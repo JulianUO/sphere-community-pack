@@ -1,0 +1,8 @@
+[typedef t_enchant_mage_weapon]
+on=@equip
+src.modskill magery,<tag0.magedecrease>
+
+on=@unequip
+src.modskill magery,-<tag0.magedecrease>
+
+[eof]

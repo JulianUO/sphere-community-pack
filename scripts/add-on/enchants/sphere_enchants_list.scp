@@ -1,0 +1,243 @@
+// SCRIPT DOCUMENTATION
+// * entry example:
+// - enchant.#.defname: The defname of the enchant
+// - enchant.#.cliloc: The name used to display, if cliloc just put the number.
+// - enchant.#.type: The type used by this enchant.
+// - enchant.#.input: Input, how to use it, read list below.
+// - enchant.#.effect: min,max effect of the enchant (per item)
+// - enchant.#.limit: maximum amount of this enchant (total)
+// - enchant.#.category: Where is one able to put it, read list below
+// - enchant.#.description: The description (for table generation)
+
+// * enchant.#.type values:
+// - meleeweap, rangeweap, wand
+// - armor, shield
+// - jewelry, talisman 
+// - instrument, spellbook
+
+// * enchant.#.input values:
+// - 0 = none, no effect at all, just to show.
+// - 1 = use the tag after the comma.
+// - 2 = call function after the comma.
+
+[comment base_table]
+// This table is to copy & paste. Don't worry about tab, just uncomment it.
+// 
+// enchant.#.defname		""
+// enchant.#.name			""
+// enchant.#.cliloc		""
+// enchant.#.type			""
+// enchant.#.input		""
+// enchant.#.effect		""
+// enchant.#.limit		""
+// enchant.#.category		""
+// enchant.#.description	""
+//
+
+[defname enchant_settings]
+enchant.amount			"19"
+
+enchant.cat.weapon		"Weapons"
+enchant.cat.meleeweap	"Melee Weapons"
+enchant.cat.rangeweap	"Range Weapons"
+enchant.cat.wand		"Wands"
+enchant.cat.armor		"Armor"
+enchant.cat.shield		"Shield"
+enchant.cat.jewelry		"Jewelry"
+enchant.cat.talisman	"Talisman"
+enchant.cat.instrument	"Instruments"
+enchant.cat.spellbook	"Spellbooks"
+
+
+[defname enchant_table]
+enchant.1.defname		"damageincrease"
+enchant.1.name			"Damage Increase"
+enchant.1.cliloc		"1060401"
+enchant.1.type			"t_enchant_damage_increase"
+enchant.1.input		"1,damageincrease"
+enchant.1.effect		"1,50"
+enchant.1.limit		"100"
+enchant.1.category		"weapon"
+enchant.1.description	"Increases the base damage you inflict with your weapon."
+
+enchant.2.defname		"damageincrease"
+enchant.2.name			"Damage Increase"
+enchant.2.cliloc		"1060401"
+enchant.2.type			"t_enchant_damage_increase"
+enchant.2.input		"1,damageincrease"
+enchant.2.effect		"1,25"
+enchant.2.limit		"100"
+enchant.2.category		"jewelry"
+enchant.2.description	"Increases the base damage you inflict with your weapon."
+
+enchant.3.defname		"defensechanceincrease"
+enchant.3.name			"Defense Chance Increase"
+enchant.3.cliloc		"1060408"
+enchant.3.type			"t_enchant_defense_chance_increase"
+enchant.3.input		"1,defensechanceincrease"
+enchant.3.effect		"1,15"
+enchant.3.limit		"45"
+enchant.3.category		"weapon,shield,jewelry"
+enchant.3.description	"Increases your chance to dodge blows."
+
+enchant.4.defname		"dexteritybonus"
+enchant.4.name			"Dexterity Bonus"
+enchant.4.cliloc		"1060409"
+enchant.4.type			"t_enchant_dexterity_bonus"
+enchant.4.input		"1,dexbonus"
+enchant.4.effect		"1,8"
+enchant.4.limit		"150"
+enchant.4.category		"jewelry"
+enchant.4.description	"Increases your Dexterity Stat by the number of points on the item."
+
+enchant.5.defname		"fastercastrecovery"
+enchant.5.name			"Faster Cast Recovery"
+enchant.5.cliloc		"1060412"
+enchant.5.type			"t_enchant_faster_cast_recovery"
+enchant.5.input		"1,fastercastrecovery"
+enchant.5.effect		"1,3"
+enchant.5.limit		"6"
+enchant.5.category		"jewelry,spellbook"
+enchant.5.description	"Shortens waiting time between casting spells by 0.25 second per point."
+
+enchant.6.defname		"fastercasting"
+enchant.6.name			"Faster Casting"
+enchant.6.cliloc		"1060413"
+enchant.6.type			"t_enchant_faster_casting"
+enchant.6.input		"1,fastercasting"
+enchant.6.effect		"1,1"
+enchant.6.limit		"2"
+enchant.6.category		"weapon,shield,jewelry,spellbook,wand"
+enchant.6.description	"Decreases the time required to cast Magery spells by 0.25 seconds per point."
+
+enchant.7.defname		"hitchanceincrease"
+enchant.7.name			"Hit Chance Increase"
+enchant.7.cliloc		"1060415"
+enchant.7.type			"t_enchant_hit_chance_increase"
+enchant.7.input		"1,hitchanceincrease"
+enchant.7.effect		"1,15"
+enchant.7.limit		"45"
+enchant.7.category		"weapon,shield,jewelry"
+enchant.7.description	"Increases your chance to hit your opponents."
+
+enchant.8.defname		"hitpointincrease"
+enchant.8.name			"Hit Point Increase"
+enchant.8.cliloc		"1060431"
+enchant.8.type			"t_enchant_hitpoint_increase"
+enchant.8.input		"1,hitsbonus"
+enchant.8.effect		"1,5"
+enchant.8.limit		"25"
+enchant.8.category		"armor"
+enchant.8.description	"Increases your maximum hit points by the number of points on the item."
+
+enchant.9.defname		"intelligencebonus"
+enchant.9.name			"Intelligence Bonus"
+enchant.9.cliloc		"1060432"
+enchant.9.type			"t_enchant_intelligence_bonus"
+enchant.9.input		"1,intbonus"
+enchant.9.effect		"1,8"
+enchant.9.limit		"150"
+enchant.9.category		"jewelry"
+enchant.9.description	"Increases your Intelligence Stat by the number of points on the item."
+
+enchant.10.defname		"lowermanacost"
+enchant.10.name		"Lower Mana Cost"
+enchant.10.cliloc		"1060433"
+enchant.10.type		"t_enchant_lower_mana_cost"
+enchant.10.input		"1,lmc"
+enchant.10.effect		"1,8"
+enchant.10.limit		"40"
+enchant.10.category		"armor,jewelry,spellbook"
+enchant.10.description	"Lowers the amount of mana needed to cast a spell or use a special move."
+
+enchant.11.defname		"lowerreagentcost"
+enchant.11.name		"Lower Reagent Cost"
+enchant.11.cliloc		"1060434"
+enchant.11.type		"t_enchant_lrc"
+enchant.11.input		"1,lrc"
+enchant.11.effect		"1,20"
+enchant.11.limit		"90"
+enchant.11.category		"armor,jewelry,spellbook"
+enchant.11.description	"Lowers the amount of reagents needed to cast spells, both magery and necromancy."
+
+enchant.12.defname		"luck"
+enchant.12.name		"Luck"
+enchant.12.cliloc		"1060436"
+enchant.12.type		"t_enchant_luck"
+enchant.12.input		"1,luck"
+enchant.12.effect		"1,100"
+enchant.12.limit		"1500"
+enchant.12.category		"weapon,armor,shield,jewelry"
+enchant.12.description	"Potentially increases monster loot in 3 ways: items, properties & intensty of properties."
+
+enchant.13.defname		"magearmor"
+enchant.13.name		"Mage Armor"
+enchant.13.cliloc		"1060437"
+enchant.13.type		"t_enchant_mage_armor"
+enchant.13.input		"0"
+enchant.13.effect		"0"
+enchant.13.limit		"0"
+enchant.13.category		"armor"
+enchant.13.description	"Negates impediments to both active and passive meditation from armor types that would normally block it."
+
+enchant.14.defname		"mageweapon"
+enchant.14.name		"Mage Weapon"
+enchant.14.cliloc		"1060438"
+enchant.14.type		"t_enchant_mage_weapon"
+enchant.14.input		"1,magedecrease"
+enchant.14.effect		"-20,-29"
+enchant.14.limit		"0"
+enchant.14.category		"weapon"
+enchant.14.description	"Allows magery skill to substute for the normal combat skill of the weapon. Magery skill is reduced by up to 30 points while a mage weapon is equiped."
+
+enchant.15.defname		"manaincrease"
+enchant.15.name		"Mana Increase"
+enchant.15.cliloc		"1060439"
+enchant.15.type		"t_enchant_mana_increase"
+enchant.15.input		"1,manabonus"
+enchant.15.effect		"1,8"
+enchant.15.limit		"25"
+enchant.15.category		"armor,spellbook"
+enchant.15.description	"Increases your maximum mana by the number of points on the item."
+
+enchant.16.defname		"slayerweapon"
+enchant.16.name		"Slayer Weapon"
+enchant.16.cliloc		"tag0.slayergroup"
+enchant.16.type		"t_enchant_slayer_weapon"
+enchant.16.input		"2,setslayer"
+enchant.16.effect		"0"
+enchant.16.limit		"0"
+enchant.16.category		"weapon,instrument,talisman"
+enchant.16.description	"Weapons will do double damage against all creatures within a certain group. An instrument with the Slayer property will increase your success chances when using bard skills against all creatures within a certain group."
+
+enchant.17.defname		"spelldamageincrease"
+enchant.17.name		"Spell Damage Increase"
+enchant.17.cliloc		"1060483"
+enchant.17.type		"t_enchant_spell_damage_increase"
+enchant.17.input		"1,spelldamageincrease"
+enchant.17.effect		"1,12"
+enchant.17.limit		"15"
+enchant.17.category		"jewelry,spellbook"
+enchant.17.description	"Increases the amount of damage spells inflict. This property is capped for Player vs. Player combat only."
+
+enchant.18.defname		"staminaincrease"
+enchant.18.name		"Stamina Increase"
+enchant.18.cliloc		"1060484"
+enchant.18.type		"t_enchant_stamina_increase"
+enchant.18.input		"1,stambonus"
+enchant.18.effect		"1,8"
+enchant.18.limit		"25"
+enchant.18.category		"armor"
+enchant.18.description	"Increases your maximum stamina by the number of points on the item."
+
+enchant.19.defname		"strengthbonus"
+enchant.19.name		"Strength Bonus"
+enchant.19.cliloc		"1060485"
+enchant.19.type		"t_enchant_strength_bonus"
+enchant.19.input		"1,strbonus"
+enchant.19.effect		"1,8"
+enchant.19.limit		"150"
+enchant.19.category		"jewelry"
+enchant.19.description	"Increases your Strength Stat by the number of points on the item."
+
+[eof]

@@ -1,0 +1,12 @@
+[typedef t_enchant_faster_casting]
+on=@equip
+if <def.scp.MagicProperties_FasterCasting>
+src.tag0.fastercasting += <tag0.fastercasting>
+endif
+
+on=@unequip
+if <def.scp.MagicProperties_FasterCasting>
+src.tag0.fastercasting -= <tag0.fastercasting>
+endif
+
+[eof]

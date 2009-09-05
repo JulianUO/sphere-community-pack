@@ -1,0 +1,99 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 22-Aug-2009
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// Included in each file.
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Main settings of every system. Switches, possibilities, etc
+// Every setting has its own description.
+//
+///////////////////////////////////////////////////////////////
+//////// General Settings
+///////////////////////////////////////////////////////////////
+// Activate or deactivate the calculation of stats according to OSI.
+// <boolean> (1 if yes, 0 if not). Default = 1
+scp.OSIStats
+scp.Followers
+scp.OSISpellDamage
+
+scp.MagicProperties_LowerReagentCost
+scp.MagicProperties_LowerManaConsume
+scp.MagicProperties_MageWeapon
+scp.MagicProperties_MageArmor
+scp.MagicProperties_FasterCastRecovery
+scp.MagicProperties_SlayerWeapon
+scp.MagicProperties_DamageIncrease
+scp.MagicProperties_DexterityBonus
+scp.MagicProperties_FasterCasting
+
+
+///////////////////////////////////////////////////////////////
+//////// AOS Custom Vendor System
+///////////////////////////////////////////////////////////////
+// Max ammount of vendors that a player can own 
+// 0 = Infinite
+scp.Vendor_PlayerMaxOwn=0
+
+// Max ammount of vendors that a player can rent 
+// 0 = Infinite
+scp.Vendor_PlayerMaxRent=0
+
+// Max characters allowed in items description
+scp.Vendor_MaxItemDescript=40
+
+// Where the vendor search for gold on buy 
+// 1 = Bag and bank / 0 = Only in bag
+scp.Vendor_GetMoneyFromBank=1
+
+// Vendors will be redeeded when dismissed? 
+// <boolean> (1 = On / 0 = Off). Default = 0
+scp.Vendor_Redeed=0
+
+// Max weight that vendors can carry 
+// Default = 390
+scp.Vendor_MaxWeight=390
+
+// New vendors comes with this shop name
+scp.Vendor_DefaultShopName=Shop Not Yet Named
+
+// Players can place vendors only on houses? 
+// <boolean> (0 = No / 1 = Yes)
+scp.Vendor_HousingOnly=1
+
+// Name of area to permit place vendors
+// Example: "Britain" (0 = Everywhere)
+scp.Vendor_PlacementRegion=0
+
+// Basic salary per day, in gp
+scp.Vendor_SalaryBasic=60
+
+// Raise 1gp on salary for each total of X gp's vending 
+// Default = 165
+scp.Vendor_SalaryAdditional=165
+
+// How many times the salary get paid on a day? Default = 12
+// NOTE: This will just make the salary get paid on small amounts X times per day.
+scp.Vendor_SalaryPaymentDiv=12
+
+///////////////////////////////////////////////////////////////
+//////// Quest Bounty Board System
+///////////////////////////////////////////////////////////////
+// Time before the bounty death dialog is opened to the death player
+scp.Bounty_Delay	8	
+
+// Amount of DAYS before an uncollected bounty decays
+scp.Bounty_Decay	14	
+
+// Minimum amount of gold coins to pay for a bounty
+scp.Bounty_Minimum 1000	
+
+
+[EOF]

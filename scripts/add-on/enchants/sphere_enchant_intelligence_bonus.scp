@@ -1,0 +1,8 @@
+[typedef t_enchant_intelligence_bonus] 
+on=@equip
+src.modint += <tag0.intbonus>
+
+on=@unequip
+src.modint -= <tag0.intbonus>
+
+[eof]

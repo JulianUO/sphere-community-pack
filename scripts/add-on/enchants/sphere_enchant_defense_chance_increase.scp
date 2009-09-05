@@ -1,0 +1,8 @@
+[typedef t_enchant_defense_chance_increase]
+on=@equip
+src.tag0.defensechanceincrease += <tag0.defensechanceincrease>
+
+on=@unequip
+src.tag0.defensechanceincrease -= <tag0.defensechanceincrease>
+
+[eof]

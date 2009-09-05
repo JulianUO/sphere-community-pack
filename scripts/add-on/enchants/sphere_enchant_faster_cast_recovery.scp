@@ -1,0 +1,12 @@
+[typedef t_enchant_faster_cast_recovery]
+on=@equip
+if <def.scp.MagicProperties_FasterCastRecovery> == 1
+src.tag0.fastercastrecovery += <tag0.fastercastrecovery>
+endif
+
+on=@unequip
+if <def.scp.MagicProperties_FasterCastRecovery> == 1
+src.tag0.fastercastrecovery -= <tag0.fastercastrecovery>
+endif
+
+[eof]

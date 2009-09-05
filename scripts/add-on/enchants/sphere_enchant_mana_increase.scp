@@ -1,0 +1,8 @@
+[typedef t_enchant_mana_increase]
+on=@equip
+src.tag0.modmaxmana += <tag0.manabonus>
+
+on=@unequip
+src.tag0.modmaxmana -= <tag0.manabonus>
+
+[eof]

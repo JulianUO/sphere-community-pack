@@ -1,0 +1,8 @@
+[typedef t_enchant_hitpoint_increase]
+on=@equip
+src.tag0.modmaxhits += <tag0.hitsbonus>
+
+on=@unequip
+src.tag0.modmaxhits -= <tag0.hitsbonus>
+
+[eof]
