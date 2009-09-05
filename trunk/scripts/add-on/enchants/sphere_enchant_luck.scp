@@ -1,0 +1,8 @@
+[typedef t_enchant_luck]
+on=@equip
+src.luck += <tag0.luck>
+
+on=@unequip
+src.luck -= <tag0.luck>
+
+[eof]

@@ -1,0 +1,40 @@
+[typedef t_enchant_lrc]
+on=@equip
+src.tag0.lrc += <tag0.lrc>
+
+on=@unequip
+src.tag0.lrc -= <tag0.lrc>
+
+[function f_lrc_check]
+local.regamount = <f_resources <serv.spell.<argv[0]>.resources>>
+local.lrc = <tag0.lrc>
+local.percent = <eval 100 / <local.regamount>>
+while (<local.lrc> > <local.percent>) && (<local.regamount> >= 1)
+local.lrc -= <local.percent>
+local.regamount --
+endwhile
+if <local.lrc> > 0
+	if <local.regamount> > 0
+		if <r<local.percent>> < <local.lrc>
+		local.regamount --
+		endif
+	endif
+endif
+if <local.regamount> > 0
+	for 0 <local.regamount>
+	consume <serv.spell.<argv[0]>.resources.<local._for>>
+	endfor
+endif
+// lower mana consume
+mana -= <eval (<argv[1]>*(<tag0.lmc>+1))/100>
+
+[function f_lrc_check_chival]
+local.toconsume = <eval (<def.spell.<argv[0]>.tithing>*<src.tag0.lrc>)/100>
+if <tithing> >= <local.toconsume>
+tithing -= <local.toconsume>
+mana -= <eval (<argv[1]>*(<tag0.lmc>+1))/100>
+else
+sysmessage @,,2 1060173,<dlocal.toconsume>
+endif
+
+[eof]

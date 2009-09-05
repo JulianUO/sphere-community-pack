@@ -1,0 +1,8 @@
+[typedef t_enchant_stamina_increase]
+on=@equip
+src.tag0.modmaxstam += <tag0.stambonus>
+
+on=@unequip
+src.tag0.modmaxstam -= <tag0.stambonus>
+
+[eof]

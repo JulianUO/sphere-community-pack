@@ -1,0 +1,92 @@
+[EVENTS e_NpcGenericEvent]
+// Followers (Death)
+on=@death
+if <def.scp.followers> == 1
+	if <src.memoryfindtype.memory_ipet>
+	ref7 = <src.memoryfindtype.memory_ipet.link.uid>
+	ref7.curfollower -= <qval <src.tag0.slots_needed> ? <src.tag0.slots_needed> : 1>
+	endif
+endif
+
+// Followers (Death?)
+on=@destroy
+if <def.scp.followers> == 1
+	if <memoryfindtype.memory_ipet>
+	ref7 = <memoryfindtype.memory_ipet.link.uid>
+	ref7.curfollower -= <qval <tag0.slots_needed> ? <tag0.slots_needed> : 1>
+	endif
+endif
+
+// Followers (Desert)
+on=@petdesert
+if <def.scp.followers> == 1
+src.curfollower -= <qval <tag0.slots_needed> ? <tag0.slots_needed> : 1>
+endif
+
+// OSI Spells Bonus + Magic Reflection + Magic Resistance
+// Followers (Summon)
+on=@spelleffect
+if <isdamagespell <argn1>>
+	if <def.scp.osispelldamage> == 1
+	tag0.gothitbyspell = <argn1>
+	endif
+elif <argn> == 40
+	if <def.scp.followers> == 1
+	local.slots = <qval <tag0.slots_needed> ? <tag0.slots_needed> : 1>
+		if <eval <src.curfollower>+<local.slots>> > <src.maxfollower>
+		src.sysmessage You have too many followers
+		hits = 0
+		else
+		src.curfollower += <local.slots>
+		endif
+	endif
+endif
+if <flags>&statf_reflection
+	if <src.uid> != <uid>
+		if (<serv.spell.<argn1>.flags>&spellflag_harm) || <argn> == 41
+		flags &= ~statf_reflection
+		findid.i_rune_magic_reflection.remove
+		effect 3,i_fx_bless_effect,16,16
+			if <src.flags>&statf_reflection
+			src.flags &= ~statf_reflection
+			src.findid.i_rune_magic_reflection.remove
+			src.effect 3,i_fx_bless_effect,16,16
+			else
+			src.spelleffect <argn1>,<argn2>
+			endif
+		return 1
+		endif
+	endif
+endif
+if <src.uid> == <uid>
+argn3 = 0
+else
+	if <serv.spell.<argn1>.flags>&spellflag_resist
+	local.resist = <eval <magicresistance>-((<src.evaluatingintel>*<spellcircle <argn1>>)/20)>
+		if <local.resist> > (<r>)
+		sysmessage @,,2 501783 // You feel yourself resisting magical energy.
+		argn3 -= <r<eval <magicresistance>/6>,<eval <magicresistance>/4>>
+		else
+		argn3 -= <r<eval <magicresistance>/7>>
+		endif
+	endif
+endif
+return 2
+
+// OSI Spells Bonus
+on=@gethit
+if <def.scp.osispelldamage> == 1
+	if <tag0.gothitbyspell>
+	local.damage = <r<serv.spell.<dtag.gothitbyspell>.effect>>
+	local.evalint = <eval (((<src.evaluatingintel>*3)/1000)+1)>
+	local.damageinc = <eval <src.int>/10>
+		if <src.inscription> >= 100.0
+		local.damageinc += 10
+		endif
+	argn1 = <eval <local.damage>*<local.evalint>>
+	argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
+	tag.gothitbyspell
+	endif
+endif
+
+[eof]

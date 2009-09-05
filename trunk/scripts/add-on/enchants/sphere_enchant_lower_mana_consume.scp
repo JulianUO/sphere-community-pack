@@ -1,0 +1,8 @@
+[typedef t_enchant_lower_mana_cost]
+on=@equip
+src.tag0.lmc += <tag0.lmc>
+
+on=@unequip
+src.tag0.lmc -= <tag0.lmc>
+
+[eof]

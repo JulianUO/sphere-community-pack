@@ -1,0 +1,8 @@
+[typedef t_enchant_strength_bonus] 
+on=@equip
+src.modstr += <tag0.strbonus>
+
+on=@unequip
+src.modstr -= <tag0.strbonus>
+
+[eof]

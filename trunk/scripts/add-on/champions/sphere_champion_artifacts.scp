@@ -1,0 +1,376 @@
+/////////////Champion Artifacts///////////////////
+[ITEMDEF 8708]
+DEFNAME=i_skull_pole
+
+[ITEMDEF i_harrower_skull_pole]
+ID=i_lantern
+NAME=skull pole
+WEIGHT=5
+
+ON=@Create
+DISPID=i_skull_pole
+
+[ITEMDEF i_acid_proof_robe]
+ID=i_robe
+NAME=Acid-Proof Robe (replica)
+
+ON=@Create
+HITPOINTS=150
+COLOR=0902
+ATTR=ATTR_NEWBIE
+
+[ITEMDEF i_robe_britannia_ari]
+ID=i_hooded_shroud
+NAME=The Robe of Britannia "Ari" (Replica)
+
+ON=@Create
+HITPOINTS=150
+COLOR=0da
+ATTR=ATTR_NEWBIE
+
+[ITEMDEF i_harrower_evil_idol]
+ID=01f18
+NAME=Evil Idol
+
+[ITEMDEF i_fang_ractus]
+ID=i_kryss
+NAME=Fang of Ractus
+REQSTR=10
+//TEVENTS=T_PROPRIEDADES
+TAG.HITCHANCEINCREASE=10
+TAG.DAMINCREASE=35
+TAG.HITCHANCEDECREASE=5
+TAG.HITPOISONAREA=20
+TAG.SPELLCHANNELING=1
+
+ON=@Create
+HITPOINTS=150
+COLOR=COLORS_GREEN
+
+[ITEMDEF i_slime_statue]
+ID=i_pet_slime
+NAME=Slime Statue
+TYPE=T_NORMAL
+
+ON=@Create
+COLOR=colors_all
+
+[ITEMDEF i_oak_leaf_cloak]
+ID=i_hooded_shroud
+NAME=Embroidered Oak Leaf Cloak
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+TAG.SKILLINCREASE=Stealth
+TAG.SKILLINCREASEVALUE=50
+
+ON=@Create
+COLOR=colors_green
+HITPOINTS=150
+
+[ITEMDEF i_Djinn_Ring]
+ID=i_ring_gold
+NAME=Djinn's Ring
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+TAG.INTINCREASE=5
+TAG.MAGICDAMINCREASE=10
+TAG.FASTERCASTING=2
+
+ON=@Create
+COLOR=04ac
+
+[ITEMDEF i_Detective_boots]
+ID=i_boots_calf
+NAME=Detective boots
+REQSTR=10
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+
+ON=@Create
+HITPOINTS=150
+COLOR=colors_all
+DORAND 3
+BEGIN
+TAG.INTINCREASE=2
+NAME=Legendary Detective of the Royal Guard
+END
+BEGIN
+TAG.INTINCREASE=3
+NAME=Elder Detective of the Royal Guard
+END
+BEGIN
+TAG.INTINCREASE=4
+NAME=Mythical Detective of the Royal Guard
+END
+ENDDO
+
+[ITEMDEF i_gauntlets_anger]
+ID=i_platemail_gloves
+NAME=Gauntlets of Anger
+REQSTR=70
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+TAG.HITCHANCEDECREASE=10
+TAG.HITSINCREASE=8
+TAG.HITSREGENERATION=2
+ARMOR=90
+
+ON=@Create
+COLOR=colors_green
+HITPOINTS=150
+
+[ITEMDEF i_oblivion_needle]
+ID=i_dagger
+NAME=Oblivion's Needle
+REQSTR=10
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+TAG.HITCHANCEINCREASE=20
+TAG.HITCHANCEDECREASE=20
+TAG.DAMINCREASE=40
+TAG.STAMLEECH=50
+TAG.STAMINCREASE=20
+
+ON=@Create
+HITPOINTS=150
+COLOR=33
+
+[ITEMDEF i_necromancer_shroud]
+ID=i_hooded_shroud
+NAME=Necromancer Shroud
+//TEVENTS=T_PROPRIEDADES
+ARMOR=8
+
+ON=@Create
+COLOR=colors_black
+HITPOINTS=150
+
+[ITEMDEF i_Lieutenant_Royal_guard]
+ID=i_sash
+NAME=Lieutenant of The Britannian Royal Guard
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+TAG.INTINCREASE=5
+TAG.LOWERREAGENTCOST=10
+TAG.MANAREGENERATION=2
+
+ON=@Create
+COLOR=colors_all
+HITPOINTS=150
+
+[ITEMDEF i_reddeath_statue]
+ID=i_pet_skeletalmount
+NAME=Red Death Statue
+TYPE=T_NORMAL
+
+ON=@Create
+COLOR=021
+
+[ITEMDEF i_plaguebeast_statue]
+ID=i_pet_plaguebeast
+NAME=Plague Beast Statue
+TYPE=T_NORMAL
+
+[ITEMDEF i_orc_chief_helm]
+ID=i_helm_orc
+NAME=orc Chief Helm
+REQSTR=30
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+TEVENTS=T_LUCK_ITEM
+TAG.LUCK=100
+TAG.HITSREGENERATION=3
+TAG.HITSINCREASE=30
+ARMOR=80
+
+ON=@Create
+COLOR=colors_green
+HITPOINTS=150
+
+[ITEMDEF i_royal_guard_survival_knife]
+ID=i_knife_butcher
+NAME=Royal Guard Survival Knife
+REQSTR=2
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=T_LUCK_ITEM
+TAG.LUCK=140
+TAG.ENCHANCEPOTIONS=25
+TAG.DAMINCREASE=20
+TAG.LIFELEECH=20
+TAG.USEBESTWEAPONSKILL=1
+
+ON=@Create
+HITPOINTS=150
+
+[ITEMDEF i_samaritan_robe]
+ID=i_robe
+NAME=Samaritan Robe
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+TAG.HITSINCREASE=5
+TAG.SKILLINCREASE=Healing
+TAG.SKILLINCREASEVALUE=50
+ARMOR=8
+REQSTR=15
+
+ON=@Create
+COLOR=colors_green
+HITPOINTS=150
+
+[ITEMDEF i_knowlegable_person]
+ID=i_hooded_shroud
+NAME=The Most Knowlegable Person
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+TAG.HITSINCREASE=5
+ARMOR=10
+REQSTR=15
+
+ON=@Create
+COLOR=0114
+HITPOINTS=150
+
+[ITEMDEF i_calm]
+ID=i_halberd
+NAME=Calm
+REQSTR=95
+//TEVENTS=T_PROPRIEDADES
+TAG.SWINGINCREASE=20
+TAG.DAMINCREASE=50
+TAG.USEBESTWEAPONSKILL=1
+TAG.MANALEECH=100
+TAG.SPELLCHANNELING=1
+
+ON=@Create
+HITPOINTS=150
+
+[ITEMDEF i_subdue]
+ID=i_scyth
+NAME=Subdue
+REQSTR=45
+//TEVENTS=T_PROPRIEDADES
+TAG.SWINGINCREASE=20
+TAG.DAMINCREASE=50
+TAG.USEBESTWEAPONSKILL=1
+TAG.MANALEECH=100
+TAG.HITCHANCEINCREASE=10
+TAG.SPELLCHANNELING=1
+
+ON=@Create
+HITPOINTS=150
+
+[ITEMDEF i_spider_statue]
+ID=i_pet_dreadspider
+NAME=Dread Spider Statue
+TYPE=T_NORMAL
+
+[ITEMDEF i_shroud_deceit]
+ID=i_hooded_shroud
+NAME=Shroud of Deceit
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+TAG.MANAINCREASE=10
+TAG.SKILLINCREASE=MagicResistance
+TAG.SKILLINCREASEVALUE=100
+ARMOR=6
+REQSTR=15
+WEIGHT=0
+
+ON=@Create
+COLOR=colors_black
+HITPOINTS=150
+
+[ITEMDEF i_captain_john_hat]
+ID=i_hat_tricorne
+NAME=Captain Johns Hat
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+TAG.DEXINCREASE=8
+TAG.SKILLINCREASE=Swordsmanship
+TAG.SKILLINCREASEVALUE=200
+TAG.HITCHANCEDECREASE=15
+ARMOR=80
+REQSTR=20
+
+ON=@Create
+COLOR=colors_black
+HITPOINTS=150
+
+ON=@Equip
+SRC.SPELLEFFECT S_NIGHT_SIGHT,1000,<SRC>
+
+ON=@ClientToolTip
+SRC.ADDCLILOC 1015008
+
+[ITEMDEF i_crown_talkeesh]
+ID=i_bandana
+NAME=Crown of Tal'Keesh
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=T_STATUS_BONUS
+TAG.INTINCREASE=8
+TAG.MAGICDAMINCREASE=10
+TAG.MANAREGENERATION=4
+ARMOR=150
+REQSTR=20
+
+ON=@Create
+COLOR=colors_blue
+HITPOINTS=150
+
+[ITEMDEF i_brave_knight_britannia]
+ID=i_katana
+NAME=Brave Knight of the Britannia
+REQSTR=25
+//TEVENTS=T_PROPRIEDADES
+TAG.HITCHANCEINCREASE=11
+TAG.DAMINCREASE=35
+TAG.LIFELEECH=45
+TAG.STAMLEECH=45
+TAG.HITHARM=46
+TAG.SELFREPAIR=5
+
+ON=@Create
+COLOR=0481
+HITPOINTS=150
+
+[ITEMDEF i_ophidianarchmage_statue]
+ID=i_pet_ophid_mage
+NAME=Ophidian Archmage Statue
+TYPE=T_NORMAL
+
+[ITEMDEF i_ophidianwarrior_statue]
+ID=i_pet_ophid_war
+NAME=Ophidian Warrior Statue
+TYPE=T_NORMAL
+
+[ITEMDEF i_pacify]
+ID=i_pike
+NAME=Pacify
+REQSTR=50
+//TEVENTS=T_PROPRIEDADES
+TAG.HITCHANCEINCREASE=10
+TAG.SWINGINCREASE=20
+TAG.DAMINCREASE=50
+TAG.uSEBESTWEAPONSKILL=1
+TAG.MANALEECH=100
+TAG.SPELLCHANNELING=1
+
+ON=@Create
+HITPOINTS=150
+
+[ITEMDEF i_gladiator_collar]
+ID=i_platemail_gorget
+NAME=Gladiator's Collar
+REQSTR=45
+//TEVENTS=T_PROPRIEDADES
+TEVENTS=t_status_bonus
+TAG.HITSINCREASE=10
+TAG.HITCHANCEINCREASE=10
+TAG.DAMINCREASE=10
+ARMOR=80
+
+ON=@Create
+COLOR=colors_o_rose
+HITPOINTS=150
+
+[EOF]

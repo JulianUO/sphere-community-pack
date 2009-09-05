@@ -1,0 +1,312 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 06-Apr-2009
+VERSION=0.56b
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// [EVENTS] @userstats - OSI STATS + BONUS
+// - Max Hits: (Str / 2) + Str Bonus + 50 + Max Hits Bonus
+// - Max Mana: Int + Int Bonus + Max Mana Bonus
+// - Max Stam: Dex + Dex Bonus + Max Stam Bonus
+
+// [EVENTS] @spellcast (TO-DO: PUT FASTER CASTING (ARGN3) IN HERE)
+// - Words of Power for new spells (necro, chivalry, etc)
+// - Plate armor restriction and Weapon unequip
+// - Integration of Mage Armor and Mage Weapon
+// - Spell Cast Recovery and addition of Faster Cast Recovery
+
+// [EVENTS] @spelleffect
+// - Checks for Harm Spell (Spell Damage Bonus)
+// - Checks for Magic Reflection Spell
+// - Implements Magic Resistance Skill
+
+// [EVENTS] @gethit - SPELL DAMAGE BONUS
+// - Eval. Int. Bonus: ((EvalInt * 3) / 100) + 1
+// - Intelligence Bonus: (INT / 10) (Drop decimals from result)
+// - GM Inscription Bonus: 10% Damage Bonus
+// - Spell Damage Increase: Int. Bonus + Inscr. Bonus + Spell Damage Increase Items*
+// - Total Damage: (Base Damage * Eval. Int. Bonus) * ((Spell Damage Increase / 100) + 1) (Drop decimals from result) 
+// - Mind Blast damage: Base Damage + ((Magery + Intelligence) / 5) (Drop decimals from result)
+// * Spell Damage Increase Items effects are capped at 15% in Player vs. Player combat.
+
+// IMPLEMENTED ENCHANTS
+// --------------------
+// - Dexterity Bonus
+// - Hitpoint Increase
+// - Intelligence Bonus
+// - Lower Mana Cost
+// - Lower Reagent Cost
+// - Luck
+// - Mage Armor
+// - Mage Weapon
+// - Mana Increase
+// - Slayer Weapon
+// - Stamina Increase
+// - Strength Bonus
+
+[events e_PlayerGenericEvent]
+// Context Menu Display
+on=@contextmenurequest
+if <uid> == <src.uid>
+	if <guild>
+	src.addcontextentry 101,6117
+	else
+	src.addcontextentry 101,6117,01
+	endif
+src.addcontextentry 102,6119
+else
+src.addcontextentry 200,6121
+endif
+return 0
+
+// Context Menu Functions
+on=@contextmenuselect
+if <uid> == <src.uid>
+	if <argn> == 101
+	groster
+	elif <argn> == 102
+	openquestlog
+	endif
+else
+	if <argn> == 200
+	src.face <uid>
+	endif
+endif
+
+// Quest Button
+on=@userquestbutton
+openquestlog
+
+// Cancel use of Book of Arms
+on=@userspecialmove
+return 1
+
+// OSI Calculation + Stats Bonus
+on=@userstats
+if <def.scp.osistats> == 1
+maxhits = <eval (<str>/2) + <modstr> + 50 + <tag0.modmaxhits>> 
+maxmana = <eval <int> + <modint> + <tag0.modmaxmana>>
+maxstam = <eval <dex> + <moddex> + <tag0.modmaxstam>>
+endif
+
+// Followers control
+on=@itembuy
+if <def.scp.followers> == 1
+	if <act.type> == t_figurine
+	local.slots = <qval <serv.chardef.<act.tdata3>.tag0.slots_needed> ? <serv.chardef.<act.tdata3>.tag0.slots_needed> : 1>
+		if <eval <src.curfollower>+(<local.slots>*<argn>)> > <src.maxfollower>
+		src.sysmessage @,,2 1049612,<serv.chardef.<act.tdata3>.name> // ~1_NAME~ remained in the stables because you have too many followers.	
+		src.newgold <local.totalcost>
+		return 1
+		endif
+	src.curfollower += <eval <local.slots>*<argn>>
+	endif
+endif
+
+// Lower Reagent Cost + Lower Mana Consume
+on=@spellselect
+if <def.scp.MagicProperties_LowerReagentCost> == 1
+	if <argn3> == 2
+		if <argn1> < 200
+		f_lrc_check <argn1>,<argn2>,<argn3>
+		elif <argn> > 600
+		return 6
+		else
+		f_lrc_check_chival <argn1>,<argn2>,<argn3>
+		endif
+	return 6
+	endif
+else
+	if <def.scp.MagicProperties_LowerManaConsume> == 1
+
+
+// Necromancy Words of Power
+// Armor Restriction + Mage Armor + Mage Weapon
+// Faster Cast Recovery
+on=@spellcast
+if <dtag0.spellrecovery> > <serv.time>
+src.sysmessage @03c1,6,2 502644 // You have not yet recovered from casting a spell
+return 1
+endif
+if !<npc>
+	if <argn1> > 100
+		if <account.plevel> > 2
+			if <serv.wopstaff>
+				if <isnum <def.spell.<argn1>.wop>>
+				say @<serv.wopcolor>,<serv.wopfont>,2 <def.spell.<argn1>.wop>
+				else
+				say @<serv.wopcolor>,<serv.wopfont> <def.spell.<argn1>.wop>
+				endif
+			endif
+		elif <account.plevel> < 2
+			if <isnum <def.spell.<argn1>.wop>>
+			say @<serv.wopcolor>,<serv.wopfont>,2 <def.spell.<argn1>.wop>
+			else
+			say @<serv.wopcolor>,<serv.wopfont> <def.spell.<argn1>.wop>
+			endif
+		endif
+	endif
+endif
+if <def.scp.MagicProperties_MageWeapon> == 1
+	if <findlayer.1.uid>
+		if !(<findlayer.1.istevent.t_enchant_mage_weapon>) || (<findlayer.1.type> == t_wand)
+		findlayer.1.unequip
+		endif
+	endif
+endif
+
+if <findlayer.2.uid>
+	if <findlayer.2.isweapon>
+		if <def.scp.MagicProperties_MageWeapon> == 1
+			if !(<findlayer.2.istevent.t_enchant_mage_weapon>)
+			findlayer.2.unequip
+			endif
+		endif
+	else
+		if <def.scp.MagicProperties_MageArmor> == 1
+			if !(<findlayer.2.istevent.t_enchant_mage_armor>)
+			findlayer.2.unequip
+			endif
+		endif
+	endif
+endif
+if <def.scp.MagicProperties_MageArmor> == 1
+	for 1 <def.armor_amount>
+	ref5 = <findlayer.<def.armor_part_<dlocal._for>>.uid>
+		if <ref5.type> == t_armor
+			if !(<ref5.istevent.t_enchant_mage_armor>)
+			src.sysmessage You can't cast with this armor (<ref5.name>).
+			return 1
+			endif
+		endif
+	endfor
+endif
+
+// OSI Spells Bonus
+// Magic Resistance Skill + Magic Reflection Spell
+on=@spelleffect
+if <def.scp.MagicProperties_FasterCastRecovery> == 1
+src.tag0.spellrecovery = <eval <serv.time>+(12-(<min <eval <src.tag0.fastercastrecovery>*2>,12>))>
+endif
+if <isdamagespell <argn1>>
+tag0.gothitbyspell = <argn1>
+endif
+if <flags>&statf_reflection
+	if <src.uid> != <uid>
+		if (<serv.spell.<argn1>.flags>&spellflag_harm) || <argn> == 41
+		flags &= ~statf_reflection
+		findid.i_rune_magic_reflection.remove
+		effect 3,i_fx_bless_effect,16,16
+			if <src.flags>&statf_reflection
+			src.flags &= ~statf_reflection
+			src.findid.i_rune_magic_reflection.remove
+			src.effect 3,i_fx_bless_effect,16,16
+			else
+			src.spelleffect <argn1>,<argn2>
+			endif
+		return 1
+		endif
+	endif
+endif
+if <src.uid> == <uid>
+argn3 = 0
+else
+	if <serv.spell.<argn1>.flags>&spellflag_resist
+	local.resist = <eval <magicresistance>-((<src.evaluatingintel>*<spellcircle <argn1>>)/20)>
+		if <local.resist> > (<r>)
+		sysmessage @,,2 501783 // You feel yourself resisting magical energy.
+		argn3 -= <r<eval <magicresistance>/6>,<eval <magicresistance>/4>>
+		else
+		argn3 -= <r<eval <magicresistance>/7>>
+		endif
+	endif
+endif
+return 2
+
+// Slayer Weapons + New Parrying 
+// Damage Increase
+on=@hit
+if <def.scp.MagicProperties_SlayerWeapon> == 1
+	if <src.brain>
+		if <argo.istevent.t_enchant_slayer_weapon>
+			if (strmatch(*<src.baseid>*,<def.<argo.tag0.slayergroup>_slayer>))
+			argn1 *= 2
+			src.effect 3,i_fx_glow,16,15,15
+			endif
+		endif
+	endif
+endif
+if <def.scp.MagicProperties_DamageIncrease> == 1
+	if <tag0.damageincrease>
+	local.damageincrease = <qval (<tag0.damageincrease> >= <def.enchant.1.limit>) ? <def.enchant.1.limit> : <tag0.damageincrease>>
+	argn1 += <eval ((<local.damageincrease>*<argn1>)/100)+1>
+	endif
+endif
+if (<src.findlayer.1>) || (<src.findlayer.2>)
+	if <src.f_cs_chancetoblock> > <r>
+		if (<src.findlayer.2.type> == t_shield) || (<src.findlayer.2.isweapon>)
+			if (<src.trysrc <uid> findlayer.2.trigger @ParryTest>)
+			return 0
+			endif
+		elif <src.findlayer.1.isweapon>
+			if (<src.trysrc <uid> findlayer.1.trigger @ParryTest>)
+			return 0
+			endif
+		endif
+	src.sysmessage "You parry the blow."
+	sysmessage "<src.name> parries the blow."
+	src.sound 0146
+	src.anim 30
+	return 1
+	endif
+endif
+
+// OSI Spells Bonus
+on=@gethit
+if <def.scp.OSISpellDamage> == 0
+return 0
+endif
+if <tag0.gothitbyspell>
+local.damage = <r<serv.spell.<dtag.gothitbyspell>.effect>>
+local.evalint = <eval (((<src.evaluatingintel>*3)/1000)+1)>
+local.damageinc = <eval <src.int>/10>
+	if <src.inscription> >= 100.0
+	local.damageinc += 10
+	endif
+	if <src.tag0.spelldamageincrease>
+	local.damageinc += <qval (<src.tag.spelldamageincrease> > 15) ? 15 : <src.tag.spelldamageincrease>>
+	endif
+argn1 = <eval <local.damage>*<local.evalint>>
+argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
+tag.gothitbyspell
+endif
+
+// Proper Statlock Fix
+on=@statchange
+local.statsum = <qval <tag0.override.statsum> ? <tag0.override.statsum> : <serv.skillclass.0.statsum>>
+local.stats = <eval <ostr>+<odex>+<oint>>
+if <local.stats> == <local.statsum>
+	if <statlock[<argn1>]> == lock_locked
+	return 1
+	endif
+	if <statlock[<argn1>]> == lock_up
+		for 0 2
+			if <local._for> != <argn1>
+				if <statlock[<dlocal._for>]> == lock_down
+					if (<eval <o<def.stat_<dlocal._for>_name>>-1> > 0)
+					o<def.stat_<dlocal._for>_name> = <eval <o<def.<stat_<dlocal._for>_name>>>-1>
+					return 0
+					endif
+				return 1
+				endif
+			endif
+		endfor
+	return 1
+	endif
+endif
+
+[eof]
