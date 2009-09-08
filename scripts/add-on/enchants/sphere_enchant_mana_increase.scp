@@ -1,8 +1,12 @@
 [typedef t_enchant_mana_increase]
 on=@equip
+if <def.scp.MagicProperties_ManaIncrease> == 1
 src.tag0.modmaxmana += <tag0.manabonus>
+endif
 
 on=@unequip
+if <def.scp.MagicProperties_ManaIncrease> == 1
 src.tag0.modmaxmana -= <tag0.manabonus>
+endif
 
 [eof]

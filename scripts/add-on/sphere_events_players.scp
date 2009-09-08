@@ -121,7 +121,7 @@ if <def.scp.MagicProperties_LowerReagentCost> == 1
 	return 6
 	endif
 else
-	if <def.scp.MagicProperties_LowerManaConsume> == 1
+	if <def.scp.MagicProperties_LowerManaCost> == 1
 
 
 // Necromancy Words of Power
@@ -268,6 +268,10 @@ endif
 // OSI Spells Bonus
 on=@gethit
 if <def.scp.OSISpellDamage> == 0
+	if <def.scp.MagicProperties_SpellDamageIncrease> == 1
+	argn1 += <qval (<src.tag.spelldamageincrease> > 15) ? 15 : <src.tag.spelldamageincrease>>
+	return 0
+	endif
 return 0
 endif
 if <tag0.gothitbyspell>
@@ -277,8 +281,10 @@ local.damageinc = <eval <src.int>/10>
 	if <src.inscription> >= 100.0
 	local.damageinc += 10
 	endif
-	if <src.tag0.spelldamageincrease>
-	local.damageinc += <qval (<src.tag.spelldamageincrease> > 15) ? 15 : <src.tag.spelldamageincrease>>
+	if <def.scp.MagicProperties_SpellDamageIncrease> == 1
+		if <src.tag0.spelldamageincrease>
+		local.damageinc += <qval (<src.tag.spelldamageincrease> > 15) ? 15 : <src.tag.spelldamageincrease>>
+		endif
 	endif
 argn1 = <eval <local.damage>*<local.evalint>>
 argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
