@@ -1,8 +1,12 @@
 [typedef t_enchant_intelligence_bonus] 
 on=@equip
+if <def.scp.MagicProperties_IntelligenceBonus> == 1
 src.modint += <tag0.intbonus>
+endif
 
 on=@unequip
+if <def.scp.MagicProperties_IntelligenceBonus> == 1
 src.modint -= <tag0.intbonus>
+endif
 
 [eof]

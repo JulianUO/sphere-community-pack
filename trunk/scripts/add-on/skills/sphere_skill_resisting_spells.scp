@@ -1,0 +1,13 @@
+[EVENTS e_resisting_spell]
+// The event is in e_PlayerGenericEvent
+// sphere_events_player.scp file
+// But the skill is done and this function below is needed
+
+[FUNCTION spellcircle] //argn1=spell number
+IF (<ARGN1>>=1) && (<ARGN1><=64) //only with default (mage) spells
+RETURN <EVAL ((<ARGN1>-1)/8)+1>
+ELSE
+RETURN 1
+ENDIF
+
+[EOF]

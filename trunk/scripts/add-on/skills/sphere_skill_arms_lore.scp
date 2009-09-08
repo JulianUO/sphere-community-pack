@@ -1,0 +1,31 @@
+[defname arms_lore_cliloc]
+armslore.durability.start	1038284
+armslore.weapon.start		1038215
+armslore.armor.start		1038295
+
+[function f_armslore_success]
+ref91 = <args>
+local.percent = <eval (<ref91.more1l>*100)/<ref91.more1h>>
+local.dcliloc = <eval (<local.percent>/10)+<def.armslore.durability.start>>
+sysmessage @,,2 <local.dcliloc>
+if <ref91.isweapon>
+local.wcliloc = <def.armslore.weapon.start>
+local.weapdam = <eval (<ref91.dam.lo>+<ref91.dam.hi>)/2>
+local.wcliloc += <eval ((<local.weapdam>/5)+1)*9>
+	if <ref91.layer> == 2
+		if (<ref91.type> == t_weapon_bow) || (<ref91.type> == t_weapon_xbow)
+		local.wcliloc += 9
+		else
+		local.wcliloc += 2
+		endif
+	else
+	local.wcliloc ++
+	endif
+sysmessage @,,2 <local.wcliloc>
+elif <ref91.isarmor>
+local.armor = <eval ((<ref91.armor.high>+<ref91.tag0.modar>)*<def.armor_<ref91.layer>>)/100>
+local.acliloc = <eval ((<local.armor>/5)+1)+<def.armslore.armor.start>>
+sysmessage @,,2 <local.acliloc>
+endif
+
+[eof]

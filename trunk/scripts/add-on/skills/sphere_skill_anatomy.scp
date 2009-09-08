@@ -1,0 +1,11 @@
+[defname anatomy_cliloc]
+anatomy.start			1038033
+
+[function f_anatomy_success]
+ref90 = <args>
+local.toadd = <eval (((<ref90.str>/10)+1)*11) + ((<ref90.dex>/10)+1)>
+local.cliloc = <eval <def.anatomy.start> + <local.toadd>>
+sysmessage @,,2 <local.cliloc>
+return 1
+
+[eof]
