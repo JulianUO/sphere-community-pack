@@ -1,0 +1,30 @@
+///////////////////////////////////////////
+/// Script feito por Coruja //////////////
+/////////////////////////////////////////
+
+[DIALOG d_guild_invitation]
+0,0
+
+resizepic 0 0 02422 350 170
+dhtmlgump 25 20 300 45 1 0 <DEF.CENTER>You have been invited to join a guild! (Warning: Accepting will make you attackable!)
+dhtmlgump 25 75 300 25 1 0 <DEF.CENTER><GUILD.NAME>
+button 195 130 0F2 0F1 1 0 0
+button 265 130 0F7 0F8 1 0 1 
+button 20 130 0D2 0D3 1 0 2
+dhtmlgump 45 130 150 30 0 0 <DEF.I>Ignore Guild Invites
+
+
+[DIALOG d_guild_invitation BUTTON]
+ON=0
+SYSMESSAGE @,,1 <SRC.NAME> has declined your invitation to join <GUILD.NAME>.
+
+ON=1
+SRC.SYSMESSAGE @,,1 You have joined <GUILD.NAME>.
+SYSMESSAGE @,,1 <SRC.NAME> has accepted your invitation to join <GUILD.NAME>.
+UID.<GUILD>.Guild_AddMember <SRC>,1
+
+ON=2
+SRC.SYSMESSAGE @,,1 You are now ignoring guild invitations.
+SRC.TAG0.IgnoreGuildInvites=1
+
+[EOF]

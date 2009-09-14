@@ -1,0 +1,73 @@
+///////////////////////////////////////////
+/// Script feito por Coruja //////////////
+/////////////////////////////////////////
+
+[DIALOG d_guild_create]
+10,10
+
+resizepic 0 0 02422 500 300
+dhtmlgump 25 20 450 25 1 0 <DEF.CENTER>GUILD MENU
+dhtmlgump 25 60 450 60 0 0 As you are not a member of any guild you can create your own by providing a unique guild name and paying the standard guild registration fee.
+IF !(<ISITEM>)
+ dhtmlgump 25 135 120 25 0 0 Registration Fee:
+ dtext 155 135 0481 <dDEF0.Guild.RegistrationFee>
+ENDIF
+dhtmlgump 25 165 120 25 0 0 Enter Guild Name: 
+resizepic 155 160 0BB8 320 26
+dtextentry 160 163 315 21 0481 1 Guild Name
+dhtmlgump 25 191 120 26 0 0 Abbreviation:
+resizepic 155 186 0BB8 320 26
+dtextentry 160 189 315 21 0481 2
+button 415 217 0F7 0F8 1 0 1
+button 345 217 0F2 0F1 1 0 0
+button 20 260 <QVAL (<TAG0.IgnoreGuildInvites>)? 0D3 0D2:0D2 0D3> 1 0 2
+dhtmlgump 45 260 200 30 0 0 <DEF.I>Ignore Guild Invites
+
+[DIALOG d_guild_create BUTTON]
+ON=1
+IF (<isempty <ARGTXT[1]>>)
+ SRC.SYSMESSAGE @,,1 Guild name cannot be blank.
+ return 1
+ELIF (<isempty <ARGTXT[2]>>)
+ SRC.SYSMESSAGE @,,1 You must provide a guild abbreviation.
+ return 1
+ELIF (<eval STRLEN(<ARGTXT[1]>)> > <DEF0.Guild.NameMaxLenght>)
+ SRC.SYSMESSAGE @,,1 A guild name cannot be more than <dDEF0.Guild.NameMaxLenght> characters in length.
+ return 1
+ELIF (<eval STRLEN(<ARGTXT[2]>)> > <DEF0.Guild.AbbrevMaxLenght>)
+ SRC.SYSMESSAGE @,,1 An abbreviation cannot exceed <dDEF0.Guild.AbbrevMaxLenght> characters in length.
+ return 1
+ELIF !(<Guild_IsNameAvaible <ARGTXT[1]>>) || (<Guild_CheckProfanity <ARGTXT[1]>>)
+ SRC.SYSMESSAGE @,,1 That guild name is not available.
+ return 1
+ELIF !(<Guild_IsAbbrevAvaible <ARGTXT[2]>>) || (<Guild_CheckProfanity <ARGTXT[2]>>)
+ SRC.SYSMESSAGE @,,1 That abbreviation is not available.
+ return 1
+ELIF !(<ISITEM>) && (<SRC.FINDLAYER.layer_bankbox.RESCOUNT.i_gold> < <DEF0.Guild.RegistrationFee>)
+ SRC.SYSMESSAGE @,,1 You do not possess the <dDEF0.Guild.RegistrationFee> gold piece fee required to create a guild.
+ return 1
+ENDIF
+IF (<ISITEM>)
+ REMOVE
+ELSE
+ SRC.SYSMESSAGE @,,1 <dDEF0.Guild.RegistrationFee> gold has been withdrawn from your bank box.
+ SRC.FINDLAYER.layer_bankbox.CONTCONSUME i_gold <DEF0.Guild.RegistrationFee>
+ENDIF
+SRC.SYSMESSAGE @,,1 Your new guild has been founded.
+SERV.NEWITEM i_guildstone
+NEW.P=5374,1079	//Green Acres
+NEW.NAME=<ARGTXT[1]>
+NEW.ABBREV=<ARGTXT[2]>
+NEW.Guild_AddMember <SRC>,1
+NEW.JoinAsMember <SRC>
+
+ON=2
+IF (<SRC.TAG0.IgnoreGuildInvites>)
+ SRC.SYSMESSAGE @,,1 You are now accepting guild invitations.
+ SRC.TAG0.IgnoreGuildInvites=
+ELSE
+ SRC.SYSMESSAGE @,,1 You are now ignoring guild invitations.
+ SRC.TAG0.IgnoreGuildInvites=1
+ENDIF
+
+[EOF]

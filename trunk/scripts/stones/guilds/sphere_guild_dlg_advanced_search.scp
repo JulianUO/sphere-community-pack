@@ -1,0 +1,71 @@
+///////////////////////////////////////////
+/// Script feito por Coruja //////////////
+/////////////////////////////////////////
+
+[DIALOG d_guild_advanced_search]
+10,10
+
+page 0
+Guild_RenderMainDialog
+
+dhtmlgump 431 43 110 26 0 0 <DEF.Guild.DialogFont.DarkBlue>Diplomacy
+dhtmlgump 65 80 480 26 1 0 <DEF.Guild.DialogFont.DarkBlue><DEF.I>Advanced Search Options
+IF (<SRC.CTAG0.GuildDiplomacy.OnlyRelationship>)
+ ARGS=Showing Guilds With Relationship
+ELIF (<SRC.CTAG0.GuildDiplomacy.OnlyAwaytingAction>)
+ ARGS=Showing Guilds Awaiting Action
+ELSE
+ ARGS=Showing All Guilds
+ENDIF
+dhtmlgump 65 110 480 26 0 0 <DEF.Guild.DialogFont.DarkBlue><ARGS>
+
+radio 75 140 0D2 0D3 0 2
+dhtmlgump 105 140 200 26 0 0 Show Guilds With Relationship
+radio 75 170 0D2 0D3 0 1
+dhtmlgump 105 170 200 26 0 0 Show Guilds Awaiting Action
+radio 75 200 0D2 0D3 0 0
+dhtmlgump 105 200 200 26 0 0 Show All Guilds
+
+resizepic 450 370 02486 100 26
+button 455 375 0845 0846 1 0 1
+dhtmlgump 480 373 60 26 0 0 OK
+resizepic 340 370 02486 100 26
+button 345 375 0845 0846 1 0 0
+dhtmlgump 370 373 60 26 0 0 Cancel
+
+
+[DIALOG d_guild_advanced_search BUTTON]
+ON=0
+SDIALOG d_guild_diplomacy
+
+ON=1
+SRC.ClearCTAGS GuildDiplomacy
+IF (<ARGCHK[1]>)
+  SRC.CTAG0.GuildDiplomacy.OnlyAwaytingAction=1
+  FOR 0 <eval <SERV.GUILDS>-1>
+   REF1=<SERV.GUILDSTONES.<LOCAL._FOR>.UID>
+   IF ((<GuildFromUID.<REF1>.WeWar>) || (<GuildFromUID.<REF1>.TheyWar>)) && !(<IsWarRing <REF1>>)
+    SRC.CTAG0.GuildDiplomacy.Search .= ,<dLOCAL._FOR>
+    SRC.CTAG0.GuildDiplomacy.SearchTotal ++
+   ENDIF
+  ENDFOR
+ELIF (<ARGCHK[2]>)
+  SRC.CTAG0.GuildDiplomacy.OnlyRelationship=1
+  FOR 0 <eval <SERV.GUILDS>-1>
+   REF1=<SERV.GUILDSTONES.<LOCAL._FOR>.UID>
+   IF (<IsWarRing <REF1>>)
+    SRC.CTAG0.GuildDiplomacy.Search .= ,<dLOCAL._FOR>
+    SRC.CTAG0.GuildDiplomacy.SearchTotal ++
+   ENDIF
+  ENDFOR
+ENDIF
+SRC.CTAG0.GuildDiplomacy.Search=<STREAT <SRC.CTAG0.GuildDiplomacy.Search>>
+IF ((<ARGCHK[1]>) || (<ARGCHK[2]>)) && !(<SRC.CTAG0.GuildDiplomacy.SearchTotal>)
+ SRC.CTAG0.GuildDiplomacy.SearchTotal=1
+ENDIF
+SDIALOG d_guild_diplomacy
+
+ON=100 102
+Guild_RenderMainDialogButton <ARGN>
+
+[EOF]
