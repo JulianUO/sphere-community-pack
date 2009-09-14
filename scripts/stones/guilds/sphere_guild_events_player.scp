@@ -1,0 +1,54 @@
+///////////////////////////////////////////
+/// Script feito por Coruja //////////////
+/////////////////////////////////////////
+
+[EVENTS e_guild]
+ON=@Death
+IF !(<ATTACKER>) || (<FINDID.i_evento_memoria>)
+ return 0
+ENDIF
+FOR 0 <eval <ATTACKER>-1>
+ REF1=<ATTACKER.<LOCAL._FOR>>
+ IF (<REF1.ISPLAYER>)
+   IF (<REF1.GUILD>)
+     IF (<UID.<GUILD>.IsWarRing <REF1.GUILD>>) 
+       UID.<REF1.GUILD>.TAG0.War.<GUILD>.Kills ++
+       IF (<STREAT <UID.<REF1.GUILD>.TAG0.War.<GUILD>>>)
+         IF (<UID.<REF1.GUILD>.TAG0.War.<GUILD>.Kills> >= <STREAT <UID.<REF1.GUILD>.TAG0.War.<GUILD>>>)
+           UID.<GUILD>.Guild_SendMessage You have lost the war with <REF1.GUILD.NAME>.
+           UID.<REF1.GUILD>.Guild_SendMessage You have won the war against <GUILD.NAME>!
+           UID.<GUILD>.DeclarePeace <REF1.GUILD>
+           UID.<REF1.GUILD>.DeclarePeace <GUILD>
+           TRY UID.<GUILD>.TAG.War.<REF1.GUILD>=
+           TRY UID.<GUILD>.TAG.War.<REF1.GUILD>.Kills=
+           TRY UID.<REF1.GUILD>.TAG.War.<GUILD>=
+           TRY UID.<REF1.GUILD>.TAG.War.<GUILD>.Kills=
+         ENDIF
+       ENDIF
+     ENDIF
+   ENDIF
+ ENDIF
+ENDFOR
+IF (<ACCOUNT.PLEVEL>==1)
+ UID.<GUILD>.Guild_SendMessage <NAME> morreu em <REGION.NAME>.
+ENDIF
+
+ON=@Login
+IF (<ACCOUNT.PLEVEL>==1)
+ UID.<GUILD>.Guild_SendMessage <NAME> esta Online.
+ENDIF
+
+ON=@Logout
+IF (<ACCOUNT.PLEVEL>==1)
+ UID.<GUILD>.Guild_SendMessage <NAME> desconectou do servidor.
+ENDIF
+
+/////////////////////////////////////////
+
+[SPEECH spk_guild]
+ON=*
+IF (<ARGN1> == <DEF.TALKMODE_GUILD>)
+ GC <ARGS>
+ENDIF
+
+[EOF]
