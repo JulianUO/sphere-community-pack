@@ -737,8 +737,14 @@ BONUS_INT=100
 BONUS_STATS=50
 ADV_RATE=2.5,50.0,200.0
 
+ON=@Success
+if <def.scp.NewSkills_SpiritSpeak> == 1
+f_SpiritSpeak_Success
+endif
+
 ON=@Fail
-	SRC.SYSMESSAGE You fail your attempt at contacting the netherworld.
+SRC.MESSAGE @,,2 502443
+
 
 ON=@Abort
 	SRC.SYSMESSAGE You stop trying to commune with the netherworld.
@@ -826,8 +832,24 @@ BONUS_INT=60
 BONUS_STATS=20
 ADV_RATE=10.0,200.0,800.0
 
+ON=@Start
+if <def.scp.Followers> == 1
+local.slots = <qval <src.targ.tag0.slots_needed> ? <src.targ.tag0.slots_needed> : 1>
+	if <eval <src.curfollower>+<local.slots>> > <src.maxfollower>
+	src.sysmessage @,,2 1049611 // You have too many followers to tame that creature.
+	return 1
+	endif
+endif
+if <src.taming> < <src.targ.taming>
+src.sysmessage @,,2 1042590 // You cannot tame this creature.
+return 1
+endif
+
+ON=@Success
+curfollower += <qval <src.targ.tag0.slots_needed> ? <src.targ.tag0.slots_needed> : 1>
+
 ON=@Fail
-	SRC.SYSMESSAGE You fail to tame the creature.
+	SRC.MESSAGE @,,2 502798
 
 ON=@Abort
 	SRC.SYSMESSAGE You give up trying to tame the creature.

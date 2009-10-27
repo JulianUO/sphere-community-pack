@@ -87,6 +87,9 @@ return 1
 
 // OSI Calculation + Stats Bonus
 on=@userstats
+if <def.scp.followers> == 1
+maxfollower = <def.scp.MaxFollowers>
+endif
 if <def.scp.osistats> == 1
 maxhits = <eval (<str>/2) + <modstr> + 50 + <tag0.modmaxhits>> 
 maxmana = <eval <int> + <modint> + <tag0.modmaxmana>>
@@ -210,6 +213,9 @@ if <flags>&statf_reflection
 		return 1
 		endif
 	endif
+endif
+if <def.scp.NewSkills_ResistingSpells> == 0
+return 2
 endif
 if <src.uid> == <uid>
 argn3 = 0

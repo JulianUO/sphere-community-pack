@@ -72,6 +72,8 @@ scripts/stones/towns/
 scripts/add-on/
 scripts/add-on/champions/
 scripts/add-on/enchants/
+scripts/add-on/override/
+scripts/add-on/quests/
 scripts/add-on/skills/
 scripts/add-on/spells/
 
