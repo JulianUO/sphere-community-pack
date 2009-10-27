@@ -1,0 +1,349 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 22-Aug-2009
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - Main system, all spells.
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Spellweaving is a new magery skill included in Mondain's Legacy.
+// This script includes all the 16 spells.
+
+[SPELL 601]
+DEFNAME=s_arcane_circle
+NAME=Arcane Circle
+SOUND=snd_spell_arcane_circle
+RUNES=//Myrshalee
+CAST_TIME=0.5
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=spellflag_good
+EFFECT_ID=03779
+EFFECT=0
+DURATION=0.0
+MANAUSE=24
+SKILLREQ=SPELLWEAVING 0.1
+INTERRUPT=100.0,100.0
+
+on=@select
+if !<IsInArcaneCircle>
+sysmessage @,,2 1072705
+return 1
+endif
+
+on=@start
+effect 3,i_fx_sparkle_2,10,20,0
+
+on=@success
+local.weavers = 0
+forchars 18
+	if (<spellweaving> >= <eval <src.spellweaving>-20.0>)
+		if (<spellweaving> <= <eval <src.spellweaving>+20.0>)
+		local.weavers ++
+		local.weaver.<local.weavers> = <uid>
+		endif
+	endif
+endfor
+local.duration = <eval <max 1,<eval <src.spellweaving>/24>>*3600>
+local.level = <min <local.weavers>,5>
+for <local.weavers>
+uid.<local.weaver.<local._for>>.f_GiveArcaneFocus <local.duration>,<local.level>
+endfor
+
+[function f_GiveArcaneFocus]
+sysmessage @,,2 1072516,#1032629,<dargv[0]>
+if <restest i_arcane_focus>
+findid.i_arcane_focus.timer = <argv[0]>
+findid.i_arcane_focus.more1 = <argv[1]>
+sysmessage @,,2 1072828
+else
+serv.newitem i_arcane_focus,1,<uid>
+new.timer = <argv[0]>
+new.more1 = <argv[1]>
+timerf <argv[0]>,uid.<new.uid>.remove
+sysmessage @,,2 1072740
+endif
+
+[function IsInArcaneCircle]
+foritems 0
+if (<dispid> == 0FEA) || (<dispid> == 01216) || (<dispid> == 0307F)
+return 1
+endif
+endfor
+return 0
+
+[SPELL 602]
+DEFNAME=s_gift_renewal
+NAME=Gift of Renewal
+SOUND=snd_spell_gift_renewal
+RUNES=//Olorisstra
+CAST_TIME=3.0
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=spellflag_good|spellflag_targ_player
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=24
+SKILLREQ=SPELLWEAVING 0.1
+INTERRUPT=100.0,100.0
+
+on=@effect
+effect 3,0376A,9,32,5005,0
+if <restest i_memory_poison_new>
+consume i_memory_poison_new
+return 0
+endif
+local.level = <src.findid.i_arcane_focus.more1>
+local.hitspertick = <eval 5+(<src.spellweaving>/24)+<local.level>>
+local.duration = <eval 30+(<local.level>*10)>
+tag0.override.regenval_0 += <local.hitspertick>
+f_AddBuff GiftOfRenewal,<local.duration>,<local.hitspertick>
+timerf <local.duration>,tag0.override.regenval_0 -= <local.hitspertick>
+
+[SPELL 603]
+DEFNAME=s_immolating_weapon
+NAME=Immolating Weapon
+SOUND=0
+RUNES=//Thalshara
+CAST_TIME=1.0
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=26
+SKILLREQ=SPELLWEAVING 0.1
+INTERRUPT=100.0,100.0
+
+[SPELL 604]
+DEFNAME=s_attune_weapon
+NAME=Attune Weapon
+SOUND=0
+RUNES=//Haeldril
+CAST_TIME=1.0
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=26
+SKILLREQ=SPELLWEAVING 0.1
+INTERRUPT=100.0,100.0
+
+[SPELL 605]
+DEFNAME=s_thunderstorm
+NAME=Thunderstorm
+SOUND=0
+RUNES=//Erelonia
+CAST_TIME=1.5
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=29
+SKILLREQ=SPELLWEAVING 10.1
+INTERRUPT=100.0,100.0
+
+[SPELL 606]
+DEFNAME=s_nature_fury
+NAME=Nature's Fury
+SOUND=0
+RUNES=//Rauvvrae
+CAST_TIME=1.5
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=29
+SKILLREQ=SPELLWEAVING 10.1
+INTERRUPT=100.0,100.0
+
+[SPELL 607]
+DEFNAME=s_summon_fey
+NAME=Summon Fey
+SOUND=0
+RUNES=//Alalithra
+CAST_TIME=2.0
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=31
+SKILLREQ=SPELLWEAVING 24.1
+INTERRUPT=100.0,100.0
+
+[SPELL 608]
+DEFNAME=s_summon_fiend
+NAME=Summon Fiend
+SOUND=0
+RUNES=//Nylisstra
+CAST_TIME=2.0
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=31
+SKILLREQ=SPELLWEAVING 24.1
+INTERRUPT=100.0,100.0
+
+[SPELL 609]
+DEFNAME=s_reaper_form
+NAME=Reaper Form
+SOUND=0
+RUNES=//Tarisstree
+CAST_TIME=2.5
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=34
+SKILLREQ=SPELLWEAVING 38.1
+INTERRUPT=100.0,100.0
+
+[SPELL 610]
+DEFNAME=s_wildfire
+NAME=Wildfire
+SOUND=0
+RUNES=//Haelyn
+CAST_TIME=2.5
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=34
+SKILLREQ=SPELLWEAVING 38.1
+INTERRUPT=100.0,100.0
+
+[SPELL 611]
+DEFNAME=s_essence_wind
+NAME=Essence of Wind
+SOUND=0
+RUNES=//Anathrae
+CAST_TIME=3.0
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=40
+SKILLREQ=SPELLWEAVING 52.1
+INTERRUPT=100.0,100.0
+
+[SPELL 612]
+DEFNAME=s_dryad_allure
+NAME=Dryad Allure
+SOUND=0
+RUNES=//Rathril
+CAST_TIME=3.0
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=40
+SKILLREQ=SPELLWEAVING 52.1
+INTERRUPT=100.0,100.0
+
+[SPELL 613]
+DEFNAME=s_ethereal_voyage
+NAME=Ethereal Voyage
+SOUND=0
+RUNES=//Orlavdra
+CAST_TIME=3.5
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=60
+SKILLREQ=SPELLWEAVING 66.1
+INTERRUPT=100.0,100.0
+
+[SPELL 614]
+DEFNAME=s_word_death
+NAME=Word of Death
+SOUND=0
+RUNES=//Nyraxle
+CAST_TIME=3.5
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=60
+SKILLREQ=SPELLWEAVING 66.1
+INTERRUPT=100.0,100.0
+
+[SPELL 615]
+DEFNAME=s_gift_life
+NAME=Gift of Life
+SOUND=0
+RUNES=//Illorae
+CAST_TIME=4.0
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=70
+SKILLREQ=SPELLWEAVING 80.1
+INTERRUPT=100.0,100.0
+
+[SPELL 616]
+DEFNAME=s_arcane_empowerment
+NAME=Arcane Empowerment
+SOUND=0
+RUNES=//Aslavdra
+CAST_TIME=4.0
+RESOURCES=
+RUNE_ITEM=0
+SCROLL_ITEM=0
+FLAGS=0
+EFFECT_ID=0
+EFFECT=0
+DURATION=0.0
+MANAUSE=70
+SKILLREQ=SPELLWEAVING 80.1
+INTERRUPT=100.0,100.0
+

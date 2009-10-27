@@ -1,0 +1,448 @@
+[ITEMDEF i_prismoflight_gate]
+ID=i_moongate_blue
+NAME=Prism of Light
+TYPE=T_FLOOR
+
+ON=@Create
+ATTR=ATTR_MOVE_NEVER|ATTR_INVIS
+
+ON=@Step
+IF (<SRC.FINDID.i_prismoflight_admission_ticket>)
+SRC.GO 6472,189
+ELSE
+LINK.SAYLOC 946,3,1073993
+SRC.MOVEBACK
+ENDIF
+
+[ITEMDEF i_prismoflight_admission_ticket]
+ID=i_book_sm
+NAME=Prism of Light admission ticket
+TYPE=T_NORMAL
+
+ON=@Create
+ATTR=attr_newbie|attr_move_never|attr_decay|attr_can_decay
+TIMER=60*60*24
+COLOR=55
+
+ON=@ClientToolTip
+SRC.ADDCLILOC 1060658,Expire time,24 hours
+
+ON=@Timer
+REMOVE
+RETURN 1
+
+[ITEMDEF i_mem_prismoflight_admission_ticket]
+ID=i_memory
+TYPE=T_EQ_SCRIPT
+NAME=prism of light mem item
+
+ON=@Create
+ATTR=attr_invis|attr_decay
+
+ON=@Equip
+TIMER=60*60*24
+
+ON=@Timer
+LINK.REMOVE
+TOPOBJ.MESSAGE @946,3,1 Your Prism of Light admission ticket has expired.
+REMOVE
+RETURN 1
+
+[FUNCTION startprismticketcountdown]
+LOCAL.OLDNEW=<NEW>
+SERV.NEWITEM=i_prismoflight_admission_ticket
+BOUNCE <NEW>
+LOCAL.TICKET=<NEW>
+SERV.NEWITEM i_mem_prismoflight_admission_ticket
+NEW.LINK=<LOCAL.TICKET>
+EQUIP <NEW>
+NEW=<LOCAL.OLDNEW>
+
+[ITEMDEF i_mirror_purification]
+ID=i_wash_basin
+NAME=Mirror of Purification
+
+[ITEMDEF i_mirror_purification_blessed]
+ID=i_wash_basin
+NAME=Mirror of Purification
+
+ON=@Create
+ATTR=attr_blessed
+COLOR=88
+
+ON=@Dclick
+IF (<UID.<REGION.UID>.TYPE> == t_multi)
+IF (<UID.<REGION.UID>.MORE1> == <SRC>)
+SRC.SPELLEFFECT S_GREATER_HEAL,1000,<SRC>
+ENDIF
+ENDIF
+MESSAGE @946,3,1 The mirror must be inside one of your properties to have effect.
+RETURN 1
+
+[ITEMDEF i_map_fragment]
+ID=i_map_rolled
+NAME=Map Fragment
+TYPE=T_NORMAL
+TAG.NOVENDOR=1
+
+[ITEMDEF i_emilio_letter_quest90]
+ID=i_book_sm
+NAME=Emilio's Letter
+TAG.NOVENDOR=1
+
+ON=@Create
+COLOR=88
+
+[ITEMDEF i_portrait_of_the_bride_quest89]
+ID=i_portrait_5
+NAME=Portrait of the Bride
+TAG.NOVENDOR=1
+
+[ITEMDEF i_transparent_heart]
+ID=i_earrings_gold
+NAME=Transparent Heart
+TEVENTS=T_LUCK_ITEM
+TAG.LUCK=100
+WEIGHT=2
+
+ON=@Create
+COLOR=colors_all
+
+[ITEMDEF i_packet_quest87]
+ID=i_book_sm
+NAME=Regina's Letter
+TAG.NOVENDOR=1
+
+ON=@Create
+COLOR=55
+
+[ITEMDEF i_ring_quest86]
+ID=i_ring_gold
+NAME=Regina's Ring
+TAG.NOVENDOR=1
+
+[ITEMDEF 9078]
+DEFNAME=i_quest48_prize
+TYPE=T_NORMAL
+VALUE=1000
+WEIGHT=10
+
+ON=@Create
+ATTR=ATTR_NEWBIE
+
+[ITEMDEF i_power_crystal]
+ID=i_crystal_1
+NAME=Power Crystal
+VALUE=1000
+
+ON=@Create
+COLOR=colors_gray
+
+[ITEMDEF 02305]
+DEFNAME=i_flower_garland
+NAME=flower garland
+TYPE=T_CLOTHING
+VALUE=10
+SKILLMAKE=SKILL_TAILORING 10.0,t_sewing_kit
+RESOURCES=5 i_cloth
+REQSTR=10
+ARMOR=40
+TEVENTS=T_LUCK_ITEM
+TAG.LUCK=30
+
+ON=@Create
+HITPOINTS={50 100}
+
+[ITEMDEF i_librarian_key]
+ID=i_key_copper
+NAME=Librarian's Key
+TYPE=T_NORMAL
+TAG.NOVENDOR=1
+
+ON=@Create
+ATTR=ATTR_NEWBIE
+COLOR=88
+
+[ITEMDEF i_thesis_notes]
+ID=i_book_sm
+NAME=Disintegrating Thesis Notes
+TYPE=T_NORMAL
+TAG.NOVENDOR=1
+
+ON=@Create
+COLOR=55
+
+[ITEMDEF 02D93]
+DEFNAME=i_dryads_blessing
+TYPE=T_NORMAL
+NAME=Dryad's Blessing
+VALUE=5000
+TAG.NOVENDOR=1
+
+ON=@Create
+ATTR=ATTR_NEWBIE
+
+[ITEMDEF i_spirit_bottle]
+ID=i_bottle_6
+NAME=Spirit Bottle
+TYPE=T_NORMAL
+
+ON=@Create
+COLOR=88
+
+[ITEMDEF i_silk_of_dread_spider]
+ID=i_wool
+NAME=ball of dread spider silk
+TYPE=T_NORMAL
+
+ON=@Create
+COLOR=0481
+
+[ITEMDEF i_leon_special_bandage]
+ID=i_bandage
+NAME=Alchemist's bandage
+TYPE=T_NORMAL
+
+ON=@Create
+COLOR=0312
+
+[ITEMDEF i_father_gratitude]
+ID=i_hammer_smith
+NAME=Father's Gratitude
+TEVENTS=T_PROPRIEDADES
+TAG.DAMINCREASE=10
+TAG.SWINGINCREASE=10
+TAG.HITCHANCEINCREASE=10
+TEVENTS=t_luck_item
+TAG.LUCK=100
+
+ON=@Create
+COLOR={01a 03a}
+HITPOINTS=255
+
+ON=@Dclick
+IF (<CONT>==<SRC>)
+IF (<SRC.ISNEARTYPE t_forge 3>) && (<SRC.ISNEARTYPE t_anvil 3>)
+SRC.CTAG.RUO.MSG
+SRC.SDIALOG d_bs_ruo
+ELSE
+SRC.SYSMESSAGE Voce precisa estar perto de um forge e um anvil.
+ELSE
+SRC.SYSMESSAGE Voce precisa estar com o martelo equipado.
+ENDIF
+ENDIF
+RETURN 1
+
+[ITEMDEF i_old_ring]
+ID=i_ring_gold
+NAME=old ring
+
+ON=@Create
+COLOR=color_o_copper
+
+[ITEMDEF i_old_necklace]
+ID=i_necklace_gold
+NAME=old necklace
+
+ON=@Create
+COLOR=color_o_copper
+
+[ITEMDEF i_book_bound_red_leather]
+ID=i_spellbook
+NAME=a book
+TYPE=T_NORMAL
+
+ON=@Create
+COLOR=0846
+
+[CHARDEF c_werewolf_bride]
+ID=c_tsuki_wolf
+NAME=Aminia The Master Weaponsmiths Wife
+CAN=MT_WALK|MT_RUN|MT_EQUIP
+ARMOR=70
+RESOURCES=8 i_reag_bone
+bloodcolor=04ac
+CATEGORY=Addon
+SUBSECTION=Misc
+DESCRIPTION=Aminia the Werewolf
+
+ON=@Create
+NPC=brain_undead
+STR=345
+MAXHITS=420
+DEX=100
+INT=150
+PARRYING={45.0 55.0}
+MAGICRESISTANCE=80.0
+TACTICS=100.0
+WRESTLING=100.0
+FAME=7000
+KARMA=-8000
+COLOR=057a
+
+ON=@NPCRestock
+ITEM=tm_questbagtrinkets
+ITEM=i_gold,{300 400}
+
+[ITEMDEF i_wolf_slayer_dagger]
+ID=i_dagger
+NAME=dagger
+TEVENTS=T_PROPRIEDADES
+
+ON=@Create
+HITPOINTS={50 80}
+
+[ITEMDEF head_of_garrison]
+ID=i_flesh_head
+NAME=Garrison's Head
+TYPE=T_NORMAL
+
+[CHARDEF c_garrison]
+ID=c_man
+NAME=Lord Garrison
+DESIRES=i_gold,e_notoriety
+AVERSIONS=t_TRAP,t_eerie_stuff
+RESOURCES=head_of_garrison, i_flesh_torso, i_flesh_right_arm, i_flesh_left_arm, i_flesh_left_leg, i_flesh_right_leg, i_blood_2
+
+CATEGORY=DO NOT USE
+SUBSECTION=QUEST MONSTERS
+DESCRIPTION=Lord Garrison
+
+ON=@Create
+EVENTS +e_resist_magic
+COLOR=colors_skin
+STR={125 160}
+DEX={81 95}
+INT={61 75}
+
+KARMA=-2500
+FENCING={50.0 95.0}
+PARRYING={85.0 95.0}
+SWORDSMANSHIP={85.0 95.0}
+WRESTLING={70.0 95.0}
+MACEFIGHTING={70.0 95.0}
+TACTICS={85.0 95.0}
+
+
+NPC=brain_human
+
+ITEMNEWBIE=random_male_hair
+COLOR=colors_hair
+ITEMNEWBIE=random_facial_hair
+COLOR=match_hair
+
+ON=@NPCRestock
+ITEM=i_chainmail_tunic
+ITEM=i_chainmail_leggings
+ITEM=i_chainmail_coif
+ITEM=i_leather_gorget
+ITEM=i_shield_heater
+ITEM=i_sword_broad
+ITEM=i_boots_calf
+ITEM=random_coin_purse
+
+ON=@NPCSEENEWPLAYER
+IF (<SRC.ISPLAYER>)
+DORAND 5
+SAY Lord British? WHat did he ever do for us!
+SAY I'm glad he is dead, a worthless ruler that's what he was...
+SAY A coward and a traitor, that's all I think of British
+SAY The man was a fraud!
+SAY I'd have killed him myself if someone hadn't beaten me to it
+ENDDO
+ENDIF
+
+[FUNCTION quest125setwolfslayerdagger]
+LOCAL.OLDOBJ=<OBJ>
+OBJ=<FINDID.i_wolf_slayer_dagger>
+OBJ.COLOR=04ac
+OBJ.TAG.DAMINCREASE=10
+OBJ.TAG.HITCHANCEINCREASE=10
+OBJ.SETSLAYER
+OBJ.TAG.SLAYERGROUP=WOLF
+OBJ.NAME=Wolf Slayer Dagger
+TRYSRC <UID> SRC.OBJ.RESENDTOOLTIP 1
+OBJ.MESSAGE @946,3,1 Your dagger now has some magical properties.
+OBJ=<LOCAL.OLDOBJ>
+
+[FUNCTION DOOMSUMMONBONEDAEMON]
+OBJ.ANIM 16
+OBJ.SAYLOC 33,3,1050031
+OBJ.TIMERF 2,DOOMSAYTIMING
+SYSMESSAGELOC 55,3,1050036
+SERV.NEWNPC C_BONE_DAEMON
+NEW.NAME=the devourer
+NEW.GO=442,204,-3,3
+NEW.HOME=442,204,-3,3
+NEW.HOMEDIST=30
+NEW.EVENTS +e_questsylvana_daemon
+LOCAL.DEVOURER=<NEW>
+SERV.NEWITEM i_doom_bone_daemon_remover,1,<LOCAL.DEVOURER>
+NEW.TIMER=60*10
+
+[FUNCTION DOOMSAYTIMING]
+SAY @33,3,1 Go forth and vanquish the devourer that has been summoned!
+
+[ITEMDEF i_salivas_feather]
+ID=i_feather
+TYPE=t_FEATHER
+NAME=Saliva's Feather
+VALUE=2
+WEIGHT=.1
+CATEGORY=Do Not Use 
+SUBSECTION=Quest Items
+DESCRIPTION=Saliva's Feather
+
+ON=@CREATE
+COLOR=COLORS_YELLOW
+
+[ITEMDEF i_hydra_scale]
+ID=i_reag_serpent_scale
+NAME=hydra's scales
+TYPE=T_INGOT
+VALUE=3
+PILE=1
+WEIGHT=.1
+CATEGORY=Do Not Use
+SUBSECTION=Quest Items
+DESCRIPTION=Hydra Scales
+
+[ITEMDEF i_thrashers_tail]
+ID=i_hide
+NAME=thrasher's tail
+TYPE=t_hide
+CATEGORY=Do Not Use
+SUBSECTION=Quest Items
+DESCRIPTION=thrasher's tail
+
+[ITEMDEF 026c3]
+DEFNAME=i_repeating_crossbow
+NAME=Repeating Crossbow
+DAM=10,12
+SPEED=41
+WEIGHT=5
+//TEVENTS=t_showprops
+TYPE=t_weapon_XBOW
+TWOHANDS=Y
+TDATA3=i_xbolt
+TDATA4=i_xbolt_x
+SKILLMAKE=SKILL_BOWCRAFT 90.0
+RESOURCES=10 i_log
+SKILL=Archery
+CATEGORY=Provisions - Weapons
+SUBSECTION=Bows
+DESCRIPTION=Repeating Crossbow
+REQSTR=30
+ON=@create
+hitpoints={50 100}
+
+[ITEMDEF i_resolves_bridle]
+ID=i_bridle_horse
+NAME=Resolve's Bridle
+RESOURCES=2 i_HIDE, 1 i_ingot_iron
+WEIGHT=5
+CATEGORY=Do Not Use
+SUBSECTION=Quest Items
+DESCRIPTION=Resolve's Bridle
+
+[EOF]
