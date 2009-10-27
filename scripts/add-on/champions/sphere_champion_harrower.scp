@@ -296,7 +296,7 @@ IF (<ATTACKER>)
 				SERV.NEWITEM=<HVAL <DEF.CHAMP_LOOT_VERY_HIGH>>
 				REF2.BOUNCE <NEW>
 				ENDFOR
-				IF (<DEF.CHAMP_CHANCE_TO_GET_ARTY> >= <R1,100>)
+				IF (<DEF.scp.Champions_ArtyChamp> >= <R1,100>)
 				SERV.NEWITEM <DEF.champ_Harrower_REWARD>
 				REF2.BOUNCE <NEW>
 				ENDIF

@@ -34,12 +34,14 @@ scripts/maps/sphere_map1.scp
 // scripts/maps/sphere_map2.scp
 // scripts/maps/sphere_map3.scp
 // scripts/maps/sphere_map4.scp
+// scripts/maps/sphere_map5.scp
 scripts/maps/sphere_map_points0.scp
 // scripts/maps/sphere_map_points0_ml.scp
 scripts/maps/sphere_map_points1.scp
 // scripts/maps/sphere_map_points2.scp
 // scripts/maps/sphere_map_points3.scp
 // scripts/maps/sphere_map_points4.scp
+// scripts/maps/sphere_map_points5.scp
 // -----------------------------------
 scripts/sphere_menu.scp
 scripts/sphere_name.scp
@@ -48,6 +50,11 @@ scripts/sphere_spawns.scp
 scripts/sphere_speech.scp
 scripts/sphere_skills.scp
 scripts/sphere_spells.scp
+scripts/sphere_spells_alchemy.scp
+scripts/sphere_spells_necromancy.scp
+scripts/sphere_spells_chivalry.scp
+scripts/sphere_spells_spellweaving.scp
+scripts/sphere_spells_mysticism.scp
 scripts/sphere_newb.scp
 scripts/sphere_template.scp
 scripts/sphere_template_loot.scp
@@ -58,11 +65,15 @@ scripts/speech/
 // -----------------------------------
 //          Stone system
 // -----------------------------------
-// scripts/stones/
-// scripts/stones/guilds/
-// scripts/stones/towns/
+scripts/stones/
+scripts/stones/guilds/
+scripts/stones/towns/
 // -----------------------------------
-// scripts/custom/
+scripts/add-on/
+scripts/add-on/champions/
+scripts/add-on/enchants/
+scripts/add-on/skills/
+scripts/add-on/spells/
 
 [OBSCENE]
 

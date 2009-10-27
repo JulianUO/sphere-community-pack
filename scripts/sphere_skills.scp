@@ -48,16 +48,16 @@ ON=@Fail
 	SRC.SYSMESSAGE You toss the failed mixture from the mortar, unable to create a potion from it.
 
 ON=@Abort
-	SRC.SYSMESSAGE You fail to complete the potion.
+SRC.MESSAGE @33,,2 500290
 
 [SKILL 1]
 DEFNAME=SKILL_ANATOMY
 KEY=Anatomy
 TITLE=Scholar
-PROMPT_MSG=Whom shall I examine?
+PROMPT_MSG=@,,2 500321
 
 DELAY=3.0,1.0
-ADV_RATE=2.5,50.0,200.0
+ADV_RATE=1.0,50.0,150.0
 
 BONUS_STATS=50
 BONUS_STR=0
@@ -68,17 +68,21 @@ STAT_STR=15
 STAT_INT=70
 STAT_DEX=15
 
-ON=@Fail
-	SRC.SYSMESSAGE You can't think of anything about this creature
+on=@success
+if <def.NewSkills_Anatomy> == 1
+f_anatomy_success <src.targ.uid>
+skillgain Anatomy <eval <Anatomy>/10>
+return 1
+endif
 
-ON=@Abort
-	SRC.SYSMESSAGE You fail to examine the creature fully.
+ON=@Fail
+SRC.MESSAGE @,,2 1042915
 
 [SKILL 2]
 DEFNAME=SKILL_ANIMAL_LORE
 KEY=AnimalLore
 TITLE=Scholar
-PROMPT_MSG=What animal should I look at?
+PROMPT_MSG=@,,2 500328
 DELAY=3.0,1.0
 ADV_RATE=2.5,50.0,200.0
 
@@ -90,17 +94,23 @@ BONUS_DEX=0
 BONUS_INT=100
 BONUS_STATS=50
 
-ON=@Fail
-	SRC.SYSMESSAGE You can't think of anything off hand
+on=@success
+if <def.NewSkills_AnimalLore> == 1
+	if <src.act.brain>
+	f_ResendDialog d_animal_lore
+	skillgain AnimalLore <eval <AnimalLore>/10>
+	return 1
+	endif
+endif
 
-ON=@Abort
-	SRC.SYSMESSAGE You stop trying to understand the creature.
+ON=@Fail
+SRC.MESSAGE @,,2 500334
 
 [SKILL 3]
 DEFNAME=SKILL_APPRAISE
 KEY=ItemID
 TITLE=Merchant
-PROMPT_MSG=What do you wish to appraise and identify?
+PROMPT_MSG=@,,2 500343
 DELAY=1.0
 ADV_RATE=2.5,50.0,200.0
 STAT_STR=0
@@ -112,7 +122,7 @@ BONUS_INT=100
 BONUS_STATS=25
 
 ON=@Fail
-	SRC.SYSMESSAGE You can't think of anything off hand
+SRC.MESSAGE @,,2 500334
 
 ON=@Abort
 	SRC.SYSMESSAGE You stop trying to appraise the item.
@@ -121,16 +131,23 @@ ON=@Abort
 DEFNAME=SKILL_ARMSLORE
 KEY=ArmsLore
 TITLE=Arms%s
-PROMPT_MSG=What would you like to evaluate?
+PROMPT_MSG=@,,2 500906
 DELAY=1.0
 STAT_STR=10
-STAT_INT=50
+STAT_INT=5
 STAT_DEX=15
 BONUS_STR=33
 BONUS_DEX=33
 BONUS_INT=34
 BONUS_STATS=25
 ADV_RATE=2.5,50.0,200.0
+
+on=@success
+if <def.NewSkills_ArmsLore> == 1
+f_armslore_success <src.targ.uid>
+skillgain ArmsLore <eval <ArmsLore>/10>
+return 1
+endif
 
 ON=@Fail
 	SRC.SYSMESSAGE You are uncertain about this item 
@@ -157,7 +174,7 @@ BONUS_STATS=10
 DEFNAME=SKILL_Begging
 KEY=Begging
 TITLE=Beggar
-PROMPT_MSG=To whom do you wish to grovel?
+PROMPT_MSG=@,,2 500397
 DELAY=2.0
 ADV_RATE=2.5,50.0,200.0
 STAT_STR=5
@@ -168,8 +185,12 @@ BONUS_DEX=50
 BONUS_INT=50
 BONUS_STATS=10
 
-ON=@Abort
-	SRC.SYSMESSAGE You fail utterly in your attempt to grovel.
+on=@select
+if <def.NewSkills_Begging> == 1
+sysmessage @,,2 500397 // To whom do you wish to grovel?
+targetf f_begging_start
+return 1
+endif
 
 [SKILL 7]
 DEFNAME=SKILL_Blacksmith
@@ -210,7 +231,7 @@ ADV_RATE=10.0,200.0,800.0
 VALUES=1,30,200
 
 ON=@Fail
-	SRC.SYSMESSAGE You fail to create the item
+SRC.SYSMESSAGE @,,2 1044043
 
 ON=@Abort
 	SRC.SYSMESSAGE You fail to complete the item.
@@ -231,7 +252,7 @@ BONUS_STATS=5
 ADV_RATE=2.5,50.0,200.0
 
 ON=@Fail
-	SRC.SYSMESSAGE You attempt to calm everyone, but fail.
+SRC.MESSAGE @,,2 500613
 
 ON=@Abort
 	SRC.SYSMESSAGE You fail to complete the song.
@@ -252,7 +273,7 @@ BONUS_STATS=50
 ADV_RATE=2.5,50.0,200.0
 
 ON=@Fail
-	SRC.SYSMESSAGE You fail to ignite the campfire.
+	SRC.MESSAGE @,,2 501696
 
 ON=@Abort
 	SRC.SYSMESSAGE You give up trying to light the campfire.
@@ -274,7 +295,7 @@ ADV_RATE=2.5,50.0,200.0
 VALUES=1,20,80
 
 ON=@Fail
-	SRC.SYSMESSAGE You fail to create the item
+SRC.SYSMESSAGE @,,2 1044043
 
 ON=@Abort
 	SRC.SYSMESSAGE You fail to complete the item.
@@ -296,7 +317,7 @@ ADV_RATE=2.5,50.0,200.0
 VALUES=1,20,80
 
 ON=@Fail
-	SRC.SYSMESSAGE Thy trembling hand results in an unusable map.
+	SRC.MESSAGE @,,2 501793
 
 ON=@Abort
 	SRC.SYSMESSAGE You fail to complete the map.
@@ -318,7 +339,7 @@ ADV_RATE=2.5,50.0,200.0
 VALUES=1,20,80
 
 ON=@Fail
-	SRC.SYSMESSAGE You burn the food to a crisp! It's ruined.
+SRC.MESSAGE @,,2 500686
 
 ON=@Abort
 	SRC.SYSMESSAGE You stop cooking the food.
@@ -339,7 +360,7 @@ BONUS_STATS=25
 ADV_RATE=2.5,50.0,200.0
 
 ON=@Fail
-	SRC.SYSMESSAGE You can see nothing hidden there.
+	SRC.MESSAGE @,,2 500817
 
 ON=@Abort
 	SRC.SYSMESSAGE You stop looking for anything hidden.
@@ -369,7 +390,7 @@ ON=@Abort
 DEFNAME=Skill_EvalInt
 KEY=EvaluatingIntel
 TITLE=Scholar
-PROMPT_MSG=Select char to inspect.
+PROMPT_MSG=@,,2 500906
 DELAY=1.0
 STAT_STR=5
 STAT_INT=60
@@ -380,11 +401,24 @@ BONUS_INT=100
 BONUS_STATS=50
 ADV_RATE=2.5,50.0,200.0
 
-ON=@Fail
-	SRC.SYSMESSAGE You cannot seem to judge the creature correctly.
+on=@start
+if <def.NewSkills_EvalInt> == 1
+	if <src.targ.isitem>
+	sysmessage <def.evalint_item>
+	action = -1
+	return 1
+	endif
+endif
 
-ON=@Abort
-	SRC.SYSMESSAGE You fail to inspect the creature completely.
+on=@success
+if <def.NewSkills_EvalInt> == 1
+f_evalint_success <src.targ.uid>
+skillgain EvaluatingIntel <eval <EvaluatingIntel>/10>
+return 1
+endif
+
+ON=@Fail
+f_evalint_fail <src.targ.uid>
 
 [SKILL 17]
 DEFNAME=Skill_Healing
@@ -412,7 +446,7 @@ ON=@Abort
 DEFNAME=Skill_Fishing
 KEY=Fishing
 TITLE=Fisher%s
-PROMPT_MSG=What water do you want to fish in?
+PROMPT_MSG=@,,2 500974
 DELAY=2.0
 STAT_STR=40
 STAT_INT=30
@@ -425,7 +459,7 @@ ADV_RATE=2.5,50.0,200.0
 VALUES=1,30,200
 
 ON=@Fail
-	SRC.SYSMESSAGE You fish a while, but fail to catch anything.
+	SRC.MESSAGE @,,2 503171
 
 ON=@Abort
 	SRC.SYSMESSAGE You pull your line back in and stop fishing.
@@ -446,7 +480,7 @@ BONUS_STATS=25
 ADV_RATE=2.5,50.0,200.0
 
 ON=@Fail
-	SRC.SYSMESSAGE You can tell nothing about the corpse.
+src.sysmessageloc @,,2 1055048
 
 ON=@Abort
 	SRC.SYSMESSAGE You decide you'd rather not look at that.
@@ -489,16 +523,16 @@ BONUS_STATS=25
 ADV_RATE=2.5,50.0,200.0
 
 ON=@Fail
-	SRC.SYSMESSAGE You can't seem to hide here.
+MESSAGE @,,2 501241
 
 ON=@Abort
-	SRC.SYSMESSAGE You stop trying to hide.
+MESSAGE @,,2 501241
 
 [SKILL 22]
 DEFNAME=SKILL_PROVOCATION
 KEY=Provocation
 TITLE=Bard
-PROMPT_MSG=Whom do you wish to incite?
+PROMPT_MSG=@,,2 501587
 DELAY=3.0
 STAT_STR=20
 STAT_INT=60
@@ -510,7 +544,7 @@ BONUS_STATS=5
 ADV_RATE=2.5,50.0,200.0
 
 ON=@Fail
-	SRC.SYSMESSAGE Your music fails to incite enough anger.
+SRC.sysmessageloc -1,501599
 
 ON=@Abort
 	SRC.SYSMESSAGE You decide not to incite anything for now.
@@ -542,7 +576,7 @@ ON=@Abort
 DEFNAME=Skill_LockPick
 KEY=LockPicking
 TITLE=Locksmith
-PROMPT_MSG=What do you want to pick?
+PROMPT_MSG=@,,2 502068
 DELAY=3.0
 STAT_STR=20
 STAT_INT=60
@@ -723,6 +757,31 @@ BONUS_DEX=100
 BONUS_INT=0
 BONUS_STATS=10
 ADV_RATE=10.0,200.0,800.0
+
+ON=@Start
+IF (<ACT.TAG0.DOOMARTIFACT>) && !(<STEALING> >= 900)
+SRC.SYSMESSAGE You need 90.0 or more on stealing to take this artifact.
+RETURN 1
+ELIF (<ACT.TAG0.DOOMARTIFACT>) && !(<ACT.TAG0.DOOMJAFOIPEGO>)
+	IF !(<R5>)
+	ACT.TAG.DOOMJAFOIPEGO=1
+	ACT.ATTR &= ~attr_move_never
+	LOCAL.P=<ACT.P>
+	SERV.NEWITEM=i_doomartifact_spawn
+		IF ((<ACT.P.X>==471) && (<ACT.P.Y>==99)) || ((<ACT.P.X>==472) && (<ACT.P.Y>==96)) || (STRCMPI(<REGION.NAME>,Doom))
+		NEW.P=<ACT.P>
+		ELSE
+		NEW.DOOMLOCATION
+		ENDIF
+	ACT.BOUNCE
+	NEW.MORE1=<ACT.BASEID>
+	NEW.TIMER=<EVAL 60*60*<ACT.TAG0.DOOMARTIFACT>>
+	RETURN 1
+	ELSE
+	SYSMESSAGE @55 You fail!
+	RETURN 1
+	ENDIF
+ENDIF
 
 ON=@Fail
 	SRC.SYSMESSAGE You fail to steal the item.
@@ -1105,6 +1164,48 @@ BONUS_INT=100
 BONUS_STATS=50
 ADV_RATE=2.5,50.0,200.0
 
+[SKILL 55]
+DEFNAME=SKILL_MYSTICISM
+KEY=Mysticism
+TITLE=Mystic
+STAT_STR=20
+STAT_INT=70
+STAT_DEX=30
+BONUS_STR=0
+BONUS_DEX=0
+BONUS_INT=100
+BONUS_STATS=50
+ADV_RATE=2.5,50.0,200.0
+
+[SKILL 56]
+DEFNAME=SKILL_IMBUING
+KEY=Imbuing
+TITLE=Artificer
+DELAY=3.0
+STAT_STR=15
+STAT_INT=100
+STAT_DEX=15
+BONUS_STR=0
+BONUS_DEX=0
+BONUS_INT=100
+BONUS_STATS=10
+ADV_RATE=10.0,200.0,800.0
+VALUES=1,30,200
+
+[SKILL 57]
+DEFNAME=SKILL_THROWING
+KEY=Throwing
+TITLE=Bladeweaver
+STAT_STR=40
+STAT_INT=30
+STAT_DEX=70
+BONUS_STR=0
+BONUS_DEX=95
+BONUS_INT=5
+BONUS_STATS=10
+ADV_RATE=10.0,200.0,800.0
+FLAGS=0200|skf_fight
+
 [SKILLCLASS 0]
 // undeclared class.
 // max skills for players of this skill class. 
@@ -1172,5 +1273,8 @@ Chivalry=100.0
 Bushido=100.0
 Ninjitsu=100.0
 Spellweaving=100.0
+Mysticism=100.0
+Imbuing=100.0
+Throwing=100.0
 
 [EOF]

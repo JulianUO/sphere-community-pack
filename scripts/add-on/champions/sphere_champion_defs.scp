@@ -2,9 +2,7 @@
 CHAMP_LOOT_VERY_HIGH {RANDOM_PLATEMAIL_INVULNERABILITY 1 RANDOM_WEAPON_VANQ 1 RANDOM_WEAPON_POWER 1 RANDOM_PLATEMAIL_FORTIFICATION 1}
 CHAMP_CHANCE_TO_GET_PSONMINIONS 1000 //chance to get power scrolls or transcendence scrolls as: 1/THISDEF, example: 1/1000
 CHAMP_POWERSCROLL_SKILLS {1 1 2 1 4 1 5 1 7 1 8 1 9 1 11 1 15 1 16 1 17 1 22 1 25 1 26 1 27 1 31 1 34 1 35 1 37 1 39 1 40 1 41 1 42 1 43 1 45 1 46 1 29 1 52 1 44 1}
-CHAMPIONLEVELMINUTE 10*60 //countdown timer for level restart or regression
-TOTALMONSTERS 128 //number of monsters spawned by a champion spawn
-CHAMP_CHANCE_TO_GET_ARTY 30 //chance to get a champ artifact in %
+
 
 //Statmsum overrides by the different levels of Stat Scrolls
 SPHERECHAMPIONS_STATSUMINCREASE_1 230

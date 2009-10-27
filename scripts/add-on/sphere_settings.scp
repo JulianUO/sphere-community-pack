@@ -16,6 +16,17 @@ VERSION=0.56b
 // Every setting has its own description.
 //
 ///////////////////////////////////////////////////////////////
+//////// Skills Settings
+///////////////////////////////////////////////////////////////
+// Choose between using new or default skills. Most of them are OSI-Like
+// If not, you can find documentation in the forums.
+scp.NewSkills_Anatomy=1
+scp.NewSkills_AnimalLore=1
+scp.NewSkills_ArmsLore=1
+scp.NewSkills_Begging=1
+scp.NewSkills_EvalInt=1
+
+///////////////////////////////////////////////////////////////
 //////// General Settings
 ///////////////////////////////////////////////////////////////
 // Activate or deactivate the current/max followers system
@@ -34,22 +45,37 @@ scp.OSIStats=1
 // Formula is: (Base Damage * Eval. Int. Bonus) * ((Spell Damage Increase / 100) + 1)
 scp.OSISpellDamage=1
 
-scp.MagicProperties_DamageIncrease
-scp.MagicProperties_DexterityBonus
-scp.MagicProperties_FasterCastRecovery
-scp.MagicProperties_FasterCasting
-scp.MagicProperties_HitPointIncrease
-scp.MagicProperties_IntelligenceBonus
-scp.MagicProperties_LowerManaCost
-scp.MagicProperties_LowerReagentCost
-scp.MagicProperties_Luck
-scp.MagicProperties_MageArmor
-scp.MagicProperties_MageWeapon
-scp.MagicProperties_ManaIncrease
-scp.MagicProperties_SlayerWeapon
-scp.MagicProperties_SpellDamageIncrease
-scp.MagicProperties_StaminaIncrease
-scp.MagicProperties_StrengthBonus
+scp.MagicProperties_DamageIncrease=0
+scp.MagicProperties_DexterityBonus=0
+scp.MagicProperties_FasterCastRecovery=0
+scp.MagicProperties_FasterCasting=0
+scp.MagicProperties_HitPointIncrease=0
+scp.MagicProperties_IntelligenceBonus=0
+scp.MagicProperties_LowerManaCost=0
+scp.MagicProperties_LowerReagentCost=0
+scp.MagicProperties_Luck=0
+scp.MagicProperties_MageArmor=0
+scp.MagicProperties_MageWeapon=0
+scp.MagicProperties_ManaIncrease=0
+scp.MagicProperties_SlayerWeapon=0
+scp.MagicProperties_SpellDamageIncrease=0
+scp.MagicProperties_StaminaIncrease=0
+scp.MagicProperties_StrengthBonus=0
+
+///////////////////////////////////////////////////////////////
+//////// OSI Champion System
+///////////////////////////////////////////////////////////////
+// Chance to get a champ artifact in % (0-100)
+// 100 = Always. 0 = Never.
+scp.Champions_ArtyChamp=30
+
+// Amount of monsters spawned by champion spawn.
+// Caution! Check MaxComplexity setting in sphere.ini!
+scp.Champions_TotalMonsters=128
+
+// Countdown timer for level restart or regression
+// In seconds. Example: 10*60 = 10 minutes
+scp.Champions_LevelMinutes=10*60
 
 ///////////////////////////////////////////////////////////////
 //////// AOS Custom Vendor System
@@ -103,13 +129,13 @@ scp.Vendor_SalaryPaymentDiv=12
 //////// Quest Bounty Board System
 ///////////////////////////////////////////////////////////////
 // Time before the bounty death dialog is opened to the death player
-scp.Bounty_Delay	8	
+scp.Bounty_Delay=8	
 
 // Amount of DAYS before an uncollected bounty decays
-scp.Bounty_Decay	14	
+scp.Bounty_Decay=14	
 
 // Minimum amount of gold coins to pay for a bounty
-scp.Bounty_Minimum 1000	
+scp.Bounty_Minimum=1000	
 
 
 [EOF]
