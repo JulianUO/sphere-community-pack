@@ -1,4 +1,3 @@
-[EVENTS e_resisting_spell]
 // The event is in e_PlayerGenericEvent
 // sphere_events_player.scp file
 // But the skill is done and this function below is needed

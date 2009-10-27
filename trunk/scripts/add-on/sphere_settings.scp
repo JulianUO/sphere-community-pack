@@ -25,6 +25,8 @@ scp.NewSkills_AnimalLore=1
 scp.NewSkills_ArmsLore=1
 scp.NewSkills_Begging=1
 scp.NewSkills_EvalInt=1
+scp.NewSkills_SpiritSpeak=1
+scp.NewSkills_ResistingSpells=1
 
 ///////////////////////////////////////////////////////////////
 //////// General Settings
@@ -37,9 +39,17 @@ scp.Followers=1
 // Only used if "scp.Followers" is equal 1. Default = 5
 scp.MaxFollowers=5
 
+// Delay for re-resurrection in ankhs. 0 deactivates it.
+// In seconds. Default = 60
+scp.ResurrectionDelay=60
+
 // Activate or deactivate the calculation of stats according to OSI.
 // <boolean> (1 if yes, 0 if not). Default = 1
 scp.OSIStats=1
+
+// Activate or deactivate the calculation of smelt chances according to OSI.
+// <boolean> (1 if yes, 0 if not).
+scp.OSIOreFormula=1
 
 // Set to 1 if you want to use EvalInt, Int and Inscription as Damage Modifiers for Spells
 // Formula is: (Base Damage * Eval. Int. Bonus) * ((Spell Damage Increase / 100) + 1)
@@ -124,6 +134,127 @@ scp.Vendor_SalaryAdditional=165
 // How many times the salary get paid on a day? Default = 12
 // NOTE: This will just make the salary get paid on small amounts X times per day.
 scp.Vendor_SalaryPaymentDiv=12
+
+///////////////////////////////////////////////////////////////
+//////// AOS House System
+///////////////////////////////////////////////////////////////
+// When a house got demolished, you want get back your house deed or the house value in gold? 
+// (0 = House Value in Gold / 1 = House Deed)
+scp.House_UseDeeds=0
+
+// House decay timer, in days. 
+// 0 = Decay Off
+scp.House_DecayTimer=5
+
+// House decay timer for Demolition Pending houses, in days.
+// Houses can only be pended to demolition by a Game Master.
+scp.House_DemolitionPend=5
+
+// Max number of houses allower per account.
+scp.House_MaxPerAccount=1
+
+// All character of the house owner account will get owner access in the house?
+// <boolean> (0 = No / 1 = Yes)
+scp.House_AccOwner=1
+
+// Enable house command to place trash barrel
+// <boolean> (0 = No / 1 = Yes)
+scp.House_UseTrash=1
+
+// Minimum area distance allowed between placed houses. 
+// Default = 1
+scp.House_PlaceMinDistArea=1
+
+// Minimum front distance allowed between placed houses. 
+// Default = 5
+scp.House_PlaceMinDistFront=5
+
+// Allow place houses on Ilshenar facet. Default = 0
+// <boolean> (0 = No / 1 = Yes)
+scp.House_PlaceIlshenar=0
+
+// Period in days that a player must wait to place a new house before house placement. 
+// Default = 7
+scp.House_PlaceWaitPeriod=7
+
+// % of house value that will be refunded on demolish 
+// Default = 90
+scp.House_DemolishRefund=90
+
+// Use Global Storage Limit value or calculate it by the house area? 
+// 0 = Calculate by House Area / 1 = Global Value
+scp.House_GlobalStorage=0
+
+// Global max secured storage allowed per house 
+// (Secure containers + items inside secure containers)
+scp.House_GlobalSecStorage=600
+
+// Global max locked items allowed per house 
+// This value will cont on Secure Storage Limit.
+scp.House_GlobalLockdown		100	
+
+// Owner of the house can change the door access?
+// <boolean> (0 = No / 1 = Yes)
+scp.House_DoorAccess=1
+
+// Max number of co-owners allowed per house
+scp.House_MaxCoowners=15
+
+// Max number of friends allowed per house
+scp.House_MaxFriends=50
+
+// Max number of bans allowed per house
+scp.House_MaxBans=50
+
+// Max number of players on access list allowed per house
+scp.House_MaxAccess=50
+
+// Allow enter on private houses only who is in access list
+// <boolean> (0 = No / 1 = Yes)
+scp.House_DepthOfField=1
+
+// Enable house ban engine?
+// <boolean> (0 = No / 1 = Yes)
+scp.House_BanEngine=1
+
+// Enable banking from the house sign?
+// <boolean> (0 = No / 1 = Yes)
+scp.House_AllowBanking=0
+
+// Notice player using dialog when your house decay or when it removed from the house access list
+// <boolean> (0 = No / 1 = Yes)
+scp.House_NoticeSystem=1
+
+// Only public houses can change house sign?
+// <boolean> (0 = No / 1 = Yes)
+scp.House_SignChange=1
+
+// Enable AOS Customization system?
+// <boolean> (0 = No / 1 = Yes)
+scp.House_AoSDesignTool=1
+
+// Price per customized component, in gp's 
+// Default = 500
+scp.House_PricePerComp=500
+
+// Classic houses can be converted into custom foundations?
+// <boolean> (0 = No / 1 = Yes)
+scp.House_AllowConvert=1
+
+// Enable house interactivity with custom vendors
+// <boolean> (0 = No / 1 = Yes)
+scp.House_UseVendors=0
+
+// Vendors can be placed only on public houses?
+// <boolean> (0 = No / 1 = Yes)
+scp.House_VendorsPublic=1
+
+// Use Global Vendor Limit or calculate it by the house area? 
+// 0 = Calculate by House Area / 1 = Global Value
+scp.House_GlobalMaxVendors=0
+
+// Max number of vendors allowed per house
+scp.House_MaxVendors=10
 
 ///////////////////////////////////////////////////////////////
 //////// Quest Bounty Board System

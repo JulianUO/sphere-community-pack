@@ -50,6 +50,7 @@ f_onserver_blockip
 // ARGS  --> account name
 // ARGO  --> the client creating the character
 [FUNCTION f_onchar_create]
+src.remove_invalid_houses
 
 // This function is called before client is going to delete a character.
 // SRC  --> char being deleted
