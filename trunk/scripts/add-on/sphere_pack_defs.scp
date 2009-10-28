@@ -1,0 +1,8 @@
+[defname sounds_new]
+// Spellweaving Spells
+snd_spell_arcane_circle		1472
+snd_spell_gift_renewal		1481
+
+[defname spell_flags_new]
+spellflag_targ_player		  0200004 // targ_char + targ_no_npc
+spellflag_targ_npc			  0100004 // targ_char + targ_no_player

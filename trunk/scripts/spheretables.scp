@@ -14,6 +14,7 @@ VERSION=0.56
 // sphere.ini and spheretable.scp are automatic.
 // All the other scripts we want to load.
 scripts/sphere_defs.scp
+scripts/add-on/sphere_pack_defs.scp
 scripts/sphere_types.scp
 scripts/sphere_book.scp
 scripts/sphere_backward_compatibility.scp
@@ -71,6 +72,7 @@ scripts/stones/towns/
 // -----------------------------------
 scripts/add-on/
 scripts/add-on/champions/
+scripts/add-on/crafting/
 scripts/add-on/enchants/
 scripts/add-on/override/
 scripts/add-on/quests/
