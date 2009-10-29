@@ -1,0 +1,185 @@
+[function f_crafting_startosi]
+if <args>==sm_blacksmith
+craftskill Blacksmithing
+return 1
+elif <args>==sm_alchemy
+craftskill Alchemy
+return 1
+elif <args>==sm_bowcraft
+craftskill Bowcraft
+return 1
+elif <args>==sm_cartography
+craftskill Cartography
+return 1
+elif <args>==sm_carpentry
+craftskill Carpentry
+return 1
+elif <args>==sm_tailor_leather
+craftskill Tailoring
+return 1
+elif <args>==sm_tailor_cloth
+craftskill Tailoring
+return 1
+elif <args>==sm_tinker
+craftskill Tinkering
+return 1
+elif <args>==sm_inscription
+craftskill Inscription
+return 1
+endif
+
+[function craftskill]
+if <def.scp.NewCrafting_<args>> == 1
+	if strcmp("<argv[0]>","<ctag.craft.skill>")
+	ctag.craft.last
+	ctag.craft.page.sidebar
+	endif
+ctag.craft.skill=<argv[0]>
+sdialog d_craft_menu
+endif
+
+
+[function craft]
+if !<canmakeskill <args>>
+ctag.craft.message = You are not skilled enough to make anything out of that.
+f_resenddialog d_craft_menu
+return 1
+elif !<canmake <args>>
+ctag.craft.message = You don't have the resources required to make that item.
+f_resenddialog d_craft_menu
+return 1
+elif !<isempty <def.<ctag0.craft.skill>_check>>
+	if (<<def.<ctag0.craft.skill>_check> <args>>)
+	f_resenddialog d_craft_menu
+	return 1
+	endif
+endif
+makeitem <args>
+craftsuccesschance <args>
+ctag.craft.message = Creating <serv.itemdef.<args>.name>...
+ctag.craft.last.<ctag0.craft.skill> = <args>
+if !strcmp("Cooking","<ctag0.craft.skill>")
+timerf <eval <serv.skill.13.delay>/10>,craftcooking <args>,<actdiff> // Cooking Fix
+endif
+
+[function craftcooking]
+if (<canmake <argv[0]>>) && (<argv[1]> > 0)
+serv.newitem <argv[0]>
+consume <new.resources>
+new.bounce
+ctag.craft.message = You make <new.name>.
+skillgan 13 <r2>
+else
+ctag.craft.message = You fail to create the item.
+endif
+craftskill cooking
+
+[function craftsuccesschance]
+if (<src.<streat <serv.itemdef.<args>.skillmake.1>>> >= <serv.itemdef.<args>.skillmake.1.val>)
+local.r = <eval (<src.<streat <serv.itemdef.<args>.skillmake.1>>> - <serv.itemdef.<args>.skillmake.1.val>) * 2>
+local.r += <def.<src.ctag0.craft.skill>_chanceatmin>
+endif
+if !(<isitem>)
+	if (<r1000> < <local.r>)
+	actdiff = 10
+	else
+	actdiff = -10
+	endif
+return 1
+else
+	if <local.r> < 0
+	local.r = 0
+	elif <local.r> > 1000
+	local.r = 1000
+	endif
+return <local.r>
+endif
+
+[function craft_exceptionalchance]
+if <src.<serv.skill.<skillmake.0.key>.name>> < 95.0
+local.r = <eval <craftsuccesschance> - 60>
+else
+local.r = <eval <craftsuccesschance> - 45>
+endif
+if <local.r> < 0
+local.r = 0
+endif
+return <local.r>
+
+
+[function f_crafting_render_itemlist]
+dhtmlgump 175 40 370 20 0 0 <def.bfont_white><def.center>SELECTIONS
+local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "_">
+local.mainbar = <eval 1 + (10 * <ctag0.craft.page.mainbar>)>
+local.y = 65
+for 1 10
+local.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<dlocal.mainbar>>
+	if <local.item> != 0
+	button 505 <local.y> 4011 4012 1 0 <eval 100 + <local.mainbar>>
+	button 180 <local.y> 4005 4007 1 0 <eval 10100 + <local.mainbar>>
+	dcroppedtext 215 <local.y> 290 20 <qval (<canmake <local.item>>) ? 0480 : 020> <serv.itemdef.<local.item>.name>
+	endif
+local.mainbar ++
+local.y += 20
+endfor
+if !(<isempty <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<dlocal.mainbar>>>)
+button 380 267 4005 4007 1 0 5002
+dtext 415 268 0480 NEXT PAGE
+endif
+if <ctag0.craft.page.mainbar> > 0)
+button 180 267 4014 4015 1 0 5003
+dtext 215 268 0480 PREVIOUS PAGE
+endif
+
+
+[function f_crafting_render_materials]
+dhtmlgump 175 40 370 20 0 0 <def.bfont_white><def.center>SELECTIONS
+local.x = 180
+dorigin 180 45
+while !(<isempty <def.<ctag0.craft.skill>_material_<dlocal.n>_name>>)
+dtext +35 *20 0480 <def.<ctag0.craft.skill>_material_<dlocal.n>_name>
+button *0 *0 4005 4007 1 0 <eval 5020 + <local.n>>
+	if <local.n> > 9
+	local.x += 180
+	dorigin <local.x> 45
+	endif
+local.n ++
+endwhile
+
+
+[function f_crafting_render_itemprop]
+gumppictiled 175 135 365 5 5058
+checkertrans 175 135 365 5
+gumppictiled 265 40 5 95 5058
+checkertrans 265 40 5 95
+gumppictiled 355 140 5 155 5058
+checkertrans 355 140 5 155
+
+serv.newitem <ctag0.craft.item>
+ref1=<new>
+
+tilepichue 190 60 <ref1.dispiddec> <dref1.color>
+dcroppedtext 275 45 265 20 0480 Item:
+dcroppedtext 310 45 265 20 88 <ref1.name>
+dcroppedtext 275 90 330 20 0480 Success Chance: <fval <ref1.craftsuccesschance <ref1.baseid>>>%
+button 275 110 4014 4016 1 0 0
+dtext 310 112 0480 Back
+button 425 110 4011 4012 1 0 10100
+dtext 460 112 0480 Make Item
+dhtmlgump 175 140 185 20 0 0 <def.bfont_white><def.center>SKILLS
+args = <ref1.skillmake>
+dorigin 182 137
+for 1 <argv>
+	if (<serv.skill.<ref1.skillmake.<local._for>.key>>)
+	dcroppedtext 182 *20 170 20 0480 <serv.skill.<ref1.skillmake.<local._for>.key>.name>: <fval <ref1.skillmake.<local._for>.val>>
+	endif
+endfor
+dhtmlgump 360 140 180 20 0 0 <def.bfont_white><def.center>MATERIALS
+args = <ref1.resmake>
+dorigin 368 137 
+for 1 <argv>
+dcroppedtext 368 *20 170 20 0480 <ref1.resources.<local._for>.val><serv.itemdef.<ref1.resources.<local._for>.key>.name>
+endfor
+ref1.remove
+
+[eof]

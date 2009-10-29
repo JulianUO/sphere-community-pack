@@ -1,0 +1,148 @@
+[defname sphere_crafting_blacksmithing_default]
+blacksmithing_title			"BLACKSMITHY MENU"
+
+blacksmithing_smelt			"function name"
+blacksmithing_repair		"function name"
+blacksmithing_marking		"1" // 1 or 0
+blacksmithing_materials		"1" // 1 or 0
+
+blacksmithing_check			"Blacksmith_CheckForge"
+blacksmithing_check_notice	"You need to be near a forge."
+blacksmithing_chanceatmin	"0.0"
+
+
+
+
+blacksmithing_category_1_name "Platemail Armor"
+blacksmithing_category_2_name "Chainmail Armor"
+blacksmithing_category_3_name "Ringmail Armor"
+blacksmithing_category_4_name "Japanese Armor"
+blacksmithing_category_5_name "Shields"
+blacksmithing_category_6_name "Swords"
+blacksmithing_category_7_name "Maces"
+blacksmithing_category_8_name "Axes"
+blacksmithing_category_9_name "Fencer"
+
+blacksmithing_category_1_amount "12"
+blacksmithing_category_2_amount "3"
+blacksmithing_category_3_amount "4"
+blacksmithing_category_4_amount "8"
+blacksmithing_category_5_amount "5"
+blacksmithing_category_6_amount "6"
+blacksmithing_category_7_amount "5"
+blacksmithing_category_8_amount "9"
+blacksmithing_category_9_amount "5"
+
+blacksmithing_category_1_1	"i_platemail_arms"
+blacksmithing_category_1_2	"i_platemail_chest"
+blacksmithing_category_1_3	"i_platemail_gloves"
+blacksmithing_category_1_4	"i_platemail_gorget"
+blacksmithing_category_1_5	"i_platemail_helm"
+blacksmithing_category_1_6	"i_platemail_leggings"
+blacksmithing_category_1_7	"i_bascinet"
+blacksmithing_category_1_8	"i_helm_closed"
+blacksmithing_category_1_9	"i_helm_open"
+blacksmithing_category_1_10	 "i_helm_nose"
+blacksmithing_category_1_11	 "i_armor_female_plate"
+blacksmithing_category_1_12	 "i_armor_female_studded"
+
+blacksmithing_category_2_1	"i_chainmail_coif"
+blacksmithing_category_2_2	"i_chainmail_leggings"
+blacksmithing_category_2_3	"i_chainmail_tunic"
+
+blacksmithing_category_3_1	"i_ringmail_tunic"
+blacksmithing_category_3_2	"i_ringmail_sleeves"
+blacksmithing_category_3_3	"i_ringmail_leggings"
+blacksmithing_category_3_4	"i_ringmail_gloves"
+
+blacksmithing_category_4_1	"i_platemail_kabuto_battle"
+blacksmithing_category_4_2	"i_platemail_kabuto"
+blacksmithing_category_4_3	"i_platemail_do"
+blacksmithing_category_4_4	"i_platemail_haidate"
+blacksmithing_category_4_5	"i_platemail_hatsuburi"
+blacksmithing_category_4_6	"i_platemail_mempo"
+blacksmithing_category_4_7	"i_platemail_suneate"
+blacksmithing_category_4_8	"i_plate_jinsaga_light"
+
+blacksmithing_category_5_1	"i_shield_buckler"
+blacksmithing_category_5_2	"i_shield_round_bronze"
+blacksmithing_category_5_3	"i_shield_round_metal"
+blacksmithing_category_5_4	"i_shield_kite_metal"
+blacksmithing_category_5_5	"i_shield_heater"
+
+blacksmithing_category_6_1	"i_sword_broad"
+blacksmithing_category_6_2	"i_cutlass"
+blacksmithing_category_6_3	"i_katana"
+blacksmithing_category_6_4	"i_sword_long"
+blacksmithing_category_6_5	"i_scimitar"
+blacksmithing_category_6_6	"i_sword_viking"
+
+blacksmithing_category_7_1	"i_hammer_pick"
+blacksmithing_category_7_2	"i_mace"
+blacksmithing_category_7_3	"i_maul"
+blacksmithing_category_7_4	"i_hammer_war"
+blacksmithing_category_7_5	"i_mace_war"
+
+blacksmithing_category_8_1	"i_axe_exec"
+blacksmithing_category_8_2	"i_axe"
+blacksmithing_category_8_3	"i_axe_double"
+blacksmithing_category_8_4	"i_axe_battle"
+blacksmithing_category_8_5	"i_axe_battle_large"
+blacksmithing_category_8_6	"i_axe_war"
+blacksmithing_category_8_7	"i_axe_two_hand"
+blacksmithing_category_8_8	"i_bardiche"
+blacksmithing_category_8_9	"i_halberd"
+
+blacksmithing_category_9_1	"i_dagger"
+blacksmithing_category_9_2	"i_kryss"
+blacksmithing_category_9_3	"i_spear_short"
+blacksmithing_category_9_4	"i_spear"
+blacksmithing_category_9_5	"i_war_fork"
+
+
+[defname sphere_crafting_blacksmithing_colored]
+blacksmithing_material_0			""
+blacksmithing_material_0_name		"IRON"
+blacksmithing_material_0_skill	"Blacksmithing 0.0"
+
+blacksmithing_material_1			"Silver"
+blacksmithing_material_1_name		"SILVER"
+blacksmithing_material_1_skill	"Blacksmithing 60.0"
+
+blacksmithing_material_2			"Gold"
+blacksmithing_material_2_name		"GOLD"
+blacksmithing_material_2_skill	"Blacksmithing 65.0"
+
+blacksmithing_material_3			"Verite"
+blacksmithing_material_3_name		"VERITE"
+blacksmithing_material_3_skill	"Blacksmithing 70.0"
+
+blacksmithing_material_4			"Valorite"
+blacksmithing_material_4_name		"VALORITE"
+blacksmithing_material_4_skill	"Blacksmithing 75.0"
+
+blacksmithing_material_5			"BloodRock"
+blacksmithing_material_5_name		"BLOODROCK"
+blacksmithing_material_5_skill	"Blacksmithing 80.0"
+
+blacksmithing_material_6			"BlackRock"
+blacksmithing_material_6_name		"BLACKROCK"
+blacksmithing_material_6_skill	"Blacksmithing 80.0"
+
+blacksmithing_material_7			"Mytheril"
+blacksmithing_material_7_name		"MYTHERIL"
+blacksmithing_material_7_skill	"Blacksmithing 85.0"
+
+blacksmithing_material_8			"Mercury"
+blacksmithing_material_8_name		"MERCURY"
+blacksmithing_material_8_skill	"Blacksmithing 90.0"
+
+blacksmithing_material_9			"Moonlight"
+blacksmithing_material_9_name		"MOONLIGHT"
+blacksmithing_material_9_skill	"Blacksmithing 95.0"
+
+blacksmithing_material_10		"Onyx"
+blacksmithing_material_10_name	"ONYX"
+blacksmithing_material_10_skill	"Blacksmithing 99.0"
+
+[eof]
