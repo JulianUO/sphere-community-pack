@@ -1,0 +1,77 @@
+[events e_osi_crafting]
+
+ON=@SKILLABORT
+IF <Def0.Craftskill_<Serv.Skill.<Argn>.Key>>
+IF !<ISEMPTY <Ctag0.Craft.Last>>
+Ctag.Craft.Message=You fail to craft <SERV.ITEMDEF.<Ctag0.Craft.Last>.NAME>.
+ELSE
+Ctag.Craft.Message=You fail to craft the item.
+ENDIF
+IF !<ISEMPTY <Ctag.Craft.Skill>>
+Var.CraftDialog=1
+Craftskill <Ctag0.Craft.Skill>
+Var.CraftDialog=
+ENDIF
+ENDIF
+
+
+ON=@SKILLFAIL
+IF <Def0.Craftskill_<Serv.Skill.<Argn>.Key>>
+IF !<ISEMPTY <Ctag.Craft.Skill>>
+Var.CraftDialog=1
+Craftskill <Ctag0.Craft.Skill>
+Var.CraftDialog=
+ENDIF
+ENDIF
+
+ON=@SKILLMAKEITEM
+Ref1=<Act.Uid>
+Ref1.Name=<Serv.Itemdef.<Ref1.Baseid>.Name>
+if <Ref1.Get_Craftskill_Item <Serv.Skill.<Action>.Key>>>0
+Local.Skillmake=<Ref1.Get_Craftskill_Item <Serv.Skill.<Action>.Key>>
+Else
+Local.Skillmake=0
+Endif
+Local.Success=<Eval (<Local.Skillmake>+(250+(<Local.Skillmake>/3)))+-<<Serv.Skill.<Action>.Key>>>
+IF RAND(1000)<<Local.Success>
+Ctag.Craft.Message=You fail to craft <Ref1.name>.
+IF !<ISEMPTY <Ctag.Craft.Skill>>
+Var.CraftDialog=1
+Craftskill <Ctag0.Craft.Skill>
+Var.CraftDialog=
+ENDIF
+Ref1.Remove
+return 1
+Endif
+
+Ctag.Craft.Message=You create <Ref1.name>. 
+
+Ref1.Tag.Crafted=<Uid>
+IF <DEF0.Craft_<Ctag0.Craft.Skill><DEF.Craft_<Ctag0.Craft.Skill>_Material_<dCTAG.Craft.Material>>_Exceptional>
+Local.Exceptional=<eval (<<Serv.Skill.<Ref1.Get_Craftskill_Skill>.Key>>+-<REF1.Get_Craftskill_Val>)/2>
+if ((<Local.Exceptional><0) || (<Ref1.Can>&0100))
+Local.Exceptional=0
+Endif
+if Rand(1000)<<Local.Exceptional>
+Ctag.Craft.Message=You create <Ref1.name>. It is of exceptional quality!
+Ref1.tag.exceptional=1
+IF !<Ctag0.Craft.NoMark>
+REF1.NAME=<SERV.ITEMDEF.<REF1.BASEID>.NAME> Crafted by <NAME>
+ENDIF
+TRY Ref1.<DEF0.Craft_<Ctag0.Craft.Skill><DEF.Craft_<Ctag0.Craft.Skill>_Material_<dCTAG.Craft.Material>>_Exceptional_Bonus>
+Endif
+Endif
+
+Ref1.Trigger @Craft
+
+IF ((<<Ctag0.Craft.Skill>> < 150) && (<Local.Skillmake> < 10))
+SKILLGAIN <Ctag0.Craft.Skill>,1
+ENDIF
+
+IF !<ISEMPTY <Ctag.Craft.Skill>>
+Var.CraftDialog=1
+Craftskill <Ctag0.Craft.Skill>
+Var.CraftDialog=
+ENDIF
+
+//return 0

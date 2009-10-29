@@ -143,7 +143,7 @@ BONUS_STATS=25
 ADV_RATE=2.5,50.0,200.0
 
 on=@success
-if <def.NewSkills_ArmsLore> == 1
+if <def.scp.NewSkills_ArmsLore> == 1
 f_armslore_success <src.targ.uid>
 skillgain ArmsLore <eval <ArmsLore>/10>
 return 1

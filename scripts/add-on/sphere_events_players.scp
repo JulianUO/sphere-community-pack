@@ -87,10 +87,10 @@ return 1
 
 // OSI Calculation + Stats Bonus
 on=@userstats
-if <def.scp.followers> == 1
+if <def.scp.Followers> == 1
 maxfollower = <def.scp.MaxFollowers>
 endif
-if <def.scp.osistats> == 1
+if <def.scp.OSIStats> == 1
 maxhits = <eval (<str>/2) + <modstr> + 50 + <tag0.modmaxhits>> 
 maxmana = <eval <int> + <modint> + <tag0.modmaxmana>>
 maxstam = <eval <dex> + <moddex> + <tag0.modmaxstam>>
@@ -123,9 +123,17 @@ if <def.scp.MagicProperties_LowerReagentCost> == 1
 		endif
 	return 6
 	endif
-else
-	if <def.scp.MagicProperties_LowerManaCost> == 1
+endif
+//else
+//	if <def.scp.MagicProperties_LowerManaCost> == 1
 
+// Crafting System
+on=@skillmenu
+doswitch <def.scp.CraftingSystem>
+return 0
+f_crafting_startosi <args>
+enddo
+return 1
 
 // Necromancy Words of Power
 // Armor Restriction + Mage Armor + Mage Weapon

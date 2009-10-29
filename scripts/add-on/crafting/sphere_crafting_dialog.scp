@@ -1,0 +1,182 @@
+////////////////////////////////////////////
+// Script feito por pyromapes2k / Coruja //
+//////////////////////////////////////////
+
+/////////////////////////////////////////
+// ctag0.craft.skill = the skill used
+// ctag0.craft.last = last item crafted
+// ctag0.craft.page.sidebar = sidebar page
+/////////////////////////////////////////
+
+[dialog d_craft_menu]
+40,40
+
+page 0 // Basic Layout
+resizepic 0 0 9200 550 425
+gumppictiled 10 10 530 405 2624
+gumppictiled 10 35 530 5 5058
+gumppictiled 10 295 530 5 5058
+gumppictiled 10 345 530 5 5058
+gumppictiled 170 40 5 305 5058
+checkertrans 10 10 530 405
+dhtmlgump 10 13 530 20 0 0 <def.bfont_white><def.center><def.<ctag0.craft.skill>_title>
+dhtmlgump 10 310 165 20 0 0 <def.bfont_white><def.center>NOTICES
+dhtmlgump 185 302 355 45 0 0 <def.bfont_white><ctag0.craft.message>
+
+page 1 // Content
+dhtmlgump 10 40 165 20 0 0 <def.bfont_white><def.center>CATEGORIES
+local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "_">
+local.sidebar = <eval 1 + (10 * <ctag0.craft.page.sidebar>)>
+dorigin 15 45
+for z 1 10
+	if !(<isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>)
+	button *0 *20 4005 4007 1 0 <local.sidebar>
+	dcroppedtext +35 *0 115 20 0480 <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>
+	endif
+local.sidebar ++
+endfor
+if !(<isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>)
+button 135 267 4005 4007 1 0 5000
+endif
+if <ctag0.craft.page.sidebar> > 0
+button 15 267 4014 4015 1 0 5001
+endif
+
+if <ctag0.craft.changematerial>
+ctag.craft.changematerial
+f_crafting_render_materials
+elif !(<isempty <ctag.craft.item>>)
+f_crafting_render_itemprop
+else
+f_crafting_render_itemlist
+endif
+ctag.craft.message
+
+if !<isempty <def.<ctag0.craft.skill>_smelt>>
+button 15 350 4005 4007 1 0 5004
+dtext 50 350 0480 SMELT ITEM
+endif
+if <def0.<ctag0.craft.skill>_materials>
+button 15 370 4005 4007 1 0 5005
+dtext 50 370 0480 <def.<ctag0.craft.skill>_material_<dctag.craft.material.<ctag.craft.skill>>_name>
+endif
+button 15 390 4017 4019 1 0 0
+dtext 50 390 0480 EXIT
+if !<isempty <def.<ctag0.craft.skill>_repair>>
+button 270 350 4005 4007 1 0 5006
+dtext 305 350 0480 REPAIR
+endif
+if <def0.craft_<ctag0.craft.skill>_marking>
+button 270 370 4005 4007 1 0 5007
+dtext 305 370 0480 <qval (<ctag0.craft.mark>) ? <qval (<ctag0.craft.mark>==1) ? MARK ITEM : ASK ME> : DON'T MARK>
+endif
+button 270 390 4005 4007 1 0 5008
+dtext 305 390 0480 MAKE LAST
+
+
+[DIALOG d_craft_menu BUTTON]
+on=0
+ctag.craft.message
+if !<isempty <ctag.craft.item>>
+ctag.craft.item
+f_resenddialog d_craft_menu
+endif
+
+on=1 99
+ctag.craft.item
+ctag.craft.page.mainbar
+ctag.craft.sidebar = <argn>
+f_resenddialog d_craft_menu
+
+on=100 4999
+local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "_">
+ctag.craft.item = <def.<ctag0.craft.skill><local.resource>category_<ctag0.craft.sidebar>_<eval <argn>-100>>
+ctag.craft.message = <def.<ctag0.craft.skill>_check_notice>
+if <serv.itemdef.<ctag0.craft.item>.replicate>
+ctag.craft.message = "Will make the maximum amount possible of this item or something like that?"
+endif
+f_resenddialog d_craft_menu
+
+on=10100 104999
+local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "_">
+craft <qval (<ctag0.craft.item> != 0) ? <ctag0.craft.item> : <def.<ctag0.craft.skill><local.resource>category_<ctag0.craft.sidebar>_<eval <argn>-10100>>>
+
+on=5000 5001
+if <argn> == 5000
+ctag0.craft.page.sidebar ++
+else
+ctag0.craft.page.sidebar --
+endif
+f_resenddialog d_craft_menu
+
+on=5002 5003
+if <argn> == 5002
+ctag0.craft.page.mainbar ++
+else
+ctag0.craft.page.mainbar --
+endif
+f_resenddialog d_craft_menu
+
+on=5004
+f_resenddialog d_craft_menu
+try <def.<ctag0.craft.skill>_smelt>
+
+on=5005
+ctag.craft.changematerial=1
+f_resenddialog d_craft_menu
+
+on=5006
+f_resenddialog d_craft_menu
+try <def.<ctag0.craft.skill>_repair>
+
+on=5007
+doswitch <ctag0.craft.mark>
+ctag.craft.mark = 1
+ctag.craft.mark = 2
+ctag.craft.mark
+f_resenddialog d_craft_menu
+
+on=5008
+if (<isempty <ctag.craft.last.<ctag0.craft.skill>>>)
+ctag.craft.message = You need to make an item first.
+return 1
+endif
+craft <ctag0.craft.last.<ctag0.craft.skill>>
+
+on=5020 5040
+local.skill = <strarg <def.<ctag0.craft.skill>_material_<eval <argn>-5020>_skill>>
+if !<isempty <local.skill>>
+local.skillreq = <streat <def.<ctag0.craft.skill>_material_<eval <argn>-5020>_skill>>
+	if (<src.<local.skill>> < <local.skillreq>)
+	ctag.craft.message = You need <fval <local.skillreq>> <local.skill> to use <strtolower <def.<ctag0.craft.skill>_material_<eval <argn>-5020>_name>>.
+	f_resenddialog d_craft_menu
+	return 1
+	endif
+endif
+ctag.craft.page.sidebar
+ctag.craft.item
+ctag.craft.material.<ctag.craft.skill> = <eval <argn>-5020>
+f_resenddialog d_craft_menu
+
+/////////////////////////////////////////
+
+[dialog d_craft_prompt]
+0,25
+
+resizepic 0 0 5054 220 170
+resizepic 10 10 3000 200 150
+dhtmlgump 20 20 180 80 0 0 "Do you wish to place your maker's mark on this item?"
+dhtmlgump 55 100 140 25 0 0 CONTINUE
+button 20 100 4005 4007 1 0 1
+dhtmlgump 55 125 140 25 0 0 CANCEL
+button 20 125 4005 4007 1 0 0
+
+[dialog d_craft_prompt button]
+on=0
+src.sysmessage @,,1 Cancelled mark.
+
+on=1
+src.sysmessage @,,1 You mark the item.
+name = <name> crafted by <src.name>
+
+[eof]
