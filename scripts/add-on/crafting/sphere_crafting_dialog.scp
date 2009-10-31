@@ -90,7 +90,7 @@ f_resenddialog d_craft_menu
 
 on=100 4999
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "_">
-ctag.craft.item = <def.<ctag0.craft.skill><local.resource>category_<ctag0.craft.sidebar>_<eval <argn>-100>>
+ctag.craft.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<eval <argn>-100>>
 ctag.craft.message = <def.<ctag0.craft.skill>_check_notice>
 if <serv.itemdef.<ctag0.craft.item>.replicate>
 ctag.craft.message = "Will make the maximum amount possible of this item or something like that?"
@@ -99,7 +99,7 @@ f_resenddialog d_craft_menu
 
 on=10100 104999
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "_">
-craft <qval (<ctag0.craft.item> != 0) ? <ctag0.craft.item> : <def.<ctag0.craft.skill><local.resource>category_<ctag0.craft.sidebar>_<eval <argn>-10100>>>
+craft <qval (<ctag0.craft.item> != 0) ? <ctag0.craft.item> : <def.<ctag0.craft.skill><local.resource>category_<dctag.craft.sidebar>_<eval <argn>-10100>>>
 
 on=5000 5001
 if <argn> == 5000
@@ -142,6 +142,7 @@ ctag.craft.message = You need to make an item first.
 return 1
 endif
 craft <ctag0.craft.last.<ctag0.craft.skill>>
+serv.log here
 
 on=5020 5040
 local.skill = <strarg <def.<ctag0.craft.skill>_material_<eval <argn>-5020>_skill>>

@@ -1,77 +1,43 @@
 [events e_osi_crafting]
+on=@skillabort
+if <def.scp.NewCrafting_<serv.skill.<argn>.key>> == 0
+return 0
+endif
+if !<isempty <ctag0.craft.last>>
+ctag.craft.message = You fail to create <serv.itemdef.<ctag0.craft.last>.name>.
+else
+ctag.craft.message = You fail to craft the item.
+endif
 
-ON=@SKILLABORT
-IF <Def0.Craftskill_<Serv.Skill.<Argn>.Key>>
-IF !<ISEMPTY <Ctag0.Craft.Last>>
-Ctag.Craft.Message=You fail to craft <SERV.ITEMDEF.<Ctag0.Craft.Last>.NAME>.
-ELSE
-Ctag.Craft.Message=You fail to craft the item.
-ENDIF
-IF !<ISEMPTY <Ctag.Craft.Skill>>
-Var.CraftDialog=1
-Craftskill <Ctag0.Craft.Skill>
-Var.CraftDialog=
-ENDIF
-ENDIF
+on=@skillfail
+if <def.scp.NewCrafting_<serv.skill.<argn>.key>>
+	if !<isempty <ctag.craft.skill>>
+	craftskill <ctag0.craft.skill>
+	endif
+endif
 
-
-ON=@SKILLFAIL
-IF <Def0.Craftskill_<Serv.Skill.<Argn>.Key>>
-IF !<ISEMPTY <Ctag.Craft.Skill>>
-Var.CraftDialog=1
-Craftskill <Ctag0.Craft.Skill>
-Var.CraftDialog=
-ENDIF
-ENDIF
-
-ON=@SKILLMAKEITEM
-Ref1=<Act.Uid>
-Ref1.Name=<Serv.Itemdef.<Ref1.Baseid>.Name>
-if <Ref1.Get_Craftskill_Item <Serv.Skill.<Action>.Key>>>0
-Local.Skillmake=<Ref1.Get_Craftskill_Item <Serv.Skill.<Action>.Key>>
-Else
-Local.Skillmake=0
-Endif
-Local.Success=<Eval (<Local.Skillmake>+(250+(<Local.Skillmake>/3)))+-<<Serv.Skill.<Action>.Key>>>
-IF RAND(1000)<<Local.Success>
-Ctag.Craft.Message=You fail to craft <Ref1.name>.
-IF !<ISEMPTY <Ctag.Craft.Skill>>
-Var.CraftDialog=1
-Craftskill <Ctag0.Craft.Skill>
-Var.CraftDialog=
-ENDIF
-Ref1.Remove
+on=@skillmakeitem
+ref2 = <act.uid>
+ref2.name = <serv.itemdef.<ref2.baseid>.name>
+local.skillmake = <serv.skill.<action>.key> // someone explain why would action not be the crafting skill and i'll add the statement.
+local.success = <eval (<local.skillmake> + (250 + (<local.skillmake> / 3))) - <<serv.skill.<action>.key>>>
+if <r> < <local.success>
+ctag.craft.message = You fail to craft <ref2.name>.
+	if !<isempty <ctag.craft.skill>>
+	craftskill <ctag0.craft.skill>
+	endif
+ref1.remove
 return 1
-Endif
+endif
+ctag.craft.message = You create <ref2.name>.
+if <craft_exceptionalchance> < <r>
+ctag0.craft.message = You create <ref2.name>. It is of exceptional quality!
+ref2.tag.exceptional = 1
+	if !<ctag0.craft.nomark>
+	ref2.name = <ref2.name> crafted by <name>
+	endif
+try ref2.<def.<ctag0.craft.skill><local.resource>_exceptional_bonus>
+endif
+f_resenddialog d_craft_menu
 
-Ctag.Craft.Message=You create <Ref1.name>. 
-
-Ref1.Tag.Crafted=<Uid>
-IF <DEF0.Craft_<Ctag0.Craft.Skill><DEF.Craft_<Ctag0.Craft.Skill>_Material_<dCTAG.Craft.Material>>_Exceptional>
-Local.Exceptional=<eval (<<Serv.Skill.<Ref1.Get_Craftskill_Skill>.Key>>+-<REF1.Get_Craftskill_Val>)/2>
-if ((<Local.Exceptional><0) || (<Ref1.Can>&0100))
-Local.Exceptional=0
-Endif
-if Rand(1000)<<Local.Exceptional>
-Ctag.Craft.Message=You create <Ref1.name>. It is of exceptional quality!
-Ref1.tag.exceptional=1
-IF !<Ctag0.Craft.NoMark>
-REF1.NAME=<SERV.ITEMDEF.<REF1.BASEID>.NAME> Crafted by <NAME>
-ENDIF
-TRY Ref1.<DEF0.Craft_<Ctag0.Craft.Skill><DEF.Craft_<Ctag0.Craft.Skill>_Material_<dCTAG.Craft.Material>>_Exceptional_Bonus>
-Endif
-Endif
-
-Ref1.Trigger @Craft
-
-IF ((<<Ctag0.Craft.Skill>> < 150) && (<Local.Skillmake> < 10))
-SKILLGAIN <Ctag0.Craft.Skill>,1
-ENDIF
-
-IF !<ISEMPTY <Ctag.Craft.Skill>>
-Var.CraftDialog=1
-Craftskill <Ctag0.Craft.Skill>
-Var.CraftDialog=
-ENDIF
-
-//return 0
+[eof]

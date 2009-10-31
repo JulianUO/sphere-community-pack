@@ -1,0 +1,24 @@
+[function f_resenddialog]
+dialogclose <ARGV[0]>
+sdialog <ARGS>
+
+[function f_resources]
+return <ARGV>
+
+[function f_loopanim]
+if <argv[1]>>1
+	for <eval (<argv[1]>-1)>
+	timerf <eval (<local._for>*<argv[2]>)>,anim <eval <argv[0]>>
+	endfor
+endif
+anim <argv[0]>
+
+[function f_loopsound]
+if <argv[1]>>1
+	for <eval (<argv[1]>-1)>
+	timerf <eval (<local._for>*<argv[2]>)>,sound <eval <argv[0]>>
+	endfor
+endif
+sound <argv[0]>
+
+[eof]
