@@ -1,37 +1,32 @@
 [defname sphere_crafting_blacksmithing_default]
-blacksmithing_title			"BLACKSMITHY MENU"
-
-blacksmithing_smelt			"Smelt_Blacksmith"
-blacksmithing_repair		"Repair_Blacksmith"
 blacksmithing_marking		"1" // 1 or 0
 blacksmithing_materials		"1" // 1 or 0
 
-blacksmithing_check			"Blacksmith_CheckForge"
-blacksmithing_check_notice	"You need to be near a forge."
-blacksmithing_chanceatmin	"0.0"
+blacksmithing_smelt				"f_craft_blacksmith_smelt"
+blacksmithing_repair			"f_craft_blacksmith_repair"
+blacksmithing_check				"f_craft_blacksmith_checkforge"
+blacksmithing_check_notice		"1044267" // You must be near an anvil and a forge to smith items.
+blacksmithing_chanceatmin		"0.0"
+blacksmithing_exceptional_bonus	"f_craft_blacksmith_exceptionalbonus"
 
-blacksmithing_category_1_name "Platemail Armor"
-blacksmithing_category_2_name "Chainmail Armor"
-blacksmithing_category_3_name "Ringmail Armor"
-blacksmithing_category_4_name "Japanese Armor"
-blacksmithing_category_5_name "Shields"
-blacksmithing_category_6_name "Swords"
-blacksmithing_category_7_name "Maces"
-blacksmithing_category_8_name "Axes"
-blacksmithing_category_9_name "Fencer"
+blacksmithing_category_1_name "1011078"	// Platemail
+blacksmithing_category_2_name "1011077"	// Chainmail
+blacksmithing_category_3_name "1011076"	// Ringmail
+blacksmithing_category_4_name "1011079"	// Helmets
+blacksmithing_category_5_name "1011080"	// Shields
+blacksmithing_category_6_name "1011081"	// Bladed
+blacksmithing_category_7_name "1011084"	// Polearms
+blacksmithing_category_8_name "1011083"	// Axes
+blacksmithing_category_9_name "1011082"	// Bashing
 
-blacksmithing_category_1_1	"i_platemail_arms"
-blacksmithing_category_1_2	"i_platemail_chest"
-blacksmithing_category_1_3	"i_platemail_gloves"
+blacksmithing_category_1_1	"i_platemail_chest"
+blacksmithing_category_1_2	"i_armor_female_plate"
+blacksmithing_category_1_3	"i_armor_female_studded"
 blacksmithing_category_1_4	"i_platemail_gorget"
-blacksmithing_category_1_5	"i_platemail_helm"
-blacksmithing_category_1_6	"i_platemail_leggings"
-blacksmithing_category_1_7	"i_bascinet"
-blacksmithing_category_1_8	"i_helm_closed"
-blacksmithing_category_1_9	"i_helm_open"
-blacksmithing_category_1_10	 "i_helm_nose"
-blacksmithing_category_1_11	 "i_armor_female_plate"
-blacksmithing_category_1_12	 "i_armor_female_studded"
+blacksmithing_category_1_5	"i_platemail_gloves"
+blacksmithing_category_1_6	"i_platemail_helm"
+blacksmithing_category_1_7	"i_platemail_leggings"
+blacksmithing_category_1_8	"i_platemail_arms"
 
 blacksmithing_category_2_1	"i_chainmail_coif"
 blacksmithing_category_2_2	"i_chainmail_leggings"
@@ -42,14 +37,10 @@ blacksmithing_category_3_2	"i_ringmail_sleeves"
 blacksmithing_category_3_3	"i_ringmail_leggings"
 blacksmithing_category_3_4	"i_ringmail_gloves"
 
-blacksmithing_category_4_1	"i_platemail_kabuto_battle"
-blacksmithing_category_4_2	"i_platemail_kabuto"
-blacksmithing_category_4_3	"i_platemail_do"
-blacksmithing_category_4_4	"i_platemail_haidate"
-blacksmithing_category_4_5	"i_platemail_hatsuburi"
-blacksmithing_category_4_6	"i_platemail_mempo"
-blacksmithing_category_4_7	"i_platemail_suneate"
-blacksmithing_category_4_8	"i_plate_jinsaga_light"
+blacksmithing_category_4_1	"i_helm_closed"
+blacksmithing_category_4_2	"i_helm_open"
+blacksmithing_category_4_3	"i_bascinet"
+blacksmithing_category_4_4	"i_helm_nose"
 
 blacksmithing_category_5_1	"i_shield_buckler"
 blacksmithing_category_5_2	"i_shield_round_bronze"
@@ -59,32 +50,35 @@ blacksmithing_category_5_5	"i_shield_heater"
 
 blacksmithing_category_6_1	"i_sword_broad"
 blacksmithing_category_6_2	"i_cutlass"
-blacksmithing_category_6_3	"i_katana"
-blacksmithing_category_6_4	"i_sword_long"
-blacksmithing_category_6_5	"i_scimitar"
-blacksmithing_category_6_6	"i_sword_viking"
+blacksmithing_category_6_3	"i_dagger"
+blacksmithing_category_6_4	"i_katana"
+blacksmithing_category_6_5	"i_kryss"
+blacksmithing_category_6_6	"i_sword_long"
+blacksmithing_category_6_7	"i_scimitar"
+blacksmithing_category_6_8	"i_sword_viking"
 
-blacksmithing_category_7_1	"i_hammer_pick"
-blacksmithing_category_7_2	"i_mace"
-blacksmithing_category_7_3	"i_maul"
-blacksmithing_category_7_4	"i_hammer_war"
-blacksmithing_category_7_5	"i_mace_war"
+blacksmithing_category_7_1	"i_axe_exec"
+blacksmithing_category_7_2	"i_axe"
+blacksmithing_category_7_3	"i_axe_double"
+blacksmithing_category_7_4	"i_axe_battle"
+blacksmithing_category_7_5	"i_axe_battle_large"
+blacksmithing_category_7_6	"i_axe_war"
+blacksmithing_category_7_7	"i_axe_two_hand"
+blacksmithing_category_7_8	"i_bardiche"
+blacksmithing_category_7_9	"i_halberd"
 
-blacksmithing_category_8_1	"i_axe_exec"
-blacksmithing_category_8_2	"i_axe"
-blacksmithing_category_8_3	"i_axe_double"
-blacksmithing_category_8_4	"i_axe_battle"
-blacksmithing_category_8_5	"i_axe_battle_large"
-blacksmithing_category_8_6	"i_axe_war"
-blacksmithing_category_8_7	"i_axe_two_hand"
-blacksmithing_category_8_8	"i_bardiche"
-blacksmithing_category_8_9	"i_halberd"
+blacksmithing_category_8_1	"i_hammer_pick"
+blacksmithing_category_8_2	"i_mace"
+blacksmithing_category_8_3	"i_maul"
+blacksmithing_category_8_4	"i_hammer_smith"
+blacksmithing_category_8_5	"i_hammer_war"
+blacksmithing_category_8_6	"i_mace_war"
 
-blacksmithing_category_9_1	"i_dagger"
-blacksmithing_category_9_2	"i_kryss"
-blacksmithing_category_9_3	"i_spear_short"
-blacksmithing_category_9_4	"i_spear"
-blacksmithing_category_9_5	"i_war_fork"
+blacksmithing_category_9_1	"i_spear_short"
+blacksmithing_category_9_2	"i_spear"
+blacksmithing_category_9_3	"i_war_fork"
+
+
 
 
 [defname sphere_crafting_blacksmithing_colored]
@@ -133,13 +127,20 @@ blacksmithing_material_10_name	"ONYX"
 blacksmithing_material_10_skill	"Blacksmithing 99.0"
 
 
-
 [function f_craft_blacksmith_checkforge]
 if (!<isneartype t_forge 3>) || (!<isneartype t_anvil 3>)
 return 0
 endif
-ctag.craft.message = "You must be near an anvil and a forge to smith items."
+ctag.craft.message = "1044267"
 return 1
+
+[function f_craft_blacksmith_exceptionalbonus]
+name = Exceptional <name>
+if <isweapon>
+tag0.damageincrease += 35
+elif <isarmor>
+modar += <eval (<armor.high> * 15) / 100>
+endif
 
 [function f_craft_blacksmith_repair]
 targetf f_craft_blacksmith_repair_targ
@@ -183,9 +184,6 @@ argo.more1l = <argo.more1h>
 sysmessage <def.scp.craft_repair_success>
 endif
 
-
-
-
 [function f_craft_blacksmith_smelt]
 targetf f_craft_blacksmith_smelt_targ
 sysmessage <def.scp.craft_smelt_targ>
@@ -195,7 +193,21 @@ if (!<isneartype t_forge 3>) || (!<isneartype t_anvil 3>)
 sysmessage <def.scp.craft_blacks_forgeanvil>
 return 1
 elif !<argo.isitem>
-sysmessage "You can only smelt items."
+sysmessage <def.scp.craft_smelt_notitem>
 return 1
+elif (<argo.type>==t_clothing) || (<argo.attr>&attr_magic) || !((<argo.isarmor>) || (<argo.isweapon>) || strmatch("*ingot*","argo.resources.1>"))
+sysmessage <def.scp.craft_smelt_notsmeltable>
+return 1
+else
+	if !<argo.quality>
+	local.amount = 1
+	else
+	local.amount = <muldiv <strarg <argo.resources.1>>,60,100>
+	endif
+serv.newitem <streat <argo.resources.1>>,<dlocal.amount>
+new.cont = <argo.cont>
+argo.remove
+sysmessage <def.scp.craft_smelt_success>
+endif
 
 [eof]

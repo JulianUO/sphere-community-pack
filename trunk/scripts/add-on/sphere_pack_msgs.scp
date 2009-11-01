@@ -15,8 +15,35 @@ VERSION=0.56b
 //    0x01 = Prepend text to message
 //    0x02 = Forces message to show as a system message
 
+// The following are ONLY clilocs used by some dialogs or other things
+// Just remember, only clilocs, nothing else.
+[DEFNAME SphereCommunityPack_Clilocs]
+scp.craft_msg_fail			"1044043" // You failed to create the item, and some of your materials are lost.
+scp.craft_msg_noskill		"1044153" // You don't have the required skills to attempt this item.
+scp.craft_msg_success		"1044154"	// You create the item.
+scp.craft_msg_exceptional	"1044155"	// You create an exceptional quality item.
+scp.craft_msg_excepmark		"1044156"	// You create an exceptional quality item and affix your maker's mark.
+scp.craft_msg_noresources	"1044253" // You don't have the components needed to make that.
+scp.craft_msg_nomana		"1044380" // You don't have enough mana to inscribe that spell.
+scp.craft_msg_nocast		"You need to be able to cast this spell in order to inscribe it."
+
+scp.craft_title_alchemy		"1044001"	// <CENTER>ALCHEMY MENU</CENTER>
+scp.craft_title_blacksmithing	"1044002"	// <CENTER>BLACKSMITHY MENU</CENTER>
+scp.craft_title_cooking		"1044003"	// <CENTER>COOKING MENU</CENTER>
+scp.craft_title_carpentry	"1044004"	// <CENTER>CARPENTRY MENU</CENTER>
+scp.craft_title_tailoring	"1044005"	// <CENTER>TAILORING MENU</CENTER>
+scp.craft_title_bowcraft		"1044006"	// <CENTER>BOWCRAFT AND FLETCHING MENU</CENTER>
+scp.craft_title_tinkering	"1044007"	// <CENTER>TINKERING MENU</CENTER>
+scp.craft_title_cartography	"1044008"	// <CENTER>CARTOGRAPHY MENU</CENTER>
+scp.craft_title_inscription	"1044009"	// <CENTER>INSCRIPTION MENU</CENTER>
+scp.craft_title_masonry		"1044500"	// <CENTER>MASONRY MENU</CENTER>
+scp.craft_title_glassblowing	"1044622"	// <CENTER>GLASSBLOWING MENU</CENTER>
+scp.craft_title_dragonscale	"1053135"	// <CENTER>DRAGON SCALE ARMOR MENU</CENTER>
+
+// The following are sysmessages, messages, say, etc.
+// You can change it for everything, even for text.
 [DEFNAME SphereCommunityPack_Messages]
-scp.craft_blacks_forgeanvil	"@,,2 1044282" // You must be near a forge and and anvil to repair items.
+scp.craft_blacks_forgeanvil	"@,,2 1044267" // You must be near a forge and and anvil to repair items.
 
 scp.craft_repair_targ		"@,,2 1044276" // Target an item to repair.
 scp.craft_repair_notitem		"@,,2 1044283"	// You cannot repair that.
@@ -27,4 +54,9 @@ scp.craft_repair_cannot		"@,,2 1044278" // That item has been repaired many time
 scp.craft_repair_fail		"@,,2 1044280" // You fail to repair the item.
 scp.craft_repair_success		"@,,2 1044279"	// You repair the item.
 
-scp.craft_smelt_targ		"@,,2 1044273"	// Target an item to recycle.
+scp.craft_smelt_targ		"@,,2 1044273"	// Target an item to recycle. 
+scp.craft_smelt_notitem		"@,,2 1044272"	// You can't melt that down into ingots.
+scp.craft_smelt_notsmeltable	"@,,2 1044272"	// You can't melt that down into ingots.
+scp.craft_smelt_success		"@,,2 1044270"	// You melt the item down into ingots.
+
+[eof]

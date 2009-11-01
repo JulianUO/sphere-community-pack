@@ -42,6 +42,7 @@ scp.NewCrafting_Carpentry=1
 scp.NewCrafting_Cooking=1
 scp.NewCrafting_Inscription=1
 scp.NewCrafting_Tailoring=1
+scp.NewCrafting_Tinkering=1
 
 ///////////////////////////////////////////////////////////////
 //////// General Settings

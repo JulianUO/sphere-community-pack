@@ -29,7 +29,7 @@ return 1
 endif
 
 [function craftskill]
-if <def.scp.NewCrafting_<args>> == 1
+if <def0.scp.NewCrafting_<args>> == 1
 	if strcmp("<argv[0]>","<ctag.craft.skill>")
 	ctag.craft.last
 	ctag.craft.page.sidebar
@@ -41,11 +41,11 @@ endif
 
 [function craft]
 if !<canmakeskill <args>>
-ctag.craft.message = You are not skilled enough to make anything out of that.
+ctag.craft.message = <def.scp.craft_msg_noskill>
 f_resenddialog d_craft_menu
 return 1
 elif !<canmake <args>>
-ctag.craft.message = You don't have the resources required to make that item.
+ctag.craft.message = <def.scp.craft_msg_noresources>
 f_resenddialog d_craft_menu
 return 1
 elif !<isempty <def.<ctag0.craft.skill>_check>>
@@ -56,7 +56,7 @@ elif !<isempty <def.<ctag0.craft.skill>_check>>
 endif
 makeitem <args>
 craftsuccesschance <args>
-ctag.craft.message = Creating <serv.itemdef.<args>.name>...
+ctag.craft.message = "Creating <serv.itemdef.<args>.name>..."
 ctag.craft.last.<ctag0.craft.skill> = <args>
 if !strcmp("Cooking","<ctag0.craft.skill>")
 timerf <eval <serv.skill.13.delay>/10>,craftcooking <args>,<actdiff> // Cooking Fix
@@ -67,10 +67,10 @@ if (<canmake <argv[0]>>) && (<argv[1]> > 0)
 serv.newitem <argv[0]>
 consume <new.resources>
 new.bounce
-ctag.craft.message = You make <new.name>.
+ctag.craft.message = <def.scp.craft_msg_success>
 skillgan 13 <r2>
 else
-ctag.craft.message = You fail to create the item.
+ctag.craft.message = <def.scp.craft_msg_fail>
 endif
 craftskill cooking
 
@@ -108,7 +108,7 @@ return <local.r>
 
 
 [function f_crafting_render_itemlist]
-dhtmlgump 175 40 370 20 0 0 <def.bfont_white><def.center>SELECTIONS
+xmfhtmlgumpcolor 175 40 370 20 1044011 0 0 <ddef.dcolor_white>
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "_">
 local.mainbar = <eval 1 + (10 * <ctag0.craft.page.mainbar>)>
 local.y = 65
@@ -124,16 +124,16 @@ local.y += 20
 endfor
 if !(<isempty <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<dlocal.mainbar>>>)
 button 380 267 4005 4007 1 0 5002
-dtext 415 268 0480 NEXT PAGE
+xmfhtmlgumpcolor 415 268 150 20 1044045 0 0 <ddef.dcolor_white>
 endif
 if <ctag0.craft.page.mainbar> > 0)
 button 180 267 4014 4015 1 0 5003
-dtext 215 268 0480 PREVIOUS PAGE
+xmfhtmlgumpcolor 215 268 150 20 1044044 0 0 <ddef.dcolor_white>
 endif
 
 
 [function f_crafting_render_materials]
-dhtmlgump 175 40 370 20 0 0 <def.bfont_white><def.center>SELECTIONS
+xmfhtmlgumpcolor 175 40 370 20 1044011 0 0 <ddef.dcolor_white>
 local.x = 180
 dorigin 180 45
 while !(<isempty <def.<ctag0.craft.skill>_material_<dlocal.n>_name>>)
@@ -166,7 +166,7 @@ button 275 110 4014 4016 1 0 0
 dtext 310 112 0480 Back
 button 425 110 4011 4012 1 0 10100
 dtext 460 112 0480 Make Item
-dhtmlgump 175 140 185 20 0 0 <def.bfont_white><def.center>SKILLS
+xmfhtmlgumpcolor 175 140 185 20 1044054 0 0 <ddef.dcolor_white>
 args = <ref1.skillmake>
 dorigin 182 137
 for 1 <argv>
@@ -174,7 +174,7 @@ for 1 <argv>
 	dcroppedtext 182 *20 170 20 0480 <serv.skill.<ref1.skillmake.<local._for>.key>.name>: <fval <ref1.skillmake.<local._for>.val>>
 	endif
 endfor
-dhtmlgump 360 140 180 20 0 0 <def.bfont_white><def.center>MATERIALS
+xmfhtmlgumpcolor 360 140 180 20 1044055 0 0 <ddef.dcolor_white>
 args = <ref1.resmake>
 dorigin 368 137 
 for 1 <argv>

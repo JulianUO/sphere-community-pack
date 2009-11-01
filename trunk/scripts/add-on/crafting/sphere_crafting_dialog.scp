@@ -19,20 +19,29 @@ gumppictiled 10 295 530 5 5058
 gumppictiled 10 345 530 5 5058
 gumppictiled 170 40 5 305 5058
 checkertrans 10 10 530 405
-xmfhtmlgumpcolor 10 13 530 20 <def.<ctag0.craft.skill>_title> 0 0 <def.dcolor_white>
-xmfhtmlgumpcolor 10 310 165 20 1044012 0 0 <def.dcolor_white>
-xmfhtmlgumpcolor 185 302 355 45 <ctag0.craft.message> 0 0 <def.dcolor_white>
+xmfhtmlgumpcolor 10 13 530 20 <ddef.scp.craft_title_<ctag0.craft.skill>> 0 0 <ddef.dcolor_white>
+xmfhtmlgumpcolor 10 310 165 20 1044012 0 0 <ddef.dcolor_white>
+if <isnum <ctag.craft.message>>
+xmfhtmlgumpcolor 185 302 355 45 <dctag0.craft.message> 0 0 <ddef.dcolor_white>
+else
+dhtmlgump 185 302 355 45 0 0 <def.bfont_white><ctag.craft.message>
+endif
 
 page 1 // Content
-xmfhtmlgumpcolor 10 40 165 20 1044010 0 0 16777215
+xmfhtmlgumpcolor 10 40 165 20 1044010 0 0 <ddef.dcolor_white>
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "_">
 local.sidebar = <eval 1 + (10 * <ctag0.craft.page.sidebar>)>
-dorigin 15 45
+local.wid = 65
 for z 1 10
 	if !(<isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>)
-	button *0 *20 4005 4007 1 0 <local.sidebar>
-	dcroppedtext +35 *0 115 20 0480 <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>
+	button 15 <dlocal.wid> 4005 4007 1 0 <local.sidebar>
+		if (<isnum <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>)
+		xmfhtmlgumpcolor 50 <dlocal.wid> 115 20 <ddef.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name> 0 0 <ddef.dcolor_white>
+		else
+		dcroppedtext 50 <dlocal.wid> 115 20 0480 <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>
+		endif
 	endif
+local.wid += 20
 local.sidebar ++
 endfor
 if !(<isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>)
@@ -54,7 +63,7 @@ ctag.craft.message
 
 if !<isempty <def.<ctag0.craft.skill>_smelt>>
 button 15 350 4005 4007 1 0 5004
-xmfhtmlgumpcolor 50 350 150 20 1044016 0 0
+xmfhtmlgumpcolor 50 350 150 20 1044016 0 0 <ddef.dcolor_white> 
 endif
 if <def0.<ctag0.craft.skill>_materials>
 button 15 370 4005 4007 1 0 5005
@@ -62,18 +71,18 @@ dtext 50 370 0480 <def.<ctag0.craft.skill>_material_<dctag.craft.material.<ctag.
 endif
 
 button 15 390 4017 4019 1 0 0
-dtext 50 390 0480 <def.bfont_white>BACK
+dtext 50 390 0480 BACK
 
 if !<isempty <def.<ctag0.craft.skill>_repair>>
 button 270 350 4005 4007 1 0 5006
-xmfhtmlgumpcolor 305 350 150 20 1044015 0 0 <def.dcolor_white>
+xmfhtmlgumpcolor 305 350 150 20 1044015 0 0 <ddef.dcolor_white>
 endif
 if <def0.craft_<ctag0.craft.skill>_marking>
 button 270 370 4005 4007 1 0 5007
-xmfhtmlgumpcolor 305 370 150 20 <qval (<ctag0.craft.mark>) ? <qval (<ctag0.craft.mark>==1) ? 1044017 : 1044019> : 1044018> 0 0 <def.dcolor_white>
+xmfhtmlgumpcolor 305 370 150 20 <qval (<ctag0.craft.mark>) ? <qval (<ctag0.craft.mark>==1) ? 1044017 : 1044019> : 1044018> 0 0 <ddef.dcolor_white>
 endif
 button 270 390 4005 4007 1 0 5008
-xmfhtmlgumpcolor 305 390 150 20 1044013 0 0
+xmfhtmlgumpcolor 305 390 150 20 1044013 0 0 <ddef.dcolor_white>
 
 
 [DIALOG d_craft_menu BUTTON]

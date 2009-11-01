@@ -1,0 +1,41 @@
+[defname sphere_crafting_bowcraft_default]
+bowcraft_marking			"1" // 1 or 0
+bowcraft_materials			"1" // 1 or 0
+
+bowcraft_smelt				""
+bowcraft_repair			""
+bowcraft_check				""
+bowcraft_check_notice		""
+bowcraft_chanceatmin		"50.0"
+bowcraft_exceptional_bonus	""
+
+bowcraft_category_1_name	"Ammunition"
+bowcraft_category_2_name	"Bows & Crossbows"
+bowcraft_category_3_name	"Exceptional Bows"
+bowcraft_category_4_name	"Misc Items."
+
+bowcraft_category_1_1	"i_arrow"
+bowcraft_category_1_2	"i_xbolt"
+
+bowcraft_category_2_1	"i_bow"
+bowcraft_category_2_2	"i_crossbow"
+bowcraft_category_2_3	"i_crossbow_heavy"
+
+bowcraft_category_3_1	"i_bow_sup"
+bowcraft_category_3_2	"i_xbow_sup"
+bowcraft_category_3_3	"i_hxbow_sup"
+bowcraft_category_3_4	"i_bow_excep"
+bowcraft_category_3_5	"i_xbow_excep"
+bowcraft_category_3_6	"i_hxbow_excep"
+bowcraft_category_3_7	"i_bow_elven"
+
+bowcraft_category_4_1	"i_arrow_shaft"
+bowcraft_category_4_2	"i_kindling"
+bowcraft_category_4_3	"i_torch"
+
+
+[defname sphere_crafting_bowcraft_colored]
+bowcraft_material_0
+bowcraft_material_0_name	"LOG"
+
+[EOF]

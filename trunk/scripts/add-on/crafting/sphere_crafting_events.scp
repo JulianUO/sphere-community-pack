@@ -1,28 +1,36 @@
 [events e_osi_crafting]
 on=@skillabort
+if <def.scp.CraftingSystem> == 0
+return 0
+endif
 if <def0.scp.NewCrafting_<serv.skill.<argn>.key>> == 0
 return 0
 endif
-if !<isempty <ctag0.craft.last>>
-ctag.craft.message = You fail to create <serv.itemdef.<ctag0.craft.last>.name>.
-else
-ctag.craft.message = You fail to craft the item.
-endif
+ctag.craft.message = <def.scp.craft_msg_fail>
 
 on=@skillfail
-if <def.scp.NewCrafting_<serv.skill.<argn>.key>>
+if <def.scp.CraftingSystem> == 0
+return 0
+endif
+if <def0.scp.NewCrafting_<serv.skill.<argn>.key>> == 1
 	if !<isempty <ctag.craft.skill>>
 	craftskill <ctag0.craft.skill>
 	endif
 endif
 
 on=@skillmakeitem
+if <def.scp.CraftingSystem> == 0
+return 0
+endif
+if <def0.scp.NewCrafting_<serv.skill.<argn>.key>> == 0
+return 0
+endif
 ref2 = <act.uid>
 ref2.name = <serv.itemdef.<ref2.baseid>.name>
 local.skillmake = <serv.skill.<action>.key> // someone explain why would action not be the crafting skill and i'll add the statement.
 local.success = <eval (<local.skillmake> + (250 + (<local.skillmake> / 3))) - <<serv.skill.<action>.key>>>
 if <r> < <local.success>
-ctag.craft.message = You fail to craft <ref2.name>.
+ctag.craft.message = <def.scp.craft_msg_fail>
 	if !<isempty <ctag.craft.skill>>
 	craftskill <ctag0.craft.skill>
 	endif
@@ -31,12 +39,13 @@ return 1
 endif
 ctag.craft.message = You create <ref2.name>.
 if <craft_exceptionalchance> < <r>
-ctag0.craft.message = You create <ref2.name>. It is of exceptional quality!
+ctag0.craft.message = <def.scp.craft_msg_exceptional>
 ref2.tag.exceptional = 1
 	if !<ctag0.craft.nomark>
 	ref2.name = <ref2.name> crafted by <name>
+	ctag.craft.message = <def.scp.craft_msg_excepmark>
 	endif
-try ref2.<def.<ctag0.craft.skill><local.resource>_exceptional_bonus>
+ref2.<def.<ctag0.craft.skill><local.resource>_exceptional_bonus>
 endif
 f_resenddialog d_craft_menu
 
