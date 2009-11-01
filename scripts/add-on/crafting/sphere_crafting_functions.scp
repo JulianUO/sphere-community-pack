@@ -55,7 +55,7 @@ elif !<isempty <def.<ctag0.craft.skill>_check>>
 	endif
 endif
 makeitem <args>
-//craftsuccesschance <args>
+craftsuccesschance <args>
 ctag.craft.message = Creating <serv.itemdef.<args>.name>...
 ctag.craft.last.<ctag0.craft.skill> = <args>
 if !strcmp("Cooking","<ctag0.craft.skill>")

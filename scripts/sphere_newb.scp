@@ -127,8 +127,8 @@ ITEMNEWBIE=i_kindling,2
 ITEMNEWBIE=i_cape
 COLOR=colors_black
 
-[NEWBIE ENTICEMENT]
-// Enticement is best skill
+[NEWBIE DISCORDANCE]
+// Discordance is best skill
 ITEMNEWBIE=random_instrument
 
 [NEWBIE EvaluatingIntel]

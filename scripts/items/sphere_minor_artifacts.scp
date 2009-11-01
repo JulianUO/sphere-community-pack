@@ -580,7 +580,7 @@ ON=@Dclick
 							IF (<UID>!=<SRC>)
 								IF (<CANSEELOS>)
 									LOCAL.DIV=<QVAL (<ISPLAYER>) ? 110:80>
-									DAMAGE <EVAL ((<SRC.Musicianship>/<LOCAL.DIV>)+(<SRC.Provocation>/<LOCAL.DIV>)+(<SRC.Peacemaking>/<LOCAL.DIV>)+(<SRC.Enticement>/<LOCAL.DIV>))-5> 02 <SRC>
+									DAMAGE <EVAL ((<SRC.Musicianship>/<LOCAL.DIV>)+(<SRC.Provocation>/<LOCAL.DIV>)+(<SRC.Peacemaking>/<LOCAL.DIV>)+(<SRC.Discordance>/<LOCAL.DIV>))-5> 02 <SRC>
 								endif
 							endif
 						end

@@ -366,8 +366,8 @@ ON=@Abort
 	SRC.SYSMESSAGE You stop looking for anything hidden.
 
 [SKILL 15]
-DEFNAME=Skill_Enticement
-KEY=Enticement
+DEFNAME=Skill_Discordance
+KEY=Discordance
 TITLE=Bard
 PROMPT_MSG=Whom do you wish to entice?
 DELAY=2.0
@@ -1255,7 +1255,7 @@ Carpentry=100.0
 Cartography=100.0
 Cooking=100.0
 DetectingHidden=100.0
-Enticement=100.0
+Discordance=100.0
 EvaluatingIntel=100.0
 Healing=100.0
 Fishing=100.0
