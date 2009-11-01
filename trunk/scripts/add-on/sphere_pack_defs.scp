@@ -6,3 +6,7 @@ snd_spell_gift_renewal		1481
 [defname spell_flags_new]
 spellflag_targ_player		  0200004 // targ_char + targ_no_npc
 spellflag_targ_npc			  0100004 // targ_char + targ_no_player
+
+
+[defname dialogs_colors]
+dcolor_white	16777215

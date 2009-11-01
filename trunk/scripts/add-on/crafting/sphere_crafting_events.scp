@@ -1,6 +1,6 @@
 [events e_osi_crafting]
 on=@skillabort
-if <def.scp.NewCrafting_<serv.skill.<argn>.key>> == 0
+if <def0.scp.NewCrafting_<serv.skill.<argn>.key>> == 0
 return 0
 endif
 if !<isempty <ctag0.craft.last>>

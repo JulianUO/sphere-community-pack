@@ -1,0 +1,30 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 01-Nov-2009
+VERSION=0.56b
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// "@hue,font,2 clilocid[,arguments]"
+// "@hue,font,3 clilocid,flags,affix[,arguments]"
+// Known possible values for flags are:
+//    0x00 = Append text to message
+//    0x01 = Prepend text to message
+//    0x02 = Forces message to show as a system message
+
+[DEFNAME SphereCommunityPack_Messages]
+scp.craft_blacks_forgeanvil	"@,,2 1044282" // You must be near a forge and and anvil to repair items.
+
+scp.craft_repair_targ		"@,,2 1044276" // Target an item to repair.
+scp.craft_repair_notitem		"@,,2 1044283"	// You cannot repair that.
+scp.craft_repair_inpack		"@,,2 1044275" // The item must be in your backpack to repair it.
+scp.craft_repair_wrongskill	"@,,2 1044277" // That item cannot be repaired.
+scp.craft_repair_fullrepair	"@,,2 1044281"	// That item is in full repair
+scp.craft_repair_cannot		"@,,2 1044278" // That item has been repaired many times, and will break if repairs are attempted again.
+scp.craft_repair_fail		"@,,2 1044280" // You fail to repair the item.
+scp.craft_repair_success		"@,,2 1044279"	// You repair the item.
+
+scp.craft_smelt_targ		"@,,2 1044273"	// Target an item to recycle.
