@@ -10,7 +10,24 @@
 // FILE LAST UPDATED: Saturday, November 15, 2003
 //
 VERSION=0.56b
+[comment edits]
+Way to many to list, but I will load up an old file for comparison.
+* Starting gold is 1000 now.
+* Added in Chivalry, Focus, Spellweaving, Ninjitsu, Bushido, and Necromancy.
+* Blacksmithing got iron ingots added to it, amount 50. Another blacksmithing tool as well.
+* Values changes on several <amount> writable items to match EA. (some listed in comments here)
+* Removed i_cloth, from tailors, all accounts. Added i_cloth_bolt.
+* Changed a few Robe colors to match EA.
+* i_log, changed to i_board in bowcraft.
+* Fixed cooking.
+* Alchemy was edited.
+* Magery got a huge edit, scroll down to view.
+* Any thieving based skill, had lockpick counts increased.
+* Removed everything minus tinker tools, from tinkering.
 
+
+Left to fix.
+* Tactics needs practice weapons scripted. This is not current in EA. It was pre AoS. Current != known and should maybe stick to this code.
 
 // Get the starting items for each skill.
 
@@ -25,7 +42,7 @@ COLOR=colors_neutral
 ITEMNEWBIE=i_dagger
 ITEMNEWBIE=i_candle
 ITEMNEWBIE=i_book_sm
-ITEMNEWBIE=i_gold,100
+ITEMNEWBIE=i_gold,1000
 
 [NEWBIE FEMALE_DEFAULT]
 // Female Generic Starting Clothes
@@ -38,23 +55,23 @@ COLOR=colors_neutral
 ITEMNEWBIE=i_dagger
 ITEMNEWBIE=i_candle
 ITEMNEWBIE=i_BOOK_SM
-ITEMNEWBIE=i_gold,100
+ITEMNEWBIE=i_gold,1000
 
 [NEWBIE ALCHEMY]
 // Alchemy is best skill
 ITEMNEWBIE=i_mortar_pestle
 ITEMNEWBIE=i_BOTTLE_EMPTY,4
-ITEMNEWBIE=i_reag_black_pearl,4
-ITEMNEWBIE=i_reag_garlic,4
-ITEMNEWBIE=i_reag_ginseng,4
-ITEMNEWBIE=i_reag_spider_silk,4
+ITEMNEWBIE={ i_reag_black_pearl 1 i_reag_blood_moss 1 },3
+ITEMNEWBIE={ i_reag_garlic 1 i_reag_ginseng 1 },3
+ITEMNEWBIE={ i_reag_mandrake_root 1 i_reag_nightshade 1 },3
+ITEMNEWBIE={ i_reag_spider_silk 1 i_reag_sulphur_ash 1 },3
 ITEMNEWBIE=i_robe
 COLOR=colors_red
 
 [NEWBIE ANATOMY]
 // Anatomy is best skill
 ITEMNEWBIE=i_robe
-COLOR=colors_yellow
+COLOR=colors_brown
 ITEMNEWBIE=i_bandage,3
 
 [NEWBIE ANIMALLORE]
@@ -82,12 +99,14 @@ ITEMNEWBIE=i_staff_gnarled
 [NEWBIE BLACKSMITHING]
 // Blacksmithing is best skill
 ITEMNEWBIE={ i_hammer_sledge 1 i_tongs 1 i_hammer_smith 1 }
+ITEMNEWBIE={ i_hammer_sledge 1 i_tongs 1 i_hammer_smith 1 }
+ITEMNEWBIE=i_ingot_iron,50
 ITEMNEWBIE=i_apron_half
 COLOR=colors_brown
 
 [NEWBIE BOWCRAFT]
 // Bowcraft/Fletching is best skill
-ITEMNEWBIE=i_log,14
+ITEMNEWBIE=i_board,14
 ITEMNEWBIE=i_feather,5
 ITEMNEWBIE=i_arrow_shaft,5
 
@@ -103,7 +122,6 @@ ITEMNEWBIE=i_bedroll
 [NEWBIE CARPENTRY]
 // Carpentry is best skill
 ITEMNEWBIE={ i_saw_dovetail 1 i_hammer 1 i_plane_moulding 1 i_nails 1 i_plane_jointing 1 i_plane_smoothing 1 i_saw 1 i_scorp 1 i_inshave 1 }
-ITEMNEWBIE=i_log,10
 ITEMNEWBIE=i_board,10
 ITEMNEWBIE=i_apron_half
 COLOR=colors_brown
@@ -115,9 +133,9 @@ ITEMNEWBIE=i_sextant
 
 [NEWBIE COOKING]
 // Cooking is best skill
-ITEMNEWBIE={ i_fish_big_1 1 i_eggs_fresh 1 i_bird_raw 1 i_ribs_raw 1 i_dough 1 i_cookie_mix 1 i_pie_unbaked 1 i_pizza_uncooked 1 i_chicken_leg 1 i_lamb_leg_raw 1 i_flour_sack 1 }
-ITEMNEWBIE={ i_fish_big_2 1 i_eggs_fresh 1 i_bird_raw 1 i_ribs_raw 1 i_dough 1 i_cookie_mix 1 i_pie_unbaked 1 i_pizza_uncooked 1 i_chicken_leg 1 i_lamb_leg_raw 1 i_flour_sack 1 }
-ITEMNEWBIE={ i_fish_big_3 1 i_eggs_fresh 1 i_bird_raw 1 i_ribs_raw 1 i_dough 1 i_cookie_mix 1 i_pie_unbaked 1 i_pizza_uncooked 1 i_chicken_leg 1 i_lamb_leg_raw 1 i_flour_sack 1 }
+ITEMNEWBIE=i_fish_cut_raw, 1
+ITEMNEWBIE=i_chicken_leg,1
+ITEMNEWBIE=i_lamb_leg_raw,1
 ITEMNEWBIE=i_flour_sack
 ITEMNEWBIE=i_pitcher_water
 ITEMNEWBIE=i_kindling,2
@@ -127,8 +145,8 @@ ITEMNEWBIE=i_kindling,2
 ITEMNEWBIE=i_cape
 COLOR=colors_black
 
-[NEWBIE DISCORDANCE]
-// Discordance is best skill
+[NEWBIE ENTICEMENT]//Discordance
+// Enticement is best skill
 ITEMNEWBIE=random_instrument
 
 [NEWBIE EvaluatingIntel]
@@ -136,7 +154,7 @@ ITEMNEWBIE=random_instrument
 
 [NEWBIE HEALING]
 // Healing is best skill
-ITEMNEWBIE=i_bandage,5
+ITEMNEWBIE=i_bandage,50
 ITEMNEWBIE=i_scissors
 
 [NEWBIE FISHING]
@@ -157,7 +175,6 @@ ITEMNEWBIE=i_shepherds_crook
 ITEMNEWBIE=i_cape
 COLOR=colors_black
 
-
 [NEWBIE PROVOCATION]
 // Provocation is best skill
 ITEMNEWBIE=random_instrument
@@ -169,32 +186,45 @@ ITEMNEWBIE=i_book_sm
 
 [NEWBIE LOCKPICKING]
 // Lockpicking is best skill
-ITEMNEWBIE=i_lockpick,5
+ITEMNEWBIE=i_lockpick,20
 
-[NEWBIE MAGERY]
+[NEWBIE MAGERY]//needs more added.
 // Magery is best skill
 ITEMNEWBIE=i_spellbook
-ITEMNEWBIE=i_reag_black_pearl,3
-ITEMNEWBIE=i_reag_blood_moss,3
-ITEMNEWBIE=i_reag_garlic,3
-ITEMNEWBIE=i_reag_ginseng,3
-ITEMNEWBIE=i_reag_nightshade,3
-ITEMNEWBIE=i_reag_sulfur_ash,3
-ITEMNEWBIE=i_reag_spider_silk,3
-ITEMNEWBIE=i_reag_mandrake_root,3
-ITEMNEWBIE={ i_scroll_night_sight 1 i_scroll_clumsy 1 i_scroll_create_food 1 }
-ITEMNEWBIE={ i_scroll_feeblemind 1 i_scroll_heal 1 i_scroll_magic_arrow 1 }
-ITEMNEWBIE={ i_scroll_night_sight 1 i_scroll_weaken 1 }
+ADDSPELL=s_magic_arrow
+ADDSPELL=s_create_food
+ADDSPELL=s_heal
+ADDSPELL=s_cure
+ADDSPELL=s_protection
+ADDSPELL=s_magic_untrap
+ADDSPELL=s_bless
+ADDSPELL=s_teleport
+ADDSPELL=s_telekinesis
+ADDSPELL=s_curse
+ADDSPELL=s_greater_heal
+ADDSPELL=s_fire_field
+ITEMNEWBIE=i_reag_black_pearl,30
+ITEMNEWBIE=i_reag_blood_moss,30
+ITEMNEWBIE=i_reag_garlic,30
+ITEMNEWBIE=i_reag_ginseng,30
+ITEMNEWBIE=i_reag_nightshade,30
+ITEMNEWBIE=i_reag_sulfur_ash,30
+ITEMNEWBIE=i_reag_spider_silk,30
+ITEMNEWBIE=i_reag_mandrake_root,30
+ITEMNEWBIE={ i_scroll_night_sight 1 i_scroll_clumsy 1 i_scroll_feeblemind 1 i_scroll_reactive_armor 1 i_scroll_weaken 1 }
+ITEMNEWBIE={ i_scroll_agility 1 i_scroll_cunning 1 i_scroll_harm 1 i_scroll_magic_trap 1 i_scroll_strength 1 }
+ITEMNEWBIE={ i_scroll_fireball 1 i_scroll_magic_lock 1 i_scroll_poison 1 i_scroll_unlock 1 i_scroll_wall_of_stone 1 i_scroll_archprotection 1 i_scroll_archcure 1 i_scroll_lightning 1 i_scroll_mana_drain 1 i_scroll_recall 1 }
 
 [NEWBIE MAGICRESISTANCE]
 // Resisting Spells is best skill
 
 [NEWBIE TACTICS]
 // Tactics is best skill
+ITEMNEWBIE=i_katana
 
 [NEWBIE SNOOPING]
 // Snooping is best skill
-ITEMNEWBIE=i_lockpick,4
+ITEMNEWBIE=i_lockpick,20
 
 [NEWBIE MUSICIANSHIP]
 // Musicianship is best skill
@@ -216,19 +246,12 @@ COLOR=colors_black
 
 [NEWBIE STEALING]
 // Steal is best skill
-ITEMNEWBIE=i_lockpick,4
+ITEMNEWBIE=i_lockpick,20
 
 [NEWBIE TAILORING]
 // Tailoring is best skill
 ITEMNEWBIE=i_sewing_kit
-ITEMNEWBIE=i_CLOTH
-COLOR=colors_neutral
-ITEMNEWBIE=i_CLOTH
-COLOR=colors_neutral
-ITEMNEWBIE=i_CLOTH
-COLOR=colors_neutral
-ITEMNEWBIE=i_CLOTH
-COLOR=colors_neutral
+ITEMNEWBIE=i_CLOTH_BOLT
 
 [NEWBIE TAMING]
 // Animal Training is best skill
@@ -242,10 +265,10 @@ ITEMNEWBIE=random_potion
 
 [NEWBIE TINKERING]
 // Tinkering is best skill
-ITEMNEWBIE={ i_clock_frame 1 i_clock_parts 1 i_axel_and_gears 1 i_gears 1 i_hinge 1 i_sextant_parts 1 i_sticks 1 i_springs 1 i_tinker_tools 1 }
+//ITEMNEWBIE={ i_clock_frame 1 i_clock_parts 1 i_axel_and_gears 1 i_gears 1 i_hinge 1 i_sextant_parts 1 i_sticks 1 i_springs 1 i_tinker_tools 1 }
 ITEMNEWBIE=i_tinker_tools
-ITEMNEWBIE=i_apron_half
-COLOR=colors_brown
+//ITEMNEWBIE=i_apron_half
+//COLOR=colors_brown
 
 [NEWBIE TRACKING]
 // Tracking is best skill
@@ -260,15 +283,15 @@ ITEMNEWBIE=i_scissors
 
 [NEWBIE SWORDSMANSHIP]
 // Swordsmanship is best skill
-ITEMNEWBIE=i_sword_long
+ITEMNEWBIE=i_katana
 
 [NEWBIE MACEFIGHTING]
 // Mace Fighting is best skill
-ITEMNEWBIE=i_mace
+ITEMNEWBIE=i_club
 
 [NEWBIE FENCING]
 // Fencing is best skill
-ITEMNEWBIE=i_spear
+ITEMNEWBIE=i_kryss
 
 [NEWBIE WRESTLING]
 // Wrestling is best skill
@@ -282,5 +305,43 @@ ITEMNEWBIE=i_hatchet
 // Mining is best skill
 ITEMNEWBIE={ i_pickaxe 1 i_shovel 1 }
 
+[NEWBIE BUSHIDO]
+ITEMNEWBIE=i_hakama
+ITEMNEWBIE=i_kasa
+ITEMNEWBIE=i_spellbook_bushido
+
+[NEWBIE FOCUS]
+ITEMNEWBIE=i_robe
+COLOR=colors_red
+ITEMNEWBIE=i_dagger
+
+[NEWBIE CHIVALRY]
+//None.
+
+[NEWBIE NECROMANCY]
+ITEMNEWBIE=i_spellbook_necromancy
+ADDSPELL=s_animate_dead
+ADDSPELL=s_summon_familiar
+ADDSPELL=s_blood_oath
+ADDSPELL=s_evil_omen
+ADDSPELL=s_corpse_skin
+CONTAINER=i_bag
+COLOR=COLORS_BLACK
+ITEMNEWBIE=i_reag_bat_wings,50
+ITEMNEWBIE=i_reag_daemon_blood,50
+ITEMNEWBIE=i_reag_grave_dust,50
+ITEMNEWBIE=i_reag_pig_iron_2,50
+ITEMNEWBIE=i_reag_nox_crystal,50
+
+[NEWBIE NINJITSU]
+ITEMNEWBIE=i_spellbook_ninjitsu
+ITEMNEWBIE=i_hakama
+ITEMNEWBIE=i_kasa
+
+[COMMENT NEWBIE REMOVETRAP]
+non-starting skill.
+
+[COMMENT NEWBIE SPELLWEAVING]
+non-starting skill.
 
 [EOF]
