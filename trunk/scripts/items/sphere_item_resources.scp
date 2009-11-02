@@ -903,7 +903,7 @@ DESCRIPTION=Dead Wood
 
 [ITEMDEF 0f91]
 // Worms Heart
-DEFNAME=i_reag_worm_heart
+DEFNAME=i_reag_wyrm_heart
 DEFNAME2=worm_heart
 TYPE=T_REAGENT
 VALUE=3
@@ -1616,3 +1616,78 @@ VALUE=1
 
 ON=@Create
 	COLOR=colors_white
+
+
+
+
+
+[COMMENT Reagents]
+Khaos - I am recompiling all AoS ++ reagents, non-magery. All are missing minus Bat wing, which im redefining.
+
+These will get their own file later when I compile SA reagents.
+
+[ITEMDEF i_reag_bat_wings]
+DEFNAME=i_reag_bat_wings
+NAME=Bat Wings
+ID=i_reag_batwing
+TYPE=T_REAGENT
+VALUE=3
+PILE=1
+WEIGHT=.1
+
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Reagents - AoS Necromancy
+DESCRIPTION=Bat Wings
+
+[ITEMDEF i_reag_daemon_blood]
+DEFNAME=i_reag_daemon_blood
+NAME=Daemon Blood
+ID=i_reag_dragon_blood
+TYPE=T_REAGENT
+VALUE=3
+PILE=1
+WEIGHT=.1
+
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Reagents - AoS Necromancy
+DESCRIPTION=Daemon Blood
+
+[ITEMDEF i_reag_grave_dust]
+DEFNAME=i_reag_grave_dust
+NAME=Grave Dust
+ID=i_reag_volcanic_ash
+TYPE=T_REAGENT
+VALUE=3
+PILE=1
+WEIGHT=.1
+
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Reagents - AoS Necromancy
+DESCRIPTION=Grave Dust
+
+[ITEMDEF i_reag_nox_crystal]
+DEFNAME=i_reag_nox_crystal
+NAME=Nox Crystal
+ID=i_reag_serpent_scale
+TYPE=T_REAGENT
+VALUE=3
+PILE=1
+WEIGHT=.1
+
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Reagents - AoS Necromancy
+DESCRIPTION=Nox Crystal
+
+[ITEMDEF i_reag_pig_iron_2]
+//Up to you if you use, or use old def, they're the same. Added this for grouping purposes.
+DEFNAME=i_reag_pig_iron_2
+NAME=Pig Iron
+ID=i_reag_pig_iron
+TYPE=T_REAGENT
+VALUE=3
+PILE=1
+WEIGHT=.1
+
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Reagents - AoS Necromancy
+DESCRIPTION=Pig Iron
