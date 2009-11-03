@@ -23,15 +23,20 @@ VERSION=0.56b
 // If not, you can find documentation in the forums.
 scp.NewSkills_Anatomy=1
 scp.NewSkills_AnimalLore=1
+scp.NewSkills_AnimalTaming=1
 scp.NewSkills_ArmsLore=1
 scp.NewSkills_Begging=1
 scp.NewSkills_EvalInt=1
 scp.NewSkills_SpiritSpeak=1
 scp.NewSkills_ResistingSpells=1
 
+// Enables, switch or disable the new barding system
+// 0 = Default. 1 = OSI-Like.
+scp.BardingSystem=1
+
 // Enables, switch or disable the new crafting system
 // 0 = Default. 1 = OSI-Like. 
-scp.CraftingSystem = 1
+scp.CraftingSystem=1
 
 // Enable or disable the crafting menu for specific skill.
 // <boolean> (1 if enable, 0 if not). Default = 1

@@ -1,0 +1,68 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - Complete Barding System
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// New Peacemaking System. OSI-Like but still a little custom.
+// Because some formulas are missing.
+//
+[function f_start_peacemaking]
+ref10 = <args>
+if <argo.isitem>
+sysmessage <def.scp.bard_peacemaking_isitem>
+return 1
+endif
+// Standard mode : reset combatants for everyone in the area
+if <ref10.uid> == <uid>
+ref12 = <uid>
+local.chance = <eval (<peacemaking> /2 ) + (<musicianship> / 2)>
+	if <local.chance> < 400
+	local.chance = 400
+	endif
+	if <r<local.chance>> > 290
+	local.chars = 0
+		forchars <eval 8 + (<peacemaking> / 150)>
+			if <ref12.uid> != <uid>
+			local.chars ++ 
+				if !<isplayer>
+				action  = 06d
+				endif
+			flags &= ~statf_war
+			memoryfindtype.memory_war_targ.remove
+			sysmessage <def.scp.bard_peacemaking_peaced>
+			endif
+		endfor
+	ref12.sysmessage <qval (<local.chars> > 0) ? <def.scp.bard_peacemaking_success> : <def.scp.bard_peacemaking_norange>
+	else
+	ref12.sysmessage <def.scp.bard_peacemaking_fail>
+	endif
+else 
+// Target mode : pacify a single target for a longer duration
+	if !<argo.isplayer>
+	local.chance = <f_barding_calculation <argo.uid>,<tag0.instrument>,peacemaking>
+		if <local.chance> < <r>
+		sysmessage <def.scp.bard_peacemaking_tfail>
+		return 1
+		endif
+	serv.newitem i_new_peacemaking,1,<argo.uid>
+	new.timer = <eval (<peacemaking> / 10) + 30>
+	argo.tag0.nomovetill = <eval <new.timer> + <serv.time>>
+	argo.events +e_peacemaking
+	argo.flags &= ~statf_war
+	argo.memoryfindtype.memory_war_targ.remove
+	argo.action = -1
+	sysmessage <def.scp.bard_peacemaking_tsuccess>
+	endif
+endif
+return 1
+
+[eof]

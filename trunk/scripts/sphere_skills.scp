@@ -251,6 +251,12 @@ BONUS_INT=50
 BONUS_STATS=5
 ADV_RATE=2.5,50.0,200.0
 
+on=@prestart
+if <def.scp.BardingSystem> == 1
+f_onbarding_start 9
+return 1
+endif
+
 ON=@Fail
 SRC.MESSAGE @,,2 500613
 
@@ -379,6 +385,12 @@ BONUS_DEX=50
 BONUS_INT=50
 BONUS_STATS=5
 ADV_RATE=2.5,50.0,200.0
+
+on=@prestart
+if <def.scp.BardingSystem> == 1
+f_onbarding_start 15
+return 1
+endif
 
 ON=@Fail
 	SRC.SYSMESSAGE Your music fails to attract anyone.
@@ -543,8 +555,14 @@ BONUS_INT=10
 BONUS_STATS=5
 ADV_RATE=2.5,50.0,200.0
 
+on=@prestart
+if <def.scp.BardingSystem> == 1
+f_onbarding_start 22
+return 1
+endif
+
 ON=@Fail
-SRC.sysmessageloc -1,501599
+SRC.sysmessage @,,2 501599
 
 ON=@Abort
 	SRC.SYSMESSAGE You decide not to incite anything for now.
@@ -833,26 +851,34 @@ BONUS_STATS=20
 ADV_RATE=10.0,200.0,800.0
 
 ON=@Start
+if <def.scp.NewSkills_AnimalTaming> == 1
+f_start_taming <act.uid>
+return 1
+endif
 if <def.scp.Followers> == 1
-local.slots = <qval <src.targ.tag0.slots_needed> ? <src.targ.tag0.slots_needed> : 1>
+local.slots = <qval <src.targ.tag0.control.slots> ? <src.targ.tag0.control.slots> : 1>
 	if <eval <src.curfollower>+<local.slots>> > <src.maxfollower>
-	src.sysmessage @,,2 1049611 // You have too many followers to tame that creature.
+	src.sysmessage <def.scp.taming_manyfollowers>
 	return 1
 	endif
 endif
 if <src.taming> < <src.targ.taming>
-src.sysmessage @,,2 1042590 // You cannot tame this creature.
+src.sysmessage <def.scp.taming_nochance>
 return 1
 endif
 
-ON=@Success
-curfollower += <qval <src.targ.tag0.slots_needed> ? <src.targ.tag0.slots_needed> : 1>
+on=@success
+if <def.scp.NewSkills_AnimalTaming> == 0
+	if <def.scp.Followers> == 1
+	curfollower += <qval <src.targ.tag0.control.slots> ? <src.targ.tag0.control.slots> : 1>
+	endif
+endif
 
-ON=@Fail
-	SRC.MESSAGE @,,2 502798
+on=@fail
+sysmessage <def.scp.taming_failed>
 
-ON=@Abort
-	SRC.SYSMESSAGE You give up trying to tame the creature.
+on=@abort
+sysmessage <def.scp.taming_abort>
 
 [SKILL 36]
 DEFNAME=skill_tasteid
