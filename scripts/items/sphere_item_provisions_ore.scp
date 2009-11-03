@@ -12,22 +12,22 @@
 VERSION=0.56b
 
 [DEFNAME COLOR_ORE]
-color_o_iron		0    //option: 0763
-color_o_bronze        06d6
+color_o_iron		0763 //option: 0
+color_o_bronze		06d6
 color_o_gold		045e //option: 084d
 color_o_copper		0641 //option: 060c
 color_o_oldcopper	0590
-color_o_dullcopper  060a
-color_o_silver     0231 //option: 0
-color_o_shadow     0770
-color_o_bloodrock  04c2
-color_o_blackrock  0455
-color_o_mytheril   052d //or 0528
-color_o_rose       0665
-color_o_verite     07d1
-color_o_agapite    0400
-color_o_rusty      0750
-color_o_valorite   0515
+color_o_dullcopper	060a
+color_o_silver		0231 //option: 0
+color_o_shadow		0770
+color_o_bloodrock	04c2
+color_o_blackrock	0455
+color_o_mytheril	052d //or 0528
+color_o_rose		0665
+color_o_verite		07d1
+color_o_agapite		0400
+color_o_rusty		0750
+color_o_valorite	0515
 //************** Ores ***************
 
 [ITEMDEF 019b7]
