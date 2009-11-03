@@ -1,0 +1,348 @@
+[itemdef 02782]
+defname=i_kimono_male
+name=Male Kimono
+type=t_clothing
+weight=4.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 50.0,t_sewing_kit
+resources=16 i_cloth
+
+dupelist=027CD
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Male Kimono
+
+on=@create
+ hitpoints={50 80}
+
+//Male Kimono
+[itemdef 027CD]
+dupeitem=02782
+
+
+[itemdef 02783]
+defname=i_kimono_female
+name=Female Kimono
+type=t_clothing
+weight=4.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 50.0,t_sewing_kit
+resources=16 i_cloth
+
+dupelist=027CE
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Female Kimono
+
+on=@create
+ hitpoints={50 80}
+
+//Female Kimono
+[itemdef 027CE]
+dupeitem=02783
+
+
+[itemdef 0278F]
+defname=i_cloth_ninja_hood
+name=Cloth Ninja Hood
+type=t_clothing
+weight=2.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 80.0,t_sewing_kit
+resources=13 i_cloth
+
+dupelist=027DA
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Cloth Ninja Hood
+
+on=@create
+ hitpoints={50 80}
+
+//Cloth Ninja Hood
+[itemdef 027DA]
+dupeitem=0278F
+
+
+[itemdef 02794]
+defname=i_cloth_ninja_jacket
+name=Cloth Ninja Jacket
+type=t_clothing
+weight=5.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 75.0,t_sewing_kit
+resources=12 i_cloth
+
+dupelist=027DF
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Cloth Ninja Jacket
+
+on=@create
+ hitpoints={50 80}
+
+//Cloth Ninja Jacket
+[itemdef 027DF]
+dupeitem=02794
+
+
+[itemdef 02798]
+defname=i_kasa
+name=Kasa
+type=t_clothing
+weight=3.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 60.0,t_sewing_kit
+resources=12 i_cloth
+
+dupelist=027E3
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Kasa
+
+on=@create
+ hitpoints={50 80}
+
+//Kasa
+[itemdef 027E3]
+dupeitem=02798
+
+
+[itemdef 02799]
+defname=i_kamashimo
+name=Kamashimo
+type=t_clothing
+weight=3.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 75.0,t_sewing_kit
+resources=15 i_cloth
+
+dupelist=027E4
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Kamashimo
+
+on=@create
+ hitpoints={50 80}
+
+//Kamashimo
+[itemdef 027E4]
+dupeitem=02799
+
+
+[itemdef 0279A]
+defname=i_hakama
+name=Hakama
+type=t_clothing
+weight=2.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 50.0,t_sewing_kit
+resources=16 i_cloth
+
+dupelist=027E5
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Hakama
+
+on=@create
+ hitpoints={50 80}
+
+//Hakama
+[itemdef 027E5]
+dupeitem=0279A
+
+
+[itemdef 0279B]
+defname=i_tattsuke_hakama
+name=Tattsuke-Hakama
+type=t_clothing
+weight=2.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 50.0,t_sewing_kit
+resources=16 i_cloth
+
+dupelist=027E6
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Tattsuke-Hakama
+
+on=@create
+ hitpoints={50 80}
+
+//Tattsuke-Hakama
+[itemdef 027E6]
+dupeitem=0279B
+
+
+[itemdef 0279C]
+defname=i_hakama_shita
+name=Hakama-Shita
+type=t_clothing
+weight=3.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 40.0,t_sewing_kit
+resources=14 i_cloth
+
+dupelist=027E7
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Hakama-Shita
+
+on=@create
+ hitpoints={50 80}
+
+//Hakama-Shita
+[itemdef 027E7]
+dupeitem=0279C
+
+
+[itemdef 027A0]
+defname=i_obi
+name=Obi
+type=t_clothing
+weight=1.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 20.0,t_sewing_kit
+resources=6 i_cloth
+
+dupelist=027EB
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Obi
+
+on=@create
+ hitpoints={50 80}
+
+//Obi
+[itemdef 027EB]
+dupeitem=027A0
+
+
+[itemdef 02796]
+defname=i_waraji_tabi
+name=Waraji and Tabi
+type=t_clothing
+weight=2.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 20.0,t_sewing_kit
+resources=6 i_cloth
+
+dupelist=027E1
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Waraji and Tabi
+
+on=@create
+ hitpoints={50 80}
+
+//Waraji and Tabi
+[itemdef 027E1]
+dupeitem=02796
+
+
+[itemdef 02797]
+defname=i_ninja_tabi
+name=Ninja Tabi
+type=t_clothing
+weight=2.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 70.0,t_sewing_kit
+resources=10 i_cloth
+
+dupelist=027E2
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Ninja Tabi
+
+on=@create
+ hitpoints={50 80}
+
+//Ninja Tabi
+[itemdef 027E2]
+dupeitem=02797
+
+
+[itemdef 027A1]
+defname=i_jin_baori
+name=Jin-Baori
+type=t_clothing
+weight=3.0
+flip=1
+reqstr=10
+dye=1
+skillmake=tailoring 30.0,t_sewing_kit
+resources=10 i_cloth
+
+dupelist=027EC
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Jin-Baori
+
+on=@create
+ hitpoints={50 80}
+
+//Jin-Baori
+[itemdef 027EC]
+dupeitem=027A1
+
+
+[itemdef 02790]
+defname=i_leather_ninja_belt
+name=Leather Ninja Belt
+type=t_clothing
+Weight=1.0
+Flip=1
+reqstr=10
+dye=0
+skillmake=tailoring 50.0,t_sewing_kit
+resources=5 i_hides_cut
+
+dupelist=027DB
+
+category=Provisions - clothing
+subsection=Samurai Empire
+description=Leather Ninja Belt
+
+on=@create
+ hitpoints={50 80}
+
+//Leather Ninja Belt
+[itemdef 027DB]
+dupeitem=02790
