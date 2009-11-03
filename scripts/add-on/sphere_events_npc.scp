@@ -4,7 +4,7 @@ on=@death
 if <def.scp.followers> == 1
 	if <src.memoryfindtype.memory_ipet>
 	ref7 = <src.memoryfindtype.memory_ipet.link.uid>
-	ref7.curfollower -= <qval <src.tag0.slots_needed> ? <src.tag0.slots_needed> : 1>
+	ref7.curfollower -= <qval <src.tag0.control.slots> ? <src.tag0.control.slots> : 1>
 	endif
 endif
 
@@ -13,14 +13,14 @@ on=@destroy
 if <def.scp.followers> == 1
 	if <memoryfindtype.memory_ipet>
 	ref7 = <memoryfindtype.memory_ipet.link.uid>
-	ref7.curfollower -= <qval <tag0.slots_needed> ? <tag0.slots_needed> : 1>
+	ref7.curfollower -= <qval <tag0.control.slots> ? <tag0.control.slots> : 1>
 	endif
 endif
 
 // Followers (Desert)
 on=@petdesert
 if <def.scp.followers> == 1
-src.curfollower -= <qval <tag0.slots_needed> ? <tag0.slots_needed> : 1>
+src.curfollower -= <qval <tag0.control.slots> ? <tag0.control.slots> : 1>
 endif
 
 // OSI Spells Bonus + Magic Reflection + Magic Resistance
@@ -32,7 +32,7 @@ if <isdamagespell <argn1>>
 	endif
 elif <argn> == 40
 	if <def.scp.followers> == 1
-	local.slots = <qval <tag0.slots_needed> ? <tag0.slots_needed> : 1>
+	local.slots = <qval <tag0.control.slots> ? <tag0.control.slots> : 1>
 		if <eval <src.curfollower>+<local.slots>> > <src.maxfollower>
 		src.sysmessage You have too many followers
 		hits = 0

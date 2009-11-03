@@ -107,7 +107,7 @@ endif
 on=@itembuy
 if <def.scp.followers> == 1
 	if <act.type> == t_figurine
-	local.slots = <qval <serv.chardef.<act.tdata3>.tag0.slots_needed> ? <serv.chardef.<act.tdata3>.tag0.slots_needed> : 1>
+	local.slots = <qval <serv.chardef.<act.tdata3>.tag0.control.slots> ? <serv.chardef.<act.tdata3>.tag0.control.slots> : 1>
 		if <eval <src.curfollower>+(<local.slots>*<argn>)> > <src.maxfollower>
 		src.sysmessage @,,2 1049612,<serv.chardef.<act.tdata3>.name> // ~1_NAME~ remained in the stables because you have too many followers.	
 		src.newgold <local.totalcost>

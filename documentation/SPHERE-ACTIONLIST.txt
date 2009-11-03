@@ -1,0 +1,17 @@
+    NPCACT_FOLLOW_TARG = 100,    // 100 = following a char.
+    NPCACT_STAY,            // 101
+    NPCACT_GOTO,            // 102 = Go to a location x,y. Pet command
+    NPCACT_WANDER,            // 103 = Wander aimlessly.
+    NPCACT_LOOKING,            // 104 = just look around intently.
+    NPCACT_FLEE,            // 105 = Run away from target. m_Act_Targ
+    NPCACT_TALK,            // 106 = Talking to my target. m_Act_Targ
+    NPCACT_TALK_FOLLOW,        // 107 = m_Act_Targ
+    NPCACT_GUARD_TARG,        // 108 = Guard a targetted object. m_Act_Targ
+    NPCACT_GO_HOME,            // 109 =
+    NPCACT_BREATH,            // 110 = Using breath weapon. on m_Act_Targ
+    NPCACT_RIDDEN,            // 111 = Being ridden or shrunk as figurine.
+    NPCACT_LOOTING,            // 112 = Looting a corpse. m_Act_Targ
+    NPCACT_THROWING,        // 113 = Throwing a stone at m_Act_Targ.
+    NPCACT_TRAINING,        // 114 = using as a training dummy, or teaching sth. etc.
+    NPCACT_Napping,            // 115 = just snoozong a little bit, but not sleeping.
+    NPCACT_FOOD,            // 116 = Searching for food
