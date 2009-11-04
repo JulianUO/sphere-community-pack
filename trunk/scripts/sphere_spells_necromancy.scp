@@ -34,9 +34,6 @@ MANAUSE=23
 SKILLREQ=Necromancy 40.0
 INTERRUPT=100.0,1.0
 
-ON=@Start
-// sayu Uus Corp
-
 on=@success
 src.sysmessage @,,2 1061083
 src.targetf f_AnimateDeadTarg
@@ -117,9 +114,6 @@ MANAUSE=13
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
 
-ON=@Start
-// Sayu In Jux Mani Xen
-
 ON=@Success
 if <src.tag0.bloodoathcast>
 src.tag.bloodoathcast =
@@ -169,9 +163,6 @@ MANAUSE=11
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
 
-ON=@Start
-// sayu In Aglo Corp Ylem
-
 ON=@Success
 if <act.restest i_corpse_skin>
 act.consume i_corpse_skin
@@ -203,7 +194,6 @@ SKILLREQ=Necromancy 0.1
 INTERRUPT=100.0,1.0
 
 ON=@Start
-// sayu An Sanct Gra Char
 if !(<act.isweapon>)
 src.sysmessage That isn't a weapon
 return 1
@@ -236,9 +226,6 @@ MANAUSE=11
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
 
-ON=@Start
-// sayu Pas Tym An Sanct
-
 ON=@Success
 if <act.isevent.e_evil_omen>
 act.events -e_evil_omen
@@ -262,9 +249,6 @@ DURATION=0
 MANAUSE=11
 SKILLREQ=Necromancy 40.0
 INTERRUPT=100.0,1.0
-
-ON=@Start
-//Sayu Rel Xen Vas Bal
 
 ON=@Success
 serv.newitem=i_beast_fx
@@ -300,9 +284,6 @@ DURATION=0
 MANAUSE=23
 SKILLREQ=Necromancy 70.0
 INTERRUPT=100.0,1.0
-
-ON=@Start
-// Sayu Rel Xen Corp Ort
 
 ON=@Effect
 serv.newitem=i_liche_fx
@@ -345,9 +326,6 @@ MANAUSE=17
 SKILLREQ=Necromancy 30.0
 INTERRUPT=100.0,1.0
 
-ON=@Start
-// Sayu Wis An Ben
-
 ON=@Success
 if <act.restest i_mind_rot>
 act.consume i_mind_rot
@@ -377,9 +355,6 @@ DURATION=0
 MANAUSE=5
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
-
-ON=@Start
-// sayu In Sar
 
 ON=@SUCCESS
 local.damage = <eval ((<src.necromancy> - <act.magicresistance>) / 100) + 30>
@@ -527,9 +502,6 @@ MANAUSE=29
 SKILLREQ=Necromancy 65.0
 INTERRUPT=100.0,1.0
 
-ON=@Start
-// sayu In Bal Nox
-
 ON=@Success
 act.effect 3,i_fx_heal_effect,16,20,0,01,1
 serv.newitem i_strangle
@@ -555,9 +527,6 @@ MANAUSE=17
 SKILLREQ=Necromancy 30.0
 INTERRUPT=100.0,1.0
 
-ON=@Start
-// sayu Kal Xen Bal
-
 ON=@Success
 skillmenu sm_summon_familiar
 return 1
@@ -578,9 +547,6 @@ DURATION=0
 MANAUSE=23
 SKILLREQ=Necromancy 99.0
 INTERRUPT=100.0,1.0
-
-ON=@Start
-// Sayu Rel Xen An Sanct
 
 ON=@Success
 serv.newitem i_fx_bless_effect
@@ -644,7 +610,6 @@ if <src.restest i_Revenant_tracker>
 endif
 
 ON=@Success
-//sayu Ral Xen Bal Beh
 serv.newitem i_revenant_tracker
 new.equip <src>
 serv.newnpc c_revenant
@@ -677,9 +642,6 @@ MANAUSE=23
 SKILLREQ=Necromancy 60.0
 INTERRUPT=100.0,1.0
 
-ON=@Start
-// Sayu Kal Vas An Flam
-
 on=@success
 forchars 5
 	if <src.uid> != <uid>
@@ -710,9 +672,6 @@ DURATION=0
 MANAUSE=17
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
-
-ON=@Start
-// Sayu Rel Xen Um
 
 ON=@Success
   serv.newitem=i_wraith_fx

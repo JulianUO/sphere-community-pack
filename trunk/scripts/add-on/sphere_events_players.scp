@@ -117,6 +117,14 @@ if <def.scp.followers> == 1
 	endif
 endif
 
+// Crafting System
+on=@skillmenu
+doswitch <def.scp.CraftingSystem>
+return 0
+f_crafting_startosi <args>
+enddo
+return 1
+
 // Lower Reagent Cost + Lower Mana Consume
 on=@spellselect
 if <def.scp.MagicProperties_LowerReagentCost> == 1
@@ -130,17 +138,11 @@ if <def.scp.MagicProperties_LowerReagentCost> == 1
 		endif
 	return 6
 	endif
+else
+	if <def.scp.MagicProperties_LowerManaCost> == 1
+	argn2 = <eval (<argn2> * (<tag0.lmc> + 1)) / 100>
+	endif
 endif
-//else
-//	if <def.scp.MagicProperties_LowerManaCost> == 1
-
-// Crafting System
-on=@skillmenu
-doswitch <def.scp.CraftingSystem>
-return 0
-f_crafting_startosi <args>
-enddo
-return 1
 
 // Necromancy Words of Power
 // Armor Restriction + Mage Armor + Mage Weapon
@@ -149,6 +151,9 @@ on=@spellcast
 if <dtag0.spellrecovery> > <serv.time>
 src.sysmessage @03c1,6,2 502644 // You have not yet recovered from casting a spell
 return 1
+endif
+if <def.scp.OSISpellDiff> == 1
+actdiff = <eval (((<<argn1>> - <argn2>) * 2.5) + 50.0)>
 endif
 if !<npc>
 	if <argn1> > 100
