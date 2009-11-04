@@ -76,6 +76,10 @@ scp.OSIOreFormula=1
 // Formula is: (Base Damage * Eval. Int. Bonus) * ((Spell Damage Increase / 100) + 1)
 scp.OSISpellDamage=1
 
+// Set to 1 if you want to calculate the success chance of the spell according to OSI.
+// Formula is: ((CastSkill - SkillRequired) * 2.5) + 50.0
+scp.OSISpellDiff=1
+
 scp.MagicProperties_DamageIncrease=0
 scp.MagicProperties_DexterityBonus=0
 scp.MagicProperties_FasterCastRecovery=0

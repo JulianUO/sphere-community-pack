@@ -73,9 +73,9 @@ endif
 
 [function IsInArcaneCircle]
 foritems 0
-if (<dispid> == 0FEA) || (<dispid> == 01216) || (<dispid> == 0307F)
-return 1
-endif
+	if (<dispid> == 0FEA) || (<dispid> == 01216) || (<dispid> == 0307F)
+	return 1
+	endif
 endfor
 return 0
 
