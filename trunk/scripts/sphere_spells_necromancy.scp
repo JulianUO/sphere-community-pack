@@ -14,6 +14,8 @@ VERSION=0.56b
 // - Blood Oath
 // - Pain Spike
 // - Wither
+//
+//We're missing exorcism!! - Khaos
 
 [SPELL 101]
 DEFNAME=s_animate_dead
@@ -21,7 +23,7 @@ NAME=Animate Dead
 SOUND=snd_spell_resurrection
 RUNES=
 CAST_TIME=1.5
-RESOURCES=i_reag_volcanic_ash, i_reag_blood_vial
+RESOURCES=i_reag_grave_dust, i_reag_daemon_blood
 RUNE_ITEM=i_rune_resurrection
 SCROLL_ITEM=i_scroll_animate_dead
 FLAGS=spellflag_scripted
@@ -31,6 +33,9 @@ DURATION=0
 MANAUSE=23
 SKILLREQ=Necromancy 40.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// sayu Uus Corp
 
 on=@success
 src.sysmessage @,,2 1061083
@@ -101,7 +106,7 @@ NAME=Blood Oath
 SOUND=01e9
 RUNES=
 CAST_TIME=1.5
-RESOURCES=i_reag_blood_vial
+RESOURCES=i_reag_daemon_blood
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_blood_oath
 FLAGS=SPELLFLAG_TARG_PLAYER | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_FX_TARG| SPELLFLAG_RESIST
@@ -111,6 +116,9 @@ DURATION=0
 MANAUSE=13
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// Sayu In Jux Mani Xen
 
 ON=@Success
 if <src.tag0.bloodoathcast>
@@ -150,7 +158,7 @@ NAME=Corpse Skin
 SOUND=snd_spell_weaken
 RUNES=
 CAST_TIME=2
-RESOURCES=i_reag_volcanic_ash, i_reag_batwing
+RESOURCES=i_reag_grave_dust, i_reag_batwing
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_corpse_skin
 FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_FX_TARG | SPELLFLAG_RESIST
@@ -160,6 +168,9 @@ DURATION=0
 MANAUSE=11
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// sayu In Aglo Corp Ylem
 
 ON=@Success
 if <act.restest i_corpse_skin>
@@ -192,6 +203,7 @@ SKILLREQ=Necromancy 0.1
 INTERRUPT=100.0,1.0
 
 ON=@Start
+// sayu An Sanct Gra Char
 if !(<act.isweapon>)
 src.sysmessage That isn't a weapon
 return 1
@@ -213,7 +225,7 @@ NAME=Evil Omen
 SOUND=0245
 RUNES=
 CAST_TIME=1
-RESOURCES=i_reag_batwing, i_reag_serpent_scale
+RESOURCES=i_reag_batwing, i_reag_nox_crystal
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_evil_omen
 FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_RESIST
@@ -223,6 +235,9 @@ DURATION=0
 MANAUSE=11
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// sayu Pas Tym An Sanct
 
 ON=@Success
 if <act.isevent.e_evil_omen>
@@ -237,7 +252,7 @@ NAME=Horrific Beast
 SOUND=snd_spell_summon_daemon
 RUNES=
 CAST_TIME=4
-RESOURCES=i_reag_blood_vial, i_reag_batwing
+RESOURCES=i_reag_daemon_blood, i_reag_batwing
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_horrific_beast
 FLAGS=SPELLFLAG_RESIST
@@ -247,6 +262,9 @@ DURATION=0
 MANAUSE=11
 SKILLREQ=Necromancy 40.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+//Sayu Rel Xen Vas Bal
 
 ON=@Success
 serv.newitem=i_beast_fx
@@ -272,7 +290,7 @@ NAME=Liche Form
 SOUND=00fb
 RUNES=
 CAST_TIME=4
-RESOURCES=i_reag_volcanic_ash, i_reag_serpent_scale, i_reag_blood_vial
+RESOURCES=i_reag_grave_dust, i_reag_nox_crystal, i_reag_daemon_blood
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_liche_transformation
 FLAGS=SPELLFLAG_RESIST
@@ -282,6 +300,9 @@ DURATION=0
 MANAUSE=23
 SKILLREQ=Necromancy 70.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// Sayu Rel Xen Corp Ort
 
 ON=@Effect
 serv.newitem=i_liche_fx
@@ -313,7 +334,7 @@ NAME=Mind Rot
 SOUND=0213
 RUNES=
 CAST_TIME=1.5
-RESOURCES=i_reag_batwing, i_reag_blood_vial, i_reag_pig_iron
+RESOURCES=i_reag_batwing, i_reag_daemon_blood, i_reag_pig_iron
 RUNE_ITEM=i_rune_poison
 SCROLL_ITEM=i_scroll_mind_rot
 FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_RESIST
@@ -323,6 +344,9 @@ DURATION=0
 MANAUSE=17
 SKILLREQ=Necromancy 30.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// Sayu Wis An Ben
 
 ON=@Success
 if <act.restest i_mind_rot>
@@ -343,7 +367,7 @@ NAME=Pain Spike
 SOUND=snd_spell_dispel_field
 RUNES=
 CAST_TIME=1
-RESOURCES=i_reag_volcanic_ash, i_reag_pig_iron
+RESOURCES=i_reag_grave_dust, i_reag_pig_iron
 RUNE_ITEM=i_rune_poison
 SCROLL_ITEM=i_scroll_pain_spike
 FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_FX_TARG| SPELLFLAG_RESIST
@@ -353,6 +377,9 @@ DURATION=0
 MANAUSE=5
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// sayu In Sar
 
 ON=@SUCCESS
 local.damage = <eval ((<src.necromancy> - <act.magicresistance>) / 100) + 30>
@@ -377,9 +404,9 @@ hits += <args>
 DEFNAME=s_poison_strike
 NAME=Poison Strike
 SOUND=snd_spell_poison_field
-RUNES=
+RUNES=IVN
 CAST_TIME=2
-RESOURCES=i_reag_serpent_scale
+RESOURCES=i_reag_nox_crystal
 RUNE_ITEM=i_rune_poison
 SCROLL_ITEM=i_scroll_poison_strike
 FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_FX_TARG| SPELLFLAG_RESIST
@@ -489,7 +516,7 @@ NAME=Strangle
 SOUND=
 RUNES=
 CAST_TIME=2.5
-RESOURCES=i_reag_blood_vial, i_reag_serpent_scale
+RESOURCES=i_reag_daemon_blood, i_reag_nox_crystal
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_strangle
 FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_RESIST
@@ -499,6 +526,9 @@ DURATION=0
 MANAUSE=29
 SKILLREQ=Necromancy 65.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// sayu In Bal Nox
 
 ON=@Success
 act.effect 3,i_fx_heal_effect,16,20,0,01,1
@@ -514,7 +544,7 @@ NAME=Summon Familiar
 SOUND=0214
 RUNES=
 CAST_TIME=4
-RESOURCES=i_reag_batwing, i_reag_volcanic_ash, i_reag_blood_vial
+RESOURCES=i_reag_batwing, i_reag_grave_dust, i_reag_daemon_blood
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_summon_familiar
 FLAGS=SPELLFLAG_SUMMON|SPELLFLAG_PLAYERONLY
@@ -524,6 +554,9 @@ DURATION=0
 MANAUSE=17
 SKILLREQ=Necromancy 30.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// sayu Kal Xen Bal
 
 ON=@Success
 skillmenu sm_summon_familiar
@@ -535,7 +568,7 @@ NAME=Vampiric Embrace
 SOUND=01eb
 RUNES=
 CAST_TIME=4
-RESOURCES=i_reag_batwing, i_reag_pig_iron, i_reag_serpent_scale
+RESOURCES=i_reag_batwing, i_reag_pig_iron, i_reag_nox_crystal
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_vampiric_embrace
 FLAGS=SPELLFLAG_RESIST
@@ -545,6 +578,9 @@ DURATION=0
 MANAUSE=23
 SKILLREQ=Necromancy 99.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// Sayu Rel Xen An Sanct
 
 ON=@Success
 serv.newitem i_fx_bless_effect
@@ -590,7 +626,7 @@ NAME=Vengeful Spirit
 SOUND=019c
 RUNES=
 CAST_TIME=8
-RESOURCES=i_reag_batwing, i_reag_volcanic_ash, i_reag_pig_iron
+RESOURCES=i_reag_batwing, i_reag_grave_dust, i_reag_pig_iron
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_vengeful_spirit
 FLAGS=SPELLFLAG_HARM|SPELLFLAG_TARG_CHAR
@@ -608,6 +644,7 @@ if <src.restest i_Revenant_tracker>
 endif
 
 ON=@Success
+//sayu Ral Xen Bal Beh
 serv.newitem i_revenant_tracker
 new.equip <src>
 serv.newnpc c_revenant
@@ -629,7 +666,7 @@ NAME=Wither
 SOUND=0108
 RUNES=
 CAST_TIME=1.5
-RESOURCES=i_reag_brimstone, i_reag_pumice
+RESOURCES=i_reag_grave_dust, i_reag_nox_crystal, i_reag_pig_iron
 RUNE_ITEM=i_rune_weaken
 SCROLL_ITEM=i_scroll_wither
 FLAGS=SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_FX_TARG| SPELLFLAG_RESIST
@@ -639,6 +676,9 @@ DURATION=0
 MANAUSE=23
 SKILLREQ=Necromancy 60.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// Sayu Kal Vas An Flam
 
 on=@success
 forchars 5
@@ -660,7 +700,7 @@ NAME=Wraith Form
 SOUND=01d2
 RUNES=
 CAST_TIME=4
-RESOURCES=i_reag_serpent_scale, i_reag_pig_iron
+RESOURCES=i_reag_nox_crystal, i_reag_pig_iron
 RUNE_ITEM=i_rune_weaken
 SCROLL_ITEM=i_scroll_wraith_form
 FLAGS=SPELLFLAG_RESIST
@@ -670,6 +710,9 @@ DURATION=0
 MANAUSE=17
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
+
+ON=@Start
+// Sayu Rel Xen Um
 
 ON=@Success
   serv.newitem=i_wraith_fx
