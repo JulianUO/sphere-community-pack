@@ -159,17 +159,17 @@ if !<npc>
 	if <argn1> > 100
 		if <account.plevel> > 2
 			if <serv.wopstaff>
-				if <isnum <def.spell.<argn1>.wop>>
-				say @<serv.wopcolor>,<serv.wopfont>,2 <def.spell.<argn1>.wop>
+				if <isnum <def.scp.spell_<argn1>_wop>>
+				say @<serv.wopcolor>,<serv.wopfont>,2 <def.scp.spell_<argn1>_wop>
 				else
-				say @<serv.wopcolor>,<serv.wopfont> <def.spell.<argn1>.wop>
+				say @<serv.wopcolor>,<serv.wopfont> <def.scp.spell_<argn1>_wop>
 				endif
 			endif
 		elif <account.plevel> < 2
 			if <isnum <def.spell.<argn1>.wop>>
-			say @<serv.wopcolor>,<serv.wopfont>,2 <def.spell.<argn1>.wop>
+			say @<serv.wopcolor>,<serv.wopfont>,2 <def.scp.spell_<argn1>_wop>
 			else
-			say @<serv.wopcolor>,<serv.wopfont> <def.spell.<argn1>.wop>
+			say @<serv.wopcolor>,<serv.wopfont> <def.scp.spell_<argn1>_wop>
 			endif
 		endif
 	endif
