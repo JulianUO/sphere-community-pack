@@ -103,6 +103,7 @@ spell_113_wop	"Rel Xen An Sanct"	// Vampiric Embrace
 spell_114_wop	"Kal Xen Bal Beh"	// Vengeful Spirit
 spell_115_wop	"Kal Vas An Flam"	// Wither
 spell_116_wop	"Rel Xen Um"		// Wraith Form
+spell_117_wop	"Ort Corp Grav"		// Exorcism
 spell_201_wop	"1060718"			// Cleanse by Fire
 spell_202_wop	"1060719"			// Close Wounds
 spell_203_wop	"1060720"			// Consecrate Weapon
