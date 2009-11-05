@@ -14,8 +14,6 @@ VERSION=0.56b
 // - Blood Oath
 // - Pain Spike
 // - Wither
-//
-//We're missing exorcism!! - Khaos
 
 [SPELL 101]
 DEFNAME=s_animate_dead
@@ -689,3 +687,57 @@ else
   src.consume i_wraith_form
   src.updatex
 endif
+
+
+[spell 117]//116 according to run uo
+DEFNAME=s_exorcism
+NAME=Exorcism
+SOUND=
+RUNES=
+CAST_TIME=0
+RESOURCES=i_reag_nox_crystal, i_reag_grave_dust
+RUNE_ITEM=i_rune_exorcism
+SCROLL_ITEM=i_scroll_exorcism
+FLAGS=
+EFFECT_ID=0
+EFFECT=0
+DURATION=0
+MANAUSE=40
+SKILLREQ=Necromancy 80.0
+INTERRUPT=100.0,1.0
+
+on=@start
+if <spiritspeak> < 100.0
+ actdiff = -1
+endif
+
+ON=@Success
+//ref11 = <uid>
+forchars 26
+ if <region.tag0.champion> == 1
+  if <flags>&statf_dead
+   if <isplayer>
+    if <isnearcorpse 10> // tweak this shit
+     doswitch <mapplane>
+     go r_chaos_shrine_fel
+     go r_chaos_shrine_
+     go r_chaos_shrine_ilsh
+     go r_chaos_shrine_malas
+     go r_chaos_shrine_tok
+     go r_chaos_shrine_termur
+     enddo
+    endif
+   endif
+  endif
+ endif
+endfor
+
+[function isnearcorpse]
+foritems <args>
+ if <type> == t_corpse
+  if <link.uid> != <uid>
+   return 1
+  endif
+ endif
+endfor
+return 0
