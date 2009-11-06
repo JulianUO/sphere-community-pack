@@ -2,11 +2,11 @@
 blacksmithing_marking		"1" // 1 or 0
 blacksmithing_materials		"1" // 1 or 0
 
-blacksmithing_smelt				"f_craft_blacksmith_smelt"
-blacksmithing_repair			"f_craft_blacksmith_repair"
-blacksmithing_check				"f_craft_blacksmith_checkforge"
-blacksmithing_check_notice		"1044267" // You must be near an anvil and a forge to smith items.
-blacksmithing_chanceatmin		"0.0"
+blacksmithing_smelt		"f_craft_blacksmith_smelt"
+blacksmithing_repair		"f_craft_blacksmith_repair"
+blacksmithing_check		"f_craft_blacksmith_checkforge"
+blacksmithing_check_notice	"1044267" // You must be near an anvil and a forge to smith items.
+blacksmithing_chanceatmin	"0.0"
 blacksmithing_exceptional_bonus	"f_craft_blacksmith_exceptionalbonus"
 
 blacksmithing_category_1_name "1011078"	// Platemail
@@ -78,51 +78,48 @@ blacksmithing_category_9_1	"i_spear_short"
 blacksmithing_category_9_2	"i_spear"
 blacksmithing_category_9_3	"i_war_fork"
 
-
-
-
 [defname sphere_crafting_blacksmithing_colored]
-blacksmithing_material_0			""
-blacksmithing_material_0_name		"IRON"
+blacksmithing_material_0	""
+blacksmithing_material_0_name	"IRON"
 blacksmithing_material_0_skill	"Blacksmithing 0.0"
 
-blacksmithing_material_1			"Silver"
-blacksmithing_material_1_name		"SILVER"
+blacksmithing_material_1	"Silver"
+blacksmithing_material_1_name	"SILVER"
 blacksmithing_material_1_skill	"Blacksmithing 60.0"
 
-blacksmithing_material_2			"Gold"
-blacksmithing_material_2_name		"GOLD"
+blacksmithing_material_2	"Gold"
+blacksmithing_material_2_name	"GOLD"
 blacksmithing_material_2_skill	"Blacksmithing 65.0"
 
-blacksmithing_material_3			"Verite"
-blacksmithing_material_3_name		"VERITE"
+blacksmithing_material_3	"Verite"
+blacksmithing_material_3_name	"VERITE"
 blacksmithing_material_3_skill	"Blacksmithing 70.0"
 
-blacksmithing_material_4			"Valorite"
-blacksmithing_material_4_name		"VALORITE"
+blacksmithing_material_4	"Valorite"
+blacksmithing_material_4_name	"VALORITE"
 blacksmithing_material_4_skill	"Blacksmithing 75.0"
 
-blacksmithing_material_5			"BloodRock"
-blacksmithing_material_5_name		"BLOODROCK"
+blacksmithing_material_5	"BloodRock"
+blacksmithing_material_5_name	"BLOODROCK"
 blacksmithing_material_5_skill	"Blacksmithing 80.0"
 
-blacksmithing_material_6			"BlackRock"
-blacksmithing_material_6_name		"BLACKROCK"
+blacksmithing_material_6	"BlackRock"
+blacksmithing_material_6_name	"BLACKROCK"
 blacksmithing_material_6_skill	"Blacksmithing 80.0"
 
-blacksmithing_material_7			"Mytheril"
-blacksmithing_material_7_name		"MYTHERIL"
+blacksmithing_material_7	"Mytheril"
+blacksmithing_material_7_name	"MYTHERIL"
 blacksmithing_material_7_skill	"Blacksmithing 85.0"
 
-blacksmithing_material_8			"Mercury"
-blacksmithing_material_8_name		"MERCURY"
+blacksmithing_material_8	"Mercury"
+blacksmithing_material_8_name	"MERCURY"
 blacksmithing_material_8_skill	"Blacksmithing 90.0"
 
-blacksmithing_material_9			"Moonlight"
-blacksmithing_material_9_name		"MOONLIGHT"
+blacksmithing_material_9	"Moonlight"
+blacksmithing_material_9_name	"MOONLIGHT"
 blacksmithing_material_9_skill	"Blacksmithing 95.0"
 
-blacksmithing_material_10		"Onyx"
+blacksmithing_material_10	"Onyx"
 blacksmithing_material_10_name	"ONYX"
 blacksmithing_material_10_skill	"Blacksmithing 99.0"
 

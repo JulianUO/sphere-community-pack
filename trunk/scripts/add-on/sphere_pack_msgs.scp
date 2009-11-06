@@ -18,133 +18,133 @@ VERSION=0.56b
 [DEFNAME SphereCommunityPack_Clilocs]
 // The following are ONLY clilocs used by some dialogs or other things
 // Just remember, only clilocs if you're not sure of how it works.
-scp.craft_msg_fail			"1044043" // You failed to create the item, and some of your materials are lost.
+scp.craft_msg_fail		"1044043" // You failed to create the item, and some of your materials are lost.
 scp.craft_msg_noskill		"1044153" // You don't have the required skills to attempt this item.
-scp.craft_msg_success		"1044154"	// You create the item.
-scp.craft_msg_exceptional	"1044155"	// You create an exceptional quality item.
-scp.craft_msg_excepmark		"1044156"	// You create an exceptional quality item and affix your maker's mark.
+scp.craft_msg_success		"1044154" // You create the item.
+scp.craft_msg_exceptional	"1044155" // You create an exceptional quality item.
+scp.craft_msg_excepmark		"1044156" // You create an exceptional quality item and affix your maker's mark.
 scp.craft_msg_noresources	"1044253" // You don't have the components needed to make that.
 scp.craft_msg_nomana		"1044380" // You don't have enough mana to inscribe that spell.
 scp.craft_msg_nocast		"You need to be able to cast this spell in order to inscribe it."
-scp.craft_title_alchemy		"1044001"	// <CENTER>ALCHEMY MENU</CENTER>
-scp.craft_title_blacksmithing	"1044002"	// <CENTER>BLACKSMITHY MENU</CENTER>
-scp.craft_title_cooking		"1044003"	// <CENTER>COOKING MENU</CENTER>
-scp.craft_title_carpentry	"1044004"	// <CENTER>CARPENTRY MENU</CENTER>
-scp.craft_title_tailoring	"1044005"	// <CENTER>TAILORING MENU</CENTER>
-scp.craft_title_bowcraft		"1044006"	// <CENTER>BOWCRAFT AND FLETCHING MENU</CENTER>
-scp.craft_title_tinkering	"1044007"	// <CENTER>TINKERING MENU</CENTER>
-scp.craft_title_cartography	"1044008"	// <CENTER>CARTOGRAPHY MENU</CENTER>
-scp.craft_title_inscription	"1044009"	// <CENTER>INSCRIPTION MENU</CENTER>
-scp.craft_title_masonry		"1044500"	// <CENTER>MASONRY MENU</CENTER>
-scp.craft_title_glassblowing	"1044622"	// <CENTER>GLASSBLOWING MENU</CENTER>
-scp.craft_title_dragonscale	"1053135"	// <CENTER>DRAGON SCALE ARMOR MENU</CENTER>
+scp.craft_title_alchemy		"1044001" // <CENTER>ALCHEMY MENU</CENTER>
+scp.craft_title_blacksmithing	"1044002" // <CENTER>BLACKSMITHY MENU</CENTER>
+scp.craft_title_cooking		"1044003" // <CENTER>COOKING MENU</CENTER>
+scp.craft_title_carpentry	"1044004" // <CENTER>CARPENTRY MENU</CENTER>
+scp.craft_title_tailoring	"1044005" // <CENTER>TAILORING MENU</CENTER>
+scp.craft_title_bowcraft	"1044006" // <CENTER>BOWCRAFT AND FLETCHING MENU</CENTER>
+scp.craft_title_tinkering	"1044007" // <CENTER>TINKERING MENU</CENTER>
+scp.craft_title_cartography	"1044008" // <CENTER>CARTOGRAPHY MENU</CENTER>
+scp.craft_title_inscription	"1044009" // <CENTER>INSCRIPTION MENU</CENTER>
+scp.craft_title_masonry		"1044500" // <CENTER>MASONRY MENU</CENTER>
+scp.craft_title_glassblowing	"1044622" // <CENTER>GLASSBLOWING MENU</CENTER>
+scp.craft_title_dragonscale	"1053135" // <CENTER>DRAGON SCALE ARMOR MENU</CENTER>
 
 [DEFNAME SphereCommunityPack_Messages]
 // The following are sysmessages, messages, say, etc.
 // You can change it for everything, even for text.
-scp.craft_blacks_forgeanvil	"@,,2 1044267" // You must be near a forge and and anvil to repair items.
-scp.craft_repair_targ		"@,,2 1044276" // Target an item to repair.
-scp.craft_repair_notitem		"@,,2 1044283"	// You cannot repair that.
-scp.craft_repair_inpack		"@,,2 1044275" // The item must be in your backpack to repair it.
-scp.craft_repair_wrongskill	"@,,2 1044277" // That item cannot be repaired.
+scp.craft_blacks_forgeanvil	"@,,2 1044267"	// You must be near a forge and and anvil to repair items.
+scp.craft_repair_targ		"@,,2 1044276"	// Target an item to repair.
+scp.craft_repair_notitem	"@,,2 1044283"	// You cannot repair that.
+scp.craft_repair_inpack		"@,,2 1044275"	// The item must be in your backpack to repair it.
+scp.craft_repair_wrongskill	"@,,2 1044277"	// That item cannot be repaired.
 scp.craft_repair_fullrepair	"@,,2 1044281"	// That item is in full repair
-scp.craft_repair_cannot		"@,,2 1044278" // That item has been repaired many times, and will break if repairs are attempted again.
-scp.craft_repair_fail		"@,,2 1044280" // You fail to repair the item.
-scp.craft_repair_success		"@,,2 1044279"	// You repair the item.
+scp.craft_repair_cannot		"@,,2 1044278"	// That item has been repaired many times, and will break if repairs are attempted again.
+scp.craft_repair_fail		"@,,2 1044280"	// You fail to repair the item.
+scp.craft_repair_success	"@,,2 1044279"	// You repair the item.
 scp.craft_smelt_targ		"@,,2 1044273"	// Target an item to recycle. 
 scp.craft_smelt_notitem		"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_notsmeltable	"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_success		"@,,2 1044270"	// You melt the item down into ingots.
-scp.taming_tameself			"@,,1 You are your own master."
-scp.taming_notchar			"@,,2 502801"	// You can't tame that!
+scp.taming_tameself		"@,,1 You are your own master."
+scp.taming_notchar		"@,,2 502801"	// You can't tame that!
 scp.taming_notameable		"@,,2 1049655"	// That creature cannot be tamed.
 scp.taming_alreadytamed		"@,,2 502804"	// That animal looks tame already.
-scp.taming_onlymale			"@,,2 1049653"	// That creature can only be tamed by males.
+scp.taming_onlymale		"@,,2 1049653"	// That creature can only be tamed by males.
 scp.taming_onlyfemale		"@,,2 1049652"	// That creature can only be tamed by females.
-scp.taming_nochance			"@,,2 502806"	// You have no chance of taming this creature.
-scp.taming_manyfollowers		"@,,2 1049611"	// You have too many followers to tame that creature.
+scp.taming_nochance		"@,,2 502806"	// You have no chance of taming this creature.
+scp.taming_manyfollowers	"@,,2 1049611"	// You have too many followers to tame that creature.
 scp.taming_manyowners		"@,,2 1005615"	// This animal has had too many owners and is too upset for you to tame.
 scp.taming_mustsubdue		"@,,2 1054025"	// You must subdue this creature before you can tame it!
-scp.taming_ontame			"@,,2 502802"	// Someone else is already taming this.
-scp.taming_getanger			"@,,2 502805"		// You seem to anger the beast!
-scp.taming_started			"@059,,2 1010597"	// *You start to tame the creature.*
+scp.taming_ontame		"@,,2 502802"	// Someone else is already taming this.
+scp.taming_getanger		"@,,2 502805"	// You seem to anger the beast!
+scp.taming_started		"@059,,2 1010597"	// *You start to tame the creature.*
 scp.taming_hestarted		"@059,,2 1010598"	// *begins taming a creature.*
-scp.taming_failed			"@,,2 502798"
-scp.taming_abort			"You give up trying to tame the creature."
+scp.taming_failed		"@,,2 502798"
+scp.taming_abort		"You give up trying to tame the creature."
 scp.bard_noinstrument		"@,,2 1062488"	// The instrument you are trying to play is no longer in your backpack!
-scp.bard_instrument_targ		""
+scp.bard_instrument_targ	""
 scp.bard_instrument_wrong	""
-scp.bard_toofaraway			""
+scp.bard_toofaraway		""
 scp.bard_peacemaking_targ	""
-scp.bard_peacemaking_isitem	"@,,2 1049528" // You cannot calm that!
+scp.bard_peacemaking_isitem	"@,,2 1049528"	// You cannot calm that!
 scp.bard_peacemaking_peaced	"@,,2 500616"	// You hear lovely music, and forget to continue battling!
 scp.bard_peacemaking_success	"@,,2 500615"	// You play your hypnotic music, stopping the battle.
 scp.bard_peacemaking_fail	"@,,2 500613"	// You attempt to calm everyone, but fail.
-scp.bard_peacemaking_norange	"@,,2 1049648" // You play hypnotic music, but there is nothing in range for you to calm.
-scp.bard_peacemaking_tfail	"@,,2 1049531" // You attempt to calm your target, but fail.
-scp.bard_peacemaking_tsuccess	"@,,2 1049532" // You play hypnotic music, calming your target.
+scp.bard_peacemaking_norange	"@,,2 1049648"	// You play hypnotic music, but there is nothing in range for you to calm.
+scp.bard_peacemaking_tfail	"@,,2 1049531"	// You attempt to calm your target, but fail.
+scp.bard_peacemaking_tsuccess	"@,,2 1049532"	// You play hypnotic music, calming your target.
 
 [DEFNAME SphereCommunityPack_WordsOfPower]
 // Words of Power for spells. Necromancy, Chivalry and Spellweaving.
 // Chivalry is the only one using clilocs.
-scp.spell_101_wop	"Uus Corp"			// Animate Dead
-scp.spell_102_wop	"In Jux Mani Xen"		// Blood Oath
-scp.spell_103_wop	"In Agle Corp Ylem"		// Corpse Skin
-scp.spell_104_wop	"An Sanct Gra Char"		// Curse Weapon
-scp.spell_105_wop	"Pas Tym An Sanct"		// Evil Omen
-scp.spell_106_wop	"Rel Xen Vas Bal"		// Horrific Beast
-scp.spell_107_wop	"Rel Xen Corp Ort"		// Liche Form
-scp.spell_108_wop	"Wis An Ben"			// Mind Rot
-scp.spell_109_wop	"In Sar"			// Pain Spike
-scp.spell_110_wop	"In Vas Nox"			// Poison Strike
-scp.spell_111_wop	"In Bal Nox"			// Strangle
-scp.spell_112_wop	"Kal Xen Bal"			// Summon Familiar
-scp.spell_113_wop	"Rel Xen An Sanct"		// Vampiric Embrace
-scp.spell_114_wop	"Kal Xen Bal Beh"		// Vengeful Spirit
-scp.spell_115_wop	"Kal Vas An Flam"		// Wither
-scp.spell_116_wop	"Rel Xen Um"			// Wraith Form
-scp.spell_117_wop	"Ort Corp Grav"			// Exorcism
-scp.spell_201_wop	"1060718"			// Cleanse by Fire
-scp.spell_202_wop	"1060719"			// Close Wounds
-scp.spell_203_wop	"1060720"			// Consecrate Weapon
-scp.spell_204_wop	"1060721"			// Dispel Evil
-scp.spell_205_wop	"1060722"			// Divine Fury
-scp.spell_206_wop	"1060723"			// Enemy of One
-scp.spell_207_wop	"1060724"			// Holy Light
-scp.spell_208_wop	"1060725"			// Noble Sacrifice
-scp.spell_209_wop	"1060726"			// Remove Curse 
-scp.spell_210_wop	"1060727"			// Sacred Journey
-scp.spell_601_wop	"Myrshalee"			// Arcane Circle
-scp.spell_602_wop	"Olorisstra"			// Gift of Renewal
-scp.spell_603_wop	"Thalshara"			// Immolating Weapon
-scp.spell_604_wop	"Haeldril"			// Attune Weapon
-scp.spell_605_wop	"Erelonia"			// Thunderstorm
-scp.spell_606_wop	"Rauvvrae"			// Nature's Fury
-scp.spell_607_wop	"Alalithra"			// Summon Fey
-scp.spell_608_wop	"Nylisstra"			// Summon Fiend
-scp.spell_609_wop	"Tarisstree"			// Reaper Form
-scp.spell_610_wop	"Haelyn"			// Wildfire
-scp.spell_611_wop	"Anathrae"			// Essence of Wind
-scp.spell_612_wop	"Rathril"			// Dryad Allure
-scp.spell_613_wop	"Orlavdra"			// Ethereal Voyage
-scp.spell_614_wop	"Nyraxle"			// Word of Death
-scp.spell_615_wop	"Illorae"			// Gift of Life
-scp.spell_616_wop	"Aslavdra"			// Arcane Empowerment
-scp.spell_678_wop	"In Corp Ylem"			//Nether Bolt
-scp.spell_679_wop	"Kal In Mani"			//Healing Stone
-scp.spell_680_wop	"An Ort Sanct"			//Purge Magic
-scp.spell_681_wop	"In Ort Ylem"			//Enchant
-scp.spell_682_wop	"In Zu"				//Sleep
-scp.spell_683_wop	"Kal Por Xen"			//Eagle Strike
-scp.spell_684_wop	"In Jux Por Ylem"		//Animated Weapon
-scp.spell_685_wop	"In Rel Ylem"			//Stone Form
-scp.spell_686_wop	"In Vas Ort Ex"			//Spell Trigger
-scp.spell_687_wop	"Vas Zu"			//Mass Sleep
-scp.spell_688_wop	"In Vas Mani Hur"		//Cleansing Winds
-scp.spell_689_wop	"Corp Por Ylem"			//Bombard
-scp.spell_690_wop	"Vas Rel Jux Ort"		//Spell Plague
-scp.spell_691_wop	"Kal Des Ylem"			//Hail Storm
-scp.spell_692_wop	"Grav Hur"			//Nether Cyclone
-scp.spell_693_wop	"Kal Vas Xen Corp Ylem"		//Rising Colossus
+scp.spell_101_wop	"Uus Corp"		// Animate Dead
+scp.spell_102_wop	"In Jux Mani Xen"	// Blood Oath
+scp.spell_103_wop	"In Agle Corp Ylem"	// Corpse Skin
+scp.spell_104_wop	"An Sanct Gra Char"	// Curse Weapon
+scp.spell_105_wop	"Pas Tym An Sanct"	// Evil Omen
+scp.spell_106_wop	"Rel Xen Vas Bal"	// Horrific Beast
+scp.spell_107_wop	"Rel Xen Corp Ort"	// Liche Form
+scp.spell_108_wop	"Wis An Ben"		// Mind Rot
+scp.spell_109_wop	"In Sar"		// Pain Spike
+scp.spell_110_wop	"In Vas Nox"		// Poison Strike
+scp.spell_111_wop	"In Bal Nox"		// Strangle
+scp.spell_112_wop	"Kal Xen Bal"		// Summon Familiar
+scp.spell_113_wop	"Rel Xen An Sanct"	// Vampiric Embrace
+scp.spell_114_wop	"Kal Xen Bal Beh"	// Vengeful Spirit
+scp.spell_115_wop	"Kal Vas An Flam"	// Wither
+scp.spell_116_wop	"Rel Xen Um"		// Wraith Form
+scp.spell_117_wop	"Ort Corp Grav"		// Exorcism
+scp.spell_201_wop	"1060718"		// Cleanse by Fire
+scp.spell_202_wop	"1060719"		// Close Wounds
+scp.spell_203_wop	"1060720"		// Consecrate Weapon
+scp.spell_204_wop	"1060721"		// Dispel Evil
+scp.spell_205_wop	"1060722"		// Divine Fury
+scp.spell_206_wop	"1060723"		// Enemy of One
+scp.spell_207_wop	"1060724"		// Holy Light
+scp.spell_208_wop	"1060725"		// Noble Sacrifice
+scp.spell_209_wop	"1060726"		// Remove Curse 
+scp.spell_210_wop	"1060727"		// Sacred Journey
+scp.spell_601_wop	"Myrshalee"		// Arcane Circle
+scp.spell_602_wop	"Olorisstra"		// Gift of Renewal
+scp.spell_603_wop	"Thalshara"		// Immolating Weapon
+scp.spell_604_wop	"Haeldril"		// Attune Weapon
+scp.spell_605_wop	"Erelonia"		// Thunderstorm
+scp.spell_606_wop	"Rauvvrae"		// Nature's Fury
+scp.spell_607_wop	"Alalithra"		// Summon Fey
+scp.spell_608_wop	"Nylisstra"		// Summon Fiend
+scp.spell_609_wop	"Tarisstree"		// Reaper Form
+scp.spell_610_wop	"Haelyn"		// Wildfire
+scp.spell_611_wop	"Anathrae"		// Essence of Wind
+scp.spell_612_wop	"Rathril"		// Dryad Allure
+scp.spell_613_wop	"Orlavdra"		// Ethereal Voyage
+scp.spell_614_wop	"Nyraxle"		// Word of Death
+scp.spell_615_wop	"Illorae"		// Gift of Life
+scp.spell_616_wop	"Aslavdra"		// Arcane Empowerment
+scp.spell_678_wop	"In Corp Ylem"		// Nether Bolt
+scp.spell_679_wop	"Kal In Mani"		// Healing Stone
+scp.spell_680_wop	"An Ort Sanct"		// Purge Magic
+scp.spell_681_wop	"In Ort Ylem"		// Enchant
+scp.spell_682_wop	"In Zu"			// Sleep
+scp.spell_683_wop	"Kal Por Xen"		// Eagle Strike
+scp.spell_684_wop	"In Jux Por Ylem"	// Animated Weapon
+scp.spell_685_wop	"In Rel Ylem"		// Stone Form
+scp.spell_686_wop	"In Vas Ort Ex"		// Spell Trigger
+scp.spell_687_wop	"Vas Zu"		// Mass Sleep
+scp.spell_688_wop	"In Vas Mani Hur"	// Cleansing Winds
+scp.spell_689_wop	"Corp Por Ylem"		// Bombard
+scp.spell_690_wop	"Vas Rel Jux Ort"	// Spell Plague
+scp.spell_691_wop	"Kal Des Ylem"		// Hail Storm
+scp.spell_692_wop	"Grav Hur"		// Nether Cyclone
+scp.spell_693_wop	"Kal Vas Xen Corp Ylem"	// Rising Colossus
 
 [eof]
