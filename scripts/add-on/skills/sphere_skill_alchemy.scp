@@ -1,12 +1,12 @@
 [defname sphere_crafting_alchemy_default]
 alchemy_marking			"0" // 1 or 0
-alchemy_materials			"0" // 1 or 0
+alchemy_materials		"0" // 1 or 0
 
-alchemy_smelt				""
-alchemy_repair				""
-alchemy_check				""
+alchemy_smelt			""
+alchemy_repair			""
+alchemy_check			""
 alchemy_check_notice		""
-alchemy_chanceatmin			"0.0"
+alchemy_chanceatmin		"0.0"
 alchemy_exceptional_bonus	""
 
 alchemy_category_1_name	"Lesser Potions"

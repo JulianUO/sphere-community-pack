@@ -10,7 +10,14 @@ spellflag_targ_npc			  0100004 // targ_char + targ_no_player
 [defname dialogs_colors]
 dcolor_white	16777215
 
-[defname buff_icons_clilocs]
+[defname buff_icons]
+bufficon_sleep				1049
+bufficon_stoneform			1050
+bufficon_spellplague		1051
+bufficon_gargoyleberserk		1052 // i assume this is a new ability
+bufficon_gargoylefly		1054 // and this is the flying effect
+
+[defname buff_clilocs]
 buffcliloc_empty			1070722
 buffcliloc_poison_1			1017383
 buffcliloc_poison_2			1075633 // 1070722 //empty
