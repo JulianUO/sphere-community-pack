@@ -166,7 +166,7 @@ if <act.restest i_corpse_skin>
 act.consume i_corpse_skin
 return 1
 endif
-serv.newitem i_liche_fx
+serv.newitem i_lich_fx
 new.attr=attr_static|attr_decay 
 new.timer=2 
 new.p=<act.p>
@@ -188,7 +188,7 @@ EFFECT_ID=0
 EFFECT=0
 DURATION=0
 MANAUSE=7
-SKILLREQ=Necromancy 0.1
+SKILLREQ=Necromancy 0.0
 INTERRUPT=100.0,1.0
 
 ON=@Start
@@ -254,7 +254,7 @@ new.attr=attr_static|attr_decay
 new.timer=1 
 new.p=<act.p>
 if !(<src.body>==c_Moloch)
-src.consume i_liche_form
+src.consume i_lich_form
 src.consume i_wraith_form
 src.consume i_vampire_form
 serv.newitem i_beast_form
@@ -267,14 +267,14 @@ src.updatex
 endif
 
 [SPELL 107]
-DEFNAME=s_liche_form
-NAME=Liche Form
+DEFNAME=s_lich_form
+NAME=Lich Form
 SOUND=00fb
 RUNES=
 CAST_TIME=4
 RESOURCES=i_reag_grave_dust, i_reag_nox_crystal, i_reag_daemon_blood
 RUNE_ITEM=
-SCROLL_ITEM=i_scroll_liche_transformation
+SCROLL_ITEM=i_scroll_lich_form
 FLAGS=SPELLFLAG_RESIST
 EFFECT_ID=0
 EFFECT=0
@@ -284,26 +284,26 @@ SKILLREQ=Necromancy 70.0
 INTERRUPT=100.0,1.0
 
 ON=@Effect
-serv.newitem=i_liche_fx
+serv.newitem=i_lich_fx
 new.attr=attr_static|attr_decay 
 new.timer=1 
 new.p=<src.p>
 
 ON=@Success
-serv.newitem=i_liche_fx
+serv.newitem=i_lich_fx
 new.attr=attr_static|attr_decay 
 new.timer=1 
 new.p=<act.p>
-if !(<src.body>==c_liche)
+if !(<src.body>==c_lich)
 src.consume i_beast_form
 src.consume i_wraith_form
 src.consume i_vampire_form
-serv.newitem i_liche_form
+serv.newitem i_lich_form
 new.timer=10
 act.equip <new>
 src.updatex
 else
-src.consume i_liche_form
+src.consume i_lich_form
 src.updatex
 endif
 
@@ -574,7 +574,7 @@ serv.newitem i_fx_bless_effect
 if !(<src.body>==c_vampire_bat)
   src.consume i_beast_form
   src.consume i_wraith_form
-  src.consume i_liche_form
+  src.consume i_lich_form
   serv.newitem i_vampire_form
   new.timer=10
   act.equip <new>
@@ -678,7 +678,7 @@ ON=@Success
   new.p=<act.p>
 if !(<src.body>==c_Harrower)
   src.consume i_beast_form
-  src.consume i_liche_form
+  src.consume i_lich_form
   src.consume i_vampire_form
   serv.newitem i_wraith_form
   act.equip <new>
@@ -689,7 +689,7 @@ else
 endif
 
 
-[spell 117]//116 according to run uo
+[spell 117]
 DEFNAME=s_exorcism
 NAME=Exorcism
 SOUND=

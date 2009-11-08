@@ -886,9 +886,9 @@ ON=@NPCRestock
 
 
 [CHARDEF 01041]
-DEFNAME=c_m_liche_lord
-NAME=Liche Lord
-ID=c_Liche
+DEFNAME=c_m_lich_lord
+NAME=Lich Lord
+ID=c_Lich
 ICON=i_pet_LICH
 DAM=6,18
 ARMOR=25
@@ -899,7 +899,7 @@ DESIRES=t_bone,i_gold,t_wand,t_reagent,e_undead
 TEVENTS=e_undead
 CATEGORY=Monsters
 SUBSECTION=Undeads
-DESCRIPTION=Liche Lord
+DESCRIPTION=Lich Lord
 
 ON=@Create
 	NPC=brain_undead

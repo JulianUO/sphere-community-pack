@@ -12,7 +12,6 @@
 VERSION=0.56b
 
 [ITEMDEF 01085]
-//DEFNAME2=NECKLACE3
 DEFNAME=i_necklace_metal_beads
 TYPE=t_jewelry
 SKILLMAKE=TINKERING 61.0,t_tinker_tools
@@ -23,7 +22,6 @@ SUBSECTION=Jewelry
 DESCRIPTION=Necklace
 
 [ITEMDEF 01086]
-//DEFNAME2=NECKLACE_GOLD
 DEFNAME=i_bracelet_gold
 TYPE=t_jewelry
 SKILLMAKE=TINKERING 63.5,t_tinker_tools
@@ -34,7 +32,6 @@ SUBSECTION=Jewelry
 DESCRIPTION=Bracelet (Gold)
 
 [ITEMDEF 01087]
-//DEFNAME2=i_earings
 DEFNAME=i_earrings_gold
 TYPE=t_jewelry
 SKILLMAKE=TINKERING 62.5,t_tinker_tools
@@ -45,8 +42,6 @@ SUBSECTION=Jewelry
 DESCRIPTION=Earrings (Gold)
 
 [ITEMDEF 01088]
-//necklace
-//DEFNAME2=i_NECKLACE_2
 DEFNAME=i_necklace_gold
 TYPE=t_jewelry
 SKILLMAKE=TINKERING 61.0,t_tinker_tools
@@ -57,8 +52,6 @@ SUBSECTION=Jewelry
 DESCRIPTION=Necklace
 
 [ITEMDEF 01089]
-//DEFNAME2=i_NECKLACE_3
-//Gold Bead Necklace
 DEFNAME=i_necklace_gold_beads
 TYPE=t_jewelry
 SKILLMAKE=TINKERING 62.0,t_tinker_tools
@@ -69,8 +62,6 @@ SUBSECTION=Jewelry
 DESCRIPTION=Necklace (Gold Bead)
 
 [ITEMDEF 0108a]
-//Gold Ring
-//ORIGINAL DEFNAME=i_RING
 DEFNAME=i_ring_gold
 TYPE=t_jewelry
 RESOURCES=i_ingot_gold
@@ -88,7 +79,6 @@ SKILLMAKE=TINKERING 60.0,t_tinker_tools
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewelry
 DESCRIPTION=Beads
-//ORIGINAL DEFNAME=i_BEADS
 
 [ITEMDEF 01f06]
 DEFNAME=i_bracelet_silver
@@ -96,7 +86,7 @@ TYPE=t_jewelry
 SKILLMAKE=TINKERING 62.0,t_tinker_tools
 RESOURCES=1 i_ingot_silver
 WEIGHT=1
-CATEGORY=Provisions - Clothes
+CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewelry
 DESCRIPTION=Silver Bracelet
 
@@ -106,7 +96,7 @@ TYPE=t_jewelry
 SKILLMAKE=TINKERING 62.0,t_tinker_tools
 RESOURCES=1 i_ingot_silver
 WEIGHT=1
-CATEGORY=Provisions - Clothes
+CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewelry
 DESCRIPTION=Silver Earrings
 
@@ -116,7 +106,7 @@ TYPE=t_jewelry
 SKILLMAKE=TINKERING 62.0,t_tinker_tools
 RESOURCES=1 i_ingot_silver
 WEIGHT=1
-CATEGORY=Provisions - Clothes
+CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewelry
 DESCRIPTION=Silver Necklace
 
@@ -126,7 +116,7 @@ TYPE=t_jewelry
 SKILLMAKE=TINKERING 62.0,t_tinker_tools
 RESOURCES=1 i_ingot_silver
 WEIGHT=1
-CATEGORY=Provisions - Clothes
+CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewelry
 DESCRIPTION=Silver Ring
 
@@ -136,6 +126,6 @@ TYPE=t_jewelry
 SKILLMAKE=TINKERING 62.0,t_tinker_tools
 RESOURCES=1 i_ingot_silver
 WEIGHT=1
-CATEGORY=Provisions - Clothes
+CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewelry
 DESCRIPTION=Silver Beads

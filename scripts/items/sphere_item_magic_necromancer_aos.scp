@@ -153,8 +153,8 @@ SUBSECTION=Scrolls - Necromancy
 DESCRIPTION=Horrific Beast
 
 [ITEMDEF 02266]
-DEFNAME=i_scroll_liche_transformation
-NAME=Liche Transformation Scroll
+DEFNAME=i_scroll_lich_form
+NAME=Lich Form Scroll
 TYPE=t_scroll
 WEIGHT=1
 RESOURCES=i_scroll_blank,i_reag_volcanic_ash, i_reag_serpent_scale, i_reag_blood_vial

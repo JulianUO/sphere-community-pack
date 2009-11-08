@@ -287,24 +287,24 @@ ON=@Timer
   return 1
 
 //#################################################\\
-//#                   Liche Form                  #\\
+//#                   Lich Form                  #\\
 //#################################################\\
 
-[itemdef i_liche_form]
-NAME=liche Form
+[itemdef i_lich_form]
+NAME=lich Form
 ID=i_memory 
 TYPE=t_eq_script
 LAYER=layer_special
 
 ON=@Equip
-  src.body=c_liche
+  src.body=c_lich
   src.color=0
-  src.events +e_liche_form
+  src.events +e_lich_form
 
 ON=@UnEquip
   src.body=<src.obody>
   src.color=<src.oskin>
-  src.events -e_liche_form
+  src.events -e_lich_form
 
 ON=@Timer
 cont.hits -= 5
@@ -315,16 +315,16 @@ endif
 timer=10
 return 1
 
-[events e_liche_form]
+[events e_lich_form]
 ON=@Spellcast
 if (<argn>==56)
   src.sysmessage You can't do that in your current state
   return 1
 endif
 
-[itemdef i_liche_fx]
-defname=i_liche_fx
-name=liche fx
+[itemdef i_lich_fx]
+defname=i_lich_fx
+name=lich fx
 id=i_fire_column
 type=t_script
 

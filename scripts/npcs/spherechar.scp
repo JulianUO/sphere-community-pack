@@ -714,9 +714,9 @@ ON=@NPCRestock
 	ITEM=loot_GAZER
 
 [CHARDEF 018]
-DEFNAME=c_liche
-NAME=Liche
-SOUND=snd_MONSTER_LICHE1
+DEFNAME=c_lich
+NAME=Lich
+SOUND=snd_MONSTER_Lich1
 ICON=i_pet_LICH
 ANIM=07bc7f
 DAM=15,25
@@ -730,7 +730,7 @@ BLOODCOLOR=colors_green
 TEVENTS=e_undead
 CATEGORY=Monsters
 SUBSECTION=Undeads
-DESCRIPTION=Liche
+DESCRIPTION=Lich
 
 ON=@Create
 	NPC=brain_undead
