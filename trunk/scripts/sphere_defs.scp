@@ -419,7 +419,7 @@ snd_monster_grat1         392
 snd_monster_gscorp1       397
 snd_monster_harpy1       402
 snd_monster_headls1       407
-snd_monster_liche1       412
+snd_monster_lich1       412
 snd_monster_lzrdmn1       417
 snd_monster_mngbat1       422
 snd_monster_ogre1         427
@@ -1470,7 +1470,7 @@ height_084 	15	//DEFNAME=c_kirin
 height_04d	16	//DEFNAME=c_kraken
 height_0102	19	//DEFNAME=c_lady_m
 height_0fc	14	//DEFNAME=c_lady_of_snow
-height_018	20	//DEFNAME=c_liche
+height_018	20	//DEFNAME=c_lich
 height_021	20	//DEFNAME=c_lizardman
 height_024	20	//DEFNAME=c_lizardman_mace
 height_023	20	//DEFNAME=c_lizardman_spear
