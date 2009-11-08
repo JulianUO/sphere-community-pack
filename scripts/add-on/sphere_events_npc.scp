@@ -73,6 +73,19 @@ else
 endif
 return 2
 
+// Poisoning System
+on=@hittry
+if <poisoning> >= <def.scp.Poisoning_MonsterPoisonous>
+tag.skill.poisoning = <psnsys_min <eval (<poisoning> + 1) / (<def.scp.Poisoning_MonsterPoisonous> + 1)>,6>
+endif
+poisoning = 0
+
+// Poisoning System
+on=@hit
+if <tag0.skill.poisoning>
+src.new_poison <psnsys_max <eval <tag0.skill.poisoning>-2>,0>,<uid>
+endif
+
 // OSI Spells Bonus
 on=@gethit
 if <def.scp.osispelldamage> == 1

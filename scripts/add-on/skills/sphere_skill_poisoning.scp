@@ -1,0 +1,541 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// Pyromapes2k - Poisoning, Healing & Veterinary System
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// OSI-Like Poisoning System.
+//
+[DEFNAME Poisons]
+
+//Lesser Poison
+PoisonType_0 = Lesser
+PoisonType_0_Message_Self = 1042857
+PoisonType_0_Message_Other = 1042858
+PoisonType_0_DamLow = 3
+PoisonType_0_DamHigh = 26
+PoisonType_0_Divide = 40
+PoisonType_0_Frequency = 15
+PoisonType_0_Duration = 120
+PoisonType_0_RecalcChance = 50
+PoisonType_0_Difficulty = 50
+PoisonType_0_ApplicationDifficulty = 0
+PoisonType_0_ApplicationCharges = 20
+
+//Normal Poison
+PoisonType_1 = Regular
+PoisonType_1_Message_Self = 1042859
+PoisonType_1_Message_Other = 1042860
+PoisonType_1_DamLow = 5
+PoisonType_1_DamHigh = 26
+PoisonType_1_Divide = 32
+PoisonType_1_Frequency = 10
+PoisonType_1_Duration = 120
+PoisonType_1_RecalcChance = 50
+PoisonType_1_Difficulty = 700
+PoisonType_1_ApplicationDifficulty = 300
+PoisonType_1_ApplicationCharges = 18
+
+//Greater Poison
+PoisonType_2 = Greater
+PoisonType_2_Message_Self = 1042861
+PoisonType_2_Message_Other = 1042862
+PoisonType_2_DamLow = 7
+PoisonType_2_DamHigh = 26
+PoisonType_2_Divide = 16
+PoisonType_2_Frequency = 10
+PoisonType_2_Duration = 120
+PoisonType_2_RecalcChance = 50
+PoisonType_2_Difficulty = 900
+PoisonType_2_ApplicationDifficulty = 600
+PoisonType_2_ApplicationCharges = 16
+
+//Deadly Poison
+PoisonType_3 = Deadly
+PoisonType_3_Message_Self = 1042863
+PoisonType_3_Message_Other = 1042864
+PoisonType_3_DamLow = 6
+PoisonType_3_DamHigh = 26
+PoisonType_3_Divide = 8
+PoisonType_3_Frequency = 5
+PoisonType_3_Duration = 120
+PoisonType_3_RecalcChance = 50
+PoisonType_3_Difficulty = 1100
+PoisonType_3_ApplicationDifficulty = 900
+PoisonType_3_ApplicationCharges = 14
+//This is a function to perform when poison is applied and whenever it ticks.
+//Argv[0] = 1 when the poison is first applied
+PoisonType_3_Function = f_poison_effect_deadly
+
+//Lethal Poison
+PoisonType_4 = Lethal
+PoisonType_4_Message_Self = 1042865
+PoisonType_4_Message_Other = 1042866
+PoisonType_4_DamLow = 7
+PoisonType_4_DamHigh = 26
+PoisonType_4_Divide = 4
+PoisonType_4_Frequency = 5
+PoisonType_4_Duration = 120
+PoisonType_4_RecalcChance = 50
+PoisonType_4_Difficulty = 3000
+PoisonType_4_ApplicationDifficulty = 10000
+PoisonType_4_ApplicationCharges = 0
+PoisonType_4_Function = f_poison_effect_lethal
+
+//Poisonable Weapon Types
+//Weapons of this type or weapons with TAG.OVERRIDE.POISONABLE set are poisonable
+PoisonWep_t_weapon_sword = 1
+PoisonWep_t_weapon_fence = 1
+PoisonWep_t_weapon_axe = 1
+
+//Poisonable Food Types
+PoisonFood_t_food = 1
+PoisonFood_t_drink = 1
+PoisonFood_t_booze = 1
+
+
+[Function f_skill_poison]
+If <Argo.TopObj>!=<Uid>
+Sysmessage <def.scp.poisoning_mustbeinpack>
+Return 1
+Endif
+If !<Argo.IsItem>
+Sysmessage <def.scp.poisoning_cantworkonthat>
+Return 1
+Endif
+If ((!<Def0.PoisonWep_<Argo.Type>>) && (!<Argo.Tag0.Override.Poisonable>) && (!<Def0.PoisonFood_<Argo.Type>>))
+Sysmessage <def.scp.poisoning_notpoisonable>
+Return 1
+Endif
+If ((<Argo.TwoHands>) && (!<Def0.scp.Poisoning_WeaponTwoHands>) && (!<Argo.Tag0.Override.Poisonable>))
+Sysmessage <def.scp.poisoning_notpoison2hands>
+Return 1
+Endif
+If ((!<IsEmpty <Argo.Tag.Poison.Level>>) && (<Def0.scp.Poisoning_CleanWeapons>))
+Sysmessage <def.scp.poisoning_mustbecleaned>
+Return 1
+Endif
+Sysmessage <def.scp.poisoning_whatpoisonuse>
+Targetf f_skill_poison_2 <Argo.Uid>
+
+[Function f_skill_poison_2]
+Ref1 = <Argv[0]>
+If <Argo.TopObj>!=<Uid>
+Sysmessage <def.scp.poisoning_mustbeinpack>
+Return 1
+Endif
+If <Ref1.TopObj>!=<Uid>
+Sysmessage <def.scp.poisoning_targettoofar>
+Return 1
+Endif
+If !<Argo.IsItem>
+Sysmessage <def.scp.poisoning_cantworkonthat>
+Return 1
+Endif
+If <Argo.Type> != t_potion
+Sysmessage <def.scp.poisoning_notpoisonpot>
+Return 1
+Endif
+If <Argo.More1> != s_poison
+Sysmessage <def.scp.poisoning_notpoisonpot>
+Return 1
+Endif
+If <Argo.Tag0.Poison>
+Local.PoisonLevel = <Argo.Tag0.Poison>
+Else
+Local.PoisonLevel = <Qval <Argo.More2> < 450 ? 0 : <Qval <Argo.More2> < 550 ? 1 : <Qval <Argo.More2> < 950 ? 2 : 3>>>
+Endif
+If <Argo.Amount> > 1
+Argo.Amount -= 1
+Else
+Argo.Remove
+Endif
+Serv.Newitem = i_bottle_empty
+New.Bounce
+Ctag.Skill.Poisoning = 1
+Anim 33
+Sound 583
+Local.X
+For 2 <Eval {2 3}>
+Timerf <Local._For>,Anim 33
+Timerf <Local._For>,Sound 583
+Local.X = <Local._For>
+Endfor
+Timerf <Local.X>,f_skill_poison_apply <Ref1.Uid>,<Local.PoisonLevel>
+
+
+[Function f_skill_poison_apply]
+Ref1 = <Argv[0]>
+Ctag.Skill.Poisoning =
+Local.Chance = <Eval {(<Poisoning> / 2) <Poisoning>}>
+If <Local.Chance> > <Def0.PoisonType_<Eval <Argv[1]>>_ApplicationDifficulty>
+Sysmessage <def.scp.poisoning_youapplypoison>
+Ref1.Tag.Poison.Level = <Argv[1]>
+If <Def0.PoisonFood_<Ref1.Type>>
+Ref1.Events +t_food_poisoned
+Else
+Ref1.Tag.Poison.Charges = <Def0.PoisonType_<Eval <Argv[1]>>_ApplicationCharges>
+If <Def0.scp.Poisoning_WeaponsPoison>
+Ref1.Events +t_weapon_poisoned
+Endif
+Endif
+Ref1.ResendToolTip
+If ((<Findlayer.<Ref1.Layer>.Uid>==<Ref1.Uid>) && (<Def0.scp.Poisoning_WeaponsPoison>))
+Events +e_weapon_poisoned
+Endif
+If <Poisoning> < <Def0.PoisonType_<Eval <Argv[1]>>_ApplicationDifficulty> + 350
+Skillgain Poisoning,1
+Endif
+Elif <Local.Chance> < <Def0.PoisonType_<Eval <Argv[1]>>_ApplicationDifficulty> - (<Def0.PoisonType_<Eval <Argv[1]>>_ApplicationDifficulty> / 3)
+Sysmessage <def.scp.poisoning_gravemistake>
+New_Poison <Qval <Argv[1]> ? (<Argv[1]> +- 1) : 0>
+Else
+Sysmessage <def.scp.poisoning_failapplypoison>
+If <Poisoning> < 150
+Skillgain Poisoning,1
+Endif
+Endif
+
+[Typedef t_weapon_poisoned]
+
+ON=@Click
+Message @,,2 1062413,<dTag0.Poison.Charges>
+
+ON=@ClientTooltip
+src.addcliloc 1062413,<dTag0.Poison.Charges>
+
+ON=@Equip
+Src.Events +e_weapon_poisoned
+
+ON=@UnEquip
+Src.Events -e_weapon_poisoned
+
+[Typedef t_food_poisoned]
+
+ON=@Dclick
+Events -t_food_poisoned
+If Rand(101) <= <Def0.scp.Poisoning_FoodChance>
+Src.New_Poison <Tag0.Poison.Level>,<Src.Uid>
+Tag.Poison.Level =
+Endif
+
+[Events e_weapon_poisoned]
+
+On=@Hit
+If Rand(11) < <Eval 2 + (<Poisoning>/200)>
+Src.New_Poison <Weapon.Tag0.Poison.Level>,<Uid>
+Sysmessage <def.scp.poisoning_bloodmixpoison>
+Weapon.More1l -= <Eval {2 4}>
+If <Weapon.More1l> < 0
+Weapon.More1l = 0
+Endif
+Endif
+Weapon.Tag.Poison.Charges = <Eval <Weapon.Tag0.Poison.Charges> +- 1>
+Weapon.ResendToolTip
+If <Weapon.Tag0.Poison.Charges> <= 0
+Weapon.Tag.Poison.Level =
+Weapon.Tag.Poison.Charges =
+Weapon.Events -t_weapon_poisoned
+Events -e_weapon_poisoned
+Endif
+
+[Function Poisonous]
+If ((<Poisoning> > <Def0.scp.Poisoning_MonsterPoisonous>) || (<Tag0.Skill.Poisoning>))
+Return 1
+Endif
+Return 0
+
+
+
+
+
+
+[Function PsnSys_Max]
+RETURN <QVAL <ARGN2> < <ARGN1>? <ARGN1> : <ARGN2>>
+
+[Function PsnSys_Min]
+RETURN <QVAL <ARGN2> < <ARGN1>? <ARGN2> : <ARGN1>>
+
+
+[Function New_Cure]
+If <Findid.i_memory_poison_new>
+Findid.i_memory_poison_new.Trigger @Cure,<Def0.TAT_AS_ARGN>,<Argv[0]>
+Endif
+Return 0
+
+[Function New_Poison]
+
+//Prevent Poison to Poisonous monsters, undead and npcs with respoison at 100 or more
+If ((<Npc>) && (((<Poisonous>) && (<DEF0.scp.Poisoning_MonsterImmunePoisonous>)) || ((<Brain>==brain_undead) && (<DEF0.scp.Poisoning_MonsterImmuneUndead>)) || ((<ResPoison> >= 100) && (<DEF0.scp.Poisoning_MonsterImmuneResist>))))
+message <def.scp.poisoning_immune>
+Return 1
+Endif
+
+Local.Poison = <Eval <Argv[0]>>
+If !<Isempty <Argv[1]>>
+Local.Src = <Argv[1]>
+Else
+Local.Src = <Uid>
+Endif
+If <Findid.i_memory_poison_new>
+If <Findid.i_memory_poison_new.More2> > <Local.Poison>
+Return 1
+Elif <Findid.i_memory_poison_new.More2> == <Local.Poison>
+Findid.i_memory_poison_new.More1h = <Def0.PoisonType_<dLocal.Poison>_Duration>
+Return 1
+Else
+Consume i_memory_poison_new
+Endif
+Endif
+Serv.Newitem = i_memory_poison_new
+New.More2 = <Local.Poison>
+New.Link = <Local.Src>
+New.More1l = <Def0.PoisonType_<dLocal.Poison>_Frequency>
+New.More1h = <Def0.PoisonType_<dLocal.Poison>_Duration>
+If <Trigger @Poison,<Def0.TAT_AS_ARGO>,<New.Uid>> == 1
+New.Remove
+Else
+Equip <New.Uid>
+Endif
+
+[Itemdef i_memory_poison_new]
+ID=i_memory
+TYPE=t_eq_script
+NAME=Poison
+
+ON=@Equip
+Timer = <More1l>
+Src.Flags = <Src.Flags>|080
+Src.Update
+src.sysmessage <def.scp.poisoning_beenpoisoned>
+If (<Cont.IsPlayer>)
+   TrySrc <Cont> Cont.Message @32,,2 <Def0.PoisonType_<dMore2>_Message_Self>
+Endif
+If ((<Cont.Flags> != <Cont.Flags>|08) && (<Cont.Flags> != <Cont.Flags>|0800000))
+   Cont.f_Psn_msg_other <dMore2>
+Endif
+Src.Events +e_poisoned
+Morex = <Eval 1 + (<Src.Hits> / <Def0.PoisonType_<Eval <More2>>_Divide>)>
+Morex = <PsnSys_Max <Morex>,<Def0.PoisonType_<Eval <More2>>_DamLow>>
+Morex = <PsnSys_Min <Morex>,<Def0.PoisonType_<Eval <More2>>_DamHigh>>
+If !<IsEmpty <Def.PoisonType_<Eval <More2>>_Function>>
+Src.<Def.PoisonType_<Eval <More2>>_Function> 1
+Endif
+
+ON=@Unequip
+Src.Flags = <Src.Flags>&~080
+Src.Update
+Src.Events -e_poisoned
+If <Tag0.Cured>
+src.sysmessage <def.scp.poisoning_beencured>
+Endif
+
+ON=@Cure
+Tag.Cure = <Argn1>
+Local.Cure = <Cont.Trigger @Cure,<Def0.TAT_AS_ARGO>,<Uid>>
+If <Local.Cure>==-1
+Tag.Cured = 1
+Remove
+Return 1
+Endif
+If ((<Local.Cure>==2) || (<Local.Cure>==0))
+If Rand(1,<Def0.PoisonType_<Eval <More2>>_Difficulty>) < <Tag0.Cure>
+Tag.Cured = 1
+Remove
+Return 1
+Endif
+Return 0
+Endif
+Return 0
+
+On=@Timer
+If ((!<Link.IsChar>) && (!<Link.IsItem>))
+Link = <Cont.Uid>
+Endif
+
+If <Cont.Trigger @PoisonTick,<Def0.TAT_AS_ARGO>,<Uid>> == 1
+Remove
+Return 1
+Endif
+
+More1h -= <More1l>
+
+//Damage Calculation
+If RAND(1,100) <= <Def0.PoisonType_<Eval <More2>>_RecalcChance>
+Morex = <Eval 1 + (<Cont.Hits> / <Def0.PoisonType_<Eval <More2>>_Divide>)>
+Morex = <PsnSys_Max <Morex>,<Def0.PoisonType_<Eval <More2>>_DamLow>>
+Morex = <PsnSys_Min <Morex>,<Def0.PoisonType_<Eval <More2>>_DamHigh>>
+Endif
+
+If !<IsEmpty <Def.PoisonType_<Eval <More2>>_Function>>
+Cont.<Def.PoisonType_<Eval <More2>>_Function> 0
+Endif
+
+//Timer Check & Set
+If <More1h> <= 0
+cont.sysmessage <def.scp.poisoning_wornoff>
+Remove
+Else
+Timer = <More1l>
+Endif
+
+//Damage (Poison, Noreveal)
+Cont.Damage <Morex> 04008 <Link.Uid>
+
+//Message (Message if hidden, Say if not)
+If (<Cont.IsPlayer>)
+   TrySrc <Cont> Cont.Message @32,,2 <Def0.PoisonType_<dMore2>_Message_Self>
+Endif
+If ((<Cont.Flags> != <Cont.Flags>|08) && (<Cont.Flags> != <Cont.Flags>|0800000))
+   Cont.f_Psn_msg_other <dMore2>
+Endif
+
+Return 1
+
+
+[Events e_poisoned]
+//Poison Event
+
+On=@Spelleffect
+
+On=@Death
+Consume i_memory_poison_new
+
+
+[Function f_Psn_msg_self]
+Message @32,,2 <Def0.PoisonType_<dArgv[0]>_Message_Self>
+
+[Function f_Psn_msg_other]
+Ref1 = <uid>
+FORCLIENTS 18
+   IF (<Ref1> != <UID>)
+      TRYSRC <UID> UID.<Ref1>.MESSAGE @32,,2 <Def0.PoisonType_<Eval <Argv[0]>>_Message_Other>,<Ref1.Name>,<UID.<SRC>.NAME>
+      TRYSRC <UID> UID.<Ref1>.MESSAGE @32
+   ENDIF
+ENDFOR
+
+
+//Test Event for Triggers
+[Events e_poison_event_test]
+
+On=@Poison
+//Argo = Poison Item
+//Removing Argo here prevents poison
+//Return 1 Prevents Poison
+
+ON=@PoisonTick
+//Argo = Poison Item (DO NOT REMOVE IT)
+//Return 1 Removes poison object (This removes it properly)
+
+On=@Cure
+//Argo = Poison Item
+//Argo.Tag.Cure = Cure Strength
+//Return 1 Prevents Curing
+//Return -1 Forces Curing
+
+[Function f_poison_effect_deadly]
+If ((<Argv[0]> == 0) && (<Hits> <= <MaxHits>/4))
+Stam -= <Eval {10 19}>
+If <Stam> < 0
+Stam = 0
+Endif
+Endif
+
+[Function f_poison_effect_lethal]
+If ((<Argv[0]> == 0) && (<Hits> <= <MaxHits>/4))
+Stam -= <Eval {15 29}>
+If <Stam> < 0
+Stam = 0
+Endif
+Endif
+
+[Function f_bandage_cure]
+If !<Restest i_memory_poison_new>
+Return 0
+Endif
+If ((<Def0.scp.Healing_MinAnatomyToCure> > <Src.Anatomy>) || (<Def0.scp.Healing_MinToCure> > <Src.Healing>))
+Src.Sysmessage <def.scp.poisoning_failcuretarg>
+Return 1
+Endif
+Local.Skill = <Src.Healing>
+If <Def0.scp.Healing_UseAnatomy>
+Local.Skill += <Src.Anatomy>
+Else
+Local.Skill *= 2
+Endif
+Local.Cured = <Findid.i_memory_poison_new.Trigger @Cure,<Def0.TAT_AS_ARGN>,<Local.Skill> / 2>
+If <Local.Cured>
+Src.Sysmessage <def.scp.poisoning_curedtarget>
+Else
+Src.Sysmessage <def.scp.poisoning_failcuretarg>
+Endif
+Return 1
+
+[Function f_veterinary_bandage_cure]
+If !<Restest i_memory_poison_new>
+Return 0
+Endif
+If ((<Def0.scp.Veterinary_MinAnimalLoreToCure> > <Src.AnimalLore>) || (<Def0.scp.Veterinary_MinToCure> > <Src.Veterinary>))
+Src.Sysmessage <def.scp.poisoning_failcuretarg>
+Return 1
+Endif
+Local.Skill = <Src.Veterinary>
+If <Def0.scp.Veterinary_UseAnimalLore>
+Local.Skill += <Src.AnimalLore>
+Else
+Local.Skill *= 2
+Endif
+Local.Cured = <Findid.i_memory_poison_new.Trigger @Cure,<Def0.TAT_AS_ARGN>,<Local.Skill> / 2>
+If <Local.Cured>
+Src.Sysmessage <def.scp.poisoning_curedtarget>
+Else
+Src.Sysmessage <def.scp.poisoning_failcuretarg>
+Endif
+Return 1
+
+
+[Itemdef i_cloth_oil]
+ID=i_cloth
+TYPE=t_script
+NAME=Oil Cloth
+
+ON=@Create
+Color = 61
+
+ON=@Dclick
+Src.Sysmessage <def.scp.poisoning_usethison>
+Target
+Return 1
+
+On=@Targon_Item
+Ref1 = <Src.Targ.Uid>
+If <Ref1.IsWeapon>
+If !<IsEmpty <Ref1.Tag.Poison.Level>>
+Ref1.Tag.Poison.Level = 
+Ref1.Events -t_weapon_poisoned
+Ref1.Tag.Poison.Charges = 
+If <Src.Findlayer.<Ref1.Layer>.Uid>==<Ref1.Uid>
+Src.Events -e_weapon_poisoned
+Endif
+Ref1.ResendToolTip
+Endif
+Else
+Src.Sysmessage <def.scp.poisoning_cantworkonthat>
+Return 1
+Endif
+Src.Sysmessage <def.scp.poisoning_cleaneditem>
+Consume
+Return 1
+
+On=@Targon_Char
+Return 1
+
+[eof]

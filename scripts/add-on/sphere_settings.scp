@@ -29,6 +29,7 @@ scp.NewSkills_Begging=1
 scp.NewSkills_EvalInt=1
 scp.NewSkills_SpiritSpeak=1
 scp.NewSkills_ResistingSpells=1
+scp.NewSkills_Poisoning=1 // Includes Healing & Veterinary
 
 // Enables, switch or disable the new barding system
 // 0 = Default. 1 = OSI-Like.
@@ -48,6 +49,73 @@ scp.NewCrafting_Cooking=1
 scp.NewCrafting_Inscription=1
 scp.NewCrafting_Tailoring=1
 scp.NewCrafting_Tinkering=1
+
+///////////////////////////////////////////////////////////////
+//////// Skills Settings - Poisoning/Healing/Veterinary
+///////////////////////////////////////////////////////////////
+// Undead monsters are immune to poison
+// <boolean> (0 = No / 1 = Yes)
+scp.Poisoning_MonsterImmuneUndead=1
+
+// Poisonous monsters are immune to poison
+// <boolean> (0 = No / 1 = Yes)
+scp.Poisoning_MonsterImmunePoisonous=1
+
+// Monsters are immune to poison if they have 100 ResPoison or more
+// <boolean> (0 = No / 1 = Yes)
+scp.Poisoning_MonsterImmuneResist=1
+
+// Minimum Poisoning for monsters to required to be classed as poisonous (able to poison)
+// From 0 to 1000. Default = 200 (20.0%)
+scp.Poisoning_MonsterPoisonous=200
+
+// Two Handed weapons can be poisoned
+// <boolean> (0 = No / 1 = Yes)
+scp.Poisoning_WeaponTwoHands=0
+
+// Chance for food to poison consumer (Percent value)
+// From 0 to 100%. Default = 100
+scp.Poisoning_FoodChance=100
+
+// If a weapon is poisoned it required cleaning to be poisoned again (1 = yes, 0 = no)
+// Item for cleaning is i_cloth_oil, needs adding to a craft or vendor for use.
+scp.Poisoning_CleanWeapons=0
+
+// Weapons poison on hit (1 = yes, 0 = no) (NOTE: Turning this off will still poison the weapon)
+// Leave this on unless you plan on using things like Infectious Strike from the maneuvers system.
+scp.Poisoning_WeaponsPoison=1
+
+// Minimum Healing required to cure
+// From 0 to 1000. Default = 0 (0.0%)
+scp.Healing_MinToCure=0
+
+// Minimum Anatomy required to cure
+// From 0 to 1000. Default = 620 (62.0%)
+scp.Healing_MinAnatomyToCure=620
+
+// Is anatomy skill used in the cure chance?
+// <boolean> (0 = No / 1 = Yes)
+scp.Healing_UseAnatomy=1
+
+// Poison prevents healing from bandages
+// <boolean> (0 = No / 1 = Yes)
+scp.Healing_PoisonNoBandage=1
+
+// Minimum Veterinary required to cure
+// From 0 to 1000. Default = 0 (0.0%)
+scp.Veterinary_MinToCure=0
+
+// Minimum Animal Lore required to cure
+// From 0 to 1000. Default = 620 (62.0%)
+scp.Veterinary_MinAnimalLoreToCure=620
+
+// Is animal lore skill used in the cure chance? 
+// <boolean> (0 = No / 1 = Yes)
+scp.Veterinary_UseAnimalLore=1
+
+// Poison prevents veterinary healing from bandages
+// <boolean> (0 = No / 1 = Yes)
+scp.Veterinary_PoisonNoBandage=1
 
 ///////////////////////////////////////////////////////////////
 //////// General Settings
