@@ -218,6 +218,28 @@ MANAUSE=6
 SKILLREQ=MAGERY 20.0
 INTERRUPT=100.0,100.0
 
+on=@effect
+if <def.scp.NewSkills_Poisoning> == 0
+return 0
+endif
+if <findid.i_memory_poison_new>
+local.cured = <findid.i_memory_poison_new.trigger @cure,tat_as_argn,<eval <argn2> / 2>>
+	if <local.cured>
+	src.sysmessage <def.scp.poisoning_curedtarget>
+	else
+	src.sysmessage <def.scp.poisoning_failcuretarg>
+	endif
+else
+	if <uid> == <src.uid>
+	src.sysmessage <def.scp.poisoning_notpoisoned>
+	else
+	src.sysmessage <def.scp.poisoning_targnotpoisoned>
+	endif
+endif
+sound snd_spell_cure
+effect 3,i_fx_bless_effect,1,17,0
+return 1
+
 [Spell 12]
 DEFNAME=s_harm
 NAME=Harm
@@ -364,13 +386,35 @@ CAST_TIME=3.0
 RESOURCES=i_reag_nightshade
 RUNE_ITEM=i_rune_POISON
 SCROLL_ITEM=i_scroll_POISON
-FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_FX_TARG| SPELLFLAG_RESIST
+FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_FX_TARG | SPELLFLAG_RESIST
 EFFECT_ID=i_fx_curse
-EFFECT=0	// 100,750
+EFFECT=0    // 100,750
 DURATION=1.0,15.0
 MANAUSE=9
 SKILLREQ=MAGERY 30.0
 INTERRUPT=100.0,100.0
+
+on=@effect
+if <def.scp.NewSkills_Poisoning> == 0
+return 0
+endif
+FINDID(i_rune_paralyze).REMOVE
+FINDID(i_rune_paralyze_field).REMOVE
+LOCAL.FORMULA=<EVAL ((<Argn2> + <SRC.POISONING>) / 2)>
+IF (<LOCAL.FORMULA> < 651)
+   NEW_POISON 0,<SRC.UID>
+ELSEIF (<LOCAL.FORMULA> < 850)
+   NEW_POISON 1,<SRC.UID>
+ELSEIF (<LOCAL.FORMULA> < 999)
+   NEW_POISON 2,<SRC.UID>
+ELSE
+   NEW_POISON 3,<SRC.UID>
+ENDIF
+SOUND snd_spell_poison
+EFFECT 3,0374a,1,15,1
+//Ensures you are still the aggressor
+DAMAGE 0 0001 <Src.Uid>
+Return 1
 
 [Spell 21]
 DEFNAME=s_telekinesis
@@ -456,6 +500,24 @@ DURATION=0.0
 MANAUSE=11
 SKILLREQ=MAGERY 40.0
 INTERRUPT=100.0,100.0
+
+ON=@Effect
+if <def.scp.NewSkills_Poisoning> == 0
+return 0
+endif
+If <IsChar>
+If <Findid.i_memory_poison_new>
+Local.Cured = <Findid.i_memory_poison_new.Trigger @Cure,<Def0.TAT_AS_ARGN>,<Argn2>>
+If <Local.Cured>
+Src.Sysmessage <def.scp.poisoning_curedtarget>
+Else
+Src.Sysmessage <def.scp.poisoning_failcuretarg>
+Endif
+Endif
+Sound snd_spell_cure
+Effect 3,i_fx_bless_effect,1,17,0
+Return 1
+Endif
 
 [Spell 26]
 DEFNAME=s_archprotection
@@ -698,6 +760,30 @@ DURATION=2*60.0,4*60.0
 MANAUSE=14
 SKILLREQ=MAGERY 50.0
 INTERRUPT=100.0,100.0
+
+ON=@Effect
+if <def.scp.NewSkills_Poisoning> == 0
+return 0
+endif
+If <IsChar>
+FINDID(i_rune_paralyze).REMOVE
+FINDID(i_rune_paralyze_field).REMOVE
+LOCAL.FORMULA=<EVAL ((<Argn2> + <SRC.POISONING>) / 2)>
+IF (<LOCAL.FORMULA> < 651)
+   NEW_POISON 0,<SRC.UID>
+ELSEIF (<LOCAL.FORMULA> < 850)
+   NEW_POISON 1,<SRC.UID>
+ELSEIF (<LOCAL.FORMULA> < 999)
+   NEW_POISON 2,<SRC.UID>
+ELSE
+   NEW_POISON 3,<SRC.UID>
+ENDIF
+SOUND snd_spell_poison
+EFFECT 3,0374a,1,15,1
+//Ensures you are still the aggressor
+DAMAGE 0 0001 <Src.Uid>
+Return 1
+Endif
 
 [Spell 40]
 // NOTE: This spell is the mages first true form of combat at low levels. One of the main uses is summoning a horse to travel. Don't set to low.

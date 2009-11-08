@@ -448,11 +448,19 @@ BONUS_STR=0
 BONUS_DEX=30
 BONUS_INT=70
 
+on=@success
+if <def.NewSkills_Poisoning> == 0
+return 0
+endif
+if <act.f_bandage_cure> && <def.scp.Healing_PoisonNoBandage>
+return 1
+endif
+
 ON=@Fail
-	SRC.SYSMESSAGE You apply the bandages, but they barely help.
+    SRC.SYSMESSAGE You apply the bandages, but they barely help.
 
 ON=@Abort
-	SRC.SYSMESSAGE You stop applying the bandages.
+    SRC.SYSMESSAGE You stop applying the bandages.
 
 [SKILL 18]
 DEFNAME=Skill_Fishing
@@ -707,6 +715,7 @@ ON=@Abort
 DEFNAME=SKILL_POISONING
 KEY=Poisoning
 TITLE=Assassin
+FLAGS = 01|020
 PROMPT_MSG=To what do you wish to apply the poison?
 DELAY=2.0
 STAT_STR=15
@@ -716,14 +725,26 @@ BONUS_STR=0
 BONUS_DEX=20
 BONUS_INT=80
 BONUS_STATS=20
-ADV_RATE=2.5,50.0,200.0
+ADV_RATE=2.5,10.0,20.0
 VALUES=1,30,200
 
-ON=@Fail
-	SRC.SYSMESSAGE You fail to apply a sufficient dose of poison to it.
+on=@select
+if <def.scp.NewSkills_Poisoning> == 0
+return 0
+endif
+if !<ctag0.skill.poisoning>
+src.sysmessage <def.scp.poisoning_poisonwhat>
+src.targetf f_skill_poison
+else
+src.sysmessage <def.scp.poisoning_youmustwait>
+endif
+return 1
+
+on=@fail
+src.sysmessage <def.scp.poisoning_failtoapply>
 
 ON=@Abort
-	SRC.SYSMESSAGE You decide not to poison anything for now.
+//SRC.SYSMESSAGE You decide not to poison anything for now.
 
 [SKILL 31]
 DEFNAME=Skill_Archery
@@ -959,11 +980,19 @@ BONUS_INT=60
 BONUS_STATS=20
 ADV_RATE=10.0,200.0,800.0
 
+ON=@Success
+if <def.scp.NewSkills_Poisoning> == 0
+return 0
+endif
+if <act.f_veterinary_bandage_cure> && <def0.scp.Veterinary_PoisonNoBandage>
+return 1
+endif
+
 ON=@Fail
-	SRC.SYSMESSAGE You apply the bandages, but they barely help.
+    SRC.SYSMESSAGE You apply the bandages, but they barely help.
 
 ON=@Abort
-	SRC.SYSMESSAGE You stop applying the bandages.
+    SRC.SYSMESSAGE You stop applying the bandages.
 	
 [SKILL 40]
 DEFNAME=Skill_Swordsmanship
