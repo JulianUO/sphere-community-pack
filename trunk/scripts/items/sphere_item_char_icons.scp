@@ -485,13 +485,13 @@ DESCRIPTION=Panther (looks terrible)
 
 [ITEMDEF 020f8]
 DEFNAME=i_pet_lich
-NAME=Liche
+NAME=Lich
 TYPE=T_FIGURINE
-TDATA3=c_liche
+TDATA3=c_lich
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
-DESCRIPTION=Liche
+DESCRIPTION=Lich
 
 [ITEMDEF 020f9]
 DEFNAME=i_pet_mongbat

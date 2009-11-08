@@ -27,6 +27,21 @@ DUPEITEM=026b1
 DUPEITEM=026b1
 
 
+//For backwards compatability
+[ITEMDEF i_reag_dragon_scale]
+DEFNAME=i_reag_dragon_scale
+ID=026B4
+NAME=Dragon Scale%s
+TYPE=t_reagent
+WEIGHT=0.1
+VALUE=5
+
+CATEGORY=Provisions - Blacksmithing
+SUBSECTION=Scales
+DESCRIPTION=Dragon Scale
+
+
+
 [ITEMDEF i_reag_scale_black]
 DEFNAME=i_reag_scale_black
 ID=026B4

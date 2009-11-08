@@ -31,8 +31,8 @@ CATEGORY=Spawn Groups
 SUBSECTION=Undead
 DESCRIPTION=Strong Undead
 ID=c_m_skeleton_mage 3
-ID=c_liche 4
-ID=c_m_liche_lord
+ID=c_lich 4
+ID=c_m_lich_lord
 ID=c_skeleton_w_sword
 
 [SPAWN 08003]
@@ -47,8 +47,8 @@ ID=c_skeleton_w_sword
 ID=c_skeleton_w_sword
 ID=c_skeleton
 ID=c_m_skeleton_mage
-ID=c_liche
-ID=c_m_liche_lord
+ID=c_lich
+ID=c_m_lich_lord
 
 [SPAWN 08004]
 DEFNAME=SPAWN_elems
@@ -241,8 +241,8 @@ ID=c_skeleton_w_axe
 ID=c_skeleton_w_sword
 ID=c_skeleton
 ID=c_m_skeleton_mage
-ID=c_liche
-ID=c_m_liche_lord
+ID=c_lich
+ID=c_m_lich_lord
 ID=c_skeleton_w_sword
 ID=c_elem_air
 ID=c_elem_earth
@@ -873,7 +873,7 @@ ID=c_elem_air 2
 ID=c_elem_earth 2
 ID=c_elem_fire 2
 ID=c_spectre 4
-ID=c_liche 2
+ID=c_lich 2
 
 [SPAWN 08044]
 CATEGORY=Spawn Groups

@@ -12,8 +12,14 @@
 VERSION=0.56b
 
 [DEFNAME backward_compability_defs]
-loot_ORGE_LORD loot_OGRE_LORD
-i_axe_war_VANQUISIHNG i_axe_war_VANQ
+loot_ORGE_LORD			loot_OGRE_LORD
+i_axe_war_VANQUISIHNG		i_axe_war_VANQ
+i_scroll_liche_transformation	i_scroll_lich_form
+s_liche_form			s_lich_form
+i_liche_fx			i_lich_fx
+i_liche_form			i_lich_form
+c_liche				c_lich
+c_m_liche_lord			c_m_lich_lord
 
 [FUNCTION addnpc]
 IF (<ISNUM <ARGS>>)

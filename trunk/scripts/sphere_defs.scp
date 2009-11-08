@@ -213,6 +213,15 @@ random_scroll          { random_lower_scroll 1 random_upper_scroll 1 }
 random_lower_scroll    { random_first_circle 1 random_second_circle 1 random_third_circle 1 random_fourth_circle 1 }
 random_upper_scroll    { random_fifth_circle 1 random_sixth_circle 1 random_seventh_circle 1 random_eighth_circle 1 }
 
+//stratics scrolls
+random_scroll_low	 { i_scroll_blank 1 random_first_circle 1 random_second_circle 1 random_third_circle 1 }
+random_scroll_medium	 { random_fourth_circle 1 random_fifth_circle 1 random_sixth_circle 1 random_seventh_circle 1 }
+random_scroll_high	 { random_eigth_circle 1 }
+
+random_scroll_necro_low	 { i_scroll_animate_dead 1 i_scroll_blood_oath 1 i_scroll_corpse_skin 1 i_scroll_curse_weapon 1 i_scroll_evil_omen 1 i_scroll_horrific_beast 1 i_scroll_mind_rot 1 i_scroll_rot_mind 1 i_scroll_summon_familiar 1 i_scroll_wraith_form 1 }
+random_scroll_necro_med	 { i_scroll_lich_form 1 i_scroll_poison_strike 1 i_scroll_strangle 1 i_scroll_wither 1 }
+random_scroll_necro_high { i_scroll_vengeful_spirit 1 i_scroll_vampiric_embrace 1 i_scroll_exorcism 1 }
+
 random_first_circle    { i_scroll_reactive_armor 1 i_scroll_clumsy 1 i_scroll_create_food 1 i_scroll_feeblemind 1 i_scroll_heal 1 i_scroll_magic_arrow 1 i_scroll_night_sight 1 i_scroll_weaken 1 }
 random_second_circle   { i_scroll_agility 1 i_scroll_cunning 1 i_scroll_cure 1 i_scroll_harm 1 i_scroll_magic_trap 1 i_scroll_magic_untrap 1 i_scroll_protection 1 i_scroll_strength 1 }
 random_third_circle    { i_scroll_bless 1 i_scroll_fireball 1 i_scroll_magic_lock 1 i_scroll_poison 1 i_scroll_telekinesis 1 i_scroll_teleport 1 i_scroll_unlock 1 i_scroll_wall_of_stone 1 }
