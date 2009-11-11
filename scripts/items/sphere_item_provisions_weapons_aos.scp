@@ -29,7 +29,7 @@ SUBSECTION=Age of Shadows
 DESCRIPTION=Scythe
 
 ON=@CREATE
-HITPOINTS={50 60}
+ HITPOINTS={50 60}
 
 [ITEMDEF 026bb]
 DEFNAME=i_bone_harvester
@@ -51,7 +51,7 @@ SUBSECTION=Age of Shadows
 DESCRIPTION=Bone Harvester
 
 ON=@CREATE
-HITPOINTS={50 60}
+ HITPOINTS={50 60}
 
 [ITEMDEF 026bc]
 DEFNAME=i_scepter
@@ -73,10 +73,10 @@ SUBSECTION=Age of Shadows
 DESCRIPTION=Scepter
 
 ON=@CREATE
-HITPOINTS={50 60}
+ HITPOINTS={50 60}
 
 [ITEMDEF 026bd]
-DEFNAME=i_staff_bladed
+DEFNAME=i_bladed_staff
 NAME=Bladed Staff
 TYPE=t_weapon_sword
 DAM=14,16
@@ -96,7 +96,7 @@ SUBSECTION=Age of Shadows
 DESCRIPTION=Bladed Staff
 
 ON=@CREATE
-HITPOINTS={50 60}
+ HITPOINTS={50 60}
 
 [ITEMDEF 026be]
 DEFNAME=i_pike
@@ -118,10 +118,10 @@ SUBSECTION=Age of Shadows
 DESCRIPTION=Pike
 
 ON=@CREATE
-HITPOINTS={50 60}
+ HITPOINTS={50 60}
 
 [ITEMDEF 026bf]
-DEFNAME=i_staff_bladed_double
+DEFNAME=i_double_bladed_staff
 NAME=Double Bladed Staff
 TYPE=t_weapon_fence
 DAM=12,13
@@ -141,7 +141,7 @@ SUBSECTION=Age of Shadows
 DESCRIPTION=Double Bladed Staff
 
 ON=@CREATE
-HITPOINTS={50 60}
+ HITPOINTS={50 60}
 
 [ITEMDEF 026c0]
 DEFNAME=i_lance
@@ -162,7 +162,7 @@ SUBSECTION=Age of Shadows
 DESCRIPTION=Lance
 
 ON=@CREATE
-HITPOINTS={50 60}
+ HITPOINTS={50 60}
 
 [ITEMDEF 026c1]
 DEFNAME=i_crescent_blade
@@ -182,10 +182,10 @@ SUBSECTION=Age of Shadows
 DESCRIPTION=Double Blade
 
 ON=@CREATE
-HITPOINTS={50 60}
+ HITPOINTS={50 60}
 
 [ITEMDEF 026c2]
-DEFNAME=i_bow_composite
+DEFNAME=i_composite_bow
 NAME=Composite Bow
 DAM=15,17
 WEIGHT=5.5
@@ -206,10 +206,10 @@ SUBSECTION=Age of Shadows
 DESCRIPTION=Composite Bow
 
 ON=@CREATE
-HITPOINTS={50 60}
+ HITPOINTS={50 60}
 
 [ITEMDEF 026c3]
-DEFNAME=i_crossbow_repeating
+DEFNAME=i_repeating_crossbow
 NAME=Repeating Crossbow
 DAM=10,12
 WEIGHT=2.5
@@ -263,7 +263,7 @@ DUPEITEM=026c2
 DUPEITEM=026c3
 
 [ITEMDEF 026ce]
-DEFNAME=i_sword_paladin
+DEFNAME=i_paladin_sword
 NAME=Paladin Sword
 TYPE=t_weapon_sword
 SKILL=swordsmanship
@@ -281,7 +281,7 @@ SUBSECTION=Age of Shadows
 DESCRIPTION=Paladin Sword
 
 ON=@CREATE
-HITPOINTS={50 60}
+ HITPOINTS={50 60}
 
 [ITEMDEF 026cf]
 DUPEITEM=026ce

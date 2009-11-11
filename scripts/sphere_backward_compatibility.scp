@@ -21,6 +21,20 @@ i_liche_form			i_lich_form
 c_liche				c_lich
 c_m_liche_lord			c_m_lich_lord
 
+[DEFNAME backward_compatibility_defs_weapons]
+i_staff_bladed_double		i_double_bladed_staff
+i_staff_bladed			i_bladed_staff
+i_crossbow_repeating		i_repeating_crossbow
+i_bow_composite			i_composite_bow
+i_sword_paladin			i_paladin_sword
+i_mace_wildstaff		i_wild_staff
+i_sword_warcleaver		i_war_cleaver
+i_sword_leafblade		i_leafblade
+i_mace_diamond			i_diamond_mace
+i_sword_assassin_spike		i_assassin_spike
+i_bow_ruin_o			i_bow_ruin
+i_kryss_ruin_o			i_kryss_ruin
+
 [FUNCTION addnpc]
 IF (<ISNUM <ARGS>>)
 	ADD <ARGS>|08c000000
