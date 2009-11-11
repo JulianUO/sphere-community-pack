@@ -11,6 +11,10 @@
 //
 VERSION=0.56b
 
+[DEFNAME weapon_backwards_compatibility]
+i_bow_ruin_o		i_bow_ruin
+i_kryss_ruin_o		i_kryss_ruin
+
 [ITEMDEF i_enchant_weapon]
 // WEAPON ENHANCER - good for 20 % enchantment
 // Player must be holding a weapon in their right hand.
@@ -50,112 +54,13 @@ ON=@DCLICK
 	SRC.UPDATE
 	RETURN 1
 
-[ITEMDEF 04129]
-//Same as [ITEMDEF 0412f] Do not remove! Here for backward compatility!
-DEFNAME=i_BOW_RUIN_O
-ID=i_bow
-NAME=Bow of Ruin
-RESOURCES=i_bow,i_enchant_weapon
 
-ON=@Create
-	ATTR=attr_magic
-	MOREY=20.0
-	HITPOINTS={31 60}
-	COLOR=color_magic_weap
-
-[ITEMDEF 04139]
-//Same as [ITEMDEF 0413f] Do not remove! Here for backward compatility!
-DEFNAME=i_KRYSS_RUIN_O
-ID=i_kryss
-NAME=Kryss of Ruin
-RESOURCES=i_kryss,i_enchant_weapon
-
-ON=@Create
-	MOREY=20.0
-	ATTR=attr_magic
-	HITPOINTS={31 90}
-	COLOR=color_magic_weap
-
-[ITEMDEF 04105]
-DEFNAME=i_SCIMITAR_FORCE
-ID=i_scimitar
-NAME=Scimitar of Force
-RESOURCES=i_scimitar,3 i_enchant_weapon
-DESCRIPTION=Scimitar of Force
-SUBSECTION=Magic Scimitars
-CATEGORY=Provisions - Weapons - Magic
-
-ON=@Create
-	COLOR=color_magic_weap
-	HITPOINTS={31 100}
-	ATTR=attr_magic
-	MOREY=60.0
-
-[ITEMDEF 04106]
-DEFNAME=i_SCIMITAR_vanq
-ID=i_scimitar
-NAME=Scimitar of Vanquishing
-RESOURCES=i_scimitar,5 i_enchant_weapon
-DESCRIPTION=Scimitar of Vanquishing
-SUBSECTION=Magic Scimitars
-CATEGORY=Provisions - Weapons - Magic
-
-ON=@Create
-	COLOR=color_magic_weap
-	HITPOINTS={31 100}
-	ATTR=attr_magic
-	MOREY=100.0
-
-[ITEMDEF 04107]
-DEFNAME=i_HALBERD_FORCE
-ID=i_halberd
-NAME=Halberd of Force
-RESOURCES=i_halberd,3 i_enchant_weapon
-DESCRIPTION=Halberd of Force
-SUBSECTION=Magic Halberds
-CATEGORY=Provisions - Weapons - Magic
-
-ON=@Create
-	COLOR=color_magic_weap
-	HITPOINTS={31 80}
-	ATTR=attr_magic
-	MOREY=60.0
-
-[ITEMDEF 04108]
-DEFNAME=i_HALBERD_vanq
-ID=i_halberd
-Name=Halberd of Vanquishing
-RESOURCES=i_halberd,5 i_enchant_weapon
-CATEGORY=Provisions - Weapons - Magic
-SUBSECTION=Magic Halberds
-DESCRIPTION=Halberd of Vanquishing
-
-ON=@Create
-	COLOR=color_magic_weap
-	HITPOINTS={31 80}
-	ATTR=attr_magic
-	MOREY=100.0
-
-[ITEMDEF 04109]
-DEFNAME=i_CROSSBOW_FORCE
-ID=i_crossbow
-NAME=Crossbow of Force
-RESOURCES=i_crossbow,3 i_enchant_weapon
-CATEGORY=Provisions - Weapons - Magic
-SUBSECTION=Magic Crossbows
-DESCRIPTION=Crossbow of Force
-
-ON=@Create
-	COLOR=color_magic_weap
-	HITPOINTS={31 80}
-	ATTR=attr_magic
-	MOREY=60.0
-
-[ITEMDEF 0410a]
+[ITEMDEF i_SCIMITAR_RUIN]
 DEFNAME=i_SCIMITAR_RUIN
 ID=i_scimitar
 NAME=Scimitar of Ruin
 RESOURCES=i_scimitar,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Scimitars
 DESCRIPTION=Scimitar of Ruin
@@ -166,11 +71,12 @@ ON=@Create
 	MOREY=20.0
 	ATTR=attr_magic
 
-[ITEMDEF 0410b]
+[ITEMDEF i_SCIMITAR_MIGHT]
 DEFNAME=i_SCIMITAR_MIGHT
 ID=i_scimitar
 NAME=Scimitar of Might
 RESOURCES=i_scimitar,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Scimitars
 DESCRIPTION=Scimitar of Might
@@ -181,11 +87,28 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=40.0
 
-[ITEMDEF 0410c]
+[ITEMDEF i_SCIMITAR_FORCE]
+DEFNAME=i_SCIMITAR_FORCE
+ID=i_scimitar
+NAME=Scimitar of Force
+RESOURCES=i_scimitar,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Scimitars
+DESCRIPTION=Scimitar of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={115 116}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_SCIMITAR_POWER]
 DEFNAME=i_SCIMITAR_POWER
 ID=i_scimitar
 NAME=Scimitar of Power
 RESOURCES=i_scimitar,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Scimitars
 DESCRIPTION=Scimitar of Power
@@ -196,11 +119,45 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=80.0
 
-[ITEMDEF 0410d]
+[ITEMDEF i_SCIMITAR_VANQ]
+DEFNAME=i_SCIMITAR_VANQ
+ID=i_scimitar
+NAME=Scimitar of Vanquishing
+RESOURCES=i_scimitar,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Scimitars
+DESCRIPTION=Scimitar of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={115 116}
+	ATTR=attr_magic
+	MOREY=100.0
+
+[ITEMDEF i_SCIMITAR_mystic]
+DEFNAME=i_SCIMITAR_mystic
+ID=i_scimitar
+NAME=Mystic Scimitar
+RESOURCES=i_scimitar,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Scimitars
+DESCRIPTION=Mystic Scimitar
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={115 116}
+	ATTR=attr_magic
+	MOREY=120.0
+
+
+[ITEMDEF i_CROSSBOW_RUIN]
 DEFNAME=i_CROSSBOW_RUIN
 ID=i_crossbow
 NAME=Crossbow of Ruin
 RESOURCES=i_crossbow,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Crossbows
 DESCRIPTION=Crossbow of Ruin
@@ -210,11 +167,12 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=20.0
 
-[ITEMDEF 0410e]
+[ITEMDEF i_CROSSBOW_MIGHT]
 DEFNAME=i_CROSSBOW_MIGHT
 ID=i_crossbow
 NAME=Crossbow of Might
 RESOURCES=i_crossbow,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Crossbows
 DESCRIPTION=Crossbow of Might
@@ -225,11 +183,28 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=40.0
 
-[ITEMDEF 0410f]
+[ITEMDEF i_CROSSBOW_FORCE]
+DEFNAME=i_CROSSBOW_FORCE
+ID=i_crossbow
+NAME=Crossbow of Force
+RESOURCES=i_crossbow,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Crossbows
+DESCRIPTION=Crossbow of Force
+
+ON=@Create
+	COLOR=045e
+	HITPOINTS={90 91}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_CROSSBOW_POWER]
 DEFNAME=i_CROSSBOW_POWER
 ID=i_crossbow
 NAME=Crossbow of Power
 RESOURCES=i_crossbow,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Crossbows
 DESCRIPTION=Crossbow of Power
@@ -239,11 +214,12 @@ ON=@Create
 	ATTR=attr_magic
 	HITPOINTS={100 101}
 
-[ITEMDEF 04110]
+[ITEMDEF i_CROSSBOW_vanq]
 DEFNAME=i_CROSSBOW_vanq
 ID=i_crossbow
 NAME=Crossbow of Vanquishing
 RESOURCES=i_crossbow,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Crossbows
 DESCRIPTION=Crossbow of Vanquishing
@@ -254,11 +230,29 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=100.0
 
-[ITEMDEF 04111]
+[ITEMDEF i_CROSSBOW_mystic]
+DEFNAME=i_CROSSBOW_mystic
+ID=i_crossbow
+NAME=Mystic Crossbow
+RESOURCES=i_crossbow,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Crossbows
+DESCRIPTION=Mystic Crossbow
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={31 80}
+	ATTR=attr_magic
+	MOREY=120.0
+
+
+[ITEMDEF i_HALBERD_RUIN]
 DEFNAME=i_HALBERD_RUIN
 ID=i_halberd
 NAME=Halberd of Ruin
 RESOURCES=i_halberd,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Halberds
 DESCRIPTION=Halberd of Ruin
@@ -269,11 +263,12 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=20.0
 
-[ITEMDEF 04112]
+[ITEMDEF i_HALBERD_MIGHT]
 DEFNAME=i_HALBERD_MIGHT
 ID=i_halberd
 NAME=Halberd of Might
 RESOURCES=i_halberd,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Halberds
 DESCRIPTION=Halberd of Might
@@ -284,11 +279,28 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=40.0
 
-[ITEMDEF 04113]
+[ITEMDEF i_HALBERD_FORCE]
+DEFNAME=i_HALBERD_FORCE
+ID=i_halberd
+NAME=Halberd of Force
+RESOURCES=i_halberd,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Halberds
+DESCRIPTION=Halberd of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={31 80}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_HALBERD_POWER]
 DEFNAME=i_HALBERD_POWER
 ID=i_halberd
 NAME=Halberd of Power
 RESOURCES=i_halberd,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Halberds
 DESCRIPTION=Halberd of Power
@@ -299,7 +311,40 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=80.0
 
-[ITEMDEF 04114]
+[ITEMDEF i_HALBERD_vanq]
+DEFNAME=i_HALBERD_vanq
+ID=i_halberd
+NAME=Halberd of Vanquishing
+RESOURCES=i_halberd,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Halberds
+DESCRIPTION=Halberd of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={31 80}
+	ATTR=attr_magic
+	MOREY=100.0
+
+[ITEMDEF i_HALBERD_MYSTIC]
+DEFNAME=i_HALBERD_MYSTIC
+ID=i_halberd
+NAME=Mystic Halberd
+RESOURCES=i_halberd,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Halberds
+DESCRIPTION=Mystic Halberd
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={31 80}
+	ATTR=attr_magic
+	MOREY=120.0
+
+
+[ITEMDEF i_BARDICHE_RUIN]
 DEFNAME=i_BARDICHE_RUIN
 ID=i_bardiche
 NAME=Bardiche of Ruin
@@ -314,7 +359,7 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=20.0
 
-[ITEMDEF 04115]
+[ITEMDEF i_BARDICHE_MIGHT]
 DEFNAME=i_BARDICHE_MIGHT
 ID=i_bardiche
 NAME=Bardiche of Might
@@ -329,7 +374,7 @@ ON=@Create
 	HITPOINTS={31 100}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04116]
+[ITEMDEF i_BARDICHE_FORCE]
 DEFNAME=i_BARDICHE_FORCE
 ID=i_bardiche
 NAME=Bardiche of Force
@@ -344,7 +389,7 @@ ON=@Create
 	HITPOINTS={31 100}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04117]
+[ITEMDEF i_BARDICHE_POWER]
 DEFNAME=i_BARDICHE_POWER
 ID=i_bardiche
 NAME=Bardiche of Power
@@ -359,11 +404,12 @@ ON=@Create
 	HITPOINTS={31 100}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04118]
+[ITEMDEF i_BARDICHE_vanq]
 DEFNAME=i_BARDICHE_vanq
 ID=i_bardiche
 NAME=Bardiche of Vanquishing
 RESOURCES=i_bardiche,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Bardiches
 DESCRIPTION=Bardiche of Vanquishing
@@ -374,11 +420,29 @@ ON=@Create
 	HITPOINTS={31 100}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0411a]
+[ITEMDEF i_BARDICHE_mystic]
+DEFNAME=i_BARDICHE_mystic
+ID=i_bardiche
+NAME=Mystic Bardiche
+RESOURCES=i_bardiche,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Bardiches
+DESCRIPTION=Mystic Bardiche
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={31 100}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_CUTLASS_RUIN]
 DEFNAME=i_CUTLASS_RUIN
 ID=i_cutlass
 NAME=Cutlass of Ruin
 RESOURCES=i_cutlass,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Cutlasses
 DESCRIPTION=Cutlass of Ruin
@@ -389,11 +453,12 @@ ON=@Create
 	HITPOINTS={70 71}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0411b]
+[ITEMDEF i_CUTLASS_MIGHT]
 DEFNAME=i_CUTLASS_MIGHT
 ID=i_cutlass
 NAME=Cutlass of Might
 RESOURCES=i_cutlass,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Cutlasses
 DESCRIPTION=Cutlass of Might
@@ -404,11 +469,12 @@ ON=@Create
 	HITPOINTS={75 76}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0411c]
+[ITEMDEF i_CUTLASS_FORCE]
 DEFNAME=i_CUTLASS_FORCE
 ID=i_cutlass
 NAME=Cutlass of Force
 RESOURCES=i_cutlass,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Cutlasses
 DESCRIPTION=Cutlass of Force
@@ -419,11 +485,12 @@ ON=@Create
 	HITPOINTS={80 81}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0411d]
+[ITEMDEF i_CUTLASS_POWER]
 DEFNAME=i_CUTLASS_POWER
 ID=i_cutlass
 NAME=Cutlass of Power
 RESOURCES=i_cutlass,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Cutlasses
 DESCRIPTION=Cutlass of Power
@@ -434,11 +501,12 @@ ON=@Create
 	HITPOINTS={85 86}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0411e]
+[ITEMDEF i_CUTLASS_vanq]
 DEFNAME=i_CUTLASS_vanq
 ID=i_cutlass
 NAME=Cutlass of Vanquishing
 RESOURCES=i_cutlass,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Cutlasses
 DESCRIPTION=Cutlass of Vanquishing
@@ -449,11 +517,29 @@ ON=@Create
 	HITPOINTS={90 91}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0411f]
+[ITEMDEF i_CUTLASS_mystic]
+DEFNAME=i_CUTLASS_mystic
+ID=i_cutlass
+NAME=Mystic Cutlass
+RESOURCES=i_cutlass,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Cutlasses
+DESCRIPTION=Mystic Cutlass
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={90 91}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_sword_viking_RUIN]
 DEFNAME=i_sword_viking_RUIN
 ID=i_sword_viking
 NAME=Viking Sword of Ruin
 RESOURCES=i_sword_viking,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Viking Swords
 DESCRIPTION=Viking Sword of Ruin
@@ -464,11 +550,12 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04120]
+[ITEMDEF i_sword_viking_MIGHT]
 DEFNAME=i_sword_viking_MIGHT
 ID=i_sword_viking
 NAME=Viking Sword of Might
 RESOURCES=i_sword_viking,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Viking Swords
 DESCRIPTION=Viking Sword of Might
@@ -479,11 +566,12 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04121]
+[ITEMDEF i_sword_viking_FORCE]
 DEFNAME=i_sword_viking_FORCE
 ID=i_sword_viking
 NAME=Viking Sword of Force
 RESOURCES=i_sword_viking,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Viking Swords
 DESCRIPTION=Viking Sword of Force
@@ -494,11 +582,12 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04122]
+[ITEMDEF i_sword_viking_POWER]
 DEFNAME=i_sword_viking_POWER
 ID=i_sword_viking
 NAME=Viking Sword of Power
 RESOURCES=i_sword_viking,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Viking Swords
 DESCRIPTION=Viking Sword of Power
@@ -509,11 +598,12 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04123]
+[ITEMDEF i_sword_viking_vanq]
 DEFNAME=i_sword_viking_vanq
 ID=i_sword_viking
 NAME=Viking Sword of Vanquishing
 RESOURCES=i_sword_viking,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Viking Swords
 DESCRIPTION=Viking Sword of Vanquishing
@@ -524,11 +614,29 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04124]
+[ITEMDEF i_sword_viking_mystic]
+DEFNAME=i_sword_viking_mystic
+ID=i_sword_viking
+NAME=Mystic Viking Sword
+RESOURCES=i_sword_viking,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Viking Swords
+DESCRIPTION=Mystic Viking Sword
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={31 90}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_crossbow_heavy_RUIN]
 DEFNAME=i_crossbow_heavy_RUIN
 ID=i_crossbow_heavy
 NAME=Heavy Crossbow of Ruin
 RESOURCES=i_crossbow_heavy,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Heavy Crossbows
 DESCRIPTION=Heavy Crossbow of Ruin
@@ -539,11 +647,12 @@ ON=@Create
 	HITPOINTS={31 100}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04125]
+[ITEMDEF i_crossbow_heavy_MIGHT]
 DEFNAME=i_crossbow_heavy_MIGHT
 ID=i_crossbow_heavy
 NAME=Heavy Crossbow of Might
 RESOURCES=i_crossbow_heavy,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Heavy Crossbows
 DESCRIPTION=Heavy Crossbow of Might
@@ -554,11 +663,12 @@ ON=@Create
 	HITPOINTS={31 100}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04126]
+[ITEMDEF i_crossbow_heavy_FORCE]
 DEFNAME=i_crossbow_heavy_FORCE
 ID=i_crossbow_heavy
 NAME=Heavy Crossbow of Force
 RESOURCES=i_crossbow_heavy,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Heavy Crossbows
 DESCRIPTION=Heavy Crossbow of Force
@@ -569,11 +679,12 @@ ON=@Create
 	HITPOINTS={31 100}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04127]
+[ITEMDEF i_crossbow_heavy_POWER]
 DEFNAME=i_crossbow_heavy_POWER
 ID=i_crossbow_heavy
 NAME=Heavy Crossbow of Power
 RESOURCES=i_crossbow_heavy,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Heavy Crossbows
 DESCRIPTION=Heavy Crossbow of Power
@@ -584,11 +695,12 @@ ON=@Create
 	HITPOINTS={31 100}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04128]
+[ITEMDEF i_crossbow_heavy_vanq]
 DEFNAME=i_crossbow_heavy_vanq
 ID=i_crossbow_heavy
 NAME=Heavy Crossbow of Vanquishing
 RESOURCES=i_crossbow_heavy,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Heavy Crossbows
 DESCRIPTION=Heavy Crossbow of Vanquishing
@@ -599,11 +711,29 @@ ON=@Create
 	HITPOINTS={31 100}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0412a]
+[ITEMDEF i_crossbow_heavy_mystic]
+DEFNAME=i_crossbow_heavy_mystic
+ID=i_crossbow_heavy
+NAME=Mystic Heavy Crossbow
+RESOURCES=i_crossbow_heavy,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Heavy Crossbows
+DESCRIPTION=Mystic Heavy Crossbow
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={31 100}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_KATANA_RUIN]
 DEFNAME=i_KATANA_RUIN
 ID=i_katana
 NAME=Katana of Ruin
 RESOURCES=i_katana,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Katanas
 DESCRIPTION=Katana of Ruin
@@ -614,11 +744,12 @@ ON=@Create
 	HITPOINTS={90 91}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0412b]
+[ITEMDEF i_KATANA_MIGHT]
 DEFNAME=i_KATANA_MIGHT
 ID=i_katana
 NAME=Katana of Might
 RESOURCES=i_katana,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Katanas
 DESCRIPTION=Katana of Might
@@ -629,11 +760,12 @@ ON=@Create
 	HITPOINTS={95 96}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0412c]
+[ITEMDEF i_KATANA_FORCE]
 DEFNAME=i_KATANA_FORCE
 ID=i_katana
 NAME=Katana of Force
 RESOURCES=i_katana,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Katanas
 DESCRIPTION=Katana of Force
@@ -644,11 +776,12 @@ ON=@Create
 	HITPOINTS={100 101}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0412d]
+[ITEMDEF i_KATANA_POWER]
 DEFNAME=i_KATANA_POWER
 ID=i_katana
 NAME=Katana of Power
 RESOURCES=i_katana,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Katanas
 DESCRIPTION=Katana of Power
@@ -659,11 +792,12 @@ ON=@Create
 	HITPOINTS={105 106}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0412e]
+[ITEMDEF i_KATANA_vanq]
 DEFNAME=i_KATANA_vanq
 ID=i_katana
 NAME=Katana of Vanquishing
 RESOURCES=i_katana,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Katanas
 DESCRIPTION=Katana of Vanquishing
@@ -674,11 +808,29 @@ ON=@Create
 	HITPOINTS={110 111}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0412f]
+[ITEMDEF i_KATANA_mystic]
+DEFNAME=i_KATANA_mystic
+ID=i_katana
+NAME=Mystic Katana
+RESOURCES=i_katana,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Katanas
+DESCRIPTION=Mystic Katana
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={110 111}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_BOW_RUIN]
 DEFNAME=i_BOW_RUIN
 ID=i_bow
 NAME=Bow of Ruin
 RESOURCES=i_bow,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Bows
 DESCRIPTION=Bow of Ruin
@@ -689,11 +841,12 @@ ON=@Create
 	HITPOINTS={31 60}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04130]
+[ITEMDEF i_BOW_MIGHT]
 DEFNAME=i_BOW_MIGHT
 ID=i_bow
 NAME=Bow of Might
 RESOURCES=i_bow,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Bows
 DESCRIPTION=Bow of Might
@@ -704,11 +857,12 @@ ON=@Create
 	HITPOINTS={31 60}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04131]
+[ITEMDEF i_BOW_FORCE]
 DEFNAME=i_BOW_FORCE
 ID=i_bow
 NAME=Bow of Force
 RESOURCES=i_bow,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Bows
 DESCRIPTION=Bow of Force
@@ -719,11 +873,12 @@ ON=@Create
 	HITPOINTS={31 60}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04132]
+[ITEMDEF i_BOW_POWER]
 DEFNAME=i_BOW_POWER
 ID=i_bow
 NAME=Bow of Power
 RESOURCES=i_bow,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Bows
 DESCRIPTION=Bow of Power
@@ -734,11 +889,15 @@ ON=@Create
 	HITPOINTS={31 60}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04133]
+[ITEMDEF i_BOW_vanq]
 DEFNAME=i_BOW_vanq
 ID=i_bow
 NAME=Bow of Vanquishing
 RESOURCES=i_bow,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Bows
+DESCRIPTION=Bow of Vanquishing
 
 ON=@Create
 	COLOR=color_magic_weap
@@ -746,14 +905,32 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=100.0
 
-[ITEMDEF 04134]
+[ITEMDEF i_BOW_mystic]
+DEFNAME=i_BOW_mystic
+ID=i_bow
+NAME=Mystic Bow
+RESOURCES=i_bow,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Bows
+DESCRIPTION=Mystic Bow
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={31 60}
+	ATTR=attr_magic
+	MOREY=120.0
+
+
+[ITEMDEF i_PITCHFORK_RUIN]
 DEFNAME=i_PITCHFORK_RUIN
 ID=i_PITCHFORK
 NAME=Pitchfork of Ruin
 RESOURCES=i_PITCHFORK,i_enchant_weapon
-DESCRIPTION=Pitchfork of Ruin
-SUBSECTION=Magic Pitchforks
+
 CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Pitchforks
+DESCRIPTION=Pitchfork of Ruin
 
 ON=@Create
 	COLOR=color_magic_weap
@@ -761,11 +938,12 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=20.0
 
-[ITEMDEF 04135]
+[ITEMDEF i_PITCHFORK_MIGHT]
 DEFNAME=i_PITCHFORK_MIGHT
 ID=i_PITCHFORK
 NAME=Pitchfork of Might
 RESOURCES=i_PITCHFORK,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Pitchforks
 DESCRIPTION=Pitchfork of Might
@@ -776,11 +954,12 @@ ON=@Create
 	HITPOINTS={31 60}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04136]
+[ITEMDEF i_PITCHFORK_FORCE]
 DEFNAME=i_PITCHFORK_FORCE
 ID=i_PITCHFORK
 NAME=Pitchfork of Force
 RESOURCES=i_PITCHFORK,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Pitchforks
 DESCRIPTION=Pitchfork of Force
@@ -791,7 +970,7 @@ ON=@Create
 	HITPOINTS={31 60}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04137]
+[ITEMDEF i_PITCHFORK_POWER]
 DEFNAME=i_PITCHFORK_POWER
 ID=i_PITCHFORK
 NAME=Pitchfork of Power
@@ -806,11 +985,12 @@ ON=@Create
 	HITPOINTS={31 60}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04138]
+[ITEMDEF i_PITCHFORK_vanq]
 DEFNAME=i_PITCHFORK_vanq
 ID=i_PITCHFORK
 NAME=Pitchfork of Vanquishing
 RESOURCES=i_PITCHFORK,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Pitchforks
 DESCRIPTION=Pitchfork of Vanquishing
@@ -821,11 +1001,29 @@ ON=@Create
 	HITPOINTS={31 60}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0413a]
+[ITEMDEF i_PITCHFORK_mystic]
+DEFNAME=i_PITCHFORK_mystic
+ID=i_PITCHFORK
+NAME=Mystic Pitchfork
+RESOURCES=i_PITCHFORK,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Pitchforks
+DESCRIPTION=Mystic Pitchfork
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={31 60}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_BROADSWORD_RUIN]
 DEFNAME=i_BROADSWORD_RUIN
 ID=i_sword_broad
 NAME=Broadsword of Ruin
 RESOURCES=i_sword_broad,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Broadswords
 DESCRIPTION=Broadsword of Ruin
@@ -836,11 +1034,12 @@ ON=@Create
 	HITPOINTS={100 101}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0413b]
+[ITEMDEF i_BROADSWORD_MIGHT]
 DEFNAME=i_BROADSWORD_MIGHT
 ID=i_sword_broad
 NAME=Broadsword of Might
 RESOURCES=i_sword_broad,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Broadswords
 DESCRIPTION=Broadsword of Might
@@ -851,11 +1050,12 @@ ON=@Create
 	HITPOINTS={105 106}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0413c]
+[ITEMDEF i_BROADSWORD_FORCE]
 DEFNAME=i_BROADSWORD_FORCE
 ID=i_sword_broad
 NAME=Broadsword of Force
 RESOURCES=i_sword_broad,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Broadswords
 DESCRIPTION=Broadsword of Force
@@ -866,11 +1066,12 @@ ON=@Create
 	HITPOINTS={110 111}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0413d]
+[ITEMDEF i_BROADSWORD_POWER]
 DEFNAME=i_BROADSWORD_POWER
 ID=i_sword_broad
 NAME=Broadsword of Power
 RESOURCES=i_sword_broad,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Broadswords
 DESCRIPTION=Broadsword of Power
@@ -881,11 +1082,12 @@ ON=@Create
 	HITPOINTS={115 116}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0413e]
+[ITEMDEF i_BROADSWORD_vanq]
 DEFNAME=i_BROADSWORD_vanq
 ID=i_sword_broad
 NAME=Broadsword of Vanquishing
 RESOURCES=i_sword_broad,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Broadswords
 DESCRIPTION=Broadsword of Vanquishing
@@ -896,11 +1098,29 @@ ON=@Create
 	HITPOINTS={120 121}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0413f]
+[ITEMDEF i_BROADSWORD_mystic]
+DEFNAME=i_BROADSWORD_mystic
+ID=i_sword_broad
+NAME=Mystic Broadsword
+RESOURCES=i_sword_broad,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Broadswords
+DESCRIPTION=Mystic Broadsword
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={120 121}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_KRYSS_RUIN]
 DEFNAME=i_KRYSS_RUIN
 ID=i_kryss
 NAME=Kryss of Ruin
 RESOURCES=i_kryss,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Krysses
 DESCRIPTION=Kryss of Ruin
@@ -911,11 +1131,12 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04140]
+[ITEMDEF i_KRYSS_MIGHT]
 DEFNAME=i_KRYSS_MIGHT
 ID=i_kryss
 NAME=Kryss of Might
 RESOURCES=i_kryss,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Krysses
 DESCRIPTION=Kryss of Might
@@ -926,11 +1147,12 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04141]
+[ITEMDEF i_KRYSS_FORCE]
 DEFNAME=i_KRYSS_FORCE
 ID=i_kryss
 NAME=Kryss of Force
 RESOURCES=i_kryss,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Krysses
 DESCRIPTION=Kryss of Force
@@ -941,11 +1163,12 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04142]
+[ITEMDEF i_KRYSS_POWER]
 DEFNAME=i_KRYSS_POWER
 ID=i_kryss
 NAME=Kryss of Power
 RESOURCES=i_kryss,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Krysses
 DESCRIPTION=Kryss of Power
@@ -956,11 +1179,12 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04143]
+[ITEMDEF i_KRYSS_vanq]
 DEFNAME=i_KRYSS_vanq
 ID=i_kryss
 NAME=Kryss of Vanquishing
 RESOURCES=i_kryss,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Krysses
 DESCRIPTION=Kryss of Vanquishing
@@ -971,11 +1195,29 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04144]
+[ITEMDEF i_KRYSS_mystic]
+DEFNAME=i_KRYSS_mystic
+ID=i_kryss
+NAME=Mystic Kryss
+RESOURCES=i_kryss,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Krysses
+DESCRIPTION=Mystic Kryss
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={31 90}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_SPEAR_RUIN]
 DEFNAME=i_SPEAR_RUIN
 ID=i_spear
 NAME=Spear of Ruin
 RESOURCES=i_spear,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Spears
 DESCRIPTION=Spear of Ruin
@@ -986,11 +1228,12 @@ ON=@Create
 	HITPOINTS={31 80}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04145]
+[ITEMDEF i_SPEAR_MIGHT]
 DEFNAME=i_SPEAR_MIGHT
 ID=i_spear
 NAME=Spear of Might
 RESOURCES=i_spear,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Spears
 DESCRIPTION=Spear of Might
@@ -1001,11 +1244,12 @@ ON=@Create
 	HITPOINTS={31 80}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04146]
+[ITEMDEF i_SPEAR_FORCE]
 DEFNAME=i_SPEAR_FORCE
 ID=i_spear
 NAME=Spear of Force
 RESOURCES=i_spear,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Spears
 DESCRIPTION=Spear of Force
@@ -1016,11 +1260,12 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=60.0
 
-[ITEMDEF 04147]
+[ITEMDEF i_SPEAR_POWER]
 DEFNAME=i_SPEAR_POWER
 ID=i_spear
 NAME=Spear of Power
 RESOURCES=i_spear,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Spears
 DESCRIPTION=Spear of Power
@@ -1031,11 +1276,12 @@ ON=@Create
 	HITPOINTS={31 80}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04148]
+[ITEMDEF i_SPEAR_vanq]
 DEFNAME=i_SPEAR_vanq
 ID=i_spear
 NAME=Spear of Vanquishing
 RESOURCES=i_spear,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Spears
 DESCRIPTION=Spear of Vanquishing
@@ -1046,11 +1292,29 @@ ON=@Create
 	HITPOINTS={31 80}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04149]
+[ITEMDEF i_SPEAR_mystic]
+DEFNAME=i_SPEAR_mystic
+ID=i_spear
+NAME=Mystic Spear
+RESOURCES=i_spear,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Spears
+DESCRIPTION=Mystic Spear
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={31 80}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_sword_viking_vanq_fireball]
 //Viking Sword of Vanquishing & Fireball 40 charges
 ID=i_sword_viking
 NAME=Viking of Vanquishing and Daemon's Breath
 RESOURCES=i_sword_viking,5 i_enchant_weapon,i_wand_1,40 i_scroll_fireball
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Special Weapons
 DESCRIPTION=Viking of Vanquishing and Daemon's Breath
@@ -1063,7 +1327,8 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0414a]
+
+[ITEMDEF i_sword_long_RUIN]
 DEFNAME=i_sword_long_RUIN
 ID=i_sword_long
 NAME=Longsword of Ruin
@@ -1078,7 +1343,7 @@ ON=@Create
 	HITPOINTS={110 111}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0414b]
+[ITEMDEF i_sword_long_MIGHT]
 DEFNAME=i_sword_long_MIGHT
 ID=i_sword_long
 NAME=Longsword of Might
@@ -1093,7 +1358,7 @@ ON=@Create
 	HITPOINTS={115 116}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0414c]
+[ITEMDEF i_sword_long_FORCE]
 DEFNAME=i_sword_long_FORCE
 ID=i_sword_long
 NAME=Longsword of Force
@@ -1108,7 +1373,7 @@ ON=@Create
 	HITPOINTS={120 121}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0414d]
+[ITEMDEF i_sword_long_POWER]
 DEFNAME=i_sword_long_POWER
 ID=i_sword_long
 NAME=Longsword of Power
@@ -1123,11 +1388,12 @@ ON=@Create
 	HITPOINTS={125 126}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0414e]
+[ITEMDEF i_sword_long_vanq]
 DEFNAME=i_sword_long_vanq
 ID=i_sword_long
 NAME=Longsword of Vanquishing
 RESOURCES=i_sword_long,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Longswords
 DESCRIPTION=Longsword of Vanquishing
@@ -1138,12 +1404,30 @@ ON=@Create
 	HITPOINTS={130 131}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04150]
+[ITEMDEF i_sword_long_mystic]
+DEFNAME=i_sword_long_mystic
+ID=i_sword_long
+NAME=Mystic Longsword
+RESOURCES=i_sword_long,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Longswords
+DESCRIPTION=Mystic Longsword
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={130 131}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_sword_viking_vanq_Brimstone]
 //Viking Sword of Vanquishing & Flamestrike 40 charges
 DEFNAME=i_sword_viking_vanq_Brimstone
 ID=i_sword_viking
 NAME=Viking of Vanquishing and Brimstone
 RESOURCES=i_sword_viking,5 i_enchant_weapon,i_wand_1,40 i_scroll_flamestrike
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Special Weapons
 DESCRIPTION=Viking of Vanquishing and Brimstone
@@ -1156,12 +1440,13 @@ ON=@Create
 	MOREY=100.0
 	MORE2=40
 
-[ITEMDEF 04151]
+[ITEMDEF i_sword_viking_vanq_Electricity]
 //Viking Sword of Vanquishing & Energy Bolt 40 charges
 DEFNAME=i_sword_viking_vanq_Electricity
 ID=i_sword_viking
 NAME=Viking of Vanquishing and Electricity
 RESOURCES=i_sword_viking,5 i_enchant_weapon,i_wand_1,40 i_scroll_energy_bolt
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Special Weapons
 DESCRIPTION=Viking of Vanquishing and Electricity
@@ -1174,12 +1459,13 @@ ON=@Create
 	HITPOINTS={31 90}
 	COLOR=063
 
-[ITEMDEF 04152]
+[ITEMDEF i_crossbow_heavy_vanq_Daemon_Breath]
 //Heavy Crossbow of Vanquishing & Fireball 40 charges
 DEFNAME=i_crossbow_heavy_vanq_Daemon_Breath
 ID=i_crossbow_heavy
 NAME=Heavy Crossbow of Vanquishing & Daemon's Breath
 RESOURCES=i_crossbow_heavy,5 i_enchant_weapon,i_wand_1,40 i_scroll_fireball
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Special Weapons
 DESCRIPTION=Heavy Crossbow of Vanquishing & Daemon's Breath
@@ -1192,12 +1478,13 @@ ON=@Create
 	HITPOINTS=31 100
 	COLOR=color_magic_weap
 
-[ITEMDEF 04153]
+[ITEMDEF i_bow_vanq_Electricity]
 //Bow of Vanquishing & Energy Bolt 40 Charges
 DEFNAME=i_bow_vanq_Electricity
 ID=i_bow
 NAME=Bow of Vanquishing & Electricity
 RESOURCES=i_bow,5 i_enchant_weapon,i_wand_1,40 i_scroll_energy_bolt
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Special Weapons
 DESCRIPTION=Bow of Vanquishing & Electricity
@@ -1210,12 +1497,13 @@ ON=@Create
 	HITPOINTS=31 60
 	COLOR=063
 
-[ITEMDEF 04154]
+[ITEMDEF i_BOW_Smite_Electricity]
 //GM Bow of Smite and Energy Bolt
 DEFNAME=i_BOW_Smite_Electricity
 ID=i_bow
 NAME=GM Bow of Smite and Electricity
 RESOURCES=i_bow,50 i_enchant_weapon,i_wand_1,100 i_scroll_energy_bolt
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Special Weapons
 DESCRIPTION=GM Bow of Smite and Electricity
@@ -1228,11 +1516,13 @@ ON=@Create
 	HITPOINTS={20 30}
 	COLOR=063
 
-[ITEMDEF 04155]
+
+[ITEMDEF i_SPEAR_SHORT_RUIN]
 DEFNAME=i_SPEAR_SHORT_RUIN
 ID=i_spear_short
 NAME=Short Spear of Ruin
 RESOURCES=i_spear_short,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Short Spears
 DESCRIPTION=Short Spear of Ruin
@@ -1243,11 +1533,12 @@ ON=@Create
 	HITPOINTS={70 71}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04156]
+[ITEMDEF i_SPEAR_SHORT_MIGHT]
 DEFNAME=i_SPEAR_SHORT_MIGHT
 ID=i_spear_short
 NAME=Short Spear of Might
 RESOURCES=i_spear_short,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Short Spears
 DESCRIPTION=Short Spear of Might
@@ -1258,11 +1549,12 @@ ON=@Create
 	HITPOINTS={75 76}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04157]
+[ITEMDEF i_spear_short_FORCE]
 DEFNAME=i_spear_short_FORCE
 ID=i_spear_short
 NAME=Short Spear of Force
 RESOURCES=i_spear_short,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Short Spears
 DESCRIPTION=Short Spear of Force
@@ -1273,11 +1565,12 @@ ON=@Create
 	HITPOINTS={80 81}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04158]
+[ITEMDEF i_spear_short_POWER]
 DEFNAME=i_spear_short_POWER
 ID=i_spear_short
 NAME=Short Spear of Power
 RESOURCES=i_spear_short,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Short Spears
 DESCRIPTION=Short Spear of Power
@@ -1288,11 +1581,12 @@ ON=@Create
 	HITPOINTS={85 86}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04159]
+[ITEMDEF i_spear_short_vanq]
 DEFNAME=i_spear_short_vanq
 ID=i_spear_short
 NAME=Short Spear of Vanquishing
-RESOURCES=i_spear_short,4 i_enchant_weapon
+RESOURCES=i_spear_short,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Short Spears
 DESCRIPTION=Short Spear of Vanquishing
@@ -1303,11 +1597,29 @@ ON=@Create
 	HITPOINTS={90 91}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0415a]
+[ITEMDEF i_spear_short_mystic]
+DEFNAME=i_spear_short_mystic
+ID=i_spear_short
+NAME=Mystic Short Spear
+RESOURCES=i_spear_short,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Short Spears
+DESCRIPTION=Mystic Short Spear
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={90 91}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_WAR_FORK_RUIN]
 DEFNAME=i_WAR_FORK_RUIN
 ID=I_WAR_FORK
 NAME=War Fork of Ruin
 RESOURCES=i_WAR_FORK,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Forks
 DESCRIPTION=War Fork of Ruin
@@ -1318,11 +1630,12 @@ ON=@Create
 	HITPOINTS={115 116}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0415b]
+[ITEMDEF i_WAR_FORK_MIGHT]
 DEFNAME=i_WAR_FORK_MIGHT
 ID=I_WAR_FORK
 NAME=War Fork of Might
 RESOURCES=i_WAR_FORK,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Forks
 DESCRIPTION=War Fork of Might
@@ -1333,11 +1646,12 @@ ON=@Create
 	HITPOINTS={120 121}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0415c]
+[ITEMDEF i_WAR_FORK_FORCE]
 DEFNAME=i_WAR_FORK_FORCE
 ID=I_WAR_FORK
 NAME=War Fork of Force
 RESOURCES=i_WAR_FORK,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Forks
 DESCRIPTION=War Fork of Force
@@ -1348,11 +1662,12 @@ ON=@Create
 	HITPOINTS={125 126}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0415d]
+[ITEMDEF i_WAR_FORK_POWER]
 DEFNAME=i_WAR_FORK_POWER
 ID=I_WAR_FORK
 NAME=War Fork of Power
 RESOURCES=i_WAR_FORK,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Forks
 DESCRIPTION=War Fork of Power
@@ -1363,11 +1678,12 @@ ON=@Create
 	HITPOINTS={130 131}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0415e]
+[ITEMDEF i_WAR_FORK_vanq]
 DEFNAME=i_WAR_FORK_vanq
 ID=I_WAR_FORK
 NAME=War Fork of Vanquishing
 RESOURCES=i_WAR_FORK,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Forks
 DESCRIPTION=War Fork of Vanquishing
@@ -1378,11 +1694,29 @@ ON=@Create
 	HITPOINTS={135 136}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04160]
+[ITEMDEF i_WAR_FORK_mystic]
+DEFNAME=i_WAR_FORK_mystic
+ID=I_WAR_FORK
+NAME=Mystic War Fork
+RESOURCES=i_WAR_FORK,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic War Forks
+DESCRIPTION=Mystic War Fork
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={135 136}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_CLUB_RUIN]
 DEFNAME=i_CLUB_RUIN
 ID=i_club
 NAME=Club of Ruin
 RESOURCES=i_club,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Clubs
 DESCRIPTION=Club of Ruin
@@ -1393,11 +1727,12 @@ ON=@Create
 	HITPOINTS={45 46}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04161]
+[ITEMDEF i_CLUB_MIGHT]
 DEFNAME=i_CLUB_MIGHT
 ID=i_club
 NAME=Club of Might
 RESOURCES=i_club,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Clubs
 DESCRIPTION=Club of Might
@@ -1408,11 +1743,12 @@ ON=@Create
 	HITPOINTS={50 51}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04162]
+[ITEMDEF i_CLUB_FORCE]
 DEFNAME=i_CLUB_FORCE
 ID=i_club
 NAME=Club of Force
 RESOURCES=i_club,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Clubs
 DESCRIPTION=Club of Force
@@ -1423,11 +1759,12 @@ ON=@Create
 	HITPOINTS={55 56}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04163]
+[ITEMDEF i_CLUB_POWER]
 DEFNAME=i_CLUB_POWER
 ID=i_club
 NAME=Club of Power
 RESOURCES=i_club,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Clubs
 DESCRIPTION=Club of Power
@@ -1438,11 +1775,12 @@ ON=@Create
 	HITPOINTS={60 61}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04164]
+[ITEMDEF i_CLUB_vanq]
 DEFNAME=i_CLUB_vanq
 ID=i_club
 NAME=Club of Vanquishing
 RESOURCES=i_club,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Clubs
 DESCRIPTION=Club of Vanquishing
@@ -1453,11 +1791,29 @@ ON=@Create
 	HITPOINTS={65 66}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04165]
+[ITEMDEF i_CLUB_mystic]
+DEFNAME=i_CLUB_mystic
+ID=i_club
+NAME=Mystic Club
+RESOURCES=i_club,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Clubs
+DESCRIPTION=Mystic Club
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={65 66}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_MACE_RUIN]
 DEFNAME=i_MACE_RUIN
 ID=i_mace
 NAME=Mace of Ruin
 RESOURCES=i_mace,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Maces
 DESCRIPTION=Mace of Ruin
@@ -1468,11 +1824,12 @@ ON=@Create
 	HITPOINTS={70 71}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04166]
+[ITEMDEF i_MACE_MIGHT]
 DEFNAME=i_MACE_MIGHT
 ID=i_mace
 NAME=Mace of Might
 RESOURCES=i_mace,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Maces
 DESCRIPTION=Mace of Might
@@ -1483,11 +1840,12 @@ ON=@Create
 	HITPOINTS={75 76}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04167]
+[ITEMDEF i_MACE_FORCE]
 DEFNAME=i_MACE_FORCE
 ID=i_mace
 NAME=Mace of Force
 RESOURCES=i_mace,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Maces
 DESCRIPTION=Mace of Force
@@ -1498,11 +1856,12 @@ ON=@Create
 	HITPOINTS={80 81}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04168]
+[ITEMDEF i_MACE_POWER]
 DEFNAME=i_MACE_POWER
 ID=i_mace
 NAME=Mace of Power
 RESOURCES=i_mace,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Maces
 DESCRIPTION=Mace of Power
@@ -1513,11 +1872,12 @@ ON=@Create
 	HITPOINTS={85 86}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04169]
+[ITEMDEF i_MACE_vanq]
 DEFNAME=i_MACE_vanq
 ID=i_mace
 NAME=Mace of Vanquishing
 RESOURCES=i_mace,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Maces
 DESCRIPTION=Mace of Vanquishing
@@ -1528,11 +1888,29 @@ ON=@Create
 	HITPOINTS={90 91}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0416a]
+[ITEMDEF i_MACE_mystic]
+DEFNAME=i_MACE_mystic
+ID=i_mace
+NAME=Mystic Mace
+RESOURCES=i_mace,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Maces
+DESCRIPTION=Mystic Mace
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={90 91}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_MAUL_RUIN]
 DEFNAME=i_MAUL_RUIN
 ID=i_maul
 NAME=Maul of Ruin
 RESOURCES=i_maul,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Mauls
 DESCRIPTION=Maul of Ruin
@@ -1543,11 +1921,12 @@ ON=@Create
 	HITPOINTS={70 71}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0416b]
+[ITEMDEF i_MAUL_MIGHT]
 DEFNAME=i_MAUL_MIGHT
 ID=i_maul
 NAME=Maul of Might
 RESOURCES=i_maul,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Mauls
 DESCRIPTION=Maul of Might
@@ -1558,11 +1937,12 @@ ON=@Create
 	HITPOINTS={75 76}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0416c]
+[ITEMDEF i_MAUL_FORCE]
 DEFNAME=i_MAUL_FORCE
 ID=i_maul
 NAME=Maul of Force
 RESOURCES=i_maul,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Mauls
 DESCRIPTION=Maul of Force
@@ -1573,11 +1953,12 @@ ON=@Create
 	HITPOINTS={80 81}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0416d]
+[ITEMDEF i_MAUL_POWER]
 DEFNAME=i_MAUL_POWER
 ID=i_maul
 NAME=Maul of Power
 RESOURCES=i_maul,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Mauls
 DESCRIPTION=Maul of Power
@@ -1588,11 +1969,12 @@ ON=@Create
 	HITPOINTS={85 86}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0416e]
+[ITEMDEF i_MAUL_vanq]
 DEFNAME=i_MAUL_vanq
 ID=i_maul
 NAME=Maul of Vanquishing
 RESOURCES=i_maul,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Mauls
 DESCRIPTION=Maul of Vanquishing
@@ -1603,11 +1985,29 @@ ON=@Create
 	HITPOINTS={90 91}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04170]
+[ITEMDEF i_MAUL_mystic]
+DEFNAME=i_MAUL_mystic
+ID=i_maul
+NAME=Mystic Maul
+RESOURCES=i_maul,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Mauls
+DESCRIPTION=Mystic Maul
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={90 91}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_mace_war_RUIN]
 DEFNAME=i_mace_war_RUIN
 ID=i_mace_war
 NAME=War Mace of Ruin
 RESOURCES=i_mace_war,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Maces
 DESCRIPTION=War Mace of Ruin
@@ -1618,11 +2018,12 @@ ON=@Create
 	HITPOINTS={125 126}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04171]
+[ITEMDEF i_mace_war_MIGHT]
 DEFNAME=i_mace_war_MIGHT
 ID=i_mace_war
 NAME=War Mace of Might
 RESOURCES=i_mace_war,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Maces
 DESCRIPTION=War Mace of Might
@@ -1633,11 +2034,12 @@ ON=@Create
 	HITPOINTS={130 131}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04172]
+[ITEMDEF i_mace_war_FORCE]
 DEFNAME=i_mace_war_FORCE
 ID=i_mace_war
 NAME=War Mace of Force
 RESOURCES=i_mace_war,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Maces
 DESCRIPTION=War Mace of Force
@@ -1648,11 +2050,12 @@ ON=@Create
 	HITPOINTS={135 136}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04173]
+[ITEMDEF i_mace_war_POWER]
 DEFNAME=i_mace_war_POWER
 ID=i_mace_war
 NAME=War Mace of Power
 RESOURCES=i_mace_war,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Maces
 DESCRIPTION=War Mace of Power
@@ -1663,11 +2066,12 @@ ON=@Create
 	HITPOINTS={140 141}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04174]
+[ITEMDEF i_mace_war_vanq]
 DEFNAME=i_mace_war_vanq
 ID=i_mace_war
 NAME=War Mace of Vanquishing
 RESOURCES=i_mace_war,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Maces
 DESCRIPTION=War Mace of Vanquishing
@@ -1678,11 +2082,29 @@ ON=@Create
 	HITPOINTS={145 146}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04175]
+[ITEMDEF i_mace_war_mystic]
+DEFNAME=i_mace_war_mystic
+ID=i_mace_war
+NAME=Mystic War Mace
+RESOURCES=i_mace_war,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic War Maces
+DESCRIPTION=Mystic War Mace
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={145 146}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_HAMMER_PICK_RUIN]
 DEFNAME=i_HAMMER_PICK_RUIN
 ID=i_hammer_pick
 NAME=Hammer Pick of Ruin
 RESOURCES=i_hammer_pick,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Hammer Picks
 DESCRIPTION=Hammer Pick of Ruin
@@ -1693,11 +2115,12 @@ ON=@Create
 	HITPOINTS={70 71}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04176]
+[ITEMDEF i_HAMMER_PICK_MIGHT]
 DEFNAME=i_HAMMER_PICK_MIGHT
 ID=i_hammer_pick
 NAME=Hammer Pick of Might
 RESOURCES=i_hammer_pick,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Hammer Picks
 DESCRIPTION=Hammer Pick of Might
@@ -1708,11 +2131,12 @@ ON=@Create
 	HITPOINTS={75 76}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04177]
+[ITEMDEF i_HAMMER_PICK_FORCE]
 DEFNAME=i_HAMMER_PICK_FORCE
 ID=i_hammer_pick
 NAME=Hammer Pick of Force
 RESOURCES=i_hammer_pick,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Hammer Picks
 DESCRIPTION=Hammer Pick of Force
@@ -1723,11 +2147,12 @@ ON=@Create
 	HITPOINTS={80 81}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04178]
+[ITEMDEF i_HAMMER_PICK_POWER]
 DEFNAME=i_HAMMER_PICK_POWER
 ID=i_hammer_pick
 NAME=Hammer Pick of Power
 RESOURCES=i_hammer_pick,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Hammer Picks
 DESCRIPTION=Hammer Pick of Power
@@ -1738,11 +2163,12 @@ ON=@Create
 	HITPOINTS={85 86}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04179]
+[ITEMDEF i_HAMMER_PICK_vanq]
 DEFNAME=i_HAMMER_PICK_vanq
 ID=i_hammer_pick
 NAME=Hammer Pick of Vanquishing
 RESOURCES=i_hammer_pick,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Hammer Picks
 DESCRIPTION=Hammer Pick of Vanquishing
@@ -1753,7 +2179,24 @@ ON=@Create
 	HITPOINTS={85 86}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0417a]
+[ITEMDEF i_HAMMER_PICK_MYSTIC]
+DEFNAME=i_HAMMER_PICK_MYSTIC
+ID=i_hammer_pick
+NAME=Mystic Hammer Pick
+RESOURCES=i_hammer_pick,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Hammer Picks
+DESCRIPTION=Mystic Hammer Pick
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={85 86}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_hammer_war_RUIN]
 DEFNAME=i_hammer_war_RUIN
 ID=i_hammer_war
 NAME=War Hammer of Ruin
@@ -1768,7 +2211,7 @@ ON=@Create
 	HITPOINTS={110 111}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0417b]
+[ITEMDEF i_hammer_war_MIGHT]
 DEFNAME=i_hammer_war_MIGHT
 ID=i_hammer_war
 NAME=War Hammer of Might
@@ -1783,7 +2226,7 @@ ON=@Create
 	HITPOINTS={115 116}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0417c]
+[ITEMDEF i_hammer_war_FORCE]
 DEFNAME=i_hammer_war_FORCE
 ID=i_hammer_war
 NAME=War Hammer of Force
@@ -1798,7 +2241,7 @@ ON=@Create
 	HITPOINTS={120 121}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0417d]
+[ITEMDEF i_hammer_war_POWER]
 DEFNAME=i_hammer_war_POWER
 ID=i_hammer_war
 NAME=War Hammer of Power
@@ -1813,7 +2256,7 @@ ON=@Create
 	HITPOINTS={125 126}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0417e]
+[ITEMDEF i_hammer_war_vanq]
 DEFNAME=i_hammer_war_vanq
 ID=i_hammer_war
 NAME=War Hammer of Vanquishing
@@ -1828,11 +2271,29 @@ ON=@Create
 	HITPOINTS={130 131}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04180]
+[ITEMDEF i_hammer_war_mystic]
+DEFNAME=i_hammer_war_mystic
+ID=i_hammer_war
+NAME=Mystic War Hammer
+RESOURCES=i_hammer_war,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic War Hammers
+DESCRIPTION=Mystic War Hammer
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={130 131}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_axe_ruin]
 DEFNAME=i_AXE_RUIN
 ID=i_axe
 NAME=Axe of Ruin
 RESOURCES=i_axe,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Axes
 DESCRIPTION=Axe of Ruin
@@ -1843,11 +2304,12 @@ ON=@Create
 	HITPOINTS={80 81}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04181]
+[ITEMDEF i_axe_might]
 DEFNAME=i_AXE_MIGHT
 ID=i_axe
 NAME=Axe of Might
 RESOURCES=i_axe,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Axes
 DESCRIPTION=Axe of Might
@@ -1858,11 +2320,12 @@ ON=@Create
 	HITPOINTS={85 86}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04182]
+[ITEMDEF i_axe_force]
 DEFNAME=i_AXE_FORCE
 ID=i_axe
 NAME=Axe of Force
 RESOURCES=i_axe,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Axes
 DESCRIPTION=Axe of Force
@@ -1873,11 +2336,12 @@ ON=@Create
 	HITPOINTS={90 91}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04183]
+[ITEMDEF i_axe_power]
 DEFNAME=i_AXE_POWER
 ID=i_axe
 NAME=Axe of Power
 RESOURCES=i_axe,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Axes
 DESCRIPTION=Axe of Power
@@ -1888,11 +2352,12 @@ ON=@Create
 	HITPOINTS={95 96}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04184]
+[ITEMDEF i_axe_vanq]
 DEFNAME=i_AXE_vanq
 ID=i_axe
 NAME=Axe of Vanquishing
 RESOURCES=i_axe,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Axes
 DESCRIPTION=Axe of Vanquishing
@@ -1903,11 +2368,29 @@ ON=@Create
 	HITPOINTS={100 101}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04185]
+[ITEMDEF i_AXE_mystic]
+DEFNAME=i_AXE_mystic
+ID=i_axe
+NAME=Mystic Axe
+RESOURCES=i_axe,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Axes
+DESCRIPTION=Mystic Axe
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={100 101}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_axe_exec_ruin]
 DEFNAME=i_axe_exec_RUIN
 ID=i_axe_exec
 NAME=Executioner's Axe of Ruin
 RESOURCES=i_axe_exec,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Executioner's Axes
 DESCRIPTION=Executioner's Axe of Ruin
@@ -1918,11 +2401,12 @@ ON=@Create
 	HITPOINTS={90 91}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04186]
+[ITEMDEF i_axe_exec_might]
 DEFNAME=i_axe_exec_MIGHT
 ID=i_axe_exec
 NAME=Executioner's Axe of Might
 RESOURCES=i_axe_exec,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Executioner's Axes
 DESCRIPTION=Executioner's Axe of Might
@@ -1933,11 +2417,12 @@ ON=@Create
 	HITPOINTS={95 96}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04187]
+[ITEMDEF i_axe_exec_force]
 DEFNAME=i_axe_exec_FORCE
 ID=i_axe_exec
 NAME=Executioner's Axe of Force
 RESOURCES=i_axe_exec,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Executioner's Axes
 DESCRIPTION=Executioner's Axe of Force
@@ -1948,11 +2433,12 @@ ON=@Create
 	HITPOINTS={100 101}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04188]
+[ITEMDEF i_axe_exec_power]
 DEFNAME=i_axe_exec_POWER
 ID=i_axe_exec
 NAME=Executioner's Axe of Power
 RESOURCES=i_axe_exec,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Executioner's Axes
 DESCRIPTION=Executioner's Axe of Power
@@ -1963,11 +2449,12 @@ ON=@Create
 	HITPOINTS={105 106}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04189]
+[ITEMDEF i_axe_exec_vanq]
 DEFNAME=i_axe_exec_vanq
 ID=i_axe_exec
 NAME=Executioner's Axe of Vanquishing
 RESOURCES=i_axe_exec,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Executioner's Axes
 DESCRIPTION=Executioner's Axe of Vanquishing
@@ -1978,11 +2465,29 @@ ON=@Create
 	HITPOINTS={110 111}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0418a]
+[ITEMDEF i_axe_exec_mystic]
+DEFNAME=i_axe_exec_mystic
+ID=i_axe_exec
+NAME=Mystic Executioner's Axe
+RESOURCES=i_axe_exec,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Executioner's Axes
+DESCRIPTION=Mystic Executioner's Axe
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={110 111}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_axe_battle_ruin]
 DEFNAME=i_axe_battle_RUIN
 ID=i_axe_battle
 NAME=Battle Axe of Ruin
 RESOURCES=i_axe_battle,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Battle Axes
 DESCRIPTION=Battle Axe of Ruin
@@ -1993,11 +2498,12 @@ ON=@Create
 	HITPOINTS={110 111}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0418b]
+[ITEMDEF i_axe_battle_might]
 DEFNAME=i_axe_battle_MIGHT
 ID=i_axe_battle
 NAME=Battle Axe of Might
 RESOURCES=i_axe_battle,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Battle Axes
 DESCRIPTION=Battle Axe of Might
@@ -2008,11 +2514,12 @@ ON=@Create
 	HITPOINTS={115 116}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0418c]
+[ITEMDEF i_axe_battle_force]
 DEFNAME=i_axe_battle_FORCE
 ID=i_axe_battle
 NAME=Battle Axe of Force
 RESOURCES=i_axe_battle,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Battle Axes
 DESCRIPTION=Battle Axe of Force
@@ -2023,11 +2530,12 @@ ON=@Create
 	HITPOINTS={120 121}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0418d]
+[ITEMDEF i_axe_battle_power]
 DEFNAME=i_axe_battle_POWER
 ID=i_axe_battle
 NAME=Battle Axe of Power
 RESOURCES=i_axe_battle,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Battle Axes
 DESCRIPTION=Battle Axe of Power
@@ -2038,11 +2546,12 @@ ON=@Create
 	HITPOINTS={125 126}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0418e]
+[ITEMDEF i_axe_battle_vanq]
 DEFNAME=i_axe_battle_vanq
 ID=i_axe_battle
 NAME=Battle Axe of Vanquishing
 RESOURCES=i_axe_battle,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Battle Axes
 DESCRIPTION=Battle Axe of Vanquishing
@@ -2053,11 +2562,29 @@ ON=@Create
 	HITPOINTS={130 131}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04190]
+[ITEMDEF i_axe_battle_mystic]
+DEFNAME=i_axe_battle_mystic
+ID=i_axe_battle
+NAME=Mystic Battle Axe
+RESOURCES=i_axe_battle,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Battle Axes
+DESCRIPTION=Mystic Battle Axe
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={130 131}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_axe_double_ruin]
 DEFNAME=i_axe_double_RUIN
 ID=i_axe_double
 NAME=Double Axe of Ruin
 RESOURCES=i_axe_double,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Double Axes
 DESCRIPTION=Double Axe of Ruin
@@ -2068,11 +2595,12 @@ ON=@Create
 	HITPOINTS={110 111}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04191]
+[ITEMDEF i_axe_Double_might]
 DEFNAME=i_axe_double_MIGHT
 ID=i_axe_double
 NAME=Double Axe of Might
 RESOURCES=i_axe_double,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Double Axes
 DESCRIPTION=Double Axe of Might
@@ -2083,11 +2611,12 @@ ON=@Create
 	HITPOINTS={115 116}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04192]
+[ITEMDEF i_axe_double_force]
 DEFNAME=i_axe_double_FORCE
 ID=i_axe_double
 NAME=Double Axe of Force
 RESOURCES=i_axe_double,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Double Axes
 DESCRIPTION=Double Axe of Force
@@ -2098,11 +2627,12 @@ ON=@Create
 	HITPOINTS={120 121}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04193]
+[ITEMDEF i_axe_double_power]
 DEFNAME=i_axe_double_POWER
 ID=i_axe_double
 NAME=Double Axe of Power
 RESOURCES=i_axe_double,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Double Axes
 DESCRIPTION=Double Axe of Power
@@ -2113,11 +2643,12 @@ ON=@Create
 	HITPOINTS={125 126}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04194]
+[ITEMDEF i_axe_double_vanq]
 DEFNAME=i_axe_double_vanq
 ID=i_axe_double
 NAME=Double Axe of Vanquishing
 RESOURCES=i_axe_double,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Double Axes
 DESCRIPTION=Double Axe of Vanquishing
@@ -2128,11 +2659,29 @@ ON=@Create
 	HITPOINTS={130 131}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04195]
+[ITEMDEF i_axe_double_mystic]
+DEFNAME=i_axe_double_mystic
+ID=i_axe_double
+NAME=Mystic Double Axe
+RESOURCES=i_axe_double,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Double Axes
+DESCRIPTION=Mystic Double Axe
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={130 131}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_axe_two_hand_ruin]
 DEFNAME=i_axe_two_hand_RUIN
 ID=i_axe_two_hand
 NAME=Two Handed Axe of Ruin
 RESOURCES=i_axe_two_hand,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Two Handed Axes
 DESCRIPTION=Two Handed Axe of Ruin
@@ -2143,11 +2692,12 @@ ON=@Create
 	HITPOINTS={70 71}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04196]
+[ITEMDEF i_axe_two_hand_might]
 DEFNAME=i_axe_two_hand_MIGHT
 ID=i_axe_two_hand
 NAME=Two Handed Axe of Might
 RESOURCES=i_axe_two_hand,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Two Handed Axes
 DESCRIPTION=Two Handed Axe of Might
@@ -2158,11 +2708,12 @@ ON=@Create
 	HITPOINTS={75 76}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04197]
+[ITEMDEF i_axe_two_hand_force]
 DEFNAME=i_axe_two_hand_FORCE
 ID=i_axe_two_hand
 NAME=Two Handed Axe of Force
 RESOURCES=i_axe_two_hand,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Two Handed Axes
 DESCRIPTION=Two Handed Axe of Force
@@ -2173,11 +2724,12 @@ ON=@Create
 	HITPOINTS={80 81}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04198]
+[ITEMDEF i_axe_two_hand_power]
 DEFNAME=i_axe_two_hand_POWER
 ID=i_axe_two_hand
 NAME=Two Handed Axe of Power
 RESOURCES=i_axe_two_hand,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Two Handed Axes
 DESCRIPTION=Two Handed Axe of Power
@@ -2188,11 +2740,12 @@ ON=@Create
 	HITPOINTS={85 86}
 	COLOR=color_magic_weap
 
-[ITEMDEF 04199]
+[ITEMDEF i_axe_two_hand_vanq]
 DEFNAME=i_axe_two_hand_vanq
 ID=i_axe_two_hand
 NAME=Two Handed Axe of Vanquishing
 RESOURCES=i_axe_two_hand,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Two Handed Axes
 DESCRIPTION=Two Handed Axe of Vanquishing
@@ -2203,11 +2756,29 @@ ON=@Create
 	HITPOINTS={90 91}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0419a]
+[ITEMDEF i_axe_two_hand_mystic]
+DEFNAME=i_axe_two_hand_mystic
+ID=i_axe_two_hand
+NAME=Mystic Two Handed Axe
+RESOURCES=i_axe_two_hand,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Two Handed Axes
+DESCRIPTION=Mystic Two Handed Axe
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={90 91}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_axe_war_ruin]
 DEFNAME=i_axe_war_RUIN
 ID=i_axe_war
 NAME=War Axe of Ruin
 RESOURCES=i_axe_war,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Axes
 DESCRIPTION=War Axe of Ruin
@@ -2218,11 +2789,12 @@ ON=@Create
 	HITPOINTS={80 81}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0419b]
+[ITEMDEF i_axe_war_might]
 DEFNAME=i_axe_war_MIGHT
 ID=i_axe_war
 NAME=War Axe of Might
 RESOURCES=i_axe_war,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Axes
 DESCRIPTION=War Axe of Might
@@ -2233,11 +2805,12 @@ ON=@Create
 	HITPOINTS={85 86}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0419c]
+[ITEMDEF i_axe_war_force]
 DEFNAME=i_axe_war_FORCE
 ID=i_axe_war
 NAME=War Axe of Force
 RESOURCES=i_axe_war,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Axes
 DESCRIPTION=War Axe of Force
@@ -2248,11 +2821,12 @@ ON=@Create
 	HITPOINTS={90 91}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0419d]
+[ITEMDEF i_axe_war_power]
 DEFNAME=i_axe_war_POWER
 ID=i_axe_war
 NAME=War Axe of Power
 RESOURCES=i_axe_war,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Axes
 DESCRIPTION=War Axe of Power
@@ -2263,11 +2837,12 @@ ON=@Create
 	HITPOINTS={95 96}
 	COLOR=color_magic_weap
 
-[ITEMDEF 0419e]
+[ITEMDEF i_axe_war_vanq]
 DEFNAME=i_axe_war_VANQ
 ID=i_axe_war
 NAME=War Axe of Vanquishing
 RESOURCES=i_axe_war,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic War Axes
 DESCRIPTION=War Axe of Vanquishing
@@ -2278,11 +2853,29 @@ ON=@Create
 	HITPOINTS={100 101}
 	COLOR=color_magic_weap
 
-[ITEMDEF 041a0]
+[ITEMDEF i_axe_war_mystic]
+DEFNAME=i_axe_war_mystic
+ID=i_axe_war
+NAME=Mystic War Axe
+RESOURCES=i_axe_war,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic War Axes
+DESCRIPTION=Mystic War Axe
+
+ON=@Create
+	MOREY=120.0
+	ATTR=attr_magic
+	HITPOINTS={100 101}
+	COLOR=color_magic_weap
+
+
+[ITEMDEF i_axe_battle_large_ruin]
 DEFNAME=i_axe_battle_large_RUIN
 ID=i_axe_battle_large
 NAME=Large Battle Axe of Ruin
 RESOURCES=i_axe_battle_large,i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Large Battle Axes
 DESCRIPTION=Large Battle Axe of Ruin
@@ -2293,11 +2886,12 @@ ON=@Create
 	HITPOINTS={110 111}
 	COLOR=color_magic_weap
 
-[ITEMDEF 041a1]
+[ITEMDEF i_axe_battle_large_might]
 DEFNAME=i_axe_battle_large_MIGHT
 ID=i_axe_battle_large
 NAME=Large Battle Axe of Might
 RESOURCES=i_axe_battle_large,2 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Large Battle Axes
 DESCRIPTION=Large Battle Axe of Might
@@ -2308,11 +2902,12 @@ ON=@Create
 	HITPOINTS={115 116}
 	COLOR=color_magic_weap
 
-[ITEMDEF 041a2]
+[ITEMDEF i_axe_battle_large_force]
 DEFNAME=i_axe_battle_large_FORCE
 ID=i_axe_battle_large
 NAME=Large Battle Axe of Force
 RESOURCES=i_axe_battle_large,3 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Large Battle Axes
 DESCRIPTION=Large Battle Axe of Force
@@ -2323,11 +2918,12 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=60.0
 
-[ITEMDEF 041a3]
+[ITEMDEF i_axe_battle_large_power]
 DEFNAME=i_axe_battle_large_POWER
 ID=i_axe_battle_large
 NAME=Large Battle Axe of Power
 RESOURCES=i_axe_battle_large,4 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Large Battle Axes
 DESCRIPTION=Large Battle Axe of Power
@@ -2338,11 +2934,12 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=80.0
 
-[ITEMDEF 041a4]
+[ITEMDEF i_axe_battle_large_vanq]
 DEFNAME=i_axe_battle_large_vanq
 ID=i_axe_battle_large
 NAME=Large Battle Axe of Vanquishing
 RESOURCES=i_axe_battle_large,5 i_enchant_weapon
+
 CATEGORY=Provisions - Weapons - Magic
 SUBSECTION=Magic Large Battle Axes
 DESCRIPTION=Large Battle Axe of Vanquishing
@@ -2352,3 +2949,1086 @@ ON=@Create
 	ATTR=attr_magic
 	MOREY=100.0
 	HITPOINTS={130 131}
+
+[ITEMDEF i_axe_battle_large_mystic]
+DEFNAME=i_axe_battle_large_mystic
+ID=i_axe_battle_large
+NAME=Mystic Large Battle Axe
+RESOURCES=i_axe_battle_large,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Large Battle Axes
+DESCRIPTION=Mystic Large Battle Axe
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={135 140}
+
+
+[ITEMDEF i_hatchet_ruin]
+DEFNAME=i_hatchet_ruin
+ID=i_hatchet
+NAME=Hatchet of Ruin
+RESOURCES=i_hatchet,i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Hatchets
+DESCRIPTION=Hatchet of Ruin
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=20.0
+	HITPOINTS={110 111}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_hatchet_might]
+DEFNAME=i_hatchet_might
+ID=i_hatchet
+NAME=Hatchet of Might
+RESOURCES=i_hatchet,2 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Hatchets
+DESCRIPTION=Hatchet of Might
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=40.0
+	HITPOINTS={115 116}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_hatchet_force]
+DEFNAME=i_hatchet_force
+ID=i_hatchet
+NAME=Hatchet of Force
+RESOURCES=i_hatchet,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Hatchets
+DESCRIPTION=Hatchet of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={120 121}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_hatchet_power]
+DEFNAME=i_hatchet_power
+ID=i_hatchet
+NAME=Hatchet of Power
+RESOURCES=i_hatchet,4 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Hatchets
+DESCRIPTION=Hatchet of Power
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={125 126}
+	ATTR=attr_magic
+	MOREY=80.0
+
+[ITEMDEF i_hatchet_vanq]
+DEFNAME=i_hatchet_vanq
+ID=i_hatchet
+NAME=Hatchet of Vanquishing
+RESOURCES=i_hatchet,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Hatchets
+DESCRIPTION=Hatchet of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=100.0
+	HITPOINTS={130 131}
+
+[ITEMDEF i_hatchet_mystic]
+DEFNAME=i_hatchet_mystic
+ID=i_hatchet
+NAME=Mystic Hatchet
+RESOURCES=i_hatchet,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Hatchets
+DESCRIPTION=Mystic Hatchet
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={135 140}
+
+
+[ITEMDEF i_dagger_ruin]
+DEFNAME=i_dagger_ruin
+ID=i_dagger
+NAME=Dagger of Ruin
+RESOURCES=i_dagger,i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Daggers
+DESCRIPTION=Dagger of Ruin
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=20.0
+	HITPOINTS={60 70}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_dagger_might]
+DEFNAME=i_dagger_might
+ID=i_dagger
+NAME=Dagger of Might
+RESOURCES=i_dagger,2 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Daggers
+DESCRIPTION=Dagger of Might
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=40.0
+	HITPOINTS={70 80}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_dagger_force]
+DEFNAME=i_dagger_force
+ID=i_dagger
+NAME=Dagger of Force
+RESOURCES=i_dagger,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Daggers
+DESCRIPTION=Dagger of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={80 90}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_dagger_power]
+DEFNAME=i_dagger_power
+ID=i_dagger
+NAME=Dagger of Power
+RESOURCES=i_dagger,4 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Daggers
+DESCRIPTION=Dagger of Power
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={90 100}
+	ATTR=attr_magic
+	MOREY=80.0
+
+[ITEMDEF i_dagger_vanq]
+DEFNAME=i_dagger_vanq
+ID=i_dagger
+NAME=Dagger of Vanquishing
+RESOURCES=i_dagger,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Daggers
+DESCRIPTION=Dagger of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=100.0
+	HITPOINTS={100 110}
+
+[ITEMDEF i_dagger_mystic]
+DEFNAME=i_dagger_mystic
+ID=i_dagger
+NAME=Mystic Dagger
+RESOURCES=i_dagger,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Daggers
+DESCRIPTION=Mystic Dagger
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={110 120}
+
+
+[ITEMDEF i_knife_butcher_ruin]
+DEFNAME=i_knife_butcher_ruin
+ID=i_knife_butcher
+NAME=Butcher Knife of Ruin
+RESOURCES=i_knife_butcher,i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Butcher Knives
+DESCRIPTION=Butcher Knife of Ruin
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=20.0
+	HITPOINTS={60 70}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_knife_butcher_might]
+DEFNAME=i_knife_butcher_might
+ID=i_knife_butcher
+NAME=Butcher Knife of Might
+RESOURCES=i_knife_butcher,2 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Butcher Knives
+DESCRIPTION=Butcher Knife of Might
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=40.0
+	HITPOINTS={70 80}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_knife_butcher_force]
+DEFNAME=i_knife_butcher_force
+ID=i_knife_butcher
+NAME=Butcher Knife of Force
+RESOURCES=i_knife_butcher,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Butcher Knives
+DESCRIPTION=Butcher Knife of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={80 90}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_knife_butcher_power]
+DEFNAME=i_knife_butcher_power
+ID=i_knife_butcher
+NAME=Butcher Knife of Power
+RESOURCES=i_knife_butcher,4 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Butcher Knives
+DESCRIPTION=Butcher Knife of Power
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={90 100}
+	ATTR=attr_magic
+	MOREY=80.0
+
+[ITEMDEF i_knife_butcher_vanq]
+DEFNAME=i_knife_butcher_vanq
+ID=i_knife_butcher
+NAME=Butcher Knife of Vanquishing
+RESOURCES=i_knife_butcher,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Butcher Knives
+DESCRIPTION=Butcher Knife of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=100.0
+	HITPOINTS={100 110}
+
+[ITEMDEF i_knife_butcher_mystic]
+DEFNAME=i_knife_butcher_mystic
+ID=i_knife_butcher
+NAME=Mystic Butcher Knife
+RESOURCES=i_knife_butcher,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Butcher Knives
+DESCRIPTION=Mystic Butcher Knife
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={110 120}
+
+
+[ITEMDEF i_knife_skinning_ruin]
+DEFNAME=i_knife_skinning_ruin
+ID=i_knife_skinning
+NAME=Skinning Knife of Ruin
+RESOURCES=i_knife_skinning,i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Skinning Knives
+DESCRIPTION=Skinning Knife of Ruin
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=20.0
+	HITPOINTS={60 70}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_knife_skinning_might]
+DEFNAME=i_knife_skinning_might
+ID=i_knife_skinning
+NAME=Skinning Knife of Might
+RESOURCES=i_knife_skinning,2 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Skinning Knives
+DESCRIPTION=Skinning Knife of Might
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=40.0
+	HITPOINTS={70 80}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_knife_skinning_force]
+DEFNAME=i_knife_skinning_force
+ID=i_knife_skinning
+NAME=Skinning Knife of Force
+RESOURCES=i_knife_skinning,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Skinning Knives
+DESCRIPTION=Skinning Knife of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={80 90}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_knife_skinning_power]
+DEFNAME=i_knife_skinning_power
+ID=i_knife_skinning
+NAME=Skinning Knife of Power
+RESOURCES=i_knife_skinning,4 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Skinning Knives
+DESCRIPTION=Skinning Knife of Power
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={90 100}
+	ATTR=attr_magic
+	MOREY=80.0
+
+[ITEMDEF i_knife_skinning_vanq]
+DEFNAME=i_knife_skinning_vanq
+ID=i_knife_skinning
+NAME=Skinning Knife of Vanquishing
+RESOURCES=i_knife_skinning,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Skinning Knives
+DESCRIPTION=Skinning Knife of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=100.0
+	HITPOINTS={100 110}
+
+[ITEMDEF i_knife_skinning_mystic]
+DEFNAME=i_knife_skinning_mystic
+ID=i_knife_skinning
+NAME=Mystic Skinning Knife
+RESOURCES=i_knife_skinning,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Skinning Knives
+DESCRIPTION=Mystic Skinning Knife
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={110 120}
+
+
+[ITEMDEF i_cleaver_meat_ruin]
+DEFNAME=i_cleaver_meat_ruin
+ID=i_cleaver_meat
+NAME=Cleaver of Ruin
+RESOURCES=i_cleaver_meat,i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Cleavers
+DESCRIPTION=Cleaver of Ruin
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=20.0
+	HITPOINTS={60 70}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_cleaver_meat_might]
+DEFNAME=i_cleaver_meat_might
+ID=i_cleaver_meat
+NAME=Cleaver of Might
+RESOURCES=i_cleaver_meat,2 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Cleavers
+DESCRIPTION=Cleaver of Might
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=40.0
+	HITPOINTS={70 80}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_cleaver_meat_force]
+DEFNAME=i_cleaver_meat_force
+ID=i_cleaver_meat
+NAME=Cleaver of Force
+RESOURCES=i_cleaver_meat,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Cleavers
+DESCRIPTION=Cleaver of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={80 90}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_cleaver_meat_power]
+DEFNAME=i_cleaver_meat_power
+ID=i_cleaver_meat
+NAME=Cleaver of Power
+RESOURCES=i_cleaver_meat,4 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Cleavers
+DESCRIPTION=Cleaver of Power
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={90 100}
+	ATTR=attr_magic
+	MOREY=80.0
+
+[ITEMDEF i_cleaver_meat_vanq]
+DEFNAME=i_cleaver_meat_vanq
+ID=i_cleaver_meat
+NAME=Cleaver of Vanquishing
+RESOURCES=i_cleaver_meat,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Cleavers
+DESCRIPTION=Cleaver of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=100.0
+	HITPOINTS={100 110}
+
+[ITEMDEF i_cleaver_meat_mystic]
+DEFNAME=i_cleaver_meat_mystic
+ID=i_cleaver_meat
+NAME=Mystic Cleaver
+RESOURCES=i_cleaver_meat,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Cleavers
+DESCRIPTION=Mystic Cleaver
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={110 120}
+
+
+[ITEMDEF i_hammer_smith_ruin]
+DEFNAME=i_hammer_smith_ruin
+ID=i_hammer_smith
+NAME=Smith's Hammer of Ruin
+RESOURCES=i_hammer_smith,i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Smith's Hammers
+DESCRIPTION=Smith's Hammer of Ruin
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=20.0
+	HITPOINTS={60 70}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_hammer_smith_might]
+DEFNAME=i_hammer_smith_might
+ID=i_hammer_smith
+NAME=Smith's Hammer of Might
+RESOURCES=i_hammer_smith,2 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Smith's Hammers
+DESCRIPTION=Smith's Hammer of Might
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=40.0
+	HITPOINTS={70 80}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_hammer_smith_force]
+DEFNAME=i_hammer_smith_force
+ID=i_hammer_smith
+NAME=Smith's Hammer of Force
+RESOURCES=i_hammer_smith,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Smith's Hammers
+DESCRIPTION=Smith's Hammer of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={80 90}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_hammer_smith_power]
+DEFNAME=i_hammer_smith_power
+ID=i_hammer_smith
+NAME=Smith's Hammer of Power
+RESOURCES=i_hammer_smith,4 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Smith's Hammers
+DESCRIPTION=Smith's Hammer of Power
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={90 100}
+	ATTR=attr_magic
+	MOREY=80.0
+
+[ITEMDEF i_hammer_smith_vanq]
+DEFNAME=i_hammer_smith_vanq
+ID=i_hammer_smith
+NAME=Smith's Hammer of Vanquishing
+RESOURCES=i_hammer_smith,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Smith's Hammers
+DESCRIPTION=Smith's Hammer of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=100.0
+	HITPOINTS={100 110}
+
+[ITEMDEF i_hammer_smith_mystic]
+DEFNAME=i_hammer_smith_mystic
+ID=i_hammer_smith
+NAME=Mystic Smith's Hammer
+RESOURCES=i_hammer_smith,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Smith's Hammers
+DESCRIPTION=Mystic Smith's Hammer
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={110 120}
+
+
+[ITEMDEF i_staff_black_ruin]
+DEFNAME=i_staff_black_ruin
+ID=i_staff_black
+NAME=Black Staff of Ruin
+RESOURCES=i_staff_black,i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Black Staves
+DESCRIPTION=Black Staff of Ruin
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=20.0
+	HITPOINTS={60 70}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_staff_black_might]
+DEFNAME=i_staff_black_might
+ID=i_staff_black
+NAME=Black Staff of Might
+RESOURCES=i_staff_black,2 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Black Staves
+DESCRIPTION=Black Staff of Might
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=40.0
+	HITPOINTS={70 80}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_staff_black_force]
+DEFNAME=i_staff_black_force
+ID=i_staff_black
+NAME=Black Staff of Force
+RESOURCES=i_staff_black,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Black Staves
+DESCRIPTION=Black Staff of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={80 90}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_staff_black_power]
+DEFNAME=i_staff_black_power
+ID=i_staff_black
+NAME=Black Staff of Power
+RESOURCES=i_staff_black,4 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Black Staves
+DESCRIPTION=Black Staff of Power
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={90 100}
+	ATTR=attr_magic
+	MOREY=80.0
+
+[ITEMDEF i_staff_black_vanq]
+DEFNAME=i_staff_black_vanq
+ID=i_staff_black
+NAME=Black Staff of Vanquishing
+RESOURCES=i_staff_black,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Black Staves
+DESCRIPTION=Black Staff of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=100.0
+	HITPOINTS={100 110}
+
+[ITEMDEF i_staff_black_mystic]
+DEFNAME=i_staff_black_mystic
+ID=i_staff_black
+NAME=Mystic Black Staff
+RESOURCES=i_staff_black,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Black Staves
+DESCRIPTION=Mystic Black Staff
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={110 120}
+
+
+[ITEMDEF i_staff_gnarled_ruin]
+DEFNAME=i_staff_gnarled_ruin
+ID=i_staff_gnarled
+NAME=Gnarled Staff of Ruin
+RESOURCES=i_staff_gnarled,i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Gnarled Staves
+DESCRIPTION=Gnarled Staff of Ruin
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=20.0
+	HITPOINTS={60 70}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_staff_gnarled_might]
+DEFNAME=i_staff_gnarled_might
+ID=i_staff_gnarled
+NAME=Gnarled Staff of Might
+RESOURCES=i_staff_gnarled,2 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Gnarled Staves
+DESCRIPTION=Gnarled Staff of Might
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=40.0
+	HITPOINTS={70 80}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_staff_gnarled_force]
+DEFNAME=i_staff_gnarled_force
+ID=i_staff_gnarled
+NAME=Gnarled Staff of Force
+RESOURCES=i_staff_gnarled,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Gnarled Staves
+DESCRIPTION=Gnarled Staff of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={80 90}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_staff_gnarled_power]
+DEFNAME=i_staff_gnarled_power
+ID=i_staff_gnarled
+NAME=Gnarled Staff of Power
+RESOURCES=i_staff_gnarled,4 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Gnarled Staves
+DESCRIPTION=Gnarled Staff of Power
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={90 100}
+	ATTR=attr_magic
+	MOREY=80.0
+
+[ITEMDEF i_staff_gnarled_vanq]
+DEFNAME=i_staff_gnarled_vanq
+ID=i_staff_gnarled
+NAME=Gnarled Staff of Vanquishing
+RESOURCES=i_staff_gnarled,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Gnarled Staves
+DESCRIPTION=Gnarled Staff of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=100.0
+	HITPOINTS={100 110}
+
+[ITEMDEF i_staff_gnarled_mystic]
+DEFNAME=i_staff_gnarled_mystic
+ID=i_staff_gnarled
+NAME=Mystic Gnarled Staff
+RESOURCES=i_staff_gnarled,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Gnarled Staves
+DESCRIPTION=Mystic Gnarled Staff
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={110 120}
+
+
+[ITEMDEF i_staff_quarter_ruin]
+DEFNAME=i_staff_quarter_ruin
+ID=i_staff_quarter
+NAME=Quarter Staff of Ruin
+RESOURCES=i_staff_quarter,i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Quarter Staves
+DESCRIPTION=Quarter Staff of Ruin
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=20.0
+	HITPOINTS={60 70}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_staff_quarter_might]
+DEFNAME=i_staff_quarter_might
+ID=i_staff_quarter
+NAME=Quarter Staff of Might
+RESOURCES=i_staff_quarter,2 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Quarter Staves
+DESCRIPTION=Quarter Staff of Might
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=40.0
+	HITPOINTS={70 80}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_staff_quarter_force]
+DEFNAME=i_staff_quarter_force
+ID=i_staff_quarter
+NAME=Quarter Staff of Force
+RESOURCES=i_staff_quarter,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Quarter Staves
+DESCRIPTION=Quarter Staff of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={80 90}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_staff_quarter_power]
+DEFNAME=i_staff_quarter_power
+ID=i_staff_quarter
+NAME=Quarter Staff of Power
+RESOURCES=i_staff_quarter,4 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Quarter Staves
+DESCRIPTION=Quarter Staff of Power
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={90 100}
+	ATTR=attr_magic
+	MOREY=80.0
+
+[ITEMDEF i_staff_quarter_vanq]
+DEFNAME=i_staff_quarter_vanq
+ID=i_staff_quarter
+NAME=Quarter Staff of Vanquishing
+RESOURCES=i_staff_quarter,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Quarter Staves
+DESCRIPTION=Quarter Staff of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=100.0
+	HITPOINTS={100 110}
+
+[ITEMDEF i_staff_quarter_mystic]
+DEFNAME=i_staff_quarter_mystic
+ID=i_staff_quarter
+NAME=Mystic Quarter Staff
+RESOURCES=i_staff_quarter,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Quarter Staves
+DESCRIPTION=Mystic Quarter Staff
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={110 120}
+
+
+[ITEMDEF i_shepherds_crook_ruin]
+DEFNAME=i_shepherds_crook_ruin
+ID=i_shepherds_crook
+NAME=Shepherd's Crook of Ruin
+RESOURCES=i_shepherds_crook,i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Shepherd's Crooks
+DESCRIPTION=Shepherd's Crook of Ruin
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=20.0
+	HITPOINTS={60 70}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_shepherds_crook_might]
+DEFNAME=i_shepherds_crook_might
+ID=i_shepherds_crook
+NAME=Shepherd's Crook of Might
+RESOURCES=i_shepherds_crook,2 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Shepherd's Crooks
+DESCRIPTION=Shepherd's Crook of Might
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=40.0
+	HITPOINTS={70 80}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_shepherds_crook_force]
+DEFNAME=i_shepherds_crook_force
+ID=i_shepherds_crook
+NAME=Shepherd's Crook of Force
+RESOURCES=i_shepherds_crook,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Shepherd's Crooks
+DESCRIPTION=Shepherd's Crook of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={80 90}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_shepherds_crook_power]
+DEFNAME=i_shepherds_crook_power
+ID=i_shepherds_crook
+NAME=Shepherd's Crook of Power
+RESOURCES=i_shepherds_crook,4 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Shepherd's Crooks
+DESCRIPTION=Shepherd's Crook of Power
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={90 100}
+	ATTR=attr_magic
+	MOREY=80.0
+
+[ITEMDEF i_shepherds_crook_vanq]
+DEFNAME=i_shepherds_crook_vanq
+ID=i_shepherds_crook
+NAME=Shepherd's Crook of Vanquishing
+RESOURCES=i_shepherds_crook,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Shepherd's Crooks
+DESCRIPTION=Shepherd's Crook of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=100.0
+	HITPOINTS={100 110}
+
+[ITEMDEF i_shepherds_crook_mystic]
+DEFNAME=i_shepherds_crook_mystic
+ID=i_shepherds_crook
+NAME=Mystic Shepherd's Crook
+RESOURCES=i_shepherds_crook,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Shepherd's Crooks
+DESCRIPTION=Mystic Shepherd's Crook
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={110 120}
+
+
+[ITEMDEF i_sword_long_b_ruin]
+DEFNAME=i_sword_long_b_ruin
+ID=i_sword_long_b
+NAME=Long Sword of Ruin
+RESOURCES=i_sword_long_b,i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Long Swords
+DESCRIPTION=Long Sword of Ruin
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=20.0
+	HITPOINTS={60 70}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_sword_long_b_might]
+DEFNAME=i_sword_long_b_might
+ID=i_sword_long_b
+NAME=Long Sword of Might
+RESOURCES=i_sword_long_b,2 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Long Swords
+DESCRIPTION=Long Sword of Might
+
+ON=@Create
+	ATTR=attr_magic
+	MOREY=40.0
+	HITPOINTS={70 80}
+	COLOR=color_magic_weap
+
+[ITEMDEF i_sword_long_b_force]
+DEFNAME=i_sword_long_b_force
+ID=i_sword_long_b
+NAME=Long Sword of Force
+RESOURCES=i_sword_long_b,3 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Long Swords
+DESCRIPTION=Long Sword of Force
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={80 90}
+	ATTR=attr_magic
+	MOREY=60.0
+
+[ITEMDEF i_sword_long_b_power]
+DEFNAME=i_sword_long_b_power
+ID=i_sword_long_b
+NAME=Long Sword of Power
+RESOURCES=i_sword_long_b,4 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Long Swords
+DESCRIPTION=Long Sword of Power
+
+ON=@Create
+	COLOR=color_magic_weap
+	HITPOINTS={90 100}
+	ATTR=attr_magic
+	MOREY=80.0
+
+[ITEMDEF i_sword_long_b_vanq]
+DEFNAME=i_sword_long_b_vanq
+ID=i_sword_long_b
+NAME=Long Sword of Vanquishing
+RESOURCES=i_sword_long_b,5 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Long Swords
+DESCRIPTION=Long Sword of Vanquishing
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=100.0
+	HITPOINTS={100 110}
+
+[ITEMDEF i_sword_long_b_mystic]
+DEFNAME=i_sword_long_b_mystic
+ID=i_sword_long_b
+NAME=Mystic Long Sword
+RESOURCES=i_sword_long_b,6 i_enchant_weapon
+
+CATEGORY=Provisions - Weapons - Magic
+SUBSECTION=Magic Long Swords
+DESCRIPTION=Mystic Long Sword
+
+ON=@Create
+	COLOR=color_magic_weap
+	ATTR=attr_magic
+	MOREY=120.0
+	HITPOINTS={110 120}
