@@ -29,7 +29,8 @@ scp.NewSkills_Begging=1
 scp.NewSkills_EvalInt=1
 scp.NewSkills_SpiritSpeak=1
 scp.NewSkills_ResistingSpells=1
-scp.NewSkills_Poisoning=1 // Includes Healing & Veterinary
+scp.NewSkills_Poisoning=1
+scp.NewSkills_Healing=1
 
 // Enables, switch or disable the new barding system
 // 0 = Default. 1 = OSI-Like.
@@ -100,6 +101,11 @@ scp.Healing_UseAnatomy=1
 // Poison prevents healing from bandages
 // <boolean> (0 = No / 1 = Yes)
 scp.Healing_PoisonNoBandage=1
+
+// Healing uses your form's brain? 
+// Example: if you polymorphed into a bear, you would heal with veterinary
+// <boolean> (0 = No / 1 = Yes)
+scp.Healing_BasedOnForm=0
 
 // Minimum Veterinary required to cure
 // From 0 to 1000. Default = 0 (0.0%)
