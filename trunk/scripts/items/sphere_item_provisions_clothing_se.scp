@@ -11,7 +11,7 @@ resources=16 i_cloth
 
 dupelist=027CD
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Male Kimono
 
@@ -36,7 +36,7 @@ resources=16 i_cloth
 
 dupelist=027CE
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Female Kimono
 
@@ -61,7 +61,7 @@ resources=13 i_cloth
 
 dupelist=027DA
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Cloth Ninja Hood
 
@@ -86,7 +86,7 @@ resources=12 i_cloth
 
 dupelist=027DF
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Cloth Ninja Jacket
 
@@ -111,7 +111,7 @@ resources=12 i_cloth
 
 dupelist=027E3
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Kasa
 
@@ -136,7 +136,7 @@ resources=15 i_cloth
 
 dupelist=027E4
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Kamashimo
 
@@ -161,7 +161,7 @@ resources=16 i_cloth
 
 dupelist=027E5
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Hakama
 
@@ -186,7 +186,7 @@ resources=16 i_cloth
 
 dupelist=027E6
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Tattsuke-Hakama
 
@@ -211,7 +211,7 @@ resources=14 i_cloth
 
 dupelist=027E7
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Hakama-Shita
 
@@ -236,7 +236,7 @@ resources=6 i_cloth
 
 dupelist=027EB
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Obi
 
@@ -261,7 +261,7 @@ resources=6 i_cloth
 
 dupelist=027E1
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Waraji and Tabi
 
@@ -286,7 +286,7 @@ resources=10 i_cloth
 
 dupelist=027E2
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Ninja Tabi
 
@@ -311,7 +311,7 @@ resources=10 i_cloth
 
 dupelist=027EC
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Jin-Baori
 
@@ -336,7 +336,7 @@ resources=5 i_hides_cut
 
 dupelist=027DB
 
-category=Provisions - clothing
+category=Provisions - Clothes
 subsection=Samurai Empire
 description=Leather Ninja Belt
 

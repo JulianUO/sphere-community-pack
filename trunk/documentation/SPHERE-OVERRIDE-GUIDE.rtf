@@ -1,0 +1,75 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Msftedit 5.41.21.2509;}\viewkind4\uc1\pard\cf1\f0\fs20 Override Common Data\cf0\par
+\par
+Ever wondered why you can't change for example 'TDATA' values on a per-item basis? Or some default values from Sphere.ini?\par
+\par
+The reason is simple: The majority of items, characters and situation will not need individual values there and are working fine with the default ones (either hardcoded or set in the INI or the *DEF sections), so it simply would be a waste of memory to store them again on each game object. Therefore for example a single crossbow in the world reads what items it needs as ammunition not from it's "WORLDITEM" data object, but from it's ITEMDEF (the TDATA property).\par
+\par
+Alas, as time goes by for some stuff it showed reasonable to allow overriding the default values for a single item, character or even region. Nevertheless it still would be a waste of resources to give all crossbows an "ammunition" property what on almost all of them will read: "default". So the Sphere developers decided to store the respective individual changes in TAGs: If the TAG exists it will be used, if not, the default is used.\par
+\par
+Common to most overrides is the syntax of the TAG's name: TAG.OVERRIDE.* - where "*" denotes the name of the respective tag. But there are also some others what were named before this naming scheme was established.\par
+\par
+\par
+\cf1 Item-based Override TAGs\par
+\cf0 TAG.ALWAYSSEND\tab\tab\tab\tab When optional flag OF_OsiMultiSight is on, all items inside a multi are not sent until entering the multi. If you want an item to be always sent, set TAG.ALWYASSEND to 1. This tag also can \tab\tab\tab\tab\tab\tab\tab also go under the ITEMDEF section of an item.\par
+TAG.NOSAVE\tab\tab\tab\tab\tab If set to 1 the object will NOT be saved.\par
+TAG.OVERRIDE.AMMOANIM \tab\tab\tab Overrides TDATA4 for bow/crossbow type weapons.\par
+TAG.OVERRIDE.AMMOANIMHUE \tab\tab Sets the colour of the effect when firing bow/crossbow type weapons.\par
+TAG.OVERRIDE.AMMOANIMRENDER\tab\tab Sets the render mode of the effect when firing bow/crossbow type weapons.\par
+TAG.OVERRIDE.AMMOTYPE\tab\tab\tab Overrides TDATA3 for bow/crossbow type weapons.\par
+TAG.OVERRIDE.DAMAGETYPE\tab\tab Sets the damage type for a weapon (ARGN2 in @GetHit trigger).\par
+TAG.OVERRIDE.DOORSOUND_CLOSE\tab\tab Overrides the sound that will be played for a door when it is being closed.\par
+TAG.OVERRIDE.DOORSOUND_OPEN\tab\tab Overrides the sound that will be played for a door when it is being opened.\par
+TAG.OVERRIDE.DROPSOUND\tab\tab\tab Overrides the sound that will be played when the item is dropped somewhere.\par
+TAG.OVERRIDE_LIGHT\tab\tab\tab\tab Overrides TDATA3 for lights (T_LIGHT_LIT, T_LIGHT_OUT). Take notice that there is an underscore in this TAG's name.\par
+TAG.OVERRIDE.MAXITEMS\tab\tab\tab Overrides the maximum number of items that can be placed into a container (default: 255)\par
+TAG.OVERRIDE.MAXWEIGHT\tab\tab\tab Overrides the maximum total weight that can be placed into a container.\par
+TAG.OVERRIDE.PORTCULUSSOUND\tab\tab Overrides the sound that will be played for a portcullis when it is used.\par
+TAG.OVERRIDE.PRACTICEMAX.SKILL_$skillid\tab Overrides SKILLPRACTICEMAX setting from Sphere.ini for a particular skill. $skillid is the numeric ID of the skill.\par
+TAG.OVERRIDE.RANGE\tab\tab\tab Overrides the RANGE property of the ITEMDEF for a weapon. If this tag exists on both the character and the weapon then the largest value will be used.\par
+TAG.OVERRIDE.SHIPSPEED.PERIOD\tab\tab Overrides SHIPSPEED.PERIOD for a ship (the length of time it takes for the ship to move one step, in tenths of a second)\par
+TAG.OVERRIDE.SHIPSPEED.TILES\tab\tab Overrides SHIPSPEED.TILES for a ship (the number of tiles that a ship moves in one step)\par
+TAG.OVERRIDE.SKILL\tab\tab\tab\tab Overrides the SKILL property of the ITEMDEF for a weapon.\par
+TAG.OVERRIDE.SOUND_HIT\tab\tab\tab Overrides the hit sound for a weapon. Take notice that there is an underscore in this TAG's name.\par
+TAG.OVERRIDE.SOUND_MISS\tab\tab\tab Overrides the miss sound for a weapon. Take notice that there is an underscore in this TAG's name.\par
+\par
+\par
+\cf1 Character-based Override TAGs\cf0\par
+TAG.DEATHFLAGS\tab\tab\tab\tab Changes some death related behaviour. The list of supported flags are in sphere_defs.scp.\par
+TAG.MAXPLAYERPETS\tab\tab\tab\tab Overrides the maximum number of pets that a player can stable. Default is 10.\par
+TAG.NAME.ALT\tab\tab\tab\tab\tab Sets an alternative name, useful for incognito effects.\par
+TAG.NAME.HUE\tab\tab\tab\tab Changes the colour of the name displayed above a character.\par
+TAG.NAME.PREFIX\tab\tab\tab\tab Sets some text to display before the character's name.\par
+TAG.NAME.SUFFIX\tab\tab\tab\tab Sets some text to display after the character's name.\par
+TAG.NOSKILLMSG\tab\tab\tab\tab When set to 1, character will receive the "gainradius_not_met" defmessage (sphere_msgs.scp) when skillgain is aborted due to the GAINRADIUS on a skill.\par
+TAG.OVERRIDE.MOVERATE\tab\tab\tab Overrides the MOVERATE property of the CHARDEF.\par
+TAG.OVERRIDE.RANGE\tab\tab\tab Overrides the RANGE property of the CHARDEF. If this tag exists on both the character and the weapon then the largest value will be used.\par
+TAG.OVERRIDE.REGEN_$statid\tab\tab Overrides REGEN rate from Sphere.ini\par
+TAG.OVERRIDE.REGENVAL_$statid\tab\tab Overrides REGEN amount from Sphere.ini\par
+TAG.OVERRIDE.ROCK\tab\tab\tab\tab Sets the ID of an item that the NPC can throw at enemies.\par
+TAG.OVERRIDE.RUNNINGPENALTY\tab\tab Overrides RUNNINGPENALTY from Sphere.ini\par
+TAG.OVERRIDE.SKILLCAP_$skillid\tab\tab Overrides skill settings from the character's SKILLCLASS. $skillid is the numeric ID of the skill.\par
+TAG.OVERRIDE.SKILLSUM\tab\tab\tab Overrides SKILLSUM setting from the character's SKILLCLASS.\par
+TAG.OVERRIDE.SPIDERWEB\tab\tab\tab When set to 1, NPC will be able to drop spider webs (for a giant spider, if this set to 1 then it will stop it from dropping webs)\par
+TAG.OVERRIDE.STAMINALOSSATWEIGHT\tab Overrides STAMINALOSSATWEIGHT from Sphere.ini\par
+TAG.OVERRIDE.STATCAP_$statid\tab\tab Overrides STR/DEX/INT settings from the character's SKILLCLASS. (0=STR, 1=INT, 2=DEX)\par
+TAG.OVERRIDE.STATSUM\tab\tab\tab Overrides STATSUM setting from the character's SKILLCLASS.\par
+TAG.OVERRIDE.TRAINSKILLMAX\tab\tab Overrides NPCTRAINMAX setting from Sphere.ini\par
+TAG.OVERRIDE.TRAINSKILLMAXPERCENT\tab Overrides NPCTRAINPERCENT setting from Sphere.ini\par
+TAG.PARTY_AUTODECLINEINVITE\tab\tab When set to 1, character will automatically decline party invitations.\par
+TAG.PARTY_CANLOOTME\tab\tab\tab When set to 1, party members will be allow to loot this character without it being counted as a criminal action (linked to the option in the party menu).\par
+TAG.VENDORMARKUP\tab\tab\tab\tab This value is added to the markup percentage that vendors apply to their buy and sell prices. Since the default markup is 15%, this means that a vendor will sell something worth 100gp at 115gp \tab\tab\tab\tab\tab\tab and buy it back for 85gp. If you set this tag to -15 the markup will be cancelled out to 0%, or you can raise/lower it if you want your vendor to sell things at a higher/lower price.\par
+\par
+\par
+\cf1 Region-based Override TAGs\cf0\par
+TAG.OVERRIDE.GUARDS\tab\tab\tab Specifies the character that will be summoned when guards are called in the region, overriding the guards \{c_h_guard 1 c_h_guard_f 1\} defname in sphere_defs.scp\par
+TAG.VENDORMARKUP\tab\tab\tab\tab This value is added to the markup percentage that vendors apply to their buy and sell prices. Since the default markup is 15%, this means that a vendor will sell something worth 100gp at 115gp \tab\tab\tab\tab\tab\tab and buy it back for 85gp. If you set this tag to -15 the markup will be cancelled out to 0%, or you can raise/lower it if you want your vendor to sell things at a higher/lower price. If the vendor has \tab\tab\tab\tab\tab\tab this tag set directly on them then this region TAG will not be used. \par
+\par
+\cf1 Sphere Miscellaneous Overrides\cf0\par
+\par
+\par
+ALLOWLIGHTOVERRIDE\tab\tab\tab If value is set to 0, sector local light will be skipped.\par
+\par
+}
+ 

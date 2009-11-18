@@ -22,7 +22,7 @@ SKILLMAKE=
 RESOURCES=
 DUPELIST=03172
 
-CATEGORY=Provisions - Clothing
+CATEGORY=Provisions - Clothes
 SUBSECTION=Mondain's Legacy
 DESCRIPTION=Elven Glasses
 
@@ -36,7 +36,7 @@ SKILLMAKE=TAILORING 80.0
 RESOURCES=30 i_cloth
 DUPELIST=03173
 
-CATEGORY=Provisions - Clothing
+CATEGORY=Provisions - Clothes
 SUBSECTION=Mondain's Legacy
 DESCRIPTION=Elven Robe
 
@@ -50,7 +50,7 @@ SKILLMAKE=TAILORING 80.0
 RESOURCES=30 i_cloth
 DUPELIST=03174
 
-CATEGORY=Provisions - Clothing
+CATEGORY=Provisions - Clothes
 SUBSECTION=Mondain's Legacy
 DESCRIPTION=Female Elven Robe
 
@@ -64,7 +64,7 @@ SKILLMAKE=TAILORING 80.0
 RESOURCES=12 i_cloth
 DUPELIST=03179
 
-CATEGORY=Provisions - Clothing
+CATEGORY=Provisions - Clothes
 SUBSECTION=Mondain's Legacy
 DESCRIPTION=Elven Pants
 
@@ -78,7 +78,7 @@ SKILLMAKE=TAILORING 80.0
 RESOURCES=15 i_hides_cut
 DUPELIST=0317a
 
-CATEGORY=Provisions - Clothing
+CATEGORY=Provisions - Clothes
 SUBSECTION=Mondain's Legacy
 DESCRIPTION=Elven Pants
 
@@ -101,7 +101,7 @@ SKILLMAKE=TAILORING 80.0
 RESOURCES=10 i_cloth
 DUPELIST=03177
 
-CATEGORY=Provisions - Clothing
+CATEGORY=Provisions - Clothes
 SUBSECTION=Mondain's Legacy
 DESCRIPTION=Elven Shirt
 
@@ -115,7 +115,7 @@ SKILLMAKE=TAILORING 80.0
 RESOURCES=10 i_cloth
 DUPELIST=03178
 
-CATEGORY=Provisions - Clothing
+CATEGORY=Provisions - Clothes
 SUBSECTION=Mondain's Legacy
 DESCRIPTION=Elven Shirt (Dark)
 
