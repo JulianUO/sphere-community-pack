@@ -76,6 +76,9 @@ scp.taming_hestarted		"@059,,2 1010598"	// *begins taming a creature.*
 scp.taming_failed		"@,,2 502798"
 scp.taming_toofaraway		"@,,2 502795"	// You are too far away to continue taming.
 scp.taming_abort		"You give up trying to tame the creature."
+scp.taming_youdead		"@,,2 502796"	// You are dead, and cannot continue taming.
+scp.taming_cantseelos		"@,,2 1049654"	// You do not have a clear path to the animal you are taming, and must cease your attempt.
+scp.taming_isangry		"@,,2 502794"	// The animal is too angry to continue taming.
 
 scp.bard_noinstrument		"@,,2 1062488"	// The instrument you are trying to play is no longer in your backpack!
 scp.bard_instrument_targ	""
