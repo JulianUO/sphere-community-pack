@@ -1,0 +1,223 @@
+[function f_start_taming]
+ref7 = <args>
+if <ref7.uid> == <uid>
+sysmessage <def.scp.taming_tameself>
+return 1
+elif !<ref7.ischar>
+sysmessage <def.scp.taming_notchar>
+return 1
+elif !<ref7.taming>
+ref7.message <def.scp.taming_notameable>
+return 1
+elif <ref7.owner>
+ref7.message <def.scp.taming_alreadytamed>
+return 1
+elif (!<ref7.allow_female_tamer>) && ((<body> == c_woman>) || (<body> == c_elf_female))
+ref7.message <def.scp.taming_onlymale>
+return 1
+elif (!<ref7.allow_male_tamer>) && ((<body> == c_man) || (<body> == c_elf_male))
+ref7.message <def.scp.taming_onlyfemale>
+return 1
+elif <ref7.taming_min_skill> > <taming>
+ref7.message <def.scp.taming_nochance>
+return 1
+elif (<ref7.followerslot> + <curfollower>) > <maxfollower>
+sysmessage <def.scp.taming_manyfollowers>
+return 1
+elif <ref7.owners_count> >= <ref7.maxowners>
+ref7.message <def.scp.taming_manyowners>
+return 1
+elif <act.must_be_subdued>
+ref7.message <def.scp.taming_mustsubdue>
+return 1
+elif <tag0.beingtamed>
+ref7.message <def.scp.taming_ontame>
+return 1
+elif <ref7.can_anger_on_tame> && (!<act.isevent.e_peacemaked>)
+	if <r1,100> <= 95
+	ref7.message <def.scp.taming_getanger>
+	ref7.face <uid>
+	ref7.attack <uid>
+	return 1
+	endif
+endif
+message <def.scp.taming_started>
+forplayers
+	if <uid> != <src.uid>
+	trysrc <uid> uid.<src.uid>.message <def.scp.taming_he_started>
+	endif
+endfor
+tag.totame = <ref7.uid>
+ref7.tag.beingtamed = 1
+serv.newitem i_tamefix
+new.link = <ref7.uid>
+equip <new>
+new.more1 = {4 5}
+return 1
+
+[itemdef i_tamefix]
+id=i_memory
+type=t_eq_script
+name=tamefix
+
+on=@equip
+timer=3
+
+on=@timer
+if <more1>
+	if <cont.distance <link>> > 3
+	link.message <def.scp.taming_toofaraway>
+	cont.tamingfail <link>
+	remove
+	return 1
+	elif <cont.flags>&statf_dead
+	link.message <def.scp.taming_youdead>
+	cont.tamingfail <link>
+	remove
+	return 1
+	elif !(<cont.canseelos <link>>)
+	link.message <def.scp.taming_cantseelos>
+	cont.tamingfail <link>
+	remove
+	return 1
+	elif <link.memoryfindtype.memory_war_targ>
+	link.message <def.scp.taming_isangry>
+	cont.tamingfail <link>
+	remove
+	return 1
+	endif
+cont.say @,,2 { {502790 502793} 1 {1005608 1005613} 1 {1010593 1010596} 1 }
+cont.face <link>
+more1 --
+timer = {2 3}
+else
+	if <r> <= <cont.tamingsuccesschance <link>>
+	link.removeallmemories
+	link.makemypet <cont>
+	else
+	cont.tamingfail <link>
+	cont.sysmessage <def.scp.taming_failed>
+	endif
+remove
+endif
+return 1
+
+
+[FUNCTION RemoveAllMemories]
+WHILE (<FINDID.i_memory>)
+    FINDID(i_memory).REMOVE
+ENDWHILE
+
+[FUNCTION MakeMyPet]
+REF1=<ARGS>
+SERV.NEWITEM i_memory
+NEW.ATTR=04
+NEW.MORE1=04
+NEW.MORE2=<SERV.TIME>
+NEW.MOREP=<P>
+NEW.COLOR=memory_ipet
+NEW.TIMER=-1
+NEW.LINK=<REF1>
+NEW.CONT=<UID>
+FLAGS |= statf_pet
+TAG.BEINGTAMED=
+IF !(<TAG0.Owner.<REF1>>)
+    REF1.SYSMESSAGE @,,2 502799 // It seems to accept you as master.
+    LOCAL.GainDifficulty = <EVAL (<REF1.TamingSuccessChance <UID>> / 10)>
+    IF !(<LOCAL.GainDifficulty>)
+        LOCAL.GainDifficulty ++
+    ENDIF
+    REF1.SKILLGAIN Taming <dLOCAL.GainDifficulty>
+ELSE
+    REF1.SYSMESSAGE @,,2 502797 // That wasn't even challenging.
+ENDIF
+IF !(<TAG0.Owner.<REF1>>)
+    Owners.Count=1
+    TAG.Owner.<REF1> = 1
+ENDIF
+REF1.CURFOLLOWER += <FollowerSlot>
+REF1.EVENTS -e_taming
+REF1.TAG.TOTAME=
+UPDATE
+
+[FUNCTION TamingFail]
+REF1=<ARGS>
+REF1.TAG.BEINGTAMED=
+TAG.TOTAME=
+
+[EVENTS e_taming]
+ON=@UserWarMode
+TamingFail <TAG.TOTAME>
+EVENTS -e_taming
+
+ON=@Logout
+TamingFail <TAG.TOTAME>
+EVENTS -e_taming
+
+ON=@GetHit
+TamingFail <TAG.TOTAME>
+EVENTS -e_taming
+
+ON=@SkillSelect
+SYSMESSAGE You must wait to perform another action
+RETURN 1
+
+On=@SkillStart
+TamingFail <TAG.TOTAME>
+EVENTS -e_taming
+
+[FUNCTION allow_female_tamer]
+IF (<BASEID> == c_kirin)
+    RETURN 0
+ELSE
+    RETURN 1
+ENDIF
+
+[FUNCTION allow_male_tamer]
+IF (<BASEID> == c_m_unicorn)
+    RETURN 0
+ELSE
+    RETURN 1
+ENDIF
+
+[FUNCTION FollowerSlot]
+IF !(<tag0.control.slots>)
+    RETURN 1
+ELSE
+    RETURN <tag.control.slots>
+ENDIF
+
+[FUNCTION owners_count]
+IF (<ARGN>)
+    TAG0.OWNER_COUNT += 1
+ELSE
+    RETURN <TAG0.OWNER_COUNT>
+ENDIF
+
+[FUNCTION MaxOwners]
+RETURN 5
+
+[FUNCTION must_be_subdued]
+IF (<BASEID> == c_rune_beetle) || (<BASEID> == c_giant_beetle) || (<BASEID> == c_m_ice_worm)
+    RETURN 1
+ELSE
+    RETURN 0
+ENDIF
+
+[FUNCTION can_anger_on_tame]
+IF (<BASEID> == c_m_hiryu) || (<BASEID> == c_m_nightmare) || (<BASEID> == c_armored_swamp_dragon) || (<BASEID> == c_swamp_dragon) || (<BODY> == c_dragon_red) || (<BODY> == c_dragon_green) || (<BODY> == c_dragon_small_black) || (<BODY> == c_dragon_small_red)
+    RETURN 1
+ELSE
+    RETURN 0
+ENDIF
+
+[FUNCTION taming_min_skill]
+RETURN <EVAL (<TAMING> + (<Owners.Count> * 60))>
+
+[FUNCTION TamingSuccessChance]
+REF1=<ARGS>
+DOSWITCH <REF1.TAG0.Owner.<UID>>
+    LOCAL.SuccessChance=<EVAL (((<TAMING> - <REF1.TamingMinSkill>) + 1) * 2)>
+    LOCAL.SuccessChance=1000
+ENDDO
+RETURN <dLOCAL.SuccessChance>

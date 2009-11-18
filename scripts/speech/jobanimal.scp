@@ -76,14 +76,34 @@ ON=*trainer*
 	ENDIF
 
 ON=*Retrieve*
-	IF <NPC>==BRAIN_ANIMAL_TRAINER
-		PETRETRIEVE
-	ENDIF
+if <npc> == brain_animal_trainer
+	if <def.scp.Followers> == 0
+	petretrieve
+	else
+		forcont <findlayer.layer_bankbox>
+			if <tag0.master> == <src.uid>
+			p = <src.p>
+			src.dclick <uid>
+			endif
+		endfor
+	say @,,2 1042559 // Here you go... and good day to you!
+	endif
+endif
 
 ON=*Stable*
-	IF <NPC>==BRAIN_ANIMAL_TRAINER
-		PETSTABLE
-	ENDIF
+if <npc> == brain_animal_trainer
+	if <def.scp.Followers> == 0
+	petstable
+	else
+		if !<findlayer.layer_bankbox.uid>
+		serv.newitem i_bankbox
+		new.cont = <uid>
+		new.layer = 29
+		endif
+	src.targetf f_stable_npc <findlayer.layer_bankbox.uid>
+	src.sysmessage What pet would you like to stable here?
+	endif
+endif
 
 ON=*train*
 ON=*animal*

@@ -51,9 +51,9 @@ VERSION=0.56b
 [events e_PlayerGenericEvent]
 on=@userextcmd
 if <argn1> == 36
-	if <trigger @SkillPreSelect,tat_as_argn,<argv[0]>>
-	return 1
-	endif
+//	if (<src.trigger @SkillPreSelect,tat_as_argn,<argv[0]>>)
+//	return 1
+//	endif
 endif
 
 // Context Menu Display

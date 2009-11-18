@@ -1,0 +1,80 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// Anarch Cassius - Original scripter of this
+// ShiryuX - Updated it and changed some code.
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Followers functions and support.
+
+// Transfer Function
+[function f_transfer]
+ref12 = <args>
+if <argo.uid> == <src.uid>
+src.sysmessage You can't transfer to yourself!
+return 1
+endif
+	if !<argo.brain>
+	local.slots = <qval <ref12.tag0.control.slots> ? <ref12.tag0.control.slots> : 1>
+		if <eval <argo.curfollower>+<local.slots>> > <argo.maxfollower>
+		argo.sysmessage You have too many followers.
+		return 1
+		endif
+	ref12.memoryfindtype.memory_ipet.remove
+	ref12.newitem = i_memory
+	new.color = 02
+	new.cont = <ref12.uid>
+	new.link = <argo.uid>
+	new.more2 = <argo.uid>
+	sysmessage You have given <ARGO.NAME> your pet.
+	src.curfollower -= <local.slots>
+	argo.curfollower += <local.slots>
+	argo.sysmessage <ref12.name> is your new pet.
+	else
+	src.sysmessage That's not a player.
+	endif
+return 1
+
+// Shrinked animals
+[typedef t_figurine]
+on=@dclick
+local.slots = <qval <serv.chardef.<act.tdata3>.tag0.control.slots> ? <serv.chardef.<act.tdata3>.tag0.control.slots> : 1>
+if <eval <src.curfollower>+<local.slots>> > <src.maxfollower>
+src.sysmessage You have too many followers.
+return 1
+endif
+src.curfollower += <local.slots>
+
+// Stable function
+[function f_stable_npc]
+if <argo.uid> == <src.uid>
+src.sysmessage You can't stable yourself.
+return 1
+endif
+if <argo.memoryfindtype.memory_ipet.link> == <src.uid>
+local.stablenpc = <argo.uid>
+src.curfollower -= <qval <argo.tag0.control.slots> ? <argo.tag0.control.slots> : 1>
+argo.shrink
+	foritems 10
+		if <type> == t_figurine
+			if <more2> == <local.stablenpc>
+			ref77 = <uid>
+			endif
+		endif
+	endfor
+	ref77.removefromview
+	ref77.tag0.master = <src.uid>
+	ref77.cont = <args>
+	argo.sysmessage You have saved your pet.
+	endif
+endif
+
+[eof]
