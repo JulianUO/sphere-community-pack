@@ -1,0 +1,123 @@
+04-09-2009, ShiryuX
+- Added: Base files. Project Started.
+
+07-09-2009, ShiryuX
+- Added: a few skills scripts.
+- Updated: magic properties to be able to activate/deactivate them using the settings file.
+
+14-09-2009, ShiryuX
+- Added: OSI Guildstone System (by coruja747)
+
+27-10-2009, ShiryuX
+- Added: Cloud_BR's quest system.
+- Added: some skills settings and others.
+- Added: Necromancy and Chivalry (complete)
+- Added: 2 spells of spellweaving.
+- Added: OSI Doom dungeon.
+- Added: Mysticism spells definition.
+- Added: House system.
+- Added: OSI Ore smelt formula.
+- Added: Tithing points and resurrect delay for ankhs.
+- Updated: skills with the new SA skills definitions.
+- Updated: champion system settings to sphere_settings.scp
+- Updated: moved spells to separate files (by skill)
+- Updated: spheretables.scp to load all scripts.
+- Updated: resisting spells to be able to switch.
+
+28-10-2009, ShiryuX
+- Added: missing scrolls from necromancy.
+- Added: crafting system! finally! not 100% working but near that.
+- Fixed: defnames for spells and etc.
+
+31-10-2009, ShiryuX
+- Added: some general functions for all scripts.
+- Fixed: crafting system, just small details here and there.
+
+01-11-2009, ShiryuX
+- Added: @SkillPreSelect, fired when the player runs a skill from the menu or from a macro and before any hardcoded check takes place. 
+	 ARGN1 is the skill number. (Thanks MrSugarCube for idea)
+- Added: working blacksmithing, inscription, alchemy and bowcraft.
+- Added: new buffs function to support necro/chival spell buffs. List can be found in sphere_pack_defs.scp
+- Updated: moved new messages to the messages file.
+- Updated: crafting system a little, made some fixes.
+- Updated: sphere_item_christimas.scp -> sphere_item_christmas.scp
+- Updated: Enticement -> Discordance
+- Fixed: more crafting issues like wrong messages and such.
+- Moved: some messages to a new file, so it's easier to change them.
+
+02-11-2009, Khaos
+* Fixed: AxisCats in sphere_item_christmas earlier. (Forgot to note)
+* sphere_newb.scp - Major Edits within. Read comments at the top! (Need feedback on tactics edits!!) Note: Removetrap and spellweaving should NOT have comments removed in def's. They are placeholders. They cannot be chosen as beginning skills according to EA.
+* sphere_item_resources.scp - Added Necro reagents true to AoS. Only one duplication within for categorizing til I sort through all the necromancy spells, scrolls.
+
+03-11-2009, Khaos
+* Removed i_reag_dragon_scale from sphere_item_provisions_armor_aos.scp
+* Removed Scales 026B1 - 026B6 from sphere_item_misc_se.scp It was redundant to even be in SE packs when they were implemented way before. All Scale resources moved to sphere_item_resources_scales.scp
+* New Axis Cat was added for above resources to find them easier. Provisions - Blacksmithing / Scales, will be moving ingots and ores to their own provisions too.
+* Added AoS Dragon Scale Resources intp sphere_item_resources_scales.scp colors are as close as I can get them. Type = t_reagent instead of t_normal; in case anyone uses them for their casting systems.
+* Removed i_reag_dragon_scale from sphere_item_provisions_armor_aos.scp
+* Updates: sphere_name.scp
+* Edited and added to Controller, Daemon, evil mage names. Missing # amount in controllers. Daemon and Evil Mage added 1 or 2 more names.
+* Added: names_balron, names_evil_mage_lord, names_gargoyle_fire, names_dark_father, names_darknight_creeper, names_impaler. They match EA: UO name lists.
+* sphere_item_provisions_ore.scp: color_o_iron is now switched to the option, so it can be used in colors for other items and npcs now.
+* sphere_item_resources.scp: Removed all reagents. Correctly relabeled Necromancy reagents. Changed defnames. Made a secondary item for any itemdef that was changed. 
+* Added Files: sphere_item_provisions_armor_sa.scp, sphere_item_provisions_clothing_sa.scp, sphere_item_provisions_weapons_sa.scp. Are empty for now.
+* sphere_item_provisions_clothing_se.scp: Contains all my Samurai Empire Clothing files.
+
+03-11-2009, ShiryuX
+- Added: a base for barding skills.
+- Added: extras and documentation folders.
+- Updated: tag.slots_needed -> tag.control.slots
+- Updated: more messages to the msgs file.
+
+04-11-2009, Khaos
+* sphere_spells_necromancy.scp: Added in words of power, though they are commented out right now (These were added in @Start). Fixed reagents to match new ones added.
+Note: We are missing a spell it seems. Exorcism is non-existant.
+
+04-11-2009, ShiryuX
+- Added: OSI Spell Actdiff calculation.
+- Fixed: Now LMC is working even with LRC disabled.
+- Fixed: Necromancy WOP displayed twice.
+
+05-11-2009, ShiryuX
+- Updated: sphere_pack_msgs.scp with missing WoP section. Sorry about that.
+- Fixed: wops wrong defname, now corrected according pack standard.
+
+05-11-2009, Khaos
+* sphere_pack_msgs.scp; Added in spell_117_wop "Ort Corp Grav" This is the "Exorcism" spell's words of power.
+* sphere_spells_necromancy.scp; Added in spell 117. Exorcism. Has all the checks minus "issameguild", "issamealliance", "issameparty", and "issamefaction". These needed to be added, but as I see it, we need a stable faction/party/alliance/guild system that won't get changed to add these functions.
+* sphere_pack_msgs.scp; Added in ALL Stygian Abyss spells WOP's.
+
+06-11-2009, ShiryuX
+- Added: carpentry and tailoring tables for crafting.
+- Updated: defs with new buff icons of gargoyle things.
+
+11-11-2009, Khaos
+* sphere_item_magic_weapon.scp Added in Mystic weapons to all weapons listed. Mystic runs a morey of 120.0. Added in Hatchets, daggers, smith hammer,  cleavers, all staves, skinning knives, butcher knives, and long sword b. Removed all ITEMDEF 0#### as these will interfere with SA items. Fixed Axis cats for i_bow_vanq. Added in halberd of Force and Vanquishing. Added Crossbow of Force and vanq, same with scimitars.. They were missing or out of place.
+More to be added later. Will be adding in all and I repeat all ML, SE, AOS, SA items as well as time goes on.
+Note: Mystic weapons were introduced during Ophidian Wars.
+* sphere_item_provisions_weapons_*.scp; all expansion files had def changes done. A backwards compatibility def list is included in the sphere_backward_compatibility.scp Transitioning the new def's should not be an issue. I suggest minor updating to crafting systems if their is issues. Otherwise please don't change these new def's. Whole deflists for magic items are done with them and magic items use these new def's. (Note: If they are reverted, I will drop all work on those said items and anything to do with them, their def's made little sensibility e.g. i_mace_wildstaff.. wtf? i_wild_staff is new def. Seems more sensible.)
+* sphere_item_magic_weapon.scp; added in all weapons from AoS, SE, ML weapons. Each weapon type has ruin - mystic attributes. SA will get done later today.
+* sphere_backwards_compatibility.scp; updated in old weapon defs which I changed to make more sense, this should allow any use with old def items spawned to have the def information converted to the new formatting. Hope the crafting systems will transition well with this.
+*sphere_item_provisions_weapons_sa.scp; completed every single SA weapon minus stone war sword and serpentstone staff, they are not defined on stratics. All the throwing weapons are type t_weapon_bow. Since we don't have a type for throwing yet. I will make one later most likely. Everything is EA accurate so far.
+
+17-11-2009, ShiryuX
+- Added: healing and veterinary scripts
+- Updated: sphere_settings.scp with some healing settings.
+- Updated: maps to use tag.override.map.width and tag.override.map.height.
+
+18-11-2009, Khaos
+* Added several new informative documents to the Documentation Folder. Adding a file for the following three guides: sphere-speed-conversion-table, sphere-npc-behaviours, sphere-armor-calculations, and sphere-override-guide
+* sphere_item_provisions_clothing_ml and sphere_item_provisions_clothing_se; changed axis cats. Category=Provisions - Clothing is now: Provisions - Clothes.
+* Added names_humanmale_tokuno, names_humanfemale_tokuno to sphere_name.scp. 50 of each. Will add more later.
+* updated sphere_name.scp Added two more names to names_daemon.
+
+18-11-2009, ShiryuX
+- Added: a few taming messages.
+- Added: new animal taming, osi-like (thanks jeem)
+- Fixed: some code of followers was missing.
+- Fixed: enticement -> discordance in newbie block.
+- Removed: @SkillPreSelect until find a fix for it.
+
+19-11-2009, ShiryuX
+- Added: installation instructions.
