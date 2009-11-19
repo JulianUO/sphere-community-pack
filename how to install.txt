@@ -1,0 +1,16 @@
+Installation instructions
+
+1. Download the pack and uncompress it in your sphere folder. Just like you do with the default script pack. Get the last version from: 
+
+
+2. Go to your "sphere.ini" and change the following settings:
+EventsPet=your_event
+EventsPlayer=your_event
+
+With this:
+EventsPet=e_NpcGenericEvent
+EventsPlayer=e_PlayerGenericEvent,e_osi_crafting
+
+
+3. If you want to change any settings search the file "scripts/add-on/sphere_settings.scp". Inside it you will find a switch for everything plus some settings.
+After that, enjoy it!
