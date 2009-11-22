@@ -153,7 +153,8 @@ src.sysmessage @03c1,6,2 502644 // You have not yet recovered from casting a spe
 return 1
 endif
 if <def.scp.OSISpellDiff> == 1
-actdiff = <eval (((<<argn1>> - <argn2>) * 2.5) + 50.0)>
+local.skill = <streat <serv.spell.<argn1>.skillreq>>
+actdiff = <eval (((<<local.skill>> - <argn2>) * 2.5) + 50.0)>
 endif
 if !<npc>
 	if <argn1> > 100
@@ -175,17 +176,21 @@ if !<npc>
 	endif
 endif
 if <def.scp.MagicProperties_MageWeapon> == 1
-	if <findlayer.1.uid>
-		if !(<findlayer.1.istevent.t_enchant_mage_weapon>) || (<findlayer.1.type> == t_wand)
-		findlayer.1.unequip
+	if <argn1> != 104 // exception for Curse Weapon
+		if <findlayer.1.uid>
+			if !(<findlayer.1.istevent.t_enchant_mage_weapon>) || (<findlayer.1.type> == t_wand)
+			findlayer.1.unequip
+			endif
 		endif
 	endif
 endif
 if <findlayer.2.uid>
 	if <findlayer.2.isweapon>
-		if <def.scp.MagicProperties_MageWeapon> == 1
-			if !(<findlayer.2.istevent.t_enchant_mage_weapon>)
-			findlayer.2.unequip
+		if <argn1> != 104 // exception for Curse Weapon
+			if <def.scp.MagicProperties_MageWeapon> == 1
+				if !(<findlayer.2.istevent.t_enchant_mage_weapon>)
+				findlayer.2.unequip
+				endif
 			endif
 		endif
 	else

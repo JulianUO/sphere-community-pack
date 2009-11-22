@@ -1,8 +1,99 @@
-[TEMPLATE random_necro_scroll]
-CATEGORY=Item Templates
-SUBSECTION=Scrolls
-DESCRIPTION=Necromancer Scrolls
-ITEM={ i_scroll_animate_dead 1 i_scroll_blood_oath 1 i_scroll_corpse_skin 1 i_scroll_curse_weapon 1 i_scroll_evil_omen 1 i_scroll_horrific_beast 1 i_scroll_lich_transformation 1 i_scroll_mind_rot 1 i_scroll_pain_spike 1 i_scroll_poison_strike 1 i_scroll_strangle 1 i_scroll_summon_familiar 1 i_scroll_vampiric_embrace 1 i_scroll_vengeful_spirit 1 i_scroll_wither 1 i_scroll_wraith_form 1 }
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// Wiccanian, ShiryuX, Anarch - Can't remember very well. This is more a compilation of authors
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Necromancy functions and other things used.
+// We move them here just to keep clean the main files and can tweak it without problems.
+//
+
+// Animate Dead
+[function f_AnimateDeadTarg]
+if <argo.type> == t_corpse
+	if <argo.link.uid>
+	sysmessage @,,2 1061085 // There's not enough life force there to animate.
+	return 0
+	endif
+local.castability = <eval (((<necromancy>*3)+(<spiritspeak>*7))/10)*18>
+local.delay = <eval 5>
+	if <local.castability> > <argo.tag0.corpsefame>
+		if <serv.chardef.<argo.morex>.tag0.animateid>
+		serv.newnpc <serv.chardef.<argo.morex>.tag0.animateid>
+		else
+		serv.newnpc <f_AnimateCharacter>
+		endif
+	TimerF <local.delay>,f_AnimateDeadDispel <new.uid>
+	new.p = <argo.p>
+	new.flags ^= statf_conjured
+	new.maxhits = <eval <local.castability>/50>
+	new.hits = <new.maxhits>
+	new.f_MakePetOf <uid>
+	endif
+else
+sysmessage @,,2 1061084 // You cannot animate that.
+return 0
+endif
+
+[function f_AnimateCharacter]
+if (<local.casterability> > 17500)
+return c_skeletal_dragon
+elseif (<local.casterability> > 15000)
+return c_m_liche_lord
+elseif (<local.casterability> > 12500)
+return c_flesh_golem
+elseif (<local.casterability> > 10000)
+return c_mummy
+elseif (<local.casterability> > 8000)
+return c_liche
+elseif (<local.casterability> > 6000)
+return c_m_skeleton_knight
+elseif (<local.casterability> > 4000)
+return c_m_skeleton_mage
+elseif (<local.casterability> > 2000)
+return c_patchwork_skeleton
+else
+return c_mound_maggots
+endif
+
+[function f_AnimateDeadDispel]
+uid.<args>.hits = 0
+
+// Blood Oath
+[function f_BloodOathDispel]
+events -e_BloodOath
+uid.<tag0.bloodoath>.removebuff <def.bufficon_bloodoathcaster>
+uid.<tag0.bloodoath>.tag0.bloodoathcast
+removebuff <def.bufficon_bloodoathcurse>
+tag0.bloodoath
+
+[events e_BloodOath]
+on=@Hit
+uid.<tag0.bloodoath>.damage <eval (<argn1>*20)/100> <argn2> <uid>
+
+on=@SpellCast
+uid.<tag0.bloodoath>.spelleffect <argn> <argn2>
+
+on=@SpellEffect
+if (<argn> == 34) || (<argn> == 41)
+f_BloodOathDispel
+endif
+
+// Pain Spike
+[function f_PainSpikeDispel]
+tag0.painspike
+hits += <args>
+
+
+
 
 //#################################################\\
 //#                 Curse Weapon                  #\\
