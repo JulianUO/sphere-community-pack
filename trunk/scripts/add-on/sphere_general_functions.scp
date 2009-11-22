@@ -21,4 +21,14 @@ if <argv[1]>>1
 endif
 sound <argv[0]>
 
+// <pet uid>.f_MakePetOf <owner uid>
+[function f_MakePetOf]
+serv.newitem i_memory
+new.color = memory_ipet
+new.more1 = 04
+new.more2 = <serv.time>
+new.morep = <p>
+new.link = <args>
+new.cont = <uid>
+
 [eof]
