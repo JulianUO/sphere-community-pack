@@ -69,7 +69,7 @@ STAT_INT=70
 STAT_DEX=15
 
 on=@success
-if <def.NewSkills_Anatomy> == 1
+if <def.scp.NewSkills_Anatomy> == 1
 f_anatomy_success <src.targ.uid>
 skillgain Anatomy <eval <Anatomy>/10>
 return 1
@@ -95,7 +95,7 @@ BONUS_INT=100
 BONUS_STATS=50
 
 on=@success
-if <def.NewSkills_AnimalLore> == 1
+if <def.scp.NewSkills_AnimalLore> == 1
 	if <src.act.brain>
 	f_ResendDialog d_animal_lore
 	skillgain AnimalLore <eval <AnimalLore>/10>
@@ -186,7 +186,7 @@ BONUS_INT=50
 BONUS_STATS=10
 
 on=@select
-if <def.NewSkills_Begging> == 1
+if <def.scp.NewSkills_Begging> == 1
 sysmessage @,,2 500397 // To whom do you wish to grovel?
 targetf f_begging_start
 return 1
@@ -414,7 +414,7 @@ BONUS_STATS=50
 ADV_RATE=2.5,50.0,200.0
 
 on=@start
-if <def.NewSkills_EvalInt> == 1
+if <def.scp.NewSkills_EvalInt> == 1
 	if <src.targ.isitem>
 	sysmessage <def.evalint_item>
 	action = -1
@@ -423,7 +423,7 @@ if <def.NewSkills_EvalInt> == 1
 endif
 
 on=@success
-if <def.NewSkills_EvalInt> == 1
+if <def.scp.NewSkills_EvalInt> == 1
 f_evalint_success <src.targ.uid>
 skillgain EvaluatingIntel <eval <EvaluatingIntel>/10>
 return 1
@@ -449,7 +449,7 @@ BONUS_DEX=30
 BONUS_INT=70
 
 on=@success
-if <def.NewSkills_Poisoning> == 0
+if <def.scp.NewSkills_Poisoning> == 0
 return 0
 endif
 if <act.f_bandage_cure> && <def.scp.Healing_PoisonNoBandage>
