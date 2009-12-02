@@ -46,7 +46,7 @@ return 1
 // Shrinked animals
 [typedef t_figurine]
 on=@dclick
-if <def.scp.OSIFollowers> == 0
+if <def.scp.Followers> == 0
 return 0
 endif
 local.slots = <qval <serv.chardef.<tdata3>.tag0.control.slots> ? <serv.chardef.<tdata3>.tag0.control.slots> : 1>

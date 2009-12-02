@@ -153,7 +153,7 @@ src.sysmessage @03c1,6,2 502644 // You have not yet recovered from casting a spe
 return 1
 endif
 if <def.scp.OSISpellDiff> == 1
-local.skill = <streat <serv.spell.<argn1>.skillreq>>
+local.skill = <serv.skill.<streat <serv.spell.<argn1>.skillreq>>.key>
 actdiff = <eval (((<<local.skill>> - <argn2>) * 2.5) + 50.0)>
 endif
 if !<npc>
