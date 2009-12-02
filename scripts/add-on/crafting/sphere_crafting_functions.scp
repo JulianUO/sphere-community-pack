@@ -68,7 +68,7 @@ serv.newitem <argv[0]>
 consume <new.resources>
 new.bounce
 ctag.craft.message = <def.scp.craft_msg_success>
-skillgan 13 <r2>
+skillgain 13 <r2>
 else
 ctag.craft.message = <def.scp.craft_msg_fail>
 endif

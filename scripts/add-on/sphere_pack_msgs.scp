@@ -85,7 +85,7 @@ scp.bard_instrument_targ	""
 scp.bard_instrument_wrong	""
 scp.bard_toofaraway		""
 
-scp.bard_peacemaking_targ	""
+scp.bard_peacemaking_targ	"@,,2 1049525"	// Whom do you wish to calm?
 scp.bard_peacemaking_isitem	"@,,2 1049528"	// You cannot calm that!
 scp.bard_peacemaking_peaced	"@,,2 500616"	// You hear lovely music, and forget to continue battling!
 scp.bard_peacemaking_success	"@,,2 500615"	// You play your hypnotic music, stopping the battle.

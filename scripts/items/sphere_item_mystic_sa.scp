@@ -296,25 +296,4 @@ ON=@Create
 	MOREX = s_rising_colossus
 	MOREY = {80 100}
 
-// mystic template
-[TEMPLATE tm_mystic]
-CONTAINER=i_bag
-ITEM=i_spellbook_mystic
-ITEM=i_scroll_nether_bolt
-ITEM=i_scroll_healing_stone
-ITEM=i_scroll_purge_magic
-ITEM=i_scroll_enchant_weapon
-ITEM=i_scroll_sleep
-ITEM=i_scroll_eagle_strike
-ITEM=i_scroll_animated_weapon
-ITEM=i_scroll_stone_form
-ITEM=i_scroll_spell_trigger
-ITEM=i_scroll_mass_sleep
-ITEM=i_scroll_cleansing_winds
-ITEM=i_scroll_bombard
-ITEM=i_scroll_spell_plague
-ITEM=i_scroll_hail_storm
-ITEM=i_scroll_nether_cyclone
-ITEM=i_scroll_rising_colossus
-
 [EOF]

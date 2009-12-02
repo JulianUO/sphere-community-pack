@@ -17,7 +17,7 @@ VERSION=0.56b
 //
 [function f_start_peacemaking]
 ref10 = <args>
-if <argo.isitem>
+if <ref10.isitem>
 sysmessage <def.scp.bard_peacemaking_isitem>
 return 1
 endif
@@ -47,22 +47,52 @@ local.chance = <eval (<peacemaking> /2 ) + (<musicianship> / 2)>
 	endif
 else 
 // Target mode : pacify a single target for a longer duration
-	if !<argo.isplayer>
-	local.chance = <f_barding_calculation <argo.uid>,<tag0.instrument>,peacemaking>
+	if !<ref10.isplayer>
+	local.chance = <f_barding_calculation <ref10.uid>,<tag0.instrument>,peacemaking>
 		if <local.chance> < <r>
 		sysmessage <def.scp.bard_peacemaking_tfail>
 		return 1
 		endif
-	serv.newitem i_new_peacemaking,1,<argo.uid>
+	serv.newitem i_new_peacemaking,1,<ref10.uid>
 	new.timer = <eval (<peacemaking> / 10) + 30>
-	argo.tag0.nomovetill = <eval <new.timer> + <serv.time>>
-	argo.events +e_peacemaking
-	argo.flags &= ~statf_war
-	argo.memoryfindtype.memory_war_targ.remove
-	argo.action = -1
+	ref10.tag0.nomovetill = <eval <new.timer> + <serv.time>>
+	ref10.events +e_peacemaking
+	ref10.flags &= ~statf_war
+	ref10.memoryfindtype.memory_war_targ.remove
+	ref10.action = -1
 	sysmessage <def.scp.bard_peacemaking_tsuccess>
 	endif
 endif
+return 1
+
+[events e_peacemaked]
+on=@npcactfight
+action -1
+return 1
+
+on=@attack
+action -1
+return 1
+
+on=@hittry
+action -1
+return 1
+
+on=@gethit
+findid.i_peace_memory.remove
+attack <src.uid>
+events -e_peace_event
+
+
+[ITEMDEF i_new_peacemaking]
+ID=i_memory
+NAME=new peacemaking
+TYPE=T_EQ_SCRIPT
+
+on=@timer
+cont.events -e_peace_event
+cont.tag0.nomovetill
+remove
 return 1
 
 [eof]
