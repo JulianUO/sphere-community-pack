@@ -50,11 +50,9 @@ SUBSECTION=Miscellaneous
 DESCRIPTION=Filthy Rich Gold Pile
 ITEM=i_gold,{100 180}
 
-
-
 [TEMPLATE tm_BAG_OF_MAGIC]
 CATEGORY=Item Templates
-SUBSECTION=Miscellaneous
+SUBSECTION=Magical
 DESCRIPTION=Bag of Magic
 CONTAINER=i_bag
 ITEM=i_reag_black_pearl,50
@@ -69,12 +67,61 @@ ITEM=i_spellbook
 MORE1=0ffffffff
 MORE2=0ffffffff
 
+// necromancy
+[TEMPLATE tm_necromancy]
+CATEGORY=Item Templates
+SUBSECTION=Scrolls
+DESCRIPTION=Bag of Necromancy
+CONTAINER=i_bag
+ITEM=i_spellbook_necromancy
+ITEM=i_scroll_animate_dead
+ITEM=i_scroll_blood_oath
+ITEM=i_scroll_corpse_skin
+ITEM=i_scroll_curse_weapon
+ITEM=i_scroll_evil_omen
+ITEM=i_scroll_horrific_beast
+ITEM=i_scroll_lich_transformation
+ITEM=i_scroll_mind_rot
+ITEM=i_scroll_pain_spike
+ITEM=i_scroll_poison_strike
+ITEM=i_scroll_strangle
+ITEM=i_scroll_summon_familiar
+ITEM=i_scroll_vampiric_embrace
+ITEM=i_scroll_vengeful_spirit
+ITEM=i_scroll_wither
+ITEM=i_scroll_wraith_form
+ITEM=i_scroll_exorcism
+
+// mystic template
+[TEMPLATE tm_mystic]
+CATEGORY=Item Templates
+SUBSECTION=Magical
+DESCRIPTION=Bag of Mysticism
+CONTAINER=i_bag
+ITEM=i_spellbook_mystic
+ITEM=i_scroll_nether_bolt
+ITEM=i_scroll_healing_stone
+ITEM=i_scroll_purge_magic
+ITEM=i_scroll_enchant_weapon
+ITEM=i_scroll_sleep
+ITEM=i_scroll_eagle_strike
+ITEM=i_scroll_animated_weapon
+ITEM=i_scroll_stone_form
+ITEM=i_scroll_spell_trigger
+ITEM=i_scroll_mass_sleep
+ITEM=i_scroll_cleansing_winds
+ITEM=i_scroll_bombard
+ITEM=i_scroll_spell_plague
+ITEM=i_scroll_hail_storm
+ITEM=i_scroll_nether_cyclone
+ITEM=i_scroll_rising_colossus
+
 //********************************
 
 [TEMPLATE random_necro_scroll]
 CATEGORY=Item Templates
-SUBSECTION=Scrolls
-DESCRIPTION=Necromancer Scrolls
+SUBSECTION=Random Scrolls
+DESCRIPTION=Necromancy
 ITEM={ i_scroll_animate_dead 1 i_scroll_blood_oath 1 i_scroll_corpse_skin 1 i_scroll_curse_weapon 1 i_scroll_evil_omen 1 i_scroll_horrific_beast 1 i_scroll_lich_transformation 1 i_scroll_mind_rot 1 i_scroll_pain_spike 1 i_scroll_poison_strike 1 i_scroll_strangle 1 i_scroll_summon_familiar 1 i_scroll_vampiric_embrace 1 i_scroll_vengeful_spirit 1 i_scroll_wither 1 i_scroll_wraith_form 1 }
 
 [TEMPLATE RANDOM_WAND_ONE]

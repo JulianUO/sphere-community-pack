@@ -1,3 +1,22 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// jeem - All the new taming skill script
+// ShiryuX - Adapted to the script pack.
+// ?? - Fixed some issues
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// OSI-Like Animal Taming
+//
+
 [function f_start_taming]
 ref7 = <args>
 if <ref7.uid> == <uid>
@@ -103,47 +122,103 @@ endif
 return 1
 
 
-[FUNCTION RemoveAllMemories]
-WHILE (<FINDID.i_memory>)
-    FINDID(i_memory).REMOVE
-ENDWHILE
+[function removeallmemories]
+while (<findid.i_memory>)
+    findid(i_memory).remove
+endwhile
 
-[FUNCTION MakeMyPet]
-REF1=<ARGS>
-SERV.NEWITEM i_memory
-NEW.ATTR=04
-NEW.MORE1=04
-NEW.MORE2=<SERV.TIME>
-NEW.MOREP=<P>
-NEW.COLOR=memory_ipet
-NEW.TIMER=-1
-NEW.LINK=<REF1>
-NEW.CONT=<UID>
-FLAGS |= statf_pet
-TAG.BEINGTAMED=
-IF !(<TAG0.Owner.<REF1>>)
-    REF1.SYSMESSAGE @,,2 502799 // It seems to accept you as master.
-    LOCAL.GainDifficulty = <EVAL (<REF1.TamingSuccessChance <UID>> / 10)>
-    IF !(<LOCAL.GainDifficulty>)
-        LOCAL.GainDifficulty ++
-    ENDIF
-    REF1.SKILLGAIN Taming <dLOCAL.GainDifficulty>
-ELSE
-    REF1.SYSMESSAGE @,,2 502797 // That wasn't even challenging.
-ENDIF
-IF !(<TAG0.Owner.<REF1>>)
-    Owners.Count=1
-    TAG.Owner.<REF1> = 1
-ENDIF
-REF1.CURFOLLOWER += <FollowerSlot>
-REF1.EVENTS -e_taming
-REF1.TAG.TOTAME=
-UPDATE
+[function makemypet]
+ref1=<args>
+serv.newitem i_memory
+new.attr=04
+new.more1=04
+new.more2=<serv.time>
+new.morep=<p>
+new.color=memory_ipet
+new.timer=-1
+new.link=<ref1>
+new.cont=<uid>
+flags |= statf_pet
+tag.beingtamed=
+if !(<tag0.owner.<ref1>>)
+    ref1.sysmessage @,,2 502799 // It seems to accept you as master.
+    local.gaindifficulty = <eval (<ref1.tamingsuccesschance <uid>> / 10)>
+    if !(<local.gaindifficulty>)
+        local.gaindifficulty ++
+    endif
+    ref1.skillgain taming <dlocal.gaindifficulty>
+else
+    ref1.sysmessage @,,2 502797 // That wasn't even challenging.
+endif
+if !(<tag0.owner.<ref1>>)
+    owners_count=1
+    tag.owner.<ref1> = 1
+endif
+ref1.curfollower += <followerslot>
+ref1.events -e_taming
+ref1.tag.totame=
+update
 
-[FUNCTION TamingFail]
-REF1=<ARGS>
-REF1.TAG.BEINGTAMED=
-TAG.TOTAME=
+[function tamingfail]
+ref1=<args>
+ref1.tag.beingtamed=
+tag.totame=
+
+[function allow_female_tamer]
+if (<baseid> == c_kirin)
+    return 0
+else
+    return 1
+endif
+
+[function allow_male_tamer]
+if (<baseid> == c_m_unicorn)
+    return 0
+else
+    return 1
+endif
+
+[function followerslot]
+if !(<tag0.control.slots>)
+    return 1
+else
+    return <tag.control.slots>
+endif
+
+[function owners_count]
+if (<argn>)
+    tag0.owner_count += 1
+else
+    return <tag0.owner_count>
+endif
+
+[function maxowners]
+return 5
+
+[function must_be_subdued]
+if (<baseid> == c_rune_beetle) || (<baseid> == c_giant_beetle) || (<baseid> == c_m_ice_worm)
+    return 1
+else
+    return 0
+endif
+
+[function can_anger_on_tame]
+if (<baseid> == c_m_hiryu) || (<baseid> == c_m_nightmare) || (<baseid> == c_armored_swamp_dragon) || (<baseid> == c_swamp_dragon) || (<body> == c_dragon_red) || (<body> == c_dragon_green) || (<body> == c_dragon_small_black) || (<body> == c_dragon_small_red)
+    return 1
+else
+    return 0
+endif
+
+[function taming_min_skill]
+return <eval (<taming> + (<owners_count> * 60))>
+
+[function tamingsuccesschance]
+ref1=<args>
+doswitch <ref1.tag0.owner.<uid>>
+    local.successchance=<eval (((<taming> - <ref1.taming_min_skill>) + 1) * 2)>
+    local.successchance=1000
+enddo
+return <dlocal.successchance>
 
 [EVENTS e_taming]
 ON=@UserWarMode
@@ -160,64 +235,5 @@ EVENTS -e_taming
 
 ON=@SkillSelect
 SYSMESSAGE You must wait to perform another action
-RETURN 1
 
-On=@SkillStart
-TamingFail <TAG.TOTAME>
-EVENTS -e_taming
-
-[FUNCTION allow_female_tamer]
-IF (<BASEID> == c_kirin)
-    RETURN 0
-ELSE
-    RETURN 1
-ENDIF
-
-[FUNCTION allow_male_tamer]
-IF (<BASEID> == c_m_unicorn)
-    RETURN 0
-ELSE
-    RETURN 1
-ENDIF
-
-[FUNCTION FollowerSlot]
-IF !(<tag0.control.slots>)
-    RETURN 1
-ELSE
-    RETURN <tag.control.slots>
-ENDIF
-
-[FUNCTION owners_count]
-IF (<ARGN>)
-    TAG0.OWNER_COUNT += 1
-ELSE
-    RETURN <TAG0.OWNER_COUNT>
-ENDIF
-
-[FUNCTION MaxOwners]
-RETURN 5
-
-[FUNCTION must_be_subdued]
-IF (<BASEID> == c_rune_beetle) || (<BASEID> == c_giant_beetle) || (<BASEID> == c_m_ice_worm)
-    RETURN 1
-ELSE
-    RETURN 0
-ENDIF
-
-[FUNCTION can_anger_on_tame]
-IF (<BASEID> == c_m_hiryu) || (<BASEID> == c_m_nightmare) || (<BASEID> == c_armored_swamp_dragon) || (<BASEID> == c_swamp_dragon) || (<BODY> == c_dragon_red) || (<BODY> == c_dragon_green) || (<BODY> == c_dragon_small_black) || (<BODY> == c_dragon_small_red)
-    RETURN 1
-ELSE
-    RETURN 0
-ENDIF
-
-[FUNCTION taming_min_skill]
-RETURN <EVAL (<TAMING> + (<Owners.Count> * 60))>
-
-[FUNCTION TamingSuccessChance]
-REF1=<ARGS>
-DOSWITCH <REF1.TAG0.Owner.<UID>>
-    LOCAL.SuccessChance=<EVAL (((<TAMING> - <REF1.TamingMinSkill>) + 1) * 2)>
-    LOCAL.SuccessChance=1000
-ENDDO
-RETURN <dLOCAL.SuccessChance>
+[eof]

@@ -46,7 +46,10 @@ return 1
 // Shrinked animals
 [typedef t_figurine]
 on=@dclick
-local.slots = <qval <serv.chardef.<act.tdata3>.tag0.control.slots> ? <serv.chardef.<act.tdata3>.tag0.control.slots> : 1>
+if <def.scp.OSIFollowers> == 0
+return 0
+endif
+local.slots = <qval <serv.chardef.<tdata3>.tag0.control.slots> ? <serv.chardef.<tdata3>.tag0.control.slots> : 1>
 if <eval <src.curfollower>+<local.slots>> > <src.maxfollower>
 src.sysmessage You have too many followers.
 return 1
