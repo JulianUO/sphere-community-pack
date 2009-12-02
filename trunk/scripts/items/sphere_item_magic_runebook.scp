@@ -1,0 +1,537 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// Pyromapes2k - Runebook script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Just a runebook!
+//
+
+[ITEMDEF 022C5]
+DEFNAME=i_runebook
+TYPE=t_rune
+NAME=Runebook
+RESOURCES=80 i_scroll_blank, 1 I_CLOTH, 10 I_scroll_recall
+SKILLMAKE=INSCRIPTION 75.0, MAGERY 70.0
+
+ON=@CREATE
+TAG.Charges.Max=8
+TAG.Charges=8
+COLOR=0972
+ATTR=04
+
+ON=@CLICK
+IF !<ISEMPTY <Tag.NAME>>
+MESSAGE @0482,,1 <Tag0.NAME>
+ENDIF
+
+ON=@clienttooltip
+IF !<ISEMPTY <Tag.NAME>>
+src.addcliloc 1042971,<Tag0.NAME>
+ENDIF
+
+ON=@DCLICK
+TAG.PAGE=
+Src.Sound 85
+DIALOGCLOSE d_runebook_dialog
+DIALOG d_runebook_dialog
+RETURN 1
+
+ON=@DROPON_SELF
+IF <ARGO.BASEID>==i_scroll_recall
+DIALOGCLOSE d_runebook_dialog
+LOCAL.NEEDED=<EVAL <TAG0.Charges.Max>+-<TAG0.Charges>>
+IF <ARGO.AMOUNT>><LOCAL.NEEDED>
+ARGO.AMOUNT = <EVAL <ARGO.AMOUNT>+-<LOCAL.NEEDED>>
+SRC.SYSMESSAGE @88,,1 You add <EVAL <LOCAL.NEEDED>> charges to the runebook
+TAG.Charges=<TAG0.Charges.Max>
+RETURN 1
+ELSE
+SRC.SYSMESSAGE @88,,1 You add <EVAL <ARGO.AMOUNT>> charges to the runebook
+TAG.Charges=<EVAL <TAG0.Charges>+<ARGO.AMOUNT>>
+ARGO.REMOVE
+RETURN 1
+ENDIF
+ELIF <ARGO.BASEID>==i_rune_marker
+DIALOGCLOSE d_runebook_dialog
+IF <ARGO.MOREP>
+ADD_RUNE <ARGO.UID>
+RETURN 1
+ELSE
+SRC.SYSMESSAGE @34,,1 Rune must be marked
+RETURN 1
+ENDIF
+ENDIF
+
+ON=@SPELLEFFECT
+MORE1=100
+IF ((<ARGN>==32) || (<ARGN>==52))
+IF !<TAG0.Runebook.Location.<EVAL <TAG0.Runebook.Default>>>
+SRC.SYSMESSAGE @34,,1 This book has no default location
+RETURN 1
+ELSE
+MOREP=<TAG0.Runebook.Location.<EVAL <TAG0.Runebook.Default>>>
+ENDIF
+ENDIF
+IF <ARGN>==45
+SRC.SYSMESSAGE @34,,1 You cannot mark this
+RETURN 1
+ENDIF
+
+[FUNCTION ADD_RUNE]
+OBJ=<ARGV[0]>
+LOCAL.Free_Space=0
+FOR 16 1
+IF <ISEMPTY <TAG.Runebook.<EVAL <LOCAL._FOR>>>>
+LOCAL.Free_Space=<EVAL <LOCAL._FOR>>
+ENDIF
+ENDFOR
+IF <LOCAL.Free_Space>
+TRY TAG.Runebook.<EVAL <LOCAL.Free_Space>> = <OBJ.NAME>
+TRY TAG.Runebook.Location.<EVAL <LOCAL.Free_Space>> = <OBJ.MOREP>
+SRC.SYSMESSAGE @88,,1 <OBJ.NAME> has been added to the runebook
+SOUND 87
+OBJ.REMOVE
+ELSE
+SRC.SYSMESSAGE @34,,1 No free space in the book. Remove a rune first
+ENDIF
+
+[FUNCTION REMOVE_RUNE]
+SERV.NEWITEM=i_rune_marker
+NEW.MORE1=100
+NEW.MOREP=<TAG.Runebook.Location.<EVAL <ARGV[0]>>>
+NEW.BOUNCE
+NEW.NAME=<TAG.Runebook.<EVAL <ARGV[0]>>>
+TRY TAG.Runebook.<EVAL <ARGV[0]>>=
+TRY TAG.Runebook.Location.<EVAL <ARGV[0]>>=
+IF <ARGV[0]><16
+FOR <EVAL <ARGV[0]>+1> 16
+IF !<ISEMPTY <TAG.Runebook.<EVAL <LOCAL._FOR>>>>
+TRY TAG.Runebook.<EVAL <LOCAL._FOR>+-1>=<TAG.Runebook.<EVAL <LOCAL._FOR>>>
+TRY TAG.Runebook.Location.<EVAL <LOCAL._FOR>+-1>=<TAG.Runebook.Location.<EVAL <LOCAL._FOR>>>
+TRY TAG.Runebook.<EVAL <LOCAL._FOR>>=
+TRY TAG.Runebook.Location.<EVAL <LOCAL._FOR>>=
+ENDIF
+ENDFOR
+ENDIF
+
+[DIALOG d_runebook_dialog] 
+50,50
+PAGE 0 
+gumppic 0 0 2200
+
+gumppic 29 46 57
+gumppic 49 46 58
+gumppic 65 46 58
+gumppic 81 46 58
+gumppic 97 46 58
+gumppic 113 46 58
+gumppic 129 46 59
+
+gumppic 189 46 57
+gumppic 209 46 58
+gumppic 225 46 58
+gumppic 241 46 58
+gumppic 257 46 58
+gumppic 273 46 58
+gumppic 289 46 59
+
+button 30 177 2225 2225 1 0 501
+button 65 177 2226 2226 1 0 503
+button 100 177 2227 2227 1 0 505
+button 135 177 2228 2228 1 0 507
+
+button 200 177 2229 2229 1 0 509
+button 235 177 2230 2230 1 0 511
+button 270 177 2231 2231 1 0 513
+button 305 177 2232 2232 1 0 515
+
+DOSWITCH <EVAL <EVAL <TAG0.PAGE>+1>/2>
+button 296 5 2236 2236 1 0 501
+BEGIN
+button 23 5 2235 2235 1 0 500
+button 296 5 2236 2236 1 0 503
+END
+BEGIN
+button 23 5 2235 2235 1 0 501
+button 296 5 2236 2236 1 0 505
+END
+BEGIN
+button 23 5 2235 2235 1 0 503
+button 296 5 2236 2236 1 0 507
+END
+BEGIN
+button 23 5 2235 2235 1 0 505
+button 296 5 2236 2236 1 0 509
+END
+BEGIN
+button 23 5 2235 2235 1 0 507
+button 296 5 2236 2236 1 0 511
+END
+BEGIN
+button 23 5 2235 2235 1 0 509
+button 296 5 2236 2236 1 0 513
+END
+BEGIN
+button 23 5 2235 2235 1 0 511
+button 296 5 2236 2236 1 0 515
+END
+button 23 5 2235 2235 1 0 513
+ENDDO
+
+dtext 40 36 0 Charges:    <EVAL <TAG0.Charges>>
+dtext 195 36 0 Max Charges:   <EVAL <TAG0.Charges.Max>>
+
+IF !<TAG0.PAGE>
+
+button 27 5 2472 2473 1 0 1001
+dtext 58 13 0 Rename book
+
+LOCAL.Y=60
+
+FOR 1 8
+IF !<ISEMPTY <TAG.Runebook.<EVAL <LOCAL._FOR>>>>
+button 30 <LOCAL.Y> 2103 2104 1 0 <LOCAL._FOR>
+dcroppedtext 45 <EVAL <LOCAL.Y>+-5> 120 18 0 <TAG.Runebook.<EVAL <LOCAL._FOR>>>
+ELSE
+button 30 <LOCAL.Y> 2103 2104 1 0 1000
+dcroppedtext 45 <EVAL <LOCAL.Y>+-5> 120 18 0 Empty
+ENDIF
+LOCAL.Y += 14
+ENDFOR
+
+LOCAL.Y=60
+
+FOR 9 16
+IF !<ISEMPTY <TAG.Runebook.<EVAL <LOCAL._FOR>>>>
+button 190 <LOCAL.Y> 2103 2104 1 0 <LOCAL._FOR>
+dcroppedtext 205 <EVAL <LOCAL.Y>+-5> 120 18 0 <TAG.Runebook.<EVAL <LOCAL._FOR>>>
+ELSE
+button 190 <LOCAL.Y> 2103 2104 1 0 1000
+dcroppedtext 205 <EVAL <LOCAL.Y>+-5> 120 18 0 Empty
+ENDIF
+LOCAL.Y += 14
+ENDFOR
+
+ELSE
+
+/////////////////Section One///////////////////
+
+IF <ISEMPTY <TAG.Runebook.<EVAL <TAG0.PAGE>>>>
+button 30 60 2103 2104 1 0 1000
+dcroppedtext 45 55 120 18 0 Empty
+ELSE
+button 30 60 2103 2104 1 0 <TAG0.PAGE>
+dcroppedtext 45 55 120 18 0 <TAG.Runebook.<EVAL <TAG0.PAGE>>>
+button 35 110 2437 2438 1 0 <EVAL <TAG0.PAGE>+100>
+dtext 49 107 0 Drop rune
+button 35 130 2271 2271 1 0 <EVAL <TAG0.PAGE>+200>
+button 105 130 2291 2291 1 0 <EVAL <TAG0.PAGE>+300>
+IF <TAG0.Runebook.Default>!=<EVAL <TAG0.PAGE>>
+button 60 10 2361 2361 1 0 <EVAL <TAG0.PAGE>+600>
+dtext 74 4 0 Set default
+ENDIF
+dcroppedtext 35 74 80 20 0 <STRARG <SEXTANTP <TAG.Runebook.Location.<EVAL <TAG0.PAGE>>>>>
+dcroppedtext 35 89 80 20 0 <STREAT <SEXTANTP <TAG.Runebook.Location.<EVAL <TAG0.PAGE>>>>>
+ENDIF
+
+/////////////////Section Two///////////////////
+IF <ISEMPTY <TAG.Runebook.<EVAL <TAG0.PAGE>+1>>>
+button 190 60 2103 2104 1 0 1000
+dcroppedtext 205 55 120 18 0 Empty
+ELSE
+button 190 60 2103 2104 1 0 <EVAL <TAG0.PAGE>+1>
+dcroppedtext 205 55 120 18 0 <TAG.Runebook.<EVAL <TAG0.PAGE>+1>>
+button 195 107 2437 2438 1 0 <EVAL <TAG0.PAGE>+101>
+dtext 209 107 0 Drop rune
+button 195 130 2271 2271 1 0 <EVAL <TAG0.PAGE>+201>
+button 265 130 2291 2291 1 0 <EVAL <TAG0.PAGE>+301>
+IF <TAG0.Runebook.Default>!=<EVAL <TAG0.PAGE>+1>
+button 200 10 2361 2361 1 0 <EVAL <TAG0.PAGE>+601>
+dtext 214 4 0 Set default
+ENDIF
+dcroppedtext 195 74 80 20 0 <STRARG <SEXTANTP <TAG.Runebook.Location.<EVAL <TAG0.PAGE>+1>>>>
+dcroppedtext 195 89 80 20 0 <STREAT <SEXTANTP <TAG.Runebook.Location.<EVAL <TAG0.PAGE>+1>>>>
+ENDIF
+
+ENDIF
+
+
+[DIALOG d_runebook_dialog BUTTON] 
+
+ON=0
+Src.Sound 85
+
+ON=601 616
+TAG.Runebook.Default=<EVAL <ARGN>+-600>
+SRC.Sysmessage @1153,,1 New default location set.
+TAG.PAGE=
+DIALOGCLOSE d_runebook_dialog
+DIALOG d_runebook_dialog
+
+ON=500
+TAG.PAGE=
+Src.Sound 85
+DIALOGCLOSE d_runebook_dialog
+DIALOG d_runebook_dialog
+
+ON=501 515
+TAG.PAGE=<EVAL <ARGN>+-500>
+Src.Sound 85
+DIALOGCLOSE d_runebook_dialog
+DIALOG d_runebook_dialog
+
+ON=1 16
+IF <SRC.FLAGS>==<SRC.FLAGS>|02
+SRC.Message @34,,1 You cannot use this while dead
+ENDIF
+IF <SRC.FLAGS>==<SRC.FLAGS>|04
+SRC.Message @34,,1 You cannot use this while paralyzed
+ENDIF
+IF <TAG0.Charges>
+SRC.Ctag.Runebook=<Uid>
+SRC.Runebook_Recall <TAG0.Runebook.Location.<ARGN>>
+ELSE
+SRC.SYSMESSAGE @34,,1 Your book needs more charges
+ENDIF
+
+ON=101 116
+REMOVE_RUNE <EVAL <ARGN>+-100>
+
+ON=201 216
+LOCAL.Rune=<EVAL <ARGN>+-200>
+IF <SRC.FLAGS>==<SRC.FLAGS>|02
+SRC.Message @34,,1 You cannot use this while dead
+ENDIF
+IF <SRC.FLAGS>==<SRC.FLAGS>|04
+SRC.Message @34,,1 You cannot use this while paralyzed
+ENDIF
+SRC.Runebook_Recall_Reags <TAG0.Runebook.Location.<dLOCAL.Rune>>
+
+ON=301 316
+LOCAL.Rune=<EVAL <ARGN>+-300>
+IF <SRC.FLAGS>==<SRC.FLAGS>|02
+SRC.Message @34,,1 You cannot use this while dead
+ENDIF
+IF <SRC.FLAGS>==<SRC.FLAGS>|04
+SRC.Message @34,,1 You cannot use this while paralyzed
+ENDIF
+SRC.Runebook_Gate_Reags <TAG0.Runebook.Location.<dLOCAL.Rune>>
+
+ON=1001
+SRC.SYSMESSAGE Type in a new name for the runebook
+SRC.CTAG.Runebook=<UID>
+SRC.PROMPTCONSOLE Rename_Runebook
+
+[function Runebook_Recall]
+IF ((<f_runebook_magery_check 32>) || (<ISGM>))
+IF ((<MANA>>=<Serv.Spell.32.Manause>) || (<ISGM>))
+Consume i_recallgate_memory
+EVENTS +e_runebook_charge_cast
+Serv.Newitem=i_recallgate_memory
+Ref1=<New.Uid>
+Ref1.MORE2=<Ctag0.Runebook>
+Ctag.Runebook=
+Ref1.Timer=<Eval (<Serv.Spell.32.Cast_Time>/10)+15>
+Ref1.Morep=<Args>
+Equip <Ref1.Uid>
+ACT = <Ref1.Uid>
+ACTPRV = <Ref1.UID>
+ACTARG1 = 32
+ACTION = 25
+ELSE
+sysmessage You lack sufficient mana for this spell
+ENDIF
+ELSE
+sysmessage This is beyond your ability.
+ENDIF
+RETURN 1
+
+[EVENTS e_runebook_charge_cast]
+ON=@SPELLSELECT
+Return 6
+
+ON=@Spellcast
+ARGN2=1
+Events -e_runebook_charge_cast
+
+[Function f_runebook_magery_check]
+IF <<Serv.Skill.<STREAT <Serv.Spell.<Argv[0]>.Skillreq>>.Key>>>=<STRARG <Serv.Spell.<Argv[0]>.Skillreq>>
+Return 1
+Else
+Return 0
+Endif
+
+[function Runebook_Recall_Reags]
+IF ((<f_runebook_magery_check 32>) || (<ISGM>))
+IF ((<RESTEST <SERV.SPELL.32.RESOURCES>>) || (!<SERV.ReagentsRequired>) || (<ISGM>))
+IF ((<MANA>>=<Serv.Spell.32.Manause>) || (<ISGM>))
+IF ((<CANCAST 32 0>) || (<DEF0.scp.Runebook_NoSpellBook>) || (<ISGM>))
+Consume i_recallgate_memory
+Serv.Newitem=i_recallgate_memory
+Ref1=<New.Uid>
+Ref1.Timer=<Eval (<Serv.Spell.32.Cast_Time>/10)+15>
+Ref1.Morep=<Args>
+Equip <Ref1.Uid>
+ACTPRV = <UID>
+IF <DEF0.scp.Runebook_NoSpellBook>
+IF <Serv.ReagentsRequired>
+IF <Serv.ReagentLossFail>
+Consume <SERV.SPELL.32.RESOURCES>
+ENDIF
+ENDIF
+Ref1.Color=32
+Consume i_recallgate_spellbook
+Serv.Newitem=i_recallgate_spellbook
+Ref2=<New.Uid>
+Ref2.Timer=<Eval (<Serv.Spell.32.Cast_Time>/10)+15>
+Equip <Ref2.Uid>
+ACTPRV = <Ref2.UID>
+ENDIF
+ACT = <Ref1.Uid>
+ACTARG1 = 32
+ACTION = 25
+ELSE
+sysmessage You don't have that spell.
+ENDIF
+ELSE
+sysmessage You lack sufficient mana for this spell
+ENDIF
+ELSE
+sysmessage You lack the reagents for this spell.
+ENDIF
+ELSE
+sysmessage This is beyond your ability.
+ENDIF
+RETURN 1
+
+[function Runebook_Gate_Reags]
+IF ((<f_runebook_magery_check 52>) || (<ISGM>))
+IF ((<RESTEST <SERV.SPELL.52.RESOURCES>>) || (!<SERV.ReagentsRequired>) || (<ISGM>))
+IF ((<MANA>>=<Serv.Spell.52.Manause>) || (<ISGM>))
+IF ((<CANCAST 52 0>) || (<DEF0.scp.Runebook_NoSpellBook>) || (<ISGM>))
+Consume i_recallgate_memory
+Serv.Newitem=i_recallgate_memory
+Ref1=<New.Uid>
+Ref1.Timer=<Eval (<Serv.Spell.52.Cast_Time>/10)+15>
+Ref1.Morep=<Args>
+Equip <Ref1.Uid>
+ACTPRV = <Uid>
+IF <DEF0.scp.Runebook_NoSpellBook>
+IF <Serv.ReagentsRequired>
+IF <Serv.ReagentLossFail>
+Consume <SERV.SPELL.52.RESOURCES>
+ENDIF
+ENDIF
+Ref1.Color=52
+Consume i_recallgate_spellbook
+Serv.Newitem=i_recallgate_spellbook
+Ref2=<New.Uid>
+Ref2.Timer=<Eval (<Serv.Spell.32.Cast_Time>/10)+15>
+Equip <Ref2.Uid>
+ACTPRV = <Ref2.UID>
+ENDIF
+ACT = <Ref1.Uid>
+ACTARG1 = 52
+ACTION = 25
+ELSE
+sysmessage You don't have that spell.
+ENDIF
+ELSE
+sysmessage You lack sufficient mana for this spell
+ENDIF
+ELSE
+sysmessage You lack the reagents for this spell.
+ENDIF
+ELSE
+sysmessage This is beyond your ability.
+ENDIF
+RETURN 1
+
+[function Rename_Runebook]
+IF !<RUNEBOOK_INVALID_ALFA_NUM <ARGS>>
+REF1=<SRC.CTAG0.Runebook>
+SRC.CTAG.Runebook=
+REF1.TAG.NAME=<ARGS>
+REF1.ResendTooltip
+SRC.Sysmessage @88,,1 Book Renamed to <ARGS>
+ELSE
+SRC.Sysmessage @34,,1 Invalid name. Please use A-Z, 0-9 only. Thank you.
+ENDIF
+
+[Itemdef i_recallgate_spellbook]
+ID=i_memory
+Type=t_eq_script
+Name=Recall/Gate Spellbook
+
+ON=@Create
+Attr=024
+
+ON=@Equip
+Type=t_spellbook
+
+ON=@Timer
+Remove
+Return 1
+
+[Itemdef i_recallgate_memory]
+ID=i_memory
+Type=t_eq_script
+Name=Recall/Gate Memory
+
+ON=@Create
+Attr=020
+More=100
+
+ON=@Equip
+Type=t_rune
+
+ON=@Spelleffect
+IF <MORE2>
+Ref1=<MORE2>
+Ref1.TAG.Charges=<Eval <Ref1.TAG0.Charges>+-1>
+ELIF <COLOR>
+IF <Serv.ReagentsRequired>
+IF !<Serv.ReagentLossFail>
+Src.Consume <SERV.SPELL.<COLOR>.RESOURCES>
+ENDIF
+ENDIF
+ENDIF
+Remove
+Return 1
+
+ON=@Timer
+Remove
+Return 1
+
+//Function Contributed by Admin Ben
+[FUNCTION RUNEBOOK_INVALID_ALFA_NUM]
+IF (STRMATCH(*[^a-z0-9_ ]*,<ARGS>))
+RETURN 1
+ELSE
+RETURN 0
+ENDIF
+
+[function Rename_Rune]
+OBJ=<SRC.CTAG0.Rune>
+SRC.CTAG.Rune=
+IF !<ISNUM <ARGS>>
+IF !<ISEMPTY <ARGS>>
+OBJ.NAME=<ARGS>
+SRC.Sysmessage @88,,1 Rune renamed to <ARGS>
+ELSE
+SRC.Sysmessage @34,,1 You must enter a name to rename the rune
+ENDIF
+ELSE
+SRC.Sysmessage @34,,1 Rune name cannot be a number
+ENDIF
+
+[eof]

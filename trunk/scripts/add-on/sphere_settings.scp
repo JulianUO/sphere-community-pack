@@ -171,6 +171,18 @@ scp.MagicProperties_SpellDamageIncrease=0
 scp.MagicProperties_StaminaIncrease=0
 scp.MagicProperties_StrengthBonus=0
 
+// Setting to 1 allows players to cast from the runebook without a spellbook
+// <boolean> (0 = No / 1 = Yes)
+scp.Runebook_NoSpellBook=1
+
+// If this is 1, the runes will never fade, 0 will keep them old-style
+// NOTE: in EA the runes never fade.
+scp.Rune_NeverFade=1
+
+// Set to 1 if you want to remove the "Rune to:" prefix
+// <boolean> (0 = No / 1 = Yes)
+scp.Rune_RenameNoPrefix=1
+
 ///////////////////////////////////////////////////////////////
 //////// OSI Champion System
 ///////////////////////////////////////////////////////////////
