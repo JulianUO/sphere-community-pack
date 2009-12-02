@@ -333,6 +333,19 @@ SUBSECTION=Magical Items
 DESCRIPTION=Recall Rune
 DUPELIST=01f15,01f16,01f17
 
+on=@spelleffect
+if <def.scp.Rune_NeverFade> == 1
+more1=100
+endif
+
+on=@dclick
+if <def.scp.Rune_RenameNoPrefix> == 1
+src.ctag.rune = <uid>
+src.sysmessage <def.scp.runes_entername>
+src.promptconsole Rename_Rune
+return 1
+endif
+
 [ITEMDEF 01f15]
 //recall rune
 DUPEITEM=01f14

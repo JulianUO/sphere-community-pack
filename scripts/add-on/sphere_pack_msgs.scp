@@ -120,6 +120,8 @@ scp.poisoning_cleaneditem	"@,,2 1010496"
 scp.poisoning_mustbecleaned	"@,,2 1005536"
 scp.poisoning_usethison		"@,,2 1010086"
 
+scp.runes_entername		"@88,,1 Type in a name for the rune"
+
 scp.spell.animatedead_target	"@,,2 1061083"	// Animate what corpse?
 scp.spell.curseweapon_noweap	"@,,2 501078"	// You must be holding a weapon.
 
