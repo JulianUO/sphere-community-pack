@@ -121,3 +121,22 @@ Note: Mystic weapons were introduced during Ophidian Wars.
 
 19-11-2009, ShiryuX
 - Added: installation instructions.
+
+22-11-2009, ShiryuX
+- Moved: some functions of necromancy to its extra file.
+- Moved: random necro spell template to template file.
+- Updated: curse weapon to curse the weapon in the hand.
+
+01-12-2009, ShiryuX
+- Fixed: misspell with skill settings.
+
+02-12-2009, ShiryuX
+- Added: full necromancy and mysticism scrolls + book template.
+- Updated: templates names, descriptions, etc.
+- Updated: just a peacemaking message.
+- Updated: defs with some sounds of SA and others.
+- Fixed #4: Misspell on sphere_crafting_functions.scp (skillgan -> skillgain)
+- Fixed #3: Some function errors with animal taming script (cem.onal92, real nick?)
+- Fixed: forgot to add a check for OSIFollowers setting in the shrinked pets.
+- Fixed: inexistant runes in spell sections.
+- Fixed: several bugs on peacemaking skill.
