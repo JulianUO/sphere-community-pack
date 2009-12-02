@@ -32,7 +32,7 @@ xmfhtmlgumpcolor 10 40 165 20 1044010 0 0 <ddef.dcolor_white>
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "_">
 local.sidebar = <eval 1 + (10 * <ctag0.craft.page.sidebar>)>
 local.wid = 65
-for z 1 10
+for z <local.sidebar> <eval <local.sidebar>+9>
 	if !(<isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>)
 	button 15 <dlocal.wid> 4005 4007 1 0 <local.sidebar>
 		if (<isnum <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>)
@@ -44,7 +44,7 @@ for z 1 10
 local.wid += 20
 local.sidebar ++
 endfor
-if !(<isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>)
+if !(<isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.sidebar>_name>>)
 button 135 267 4005 4007 1 0 5000
 endif
 if <ctag0.craft.page.sidebar> > 0
