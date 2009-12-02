@@ -157,7 +157,7 @@ local.skill = <serv.skill.<streat <serv.spell.<argn1>.skillreq>>.key>
 actdiff = <eval (((<<local.skill>> - <argn2>) * 2.5) + 50.0)>
 endif
 if !<npc>
-	if <argn1> > 100
+	if <isempty <serv.spell.<argn1>.runes>>
 		if <account.plevel> > 2
 			if <serv.wopstaff>
 				if <isnum <def.scp.spell_<argn1>_wop>>
