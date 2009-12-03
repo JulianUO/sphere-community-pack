@@ -1,0 +1,149 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Logs, resources, etc. All for lumberjacking
+
+[DEFNAME COLOR_LOG]
+color_o_log		0
+color_o_oak		07da
+color_o_ash		04a7
+color_o_yew		04a8
+color_o_heartwood	04a9
+color_o_bloodwood	04aa
+color_o_frostwood	047f
+
+///////////////////////////////////////////////////////////////
+//////// OSI LOGS
+///////////////////////////////////////////////////////////////
+// This are the logs used in OSI.
+[ITEMDEF 01bdd]
+DEFNAME=i_log
+NAME=log%s
+VALUE=1
+TYPE=T_LOG
+WEIGHT=2
+CATEGORY=Items by Professions
+SUBSECTION=Archers/Bowyers
+DESCRIPTION=Log (SE)
+DUPELIST=01bde,01bdf,01be0,01be1,01be2
+
+[ITEMDEF i_log_oak]
+NAME=oak log%s
+VALUE=5
+TYPE=T_LOG
+WEIGHT=2
+
+ON=@Create
+COLOR=color_o_oak
+
+[ITEMDEF i_log_ash]
+NAME=ash log%s
+VALUE=5
+TYPE=T_LOG
+WEIGHT=2
+
+ON=@Create
+COLOR=color_o_ash
+
+[ITEMDEF i_log_yew]
+NAME=yew log%s
+VALUE=5
+TYPE=T_LOG
+WEIGHT=2
+
+ON=@Create
+COLOR=color_o_yew
+
+[ITEMDEF i_log_heartwood]
+NAME=heartwood log%s
+VALUE=5
+TYPE=T_LOG
+WEIGHT=2
+
+ON=@Create
+COLOR=color_o_heartwood 
+
+[ITEMDEF i_log_bloodwood]
+NAME=bloodwood log%s
+VALUE=5
+TYPE=T_LOG
+WEIGHT=2
+
+ON=@Create
+COLOR=color_o_bloodwood 
+
+[ITEMDEF i_log_frostwood]
+NAME=frostwood log%s
+VALUE=5
+TYPE=T_LOG
+WEIGHT=2
+
+ON=@Create
+COLOR=color_o_frostwood 
+
+
+///////////////////////////////////////////////////////////////
+//////// OSI DISTRIBUTION
+///////////////////////////////////////////////////////////////
+// This are the distribution used in OSI.
+[REGIONRESOURCE mr_tree]
+// t_tree
+skill=1.0,80.0
+amount=10,30
+REAP=i_log
+REGEN=60*60
+
+[REGIONRESOURCE mr_oak]
+// t_tree
+skill=65.0,90.0
+amount=9,20
+REAP=i_log_oak
+REGEN=60*60
+
+[REGIONRESOURCE mr_ash]
+// t_tree
+skill=80.0,105.0
+amount=9,20
+REAP=i_log_ash
+REGEN=60*60
+
+[REGIONRESOURCE mr_yew]
+// t_tree
+skill=95.0,120.0
+amount=9,20
+REAP=i_log_yew
+REGEN=60*60
+
+[REGIONRESOURCE mr_heartwood]
+// t_tree
+skill=100.0,120.0
+amount=9,15
+REAP=i_log_heartwood
+REGEN=60*60
+
+[REGIONRESOURCE mr_bloodwood]
+// t_tree
+skill=100.0,120.0
+amount=9,15
+REAP=i_log_bloodwood
+REGEN=60*60
+
+[REGIONRESOURCE mr_frostwood]
+// t_tree
+skill=100.0,120.0
+amount=9,15
+REAP=i_log_frostwood
+REGEN=60*60
+
+[eof]
