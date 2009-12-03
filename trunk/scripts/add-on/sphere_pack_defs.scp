@@ -1,80 +1,128 @@
-[defname sounds_new]
-snd_quest_abandon 1460 
-snd_quest_accept 1461
-snd_quest_complete 1462 
-snd_quest_update 1463 
-snd_virtuecards_add_remove 1466
-snd_virtuecards_rightcombo 1467
-snd_virtuecards_wrongcombo 1468
-snd_gargoyle_pluck 1489 
-snd_imbue 1490
-snd_throw_h 1491
-snd_throw_m 1491 
-snd_gargoyle_female_a 1525 
-snd_gargoyle_female_d 1526
-snd_gargoyle_female_h 1527 
-snd_gargoyle_female_n 1528
-snd_gargoyle_male_a 1529 
-snd_gargoyle_male_d 1530
-snd_gargoyle_male_h 1531 
-snd_gargoyle_male_n 1532
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// SphereCommunityPack - All the script.
+// 
+// SCRIPT DOCUMENTATION
+// --------------------
+// Default lists, something like "small" settings.
+// If need to change color, sounds, etc, search around here.
 
-// SA monsters
-snd_monster_medusa_a 1555 
-snd_monster_medusa_d 1556 
-snd_monster_medusa_h 1557 
-snd_monster_medusa_n 1558
-snd_monster_rotworm_a 1579
-snd_monster_rotworm_d 1580
-snd_monster_rotworm_h 1581
-snd_monster_rotworm_n 1582 
-snd_monster_slasher_of_veils_a 1587
-snd_monster_slasher_of_veils_d 1588
-snd_monster_slasher_of_veils_h 1589
-snd_monster_slasher_of_veils_n 1590
-snd_monster_stygian_dragon_a 1599
-snd_monster_stygian_dragon_d 1600
-snd_monster_stygian_dragon_h 1601
-snd_monster_stygian_dragon_n 1602
+[DEFNAME COLOR_LOG]
+color_o_log		0
+color_o_oak		07da
+color_o_ash		04a7
+color_o_yew		04a8
+color_o_heartwood	04a9
+color_o_bloodwood	04aa
+color_o_frostwood	047f
 
-// Spell sounds for Mysticism
-snd_spell_animated_weapon 1611
-snd_spell_bombard 1612
-snd_spell_cleansing_winds 1613
-snd_spell_eagle_strike 1614
-snd_spell_enchant 1615
-snd_spell_hail_storm 1616
-snd_spell_healing_stone 1617
-snd_spell_mass_sleep 1618
-snd_mysticism 1619
-snd_spell_nether_bolt 1620
-snd_spell_nether_cyclone 1621
-snd_spell_pure_magic 1622
-snd_spell_rising_colossus 1623
-snd_spell_sleep 1624
-snd_spell_spell_plague 1625
-snd_spell_spell_trigger 1626
-snd_spell_stone_form 1627
+[DEFNAME COLOR_ORE]
+color_o_iron		0763 //option: 0
+color_o_dullcopper	060a
+color_o_shadow		0770
+color_o_copper		0641 //option: 060c
+color_o_bronze		06d6
+color_o_gold		045e //option: 084d
+color_o_agapite		0400
+color_o_verite		07d1
+color_o_valorite	0515
 
-// Spellweaving Spells
+[DEFNAME COLOR_ORE_BACKWARDS]
+color_o_oldcopper	0590
+color_o_silver		0231 //option: 0
+color_o_bloodrock	04c2
+color_o_blackrock	0455
+color_o_mytheril	052d //or 0528
+color_o_rose		0665
+color_o_rusty		0750
+
+[DEFNAME SPELLWEAVING_SOUNDS]
 snd_spell_arcane_circle		1472
 snd_spell_gift_renewal		1481
 
-[defname spell_flags_new]
+[DEFNAME MYSTICISM_SOUNDS]
+snd_spell_animated_weapon	1611
+snd_spell_bombard		1612
+snd_spell_cleansing_winds	1613
+snd_spell_eagle_strike		1614
+snd_spell_enchant		1615
+snd_spell_hail_storm		1616
+snd_spell_healing_stone		1617
+snd_spell_mass_sleep		1618
+snd_spell_nether_bolt		1620
+snd_spell_nether_cyclone	1621
+snd_spell_pure_magic		1622
+snd_spell_rising_colossus	1623
+snd_spell_sleep			1624
+snd_spell_spell_plague		1625
+snd_spell_spell_trigger		1626
+snd_spell_stone_form		1627
+
+[DEFNAME SA_GARGOYLE_SOUND]
+snd_gargoyle_female_a		1525 
+snd_gargoyle_female_d		1526
+snd_gargoyle_female_h		1527 
+snd_gargoyle_female_n		1528
+snd_gargoyle_male_a		1529 
+snd_gargoyle_male_d		1530
+snd_gargoyle_male_h		1531 
+snd_gargoyle_male_n		1532
+
+[DEFNAME SA_MONSTER_SOUND]
+snd_monster_medusa_a		1555 
+snd_monster_medusa_d		1556 
+snd_monster_medusa_h		1557 
+snd_monster_medusa_n		1558
+snd_monster_rotworm_a		1579
+snd_monster_rotworm_d		1580
+snd_monster_rotworm_h		1581
+snd_monster_rotworm_n		1582 
+snd_monster_slasher_of_veils_a	1587
+snd_monster_slasher_of_veils_d	1588
+snd_monster_slasher_of_veils_h	1589
+snd_monster_slasher_of_veils_n	1590
+snd_monster_stygian_dragon_a	1599
+snd_monster_stygian_dragon_d	1600
+snd_monster_stygian_dragon_h	1601
+snd_monster_stygian_dragon_n	1602
+
+[DEFNAME MISC_SOUNDS]
+snd_quest_abandon		1460 
+snd_quest_accept		1461
+snd_quest_complete		1462 
+snd_quest_update		1463 
+snd_virtuecards_add_remove	1466
+snd_virtuecards_rightcombo	1467
+snd_virtuecards_wrongcombo	1468
+snd_gargoyle_pluck		1489 
+snd_imbue			1490
+snd_throw_h			1491
+snd_throw_m			1491 
+snd_mysticism			1619
+
+[DEFNAME SPELL_FLAGS_NEW]
 spellflag_targ_player		0200004 // targ_char + targ_no_npc
 spellflag_targ_npc		0100004 // targ_char + targ_no_player
 
-[defname dialogs_colors]
+[DEFNAME DIALOG_COLORS]
 dcolor_white			16777215
 
-[defname buff_icons]
+[DEFNAME BUFF_ICONS]
 bufficon_sleep			1049
 bufficon_stoneform		1050
 bufficon_spellplague		1051
 bufficon_gargoyleberserk	1052 // i assume this is a new ability
 bufficon_gargoylefly		1054 // and this is the flying effect
 
-[defname buff_clilocs]
+[DEFNAME BUFF_CLILOCS]
 buffcliloc_empty		1070722
 buffcliloc_poison_1		1017383
 buffcliloc_poison_2		1075633 // 1070722 //empty
