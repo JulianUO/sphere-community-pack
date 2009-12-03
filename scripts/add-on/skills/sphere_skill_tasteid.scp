@@ -1,0 +1,39 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// jeem - all the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Taste Identifation, yeah, it works actually.
+//
+
+[function f_tasteid_success]
+ref15 = <args>
+if <ref15.isfood>
+	if <ref15.morez>
+	sysmessage <def.scp.tasteid_ispoisoned>
+	else
+	sysmessage <def.scp.tasteid_notpoisoned>
+	endif
+elif <ref15.type> == t_potion
+sysmessage <def.scp.tasteid_ispotion>
+elif <ref15.baseid> == i_keg_potion
+	if !<ref15.morex>
+	sysmessage <def.scp.tasteid_kegempty>
+	else
+	sysmessage <def.scp.tasteid_knowkeg>
+	sysmessage @,,1 A keg of <serv.itemdef.<ref15.more1>.name>
+	endif
+else
+sysmessage <def.scp.tasteid_cannot>
+endif
+
+[eof]
