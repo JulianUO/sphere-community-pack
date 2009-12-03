@@ -1238,17 +1238,6 @@ SUBSECTION=Archers/Bowyers
 DESCRIPTION=Board
 DUPELIST=01bd8,01bd9,01bda,01bdb,01bdc
 
-[ITEMDEF 01bdd]
-DEFNAME=i_log
-NAME=log%s
-VALUE=1
-TYPE=T_LOG
-WEIGHT=2
-CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
-DESCRIPTION=Log (SE)
-DUPELIST=01bde,01bdf,01be0,01be1,01be2
-
 [ITEMDEF 010b8]
 DEFNAME=i_spiderweb
 VALUE=2

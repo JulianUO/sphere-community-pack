@@ -25,6 +25,7 @@ scripts/sphere_admin.scp
 scripts/sphere_dialog.scp
 scripts/items/sphere_item_resources.scp
 scripts/items/
+scripts/sphere_region_resources.scp
 scripts/sphere_region.scp
 // -----------------------------------
 //          	Maps
@@ -50,12 +51,7 @@ scripts/sphere_skillmenu.scp
 scripts/sphere_spawns.scp
 scripts/sphere_speech.scp
 scripts/sphere_skills.scp
-scripts/sphere_spells.scp
-scripts/sphere_spells_alchemy.scp
-scripts/sphere_spells_necromancy.scp
-scripts/sphere_spells_chivalry.scp
-scripts/sphere_spells_spellweaving.scp
-scripts/sphere_spells_mysticism.scp
+scripts/spells/
 scripts/sphere_newb.scp
 scripts/sphere_template.scp
 scripts/sphere_template_loot.scp

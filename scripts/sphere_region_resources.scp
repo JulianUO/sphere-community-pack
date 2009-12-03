@@ -1,0 +1,77 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// SphereServer - Default files used as base
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Resources used for regions, separated for better organization
+
+///////////////////////////////////////////////////////////////
+//////// COMMON DISTRIBUTION
+///////////////////////////////////////////////////////////////
+// These are generally used in several types.
+[REGIONRESOURCE mr_nothing]
+// there is nothing here
+REAP=i_unused
+REGEN=60*60*10
+
+
+///////////////////////////////////////////////////////////////
+//////// T_WATER DISTRIBUTION
+///////////////////////////////////////////////////////////////
+// These are generally used in t_water. Normally, fish.
+[REGIONRESOURCE mr_fish1]
+// fishing default
+// t_water
+skill=1.0,100.0
+amount=9,30
+REAP=i_fish_big_1
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish2]
+// fishing default
+// t_water
+skill=1.0,100.0
+REAP=i_fish_big_2
+amount=9,30
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish3]
+// fishing default
+// t_water
+skill=1.0,100.0
+amount=9,30
+REAP=i_fish_big_3
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish4]
+// fishing default
+// t_water
+skill=1.0,100.0
+amount=9,30
+REAP=i_fish_big_4
+REGEN=60*60*10
+
+
+///////////////////////////////////////////////////////////////
+//////// T_GRASS DISTRIBUTION
+///////////////////////////////////////////////////////////////
+// These are generally used in t_grass. Grass for animals?
+[REGIONRESOURCE mr_grass]
+// grazing animals
+// t_grass
+AMOUNT=9,30
+REGEN=60*60*10
+REAP=i_hay_sheaf
+
+
+
+[eof]
