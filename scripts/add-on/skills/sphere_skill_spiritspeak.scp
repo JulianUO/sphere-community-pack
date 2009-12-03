@@ -1,3 +1,19 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// Cloud_BR - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// OSI-Like SpiritSpeak
+
 [FUNCTION f_SpiritSpeak_Success]
 SKILLGAIN SPIRITSPEAK 30
 IF <HITS> >= <MAXHITS>

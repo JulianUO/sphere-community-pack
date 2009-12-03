@@ -1,3 +1,20 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Based on sphere_skillmenu.scp
+//
+
 [defname sphere_crafting_alchemy_default]
 alchemy_marking			"0" // 1 or 0
 alchemy_materials		"0" // 1 or 0

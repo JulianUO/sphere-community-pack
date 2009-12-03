@@ -140,3 +140,17 @@ Note: Mystic weapons were introduced during Ophidian Wars.
 - Fixed: forgot to add a check for OSIFollowers setting in the shrinked pets.
 - Fixed: inexistant runes in spell sections.
 - Fixed: several bugs on peacemaking skill.
+
+03-12-2009, ShiryuX
+- Added: osi-like runebook by pyromapes2k with small changes
+- Added: map5 files, though they were already there.
+- Added: small cooking file, no tool yet, just a base.
+- Added: new script for Taste ID skill (thanks jeem)
+- Added: sand mining, only using a shovel in sand.
+- Updated: barding system to be able to activate/deactivate each skill separate from the main setting, deactivating barding setting deactivates every skill.
+- Updated: runes with some new settings (thanks pyro)
+- Updated: proper way to override words of power. now only the wops in sphere_pack_msgs.scp will be used if the runes setting in spell section is empty.
+- Fixed #2: wrong button in crafting categories
+- Fixed: two small typos in the script (sorry, can't remember every word)
+- Fixed: also some crafting bugs, (in *theory*) in the sidebar buttons.
+- Fixed: @SkillPreSelect now working, forgot to add a little 1 in here. =P

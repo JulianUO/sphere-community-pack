@@ -15,6 +15,7 @@ VERSION=0.56b
 // New Peacemaking System. OSI-Like but still a little custom.
 // Because some formulas are missing.
 //
+
 [function f_start_peacemaking]
 ref10 = <args>
 if <ref10.isitem>
