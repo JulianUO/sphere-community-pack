@@ -8,10 +8,11 @@ VERSION=0.56b
 //
 // SCRIPT CREDITS
 // --------------
+// Pyromapes2k - All the script
 //
 // SCRIPT DOCUMENTATION
 // --------------------
-//
+// OSI-Like & Customizable Veterinary system
 
 [DEFNAME Veterinary]
 

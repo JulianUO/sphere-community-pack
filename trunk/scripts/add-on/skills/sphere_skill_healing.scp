@@ -8,10 +8,13 @@ VERSION=0.56b
 //
 // SCRIPT CREDITS
 // --------------
+// Pyromapes2k - All the script
 //
 // SCRIPT DOCUMENTATION
 // --------------------
+// OSI-Like but at the same time a custom healing system.
 //
+
 [DEFNAME Healing]
 //General Defs
 //Healing item used for each brain type (0 = healing not permitted)
