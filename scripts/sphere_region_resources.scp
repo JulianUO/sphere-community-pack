@@ -62,6 +62,60 @@ REGEN=60*60*10
 
 
 ///////////////////////////////////////////////////////////////
+//////// T_TREE DISTRIBUTION
+///////////////////////////////////////////////////////////////
+// These are generally used in t_tree. Normally, logs.
+[REGIONRESOURCE mr_tree]
+// t_tree
+skill=1.0,80.0
+amount=10,30
+REAP=i_log
+REGEN=60*60
+
+[REGIONRESOURCE mr_oak]
+// t_tree
+skill=65.0,90.0
+amount=9,20
+REAP=i_log_oak
+REGEN=60*60
+
+[REGIONRESOURCE mr_ash]
+// t_tree
+skill=80.0,105.0
+amount=9,20
+REAP=i_log_ash
+REGEN=60*60
+
+[REGIONRESOURCE mr_yew]
+// t_tree
+skill=95.0,120.0
+amount=9,20
+REAP=i_log_yew
+REGEN=60*60
+
+[REGIONRESOURCE mr_heartwood]
+// t_tree
+skill=100.0,120.0
+amount=9,15
+REAP=i_log_heartwood
+REGEN=60*60
+
+[REGIONRESOURCE mr_bloodwood]
+// t_tree
+skill=100.0,120.0
+amount=9,15
+REAP=i_log_bloodwood
+REGEN=60*60
+
+[REGIONRESOURCE mr_frostwood]
+// t_tree
+skill=100.0,120.0
+amount=9,15
+REAP=i_log_frostwood
+REGEN=60*60
+
+
+///////////////////////////////////////////////////////////////
 //////// T_GRASS DISTRIBUTION
 ///////////////////////////////////////////////////////////////
 // These are generally used in t_grass. Grass for animals?
@@ -73,5 +127,187 @@ REGEN=60*60*10
 REAP=i_hay_sheaf
 
 
+///////////////////////////////////////////////////////////////
+//////// T_ROCK (OSI) DISTRIBUTION
+///////////////////////////////////////////////////////////////
+// These are generally used in t_rock. OSI-Like.
+[REGIONRESOURCE mr_iron]
+// t_rock
+skill=0.1,50.0
+amount=5,15
+REAP=i_ore_iron
+REGEN=60*60
+
+[REGIONRESOURCE mr_dull_copper]
+// t_rock
+skill=65.0,90.0
+amount=5,15
+REAP=i_ore_dull_copper
+REGEN=60*60
+
+[REGIONRESOURCE mr_shadow]
+// t_rock
+skill=70.0,95.0
+amount=5,15
+REAP=i_ore_shadow
+REGEN=60*60
+
+[REGIONRESOURCE mr_copper]
+// t_rock
+skill=75.0,100.0
+amount=5,15
+REAP=i_ore_copper
+REGEN=60*60
+
+[REGIONRESOURCE mr_bronze]
+// t_rock
+skill=80.0,105.0
+amount=5,15
+REAP=i_ore_bronze
+REGEN=60*60
+
+[REGIONRESOURCE mr_gold]
+// t_rock
+skill=85.0,110.0
+amount=5,15
+REAP=i_ore_gold
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_agapite]
+// t_rock
+skill=90.0,115.0
+amount=5,15
+REAP=i_ore_agapite
+REGEN=60*60
+
+[REGIONRESOURCE mr_verite]
+// t_rock
+skill=95.0,120.0
+amount=5,15
+REAP=i_ore_verite
+REGEN=60*60
+
+[REGIONRESOURCE mr_valorite]
+// t_rock
+skill=99.0,120.0
+amount=5,15
+REAP=i_ore_valorite
+REGEN=60*60
+
+
+///////////////////////////////////////////////////////////////
+//////// T_ROCK (SPHERE) DISTRIBUTION
+///////////////////////////////////////////////////////////////
+// These are generally used in t_rock. Sphere Backwards Comp.
+[REGIONRESOURCE mr_old_copper]
+// this is really just a variety of copper. copper makes terrible armor
+// t_rock
+skill=1.0,30.0
+amount=7,18
+REAP=i_ore_old_copper
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_rusty]
+// t_rock - Iron gets rusty. It's not smeltable !
+skill=1.0,30.0
+amount=8,21
+REAP=i_ore_rusty
+REGEN=60*60
+
+[REGIONRESOURCE mr_rose]
+// t_rock
+skill=30.0,60.0
+amount=3,9
+REAP=i_ore_rose
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_bloodrock]
+// t_rock
+skill=30.0,60.0
+amount=3,6
+REAP=i_ore_bloodrock
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_silver]
+// t_rock
+skill=30.0,60.0
+amount=1,2
+REAP=i_ore_silver
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_mytheril]
+// t_rock
+skill=60.0,110.0
+amount=2,3
+REAP=i_ore_mytheril
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_blackrock]
+// t_rock
+skill=60.0,110.0
+amount=1,3
+REAP=i_ore_blackrock
+REGEN=60*60*10
+
+
+///////////////////////////////////////////////////////////////
+//////// T_ROCK (GEMS) DISTRIBUTION
+///////////////////////////////////////////////////////////////
+// These are generally used in t_rock. Gems and that stuff.
+[REGIONRESOURCE mr_diamond]
+// t_rock
+skill=60.0,110.0
+amount=1,4
+REAP=i_gem_diamond
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_ruby]
+// t_rock
+skill=60.0,110.0
+amount=1,4
+REAP=i_gem_ruby
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_citrine]
+// t_rock
+skill=60.0,110.0
+amount=1,4
+REAP=i_gem_citrine
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_Emerald]
+// t_rock
+skill=60.0,110.0
+amount=1,4
+REAP=i_gem_Emerald
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_Star_Sapphire]
+// t_rock
+skill=60.0,110.0
+amount=1,4
+REAP=i_gem_Star_Sapphire
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_Sapphire]
+// t_rock
+skill=60.0,110.0
+amount=1,4
+REAP=i_gem_Sapphire
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_Amethyst]
+// t_rock
+skill=60.0,110.0
+amount=1,4
+REAP=i_gem_Amethyst
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_Tourmaline]
+// t_rock
+skill=60.0,110.0
+amount=1,4
+REAP=i_gem_Tourmaline
+REGEN=60*60*10
 
 [eof]
