@@ -253,8 +253,10 @@ ADV_RATE=2.5,50.0,200.0
 
 on=@prestart
 if <def.scp.BardingSystem> == 1
-f_onbarding_start 9
-return 1
+	if <def.scp.NewBarding_Peacemaking> == 1
+	f_onbarding_start 9
+	return 1
+	endif
 endif
 
 ON=@Fail
@@ -388,8 +390,10 @@ ADV_RATE=2.5,50.0,200.0
 
 on=@prestart
 if <def.scp.BardingSystem> == 1
-f_onbarding_start 15
-return 1
+	if <def.scp.NewBarding_Discordance> == 1
+	f_onbarding_start 15
+	return 1
+	endif
 endif
 
 ON=@Fail
@@ -565,8 +569,10 @@ ADV_RATE=2.5,50.0,200.0
 
 on=@prestart
 if <def.scp.BardingSystem> == 1
-f_onbarding_start 22
-return 1
+	if <def.scp.NewBarding_Provocation> == 1
+	f_onbarding_start 22
+	return 1
+	endif
 endif
 
 ON=@Fail
@@ -905,7 +911,8 @@ sysmessage <def.scp.taming_abort>
 DEFNAME=skill_tasteid
 KEY=TasteID
 TITLE=Food Taster
-PROMPT_MSG=What would you like to taste?
+PROMPT_MSG=@,,2 502807 // What would you like to taste?
+FLAGS=SKF_SCRIPTED
 DELAY=1.0
 STAT_STR=25
 STAT_INT=50
@@ -916,11 +923,20 @@ BONUS_INT=80
 BONUS_STATS=50
 ADV_RATE=2.5,50.0,200.0
 
-ON=@Fail
-	SRC.SYSMESSAGE You cannot discern anything about this substance.
+on=@start
+if <act.ischar>
+sysmessage <def.scp.tasteid_ischar>
+return 1
+endif
 
-ON=@Abort
-	SRC.SYSMESSAGE You decide against tasting anything.
+on=@success
+if <def.scp.NewSkills_TasteID> == 1
+f_tasteid_success <act.uid>
+return 1
+endif
+
+on=@fail
+src.sysmessage <def.scp.tasteid_fail>
 
 [SKILL 37]
 DEFNAME=Skill_Tinkering

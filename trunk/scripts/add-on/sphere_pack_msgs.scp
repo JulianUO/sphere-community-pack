@@ -59,6 +59,12 @@ scp.craft_smelt_notitem		"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_notsmeltable	"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_success		"@,,2 1044270"	// You melt the item down into ingots.
 
+scp.mining_nosand		"@,,2 1044629"	// There is no sand here to mine.
+scp.mining_mounted		"@,,2 501864"	// You can't mine while riding.
+scp.mining_faraway		"@,,2 500295"	// You are too far away to do that.
+scp.mining_canseelos		"@,,2 500346"	// Target cannot be seen.
+scp.mining_sand_fail		"@,,2 1044630"	// You dig for a while but fail to find any of sufficient quality for glassblowing.
+
 scp.taming_tameself		"@,,1 You are your own master."
 scp.taming_notchar		"@,,2 502801"	// You can't tame that!
 scp.taming_notameable		"@,,2 1049655"	// That creature cannot be tamed.
@@ -79,6 +85,15 @@ scp.taming_abort		"You give up trying to tame the creature."
 scp.taming_youdead		"@,,2 502796"	// You are dead, and cannot continue taming.
 scp.taming_cantseelos		"@,,2 1049654"	// You do not have a clear path to the animal you are taming, and must cease your attempt.
 scp.taming_isangry		"@,,2 502794"	// The animal is too angry to continue taming.
+
+scp.tasteid_ischar		"@,,2 502816"	// You feel that such an action would be inappropriate.
+scp.tasteid_ispoisoned		"@,,2 1038284"	// It appears to have poison smeared on it.
+scp.tasteid_notpoisoned		"@,,2 1010600"	// You detect nothing unusual about this substance.
+scp.tasteid_ispotion		"@,,2 502813"	// You already know what kind of potion that is.
+scp.tasteid_kegempty		"@,,2 502228"	// There is nothing in the keg to taste!
+scp.tasteid_knowkeg		"@,,2 502229"	// You are already familiar with this keg's contents.
+scp.tasteid_cannot		"@,,2 502820"	// That's not something you can taste.
+scp.tasteid_fail		"@,,2 502823"	// You cannot discern anything about this substance.
 
 scp.bard_noinstrument		"@,,2 1062488"	// The instrument you are trying to play is no longer in your backpack!
 scp.bard_instrument_targ	""

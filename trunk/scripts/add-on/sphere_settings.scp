@@ -31,10 +31,17 @@ scp.NewSkills_SpiritSpeak=1
 scp.NewSkills_ResistingSpells=1
 scp.NewSkills_Poisoning=1
 scp.NewSkills_Healing=1
+scp.NewSkills_TasteID=1
 
 // Enables, switch or disable the new barding system
 // 0 = Default. 1 = OSI-Like.
 scp.BardingSystem=1
+
+// Enable or disable a specific skill from the barding system
+// <boolean> (1 if enable, 0 if not). Default = 1
+scp.NewBarding_Peacemaking=1
+scp.NewBarding_Provocation=0 // NOT DONE!!
+scp.NewBarding_Discordance=0 // NOT DONE!!
 
 // Enables, switch or disable the new crafting system
 // 0 = Default. 1 = OSI-Like. 
@@ -46,10 +53,14 @@ scp.NewCrafting_Alchemy=1
 scp.NewCrafting_Blacksmithing=1
 scp.NewCrafting_Bowcraft=1
 scp.NewCrafting_Carpentry=1
-scp.NewCrafting_Cooking=1
+scp.NewCrafting_Cooking=0 // NOT DONE!!
 scp.NewCrafting_Inscription=1
 scp.NewCrafting_Tailoring=1
 scp.NewCrafting_Tinkering=1
+
+// Allow shovels to dig in sand?
+// <boolean> (1 if enable, 0 if not). Default = 1
+scp.Mining_AllowSand=1
 
 ///////////////////////////////////////////////////////////////
 //////// Skills Settings - Poisoning/Healing/Veterinary
