@@ -15,7 +15,7 @@ VERSION=0.56b
 // Default lists, something like "small" settings.
 // If need to change color, sounds, etc, search around here.
 
-[DEFNAMEE TITHINGCONSUME]
+[DEFNAME TITHINGCONSUME]
 spell.201.tithing	"10" // Cleanse by Fire
 spell.202.tithing	"10" // Close Wounds
 spell.203.tithing	"10" // Consecrate Weapon
