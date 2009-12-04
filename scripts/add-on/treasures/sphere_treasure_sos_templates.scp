@@ -1,0 +1,43 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// Swindler, Kell, Melen, syn - Original credits from original version
+// ShiryuX - Updating and adapting to 56b Sphere Community Pack
+// 
+// SCRIPT DOCUMENTATION
+// --------------------
+// Templates for items that you get from SOS Treasure Maps
+
+[template tm_sos_treasure_ancient]
+// this is one level greater than any common sos
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Ancient SOS Treasure
+
+[template tm_sos_treasure]
+// common sos treasure
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Common SOS Treasure
+
+[template tm_sos_random_items]
+// random items fished up from treasure tile
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Random SOS Items
+
+[template tm_sos_random_items]
+// valuable items fished up from treasure tile
+// things like paintings, decoration, etc
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Valuable SOS Items
+
+[eof]

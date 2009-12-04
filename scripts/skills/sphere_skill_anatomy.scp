@@ -1,0 +1,36 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 1]
+DEFNAME=SKILL_ANATOMY
+KEY=Anatomy
+TITLE=Scholar
+PROMPT_MSG=@,,2 500321
+DELAY=3.0,1.0
+ADV_RATE=1.0,50.0,150.0
+BONUS_STATS=50
+BONUS_STR=0
+BONUS_DEX=0
+BONUS_INT=100
+STAT_STR=15
+STAT_INT=70
+STAT_DEX=15
+
+on=@success
+if <def.scp.NewSkills_Anatomy> == 1
+local.toadd = <eval (((<src.targ.str>/10)+1)*11) + ((<src.targ.dex>/10)+1)>
+local.cliloc = <eval <def.scp.anatomy_start> + <local.toadd>>
+sysmessage @,,2 <local.cliloc>
+skillgain Anatomy <eval <Anatomy>/10>
+return 1
+endif
+
+on=@fail
+sysmessage <def.scp.anatomy_fail>
+
+[eof]

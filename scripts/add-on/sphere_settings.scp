@@ -58,9 +58,37 @@ scp.NewCrafting_Inscription=1
 scp.NewCrafting_Tailoring=1
 scp.NewCrafting_Tinkering=1
 
+
+///////////////////////////////////////////////////////////////
+//////// Skills Settings - Resource Gathering
+///////////////////////////////////////////////////////////////
 // Allow shovels to dig in sand?
 // <boolean> (1 if enable, 0 if not). Default = 1
 scp.Mining_AllowSand=1
+
+// Allow the new SOS fishing treasure system?
+// <boolean> (1 if enable, 0 if not). Default = 1 
+scp.Fishing_SOSTreasure=0 // NOT FINISHED YET!
+
+// Can SeaSerpent appear when you fail at fishing?
+// <boolean> (1 if enable, 0 if not). Default = 1
+scp.Fishing_SeaSerpent=1
+
+// Minimum fishing skill at which you can disturb Sea Serpents
+// From 0 to 100.0 - Default = 80.0
+scp.Fishing_MinToDisturbSerpent=80.0
+
+// Chance to disturb a Sea Serpent when you fail.
+// From 0 to 100 (percent). Default = 5%
+scp.Fishing_ChanceSeaSerpent=5
+
+// Chance to transform a SOS into an Ancient SOS
+// From 0 to 100 (percent). Default = 4%
+scp.Fishing_ChanceToAncient=4
+
+// Minimum fishing skill to be able to open a SOS Bottle
+// Setting this to 0 disables it. 
+scp.Fishing_MinToSosBottle=0 // NOT FINISHED YET!
 
 ///////////////////////////////////////////////////////////////
 //////// Skills Settings - Poisoning/Healing/Veterinary
