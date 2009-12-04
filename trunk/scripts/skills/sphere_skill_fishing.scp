@@ -1,0 +1,39 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 18]
+DEFNAME=Skill_Fishing
+KEY=Fishing
+TITLE=Fisher%s
+PROMPT_MSG=@,,2 500974
+DELAY=2.0
+STAT_STR=40
+STAT_INT=30
+STAT_DEX=40
+BONUS_STR=10
+BONUS_DEX=90
+BONUS_INT=0
+BONUS_STATS=25
+ADV_RATE=2.5,50.0,200.0
+VALUES=1,30,200
+
+on=@fail
+src.message <def.scp.fishing_fail>
+if <def.scp.Fishing_SeaSerpent> == 0
+return 0
+endif
+if <src.fishing> >= <def.scp.Fishing_MinToDisturbSerpent>
+	if <r100> <= <def.scp.Fishing_ChanceSeaSerpent>
+	serv.newnpc = c_sea_serpent
+	new.home = <src.targp>
+	new.homedist = 5
+	new.attack <src.uid>
+	endif
+endif
+
+[eof]

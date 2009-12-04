@@ -41,11 +41,15 @@ RESOURCES=10.0 mr_fish4
 [REGIONTYPE r_water t_water]
 // Default water area resources
 // This IS ocean. Maybe can find creatures here?
-RESOURCES=50.0 mr_nothing
-RESOURCES=10.0 mr_fish1
-RESOURCES=10.0 mr_fish2
-RESOURCES=10.0 mr_fish3
-RESOURCES=10.0 mr_fish4
+RESOURCES=25.0 mr_nothing
+RESOURCES=25.0 mr_fish1
+RESOURCES=25.0 mr_fish2
+RESOURCES=25.0 mr_fish3
+RESOURCES=25.0 mr_fish4
+RESOURCES=1.5 mr_fish_highly_peculiar
+RESOURCES=1.5 mr_fish_prized
+RESOURCES=1.5 mr_fish_wondrous
+RESOURCES=1.5 mr_fish_truly_rare
 
 [REGIONTYPE r_default_tree t_tree]
 // Default tree area resources.

@@ -21,7 +21,7 @@ VERSION=0.56b
 [REGIONRESOURCE mr_nothing]
 // there is nothing here
 REAP=i_unused
-REGEN=60*60*10
+REGEN=60*60
 
 
 ///////////////////////////////////////////////////////////////
@@ -47,7 +47,7 @@ regen=60*60*2
 skill=1.0,100.0
 amount=9,30
 REAP=i_fish_big_1
-REGEN=60*60*10
+REGEN=60*60
 
 [REGIONRESOURCE mr_fish2]
 // fishing default
@@ -55,7 +55,7 @@ REGEN=60*60*10
 skill=1.0,100.0
 REAP=i_fish_big_2
 amount=9,30
-REGEN=60*60*10
+REGEN=60*60
 
 [REGIONRESOURCE mr_fish3]
 // fishing default
@@ -63,7 +63,7 @@ REGEN=60*60*10
 skill=1.0,100.0
 amount=9,30
 REAP=i_fish_big_3
-REGEN=60*60*10
+REGEN=60*60
 
 [REGIONRESOURCE mr_fish4]
 // fishing default
@@ -71,7 +71,37 @@ REGEN=60*60*10
 skill=1.0,100.0
 amount=9,30
 REAP=i_fish_big_4
-REGEN=60*60*10
+REGEN=60*60
+
+[REGIONRESOURCE mr_fish_highly_peculiar]
+SKILL=1.0,100.0
+AMOUNT=1,2
+REAP=i_highly_peculiar_fish
+REGEN=60*60
+
+[REGIONRESOURCE mr_fish_prized]
+SKILL=1.0,100.0
+AMOUNT=1,2
+REAP=i_prized_fish
+REGEN=60*60
+
+[REGIONRESOURCE mr_fish_wondrous]
+SKILL=1.0,100.0
+AMOUNT=1,2
+REAP=i_wondrous_fish
+REGEN=60*60
+
+[REGIONRESOURCE mr_fish_truly_rare]
+SKILL=1.0,100.0
+AMOUNT=1,2
+REAP=i_truly_rare_fish
+REGEN=60*60
+
+[REGIONRESOURCE mr_sos_bottle]
+SKILL=100.0,120.0
+AMOUNT=1,1
+REAP=i_sos_bottle
+REGEN=60*30*10
 
 
 ///////////////////////////////////////////////////////////////
@@ -136,7 +166,7 @@ REGEN=60*60
 // grazing animals
 // t_grass
 AMOUNT=9,30
-REGEN=60*60*10
+REGEN=60*60
 REAP=i_hay_sheaf
 
 

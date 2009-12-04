@@ -1,0 +1,80 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// Swindler, Kell, Melen, syn - Original credits from original version
+// ShiryuX - Updating and adapting to 56b Sphere Community Pack
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// SOS Treasure Hunting. Oh, this reminds me a song...
+// We're a band of vicious pirates!
+// A sailin´ out to sea.
+// When you hear our gentle singing...
+// You'll be sure to turn and flee!
+// // Finally, scripting turns fun!
+
+[ITEMDEF i_sos_bottle]
+NAME=Message in a bottle
+ID=099f
+VALUE=20000
+CATEGORY=Treasure Hunting
+SUBSECTION=SOS Items
+DESCRIPTION=Message in a bottle
+
+ON=@Create
+ATTR=attr_decay
+TIMER=0
+
+on=@dclick
+if <src.fishing> < <def.scp.Fishing_MinToSosBottle>
+src.sysmessage <def.scp.fishing_cannotsos>
+else
+serv.newitem i_sos_message
+	if <r100> < <def.scp.Fishing_ChanceToAncient>
+	new.tag0.sos.ancient = 1
+	new.name "Ancient SOS"
+	new.color = color_o_sosancient
+	endif
+new.bounce
+remove
+endif
+return 1
+
+
+[ITEMDEF i_sos_message]
+NAME=Waterstained SOS
+ID=014ed
+TYPE=t_script
+VALUE=20000
+CATEGORY=Treasure Hunting
+SUBSECTION=SOS Items
+DESCRIPTION=Waterstained SOS
+
+ON=@Create
+ATTR=attr_decay
+TIMER=0
+
+on=@dclick
+if <isempty <tag.sextantp>>
+f_generate_coords
+serv.newitem i_sos_tile
+new.link = <uid>
+link = <new.uid>
+new.attr = attr_static|attr_move_never
+new.p = <tag0.sextantp>
+new.sextant
+new.fix
+endif
+src.tag0.sextantcoords = <tag0.coords>
+src.f_resenddialog d_sos_message
+return 1
+
+
+[eof]

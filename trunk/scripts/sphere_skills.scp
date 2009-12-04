@@ -50,34 +50,6 @@ ON=@Fail
 ON=@Abort
 SRC.MESSAGE @33,,2 500290
 
-[SKILL 1]
-DEFNAME=SKILL_ANATOMY
-KEY=Anatomy
-TITLE=Scholar
-PROMPT_MSG=@,,2 500321
-
-DELAY=3.0,1.0
-ADV_RATE=1.0,50.0,150.0
-
-BONUS_STATS=50
-BONUS_STR=0
-BONUS_DEX=0
-BONUS_INT=100
-
-STAT_STR=15
-STAT_INT=70
-STAT_DEX=15
-
-on=@success
-if <def.scp.NewSkills_Anatomy> == 1
-f_anatomy_success <src.targ.uid>
-skillgain Anatomy <eval <Anatomy>/10>
-return 1
-endif
-
-ON=@Fail
-SRC.MESSAGE @,,2 1042915
-
 [SKILL 2]
 DEFNAME=SKILL_ANIMAL_LORE
 KEY=AnimalLore
@@ -465,28 +437,6 @@ ON=@Fail
 
 ON=@Abort
     SRC.SYSMESSAGE You stop applying the bandages.
-
-[SKILL 18]
-DEFNAME=Skill_Fishing
-KEY=Fishing
-TITLE=Fisher%s
-PROMPT_MSG=@,,2 500974
-DELAY=2.0
-STAT_STR=40
-STAT_INT=30
-STAT_DEX=40
-BONUS_STR=10
-BONUS_DEX=90
-BONUS_INT=0
-BONUS_STATS=25
-ADV_RATE=2.5,50.0,200.0
-VALUES=1,30,200
-
-ON=@Fail
-	SRC.MESSAGE @,,2 503171
-
-ON=@Abort
-	SRC.SYSMESSAGE You pull your line back in and stop fishing.
 
 [SKILL 19]
 DEFNAME=Skill_Forensics

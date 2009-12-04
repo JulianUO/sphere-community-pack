@@ -50,6 +50,7 @@ scripts/sphere_name.scp
 scripts/sphere_skillmenu.scp
 scripts/sphere_spawns.scp
 scripts/sphere_speech.scp
+scripts/skills/
 scripts/sphere_skills.scp
 scripts/spells/
 scripts/sphere_newb.scp
