@@ -1,0 +1,178 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Based on EA crafting lists
+
+blacksmithing_category_1_name	"1011076" // Ringmail
+blacksmithing_category_2_name	"1011077" // Chainmail
+blacksmithing_category_3_name	"1011078" // Platemail
+blacksmithing_category_4_name	"1011079" // Helmets
+blacksmithing_category_5_name	"1011080" // Shields
+blacksmithing_category_6_name	"1011081" // Bladed
+blacksmithing_category_7_name	"1011082" // Bashing
+blacksmithing_category_8_name	"1011083" // Axes
+blacksmithing_category_9_name	"1011084" // Polearms
+blacksmithing_category_10_name	"1060885" // Dragon Scale Armor
+
+blacksmithing_category_1_1	"i_ringmail_gloves"		// 1025099
+blacksmithing_category_1_2	"i_ringmail_leggings"		// 1025104
+blacksmithing_category_1_3	"i_ringmail_sleeves"		// 1025103
+blacksmithing_category_1_4	"i_ringmail_tunic"		// 1025100
+
+blacksmithing_category_2_1	"i_chainmail_coif"		// 1025051
+blacksmithing_category_2_2	"i_chainmail_leggings"		// 1025054
+blacksmithing_category_2_3	"i_chainmail_tunic"		// 1025055
+
+blacksmithing_category_3_1	"i_platemail_arms"		// 1025136
+blacksmithing_category_3_2	"i_platemail_gloves"		// 1025140
+blacksmithing_category_3_3	"i_platemail_gorget"		// 1025139
+blacksmithing_category_3_4	"i_platemail_leggings"		// 1025137
+blacksmithing_category_3_5	"i_platemail_chest"		// 1046431
+blacksmithing_category_3_6	"i_armor_female_plate"		// 1046430
+blacksmithing_category_3_8	"i_platemail_mempo"		// 1030105
+blacksmithing_category_3_9	"i_platemail_do"		// 1030109
+blacksmithing_category_3_10	"i_platemail_hiro_sode"		// 1030112
+blacksmithing_category_3_11	"i_platemail_suneate"		// 1030120
+blacksmithing_category_3_12	"i_platemail_haidate"		// 1030125
+
+blacksmithing_category_4_1	"i_bascinet"			// 1025132
+blacksmithing_category_4_2	"i_helm_closed"			// 1025128
+blacksmithing_category_4_2	"i_helm_open"			// 1025130
+blacksmithing_category_4_4	"i_helm_nose"			// 1025134 WTF??? seems to be called norse helm
+blacksmithing_category_4_5	"i_platemail_helm"		// 1025138
+blacksmithing_category_4_6	"i_chainmail_hatsuburi"		// 1030100
+blacksmithing_category_4_7	"i_platemail_hatsuburi"		// 1030101
+blacksmithing_category_4_8	"i_plate_jingasa_heavy"		// 1030103
+blacksmithing_category_4_9	"i_plate_jingasa_light"		// 1030113
+blacksmithing_category_4_10	"i_plate_jingasa_small"		// 1030116
+blacksmithing_category_4_11	"i_platemail_kabuto_decorative"	// 1030104
+blacksmithing_category_4_12	"i_platemail_kabuto_battle"	// 1030117
+blacksmithing_category_4_13	"i_platemail_kabuto"		// 1030121
+blacksmithing_category_4_14	"i_circlet"			// 1031118
+blacksmithing_category_4_15	"i_circlet_royal"		// 1031119
+blacksmithing_category_4_16	"i_circlet_gemmed"		// 1031120
+
+blacksmithing_category_5_1	"i_shield_buckler"		// 1027027
+blacksmithing_category_5_2	"i_shield_round_bronze"		// 1027026
+blacksmithing_category_5_3	"i_shield_heater"		// 1027030
+blacksmithing_category_5_4	"i_shield_round_metal"		// 1027035
+blacksmithing_category_5_5	"i_shield_kite_metal"		// 1027028
+blacksmithing_category_5_6	"i_shield_kite_wood"		// 1027032
+blacksmithing_category_5_7	"i_shield_chaos"		// 1027107
+blacksmithing_category_5_8	"i_shield_order"		// 1027108
+
+blacksmithing_category_6_1	"i_bone_harvester"		// 1029915
+blacksmithing_category_6_2	"i_sword_broad"			// 1023934
+blacksmithing_category_6_3	"i_crescent_blade"		// 1029921
+blacksmithing_category_6_4	"i_cutlass"			// 1025185
+blacksmithing_category_6_5	"i_dagger"			// 1023921
+blacksmithing_category_6_6	"i_katana"			// 1025119
+blacksmithing_category_6_7	"i_kryss"			// 1025121
+blacksmithing_category_6_8	"i_sword_long"			// 1023937
+blacksmithing_category_6_9	"i_scimitar"			// 1025046
+blacksmithing_category_6_10	"i_sword_viking"		// 1025049
+blacksmithing_category_6_11	"i_no_dachi"			// 1030146
+blacksmithing_category_6_12	"i_wakizashi"			// 1030148
+blacksmithing_category_6_13	"i_lajatang"			// 1030151
+blacksmithing_category_6_14	"i_daisho"			// 1030153
+blacksmithing_category_6_15	"i_tekagi"			// 1030155
+blacksmithing_category_6_16	"i_shuriken"			// 1030156
+blacksmithing_category_6_17	"i_kama"			// 1030157
+blacksmithing_category_6_18	"i_sai"				// 1030159
+blacksmithing_category_6_19	"i_radiant_scimitar"		// 1031571
+blacksmithing_category_6_20	"i_war_cleaver"			// 1031555
+blacksmithing_category_6_21	"i_elven_spellblade"		// 1031552
+blacksmithing_category_6_22	"i_assassin_spike"		// 1031553
+blacksmithing_category_6_23	"i_leafblade"			// 1031554
+blacksmithing_category_6_24	"i_rune_blade"			// 1031558
+blacksmithing_category_6_25	"i_elven_machete"		// 1031561
+//blacksmithing_category_6_26	Rune Carving Knife		// 1072915
+//blacksmithing_category_6_27	Cold Forged Blade		// 1072916
+//blacksmithing_category_6_28	Overseer Sundered Blade		// 1072920
+//blacksmithing_category_6_29	Luminous Rune Blade		// 1072922
+//blacksmithing_category_6_30	True Spellblade			// 1073513
+//blacksmithing_category_6_31	Icy spellblade			// 1073514
+//blacksmithing_category_6_32	fiery spellblade		// 1073515
+//blacksmithing_category_6_33	spellblade of defense		// 1073516
+//blacksmithing_category_6_34	true assassin spike		// 1073517
+//blacksmithing_category_6_35	charged assassin spike		// 1073518
+//blacksmithing_category_6_36	magekiller assassin spike	// 1073519
+//blacksmithing_category_6_37	wounding assassin spike		// 1073520
+//blacksmithing_category_6_38	true leafblade			// 1073521
+//blacksmithing_category_6_39	luckblade			// 1073522
+//blacksmithing_category_6_40	magekiller leafblade		// 1073523
+//blacksmithing_category_6_41	leafblade of ease		// 1073524
+//blacksmithing_category_6_42	knight's war cleaver		// 1073525
+//blacksmithing_category_6_43	butcher's war cleaver		// 1073526
+//blacksmithing_category_6_44	serrated war cleaver		// 1073527
+//blacksmithing_category_6_45	true war cleaver		// 1073528
+//blacksmithing_category_6_46	ruby mace			// 1073533
+//blacksmithing_category_6_47	emerald mace			// 1073534
+//blacksmithing_category_6_48	sapphire mace			// 1073535
+//blacksmithing_category_6_49	Diseased Machete		// 1073536
+//blacksmithing_category_6_50	runesabre			// 1073537
+//blacksmithing_category_6_51	mage's rune blade		// 1073538
+//blacksmithing_category_6_52	rune blade of knowledge		// 1073539
+//blacksmithing_category_6_53	Corrupted Rune Blade		// 1073540
+//blacksmithing_category_6_54	true radiant scimitar		// 1073541
+//blacksmithing_category_6_55	darkglow scimitar		// 1073542
+//blacksmithing_category_6_56	icy scimitar			// 1073543
+//blacksmithing_category_6_57	twinkling scimitar		// 1073544
+//blacksmithing_category_6_58	bone machete			// 1020526
+
+blacksmithing_category_7_1	"i_axe"				// 1023913
+blacksmithing_category_7_2	"i_axe_battle"			// 1023911
+blacksmithing_category_7_3	"i_axe_double"			// 1023915
+blacksmithing_category_7_4	"i_axe_exec"			// 1023909
+blacksmithing_category_7_5	"i_axe_battle_large"		// 1025115
+blacksmithing_category_7_6	"i_axe_two_hand"		// 1025187
+blacksmithing_category_7_7	"i_axe_war"			// 1025040
+blacksmithing_category_7_8	"i_ornate_axe"			// 1031560
+//blacksmithing_category_7_9	guardian axe			// 1073545
+//blacksmithing_category_7_10	singing axe			// 1073546
+//blacksmithing_category_7_11	thundering axe			// 1073547
+//blacksmithing_category_7_12	heavy ornate axe		// 1073548
+
+blacksmithing_category_8_1	"i_bardiche"			// 1023917
+blacksmithing_category_8_2	"i_bladed_staff"		// 1029917
+blacksmithing_category_8_3	"i_double_bladed_staff"		// 1029919
+blacksmithing_category_8_4	"i_halberd"			// 1025183
+blacksmithing_category_8_5	"i_lance"			// 1029920
+blacksmithing_category_8_6	"i_pike"			// 1029918
+blacksmithing_category_8_7	"i_spear_short"			// 1025123
+blacksmithing_category_8_8	"i_scythe"			// 1029914
+blacksmithing_category_8_9	"i_spear"			// 1023938
+blacksmithing_category_8_10	"i_war_fork"			// 1025125
+
+blacksmithing_category_9_1	"i_hammer_pick"			// 1025181
+blacksmithing_category_9_2	"i_mace"			// 1023932
+blacksmithing_category_9_3	"i_maul"			// 1025179
+blacksmithing_category_9_4	"i_scepter"			// 1029916
+blacksmithing_category_9_5	"i_mace_war"			// 1025127
+blacksmithing_category_9_6	"i_hammer_war"			// 1025177
+blacksmithing_category_9_7	"i_tessen"			// 1030147
+//blacksmithing_category_9_8	diamond mace			// 1031556
+//blacksmithing_category_9_9	Shard Thrasher			// 1072918
+//blacksmithing_category_9_10	ruby mace			// 1073529
+//blacksmithing_category_9_11	emerald mace			// 1073530
+//blacksmithing_category_9_12	sapphire mace			// 1073531
+//blacksmithing_category_9_13	silver-etched mace		// 1073532
+
+blacksmithing_category_10_1	"i_dragon_gloves"		// 1029795
+blacksmithing_category_10_2	"i_dragon_helm"			// 1029797
+blacksmithing_category_10_3	"i_dragon_leggings"		// 1029799
+blacksmithing_category_10_4	"i_dragon_sleeves"		// 1029815
+blacksmithing_category_10_5	"i_dragon_chest"		// 1029793
+
+[eof]
