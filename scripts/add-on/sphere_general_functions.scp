@@ -31,4 +31,10 @@ new.morep = <p>
 new.link = <args>
 new.cont = <uid>
 
+[function isdamagespell]
+IF ((<ARGN1> == 5) || (<ARGN1> == 12) || (<ARGN1> == 18) || (<ARGN1> == 30) || (<ARGN1> == 42) || (<ARGN1> == 49) || (<ARGN1> == 51) || (<ARGN1> == 55))
+RETURN 1
+ENDIF
+RETURN 0
+
 [eof]
