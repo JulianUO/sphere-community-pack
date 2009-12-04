@@ -14,6 +14,17 @@ VERSION=0.56b
 // --------------------
 // Based on EA crafting lists
 
+[defname sphere_crafting_blacksmithing_default]
+blacksmithing_marking		"1" // 1 or 0
+blacksmithing_materials		"1" // 1 or 0
+
+blacksmithing_smelt		"f_craft_blacksmith_smelt"
+blacksmithing_repair		"f_craft_blacksmith_repair"
+blacksmithing_check		"f_craft_blacksmith_checkforge"
+blacksmithing_check_notice	"1044267" // You must be near an anvil and a forge to smith items.
+blacksmithing_chanceatmin	"0.0"
+blacksmithing_exceptional_bonus	"f_craft_blacksmith_exceptionalbonus"
+
 blacksmithing_category_1_name	"1011076" // Ringmail
 blacksmithing_category_2_name	"1011077" // Chainmail
 blacksmithing_category_3_name	"1011078" // Platemail
@@ -174,5 +185,43 @@ blacksmithing_category_10_2	"i_dragon_helm"			// 1029797
 blacksmithing_category_10_3	"i_dragon_leggings"		// 1029799
 blacksmithing_category_10_4	"i_dragon_sleeves"		// 1029815
 blacksmithing_category_10_5	"i_dragon_chest"		// 1029793
+
+
+[defname sphere_crafting_blacksmithing_colored]
+blacksmithing_material_0	""
+blacksmithing_material_0_name	"IRON"
+blacksmithing_material_0_skill	"Blacksmithing 0.0"
+
+blacksmithing_material_1	"Dull Copper"
+blacksmithing_material_1_name	"DULL COPPER"
+blacksmithing_material_1_skill	"Blacksmithing 65.0"
+
+blacksmithing_material_2	"Shadow"
+blacksmithing_material_2_name	"SHADOW"
+blacksmithing_material_2_skill	"Blacksmithing 70.0"
+
+blacksmithing_material_3	"Copper"
+blacksmithing_material_3_name	"COPPER"
+blacksmithing_material_3_skill	"Blacksmithing 75.0"
+
+blacksmithing_material_4	"Bronze"
+blacksmithing_material_4_name	"BRONZE"
+blacksmithing_material_4_skill	"Blacksmithing 80.0"
+
+blacksmithing_material_5	"Golden"
+blacksmithing_material_5_name	"GOLDEN"
+blacksmithing_material_5_skill	"Blacksmithing 85.0"
+
+blacksmithing_material_6	"Agapite"
+blacksmithing_material_6_name	"AGAPITE"
+blacksmithing_material_6_skill	"Blacksmithing 90.0"
+
+blacksmithing_material_7	"Verite"
+blacksmithing_material_7_name	"VERITE"
+blacksmithing_material_7_skill	"Blacksmithing 95.0"
+
+blacksmithing_material_8	"Valorite"
+blacksmithing_material_8_name	"VALORITE"
+blacksmithing_material_8_skill	"Blacksmithing 99.0"
 
 [eof]

@@ -15,6 +15,18 @@ VERSION=0.56b
 // Default lists, something like "small" settings.
 // If need to change color, sounds, etc, search around here.
 
+[DEFNAMEE TITHINGCONSUME]
+spell.201.tithing	"10" // Cleanse by Fire
+spell.202.tithing	"10" // Close Wounds
+spell.203.tithing	"10" // Consecrate Weapon
+spell.204.tithing	"10" // Dispel Evil
+spell.205.tithing	"10" // Divine Fury
+spell.206.tithing	"10" // Enemy of One
+spell.207.tithing	"10" // Holy Light
+spell.208.tithing	"30" // Noble Sacrifice
+spell.209.tithing	"10" // Remove Curse
+spell.210.tithing	"20" // Sacred Journey
+
 [DEFNAME COLOR_LOG]
 color_o_log		0
 color_o_oak		07da
