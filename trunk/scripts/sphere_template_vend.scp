@@ -1190,7 +1190,7 @@ SELL=i_Box_Wood,{5 38}
 SELL=i_key_copper,{5 38}
 SELL=i_bedroll,{5 38}
 SELL=i_kindling,{5 38}
-SELL=i_deed_GUILDSTONE,{5 38}
+//SELL=i_deed_GUILDSTONE,{5 38}
 SELL=i_bottle_hair_dye,{5 38}
 SELL=i_chessboard,{5 38}
 SELL=i_checkerboard,{5 38}
@@ -1292,7 +1292,7 @@ BUY=VENDOR_B_WEAPONS_BLADED
 BUY=VENDOR_B_WEAPONS_BLUNT
 BUY=VENDOR_B_BOWYER
 
-BUY=i_deed_GUILDSTONE,10 20
+//BUY=i_deed_GUILDSTONE,10 20
 
 [TEMPLATE VENDOR_S_JEWELER]
 CATEGORY=Vendor Templates
