@@ -1,0 +1,41 @@
+#summary Custom / Overriding TAGs
+#labels Phase-Implementation,Phase-Deploy
+
+= Introduction =
+TAGs used on this pack to override/change default behavior.
+Most of them are easy to use. If you want to change anything default, just insert or tweak them into your custom code.
+
+= Details =
+
+=== Item Tags ===
+*tag.override.map.width*
+*tag.override.map.height*
+
+*tag.DexterityBonus*
+----
+
+=== NPC Tags ===
+*tag.control.slots*
+----
+
+=== Character Tags ===
+*tag.skillrecovery*
+*tag.spellrecovery*
+
+*tag.modmaxhits*
+*tag.modmaxmana*
+*tag.modmaxstam*
+
+*tag.DamageIncrease*
+*tag.DefenseChanceIncrease*
+*tag.LowerManaCost*
+----
+
+=== Skill Tags ===
+*tag.recovery*
+----
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
