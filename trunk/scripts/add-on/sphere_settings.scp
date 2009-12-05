@@ -68,7 +68,7 @@ scp.Mining_AllowSand=1
 
 // Allow the new SOS fishing treasure system?
 // <boolean> (1 if enable, 0 if not). Default = 1 
-scp.Fishing_SOSTreasure=0 // NOT FINISHED YET!
+scp.Fishing_SOSTreasure=1
 
 // Can SeaSerpent appear when you fail at fishing?
 // <boolean> (1 if enable, 0 if not). Default = 1

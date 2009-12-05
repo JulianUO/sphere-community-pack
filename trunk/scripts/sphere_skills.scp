@@ -374,40 +374,6 @@ ON=@Fail
 ON=@Abort
 	SRC.SYSMESSAGE You fail to complete the song.
 
-[SKILL 16]
-DEFNAME=Skill_EvalInt
-KEY=EvaluatingIntel
-TITLE=Scholar
-PROMPT_MSG=@,,2 500906
-DELAY=1.0
-STAT_STR=5
-STAT_INT=60
-STAT_DEX=10
-BONUS_STR=0
-BONUS_DEX=0
-BONUS_INT=100
-BONUS_STATS=50
-ADV_RATE=2.5,50.0,200.0
-
-on=@start
-if <def.scp.NewSkills_EvalInt> == 1
-	if <src.targ.isitem>
-	sysmessage <def.evalint_item>
-	action = -1
-	return 1
-	endif
-endif
-
-on=@success
-if <def.scp.NewSkills_EvalInt> == 1
-f_evalint_success <src.targ.uid>
-skillgain EvaluatingIntel <eval <EvaluatingIntel>/10>
-return 1
-endif
-
-ON=@Fail
-f_evalint_fail <src.targ.uid>
-
 [SKILL 17]
 DEFNAME=Skill_Healing
 KEY=Healing

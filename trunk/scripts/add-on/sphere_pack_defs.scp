@@ -27,6 +27,10 @@ spell.208.tithing	"30" // Noble Sacrifice
 spell.209.tithing	"10" // Remove Curse
 spell.210.tithing	"20" // Sacred Journey
 
+[DEFNAME COLOR_FISH]
+color_o_sos_tile	0
+color_o_sos_ancient	0
+
 [DEFNAME COLOR_LOG]
 color_o_log		0
 color_o_oak		07da

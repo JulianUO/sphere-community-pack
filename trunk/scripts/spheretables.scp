@@ -73,8 +73,10 @@ scripts/add-on/crafting/
 scripts/add-on/enchants/
 scripts/add-on/override/
 scripts/add-on/quests/
-scripts/add-on/skills/
 scripts/add-on/skillmenu/
+scripts/add-on/skills/
+scripts/add-on/treasures/
+
 
 [OBSCENE]
 
