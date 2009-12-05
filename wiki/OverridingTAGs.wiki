@@ -9,13 +9,18 @@ Most of them are easy to use. If you want to change anything default, just inser
 
 === Item Tags ===
 *tag.override.map.width*
+Overrides the width of the treasure/cartography map gump size.
+
 *tag.override.map.height*
+Overrides the height of the treasure/cartography map gump size.
 
 *tag.DexterityBonus*
+Adds a bonus to dexterity to whoever equips the item with this tag. In the player there's not tag for this since MODDEX is used instead. 
 ----
 
 === NPC Tags ===
 *tag.control.slots*
+Followers slots required to control this creature. Default is 1 unless this is set to something different. Setting negatives values will lead to undesired behavior.
 ----
 
 === Character Tags ===
