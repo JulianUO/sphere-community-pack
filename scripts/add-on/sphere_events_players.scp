@@ -143,6 +143,11 @@ endif
 on=@userquestbutton
 openquestlog
 
+// OSI Guildstones Menu
+on=@userguildbutton
+src.GuildMenu
+return 1
+
 // Cancel use of Book of Arms
 // Until we script it and finish it!
 on=@userspecialmove
