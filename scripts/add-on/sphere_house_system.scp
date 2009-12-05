@@ -368,11 +368,13 @@ ENDIF
 
 [ITEMDEF 0100e]
 DEFNAME=i_key_copper
+RESOURCES=3 i_ingot_iron
 WEIGHT=0.1
 TYPE=T_KEY
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Keys
 DESCRIPTION=Copper Key
+SKILLMAKE=TINKERING 43.0,t_tinker_tools
 
 ON=@Click
 MESSAGE (<LINK.NAME>)
