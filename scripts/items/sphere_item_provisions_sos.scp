@@ -20,6 +20,16 @@ VERSION=0.56b
 // You'll be sure to turn and flee!
 // // Finally, scripting turns fun!
 
+[itemdef i_sos_tile]
+ID=i_water
+type=t_script
+
+on=@create
+color=color_o_sos_tile
+ATTR=attr_decay
+TIMER=0
+
+
 [ITEMDEF i_sos_bottle]
 NAME=Message in a bottle
 ID=099f
@@ -40,7 +50,7 @@ serv.newitem i_sos_message
 	if <r100> < <def.scp.Fishing_ChanceToAncient>
 	new.tag0.sos.ancient = 1
 	new.name "Ancient SOS"
-	new.color = color_o_sosancient
+	new.color = color_o_sos_ancient
 	endif
 new.bounce
 remove
@@ -76,5 +86,19 @@ src.tag0.sextantcoords = <tag0.coords>
 src.f_resenddialog d_sos_message
 return 1
 
+
+// This is to make sure the spawns don't hang around forever, which can be a problem
+[ITEMDEF i_fishing_spawn_remover]
+NAME=Spawn Remover Memory
+ID=i_memory
+TYPE=t_eq_script
+
+on=@create
+ATTR=attr_invis|attr_newbie
+TIMER=60*60*2 //4 hours
+
+on=@timer
+cont.remove
+return 1
 
 [eof]

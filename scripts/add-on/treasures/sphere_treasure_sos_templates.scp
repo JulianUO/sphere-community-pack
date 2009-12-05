@@ -26,18 +26,58 @@ DESCRIPTION=Ancient SOS Treasure
 CATEGORY=Item Templates
 SUBSECTION=Treasure Hunting
 DESCRIPTION=Common SOS Treasure
+CONTAINER=0e41
+ITEM={ tm_sos_pillows 1 tm_sos_paintings 1 tm_sos_bodyparts 1 }
+ITEM=i_arrow,{10 25}
+ITEM=random_scroll
+ITEM=random_scroll
+ITEM=random_scroll
+ITEM={ RANDOM_SHIELD_HARDENING 1 RANDOM_PLATEMAIL_HARDENING 1 RANDOM_CHAINMAIL_HARDENING 1 RANDOM_RINGMAIL_HARDENING 1 RANDOM_SHIELD_DEFENSE 1 RANDOM_PLATEMAIL_DEFENSE 1 RANDOM_CHAINMAIL_DEFENSE 1 RANDOM_RINGMAIL_DEFENSE 1 }
+ITEM=random_jewel,{1 3}
+ITEM=random_jewel,{1 3}
+ITEM=random_jewel,{1 3}
+ITEM=RANDOM_RICH_MAGIC_GOODIE
+ITEM={ RANDOM_RICH_MAGIC_LOOT 1 RANDOM_AVERAGE_MAGIC_LOOT 1 }
+ITEM=RANDOM_RICH_MAGIC_LOOT
+ITEM=i_gold,{12000 13000}
+ITEM=random_magic_wands,R3
+ITEM=i_reag_black_pearl,{10 30}
+ITEM=i_reag_blood_moss,{10 30}
+ITEM=i_reag_garlic,{10 30}
+ITEM=i_reag_ginseng,{10 30}
+ITEM=i_reag_mandrake_root,{10 30}
+ITEM=i_reag_nightshade,{10 30}
+ITEM=i_reag_sulfur_ash,{10 30}
+ITEM=i_reag_spider_silk,{10 30}
+ITEM=i_reag_blackmoor,{10 30}
+ITEM=i_reag_blood_vial,{10 30}
+ITEM=i_reag_bone,{10 30}
+ITEM=i_reag_dragon_blood,{10 30}
+ITEM=i_reag_executioners_cap,{10 30}
+ITEM=i_reag_eye_of_newt,{10 30}
+ITEM=i_reag_worm_heart,{10 30}
+ITEM=RANDOM_FILTHY_RICH_MONSTER_GOODIE
 
-[template tm_sos_random_items]
-// random items fished up from treasure tile
+[TEMPLATE tm_sos_pillows]
+// decorative items fished up from treasure tile
 CATEGORY=Item Templates
 SUBSECTION=Treasure Hunting
-DESCRIPTION=Random SOS Items
+DESCRIPTION=Pillows
+ITEM={ i_pillow 1 i_pillow_2 1 i_pillow_large 1 i_pillow_9 1 i_pillow_10 1 i_pillow_11 1 i_pillow_3 1 i_pillow_4 1 i_pillow_5 1 i_pillow_6 1 i_pillow_7 1 i_pillow_8 1 }
 
-[template tm_sos_random_items]
-// valuable items fished up from treasure tile
-// things like paintings, decoration, etc
+[TEMPLATE tm_sos_paintings]
+// decorative items fished up from treasure tile
 CATEGORY=Item Templates
 SUBSECTION=Treasure Hunting
-DESCRIPTION=Valuable SOS Items
+DESCRIPTION=Paintings
+ITEM={ i_portrait_1 1 i_portrait_2 1 i_portrait_3 1 i_portrait_4 1 i_portrait_5 1 i_portrait_6 1 i_portrait_7 1 i_portrait_big 1 i_painting_ruined 1 }
+
+[TEMPLATE tm_sos_bodyparts]
+// decorative items fished up from treasure tile
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Body Parts
+ITEM={ i_flesh_arm_right 1 i_flesh_upper_body 1 i_flesh_leggings 1 i_flesh_torso_2 1 i_flesh_head 1 i_flesh_leg 1 i_flesh 1 i_flesh_legs_3 1 i_flesh_arm_left 1 i_flesh_upper_body_2 1 i_flesh_legs_4 1 i_flesh_torso_3 1 i_flesh_2 1 i_flesh_legs_5 1 i_flesh_leg_2 1 i_flesh_heart 1 i_flesh_liver 1 i_flesh_entrails 1 i_flesh_brain 1 i_flesh_torso 1 i_flesh_head_2 1 i_flesh_left_arm 1 i_flesh_right_arm 1 i_flesh_left_leg 1 i_flesh_right_leg 1 }
+
 
 [eof]

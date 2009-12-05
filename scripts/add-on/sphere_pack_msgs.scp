@@ -19,6 +19,8 @@ VERSION=0.56b
 // The following are RANGES of cliloc. They just determine a start of a range.
 // Used for certain skills which using math calculations return the according cliloc.
 scp.anatomy_start		"1038033"
+scp.evalint_start		"1038168"
+scp.evalint_fail		"1038166"
 
 
 [DEFNAME SphereCommunityPack_Clilocs]
@@ -46,6 +48,7 @@ scp.craft_title_masonry		"1044500" // <CENTER>MASONRY MENU</CENTER>
 scp.craft_title_glassblowing	"1044622" // <CENTER>GLASSBLOWING MENU</CENTER>
 scp.craft_title_dragonscale	"1053135" // <CENTER>DRAGON SCALE ARMOR MENU</CENTER>
 
+
 [DEFNAME SphereCommunityPack_Messages]
 // The following are sysmessages, messages, say, etc.
 // You can change it for everything, even for text.
@@ -64,6 +67,8 @@ scp.craft_smelt_targ		"@,,2 1044273"	// Target an item to recycle.
 scp.craft_smelt_notitem		"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_notsmeltable	"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_success		"@,,2 1044270"	// You melt the item down into ingots.
+
+scp.evalint_item		"@,,2 500908"
 
 scp.fishing_treasure		"@,,2 503175"	// You pull up a heavy chest from the depths of the ocean!
 scp.fishing_nofish		"@,,2 503168"	// The fish don't seem to be biting here.

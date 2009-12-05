@@ -1,0 +1,75 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - all the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// - Level is Target's Int / 10
+// - For womans the cliloc is +11 and for non-human monsters is +22
+
+[SKILL 16]
+DEFNAME=Skill_EvalInt
+KEY=EvaluatingIntel
+TITLE=Scholar
+PROMPT_MSG=@,,2 500906
+DELAY=1.0
+STAT_STR=5
+STAT_INT=60
+STAT_DEX=10
+BONUS_STR=0
+BONUS_DEX=0
+BONUS_INT=100
+BONUS_STATS=50
+ADV_RATE=2.5,50.0,200.0
+
+on=@start
+if <def.scp.NewSkills_EvalInt> == 1
+	if <src.targ.isitem>
+	sysmessage <def.evalint_item>
+	action = -1
+	return 1
+	endif
+endif
+
+on=@success
+if <def.scp.NewSkills_EvalInt> == 1
+local.level = <eval (<src.targ.int>/10)+1>
+	if <local.level> > 11
+	local.level = 11
+	endif
+local.cliloc = <eval <def.scp.evalint_start> + <local.level>>
+	if <src.targ.brain>
+		if !<src.targ.ishuman>
+		local.cliloc += 22
+		endif
+	endif
+	if <src.targ.id> == c_woman
+	local.cliloc += 11
+	endif
+sysmessage @,,2 <local.cliloc>
+skillgain EvaluatingIntel <eval <EvaluatingIntel>/10>
+return 1
+endif
+
+ON=@Fail
+local.cliloc = <def.scp.evalint_fail>
+if <src.targ.brain>
+	if !<src.targ.ishuman>
+	local.cliloc += 2
+	endif
+endif
+if <src.targ.id> == c_woman
+local.cliloc += 1
+endif
+sysmessage @,,2 <local.cliloc>
+return 1
+
+[eof]

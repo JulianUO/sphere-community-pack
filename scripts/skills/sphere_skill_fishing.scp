@@ -29,10 +29,7 @@ return 0
 endif
 if <src.fishing> >= <def.scp.Fishing_MinToDisturbSerpent>
 	if <r100> <= <def.scp.Fishing_ChanceSeaSerpent>
-	serv.newnpc = c_sea_serpent
-	new.home = <src.targp>
-	new.homedist = 5
-	new.attack <src.uid>
+	src.f_disturb_seamonster <targp>
 	endif
 endif
 

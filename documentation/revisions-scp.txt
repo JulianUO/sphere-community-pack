@@ -140,8 +140,9 @@ Note: Mystic weapons were introduced during Ophidian Wars.
 - Fixed: forgot to add a check for OSIFollowers setting in the shrinked pets.
 - Fixed: inexistant runes in spell sections.
 - Fixed: several bugs on peacemaking skill.
+---- Released 0.1c
 
-03-12-2009, ShiryuX
+02-12-2009, ShiryuX
 - Added: osi-like runebook by pyromapes2k with small changes
 - Added: map5 files, though they were already there.
 - Added: small cooking file, no tool yet, just a base.
@@ -154,3 +155,31 @@ Note: Mystic weapons were introduced during Ophidian Wars.
 - Fixed: two small typos in the script (sorry, can't remember every word)
 - Fixed: also some crafting bugs, (in *theory*) in the sidebar buttons.
 - Fixed: @SkillPreSelect now working, forgot to add a little 1 in here. =P
+
+03-12-2009, ShiryuX
+- Added: logs according to osi and moved them to separate file.
+- Updated: ores according to osi. old ores are still there.
+- Updated: organized a lot the region file, regionresource
+- Updated: moved misc spells to separate file
+- Updated: many headers with credits to the skill files.
+- Updated: sphere_spells.scp -> sphere_spells_magery.scp
+- Updated: moved spells files to the spell folder.
+- Updated: moved ingots to own file. 
+- Updated: moved color settings to def file.
+- Updated: moved all the ore [regionresource] to sphere_region_resources.scp
+- Updated: blacksmithing table according to the SA files.
+- Updated: foundations prices according to SA files.
+
+04-12-2009, ShiryuX
+- Added: missing mr_sand region resource.
+- Added: fishing according to EA. needs treasure sys to be done.
+- Added: some basic support for SOS treasure system. stills needs to be finished, not usable yet.
+- Updated: alchemy skillmenu according to SA files.
+- Updated: merged some spells file into the main one (sphere_spells_tithing -> sphere_pack_defs.scp and sphere_spells_damage_bonus.scp -> sphere_general_functions.scp)
+- Updated: moved scripts/add-on/spells/ files to scripts/spells/.
+- Updated: moved crafting skillmenues to their own skillmenu folder. (need to finish other skills)
+- Moved: anatomy and fishing to the main skills folder (the rest of skills will be moved as I update them)
+- Fixed: now chivalry spells consume tithing points in all cases.
+- Fixed: misspell in sphere_events_players.scp.
+- Fixed: misspell in sphere_pack_defs.scp
+- Removed: old file for bowcraft.
