@@ -417,28 +417,6 @@ ON=@Fail
 ON=@Abort
 	SRC.SYSMESSAGE You give up trying to persuade that to move.
 
-
-[SKILL 21]
-DEFNAME=Skill_Hiding
-KEY=Hiding
-TITLE=Rogue
-PROMPT_MSG=
-DELAY=2.0
-STAT_STR=20
-STAT_INT=60
-STAT_DEX=90
-BONUS_STR=0
-BONUS_DEX=80
-BONUS_INT=20
-BONUS_STATS=25
-ADV_RATE=2.5,50.0,200.0
-
-ON=@Fail
-MESSAGE @,,2 501241
-
-ON=@Abort
-MESSAGE @,,2 501241
-
 [SKILL 23]
 DEFNAME=Skill_Inscription
 KEY=Inscription
@@ -987,27 +965,6 @@ ON=@Fail
 
 ON=@Abort
 	SRC.SYSMESSAGE You stop concentrating.
-
-[SKILL 47]
-DEFNAME=SKILL_STEALTH
-KEY=Stealth
-TITLE=Rogue
-PROMPT_MSG=
-DELAY=2.0
-STAT_STR=20
-STAT_INT=60
-STAT_DEX=90
-BONUS_STR=0
-BONUS_DEX=80
-BONUS_INT=20
-BONUS_STATS=25
-ADV_RATE=10.0,200.0,800.0
-
-ON=@Fail
-	SRC.SYSMESSAGE You can't seem to hide here.
-
-ON=@Abort
-	SRC.SYSMESSAGE You give up trying to hide here.
 
 [SKILL 48]
 DEFNAME=SKILL_REMOVE_TRAP

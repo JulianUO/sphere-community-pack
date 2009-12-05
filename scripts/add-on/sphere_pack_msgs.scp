@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 01-Nov-2009
+// FILE LAST UPDATED: 05-Dec-2009
 VERSION=0.56b
 //
 // SCRIPT DOCUMENTATION
@@ -160,6 +160,19 @@ scp.poisoning_bloodmixpoison	"@,,2 1005537"
 scp.poisoning_cleaneditem	"@,,2 1010496"
 scp.poisoning_mustbecleaned	"@,,2 1005536"
 scp.poisoning_usethison		"@,,2 1010086"
+
+scp.hiding_spellactive			"@,,2 501238"		// You are busy doing something else and cannot hide.
+scp.hiding_activecombat			"@022,,2 501237"	// You can't seem to hide right now.
+scp.hiding_success				"@01f4,,2 501240"	// You have hidden yourself well.
+scp.hiding_fail					"@022,,2 501241"	// You fail to hide.
+scp.hiding_reveal				"@,,2 501242"		// You are no longer hidden.
+scp.hiding_shoveinvis			"@,,2 1019041"		// You shove something invisible out of the way.
+
+scp.stealth_nothidden			"@,,2 502725" // You must hide first
+scp.stealth_reqhiding			"@,,2 502726" // You are not hidden well enough.  Become better at hiding.
+scp.stealth_armorcheck			"@,,2 502727" // You could not hope to move quietly wearing this much armor.
+scp.stealth_success				"@,,2 502730" // You begin to move quietly.
+scp.stealth_fail				"@,,2 502731" // You fail in your attempt to move unnoticed.
 
 scp.runes_entername		"@88,,1 Type in a name for the rune"
 

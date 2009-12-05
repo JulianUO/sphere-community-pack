@@ -32,6 +32,8 @@ scp.NewSkills_ResistingSpells=1
 scp.NewSkills_Poisoning=1
 scp.NewSkills_Healing=1
 scp.NewSkills_TasteID=1
+scp.NewSkills_Hiding=1
+scp.NewSkills_Stealth=1
 
 // Enables, switch or disable the new barding system
 // 0 = Default. 1 = OSI-Like.
