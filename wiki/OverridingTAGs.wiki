@@ -1,5 +1,5 @@
 #summary Custom / Overriding TAGs
-#labels Phase-Implementation,Phase-Deploy
+#labels Phase-Implementation,Phase-Deploy,Featured
 
 = Introduction =
 TAGs used on this pack to override/change default behavior.
