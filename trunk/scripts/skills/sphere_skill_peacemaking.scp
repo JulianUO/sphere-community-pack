@@ -16,6 +16,29 @@ VERSION=0.56b
 // Because some formulas are missing.
 //
 
+[SKILL 9]
+DEFNAME=SKILL_PEACEMAKING
+KEY=Peacemaking
+TITLE=Bard
+PROMPT_MSG=
+DELAY=2.0
+STAT_STR=0
+STAT_INT=70
+STAT_DEX=70
+BONUS_STR=0
+BONUS_DEX=50
+BONUS_INT=50
+BONUS_STATS=5
+ADV_RATE=2.5,50.0,200.0
+
+on=@prestart
+if <def.scp.BardingSystem> == 1
+	if <def.scp.NewBarding_Peacemaking> == 1
+	f_onbarding_start 9
+	return 1
+	endif
+endif
+
 [function f_start_peacemaking]
 ref10 = <args>
 if <ref10.isitem>
@@ -24,25 +47,12 @@ return 1
 endif
 // Standard mode : reset combatants for everyone in the area
 if <ref10.uid> == <uid>
-ref12 = <uid>
 local.chance = <eval (<peacemaking> /2 ) + (<musicianship> / 2)>
 	if <local.chance> < 400
 	local.chance = 400
 	endif
 	if <r<local.chance>> > 290
-	local.chars = 0
-		forchars <eval 8 + (<peacemaking> / 150)>
-			if <ref12.uid> != <uid>
-			local.chars ++ 
-				if !<isplayer>
-				action  = 06d
-				endif
-			flags &= ~statf_war
-			memoryfindtype.memory_war_targ.remove
-			sysmessage <def.scp.bard_peacemaking_peaced>
-			endif
-		endfor
-	ref12.sysmessage <qval (<local.chars> > 0) ? <def.scp.bard_peacemaking_success> : <def.scp.bard_peacemaking_norange>
+	timerf <serv.skill.peacemaking.delay>,f_peacemaking_success_area
 	else
 	ref12.sysmessage <def.scp.bard_peacemaking_fail>
 	endif
@@ -54,17 +64,37 @@ else
 		sysmessage <def.scp.bard_peacemaking_tfail>
 		return 1
 		endif
-	serv.newitem i_new_peacemaking,1,<ref10.uid>
-	new.timer = <eval (<peacemaking> / 10) + 30>
-	ref10.tag0.nomovetill = <eval <new.timer> + <serv.time>>
-	ref10.events +e_peacemaking
-	ref10.flags &= ~statf_war
-	ref10.memoryfindtype.memory_war_targ.remove
-	ref10.action = -1
-	sysmessage <def.scp.bard_peacemaking_tsuccess>
+	timerf <serv.skill.peacemaking.delay>,f_peacemaking_success_targ <ref10.uid>
 	endif
 endif
 return 1
+
+[function f_peacemaking_success_area]
+ref12 = <uid>
+local.chars = 0
+forchars <eval 8 + (<peacemaking> / 150)>
+	if <ref12.uid> != <uid>
+	local.chars ++ 
+		if !<isplayer>
+		action  = 06d
+		endif
+	flags &= ~statf_war
+	memoryfindtype.memory_war_targ.remove
+	sysmessage <def.scp.bard_peacemaking_peaced>
+	endif
+endfor
+ref12.sysmessage <qval (<local.chars> > 0) ? <def.scp.bard_peacemaking_success> : <def.scp.bard_peacemaking_norange>
+
+[function f_peacemaking_success_targ]
+ref11 = <args>
+serv.newitem i_new_peacemaking,1,<ref11.uid>
+new.timer = <eval (<peacemaking> / 10) + 30>
+ref11.tag0.nomovetill = <eval <new.timer> + <serv.time>>
+ref11.events +e_peacemaking
+ref11.flags &= ~statf_war
+ref11.memoryfindtype.memory_war_targ.remove
+ref11.action = -1
+sysmessage <def.scp.bard_peacemaking_tsuccess>
 
 [events e_peacemaked]
 on=@npcactfight
@@ -83,7 +113,6 @@ on=@gethit
 findid.i_peace_memory.remove
 attack <src.uid>
 events -e_peace_event
-
 
 [ITEMDEF i_new_peacemaking]
 ID=i_memory

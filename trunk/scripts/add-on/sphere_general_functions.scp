@@ -31,10 +31,47 @@ new.morep = <p>
 new.link = <args>
 new.cont = <uid>
 
+// Check if the introduced argument is a spell number
+// Arguments = spell
 [function isdamagespell]
 IF ((<ARGN1> == 5) || (<ARGN1> == 12) || (<ARGN1> == 18) || (<ARGN1> == 30) || (<ARGN1> == 42) || (<ARGN1> == 49) || (<ARGN1> == 51) || (<ARGN1> == 55))
 RETURN 1
 ENDIF
 RETURN 0
+
+// Close all dialogs of the player
+[FUNCTION closealldialogs]
+IF (<DIALOGLIST.COUNT>)
+FOR 0 <EVAL <DIALOGLIST.COUNT>-1>
+DIALOGCLOSE <DIALOGLIST.<dLOCAL._FOR>.ID> <ARGN2>
+ENDFOR
+ENDIF
+
+// New ADDITEM function with works with 65000+ items pile
+// Arguments = id,amount
+[function f_additem]
+IF (0<DEF.<ARGV[0]>>)
+IF (0<ARGV[1]>)
+LOCAL.AMOUNT=<ARGV[1]>
+ELSE
+LOCAL.AMOUNT=1
+ENDIF
+WHILE <LOCAL.AMOUNT>
+SERV.NEWITEM=<ARGV[0]>
+IF (<SERV.ITEMDEF.<ARGV[0]>.CAN>&CAN_I_PILE)
+IF (<LOCAL.AMOUNT> > 64999)
+NEW.AMOUNT=65000
+ELSE
+NEW.AMOUNT=<LOCAL.AMOUNT>
+ENDIF
+ENDIF
+LOCAL.AMOUNT -= <NEW.AMOUNT>
+IF (0<ARGV[2]>)
+NEW.CONT=<ARGV[2]>
+ELSE
+BOUNCE <NEW>
+ENDIF
+ENDWHILE
+ENDIF
 
 [eof]

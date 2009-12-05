@@ -634,7 +634,7 @@ MANAUSE=40
 SKILLREQ=Necromancy 80.0
 INTERRUPT=100.0,1.0
 
-on=@start
+on=@select
 if <spiritspeak> < 100.0
 actdiff = -1
 endif
