@@ -6,26 +6,25 @@ TAGs used on this pack to override/change default behavior.
 Most of them are easy to use. If you want to change anything default, just insert or tweak them into your custom code.
 
 
-
+----
 == Item Tags ==
 *tag.override.map.width*<br>
-Overrides the width of the treasure/cartography map gump size.
-
-
+Overrides the width of the treasure/cartography map gump size.<br>
+<br>
 *tag.override.map.height*<br>
-Overrides the height of the treasure/cartography map gump size.
-
-
+Overrides the height of the treasure/cartography map gump size.<br>
+<br>
 *tag.DexterityBonus*<br>
 Adds a bonus to dexterity to whoever equips the item with this tag. In the player there's not tag for this since MODDEX is used instead. 
-
 ----
 
+----
 === NPC Tags ===
 *tag.control.slots*<br>
 Followers slots required to control this creature. Default is 1 unless this is set to something different. Setting negatives values will lead to undesired behavior.
 ----
 
+----
 === Character Tags ===
 *tag.skillrecovery*<br>
 *tag.spellrecovery*<br>
@@ -37,11 +36,7 @@ Followers slots required to control this creature. Default is 1 unless this is s
 *tag.LowerManaCost*<br>
 ----
 
+----
 === Skill Tags ===
 *tag.recovery*<br>
 ----
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
