@@ -33,26 +33,64 @@ VERSION=0.56b
 // - Mind Blast damage: Base Damage + ((Magery + Intelligence) / 5) (Drop decimals from result)
 // * Spell Damage Increase Items effects are capped at 15% in Player vs. Player combat.
 
-// IMPLEMENTED ENCHANTS
-// --------------------
-// - Dexterity Bonus
-// - Hitpoint Increase
-// - Intelligence Bonus
-// - Lower Mana Cost
-// - Lower Reagent Cost
-// - Luck
-// - Mage Armor
-// - Mage Weapon
-// - Mana Increase
-// - Slayer Weapon
-// - Stamina Increase
-// - Strength Bonus
+// SCRIPTPACK ENCHANTS
+// -------------------
+// *DONE* Damage Increase
+// Defense Chance Increase (Depends on Combat System)
+// *DONE* Dexterity Bonus
+// *DONE* Faster Cast Recovery
+// Faster Casting (Not even started)
+// Hit Chance Increase (Depends on Combat System)
+// *DONE* Hitpoints Increase
+// *DONE* Intelligence Bonus
+// *DONE* Lower Mana Cost
+// *DONE* Lower Reagent Cost
+// Luck (There's no real effect on this one)
+// *DONE* Mage Armor
+// *DONE* Mage Weapon
+// *DONE* Mana Increase
+// Slayer Weapon (Uncomplete, need to add different types of slayers, etc)
+// *DONE* Spell Damage Increase
+// *DONE* Strength Bonus
 
 [events e_PlayerGenericEvent]
+// New @SkillPreSelect Trigger
 on=@userextcmd
 if <argn1> == 36
 	if <trigger @SkillPreSelect,tat_as_argn,<argv[0]>> == 1
 	return 1
+	endif
+endif
+
+// Skill recovery snippet
+on=@skillselect
+if <dtag0.skillrecovery> > <serv.time>
+src.sysmessage <def.scp.skill_mustwait>
+return 1
+endif
+
+// Skill recovery snippet
+on=@skillsuccess
+if !<isempty <serv.skill.<argn1>.tag.recovery>>
+args = <serv.skill.<argn1>.tag0.recovery>
+tag.skillrecovery = <eval <serv.time> + <argv[0]>>
+endif
+
+// Skill recovery snippet
+on=@skillfail
+if !<isempty <serv.skill.<argn1>.tag.recovery>>
+args = <serv.skill.<argn1>.tag0.recovery>
+	if !<isempty <argv[1]>>
+	tag.skillrecovery = <eval <serv.time> + <argv[1]>>
+	endif
+endif
+
+// Skill recovery snippet
+on=@skillabort
+if !<isempty <serv.skill.<argn1>.tag.recovery>>
+args = <serv.skill.<argn1>.tag0.recovery>
+	if !<isempty <argv[1]>>
+	tag.skillrecovery = <eval <serv.time> + <argv[1]>>
 	endif
 endif
 
@@ -89,6 +127,7 @@ on=@userquestbutton
 openquestlog
 
 // Cancel use of Book of Arms
+// Until we script it and finish it!
 on=@userspecialmove
 return 1
 
@@ -146,7 +185,7 @@ else
 		endif
 	endif
 	if <def.scp.MagicProperties_LowerManaCost> == 1
-	argn2 = <eval (<argn2> * (<tag0.lmc> + 1)) / 100>
+	argn2 = <eval (<argn2> * (<tag0.LowerManaCost> + 1)) / 100>
 	endif
 endif
 

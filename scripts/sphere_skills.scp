@@ -208,35 +208,6 @@ SRC.SYSMESSAGE @,,2 1044043
 ON=@Abort
 	SRC.SYSMESSAGE You fail to complete the item.
 
-[SKILL 9]
-DEFNAME=SKILL_PEACEMAKING
-KEY=Peacemaking
-TITLE=Bard
-PROMPT_MSG=
-DELAY=2.0
-STAT_STR=0
-STAT_INT=70
-STAT_DEX=70
-BONUS_STR=0
-BONUS_DEX=50
-BONUS_INT=50
-BONUS_STATS=5
-ADV_RATE=2.5,50.0,200.0
-
-on=@prestart
-if <def.scp.BardingSystem> == 1
-	if <def.scp.NewBarding_Peacemaking> == 1
-	f_onbarding_start 9
-	return 1
-	endif
-endif
-
-ON=@Fail
-SRC.MESSAGE @,,2 500613
-
-ON=@Abort
-	SRC.SYSMESSAGE You fail to complete the song.
-
 [SKILL 10]
 DEFNAME=Skill_Camping
 KEY=Camping
@@ -467,35 +438,6 @@ MESSAGE @,,2 501241
 
 ON=@Abort
 MESSAGE @,,2 501241
-
-[SKILL 22]
-DEFNAME=SKILL_PROVOCATION
-KEY=Provocation
-TITLE=Bard
-PROMPT_MSG=@,,2 501587
-DELAY=3.0
-STAT_STR=20
-STAT_INT=60
-STAT_DEX=70
-BONUS_STR=0
-BONUS_DEX=90
-BONUS_INT=10
-BONUS_STATS=5
-ADV_RATE=2.5,50.0,200.0
-
-on=@prestart
-if <def.scp.BardingSystem> == 1
-	if <def.scp.NewBarding_Provocation> == 1
-	f_onbarding_start 22
-	return 1
-	endif
-endif
-
-ON=@Fail
-SRC.sysmessage @,,2 501599
-
-ON=@Abort
-	SRC.SYSMESSAGE You decide not to incite anything for now.
 
 [SKILL 23]
 DEFNAME=Skill_Inscription

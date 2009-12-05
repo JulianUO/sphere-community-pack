@@ -68,7 +68,7 @@ scp.craft_smelt_notitem		"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_notsmeltable	"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_success		"@,,2 1044270"	// You melt the item down into ingots.
 
-scp.evalint_item		"@,,2 500908"
+scp.evalint_item		"@,,2 500908"	//
 
 scp.fishing_treasure		"@,,2 503175"	// You pull up a heavy chest from the depths of the ocean!
 scp.fishing_nofish		"@,,2 503168"	// The fish don't seem to be biting here.
@@ -112,9 +112,9 @@ scp.tasteid_cannot		"@,,2 502820"	// That's not something you can taste.
 scp.tasteid_fail		"@,,2 502823"	// You cannot discern anything about this substance.
 
 scp.bard_noinstrument		"@,,2 1062488"	// The instrument you are trying to play is no longer in your backpack!
-scp.bard_instrument_targ	""
-scp.bard_instrument_wrong	""
-scp.bard_toofaraway		""
+scp.bard_instrument_targ	"@,,2 500617"	// What instrument shall you play?
+scp.bard_instrument_wrong	"@,,2 500619"	// That is not a musical instrument.
+scp.bard_toofaraway		"@,,2 501816"	// You are too far away to do that.
 scp.bard_peacemaking_targ	"@,,2 1049525"	// Whom do you wish to calm?
 scp.bard_peacemaking_isitem	"@,,2 1049528"	// You cannot calm that!
 scp.bard_peacemaking_peaced	"@,,2 500616"	// You hear lovely music, and forget to continue battling!
@@ -123,7 +123,17 @@ scp.bard_peacemaking_fail	"@,,2 500613"	// You attempt to calm everyone, but fai
 scp.bard_peacemaking_norange	"@,,2 1049648"	// You play hypnotic music, but there is nothing in range for you to calm.
 scp.bard_peacemaking_tfail	"@,,2 1049531"	// You attempt to calm your target, but fail.
 scp.bard_peacemaking_tsuccess	"@,,2 1049532"	// You play hypnotic music, calming your target.
+
+scp.bard_provocation_cannot	"@,,2 1049446"	// You have no chance of provoking those creatures.
+scp.bard_provocation_tamed	"@,,2 501590"	// They are too loyal to their master to be provoked.
+scp.bard_provocation_fail	"@,,2 501599"	// Your music fails to incite enough anger.
+scp.bard_provocation_notevil	"@,,2 501589"	// You can't incite that!
+scp.bard_provocation_nochance	"@,,2 1049446"	// You have no chance of provoking those creatures.
 scp.bard_provocation_2ndtarg	"@,,2 1008085"	// You play your music and your target becomes angered.  Whom do you wish them to attack?
+scp.bard_provocation_faraway	"@,,2 1049450"	// The creatures you are trying to provoke are too far away from each other for your music to have an effect.
+scp.bard_provocation_success	"@,,2 501602"	// Your music succeeds, as you start a fight.
+scp.bard_provocation_sametarg	"@,,2 501593"	// You can't tell someone to attack themselves!
+scp.bard_provocation_nonpc	"@,,2 501589"	// You can't incite that!
 
 scp.poisoning_immune		"@,,2 1005534"
 scp.poisoning_beenpoisoned	"@,,2 1010512"
@@ -152,6 +162,8 @@ scp.poisoning_mustbecleaned	"@,,2 1005536"
 scp.poisoning_usethison		"@,,2 1010086"
 
 scp.runes_entername		"@88,,1 Type in a name for the rune"
+
+scp.skill_mustwait		"@,,2 500118"	// You must wait a few moments to use another skill.
 
 scp.spell.animatedead_target	"@,,2 1061083"	// Animate what corpse?
 scp.spell.curseweapon_noweap	"@,,2 501078"	// You must be holding a weapon.

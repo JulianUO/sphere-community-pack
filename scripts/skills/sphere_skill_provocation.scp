@@ -1,0 +1,104 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// - Target needs to be evil (red) in both cases
+// - Pets, Players and Vendors can't be provoked
+// tag0.noprovoke =  The npc cannot be provoked by any means.
+// tag0.noprovoke.1 = cannot be first target (the attacker)
+// tag0.noprovoke.2 = cannot be second target (who receive the attack)
+
+[SKILL 22]
+DEFNAME=SKILL_PROVOCATION
+KEY=Provocation
+TITLE=Bard
+PROMPT_MSG=@,,2 501587
+DELAY=3.0
+STAT_STR=20
+STAT_INT=60
+STAT_DEX=70
+BONUS_STR=0
+BONUS_DEX=90
+BONUS_INT=10
+BONUS_STATS=5
+ADV_RATE=2.5,50.0,200.0
+
+on=@prestart
+if <def.scp.BardingSystem> == 1
+	if <def.scp.NewBarding_Provocation> == 1
+	f_onbarding_start 22
+	return 1
+	endif
+endif
+
+// args = first target
+[function f_start_provocation]
+ref29 = <args>
+if <ref29.tag0.noprovoke> || <ref29.tag0.noprovoke.1>
+sysmessage <def.scp.bard_provocation_cannot>
+return 1
+endif
+if <ref29.brain>
+	if <ref29.notogetflag> == NotoEvil
+		if <ref29.memoryfindtype.memory_ipet.uid>
+		sysmessage <def.scp.bard_provocation_tamed>
+		return 1
+		else
+		local.chances = <f_bard_calculation <ref29.uid>,<tag0.instrument>,provocation>
+			if <r100> < <local.chances>
+			sysmessage <def.scp.bard_provocation_2ndtarg>
+			targetf f_provocation_secondtarg <ref29.uid>
+			else
+			sysmessage <def.scp.bard_provocation_nochance>
+			endif
+		endif
+	else
+	sysmessage <def.scp.bard_provocation_notevil>
+	endif
+else
+sysmessage <def.scp.bard_provocation_nonpc>
+endif
+return 1
+
+// args = first target
+// argo = second target
+[function f_provocation_secondtarg]
+if <argo.tag0.noprovoke> || <argo.tag0.noprovoke.2>
+sysmessage <def.scp.bard_provocation_cannot>
+return 1
+endif
+if <argo.brain>
+	if <argo.uid> != <args>
+		if <argo.distance <args>> > <def.scp.Provocation_DistanceBetween>
+		sysmessage <def.scp.bard_provocation_faraway>
+		return 0
+		else
+		local.chances = <f_bard_calculation <ref29.uid>,<tag0.instrument>,provocation>
+			if <r100> < <local.chances>
+			sound <uid.<tag0.instrument>.tdata1>
+			sysmessage <def.scp.bard_provocation_success>
+			uid.<args>.attack <argo.uid>
+			else
+			sysmessage <def.scp.bard_provocation_fail>
+			return 1
+			endif
+		endif
+	else
+	sysmessage <def.scp.bard_provocation_sametarg>
+	endif
+else
+sysmessage <def.scp.bard_provocation_nonpc>
+endif
+return 1
+
+[eof]

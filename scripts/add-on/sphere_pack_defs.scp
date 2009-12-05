@@ -27,6 +27,9 @@ spell.208.tithing	"30" // Noble Sacrifice
 spell.209.tithing	"10" // Remove Curse
 spell.210.tithing	"20" // Sacred Journey
 
+[DEFNAME DIALOG_COLORS]
+dcolor_white			16777215
+
 [DEFNAME COLOR_FISH]
 color_o_sos_tile	0
 color_o_sos_ancient	0
@@ -124,12 +127,17 @@ snd_throw_h			1491
 snd_throw_m			1491 
 snd_mysticism			1619
 
+[DEFNAME NOTO_FLAGS]
+NotoGood		1
+NotoGuildSame		2
+NotoNeutral		3
+NotoCriminal		4
+NotoGuildWar		5
+NotoEvil		6
+
 [DEFNAME SPELL_FLAGS_NEW]
 spellflag_targ_player		0200004 // targ_char + targ_no_npc
 spellflag_targ_npc		0100004 // targ_char + targ_no_player
-
-[DEFNAME DIALOG_COLORS]
-dcolor_white			16777215
 
 [DEFNAME BUFF_ICONS]
 bufficon_sleep			1049
