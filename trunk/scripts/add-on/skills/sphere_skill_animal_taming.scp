@@ -69,7 +69,7 @@ tag.totame = <ref7.uid>
 ref7.tag.beingtamed = 1
 serv.newitem i_tamefix
 new.link = <ref7.uid>
-if <ref7.flags>&statf_paralyzed
+if <ref7.flags>&statf_freeze
 new.tag.paralyzed = 1
 endif
 equip <new>
@@ -112,11 +112,11 @@ cont.face <link>
 more1 --
 timer = {2 3}
 cont.skillgain animallore <psnsys_min 100,<eval (<cont.animallore> / 10)>>
-if <link.flags>&statf_paralyzed
+if <link.flags>&statf_freeze
 tag.paralyzed = 1
 endif
 else
-	if <link.flags>&statf_paralyzed
+	if <link.flags>&statf_freeze
 	tag.paralyzed = 1
 	endif
 	if <r> <= <cont.tamingsuccesschance <link>>
