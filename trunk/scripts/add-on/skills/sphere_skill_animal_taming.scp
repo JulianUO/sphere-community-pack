@@ -36,6 +36,9 @@ return 1
 elif (!<ref7.allow_male_tamer>) && ((<body> == c_man) || (<body> == c_elf_male))
 ref7.message <def.scp.taming_onlyfemale>
 return 1
+elif (<ref7.baseid> == c_cu_sidhe) && ((<body> == c_elf_male) || (<body> == c_elf_female)
+ref7.message <def.scp.taming_onlyelf>
+return 1
 elif <ref7.taming_min_skill> > <taming>
 ref7.message <def.scp.taming_nochance>
 return 1
@@ -72,6 +75,7 @@ new.link = <ref7.uid>
 if <ref7.flags>&statf_freeze
 new.tag.paralyzed = 1
 endif
+new.tag.starttime = <serv.time>
 equip <new>
 new.more1 = {4 5}
 return 1
@@ -101,7 +105,7 @@ if <more1>
 	cont.tamingfail <link>
 	remove
 	return 1
-	elif <link.memoryfindtype.memory_war_targ>
+	elif <eval (<serv.time> - (<link.attacker.last.elapsed> * 10))> > <tag0.starttime>
 	link.message <def.scp.taming_isangry>
 	cont.tamingfail <link>
 	remove
@@ -133,7 +137,7 @@ return 1
 
 [function removeallmemories]
 while (<findid.i_memory>)
-    findid(i_memory).remove
+	findid(i_memory).remove
 endwhile
 
 [function makemypet]
@@ -186,30 +190,30 @@ tag.totame=
 
 [function allow_female_tamer]
 if (<baseid> == c_kirin)
-    return 0
+return 0
 else
-    return 1
+return 1
 endif
 
 [function allow_male_tamer]
 if (<baseid> == c_m_unicorn)
-    return 0
+return 0
 else
-    return 1
+return 1
 endif
 
 [function followerslot]
 if !(<tag0.control.slots>)
-    return 1
+return 1
 else
-    return <tag.control.slots>
+return <tag.control.slots>
 endif
 
 [function owners_count]
 if (<argn>)
-    tag0.owner_count += 1
+tag0.owner_count += 1
 else
-    return <tag0.owner_count>
+return <tag0.owner_count>
 endif
 
 [function maxowners]
@@ -217,16 +221,16 @@ return 5
 
 [function must_be_subdued]
 if (<baseid> == c_rune_beetle) || (<baseid> == c_giant_beetle) || (<baseid> == c_m_ice_worm)
-    return 1
+return 1
 else
-    return 0
+return 0
 endif
 
 [function can_anger_on_tame]
 if (<baseid> == c_m_hiryu) || (<baseid> == c_m_nightmare) || (<baseid> == c_armored_swamp_dragon) || (<baseid> == c_swamp_dragon) || (<body> == c_dragon_red) || (<body> == c_dragon_green) || (<body> == c_dragon_small_black) || (<body> == c_dragon_small_red)
-    return 1
+return 1
 else
-    return 0
+return 0
 endif
 
 [function taming_min_skill]
@@ -235,8 +239,8 @@ return <eval (<taming> + (<owners_count> * 60))>
 [function tamingsuccesschance]
 ref1=<args>
 doswitch <ref1.tag0.owner.<uid>>
-    local.successchance=<eval (((<taming> - <ref1.taming_min_skill>) + 1) * 2)>
-    local.successchance=1000
+	local.successchance=<eval (((<taming> - <ref1.taming_min_skill>) + 1) * 2)>
+	local.successchance=1000
 enddo
 return <dlocal.successchance>
 

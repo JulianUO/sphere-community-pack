@@ -87,6 +87,7 @@ scp.taming_notameable		"@,,2 1049655"	// That creature cannot be tamed.
 scp.taming_alreadytamed		"@,,2 502804"	// That animal looks tame already.
 scp.taming_onlymale		"@,,2 1049653"	// That creature can only be tamed by males.
 scp.taming_onlyfemale		"@,,2 1049652"	// That creature can only be tamed by females.
+scp.taming_onlyelf			"@03b2,,2 502801"	// You can't tame that!
 scp.taming_nochance		"@,,2 502806"	// You have no chance of taming this creature.
 scp.taming_manyfollowers	"@,,2 1049611"	// You have too many followers to tame that creature.
 scp.taming_manyowners		"@,,2 1005615"	// This animal has had too many owners and is too upset for you to tame.
