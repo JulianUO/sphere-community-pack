@@ -106,8 +106,8 @@ endif
 on=@skillabort
 if !<isempty <serv.skill.<argn1>.tag.recovery>>
 args = <serv.skill.<argn1>.tag0.recovery>
-	if !<isempty <argv[1]>>
-	tag.skillrecovery = <eval <serv.time> + <argv[1]>>
+	if !<isempty <argv[2]>>
+	tag.skillrecovery = <eval <serv.time> + <argv[2]>>
 	endif
 endif
 
