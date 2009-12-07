@@ -25,6 +25,7 @@ tinkering_check			""
 tinkering_check_notice		""
 tinkering_chanceatmin		"50.0"
 tinkering_exceptional_bonus	""
+tinkering_aftercraft		""	// function called on the item AFTER you craft it (if success only).
 
 tinkering_category_1_name	"Containers"
 tinkering_category_2_name	"Parts"

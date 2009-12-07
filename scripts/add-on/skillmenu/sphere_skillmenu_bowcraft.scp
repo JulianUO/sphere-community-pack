@@ -24,6 +24,8 @@ bowcraft_check			""
 bowcraft_check_notice		""
 bowcraft_chanceatmin		"50.0"
 bowcraft_exceptional_bonus	""
+bowcraft_aftercraft		""	// function called on the item AFTER you craft it (if success only).
+
 
 bowcraft_category_1_name	"1044457" // Materials
 bowcraft_category_2_name	"1044565" // Ammunition

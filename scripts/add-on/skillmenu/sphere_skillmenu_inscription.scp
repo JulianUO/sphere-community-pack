@@ -24,6 +24,7 @@ inscription_check		"f_craft_inscription_mana" // f_craft_inscription_cancast
 inscription_check_notice	"1044379" // Inscribing scrolls also requires a blank scroll and mana.
 inscription_chanceatmin		"0.0"
 inscription_exceptional_bonus	""
+inscription_aftercraft		""	// function called on the item AFTER you craft it (if success only).
 
 inscription_category_1_name	"1044369"
 inscription_category_2_name	"1044370"

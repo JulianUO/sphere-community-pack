@@ -1,12 +1,25 @@
-////////////////////////////////////////////
-// Script feito por pyromapes2k / Coruja //
-//////////////////////////////////////////
-
-/////////////////////////////////////////
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// pyromapes2k - Base crafting system used in here
+// coruja - Updated to be more OSI compatible
+// ShiryuX - Updated to the scriptpack and tweaked many parts of it
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// OSI Crafting System
+// ---------------------------------------
 // ctag0.craft.skill = the skill used
 // ctag0.craft.last = last item crafted
 // ctag0.craft.page.sidebar = sidebar page
-/////////////////////////////////////////
+// ---------------------------------------
 
 [dialog d_craft_menu]
 40,40
@@ -153,7 +166,6 @@ ctag.craft.message = You need to make an item first.
 return 1
 endif
 craft <ctag0.craft.last.<ctag0.craft.skill>>
-serv.log here
 
 on=5020 5040
 local.skill = <strarg <def.<ctag0.craft.skill>_material_<eval <argn>-5020>_skill>>
