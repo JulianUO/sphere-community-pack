@@ -10,6 +10,15 @@
 // By Blizzard
 VERSION=0.56b
 
+[ITEMDEF i_reag_dragon_scale]
+DEFNAME=i_reag_dragon_scale
+ID=i_reag_serpent_scale
+NAME=Dragon Scale%s
+TYPE=t_reagent
+
+ON=@CREATE
+	COLOR=043
+
 [ITEMDEF 025e4]
 DEFNAME=i_armor_female_shorts_spiked
 NAME=Spiked Shorts

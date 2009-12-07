@@ -21,8 +21,14 @@ TYPE=t_armor
 RESOURCES=20 i_log
 SKILLMAKE=CARPENTRY 90.0
 REQSTR=95
-ARMOR=35
+ARMOR=0 // 35
 DUPELIST=0315e
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -34,7 +40,7 @@ TYPE=t_armor
 RESOURCES=10 i_hides_cut
 SKILLMAKE=TAILORING 80.0
 REQSTR=10
-ARMOR=35
+ARMOR=0 // 35
 DUPELIST=0315f
 
 ON=@CREATE
@@ -47,8 +53,14 @@ TYPE=t_armor
 RESOURCES=15 i_log
 SKILLMAKE=CARPENTRY 85.0
 REQSTR=45
-ARMOR=35
+ARMOR=0 // 35
 DUPELIST=03160
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -60,8 +72,14 @@ TYPE=t_armor
 RESOURCES=15 i_log
 SKILLMAKE=CARPENTRY 85.0
 REQSTR=70
-ARMOR=35
+ARMOR=0 // 35
 DUPELIST=03161
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -73,8 +91,14 @@ TYPE=t_armor
 RESOURCES=15 i_log
 SKILLMAKE=CARPENTRY 85.0
 REQSTR=90
-ARMOR=35
+ARMOR=0 // 35
 DUPELIST=03162
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -86,8 +110,14 @@ TYPE=t_armor
 RESOURCES=15 i_log
 SKILLMAKE=CARPENTRY 85.0
 REQSTR=80
-ARMOR=35
+ARMOR=0 // 35
 DUPELIST=03163
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -99,8 +129,14 @@ TYPE=t_armor
 RESOURCES=20 i_log
 SKILLMAKE=CARPENTRY 90.0
 REQSTR=95
-ARMOR=35
+ARMOR=0 // 35
 DUPELIST=03164
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -112,8 +148,14 @@ TYPE=t_armor
 RESOURCES=6 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 62.1
 REQSTR=10
-ARMOR=9
+ARMOR=0 // 9
 DUPELIST=03165
+
+TAG.ResPhysical=1
+TAG.ResFire=5
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=5
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -125,8 +167,14 @@ TYPE=t_armor
 RESOURCES=6 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 70.0
 REQSTR=10
-ARMOR=28
+ARMOR=0 // 28
 DUPELIST=03166
+
+TAG.ResPhysical=1
+TAG.ResFire=5
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=5
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -138,8 +186,14 @@ TYPE=t_armor
 RESOURCES=6 i_ingot_iron, 1 i_gem_amethyst, 1 i_gem_diamond, 1 i_gem_tourmaline
 SKILLMAKE=BLACKSMITHING 75.0
 REQSTR=10
-ARMOR=40
+ARMOR=0 // 40
 DUPELIST=03167
+
+TAG.ResPhysical=1
+TAG.ResFire=5
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=5
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -148,11 +202,17 @@ HITPOINTS={50 60}
 DEFNAME=i_helm_raven
 NAME=Raven Helm
 TYPE=t_armor
-RESOURCES=10 i_log, 25 i_feather
+RESOURCES=10 i_log, 25 i_feather, 1 i_bark_fragment
 SKILLMAKE=CARPENTRY 65.0, t_carpentry
 REQSTR=25
-ARMOR=28
+ARMOR=0 // 28
 DUPELIST=03168
+
+TAG.ResPhysical=5
+TAG.ResFire=1
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=5
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -164,8 +224,14 @@ TYPE=t_armor
 RESOURCES=10 i_log, 25 i_feather
 SKILLMAKE=CARPENTRY 63.9, t_carpentry
 REQSTR=25
-ARMOR=20
+ARMOR=0 // 20
 DUPELIST=03169
+
+TAG.ResPhysical=5
+TAG.ResFire=1
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=5
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -177,8 +243,14 @@ TYPE=t_armor
 RESOURCES=10 i_log, 60 i_feather
 SKILLMAKE=CARPENTRY 58.4, t_carpentry
 REQSTR=25
-ARMOR=40
+ARMOR=0 // 40
 DUPELIST=0316a
+
+TAG.ResPhysical=5
+TAG.ResFire=1
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=5
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -190,8 +262,14 @@ TYPE=t_armor_leather
 RESOURCES=15 i_hides_cut
 SKILLMAKE=TAILORING 80.0
 REQSTR=25
-ARMOR=
+ARMOR=0 // 
 DUPELIST=0316b
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -203,8 +281,14 @@ TYPE=t_armor_leather
 RESOURCES=15 i_hides_cut
 SKILLMAKE=TAILORING 80.0
 REQSTR=15
-ARMOR=
+ARMOR=0 // 
 DUPELIST=0316c
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -216,8 +300,14 @@ TYPE=t_armor_leather
 RESOURCES=15 i_hides_cut
 SKILLMAKE=TAILORING 80.0
 REQSTR=15
-ARMOR=
+ARMOR=0 // 
 DUPELIST=0316d
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -229,8 +319,14 @@ TYPE=t_armor_leather
 RESOURCES=15 i_hides_cut
 SKILLMAKE=TAILORING 80.0
 REQSTR=20
-ARMOR=
+ARMOR=0 // 
 DUPELIST=0316e
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -242,8 +338,14 @@ TYPE=t_armor_leather
 RESOURCES=15 i_hides_cut
 SKILLMAKE=TAILORING 80.0
 REQSTR=25
-ARMOR=
+ARMOR=0 // 
 DUPELIST=0316f
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -255,8 +357,14 @@ TYPE=t_armor_leather
 RESOURCES=
 SKILLMAKE=TAILORING 
 REQSTR=
-ARMOR=
+ARMOR=0 // 
 DUPELIST=03170
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -268,8 +376,14 @@ TYPE=t_armor_leather
 RESOURCES=15 i_hides_cut
 SKILLMAKE=TAILORING 80.0
 REQSTR=20
-ARMOR=
+ARMOR=0 // 
 DUPELIST=0317b
+
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -281,8 +395,14 @@ TYPE=t_armor_leather
 RESOURCES=15 i_hides_cut
 SKILLMAKE=TAILORING 80.0
 REQSTR=10
-ARMOR=
+ARMOR=0 // 
 DUPELIST=0317c
+
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -294,8 +414,14 @@ TYPE=t_armor_leather
 RESOURCES=15 i_hides_cut
 SKILLMAKE=TAILORING 80.0
 REQSTR=10
-ARMOR=
+ARMOR=0 // 
 DUPELIST=0317d
+
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -307,8 +433,14 @@ TYPE=t_armor_leather
 RESOURCES=15 i_hides_cut
 SKILLMAKE=TAILORING  80.0
 REQSTR=15
-ARMOR=
+ARMOR=0 // 
 DUPELIST=0317e
+
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -320,8 +452,14 @@ TYPE=t_armor_leather
 RESOURCES=15 i_hides_cut
 SKILLMAKE=TAILORING 80.0
 REQSTR=20
-ARMOR=
+ARMOR=0 // 
 DUPELIST=0317f
+
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -333,8 +471,14 @@ TYPE=t_armor_leather
 RESOURCES=12 i_hides_cut
 SKILLMAKE=TAILORING 80.0
 REQSTR=10
-ARMOR=
+ARMOR=0 // 
 DUPELIST=03180
+
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
