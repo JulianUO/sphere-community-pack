@@ -24,6 +24,7 @@ alchemy_check			""
 alchemy_check_notice		""
 alchemy_chanceatmin		"0.0"
 alchemy_exceptional_bonus	""
+alchemy_aftercraft		""	// function called on the item AFTER you craft it (if success only).
 
 
 alchemy_category_1_name		"1044530"	// Refresh

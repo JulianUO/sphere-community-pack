@@ -25,6 +25,8 @@ carpentry_check			""
 carpentry_check_notice		""
 carpentry_chanceatmin		"50.0"
 carpentry_exceptional_bonus	""
+carpentry_aftercraft		""	// function called on the item AFTER you craft it (if success only).
+
 
 carpentry_category_1_name	"Chairs"
 carpentry_category_2_name	"Containers & Shields"

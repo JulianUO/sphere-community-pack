@@ -25,6 +25,7 @@ alchemy_check			""
 alchemy_check_notice		""
 alchemy_chanceatmin		"50.0"
 alchemy_exceptional_bonus	""
+alchemy_aftercraft		""	// function called on the item AFTER you craft it (if success only).
 
 tailoring_category_1_name	"Footwear"
 tailoring_category_2_name	"Leather Armor"

@@ -24,6 +24,7 @@ blacksmithing_check		"f_craft_blacksmith_checkforge"
 blacksmithing_check_notice	"1044267" // You must be near an anvil and a forge to smith items.
 blacksmithing_chanceatmin	"0.0"
 blacksmithing_exceptional_bonus	"f_craft_blacksmith_exceptionalbonus"
+blacksmithing_aftercraft	""	// function called on the item AFTER you craft it (if success only).
 
 blacksmithing_category_1_name	"1011076" // Ringmail
 blacksmithing_category_2_name	"1011077" // Chainmail

@@ -39,14 +39,27 @@ return 1
 endif
 ctag.craft.message = You create <ref2.name>.
 if <craft_exceptionalchance> < <r>
+	if !<isempty <def.<ctag0.craft.skill>_exceptional_bonus>>
+	ref2.<def.<ctag0.craft.skill>_exceptional_bonus>
+	endif
 ctag0.craft.message = <def.scp.craft_msg_exceptional>
 ref2.tag.exceptional = 1
 	if !<ctag0.craft.nomark>
 	ref2.name = <ref2.name> crafted by <name>
 	ctag.craft.message = <def.scp.craft_msg_excepmark>
 	endif
-ref2.<def.<ctag0.craft.skill><local.resource>_exceptional_bonus>
 endif
+if !<isempty <def.<ctag0.craft.skill>_aftercraft>
+ref2.<def.<ctag0.craft.skill>_aftercraft>
+endif
+local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "0">
+if <ctag0.craft.material.<ctag0.craft.skill>>
+	if !<isempty <def.<ctag0.craft.skill>_<ctag0.craft.material.<ctag0.craft.skill>>_aftercraft>>
+	ref2.<def.<ctag0.craft.skill>_<ctag0.craft.material.<ctag0.craft.skill>>_aftercraft>>
+	endif
+endif
+trigger @ItemCraft,<def.tat_as_argo>,<ref2.uid>
+ref2.trigger @Craft,<def.tat_as_argo,<uid>
 f_resenddialog d_craft_menu
 
 [eof]
