@@ -14,10 +14,16 @@ VERSION=0.56b
 DEFNAME=i_chainmail_hatsuburi
 NAME=Chainmail Hatsuburi
 TYPE=t_armor
-ARMOR=28
+ARMOR=0 // 28
 REQSTR=50
 RESOURCES=20 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 30.0
+
+TAG.ResPhysical=5
+TAG.ResFire=2
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -26,10 +32,16 @@ HITPOINTS={50 60}
 DEFNAME=i_platemail_hatsuburi
 NAME=Platemail Hatsuburi
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=65
 RESOURCES=20 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 45.0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -40,12 +52,18 @@ DESCRIPTION=Platemail Hatsuburi
 
 [ITEMDEF 02776]
 DEFNAME=i_leather_jinsaga
-NAME=Leather Jinsaga
+NAME=Leather Jingasa
 TYPE=t_armor
-ARMOR=13
+ARMOR=0 // 13
 REQSTR=25
 RESOURCES=4 t_leather
 SKILLMAKE=TAILORING 45.0
+
+TAG.ResPhysical=4
+TAG.ResFire=3
+TAG.ResCold=3
+TAG.ResPoison=2
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -55,13 +73,19 @@ SUBSECTION=Leather Armor
 DESCRIPTION=Leather Jinsaga
 
 [ITEMDEF 02777]
-DEFNAME=i_plate_jinsaga_heavy
-NAME=Plate Jinsaga
+DEFNAME=i_plate_jingasa_heavy
+NAME=Heavy Platemail Jingasas
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=55
 RESOURCES=20 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 45.0
+
+TAG.ResPhysical=7
+TAG.ResFire=2
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -74,10 +98,16 @@ DESCRIPTION=Heavy Plate Jinsaga
 DEFNAME=i_platemail_kabuto_decorative
 NAME=Decorative Platemail Kabuto
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=70
 RESOURCES=25 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 90.0
+
+TAG.ResPhysical=6
+TAG.ResFire=2
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -88,12 +118,18 @@ DESCRIPTION=Decorative Platemail Kabuto
 
 [ITEMDEF 02779]
 DEFNAME=i_platemail_mempo
-NAME=Plate Mempo
+NAME=Platemail Mempo
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=50
 RESOURCES=18 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 80.0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -106,10 +142,16 @@ DESCRIPTION=Platemail Mempo
 DEFNAME=i_leather_mempo
 NAME=Leather Mempo
 TYPE=t_armor
-ARMOR=13
+ARMOR=0 // 13
 REQSTR=30
 RESOURCES=8 t_leather
 SKILLMAKE=TAILORING 80.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -122,10 +164,16 @@ DESCRIPTION=Leather Mempo
 DEFNAME=i_leather_do
 NAME=Leather Do
 TYPE=t_armor
-ARMOR=13
+ARMOR=0 // 13
 REQSTR=40
 RESOURCES=12 t_leather
 SKILLMAKE=TAILORING 75.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -138,10 +186,16 @@ DESCRIPTION=Leather Do
 DEFNAME=i_studded_do
 NAME=Studded Do
 TYPE=t_armor
-ARMOR=20
+ARMOR=0 // 20
 REQSTR=55
 RESOURCES=14 t_leather
 SKILLMAKE=TAILORING 95.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -154,10 +208,16 @@ DESCRIPTION=Studded Do
 DEFNAME=i_platemail_do
 NAME=Platemail Do
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=85
 RESOURCES=28 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 87.0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -170,10 +230,16 @@ DESCRIPTION=Platemail Do
 DEFNAME=i_leather_hiro_sode
 NAME=Leather Hiro Sode
 TYPE=t_armor
-ARMOR=13
+ARMOR=0 // 13
 REQSTR=25
 RESOURCES=5 t_leather
 SKILLMAKE=TAILORING 55.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -186,10 +252,16 @@ DESCRIPTION=Leather Hiro Sode
 DEFNAME=i_studded_hiro_sode
 NAME=Studded Hiro Sode
 TYPE=t_armor
-ARMOR=20
+ARMOR=0 // 20
 REQSTR=30
 RESOURCES=8 t_leather
 SKILLMAKE=TAILORING 85.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -202,10 +274,16 @@ DESCRIPTION=Studded Hiro Sode
 DEFNAME=i_platemail_hiro_sode
 NAME=Platemail Hiro Sode
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=75
 RESOURCES=16 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 80.0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -215,13 +293,19 @@ SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Hiro Sode
 
 [ITEMDEF 02781]
-DEFNAME=i_plate_jinsaga_light
-NAME=Plate Jinsaga
+DEFNAME=i_plate_jingasa_light
+NAME=Light Platemail Jingasa
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=55
 RESOURCES=20 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 45.0
+
+TAG.ResPhysical=7
+TAG.ResFire=2
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -231,13 +315,19 @@ SUBSECTION=Helmet
 DESCRIPTION=Light Plate Jinsaga
 
 [ITEMDEF 02784]
-DEFNAME=i_plate_jinsaga_small
-NAME=Platemail Hatsuburi
+DEFNAME=i_plate_jingasa_small
+NAME=Small Platemail Jingasa
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=55
 RESOURCES=20 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 45.0
+
+TAG.ResPhysical=7
+TAG.ResFire=2
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -250,10 +340,16 @@ DESCRIPTION=Small Plate Jinsaga
 DEFNAME=i_platemail_kabuto_battle
 NAME=Platemail Battle Kabuto
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=70
 RESOURCES=25 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 90.0
+
+TAG.ResPhysical=6
+TAG.ResFire=2
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -264,12 +360,18 @@ DESCRIPTION=Platemail Battle Kabuto
 
 [ITEMDEF 02786]
 DEFNAME=i_leather_suneate
-NAME=Platemail Hatsuburi
+NAME=Leather Suneate
 TYPE=t_armor
-ARMOR=13
+ARMOR=0 // 13
 REQSTR=20
 RESOURCES=12 t_leather
 SKILLMAKE=TAILORING 68.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -282,10 +384,16 @@ DESCRIPTION=Leather Suneate
 DEFNAME=i_studded_suneate
 NAME=Studded Suneate
 TYPE=t_armor
-ARMOR=20
+ARMOR=0 // 20
 REQSTR=30
 RESOURCES=14 t_leather
 SKILLMAKE=TAILORING 92.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -298,10 +406,16 @@ DESCRIPTION=Studded Suneate
 DEFNAME=i_platemail_suneate
 NAME=Platemail Suneate
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=80
 RESOURCES=20 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 65.0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -314,10 +428,16 @@ DESCRIPTION=Platemail Suneate
 DEFNAME=i_platemail_kabuto
 NAME=Standard Platemail Kabuto
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=80
 RESOURCES=20 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 65.0
+
+TAG.ResPhysical=6
+TAG.ResFire=2
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -330,10 +450,16 @@ DESCRIPTION=Platemail Kabuto
 DEFNAME=i_leather_haidate
 NAME=Leather Haidate
 TYPE=t_armor
-ARMOR=13
+ARMOR=0 // 13
 REQSTR=20
 RESOURCES=12 t_leather
 SKILLMAKE=TAILORING 68.9
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -346,10 +472,16 @@ DESCRIPTION=Leather Haidate
 DEFNAME=i_studded_haidate
 NAME=Studded Haidate
 TYPE=t_armor
-ARMOR=20
+ARMOR=0 // 20
 REQSTR=30
 RESOURCES=14 t_leather
 SKILLMAKE=TAILORING 92.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -362,10 +494,16 @@ DESCRIPTION=Studded Haidate
 DEFNAME=i_platemail_haidate
 NAME=Platemail Haidate
 TYPE=t_armor
-ARMOR=40
+ARMOR=0 // 40
 REQSTR=80
 RESOURCES=20 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 65.0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -378,10 +516,16 @@ DESCRIPTION=Platemail Haidate
 DEFNAME=i_leather_ninja_hood
 NAME=Leather Ninja Hood
 TYPE=t_armor
-ARMOR=13
+ARMOR=0 // 13
 REQSTR=10
 RESOURCES=14 t_leather
 SKILLMAKE=TAILORING 90.0
+
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -435,14 +579,27 @@ ELSE
 ENDIF
 RETURN 1
 
+ON=@DropOn_Self
+IF (<ARGO.BASEID> == i_shuriken)
+   TAG0.Shuriken += <ARGO.AMOUNT>
+   ARGO.REMOVE
+   RETURN 1
+ENDIF
+
 [ITEMDEF 02791]
 DEFNAME=i_leather_ninja_pants
 NAME=Leather Ninja Pants
 TYPE=t_armor
-ARMOR=13
+ARMOR=0 // 13
 REQSTR=10
 RESOURCES=13 t_leather
 SKILLMAKE=TAILORING 80.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -455,10 +612,16 @@ DESCRIPTION=Leather Ninja Pants
 DEFNAME=i_leather_ninja_mitts
 NAME=Leather Ninja Mitts
 TYPE=t_armor
-ARMOR=13
+ARMOR=0 // 13
 REQSTR=10
 RESOURCES=12 t_leather
 SKILLMAKE=TAILORING 65.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -471,10 +634,16 @@ DESCRIPTION=Leather Ninja Mitts
 DEFNAME=i_leather_ninja_jacket
 NAME=Leather Ninja Jacket
 TYPE=t_armor
-ARMOR=13
+ARMOR=0 // 13
 REQSTR=10
 RESOURCES=13 t_leather
 SKILLMAKE=TAILORING 85.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}
@@ -487,10 +656,16 @@ DESCRIPTION=Leather Ninja Jacket
 DEFNAME=i_studded_mempo
 NAME=Studded Mempo
 TYPE=t_armor
-ARMOR=20
+ARMOR=0 // 20
 REQSTR=30
 RESOURCES=8 t_leather
 SKILLMAKE=TAILORING 80.0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@CREATE
 HITPOINTS={50 60}

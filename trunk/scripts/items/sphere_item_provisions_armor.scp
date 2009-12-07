@@ -17,12 +17,18 @@ RESOURCES=10 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 14.5
 WEIGHT=7
 FLIP=1
-ARMOR=23
-REQSTR=20
+REQSTR=60
+ARMOR=0
 CATEGORY=Provisions - Armor
 SUBSECTION=Chainmail Armor
 DESCRIPTION=Chainmail Coif
 DUPELIST=013c0
+
+TAG.ResPhysical=4
+TAG.ResFire=4
+TAG.ResCold=4
+TAG.ResPoison=1
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -33,6 +39,7 @@ DEFNAME=i_chainmail_leggings_decoration
 TYPE=t_armor
 RESOURCES=1 i_CHAINMAIL_LEGGINGS, 1 i_PEG
 WEIGHT=11
+ARMOR=0
 CATEGORY=Provisions - Armor
 SUBSECTION=Chainmail Armor
 DESCRIPTION=Chainmail Leggings Hanging
@@ -47,6 +54,7 @@ DEFNAME=i_chainmail_tunic_decoration
 TYPE=t_armor
 RESOURCES=1 i_CHAINMAIL_TUNIC, 1 i_PEG
 WEIGHT=15
+ARMOR=0
 CATEGORY=Provisions - Armor
 SUBSECTION=Chainmail Armor
 DESCRIPTION=Chainmail Tunic Hanging
@@ -62,12 +70,19 @@ TYPE=T_ARMOR
 RESOURCES=18 i_ingot_iron
 WEIGHT=10
 FLIP=1
-ARMOR=23
-REQSTR=20
+REQSTR=60
+ARMOR=0
 CATEGORY=Provisions - Armor
 SUBSECTION=Chainmail Armor
 DESCRIPTION=Chainmail Leggings
 SKILLMAKE=BLACKSMITHING 36.7
+
+
+TAG.ResPhysical=4
+TAG.ResFire=4
+TAG.ResCold=4
+TAG.ResPoison=1
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -79,13 +94,20 @@ TYPE=T_ARMOR
 RESOURCES=20 i_ingot_iron
 WEIGHT=15
 FLIP=1
-ARMOR=23
-REQSTR=20
+REQSTR=60
+ARMOR=0
 CATEGORY=Provisions - Armor
 SUBSECTION=Chainmail Armor
 DESCRIPTION=Chainmail Tunic Hanging
 DUPELIST=013c4
 SKILLMAKE=BLACKSMITHING 39.1
+
+
+TAG.ResPhysical=4
+TAG.ResFire=4
+TAG.ResCold=4
+TAG.ResPoison=1
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -118,13 +140,20 @@ RESOURCES=4 i_hides_cut
 SKILLMAKE=TAILORING 53.9, t_sewing_kit
 WEIGHT=6
 FLIP=1
-ARMOR=13
-REQSTR=10
+REQSTR=20
+ARMOR=0
 DUPELIST=013c8,013cd,013cf
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Leather Armor
 DESCRIPTION=Leather Sleeves
+
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@Create
 HITPOINTS={25 30}
@@ -136,13 +165,20 @@ RESOURCES=3 i_hides_cut
 SKILLMAKE=TAILORING 51.8, t_sewing_kit
 WEIGHT=1
 FLIP=1
-ARMOR=13
-REQSTR=10
+REQSTR=20
+ARMOR=0
 DUPELIST=013ce
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Leather Armor
 DESCRIPTION=Leather Gloves
+
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@Create
 HITPOINTS={25 30}
@@ -154,8 +190,15 @@ RESOURCES=4 i_hides_cut
 SKILLMAKE=TAILORING 53.9, t_sewing_kit
 WEIGHT=2
 FLIP=1
-ARMOR=13
-REQSTR=10
+REQSTR=20
+ARMOR=0
+
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Leather Armor
@@ -175,6 +218,7 @@ RESOURCES=1 i_LEATHER_LEGGINGS, 1 i_log
 SKILLMAKE=TAILORING 0.0, t_sewing_kit
 WEIGHT=7
 DUPELIST=013d0
+ARMOR=0
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Leather Armor
@@ -190,6 +234,7 @@ RESOURCES=1 i_LEATHER_TUNIC, 1 i_log
 SKILLMAKE=TAILORING 0.0, t_sewing_kit
 WEIGHT=8
 DUPELIST=013d1
+ARMOR=0
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Leather Armor
@@ -205,9 +250,15 @@ RESOURCES=10 i_hides_cut
 SKILLMAKE=TAILORING 66.3, t_sewing_kit
 WEIGHT=6
 FLIP=1
-ARMOR=13
-REQSTR=10
+REQSTR=20
 DUPELIST=013d2
+ARMOR=0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Leather Armor
@@ -223,9 +274,15 @@ RESOURCES=12 i_hides_cut
 SKILLMAKE=TAILORING 70.5, t_sewing_kit
 WEIGHT=7
 FLIP=1
-ARMOR=13
-REQSTR=15
+REQSTR=25
 DUPELIST=013d3
+ARMOR=0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Leather Armor
@@ -264,14 +321,20 @@ DUPEITEM=013cc
 
 [ITEMDEF 013d4]
 DEFNAME=i_studded_sleeves
-TYPE=T_ARMOR
+TYPE=T_ARMOR_leather
 RESOURCES=10 i_hides_cut
 WEIGHT=8
 FLIP=1
-ARMOR=16
 REQSTR=25
 DUPELIST=013dc
 SKILLMAKE=TAILORING 87.1, t_sewing_kit
+ARMOR=0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Studded Armor
@@ -282,31 +345,43 @@ HITPOINTS={50 60}
 
 [ITEMDEF 013d5]
 DEFNAME=i_studded_gloves
-TYPE=t_armor
+TYPE=t_armor_leather
 SKILLMAKE=TAILORING 82.9, t_sewing_kit
 RESOURCES=8 i_hides_cut
 WEIGHT=2
 FLIP=1
-ARMOR=16
 REQSTR=25
 DUPELIST=013dd
+ARMOR=0
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Studded Armor
 DESCRIPTION=Studded Gloves
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
 
 ON=@Create
 HITPOINTS={50 60}
 
 [ITEMDEF 013d6]
 DEFNAME=i_studded_gorget
-TYPE=T_ARMOR
+TYPE=T_ARMOR_leather
 RESOURCES=6 i_hides_cut
 WEIGHT=3
 FLIP=1
-ARMOR=16
 REQSTR=25
 SKILLMAKE=TAILORING 78.8, t_sewing_kit
+ARMOR=0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Studded Armor
@@ -317,13 +392,13 @@ HITPOINTS={50 60}
 
 [ITEMDEF 013d7]
 DEFNAME=i_studded_sleeves_decoration
-TYPE=t_armor
+TYPE=t_armor_leather
 RESOURCES=1 i_studded_SLEEVES, 1 i_PEG
 SKILLMAKE=TAILORING 0.0
 WEIGHT=9
 DUPELIST=013de
-ARMOR=16
 REQSTR=25
+ARMOR=0
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Studded Armor
@@ -331,12 +406,12 @@ DESCRIPTION=Studded Sleeves Hanging
 
 [ITEMDEF 013d8]
 DEFNAME=i_studded_leggings_decoration
-TYPE=t_armor
+TYPE=t_armor_leather
 RESOURCES=1 i_studded_LEGGINGS, 1 i_PEG
 SKILLMAKE=TAILORING 0.0
 WEIGHT=8
 DUPELIST=013df
-ARMOR=16
+ARMOR=0
 REQSTR=30
 
 CATEGORY=Provisions - Armor
@@ -345,12 +420,12 @@ DESCRIPTION=Studded Leggings Hanging
 
 [ITEMDEF 013d9]
 DEFNAME=i_studded_tunic_decoration
-TYPE=t_armor
+TYPE=t_armor_leather
 RESOURCES=1 i_studded_TUNIC, 1 i_PEG
 SKILLMAKE=TAILORING 0.0
 WEIGHT=11
 DUPELIST=013e0
-ARMOR=16
+ARMOR=0
 REQSTR=25
 
 CATEGORY=Provisions - Armor
@@ -359,14 +434,20 @@ DESCRIPTION=Studded Tunic Hanging
 
 [ITEMDEF 013da]
 DEFNAME=i_studded_leggings
-TYPE=T_ARMOR
+TYPE=T_ARMOR_leather
 RESOURCES=12 i_hides_cut
 WEIGHT=7
 FLIP=1
-ARMOR=16
 REQSTR=30
 DUPELIST=013e1
 SKILLMAKE=TAILORING 91.2, t_sewing_kit
+ARMOR=0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Studded Armor
@@ -377,14 +458,20 @@ HITPOINTS={50 60}
 
 [ITEMDEF 013db]
 DEFNAME=i_studded_tunic
-TYPE=T_ARMOR
+TYPE=T_ARMOR_leather
 RESOURCES=14 i_hides_cut
 WEIGHT=9
-FLIP=1
-ARMOR=16
+FLIP=
 REQSTR=35
 DUPELIST=013e2
 SKILLMAKE=TAILORING 94.0, t_sewing_kit
+ARMOR=0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Studded Armor
@@ -433,6 +520,7 @@ CATEGORY=Provisions - Armor
 SUBSECTION=Ringmail Armor
 DESCRIPTION=Ringmail Leggings Decoration
 DUPELIST=013e6
+ARMOR=0
 
 ON=@Create
 COLOR=color_o_iron
@@ -451,6 +539,7 @@ CATEGORY=Provisions - Armor
 SUBSECTION=Ringmail Armor
 DESCRIPTION=Ringmail Chest Decoration
 DUPELIST=013e8
+ARMOR=0
 
 ON=@Create
 COLOR=color_o_iron
@@ -485,12 +574,18 @@ RESOURCES=10 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 12.0
 WEIGHT=2
 FLIP=1
-ARMOR=16
-REQSTR=20
+REQSTR=40
 CATEGORY=Provisions - Armor
 SUBSECTION=Ringmail Armor
 DESCRIPTION=Ringmail Gloves
 DUPELIST=013f2
+ARMOR=0
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=1
+TAG.ResPoison=5
+TAG.ResEnergy=3
 
 ON=@Create
 COLOR=color_o_iron
@@ -503,12 +598,18 @@ FLIP=1
 WEIGHT=15
 RESOURCES=18 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 21.9
-ARMOR=16
-REQSTR=20
+REQSTR=40
 CATEGORY=Provisions - Armor
 SUBSECTION=Ringmail Armor
 DESCRIPTION=Ringmail Tunic
 DUPELIST=013ed
+ARMOR=0
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=1
+TAG.ResPoison=5
+TAG.ResEnergy=3
 
 ON=@Create
 COLOR=color_o_iron
@@ -525,12 +626,18 @@ FLIP=1
 RESOURCES=14 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 16.9
 WEIGHT=13
-ARMOR=16
-REQSTR=20
+REQSTR=40
 CATEGORY=Provisions - Armor
 SUBSECTION=Ringmail Armor
 DESCRIPTION=Ringmail Sleeves
 DUPELIST=013ef
+ARMOR=0
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=1
+TAG.ResPoison=5
+TAG.ResEnergy=3
 
 ON=@Create
 COLOR=color_o_iron
@@ -547,12 +654,18 @@ FLIP=1
 RESOURCES=16 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 19.4
 WEIGHT=15
-ARMOR=16
-REQSTR=20
+REQSTR=40
 CATEGORY=Provisions - Armor
 SUBSECTION=Ringmail Armor
 DESCRIPTION=Ringmail Leggings
 DUPELIST=013f1
+ARMOR=0
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=1
+TAG.ResPoison=5
+TAG.ResEnergy=3
 
 ON=@Create
 COLOR=color_o_iron
@@ -573,13 +686,19 @@ TYPE=T_ARMOR
 FLIP=1
 RESOURCES=15 i_ingot_iron
 WEIGHT=7
-ARMOR=30
-REQSTR=40
+REQSTR=55
 CATEGORY=Provisions - Armor
 SUBSECTION=Helmets
 DESCRIPTION=Closed Helm
 DUPELIST=01409
 SKILLMAKE=BLACKSMITHING 37.9
+ARMOR=0
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@Create
 COLOR=color_o_iron
@@ -596,13 +715,19 @@ TYPE=T_ARMOR
 FLIP=1
 RESOURCES=15 i_ingot_iron
 WEIGHT=7
-ARMOR=30
-REQSTR=40
+REQSTR=45
 CATEGORY=Provisions - Armor
 SUBSECTION=Helmets
 DESCRIPTION=Helmet
 DUPELIST=0140b
 SKILLMAKE=BLACKSMITHING 37.9
+ARMOR=0
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=4
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -618,13 +743,19 @@ TYPE=T_ARMOR
 FLIP=1
 RESOURCES=15 i_ingot_iron
 WEIGHT=7
-ARMOR=20
-REQSTR=10
+REQSTR=40
 CATEGORY=Provisions - Armor
 SUBSECTION=Helmets
 DESCRIPTION=Bascinet
 DUPELIST=0140d
 SKILLMAKE=BLACKSMITHING 8.3
+ARMOR=0
+
+TAG.ResPhysical=7
+TAG.ResFire=2
+TAG.ResCold=2
+TAG.ResPoison=2
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -640,13 +771,19 @@ TYPE=t_ARMOR
 FLIP=1
 RESOURCES=15 i_ingot_iron
 WEIGHT=7
-ARMOR=30
-REQSTR=40
+REQSTR=55
 CATEGORY=Provisions - Armor
 SUBSECTION=Helmets
 DESCRIPTION=Nose Helm
 DUPELIST=0140f
 SKILLMAKE=BLACKSMITHING 37.9
+ARMOR=0
+
+TAG.ResPhysical=4
+TAG.ResFire=1
+TAG.ResCold=4
+TAG.ResPoison=4
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -663,12 +800,18 @@ FLIP=1
 SKILLMAKE=BLACKSMITHING 66.3
 RESOURCES=18 i_ingot_iron
 WEIGHT=18
-ARMOR=40
-REQSTR=40
+REQSTR=80
 CATEGORY=Provisions - Armor
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Arms
 DUPELIST=01417
+ARMOR=0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -680,13 +823,19 @@ TYPE=T_ARMOR
 FLIP=1
 RESOURCES=20 i_ingot_iron
 WEIGHT=20
-ARMOR=40
-REQSTR=40
+REQSTR=90
 CATEGORY=Provisions - Armor
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Legs
 DUPELIST=0141a
 SKILLMAKE=BLACKSMITHING 68.8
+ARMOR=0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -698,13 +847,19 @@ TYPE=T_ARMOR
 FLIP=1
 RESOURCES=15 i_ingot_iron
 WEIGHT=10
-ARMOR=40
-REQSTR=60
+REQSTR=80
 CATEGORY=Provisions - Armor
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Helm
 DUPELIST=01419
 SKILLMAKE=BLACKSMITHING 62.6
+ARMOR=0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -716,12 +871,18 @@ TYPE=T_ARMOR
 FLIP=1
 RESOURCES=10 i_ingot_iron
 WEIGHT=6
-ARMOR=40
-REQSTR=30
+REQSTR=45
 CATEGORY=Provisions - Armor
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Gorget
 SKILLMAKE=BLACKSMITHING 56.4
+ARMOR=0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -733,13 +894,19 @@ TYPE=T_ARMOR
 FLIP=1
 RESOURCES=12 i_ingot_iron
 WEIGHT=5
-ARMOR=40
-REQSTR=30
+REQSTR=70
 CATEGORY=Provisions - Armor
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Gauntlets
 DUPELIST=01418
 SKILLMAKE=BLACKSMITHING 58.9
+ARMOR=0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -751,13 +918,19 @@ TYPE=T_ARMOR
 FLIP=1
 RESOURCES=25 i_ingot_iron
 WEIGHT=23
-ARMOR=40
-REQSTR=60
+REQSTR=95
 CATEGORY=Provisions - Armor
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Breastplate
 DUPELIST=01416
 SKILLMAKE=BLACKSMITHING 75.0
+ARMOR=0
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@Create
 COLOR=color_o_iron
@@ -790,8 +963,15 @@ FLIP=1
 RESOURCES=5 i_reag_bone
 VALUE=5
 WEIGHT=4
-ARMOR=15
 DUPELIST=0141c
+REQSTR=10
+ARMOR=0
+
+TAG.ResPhysical=1
+TAG.ResFire=1
+TAG.ResCold=7
+TAG.ResPoison=7
+TAG.ResEnergy=8
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Masks
@@ -811,13 +991,19 @@ FLIP=1
 RESOURCES=4 i_reag_bone, 8 i_hides_cut
 SKILLMAKE=TAILORING 92.0, t_sewing_kit
 WEIGHT=2
-ARMOR=30
-REQSTR=40
+REQSTR=55
 DUPELIST=01453
+ARMOR=0
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Bone Armor
 DESCRIPTION=Bone Arms
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=2
+TAG.ResEnergy=4
 
 ON=@Create
 HITPOINTS={21 23}
@@ -829,13 +1015,19 @@ FLIP=1
 RESOURCES=4 i_reag_bone, 8 i_hides_cut
 SKILLMAKE=TAILORING 92.0, t_sewing_kit
 WEIGHT=11
-ARMOR=30
-REQSTR=40
+REQSTR=60
 DUPELIST=01454
+ARMOR=0
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Bone Armor
 DESCRIPTION=Bone Chest
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=2
+TAG.ResEnergy=4
 
 ON=@Create
 HITPOINTS={21 23}
@@ -847,13 +1039,19 @@ FLIP=1
 RESOURCES=2 i_reag_bone, 6 i_hides_cut
 SKILLMAKE=TAILORING 89.0, t_sewing_kit
 WEIGHT=3
-ARMOR=30
-REQSTR=40
+REQSTR=55
 DUPELIST=01455
+ARMOR=0
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Bone Armor
 DESCRIPTION=Bone Gloves
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=2
+TAG.ResEnergy=4
 
 ON=@Create
 HITPOINTS={21 23}
@@ -865,9 +1063,15 @@ FLIP=1
 RESOURCES=2 i_reag_bone, 4 i_hides_cut
 SKILLMAKE=TAILORING 85.0, t_sewing_kit
 WEIGHT=4
-ARMOR=30
-REQSTR=40
+REQSTR=20
 DUPELIST=01456
+ARMOR=0
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=2
+TAG.ResEnergy=4
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Bone Armor
@@ -883,8 +1087,15 @@ FLIP=1
 RESOURCES=6 i_reag_bone, 10 i_hides_cut
 SKILLMAKE=TAILORING 95.0, t_sewing_kit
 WEIGHT=6
-ARMOR=30
+REQSTR=55
 DUPELIST=01457
+ARMOR=0
+
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=2
+TAG.ResEnergy=4
 
 CATEGORY=Provisions - Armor
 SUBSECTION=Bone Armor
@@ -919,12 +1130,13 @@ TYPE=t_shield
 FLIP=1
 RESOURCES=10 i_ingot_iron
 WEIGHT=12
-ARMOR=10
-REQSTR=20
+REQSTR=35
 CATEGORY=Provisions - Armor
 SUBSECTION=Shields
 DESCRIPTION=Round Bronze Shield
-SKILLMAKE=BLACKSMITHING 0.0
+SKILLMAKE=BLACKSMITHING 40.0
+
+TAG.ResCold=1
 
 ON=@Create
 COLOR=color_o_iron
@@ -935,13 +1147,14 @@ DEFNAME=i_shield_buckler
 TYPE=t_shield
 FLIP=1
 RESOURCES=6 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 0.0
+SKILLMAKE=BLACKSMITHING 0.1
 WEIGHT=6
-ARMOR=7
-REQSTR=15
+REQSTR=20
 CATEGORY=Provisions - Armor
 SUBSECTION=Shields
 DESCRIPTION=Buckler
+
+TAG.ResPoison=1
 
 ON=@Create
 COLOR=color_o_iron
@@ -954,13 +1167,14 @@ FLIP=1
 RESOURCES=16 i_ingot_iron
 WEIGHT=14
 DYE=1
-ARMOR=18
-REQSTR=20
+REQSTR=45
 CATEGORY=Provisions - Armor
 SUBSECTION=Shields
 DESCRIPTION=Kite Shield (Metal)
 DUPELIST=01b75
-SKILLMAKE=BLACKSMITHING 4.6
+SKILLMAKE=BLACKSMITHING 44.6
+
+TAG.ResEnergy=1
 
 ON=@Create
 COLOR=color_o_iron
@@ -976,13 +1190,14 @@ TYPE=t_shield
 FLIP=1
 RESOURCES=18 i_ingot_iron
 WEIGHT=14
-ARMOR=23
-REQSTR=30
+REQSTR=90
 CATEGORY=Provisions - Armor
 SUBSECTION=Shields
 DESCRIPTION=Heater Shield
 DUPELIST=01b77
 SKILLMAKE=BLACKSMITHING 24.3
+
+TAG.ResFire=1
 
 ON=@Create
 COLOR=color_o_iron
@@ -998,13 +1213,14 @@ TYPE=t_shield
 FLIP=1
 RESOURCES=8 i_ingot_iron,4 i_log
 WEIGHT=9
-ARMOR=16
-REQSTR=30
+REQSTR=20
 CATEGORY=Provisions - Armor
 SUBSECTION=Shields
 DESCRIPTION=Kite Shield (Wooden)
 DUPELIST=01b79
 SKILLMAKE=BLACKSMITHING 12.6
+
+TAG.ResEnergy=1
 
 ON=@Create
 HITPOINTS={50 60}
@@ -1018,13 +1234,14 @@ DEFNAME=i_shield_wood
 TYPE=t_shield
 FLIP=1
 WEIGHT=9
-ARMOR=8
-REQSTR=5
+REQSTR=20
 CATEGORY=Provisions - Armor
 SUBSECTION=Shields
 DESCRIPTION=Wooden Shield
 SKILLMAKE=CARPENTRY 52.6, t_carpentry
 RESOURCES=9 i_board
+
+TAG.ResEnergy=1
 
 ON=@Create
 HITPOINTS={21 26}
@@ -1035,12 +1252,13 @@ TYPE=t_shield
 FLIP=1
 RESOURCES=14 i_ingot_iron
 WEIGHT=11
-ARMOR=9
-REQSTR=10
+REQSTR=45
 CATEGORY=Provisions - Armor
 SUBSECTION=Shields
 DESCRIPTION=Metal Shield
-SKILLMAKE=BLACKSMITHING 0.0
+SKILLMAKE=BLACKSMITHING 30.0
+
+TAG.ResFire=1
 
 ON=@Create
 COLOR=color_o_iron
@@ -1053,11 +1271,12 @@ FLIP=1
 RESOURCES=25 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 85.0
 WEIGHT=1
-ARMOR=32
-REQSTR=0
+REQSTR=95
 CATEGORY=Provisions - Armor
 SUBSECTION=Shields
 DESCRIPTION=Chaos Shield
+
+TAG.ResPhysical=1
 
 ON=@Create
 COLOR=color_o_iron
@@ -1093,12 +1312,13 @@ FLIP=1
 RESOURCES=25 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 85.0
 WEIGHT=1
-ARMOR=30
-REQSTR=0
+REQSTR=95
 CATEGORY=Provisions - Armor
 SUBSECTION=Shields
 DESCRIPTION=Order Shield
 DUPELIST=01bc5
+
+TAG.ResPhysical=1
 
 ON=@Create
 COLOR=color_o_iron
@@ -1136,14 +1356,19 @@ DEFNAME=i_armor_female_shorts
 RESOURCES=8 i_hides_cut
 WEIGHT=2
 //DEFNAME=i_FEM_ARMOR_SHORTS
-TYPE=T_CLOTHING
-ARMOR=13
+TYPE=t_armor_leather
 REQSTR=15
 CATEGORY=Provisions - Armor
 SUBSECTION=Female Armor
 DESCRIPTION=Leather Shorts
 DUPELIST=01c01
 SKILLMAKE=TAILORING 68.1
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@Create
 HITPOINTS={31 37}
@@ -1154,18 +1379,23 @@ DUPEITEM=01c00
 
 [ITEMDEF 01c02]
 DEFNAME=i_armor_female_studded
-TYPE=T_ARMOR
+TYPE=T_ARMOR_leather
 FLIP=1
 RESOURCES=22 i_ingot_iron
 WEIGHT=5
 //DEFNAME=i_FEM_ARMOR_A
-ARMOR=15
 REQSTR=35
 CATEGORY=Provisions - Armor
 SUBSECTION=Female Armor
 DESCRIPTION=Studded Armor
 DUPELIST=01c03
 SKILLMAKE=BLACKSMITHING 52.6
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@Create
 HITPOINTS={101 115}
@@ -1181,13 +1411,18 @@ FLIP=1
 RESOURCES=20 i_ingot_iron
 WEIGHT=6
 //DEFNAME=i_FEM_ARMOR_B
-ARMOR=30
-REQSTR=45
+REQSTR=95
 CATEGORY=Provisions - Armor
 SUBSECTION=Female Armor
 DESCRIPTION=Female Plate Armor
 DUPELIST=01c05
 SKILLMAKE=BLACKSMITHING 45.3
+
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
 
 ON=@Create
 HITPOINTS={51 65}
@@ -1203,13 +1438,18 @@ FLIP=1
 RESOURCES=10 i_hides_cut
 WEIGHT=4
 //DEFNAME=i_FEM_ARMOR_C
-ARMOR=13
-REQSTR=15
+REQSTR=25
 CATEGORY=Provisions - Armor
 SUBSECTION=Female Armor
 DESCRIPTION=Leather Armor
 DUPELIST=01c07
 SKILLMAKE=TAILORING 86.3
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@Create
 HITPOINTS={31 37}
@@ -1225,13 +1465,18 @@ FLIP=1
 RESOURCES=6 i_hides_cut
 WEIGHT=3
 //DEFNAME=i_FEM_ARMOR_SKIRT
-ARMOR=13
-REQSTR=10
+REQSTR=20
 CATEGORY=Provisions - Armor
 SUBSECTION=Female Armor
 DESCRIPTION=Leather Skirt
 DUPELIST=01c09
 SKILLMAKE=TAILORING 63.6, t_sewing_kit
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@Create
 HITPOINTS={31 37}
@@ -1247,13 +1492,18 @@ FLIP=1
 RESOURCES=6 i_hides_cut
 WEIGHT=2
 //DEFNAME=i_FEM_ARMOR_TOP_A
-ARMOR=13
-REQSTR=15
+REQSTR=20
 CATEGORY=Provisions - Armor
 SUBSECTION=Female Armor
 DESCRIPTION=Leather Bustier
 DUPELIST=01c0b
 SKILLMAKE=TAILORING 63.6, t_sewing_kit
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
 
 ON=@Create
 HITPOINTS={31 37}
@@ -1264,18 +1514,23 @@ DUPEITEM=01c0a
 
 [ITEMDEF 01c0c]
 DEFNAME=i_armor_female_bustier_studded
-TYPE=T_ARMOR
+TYPE=T_ARMOR_leather
 FLIP=1
 RESOURCES=8 i_hides_cut
 WEIGHT=2
 //DEFNAME2=i_FEM_ARMOR_TOP_B
-ARMOR=16
-REQSTR=25
+REQSTR=35
 CATEGORY=Provisions - Armor
 SUBSECTION=Female Armor
 DESCRIPTION=Studded Bustier
 DUPELIST=01c0d
 SKILLMAKE=TAILORING 81.8, t_sewing_kit
+
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
 
 ON=@Create
 HITPOINTS={101 115}
@@ -1298,6 +1553,12 @@ CATEGORY=Provisions - Armor
 SUBSECTION=Leather Armor
 DESCRIPTION=Leather Cap
 
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=3
+
 ON=@CREATE
 HITPOINTS={25 30}
 
@@ -1309,14 +1570,19 @@ DUPEITEM=01db9
 DEFNAME=i_helm_orc
 TYPE=t_armor_leather
 FLIP=1
-ARMOR=20
-REQSTR=1
+REQSTR=30
 VALUE=1,10
 WEIGHT=5
 CATEGORY=Provisions - Armor
 SUBSECTION=Helmets
 DESCRIPTION=Orc Helm
 DUPELIST=01f0c
+
+TAG.ResPhysical=3
+TAG.ResFire=1
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=5
 
 ON=@Create
 HITPOINTS={31 70}
