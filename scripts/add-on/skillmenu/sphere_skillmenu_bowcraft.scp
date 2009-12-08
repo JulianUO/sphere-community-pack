@@ -39,26 +39,26 @@ bowcraft_category_2_2		"i_xbolt"		// 1027163
 bowcraft_category_2_3		"i_fukiya_dart"		// 1030246
 
 bowcraft_category_3_1		"i_bow"			// 1025042
-bowcraft_category_2_2		"i_crossbow"		// 1023919
-bowcraft_category_2_3		"i_crossbow_heavy"	// 1025117
-bowcraft_category_2_3		"i_composite_bow"	// 1029922
-bowcraft_category_2_3		"i_repeating_crossbow"	// 1029923
-bowcraft_category_2_3		"i_yumi"		// 1030149
-bowcraft_category_2_3		"i_tetsubo"		// 1031550
-bowcraft_category_2_3		"i_magical_shortbow"	// 1031551
-//bowcraft_category_2_3		Blight Gripped Longbow	// 1072907
-//bowcraft_category_2_3		Faerie Fire		// 1072908
-//bowcraft_category_2_3		Silvani's Feywood Bow	// 1072955
-//bowcraft_category_2_3		Mischief Maker		// 1072910
-//bowcraft_category_2_3		The Night Reaper	// 1072912
-//bowcraft_category_2_3		barbed longbow		// 1073505
-//bowcraft_category_2_3		slayer longbow		// 1073506
-//bowcraft_category_2_3		frozen longbow		// 1073507
-//bowcraft_category_2_3		longbow of might	// 1073508
-//bowcraft_category_2_3		ranger's shortbow	// 1073509
-//bowcraft_category_2_3		lightweight shortbow	// 1073510
-//bowcraft_category_2_3		mystical shortbow	// 1073511
-//bowcraft_category_2_3		assassin's shortbow	// 1073512
+bowcraft_category_3_2		"i_crossbow"		// 1023919
+bowcraft_category_3_3		"i_crossbow_heavy"	// 1025117
+bowcraft_category_3_4		"i_composite_bow"	// 1029922
+bowcraft_category_3_5		"i_repeating_crossbow"	// 1029923
+bowcraft_category_3_6		"i_yumi"		// 1030149
+bowcraft_category_3_7		"i_tetsubo"		// 1031550
+bowcraft_category_3_8		"i_magical_shortbow"	// 1031551
+//bowcraft_category_3_9		Blight Gripped Longbow	// 1072907
+//bowcraft_category_3_10	Faerie Fire		// 1072908
+//bowcraft_category_3_11	Silvani's Feywood Bow	// 1072955
+//bowcraft_category_3_12	Mischief Maker		// 1072910
+//bowcraft_category_3_13	The Night Reaper	// 1072912
+//bowcraft_category_3_14	barbed longbow		// 1073505
+//bowcraft_category_3_15	slayer longbow		// 1073506
+//bowcraft_category_3_16	frozen longbow		// 1073507
+//bowcraft_category_3_17	longbow of might	// 1073508
+//bowcraft_category_3_18	ranger's shortbow	// 1073509
+//bowcraft_category_3_19	lightweight shortbow	// 1073510
+//bowcraft_category_3_20	mystical shortbow	// 1073511
+//bowcraft_category_3_21	assassin's shortbow	// 1073512
 
 
 [defname sphere_crafting_bowcraft_colored]

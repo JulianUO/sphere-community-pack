@@ -26,7 +26,6 @@ alchemy_chanceatmin		"0.0"
 alchemy_exceptional_bonus	""
 alchemy_aftercraft		""	// function called on the item AFTER you craft it (if success only).
 
-
 alchemy_category_1_name		"1044530"	// Refresh
 alchemy_category_2_name		"1044531"	// Agility
 alchemy_category_3_name		"1044532"	// Night Sight

@@ -48,6 +48,24 @@ scp.craft_title_masonry		"1044500" // <CENTER>MASONRY MENU</CENTER>
 scp.craft_title_glassblowing	"1044622" // <CENTER>GLASSBLOWING MENU</CENTER>
 scp.craft_title_dragonscale	"1053135" // <CENTER>DRAGON SCALE ARMOR MENU</CENTER>
 
+scp.craft_head_categories	"1044010"	// <CENTER>CATEGORIES</CENTER>
+scp.craft_head_selections	"1044011"	// <CENTER>SELECTIONS</CENTER>
+scp.craft_head_notices		"1044012"	// <CENTER>NOTICES</CENTER>
+
+scp.craft_button_makelast	"1044013"	// MAKE LAST
+scp.craft_button_lastten	"1044014"	// LAST TEN
+scp.craft_button_repair		"1044015"	// REPAIR ITEM
+scp.craft_button_smelt		"1044016"	// SMELT ITEM
+scp.craft_button_enhance	"1061001"	// ENHANCE ITEM
+scp.craft_button_nextpage	"1044045"	// NEXT PAGE
+scp.craft_button_prevpage	"1044044"	// PREV PAGE
+scp.craft_button_exit		"1011441"	// EXIT
+
+scp.craft_resdisp_4		"1063363"	// * Requires the "Samurai Empire" expansion
+scp.craft_resdisp_5		"1072651"	// * Requires the "Mondain's Legacy" expansion
+
+scp.craft_msg_gotrecipe		"1073427"	// You already know this recipe.
+scp.craft_msg_norecipe		"1073620"	// You have not learned this recipe.
 
 [DEFNAME SphereCommunityPack_Messages]
 // The following are sysmessages, messages, say, etc.
