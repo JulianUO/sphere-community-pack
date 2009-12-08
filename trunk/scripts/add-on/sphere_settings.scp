@@ -225,6 +225,33 @@ scp.Rune_NeverFade=1
 scp.Rune_RenameNoPrefix=1
 
 ///////////////////////////////////////////////////////////////
+//////// Karma/Fame Settings
+///////////////////////////////////////////////////////////////
+// Enables or disables the EA Karma/Fame System.
+// <boolean> (0 = No / 1 = Yes)
+scp.EAKarmaFame=1
+
+// Raising this value decreases gain. Lowering it increases gain.
+// Default = 100
+scp.Fame_Value=100
+
+// Raising this value decreases gain. Lowering it increases gain.
+// Default = 100
+scp.Karma_Value=100
+
+// Max Karma Limit for Players. Positive values only.
+// Default = 25000
+scp.Karma_MaxLimit=25000
+
+// Max Karma Limit for Players. Negative values only.
+// Default = -25000
+scp.Karma_MinLimit=-25000
+
+// Max Fame Limit for Players. Positive values only.
+// Default = 25000
+scp.Fame_Maxlimit=25000
+
+///////////////////////////////////////////////////////////////
 //////// OSI Champion System
 ///////////////////////////////////////////////////////////////
 // Chance to get a champ artifact in % (0-100)

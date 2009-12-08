@@ -382,8 +382,31 @@ if <local.stats> == <local.statsum>
 	endif
 endif
 
+// EA Karma Fame
+on=@famechange
+if <def.scp.EAKarmaFame> == 1
+gainfame 
+famelevelcheck
+settitle
+return 0
+endif
+
+// EA Karma Fame
+on=@karmachange
+if <def.scp.EAKarmaFame> == 1
+gainkarma
+karmalevelcheck
+settitle
+return 0
+endif
+
+// EA Karma Fame
 // Quest System
 on=@kill
+if <def.scp.EAKarmaFame> == 1
+ctag.fame.kill = <argo.fame>
+ctag.karma.kill = <argo.karma>
+endif
 if !(<argo.isplayer>)
 	if <tag0.quests>
 		for <tag0.quests>

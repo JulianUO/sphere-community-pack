@@ -1,74 +1,43 @@
-[Comment Credits]
-Scripted by Khaos.
-Administrator of the Elusive Shadows game Server.
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// Khaos - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// EA Karma/Fame. Pretty much configurable anyway.
 
-[Comment Instructions]
-Simply add the below events to your players.
+[function gainfame]
+local.fame.level = <tag0.fame.level>
+if <tag0.fame.level> == 0
+argn1 = <eval <fame> + (<ctag0.fame.kill> / <def.scp.Fame_Value>)>
+else
+argn1 = <eval <fame> + (<ctag0.fame.kill> / (<def.scp.Fame_Value> * <local.fame.level>))>
+endif
+if <fame> >= <def.scp.Fame_MaxLimit>
+fame = <def.scp.Fame_MaxLimit>
+endif
 
-Everytime they kill a NPC and gain in fame and karma, a series of checks will prevail and set the fame and karma accurately.
-
-Also a check is done to make sure no player gets more then 25,000 fame. -25,000 or 25,000 Karma.
-
-A title check is also done after all the above work. This makes sure titles are set accurately as well.
-
-//Player Events.
-ON=@Kill
- If <Def.Scp.System.Toggle> == 1
-  CTag.Fame.Kill = <Eval <ArgO.Fame>>
-  CTag.Karma.Kill = <Eval <ArgO.Karma>>
- Endif
-
-ON=@FameChange
- If <Def.Scp.System.Toggle> == 1
-  GainFame <Eval <Def.Scp.Fame.Value>>
-  FameLevelCheck
-  SetTitle
-  Return 0
- EndIf
-
-ON=@KarmaChange
- If <Def.Scp.System.Toggle> == 1
-  GainKarma <Eval <Def.Scp.Karma.Value>>
-  KarmaLevelCheck
-  SetTitle
-  Return 0
- EndIf
-
-[DefName settings_fame_karma_system]
-scp.system.toggle	1//1 is on. 0 is off.
-scp.fame.value		100//Raising this Value decreases gain. Lowering it increases gain.
-scp.karma.value		100//Raising this Value decreases gain. Lowering it increases gain.
-
-//The actual System.
-[Function GainFame]
-Local.Fame.Level = <eval <tag.fame.level>>
-If <Tag.Fame.Level> == 0
- Argn1 = <Fame> + <Eval <Ctag.Fame.Kill> / <ArgN>>
-ELSE
- Argn1 = <Fame> + <Eval <Ctag.Fame.Kill> / (<ArgN> * <Local.Fame.Level>)>
-EndIf
-
-If <Fame> >= 250000
- Fame = 250000
-EndIf
-
-
-[Function GainKarma]
-Local.Karma.Level = <Eval <Tag.Karma.Level>>
- If <Tag.Karma.Level> == 0
-  Argn1 = <Karma> + <Eval <Ctag.Karma.Kill> / <ArgN>>
- ELSE
-  Argn1 = <Karma> + <Eval <Ctag.Karma.Kill> / (<ArgN> * <Local.Karma.Level>)>
- EndIf
- 
-If <Karma> >= 250000
-  Fame = 250000
- EndIf
-
- If <Karma> <= -250000
-  Fame = -250000
- EndIf
-
+[function gainkarma]
+local.karma.level = <tag0.karma.level>
+if <tag0.karma.level> == 0
+argn1 = <eval <karma> + (<ctag0.karma.kill> / <def.scp.Karma_Value>)>
+else
+argn1 = <eval <karma> + (<ctag0.karma.kill> / (<def.scp.Karma_Value> * <local.karma.level>))>
+endif
+if <karma> >= <def.scp.Karma_MaxLimit>
+karma = <def.scp.Karma_MaxLimit>
+endif
+if <karma> <= <def.scp.Karma_MinLimit>
+karma = <def.scp.Karma_MinLimit>
+endif
 
 [Function FameLevelCheck]
 If <Fame> >= 10000
@@ -82,7 +51,6 @@ ElIf <Fame> >=1250 && <Fame> <= 2499
 ElIf <Fame> <= 1249
  Tag.Fame.Level = 0
 EndIf
-
 
 [Function KarmaLevelCheck]
 If <Karma> >= 10000
@@ -229,7 +197,7 @@ DoSwitch <Eval <Tag.Fame.Level>
   ElIf <Eval <Tag.Karma.Level>> == -2
    Title = Sinister <Src.Sex Lord/Lady>
   ElIf <Eval <Tag.Karma.Level>> == -3
-   Title = Dark  <Src.Sex Lord/Lady>
+   Title = Dark <Src.Sex Lord/Lady>
   ElIf <Eval <Tag.Karma.Level>> == -4
    Title = Evil <Src.Sex Lord/Lady>
   ElIf <Eval <Tag.Karma.Level>> == -5
