@@ -10,6 +10,9 @@ SUBSECTION=Copper
 DESCRIPTION=Platemail Arms
 RESOURCES=18 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 63.5
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=2
@@ -32,6 +35,9 @@ SUBSECTION=Copper
 DESCRIPTION=Platemail Legs
 RESOURCES=20 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 66.8
+
+TAG.Penalty.Stealth = 15
+
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=2
@@ -54,6 +60,9 @@ SUBSECTION=Copper
 DESCRIPTION=Plate Helm
 RESOURCES=15 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 58.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=2
@@ -76,6 +85,9 @@ SUBSECTION=Copper
 DESCRIPTION=Platemail Gorget
 RESOURCES=10 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 50.4
+
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=2
@@ -98,6 +110,9 @@ SUBSECTION=Copper
 DESCRIPTION=Platemail Gauntlets
 RESOURCES=12 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 53.7
+
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=2
@@ -120,6 +135,9 @@ SUBSECTION=Copper
 DESCRIPTION=Platemail
 RESOURCES=25 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 75.0
+
+TAG.Penalty.Stealth = 25
+
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=2
@@ -142,12 +160,14 @@ SUBSECTION=Copper
 DESCRIPTION=Female Platemail
 RESOURCES=22 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 70.0
+
+TAG.Penalty.Stealth = 25
+
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4
 TAG.ResPoison=3
 TAG.ResEnergy=4
-TAG.Luck=40
 
 ON=@Create
 	HITPOINTS=51
@@ -165,6 +185,9 @@ SUBSECTION=Copper
 DESCRIPTION=Chainmail Coif
 RESOURCES=10 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 27.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=5
 TAG.ResFire=5
 TAG.ResCold=4
@@ -187,6 +210,9 @@ SUBSECTION=Copper
 DESCRIPTION=Chainmail Leggings
 RESOURCES=18 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 31.1
+
+TAG.Penalty.Stealth = 15
+
 TAG.ResPhysical=5
 TAG.ResFire=5
 TAG.ResCold=4
@@ -209,6 +235,9 @@ SUBSECTION=Copper
 DESCRIPTION=Ringmail Leggings
 RESOURCES=16 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 27.6
+
+TAG.Penalty.Stealth = 15
+
 TAG.ResPhysical=4
 TAG.ResFire=4
 TAG.ResCold=1
@@ -231,6 +260,9 @@ SUBSECTION=Copper
 DESCRIPTION=Ringmail Sleeves
 RESOURCES=14 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 24.3
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=4
 TAG.ResFire=4
 TAG.ResCold=1
@@ -253,6 +285,9 @@ SUBSECTION=Copper
 DESCRIPTION=Ringmail Gloves
 RESOURCES=10 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 17.8
+
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=4
 TAG.ResFire=4
 TAG.ResCold=1
@@ -275,6 +310,9 @@ SUBSECTION=Copper
 DESCRIPTION=Ringmail Tunic
 RESOURCES=18 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 31.1
+
+TAG.Penalty.Stealth = 25
+
 TAG.ResPhysical=4
 TAG.ResFire=4
 TAG.ResCold=1
@@ -365,6 +403,9 @@ SUBSECTION=Copper
 DESCRIPTION=Closed Helm
 RESOURCES=15 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 58.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=4
 TAG.ResFire=4
 TAG.ResCold=3
@@ -387,6 +428,9 @@ SUBSECTION=Copper
 DESCRIPTION=Helmet
 RESOURCES=15 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 58.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=3
 TAG.ResFire=5
 TAG.ResCold=4
@@ -409,6 +453,9 @@ SUBSECTION=Copper
 DESCRIPTION=Bascinet
 RESOURCES=15 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 19.2
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=8
 TAG.ResFire=3
 TAG.ResCold=2
@@ -431,6 +478,9 @@ SUBSECTION=Copper
 DESCRIPTION=Nose Helm
 RESOURCES=15 i_ingot_copper
 SKILLMAKE=BLACKSMITHING 58.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=5
 TAG.ResFire=2
 TAG.ResCold=4
@@ -440,3 +490,5 @@ TAG.ResEnergy=4
 ON=@Create
 	COLOR=color_o_copper
 	HITPOINTS=101
+	
+[eof]

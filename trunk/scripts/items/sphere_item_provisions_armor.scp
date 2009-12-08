@@ -24,6 +24,8 @@ SUBSECTION=Chainmail Armor
 DESCRIPTION=Chainmail Coif
 DUPELIST=013c0
 
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=4
 TAG.ResFire=4
 TAG.ResCold=4
@@ -77,6 +79,7 @@ SUBSECTION=Chainmail Armor
 DESCRIPTION=Chainmail Leggings
 SKILLMAKE=BLACKSMITHING 36.7
 
+TAG.Penalty.Stealth = 15
 
 TAG.ResPhysical=4
 TAG.ResFire=4
@@ -102,6 +105,7 @@ DESCRIPTION=Chainmail Tunic Hanging
 DUPELIST=013c4
 SKILLMAKE=BLACKSMITHING 39.1
 
+TAG.Penalty.Stealth = 25
 
 TAG.ResPhysical=4
 TAG.ResFire=4
@@ -192,7 +196,6 @@ WEIGHT=2
 FLIP=1
 REQSTR=20
 ARMOR=0
-
 
 TAG.ResPhysical=2
 TAG.ResFire=4
@@ -330,6 +333,8 @@ DUPELIST=013dc
 SKILLMAKE=TAILORING 87.1, t_sewing_kit
 ARMOR=0
 
+TAG.Penalty.Stealth = 4
+
 TAG.ResPhysical=2
 TAG.ResFire=4
 TAG.ResCold=3
@@ -358,6 +363,8 @@ CATEGORY=Provisions - Armor
 SUBSECTION=Studded Armor
 DESCRIPTION=Studded Gloves
 
+TAG.Penalty.Stealth = 2
+
 TAG.ResPhysical=2
 TAG.ResFire=4
 TAG.ResCold=3
@@ -376,6 +383,8 @@ FLIP=1
 REQSTR=25
 SKILLMAKE=TAILORING 78.8, t_sewing_kit
 ARMOR=0
+
+TAG.Penalty.Stealth = 2
 
 TAG.ResPhysical=2
 TAG.ResFire=4
@@ -443,6 +452,8 @@ DUPELIST=013e1
 SKILLMAKE=TAILORING 91.2, t_sewing_kit
 ARMOR=0
 
+TAG.Penalty.Stealth = 6
+
 TAG.ResPhysical=2
 TAG.ResFire=4
 TAG.ResCold=3
@@ -466,6 +477,8 @@ REQSTR=35
 DUPELIST=013e2
 SKILLMAKE=TAILORING 94.0, t_sewing_kit
 ARMOR=0
+
+TAG.Penalty.Stealth = 10
 
 TAG.ResPhysical=2
 TAG.ResFire=4
@@ -581,6 +594,8 @@ DESCRIPTION=Ringmail Gloves
 DUPELIST=013f2
 ARMOR=0
 
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=3
 TAG.ResFire=3
 TAG.ResCold=1
@@ -604,6 +619,8 @@ SUBSECTION=Ringmail Armor
 DESCRIPTION=Ringmail Tunic
 DUPELIST=013ed
 ARMOR=0
+
+TAG.Penalty.Stealth = 25
 
 TAG.ResPhysical=3
 TAG.ResFire=3
@@ -632,6 +649,8 @@ SUBSECTION=Ringmail Armor
 DESCRIPTION=Ringmail Sleeves
 DUPELIST=013ef
 ARMOR=0
+
+TAG.Penalty.Stealth = 10
 
 TAG.ResPhysical=3
 TAG.ResFire=3
@@ -694,6 +713,8 @@ DUPELIST=01409
 SKILLMAKE=BLACKSMITHING 37.9
 ARMOR=0
 
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=3
 TAG.ResFire=3
 TAG.ResCold=3
@@ -723,6 +744,8 @@ DUPELIST=0140b
 SKILLMAKE=BLACKSMITHING 37.9
 ARMOR=0
 
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=2
 TAG.ResFire=4
 TAG.ResCold=4
@@ -750,6 +773,8 @@ DESCRIPTION=Bascinet
 DUPELIST=0140d
 SKILLMAKE=BLACKSMITHING 8.3
 ARMOR=0
+
+TAG.Penalty.Stealth = 10
 
 TAG.ResPhysical=7
 TAG.ResFire=2
@@ -779,6 +804,8 @@ DUPELIST=0140f
 SKILLMAKE=BLACKSMITHING 37.9
 ARMOR=0
 
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=4
 TAG.ResFire=1
 TAG.ResCold=4
@@ -807,6 +834,8 @@ DESCRIPTION=Platemail Arms
 DUPELIST=01417
 ARMOR=0
 
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
@@ -830,6 +859,8 @@ DESCRIPTION=Platemail Legs
 DUPELIST=0141a
 SKILLMAKE=BLACKSMITHING 68.8
 ARMOR=0
+
+TAG.Penalty.Stealth = 15
 
 TAG.ResPhysical=5
 TAG.ResFire=3
@@ -855,6 +886,8 @@ DUPELIST=01419
 SKILLMAKE=BLACKSMITHING 62.6
 ARMOR=0
 
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
@@ -877,6 +910,8 @@ SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Gorget
 SKILLMAKE=BLACKSMITHING 56.4
 ARMOR=0
+
+TAG.Penalty.Stealth = 5
 
 TAG.ResPhysical=5
 TAG.ResFire=3
@@ -902,6 +937,8 @@ DUPELIST=01418
 SKILLMAKE=BLACKSMITHING 58.9
 ARMOR=0
 
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
@@ -925,6 +962,8 @@ DESCRIPTION=Platemail Breastplate
 DUPELIST=01416
 SKILLMAKE=BLACKSMITHING 75.0
 ARMOR=0
+
+TAG.Penalty.Stealth = 25
 
 TAG.ResPhysical=5
 TAG.ResFire=3
@@ -999,6 +1038,8 @@ CATEGORY=Provisions - Armor
 SUBSECTION=Bone Armor
 DESCRIPTION=Bone Arms
 
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=3
 TAG.ResFire=3
 TAG.ResCold=4
@@ -1022,6 +1063,8 @@ ARMOR=0
 CATEGORY=Provisions - Armor
 SUBSECTION=Bone Armor
 DESCRIPTION=Bone Chest
+
+TAG.Penalty.Stealth = 25
 
 TAG.ResPhysical=3
 TAG.ResFire=3
@@ -1047,6 +1090,8 @@ CATEGORY=Provisions - Armor
 SUBSECTION=Bone Armor
 DESCRIPTION=Bone Gloves
 
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=3
 TAG.ResFire=3
 TAG.ResCold=4
@@ -1066,6 +1111,8 @@ WEIGHT=4
 REQSTR=20
 DUPELIST=01456
 ARMOR=0
+
+TAG.Penalty.Stealth = 10
 
 TAG.ResPhysical=3
 TAG.ResFire=3
@@ -1090,6 +1137,8 @@ WEIGHT=6
 REQSTR=55
 DUPELIST=01457
 ARMOR=0
+
+TAG.Penalty.Stealth = 15
 
 TAG.ResPhysical=3
 TAG.ResFire=3
@@ -1391,6 +1440,8 @@ DESCRIPTION=Studded Armor
 DUPELIST=01c03
 SKILLMAKE=BLACKSMITHING 52.6
 
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=2
 TAG.ResFire=4
 TAG.ResCold=3
@@ -1417,6 +1468,8 @@ SUBSECTION=Female Armor
 DESCRIPTION=Female Plate Armor
 DUPELIST=01c05
 SKILLMAKE=BLACKSMITHING 45.3
+
+TAG.Penalty.Stealth = 25
 
 TAG.ResPhysical=5
 TAG.ResFire=3
@@ -1526,6 +1579,8 @@ DESCRIPTION=Studded Bustier
 DUPELIST=01c0d
 SKILLMAKE=TAILORING 81.8, t_sewing_kit
 
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=2
 TAG.ResFire=4
 TAG.ResCold=3
@@ -1590,6 +1645,5 @@ HITPOINTS={31 70}
 [ITEMDEF 01f0c]
 //Orc Helm
 DUPEITEM=01f0b
-
 
 [eof]
