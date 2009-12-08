@@ -1,0 +1,37 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 4]
+DEFNAME=SKILL_ARMSLORE
+KEY=ArmsLore
+TITLE=Arms%s
+PROMPT_MSG=@,,2 500906
+DELAY=1.0
+STAT_STR=10
+STAT_INT=5
+STAT_DEX=15
+BONUS_STR=33
+BONUS_DEX=33
+BONUS_INT=34
+BONUS_STATS=25
+ADV_RATE=2.5,50.0,200.0
+
+on=@success
+if <def.scp.NewSkills_ArmsLore> == 1
+f_armslore_success <src.targ.uid>
+skillgain ArmsLore <eval <ArmsLore>/10>
+return 1
+endif
+
+ON=@Fail
+	SRC.SYSMESSAGE You are uncertain about this item 
+
+ON=@Abort
+	SRC.SYSMESSAGE You stop trying to evaluate the item.
+
+[eof]

@@ -1,0 +1,38 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 39]
+DEFNAME=Skill_Vet
+KEY=Veterinary
+TITLE=Veterinarian
+PROMPT_MSG=What animal would you like to heal?
+DELAY=2.0
+STAT_STR=30
+STAT_INT=50
+STAT_DEX=40
+BONUS_STR=20
+BONUS_DEX=20
+BONUS_INT=60
+BONUS_STATS=20
+ADV_RATE=10.0,200.0,800.0
+
+ON=@Success
+if <def.scp.NewSkills_Poisoning> == 0
+return 0
+endif
+if <act.f_veterinary_bandage_cure> && <def0.scp.Veterinary_PoisonNoBandage>
+return 1
+endif
+
+ON=@Fail
+    SRC.SYSMESSAGE You apply the bandages, but they barely help.
+
+ON=@Abort
+    SRC.SYSMESSAGE You stop applying the bandages.
+
+[eof]

@@ -74,4 +74,7 @@ ENDIF
 ENDWHILE
 ENDIF
 
+[FUNCTION f_skill_delay]
+tag.skillrecovery = (<serv.time>+<args>)
+
 [eof]

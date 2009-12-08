@@ -1,0 +1,31 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 44]
+DEFNAME=SKILL_LUMBERJACK
+KEY=Lumberjacking
+TITLE=Lumberjack
+PROMPT_MSG=
+DELAY=1.0
+STAT_STR=85
+STAT_INT=30
+STAT_DEX=45
+BONUS_STR=90
+BONUS_DEX=10
+BONUS_INT=0
+BONUS_STATS=20
+ADV_RATE=2.5,50.0,200.0
+VALUES=1,10,50
+
+ON=@Fail
+	SRC.SYSMESSAGE You hack at the tree for a while, but fail to produce any useable wood.
+
+ON=@Abort
+	SRC.SYSMESSAGE You decide not to chop wood for now.
+
+[eof]

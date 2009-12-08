@@ -1,0 +1,44 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 30]
+DEFNAME=SKILL_POISONING
+KEY=Poisoning
+TITLE=Assassin
+FLAGS = 01|020
+PROMPT_MSG=To what do you wish to apply the poison?
+DELAY=2.0
+STAT_STR=15
+STAT_INT=40
+STAT_DEX=40
+BONUS_STR=0
+BONUS_DEX=20
+BONUS_INT=80
+BONUS_STATS=20
+ADV_RATE=2.5,10.0,20.0
+VALUES=1,30,200
+
+on=@select
+if <def.scp.NewSkills_Poisoning> == 0
+return 0
+endif
+if !<ctag0.skill.poisoning>
+src.sysmessage <def.scp.poisoning_poisonwhat>
+src.targetf f_skill_poison
+else
+src.sysmessage <def.scp.poisoning_youmustwait>
+endif
+return 1
+
+on=@fail
+src.sysmessage <def.scp.poisoning_failtoapply>
+
+ON=@Abort
+//SRC.SYSMESSAGE You decide not to poison anything for now.
+
+[eof]

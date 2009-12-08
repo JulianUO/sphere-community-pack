@@ -1,0 +1,40 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 36]
+DEFNAME=skill_tasteid
+KEY=TasteID
+TITLE=Food Taster
+PROMPT_MSG=@,,2 502807 // What would you like to taste?
+FLAGS=SKF_SCRIPTED
+DELAY=1.0
+STAT_STR=25
+STAT_INT=50
+STAT_DEX=15
+BONUS_STR=20
+BONUS_DEX=0
+BONUS_INT=80
+BONUS_STATS=50
+ADV_RATE=2.5,50.0,200.0
+
+on=@start
+if <act.ischar>
+sysmessage <def.scp.tasteid_ischar>
+return 1
+endif
+
+on=@success
+if <def.scp.NewSkills_TasteID> == 1
+f_tasteid_success <act.uid>
+return 1
+endif
+
+on=@fail
+src.sysmessage <def.scp.tasteid_fail>
+
+[eof]

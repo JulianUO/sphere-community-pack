@@ -1,0 +1,32 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 23]
+DEFNAME=Skill_Inscription
+KEY=Inscription
+TITLE=Scribe
+PROMPT_MSG=
+DELAY=3.0
+STAT_STR=15
+STAT_INT=100
+STAT_DEX=15
+BONUS_STR=0
+BONUS_DEX=0
+BONUS_INT=100
+BONUS_STATS=10
+ADV_RATE=10.0,200.0,800.0
+VALUES=1,30,200
+
+ON=@Fail
+	SRC.SYSMESSAGE You fail to inscribe the scroll, and the scroll is ruined.
+	SRC.CONSUME 1 i_scroll_blank
+
+ON=@Abort
+	SRC.SYSMESSAGE You scribble on the scroll a bit, but fail to finish it.
+
+[eof]

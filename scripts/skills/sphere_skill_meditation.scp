@@ -1,0 +1,29 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 46]
+DEFNAME=SKILL_MEDITATION
+KEY=Meditation
+TITLE=Stoic
+DELAY=2.0,1.0
+STAT_STR=10
+STAT_INT=100
+STAT_DEX=10
+BONUS_STR=5
+BONUS_DEX=90
+BONUS_INT=5
+BONUS_STATS=20
+ADV_RATE=10.0,200.0,800.0
+
+ON=@Fail
+	SRC.SYSMESSAGE You lose your concentration.
+
+ON=@Abort
+	SRC.SYSMESSAGE You stop concentrating.
+
+[eof]

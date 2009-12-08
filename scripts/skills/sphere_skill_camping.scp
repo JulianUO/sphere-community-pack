@@ -1,0 +1,30 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 10]
+DEFNAME=Skill_Camping
+KEY=Camping
+TITLE=Camper
+PROMPT_MSG=
+DELAY=6.0
+STAT_STR=30
+STAT_INT=30
+STAT_DEX=30
+BONUS_STR=33
+BONUS_DEX=33
+BONUS_INT=34
+BONUS_STATS=50
+ADV_RATE=2.5,50.0,200.0
+
+ON=@Fail
+	SRC.MESSAGE @,,2 501696
+
+ON=@Abort
+	SRC.SYSMESSAGE You give up trying to light the campfire.
+
+[eof]

@@ -1,0 +1,38 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 15]
+DEFNAME=Skill_Discordance
+KEY=Discordance
+TITLE=Bard
+PROMPT_MSG=Whom do you wish to entice?
+DELAY=2.0
+STAT_STR=15
+STAT_INT=70
+STAT_DEX=50
+BONUS_STR=0
+BONUS_DEX=50
+BONUS_INT=50
+BONUS_STATS=5
+ADV_RATE=2.5,50.0,200.0
+
+on=@prestart
+if <def.scp.BardingSystem> == 1
+	if <def.scp.NewBarding_Discordance> == 1
+	f_onbarding_start 15
+	return 1
+	endif
+endif
+
+ON=@Fail
+	SRC.SYSMESSAGE Your music fails to attract anyone.
+
+ON=@Abort
+	SRC.SYSMESSAGE You fail to complete the song.
+
+[eof]

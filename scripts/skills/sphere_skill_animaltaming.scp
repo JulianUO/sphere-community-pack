@@ -1,0 +1,54 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 35]
+DEFNAME=Skill_Taming
+KEY=Taming
+TITLE=Animal Tamer
+PROMPT_MSG=Tame which animal?
+DELAY=2.0
+STAT_STR=30
+STAT_INT=40
+STAT_DEX=60
+BONUS_STR=30
+BONUS_DEX=10
+BONUS_INT=60
+BONUS_STATS=20
+ADV_RATE=10.0,200.0,800.0
+
+ON=@Start
+if <def.scp.NewSkills_AnimalTaming> == 1
+f_start_taming <act.uid>
+return 1
+endif
+if <def.scp.Followers> == 1
+local.slots = <qval <src.targ.tag0.control.slots> ? <src.targ.tag0.control.slots> : 1>
+	if <eval <src.curfollower>+<local.slots>> > <src.maxfollower>
+	src.sysmessage <def.scp.taming_manyfollowers>
+	return 1
+	endif
+endif
+if <src.taming> < <src.targ.taming>
+src.sysmessage <def.scp.taming_nochance>
+return 1
+endif
+
+on=@success
+if <def.scp.NewSkills_AnimalTaming> == 0
+	if <def.scp.Followers> == 1
+	curfollower += <qval <src.targ.tag0.control.slots> ? <src.targ.tag0.control.slots> : 1>
+	endif
+endif
+
+on=@fail
+sysmessage <def.scp.taming_failed>
+
+on=@abort
+sysmessage <def.scp.taming_abort>
+
+[eof]
