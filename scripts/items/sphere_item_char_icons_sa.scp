@@ -1,0 +1,405 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©1997-2007
+//www.sphereserver.net
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// FILE LAST UPDATED: Tuesday, December 08, 2009
+// BY: Valios
+
+VERSION=0.56b
+
+[ITEMDEF 0422D]
+DEFNAME=i_pet_gargoyle_male
+NAME=Gargoyle Male
+TYPE=T_FIGURINE
+TDATA3=c_gargoyle_male
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Gargoyle Male
+
+[ITEMDEF 0422E]
+DEFNAME=i_pet_gargoyle_female
+NAME=Gargoyle Female
+TYPE=T_FIGURINE
+TDATA3=c_gargoyle_female
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Gargoyle Female
+
+[ITEMDEF 0422F]
+DEFNAME=i_pet_bird_phoenix
+NAME=Phoenix Bird
+TYPE=T_FIGURINE
+TDATA3=c_bird_phoenix
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Phoenix Bird
+
+[ITEMDEF 04230]
+DEFNAME=i_pet_bird_parrot
+NAME=Parrot Bird
+TYPE=T_FIGURINE
+TDATA3=c_bird_parrot
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Parrot Bird
+
+[ITEMDEF 04287]
+DEFNAME=i_pet_abyssal_infernal
+NAME=Abyssal Infernal
+TYPE=T_FIGURINE
+TDATA3=c_abyssal_infernal
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Abyssal Infernal
+
+[ITEMDEF 04288]
+DEFNAME=i_pet_beetle_iron
+NAME=Iron Beetle
+TYPE=T_FIGURINE
+TDATA3=c_beetle_iron
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Iron Beetle
+
+[ITEMDEF 04289]
+DEFNAME=i_pet_boura
+NAME=Boura
+TYPE=T_FIGURINE
+TDATA3=c_boura
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Boura
+
+[ITEMDEF 0428A]
+DEFNAME=i_pet_chicken_lizard
+NAME=Chicken Lizard
+TYPE=T_FIGURINE
+TDATA3=c_chicken_lizard
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Chicken Lizard
+
+[ITEMDEF 0428B]
+DEFNAME=i_pet_clockwork_scorpion
+NAME=Clockwork Scorpion
+TYPE=T_FIGURINE
+TDATA3=c_clockwork_scorpion
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Clockwork Scorpion
+
+[ITEMDEF 0428C]
+DEFNAME=i_pet_dragon_faerie
+NAME=Dragon Faerie
+TYPE=T_FIGURINE
+TDATA3=c_dragon_faerie
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Dragon Faerie
+
+[ITEMDEF 0428D]
+DEFNAME=i_pet_dragon_wolf
+NAME=Dragon Wolf
+TYPE=T_FIGURINE
+TDATA3=c_dragon_wolf
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Dragon Wolf
+
+[ITEMDEF 0428E]
+DEFNAME=i_pet_elemental_lava
+NAME=Elemental Lava
+TYPE=T_FIGURINE
+TDATA3=c_elemental_lava
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Elemental Lava
+
+[ITEMDEF 0428F]
+DEFNAME=i_pet_flayer
+NAME=Flayer
+TYPE=T_FIGURINE
+TDATA3=c_flayer
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Flyer
+
+[ITEMDEF 04290]
+DEFNAME=i_pet_gargoyle_pet
+NAME=Gargoyle Pet
+TYPE=T_FIGURINE
+TDATA3=c_gargoyle_pet
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Gargoyle Pet
+
+[ITEMDEF 04291]
+DEFNAME=i_pet_gargoyle_undead
+NAME=Undead Gargoyle
+TYPE=T_FIGURINE
+TDATA3=c_gargoyle_undead
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Undead Gargoyle
+
+[ITEMDEF 04292]
+DEFNAME=i_pet_goblin_green
+NAME=Green Goblin
+TYPE=T_FIGURINE
+TDATA3=c_goblin_green
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Green Goblin
+
+[ITEMDEF 04293]
+DEFNAME=i_pet_goblin_grey
+NAME=Grey Goblin
+TYPE=T_FIGURINE
+TDATA3=c_goblin_grey
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Grey Goblin
+
+[ITEMDEF 04294]
+DEFNAME=i_pet_gremlin
+NAME=Gremlin
+TYPE=T_FIGURINE
+TDATA3=c_gremlin
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Gremlin
+
+[ITEMDEF 04295]
+DEFNAME=i_pet_humunculous
+NAME=Humunculous
+TYPE=T_FIGURINE
+TDATA3=c_humunculous
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Humunculous
+
+[ITEMDEF 04296]
+DEFNAME=i_pet_kepetch
+NAME=Kepetch
+TYPE=T_FIGURINE
+TDATA3=c_kepetch
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Kepetch
+
+[ITEMDEF 04297]
+DEFNAME=i_pet_kepetch_shorn
+NAME=Kepetch Shorn
+TYPE=T_FIGURINE
+TDATA3=c_kepetch_shorn
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Kepetch Shorn
+
+[ITEMDEF 04298]
+DEFNAME=i_pet_medusa
+NAME=Medusa
+TYPE=T_FIGURINE
+TDATA3=c_medusa
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Medusa
+
+[ITEMDEF 04299]
+DEFNAME=i_pet_mimic
+NAME=Mimic
+TYPE=T_FIGURINE
+TDATA3=c_mimic
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Mimic
+
+[ITEMDEF 0429A]
+DEFNAME=i_pet_primeval_lich
+NAME=Primeval Lich
+TYPE=T_FIGURINE
+TDATA3=c_primeval_lich
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Primeval Lich
+
+[ITEMDEF 0429B]
+DEFNAME=i_pet_raptor
+NAME=Raptor
+TYPE=T_FIGURINE
+TDATA3=c_raptor
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Raptor
+
+[ITEMDEF 0429C]
+DEFNAME=i_pet_rising_colossus
+NAME=Rising Colossus
+TYPE=T_FIGURINE
+TDATA3=c_rising_colossus
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Rising Colossus
+
+[ITEMDEF 0429D]
+DEFNAME=i_pet_rotworm
+NAME=RotWorm
+TYPE=T_FIGURINE
+TDATA3=c_rotworm
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=RotWorm
+
+[ITEMDEF 0429E]
+DEFNAME=i_pet_shadow_dweller
+NAME=Shadow Dweller
+TYPE=T_FIGURINE
+TDATA3=c_shadow_dweller
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Shadow Dweller
+
+[ITEMDEF 0429F]
+DEFNAME=i_pet_skree
+NAME=Skree
+TYPE=T_FIGURINE
+TDATA3=c_skree
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Skree
+
+[ITEMDEF 042A0]
+DEFNAME=i_pet_slasher_of_the_veils
+NAME=Slasher of the Veils
+TYPE=T_FIGURINE
+TDATA3=c_slasher_of_the_veils
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Slasher of the Veils
+
+[ITEMDEF 042A1]
+DEFNAME=i_pet_slith
+NAME=Slith
+TYPE=T_FIGURINE
+TDATA3=c_slith
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Slith
+
+[ITEMDEF 042A2]
+DEFNAME=i_pet_spider_female
+NAME=Spider Female
+TYPE=T_FIGURINE
+TDATA3=c_spider_female
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Spider Female
+
+[ITEMDEF 042A3]
+DEFNAME=i_pet_spider_male
+NAME=Spider Male
+TYPE=T_FIGURINE
+TDATA3=c_spider_male
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Spider Male
+
+[ITEMDEF 042A4]
+DEFNAME=i_pet_spider_trapdoor
+NAME=Spider Trapdoor
+TYPE=T_FIGURINE
+TDATA3=c_spider_trapdoor
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Spider Trapdoor
+
+[ITEMDEF 042A5]
+DEFNAME=i_pet_stone_form
+NAME=Stone Form
+TYPE=T_FIGURINE
+TDATA3=c_stone_form
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Stone Form
+
+[ITEMDEF 042A6]
+DEFNAME=i_pet_stygian_dragon
+NAME=Stygian Dragon
+TYPE=T_FIGURINE
+TDATA3=c_stygian_dragon
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Stygian Dragon
+
+[ITEMDEF 042A7]
+DEFNAME=i_pet_trapdoor_creature
+NAME=Trapdoor Creature
+TYPE=T_FIGURINE
+TDATA3=c_trapdoor_creature
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Trapdoor Creature
+
+[ITEMDEF 042A8]
+DEFNAME=i_pet_tunnel_spirit_body
+NAME=Tunnel Spirit Body
+TYPE=T_FIGURINE
+TDATA3=c_tunnel_spirit_body
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Tunnel Spirit Body
+
+[ITEMDEF 042A9]
+DEFNAME=i_pet_wolf_leather
+NAME=Wolf Leather
+TYPE=T_FIGURINE
+TDATA3=c_wolf_leather
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Wolf Leather
+
+[EOF]

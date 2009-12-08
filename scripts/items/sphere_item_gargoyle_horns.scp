@@ -1,0 +1,281 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©1997-2007
+//www.sphereserver.net
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// FILE LAST UPDATED: Tuesday, December 08, 2009
+// BY: Valios
+
+VERSION=0.56b
+
+// Gargoyle's Horns (Male)
+
+[ITEMDEF 04258]
+DEFNAME=i_garg_horn_m_1
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 1
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 1
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 04259]
+DEFNAME=i_garg_horn_m_2
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 2
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 2
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 0425A]
+DEFNAME=i_garg_horn_m_3
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 3
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 3
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 0425B]
+DEFNAME=i_garg_horn_m_4
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 4
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 4
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 0425C]
+DEFNAME=i_garg_horn_m_5
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 5
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 5
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 0425D]
+DEFNAME=i_garg_horn_m_6
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 6
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 6
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 0425E]
+DEFNAME=i_garg_horn_m_7
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 7
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 7
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 0425F]
+DEFNAME=i_garg_horn_m_8
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 8
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 8
+
+ON=@Create
+    ATTR=attr_newbie
+
+// Gargoyle's Horns (Female)
+
+[ITEMDEF 04261]
+DEFNAME=i_garg_horn_f_1
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 1
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 1
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 04262]
+DEFNAME=i_garg_horn_f_2
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 2
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 2
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 04273]
+DEFNAME=i_garg_horn_f_3
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 3
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 3
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 04274]
+DEFNAME=i_garg_horn_f_4
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 4
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 4
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 04275]
+DEFNAME=i_garg_horn_f_5
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 5
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 5
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 042AA]
+DEFNAME=i_garg_horn_f_6
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 6
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 6
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 042AB]
+DEFNAME=i_garg_horn_f_7
+TYPE=t_hair
+VALUE={8 12}
+NAME=Gargoyle Horn 7
+
+CATEGORY=Gargoyles - Horns
+SUBSECTION=Horns
+DESCRIPTION=Gargoyle Horn 7
+
+ON=@Create
+    ATTR=attr_newbie
+
+// Gargoyle's Facial Horns
+
+[ITEMDEF 042AD]
+DEFNAME=i_garg_horn_facial_1
+TYPE=t_beard
+VALUE={8 12}
+NAME=Gargoyle Facial Horn 1
+
+CATEGORY=Gargoyles - Facial Horns
+SUBSECTION=Facial Horns
+DESCRIPTION=Gargoyle Facial Horn 1
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 042AE]
+DEFNAME=i_garg_horn_facial_2
+TYPE=t_beard
+VALUE={8 12}
+NAME=Gargoyle Facial Horn 2
+
+CATEGORY=Gargoyles - Facial Horns
+SUBSECTION=Facial Horns
+DESCRIPTION=Gargoyle Facial Horn 2
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 042AF]
+DEFNAME=i_garg_horn_facial_3
+TYPE=t_beard
+VALUE={8 12}
+NAME=Gargoyle Facial Horn 3
+
+CATEGORY=Gargoyles - Facial Horns
+SUBSECTION=Facial Horns
+DESCRIPTION=Gargoyle Facial Horn 3
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 042B0]
+DEFNAME=i_garg_horn_facial_4
+TYPE=t_beard
+VALUE={8 12}
+NAME=Gargoyle Facial Horn 4
+
+CATEGORY=Gargoyles - Facial Horns
+SUBSECTION=Facial Horns
+DESCRIPTION=Gargoyle Facial Horn 4
+
+ON=@Create
+    ATTR=attr_newbie
+
+[ITEMDEF 042B1]
+DEFNAME=i_garg_horn_facial_5
+TYPE=t_beard
+VALUE={8 12}
+NAME=Gargoyle Facial Horn 5
+
+CATEGORY=Gargoyles - Facial Horns
+SUBSECTION=Facial Horns
+DESCRIPTION=Gargoyle Facial Horn 5
+
+ON=@Create
+    ATTR=attr_newbie
+
+[EOF]
