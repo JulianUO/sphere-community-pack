@@ -6,34 +6,35 @@
 // FILE LAST UPDATED: 
 VERSION=0.56b
 
-[SKILL 1]
-DEFNAME=SKILL_ANATOMY
-KEY=Anatomy
+[SKILL 2]
+DEFNAME=SKILL_ANIMAL_LORE
+KEY=AnimalLore
 TITLE=Scholar
-PROMPT_MSG=@,,2 500321
+PROMPT_MSG=@,,2 500328
 DELAY=0.0
-ADV_RATE=1.0,50.0,150.0
-BONUS_STATS=50
+ADV_RATE=2.5,50.0,200.0
+
+STAT_STR=0
+STAT_INT=70
+STAT_DEX=0
 BONUS_STR=0
 BONUS_DEX=0
 BONUS_INT=100
-STAT_STR=15
-STAT_INT=70
-STAT_DEX=15
+BONUS_STATS=50
 
 on=@select
 f_skill_delay 10
 
 on=@success
-if <def.scp.NewSkills_Anatomy> == 1
-local.toadd = <eval (((<src.targ.str>/10)+1)*11) + ((<src.targ.dex>/10)+1)>
-local.cliloc = <eval <def.scp.anatomy_start> + <local.toadd>>
-sysmessage @,,2 <local.cliloc>
-skillgain Anatomy <eval <Anatomy>/10>
-return 1
+if <def.scp.NewSkills_AnimalLore> == 1
+	if <src.act.brain>
+	f_ResendDialog d_animal_lore
+	skillgain AnimalLore <eval <AnimalLore>/10>
+	return 1
+	endif
 endif
 
-on=@fail
-sysmessage <def.scp.anatomy_fail>
+ON=@Fail
+SRC.MESSAGE @,,2 500334
 
 [eof]

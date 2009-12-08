@@ -1,0 +1,31 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 7]
+DEFNAME=SKILL_Blacksmith
+KEY=Blacksmithing
+TITLE=Blacksmith
+PROMPT_MSG=
+DELAY=1.0
+STAT_STR=95
+STAT_INT=15
+STAT_DEX=25
+BONUS_STR=75
+BONUS_DEX=20
+BONUS_INT=5
+BONUS_STATS=10
+ADV_RATE=2.5,50.0,200.0
+VALUES=1,20,100
+
+ON=@Fail
+	SRC.SYSMESSAGE You have failed to make anything
+
+ON=@Abort
+	SRC.SYSMESSAGE You fail to complete the item.
+
+[eof]

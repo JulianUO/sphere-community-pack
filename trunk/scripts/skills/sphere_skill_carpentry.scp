@@ -1,0 +1,31 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 11]
+DEFNAME=Skill_Carpentry
+KEY=Carpentry
+TITLE=Carpenter
+PROMPT_MSG=
+DELAY=2.0
+STAT_STR=60
+STAT_INT=40
+STAT_DEX=30
+BONUS_STR=50
+BONUS_DEX=30
+BONUS_INT=20
+BONUS_STATS=25
+ADV_RATE=2.5,50.0,200.0
+VALUES=1,20,80
+
+ON=@Fail
+SRC.SYSMESSAGE @,,2 1044043
+
+ON=@Abort
+	SRC.SYSMESSAGE You fail to complete the item.
+
+[eof]

@@ -1,0 +1,31 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 6]
+DEFNAME=SKILL_Begging
+KEY=Begging
+TITLE=Beggar
+PROMPT_MSG=@,,2 500397
+DELAY=2.0
+ADV_RATE=2.5,50.0,200.0
+STAT_STR=5
+STAT_INT=55
+STAT_DEX=25
+BONUS_STR=0
+BONUS_DEX=50
+BONUS_INT=50
+BONUS_STATS=10
+
+on=@select
+if <def.scp.NewSkills_Begging> == 1
+sysmessage @,,2 500397 // To whom do you wish to grovel?
+targetf f_begging_start
+return 1
+endif
+
+[eof]

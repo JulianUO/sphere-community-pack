@@ -1,0 +1,39 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[SKILL 17]
+DEFNAME=Skill_Healing
+KEY=Healing
+TITLE=Healer
+PROMPT_MSG=Who will you use the bandages on?
+DELAY=3.0,1.0
+EFFECT=2.0,20.0
+ADV_RATE=10.0,100.0,250.0
+STAT_STR=10
+STAT_INT=90
+STAT_DEX=10
+BONUS_STATS=20
+BONUS_STR=0
+BONUS_DEX=30
+BONUS_INT=70
+
+on=@success
+if <def.scp.NewSkills_Poisoning> == 0
+return 0
+endif
+if <act.f_bandage_cure> && <def.scp.Healing_PoisonNoBandage>
+return 1
+endif
+
+ON=@Fail
+    SRC.SYSMESSAGE You apply the bandages, but they barely help.
+
+ON=@Abort
+    SRC.SYSMESSAGE You stop applying the bandages.
+
+[eof]
