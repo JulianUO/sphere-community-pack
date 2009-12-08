@@ -35,19 +35,19 @@ ENDIF
 
 ON=@ClientToolTip
 IF (<TAG0.ResPhysical>)
-  SRC.AddCliloc 1060403,<TAG0.ResPhysical>
+  SRC.AddCliloc 1060403,<dTAG0.ResPhysical>
 ENDIF
 IF (<TAG0.ResFire>)
-  SRC.AddCliloc 1060405,<TAG0.ResFire>
+  SRC.AddCliloc 1060405,<dTAG0.ResFire>
 ENDIF
 IF (<TAG0.ResCold>)
-  SRC.AddCliloc 1060404,<TAG0.ResCold>
+  SRC.AddCliloc 1060404,<dTAG0.ResCold>
 ENDIF
 IF (<TAG0.ResPoison>)
-  SRC.AddCliloc 1060406,<TAG0.ResPoison>
+  SRC.AddCliloc 1060406,<dTAG0.ResPoison>
 ENDIF
 IF (<TAG0.ResEnergy>)
-  SRC.AddCliloc 1060407,<TAG0.ResEnergy>
+  SRC.AddCliloc 1060407,<dTAG0.ResEnergy>
 ENDIF
 
 ON=@Equip

@@ -12,6 +12,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Platemail
 RESOURCES=25 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 78.0
+
+TAG.Penalty.Stealth = 25
+
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -43,6 +46,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Platemail Arms
 RESOURCES=18 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 66.5
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -74,6 +80,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Platemail Legs
 RESOURCES=20 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 69.8
+
+TAG.Penalty.Stealth = 15
+
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -105,6 +114,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Plate Helm
 RESOURCES=15 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 61.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -136,6 +148,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Platemail Gorget
 RESOURCES=10 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 53.4
+
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -167,6 +182,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Platemail Gauntlets
 RESOURCES=12 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 56.7
+
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -198,6 +216,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Female Platemail
 RESOURCES=22 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 73.0
+
+TAG.Penalty.Stealth = 25
+
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -229,6 +250,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Chainmail Coif
 RESOURCES=10 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 30.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=6
 TAG.ResFire=7
 TAG.ResCold=6
@@ -260,6 +284,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Chainmail Leggings
 RESOURCES=18 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 34.1
+
+TAG.Penalty.Stealth = 15
+
 TAG.ResPhysical=6
 TAG.ResFire=7
 TAG.ResCold=6
@@ -291,6 +318,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Chainmail Tunic
 RESOURCES=20 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 46.8
+
+TAG.Penalty.Stealth = 25
+
 TAG.ResPhysical=6
 TAG.ResFire=7
 TAG.ResCold=6
@@ -322,6 +352,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Ringmail Leggings
 RESOURCES=16 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 30.6
+
+TAG.Penalty.Stealth = 15
+
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=3
@@ -353,6 +386,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Ringmail Sleeves
 RESOURCES=14 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 27.3
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=3
@@ -384,6 +420,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Ringmail Gloves
 RESOURCES=10 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 20.8
+
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=3
@@ -415,6 +454,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Ringmail Tunic
 RESOURCES=18 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 34.1
+
+TAG.Penalty.Stealth = 25
+
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=3
@@ -524,6 +566,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Closed Helm
 RESOURCES=15 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 61.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=5
@@ -555,6 +600,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Helmet
 RESOURCES=15 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 61.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=5
@@ -586,6 +634,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Bascinet
 RESOURCES=15 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 22.2
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=5
@@ -617,6 +668,9 @@ SUBSECTION=Agapite
 DESCRIPTION=Nose Helm
 RESOURCES=15 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 61.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=5

@@ -10,6 +10,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Platemail
 RESOURCES=25 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 79.0
+
+TAG.Penalty.Stealth = 25
+
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -32,6 +35,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Platemail Arms
 RESOURCES=18 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 67.5
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -54,6 +60,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Platemail Legs
 RESOURCES=20 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 70.8
+
+TAG.Penalty.Stealth = 15
+
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -76,6 +85,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Plate Helm
 RESOURCES=15 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 62.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -98,6 +110,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Platemail Gorget
 RESOURCES=10 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 54.4
+
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -120,6 +135,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Platemail Gauntlets
 RESOURCES=12 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 57.7
+
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -142,6 +160,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Female Platemail
 RESOURCES=22 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 74.0
+
+TAG.Penalty.Stealth = 25
+
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -164,6 +185,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Chainmail Coif
 RESOURCES=10 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 31.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=8
 TAG.ResFire=4
 TAG.ResCold=7
@@ -186,6 +210,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Chainmail Leggings
 RESOURCES=18 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 35.1
+
+TAG.Penalty.Stealth = 15
+
 TAG.ResPhysical=8
 TAG.ResFire=4
 TAG.ResCold=7
@@ -208,6 +235,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Chainmail Tunic
 RESOURCES=25 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 47.8
+
+TAG.Penalty.Stealth = 25
+
 TAG.ResPhysical=8
 TAG.ResFire=4
 TAG.ResCold=7
@@ -230,6 +260,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Ringmail Leggings
 RESOURCES=16 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 31.6
+
+TAG.Penalty.Stealth = 15
+
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=4
@@ -252,6 +285,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Ringmail Sleeves
 RESOURCES=14 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 28.3
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=4
@@ -274,6 +310,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Ringmail Gloves
 RESOURCES=10 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 21.8
+
+TAG.Penalty.Stealth = 5
+
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=4
@@ -296,6 +335,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Ringmail Tunic
 RESOURCES=18 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 35.1
+
+TAG.Penalty.Stealth = 25
+
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=4
@@ -370,6 +412,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Closed Helm
 RESOURCES=15 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 62.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=6
@@ -392,6 +437,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Helmet
 RESOURCES=15 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 62.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=6
@@ -414,6 +462,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Bascinet
 RESOURCES=15 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 23.2
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=6
@@ -436,6 +487,9 @@ SUBSECTION=Valorite
 DESCRIPTION=Nose Helm
 RESOURCES=15 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 62.6
+
+TAG.Penalty.Stealth = 10
+
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=6
@@ -445,3 +499,5 @@ TAG.ResEnergy=6
 ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={101 115}
+	
+[eof]

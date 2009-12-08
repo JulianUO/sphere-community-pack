@@ -14,7 +14,7 @@ elseif <hiding> < 50.0
 sysmessage <def.scp.stealth_reqhiding>
 f_reveal
 else
-	if <armor_rating> >= 42
+	if <f_armor_rating> >= 42
 	sysmessage <def.scp.stealth_armorcheck>
 	f_reveal
 	else
@@ -76,9 +76,9 @@ local.divisor = <eval (<hiding> + <stealth>)>
 	endif
 endif
 
-[function armor_rating]
+[function f_armor_rating]
 for 3 24
-	local.penaltytotal += <findlayer(<dlocal._for>).tag0.penalty.hiding>
+	local.penaltytotal += <findlayer(<dlocal._for>).tag0.penalty.stealth>
 endfor
 return <dlocal.penaltytotal>
 
