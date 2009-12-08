@@ -33,6 +33,7 @@ if <def0.scp.NewCrafting_<args>> == 1
 	if strcmp("<argv[0]>","<ctag.craft.skill>")
 	ctag.craft.last
 	ctag.craft.page.sidebar
+	ctag.craft.sidebar = 01
 	endif
 ctag.craft.skill=<argv[0]>
 sdialog d_craft_menu
@@ -106,32 +107,6 @@ local.r = 0
 endif
 return <local.r>
 
-
-[function f_crafting_render_itemlist]
-xmfhtmlgumpcolor 175 40 370 20 1044011 0 0 <ddef.dcolor_white>
-local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "_">
-local.mainbar = <eval 1 + (10 * <ctag0.craft.page.mainbar>)>
-local.y = 65
-for 1 10
-local.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<dlocal.mainbar>>
-	if <local.item> != 0
-	button 505 <local.y> 4011 4012 1 0 <eval 100 + <local.mainbar>>
-	button 180 <local.y> 4005 4007 1 0 <eval 10100 + <local.mainbar>>
-	dcroppedtext 215 <local.y> 290 20 <qval (<canmake <local.item>>) ? 0480 : 020> <serv.itemdef.<local.item>.name>
-	endif
-local.mainbar ++
-local.y += 20
-endfor
-if !(<isempty <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<dlocal.mainbar>>>)
-button 380 267 4005 4007 1 0 5002
-xmfhtmlgumpcolor 415 268 150 20 1044045 0 0 <ddef.dcolor_white>
-endif
-if <ctag0.craft.page.mainbar> > 0)
-button 180 267 4014 4015 1 0 5003
-xmfhtmlgumpcolor 215 268 150 20 1044044 0 0 <ddef.dcolor_white>
-endif
-
-
 [function f_crafting_render_materials]
 xmfhtmlgumpcolor 175 40 370 20 1044011 0 0 <ddef.dcolor_white>
 local.x = 180
@@ -145,41 +120,5 @@ button *0 *0 4005 4007 1 0 <eval 5020 + <local.n>>
 	endif
 local.n ++
 endwhile
-
-
-[function f_crafting_render_itemprop]
-gumppictiled 175 135 365 5 5058
-checkertrans 175 135 365 5
-gumppictiled 265 40 5 95 5058
-checkertrans 265 40 5 95
-gumppictiled 355 140 5 155 5058
-checkertrans 355 140 5 155
-
-serv.newitem <ctag0.craft.item>
-ref1=<new>
-
-tilepichue 190 60 <ref1.dispiddec> <dref1.color>
-dcroppedtext 275 45 265 20 0480 Item:
-dcroppedtext 310 45 265 20 88 <ref1.name>
-dcroppedtext 275 90 330 20 0480 Success Chance: <fval <ref1.craftsuccesschance <ref1.baseid>>>%
-button 275 110 4014 4016 1 0 0
-dtext 310 112 0480 Back
-button 425 110 4011 4012 1 0 10100
-dtext 460 112 0480 Make Item
-xmfhtmlgumpcolor 175 140 185 20 1044054 0 0 <ddef.dcolor_white>
-args = <ref1.skillmake>
-dorigin 182 137
-for 1 <argv>
-	if (<serv.skill.<ref1.skillmake.<local._for>.key>>)
-	dcroppedtext 182 *20 170 20 0480 <serv.skill.<ref1.skillmake.<local._for>.key>.name>: <fval <ref1.skillmake.<local._for>.val>>
-	endif
-endfor
-xmfhtmlgumpcolor 360 140 180 20 1044055 0 0 <ddef.dcolor_white>
-args = <ref1.resmake>
-dorigin 368 137 
-for 1 <argv>
-dcroppedtext 368 *20 170 20 0480 <ref1.resources.<local._for>.val><serv.itemdef.<ref1.resources.<local._for>.key>.name>
-endfor
-ref1.remove
 
 [eof]
