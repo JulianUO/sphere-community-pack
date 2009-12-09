@@ -178,8 +178,66 @@ Note: Mystic weapons were introduced during Ophidian Wars.
 - Updated: merged some spells file into the main one (sphere_spells_tithing -> sphere_pack_defs.scp and sphere_spells_damage_bonus.scp -> sphere_general_functions.scp)
 - Updated: moved scripts/add-on/spells/ files to scripts/spells/.
 - Updated: moved crafting skillmenues to their own skillmenu folder. (need to finish other skills)
+- Updated: fixed and finished the SOS treasure system.
+- Updated: separated inscription file into skill and skillmenu.
+- Moved: evalint from add-on/skills to skills and merged with definition.
 - Moved: anatomy and fishing to the main skills folder (the rest of skills will be moved as I update them)
 - Fixed: now chivalry spells consume tithing points in all cases.
 - Fixed: misspell in sphere_events_players.scp.
 - Fixed: misspell in sphere_pack_defs.scp
 - Removed: old file for bowcraft.
+
+05-12-2009, ShiryuX
+- Added: provocation script (not tested yet)
+- Updated: some enchants tag names to be more descriptive.
+- Updated: peacemaking script with delays between strokes.
+- Updated: removed deeds for guildstones from vendors as they are no longer used.
+- Moved: carpentry, tailoring and tinkering skillmenu moved to the according folder.
+- Fixed: moved a @start spell trigger from necro to @select.
+- Fixed: additem custom function renamed to f_additem to avoid several problems.
+- Fixed: missing code for the guild button.
+- Fixed: missing skillmake/resources section in the black staff and in the copper key override.
+
+05-12-2009, jeem
+- Added: hiding and stealth skills.
+- Fixed: @SkillPreSelect trigger has been fixed for the last time, it's working perfectly now.
+
+06-12-2009, jeem
+- Updated: sphere_skill_animal_taming.scp, added stat&skill loss on taming. also added TAG.taming_stat_loss for creatures which loses stats on taming.
+- Updated: animallore can be gained while taming now.
+- Updated: some minor details with taming. cu cidhes can only be tamed by elves now.
+- Fixed: a check for skill delays.
+- Fixed: sphere_skill_animal_taming.scp. a typo.
+
+07-12-2009, ShiryuX
+- Added: @craft called on item when it is crafted, argo is the player. 
+- Added: @itemcraft called on player when he crafts an item, argo is the item.
+- Added: new setting "_aftercraft" for crafting skillmenu. which is the name of the function to call on the item after the player crafts it. note: if you set this setting to material, both the default and the material functions will be called.
+- Added: support code (by coruja) for the AoS elemental combat, but only the display behavior.
+- Updated: every armor to use TAG.Res* 
+- Updated: colored armor into new folder inside items folder. also removed the old file since it is no longer needed.
+
+08-12-2009, jeem
+- Updated: every skill has its own file in scripts/skills folder now.
+- Updated: sphere_events_players.scp, skill delays change.
+- Updated: sphere_general_functions.scp, skill delay function.
+- Updated: sphere_skill_anatomy.scp, added skill delay for test purposes. it's not complete for all skills at the moment.
+- Updated: armors, added stealth penalty tags.
+- Updated: sphere_skillx_stealth.scp, f_armor_rating function works now.
+- Updated: changed the names of the files in add-on/skills/ to avoid conflicts.
+- Updated: arcane circle and gift of renewal rescripted to match EA better. i will be scripting other spells.
+- Updated: sphere_spells_spellweaving.scp.
+- Moved: spellweaving functions moved to sphere_spells_spellweaving_extra.scp
+- Fixed: override/sphere_override_armor.scp, fixed clilocs showing hexadecimals.
+
+08-12-2009, Khaos
+- Added: sphere_fame_karma_system.scp, matches EA as closely as possible, since there is no current formula's listed. Only thing not added was Title Locking. I will adjust later for that. (Needs testing)
+
+08-12-2009, ShiryuX
+- Added: some of the SA items (thanks Valios)
+- Updated: EA karma/fame system according to the scripting rules.
+- Updated: rescripted crafting system to use ML crafting menu. needs several testing.
+- Updated: messages and clilocs from crafting menu.
+- Fixed: inscription using runes id instead of scrolls
+- Fixed: wrong listing in bowcraft skillmenu.
+---- Released 0.2a
