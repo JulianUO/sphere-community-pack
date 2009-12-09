@@ -37,27 +37,50 @@ endfor
 if <act.tag0.resphysical>
 addcliloc 1060403,<act.dtag0.resphysical>
 endif
-if <act.tag0.resfire>
-addcliloc 1060405,<act.dtag0.resfire>
-endif
-if <act.tag0.rescold>
-addcliloc 1060404,<act.dtag0.rescold>
-endif
-if <act.tag0.respoison>
-addcliloc 1060405,<act.dtag0.respoison>
-endif
-if <act.tag0.resenergy>
-addcliloc 1060405,<act.dtag0.resenergy>
-endif
 if <act.reqstr> > 0
 	if <str> >= <act.reqstr>
 	addcliloc 1061170,<eval <act.reqstr>>
 	else
-	addcliloc 1061170,<def.bfont_red><eval <act.reqstr>>
+	addcliloc 1061170,<def.bfont_red><eval <act.reqstr>><def.bfonte>
 	endif
 endif
+if <act.more1h> > 0
 addcliloc 1060639,<act.more1l>,<act.more1h>
+endif
 addcliloc 1072225,<eval <act.weight>/10>
+if <act.isweapon>
+	if <act.tag0.damphysical>
+	addcliloc 1060403,<act.dtag0.damphysical>
+	endif
+	if <act.tag0.damfire>
+	addcliloc 1060405,<act.dtag0.damfire>
+	endif
+	if <act.tag0.damcold>
+	addcliloc 1060404,<act.dtag0.damcold>
+	endif
+	if <act.tag0.dampoison>
+	addcliloc 1060406,<act.dtag0.dampoison>
+	endif
+	if <act.tag0.damenergy>
+	addcliloc 1060407,<act.dtag0.damenergy>
+	endif
+elif <act.isarmor>
+	if <act.tag0.resphysical>
+	addcliloc 1060448,<act.dtag0.resphysical>
+	endif
+	if <act.tag0.resfire>
+	addcliloc 1060447,<act.dtag0.resfire>
+	endif
+	if <act.tag0.rescold>
+	addcliloc 1060445,<act.dtag0.rescold>
+	endif
+	if <act.tag0.respoison>
+	addcliloc 1060449,<act.dtag0.respoison>
+	endif
+	if <act.tag0.resenergy>
+	addcliloc 1060446,<act.dtag0.resenergy>
+	endif
+endif
 return 1
 
 [eof]

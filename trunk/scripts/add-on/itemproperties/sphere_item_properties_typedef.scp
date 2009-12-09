@@ -1,0 +1,113 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Typedef for Item Properties. 
+// Based on EA.
+
+[typedef t_iprop]
+on=@equip
+if <tag0.damageincrease>
+src.tag0.damageincrease += <tag0.damageincrease>
+endif
+//if <tag0.defensechanceincrease>
+//src.tag0.defensechanceincrease += <tag0.defensechanceincrease>
+//endif
+if <tag0.dexteritybonus>
+src.moddex += <tag0.dexteritybonus>
+endif
+//if <tag0.enhancepotion>
+//src.tag0.enhancepotion += <tag0.enhancepotion>
+//endif
+if <tag0.fastercastrecovery>
+src.tag0.fastercastrecovery += <tag0.fastercastrecovery>
+endif
+if <tag0.fastercasting>
+src.tag0.fastercasting += <tag0.fastercasting>
+endif
+//if <tag0.hitchanceincrease>
+//src.tag0.hitchanceincrease += <tag0.hitchanceincrease>
+//endif
+if <tag0.hitdispel>
+src.tag0.hitdispel += <tag0.hitdispel>
+endif
+if <tag0.hitlifeleech>
+src.tag0.hitlifeleech += <tag0.hitlifeleech>
+endif
+//if <tag0.hitlowerattack>
+//src.tag0.hitlowerattack += <tag0.hitlowerattack>
+//endif
+//if <tag0.hitlowerdefense>
+//src.tag0.hitlowerdefense += <tag0.hitlowerdefense>
+//endif
+if <tag0.hitmanaleech>
+src.tag0.hitmanaleech += <tag0.hitmanaleech>
+endif
+if <tag0.hitpointregeneration>
+src.tag0.hitpointregeneration += <tag0.hitpointregeneration>
+endif
+if <tag0.hitstaminaleech>
+src.tag0.hitstaminaleech += <tag0.hitstaminaleech>
+endif
+//if <tag0.>
+//src.tag0. += <tag0.>
+//endif
+
+on=@unequip
+if <tag0.damageincrease>
+src.tag0.damageincrease -= <tag0.damageincrease>
+endif
+//if <tag0.defensechanceincrease>
+//src.tag0.defensechanceincrease -= <tag0.defensechanceincrease>
+//endif
+if <tag0.dexteritybonus>
+src.moddex -= <tag0.dexteritybonus>
+endif
+//if <tag0.enhancepotion>
+//src.tag0.enhancepotion -= <tag0.enhancepotion>
+//endif
+if <tag0.fastercastrecovery>
+src.tag0.fastercastrecovery -= <tag0.fastercastrecovery>
+endif
+if <tag0.fastercasting>
+src.tag0.fastercasting -= <tag0.fastercasting>
+endif
+//if <tag0.hitchanceincrease>
+//src.tag0.hitchanceincrease -= <tag0.hitchanceincrease>
+//endif
+if <tag0.hitdispel>
+src.tag0.hitdispel -= <tag0.hitdispel>
+endif
+if <tag0.hitlifeleech>
+src.tag0.hitlifeleech -= <tag0.hitlifeleech>
+endif
+//if <tag0.hitlowerattack>
+//src.tag0.hitlowerattack -= <tag0.hitlowerattack>
+//endif
+//if <tag0.hitlowerdefense>
+//src.tag0.hitlowerdefense -= <tag0.hitlowerdefense>
+//endif
+if <tag0.hitmanaleech>
+src.tag0.hitmanaleech -= <tag0.hitmanaleech>
+endif
+if <tag0.hitpointregeneration>
+src.tag0.hitpointregeneration -= <tag0.hitpointregeneration>
+endif
+if <tag0.hitstaminaleech>
+src.tag0.hitstaminaleech -= <tag0.hitstaminaleech>
+endif
+//if <tag0.>
+//src.tag0. -= <tag0.>
+//endif
+
+[eof]

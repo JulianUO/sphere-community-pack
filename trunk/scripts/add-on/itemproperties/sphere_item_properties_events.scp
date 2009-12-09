@@ -1,0 +1,159 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Typedef for Item Properties. 
+// Based on EA.
+// ---------------
+//
+// PROPERTIES LIST
+// ---------------
+// scp.ItemProp_Resistances
+// *DONE* scp.ItemProp_DamageIncrease
+// scp.ItemProp_DefenseChanceIncrease
+// scp.ItemProp_DexterityBonus
+// scp.ItemProp_EnhancePotion
+// *DONE* scp.ItemProp_FasterCastRecovery
+// *DONE* scp.ItemProp_FasterCasting
+// scp.ItemProp_HitChanceIncrease
+// *DONE* scp.ItemProp_HitDispel
+// *DONE* scp.ItemProp_HitLifeLeech
+// scp.ItemProp_HitLowerAttack
+// scp.ItemProp_HitLowerDefense
+// *DONE* scp.ItemProp_HitManaLeech
+// *DONE* scp.ItemProp_HitPointRegeneracion
+// *DONE* scp.ItemProp_HitStaminaLeech
+// --------------
+
+[events e_PlayerCombatEvent]
+on=@userstats
+// Hit Point Generation increases value in the regeneration
+// Formula: (0.1 * intensity)
+if <def.scp.ItemProp_HitPointRegeneration> == 1
+tag0.override.regenval_0 = <eval 0.1 * <tag0.HitPointRegeneration>>
+endif
+
+on=@spellselect
+// A small check for Faster Cast Recovery. No need for checking if it is activated.
+// Since if the property is not active, the tag will not be set.
+if <dtag0.spellrecovery> > <serv.time>
+src.sysmessage @03c1,6,2 502644 // You have not yet recovered from casting a spell
+return 1
+endif
+if <def.scp.MagicProperties_LowerManaCost> == 1
+argn2 = <eval (<argn2> * (<tag0.LowerManaCost> + 1)) / 100>
+endif
+
+on=@spellcast
+// MageWeapon in this case something like MageWeaponAndShield
+// Since layer 2 can be used as Two Handed Weapon or Shield
+if <def.scp.ItemProp_MageWeapon> == 1
+	if <argn1> != 104 // exception for Curse Weapon
+		if <findlayer.1.uid>
+			if !(<findlayer.1.tag0.MageWeapon>) || (<findlayer.1.type> == t_wand)
+			findlayer.1.unequip
+			endif
+		elif <findlayer.2.uid>
+			if (!<findlayer.2.tag0.MageWeapon>) || (!<findlayer.2.tag0.MageArmor>)
+			findlayer.2.unequip
+			endif
+		endif
+	endif
+endif
+// Now, this is the real MageArmor property. Which apply for every armor slot
+// Except shield, explained it before.
+if <def.scp.ItemProperties_MageArmor> == 1
+	for 1 <def.armor_amount>
+	ref5 = <findlayer.<def.armor_part_<dlocal._for>>.uid>
+		if <ref5.type> == t_armor
+			if <ref5.tag0.MageWeapon> == 0
+			src.sysmessage You can't cast with this armor (<ref5.name>).
+			return 1
+			endif
+		endif
+	endfor
+endif
+// A weird property actually. For Mages and Necromancers > 70.0 this is capped at 2.
+// But for Chivalry, Ninjitsu, Bushido and Spellweaving this is capped at 4.
+// So just do (cap * 2) in the last case.
+if <def.scp.ItemProp_FasterCasting> == 1
+local.fcast = <src.tag0.FasterCasting>
+	if <tag0.FasterCasting> > <getargv 3 <def.itemprop_07>>
+		if <src.magery> < 70.0
+		local.fcast = <min <tag0.FasterCasting>,4>
+		else
+		local.fcast = <getargv 3 <def.itemprop_07>>
+		endif	
+	endif
+argn3 -= <local.fcast>
+	if <argn3> < 0
+	argn3 = 0.1
+	endif
+endif
+
+on=@spelleffect
+if <def.scp.ItemProp_FasterCastRecovery> == 1
+src.tag0.spellrecovery = <eval <serv.time>+(12-(<min <eval <src.tag0.FasterCastRecovery>*2>,12>))>
+endif
+
+on=@hit
+// Hit Dispel helps you to dispel a target when you hit it.
+// The % of this being activated is the intensity on the player (0-100).
+if <def.scp.ItemProp_HitDispel> == 1
+	if <src.brain>
+		if <src.flags>&statf_conjured
+			if <r100> < <tag0.HitDispel>
+			src.hits = 0
+			endif
+		endif
+	endif
+endif
+if <def.scp.ItemProp_DamageIncrease> == 1
+	if <tag0.DamageIncrease>
+	local.tempbonus = <tag0.DamageIncrease>
+	local.dicap = <getargv 3 <def.itemprop_01>>
+		if <tag0.DamageIncrease> > <local.dicap>
+		local.tempbonus = <local.dicap>
+		endif
+	argn1 += <eval ((<local.tempbonus> * <argn1>) / 100) + 1>
+	endif
+endif
+// This three leech properties should be at the end of the trigger
+// AFTER the damage calcs are done. Since they work according to damage dealt.
+// Formula (for both) is: (damage * 0.4) - intensity
+if <def.scp.ItemProp_HitManaLeech> == 1 
+float.mtoleech = <floatval (<argn1> * 0.4) - <tag0.HitManaLeech>>
+mana += <feval <float.mtoleech>>
+	if <mana> > <maxmana>
+	mana = <maxmana>
+	endif
+src.mana -= <feval <float.mtoleech>
+endif
+if <def.scp.ItemProp_HitLifeLeech> == 1
+float.htoleech = <floatval (<argn1> * 0.4) - <tag0.HitLifeLeech>>
+hits += <feval <float.htoleech>>
+	if <hits> > <maxhits>
+	hits = <maxhits>
+	endif
+src.hits -= <feval <float.htoleech>
+endif
+// This one works a little different to the rest of the leech properties
+// It uses the % of the player to calc success and gains the damage amount in stamina
+// Still, it doesn't "leech" stamina from the target
+if <def.scp.ItemProp_HitStaminaLeech> == 1
+	if <r100> < <tag0.HitStaminaLeech>
+	stam += <argn1>
+	endif
+endif
+
+[eof]
