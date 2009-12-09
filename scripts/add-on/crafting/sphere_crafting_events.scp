@@ -45,7 +45,7 @@ if <craft_exceptionalchance> < <r>
 ctag0.craft.message = <def.scp.craft_msg_exceptional>
 ref2.tag.exceptional = 1
 	if !<ctag0.craft.nomark>
-	ref2.name = <ref2.name> crafted by <name>
+	ref2.tag.exceptional = <name>
 	ctag.craft.message = <def.scp.craft_msg_excepmark>
 	endif
 endif

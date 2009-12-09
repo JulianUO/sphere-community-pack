@@ -341,7 +341,7 @@ src.sysmessage @,,1 Cancelled mark.
 
 on=1
 src.sysmessage @,,1 You mark the item.
-name = <name> crafted by <src.name>
+tag0.exceptional = <src.name>
 
 
 
