@@ -67,7 +67,7 @@ page 1
 // sidebar section
 xmfhtmlgumpcolor 10 38 200 20 <ddef.scp.craft_head_categories> 0 0 <ddef.dcolor_white>
 button 15 60 4005 4007 1 0 5010
-xmfhtmlgumpcolor 50 61 115 20 <ddef.scp.craft_button_lastten> 0 0 <ddef.color_white>
+xmfhtmlgumpcolor 50 61 115 20 <ddef.scp.craft_button_lastten> 0 0 <ddef.dcolor_white>
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "_">
 local.sidebar = <eval 1 + (10 * <ctag0.craft.page.sidebar>)>
 local.wid = 80
