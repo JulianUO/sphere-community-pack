@@ -34,17 +34,16 @@ INTERRUPT=100.0,100.0
 
 on=@select
 if !<IsInArcaneCircle>
-sysmessage @,,2 1072705 // You must be standing on an arcane circle, pentagram or abbatoir to use this spell.
+sysmessage <def.scp.spell.arcanecircle_notin>
 return 1
 endif
-
 forchars 1
 	if <eval (<src.spellweaving> - <spellweaving>)> <= 20.0 || <eval (<spellweaving> - <src.spellweaving>)> <= 20.0
 	local.weaver += 1
 	endif
 endfor
 if <local.weaver> < 2
-sysmessage @,,2 1080452 //There are not enough spellweavers present to create an Arcane Focus.
+sysmessage <def.scp.spell.arcanecircle_noplayer>
 return 1
 endif
 

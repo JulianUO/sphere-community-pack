@@ -1,0 +1,63 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// New tooltips generation, experimental for now.
+// Only tested on t_armor.
+
+[events e_PlayerTooltipEvent]
+on=@itemclienttooltip
+addcliloc 1042971,<act.name>
+//if <act.tag0.setid> > 0
+//addcliloc 1072376,<def.set_<act.tag0.setid>_pieces>
+//endif
+if !<isnum <act.tag0.exceptional>>
+addcliloc 1050043,<act.tag0.exceptional> // crafted by ~1_NAME~
+endif
+for 1 <def.enchant.amount>
+	if <act.isevent.<def.enchant.<dlocal._for>.type>>
+		if <isnum <def.enchant.<dlocal._for>.cliloc>>
+		args = <def.enchant.<dlocal._for>.input>
+		addcliloc <def.enchant.<dlocal._for>.cliloc>,<act.dtag0.<argv[1]>>
+		else		
+		addcliloc <<def.enchant.<dlocal._for>.cliloc>>
+		endif
+	endif
+endfor
+if <act.tag0.resphysical>
+addcliloc 1060403,<act.dtag0.resphysical>
+endif
+if <tag0.resfire>
+addcliloc 1060405,<act.dtag0.resfire>
+endif
+if <tag0.rescold>
+addcliloc 1060404,<act.dtag0.rescold>
+endif
+if <tag0.respoison>
+addcliloc 1060405,<act.dtag0.respoison>
+endif
+if <tag0.resenergy>
+addcliloc 1060405,<act.dtag0.resenergy>
+endif
+if <act.reqstr> > 0
+	if <str> >= <act.reqstr>
+	addcliloc 1061170,<eval <act.reqstr>>
+	else
+	addcliloc 1061170,<def.bfont_red><eval <act.reqstr>>
+	endif
+endif
+addcliloc 1060639,<act.more1l>,<act.more1h>
+addcliloc 1072225,<eval <act.weight>/10>
+return 1
+
+[eof]
