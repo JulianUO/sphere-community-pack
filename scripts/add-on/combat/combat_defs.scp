@@ -1,0 +1,245 @@
+
+[DEFNAME Combat_Defs]
+//Alter These As You See Fit//
+
+//Map PvP Options
+//Map_0: 0 = pvp off, 1 = pvp on
+Combat_Map_0_PvP 1
+//Map_1: 0 = pvp off, 1 = pvp on
+Combat_Map_1_PvP 1
+//Map_2: 0 = pvp off, 1 = pvp on
+Combat_Map_2_PvP 1
+//Map_3: 0 = pvp off, 1 = pvp on
+Combat_Map_3_PvP 1
+//Map_4: 0 = pvp off, 1 = pvp on
+Combat_Map_4_PvP 1
+//Map_5: 0 = pvp off, 1 = pvp on
+Combat_Map_5_PvP 1
+
+//HitSpeed: 0 = default, 1 = AoS, 2 = UO:R
+Combat_HitSpeed		2
+//HitChance: 0 = default, 1 = AoS, 2 = UO:R
+Combat_HitChance	2
+//BlockChance: 0 = default, 1 = AoS, 2 = UO:R
+Combat_BlockChance	2
+//DamageBonus: 0 = default, 1 = AoS, 2 = UO:R
+Combat_DamageBonus	2
+//PhysicalResist: 0 = default, 1 = AoS, 2 = UO:R
+Combat_PhysicalResist	1
+//ElementalResist: 0 = default, 1 = AoS, 2 = UO:R(off)
+Combat_ElementalResist	1
+//SlayerWeapons: 0 = default, 1 = AoS, 2 = UO:R
+Combat_SlayerWeapons	1
+
+//AOS_Velocity: 0 = off, 1 = on
+Combat_AOS_Velocity	1
+//AOS_AreaDamage: 0 = off, 1 = on
+Combat_AOS_AreaDamage	1
+//AOS_WeaponSpells: 0 = off, 1 = on
+Combat_AOS_WeaponSpells		1
+//AOS_WeaponLeech: 0 = off, 1 = on
+Combat_AOS_WeaponLeech		1
+//AOS_WepAttkDefMod: 0 = off, 1 = on
+Combat_AOS_WepAttkDefMod	1
+//AOS_PhysicalReflect: 0 = off, 1 = on
+Combat_AOS_PhysicalReflect	1
+
+//UOR_LumberjackBonus: 0 = off, 1 = on
+Combat_UOR_LumberjackBonus	1
+
+//Armor_Stacking: 0 = off, 1 = on
+Combat_Armor_Stacking	0
+
+
+//PC Wrestling Ignore Body: 0 off, 1 = on
+Combat_PC_Wrestling_Ignore_Body 1
+
+//Equipment Degrades: 0 off, 1 = on
+Combat_Equipment_Degrades 0
+
+
+[DEFNAME AOS_AreaDamage]
+///DO NOT ALTER///
+AOS_AreaDamage_0 Physical
+AOS_AreaDamage_1 Fire
+AOS_AreaDamage_2 Cold
+AOS_AreaDamage_3 Poison
+AOS_AreaDamage_4 Energy
+
+[DEFNAME Hit_Layers]
+///DO NOT ALTER///
+Hit_Layer_1 = Feet/Legs
+Hit_Layer_2 = Body
+Hit_Layer_3 = Arms
+Hit_Layer_4 = Hands
+Hit_Layer_5 = Neck
+Hit_Layer_6 = Head
+
+
+[DEFNAME Armor_Type_Defs]
+///DO NOT ALTER///
+
+Armor_Type_Leather = 1
+Armor_Type_StuddedLeather = 2
+Armor_Type_Ringmail = 3
+Armor_Type_Chainmail = 4
+Armor_Type_Bone = 5
+Armor_Type_Platemail = 6
+Armor_Type_DragonScale = 7
+Armor_Type_Shield = 8
+
+Armor_Type_1	 Leather
+Armor_Type_2	 Studded Leather
+Armor_Type_3	 Chainmail
+Armor_Type_4	 Ringmail
+Armor_Type_5	 Bone Armor
+Armor_Type_6	 Platemail
+Armor_Type_7	 Dragon Scale
+Armor_Type_8	 Shield
+
+
+//LEATHER
+armor_id_i_leather_sleeves = 1
+armor_id_i_leather_gloves = 1
+armor_id_i_leather_gorget = 1
+armor_id_i_leather_leggings = 1
+armor_id_i_leather_tunic = 1
+armor_id_i_leather_cap = 1
+armor_id_i_armor_female_shorts = 1
+armor_id_i_armor_female_leather = 1
+armor_id_i_armor_female_skirt = 1
+armor_id_i_armor_female_bustier = 1
+armor_id_i_leather_ninja_hood = 1
+////armor_id_i_leather_ninja_belt	//belt again, not armor
+armor_id_i_leather_ninja_pants = 1
+armor_id_i_leather_ninja_mitts = 1
+armor_id_i_leather_ninja_jacket = 1
+armor_id_i_leather_haidate = 1
+armor_id_i_leather_hiro_sode = 1
+armor_id_i_leather_mempo = 1
+armor_id_i_leather_do = 1
+armor_id_i_leather_suneate = 1
+armor_id_i_leather_jingasa = 1
+armor_id_i_leaf_tunic = 1
+armor_id_i_leaf_gloves = 1
+armor_id_i_leaf_gorget = 1
+armor_id_i_leaf_arms = 1
+armor_id_i_leaf_pants = 1
+armor_id_i_leaf_tonlet = 1
+
+armor_id_i_mask_orc = 1
+
+
+//STUDDED ARMOR
+armor_id_i_studded_sleeves = 2
+armor_id_i_studded_gloves = 2
+armor_id_i_studded_gorget = 2
+armor_id_i_studded_leggings = 2
+armor_id_i_studded_tunic = 2
+armor_id_i_armor_female_bustier_studded = 2
+armor_id_i_armor_female_studded = 2
+armor_id_i_studded_hiro_sode = 2
+armor_id_i_studded_haidate = 2
+armor_id_i_studded_mempo = 2
+armor_id_i_studded_suneate = 2
+armor_id_i_studded_do = 2
+armor_id_i_hide_tunic = 2
+armor_id_i_hide_gloves = 2
+armor_id_i_hide_gorget = 2
+armor_id_i_hide_paldrons = 2
+armor_id_i_hide_pants = 2
+armor_id_i_hide_tunic_female = 2
+
+
+//RINGMAIL
+armor_id_i_ringmail_gloves = 3
+armor_id_i_ringmail_tunic = 3
+armor_id_i_ringmail_sleeves = 3
+armor_id_i_ringmail_leggings = 3
+
+
+//CHAINMAIL
+armor_id_i_chainmail_coif = 4
+armor_id_i_chainmail_leggings = 4
+armor_id_i_chainmail_tunic = 4
+armor_id_i_chainmail_hatsuburi = 4
+
+
+//BONE ARMOR
+armor_id_i_bone_arms = 5
+armor_id_i_bone_chest = 5
+armor_id_i_bone_gloves = 5
+armor_id_i_bone_helmet = 5
+armor_id_i_bone_leggings = 5
+
+armor_id_i_helm_orc = 5
+
+
+//PLATEMAIL
+armor_id_i_platemail_arms = 6
+armor_id_i_platemail_leggings = 6
+armor_id_i_platemail_helm = 6
+armor_id_i_platemail_gorget = 6
+armor_id_i_platemail_gloves = 6
+armor_id_i_platemail_chest = 6
+armor_id_i_armor_female_plate = 6
+armor_id_i_platemail_mempo = 6
+armor_id_i_platemail_do = 6
+armor_id_i_platemail_hiro_sode = 6
+armor_id_i_platemail_suneate = 6
+armor_id_i_platemail_haidate = 6
+armor_id_i_woodland_chest = 6
+//armor_id_i_woodland_belt	considered a belt
+armor_id_i_woodland_gorget = 6
+armor_id_i_woodland_gauntlets = 6
+armor_id_i_woodland_leggings = 6
+armor_id_i_woodland_arms = 6
+armor_id_i_armor_female_woodland = 6
+
+armor_id_i_helm_closed = 6
+armor_id_i_helm_open = 6
+armor_id_i_bascinet = 6
+armor_id_i_helm_nose = 6
+armor_id_i_circlet = 6
+armor_id_i_circlet_royal = 6
+armor_id_i_circlet_gemmed = 6
+armor_id_i_helm_vulture = 6
+armor_id_i_helm_winged = 6
+armor_id_i_platemail_hatsuburi = 6
+armor_id_i_plate_jingasa_heavy = 6
+armor_id_i_platemail_kabuto_battle = 6
+armor_id_i_platemail_kabuto_decorative = 6
+armor_id_i_plate_jingasa_light = 6
+armor_id_i_plate_jingasa_small = 6
+armor_id_i_platemail_kabuto = 6
+
+
+//DRAGON ARMOR
+armor_id_i_dragon_chest = 7
+armor_id_i_dragon_gloves = 7
+armor_id_i_dragon_helm = 7
+armor_id_i_dragon_leggings = 7
+armor_id_i_dragon_sleeves = 7
+
+
+//SHIELDS
+armor_id_i_shield_round_bronze = 8
+armor_id_i_shield_buckler = 8
+armor_id_i_shield_kite_metal = 8
+armor_id_i_shield_heater = 8
+armor_id_i_shield_kite_wood = 8
+armor_id_i_shield_wood = 8
+armor_id_i_shield_round_metal = 8
+armor_id_i_shield_chaos = 8
+armor_id_i_shield_order = 8
+
+
+//Not sure. I assume we might have to break it down.
+armor_id_i_armor_female_shorts_spiked = 2
+armor_id_i_armor_female_harness_amazon = 2
+armor_id_i_armor_female_harness_elite = 6
+
+
+
+
+[EOF]

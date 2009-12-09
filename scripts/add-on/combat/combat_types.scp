@@ -1,0 +1,52 @@
+[Typedef t_armor]
+
+ON=@Clienttooltip
+Local.Name = "1042971, <Serv.Itemdef.<Baseid>.Name>"
+Local.Tooltip = Weight: <eval <Weight>/10><def0.br>
+
+If <Def0.Combat_PhysicalResist>
+DoSwitch <Def0.Combat_PhysicalResist>
+Local.Tooltip .= Armor: <GetArmorVal>
+Local.Tooltip .= Physical Resist <GetArmorVal>%
+Local.Tooltip .= Armor: <Armor.High>
+Enddo
+
+Endif
+
+
+
+src.addcliloc <Local.Name>
+src.addcliloc 1070722, <Local.Tooltip>
+return 1
+
+
+[Function GetArmorVal]
+Return <Eval (<Armor.High> * <Def0.Armor_Layer_Calc_<Layer>>) / 100>
+
+[DEFNAME Armor_Defs]
+Armor_Layer_Calc_1	1	
+Armor_Layer_Calc_2	1	
+Armor_Layer_Calc_3	5	
+Armor_Layer_Calc_4	20	
+Armor_Layer_Calc_5	40	
+Armor_Layer_Calc_6	10	
+Armor_Layer_Calc_7	10	
+Armor_Layer_Calc_8	1	
+Armor_Layer_Calc_9	1	
+Armor_Layer_Calc_10	5	
+Armor_Layer_Calc_11	1	
+Armor_Layer_Calc_12	20	
+Armor_Layer_Calc_13	40	
+Armor_Layer_Calc_14	1	
+Armor_Layer_Calc_15	1	
+Armor_Layer_Calc_16	1
+Armor_Layer_Calc_17	40
+Armor_Layer_Calc_18	1
+Armor_Layer_Calc_19	10
+Armor_Layer_Calc_20	20
+Armor_Layer_Calc_21	1
+Armor_Layer_Calc_22	70
+Armor_Layer_Calc_23	20
+Armor_Layer_Calc_24	25
+
+	

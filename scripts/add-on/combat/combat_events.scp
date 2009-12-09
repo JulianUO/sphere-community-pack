@@ -1,0 +1,178 @@
+[DEFNAME Noto_Colors]
+NotoFlag_1 = 05
+NotoFlag_2 = 72
+NotoFlag_3 = 0
+NotoFlag_4 = 0
+NotoFlag_5 = 49
+NotoFlag_6 = 32
+
+[EVENTS e_new_combat_code]
+
+ON=@ITEMCONTEXTMENUREQUEST
+Act.Message <Act.Name>
+Act.Trigger @Click
+
+ON=@CONTEXTMENUREQUEST
+Message @<Def0.NotoFlag_<NOTOGETFLAG>> <Name>
+Trigger @Click
+
+
+ON=@HITTRY
+Sysmessage @55,,1 Time Between Hits Attempts: <Fval <Serv.Time> +- <Ctag0.Hit>>
+cTag.Hittry=<Serv.Time>
+
+//HitSpeed
+Argn1 = <CombatSys_HitSpeed <Argn1>>
+Serv.Log Hit Speed (<Name>): <CombatSys_HitSpeed <Argn1>>
+Serv.Log Hit Chance: <Eval ((<CombatSys_UsedSkill_UOR>*10) + 5000) / (((<Src.CombatSys_UsedSkill_UOR>/10) + 50) *2)>% ::: UO:R
+//HitChance
+ActDiff = <CombatSys_HitChance <ActDiff>>
+
+ON=@Hit
+Sysmessage @55,,1 Time To Swing: <Fval <Serv.Time> +- <Ctag0.Hittry>>
+Sysmessage @55,,1 Time Total: <Fval <Serv.Time> +- <Ctag0.Hit>>
+cTag.Hit=<Serv.Time>
+Serv.Log Hit Actdiff = <Actdiff>
+ACTDIFF=0
+Serv.Log ---Hit Success! (<Name>)---
+
+Argn1 = <CombatSys_DamageBonus <Argn1>>
+Serv.Log Dam: <Argn1>
+Argn1 += <CombatSys_AOS_Velocity>
+
+
+//BlockChance
+Local.Shield=<CombatSys_Shield <Uid>>
+serv.log SHIELD VALUE = <dLocal.Shield>
+IF (((<CombatSys_BlockChance>) || (<Local.Shield>==1)) && (<Local.Shield>!=-1))
+CombatSys_Block 
+Serv.Log Dam: <Argn1>
+Serv.Log Reduction: <Qval <Weapon.IsArcheryWeapon> ? <Src.Findlayer.2.Armor.High> : <Eval <Src.Findlayer.2.Armor.High> / 2>>
+DoSwitch <Def0.Combat_BlockChance>
+Argn1=<Argn1>
+Return 1
+Argn1=<CombatSys_Max <Eval <Argn1> +- <Qval <Weapon.IsArcheryWeapon> ? <Src.Findlayer.2.Armor.High> : <Eval <Src.Findlayer.2.Armor.High> / 2>>>, 0>
+Enddo
+ENDIF
+
+Serv.Log Dam: <Argn1>
+
+Local.ChaosDam = <Qval <Weapon.Tag0.AoS.ChaosDamage> ? <Eval {1 5}> : 0>
+Local.Physical = <CombatSys_PhysicalResist <Argn1>,<Local.ChaosDam>>
+Local.Elemental = <CombatSys_ElementalResist <Argn1>,<Local.ChaosDam>>
+
+Serv.Log Chaos Dam: <dLocal.ChaosDam>
+
+Serv.log Phys: <dLocal.Physical>
+Serv.Log Elem: <dLocal.Elemental>
+
+Argn1 -= <Eval <Local.Physical> + <Local.Elemental>>
+Argn1 = <CombatSys_Max <Argn1>,0>
+
+Argn1 += <CombatSys_SlayerWeapons <Argn1>>
+
+
+Argn1 = <CombatSys_Max <Argn1>,0>
+Local.Dam=<Argn1>
+Serv.Log Flag: <Def0.Combat_PhysicalResist>
+
+Argn1=0
+
+DoSwitch <Def0.Combat_PhysicalResist>
+
+Enddo
+
+//This should prove as effective and less buggy then the doswitches and hit prevent tag
+Argn1 = <Local.Dam>
+IF (<Def0.Combat_PhysicalResist> == 1)
+	ARGN2 |= dam_god
+ENDIF
+
+CombatSys_AOS_WeaponSpells
+CombatSys_AOS_WeaponLeech <Local.Dam>
+CombatSys_AOS_WepAttkDefMod
+CombatSys_AOS_AreaDamage
+CombatSys_AOS_PhysicalReflect <Local.Dam>,<Src.Uid>
+
+
+ON=@GetHit
+Serv.Log GetHit Actdiff = <Actdiff>
+ACTDIFF=0
+If !(<argn2>&dam_god) && (<Def0.Combat_ElementalResist> || <Def0.Combat_PhysicalResist>)
+	Local.Div = 0
+	Local.Fire = 0
+	Local.Cold = 0
+	Local.Energy = 0
+	Local.Phys = 0
+	Local.Poison = 0
+	IF (<Def0.Combat_ElementalResist> == 1) //Ac: Adding elemental resistance for spells and non-weapon damage
+		IF (<argn2>&dam_fire)
+			Local.Fire = <Argn1>-<Eval <MulDiv <Argn1>,<CombatSys_Min <ResFire>,70>,100>>
+			Local.Div += 1
+		ENDIF
+		IF (<argn2>&dam_cold_new) || (<argn2>&dam_cold_old)
+			Local.Cold = <Argn1>-<Eval <MulDiv <Argn1>,<CombatSys_Min <ResCold>,70>,100>>
+			Local.Div += 1
+		ENDIF
+		IF (<argn2>&dam_poison)
+			Local.Poison = <Argn1>-<Eval <MulDiv <Argn1>,<CombatSys_Min <ResPoison>,70>,100>>
+			Local.Div += 1
+		ENDIF
+		IF (<argn2>&dam_lightning) || (<argn2>&dam_energy)
+			Local.Energy = <Argn1>-<Eval <MulDiv <Argn1>,<CombatSys_Min <ResEnergy>,70>,100>>
+			Local.Div += 1
+		ENDIF
+	ENDIF
+	IF (<argn2>&dam_physical)
+		IF <Def0.Combat_PhysicalResist>
+			Local.Phys = <Argn1>-<CombatSys_PhysicalResist <Argn1>,1>
+			Local.Div += 1
+		ELSE
+			IF (<Local.Div> > 0)
+				ARGN1 = <Argn1>/(<Local.Div>+1)
+				Damage <eval (<Local.Fire>+<Local.Cold>+<Local.Poison>+<Local.Energy>)/<Local.Div>> 0001 <Uid>
+				Local.Div = 0
+			ENDIF
+		ENDIF
+	ENDIF
+	IF (<Local.Div> > 0)
+		ARGN2 |= dam_god
+		ARGN1=(<Local.Fire>+<Local.Cold>+<Local.Poison>+<Local.Energy>+<Local.Phys>)/<Local.Div>
+	ENDIF
+ENDIF
+
+ON=@HitMiss
+Serv.Log ^^^Missed! (<Name>)^^^
+
+ON=@Attack
+If !<IsAttackable <Src.Uid>>
+Sysmessage @34,,1 You cannot attack that target
+Return 1
+Endif
+
+
+
+
+ON=@Block
+//Fires when you have blocked an attack.
+//Default = Shield Holder
+//Argo = Attacker
+
+
+ [EVENTS e_aos_armor]
+ ON=@ItemEquip
+ MODAR += <ACT.TAG0.RESPHYS>
+ RESFIRE += <ACT.TAG0.RESFIRE>
+ RESCOLD += <ACT.TAG0.RESCOLD>
+ RESPOISON += <ACT.TAG0.RESPOISON>
+ RESENERGY += <ACT.TAG0.RESENERGY>
+ ON=@ItemUnEquip
+ MODAR -= <ACT.TAG0.RESPHYS>
+ RESFIRE -= <ACT.TAG0.RESFIRE>
+ RESCOLD -= <ACT.TAG0.RESCOLD>
+ RESPOISON -= <ACT.TAG0.RESPOISON>
+ RESENERGY -= <ACT.TAG0.RESENERGY>
+  
+
+
+[EOF]
