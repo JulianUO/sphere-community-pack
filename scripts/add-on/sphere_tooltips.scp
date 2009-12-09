@@ -37,16 +37,16 @@ endfor
 if <act.tag0.resphysical>
 addcliloc 1060403,<act.dtag0.resphysical>
 endif
-if <tag0.resfire>
+if <act.tag0.resfire>
 addcliloc 1060405,<act.dtag0.resfire>
 endif
-if <tag0.rescold>
+if <act.tag0.rescold>
 addcliloc 1060404,<act.dtag0.rescold>
 endif
-if <tag0.respoison>
+if <act.tag0.respoison>
 addcliloc 1060405,<act.dtag0.respoison>
 endif
-if <tag0.resenergy>
+if <act.tag0.resenergy>
 addcliloc 1060405,<act.dtag0.resenergy>
 endif
 if <act.reqstr> > 0
