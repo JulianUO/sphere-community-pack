@@ -1,0 +1,85 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+//
+
+[DEFNAME SphereCommunityPack_ItemBase]
+PIB_MELEEWEAP	0001
+PIB_RANGEWEAP	0002
+PIB_WEAPONS	0003 // Melee + Range
+PIB_WAND	0004
+PIB_ARMOR	0008
+PIB_SHIELD	0010
+PIB_JEWELRY	0040
+PIB_TALISMAN	0080
+PIB_INSTRUMENT	0100
+PIB_SPELLBOOK	0200
+
+
+[DEFNAME SphereCommunityPack_ItemProperties_Types] 
+IPT_NONE	00	// Nothing, TEVENTS is only req.
+IPT_TAG		01	// Value in a tag.
+IPT_FUNCTION	02	// Call a function.
+IPT_DEFAULT	04	// Use default Char Properties.
+
+
+[defname SphereCommunityPack_ItemProperties]
+// #name,min,max,cap,type,input,items
+itemprop_01	"1060401,1,25,100,01,damageincrease,040"
+itemprop_02	"1060402,1,50,100,01,damageincrease,03"
+itemprop_03	"1060408,1,15,45,01,defensechanceincrease,053"
+itemprop_04	"1060409,1,8,16,01,dexteritybonus,040"
+itemprop_05	"1060411,5,25,80,01,enhancepotion,040"
+itemprop_06	"1060412,1,3,6,01,fastercastrecovery,040"
+itemprop_07	"1060413,1,1,2,01,fastercasting,053"
+itemprop_08	"1060415,1,15,45,01,hitchanceincrease,043"
+itemprop_09	"1060417,2,50,50,01,hitdispel,03"
+itemprop_0a	"1060422,2,100,100,hitlifeleech,03"
+itemprop_0b	"1060424,2,50,100,hitlowerattack,03"
+itemprop_0c	"1060425,2,50,100,hitlowerdefense,03"
+itemprop_0d	"1060427,2,100,100,hitmanaleech,03"
+itemprop_0e	"1060444,1,2,12,hitpointregeneration,08"
+itemprop_0f	"1060430,2,50,100,hitstaminaleech,03"
+itemprop_010	"1060431,1,5,25,hitpointincrease,08"
+itemprop_011	"1060432,1,8,16,intelligencebonus,040"
+itemprop_012	"1060433,1,15,40,lowermanacost,0248"
+itemprop_013	"1060434,1,20,100,lowerreagentcost,048"
+itemprop_014	""
+itemprop_015	""
+itemprop_016	""
+itemprop_017	""
+itemprop_018	""
+
+[defname SphereCommunityPack_ItemProperties_Settings]
+scp.ItemProp_Resistances=1 // Cold, Fire, Physical, Energy Resist
+scp.ItemProp_DamageIncrease=1
+scp.ItemProp_DefenseChanceIncrease
+scp.ItemProp_DexterityBonus
+scp.ItemProp_EnhancePotion
+scp.ItemProp_FasterCastRecovery
+scp.ItemProp_FasterCasting
+scp.ItemProp_HitChanceIncrease
+scp.ItemProp_HitDispel
+scp.ItemProp_HitLifeLeech
+scp.ItemProp_HitLowerAttack
+scp.ItemProp_HitLowerDefense
+scp.ItemProp_HitManaLeech
+scp.ItemProp_HitPointRegeneracion
+scp.ItemProp_HitStaminaLeech
+scp.ItemProp_
+scp.ItemProp_
+scp.ItemProp_
+scp.ItemProp_
+scp.ItemProp_
+
+[eof]

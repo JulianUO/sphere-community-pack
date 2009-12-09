@@ -156,8 +156,15 @@ f_crafting_startosi <args>
 enddo
 return 1
 
-// Lower Reagent Cost + Lower Mana Consume
 on=@spellselect
+// Tithing is needed even if it is not used at all.
+// So this needs to be check before going into LRC and LMC.
+if (<argn1> > 199) && (<argn1> < 211)
+	if <tithing> < <def.scp.spell.<argn1>.tithing>
+	sysmessage <def.scp.magery_notithing>
+	return 1
+	endif
+endif
 if <def.scp.MagicProperties_LowerReagentCost> == 1
 	if <argn3> == 2
 		if <argn1> < 200
@@ -170,12 +177,6 @@ if <def.scp.MagicProperties_LowerReagentCost> == 1
 	return 6
 	endif
 else
-	if (<argn1> > 199) && (<argn1> < 211)
-		if <tithing> < <def.scp.spell.<argn1>.tithing>
-		sysmessage <def.scp.magery_notithing>
-		return 1
-		endif
-	endif
 	if <def.scp.MagicProperties_LowerManaCost> == 1
 	argn2 = <eval (<argn2> * (<tag0.LowerManaCost> + 1)) / 100>
 	endif
