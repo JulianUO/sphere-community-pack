@@ -89,6 +89,30 @@ return 1
 
 on=@unequip
 src.tag0.override.regenval_0 -= <more1>
-src.f_RemoveBuff GiftOfRenewal
+
+// Attunement
+[ITEMDEF i_attunement]
+NAME=Attune Weapon
+ID=i_memory
+TYPE=t_eq_script
+
+on=@equip
+src.events +e_attunement
+src.f_AddBuff AttuneWeapon,<timer>,<link.name>
+
+on=@unequip
+src.events -e_attunement
+
+on=@timer
+topobj.sysmessage @,,2 1075125 // Your attunement fades.
+sfx 01f8
+remove
+return 1
+
+[events e_attunement]
+on=@hit
+if <argo> == <findid(i_attunement).tag0.weap> && <src> == <findid(i_attunement).link>
+	argn1 /= 2
+endif
 
 [EOF]
