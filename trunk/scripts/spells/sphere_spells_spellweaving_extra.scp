@@ -110,9 +110,9 @@ remove
 return 1
 
 [events e_attunement]
-on=@hit
+on=@afterhit
 if <argo> == <findid(i_attunement).tag0.weap> && <src> == <findid(i_attunement).link>
-	argn1 /= 2
+return <eval (<argn1> / 2)>
 endif
 
 [EOF]

@@ -82,6 +82,8 @@ DoSwitch <Def0.Combat_PhysicalResist>
 
 Enddo
 
+local.dam = <trigger @AfterHit,<def.tat_as_argn>,<dlocal.dam>>
+
 //This should prove as effective and less buggy then the doswitches and hit prevent tag
 Argn1 = <Local.Dam>
 IF (<Def0.Combat_PhysicalResist> == 1)
