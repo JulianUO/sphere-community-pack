@@ -12,11 +12,11 @@ Most of them are easy to use. If you want to change anything default, just inser
 ----
 == Character Triggers ==
 *@AfterHit*<br>
-It alters the damage done by a weapon. The difference between @Hit and this is that @AfterHit is triggered after the new combat system calculates the damage. This must be used to alter the damage if you are using combat system included in SCP.
-[]: Hitter
-SRC: Hitted
-ARGN1: damage
-ARGN2: weapon.
+It alters the damage done by a weapon. The difference between @Hit and this is that @AfterHit is triggered after the new combat system calculates the damage. This must be used to alter the damage if you are using combat system included in SCP.<br>
+[]: Hitter<br>
+SRC: Hitted<br>
+ARGN1: damage<br>
+ARGN2: weapon.<br>
 An example of use:<br>
 {{{
 on=@afterhit
