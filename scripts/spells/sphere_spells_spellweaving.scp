@@ -125,13 +125,42 @@ CAST_TIME=1.0
 RESOURCES=
 RUNE_ITEM=0
 SCROLL_ITEM=0
-FLAGS=0
+FLAGS=spellflag_targ_char
 EFFECT_ID=0
 EFFECT=0
 DURATION=0.0
 MANAUSE=26
 SKILLREQ=SPELLWEAVING 0.1
 INTERRUPT=100.0,100.0
+
+on=@select
+if <argn3> == 2
+	if <act.restest i_attunement>
+	sysmessage @,,2 501775 // This spell is already in effect.
+	endif
+
+	if <act.weapon>
+	sysmessage @,,2 1072198 // Target must be wielding a weapon!
+	endif
+endif
+
+on=@effect
+if <weapon>
+src.sysmessage @,,2 1072198 // Target must be wielding a weapon!
+endif
+
+sfx 05c3
+effect 2,03728,1,13,0,0455,7
+effect 2,03779,1,15,0,03f,7
+
+local.level = <src.findid.i_arcane_focus.more1>
+local.duration = <eval ((10 + <psnsys_max 1,<eval (<src.spellweaving> / 240)>>) + <local.focus>)>
+
+serv.newitem i_attunement
+new.link = <src>
+new.tag0.weap = <weapon>
+new.timer = <local.duration>
+equip = <new>
 
 [SPELL 605]
 DEFNAME=s_thunderstorm
