@@ -1,8 +1,7 @@
 #summary Custom / Triggers
 
 = Introduction =
-TAGs used on this pack to override/change default behavior.
-Most of them are easy to use. If you want to change anything default, just insert or tweak them into your custom code.
+Triggers included in SCP in addition to sphere's default ones.
 
 
 ----
