@@ -111,7 +111,7 @@ return 1
 
 [events e_attunement]
 on=@afterhit
-if <argo> == <findid(i_attunement).tag0.weap> && <src> == <findid(i_attunement).link>
+if <argn2> == <findid(i_attunement).tag0.weap> && <src> == <findid(i_attunement).link>
 return <eval (<argn1> / 2)>
 endif
 
