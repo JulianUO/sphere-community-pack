@@ -1,0 +1,22 @@
+#summary Custom / Triggers
+
+= Introduction =
+TAGs used on this pack to override/change default behavior.
+Most of them are easy to use. If you want to change anything default, just insert or tweak them into your custom code.
+
+
+----
+== Item Triggers ==
+----
+
+----
+== Character Triggers ==
+*@AfterHit*<br>
+It alters the damage done by a weapon. The difference between @Hit and this is that @AfterHit is triggered after the new combat system calculates the damage. This must be used to alter the damage if you are using combat system included in SCP. An example of use:<br>
+{{{
+on=@afterhit
+if <argo> == <findid(i_attunement).tag0.weap> && <src> == <findid(i_attunement).link>
+return <eval (<argn1> / 2)>
+endif
+}}}
+----
