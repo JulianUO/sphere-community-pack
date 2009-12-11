@@ -14,18 +14,30 @@ VERSION=0.56b
 // --------------------
 // Typedef for Item Properties. 
 // Based on EA.
-// ---------------
+//
+// FORMULAS USED
+// -------------
+// Mana Regeneration:
+// - Total = MRe + MRf + MRmi
+// -- MRmi = 2+(Meditation * 3 + Intelligence)/40
+// --- If GM Medit, MRmi = 2+(1.1*(Meditation * 3 + Intelligence)/40
+// --- If GM Medit and Medit is Active, MRmi=2+(2*(1.1*(Meditation * 3 + Intelligence)/40))
+// --- If Medit is Active, MRmi=2+(2*(Meditation * 3 + Intelligence)/40)
+// -- MRf = Focus/20
+// -- MRe = tag0.ManaRegeneration
+// Hit Points Regeneration:
+// - Total = 0.1 * tag0.HitPointRegeneration
 //
 // PROPERTIES LIST
 // ---------------
 // scp.ItemProp_Resistances
 // *DONE* scp.ItemProp_DamageIncrease
-// scp.ItemProp_DefenseChanceIncrease
+// scp.ItemProp_DefenseChanceIncrease // ATTACH TO COMBAT SYS
 // scp.ItemProp_DexterityBonus
 // scp.ItemProp_EnhancePotion
 // *DONE* scp.ItemProp_FasterCastRecovery
 // *DONE* scp.ItemProp_FasterCasting
-// scp.ItemProp_HitChanceIncrease
+// scp.ItemProp_HitChanceIncrease // ATTACH TO COMBAT SYS
 // *DONE* scp.ItemProp_HitDispel
 // *DONE* scp.ItemProp_HitLifeLeech
 // scp.ItemProp_HitLowerAttack
@@ -33,15 +45,66 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_HitManaLeech
 // *DONE* scp.ItemProp_HitPointRegeneracion
 // *DONE* scp.ItemProp_HitStaminaLeech
-// --------------
+// scp.ItemProp_HitPointIncrease
+// scp.ItemProp_IntelligenceBonus
+// *DONE* scp.ItemProp_LowerManaCost
+// scp.ItemProp_LowerReagentCost
+// scp.ItemProp_Luck
+// *DONE* scp.ItemProp_MageArmor
+// *DONE* scp.ItemProp_MageWeapon
+// scp.ItemProp_ManaIncrease
+// *DONE* scp.ItemProp_ManaRegeneration
+// scp.ItemProp_ReflectPhysicalDamage
+// scp.ItemProp_SelfRepair
+// scp.ItemProp_Slayer
+// scp.ItemProp_SkillBonus
+// scp.ItemProp_SpellChanneling
+// scp.ItemProp_SpellDamageIncrease
+// scp.ItemProp_StaminaIncrease
+// scp.ItemProp_StaminaRegeneration
+// scp.ItemProp_StrengthBonus
+// scp.ItemProp_SwingSpeedIncrease
+// scp.ItemProp_BestWeaponSkill
 
-[events e_PlayerCombatEvent]
+[events e_PlayerPropertiesEvent]
 on=@userstats
 // Hit Point Generation increases value in the regeneration
 // Formula: (0.1 * intensity)
 if <def.scp.ItemProp_HitPointRegeneration> == 1
 tag0.override.regenval_0 = <eval 0.1 * <tag0.HitPointRegeneration>>
 endif
+// Mana Regeneration is more complicated, since we have to look at:
+// Passive/Active Meditation, Intelligence, Battle Focus, Equipment
+// If you wonder why Medit / 10 and Focus / 200. Because in Sphere, GM Medit = 1000 and not 100.0
+if <def.scp.NewSkills_Meditation> == 1
+	if <def.scp.Meditation_PassiveRegen> == 1
+		if <meditation> > 99.9 // GM Meditation or better gets 10% bonus.
+		local.MRmi = <eval (1.1 * (((<meditation>/10) * 3) + <int>)) / 40)>
+		else
+		local.MRmi = <eval (((<meditation>/10) * 3) + <int>) / 40>
+		endif
+		if <tag0.active.medit>
+		local.MRmi *= 2 // Active Meditation gets regen * 2
+		endif
+	endif
+else
+local.MRmi = 0
+endif
+if <def.scp.NewSkills_Focus> == 1
+local.MRf = <eval <focus> / 200>
+else
+local.MRf = 0
+endif
+if <def.scp.ItemProp_ManaRegeneration> == 1
+local.MRe = <tag0.ManaRegeneration>
+	if <local.MRe> > <getargv 3 <def.itemprop_018>>
+	local.MRe = <getargv 3 <def.itemprop_018>>
+	endif
+else
+local.MRe = 0
+endif
+local.MRt = <eval 2 + <local.MRmi> + <local.MRf> + <local.MRe>> // This is the amount of points in 10 seconds
+tag0.override.regenval_1 = <eval <local.MRt> / 10> // So we get the 1 second value this way =)
 
 on=@spellselect
 // A small check for Faster Cast Recovery. No need for checking if it is activated.
@@ -118,6 +181,20 @@ if <def.scp.ItemProp_HitDispel> == 1
 		endif
 	endif
 endif
+// Slayer groups are just like flags, only need to see if the weapon exist
+// check if the weapon got a slayer tag and if the target got a slayer tag.
+// Lesser Slayers do x3 damage while Super Slayers do x2.
+if <def.scp.ItemProp_Slayer> == 1
+	if !<isempty <argo.uid>>
+		if <argo.tag0.slayer>
+			if <src.tag0.slayer>
+				if (<argo.tag0.slayer> & <src.tag0.slayer>)
+				argn1 *= <qval (<islesserslayer <argo.tag0.slayer>>) ? 3 : 2>
+				endif
+			endif
+		endif
+	endif
+endif		
 if <def.scp.ItemProp_DamageIncrease> == 1
 	if <tag0.DamageIncrease>
 	local.tempbonus = <tag0.DamageIncrease>

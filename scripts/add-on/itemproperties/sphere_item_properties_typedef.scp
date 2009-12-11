@@ -16,6 +16,13 @@ VERSION=0.56b
 // Based on EA.
 
 [typedef t_iprop]
+on=@damage
+// Self Repair, auto repairs the weapon for its intensity
+// SR 1 would add one point, SR 5 would add 5, and so...
+if <def.scp.ItemProp_SelfRepair>
+more1l += <tag0.selfrepair>
+endif
+
 on=@equip
 if <tag0.damageincrease>
 src.tag0.damageincrease += <tag0.damageincrease>
