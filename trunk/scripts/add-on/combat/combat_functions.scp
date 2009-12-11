@@ -227,10 +227,10 @@ Endif
 Return <Local.Skill>
 
 [Function CombatSys_UsedSkill]
-Return <Qval !<Weapon> ? <Wrestling> : <Qval <Weapon.tag0.aos.mage.weapon> ? <BestWeaponSkill 1> : <Qval <Weapon.tag0.aos.UseBestWeaponSkill> ? <BestWeaponSkill> : <<Weapon.skill>>>>>
+Return <Qval !<Weapon> ? <Wrestling> : <Qval <Weapon.tag0.aos.mage.weapon> ? <BestWeaponSkill 1> : <Qval <Weapon.tag0.aos.UseBestWeaponSkill> ? <BestWeaponSkill> : <Qval <Weapon.tag0.override.skill> ? <Weapon.tag.override.skill> : <Weapon.skill>>>>>
 
 [FUNCTION CombatSys_UsedSkill_UOR]
-Return <Qval <Weapon> ? <<Weapon.Skill>> : <Wrestling>>
+Return <Qval <Weapon> ? <Qval <Weapon.tag0.override.skill> ? <Weapon.tag.override.skill> : <<Weapon.Skill>>> : <Wrestling>>
 
 [Function ModSkill]
 If !<IsEmpty <Argv[0]>>
