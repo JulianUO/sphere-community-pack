@@ -27,7 +27,7 @@ PIB_SPELLBOOK	0200
 
 
 [DEFNAME SphereCommunityPack_ItemProperties_Types] 
-IPT_NONE	00	// Nothing, TEVENTS is only req.
+IPT_NONE	00	// Nothing
 IPT_TAG		01	// Value in a tag.
 IPT_FUNCTION	02	// Call a function.
 IPT_DEFAULT	04	// Use default Char Properties.
@@ -44,21 +44,46 @@ itemprop_06	"1060412,1,3,6,01,fastercastrecovery,040"
 itemprop_07	"1060413,1,1,2,01,fastercasting,053"
 itemprop_08	"1060415,1,15,45,01,hitchanceincrease,043"
 itemprop_09	"1060417,2,50,50,01,hitdispel,03"
-itemprop_0a	"1060422,2,100,100,hitlifeleech,03"
-itemprop_0b	"1060424,2,50,100,hitlowerattack,03"
-itemprop_0c	"1060425,2,50,100,hitlowerdefense,03"
-itemprop_0d	"1060427,2,100,100,hitmanaleech,03"
-itemprop_0e	"1060444,1,2,12,hitpointregeneration,08"
-itemprop_0f	"1060430,2,50,100,hitstaminaleech,03"
-itemprop_010	"1060431,1,5,25,hitpointincrease,08"
-itemprop_011	"1060432,1,8,16,intelligencebonus,040"
-itemprop_012	"1060433,1,15,40,lowermanacost,0248"
-itemprop_013	"1060434,1,20,100,lowerreagentcost,048"
-itemprop_014	""
-itemprop_015	""
-itemprop_016	""
-itemprop_017	""
-itemprop_018	""
+itemprop_0a	"1060422,2,100,100,01,hitlifeleech,03"
+itemprop_0b	"1060424,2,50,100,01,hitlowerattack,03"
+itemprop_0c	"1060425,2,50,100,01,hitlowerdefense,03"
+itemprop_0d	"1060427,2,100,100,01,hitmanaleech,03"
+itemprop_0e	"1060444,1,2,12,01,hitpointregeneration,08"
+itemprop_0f	"1060430,2,50,100,01,hitstaminaleech,03"
+itemprop_010	"1060431,1,5,25,01,hitpointincrease,08"
+itemprop_011	"1060432,1,8,16,01,intelligencebonus,040"
+itemprop_012	"1060433,1,15,40,01,lowermanacost,0248"
+itemprop_013	"1060434,1,20,100,01,lowerreagentcost,048"
+itemprop_014	"1060436,1,100,3982,04,luck,04a"
+itemprop_015	"1060437,0,0,0,01,magearmor,08"
+itemprop_016	"1060438,-30,0,0,01,mageweapon,01"
+itemprop_017	"1060439,1,8,100,01,manaincrease,048"
+itemprop_018	"1060440,1,3,18,01,manaregeneration,08"
+itemprop_019	"1060442,1,15,25,01,reflectphysicaldamage,018"
+itemprop_01a	"1060450,1,5,5,01,selfrepair,013"
+itemprop_01b	"-1,0,0,0,02,f_slayer,0383"
+itemprop_01c	"-1,0,0,0,02,f_skillbonus,040"
+itemprop_01d	"1060482,0,0,0,02,f_spell_channeling,013"
+itemprop_01e	"1060483,1,12,15,01,spelldamageincrease,040"
+itemprop_01f	"1060484,1,8,100,01,staminaincrease,08"
+itemprop_020	"1060443,1,3,24,01,staminaregeneration,048"
+itemprop_021	"1060485,1,8,16,01,strengthbonus,040"
+itemprop_022	"1060486,5,30,100,swingspeedincrease,03"
+itemprop_023	"1060400,0,0,0,02,f_bestweaponskill,03"
+
+// can't be scripted or not meant to be *special*
+// - resistances, damage
+// - lower requeriments
+// - strength requirement
+
+// don't have idea how to script them right now
+// or too lazy to think a solution
+// - nightsight
+// - self repair
+// - slayer
+
+// too lazy to do it
+// - skill bonus
 
 [defname SphereCommunityPack_ItemProperties_Settings]
 scp.ItemProp_Resistances=1 // Cold, Fire, Physical, Energy Resist
@@ -76,10 +101,25 @@ scp.ItemProp_HitLowerDefense
 scp.ItemProp_HitManaLeech
 scp.ItemProp_HitPointRegeneracion
 scp.ItemProp_HitStaminaLeech
-scp.ItemProp_
-scp.ItemProp_
-scp.ItemProp_
-scp.ItemProp_
-scp.ItemProp_
+scp.ItemProp_HitPointIncrease
+scp.ItemProp_IntelligenceBonus
+scp.ItemProp_LowerManaCost
+scp.ItemProp_LowerReagentCost
+scp.ItemProp_Luck
+scp.ItemProp_MageArmor
+scp.ItemProp_MageWeapon
+scp.ItemProp_ManaIncrease
+scp.ItemProp_ManaRegeneration
+scp.ItemProp_ReflectPhysicalDamage
+scp.ItemProp_SelfRepair
+scp.ItemProp_Slayer
+scp.ItemProp_SkillBonus
+scp.ItemProp_SpellChanneling
+scp.ItemProp_SpellDamageIncrease
+scp.ItemProp_StaminaIncrease
+scp.ItemProp_StaminaRegeneration
+scp.ItemProp_StrengthBonus
+scp.ItemProp_SwingSpeedIncrease
+scp.ItemProp_BestWeaponSkill
 
 [eof]
