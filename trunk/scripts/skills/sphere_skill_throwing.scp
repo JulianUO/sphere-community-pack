@@ -20,4 +20,8 @@ BONUS_STATS=10
 ADV_RATE=10.0,200.0,800.0
 FLAGS=skf_ranged|skf_fight
 
+ON=@Start
+TIMERD = <EVAL <CombatSys_HitSpeed> / 2>
+RETURN 2
+
 [eof]
