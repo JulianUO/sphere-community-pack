@@ -86,12 +86,18 @@ scp.craft_smelt_notitem		"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_notsmeltable	"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_success		"@,,2 1044270"	// You melt the item down into ingots.
 
-scp.evalint_item		"@,,2 500908"	//
+scp.evalint_item		"@,,2 500908"	// It looks smarter than a rock, but dumber than a piece of wood.
 
 scp.fishing_treasure		"@,,2 503175"	// You pull up a heavy chest from the depths of the ocean!
 scp.fishing_nofish		"@,,2 503168"	// The fish don't seem to be biting here.
 scp.fishing_ischar		""
 scp.fishing_fail		"@,,2 503171"	// You fish a while, but fail to catch anything.
+
+scp.jail_cancelled		"@,,2 503314"	// Imprisoning Cancelled
+scp.jail_notplayer		"@,,2 503312"	// Only players can be jailed.
+scp.jail_cannotmyself		"@,,2 503315"	// Congrats, you've successfully jailed yourself!
+scp.jail_jailed			"@,,2 503268"	// You've been jailed!
+scp.jail_unjailed		"@,,2 503267"	// You've been unjailed!
 
 scp.mining_nosand		"@,,2 1044629"	// There is no sand here to mine.
 scp.mining_mounted		"@,,2 501864"	// You can't mine while riding.
@@ -105,7 +111,7 @@ scp.taming_notameable		"@,,2 1049655"	// That creature cannot be tamed.
 scp.taming_alreadytamed		"@,,2 502804"	// That animal looks tame already.
 scp.taming_onlymale		"@,,2 1049653"	// That creature can only be tamed by males.
 scp.taming_onlyfemale		"@,,2 1049652"	// That creature can only be tamed by females.
-scp.taming_onlyelf			"@03b2,,2 502801"	// You can't tame that!
+scp.taming_onlyelf		"@03b2,,2 502801"	// You can't tame that!
 scp.taming_nochance		"@,,2 502806"	// You have no chance of taming this creature.
 scp.taming_manyfollowers	"@,,2 1049611"	// You have too many followers to tame that creature.
 scp.taming_manyowners		"@,,2 1005615"	// This animal has had too many owners and is too upset for you to tame.
@@ -114,7 +120,7 @@ scp.taming_ontame		"@,,2 502802"	// Someone else is already taming this.
 scp.taming_getanger		"@,,2 502805"	// You seem to anger the beast!
 scp.taming_started		"@059,,2 1010597"	// *You start to tame the creature.*
 scp.taming_hestarted		"@059,,2 1010598"	// *begins taming a creature.*
-scp.taming_failed		"@,,2 502798"
+scp.taming_failed		"@,,2 502798"	// You fail to tame the creature.
 scp.taming_toofaraway		"@,,2 502795"	// You are too far away to continue taming.
 scp.taming_abort		"You give up trying to tame the creature."
 scp.taming_youdead		"@,,2 502796"	// You are dead, and cannot continue taming.
@@ -154,8 +160,8 @@ scp.bard_provocation_success	"@,,2 501602"	// Your music succeeds, as you start 
 scp.bard_provocation_sametarg	"@,,2 501593"	// You can't tell someone to attack themselves!
 scp.bard_provocation_nonpc	"@,,2 501589"	// You can't incite that!
 
-scp.poisoning_immune		"@,,2 1005534"
-scp.poisoning_beenpoisoned	"@,,2 1010512"
+scp.poisoning_immune		"@,,2 1005534"	// * The poison seems to have no effect. *
+scp.poisoning_beenpoisoned	"@,,2 1010512"	// You have been poisoned!
 scp.poisoning_beencured		"@,,2 1010059"
 scp.poisoning_wornoff		"@,,2 502136"
 scp.poisoning_curedtarget	"@,,2 1010058"
@@ -180,18 +186,18 @@ scp.poisoning_cleaneditem	"@,,2 1010496"
 scp.poisoning_mustbecleaned	"@,,2 1005536"
 scp.poisoning_usethison		"@,,2 1010086"
 
-scp.hiding_spellactive			"@,,2 501238"		// You are busy doing something else and cannot hide.
-scp.hiding_activecombat			"@022,,2 501237"	// You can't seem to hide right now.
-scp.hiding_success				"@01f4,,2 501240"	// You have hidden yourself well.
-scp.hiding_fail					"@022,,2 501241"	// You fail to hide.
-scp.hiding_reveal				"@,,2 501242"		// You are no longer hidden.
-scp.hiding_shoveinvis			"@,,2 1019041"		// You shove something invisible out of the way.
+scp.hiding_spellactive		"@,,2 501238"		// You are busy doing something else and cannot hide.
+scp.hiding_activecombat		"@022,,2 501237"	// You can't seem to hide right now.
+scp.hiding_success		"@01f4,,2 501240"	// You have hidden yourself well.
+scp.hiding_fail			"@022,,2 501241"	// You fail to hide.
+scp.hiding_reveal		"@,,2 501242"		// You are no longer hidden.
+scp.hiding_shoveinvis		"@,,2 1019041"		// You shove something invisible out of the way.
 
-scp.stealth_nothidden			"@,,2 502725" // You must hide first
-scp.stealth_reqhiding			"@,,2 502726" // You are not hidden well enough.  Become better at hiding.
-scp.stealth_armorcheck			"@,,2 502727" // You could not hope to move quietly wearing this much armor.
-scp.stealth_success				"@,,2 502730" // You begin to move quietly.
-scp.stealth_fail				"@,,2 502731" // You fail in your attempt to move unnoticed.
+scp.stealth_nothidden		"@,,2 502725" // You must hide first
+scp.stealth_reqhiding		"@,,2 502726" // You are not hidden well enough.  Become better at hiding.
+scp.stealth_armorcheck		"@,,2 502727" // You could not hope to move quietly wearing this much armor.
+scp.stealth_success		"@,,2 502730" // You begin to move quietly.
+scp.stealth_fail		"@,,2 502731" // You fail in your attempt to move unnoticed.
 
 scp.runes_entername		"@88,,1 Type in a name for the rune"
 
