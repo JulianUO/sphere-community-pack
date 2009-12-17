@@ -83,4 +83,15 @@ RETURN <QVAL <ARGN2> < <ARGN1>? <ARGN1> : <ARGN2>>
 [FUNCTION min]
 RETURN <QVAL <ARGN2> < <ARGN1>? <ARGN2> : <ARGN1>>
 
+[FUNCTION FTIME]
+IF (<ARGS> > 86400)
+  return <EVAL <ARGS>/86400> days , <EVAL (<ARGS>%86400)/3600> hrs, <EVAL ((<ARGS>%86400)%3600)/60> min, <EVAL ((<ARGS>%86400)%3600)%60> sec
+ELIF (<ARGS> > 3600)
+  return <EVAL <ARGS>/3600> hrs, <EVAL (<ARGS>%3600)/60> min, <EVAL (<ARGS>%3600)%60> sec
+ELIF (<ARGS> > 60)
+  return <EVAL <ARGS>/60> min, <EVAL <ARGS>%60> sec
+ELSE
+  return <ARGS> sec
+ENDIF
+
 [eof]
