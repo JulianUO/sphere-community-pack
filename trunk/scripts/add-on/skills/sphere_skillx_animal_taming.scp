@@ -115,7 +115,7 @@ cont.say @,,2 { {502790 502793} 1 {1005608 1005613} 1 {1010593 1010596} 1 }
 cont.face <link>
 more1 --
 timer = {2 3}
-cont.skillgain animallore <psnsys_min 100,<eval (<cont.animallore> / 10)>>
+cont.skillgain animallore <min 100,<eval (<cont.animallore> / 10)>>
 if <link.flags>&statf_freeze
 tag.paralyzed = 1
 endif
@@ -170,7 +170,7 @@ local.gaindifficulty = <eval (<ref1.tamingsuccesschance <uid>> / 10)>
 	local.gaindifficulty ++
 	endif
 ref1.skillgain taming <dlocal.gaindifficulty>
-ref1.skillgain animallore <psnsys_min 100,<eval (<cont.animallore> / 10)>>
+ref1.skillgain animallore <min 100,<eval (<cont.animallore> / 10)>>
 else
 ref1.sysmessage @,,2 502797 // That wasn't even challenging.
 endif

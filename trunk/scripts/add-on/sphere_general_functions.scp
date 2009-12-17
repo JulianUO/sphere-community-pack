@@ -77,4 +77,10 @@ ENDIF
 [FUNCTION f_skill_delay]
 tag.skillrecovery = (<serv.time>+<args>)
 
+[FUNCTION max]
+RETURN <QVAL <ARGN2> < <ARGN1>? <ARGN1> : <ARGN2>>
+
+[FUNCTION min]
+RETURN <QVAL <ARGN2> < <ARGN1>? <ARGN2> : <ARGN1>>
+
 [eof]
