@@ -1,16 +1,28 @@
-Installation instructions
+SPHERE COMMUNITY PACK - README
+INSTALLATION AND USAGE INSTRUCTIONS
+-----------------------------------
 
-1. Download the pack and uncompress it in your sphere folder. Just like you do with the default script pack. Get the last version from: 
+1. Requeriments
+- SphereServer 0.56b Lastest (Do'h)
 
+2. Instructions
+- Download the pack and uncompress it in your sphere folder. 
+  Just like you do with the default script pack. 
+  Get the last version from: http://scripts.sphere.torfo.org/
 
-2. Go to your "sphere.ini" and change the following settings:
-EventsPet=your_event
-EventsPlayer=your_event
+- To enable main systems, add the following events to your ini:
+  (NOTE: Replace the original settings)
+  EventsPet=e_NpcGenericEvent
+  EventsPlayer=e_PlayerGenericEvent,e_PlayerCraftingEvent
 
-With this:
-EventsPet=e_NpcGenericEvent
-EventsPlayer=e_PlayerGenericEvent,e_osi_crafting
+- To enable optional/experimental systems, add the following events:
+  (NOTE: Attach the events at the end of the lines in the last step)
+  EventsPlayer=e_new_combat_code,e_PlayerPropertiesEvent,e_PlayerTooltipEvent
+  * e_new_combat_code: New Combat System (Optional)
+  * e_PlayerPropertiesEvent: Item Magical Properties (Experimental - Not Recommended)
+  * e_PlayerTooltipEvent: New Item Tooltips Generator (Experimental - Not Recommended)
 
+- To configure the system, check in your scripts folder the file:
+  scripts/add-on/sphere_settings.scp
 
-3. If you want to change any settings search the file "scripts/add-on/sphere_settings.scp". Inside it you will find a switch for everything plus some settings.
-After that, enjoy it!
+- Enjoy it!

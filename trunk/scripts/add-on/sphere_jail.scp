@@ -1,0 +1,99 @@
+[dialog d_jailcore]
+150,150
+page 0
+resizepic 0 0 9250 300 225
+dhtmlgump 15 15 269 25 1 0 <def.center><def.big>Staff - Jail Menu<def.bige><def.centere>
+dhtmlgump 17 57 100 25 0 0 Reason:
+resizepic 60 55 9350 225 55
+dtextentry 65 55 220 55 0 1  
+dhtmlgump 17 122 100 25 0 0 Time:
+resizepic 60 120 9350 225 25
+dtextentry 65 120 220 25 0 2  
+dhtmlgump 145 185 110 25 1 0 <def.center><def.big>Target player<def.bige><def.centere>
+button 255 186 4005 4007 1 0 1
+
+[dialog d_jailcore button]
+on=0
+sysmessage <def.scp.jail_cancelled>
+return 1
+
+on=1
+var.reason = <argtxt[1]>
+targetf f_jail_targ <argtxt[2]>
+
+[function f_jail_targ]
+local.reason = <var.reason>
+var.reason =
+if !<argo.isplayer>
+sysmessage <def.scp.jail_notplayer>
+return 1
+endif
+if <argo.uid> == <uid>
+sysmessage <def.scp.jail_cannotmyself>
+return 1
+endif
+serv.newitem i_jail_timer
+new.timer 60*60*<args>
+new.tag0.reason = <local.reason>
+argo.equip <new.uid>
+argo.sysmessage <def.scp.jail_jailed>
+return 1
+
+[itemdef i_jail_timer]
+id=i_memory
+type=t_eq_script
+
+on=@equip
+src.go jail
+src.trigger @Jailed,tat_as_argn,1
+src.events +e_jailed
+
+on=@timer
+cont.sysmessage <def.scp.jail_unjailed>
+cont.events -e_jailed
+cont.go <def.scp.JailSystem_GoUnjailed>
+remove
+return 1
+
+[function f_forgive]
+argo.findid.i_jail_timer.timer 0
+argo.update
+
+[events e_jail]
+on=@clienttooltip
+src.addcliloc 1042971,Jailed
+src.addcliloc 1060662,Reason,<FINDID.i_jail_timer.TAG0.reason>
+src.addcliloc 1060661,Time,<FTIME <FINDID.i_jail_timer.TIMER>>
+
+on=@login
+if <findid.i_jail_timer.timer> <= 0
+sdialog d_jail_out
+endif
+
+On=@DClick
+resendtooltip
+
+On=@SkillStart
+ACTION = -1
+return 1
+
+On=@SkillSelect
+ACTION = -1
+return 1
+
+On=@Attack
+return 1
+
+On=@Hunger
+return 1
+
+On=@Hit
+return 1
+
+On=@HitTry
+return 1
+
+On=@GetHit
+return 1
+
+[eof]

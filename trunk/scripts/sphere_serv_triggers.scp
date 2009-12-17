@@ -96,4 +96,19 @@ src.remove_invalid_houses
 [FUNCTION f_onserver_blockip]
 
 
+[FUNCTION f_oncommand]
+if <def.scp.JailSystem> == 1
+	if (strmatch(*jail*,<args>))
+		if <account.plevel> > 4
+		f_resenddialog d_jailcore
+		endif
+	return 1
+	elif (strmatch(*forgive*,<args>))
+		if <account.plevel> > 4
+		targetf f_forgive
+		endif
+	return 1
+	endif
+endif
+
 [EOF]
