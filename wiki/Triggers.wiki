@@ -3,9 +3,24 @@
 = Introduction =
 Triggers included in SCP in addition to sphere's default ones.
 
-
 ----
 == Item Triggers ==
+*@Block*<br>
+Fired when a shield or a weapon blocks the attack in the combat system.<br>
+Default: Shield/Weapon<br>
+ARGO: Who blocked the hit
+
+<br>
+*@Shield*<br>
+Fired when a shield blocks the attack in the combat system.<br>
+Default: Shield<br>
+ARGO: Who blocked the hit
+
+<br>
+*@Craft*<br>
+Fired when the player successfully craft the item. NOTE: Only fired if using the new crafting system.<br>
+Default: The item<br>
+ARGO: The player who crafted the item
 ----
 
 ----
@@ -29,4 +44,11 @@ endif
 Fired before any skill check (included warmode) takes place. Note that this is only fired when the skill is called from a macro or from the skillmenu, the rest of the skills need to be intercepted on the object that starts the skill (example: t_container for lockpicking).<br>
 Default: Player<br>
 ARGN1: Skill Selected<br>
+----
+
+----
+== NPC Triggers ==
+*@CustomVendorDismiss*<br>
+When the NPC is dismissed in the custom vendor system<br>
+Default: Vendor
 ----
