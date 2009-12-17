@@ -1,5 +1,4 @@
-[ITEMDEF 045c0]
-DEFNAME=i_DULL_COPPER_PLATEMAIL
+[ITEMDEF i_DULL_COPPER_PLATEMAIL]
 NAME=Dull Copper Platemail
 ID=i_platemail_chest
 ARMOR=0 // 25
@@ -10,9 +9,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Platemail
 RESOURCES=25 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 75.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=11
 TAG.ResFire=3
 TAG.ResCold=2
@@ -23,8 +20,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=51
 
-[ITEMDEF 045c1]
-DEFNAME=i_PLATEMAIL_DULL_COPPER_ARMS
+[ITEMDEF i_PLATEMAIL_DULL_COPPER_ARMS]
 NAME=Dull Copper Platemail Arms
 ID=i_platemail_arms
 ARMOR=0 // 25
@@ -35,9 +31,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Platemail Arms
 RESOURCES=18 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 63.5
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=11
 TAG.ResFire=3
 TAG.ResCold=2
@@ -48,8 +42,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=51
 
-[ITEMDEF 045c2]
-DEFNAME=i_PLATEMAIL_DULL_COPPER_leggings
+[ITEMDEF i_PLATEMAIL_DULL_COPPER_leggings]
 NAME=Dull Copper Platemail Legs
 ID=i_platemail_leggings
 ARMOR=0 // 25
@@ -60,9 +53,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Platemail Legs
 RESOURCES=20 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 66.8
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=11
 TAG.ResFire=3
 TAG.ResCold=2
@@ -73,8 +64,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=51
 
-[ITEMDEF 045c3]
-DEFNAME=i_PLATE_DULL_COPPER_HELM
+[ITEMDEF i_PLATE_DULL_COPPER_HELM]
 NAME=Dull Copper Plate Helm
 ID=i_platemail_helm
 ARMOR=0 // 25
@@ -85,9 +75,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Plate Helm
 RESOURCES=15 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 58.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=11
 TAG.ResFire=3
 TAG.ResCold=2
@@ -98,8 +86,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=46
 
-[ITEMDEF 045c4]
-DEFNAME=i_PLATEMAIL_DULL_COPPER_GORGET
+[ITEMDEF i_PLATEMAIL_DULL_COPPER_GORGET]
 NAME=Dull Copper Platemail Gorget
 ID=i_platemail_gorget
 ARMOR=0 // 29
@@ -110,9 +97,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Platemail Gorget
 RESOURCES=10 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 50.4
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=11
 TAG.ResFire=3
 TAG.ResCold=2
@@ -123,8 +108,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=51
 
-[ITEMDEF 045c5]
-DEFNAME=i_PLATEMAIL_GLOVES_DULL_COPPER
+[ITEMDEF i_PLATEMAIL_GLOVES_DULL_COPPER]
 NAME=Dull Copper Platemail Gauntlets
 ID=i_platemail_gloves
 ARMOR=0 // 25
@@ -135,9 +119,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Platemail Gauntlets
 RESOURCES=12 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 53.7
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=11
 TAG.ResFire=3
 TAG.ResCold=2
@@ -148,8 +130,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=51
 
-[ITEMDEF 045c6]
-DEFNAME=i_PLATEMAIL_DULL_COPPER_FEMALE
+[ITEMDEF i_PLATEMAIL_DULL_COPPER_FEMALE]
 NAME=Dull Copper Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 25
@@ -160,9 +141,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Female Platemail
 RESOURCES=22 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 70.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=11
 TAG.ResFire=3
 TAG.ResCold=2
@@ -173,8 +152,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=51
 
-[ITEMDEF 045c7]
-DEFNAME=i_CHAINMAIL_DULL_COPPER_COIF
+[ITEMDEF i_CHAINMAIL_DULL_COPPER_COIF]
 NAME=Dull Copper Chainmail Coif
 ID=i_chainmail_coif
 ARMOR=0 // 20
@@ -185,9 +163,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Chainmail Coif
 RESOURCES=10 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 27.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=10
 TAG.ResFire=4
 TAG.ResCold=4
@@ -198,8 +174,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=36
 
-[ITEMDEF 045c8]
-DEFNAME=i_CHAINMAIL_DULL_COPPER_LEGGINGS
+[ITEMDEF i_CHAINMAIL_DULL_COPPER_LEGGINGS]
 NAME=Dull Copper Chainmail Leggings
 ID=i_chainmail_leggings
 ARMOR=0 // 20
@@ -210,9 +185,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Chainmail Leggings
 RESOURCES=18 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 31.1
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=10
 TAG.ResFire=4
 TAG.ResCold=4
@@ -223,8 +196,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=46
 
-[ITEMDEF 045c9]
-DEFNAME=i_CHAINMAIL_DULL_COPPER_TUNIC
+[ITEMDEF i_CHAINMAIL_DULL_COPPER_TUNIC]
 NAME=Dull Copper Chainmail Tunic
 ID=i_chainmail_tunic
 ARMOR=0 // 20
@@ -235,9 +207,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Chainmail Tunic
 RESOURCES=20 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 43.8
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=10
 TAG.ResFire=4
 TAG.ResCold=4
@@ -248,8 +218,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=46
 
-[ITEMDEF 045ca]
-DEFNAME=i_RINGMAIL_DULL_COPPER_LEGGINGS
+[ITEMDEF i_RINGMAIL_DULL_COPPER_LEGGINGS]
 NAME=Dull Copper Ringmail Leggings
 ID=i_ringmail_leggings
 ARMOR=0 // 18
@@ -260,9 +229,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Ringmail Leggings
 RESOURCES=16 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 27.6
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=1
@@ -273,8 +240,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=46
 
-[ITEMDEF 045cb]
-DEFNAME=i_RINGMAIL_DULL_COPPER_SLEEVES
+[ITEMDEF i_RINGMAIL_DULL_COPPER_SLEEVES]
 NAME=Dull Copper Ringmail Sleeves
 ID=i_ringmail_sleeves
 ARMOR=0 // 18
@@ -285,9 +251,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Ringmail Sleeves
 RESOURCES=14 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 24.3
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=1
@@ -298,8 +262,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=41
 
-[ITEMDEF 045cc]
-DEFNAME=i_RINGMAIL_DULL_COPPER
+[ITEMDEF i_RINGMAIL_DULL_COPPER]
 NAME=Dull Copper Ringmail Gloves
 ID=i_ringmail_gloves
 ARMOR=0 // 18
@@ -310,9 +273,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Ringmail Gloves
 RESOURCES=10 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 17.8
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=1
@@ -323,8 +284,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=41
 
-[ITEMDEF 045cd]
-DEFNAME=i_RINGMAIL_DULL_COPPER_TUNIC
+[ITEMDEF i_RINGMAIL_DULL_COPPER_TUNIC]
 NAME=Dull Copper Ringmail Tunic
 ID=i_ringmail_tunic
 ARMOR=0 // 18
@@ -335,9 +295,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Ringmail Tunic
 RESOURCES=18 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 31.1
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=1
@@ -348,8 +306,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=41
 
-[ITEMDEF 045ce]
-DEFNAME=i_shield_DULL_COPPER_BUCKLER
+[ITEMDEF i_shield_DULL_COPPER_BUCKLER]
 NAME=Dull Copper Buckler
 ID=i_shield_buckler
 ARMOR=0 // 2
@@ -365,8 +322,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=41
 
-[ITEMDEF 045cf]
-DEFNAME=i_SHIELD_DULL_COPPER_HEATER
+[ITEMDEF i_SHIELD_DULL_COPPER_HEATER]
 NAME=Dull Copper Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 18
@@ -382,8 +338,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=31
 
-[ITEMDEF 045d0]
-DEFNAME=i_SHIELD_DULL_COPPER_METAL
+[ITEMDEF i_SHIELD_DULL_COPPER_METAL]
 NAME=Dull Copper Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 7
@@ -399,8 +354,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=51
 
-[ITEMDEF 045d1]
-DEFNAME=i_HELM_DULL_COPPER_CLOSED
+[ITEMDEF i_HELM_DULL_COPPER_CLOSED]
 NAME=Dull Copper Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 25
@@ -411,9 +365,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Closed Helm
 RESOURCES=15 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 58.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=3
@@ -424,8 +376,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=30
 
-[ITEMDEF 045d2]
-DEFNAME=i_DULL_COPPER_HELMET
+[ITEMDEF i_DULL_COPPER_HELMET]
 NAME=Dull Copper Helmet
 ID=i_helm_open
 ARMOR=0 // 20
@@ -436,9 +387,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Helmet
 RESOURCES=15 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 58.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=3
@@ -449,8 +398,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=51
 
-[ITEMDEF 045d3]
-DEFNAME=i_DULL_COPPER_BASCINET
+[ITEMDEF i_DULL_COPPER_BASCINET]
 NAME=Dull Copper Bascinet
 ID=i_bascinet
 ARMOR=0 // 25
@@ -461,9 +409,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Bascinet
 RESOURCES=15 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 19.2
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=3
@@ -474,8 +420,7 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=30
 
-[ITEMDEF 045d4]
-DEFNAME=i_HELM_DULL_COPPER_NOSE
+[ITEMDEF i_HELM_DULL_COPPER_NOSE]
 NAME=Dull Copper Nose Helm
 ID=i_helm_nose
 ARMOR=0 // 20
@@ -486,9 +431,7 @@ SUBSECTION=Dull Copper
 DESCRIPTION=Nose Helm
 RESOURCES=15 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 58.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=3
