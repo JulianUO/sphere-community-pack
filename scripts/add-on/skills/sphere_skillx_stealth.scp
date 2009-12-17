@@ -18,12 +18,12 @@ else
 	sysmessage <def.scp.stealth_armorcheck>
 	f_reveal
 	else
-		if <r1,1200> > <psnsys_max 150,<stealth>> // we might need a better success chance formula
+		if <r1,1200> > <max 150,<stealth>> // we might need a better success chance formula
 		sysmessage <def.scp.stealth_fail>
 		f_reveal
 		else
 		sysmessage <def.scp.stealth_success>
-		skillgain stealth <psnsys_min 100,<eval (<stealth> / 10)>>
+		skillgain stealth <min 100,<eval (<stealth> / 10)>>
 		f_stealth
 		endif
 	endif

@@ -58,8 +58,8 @@ forchars 18
 		endif
 	endif
 endfor
-local.duration = <eval <psnsys_max 1,<eval <src.spellweaving>/24>>*3600>
-local.level = <psnsys_min <dlocal.weavers>,<qval (<isinsanctuary>) ? 6:5>>
+local.duration = <eval <max 1,<eval <src.spellweaving>/24>>*3600>
+local.level = <min <dlocal.weavers>,<qval (<isinsanctuary>) ? 6:5>>
 for <local.weavers>
 uid.<local.weaver.<local._for>>.f_GiveArcaneFocus <local.duration>,<local.level>
 endfor
@@ -154,7 +154,7 @@ effect 2,03728,1,13,0,0455,7
 effect 2,03779,1,15,0,03f,7
 
 local.level = <src.findid.i_arcane_focus.more1>
-local.duration = <eval ((10 + <psnsys_max 1,<eval (<src.spellweaving> / 240)>>) + <local.focus>)>
+local.duration = <eval ((10 + <max 1,<eval (<src.spellweaving> / 240)>>) + <local.focus>)>
 
 serv.newitem i_attunement
 new.link = <src>

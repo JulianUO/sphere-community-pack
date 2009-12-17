@@ -30,7 +30,7 @@ if !<local.inhouse>
 	if !<r0,<eval ((<hiding> / 100) - 1)>> // we might need a better success chance formula
 	local.fail = 1
 	else
-	skillgain hiding <psnsys_min 100,<eval (<hiding> / 10)>>
+	skillgain hiding <min 100,<eval (<hiding> / 10)>>
 	endif
 endif
 if <local.fail>
