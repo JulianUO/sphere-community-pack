@@ -38,7 +38,7 @@ sysmessage <def.scp.spell.arcanecircle_notin>
 return 1
 endif
 forchars 1
-	if <eval (<src.spellweaving> - <spellweaving>)> <= 20.0 || <eval (<spellweaving> - <src.spellweaving>)> <= 20.0
+	if <eval (<src.spellweaving> - <spellweaving>)> <= 20.0 && <eval (<spellweaving> - <src.spellweaving>)> <= 20.0
 	local.weaver += 1
 	endif
 endfor
@@ -58,7 +58,7 @@ forchars 18
 		endif
 	endif
 endfor
-local.duration = <eval <max 1,<eval <src.spellweaving>/24>>*3600>
+local.duration = <eval (<max 1,<eval (<src.spellweaving> / 24)>> * 3600)>
 local.level = <min <dlocal.weavers>,<qval (<isinsanctuary>) ? 6:5>>
 for <local.weavers>
 uid.<local.weaver.<local._for>>.f_GiveArcaneFocus <local.duration>,<local.level>
@@ -82,7 +82,7 @@ SKILLREQ=SPELLWEAVING 0.1
 INTERRUPT=100.0,100.0
 
 on=@effect
-effect 3,0376A,9,32,5005,0
+effect 3,0376a,9,32,5005,0
 if <restest i_memory_poison_new>
 consume i_memory_poison_new
 return 0
