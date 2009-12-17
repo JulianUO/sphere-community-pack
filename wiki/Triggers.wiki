@@ -45,6 +45,27 @@ endif
 Fired before any skill check (included warmode) takes place. Note that this is only fired when the skill is called from a macro or from the skillmenu, the rest of the skills need to be intercepted on the object that starts the skill (example: t_container for lockpicking).<br>
 Default: Player<br>
 ARGN1: Skill Selected<br>
+
+<br>
+*@ReceivePowerScroll*<br>
+When the player receives a power scroll in the Champion System<br>
+Default: Player
+
+<br>
+*@ReceiveTranscendenceScroll*<br>
+When the player receives a transcendence scroll in the Champion System<br>
+Default: Player
+
+<br>
+*@ReceiveStatPowerScroll*<br>
+When the player receives a stat power scroll in the Champion System<br>
+Default: Player
+
+<br>
+*@ItemCraft*<br>
+Fired when the player successfully craft an item. NOTE: This is only fired if using the new crafting system.<br>
+Default: Player<br>
+ARGO: Item Crafted
 ----
 
 ----
