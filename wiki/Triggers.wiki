@@ -1,4 +1,5 @@
 #summary Custom / Triggers
+#labels Featured
 
 = Introduction =
 Triggers included in SCP in addition to sphere's default ones.
