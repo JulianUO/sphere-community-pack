@@ -18,12 +18,9 @@ sysmessage <def.scp.jail_cancelled>
 return 1
 
 on=1
-var.reason = <argtxt[1]>
-targetf f_jail_targ <argtxt[2]>
+targetf f_jail_targ <strarg <argtxt[2]>> <argtxt[1]>
 
 [function f_jail_targ]
-local.reason = <var.reason>
-var.reason =
 if !<argo.isplayer>
 sysmessage <def.scp.jail_notplayer>
 return 1
@@ -33,8 +30,8 @@ sysmessage <def.scp.jail_cannotmyself>
 return 1
 endif
 serv.newitem i_jail_timer
-new.timer 60*60*<args>
-new.tag0.reason = <local.reason>
+new.timer 60*60*<strarg <args>>
+new.tag0.reason = <streat <args>>
 argo.equip <new.uid>
 argo.sysmessage <def.scp.jail_jailed>
 return 1
@@ -59,7 +56,7 @@ return 1
 argo.findid.i_jail_timer.timer 0
 argo.update
 
-[events e_jail]
+[events e_jailed]
 on=@clienttooltip
 src.addcliloc 1042971,Jailed
 src.addcliloc 1060662,Reason,<FINDID.i_jail_timer.TAG0.reason>
