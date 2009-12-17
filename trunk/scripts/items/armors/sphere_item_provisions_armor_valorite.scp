@@ -1,5 +1,4 @@
-[ITEMDEF 04795]
-DEFNAME=i_PLATEMAIL_chest_VALORITE
+[ITEMDEF i_PLATEMAIL_chest_VALORITE]
 NAME=Valorite Platemail
 ID=i_platemail_chest
 ARMOR=0 // 37
@@ -10,9 +9,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Platemail
 RESOURCES=25 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 79.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -23,8 +20,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={51 65}
 
-[ITEMDEF 04796]
-DEFNAME=i_PLATEMAIL_ARMS_VALORITE
+[ITEMDEF i_PLATEMAIL_ARMS_VALORITE]
 NAME=Valorite Platemail Arms
 ID=i_platemail_arms
 ARMOR=0 // 37
@@ -35,9 +31,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Platemail Arms
 RESOURCES=18 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 67.5
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -48,8 +42,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={51 65}
 
-[ITEMDEF 04797]
-DEFNAME=i_PLATEMAIL_leggings_VALORITE
+[ITEMDEF i_PLATEMAIL_leggings_VALORITE]
 NAME=Valorite Platemail Legs
 ID=i_platemail_leggings
 ARMOR=0 // 37
@@ -60,9 +53,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Platemail Legs
 RESOURCES=20 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 70.8
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -73,8 +64,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={51 65}
 
-[ITEMDEF 04798]
-DEFNAME=i_PLATE_HELM_VALORITE
+[ITEMDEF i_PLATE_HELM_VALORITE]
 NAME=Valorite Plate Helm
 ID=i_platemail_helm
 ARMOR=0 // 37
@@ -85,9 +75,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Plate Helm
 RESOURCES=15 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 62.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -98,8 +86,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={46 58}
 
-[ITEMDEF 04799]
-DEFNAME=i_PLATEMAIL_GORGET_VALORITE
+[ITEMDEF i_PLATEMAIL_GORGET_VALORITE]
 NAME=Valorite Platemail Gorget
 ID=i_platemail_gorget
 ARMOR=0 // 37
@@ -110,9 +97,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Platemail Gorget
 RESOURCES=10 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 54.4
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -123,8 +108,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={51 65}
 
-[ITEMDEF 0479a]
-DEFNAME=i_PLATEMAIL_GLOVES_VALORITE
+[ITEMDEF i_PLATEMAIL_GLOVES_VALORITE]
 NAME=Valorite Platemail Gauntlets
 ID=i_platemail_gloves
 ARMOR=0 // 37
@@ -135,9 +119,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Platemail Gauntlets
 RESOURCES=12 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 57.7
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -148,8 +130,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={51 65}
 
-[ITEMDEF 0479b]
-DEFNAME=i_FEMALE_PLATEMAIL_VALORITE
+[ITEMDEF i_FEMALE_PLATEMAIL_VALORITE]
 NAME=Valorite Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 22
@@ -160,9 +141,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Female Platemail
 RESOURCES=22 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 74.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=9
 TAG.ResFire=3
 TAG.ResCold=5
@@ -173,8 +152,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={51 65}
 
-[ITEMDEF 0479c]
-DEFNAME=i_CHAINMAIL_COIF_VALORITE
+[ITEMDEF i_CHAINMAIL_COIF_VALORITE]
 NAME=Valorite Chainmail Coif
 ID=i_chainmail_coif
 ARMOR=0 // 27
@@ -185,9 +163,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Chainmail Coif
 RESOURCES=10 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 31.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=8
 TAG.ResFire=4
 TAG.ResCold=7
@@ -198,8 +174,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={36 44}
 
-[ITEMDEF 0479d]
-DEFNAME=i_CHAINMAIL_LEGGINGS_VALORITE
+[ITEMDEF i_CHAINMAIL_LEGGINGS_VALORITE]
 NAME=Valorite Chainmail Leggings
 ID=i_chainmail_leggings
 ARMOR=0 // 27
@@ -210,9 +185,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Chainmail Leggings
 RESOURCES=18 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 35.1
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=8
 TAG.ResFire=4
 TAG.ResCold=7
@@ -223,8 +196,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={46 58}
 
-[ITEMDEF 0479e]
-DEFNAME=i_CHAINMAIL_TUNIC_VALORITE
+[ITEMDEF i_CHAINMAIL_TUNIC_VALORITE]
 NAME=Valorite Chainmail Tunic
 ID=i_chainmail_tunic
 ARMOR=0 // 27
@@ -235,9 +207,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Chainmail Tunic
 RESOURCES=25 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 47.8
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=8
 TAG.ResFire=4
 TAG.ResCold=7
@@ -248,8 +218,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={46 58}
 
-[ITEMDEF 0479f]
-DEFNAME=i_ringmail_leggings_valorite
+[ITEMDEF i_ringmail_leggings_valorite]
 NAME=Valorite Ringmail Leggings
 ID=i_ringmail_leggings
 ARMOR=0 // 22
@@ -260,9 +229,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Ringmail Leggings
 RESOURCES=16 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 31.6
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=4
@@ -273,8 +240,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={41 51}
 
-[ITEMDEF 047a0]
-DEFNAME=i_RINGMAIL_SLEEVES_VALORITE
+[ITEMDEF i_RINGMAIL_SLEEVES_VALORITE]
 NAME=Valorite Ringmail Sleeves
 ID=i_ringmail_sleeves
 ARMOR=0 // 22
@@ -285,9 +251,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Ringmail Sleeves
 RESOURCES=14 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 28.3
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=4
@@ -298,8 +262,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={41 51}
 
-[ITEMDEF 047a1]
-DEFNAME=i_RINGMAIL_GLOVES_VALORITE
+[ITEMDEF i_RINGMAIL_GLOVES_VALORITE]
 NAME=Valorite Ringmail Gloves
 ID=i_ringmail_gloves
 ARMOR=0 // 22
@@ -310,9 +273,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Ringmail Gloves
 RESOURCES=10 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 21.8
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=4
@@ -323,8 +284,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={41 51}
 
-[ITEMDEF 047a2]
-DEFNAME=i_RINGMAIL_TUNIC_VALORITE
+[ITEMDEF i_RINGMAIL_TUNIC_VALORITE]
 NAME=Valorite Ringmail Tunic
 ID=i_ringmail_tunic
 ARMOR=0 // 22
@@ -335,9 +295,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Ringmail Tunic
 RESOURCES=18 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 35.1
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=4
@@ -348,8 +306,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={41 51}
 
-[ITEMDEF 047a3]
-//DEFNAME=i_BUCKLER_VALORITE
+[ITEMDEF i_BUCKLER_VALORITE]
 DEFNAME=i_BUCKLER_SHIELD_VALORITE
 NAME=Valorite Buckler
 ID=i_shield_buckler
@@ -366,8 +323,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={41 51}
 
-[ITEMDEF 047a4]
-DEFNAME=i_HEATER_SHIELD_VALORITE
+[ITEMDEF i_HEATER_SHIELD_VALORITE]
 NAME=Valorite Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 25
@@ -383,8 +339,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={31 37}
 
-[ITEMDEF 047a5]
-DEFNAME=i_metal_shield_valorite
+[ITEMDEF i_metal_shield_valorite]
 NAME=Valorite Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 13
@@ -400,8 +355,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={51 65}
 
-[ITEMDEF 047a6]
-DEFNAME=i_CLOSED_HELM_VALORITE
+[ITEMDEF i_CLOSED_HELM_VALORITE]
 NAME=Valorite Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 37
@@ -412,9 +366,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Closed Helm
 RESOURCES=15 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 62.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=6
@@ -425,8 +377,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={101 115}
 
-[ITEMDEF 047a7]
-DEFNAME=i_HELMET_VALORITE
+[ITEMDEF i_HELMET_VALORITE]
 NAME=Valorite Helmet
 ID=i_helm_open
 ARMOR=0 // 37
@@ -437,9 +388,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Helmet
 RESOURCES=15 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 62.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=6
@@ -450,8 +399,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={51 65}
 
-[ITEMDEF 047a8]
-DEFNAME=i_BASCINET_VALORITE
+[ITEMDEF i_BASCINET_VALORITE]
 NAME=Valorite Bascinet
 ID=i_bascinet
 ARMOR=0 // 37
@@ -462,9 +410,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Bascinet
 RESOURCES=15 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 23.2
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=6
@@ -475,8 +421,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={101 115}
 
-[ITEMDEF 047a9]
-DEFNAME=i_NOSE_HELM_VALORITE
+[ITEMDEF i_NOSE_HELM_VALORITE]
 NAME=Valorite Nose Helm
 ID=i_helm_nose
 ARMOR=0 // 37
@@ -487,9 +432,7 @@ SUBSECTION=Valorite
 DESCRIPTION=Nose Helm
 RESOURCES=15 i_ingot_valorite
 SKILLMAKE=BLACKSMITHING 62.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=3
 TAG.ResCold=6

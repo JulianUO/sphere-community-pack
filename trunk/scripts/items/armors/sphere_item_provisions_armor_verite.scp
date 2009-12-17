@@ -1,5 +1,4 @@
-[ITEMDEF 0476a]
-DEFNAME=i_PLATEMAIL_CHEST_VERITE
+[ITEMDEF i_PLATEMAIL_CHEST_VERITE]
 NAME=Verite Platemail
 ID=i_platemail_chest
 ARMOR=0 // 37
@@ -10,9 +9,7 @@ SUBSECTION=Verite
 DESCRIPTION=Platemail
 RESOURCES=25 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 79.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=8
 TAG.ResFire=6
 TAG.ResCold=4
@@ -23,8 +20,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={51 65}
 
-[ITEMDEF 0476b]
-DEFNAME=i_PLATEMAIL_ARMS_VERITE
+[ITEMDEF i_PLATEMAIL_ARMS_VERITE]
 NAME=Verite Platemail Arms
 ID=i_platemail_arms
 ARMOR=0 // 37
@@ -35,9 +31,7 @@ SUBSECTION=Verite
 DESCRIPTION=Platemail Arms
 RESOURCES=18 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 67.5
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=8
 TAG.ResFire=6
 TAG.ResCold=4
@@ -48,8 +42,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={51 65}
 
-[ITEMDEF 0476c]
-DEFNAME=i_PLATEMAIL_leggings_VERITE
+[ITEMDEF i_PLATEMAIL_leggings_VERITE]
 NAME=Verite Platemail Legs
 ID=i_platemail_leggings
 ARMOR=0 // 37
@@ -60,9 +53,7 @@ SUBSECTION=Verite
 DESCRIPTION=Platemail Legs
 RESOURCES=20 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 70.8
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=8
 TAG.ResFire=6
 TAG.ResCold=4
@@ -73,8 +64,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={51 65}
 
-[ITEMDEF 0476d]
-DEFNAME=i_PLATE_HELM_VERITE
+[ITEMDEF i_PLATE_HELM_VERITE]
 NAME=Verite Plate Helm
 ID=i_platemail_helm
 ARMOR=0 // 37
@@ -85,9 +75,7 @@ SUBSECTION=Verite
 DESCRIPTION=Plate Helm
 RESOURCES=15 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 62.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=8
 TAG.ResFire=6
 TAG.ResCold=4
@@ -98,8 +86,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={46 58}
 
-[ITEMDEF 0476e]
-DEFNAME=i_PLATEMAIL_GORGET_VERITE
+[ITEMDEF i_PLATEMAIL_GORGET_VERITE]
 NAME=Verite Platemail Gorget
 ID=i_platemail_gorget
 ARMOR=0 // 37
@@ -110,9 +97,7 @@ SUBSECTION=Verite
 DESCRIPTION=Platemail Gorget
 RESOURCES=10 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 54.4
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=8
 TAG.ResFire=6
 TAG.ResCold=4
@@ -123,8 +108,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={51 65}
 
-[ITEMDEF 0476f]
-DEFNAME=i_PLATEMAIL_GLOVES_VERITE
+[ITEMDEF i_PLATEMAIL_GLOVES_VERITE]
 NAME=Verite Platemail Gauntlets
 ID=i_platemail_gloves
 ARMOR=0 // 37
@@ -135,9 +119,7 @@ SUBSECTION=Verite
 DESCRIPTION=Platemail Gauntlets
 RESOURCES=12 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 57.7
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=8
 TAG.ResFire=6
 TAG.ResCold=4
@@ -148,8 +130,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={51 65}
 
-[ITEMDEF 04770]
-DEFNAME=i_FEMALE_PLATEMAIL_VERITE
+[ITEMDEF i_FEMALE_PLATEMAIL_VERITE]
 NAME=Verite Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 22
@@ -160,9 +141,7 @@ SUBSECTION=Verite
 DESCRIPTION=Female Platemail
 RESOURCES=22 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 74.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=8
 TAG.ResFire=6
 TAG.ResCold=4
@@ -173,8 +152,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={51 65}
 
-[ITEMDEF 04771]
-DEFNAME=i_CHAINMAIL_COIF_VERITE
+[ITEMDEF i_CHAINMAIL_COIF_VERITE]
 NAME=Verite Chainmail Coif
 ID=i_chainmail_coif
 ARMOR=0 // 27
@@ -185,9 +163,7 @@ SUBSECTION=Verite
 DESCRIPTION=Chainmail Coif
 RESOURCES=10 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 31.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=7
 TAG.ResCold=6
@@ -198,8 +174,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={36 44}
 
-[ITEMDEF 04772]
-DEFNAME=i_CHAINMAIL_LEGGINGS_VERITE
+[ITEMDEF i_CHAINMAIL_LEGGINGS_VERITE]
 NAME=Verite Chainmail Leggings
 ID=i_chainmail_leggings
 ARMOR=0 // 27
@@ -210,9 +185,7 @@ SUBSECTION=Verite
 DESCRIPTION=Chainmail Leggings
 RESOURCES=18 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 35.1
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=7
 TAG.ResFire=7
 TAG.ResCold=6
@@ -223,8 +196,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={46 58}
 
-[ITEMDEF 04773]
-DEFNAME=i_CHAINMAIL_TUNIC_VERITE
+[ITEMDEF i_CHAINMAIL_TUNIC_VERITE]
 NAME=Verite Chainmail Tunic
 ID=i_chainmail_tunic
 ARMOR=0 // 27
@@ -235,9 +207,7 @@ SUBSECTION=Verite
 DESCRIPTION=Chainmail Tunic
 RESOURCES=20 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 47.8
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=7
 TAG.ResFire=7
 TAG.ResCold=6
@@ -248,8 +218,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={46 58}
 
-[ITEMDEF 04774]
-DEFNAME=i_RINGMAIL_LEGGINGS_VERITE
+[ITEMDEF i_RINGMAIL_LEGGINGS_VERITE]
 NAME=Verite Ringmail Leggings
 ID=i_ringmail_leggings
 ARMOR=0 // 22
@@ -260,9 +229,7 @@ SUBSECTION=Verite
 DESCRIPTION=Ringmail Leggings
 RESOURCES=16 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 31.6
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=6
 TAG.ResFire=6
 TAG.ResCold=3
@@ -273,8 +240,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={41 51}
 
-[ITEMDEF 04775]
-DEFNAME=i_RINGMAIL_SLEEVES_VERITE
+[ITEMDEF i_RINGMAIL_SLEEVES_VERITE]
 NAME=Verite Ringmail Sleeves
 ID=i_ringmail_sleeves
 ARMOR=0 // 22
@@ -285,9 +251,7 @@ SUBSECTION=Verite
 DESCRIPTION=Ringmail Sleeves
 RESOURCES=14 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 28.3
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=6
 TAG.ResCold=3
@@ -298,8 +262,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={41 51}
 
-[ITEMDEF 04776]
-DEFNAME=i_RINGMAIL_GLOVES_VERITE
+[ITEMDEF i_RINGMAIL_GLOVES_VERITE]
 NAME=Verite Ringmail Gloves
 ID=i_ringmail_gloves
 ARMOR=0 // 22
@@ -310,9 +273,7 @@ SUBSECTION=Verite
 DESCRIPTION=Ringmail Gloves
 RESOURCES=10 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 21.8
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=6
 TAG.ResFire=6
 TAG.ResCold=3
@@ -323,8 +284,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={41 51}
 
-[ITEMDEF 04777]
-DEFNAME=i_RINGMAIL_TUNIC_VERITE
+[ITEMDEF i_RINGMAIL_TUNIC_VERITE]
 NAME=Verite Ringmail Tunic
 ID=i_ringmail_tunic
 ARMOR=0 // 22
@@ -335,9 +295,7 @@ SUBSECTION=Verite
 DESCRIPTION=Ringmail Tunic
 RESOURCES=18 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 35.1
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=6
 TAG.ResFire=6
 TAG.ResCold=3
@@ -348,8 +306,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={41 51}
 
-[ITEMDEF 04778]
-DEFNAME=i_BUCKLER_SHIELD_VERITE
+[ITEMDEF i_BUCKLER_SHIELD_VERITE]
 NAME=Verite Buckler
 ID=i_shield_buckler
 ARMOR=0 // 9
@@ -365,8 +322,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={41 51}
 
-[ITEMDEF 04779]
-DEFNAME=i_HEATER_SHIELD_VERITE
+[ITEMDEF i_HEATER_SHIELD_VERITE]
 NAME=Verite Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 25
@@ -382,8 +338,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={31 37}
 
-[ITEMDEF 0477a]
-DEFNAME=i_METAL_SHIELD_VERITE
+[ITEMDEF i_METAL_SHIELD_VERITE]
 NAME=Verite Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 13
@@ -399,8 +354,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={51 65}
 
-[ITEMDEF 0477b]
-DEFNAME=i_CLOSED_HELM_VERITE
+[ITEMDEF i_CLOSED_HELM_VERITE]
 NAME=Verite Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 37
@@ -411,9 +365,7 @@ SUBSECTION=Verite
 DESCRIPTION=Closed Helm
 RESOURCES=15 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 62.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=6
 TAG.ResCold=5
@@ -424,8 +376,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={101 115}
 
-[ITEMDEF 0477c]
-DEFNAME=i_HELMET_VERITE
+[ITEMDEF i_HELMET_VERITE]
 NAME=Verite Helmet
 ID=i_helm_open
 ARMOR=0 // 37
@@ -436,9 +387,7 @@ SUBSECTION=Verite
 DESCRIPTION=Helmet
 RESOURCES=15 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 62.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=6
 TAG.ResCold=5
@@ -449,8 +398,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={51 65}
 
-[ITEMDEF 0477d]
-DEFNAME=i_BASCINET_VERITE
+[ITEMDEF i_BASCINET_VERITE]
 NAME=Verite Bascinet
 ID=i_bascinet
 ARMOR=0 // 37
@@ -461,9 +409,7 @@ SUBSECTION=Verite
 DESCRIPTION=Bascinet
 RESOURCES=15 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 23.2
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=6
 TAG.ResCold=5
@@ -474,8 +420,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={101 115}
 
-[ITEMDEF 0477e]
-DEFNAME=i_NOSE_HELM_VERITE
+[ITEMDEF i_NOSE_HELM_VERITE]
 NAME=Verite Nose Helm
 ID=i_helm_nose
 ARMOR=0 // 37
@@ -486,9 +431,7 @@ SUBSECTION=Verite
 DESCRIPTION=Nose Helm
 RESOURCES=15 i_ingot_verite
 SKILLMAKE=BLACKSMITHING 62.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=6
 TAG.ResCold=5

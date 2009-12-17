@@ -1,5 +1,4 @@
-[ITEMDEF 04554]
-DEFNAME=i_PLATEMAIL_ARMS_GOLD
+[ITEMDEF i_PLATEMAIL_ARMS_GOLD]
 NAME=Golden Platemail Arms
 ID=i_platemail_arms
 ARMOR=0 // 30
@@ -10,9 +9,7 @@ SKILLMAKE=BLACKSMITHING 64.5
 CATEGORY=Provisions - Armor - Colored
 SUBSECTION=Golden
 DESCRIPTION=Platemail Arms
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4
@@ -24,8 +21,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={51 65}
 
-[ITEMDEF 04555]
-DEFNAME=i_PLATEMAIL_leggings_GOLD
+[ITEMDEF i_PLATEMAIL_leggings_GOLD]
 NAME=Golden Platemail Legs
 ID=i_platemail_leggings
 WEIGHT=15
@@ -36,9 +32,7 @@ SUBSECTION=Golden
 DESCRIPTION=Platemail Legs
 RESOURCES=20 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 67.8
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4
@@ -50,8 +44,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={51 65}
 
-[ITEMDEF 04556]
-DEFNAME=i_PLATE_HELM_GOLD
+[ITEMDEF i_PLATE_HELM_GOLD]
 NAME=Golden Plate Helm
 ID=i_platemail_helm
 ARMOR=0 // 30
@@ -62,9 +55,7 @@ SUBSECTION=Golden
 DESCRIPTION=Plate Helm
 RESOURCES=15 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 59.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4
@@ -76,8 +67,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={46 58}
 
-[ITEMDEF 04557]
-DEFNAME=i_PLATEMAIL_GORGET_GOLD
+[ITEMDEF i_PLATEMAIL_GORGET_GOLD]
 NAME=Golden Platemail Gorget
 ID=i_platemail_gorget
 ARMOR=0 // 30
@@ -88,9 +78,7 @@ SUBSECTION=Golden
 DESCRIPTION=Platemail Gorget
 RESOURCES=10 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 51.4
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4
@@ -102,8 +90,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={51 65}
 
-[ITEMDEF 04558]
-DEFNAME=i_PLATEMAIL_Gloves_GOLD
+[ITEMDEF i_PLATEMAIL_Gloves_GOLD]
 NAME=Golden Platemail Gauntlets
 ID=i_platemail_gloves
 ARMOR=0 // 30
@@ -114,9 +101,7 @@ SUBSECTION=Golden
 DESCRIPTION=Platemail Gauntlets
 RESOURCES=12 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 54.7
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4
@@ -128,8 +113,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={51 65}
 
-[ITEMDEF 04559]
-DEFNAME=i_PLATEMAIL_chest_GOLD
+[ITEMDEF i_PLATEMAIL_chest_GOLD]
 NAME=Golden Platemail
 ID=i_platemail_chest
 ARMOR=0 // 30
@@ -140,9 +124,7 @@ SUBSECTION=Golden
 DESCRIPTION=Platemail
 RESOURCES=26 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 76.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4
@@ -154,8 +136,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={51 65}
 
-[ITEMDEF 0455a]
-DEFNAME=i_RINGMAIL_LEGGINGS_GOLD
+[ITEMDEF i_RINGMAIL_LEGGINGS_GOLD]
 NAME=Golden Ringmail Leggings
 ID=i_ringmail_leggings
 ARMOR=0 // 20
@@ -166,9 +147,7 @@ SUBSECTION=Golden
 DESCRIPTION=Ringmail Leggings
 RESOURCES=16 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 28.6
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=4
 TAG.ResFire=4
 TAG.ResCold=3
@@ -180,8 +159,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={41 51}
 
-[ITEMDEF 0455b]
-DEFNAME=i_RINGMAIL_SLEEVES_GOLD
+[ITEMDEF i_RINGMAIL_SLEEVES_GOLD]
 NAME=Golden Ringmail Sleeves
 ID=i_ringmail_sleeves
 ARMOR=0 // 20
@@ -192,9 +170,7 @@ SUBSECTION=Golden
 DESCRIPTION=Ringmail Sleeves
 RESOURCES=14 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 25.3
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=4
 TAG.ResFire=4
 TAG.ResCold=3
@@ -206,8 +182,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={41 51}
 
-[ITEMDEF 0455c]
-DEFNAME=i_RINGMAIL_GLOVES_GOLD
+[ITEMDEF i_RINGMAIL_GLOVES_GOLD]
 NAME=Golden Ringmail Gloves
 ID=i_ringmail_gloves
 ARMOR=0 // 20
@@ -218,9 +193,7 @@ SUBSECTION=Golden
 DESCRIPTION=Ringmail Gloves
 RESOURCES=10 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 18.8
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=4
 TAG.ResFire=4
 TAG.ResCold=3
@@ -232,8 +205,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={41 51}
 
-[ITEMDEF 0455d]
-DEFNAME=i_RINGMAIL_TUNIC_GOLD
+[ITEMDEF i_RINGMAIL_TUNIC_GOLD]
 NAME=Golden Ringmail Tunic
 ID=i_ringmail_tunic
 ARMOR=0 // 20
@@ -244,9 +216,7 @@ SUBSECTION=Golden
 DESCRIPTION=Ringmail Tunic
 RESOURCES=18 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 32.1
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=4
 TAG.ResFire=4
 TAG.ResCold=3
@@ -258,8 +228,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={41 51}
 
-[ITEMDEF 0455e]
-DEFNAME=i_BUCKLER_SHIELD_GOLD
+[ITEMDEF i_BUCKLER_SHIELD_GOLD]
 NAME=Golden Buckler
 ID=i_shield_buckler
 ARMOR=0 // 7
@@ -275,8 +244,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={41 51}
 
-[ITEMDEF 0455f]
-DEFNAME=i_METAL_SHIELD_GOLD
+[ITEMDEF i_METAL_SHIELD_GOLD]
 NAME=Golden Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 11
@@ -292,8 +260,7 @@ ON=@Create
 	HITPOINTS={51 65}
 	COLOR=color_o_gold
 	
-[ITEMDEF 04572]
-DEFNAME=i_FEMALE_PLATEMAIL_GOLD
+[ITEMDEF i_FEMALE_PLATEMAIL_GOLD]
 NAME=Golden Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 15
@@ -304,9 +271,7 @@ SUBSECTION=Golden
 DESCRIPTION=Female Platemail
 RESOURCES=22 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 71.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4
@@ -318,8 +283,7 @@ ON=@Create
 	HITPOINTS=51
 	COLOR=color_o_gold
 
-[ITEMDEF 04573]
-DEFNAME=i_CHAINMAIL_COIF_GOLD
+[ITEMDEF i_CHAINMAIL_COIF_GOLD]
 NAME=Golden Chainmail Coif
 ID=i_chainmail_coif
 ARMOR=0 // 23
@@ -330,9 +294,7 @@ SUBSECTION=Golden
 DESCRIPTION=Chainmail Coif
 RESOURCES=10 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 28.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=5
 TAG.ResFire=5
 TAG.ResCold=6
@@ -344,8 +306,7 @@ ON=@Create
 	HITPOINTS=36
 	COLOR=color_o_gold
 
-[ITEMDEF 04574]
-DEFNAME=i_CHAINMAIL_LEGGINGS_GOLD
+[ITEMDEF i_CHAINMAIL_LEGGINGS_GOLD]
 NAME=Golden Chainmail Leggings
 ID=i_chainmail_leggings
 ARMOR=0 // 23
@@ -356,9 +317,7 @@ SUBSECTION=Golden
 DESCRIPTION=Chainmail Leggings
 RESOURCES=18 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 32.1
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=5
 TAG.ResFire=5
 TAG.ResCold=6
@@ -370,8 +329,7 @@ ON=@Create
 	HITPOINTS=46
 	COLOR=color_o_gold
 
-[ITEMDEF 04575]
-DEFNAME=i_CHAINMAIL_TUNIC_GOLD
+[ITEMDEF i_CHAINMAIL_TUNIC_GOLD]
 NAME=Golden Chainmail Tunic
 ID=i_chainmail_tunic
 ARMOR=0 // 23
@@ -382,9 +340,7 @@ SUBSECTION=Golden
 DESCRIPTION=Chainmail Tunic
 RESOURCES=20 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 44.8
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=5
 TAG.ResFire=5
 TAG.ResCold=6
@@ -396,8 +352,7 @@ ON=@Create
 	HITPOINTS=46
 	COLOR=color_o_gold
 
-[ITEMDEF 04576]
-DEFNAME=i_HEATER_SHIELD_GOLD
+[ITEMDEF i_HEATER_SHIELD_GOLD]
 NAME=Golden Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 23
@@ -413,8 +368,7 @@ ON=@Create
 	HITPOINTS=31
 	COLOR=color_o_gold
 	
-[ITEMDEF 04587]
-DEFNAME=i_CLOSED_HELM_GOLD
+[ITEMDEF i_CLOSED_HELM_GOLD]
 NAME=Golden Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 30
@@ -425,9 +379,7 @@ SUBSECTION=Golden
 DESCRIPTION=Closed Helm
 RESOURCES=15 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 59.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4
@@ -439,8 +391,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS=101
 
-[ITEMDEF 04588]
-DEFNAME=i_HELMET_GOLD
+[ITEMDEF i_HELMET_GOLD]
 NAME=Golden Helmet
 ID=i_helm_open
 ARMOR=0 // 30
@@ -451,9 +402,7 @@ SUBSECTION=Golden
 DESCRIPTION=Helmet
 RESOURCES=15 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 59.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4
@@ -465,8 +414,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS=51
 
-[ITEMDEF 04589]
-DEFNAME=i_BASCINET_GOLD
+[ITEMDEF i_BASCINET_GOLD]
 NAME=Golden Bascinet
 ID=i_bascinet
 ARMOR=0 // 30
@@ -477,9 +425,7 @@ SUBSECTION=Golden
 DESCRIPTION=Bascinet
 RESOURCES=15 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 20.2
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4
@@ -491,8 +437,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS=101
 
-[ITEMDEF 0458a]
-DEFNAME=i_NOSE_HELM_GOLD
+[ITEMDEF i_NOSE_HELM_GOLD]
 NAME=Golden Nose Helm
 ID=i_helm_nose
 ARMOR=0 // 30
@@ -503,9 +448,7 @@ SUBSECTION=Golden
 DESCRIPTION=Nose Helm
 RESOURCES=15 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 59.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=4
 TAG.ResCold=4

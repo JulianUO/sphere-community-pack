@@ -42,7 +42,7 @@ scp.BardingSystem=1
 // Enable or disable a specific skill from the barding system
 // <boolean> (1 if enable, 0 if not). Default = 1
 scp.NewBarding_Peacemaking=1
-scp.NewBarding_Provocation=0 // NOT DONE!!
+scp.NewBarding_Provocation=0 // NOT TESTED. USE AT OWN RISK. (Report bugs if any)
 scp.NewBarding_Discordance=0 // NOT DONE!!
 
 // Enables, switch or disable the new crafting system
@@ -90,7 +90,7 @@ scp.Fishing_ChanceToAncient=4
 
 // Minimum fishing skill to be able to open a SOS Bottle
 // Setting this to 0 disables it. 
-scp.Fishing_MinToSosBottle=0 // NOT FINISHED YET!
+scp.Fishing_MinToSosBottle=0
 
 ///////////////////////////////////////////////////////////////
 //////// Skills Settings - Poisoning/Healing/Veterinary

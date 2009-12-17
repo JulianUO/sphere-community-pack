@@ -1,7 +1,4 @@
-[FUNCTION f_agapite_drop]
-
-[ITEMDEF 04780]
-DEFNAME=i_PLATEMAIL_chest_AGAPITE
+[ITEMDEF i_platemail_chest_agapite]
 NAME=Agapite Platemail
 ID=i_platemail_chest
 ARMOR=0 // 37
@@ -12,9 +9,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Platemail
 RESOURCES=25 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 78.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -25,17 +20,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04781]
-DEFNAME=i_PLATEMAIL_ARMS_AGAPITE
+[ITEMDEF i_platemail_arms_agapite]
 NAME=Agapite Platemail Arms
 ID=i_platemail_arms
 ARMOR=0 // 37
@@ -46,9 +31,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Platemail Arms
 RESOURCES=18 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 66.5
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -59,17 +42,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04782]
-DEFNAME=i_PLATEMAIL_leggings_AGAPITE
+[ITEMDEF i_PLATEMAIL_leggings_AGAPITE]
 NAME=Agapite Platemail Legs
 ID=i_platemail_leggings
 ARMOR=0 // 37
@@ -80,9 +53,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Platemail Legs
 RESOURCES=20 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 69.8
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -93,17 +64,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04783]
-DEFNAME=i_PLATE_HELM_AGAPITE
+[ITEMDEF i_PLATE_HELM_AGAPITE]
 NAME=Agapite Plate Helm
 ID=i_platemail_helm
 ARMOR=0 // 37
@@ -114,9 +75,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Plate Helm
 RESOURCES=15 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 61.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -127,17 +86,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={46 58}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04784]
-DEFNAME=i_PLATEMAIL_GORGET_AGAPITE
+[ITEMDEF i_PLATEMAIL_GORGET_AGAPITE]
 NAME=Agapite Platemail Gorget
 ID=i_platemail_gorget
 ARMOR=0 // 37
@@ -148,9 +97,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Platemail Gorget
 RESOURCES=10 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 53.4
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -161,17 +108,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04785]
-DEFNAME=i_PLATEMAIL_GLOVES_AGAPITE
+[ITEMDEF i_PLATEMAIL_GLOVES_AGAPITE]
 NAME=Agapite Platemail Gauntlets
 ID=i_platemail_gloves
 ARMOR=0 // 37
@@ -182,9 +119,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Platemail Gauntlets
 RESOURCES=12 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 56.7
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -195,17 +130,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04786]
-DEFNAME=i_FEMALE_PLATEMAIL_AGAPITE
+[ITEMDEF i_FEMALE_PLATEMAIL_AGAPITE]
 NAME=Agapite Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 22
@@ -216,9 +141,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Female Platemail
 RESOURCES=22 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 73.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=7
 TAG.ResFire=6
 TAG.ResCold=4
@@ -229,17 +152,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04787]
-DEFNAME=i_CHAINMAIL_COIF_AGAPITE
+[ITEMDEF i_CHAINMAIL_COIF_AGAPITE]
 NAME=Agapite Chainmail Coif
 ID=i_chainmail_coif
 ARMOR=0 // 27
@@ -250,9 +163,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Chainmail Coif
 RESOURCES=10 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 30.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=7
 TAG.ResCold=6
@@ -263,17 +174,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={36 44}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04788]
-DEFNAME=i_CHAINMAIL_LEGGINGS_AGAPITE
+[ITEMDEF i_CHAINMAIL_LEGGINGS_AGAPITE]
 NAME=Agapite Chainmail Leggings
 ID=i_chainmail_leggings
 ARMOR=0 // 27
@@ -284,9 +185,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Chainmail Leggings
 RESOURCES=18 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 34.1
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=6
 TAG.ResFire=7
 TAG.ResCold=6
@@ -297,17 +196,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={46 58}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04789]
-DEFNAME=i_CHAINMAIL_TUNIC_AGAPITE
+[ITEMDEF i_CHAINMAIL_TUNIC_AGAPITE]
 NAME=Agapite Chainmail Tunic
 ID=i_chainmail_tunic
 ARMOR=0 // 27
@@ -318,9 +207,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Chainmail Tunic
 RESOURCES=20 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 46.8
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=6
 TAG.ResFire=7
 TAG.ResCold=6
@@ -331,17 +218,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={46 58}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 0478a]
-DEFNAME=i_RINGMAIL_LEGGINGS_AGAPITE
+[ITEMDEF i_RINGMAIL_LEGGINGS_AGAPITE]
 NAME=Agapite Ringmail Leggings
 ID=i_ringmail_leggings
 ARMOR=0 // 22
@@ -352,9 +229,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Ringmail Leggings
 RESOURCES=16 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 30.6
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=3
@@ -365,17 +240,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={41 51}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 0478b]
-DEFNAME=i_RINGMAIL_SLEEVES_AGAPITE
+[ITEMDEF i_RINGMAIL_SLEEVES_AGAPITE]
 NAME=Agapite Ringmail Sleeves
 ID=i_ringmail_sleeves
 ARMOR=0 // 22
@@ -386,9 +251,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Ringmail Sleeves
 RESOURCES=14 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 27.3
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=3
@@ -399,17 +262,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={41 51}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 0478c]
-DEFNAME=i_RINGMAIL_GLOVES_AGAPITE
+[ITEMDEF i_RINGMAIL_GLOVES_AGAPITE]
 NAME=Agapite Ringmail Gloves
 ID=i_ringmail_gloves
 ARMOR=0 // 22
@@ -420,9 +273,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Ringmail Gloves
 RESOURCES=10 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 20.8
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=3
@@ -433,17 +284,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={41 51}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 0478d]
-DEFNAME=i_RINGMAIL_TUNIC_AGAPITE
+[ITEMDEF i_RINGMAIL_TUNIC_AGAPITE]
 NAME=Agapite Ringmail Tunic
 ID=i_ringmail_tunic
 ARMOR=0 // 22
@@ -454,9 +295,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Ringmail Tunic
 RESOURCES=18 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 34.1
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=3
@@ -467,17 +306,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={41 51}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 0478e]
-DEFNAME=i_BUCKLER_SHIELD_AGAPITE
+[ITEMDEF i_BUCKLER_SHIELD_AGAPITE]
 NAME=Agapite Buckler
 ID=i_shield_buckler
 ARMOR=0 // 9
@@ -493,17 +322,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={41 51}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 0478f]
-DEFNAME=i_HEATER_SHIELD_AGAPITE
+[ITEMDEF i_HEATER_SHIELD_AGAPITE]
 NAME=Agapite Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 25
@@ -519,17 +338,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={31 37}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04790]
-DEFNAME=i_METAL_SHIELD_AGAPITE
+[ITEMDEF i_METAL_SHIELD_AGAPITE]
 NAME=Agapite Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 13
@@ -545,17 +354,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04791]
-DEFNAME=i_CLOSED_HELM_AGAPITE
+[ITEMDEF i_CLOSED_HELM_AGAPITE]
 NAME=Agapite Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 37
@@ -566,9 +365,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Closed Helm
 RESOURCES=15 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 61.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=5
@@ -579,17 +376,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={101 115}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04792]
-DEFNAME=i_HELMET_AGAPITE
+[ITEMDEF i_HELMET_AGAPITE]
 NAME=Agapite Helmet
 ID=i_helm_open
 ARMOR=0 // 37
@@ -600,9 +387,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Helmet
 RESOURCES=15 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 61.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=5
@@ -613,17 +398,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04793]
-DEFNAME=i_BASCINET_AGAPITE
+[ITEMDEF i_BASCINET_AGAPITE]
 NAME=Agapite Bascinet
 ID=i_bascinet
 ARMOR=0 // 37
@@ -634,9 +409,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Bascinet
 RESOURCES=15 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 22.2
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=5
@@ -647,17 +420,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={101 115}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif
-
-[ITEMDEF 04794]
-DEFNAME=i_NOSE_HELM_AGAPITE
+[ITEMDEF i_NOSE_HELM_AGAPITE]
 NAME=Agapite Nose Helm
 ID=i_helm_nose
 ARMOR=0 // 37
@@ -668,9 +431,7 @@ SUBSECTION=Agapite
 DESCRIPTION=Nose Helm
 RESOURCES=15 i_ingot_agapite
 SKILLMAKE=BLACKSMITHING 61.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=5
@@ -680,12 +441,3 @@ TAG.ResEnergy=5
 ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={101 115}
-
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_agapite_drop
-		return 1
-	endif

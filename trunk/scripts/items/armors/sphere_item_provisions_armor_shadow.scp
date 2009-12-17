@@ -1,7 +1,4 @@
-[FUNCTION f_shadow_curse]
-
-[ITEMDEF 04755]
-DEFNAME=i_PLATEMAIL_chest_SHADOW
+[ITEMDEF i_PLATEMAIL_chest_SHADOW]
 NAME=Shadow Platemail
 ID=i_platemail_chest
 ARMOR=0 // 37
@@ -12,9 +9,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Platemail
 RESOURCES=25 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 76.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=7
 TAG.ResFire=4
 TAG.ResCold=2
@@ -25,17 +20,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS=100
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04756]
-DEFNAME=i_PLATEMAIL_ARMS_SHADOW
+[ITEMDEF i_PLATEMAIL_ARMS_SHADOW]
 NAME=Shadow Platemail Arms
 ID=i_platemail_arms
 ARMOR=0 // 37
@@ -46,9 +31,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Platemail Arms
 RESOURCES=18 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 64.5
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=4
 TAG.ResCold=2
@@ -59,17 +42,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS=100
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04757]
-DEFNAME=i_PLATEMAIL_leggings_SHADOW
+[ITEMDEF i_PLATEMAIL_leggings_SHADOW]
 NAME=Shadow Platemail Legs
 ID=i_platemail_leggings
 ARMOR=0 // 37
@@ -80,9 +53,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Platemail Legs
 RESOURCES=20 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 67.8
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=7
 TAG.ResFire=4
 TAG.ResCold=2
@@ -93,17 +64,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS=100
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04758]
-DEFNAME=i_PLATE_HELM_SHADOW
+[ITEMDEF i_PLATE_HELM_SHADOW]
 NAME=Shadow Plate Helm
 ID=i_platemail_helm
 ARMOR=0 // 37
@@ -114,9 +75,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Plate Helm
 RESOURCES=15 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 59.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=4
 TAG.ResCold=2
@@ -127,17 +86,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={46 58}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04759]
-DEFNAME=i_PLATEMAIL_GORGET_SHADOW
+[ITEMDEF i_PLATEMAIL_GORGET_SHADOW]
 NAME=Shadow Platemail Gorget
 ID=i_platemail_gorget
 ARMOR=0 // 37
@@ -148,9 +97,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Platemail Gorget
 RESOURCES=10 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 51.4
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=7
 TAG.ResFire=4
 TAG.ResCold=2
@@ -161,17 +108,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS=100
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 0475a]
-DEFNAME=i_PLATEMAIL_GLOVES_SHADOW
+[ITEMDEF i_PLATEMAIL_GLOVES_SHADOW]
 NAME=Shadow Platemail Gauntlets
 ID=i_platemail_gloves
 ARMOR=0 // 37
@@ -182,9 +119,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Platemail Gauntlets
 RESOURCES=12 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 54.7
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=7
 TAG.ResFire=4
 TAG.ResCold=2
@@ -195,17 +130,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS=100
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 0475b]
-DEFNAME=i_FEMALE_PLATEMAIL_SHADOW
+[ITEMDEF i_FEMALE_PLATEMAIL_SHADOW]
 NAME=Shadow Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 22
@@ -216,9 +141,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Female Platemail
 RESOURCES=22 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 71.0
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=7
 TAG.ResFire=4
 TAG.ResCold=2
@@ -229,17 +152,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS=100
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 0475c]
-DEFNAME=i_CHAINMAIL_COIF_SHADOW
+[ITEMDEF i_CHAINMAIL_COIF_SHADOW]
 NAME=Shadow Chainmail Coif
 ID=i_chainmail_coif
 ARMOR=0 // 27
@@ -250,9 +163,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Chainmail Coif
 RESOURCES=10 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 28.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=6
 TAG.ResFire=5
 TAG.ResCold=4
@@ -263,17 +174,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={36 44}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 0475d]
-DEFNAME=i_CHAINMAIL_LEGGINGS_SHADOW
+[ITEMDEF i_CHAINMAIL_LEGGINGS_SHADOW]
 NAME=Shadow Chainmail Leggings
 ID=i_chainmail_leggings
 ARMOR=0 // 27
@@ -284,9 +185,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Chainmail Leggings
 RESOURCES=18 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 32.1
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=6
 TAG.ResFire=5
 TAG.ResCold=4
@@ -297,17 +196,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={46 58}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 0475e]
-DEFNAME=i_CHAINMAIL_TUNIC_SHADOW
+[ITEMDEF i_CHAINMAIL_TUNIC_SHADOW]
 NAME=Shadow Chainmail Tunic
 ID=i_chainmail_tunic
 ARMOR=0 // 27
@@ -318,9 +207,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Chainmail Tunic
 RESOURCES=20 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 44.8
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=6
 TAG.ResFire=5
 TAG.ResCold=4
@@ -331,17 +218,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={46 58}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 0475f]
-DEFNAME=i_RINGMAIL_LEGGINGS_SHADOW
+[ITEMDEF i_RINGMAIL_LEGGINGS_SHADOW]
 NAME=Shadow Ringmail Leggings
 ID=i_ringmail_leggings
 ARMOR=0 // 22
@@ -352,9 +229,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Ringmail Leggings
 RESOURCES=16 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 28.6
-
 TAG.Penalty.Stealth = 15
-
 TAG.ResPhysical=5
 TAG.ResFire=4
 TAG.ResCold=1
@@ -365,17 +240,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={41 51}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04760]
-DEFNAME=i_RINGMAIL_SLEEVES_SHADOW
+[ITEMDEF i_RINGMAIL_SLEEVES_SHADOW]
 NAME=Shadow Ringmail Sleeves
 ID=i_ringmail_sleeves
 ARMOR=0 // 22
@@ -386,9 +251,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Ringmail Sleeves
 RESOURCES=14 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 25.3
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=5
 TAG.ResFire=4
 TAG.ResCold=1
@@ -399,17 +262,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={41 51}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04761]
-DEFNAME=i_RINGMAIL_GLOVES_SHADOW
+[ITEMDEF i_RINGMAIL_GLOVES_SHADOW]
 NAME=Shadow Ringmail Gloves
 ID=i_ringmail_gloves
 ARMOR=0 // 22
@@ -420,31 +273,18 @@ SUBSECTION=Shadow
 DESCRIPTION=Ringmail Gloves
 RESOURCES=10 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 18.8
-
 TAG.Penalty.Stealth = 5
-
 TAG.ResPhysical=5
 TAG.ResFire=4
 TAG.ResCold=1
 TAG.ResPoison=5
 TAG.ResEnergy=8
 
-
 ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={41 51}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04762]
-DEFNAME=i_RINGMAIL_TUNIC_SHADOW
+[ITEMDEF i_RINGMAIL_TUNIC_SHADOW]
 NAME=Shadow Ringmail Tunic
 ID=i_ringmail_tunic
 ARMOR=0 // 22
@@ -455,31 +295,18 @@ SUBSECTION=Shadow
 DESCRIPTION=Ringmail Tunic
 RESOURCES=18 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 32.1
-
 TAG.Penalty.Stealth = 25
-
 TAG.ResPhysical=5
 TAG.ResFire=4
 TAG.ResCold=1
 TAG.ResPoison=5
 TAG.ResEnergy=8
 
-
 ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={41 51}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04763]
-DEFNAME=i_BUCKLER_SHIELD_SHADOW
+[ITEMDEF i_BUCKLER_SHIELD_SHADOW]
 NAME=Shadow Buckler
 ID=i_shield_buckler
 ARMOR=0 // 9
@@ -495,17 +322,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={41 51}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04764]
-DEFNAME=i_HEATER_SHIELD_SHADOW
+[ITEMDEF i_HEATER_SHIELD_SHADOW]
 NAME=Shadow Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 25
@@ -521,17 +338,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={31 37}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04765]
-DEFNAME=i_METAL_SHIELD_SHADOW
+[ITEMDEF i_METAL_SHIELD_SHADOW]
 NAME=Shadow Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 13
@@ -547,17 +354,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS=100
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04766]
-DEFNAME=i_CLOSED_HELM_SHADOW
+[ITEMDEF i_CLOSED_HELM_SHADOW]
 NAME=Shadow Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 37
@@ -568,9 +365,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Closed Helm
 RESOURCES=15 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 59.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=4
 TAG.ResCold=2
@@ -581,17 +376,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={101 115}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04767]
-DEFNAME=i_HELMET_SHADOW
+[ITEMDEF i_HELMET_SHADOW]
 NAME=Shadow Helmet
 ID=i_helm_open
 ARMOR=0 // 37
@@ -602,9 +387,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Helmet
 RESOURCES=15 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 59.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=4
 TAG.ResCold=2
@@ -615,17 +398,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS=100
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04768]
-DEFNAME=i_BASCINET_SHADOW
+[ITEMDEF i_BASCINET_SHADOW]
 NAME=Shadow Bascinet
 ID=i_bascinet
 ARMOR=0 // 37
@@ -636,9 +409,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Bascinet
 RESOURCES=15 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 20.2
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=4
 TAG.ResCold=2
@@ -649,17 +420,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={101 115}
 
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
-
-[ITEMDEF 04769]
-DEFNAME=i_NOSE_HELM_SHADOW
+[ITEMDEF i_NOSE_HELM_SHADOW]
 NAME=Shadow Bascinet
 ID=i_helm_nose
 ARMOR=0 // 37
@@ -670,9 +431,7 @@ SUBSECTION=Shadow
 DESCRIPTION=Bascinet
 RESOURCES=15 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 59.6
-
 TAG.Penalty.Stealth = 10
-
 TAG.ResPhysical=7
 TAG.ResFire=4
 TAG.ResCold=2
@@ -682,14 +441,5 @@ TAG.ResEnergy=7
 ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={101 115}
-
-ON=@Equip
-	TIMER=1
-
-ON=@Timer
-	if <cont>
-		f_shadow_curse
-		return 1
-	endif
 	
 [eof]
