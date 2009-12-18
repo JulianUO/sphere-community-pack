@@ -20,10 +20,42 @@ BONUS_INT=5
 BONUS_STATS=20
 ADV_RATE=10.0,200.0,800.0
 
-ON=@Fail
-	SRC.SYSMESSAGE You lose your concentration.
+on=@select
+if <def.scp.NewSkills_Meditation> == 1
+	if !<canmeditate>
+	return 1
+	endif
+endif
 
-ON=@Abort
-	SRC.SYSMESSAGE You stop concentrating.
+ON=@success
+if <mana> == <maxmana>
+tag.meditation.active
+return 0
+endif
+tag.meditation.active = 1
+
+ON=@fail
+SRC.SYSMESSAGE You lose your concentration.
+
+on=@abort
+src.sysmessage <def.scp.meditation_abort>
+
+
+[function canmeditate]
+if <def.scp.Meditation_HandsFree> == 1
+	if <findlayer.1.uid> || <findlayer.2.uid>
+	sysmessage <def.scp.meditation_handsfree>
+	return 0
+	endif
+endif
+if <def.scp.Meditation_ArmorPenalty> == 1
+	for 3 24
+		if <findlayer.<local._for>.tag0.penalty.meditation>
+		sysmessage <def.scp.meditation_armorpenalty>
+		return 0
+		endif
+	endfor
+endif
+return 1
 
 [eof]

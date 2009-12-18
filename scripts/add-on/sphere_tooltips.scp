@@ -24,13 +24,13 @@ addcliloc 1042971,<act.name>
 if !<isnum <act.tag0.exceptional>>
 addcliloc 1050043,<act.tag0.exceptional> // crafted by ~1_NAME~
 endif
-for 1 <def.enchant.amount>
-	if <act.isevent.<def.enchant.<dlocal._for>.type>>
-		if <isnum <def.enchant.<dlocal._for>.cliloc>>
-		args = <def.enchant.<dlocal._for>.input>
-		addcliloc <def.enchant.<dlocal._for>.cliloc>,<act.dtag0.<argv[1]>>
-		else		
-		addcliloc <<def.enchant.<dlocal._for>.cliloc>>
+for 1 <def.itemprops>
+local.clil = <getargv 0 <def.itemprop_<local._for>>>
+	if <local.clil> < 0
+	<getargv 5 <def.itemprop_<local._for>>>_cliloc
+	elif <local.clil> > 0
+		if <tag0.<getargv 5 <def.itemprop_<local._for>>>>
+		addcliloc <local.clil>,<tag0.<getargv 5 <def.itemprop_<local._for>>>>
 		endif
 	endif
 endfor

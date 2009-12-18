@@ -33,7 +33,7 @@ VERSION=0.56b
 // scp.ItemProp_Resistances
 // *DONE* scp.ItemProp_DamageIncrease
 // scp.ItemProp_DefenseChanceIncrease // ATTACH TO COMBAT SYS
-// scp.ItemProp_DexterityBonus
+// *DONE* scp.ItemProp_DexterityBonus
 // scp.ItemProp_EnhancePotion
 // *DONE* scp.ItemProp_FasterCastRecovery
 // *DONE* scp.ItemProp_FasterCasting
@@ -45,29 +45,46 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_HitManaLeech
 // *DONE* scp.ItemProp_HitPointRegeneracion
 // *DONE* scp.ItemProp_HitStaminaLeech
-// scp.ItemProp_HitPointIncrease
-// scp.ItemProp_IntelligenceBonus
+// *DONE* scp.ItemProp_HitPointIncrease
+// *DONE* scp.ItemProp_IntelligenceBonus
 // *DONE* scp.ItemProp_LowerManaCost
 // scp.ItemProp_LowerReagentCost
 // scp.ItemProp_Luck
 // *DONE* scp.ItemProp_MageArmor
 // *DONE* scp.ItemProp_MageWeapon
-// scp.ItemProp_ManaIncrease
+// *DONE* scp.ItemProp_ManaIncrease
 // *DONE* scp.ItemProp_ManaRegeneration
 // scp.ItemProp_ReflectPhysicalDamage
-// scp.ItemProp_SelfRepair
-// scp.ItemProp_Slayer
+// *DONE* scp.ItemProp_SelfRepair
+// *DONE* scp.ItemProp_Slayer
 // scp.ItemProp_SkillBonus
 // scp.ItemProp_SpellChanneling
-// scp.ItemProp_SpellDamageIncrease
-// scp.ItemProp_StaminaIncrease
+// *DONE* scp.ItemProp_SpellDamageIncrease
+// *DONE* scp.ItemProp_StaminaIncrease
 // scp.ItemProp_StaminaRegeneration
-// scp.ItemProp_StrengthBonus
+// *DONE* scp.ItemProp_StrengthBonus
 // scp.ItemProp_SwingSpeedIncrease
 // scp.ItemProp_BestWeaponSkill
 
+[function getargv]
+local.toret = <strarg <args>>
+args = <streat <args>>
+return <argv[<local.toret>]>
+
 [events e_PlayerPropertiesEvent]
 on=@userstats
+// Hit Point Increase, just add the TAG or Cap (whichever is smaller) to the maxhits
+// Safe zone since EVENTS on EventsPlayer are called last.
+// Same goes for ManaIncrease, StaminaIncrease
+if <def.scp.ItemProp_HitPointIncrease> == 1
+maxhits += <min <tag0.HitPointIncrease>,<getargv 3 <def.itemprop_010>>>
+endif
+if <def.scp.ItemProp_ManaIncrease> == 1
+maxmana += <min <tag0.ManaIncrease>,<getargv 3 <def.itemprop_017>>>
+endif
+if <def.scp.ItemProp_StaminaIncrease> == 1
+maxstam += <min <tag0.StaminaIncrease>,<getargv 3 <def.itemprop_01f>>>
+endif
 // Hit Point Generation increases value in the regeneration
 // Formula: (0.1 * intensity)
 if <def.scp.ItemProp_HitPointRegeneration> == 1
@@ -79,9 +96,9 @@ endif
 if <def.scp.NewSkills_Meditation> == 1
 	if <def.scp.Meditation_PassiveRegen> == 1
 		if <meditation> > 99.9 // GM Meditation or better gets 10% bonus.
-		local.MRmi = <eval (1.1 * (((<meditation>/10) * 3) + <int>)) / 40)>
+		local.MRmi = <feval <floatval (1.1 * ((<meditation> * 3) + <int>)) / 40)>>
 		else
-		local.MRmi = <eval (((<meditation>/10) * 3) + <int>) / 40>
+		local.MRmi = <feval <floatval ((<meditation> * 3) + <int>) / 40>>
 		endif
 		if <tag0.active.medit>
 		local.MRmi *= 2 // Active Meditation gets regen * 2
@@ -101,7 +118,6 @@ local.MRe = <tag0.ManaRegeneration>
 	local.MRe = <getargv 3 <def.itemprop_018>>
 	endif
 else
-local.MRe = 0
 endif
 local.MRt = <eval 2 + <local.MRmi> + <local.MRf> + <local.MRe>> // This is the amount of points in 10 seconds
 tag0.override.regenval_1 = <eval <local.MRt> / 10> // So we get the 1 second value this way =)
@@ -186,11 +202,13 @@ endif
 // Lesser Slayers do x3 damage while Super Slayers do x2.
 if <def.scp.ItemProp_Slayer> == 1
 	if !<isempty <argo.uid>>
-		if <argo.tag0.slayer>
-			if <src.tag0.slayer>
-				if (<argo.tag0.slayer> & <src.tag0.slayer>)
-				argn1 *= <qval (<islesserslayer <argo.tag0.slayer>>) ? 3 : 2>
-				endif
+		if <src.tag0.slayer.less>
+			if <argo.tag0.slayer.less> == <src.tag0.slayer>
+			argn1 *= 3
+			endif
+		elif <src.tag0.slayer.super>
+			if <argo.tag0.slayer.super>&<src.tag0.slayer>
+			argn1 *= 2
 			endif
 		endif
 	endif

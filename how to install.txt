@@ -22,6 +22,14 @@ INSTALLATION AND USAGE INSTRUCTIONS
   * e_PlayerPropertiesEvent: Item Magical Properties (Experimental - Not Recommended)
   * e_PlayerTooltipEvent: New Item Tooltips Generator (Experimental - Not Recommended)
 
+- Other *needed* settings:
+  Mana, Stamina, Dexterity Regeneration, in EA they use 10-second gains for stats.
+  Our systems calculate the amount of points regenerated every 10 seconds.
+  Check your ini for the following settings and edit them to fit the example here:
+  Regen0=10
+  Regen1=10
+  Regen2=10
+
 - To configure the system, check in your scripts folder the file:
   scripts/add-on/sphere_settings.scp
 
