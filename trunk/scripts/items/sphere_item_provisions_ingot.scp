@@ -63,7 +63,8 @@ DESCRIPTION=Shadow Ingot
 ON=@Create
 COLOR=color_o_shadow
 
-[ITEMDEF i_ingot_copper]
+[ITEMDEF 01be3]
+DEFNAME=i_ingot_copper
 TYPE=T_INGOT
 RESOURCES=i_ore_copper
 SKILLMAKE=MINING 75.0
