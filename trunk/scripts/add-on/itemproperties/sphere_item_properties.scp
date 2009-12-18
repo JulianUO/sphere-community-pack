@@ -34,9 +34,11 @@ IPT_DEFAULT	04	// Use default Char Properties.
 
 
 [defname SphereCommunityPack_ItemProperties]
+itemprops = 023
+
 // #name,min,max,cap,type,input,items
 itemprop_01	"1060401,1,25,100,01,damageincrease,040"
-itemprop_02	"1060402,1,50,100,01,damageincrease,03"
+itemprop_02	"0,1,50,100,01,damageincrease,03"
 itemprop_03	"1060408,1,15,45,01,defensechanceincrease,053"
 itemprop_04	"1060409,1,8,16,01,dexteritybonus,040"
 itemprop_05	"1060411,5,25,80,01,enhancepotion,040"
@@ -79,47 +81,11 @@ itemprop_023	"1060400,0,0,0,02,f_bestweaponskill,03"
 // don't have idea how to script them right now
 // or too lazy to think a solution
 // - nightsight
-// - self repair
-// - slayer
 
 // too lazy to do it
 // - skill bonus
 
 [defname SphereCommunityPack_ItemProperties_Settings]
-scp.ItemProp_Resistances=1 // Cold, Fire, Physical, Energy Resist
-scp.ItemProp_DamageIncrease=1
-scp.ItemProp_DefenseChanceIncrease
-scp.ItemProp_DexterityBonus
-scp.ItemProp_EnhancePotion
-scp.ItemProp_FasterCastRecovery
-scp.ItemProp_FasterCasting
-scp.ItemProp_HitChanceIncrease
-scp.ItemProp_HitDispel
-scp.ItemProp_HitLifeLeech
-scp.ItemProp_HitLowerAttack
-scp.ItemProp_HitLowerDefense
-scp.ItemProp_HitManaLeech
-scp.ItemProp_HitPointRegeneracion
-scp.ItemProp_HitStaminaLeech
-scp.ItemProp_HitPointIncrease
-scp.ItemProp_IntelligenceBonus
-scp.ItemProp_LowerManaCost
-scp.ItemProp_LowerReagentCost
-scp.ItemProp_Luck
-scp.ItemProp_MageArmor
-scp.ItemProp_MageWeapon
-scp.ItemProp_ManaIncrease
-scp.ItemProp_ManaRegeneration
-scp.ItemProp_ReflectPhysicalDamage
-scp.ItemProp_SelfRepair
-scp.ItemProp_Slayer
-scp.ItemProp_SkillBonus
-scp.ItemProp_SpellChanneling
-scp.ItemProp_SpellDamageIncrease
-scp.ItemProp_StaminaIncrease
-scp.ItemProp_StaminaRegeneration
-scp.ItemProp_StrengthBonus
-scp.ItemProp_SwingSpeedIncrease
-scp.ItemProp_BestWeaponSkill
+//scp.ItemProp_Resistances=1 // Cold, Fire, Physical, Energy Resist
 
 [eof]

@@ -1,0 +1,25 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+//
+
+[function f_slayer_cliloc]
+if <act.tag0.slayer.less>
+addcliloc <def.slayer_<act.tag0.slayer.less>_cliloc>
+elif <act.tag0.slayer.super>
+addcliloc <def.slayer_<act.tag0.slayer.super>_cliloc>
+endif
+
+[function f_skillbonus_cliloc]
+
+[eof]

@@ -66,9 +66,52 @@ endif
 if <tag0.hitstaminaleech>
 src.tag0.hitstaminaleech += <tag0.hitstaminaleech>
 endif
-//if <tag0.>
-//src.tag0. += <tag0.>
-//endif
+if <tag0.hitpointincrease>
+src.tag0.hitpointincrease += <tag0.hitpointincrease>
+endif
+if <tag0.intelligencebonus>
+src.modint += <tag0.intelligencebonus>
+endif
+if <tag0.lowermanacost>
+src.tag0.lowermanacost += <tag0.lowermanacost>
+endif
+if <tag0.lowerreagentcost>
+src.tag0.lowerreagentcost += <tag0.lowerreagentcost>
+endif
+if <tag0.luck>
+src.luck += <tag0.luck>
+endif
+// Mage Armor
+// Mage Weapon -- These two have to be set on the item ONLY.
+if <tag0.manaincrease>
+src.tag0.manaincrease += <tag0.manaincrease>
+endif
+if <tag0.manaregeneration>
+src.tag0.manaregeneration += <tag0.manaregeneration>
+endif
+if <tag0.ReflectPhysicalDamage>
+src.tag0.ReflectPhysicalDamage += <tag0.ReflectPhysicalDamage>
+endif
+// Self Repair - Only on item
+// Slayer - Only on item
+// Skill Bonus - Not resolved
+// Spell Channeling - Not resolved
+if <tag0.SpellDamageIncrease>
+src.tag0.SpellDamageIncrease += <tag0.SpellDamageIncrease>
+endif
+if <tag0.StaminaIncrease>
+src.tag0.StaminaIncrease += <tag0.StaminaIncrease>
+endif
+if <tag0.StaminaRegeneration>
+src.tag0.StaminaRegeneration += <tag0.StaminaRegeneration>
+endif
+if <tag0.StrengthBonus>
+src.modstr += <tag0.StrengthBonus>
+endif
+if <tag0.SwingSpeedIncrease>
+src.tag0.SwingSpeedIncrease += <tag0.SwingSpeedIncrease>
+endif
+// Best Weapon - Only on item
 
 on=@unequip
 if <tag0.damageincrease>

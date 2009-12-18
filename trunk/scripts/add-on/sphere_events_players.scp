@@ -33,26 +33,6 @@ VERSION=0.56b
 // - Mind Blast damage: Base Damage + ((Magery + Intelligence) / 5) (Drop decimals from result)
 // * Spell Damage Increase Items effects are capped at 15% in Player vs. Player combat.
 
-// SCRIPTPACK ENCHANTS
-// -------------------
-// *DONE* Damage Increase
-// Defense Chance Increase (Depends on Combat System)
-// *DONE* Dexterity Bonus
-// *DONE* Faster Cast Recovery
-// Faster Casting (Not even started)
-// Hit Chance Increase (Depends on Combat System)
-// *DONE* Hitpoints Increase
-// *DONE* Intelligence Bonus
-// *DONE* Lower Mana Cost
-// *DONE* Lower Reagent Cost
-// Luck (There's no real effect on this one)
-// *DONE* Mage Armor
-// *DONE* Mage Weapon
-// *DONE* Mana Increase
-// Slayer Weapon (Uncomplete, need to add different types of slayers, etc)
-// *DONE* Spell Damage Increase
-// *DONE* Strength Bonus
-
 [events e_PlayerGenericEvent]
 // New @SkillPreSelect Trigger
 on=@userextcmd
@@ -63,12 +43,10 @@ if <argn1> == 36
 endif
 
 on=@skillpreselect
-// Skill recovery snippet
 if <tag0.skillrecovery> > <serv.time>
 src.sysmessage <def.scp.skill_mustwait>
 return 1
 endif
-
 if <argn1> == 21
 	if <def.scp.NewSkills_Hiding>
 	f_start_hiding
@@ -129,9 +107,9 @@ if <def.scp.Followers> == 1
 maxfollower = <def.scp.MaxFollowers>
 endif
 if <def.scp.OSIStats> == 1
-maxhits = <eval (<str>/2) + <modstr> + 50 + <tag0.modmaxhits>> 
-maxmana = <eval <int> + <modint> + <tag0.modmaxmana>>
-maxstam = <eval <dex> + <moddex> + <tag0.modmaxstam>>
+maxhits = <eval (<str>/2) + <modstr> + 50> 
+maxmana = <eval <int> + <modint>>
+maxstam = <eval <dex> + <moddex>>
 endif
 
 // Followers control
@@ -176,10 +154,6 @@ if <def.scp.MagicProperties_LowerReagentCost> == 1
 		endif
 	return 6
 	endif
-else
-	if <def.scp.MagicProperties_LowerManaCost> == 1
-	argn2 = <eval (<argn2> * (<tag0.LowerManaCost> + 1)) / 100>
-	endif
 endif
 
 // Necromancy Words of Power
@@ -213,50 +187,10 @@ if !<npc>
 		endif
 	endif
 endif
-if <def.scp.MagicProperties_MageWeapon> == 1
-	if <argn1> != 104 // exception for Curse Weapon
-		if <findlayer.1.uid>
-			if !(<findlayer.1.istevent.t_enchant_mage_weapon>) || (<findlayer.1.type> == t_wand)
-			findlayer.1.unequip
-			endif
-		endif
-	endif
-endif
-if <findlayer.2.uid>
-	if <findlayer.2.isweapon>
-		if <argn1> != 104 // exception for Curse Weapon
-			if <def.scp.MagicProperties_MageWeapon> == 1
-				if !(<findlayer.2.istevent.t_enchant_mage_weapon>)
-				findlayer.2.unequip
-				endif
-			endif
-		endif
-	else
-		if <def.scp.MagicProperties_MageArmor> == 1
-			if !(<findlayer.2.istevent.t_enchant_mage_armor>)
-			findlayer.2.unequip
-			endif
-		endif
-	endif
-endif
-if <def.scp.MagicProperties_MageArmor> == 1
-	for 1 <def.armor_amount>
-	ref5 = <findlayer.<def.armor_part_<dlocal._for>>.uid>
-		if <ref5.type> == t_armor
-			if !(<ref5.istevent.t_enchant_mage_armor>)
-			src.sysmessage You can't cast with this armor (<ref5.name>).
-			return 1
-			endif
-		endif
-	endfor
-endif
 
 // OSI Spells Bonus
 // Magic Resistance Skill + Magic Reflection Spell
 on=@spelleffect
-if <def.scp.MagicProperties_FasterCastRecovery> == 1
-src.tag0.spellrecovery = <eval <serv.time>+(12-(<min <eval <src.tag0.fastercastrecovery>*2>,12>))>
-endif
 if <isdamagespell <argn1>>
 tag0.gothitbyspell = <argn1>
 endif
@@ -298,22 +232,6 @@ return 2
 // Slayer Weapons + New Parrying 
 // Damage Increase
 on=@hit
-if <def.scp.MagicProperties_SlayerWeapon> == 1
-	if <src.brain>
-		if <argo.istevent.t_enchant_slayer_weapon>
-			if (strmatch(*<src.baseid>*,<def.<argo.tag0.slayergroup>_slayer>))
-			argn1 *= 2
-			src.effect 3,i_fx_glow,16,15,15
-			endif
-		endif
-	endif
-endif
-if <def.scp.MagicProperties_DamageIncrease> == 1
-	if <tag0.damageincrease>
-	local.damageincrease = <qval (<tag0.damageincrease> >= <def.enchant.1.limit>) ? <def.enchant.1.limit> : <tag0.damageincrease>>
-	argn1 += <eval ((<local.damageincrease>*<argn1>)/100)+1>
-	endif
-endif
 if (<src.findlayer.1>) || (<src.findlayer.2>)
 	if <src.f_cs_chancetoblock> > <r>
 		if (<src.findlayer.2.type> == t_shield) || (<src.findlayer.2.isweapon>)
@@ -336,10 +254,6 @@ endif
 // OSI Spells Bonus
 on=@gethit
 if <def.scp.OSISpellDamage> == 0
-	if <def.scp.MagicProperties_SpellDamageIncrease> == 1
-	argn1 += <qval (<src.tag.spelldamageincrease> > 15) ? 15 : <src.tag.spelldamageincrease>>
-	return 0
-	endif
 return 0
 endif
 if <tag0.gothitbyspell>
@@ -349,9 +263,9 @@ local.damageinc = <eval <src.int>/10>
 	if <src.inscription> >= 100.0
 	local.damageinc += 10
 	endif
-	if <def.scp.MagicProperties_SpellDamageIncrease> == 1
-		if <src.tag0.spelldamageincrease>
-		local.damageinc += <qval (<src.tag.spelldamageincrease> > 15) ? 15 : <src.tag.spelldamageincrease>>
+	if <def.scp.ItemProp_SpellDamageIncrease> == 1
+		if <src.tag0.SpellDamageIncrease>
+		local.damageinc += <qval (<src.tag.SpellDamageIncrease> > 15) ? 15 : <src.tag.SpellDamageIncrease>>
 		endif
 	endif
 argn1 = <eval <local.damage>*<local.evalint>>
