@@ -70,6 +70,7 @@ src.remove_invalid_houses
 //	  0 --> normal action (save)
 //	  1 --> denyes save
 [FUNCTION f_onserver_save]
+serv.savestatics
 
 
 // This function is called after server has saved correctly (once per stage with background save).
