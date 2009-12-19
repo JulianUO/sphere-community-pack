@@ -38,20 +38,20 @@ ON=@fail
 SRC.SYSMESSAGE You lose your concentration.
 
 on=@abort
-src.sysmessage <def.scp.meditation_abort>
+src.sysmessage <def.scp.medit_msg_abort>
 
 
 [function canmeditate]
 if <def.scp.Meditation_HandsFree> == 1
 	if <findlayer.1.uid> || <findlayer.2.uid>
-	sysmessage <def.scp.meditation_handsfree>
+	sysmessage <def.scp.medit_msg_handsfree>
 	return 0
 	endif
 endif
 if <def.scp.Meditation_ArmorPenalty> == 1
 	for 3 24
 		if <findlayer.<local._for>.tag0.penalty.meditation>
-		sysmessage <def.scp.meditation_armorpenalty>
+		sysmessage <def.scp.medit_msg_armorpenalty>
 		return 0
 		endif
 	endfor
