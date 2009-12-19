@@ -2,7 +2,7 @@ SPHERE COMMUNITY PACK - README
 INSTALLATION AND USAGE INSTRUCTIONS
 -----------------------------------
 
-1. Requeriments
+1. Requirements
 - SphereServer 0.56b Lastest (Do'h)
 
 2. Instructions
@@ -17,6 +17,8 @@ INSTALLATION AND USAGE INSTRUCTIONS
 
 - To enable optional/experimental systems, add the following events:
   (NOTE: Attach the events at the end of the lines in the last step)
+  EventsPet=e_NpcPropertiesEvent
+  * e_NpcPropertiesEvent: NPC Loot Generator
   EventsPlayer=e_new_combat_code,e_PlayerPropertiesEvent,e_PlayerTooltipEvent
   * e_new_combat_code: New Combat System (Optional)
   * e_PlayerPropertiesEvent: Item Magical Properties (Experimental - Not Recommended)
