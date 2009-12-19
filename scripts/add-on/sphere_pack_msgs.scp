@@ -99,9 +99,9 @@ scp.jail_cannotmyself		"@,,2 503315"	// Congrats, you've successfully jailed you
 scp.jail_jailed			"@,,2 503268"	// You've been jailed!
 scp.jail_unjailed		"@,,2 503267"	// You've been unjailed!
 
-scp.meditation_handsfree	"@,,2 502626"	// Your hands must be free to cast spells or meditate.
-scp.meditation_abort		"@,,2 500134"	// You stop meditating.
-scp.meditation_armorpenalty	"@,,2 500135"	// Regenerative forces cannot penetrate your armor.
+scp.medit_msg_handsfree		"@,,2 502626"	// Your hands must be free to cast spells or meditate.
+scp.medit_msg_abort		"@,,2 500134"	// You stop meditating.
+scp.medit_msg_armorpenalty	"@,,2 500135"	// Regenerative forces cannot penetrate your armor.
 
 scp.mining_nosand		"@,,2 1044629"	// There is no sand here to mine.
 scp.mining_mounted		"@,,2 501864"	// You can't mine while riding.

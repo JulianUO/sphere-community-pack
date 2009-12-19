@@ -241,3 +241,55 @@ Note: Mystic weapons were introduced during Ophidian Wars.
 - Fixed: inscription using runes id instead of scrolls
 - Fixed: wrong listing in bowcraft skillmenu.
 ---- Released 0.2a
+
+09-12-2009, ShiryuX
+- Added: experimental code for new item properties. please, try to not touch this since i'm still scripting it.
+- Updated: several scripts using the default pack for SA compatibility.
+- Updated: renamed crafting event to e_PlayerCraftingEvent
+- Updated: now tithing points are always required (even they are not consumed by LRC)
+- Fixed: experimental tooltips, some statements added.
+- Fixed: missing resources and skillmake for smith's hammer.
+
+09-12-2009, jeem
+- Added: new combat system. it's in beta version so we need feedbacks. thanks to Anarch Cassius.
+- Updated: sphere_tooltips.scp. added missing ACT references.
+- Fixed: menu option LAST TEN showing in black.
+
+10-12-2009, jeem
+- Added: plantgrowing system. thanks to Xantier.
+- Updated: sphere_spells_spellweaving.scp. scripted attune weapon spell.
+- Updated: sphere_spells_spellweaving_extra.scp. attune weapon functions added.
+- Updated: combat/combat_events.scp. added a new @AfterHit trigger.
+- Updated: sphere_spells_spellweaving_extra.scp. attune weapon now uses @AfterHit trigger.
+- Updated: added weapon uid (argn2) to @AfterHit trigger.
+
+11-12-2009, ShiryuX
+- Added: slayers, mana regen and self repair pseudo-code. maybe it works, maybe not, needs testing.
+
+11-12-2009, jeem
+- Updated: support for tag.override.skill on weapons.
+
+16-12-2009, jeem
+- Updated: combat system delays.
+
+16-12-2009, ShiryuX
+- Added: basic jail system. suggestions needed.
+- Updated: install instructions and scripts loaded by spheretables.scp.
+- Updated: SCP with default new scripts from Sphere for compatibility with SA. Thanks MrSugarCube.
+
+17-12-2009, jeem
+- Updated: ShiryuX jail system. Modified the way it adds reason to avoid conflicts. And also fixed a misspell: e_jail --> e_jailed.
+- Updated: renamed PsnSys_Max and PsnSys_Min functions to MAX and MIN.
+- Updated: sphere_spells_spellweaving.scp. some little tweaks.
+
+17-12-2009, ShiryuX
+- Added: missing "ftime" function, which reads any numerical value and returns it in "# days, # hours, etc" or just "20 sec", depends on the argument used.
+- Added: new meditation checks, this include a new tag for items "tag.penalty.meditation" which if is 1 or 666 it will stop meditation (if this setting is enabled)
+- Added: sphere_msgs.scp at extra folder, which is almost the same as default, but it uses some clilocs instead of raw messages.
+- Updated: item properties, fixed some, added slayers, etc.
+- Updated: sphere_settings.scp with new item properties settings and removed old since the new are better =P
+- Removed: some old code from the main event and tweaked some to use the new item properties.
+---- Released 0.2b
+
+18-12-2009, jeem
+- Fixed: copper ingot defname.
