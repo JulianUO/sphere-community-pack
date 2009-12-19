@@ -8,10 +8,76 @@ VERSION=0.56b
 //
 // SCRIPT CREDITS
 // --------------
+// ShiryuX - All the script
 //
 // SCRIPT DOCUMENTATION
 // --------------------
-//
+// Functions for Item Properties. 
+// Based on EA.
+
+///////////////////////////////////////////////////////////////
+//////// LUCK RANDOM LOOT FUNCTIONS
+///////////////////////////////////////////////////////////////
+// This includes a new NPC tag: tag.luck.loot = items,properties
+// Items is the max amount of items that you can get from loot
+// Properties is the max amount of properties per single item
+[function f_getbasetype]
+if <layer> == 9
+return pib_talisman
+elif <type> == t_musical
+return pib_instrument
+elif <type> == t_spellbook || <type> == t_spellbook_necro || <type> == t_spellbook_pala || <type> == t_spellbook_extra || <type> == t_spellbook_bushido || <type> == t_spellbook_ninjitsu || <type> == t_spellbook_arcanist || <type> == t_spellbook_mystic
+return pib_spellbook
+elif <type> == t_wand
+return pib_wand
+elif <isarmor>
+	if <type> == t_shield
+	return pib_shield
+	else
+	return pib_armor
+	endif
+elif <isweapon>
+	if <type> == t_weapon_bow || <type> == t_weapon_xbow
+	return pib_rangeweap
+	else
+	return pib_meleeweap
+	endif
+else
+return pib_jewelry
+endif
+
+[function f_getrandomproperty]
+local.props = 0
+local.type = <args>
+for z 1 <def.itemprops>
+args = <def.itemprop_<local.z>>
+	if (<argv[6]>&<def.<local.type>>)
+	local.props ++
+	local.prop<local.props> = <local.z>
+	endif
+endfor
+local.toret = <eval <r1,<local.props>>>
+return <local.prop<local.toret>>
+
+[function f_isproperty]
+local.prop = <args>
+args = <def.itemprop_<local.prop>>
+if <argv[4]> == 02
+	if <<argv[5]>_isprop>
+	return 1
+	endif
+else
+	if <tag0.<argv[5]>>
+	return 1
+	endif
+endif
+return 0
+
+
+///////////////////////////////////////////////////////////////
+//////// SLAYER PROPERTY FUNCTIONS
+///////////////////////////////////////////////////////////////
+[function f_slayer]
 
 [function f_slayer_cliloc]
 if <act.tag0.slayer.less>
@@ -20,6 +86,19 @@ elif <act.tag0.slayer.super>
 addcliloc <def.slayer_<act.tag0.slayer.super>_cliloc>
 endif
 
+[function f_slayer_isprop]
+if <tag0.slayer.less>
+return 1
+endif
+if <tag0.slayer.super>
+return 1
+endif
+return 0
+
+
+///////////////////////////////////////////////////////////////
+//////// SKILL BONUS PROPERTY FUNCTION
+///////////////////////////////////////////////////////////////
 [function f_skillbonus_cliloc]
 
 [eof]

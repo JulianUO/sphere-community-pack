@@ -27,10 +27,10 @@ PIB_SPELLBOOK	0200
 
 
 [DEFNAME SphereCommunityPack_ItemProperties_Types] 
-IPT_NONE	00	// Nothing
-IPT_TAG		01	// Value in a tag.
-IPT_FUNCTION	02	// Call a function.
-IPT_DEFAULT	04	// Use default Char Properties.
+IPT_NONE	0	// Nothing
+IPT_TAG		1	// Value in a tag.
+IPT_FUNCTION	2	// Call a function.
+IPT_DEFAULT	3	// Use default Char Properties.
 
 
 [defname SphereCommunityPack_ItemProperties]
@@ -70,7 +70,7 @@ itemprop_01e	"1060483,1,12,15,01,spelldamageincrease,040"
 itemprop_01f	"1060484,1,8,100,01,staminaincrease,08"
 itemprop_020	"1060443,1,3,24,01,staminaregeneration,048"
 itemprop_021	"1060485,1,8,16,01,strengthbonus,040"
-itemprop_022	"1060486,5,30,100,swingspeedincrease,03"
+itemprop_022	"1060486,5,30,100,01,swingspeedincrease,03"
 itemprop_023	"1060400,0,0,0,02,f_bestweaponskill,03"
 
 // can't be scripted or not meant to be *special*

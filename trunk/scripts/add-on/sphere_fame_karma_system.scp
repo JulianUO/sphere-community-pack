@@ -40,167 +40,168 @@ karma = <def.scp.Karma_MinLimit>
 endif
 
 [Function FameLevelCheck]
-If <Fame> >= 10000
+if <Fame> >= 10000
  Tag.Fame.Level = 4
-ElIf <Fame> >= 5000 && <Fame> <= 9999
+elif <Fame> >= 5000 && <Fame> <= 9999
  Tag.Fame.Level = 3
-ElIf <Fame> >= 2500 && <Fame> <= 4999
+elif <Fame> >= 2500 && <Fame> <= 4999
  Tag.Fame.Level = 2
-ElIf <Fame> >=1250 && <Fame> <= 2499
+elif <Fame> >=1250 && <Fame> <= 2499
  Tag.Fame.Level = 1
-ElIf <Fame> <= 1249
+elif <Fame> <= 1249
  Tag.Fame.Level = 0
-EndIf
+endif
 
 [Function KarmaLevelCheck]
-If <Karma> >= 10000
+if <Karma> >= 10000
  Tag.Karma.Level = 5
-ElIf <Karma> >= 5000 && <Karma> <= 9999
+elif <Karma> >= 5000 && <Karma> <= 9999
  Tag.Karma.Level = 4
-ElIf <Karma> >= 2500 && <Karma> <= 4999
+elif <Karma> >= 2500 && <Karma> <= 4999
  Tag.Karma.Level = 3
-ElIf <Karma> >= 1250 && <Karma> <= 2499
+elif <Karma> >= 1250 && <Karma> <= 2499
  Tag.Karma.Level = 2
-ElIf <Karma> >= 625 && <Karma> <= 1249
+elif <Karma> >= 625 && <Karma> <= 1249
  Tag.Karma.Level = 1
-ElIf <Karma> >= -624 && <Karma> <= 624
+elif <Karma> >= -624 && <Karma> <= 624
  Tag.Karma.Level = 0
-ElIf <Karma> <= -625 && <Karma> >= -1249
+elif <Karma> <= -625 && <Karma> >= -1249
  Tag.Karma.Level = -1
-ElIf <Karma> <= -1250 && <Karma> >= -2499
+elif <Karma> <= -1250 && <Karma> >= -2499
  Tag.Karma.Level = -2
-ElIf <Karma> <= -2500 && <Karma> >= -4999
+elif <Karma> <= -2500 && <Karma> >= -4999
  Tag.Karma.Level = -3
-ElIf <Karma> <= -5000 && <Karma> >= -9999
+elif <Karma> <= -5000 && <Karma> >= -9999
  Tag.Karma.Level = -4
-ElIf <Karma> <= -10000
+elif <Karma> <= -10000
  Tag.Karma.Level = -5
-EndIf
+endif
 
 [Function SetTitle]
-DoSwitch <Eval <Tag.Fame.Level>
+DoSwitch <Eval <Tag.Fame.Level>>
  Begin
-  If <Eval <Tag.Karma.Level>> == 5
+  if <Eval <Tag.Karma.Level>> == 5
    Title = Trustworthy
-  ElIf <Eval <Tag.Karma.Level>> == 4
+  elif <Eval <Tag.Karma.Level>> == 4
    Title = Honest
-  ElIf <Eval <Tag.Karma.Level>> == 3
+  elif <Eval <Tag.Karma.Level>> == 3
    Title = Good
-  ElIf <Eval <Tag.Karma.Level>> == 2
+  elif <Eval <Tag.Karma.Level>> == 2
    Title = Kind
-  ElIf <Eval <Tag.Karma.Level>> == 1
+  elif <Eval <Tag.Karma.Level>> == 1
    Title = Fair
-  ElIf <Eval <Tag.Karma.Level>> == 0
+  elif <Eval <Tag.Karma.Level>> == 0
    Title =
-  ElIf <Eval <Tag.Karma.Level>> == -1
+  elif <Eval <Tag.Karma.Level>> == -1
    Title = Rude
-  ElIf <Eval <Tag.Karma.Level>> == -2
+  elif <Eval <Tag.Karma.Level>> == -2
    Title = Unsavory
-  ElIf <Eval <Tag.Karma.Level>> == -3
+  elif <Eval <Tag.Karma.Level>> == -3
    Title = Scoundrel
-  ElIf <Eval <Tag.Karma.Level>> == -4
+  elif <Eval <Tag.Karma.Level>> == -4
    Title = Despicable
-  ElIf <Eval <Tag.Karma.Level>> == -5
+  elif <Eval <Tag.Karma.Level>> == -5
    Title = Outcast
-  EndIf
+  endif
  End
  Begin
-  If <Eval <Tag.Karma.Level>> == 5
+  if <Eval <Tag.Karma.Level>> == 5
    Title = Estimable
-  ElIf <Eval <Tag.Karma.Level>> == 4
+  elif <Eval <Tag.Karma.Level>> == 4
    Title = Commendable
-  ElIf <Eval <Tag.Karma.Level>> == 3
+  elif <Eval <Tag.Karma.Level>> == 3
    Title = Honorable
-  ElIf <Eval <Tag.Karma.Level>> == 2
+  elif <Eval <Tag.Karma.Level>> == 2
    Title = Respectable
-  ElIf <Eval <Tag.Karma.Level>> == 1
+  elif <Eval <Tag.Karma.Level>> == 1
    Title = Upstanding
-  ElIf <Eval <Tag.Karma.Level>> == 0
+  elif <Eval <Tag.Karma.Level>> == 0
    Title = Notable
-  ElIf <Eval <Tag.Karma.Level>> == -1
+  elif <Eval <Tag.Karma.Level>> == -1
    Title = Disreputable
-  ElIf <Eval <Tag.Karma.Level>> == -2
+  elif <Eval <Tag.Karma.Level>> == -2
    Title = Dishonorbable
-  ElIf <Eval <Tag.Karma.Level>> == -3
+  elif <Eval <Tag.Karma.Level>> == -3
    Title = Malicious
-  ElIf <Eval <Tag.Karma.Level>> == -4
+  elif <Eval <Tag.Karma.Level>> == -4
    Title = Dastardly
-  ElIf <Eval <Tag.Karma.Level>> == -5
+  elif <Eval <Tag.Karma.Level>> == -5
    Title = Wretched
-  EndIf
+  endif
  End
  Begin
-  If <Eval <Tag.Karma.Level>> == 5
+  if <Eval <Tag.Karma.Level>> == 5
    Title = Great
-  ElIf <Eval <Tag.Karma.Level>> == 4
+  elif <Eval <Tag.Karma.Level>> == 4
    Title = Famed
-  ElIf <Eval <Tag.Karma.Level>> == 3
+  elif <Eval <Tag.Karma.Level>> == 3
    Title = Admirable
-  ElIf <Eval <Tag.Karma.Level>> == 2
+  elif <Eval <Tag.Karma.Level>> == 2
    Title = Proper
-  ElIf <Eval <Tag.Karma.Level>> == 1
+  elif <Eval <Tag.Karma.Level>> == 1
    Title = Reputable
-  ElIf <Eval <Tag.Karma.Level>> == 0
+  elif <Eval <Tag.Karma.Level>> == 0
    Title = Prominent
-  ElIf <Eval <Tag.Karma.Level>> == -1
+  elif <Eval <Tag.Karma.Level>> == -1
    Title = Notorious
-  ElIf <Eval <Tag.Karma.Level>> == -2
+  elif <Eval <Tag.Karma.Level>> == -2
    Title = Ignoble
-  ElIf <Eval <Tag.Karma.Level>> == -3
+  elif <Eval <Tag.Karma.Level>> == -3
    Title = Vile
-  ElIf <Eval <Tag.Karma.Level>> == -4
+  elif <Eval <Tag.Karma.Level>> == -4
    Title = Wicked
-  ElIf <Eval <Tag.Karma.Level>> == -5
+  elif <Eval <Tag.Karma.Level>> == -5
    Title = Nefarious
-  EndIf
+  endif
  End
  Begin
-  If <Eval <Tag.Karma.Level>> == 5
+  if <Eval <Tag.Karma.Level>> == 5
    Title = Glorious
-  ElIf <Eval <Tag.Karma.Level>> == 4
+  elif <Eval <Tag.Karma.Level>> == 4
    Title = Illustrious
-  ElIf <Eval <Tag.Karma.Level>> == 3
+  elif <Eval <Tag.Karma.Level>> == 3
    Title = Noble
-  ElIf <Eval <Tag.Karma.Level>> == 2
+  elif <Eval <Tag.Karma.Level>> == 2
    Title = Eminent
-  ElIf <Eval <Tag.Karma.Level>> == 1
+  elif <Eval <Tag.Karma.Level>> == 1
    Title = Distinguished
-  ElIf <Eval <Tag.Karma.Level>> == 0
+  elif <Eval <Tag.Karma.Level>> == 0
    Title = Renowned
-  ElIf <Eval <Tag.Karma.Level>> == -1
+  elif <Eval <Tag.Karma.Level>> == -1
    Title = Infamous
-  ElIf <Eval <Tag.Karma.Level>> == -2
+  elif <Eval <Tag.Karma.Level>> == -2
    Title = Sinister
-  ElIf <Eval <Tag.Karma.Level>> == -3
+  elif <Eval <Tag.Karma.Level>> == -3
    Title = Villanious
-  ElIf <Eval <Tag.Karma.Level>> == -4
+  elif <Eval <Tag.Karma.Level>> == -4
    Title = Evil
-  ElIf <Eval <Tag.Karma.Level>> == -5
+  elif <Eval <Tag.Karma.Level>> == -5
    Title = Dread
-  EndIf
+  endif
  End
  Begin
-  If <Eval <Tag.Karma.Level>> == 5
+  if <Eval <Tag.Karma.Level>> == 5
    Title = Glorious <Src.Sex Lord/Lady>
-  ElIf <Eval <Tag.Karma.Level>> == 4
+  elif <Eval <Tag.Karma.Level>> == 4
    Title = Illustrious <Src.Sex Lord/Lady>
-  ElIf <Eval <Tag.Karma.Level>> == 3
+  elif <Eval <Tag.Karma.Level>> == 3
    Title = Noble <Src.Sex Lord/Lady>
-  ElIf <Eval <Tag.Karma.Level>> == 2
+  elif <Eval <Tag.Karma.Level>> == 2
    Title = Eminent <Src.Sex Lord/Lady>
-  ElIf <Eval <Tag.Karma.Level>> == 1
+  elif <Eval <Tag.Karma.Level>> == 1
    Title = Distinguished <Src.Sex Lord/Lady>
-  ElIf <Eval <Tag.Karma.Level>> == 0
+  elif <Eval <Tag.Karma.Level>> == 0
    Title = <Src.Sex Lord/Lady>
-  ElIf <Eval <Tag.Karma.Level>> == -1
+  elif <Eval <Tag.Karma.Level>> == -1
    Title = Dishonored <Src.Sex Lord/Lady>
-  ElIf <Eval <Tag.Karma.Level>> == -2
+  elif <Eval <Tag.Karma.Level>> == -2
    Title = Sinister <Src.Sex Lord/Lady>
-  ElIf <Eval <Tag.Karma.Level>> == -3
+  elif <Eval <Tag.Karma.Level>> == -3
    Title = Dark <Src.Sex Lord/Lady>
-  ElIf <Eval <Tag.Karma.Level>> == -4
+  elif <Eval <Tag.Karma.Level>> == -4
    Title = Evil <Src.Sex Lord/Lady>
-  ElIf <Eval <Tag.Karma.Level>> == -5
+  elif <Eval <Tag.Karma.Level>> == -5
    Title = Dread <Src.Sex Lord/Lady>
-  EndIf
+  endif
+  end
 EndDo

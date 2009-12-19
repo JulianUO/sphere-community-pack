@@ -278,7 +278,7 @@ scp.JailSystem_GoUnjailed=Britain
 ///////////////////////////////////////////////////////////////
 // Enables or disables the EA Karma/Fame System.
 // <boolean> (0 = No / 1 = Yes)
-scp.EAKarmaFame=1
+scp.EAKarmaFame=0
 
 // Raising this value decreases gain. Lowering it increases gain.
 // Default = 100
