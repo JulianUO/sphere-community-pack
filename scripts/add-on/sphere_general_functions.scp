@@ -94,4 +94,9 @@ ELSE
   return <ARGS> sec
 ENDIF
 
+[function getargv]
+local.toret = <strarg <args>>
+args = <streat <args>>
+return <argv[<local.toret>]>
+
 [eof]

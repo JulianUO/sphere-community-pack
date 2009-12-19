@@ -32,16 +32,16 @@ VERSION=0.56b
 // ---------------
 // scp.ItemProp_Resistances
 // *DONE* scp.ItemProp_DamageIncrease
-// scp.ItemProp_DefenseChanceIncrease // ATTACH TO COMBAT SYS
+// scp.ItemProp_DefenseChanceIncrease		// ATTACH TO COMBAT SYS
 // *DONE* scp.ItemProp_DexterityBonus
-// scp.ItemProp_EnhancePotion
+// scp.ItemProp_EnhancePotion			// ATTACH TO CRAFTING SYS
 // *DONE* scp.ItemProp_FasterCastRecovery
 // *DONE* scp.ItemProp_FasterCasting
-// scp.ItemProp_HitChanceIncrease // ATTACH TO COMBAT SYS
+// scp.ItemProp_HitChanceIncrease		// ATTACH TO COMBAT SYS
 // *DONE* scp.ItemProp_HitDispel
 // *DONE* scp.ItemProp_HitLifeLeech
-// scp.ItemProp_HitLowerAttack
-// scp.ItemProp_HitLowerDefense
+// scp.ItemProp_HitLowerAttack			// ATTACH TO COMBAT SYS
+// scp.ItemProp_HitLowerDefense			// ATTACH TO COMBAT SYS
 // *DONE* scp.ItemProp_HitManaLeech
 // *DONE* scp.ItemProp_HitPointRegeneracion
 // *DONE* scp.ItemProp_HitStaminaLeech
@@ -49,12 +49,12 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_IntelligenceBonus
 // *DONE* scp.ItemProp_LowerManaCost
 // scp.ItemProp_LowerReagentCost
-// scp.ItemProp_Luck
+// *DONE* scp.ItemProp_Luck
 // *DONE* scp.ItemProp_MageArmor
 // *DONE* scp.ItemProp_MageWeapon
 // *DONE* scp.ItemProp_ManaIncrease
 // *DONE* scp.ItemProp_ManaRegeneration
-// scp.ItemProp_ReflectPhysicalDamage
+// scp.ItemProp_ReflectPhysicalDamage		// ATTACH TO COMBAT SYS
 // *DONE* scp.ItemProp_SelfRepair
 // *DONE* scp.ItemProp_Slayer
 // scp.ItemProp_SkillBonus
@@ -63,13 +63,60 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_StaminaIncrease
 // scp.ItemProp_StaminaRegeneration
 // *DONE* scp.ItemProp_StrengthBonus
-// scp.ItemProp_SwingSpeedIncrease
+// scp.ItemProp_SwingSpeedIncrease		// ATTACH TO COMBAT SYS
 // scp.ItemProp_BestWeaponSkill
 
-[function getargv]
-local.toret = <strarg <args>>
-args = <streat <args>>
-return <argv[<local.toret>]>
+
+[events e_NpcPropertiesEvent]
+on=@deathcorpse
+local.corpse = <argo.uid>
+if <def.scp.ItemProp_Luck> == 0
+return 0
+endif
+ref8 = <attacker.max>
+if <ref8.memoryfindtype.memory_ipet>
+ref8 = <ref8.memoryfindtype.memory_ipet.link.uid>
+endif
+if <tag0.luck.loot>
+local.chanceinc = <feval <floatval <ref8.luck> @ (5 / 9)>>
+args = <tag0.luck.loot>
+local.items = <r<argv[0]>>
+	if <r100> < <local.chanceinc>
+	local.items ++
+	endif
+	if <argv[1]>
+	local.props = <r<argv[1]>>
+		if <r100> < <local.chanceinc>
+		local.props ++
+		endif
+	else
+	local.props = 1
+	endif
+	for 1 <local.items>
+		if <r2>
+		serv.newitem random_weapon
+		else
+		serv.newitem {random_armor 1 {i_bracelet_gold 1 i_ring_gold 1} 1}
+		endif
+	local.type = <new.f_GetBaseType>
+	new.events +t_iprop
+		for x 1 <local.props>
+		local.proptemp = <f_GetRandomProperty <local.type>>
+			while <new.f_IsProperty <local.proptemp>>
+			local.proptemp = <f_GetRandomProperty <local.type>>
+			endwhile
+		local.intensity = <eval <r<getargv 2 <def.itemprop_<local.proptemp>>>>>
+		args = <def.itemprop_<local.proptemp>>
+			doswitch <argv[4]>
+			local.blank
+			new.tag0.<argv[5]> = <local.intensity>
+			new.<argv[5]> <local.intensity>
+			enddo
+		endfor
+	new.cont = <local.corpse>
+	endfor
+endif
+
 
 [events e_PlayerPropertiesEvent]
 on=@userstats
@@ -129,7 +176,7 @@ if <dtag0.spellrecovery> > <serv.time>
 src.sysmessage @03c1,6,2 502644 // You have not yet recovered from casting a spell
 return 1
 endif
-if <def.scp.MagicProperties_LowerManaCost> == 1
+if <def.scp.ItemProp_LowerManaCost> == 1
 argn2 = <eval (<argn2> * (<tag0.LowerManaCost> + 1)) / 100>
 endif
 
@@ -151,13 +198,15 @@ if <def.scp.ItemProp_MageWeapon> == 1
 endif
 // Now, this is the real MageArmor property. Which apply for every armor slot
 // Except shield, explained it before.
-if <def.scp.ItemProperties_MageArmor> == 1
+if <def.scp.ItemProp_MageArmor> == 1
 	for 1 <def.armor_amount>
-	ref5 = <findlayer.<def.armor_part_<dlocal._for>>.uid>
-		if <ref5.type> == t_armor
-			if <ref5.tag0.MageWeapon> == 0
-			src.sysmessage You can't cast with this armor (<ref5.name>).
-			return 1
+		if <findlayer.<def.armor_part.<dlocal._for>>>
+		ref5 = <findlayer.<def.armor_part_<dlocal._for>>.uid>
+			if <ref5.type> == t_armor
+				if <ref5.tag0.MageWeapon> == 0
+				src.sysmessage You can't cast with this armor (<ref5.name>).
+				return 1
+				endif
 			endif
 		endif
 	endfor

@@ -143,18 +143,18 @@ if (<argn1> > 199) && (<argn1> < 211)
 	return 1
 	endif
 endif
-if <def.scp.MagicProperties_LowerReagentCost> == 1
-	if <argn3> == 2
-		if <argn1> < 200
-		f_lrc_check <argn1>,<argn2>,<argn3>
-		elif <argn1> > 600
-		return 6
-		else
-		f_lrc_check_chival <argn1>,<argn2>,<argn3>
-		endif
-	return 6
-	endif
-endif
+//if <def.scp.ItemProp_LowerReagentCost> == 1
+//	if <argn3> == 2
+//		if <argn1> < 200
+//		f_lrc_check <argn1>,<argn2>,<argn3>
+//		elif <argn1> > 600
+//		return 6
+//		else
+//		f_lrc_check_chival <argn1>,<argn2>,<argn3>
+//		endif
+//	return 6
+//	endif
+//endif
 
 // Necromancy Words of Power
 // Armor Restriction + Mage Armor + Mage Weapon
