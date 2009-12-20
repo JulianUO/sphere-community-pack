@@ -8,6 +8,23 @@ if <def.scp.followers> == 1
 	endif
 endif
 
+// Death Robe Fix
+if <findlayer.22>
+tag.robe=<findlayer.22.uid>
+	if <findlayer.3>
+	tag.feet=<findlayer.3.uid>
+	endif
+endif
+
+on=@deathcorpse
+if <tag0.robe>
+uid.<tag.robe>.z = 3
+uid.<tag.feet>.z = 8
+tag.robe=
+tag.feet=
+argo.update
+endif
+
 // Followers (Death?)
 on=@destroy
 if <def.scp.followers> == 1
