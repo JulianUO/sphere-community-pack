@@ -13,11 +13,11 @@ elif <src.mining> >= <eval <skillmake.1.value>-100>
 			if <new.amount> < 1
 			new.amount = 1
 			endif
-		src.sysmessage <def.smelt_fail>
+		src.sysmessage <def.smelt_success>
 		src.consume <new.amount> <baseid>
 		new.cont <src.findlayer.21>
 		else
-		src.sysmessage <def.smelt_success>
+		src.sysmessage <def.smelt_fail>
 		src.consume 1 <baseid>
 		endif
 	else
