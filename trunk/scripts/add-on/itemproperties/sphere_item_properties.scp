@@ -38,7 +38,7 @@ itemprops = 023
 
 // #name,min,max,cap,type,input,items
 itemprop_01		"1060401,1,25,100,01,damageincrease,040"
-itemprop_02		"1060401,1,50,100,01,damageincrease,03"
+itemprop_02		"0,1,50,100,01,damageincrease,03"
 itemprop_03		"1060408,1,15,45,01,defensechanceincrease,053"
 itemprop_04		"1060409,1,8,16,01,dexteritybonus,040"
 itemprop_05		"1060411,5,25,80,01,enhancepotion,040"
