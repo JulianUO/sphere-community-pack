@@ -281,7 +281,7 @@ mana += <feval <float.mtoleech>>
 	if <mana> > <maxmana>
 	mana = <maxmana>
 	endif
-src.mana -= <feval <float.mtoleech>
+src.mana -= <feval <float.mtoleech>>
 endif
 if <def.scp.ItemProp_HitLifeLeech> == 1
 float.htoleech = <floatval (<argn1> * 0.4) - <tag0.HitLifeLeech>>
@@ -289,7 +289,7 @@ hits += <feval <float.htoleech>>
 	if <hits> > <maxhits>
 	hits = <maxhits>
 	endif
-src.hits -= <feval <float.htoleech>
+src.hits -= <feval <float.htoleech>>
 endif
 // This one works a little different to the rest of the leech properties
 // It uses the % of the player to calc success and gains the damage amount in stamina
