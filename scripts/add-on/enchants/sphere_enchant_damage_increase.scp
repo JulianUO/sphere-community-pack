@@ -1,8 +1,0 @@
-[typedef t_enchant_damage_increase]
-on=@equip
-src.tag0.DamageIncrease += <tag0.DamageIncrease>
-
-on=@unequip
-src.tag0.DamageIncrease -= <tag0.DamageIncrease>
-
-[eof]
