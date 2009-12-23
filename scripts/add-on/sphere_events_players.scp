@@ -34,29 +34,10 @@ VERSION=0.56b
 // * Spell Damage Increase Items effects are capped at 15% in Player vs. Player combat.
 
 [events e_PlayerGenericEvent]
-// New @SkillPreSelect Trigger
-on=@userextcmd
-if <argn1> == 36
-	if <trigger @SkillPreSelect,<def.tat_as_argn>,<argv[0]>> == 1
-	return 1
-	endif
-endif
-
-on=@skillpreselect
+on=@skillwait
 if <tag0.skillrecovery> > <serv.time>
 src.sysmessage <def.scp.skill_mustwait>
 return 1
-endif
-if <argn1> == 21
-	if <def.scp.NewSkills_Hiding>
-	f_start_hiding
-	return 1
-	endif
-elseif <argn1> == 47
-	if <def.scp.NewSkills_Stealth>
-	f_start_stealth
-	return 1
-	endif
 endif
 
 // Context Menu Display

@@ -293,3 +293,31 @@ Note: Mystic weapons were introduced during Ophidian Wars.
 
 18-12-2009, jeem
 - Fixed: copper ingot defname.
+
+19-12-2009, ShiryuX
+- Added: NPC's loot generator, if you want to try, added the e_NpcPropertiesEvent to the NPCs and set them the tag.luck.loot tag
+- Updated: moved getargv to general functions file.
+- Fixed: missing type in the swing speed increase entry.
+- Fixed: some typos and wrong names with the item properties.
+- Fixed: missing "end" at the fame/karma thing, crashed the server.
+- Fixed: using same defname for meditation settings and defname.
+
+19-12-2009, jeem
+- Updated: sphere_serv_triggers.scp. added savestatics command to world save.
+- Updated: how to install.txt
+
+20-12-2009, jeem
+- Added: death robe fix by pyromapes2k.
+- Updated: sphere_item_properties.scp
+- Fixed: experimental item properties not showing in clilocs.
+- Fixed: damage increase property didn't have cliloc.
+
+21-12-2009, ShiryuX
+- Fixed: issue with reqstr at tooltips, now working fine.
+- Fixed: missing > at leech property, may cause instant-kill.
+
+22-12-2009, ShiryuX
+- Added: small test code for skill bonus property.
+- Fixed: items not removing properties/bonus from players
+- Removed: old item properties code (enchants)
+---- Released 0.2c

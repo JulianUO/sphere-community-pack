@@ -93,6 +93,9 @@ scp.fishing_nofish		"@,,2 503168"	// The fish don't seem to be biting here.
 scp.fishing_ischar		""
 scp.fishing_fail		"@,,2 503171"	// You fish a while, but fail to catch anything.
 
+scp.hiding_fail			"@,,2 501241"	//
+scp.hiding_abort		"@,,2 501241"	//
+
 scp.jail_cancelled		"@,,2 503314"	// Imprisoning Cancelled
 scp.jail_notplayer		"@,,2 503312"	// Only players can be jailed.
 scp.jail_cannotmyself		"@,,2 503315"	// Congrats, you've successfully jailed yourself!
