@@ -1,8 +1,0 @@
-[typedef t_enchant_hit_chance_increase]
-on=@equip
-src.tag0.hitchanceincrease += <tag0.hitchanceincrease>
-
-on=@unequip
-src.tag0.hitchanceincrease -= <tag0.hitchanceincrease>
-
-[eof]

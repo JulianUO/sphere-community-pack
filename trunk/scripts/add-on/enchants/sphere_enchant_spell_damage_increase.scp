@@ -1,8 +1,0 @@
-[typedef t_enchant_spell_damage_increase]
-on=@equip
-src.tag0.spelldamageincrease += <tag0.spelldamageincrease>
-
-on=@unequip
-src.tag0.spelldamageincrease -= <tag0.spelldamageincrease>
-
-[eof]

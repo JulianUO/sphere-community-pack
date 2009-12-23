@@ -99,6 +99,43 @@ return 0
 ///////////////////////////////////////////////////////////////
 //////// SKILL BONUS PROPERTY FUNCTION
 ///////////////////////////////////////////////////////////////
+[function f_skillbonus]
+local.isused = 1
+for 1 5
+	if !<tag0.skill.bonus.<dlocal._for>>
+		while (<local.isused> > 0)
+		local.isused = 0
+		local.toset = <r56>
+			for x <local._for>
+				if <getargv 0 <tag0.skill.bonus.<dlocal.x>>> == <local.toset>
+				local.isused = 1
+				endif
+			endfor
+		endwhile
+	tag0.skill.bonus.<dlocal._for> = <local.toset>,<args>
+	endif
+endfor
+
 [function f_skillbonus_cliloc]
+local.cliloc = 1060451 // ~1_skillname~ +~2_val~
+for 1 5 
+	if <tag0.skill.bonus.<dlocal._for>>
+	args = <tag0.skill.bonus.<dlocal._for>>
+	addcliloc <local.cliloc>,<argv[0]>,<argv[1]>
+	local.cliloc ++
+	endif
+endfor
+
+[function f_skillbonus_isprop]
+local.bonus = 0
+for 1 5
+	if <tag0.skill.bonus.<dlocal._for>>
+	local.bonus ++
+	endif
+endfor
+if <local.bonus> == 5
+return 1
+endif
+return 0
 
 [eof]
