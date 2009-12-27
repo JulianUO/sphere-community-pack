@@ -138,4 +138,37 @@ return 1
 endif
 return 0
 
+
+///////////////////////////////////////////////////////////////
+//////// LOWER REAGENT COST PROPERTY FUNCTIONS
+///////////////////////////////////////////////////////////////
+[function f_LowerReagentCost_Reagents]
+local.regamount = <f_resources <serv.spell.<argv[0]>.resources>>
+local.lrc = <tag0.LowerReagentCost>
+local.percent = <eval 100 / <local.regamount>>
+while (<local.lrc> > <local.percent>) && (<local.regamount> >= 1)
+local.lrc -= <local.percent>
+local.regamount --
+endwhile
+if <local.lrc> > 0
+	if <local.regamount> > 0
+		if <r<local.percent>> < <local.lrc>
+		local.regamount --
+		endif
+	endif
+endif
+if <local.regamount> > 0
+	for 0 <local.regamount>
+	consume <serv.spell.<argv[0]>.resources.<local._for>>
+	endfor
+endif
+
+[function f_LowerReagentCost_Tithing]
+if <tag0.LowerReagentCost> > 0
+local.toconsume = <eval (<def.spell.<argv[0]>.tithing>*<src.tag0.LowerReagentCost>)/100>
+else
+local.toconsume = <def.spell.<argv[0]>.tithing>
+endif
+tithing -= <local.toconsume>
+
 [eof]

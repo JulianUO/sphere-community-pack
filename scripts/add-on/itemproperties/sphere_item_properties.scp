@@ -57,7 +57,7 @@ itemprop_011	"1060432,1,8,16,01,intelligencebonus,040"
 itemprop_012	"1060433,1,15,40,01,lowermanacost,0248"
 itemprop_013	"1060434,1,20,100,01,lowerreagentcost,048"
 itemprop_014	"1060436,1,100,3982,04,luck,04a"
-itemprop_015	"1060437,0,0,0,01,magearmor,08"
+itemprop_015	"1060437,1,1,1,01,magearmor,08"
 itemprop_016	"1060438,-30,0,0,01,mageweapon,01"
 itemprop_017	"1060439,1,8,100,01,manaincrease,048"
 itemprop_018	"1060440,1,3,18,01,manaregeneration,08"
@@ -71,10 +71,9 @@ itemprop_01f	"1060484,1,8,100,01,staminaincrease,08"
 itemprop_020	"1060443,1,3,24,01,staminaregeneration,048"
 itemprop_021	"1060485,1,8,16,01,strengthbonus,040"
 itemprop_022	"1060486,5,30,100,01,swingspeedincrease,03"
-itemprop_023	"1060400,0,0,0,02,f_bestweaponskill,03"
+itemprop_023	"1060400,1,1,1,01,bestweaponskill,03"
 
 // can't be scripted or not meant to be *special*
-// - resistances, damage
 // - lower requeriments
 // - strength requirement
 
@@ -84,8 +83,5 @@ itemprop_023	"1060400,0,0,0,02,f_bestweaponskill,03"
 
 // too lazy to do it
 // - skill bonus
-
-[defname SphereCommunityPack_ItemProperties_Settings]
-//scp.ItemProp_Resistances=1 // Cold, Fire, Physical, Energy Resist
 
 [eof]

@@ -27,9 +27,9 @@ on=@equip
 if <tag0.damageincrease>
 src.tag0.damageincrease += <tag0.damageincrease>
 endif
-//if <tag0.defensechanceincrease>
-//src.tag0.defensechanceincrease += <tag0.defensechanceincrease>
-//endif
+if <tag0.defensechanceincrease>
+src.tag0.defensechanceincrease += <tag0.defensechanceincrease>
+endif
 if <tag0.dexteritybonus>
 src.moddex += <tag0.dexteritybonus>
 endif
@@ -42,9 +42,9 @@ endif
 if <tag0.fastercasting>
 src.tag0.fastercasting += <tag0.fastercasting>
 endif
-//if <tag0.hitchanceincrease>
-//src.tag0.hitchanceincrease += <tag0.hitchanceincrease>
-//endif
+if <tag0.hitchanceincrease>
+src.tag0.hitchanceincrease += <tag0.hitchanceincrease>
+endif
 if <tag0.hitdispel>
 src.tag0.hitdispel += <tag0.hitdispel>
 endif
@@ -117,9 +117,9 @@ on=@unequip
 if <tag0.damageincrease>
 src.tag0.damageincrease -= <tag0.damageincrease>
 endif
-//if <tag0.defensechanceincrease>
-//src.tag0.defensechanceincrease -= <tag0.defensechanceincrease>
-//endif
+if <tag0.defensechanceincrease>
+src.tag0.defensechanceincrease -= <tag0.defensechanceincrease>
+endif
 if <tag0.dexteritybonus>
 src.moddex -= <tag0.dexteritybonus>
 endif
@@ -132,9 +132,9 @@ endif
 if <tag0.fastercasting>
 src.tag0.fastercasting -= <tag0.fastercasting>
 endif
-//if <tag0.hitchanceincrease>
-//src.tag0.hitchanceincrease -= <tag0.hitchanceincrease>
-//endif
+if <tag0.hitchanceincrease>
+src.tag0.hitchanceincrease -= <tag0.hitchanceincrease>
+endif
 if <tag0.hitdispel>
 src.tag0.hitdispel -= <tag0.hitdispel>
 endif
