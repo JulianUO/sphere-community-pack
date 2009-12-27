@@ -182,6 +182,45 @@ scp.Meditation_HandsFree=1
 scp.Meditation_ArmorPenalty=1
 
 ///////////////////////////////////////////////////////////////
+//////// Combat System Settings
+///////////////////////////////////////////////////////////////
+// Formulas or main system used in here. It will vary from expansion to expansion.
+// 0 = Default: Use Sphere's default system.
+// 1 = Custom: Use different settings from different expansions
+// 2 = Ultima Online: Renaissance
+// 3 = Ultima Online: Age of Shadows
+scp.Combat_FormulasUsed=3
+
+// Which calculation of Hit Speed should be used?
+// 0 = Default. 1 = UO:R. 2 = AOS.
+scp.Combat_HitSpeed=2
+
+// Which calculation of Hit Chance should be used?
+// 0 = Default. 1 = UO:R. 2 = AOS.
+scp.Combat_HitChance=2
+
+// Which calculation of Hit Block Chance should be used?
+// 0 = Default. 1 = UO:R. 2 = AOS.
+scp.Combat_BlockChance=2
+
+// Which calculation of Base Damage should be used?
+// 0 = Default. 1 = UO:R. 2 = AOS.
+scp.Combat_BaseDamage=2
+
+// Which calculation of Damage Bonus should be used?
+// 0 = Default. 1 = UO:R. 2 = AOS.
+scp.Combat_DamageBonus=2
+
+// Use or not the Age of Shadows Resistances.
+// Note that this will be used only if scp.Combat_FormulasUsed is 1
+// Automatically used if it is 3.
+scp.Combat_UseResistances=1
+
+// The cap for resistances used in the elemental fighting formula.
+// From 0 to 100. Default = 70 (EA-Like).
+scp.Combat_ResistancesCap=70
+
+///////////////////////////////////////////////////////////////
 //////// General Settings
 ///////////////////////////////////////////////////////////////
 // Activate or deactivate the current/max followers system

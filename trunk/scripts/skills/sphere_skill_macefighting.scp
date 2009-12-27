@@ -20,8 +20,8 @@ BONUS_INT=0
 BONUS_STATS=10
 ADV_RATE=10.0,150.0,600.0
 
-ON=@Start
-TIMERD = <EVAL <CombatSys_HitSpeed> / 2>
-RETURN 2
+on=@start
+timerd = <eval <f_combatsys_hitspeed> / 2>
+return 2
 
 [eof]

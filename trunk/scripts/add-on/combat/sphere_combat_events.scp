@@ -1,0 +1,126 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+//
+
+[events e_PlayerCombatEvent]
+on=@hittry
+if <def.scp.Combat_FormulasUsed> != 0
+argn1 = <f_combatsys_hitspeed <argn1>>
+actdiff = <f_combatsys_hitchance <actdiff>>
+endif
+
+on=@hit
+argn1 = <qval <weapon> ? <eval {<weapon.dam>}> : <eval {1,4}>>
+if <src.f_combatsys_blockchance> || (<src.trigger @Shield> == 1)
+src.f_combatsys_block
+	doswitch <def.scp.Combat_BlockChance>
+	local.blank
+	return 1
+		begin	
+		local.ar = <qval <weapon.isweapon.archery> ? <src.findlayer.2.armor.high> : <eval <src.findlayer.2.armor.high> / 2>>
+		argn1 = <max <local.ar>,0>
+		end
+	enddo
+endif
+doswitch <def.scp.Combat_FormulasUsed>
+local.totalbonus = 0
+	begin
+		doswitch <def.scp.Combat_DamageBonus>
+		local.totalbonus = 0
+		local.totalbonus = <f_combatsys_damagebonus_uor>
+		local.totalbonus = <f_combatsys_damagebonus_aos>
+		enddo
+	end
+local.totalbonus = <f_combatsys_damagebonus_uor>
+local.totalbonus = <f_combatsys_damagebonus_aos>
+enddo
+local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>
+argn1 += <local.totalbonus>
+
+on=@gethit
+if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
+local.physical = <muldiv <argn1>,<src.tag0.PhysicalDamage>,100>
+local.physical -= <muldiv <argn1>,<tag0.ModAr>,100>
+local.fire = <muldiv <argn1>,<src.tag0.FireDamage>,100> 
+local.fire -= <muldiv <argn1>,<tag0.ResFire>,100>
+local.cold = <muldiv <argn1>,<src.tag0.ColdDamage>,100>
+local.cold -= <muldiv <argn1>,<tag0.ResCold>,100>
+local.poison = <muldiv <argn1>,<src.tag0.PoisonDamage>,100>
+local.poison -= <muldiv <argn1>,<tag0.ResPoison>,100>
+local.energy = <muldiv <argn1>,<src.tag0.EnergyDamage>,100>
+local.energy -= <muldiv <argn1>,<tag0.ResEnergy>,100>
+argn1 = <eval <local.physical> + <local.fire> + <local.cold> + <local.poison> + <local.energy>>
+argn2 |= dam_god
+endif
+if <def.scp.ItemProp_ReflectPhysicalDamage>
+	if <tag0.ReflectPhysicalDamage>
+	src.damage <muldiv <local.physical>,<tag0.ReflectPhysicalDamage>,100> 01 <uid>
+	endif
+endif
+
+[events e_NpcCombatEvent]
+on=@hittry
+if <def.scp.Combat_FormulasUsed> != 0
+argn1 = <f_combatsys_hitspeed <argn1>>
+actdiff = <f_combatsys_hitchance <actdiff>>
+endif
+
+on=@hit
+argn1 = <qval <weapon> ? <eval {<weapon.dam>}> : <eval {1,4}>>
+if <src.f_combatsys_blockchance> || (<src.trigger @Shield> == 1)
+src.f_combatsys_block
+	doswitch <def.scp.Combat_BlockChance>
+	local.blank
+	return 1
+		begin	
+		local.ar = <qval <weapon.isweapon.archery> ? <src.findlayer.2.armor.high> : <eval <src.findlayer.2.armor.high> / 2>>
+		argn1 = <max <local.ar>,0>
+		end
+	enddo
+endif
+doswitch <def.scp.Combat_FormulasUsed>
+local.totalbonus = 0
+	begin
+		doswitch <def.scp.Combat_DamageBonus>
+		local.totalbonus = 0
+		local.totalbonus = <f_combatsys_damagebonus_uor>
+		local.totalbonus = <f_combatsys_damagebonus_aos>
+		enddo
+	end
+local.totalbonus = <f_combatsys_damagebonus_uor>
+local.totalbonus = <f_combatsys_damagebonus_aos>
+enddo
+local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>
+argn1 += <local.totalbonus>
+
+on=@gethit
+if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
+local.physical = <muldiv <argn1>,<src.tag0.PhysicalDamage>,100>
+local.physical -= <muldiv <argn1>,<tag0.ModAr>,100>
+local.fire = <muldiv <argn1>,<src.tag0.FireDamage>,100> 
+local.fire -= <muldiv <argn1>,<tag0.ResFire>,100>
+local.cold = <muldiv <argn1>,<src.tag0.ColdDamage>,100>
+local.cold -= <muldiv <argn1>,<tag0.ResCold>,100>
+local.poison = <muldiv <argn1>,<src.tag0.PoisonDamage>,100>
+local.poison -= <muldiv <argn1>,<tag0.ResPoison>,100>
+local.energy = <muldiv <argn1>,<src.tag0.EnergyDamage>,100>
+local.energy -= <muldiv <argn1>,<tag0.ResEnergy>,100>
+argn1 = <eval <local.physical> + <local.fire> + <local.cold> + <local.poison> + <local.energy>>
+argn2 |= dam_god
+endif
+
+
+on=@afterhit
+
+[eof]

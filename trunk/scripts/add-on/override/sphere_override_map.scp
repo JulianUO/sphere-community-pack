@@ -1,6 +1,5 @@
 [typedef t_map]
 on=@dclick
-local.mapwidth = <qval <tag0.override.map.width> ? <tag0.override.map.width> : 200>
-local.mapheight = <qval <tag0.override.map.height> ? <tag0.override.map.height> : 200>
-src.sendpacket 090 d<uid> w0139d w<more1h> w<more1l> w<more2h> w<more2l> w<local.mapwidth> w<local.mapheight>
-return 1
+tdata1 = <qval <tag0.override.map.width> ? <tag0.override.map.width> : <tdata1>>
+tdata2 = <qval <tag0.override.map.height> ? <tag0.override.map.height> : <tdata2>>
+
