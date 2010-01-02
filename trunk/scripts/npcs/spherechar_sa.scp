@@ -13,7 +13,7 @@ VERSION=0.56b
 [CHARDEF 666]
 DEFNAME=c_gargoyle_male
 NAME=Gargoyle Male
-ICON=i_pet_man
+ICON=i_pet_gargoyle_male
 RESLEVEL=7
 RESDISPDNHUE=0410
 RESDISPDNID=c_man
@@ -44,7 +44,7 @@ ON=@Create
 [CHARDEF 667]
 DEFNAME=c_gargoyle_female
 NAME=Gargoyle Female
-ICON=i_pet_woman
+ICON=i_pet_gargoyle_female
 RESLEVEL=5
 RESDISPDNHUE=0410
 RESDISPDNID=c_woman
@@ -75,7 +75,7 @@ ON=@Create
 [CHARDEF 694]
 DEFNAME=c_garg_ghost_man
 NAME=Gargoyle Male Ghost
-ICON=i_pet_man
+ICON=i_pet_gargoyle_male
 RESLEVEL=7
 RESDISPDNHUE=0410
 RESDISPDNID=c_ghost_man
@@ -106,7 +106,7 @@ ON=@Create
 [CHARDEF 695]
 DEFNAME=c_garg_ghost_woman
 NAME=Gargoyle Female Ghost
-ICON=i_pet_woman
+ICON=i_pet_gargoyle_female
 RESLEVEL=7
 RESDISPDNHUE=0410
 RESDISPDNID=c_ghost_woman
