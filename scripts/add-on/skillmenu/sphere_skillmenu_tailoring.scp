@@ -104,4 +104,21 @@ tailoring_category_9_5		"i_backpack"
 tailoring_category_9_6		"i_bag"
 tailoring_category_9_7		"i_pouch"
 
+[defname sphere_crafting_tailoring_colored]
+tailoring_material_0		""
+tailoring_material_0_name	"NORMAL"
+tailoring_material_0_skill	"Tailoring 0.0"
+
+tailoring_material_1		"Spined"
+tailoring_material_1_name	"SPINED"
+tailoring_material_1_skill	"Tailoring 65.0"
+
+tailoring_material_2		"Horned"
+tailoring_material_2_name	"HORNED"
+tailoring_material_2_skill	"Tailoring 80.0"
+
+tailoring_material_3		"Barbed"
+tailoring_material_3_name	"BARBED"
+tailoring_material_3_skill	"Tailoring 99.9"
+
 [eof]

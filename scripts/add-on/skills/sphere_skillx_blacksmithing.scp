@@ -23,9 +23,10 @@ ctag.craft.message = "1044267"
 return 1
 
 [function f_craft_blacksmith_exceptionalbonus]
+ref5 = <args>
 name = Exceptional <name>
 if <isweapon>
-tag0.damageincrease += 35
+tag0.damageincrease += <eval 35 + (<ref5.armslore> / 200)>
 elif <isarmor>
 modar += <eval (<armor.high> * 15) / 100>
 endif

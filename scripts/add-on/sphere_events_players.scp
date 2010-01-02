@@ -107,7 +107,6 @@ if <def.scp.followers> == 1
 	endif
 endif
 
-// Crafting System
 on=@skillmenu
 doswitch <def.scp.CraftingSystem>
 return 0
@@ -116,8 +115,6 @@ enddo
 return 1
 
 on=@spellselect
-// Tithing is needed even if it is not used at all.
-// So this needs to be check before going into LRC and LMC.
 if (<argn1> > 199) && (<argn1> < 211)
 	if <tithing> < <def.scp.spell.<argn1>.tithing>
 	sysmessage <def.scp.magery_notithing>
@@ -125,14 +122,7 @@ if (<argn1> > 199) && (<argn1> < 211)
 	endif
 endif
 
-// Necromancy Words of Power
-// Armor Restriction + Mage Armor + Mage Weapon
-// Faster Cast Recovery
 on=@spellcast
-if <dtag0.spellrecovery> > <serv.time>
-src.sysmessage @03c1,6,2 502644 // You have not yet recovered from casting a spell
-return 1
-endif
 if <def.scp.OSISpellDiff> == 1
 local.skill = <serv.skill.<streat <serv.spell.<argn1>.skillreq>>.key>
 actdiff = <eval (((<<local.skill>> - <argn2>) * 2.5) + 50.0)>

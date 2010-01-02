@@ -58,7 +58,7 @@ endif
 ctag.craft.message = You create <ref2.name>.
 if <craft_exceptionalchance> < <r>
 	if !<isempty <def.<ctag0.craft.skill>_exceptional_bonus>>
-	ref2.<def.<ctag0.craft.skill>_exceptional_bonus>
+	ref2.<def.<ctag0.craft.skill>_exceptional_bonus> <uid>
 	endif
 ctag0.craft.message = <def.scp.craft_msg_exceptional>
 ref2.tag.exceptional = 1
