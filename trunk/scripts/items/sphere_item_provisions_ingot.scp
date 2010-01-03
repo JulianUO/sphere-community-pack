@@ -47,7 +47,7 @@ SUBSECTION=Blacksmiths
 DESCRIPTION=Dull Copper Ingot
 
 ON=@Create
-COLOR=color_o_dullcopper
+COLOR=color_o_dull_copper
 
 [ITEMDEF i_ingot_shadow]
 NAME=Shadow Ingot

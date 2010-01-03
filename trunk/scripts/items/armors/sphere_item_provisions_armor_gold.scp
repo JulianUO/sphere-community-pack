@@ -228,7 +228,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={41 51}
 
-[ITEMDEF i_BUCKLER_SHIELD_GOLD]
+[ITEMDEF i_SHIELD_BUCKLER_GOLD]
 NAME=Golden Buckler
 ID=i_shield_buckler
 ARMOR=0 // 7
@@ -244,7 +244,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS={41 51}
 
-[ITEMDEF i_METAL_SHIELD_GOLD]
+[ITEMDEF i_SHIELD_METAL_GOLD]
 NAME=Golden Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 11
@@ -260,8 +260,8 @@ ON=@Create
 	HITPOINTS={51 65}
 	COLOR=color_o_gold
 	
-[ITEMDEF i_FEMALE_PLATEMAIL_GOLD]
-NAME=Golden Platemail
+[ITEMDEF i_PLATEMAIL_FEMALE_GOLD]
+NAME=Golden Female Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 15
 REQSTR=15
@@ -352,7 +352,7 @@ ON=@Create
 	HITPOINTS=46
 	COLOR=color_o_gold
 
-[ITEMDEF i_HEATER_SHIELD_GOLD]
+[ITEMDEF i_SHIELD_HEATER_GOLD]
 NAME=Golden Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 23
@@ -368,7 +368,7 @@ ON=@Create
 	HITPOINTS=31
 	COLOR=color_o_gold
 	
-[ITEMDEF i_CLOSED_HELM_GOLD]
+[ITEMDEF i_HELM_CLOSED_GOLD]
 NAME=Golden Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 30
@@ -391,7 +391,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS=101
 
-[ITEMDEF i_HELMET_GOLD]
+[ITEMDEF i_HELM_OPEN_GOLD]
 NAME=Golden Helmet
 ID=i_helm_open
 ARMOR=0 // 30
@@ -437,7 +437,7 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS=101
 
-[ITEMDEF i_NOSE_HELM_GOLD]
+[ITEMDEF i_HELM_NOSE_GOLD]
 NAME=Golden Nose Helm
 ID=i_helm_nose
 ARMOR=0 // 30

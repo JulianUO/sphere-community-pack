@@ -130,8 +130,8 @@ ON=@Create
 	COLOR=color_o_bronze
 	HITPOINTS={51 65}
 
-[ITEMDEF i_FEMALE_PLATEMAIL_BRONZE]
-NAME=Bronze Platemail
+[ITEMDEF i_PLATEMAIL_FEMALE_BRONZE]
+NAME=Bronze Female Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 25
 REQSTR=15
@@ -306,7 +306,7 @@ ON=@Create
 	COLOR=color_o_bronze
 	HITPOINTS={41 51}
 
-[ITEMDEF i_BUCKLER_shield_BRONZE]
+[ITEMDEF i_shield_BUCKLER_BRONZE]
 NAME=Bronze Buckler
 ID=i_shield_buckler
 ARMOR=0 // 6
@@ -322,7 +322,7 @@ ON=@Create
 	COLOR=color_o_bronze
 	HITPOINTS={41 51}
 
-[ITEMDEF i_HEATER_SHIELD_BRONZE]
+[ITEMDEF i_SHIELD_HEATER_BRONZE]
 NAME=Bronze Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 20
@@ -338,7 +338,7 @@ ON=@Create
 	COLOR=color_o_bronze
 	HITPOINTS={31 37}
 
-[ITEMDEF i_METAL_SHIELD_BRONZE]
+[ITEMDEF i_SHIELD_METAL_BRONZE]
 NAME=Bronze Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 10
@@ -354,7 +354,7 @@ ON=@Create
 	COLOR=color_o_bronze
 	HITPOINTS={51 65}
 
-[ITEMDEF i_CLOSED_HELM_BRONZE]
+[ITEMDEF i_HELM_CLOSED_BRONZE]
 NAME=Bronze Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 25
@@ -376,7 +376,7 @@ ON=@Create
 	COLOR=color_o_bronze
 	HITPOINTS={30 45}
 
-[ITEMDEF i_HELMET_BRONZE]
+[ITEMDEF i_HELM_OPEN_BRONZE]
 NAME=Bronze Helmet
 ID=i_helm_open
 ARMOR=0 // 20
@@ -420,7 +420,7 @@ ON=@Create
 	COLOR=color_o_bronze
 	HITPOINTS={30 35}
 
-[ITEMDEF i_NOSE_HELM_BRONZE]
+[ITEMDEF i_HELM_NOSE_BRONZE]
 NAME=Bronze Nose Helm
 ID=i_helm_nose
 ARMOR=0 // 20

@@ -130,8 +130,8 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={51 65}
 
-[ITEMDEF i_FEMALE_PLATEMAIL_VERITE]
-NAME=Verite Platemail
+[ITEMDEF i_PLATEMAIL_FEMALE_VERITE]
+NAME=Verite Female Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 22
 REQSTR=15
@@ -306,7 +306,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={41 51}
 
-[ITEMDEF i_BUCKLER_SHIELD_VERITE]
+[ITEMDEF i_SHIELD_BUCKLER_VERITE]
 NAME=Verite Buckler
 ID=i_shield_buckler
 ARMOR=0 // 9
@@ -322,7 +322,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={41 51}
 
-[ITEMDEF i_HEATER_SHIELD_VERITE]
+[ITEMDEF i_SHIELD_HEATER_VERITE]
 NAME=Verite Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 25
@@ -338,7 +338,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={31 37}
 
-[ITEMDEF i_METAL_SHIELD_VERITE]
+[ITEMDEF i_SHIELD_METAL_VERITE]
 NAME=Verite Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 13
@@ -354,7 +354,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={51 65}
 
-[ITEMDEF i_CLOSED_HELM_VERITE]
+[ITEMDEF i_HELM_CLOSED_VERITE]
 NAME=Verite Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 37
@@ -376,7 +376,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={101 115}
 
-[ITEMDEF i_HELMET_VERITE]
+[ITEMDEF i_HELM_OPEN_VERITE]
 NAME=Verite Helmet
 ID=i_helm_open
 ARMOR=0 // 37
@@ -420,7 +420,7 @@ ON=@Create
 	COLOR=color_o_verite
 	HITPOINTS={101 115}
 
-[ITEMDEF i_NOSE_HELM_VERITE]
+[ITEMDEF i_HELM_NOSE_VERITE]
 NAME=Verite Nose Helm
 ID=i_helm_nose
 ARMOR=0 // 37

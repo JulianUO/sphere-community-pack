@@ -40,6 +40,22 @@ src.sysmessage <def.scp.skill_mustwait>
 return 1
 endif
 
+on=@equiptest
+if <tag0.Item.Gargoyle>
+	if <src.body> == c_gargoyle_male || <src.body> == c_gargoyle_female
+	return 0
+	endif
+src.sysmessage Can't equip this
+return 1
+endif
+if <tag0.Item.Elven>
+	if <src.body> == c_elf_male || <src.body> == c_elf_female
+	return 0
+	endif
+src.sysmessage Can't equip this
+return 1
+endif
+
 // Context Menu Display
 on=@contextmenurequest
 if <uid> == <src.uid>

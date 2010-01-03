@@ -53,15 +53,15 @@ blacksmithing_category_3_3	"i_platemail_gorget"		// 1025139
 blacksmithing_category_3_4	"i_platemail_leggings"		// 1025137
 blacksmithing_category_3_5	"i_platemail_chest"		// 1046431
 blacksmithing_category_3_6	"i_armor_female_plate"		// 1046430
-blacksmithing_category_3_8	"i_platemail_mempo"		// 1030105
-blacksmithing_category_3_9	"i_platemail_do"		// 1030109
-blacksmithing_category_3_10	"i_platemail_hiro_sode"		// 1030112
-blacksmithing_category_3_11	"i_platemail_suneate"		// 1030120
-blacksmithing_category_3_12	"i_platemail_haidate"		// 1030125
+blacksmithing_category_3_7	"i_platemail_mempo"		// 1030105
+blacksmithing_category_3_8	"i_platemail_do"		// 1030109
+blacksmithing_category_3_9	"i_platemail_hiro_sode"		// 1030112
+blacksmithing_category_3_10	"i_platemail_suneate"		// 1030120
+blacksmithing_category_3_11	"i_platemail_haidate"		// 1030125
 
 blacksmithing_category_4_1	"i_bascinet"			// 1025132
 blacksmithing_category_4_2	"i_helm_closed"			// 1025128
-blacksmithing_category_4_2	"i_helm_open"			// 1025130
+blacksmithing_category_4_3	"i_helm_open"			// 1025130
 blacksmithing_category_4_4	"i_helm_nose"			// 1025134 WTF??? seems to be called norse helm
 blacksmithing_category_4_5	"i_platemail_helm"		// 1025138
 blacksmithing_category_4_6	"i_chainmail_hatsuburi"		// 1030100

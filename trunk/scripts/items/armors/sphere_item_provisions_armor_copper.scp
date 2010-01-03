@@ -130,8 +130,8 @@ ON=@Create
 	COLOR=color_o_copper
 	HITPOINTS={51 65}
 	
-[ITEMDEF i_FEMALE_PLATEMAIL_COPPER]
-NAME=Copper Platemail
+[ITEMDEF i_PLATEMAIL_FEMALE_COPPER]
+NAME=Copper Female Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 15
 REQSTR=15
@@ -284,7 +284,7 @@ ON=@Create
 	COLOR=color_o_copper
 	HITPOINTS=41
 
-[ITEMDEF i_BUCKLER_SHIELD_COPPER]
+[ITEMDEF i_SHIELD_BUCKLER_COPPER]
 NAME=Copper Buckler
 ID=i_shield_buckler
 ARMOR=0 // 7
@@ -300,7 +300,7 @@ ON=@Create
 	COLOR=color_o_copper
 	HITPOINTS=41
 
-[ITEMDEF i_METAL_SHIELD_COPPER]
+[ITEMDEF i_SHIELD_METAL_COPPER]
 NAME=Copper Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 11
@@ -332,7 +332,7 @@ ON=@Create
 	HITPOINTS=46
 	COLOR=color_o_copper
 
-[ITEMDEF i_HEATER_SHIELD_COPPER]
+[ITEMDEF i_SHIELD_HEATER_COPPER]
 NAME=Copper Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 23
@@ -348,7 +348,7 @@ ON=@Create
 	COLOR=color_o_copper
 	HITPOINTS=31
 	
-[ITEMDEF i_CLOSED_HELM_COPPER]
+[ITEMDEF i_HELM_CLOSED_COPPER]
 NAME=Copper Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 30
@@ -370,7 +370,7 @@ ON=@Create
 	COLOR=color_o_copper
 	HITPOINTS=101
 
-[ITEMDEF i_HELMET_COPPER]
+[ITEMDEF i_HELM_OPEN_COPPER]
 NAME=Copper Helmet
 ID=i_helm_open
 ARMOR=0 // 30
@@ -414,7 +414,7 @@ ON=@Create
 	COLOR=color_o_copper
 	HITPOINTS=101
 
-[ITEMDEF i_NOSE_HELM_COPPER]
+[ITEMDEF i_HELM_NOSE_COPPER]
 NAME=Copper Nose Helm
 ID=i_helm_nose
 ARMOR=0 // 30

@@ -130,7 +130,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={51 65}
 
-[ITEMDEF i_FEMALE_PLATEMAIL_VALORITE]
+[ITEMDEF i_PLATEMAIL_FEMALE_VALORITE]
 NAME=Valorite Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 22
@@ -306,8 +306,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={41 51}
 
-[ITEMDEF i_BUCKLER_VALORITE]
-DEFNAME=i_BUCKLER_SHIELD_VALORITE
+[ITEMDEF i_SHIELD_BUCKLER_VALORITE]
 NAME=Valorite Buckler
 ID=i_shield_buckler
 ARMOR=0 // 9
@@ -323,7 +322,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={41 51}
 
-[ITEMDEF i_HEATER_SHIELD_VALORITE]
+[ITEMDEF i_SHIELD_HEATER_VALORITE]
 NAME=Valorite Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 25
@@ -339,7 +338,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={31 37}
 
-[ITEMDEF i_metal_shield_valorite]
+[ITEMDEF i_shield_metal_valorite]
 NAME=Valorite Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 13
@@ -355,7 +354,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={51 65}
 
-[ITEMDEF i_CLOSED_HELM_VALORITE]
+[ITEMDEF i_HELM_CLOSED_VALORITE]
 NAME=Valorite Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 37
@@ -377,7 +376,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={101 115}
 
-[ITEMDEF i_HELMET_VALORITE]
+[ITEMDEF i_HELM_OPEN_VALORITE]
 NAME=Valorite Helmet
 ID=i_helm_open
 ARMOR=0 // 37
@@ -421,7 +420,7 @@ ON=@Create
 	COLOR=color_o_valorite
 	HITPOINTS={101 115}
 
-[ITEMDEF i_NOSE_HELM_VALORITE]
+[ITEMDEF i_HELM_NOSE_VALORITE]
 NAME=Valorite Nose Helm
 ID=i_helm_nose
 ARMOR=0 // 37
