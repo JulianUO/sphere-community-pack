@@ -17,11 +17,11 @@ INSTALLATION AND USAGE INSTRUCTIONS
 
 - To enable optional/experimental systems, add the following events:
   (NOTE: Attach the events at the end of the lines in the last step)
-  EventsPet=e_new_combat,e_NpcPropertiesEvent
-  * e_new_combat_code: New Combat System (Optional)
+  EventsPet=e_NpcCombatEvent,e_NpcPropertiesEvent
+  * e_NpcCombatEvent: New Combat System (Optional)
   * e_NpcPropertiesEvent: NPC Loot Generator
-  EventsPlayer=e_new_combat_code,e_PlayerPropertiesEvent,e_PlayerTooltipEvent
-  * e_new_combat_code: New Combat System (Optional)
+  EventsPlayer=e_PlayerCombatEvent,e_PlayerPropertiesEvent,e_PlayerTooltipEvent
+  * e_PlayerCombatEvent: New Combat System (Optional)
   * e_PlayerPropertiesEvent: Item Magical Properties (Optional)
   * e_PlayerTooltipEvent: New Item Tooltips Generator (Experimental)
 

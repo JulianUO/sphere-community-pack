@@ -69,6 +69,7 @@ if <def.scp.ItemProp_ReflectPhysicalDamage>
 	endif
 endif
 
+
 [events e_NpcCombatEvent]
 on=@hittry
 if <def.scp.Combat_FormulasUsed> != 0
@@ -119,8 +120,5 @@ local.energy -= <muldiv <argn1>,<tag0.ResEnergy>,100>
 argn1 = <eval <local.physical> + <local.fire> + <local.cold> + <local.poison> + <local.energy>>
 argn2 |= dam_god
 endif
-
-
-on=@afterhit
 
 [eof]

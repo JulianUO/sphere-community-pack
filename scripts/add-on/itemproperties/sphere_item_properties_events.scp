@@ -167,7 +167,7 @@ local.MRe = <tag0.ManaRegeneration>
 else
 endif
 local.MRt = <eval 2 + <local.MRmi> + <local.MRf> + <local.MRe>> // This is the amount of points in 10 seconds
-tag0.override.regenval_1 = <eval <local.MRt> / 10> // So we get the 1 second value this way =)
+tag0.override.regenval_1 = <local.MRt> // We get the 10 second value this way =)
 
 on=@spellselect
 // A small check for Faster Cast Recovery. No need for checking if it is activated.

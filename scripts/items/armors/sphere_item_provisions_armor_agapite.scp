@@ -42,7 +42,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-[ITEMDEF i_PLATEMAIL_leggings_AGAPITE]
+[ITEMDEF i_platemail_leggings_agapite]
 NAME=Agapite Platemail Legs
 ID=i_platemail_leggings
 ARMOR=0 // 37
@@ -64,7 +64,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-[ITEMDEF i_PLATE_HELM_AGAPITE]
+[ITEMDEF i_platemail_helm_agapite]
 NAME=Agapite Plate Helm
 ID=i_platemail_helm
 ARMOR=0 // 37
@@ -86,7 +86,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={46 58}
 
-[ITEMDEF i_PLATEMAIL_GORGET_AGAPITE]
+[ITEMDEF i_platemail_gorget_agapite]
 NAME=Agapite Platemail Gorget
 ID=i_platemail_gorget
 ARMOR=0 // 37
@@ -108,7 +108,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-[ITEMDEF i_PLATEMAIL_GLOVES_AGAPITE]
+[ITEMDEF i_platemail_gloves_agapite]
 NAME=Agapite Platemail Gauntlets
 ID=i_platemail_gloves
 ARMOR=0 // 37
@@ -130,8 +130,8 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-[ITEMDEF i_FEMALE_PLATEMAIL_AGAPITE]
-NAME=Agapite Platemail
+[ITEMDEF i_platemail_female_agapite]
+NAME=Agapite Female Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 22
 REQSTR=15
@@ -306,7 +306,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={41 51}
 
-[ITEMDEF i_BUCKLER_SHIELD_AGAPITE]
+[ITEMDEF i_SHIELD_BUCKLER_AGAPITE]
 NAME=Agapite Buckler
 ID=i_shield_buckler
 ARMOR=0 // 9
@@ -322,7 +322,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={41 51}
 
-[ITEMDEF i_HEATER_SHIELD_AGAPITE]
+[ITEMDEF i_SHIELD_HEATER_AGAPITE]
 NAME=Agapite Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 25
@@ -338,7 +338,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={31 37}
 
-[ITEMDEF i_METAL_SHIELD_AGAPITE]
+[ITEMDEF i_SHIELD_METAL_AGAPITE]
 NAME=Agapite Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 13
@@ -354,7 +354,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={51 65}
 
-[ITEMDEF i_CLOSED_HELM_AGAPITE]
+[ITEMDEF i_HELM_CLOSED_AGAPITE]
 NAME=Agapite Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 37
@@ -376,7 +376,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={101 115}
 
-[ITEMDEF i_HELMET_AGAPITE]
+[ITEMDEF i_HELM_OPEN_AGAPITE]
 NAME=Agapite Helmet
 ID=i_helm_open
 ARMOR=0 // 37
@@ -420,7 +420,7 @@ ON=@Create
 	COLOR=color_o_agapite
 	HITPOINTS={101 115}
 
-[ITEMDEF i_NOSE_HELM_AGAPITE]
+[ITEMDEF i_HELM_NOSE_AGAPITE]
 NAME=Agapite Nose Helm
 ID=i_helm_nose
 ARMOR=0 // 37

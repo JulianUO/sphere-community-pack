@@ -130,8 +130,8 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS=100
 
-[ITEMDEF i_FEMALE_PLATEMAIL_SHADOW]
-NAME=Shadow Platemail
+[ITEMDEF i_PLATEMAIL_FEMALE_SHADOW]
+NAME=Shadow Female Platemail
 ID=i_armor_female_plate
 ARMOR=0 // 22
 REQSTR=15
@@ -306,7 +306,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={41 51}
 
-[ITEMDEF i_BUCKLER_SHIELD_SHADOW]
+[ITEMDEF i_SHIELD_BUCKLER_SHADOW]
 NAME=Shadow Buckler
 ID=i_shield_buckler
 ARMOR=0 // 9
@@ -322,7 +322,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={41 51}
 
-[ITEMDEF i_HEATER_SHIELD_SHADOW]
+[ITEMDEF i_SHIELD_HEATER_SHADOW]
 NAME=Shadow Heater Shield
 ID=I_SHIELD_HEATER
 ARMOR=0 // 25
@@ -338,7 +338,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={31 37}
 
-[ITEMDEF i_METAL_SHIELD_SHADOW]
+[ITEMDEF i_SHIELD_METAL_SHADOW]
 NAME=Shadow Metal Shield
 ID=i_shield_round_metal
 ARMOR=0 // 13
@@ -354,7 +354,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS=100
 
-[ITEMDEF i_CLOSED_HELM_SHADOW]
+[ITEMDEF i_HELM_CLOSED_SHADOW]
 NAME=Shadow Closed Helm
 ID=i_helm_closed
 ARMOR=0 // 37
@@ -376,7 +376,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={101 115}
 
-[ITEMDEF i_HELMET_SHADOW]
+[ITEMDEF i_HELM_OPEN_SHADOW]
 NAME=Shadow Helmet
 ID=i_helm_open
 ARMOR=0 // 37
@@ -420,7 +420,7 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={101 115}
 
-[ITEMDEF i_NOSE_HELM_SHADOW]
+[ITEMDEF i_HELM_NOSE_SHADOW]
 NAME=Shadow Bascinet
 ID=i_helm_nose
 ARMOR=0 // 37

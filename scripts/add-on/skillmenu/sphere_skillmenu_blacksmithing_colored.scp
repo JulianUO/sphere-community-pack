@@ -1,0 +1,240 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Based on EA crafting lists
+
+[defname sphere_crafting_blacksmithing_dull_copper]
+blacksmithing_1_category_1_1	"i_ringmail_gloves_dull_copper"
+blacksmithing_1_category_1_2	"i_ringmail_leggings_dull_copper"
+blacksmithing_1_category_1_3	"i_ringmail_sleeves_dull_copper"
+blacksmithing_1_category_1_4	"i_ringmail_tunic_dull_copper"
+
+blacksmithing_1_category_2_1	"i_chainmail_coif_dull_copper"
+blacksmithing_1_category_2_2	"i_chainmail_leggings_dull_copper"
+blacksmithing_1_category_2_3	"i_chainmail_tunic_dull_copper"
+
+blacksmithing_1_category_3_1	"i_platemail_arms_dull_copper"
+blacksmithing_1_category_3_2	"i_platemail_gloves_dull_copper"
+blacksmithing_1_category_3_3	"i_platemail_gorget_dull_copper"
+blacksmithing_1_category_3_4	"i_platemail_leggings_dull_copper"
+blacksmithing_1_category_3_5	"i_platemail_chest_dull_copper"
+blacksmithing_1_category_3_6	"i_platemail_female_dull_copper"
+
+blacksmithing_1_category_4_1	"i_bascinet_dull_copper"
+blacksmithing_1_category_4_2	"i_helm_closed_dull_copper"
+blacksmithing_1_category_4_3	"i_helm_open_dull_copper"
+blacksmithing_1_category_4_4	"i_helm_nose_dull_copper"
+blacksmithing_1_category_4_5	"i_plate_helm_dull_copper"
+
+blacksmithing_1_category_5_1	"i_shield_buckler_dull_copper"
+blacksmithing_1_category_5_2	"i_shield_heater_dull_copper"
+blacksmithing_1_category_5_3	"i_shield_metal_dull_copper"
+
+
+[defname sphere_crafting_blacksmithing_shadow]
+blacksmithing_2_category_1_1	"i_ringmail_gloves_shadow"
+blacksmithing_2_category_1_2	"i_ringmail_leggings_shadow"
+blacksmithing_2_category_1_3	"i_ringmail_sleeves_shadow"
+blacksmithing_2_category_1_4	"i_ringmail_tunic_shadow"
+
+blacksmithing_2_category_2_1	"i_chainmail_coif_shadow"
+blacksmithing_2_category_2_2	"i_chainmail_leggings_shadow"
+blacksmithing_2_category_2_3	"i_chainmail_tunic_shadow"
+
+blacksmithing_2_category_3_1	"i_platemail_arms_shadow"
+blacksmithing_2_category_3_2	"i_platemail_gloves_shadow"
+blacksmithing_2_category_3_3	"i_platemail_gorget_shadow"
+blacksmithing_2_category_3_4	"i_platemail_leggings_shadow"
+blacksmithing_2_category_3_5	"i_platemail_chest_shadow"
+blacksmithing_2_category_3_6	"i_platemail_female_shadow"
+
+blacksmithing_2_category_4_1	"i_bascinet_shadow"
+blacksmithing_2_category_4_2	"i_helm_closed_shadow"
+blacksmithing_2_category_4_3	"i_helm_open_shadow"
+blacksmithing_2_category_4_4	"i_helm_nose_shadow"
+blacksmithing_2_category_4_5	"i_plate_helm_shadow"
+
+blacksmithing_2_category_5_1	"i_shield_buckler_shadow"
+blacksmithing_2_category_5_2	"i_shield_heater_shadow"
+blacksmithing_2_category_5_3	"i_shield_metal_shadow"
+
+
+[defname sphere_crafting_blacksmithing_copper]
+blacksmithing_3_category_1_1	"i_ringmail_gloves_copper"
+blacksmithing_3_category_1_2	"i_ringmail_leggings_copper"
+blacksmithing_3_category_1_3	"i_ringmail_sleeves_copper"
+blacksmithing_3_category_1_4	"i_ringmail_tunic_copper"
+
+blacksmithing_3_category_2_1	"i_chainmail_coif_copper"
+blacksmithing_3_category_2_2	"i_chainmail_leggings_copper"
+blacksmithing_3_category_2_3	"i_chainmail_tunic_copper"
+
+blacksmithing_3_category_3_1	"i_platemail_arms_copper"
+blacksmithing_3_category_3_2	"i_platemail_gloves_copper"
+blacksmithing_3_category_3_3	"i_platemail_gorget_copper"
+blacksmithing_3_category_3_4	"i_platemail_leggings_copper"
+blacksmithing_3_category_3_5	"i_platemail_chest_copper"
+blacksmithing_3_category_3_6	"i_platemail_female_copper"
+
+blacksmithing_3_category_4_1	"i_bascinet_copper"
+blacksmithing_3_category_4_2	"i_helm_closed_copper"
+blacksmithing_3_category_4_3	"i_helm_open_copper"
+blacksmithing_3_category_4_4	"i_helm_nose_copper"
+blacksmithing_3_category_4_5	"i_plate_helm_copper"
+
+blacksmithing_3_category_5_1	"i_shield_buckler_copper"
+blacksmithing_3_category_5_2	"i_shield_heater_copper"
+blacksmithing_3_category_5_3	"i_shield_metal_copper"
+
+
+[defname sphere_crafting_blacksmithing_bronze]
+blacksmithing_4_category_1_1	"i_ringmail_gloves_bronze"
+blacksmithing_4_category_1_2	"i_ringmail_leggings_bronze"
+blacksmithing_4_category_1_3	"i_ringmail_sleeves_bronze"
+blacksmithing_4_category_1_4	"i_ringmail_tunic_bronze"
+
+blacksmithing_4_category_2_1	"i_chainmail_coif_bronze"
+blacksmithing_4_category_2_2	"i_chainmail_leggings_bronze"
+blacksmithing_4_category_2_3	"i_chainmail_tunic_bronze"
+
+blacksmithing_4_category_3_1	"i_platemail_arms_bronze"
+blacksmithing_4_category_3_2	"i_platemail_gloves_bronze"
+blacksmithing_4_category_3_3	"i_platemail_gorget_bronze"
+blacksmithing_4_category_3_4	"i_platemail_leggings_bronze"
+blacksmithing_4_category_3_5	"i_platemail_chest_bronze"
+blacksmithing_4_category_3_6	"i_platemail_female_bronze"
+
+blacksmithing_4_category_4_1	"i_bascinet_bronze"
+blacksmithing_4_category_4_2	"i_helm_closed_bronze"
+blacksmithing_4_category_4_3	"i_helm_open_bronze"
+blacksmithing_4_category_4_4	"i_helm_nose_bronze"
+blacksmithing_4_category_4_5	"i_plate_helm_bronze"
+
+blacksmithing_4_category_5_1	"i_shield_buckler_bronze"
+blacksmithing_4_category_5_2	"i_shield_heater_bronze"
+blacksmithing_4_category_5_3	"i_shield_metal_bronze"
+
+
+[defname sphere_crafting_blacksmithing_gold]
+blacksmithing_5_category_1_1	"i_ringmail_gloves_gold"
+blacksmithing_5_category_1_2	"i_ringmail_leggings_gold"
+blacksmithing_5_category_1_3	"i_ringmail_sleeves_gold"
+blacksmithing_5_category_1_4	"i_ringmail_tunic_gold"
+
+blacksmithing_5_category_2_1	"i_chainmail_coif_gold"
+blacksmithing_5_category_2_2	"i_chainmail_leggings_gold"
+blacksmithing_5_category_2_3	"i_chainmail_tunic_gold"
+
+blacksmithing_5_category_3_1	"i_platemail_arms_gold"
+blacksmithing_5_category_3_2	"i_platemail_gloves_gold"
+blacksmithing_5_category_3_3	"i_platemail_gorget_gold"
+blacksmithing_5_category_3_4	"i_platemail_leggings_gold"
+blacksmithing_5_category_3_5	"i_platemail_chest_gold"
+blacksmithing_5_category_3_6	"i_platemail_female_gold"
+
+blacksmithing_5_category_4_1	"i_bascinet_gold"
+blacksmithing_5_category_4_2	"i_helm_closed_gold"
+blacksmithing_5_category_4_3	"i_helm_open_gold"
+blacksmithing_5_category_4_4	"i_helm_nose_gold"
+blacksmithing_5_category_4_5	"i_plate_helm_gold"
+
+blacksmithing_5_category_5_1	"i_shield_buckler_gold"
+blacksmithing_5_category_5_2	"i_shield_heater_gold"
+blacksmithing_5_category_5_3	"i_shield_metal_gold"
+
+
+[defname sphere_crafting_blacksmithing_agapite]
+blacksmithing_6_category_1_1	"i_ringmail_gloves_agapite"
+blacksmithing_6_category_1_2	"i_ringmail_leggings_agapite"
+blacksmithing_6_category_1_3	"i_ringmail_sleeves_agapite"
+blacksmithing_6_category_1_4	"i_ringmail_tunic_agapite"
+
+blacksmithing_6_category_2_1	"i_chainmail_coif_agapite"
+blacksmithing_6_category_2_2	"i_chainmail_leggings_agapite"
+blacksmithing_6_category_2_3	"i_chainmail_tunic_agapite"
+
+blacksmithing_6_category_3_1	"i_platemail_arms_agapite"
+blacksmithing_6_category_3_2	"i_platemail_gloves_agapite"
+blacksmithing_6_category_3_3	"i_platemail_gorget_agapite"
+blacksmithing_6_category_3_4	"i_platemail_leggings_agapite"
+blacksmithing_6_category_3_5	"i_platemail_chest_agapite"
+blacksmithing_6_category_3_6	"i_platemail_female_agapite"
+
+blacksmithing_6_category_4_1	"i_bascinet_agapite"
+blacksmithing_6_category_4_2	"i_helm_closed_agapite"
+blacksmithing_6_category_4_3	"i_helm_open_agapite"
+blacksmithing_6_category_4_4	"i_helm_nose_agapite"
+blacksmithing_6_category_4_5	"i_plate_helm_agapite"
+
+blacksmithing_6_category_5_1	"i_shield_buckler_agapite"
+blacksmithing_6_category_5_2	"i_shield_heater_agapite"
+blacksmithing_6_category_5_3	"i_shield_metal_agapite"
+
+
+[defname sphere_crafting_blacksmithing_verite]
+blacksmithing_7_category_1_1	"i_ringmail_gloves_verite"
+blacksmithing_7_category_1_2	"i_ringmail_leggings_verite"
+blacksmithing_7_category_1_3	"i_ringmail_sleeves_verite"
+blacksmithing_7_category_1_4	"i_ringmail_tunic_verite"
+
+blacksmithing_7_category_2_1	"i_chainmail_coif_verite"
+blacksmithing_7_category_2_2	"i_chainmail_leggings_verite"
+blacksmithing_7_category_2_3	"i_chainmail_tunic_verite"
+
+blacksmithing_7_category_3_1	"i_platemail_arms_verite"
+blacksmithing_7_category_3_2	"i_platemail_gloves_verite"
+blacksmithing_7_category_3_3	"i_platemail_gorget_verite"
+blacksmithing_7_category_3_4	"i_platemail_leggings_verite"
+blacksmithing_7_category_3_5	"i_platemail_chest_verite"
+blacksmithing_7_category_3_6	"i_platemail_female_verite"
+
+blacksmithing_7_category_4_1	"i_bascinet_verite"
+blacksmithing_7_category_4_2	"i_helm_closed_verite"
+blacksmithing_7_category_4_3	"i_helm_open_verite"
+blacksmithing_7_category_4_4	"i_helm_nose_verite"
+blacksmithing_7_category_4_5	"i_plate_helm_verite"
+
+blacksmithing_7_category_5_1	"i_shield_buckler_verite"
+blacksmithing_7_category_5_2	"i_shield_heater_verite"
+blacksmithing_7_category_5_3	"i_shield_metal_verite"
+
+
+[defname sphere_crafting_blacksmithing_valorite]
+blacksmithing_8_category_1_1	"i_ringmail_gloves_valorite"
+blacksmithing_8_category_1_2	"i_ringmail_leggings_valorite"
+blacksmithing_8_category_1_3	"i_ringmail_sleeves_valorite"
+blacksmithing_8_category_1_4	"i_ringmail_tunic_valorite"
+
+blacksmithing_8_category_2_1	"i_chainmail_coif_valorite"
+blacksmithing_8_category_2_2	"i_chainmail_leggings_valorite"
+blacksmithing_8_category_2_3	"i_chainmail_tunic_valorite"
+
+blacksmithing_8_category_3_1	"i_platemail_arms_valorite"
+blacksmithing_8_category_3_2	"i_platemail_gloves_valorite"
+blacksmithing_8_category_3_3	"i_platemail_gorget_valorite"
+blacksmithing_8_category_3_4	"i_platemail_leggings_valorite"
+blacksmithing_8_category_3_5	"i_platemail_chest_valorite"
+blacksmithing_8_category_3_6	"i_platemail_female_valorite"
+
+blacksmithing_8_category_4_1	"i_bascinet_valorite"
+blacksmithing_8_category_4_2	"i_helm_closed_valorite"
+blacksmithing_8_category_4_3	"i_helm_open_valorite"
+blacksmithing_8_category_4_4	"i_helm_nose_valorite"
+blacksmithing_8_category_4_5	"i_plate_helm_valorite"
+
+blacksmithing_8_category_5_1	"i_shield_buckler_valorite"
+blacksmithing_8_category_5_2	"i_shield_heater_valorite"
+blacksmithing_8_category_5_3	"i_shield_metal_valorite"
+
+[eof]

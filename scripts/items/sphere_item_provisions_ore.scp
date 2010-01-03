@@ -37,7 +37,7 @@ TDATA1=i_ingot_dull_copper
 VALUE=15
 
 ON=@Create
-COLOR=color_o_dullcopper
+COLOR=color_o_dull_copper
 
 [ITEMDEF i_ore_shadow]
 ID=i_ore_iron

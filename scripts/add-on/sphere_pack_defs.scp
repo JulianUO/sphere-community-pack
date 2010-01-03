@@ -46,7 +46,7 @@ color_o_frostwood	047f
 
 [DEFNAME COLOR_ORE]
 color_o_iron		0763 //option: 0
-color_o_dullcopper	060a
+color_o_dull_copper	060a
 color_o_shadow		0770
 color_o_copper		0641 //option: 060c
 color_o_bronze		06d6
