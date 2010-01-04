@@ -75,7 +75,12 @@ ENDWHILE
 ENDIF
 
 [FUNCTION f_skill_delay]
-tag.skillrecovery = (<serv.time>+<args>)
+if <def.scp.SkillWaitingTimes> == 1
+ctag.skillrecovery = (<serv.time>+<argn1>)
+	if <serv.time> <= <ctag.skillrecovery>
+	ctag.skillrecovery =
+	endif
+endif
 
 [FUNCTION max]
 RETURN <QVAL <ARGN2> < <ARGN1>? <ARGN1> : <ARGN2>>
