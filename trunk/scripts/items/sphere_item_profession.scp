@@ -641,31 +641,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Blacksmiths
 DESCRIPTION=Forge 1
 
-[ITEMDEF 0fb4]
-//Sledge Hammer
-DEFNAME=i_hammer_sledge
-WEIGHT=4
-TYPE=T_WEAPON_MACE_SMITH
-FLIP=1
-RESOURCES=4 i_ingot_iron
-SKILLMAKE=TINKERING 54.1,t_tinker_tools
-DAM=13,15
-SPEED=33
-SKILL=MaceFighting
-REQSTR=40
-TWOHANDS=N
-DUPELIST=0fb5
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Sledge Hammer
-
-ON=@Create
-	HITPOINTS={50 60}
-
-[ITEMDEF 0fb5]
-//sledge hammer
-DUPEITEM=0fb4
-
 [ITEMDEF 0fb6]
 //horse shoes
 DEFNAME=i_horse_shoes

@@ -1,3 +1,22 @@
+[function ColorElementalType]
+local.max = 50
+if <tag0.DamPoison> > 50
+local.hue = <eval 1267 + ((<tag0.DamPoison> - 50) / 10)>
+local.max = <tag0.DamPoison>
+endif
+if <tag0.DamFire> > <local.max>
+local.hue = <eval 1255 + ((<tag0.DamFire> - 50) / 10)>
+local.max = <tag0.DamFire>
+endif
+if <tag0.DamEnergy> > <local.max>
+local.hue = <eval 1273 + ((<tag0.DamEnergy> - 50) / 10)>
+local.max = <tag0.DamEnergy>
+endif
+if <tag0.DamCold> > <local.max>
+local.hue = <eval 1261 + ((<tag0.DamCold> - 50) / 10)>
+endif
+return <local.hue>
+
 [function f_resenddialog]
 dialogclose <ARGV[0]>
 sdialog <ARGS>

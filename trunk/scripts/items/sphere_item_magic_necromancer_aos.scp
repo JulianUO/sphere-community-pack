@@ -35,8 +35,8 @@ if <argo.type> == t_scroll
         argo.remove
       else
         argo.amount -= 1
-        argo.update
       endif
+      argo.update
       return 1
     endif
   endif

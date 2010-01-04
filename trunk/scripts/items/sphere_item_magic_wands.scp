@@ -1314,7 +1314,10 @@ ON=@Create
 
 [ITEMDEF i_wand_FIREWORKS]
 ID=i_wand_3
-NAME=fireworks wand 20 charges
+NAME=Fireworks Wand 10 charges
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Wands
+DESCRIPTION=Fireworks!
 
 ON=@Create
 	ATTR=attr_magic
@@ -1330,7 +1333,7 @@ ON=@DCLICK
 		RETURN 1
 	endif
 	more2 = <more2> - 1
-	NAME=fireworks wand <more2> charges
+	NAME=Fireworks Wand <MORE2> charges
 	SRC.NEWITEM=i_fx_curse
 	SRC.ACT.NAME=fireworks display
 	SRC.ACT.MOVE=-2+RAND(5),-2+RAND(5),20+RAND(12)
