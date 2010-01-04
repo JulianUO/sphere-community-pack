@@ -66,7 +66,7 @@ sysmessage @,,2 500404 // They seem unwilling to give you any money.
 f_skill_delay <getargv 2,<def.skill.6.waittime>>
 
 on=@targetcancel
-f_skill_delay <getargv 2,<def.skill.6.waittime>>
+f_skill_delay <getargv 3,<def.skill.6.waittime>>
 
 [function f_begging_success]
 ref1 = <args>
