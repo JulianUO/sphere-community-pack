@@ -15,6 +15,25 @@ VERSION=0.56b
 // Default lists, something like "small" settings.
 // If need to change color, sounds, etc, search around here.
 
+[DEFNAME WAITINGTIMES] // select/start, success, fail - -1 means no action
+skill.1.waittime	"2.0, -1, -1" // Anatomy (Done)
+skill.2.waittime	"1.0, -1, -1" // Animal Lore (Done)
+skill.3.waittime	"1.0, -1, -1" // Item Identification (Done)
+skill.4.waittime	"1.0, -1, -1" // Arms Lore (Done)
+skill.6.waittime	"21600.0, 10.0, 0" // Begging (Done)
+skill.9.waittime	"1.0, 10.0, 5.0"
+skill.14.waittime	"6.0, -1, -1"
+skill.15.waittime	"1.0, -1, -1"
+skill.16.waittime	"1.0, -1, -1"
+skill.19.waittime	"1.0, -1, -1"
+skill.21.waittime	"-1, 10.0, 1.0"
+skill.22.waittime	"1.0, 10.0, 5.0"
+skill.30.waittime	"10.0, -1, -1"
+skill.32.waittime	"-1, 1.0, 1.0"
+skill.36.waittime	"1.0, -1, -1"
+skill.38.waittime	"10.0, -1, -1"
+
+
 [DEFNAME TITHINGCONSUME]
 spell.201.tithing	"10" // Cleanse by Fire
 spell.202.tithing	"10" // Close Wounds

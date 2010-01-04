@@ -10,8 +10,8 @@ VERSION=0.56b
 DEFNAME=SKILL_Begging
 KEY=Begging
 TITLE=Beggar
-PROMPT_MSG=@,,2 500397
-DELAY=2.0
+PROMPT_MSG=@,,2 500397 // To whom do you wish to grovel?
+DELAY=4.0
 ADV_RATE=2.5,50.0,200.0
 STAT_STR=5
 STAT_INT=55
@@ -22,10 +22,69 @@ BONUS_INT=50
 BONUS_STATS=10
 
 on=@select
+f_skill_delay <getargv 0,<def.skill.6.waittime>>
+
+on=@start
 if <def.scp.NewSkills_Begging> == 1
-sysmessage @,,2 500397 // To whom do you wish to grovel?
-targetf f_begging_start
-return 1
+	if <act.isitem>
+	f_skill_delay <getargv 2,<def.skill.6.waittime>>
+	return 1
+	endif
+	if !<act.brain>
+	sysmessage @,,2 500398 // Perhaps just asking would work better.
+	f_skill_delay <getargv 2,<def.skill.6.waittime>>
+	return 1
+	elseif !((<act.body> == c_man) || (<act.body> == c_woman))
+	sysmessage @,,2 500399 // There is little chance of getting money from that!
+	f_skill_delay <getargv 2,<def.skill.6.waittime>>
+	return 1
+	elseif !<distance <act.uid>> < 4
+	sysmessage @,,2 <act.sex 500401/500402> // You are too far away to beg from him/her.
+	f_skill_delay <getargv 2,<def.skill.6.waittime>>
+	return 1
+	elseif <findlayer.layer_horse.uid>
+	sysmessage @,,2 500404 // They seem unwilling to give you any money.
+	f_skill_delay <getargv 2,<def.skill.6.waittime>>
+	return 1
+	endif
+face <act.uid>
+f_loopanim 32,4,1
+	if <skillsuccess <r1000>,begging>
+	timerf 4,f_begging_success <act>
+	else
+	timerf 4,sysmessage @,,2 500404 // They seem unwilling to give you any money.
+	timerf 4,f_skill_delay <getargv 2,<def.skill.6.waittime>>
+	endif
+	return 1
 endif
+
+on=@success
+f_skill_delay <getargv 1,<def.skill.6.waittime>>
+
+on=@fail
+f_skill_delay <getargv 2,<def.skill.6.waittime>>
+
+on=@targetcancel
+f_skill_delay <eval <getargv 2,<def.skill.6.waittime>>>
+
+[function f_begging_success]
+ref1 = <args>
+if <ref1.gold> < 10
+ref1.say @,,2 500407 // I have not enough money to give thee any!
+else
+local.getgold = <eval <ref1.gold>/10>
+local.max = <eval (10 + (<fame> / 2500))>
+if <local.max> > 14
+local.max = 14
+elseif <local.max> < 10
+local.max = 10
+endif
+if <local.getgold> > <local.max>
+local.getgold = <local.max>
+endif
+ref1.consume <dlocal.getgold> i_gold
+newgold <dlocal.getgold>
+f_skill_delay <eval <getargv 1,<def.skill.6.waittime>>>
+skillgain begging <eval (<begging> / 10)>
 
 [eof]
