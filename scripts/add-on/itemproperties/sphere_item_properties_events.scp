@@ -32,7 +32,7 @@ VERSION=0.56b
 // ---------------
 // scp.ItemProp_Resistances
 // *DONE* scp.ItemProp_DamageIncrease
-// *DONE* scp.ItemProp_DefenseChanceIncrease	// ATTACH TO COMBAT SYS
+// *DONE* scp.ItemProp_DefenseChanceIncrease
 // *DONE* scp.ItemProp_DexterityBonus
 // scp.ItemProp_EnhancePotion			// ATTACH TO CRAFTING SYS
 // *DONE* scp.ItemProp_FasterCastRecovery
@@ -40,8 +40,8 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_HitChanceIncrease
 // *DONE* scp.ItemProp_HitDispel
 // *DONE* scp.ItemProp_HitLifeLeech
-// scp.ItemProp_HitLowerAttack			// ATTACH TO COMBAT SYS
-// scp.ItemProp_HitLowerDefense			// ATTACH TO COMBAT SYS
+// *DONE* scp.ItemProp_HitLowerAttack
+// *DONE* scp.ItemProp_HitLowerDefense
 // *DONE* scp.ItemProp_HitManaLeech
 // *DONE* scp.ItemProp_HitPointRegeneracion
 // *DONE* scp.ItemProp_HitStaminaLeech
@@ -54,7 +54,7 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_MageWeapon
 // *DONE* scp.ItemProp_ManaIncrease
 // *DONE* scp.ItemProp_ManaRegeneration
-// *DONE* scp.ItemProp_ReflectPhysicalDamage		// ATTACH TO COMBAT SYS
+// *DONE* scp.ItemProp_ReflectPhysicalDamage
 // *DONE* scp.ItemProp_SelfRepair
 // *DONE* scp.ItemProp_Slayer
 // *DONE* scp.ItemProp_SkillBonus
@@ -63,7 +63,7 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_StaminaIncrease
 // scp.ItemProp_StaminaRegeneration
 // *DONE* scp.ItemProp_StrengthBonus
-// *DONE* scp.ItemProp_SwingSpeedIncrease		// ATTACH TO COMBAT SYS
+// *DONE* scp.ItemProp_SwingSpeedIncrease
 // *DONE* scp.ItemProp_BestWeaponSkill
 
 
@@ -284,6 +284,28 @@ if <def.scp.ItemProp_DamageIncrease> == 1
 	argn1 += <eval ((<local.tempbonus> * <argn1>) / 100) + 1>
 	endif
 endif
+// Hit Lower Attack and Hit Lower Defense applies directly to the target HCI/HDI
+// It lasts for 8 seconds and only a 25 percent, though the intensity is used for calculations.
+if <def.scp.ItemProp_HitLowerAttack> == 1
+	if <r100> < <tag0.HitLowerAttack>
+		if <src.restest i_hit_lower_attack>
+		src.findid.i_hit_lower_attack.timer = 8
+		else
+		serv.newitem i_hit_lower_attack
+		src.equip <new.uid>
+		endif
+	endif
+endif
+if <def.scp.ItemProp_HitLowerDefense> == 1
+	if <r100> < <tag0.HitLowerDefense>
+		if <src.restest i_hit_lower_defense>
+		src.findid.i_hit_lower_defense.timer = 8
+		else
+		serv.newitem i_hit_lower_defense
+		src.equip <new.uid>
+		endif
+	endif
+endif
 
 on=@gethit
 // This three leech properties should be at the end of the trigger
@@ -313,5 +335,39 @@ if <def.scp.ItemProp_HitStaminaLeech> == 1
 	stam += <argn1>
 	endif
 endif
+
+
+
+[Itemdef i_hit_lower_attack]
+ID=i_memory
+TYPE=t_eq_script
+Name=Hit Lower Attack
+
+on=@equip
+timer = 8
+src.tag.HitChanceIncrease -= 25
+
+on=@unequip
+src.tag.HitChanceIncrease += 25
+
+on=@timer
+remove
+return 1
+
+[Itemdef i_hit_lower_defense]
+ID=i_memory
+TYPE=t_eq_script
+Name=Hit Lower Defense
+
+on=@equip
+timer = 8
+src.tag.DefenseChanceIncrease -= 25
+
+on=@unequip
+src.tag.DefenseChanceIncrease += 25
+
+on=@timer
+remove
+return 1
 
 [eof]

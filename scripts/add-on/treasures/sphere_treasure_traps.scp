@@ -1,0 +1,50 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Traps for containers/chests/treasures
+// t_trap_new
+// more1 = spell
+// more2 = intensity
+
+[defname spherecommunitypack_traps]
+// spell
+scp.trap_1	"89" // Dart
+scp.trap_2	"20" // Poison
+scp.trap_3	"43" // Explosion
+scp.trap_4	"13" // Magic
+
+// more1 = spell
+[typedef t_trap]
+on=@dclick
+local.req = <strarg <serv.spell.<more1>.skillreq>>
+if <src.removetrap> >= <local.req>
+local.diff = <eval ((<local.req> - <src.removetrap>) * 2) + 50.0>
+	if <r> < <local.diff>
+	return 0
+	endif
+else
+itemcast <more1>,<more2>,<src.uid>
+endif
+return 1
+
+[function itemcast]
+local.type = 0
+if <serv.spell.<argv[0]>.flags>&spellflag_fx_targ
+local.type = 3
+endif
+trysrc <uid> uid.<argv[2]>.effect <local.type>,<serv.spell.<argv[0]>.effect_id>,1,16,1
+local.todam = <getargv 1 <serv.spell.<argv[0]>.effect>>
+damage <muldiv <local.todam>,<more2>,100> 01 <argv[2]>
+
+[eof]
