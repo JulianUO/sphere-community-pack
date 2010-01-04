@@ -11,7 +11,7 @@ DEFNAME=SKILL_APPRAISE
 KEY=ItemID
 TITLE=Merchant
 PROMPT_MSG=@,,2 500343
-DELAY=1.0
+DELAY=0.0
 ADV_RATE=2.5,50.0,200.0
 STAT_STR=0
 STAT_INT=85
@@ -21,10 +21,14 @@ BONUS_DEX=0
 BONUS_INT=100
 BONUS_STATS=25
 
-ON=@Fail
-SRC.MESSAGE @,,2 500334
+ON=@Select
+f_skill_delay <getargv 0,<def.skill.3.waittime>>
 
-ON=@Abort
-	SRC.SYSMESSAGE You stop trying to appraise the item.
+ON=@Success
+f_skill_delay <getargv 1,<def.skill.3.waittime>>
+
+ON=@Fail
+f_skill_delay <getargv 2,<def.skill.3.waittime>>
+SRC.MESSAGE @,,2 500334
 
 [eof]
