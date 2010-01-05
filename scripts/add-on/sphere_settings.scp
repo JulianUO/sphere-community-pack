@@ -20,12 +20,13 @@ VERSION=0.56b
 //////// Skills Settings
 ///////////////////////////////////////////////////////////////
 // Choose if you want to use OSI skill wait times instead of sphere's default skill delays
-scp.SkillWaitingTime=0 // NOT DONE!
+scp.SkillWaitingTime=0 // NOT TESTED
 
 // Choose between using new or default skills. Most of them are OSI-Like
 // If not, you can find documentation in the forums.
 scp.NewSkills_Anatomy=1
 scp.NewSkills_AnimalLore=1
+scp.NewSkills_ItemID=1
 scp.NewSkills_AnimalTaming=1
 scp.NewSkills_ArmsLore=1
 scp.NewSkills_Begging=1

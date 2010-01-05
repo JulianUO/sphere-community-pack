@@ -21,7 +21,7 @@ DEFNAME=SKILL_PEACEMAKING
 KEY=Peacemaking
 TITLE=Bard
 PROMPT_MSG=
-DELAY=2.0
+DELAY=0.0
 STAT_STR=0
 STAT_INT=70
 STAT_DEX=70
@@ -31,13 +31,23 @@ BONUS_INT=50
 BONUS_STATS=5
 ADV_RATE=2.5,50.0,200.0
 
-on=@prestart
+on=@wait
 if <def.scp.BardingSystem> == 1
 	if <def.scp.NewBarding_Peacemaking> == 1
 	f_onbarding_start 9
+	f_skill_delay <getargv 0,<def.skill.9.waittime>>
 	return 1
 	endif
 endif
+
+on=@select
+f_skill_delay <getargv 0,<def.skill.9.waittime>>
+
+on=@success
+f_skill_delay <getargv 1,<def.skill.9.waittime>>
+
+on=@fail
+f_skill_delay <getargv 2,<def.skill.9.waittime>>
 
 [function f_start_peacemaking]
 ref10 = <args>
@@ -54,7 +64,8 @@ local.chance = <eval (<peacemaking> /2 ) + (<musicianship> / 2)>
 	if <r<local.chance>> > 290
 	timerf <serv.skill.peacemaking.delay>,f_peacemaking_success_area
 	else
-	ref12.sysmessage <def.scp.bard_peacemaking_fail>
+	sysmessage <def.scp.bard_peacemaking_fail>
+	f_skill_delay <getargv 1,<def.skill.9.waittime>>
 	endif
 else 
 // Target mode : pacify a single target for a longer duration
@@ -62,6 +73,7 @@ else
 	local.chance = <f_barding_calculation <ref10.uid>,<tag0.instrument>,peacemaking>
 		if <local.chance> < <r>
 		sysmessage <def.scp.bard_peacemaking_tfail>
+		f_skill_delay <getargv 2,<def.skill.9.waittime>>
 		return 1
 		endif
 	timerf <serv.skill.peacemaking.delay>,f_peacemaking_success_targ <ref10.uid>
@@ -83,6 +95,7 @@ forchars <eval 8 + (<peacemaking> / 150)>
 	sysmessage <def.scp.bard_peacemaking_peaced>
 	endif
 endfor
+ref12.f_skill_delay <getargv 1,<def.skill.9.waittime>>
 ref12.sysmessage <qval (<local.chars> > 0) ? <def.scp.bard_peacemaking_success> : <def.scp.bard_peacemaking_norange>
 
 [function f_peacemaking_success_targ]
@@ -95,6 +108,7 @@ ref11.flags &= ~statf_war
 ref11.memoryfindtype.memory_war_targ.remove
 ref11.action = -1
 sysmessage <def.scp.bard_peacemaking_tsuccess>
+f_skill_delay <getargv 1,<def.skill.9.waittime>>
 
 [events e_peacemaked]
 on=@npcactfight
