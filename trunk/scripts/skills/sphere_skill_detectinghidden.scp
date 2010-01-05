@@ -11,7 +11,7 @@ DEFNAME=Skill_DetectHidden
 KEY=DetectingHidden
 TITLE=Detective
 PROMPT_MSG=
-DELAY=3.0,2.0
+DELAY=0.0
 STAT_STR=15
 STAT_INT=60
 STAT_DEX=20
@@ -21,7 +21,14 @@ BONUS_INT=80
 BONUS_STATS=25
 ADV_RATE=2.5,50.0,200.0
 
+on=@select
+f_skill_delay <getargv 0,<def.skill.14.waittime>>
+
+on=@success
+f_skill_delay <getargv 1,<def.skill.14.waittime>>
+
 ON=@Fail
+f_skill_delay <getargv 2,<def.skill.14.waittime>>
 	SRC.MESSAGE @,,2 500817
 
 ON=@Abort

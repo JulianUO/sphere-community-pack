@@ -24,35 +24,47 @@ ADV_RATE=10000.0
 ON=@Wait
 if <def.scp.NewSkills_Stealth>
 f_start_stealth
+f_skill_delay <getargv 0,<def.skill.47.waittime>>
 return 1
 endif
 
+on=@select
+f_skill_delay <getargv 0,<def.skill.47.waittime>>
+
+on=@success
+f_skill_delay <getargv 1,<def.skill.47.waittime>>
+
 ON=@Fail
 SRC.SYSMESSAGE You can't seem to hide here.
+f_skill_delay <getargv 0,<def.skill.47.waittime>>
 
 ON=@Abort
 SRC.SYSMESSAGE You give up trying to hide here.
-
 
 [function f_start_stealth]
 if !<flags>&statf_hidden
 sysmessage <def.scp.stealth_nothidden>
 f_reveal
+f_skill_delay <getargv 2,<def.skill.47.waittime>>
 elseif <hiding> < 50.0
 sysmessage <def.scp.stealth_reqhiding>
 f_reveal
+f_skill_delay <getargv 2,<def.skill.47.waittime>>
 else
 	if <f_armor_rating> >= 42
 	sysmessage <def.scp.stealth_armorcheck>
 	f_reveal
+	f_skill_delay <getargv 2,<def.skill.47.waittime>>
 	else
 		if <r1,1200> > <max 150,<stealth>> // we might need a better success chance formula
 		sysmessage <def.scp.stealth_fail>
 		f_reveal
+		f_skill_delay <getargv 2,<def.skill.47.waittime>>
 		else
 		sysmessage <def.scp.stealth_success>
 		skillgain stealth <min 100,<eval (<stealth> / 10)>>
 		f_stealth
+		f_skill_delay <getargv 1,<def.skill.47.waittime>>
 		endif
 	endif
 endif

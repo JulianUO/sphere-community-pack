@@ -20,7 +20,7 @@ DEFNAME=Skill_EvalInt
 KEY=EvaluatingIntel
 TITLE=Scholar
 PROMPT_MSG=@,,2 500906
-DELAY=1.0
+DELAY=0.0
 STAT_STR=5
 STAT_INT=60
 STAT_DEX=10
@@ -30,46 +30,57 @@ BONUS_INT=100
 BONUS_STATS=50
 ADV_RATE=2.5,50.0,200.0
 
-on=@start
+on=@wait
 if <def.scp.NewSkills_EvalInt> == 1
-	if <src.targ.isitem>
-	sysmessage <def.evalint_item>
-	action = -1
+	targetf f_start_evaluatingintel
+	sysmessage @,,2 500906
+	f_skill_delay <getargv 0,<def.skill.16.waittime>>
 	return 1
-	endif
 endif
 
+on=@select
+f_skill_delay <getargv 0,<def.skill.16.waittime>>
+
 on=@success
-if <def.scp.NewSkills_EvalInt> == 1
-local.level = <eval (<src.targ.int>/10)+1>
+f_skill_delay <getargv 1,<def.skill.16.waittime>>
+
+on=@fail
+f_skill_delay <getargv 2,<def.skill.16.waittime>>
+
+[function f_start_evaluatingintel]
+if <argo.isitem>
+sysmessage <def.evalint_item>
+return 1
+endif
+if <skillsuccess <r1000>,evaluatingintel>
+local.level = <eval (<argo.int>/10)+1>
 	if <local.level> > 11
 	local.level = 11
 	endif
 local.cliloc = <eval <def.scp.evalint_start> + <local.level>>
-	if <src.targ.brain>
-		if !<src.targ.ishuman>
+	if <argo.brain>
+		if !<argo.ishuman>
 		local.cliloc += 22
 		endif
 	endif
-	if <src.targ.id> == c_woman
+	if <argo.id> == c_woman
 	local.cliloc += 11
 	endif
 sysmessage @,,2 <local.cliloc>
 skillgain EvaluatingIntel <eval <EvaluatingIntel>/10>
-return 1
-endif
-
-ON=@Fail
+f_skill_delay <getargv 1,<def.skill.16.waittime>>
+else
 local.cliloc = <def.scp.evalint_fail>
-if <src.targ.brain>
-	if !<src.targ.ishuman>
+if <argo.brain>
+	if !<argo.ishuman>
 	local.cliloc += 2
 	endif
 endif
-if <src.targ.id> == c_woman
+if <argo.id> == c_woman
 local.cliloc += 1
 endif
 sysmessage @,,2 <local.cliloc>
-return 1
+f_skill_delay <getargv 2,<def.skill.16.waittime>>
+endif
 
 [eof]
