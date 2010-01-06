@@ -49,6 +49,10 @@ spell.208.tithing				"30" // Noble Sacrifice
 spell.209.tithing				"10" // Remove Curse
 spell.210.tithing				"20" // Sacred Journey
 
+[DEFNAME COLORS_SCP]
+colors_gargoyle		{1755 1779}
+colors_horn		{1801 1 1803 1 1805 1 1807 1 1809 1 1891 1 1893 1 1896 1 1899 1 1779 1 1777 1 1775 1 1764 1 1762 1 1760 1}
+ 
 [DEFNAME DIALOG_COLORS]
 dcolor_white					16777215
 dcolor_red						15540260

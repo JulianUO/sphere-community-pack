@@ -16,5 +16,6 @@ VERSION=0.56b
 [TYPEDEF t_set_darkwood]
 [TYPEDEF t_set_marksman]
 [TYPEDEF t_set_evocarius]
+[TYPEDEF t_set_virtue]
 
 [eof]
