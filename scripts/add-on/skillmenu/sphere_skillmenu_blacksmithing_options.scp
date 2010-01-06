@@ -1,0 +1,74 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[defname blacksmithing_options]
+// $skill_category_#_#_opt	"mark,exceptional,colored,recipe,expansion"
+blacksmithing_category_3_12_opt	"1,1,1,0,7"
+blacksmithing_category_3_13_opt	"1,1,1,0,7"
+blacksmithing_category_3_14_opt	"1,1,1,0,7"
+blacksmithing_category_3_15_opt	"1,1,1,0,7"
+
+blacksmithing_category_5_9_opt	"1,1,1,0,7"
+blacksmithing_category_5_10_opt	"1,1,1,0,7"
+blacksmithing_category_5_11_opt	"1,1,1,0,7"
+blacksmithing_category_5_12_opt	"1,1,1,0,7"
+blacksmithing_category_5_13_opt	"1,1,1,0,7"
+blacksmithing_category_5_14_opt	"1,1,1,0,7"
+
+blacksmithing_category_6_19_opt	"1,1,1,0,5"
+blacksmithing_category_6_20_opt	"1,1,1,0,5"
+blacksmithing_category_6_21_opt "1,1,1,0,5"
+blacksmithing_category_6_22_opt "1,1,1,0,5"
+blacksmithing_category_6_23_opt "1,1,1,0,5"
+blacksmithing_category_6_24_opt "1,1,1,0,5"
+blacksmithing_category_6_25_opt "1,1,1,0,5"
+blacksmithing_category_6_26_opt "0,0,0,1,5"
+blacksmithing_category_6_27_opt "0,0,0,1,5"
+blacksmithing_category_6_28_opt "0,0,0,1,5"
+blacksmithing_category_6_29_opt "0,0,0,1,5"
+blacksmithing_category_6_30_opt "1,1,1,1,5"
+blacksmithing_category_6_31_opt "1,1,1,1,5"
+blacksmithing_category_6_32_opt "1,1,1,1,5"
+blacksmithing_category_6_33_opt "1,1,1,1,5"
+blacksmithing_category_6_34_opt "1,1,1,1,5"
+blacksmithing_category_6_35_opt "1,1,1,1,5"
+blacksmithing_category_6_36_opt "1,1,1,1,5"
+blacksmithing_category_6_37_opt "1,1,1,1,5"
+blacksmithing_category_6_38_opt "1,1,1,1,5"
+blacksmithing_category_6_39_opt "1,1,1,1,5"
+blacksmithing_category_6_40_opt "1,1,1,1,5"
+blacksmithing_category_6_41_opt "1,1,1,1,5"
+blacksmithing_category_6_42_opt "1,1,1,1,5"
+blacksmithing_category_6_43_opt "1,1,1,1,5"
+blacksmithing_category_6_44_opt "1,1,1,1,5"
+blacksmithing_category_6_45_opt "1,1,1,1,5"
+blacksmithing_category_6_46_opt "1,1,1,1,5"
+blacksmithing_category_6_47_opt "1,1,1,1,5"
+blacksmithing_category_6_48_opt "1,1,1,1,5"
+blacksmithing_category_6_49_opt "1,1,1,1,5"
+blacksmithing_category_6_50_opt "1,1,1,1,5"
+blacksmithing_category_6_51_opt "1,1,1,1,5"
+blacksmithing_category_6_52_opt "1,1,1,1,5"
+blacksmithing_category_6_53_opt "1,1,1,1,5"
+blacksmithing_category_6_54_opt "1,1,1,1,5"
+blacksmithing_category_6_55_opt "1,1,1,1,5"
+blacksmithing_category_6_56_opt "1,1,1,1,5"
+blacksmithing_category_6_57_opt "1,1,1,1,5"
+
+blacksmithing_category_7_9_opt	"1,1,1,1,5"
+blacksmithing_category_7_10_opt	"1,1,1,1,5"
+blacksmithing_category_7_11_opt	"1,1,1,1,5"
+blacksmithing_category_7_12_opt	"1,1,1,1,5"
+
+blacksmithing_category_9_9_opt	"0,0,0,1,5"
+blacksmithing_category_9_10_opt	"1,1,1,1,5"
+blacksmithing_category_9_11_opt	"1,1,1,1,5"
+blacksmithing_category_9_12_opt	"1,1,1,1,5"
+blacksmithing_category_9_13_opt	"1,1,1,1,5"
+
+[eof]

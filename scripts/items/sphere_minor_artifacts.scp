@@ -271,25 +271,6 @@ NAME=Sea Horse
 ID=i_model_ship
 NAME=Ship Model of the H.M.S. Cape
 
-[ITEMDEF i_Wrath_Dryad]
-ID=i_staff_gnarled
-NAME=Wrath of the Dryad
-DAM=15,17
-TWOHANDS=Y
-SPEED=33
-REQSTR=20
-SKILL=Macefighting
-TAG.DAMINCREASE=40
-TAG.HITCHANCEINCREASE=15
-TAG.MANALEECH=50
-TEVENTS=T_PROPRIEDADES
-TEVENTS=t_luck_item
-TAG.LUCK=110
-
-ON=@Create
-	HITPOINTS=255
-	COLOR=0ad
-
 [itemdef i_corredor_sword]
 ID=i_paladin_sword
 DEFNAME=i_corredor_sword

@@ -59,6 +59,18 @@ endif
 
 
 [function craft]
+if <getargv 3 <ctag0.craft.item.options>>
+	if !<tag0.recipe.<serv.itemdef.<ctag0.craft.item>.id>>
+	ctag.craft.message = <def.scp.craft_msg_norecipe>
+	f_resenddialog d_craft_menu
+	return 1
+	endif
+endif
+if <resdisp> < <getargv 4 <ctag0.craft.item.options>>
+ctag.craft.message = <def.scp.craft_msg_noexpansion>
+f_resenddialog d_craft_menu
+return 1
+endif
 if !<canmakeskill <args>>
 ctag.craft.message = <def.scp.craft_msg_noskill>
 f_resenddialog d_craft_menu

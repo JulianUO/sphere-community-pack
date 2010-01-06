@@ -255,6 +255,16 @@ scp.OSISpellDamage=1
 // Formula is: ((CastSkill - SkillRequired) * 2.5) + 50.0
 scp.OSISpellDiff=1
 
+// Enable or disable the use of items per race.
+// This makes human not able to equip elven/gargish items and so.
+// <boolean> (1 if yes, 0 if not).
+scp.LimitationRace=1
+
+// Enable or disable the use of items per gender.
+// Makes males enable to equip female items.
+// <boolean> (1 if yes, 0 if not).
+scp.LimitationGenre=1
+
 // Enable or disable any of the Item Properties listed below
 // Please, note that the name are very descriptive, if not, drop a message on forums.
 // <boolean> (1 if yes, 0 if not).

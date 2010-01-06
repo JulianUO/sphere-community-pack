@@ -48,6 +48,7 @@ alchemy_category_3_1	"i_potion_nightsight"		// 1044542
 alchemy_category_4_1	"i_potion_healless"		// 1044543
 alchemy_category_4_2	"i_potion_heal"			// 1044544
 alchemy_category_4_3	"i_potion_healgreat"		// 1044545
+//Elixir Of Rebirth
 
 alchemy_category_5_1	"i_potion_strength"		// 1044546
 alchemy_category_5_2	"i_potion_strengthgreat"	// 1044547
@@ -56,6 +57,7 @@ alchemy_category_6_1	"i_potion_poisonless"		// 1044548
 alchemy_category_6_2	"i_potion_poison"		// 1044549
 alchemy_category_6_3	"i_potion_poisongreat"		// 1044550
 alchemy_category_6_4	"i_potion_poisondeadly"		// 1044551
+// Scouring Toxin
 
 alchemy_category_7_1	"i_potion_cureless"		// 1044552
 alchemy_category_7_2	"i_potion_cure"			// 1044553
@@ -75,6 +77,14 @@ alchemy_category_10_1	"i_potion_invisibility"		// 1074860
 //alchemy_category_10_2	parasitic			// 1072942
 //alchemy_category_10_3	darkglow			// 1072943
 //alchemy_category_10_4	hovering wisp			// 1072881
+//Plant Pigment
+//Natural Dye
+//Color Fixative
+//Crystal Granules	
+//Crystal Dust
+//Softened Reeds
+//Vial of Vitriol
+//Bottle of Ichor
 
 
 [comment several potions from sphere]

@@ -13,11 +13,12 @@ VERSION=0.56b
 // SCRIPT DOCUMENTATION
 // --------------------
 // Based on sphere_skillmenu.scp
-//
+// 
 
 [defname sphere_crafting_carpentry_default]
 carpentry_marking		"1" // 1 or 0
 carpentry_materials		"1" // 1 or 0
+carpentry_options_default	"1,1,0,0,0"
 
 carpentry_smelt			""
 carpentry_repair		""
@@ -26,6 +27,51 @@ carpentry_check_notice		""
 carpentry_chanceatmin		"50.0"
 carpentry_exceptional_bonus	""
 carpentry_aftercraft		""	// function called on the item AFTER you craft it (if success only).
+
+
+carpentry_category_1_name	"1044295" // Weapons and Armor
+carpentry_category_2_name	"1044296" // Blacksmithing
+carpentry_category_3_name	"1044292" // Containers
+carpentry_category_4_name	"1044291" // Furniture
+carpentry_category_5_name	"1044293" // Instruments
+carpentry_category_5_name	"1044290" // Misc. Add-Ons
+carpentry_category_5_name	"1044294" // Other
+carpentry_category_5_name	"1044298" // Tailoring and Cooking
+carpentry_category_5_name	"1044297" // Training
+
+carpentry_category_1_1	"i_ancient_wild_staff"
+carpentry_category_1_2	"i_arcanist_wild_staff"
+carpentry_category_1_3	"i_bokuto"
+carpentry_category_1_4	"i_club"
+carpentry_category_1_5	"i_fukiya"
+carpentry_category_1_6	"i_gnarled_staff"
+carpentry_category_1_7	"i_hardened_wild_staff"
+carpentry_category_1_8	"i_phantom_staff"
+carpentry_category_1_9	"i_quarter_staff"
+carpentry_category_1_10	"i_serpentstone_staff"
+carpentry_category_1_11	"i_shepherd_crook"
+carpentry_category_1_12	"i_tetsubo"
+carpentry_category_1_13	"i_thorned_wild_staff"
+carpentry_category_1_14	"i_wild_staff"
+carpentry_category_1_15	"i_bramble_coat"
+carpentry_category_1_16	"i_darkwood_crown"
+carpentry_category_1_17	"i_darkwood_chest"
+carpentry_category_1_18	"i_darkwood_gauntlets"
+carpentry_category_1_19	"i_darkwood_gorget"
+carpentry_category_1_20	"i_darkwood_leggings"
+carpentry_category_1_21	"i_darkwood_pauldrons"
+carpentry_category_1_22	"i_shield_wooden_gargish"
+carpentry_category_1_23	"i_ironwood_crown"
+carpentry_category_1_24	"i_helm_raven"
+carpentry_category_1_25	"i_helm_vulture"
+carpentry_category_1_26	"i_helm_winged"
+carpentry_category_1_27	"i_shield_wood"
+carpentry_category_1_28	"i_woodland_chest"
+carpentry_category_1_29	"i_woodland_arms"
+carpentry_category_1_30	"i_woodland_gauntlets"
+carpentry_category_1_31	"i_woodland_gorget"
+carpentry_category_1_32	"i_woodland_leggings"
+
 
 
 carpentry_category_1_name	"Chairs"
@@ -137,7 +183,63 @@ carpentry_category_10_18	"i_deed_bboardw"
 carpentry_category_10_19	"i_deed_bboardn"
 
 [defname sphere_crafting_carpentry_colored]
-carpentry_material_0
+carpentry_material_0		""
 carpentry_material_0_name	"LOG"
+carpentry_material_0_skill	"Carpentry 0.0"
+carpentry_resourceid		"i_log"
+
+carpentry_material_1		"oak"
+carpentry_material_1_name	"Oak"
+carpentry_material_1_skill	"Carpentry 65.0"
+carpentry_material_1_armor_res	"3,3,0,2,3,f_colored_armor_oak"
+carpentry_material_1_shield_res	"1,1,1,1,1"
+carpentry_material_1_weaps_dam	"0,0,0,0,0,f_colored_weaps_oak"
+carpentry_material_1_color	"color_o_oak"
+carpentry_material_1_resourceid	"i_log_oak"
+
+carpentry_material_2		"ash"
+carpentry_material_2_name	"Ash"
+carpentry_material_2_skill	"Carpentry 80.0"
+carpentry_material_2_armor_res	"4,2,4,1,6,f_colored_armor_ash"
+carpentry_material_2_shield_res	"0,0,0,0,3,f_colored_armor_ash"
+carpentry_material_2_weaps_dam	"0,0,0,0,0,f_colored_weaps_ash"
+carpentry_material_2_color	"color_o_ash"
+carpentry_material_2_resourceid	"i_log_ash"
+
+carpentry_material_3		"yew"
+carpentry_material_3_name	"Yew"
+carpentry_material_3_skill	"Carpentry 95.0"
+carpentry_material_3_armor_res	"6,3,3,0,3,f_colored_armor_yew"
+carpentry_material_3_shield_res	"3,0,0,0,0,f_colored_armor_yew"
+carpentry_material_3_weaps_dam	"0,0,0,0,0,f_colored_weaps_yew"
+carpentry_material_3_color	"color_o_yew"
+carpentry_material_3_resourceid	"i_log_yew"
+
+carpentry_material_4		"bloodwood"
+carpentry_material_4_name	"Bloodwood"
+carpentry_material_4_skill	"Carpentry 100.0"
+carpentry_material_4_armor_res	"3,8,1,3,3,f_colored_armor_bloodwood"
+carpentry_material_4_shield_res	"0,3,0,0,0,f_colored_shield_bloodwood"
+carpentry_material_4_weaps_dam	"0,0,0,0,0,f_colored_weaps_bloodwood"
+carpentry_material_4_color	"color_o_bloodwood"
+carpentry_material_4_resourceid	"i_log_bloodwood"
+
+carpentry_material_5		"heartwood"
+carpentry_material_5_name	"Heartwood"
+carpentry_material_5_skill	"Carpentry 100.0"
+carpentry_material_5_armor_res	"2,3,2,7,2,f_colored_armor_heartwood"
+carpentry_material_5_shield_res	"0,0,0,0,0,f_colored_armor_heartwood"
+carpentry_material_5_weaps_dam	"0,0,0,0,0,f_colored_weaps_heartwood"
+carpentry_material_5_color	"color_o_heartwood"
+carpentry_material_5_resourceid	"i_log_heartwood"
+
+carpentry_material_6		"frostwood"
+carpentry_material_6_name	"Frostwood"
+carpentry_material_6_skill	"Carpentry 100.0"
+carpentry_material_6_armor_res	"2,1,8,3,4"
+carpentry_material_6_shield_res	"0,0,3,0,0,f_colored_shield_frostwood"
+carpentry_material_6_weaps_dam	"0,0,40,0,0,f_colored_weaps_frostwood"
+carpentry_material_6_color	"color_o_frostwood"
+carpentry_material_6_resourceid	"i_log_frostwood"
 
 [eof]

@@ -390,6 +390,7 @@ DUPEITEM=01bc4
 [ITEMDEF 01c04]
 DEFNAME=i_armor_female_plate
 TYPE=T_ARMOR
+NAME=Platemail Female Armor
 FLIP=1
 RESOURCES=20 i_ingot_iron
 WEIGHT=6

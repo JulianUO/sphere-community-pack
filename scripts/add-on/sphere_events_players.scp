@@ -43,19 +43,24 @@ if <def.scp.SkillWaitingTimes> == 1
 endif
 
 on=@equiptest
-if <tag0.Item.Gargoyle>
-	if <src.body> == c_gargoyle_male || <src.body> == c_gargoyle_female
-	return 0
+if <def.scp.LimitationRace> == 1
+	if <tag0.item.gargoyle>
+		if !<src.isgargoyle>
+		return 1
+		endif
 	endif
-src.sysmessage Can't equip this
-return 1
+	if <tag0.item.elven>
+		if !<src.iselven>
+		return 1
+		endif
+	endif
 endif
-if <tag0.Item.Elven>
-	if <src.body> == c_elf_male || <src.body> == c_elf_female
-	return 0
+if <def.scp.LimitationGenre> == 1
+	if <tag0.item.female>
+		if !<src.isfemale>
+		return 1
+		endif
 	endif
-src.sysmessage Can't equip this
-return 1
 endif
 
 // Context Menu Display

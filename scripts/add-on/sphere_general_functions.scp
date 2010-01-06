@@ -17,6 +17,30 @@ local.hue = <eval 1261 + ((<tag0.DamCold> - 50) / 10)>
 endif
 return <local.hue>
 
+[function isgargoyle]
+if (<body> == c_gargoyle_male) || (<body> == c_gargoyle_female)
+return 1
+endif
+return 0
+
+[function iselven]
+if (<body> == c_elf_male) || (<body> == c_elf_female)
+return 1
+endif
+return 0
+
+[function ismale]
+if (<body> == c_gargoyle_male) || (<body> == c_elf_male) || (<body> == c_man)
+return 1
+endif
+return 0
+
+[function isfemale]
+if (<body> == c_gargoyle_female) || (<body> == c_elf_female) || (<body> == c_woman)
+return 1
+endif
+return 0
+
 [function f_resenddialog]
 dialogclose <ARGV[0]>
 sdialog <ARGS>
