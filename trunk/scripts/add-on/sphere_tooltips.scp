@@ -18,6 +18,9 @@ VERSION=0.56b
 [events e_PlayerTooltipEvent]
 on=@itemclienttooltip
 addcliloc 1042971,<act.name>
+if <act.amount> > 1
+addcliloc 1070722,Amount: <eval <act.amount>>
+endif 
 //if <act.tag0.setid> > 0
 //addcliloc 1072376,<def.set_<act.tag0.setid>_pieces>
 //endif

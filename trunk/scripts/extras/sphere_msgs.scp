@@ -32,6 +32,7 @@ fishing_4			"@,,2 500978"	// You need water to fish in!
 fishing_los			"@,,2 500979"	// You cannot see that location.
 fishing_promt			"@,,2 500974"	// What water do you want to fish in?
 fishing_reach			"@,,2 500446"	// That is too far away.
+fishing_success			"@,,2 1043297,%s" // You pull out ~1_ITEM_NAME~!
 food_canteatf			"@,,2 500867"	// You are simply too full to eat any more!
 food_full_1			"@,,2 500868"	// You eat the food, but are still extremely hungry.
 food_full_2			"@,,2 500869"	// You eat the food, and begin to feel more satiated.
@@ -208,7 +209,6 @@ server_worldsave		""
 //fishing_2			"There are no fish here."
 //fishing_3			"You can't fish from where you are standing."
 //fishing_close		"You cannot fish so close to yourself."
-//fishing_success	"You pull out a %s!"
 //food_canteat			"You are not capable of eating."
 //food_cantmove		"You can't move the item."
 //food_full_6		"You are stuffed!"
