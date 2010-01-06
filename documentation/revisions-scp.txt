@@ -321,3 +321,91 @@ Note: Mystic weapons were introduced during Ophidian Wars.
 - Fixed: items not removing properties/bonus from players
 - Removed: old item properties code (enchants)
 ---- Released 0.2c
+---- Changed version numbers, now using revisions
+
+23-12-2009, ShiryuX
+- Added: gargoyle horn definitions (thx MrSugarCube)
+- Updated: moved @skillpreselect -> @skillwait.
+- Updated: mixed hiding and stealth files into the main ones using @wait.
+- Fixed: hiding and stealth using statf_mounted instead of statf_onhorse.
+
+27-12-2009, ShiryuX
+- Added: Lower Reagent Cost, Hit Defense Increase & Hit Chance Increase item properties
+- Updated: moved hit leech properties to @gethit.
+- Updated: best weapon skill, now just use a simple tag.
+- Updated: maps to use tdata instead of tags.
+- Updated: combat system merged into the pack now. settings are in sphere_settings.scp and code was reduced as some things were removed (and some will be added in time).
+
+02-01-2010, ShiryuX
+- Updated: exceptional function now holds the player uid as argument.
+- Updated: blacksmithing excep. bonus for weapons is osi like now.
+- Updated: dragon armors with res* and meditation tags.
+- Updated: gargoyles to use garg. icon pet.
+- Removed: duplicated code of spell recovery.
+
+03-01-2010, ShiryuX
+- Added: blacksmithing materials menu
+- Added: basic code for race items, just a tag in the item, tag.item.gargoyle for gargs and tag.item.elven for elfs.
+- Updated: installation notes.
+- Updated: crafting system a lot, fixed some bugs and added materials support now.
+- Updated: armors to have more reasonable names/defnames according to their base item and with crafting system.
+- Fixed: blacksmithing wrong ids in the list.
+- Fixed: mana returning 1sec value, not the 10 second value.
+- Fixed: wrong dull copper color defname (color_o_dullcopper)
+
+04-01-2010, jeem
+- Added: future support for skill waiting times.
+- Added: skill wait times for the following skills: anatomy, animallore, armslore, begging, itemid.
+- Updated: sphere_events_players.scp. waiting time modifications.
+- Updated: waiting times table.
+
+04-01-2010, ShiryuX
+- Added: Basic traps system, which works based on Spells. Needs a lot of work.
+- Added: Hit Lower Attack & Hit Lower Defense to Item Properties.
+- Added: ColorElementalType which returns a number according to the % of best damage type.
+- Added: Darkwood armor. Set properties have not been added yet.
+- Added: Peerless Ingredients and Gems. Imbuing ingredients file for placeholder.
+- Updated: Moved Woodland armor to separate file inside armors folder.
+- Updated: Now tooltips displays correctly on Bows and added a few clilocs also.
+- Updated: SPEED property modified, now it takes tenths of seconds as argument. 
+	   The new formulas used:
+           * SPHERE: SpeedScaleFactor / ((Dex + 100) * (150 / WeaponSpeed))
+	   * UOR: 150000 / ((Stamina + 100) * (150 / WeaponSpeed))
+	   * AOS: (((WeaponSpeed * 4) - (Stamina / 30)) * (100.0 / (100 + SwingSpeedIncrease))) / 4
+ 	   COMBAT SYSTEM EVENT IS NOW MANDATORY!
+- Updated: Rescripted, fixed and added lots and lots of weapons with the right Speed/Damage properties
+	   New weapons can be found on items/weapons/ folder, separated by skill and layer.
+	   Total: 299 weapons scripted.
+
+05-01-2010, jeem
+- Added: skill waiting times almost completed. only few skills left
+- Updated: almost every selected skill has been made so that it won't be effected by combat
+- Fixed: small typo in sphere_combat_events.scp.
+- Moved: some skill files
+- Removed: unnecessary skill files
+
+05-01-2010, ShiryuX
+- Updated: reorganized, rescripted most of the armors, still a few like shields and helmets needs to be finished. 
+
+06-01-2010, ShiryuX
+- Added: isgargoyle, iselven, isfemale functions.
+- Added: Crafting items/lists generator according to materials in your skill menu. 
+  It's still beta but usable. Documentation included in the file.
+- Added: New setting to crafting items, "_opt". Also added _options_default to skills.
+  Format is: "exceptional,markable,colored,recipe,expansion"
+  1. If can be exceptionally crafted.
+  2. If can be marked	
+  3. If can be colored by the resource used.
+  4. If need a recipe to craft this.
+  5. Expansion (ResDisp) needed to see/craft item.
+- Added: Option files for Blacksmithing, Bowcraft and Carpentry.
+- Updated: Crafting dialogs to work with new _opt setting.
+- Updated: Blacksmithing with new magical and gargish items.
+- Updated: Crafting tables to work with the new generator.
+- Updated: Item limitations by genre/race with settings switch.
+- Updated: Even more armors, this time some helmets.
+- Updated: Removed color setting from Dragon Armor.
+- Fixed: Tailoring settings named as Alchemy
+- Fixed: Few wrong defnames and names in armors/weapons.
+- Removed: Duplicate entry for i_wrath_dryad.
+---- Packed Revision 137
