@@ -15,6 +15,9 @@ SKILLMAKE=CARPENTRY 90.0
 REQSTR=95
 ARMOR=0 // 35
 DUPELIST=0315e
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Chest
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
@@ -23,6 +26,9 @@ TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
+
+[ITEMDEF 0315e]
+DUPEITEM=02b67
 
 [ITEMDEF 02b68]
 DEFNAME=i_woodland_belt
@@ -33,9 +39,15 @@ SKILLMAKE=TAILORING 80.0
 REQSTR=10
 ARMOR=0 // 35
 DUPELIST=0315f
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Belt
 
 ON=@CREATE
 HITPOINTS={50 60}
+
+[ITEMDEF 0315f]
+DUPEITEM=02b68
 
 [ITEMDEF 02b69]
 DEFNAME=i_woodland_gorget
@@ -46,6 +58,9 @@ SKILLMAKE=CARPENTRY 85.0
 REQSTR=45
 ARMOR=0 // 35
 DUPELIST=03160
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Gorget
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
@@ -54,6 +69,9 @@ TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
+
+[ITEMDEF 03160]
+DUPEITEM=02b69
 
 [ITEMDEF 02b6a]
 DEFNAME=i_woodland_gauntlets
@@ -64,6 +82,9 @@ SKILLMAKE=CARPENTRY 85.0
 REQSTR=70
 ARMOR=0 // 35
 DUPELIST=03161
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Gauntlets
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
@@ -72,6 +93,9 @@ TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
+
+[ITEMDEF 03161]
+DUPEITEM=02b6a
 
 [ITEMDEF 02b6b]
 DEFNAME=i_woodland_leggings
@@ -82,6 +106,9 @@ SKILLMAKE=CARPENTRY 85.0
 REQSTR=90
 ARMOR=0 // 35
 DUPELIST=03162
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Leggings
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
@@ -90,6 +117,9 @@ TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
+
+[ITEMDEF 03162]
+DUPEITEM=02b6b
 
 [ITEMDEF 02b6c]
 DEFNAME=i_woodland_arms
@@ -100,6 +130,9 @@ SKILLMAKE=CARPENTRY 85.0
 REQSTR=80
 ARMOR=0 // 35
 DUPELIST=03163
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Arms
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
@@ -108,6 +141,9 @@ TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
+
+[ITEMDEF 03163]
+DUPEITEM=02b6c
 
 [ITEMDEF 02b6d]
 DEFNAME=i_armor_female_woodland
@@ -118,6 +154,9 @@ SKILLMAKE=CARPENTRY 90.0
 REQSTR=95
 ARMOR=0 // 35
 DUPELIST=03164
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Chest (Female)
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
@@ -126,5 +165,8 @@ TAG.ResEnergy=2
 
 ON=@CREATE
 HITPOINTS={50 60}
+
+[ITEMDEF 03164]
+DUPEITEM=02b6d
 
 [eof]

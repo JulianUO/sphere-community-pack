@@ -1,0 +1,159 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[ITEMDEF 02fc5]
+DEFNAME=i_leaf_tunic
+NAME=Leaf Tunic
+TYPE=t_armor_leather
+WEIGHT=2
+RESOURCES=15 i_hides_cut
+SKILLMAKE=TAILORING 75.0
+REQSTR=20
+DUPELIST=0317b
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Leaf Armor
+DESCRIPTION=Leaf Tunic
+TAG.Item.Elven=1
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
+
+ON=@CREATE
+HITPOINTS={50 60}
+
+[ITEMDEF 0317b]
+DUPEITEM=02fc5
+
+[ITEMDEF 02fc6]
+DEFNAME=i_leaf_gloves
+NAME=Leaf Gloves
+TYPE=t_armor_leather
+WEIGHT=2
+RESOURCES=10 i_hides_cut
+SKILLMAKE=TAILORING 60.0
+REQSTR=10
+DUPELIST=0317c
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Leaf Armor
+DESCRIPTION=Leaf Gloves
+TAG.Item.Elven=1
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
+
+ON=@CREATE
+HITPOINTS={50 60}
+
+[ITEMDEF 0317c]
+DUPEITEM=02fc6
+
+[ITEMDEF 02fc7]
+DEFNAME=i_leaf_gorget
+NAME=Leaf Gorget
+TYPE=t_armor_leather
+WEIGHT=2
+RESOURCES=12 i_hides_cut
+SKILLMAKE=TAILORING 65.0
+REQSTR=10
+DUPELIST=0317d
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Leaf Armor
+DESCRIPTION=Leaf Gorget
+TAG.Item.Elven=1
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
+
+ON=@CREATE
+HITPOINTS={50 60}
+
+[ITEMDEF 0317d]
+DUPEITEM=02fc7
+
+[ITEMDEF 02fc8]
+DEFNAME=i_leaf_arms
+NAME=Leaf Arms
+TYPE=t_armor_leather
+WEIGHT=2
+RESOURCES=12 i_hides_cut
+SKILLMAKE=TAILORING  60.0
+REQSTR=15
+DUPELIST=0317e
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Leaf Armor
+DESCRIPTION=Leaf Arms
+TAG.Item.Elven=1
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
+
+ON=@CREATE
+HITPOINTS={50 60}
+
+[ITEMDEF 0317e]
+DUPEITEM=02fc8
+
+[ITEMDEF 02fc9]
+DEFNAME=i_leaf_leggings
+NAME=Leaf Leggings
+TYPE=t_armor_leather
+WEIGHT=2
+RESOURCES=15 i_hides_cut
+SKILLMAKE=TAILORING 75.0
+REQSTR=20
+DUPELIST=0317f
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Leaf Armor
+DESCRIPTION=Leaf Leggings
+TAG.Item.Elven=1
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
+
+ON=@CREATE
+HITPOINTS={50 60}
+
+[ITEMDEF 0317f]
+DUPEITEM=02fc9
+
+[ITEMDEF 02fca]
+DEFNAME=i_leaf_tonlet
+NAME=Leaf Tonlet
+TYPE=t_armor_leather
+WEIGHT=2
+RESOURCES=12 i_hides_cut
+SKILLMAKE=TAILORING 70.0
+REQSTR=10
+DUPELIST=03180
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Leaf Armor
+DESCRIPTION=Leaf Tonlet
+TAG.Item.Elven=1
+TAG.ResPhysical=2
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=4
+TAG.ResEnergy=4
+
+ON=@CREATE
+HITPOINTS={50 60}
+
+[ITEMDEF 03180]
+DUPEITEM=02fca
+
+[eof]

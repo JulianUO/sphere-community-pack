@@ -26,6 +26,8 @@ scripts/sphere_dialog.scp
 scripts/items/sphere_item_resources.scp
 scripts/items/
 scripts/items/armors/
+scripts/items/armors/colored/
+scripts/items/armors/sets/
 scripts/items/weapons/
 scripts/sphere_region_resources.scp
 scripts/sphere_region.scp

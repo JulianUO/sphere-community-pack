@@ -14,7 +14,7 @@ DEFNAME=i_staff_black
 TYPE=T_WEAPON_MACE_STAFF
 FLIP=1
 DAM=13,16
-SPEED=2.75
+SPEED=2.2
 SKILL=MaceFighting
 REQSTR=35
 TWOHANDS=Y
@@ -46,7 +46,7 @@ SUBSECTION=Black Staves
 DESCRIPTION=Staff of Power
 
 ON=@Create
-HITPOINTS=255
+HITPOINTS.2
 COLOR=04f2
 
 [ITEMDEF i_staff_pyros]
@@ -65,7 +65,7 @@ SUBSECTION=Black Staves
 DESCRIPTION=Staff of Pyros
 
 ON=@Create
-HITPOINTS=255
+HITPOINTS.2
 COLOR=<ColorElementalType>
 
 [ITEMDEF i_staff_magi]
@@ -83,7 +83,7 @@ SUBSECTION=Black Staves
 DESCRIPTION=Staff of the Magi
 
 ON=@Create
-HITPOINTS=255
+HITPOINTS.2
 COLOR=0481
 
 
@@ -96,7 +96,7 @@ WEIGHT=3
 TYPE=T_WEAPON_MACE_STAFF
 FLIP=1
 DAM=15,17
-SPEED=3.25
+SPEED=3.2
 REQSTR=20
 TWOHANDS=Y
 DUPELIST=013f9
@@ -143,7 +143,7 @@ SUBSECTION=Gnarled Staves
 DESCRIPTION=Wrath of the Dryad
 
 ON=@Create
-HITPOINTS=255
+HITPOINTS.2
 COLOR=<ColorElementalType>
 
 
@@ -187,7 +187,7 @@ SUBSECTION=Nunchakus
 DESCRIPTION=Dragon Nunchaku
 
 ON=@Create
-HITPOINTS=255
+HITPOINTS.2
 
 
 ///////////////////////////////////////////////////////////////
@@ -201,7 +201,7 @@ FLIP=1
 RESOURCES=6 i_log
 SKILLMAKE=CARPENTRY 73.6, t_carpentry
 DAM=11,14
-SPEED=2.25
+SPEED=2.2
 SKILL=MaceFighting
 REQSTR=20
 TWOHANDS=Y
@@ -244,7 +244,7 @@ WEIGHT=4
 TYPE=T_WEAPON_MACE_CROOK
 FLIP=1
 DAM=13,15
-SPEED=2.75
+SPEED=2.2
 REQSTR=20
 TWOHANDS=Y
 SKILLMAKE=CARPENTRY 78.9, t_carpentry
@@ -267,7 +267,7 @@ TYPE=T_WEAPON_MACE_CROOK
 SKILL=MaceFighting
 FLIP=1
 DAM=13,15
-SPEED=2.75
+SPEED=2.2
 REQSTR=20
 TWOHANDS=Y
 WEIGHT=4
@@ -343,13 +343,13 @@ SUBSECTION=Tessens
 DESCRIPTION=Pilfered Dancer Fans
 
 ON=@Create
-HITPOINTS=255
+HITPOINTS.2
 
 [ITEMDEF i_wind_edge]
 ID=i_tessen
 NAME=Wind's Edge
 TEVENTS=t_iprop
-TAG.HitManaLeech=25
+TAG.HitManaLeech.2
 TAG.DefenseChanceIncrease=10
 TAG.SwingSpeedIncrease=50
 TAG.DamageIncrease=50
@@ -359,7 +359,7 @@ SUBSECTION=Tessens
 DESCRIPTION=Wind's Edge
 
 ON=@Create
-HITPOINTS=255
+HITPOINTS.2
 
 ///////////////////////////////////////////////////////////////
 //////// TETSUBOS
@@ -410,7 +410,7 @@ WEIGHT=10
 TYPE=T_WEAPON_MACE_SMITH
 FLIP=1
 DAM=17,18
-SPEED=3.75
+SPEED=3.2
 SKILL=MaceFighting
 REQSTR=95
 TWOHANDS=Y
@@ -440,7 +440,7 @@ SUBSECTION=War Hammers
 DESCRIPTION=Carapace Crusher
 
 ON=@Create
-HITPOINTS=255
+HITPOINTS.2
 COLOR=colors_black
 
 [ITEMDEF i_titan_hammer]
@@ -457,6 +457,34 @@ SUBSECTION=War Hammers
 DESCRIPTION=Titan's Hammer
 
 ON=@Create
-HITPOINTS=255
+HITPOINTS.2
+
+
+///////////////////////////////////////////////////////////////
+//////// SERPENTSTONE STAVES
+///////////////////////////////////////////////////////////////
+[ITEMDEF 0906]
+DEFNAME=i_serpentstone_staff
+NAME=Serpentstone Staff
+TYPE=t_weapon_mace_staff
+DAM=15,17
+SKILL=Macefighting
+REQSTR=35
+TWOHANDS=Y
+SKILLMAKE=Carpentry 63.8, t_carpentry
+RESOURCES=16 i_log, 1 i_gem_ecru_citrine
+SPEED=3.2
+WEIGHT=3.0
+DUPELIST=0406f
+CATEGORY=Provisions - Weapons - Macefighting
+SUBSECTION=Serpentstone Staves
+DESCRIPTION=Serpentstone Staff
+TAG.Item.Gargoyle=1
+
+ON=@Create
+HITPOINTS={50 60}
+
+[ITEMDEF 0406f]
+DUPEITEM=0906
 
 [eof]
