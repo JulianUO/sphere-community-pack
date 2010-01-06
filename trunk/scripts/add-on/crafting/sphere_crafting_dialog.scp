@@ -176,13 +176,10 @@ if <ctag0.craft.material.<ctag.craft.skill>>
 	local.resource = "_"
 	endif
 endif
-args = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<eval <argn>-100>>
-if <argv> > 1
-ctag.craft.item.options = <argv[1]>,<argv[2]>
-ctag.craft.item = <argv[0]>
-else
-ctag.craft.item.options
-ctag.craft.item = <argv[0]>
+ctag.craft.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<eval <argn>-100>>
+ctag.craft.item.options = <def.<ctag0.craft.skill>_options_default>
+if !<isempty <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-100>>>
+ctag.craft.item.options = <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-100>>
 endif
 dialogclose d_craft_menu
 f_resenddialog d_craft_itemprop
@@ -426,20 +423,19 @@ dcroppedtext 430 *0 50 20 0480 <ref1.resources.<local._for>.val>
 endfor
 ref1.remove
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<dctag0.craft.material.<ctag0.craft.skill>>_" : "_">
-args = <ctag0.craft.item.options>
+args = <ctag0.craft.item.options> // mark,exceptional,colored,recipe,expansion
 local.height = 302
-if !<isempty <argv[0]>>
-	if <argv[0]> > 0
-	xmfhtmlgumpcolor 170 <dlocal.height> 350 20 <ddef.scp.craft_resdisp_<argv[0]>> 0 0 <ddef.dcolor_white>
-	local.height += 20
-	endif
+if <argv[4]> >
+xmfhtmlgumpcolor 170 <dlocal.height> 350 20 <ddef.scp.craft_resdisp_<argv[0]>> 0 0 <ddef.dcolor_white>
+local.height += 20
 endif
-if !<isempty <argv[1]>>
-	if <tag0.recipe.<ctag0.craft.item>>
-	xmfhtmlgumpcolor 170 <dlocal.height> 350 20 <ddef.scp.craft_msg_gotrecipe> 0 0 <ddef.dcolor_white>
-	else
-	xmfhtmlgumpcolor 170 <dlocal.height> 350 20 <ddef.scp.craft_msg_norecipe> 0 0 <ddef.dcolor_red>
-	endif
+if <argv[2]>
+xmfhtmlgumpcolor 170 <dlocal.height> 350 20 <ddef.scp.craft_colored> 0 0 <ddef.dcolor_white>
+local.height += 20
+endif
+if <argv[0]>
+xmfhtmlgumpcolor 170 <dlocal.height> 350 20 <ddef.scp.craft_markable> 0 0 <ddef.dcolor_white>
+local.height += 20
 endif
 
 [dialog d_craft_itemprop button]
@@ -450,17 +446,9 @@ f_resenddialog d_craft_menu
 
 on=1
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<dctag0.craft.material.<ctag0.craft.skill>>_" : "_">
-args = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<dctag0.craft.itemnum>>
-if !<isempty <argv[1]>>
-	if <argv[1]> > <account.resdisp>
-	sysmessage You don't have the needed expansion to craft this.
-	return 1
-	endif
-endif
-if !<isempty <argv[2]>>
-	if !<tag0.recipe.<argv[0]>>
-	sysmessage You don't know the recipe for this.
-	return 1
+if <ctag0.craft.material.<ctag.craft.skill>>
+	if <isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>
+	local.resource = "_"
 	endif
 endif
 craft <ctag0.craft.item>

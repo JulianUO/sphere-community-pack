@@ -33,7 +33,7 @@ HITPOINTS={36 48}
 DUPEITEM=02d21
 
 [ITEMDEF i_charged_assassin_spike]
-ID=i_assasin_spike
+ID=i_assassin_spike
 NAME=Charged Assassin Spike
 SKILLMAKE=Blacksmithing 75.0
 RESOURCES=9 i_ingot_iron, 1 i_gem_ecru_citrine
@@ -365,6 +365,8 @@ DUPEITEM=02d22
 [ITEMDEF i_leafblade_ease]
 ID=i_leafblade
 NAME=Leafblade of Ease
+SKILLMAKE=Blacksmithing 75.0
+RESOURCES=12 i_ingot_iron, 1 i_gem_perfect_emerald
 TEVENTS=t_iprop
 TAG.BestWeaponSkill=1
 CATEGORY=Provisions - Weapons

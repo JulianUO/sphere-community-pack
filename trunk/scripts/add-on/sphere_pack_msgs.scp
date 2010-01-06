@@ -33,7 +33,9 @@ scp.craft_msg_exceptional	"1044155" // You create an exceptional quality item.
 scp.craft_msg_excepmark		"1044156" // You create an exceptional quality item and affix your maker's mark.
 scp.craft_msg_noresources	"1044253" // You don't have the components needed to make that.
 scp.craft_msg_nomana		"1044380" // You don't have enough mana to inscribe that spell.
+scp.craft_msg_norecipe		"1073620"	// You have not learned this recipe.
 scp.craft_msg_nocast		"You need to be able to cast this spell in order to inscribe it."
+scp.craft_msg_noexpansion	"You don't have the expansion pack needed."
 
 scp.craft_title_alchemy		"1044001" // <CENTER>ALCHEMY MENU</CENTER>
 scp.craft_title_blacksmithing	"1044002" // <CENTER>BLACKSMITHY MENU</CENTER>
@@ -63,9 +65,11 @@ scp.craft_button_exit		"1011441"	// EXIT
 
 scp.craft_resdisp_4		"1063363"	// * Requires the "Samurai Empire" expansion
 scp.craft_resdisp_5		"1072651"	// * Requires the "Mondain's Legacy" expansion
-
+scp.craft_resdisp_7		"1094732"	// * Requires the "Stygian Abyss" expansion
+scp.craft_colored		"1044152"	// * The item retains the color of this material
+scp.craft_markable		"1044059"	// This item may hold its maker's mark
 scp.craft_msg_gotrecipe		"1073427"	// You already know this recipe.
-scp.craft_msg_norecipe		"1073620"	// You have not learned this recipe.
+
 
 [DEFNAME SphereCommunityPack_Messages]
 // The following are sysmessages, messages, say, etc.
