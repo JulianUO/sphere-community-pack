@@ -425,7 +425,6 @@ ref1.remove
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<dctag0.craft.material.<ctag0.craft.skill>>_" : "_">
 args = <ctag0.craft.item.options> // mark,exceptional,colored,recipe,expansion
 local.height = 302
-serv.log <args> = <ctag0.craft.item.options>
 if <argv[4]> > 3
 xmfhtmlgumpcolor 170 <dlocal.height> 350 20 <ddef.scp.craft_resdisp_<argv[4]>> 0 0 <ddef.dcolor_white>
 local.height += 20
