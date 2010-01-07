@@ -415,27 +415,6 @@ CATEGORY=Do Not Use
 SUBSECTION=Quest Items
 DESCRIPTION=thrasher's tail
 
-[ITEMDEF 026c3]
-DEFNAME=i_repeating_crossbow
-NAME=Repeating Crossbow
-DAM=10,12
-SPEED=41
-WEIGHT=5
-//TEVENTS=t_showprops
-TYPE=t_weapon_XBOW
-TWOHANDS=Y
-TDATA3=i_xbolt
-TDATA4=i_xbolt_x
-SKILLMAKE=SKILL_BOWCRAFT 90.0
-RESOURCES=10 i_log
-SKILL=Archery
-CATEGORY=Provisions - Weapons
-SUBSECTION=Bows
-DESCRIPTION=Repeating Crossbow
-REQSTR=30
-ON=@create
-hitpoints={50 100}
-
 [ITEMDEF i_resolves_bridle]
 ID=i_bridle_horse
 NAME=Resolve's Bridle
