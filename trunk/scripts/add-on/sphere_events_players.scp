@@ -343,7 +343,9 @@ endif
 on=@deathcorpse
 if <tag0.robe>
 uid.<tag.robe>.z = 3
-uid.<tag.feet>.z = 8
+	if <tag0.feet>
+	uid.<tag.feet>.z = 8
+	endif
 tag.robe=
 tag.feet=
 argo.update
