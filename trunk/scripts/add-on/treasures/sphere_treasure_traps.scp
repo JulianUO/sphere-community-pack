@@ -13,9 +13,9 @@ VERSION=0.56b
 // SCRIPT DOCUMENTATION
 // --------------------
 // Traps for containers/chests/treasures
-// t_trap_new
-// more1 = spell
-// more2 = intensity
+// t_trap
+// TAG.Trap.Type = spell
+// TAG.Trap.Level = intensity
 
 [defname spherecommunitypack_traps]
 // spell

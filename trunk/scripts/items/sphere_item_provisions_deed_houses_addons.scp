@@ -1,0 +1,93 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[ITEMDEF i_deed_anvil_east]
+ID=i_deed
+NAME=Deed for an anvil (east)
+RESOURCES=150 i_ingot_iron, 5 i_log
+SKILLMAKE=Carpentry 73.6, Blacksmithing 75.0
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for an anvil (east)
+
+ON=@Create
+MORE=0fb0
+
+[ITEMDEF i_deed_anvil_south]
+ID=i_deed
+NAME=Deed for an anvil (south)
+RESOURCES=150 i_ingot_iron, 5 i_log
+SKILLMAKE=Carpentry 73.6, Blacksmithing 75.0
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for an anvil (south)
+
+ON=@Create
+MORE=0faf
+
+[ITEMDEF i_deed_forge_elven]
+ID=i_deed
+NAME=Deed for an elven forge
+RESOURCES=200 i_log
+SKILLMAKE=Carpentry 94.7
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for an elven forge
+
+ON=@Create
+MORE=i_forge_elven
+
+[ITEMDEF i_deed_forge_large_east]
+ID=i_deed
+NAME=Deed for a large forge (east)
+RESOURCES=100 i_ingot_iron, 5 i_log
+SKILLMAKE=Carpentry 78.9, Blacksmithing 80.0
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for a Large Forge (east)
+
+ON=@Create
+MORE=i_multi_forge_large_east
+
+[ITEMDEF i_deed_forge_large_south]
+ID=i_deed
+NAME=Deed for a large forge (south)
+RESOURCES=100 i_ingot_iron, 5 i_log
+SKILLMAKE=Carpentry 78.9, Blacksmithing 80.0
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for a Large Forge (south)
+
+ON=@Create
+MORE=i_multi_forge_large_south
+
+[ITEMDEF i_deed_forge_small]
+ID=i_deed
+NAME=Deed for a forge
+RESOURCES=75 i_ingot_iron, 5 i_log
+SKILLMAKE=Carpentry 73.6, Blacksmithing 75.0
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for a forge
+
+ON=@Create
+MORE=i_forge
+
+[ITEMDEF i_deed_abbatoir]
+ID=i_deed
+NAME=Deed for an abbatoir
+RESOURCES=100 i_log, 40 i_ingot_iron
+SKILLMAKE=Carpentry 100.0, Magery 50.0, t_carpentry
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for an abbatoir
+
+ON=@Create
+MORE=i_multi_abbatoir
+
+[EOF]

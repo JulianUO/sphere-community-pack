@@ -23,27 +23,32 @@ scripts/sphere_events_npcs.scp
 scripts/npcs/
 scripts/sphere_admin.scp
 scripts/sphere_dialog.scp
+// -----------------------------------
 scripts/items/sphere_item_resources.scp
 scripts/items/
 scripts/items/armors/
 scripts/items/armors/colored/
 scripts/items/armors/sets/
+scripts/items/building/
+scripts/items/crafting/
+scripts/items/decoration/
+scripts/items/multis/
+scripts/items/profession/
 scripts/items/weapons/
+// -----------------------------------
 scripts/sphere_region_resources.scp
 scripts/sphere_region.scp
 // -----------------------------------
-//          	Maps
-// -----------------------------------
 scripts/maps/sphere_map0.scp
-// scripts/maps/sphere_map0_ml.scp
-scripts/maps/sphere_map1.scp
+scripts/maps/sphere_map0_ml.scp
+// scripts/maps/sphere_map1.scp
 // scripts/maps/sphere_map2.scp
 // scripts/maps/sphere_map3.scp
 // scripts/maps/sphere_map4.scp
 // scripts/maps/sphere_map5.scp
 scripts/maps/sphere_map_points0.scp
-// scripts/maps/sphere_map_points0_ml.scp
-scripts/maps/sphere_map_points1.scp
+scripts/maps/sphere_map_points0_ml.scp
+// scripts/maps/sphere_map_points1.scp
 // scripts/maps/sphere_map_points2.scp
 // scripts/maps/sphere_map_points3.scp
 // scripts/maps/sphere_map_points4.scp
@@ -64,8 +69,6 @@ scripts/sphere_template_vend.scp
 scripts/sphere_triggers.scp
 scripts/sphere_serv_triggers.scp
 scripts/speech/
-// -----------------------------------
-//          Stone system
 // -----------------------------------
 scripts/stones/
 scripts/stones/guilds/

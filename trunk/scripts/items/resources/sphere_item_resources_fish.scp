@@ -6,14 +6,50 @@
 // FILE LAST UPDATED: 
 VERSION=0.56b
 
+[ITEMDEF 09cc]
+DEFNAME=i_fish_big_1
+VALUE=2
+TYPE=T_FISH
+WEIGHT=1
+CATEGORY=Resources - Fishing
+SUBSECTION=Fishes
+DESCRIPTION=Fish (Whole)
+
+[ITEMDEF 09cd]
+DEFNAME=i_fish_big_2
+VALUE=2
+TYPE=T_FISH
+WEIGHT=1
+CATEGORY=Resources - Fishing
+SUBSECTION=Fishes
+DESCRIPTION=Fish
+
+[ITEMDEF 09ce]
+DEFNAME=i_fish_big_3
+VALUE=2
+TYPE=T_FISH
+WEIGHT=1
+CATEGORY=Resources - Fishing
+SUBSECTION=Fishes
+DESCRIPTION=Fish
+
+[ITEMDEF 09cf]
+DEFNAME=i_fish_big_4
+VALUE=2
+TYPE=T_FISH
+WEIGHT=1
+CATEGORY=Resources - Fishing
+SUBSECTION=Fishes
+DESCRIPTION=Fish
+
 [ITEMDEF i_prized_fish]
 NAME=Prized Fish // 1041073
 ID=0dd6
 TYPE=t_script
 WEIGHT=1
 SKILLMAKE=FISHING 0.1
-CATEGORY=Items by Profession
-SUBSECTION=Fisherman
+CATEGORY=Resources - Fishing
+SUBSECTION=Fishes
 DESCRIPTION=Prized Fish
 VALUE=1000
 
@@ -32,8 +68,8 @@ ID=0dd6
 TYPE=t_script
 WEIGHT=1
 SKILLMAKE=FISHING 0.1
-CATEGORY=Items by Profession
-SUBSECTION=Fisherman
+CATEGORY=Resources - Fishing
+SUBSECTION=Fishes
 DESCRIPTION=Wondrous Fish
 VALUE=1000
 
@@ -52,8 +88,8 @@ ID=0dd6
 TYPE=t_script
 WEIGHT=1
 SKILLMAKE=FISHING 0.1
-CATEGORY=Items by Profession
-SUBSECTION=Fisherman
+CATEGORY=Resources - Fishing
+SUBSECTION=Fishes
 DESCRIPTION=Truly Rare Fish
 VALUE=1000
 
@@ -72,8 +108,8 @@ ID=0dd6
 TYPE=t_script
 WEIGHT=1
 SKILLMAKE=FISHING 0.1
-CATEGORY=Items by Profession
-SUBSECTION=Fisherman
+CATEGORY=Resources - Fishing
+SUBSECTION=Fishes
 DESCRIPTION=Highly Peculiar Fish
 VALUE=1000
 

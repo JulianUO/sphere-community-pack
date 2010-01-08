@@ -226,44 +226,6 @@ DUPEITEM=0e2d
 [ITEMDEF 0e30]
 DUPEITEM=0e2d
 
-[ITEMDEF 0e9c]
-DEFNAME=i_drum
-TYPE=T_MUSICAL
-TDATA1=038
-TDATA2=039
-WEIGHT=3
-CATEGORY=Items by Professions
-SUBSECTION=Bard
-DESCRIPTION=Drum
-RESOURCES=1 i_hides_cut, 5 I_BOARD
-SKILLMAKE=TINKERING 51.0, MUSICIANSHIP 65.0,t_tinker_tools
-
-[ITEMDEF 0e9d]
-//Tambourine
-DEFNAME=i_tambourine
-TYPE=T_MUSICAL
-TDATA1=052
-TDATA2=053
-RESOURCES=1 i_ingot_iron, 2 i_board
-SKILLMAKE=TINKERING 50.0, MUSICIANSHIP 65.0,t_tinker_tools
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Bard
-DESCRIPTION=Tambourine
-
-[ITEMDEF 0e9e]
-//tambourine (tassle)
-DEFNAME=i_tambourine_tas
-RESOURCES=i_tambourine, i_cloth
-SKILLMAKE=CARPENTRY 50.0, MUSICIANSHIP 65.0, t_carpentry
-TYPE=T_MUSICAL
-TDATA1=052
-TDATA2=053
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Bard
-DESCRIPTION=Tambourine Tassle
-
 [ITEMDEF 0e9f]
 //portrait
 DEFNAME=i_portrait_1
@@ -348,49 +310,6 @@ DUPEITEM=0ea7
 CATEGORY=Items by Professions
 SUBSECTION=Artists
 DESCRIPTION=Portrait
-
-[ITEMDEF 0eb1]
-//standing harp
-DEFNAME=i_HARP_LARGE
-TYPE=T_MUSICAL
-TDATA1=045
-TDATA2=046
-CATEGORY=Items by Professions
-SUBSECTION=Bard
-DESCRIPTION=Standing Harp
-RESOURCES=10 i_log, 4 i_wire_iron
-SKILLMAKE=TINKERING 56.5, MUSICIANSHIP 65.0,t_tinker_tools
-
-[ITEMDEF 0eb2]
-//Lap Harp
-DEFNAME=i_lyre
-TYPE=T_MUSICAL
-TDATA1=045
-TDATA2=046
-WEIGHT=10
-CATEGORY=Items by Professions
-SUBSECTION=Bard
-DESCRIPTION=Lap Harp
-RESOURCES=7 i_log, 2 i_wire_iron
-SKILLMAKE=TINKERING 54.0, MUSICIANSHIP 65.0,t_tinker_tools
-
-[ITEMDEF 0eb3]
-//Lute
-DEFNAME=i_lute
-RESOURCES=6 i_log, 1 i_wire_iron
-TYPE=T_MUSICAL
-TDATA1=04c
-TDATA2=04d
-WEIGHT=5
-CATEGORY=Items by Professions
-SUBSECTION=Bard
-DESCRIPTION=Lute
-SKILLMAKE=TINKERING 52.0, MUSICIANSHIP 65.0,t_tinker_tools
-DUPELIST=0eb4
-
-[ITEMDEF 0eb4]
-//lute
-DUPEITEM=0eb3
 
 [ITEMDEF 0eb5]
 //music stand
@@ -629,17 +548,6 @@ DUPEITEM=0faf
 CATEGORY=Items by Professions
 SUBSECTION=Blacksmiths
 DESCRIPTION=Anvil (W)
-
-[ITEMDEF 0fb1]
-//forge
-//**Is there a type for this? Smithing type?
-DEFNAME=i_forge
-TYPE=T_FORGE
-RESOURCES=20 i_rock_plain, 30 i_KINDLING
-WEIGHT=500
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 1
 
 [ITEMDEF 0fb6]
 //horse shoes

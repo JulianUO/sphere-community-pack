@@ -25,509 +25,6 @@ VERSION=0.56b
 // teleporters
 // trees
 
-[SPEECH spk_ship_cmds]
-
-ON=Set name *
-	// Changes Ship's name, where *=name.
-	// NAME=<strmid(<args>,8,64)>
-
-ON=Furl sail	// Stop
-ON=Stop			// Stops current ship movement.
-	SHIPSTOP
-
-ON=Turn Left
-ON=Port			// Turn Left
-	SHIPTURNLEFT
-
-ON=Turn Right
-ON=Starboard	// Turn Right
-	SHIPTURNRIGHT
-
-ON=Left			// Move ship in desired direction.
-ON=Drift Left
-	SHIPDRIFTLEFT
-
-ON=Right		// Move ship in desired direction.
-ON=Drift Right
-	SHIPDRIFTRIGHT
-
-ON=Back			// Move ship backwards
-ON=Backward		// Move ship backwards
-ON=Backwards	// Move ship backwards
-	SHIPBACK
-
-ON=Forward
-ON=Foreward		// Moves ship forward.
-ON=Unfurl sail	// Moves ship forward.
-	SHIPFORE
-
-ON=Forward left
-	SHIPFORELEFT
-
-ON=forward right
-	SHIPFORERIGHT
-
-ON=backward left
-
-ON=back left
-	SHIPBACKLEFT
-
-ON=backward right
-
-ON=back right
-	SHIPBACKRIGHT
-
-ON=Raise Anchor
-	SHIPANCHORRAISE
-
-ON=Drop Anchor
-	SHIPANCHORDROP
-
-ON=Turn around	// Turns ship around and proceeds.
-ON=Come about	// Turns ship around and proceeds.
-	SHIPTURN
-
-ON=Up
-	SHIPUP
-
-ON=Down
-	SHIPDOWN
-
-ON=Land
-	SHIPLAND
-
-[MULTIDEF 00]
-// Face N
-DEFNAME=i_multi_ship_small_n
-Name=Small Ship
-TYPE=T_SHIP
-VALUE=14000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Small Ship
-MULTIREGION=-2,-5,2,5
-COMPONENT=03e4e,1, 4	// tiller.
-COMPONENT=i_ship_hatch_n,0,-4	// hatch
-COMPONENT=03eb2,2,0		// plank
-COMPONENT=03eb1,-2,0	// plank
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 01]
-// Face E
-DEFNAME=i_multi_ship_small_e
-Name=Small Ship
-TYPE=T_SHIP
-VALUE=14000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Small Ship
-MULTIREGION=-5,-2,5,2
-COMPONENT=03e55,-4,0
-COMPONENT=i_ship_hatch_e,4, 0
-COMPONENT=03e85,0, 2
-COMPONENT=03e8a,0,-2
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 02]
-// Face S
-DEFNAME=i_multi_ship_small_s
-Name=Small Ship
-TYPE=T_SHIP
-VALUE=14000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Small Ship
-MULTIREGION=-2,-5,2,5
-COMPONENT=03e4b,0, -4
-COMPONENT=i_ship_hatch_s,0,  4
-COMPONENT=03eb2,2,  0
-COMPONENT=03eb1,-2, 0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 03]
-// Face W
-DEFNAME=i_multi_ship_small_w
-Name=Small Ship
-TYPE=T_SHIP
-VALUE=14000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Small Ship
-MULTIREGION=-5,-2,5,2
-COMPONENT=03e50,4, 0
-COMPONENT=i_ship_hatch_w,-4,0
-COMPONENT=03e85,0, 2
-COMPONENT=03e8a,0,-2
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 04]
-// Face N
-DEFNAME=i_multi_ship_dragon_small_n
-Name=Small Dragon Ship
-TYPE=T_SHIP
-VALUE=14500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Small Dragon Ship
-MULTIREGION=-2,-5,2,5
-COMPONENT=03e4e,1, 4, 0
-COMPONENT=i_ship_hatch_n,0,-4, 0
-COMPONENT=03eb2,2, 0, 0
-COMPONENT=03eb1,-2, 0, 0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 05]
-// Face E
-DEFNAME=i_multi_ship_dragon_small_e
-Name=Small Dragon Ship
-TYPE=T_SHIP
-VALUE=14500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=a mast
-MULTIREGION=-5,-2,5,2
-COMPONENT=03e55,-4,0
-COMPONENT=i_ship_hatch_e,4, 0
-COMPONENT=03e85,0, 2
-COMPONENT=03e8a,0,-2
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 06]
-// Face S
-DEFNAME=i_multi_ship_dragon_small_s
-Name=Small Dragon Ship
-TYPE=T_SHIP
-VALUE=14500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Small Dragon Ship
-MULTIREGION=-2,-5,2,5
-COMPONENT=03e4b,0, -4
-COMPONENT=i_ship_hatch_s,0,  4
-COMPONENT=03eb2,2,  0
-COMPONENT=03eb1,-2, 0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 07]
-// Face W
-DEFNAME=i_multi_ship_dragon_small_w
-Name=Small Dragon Ship
-TYPE=T_SHIP
-VALUE=14500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Small Dragon Ship
-MULTIREGION=-5,-2,5,2
-COMPONENT=03e50,4, 0
-COMPONENT=i_ship_hatch_w,-4,0
-COMPONENT=03e85,0, 2
-COMPONENT=03e8a,0,-2
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 08]
-// Face N
-DEFNAME=i_multi_ship_medium_n
-Name=Medium Ship
-TYPE=T_SHIP
-VALUE=16000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Medium Ship
-MULTIREGION=-2,-6,2,6
-COMPONENT=03e4e,1, 5, 0
-COMPONENT=i_ship_hatch_n,0,-4, 0
-COMPONENT=03eb2,2, 0, 0
-COMPONENT=03eb1,-2, 0, 0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 09]
-// Face E
-DEFNAME=i_multi_ship_medium_e
-Name=Medium Ship
-TYPE=T_SHIP
-VALUE=16000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Medium Ship
-MULTIREGION=-6,-2,6,2
-COMPONENT=03e55,-5,0, 0
-COMPONENT=i_ship_hatch_e,4, 0, 0
-COMPONENT=03e85,0, 2, 0
-COMPONENT=03e8a,0,-2, 0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 0a]
-// Face S
-DEFNAME=i_multi_ship_medium_s
-Name=Medium Ship
-TYPE=T_SHIP
-VALUE=16000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Medium Ship
-MULTIREGION=-2,-6,2,5
-COMPONENT=03e4b,0,-5,0
-COMPONENT=i_ship_hatch_s,0,4,0
-COMPONENT=03eb2,2,0,0
-COMPONENT=03eb1,-2,0,0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 0b]
-// Face W
-DEFNAME=i_multi_ship_medium_w
-Name=Medium Ship
-TYPE=T_SHIP
-VALUE=16000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Medium Ship
-MULTIREGION=-6,-2,6,2
-COMPONENT=03e50,5, 0,0
-COMPONENT=i_ship_hatch_w,-4,0,0
-COMPONENT=03e85,0, 2,0
-COMPONENT=03e8a,0,-2,0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 0c]
-// Face N
-DEFNAME=i_multi_ship_dragon_medium_n
-Name=Medium Dragon Ship
-TYPE=T_SHIP
-VALUE=16500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Medium Dragon Ship
-MULTIREGION=-2,-6,2,6
-COMPONENT=03e4e,1, 5, 0
-COMPONENT=i_ship_hatch_n,0,-4, 0
-COMPONENT=03eb2,2, 0, 0
-COMPONENT=03eb1,-2, 0, 0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 0d]
-// Face E
-DEFNAME=i_multi_ship_dragon_medium_e
-Name=Medium Dragon Ship
-TYPE=T_SHIP
-VALUE=16500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Medium Dragon Ship
-MULTIREGION=-6,-2,6,2
-COMPONENT=i_ship_tillerman,-5,0, 0
-COMPONENT=i_ship_hatch_e,4, 0, 0
-COMPONENT=03e87,0, 2, 0
-COMPONENT=03e8a,0,-2, 0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 0e]
-// Face S
-DEFNAME=i_multi_ship_dragon_medium_s
-Name=Medium Dragon Ship
-TYPE=T_SHIP
-VALUE=16500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Medium Dragon Ship
-MULTIREGION=-2,-6,2,5
-COMPONENT=03e4b,0, -5,0
-COMPONENT=i_ship_hatch_s,0,  4,0
-COMPONENT=03ea9,2,  0,0
-COMPONENT=03eb1,-2, 0,0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 0f]
-// Face W
-DEFNAME=i_multi_ship_dragon_medium_w
-Name=Medium Dragon Ship
-TYPE=T_SHIP
-VALUE=16500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Medium Dragon Ship
-MULTIREGION=-6,-2,6,2
-COMPONENT=03e50,5, 0
-COMPONENT=i_ship_hatch_w,-4,0
-COMPONENT=03e87,0, 2
-COMPONENT=03e8a,0,-2
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 010]
-// Face N
-DEFNAME=i_multi_ship_long_n
-Name=Long Ship
-TYPE=T_SHIP
-VALUE=18000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Long Ship
-MULTIREGION=-2,-7,2,7
-COMPONENT=03e4e,1, 5, 0
-COMPONENT=i_ship_hatch_n,0,-5, 0
-COMPONENT=03eb2,2, -1, 0
-COMPONENT=03eb1,-2, -1, 0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 011]
-// Face E
-DEFNAME=i_multi_ship_long_e
-Name=Long Ship
-TYPE=T_SHIP
-VALUE=18000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Long Ship
-MULTIREGION=-7,-2,7,2
-COMPONENT=03e55,-5,0, 0
-COMPONENT=i_ship_hatch_e,5, 0, 0
-COMPONENT=03e85,1, 2, 0
-COMPONENT=03e8a,1,-2, 0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 012]
-// Face S
-DEFNAME=i_multi_ship_long_s
-Name=Long Ship
-TYPE=T_SHIP
-VALUE=18000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Long Ship
-MULTIREGION=-2,-7,2,5
-COMPONENT=03e4b,0, -5,0
-COMPONENT=i_ship_hatch_s,0, 5,0
-COMPONENT=03eb2,2, 1,0
-COMPONENT=03eb1,-2, 1,0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 013]
-// Face W
-DEFNAME=i_multi_ship_long_w
-Name=Long Ship
-TYPE=T_SHIP
-VALUE=18000
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Long Ship
-MULTIREGION=-7,-2,7,2
-COMPONENT=03e50,5, 0,0
-COMPONENT=i_ship_hatch_w,-5,0,0
-COMPONENT=03e85,-1, 2,0
-COMPONENT=03e8a,-1,-2,0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 014]
-// Face N
-DEFNAME=i_multi_ship_dragon_long_n
-Name=Long Dragon Ship
-TYPE=T_SHIP
-VALUE=18500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Long Dragon Ship
-MULTIREGION=-2,-7,2,7
-COMPONENT=03e4e,1, 5, 0
-COMPONENT=i_ship_hatch_n,0,-5, 0
-COMPONENT=03eb2,2, -1, 0
-COMPONENT=03eb1,-2, -1, 0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 015]
-// Face E
-DEFNAME=i_multi_ship_dragon_long_e
-Name=Long Dragon Ship
-TYPE=T_SHIP
-VALUE=18500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Long Dragon Ship
-MULTIREGION=-7,-2,7,2
-COMPONENT=03e55,-5,0, 0
-COMPONENT=i_ship_hatch_e,5, 0, 0
-COMPONENT=03e85,1, 2, 0
-COMPONENT=03e8a,1,-2, 0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 016]
-// Face S
-DEFNAME=i_multi_ship_dragon_long_s
-Name=Long Dragon Ship
-TYPE=T_SHIP
-VALUE=18500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Long Dragon Ship
-MULTIREGION=-2,-7,2,5
-COMPONENT=03e4b,0, -5,0
-COMPONENT=i_ship_hatch_s,0, 5,0
-COMPONENT=03eb2,2, 1,0
-COMPONENT=03eb1,-2, 1,0
-TSPEECH=spk_ship_cmds
-
-[MULTIDEF 017]
-// Face W
-DEFNAME=i_multi_ship_dragon_long_w
-Name=Long Dragon Ship
-TYPE=T_SHIP
-VALUE=18500
-HEIGHT=3
-CAN=CAN_I_BLOCK
-CATEGORY=Multis
-SUBSECTION=Ships
-DESCRIPTION=Long Dragon Ship
-MULTIREGION=-7,-2,7,2
-COMPONENT=03e50,5, 0,0
-COMPONENT=i_ship_hatch_w,-5,0,0
-COMPONENT=03e85,-1, 2,0
-COMPONENT=03e8a,-1,-2,0
-TSPEECH=spk_ship_cmds
-
 [MULTIDEF 064]
 DEFNAME=i_multi_house_stone_plaster_small
 Name=Small Stone and Plaster House
@@ -1269,19 +766,6 @@ COMPONENT=4806 3 -3
 COMPONENT=4797 3 -3
 COMPONENT=4807 4 -4
 
-[ITEMDEF i_multi_altar]
-ID=01216
-TYPE=t_multi
-MULTIREGION=0,0,0,0
-COMPONENT=4622 -1 -1 0 0
-COMPONENT=4629 -1 0 0 0
-COMPONENT=4628 -1 1 0 0
-COMPONENT=4623 0 -1 0 0
-COMPONENT=4627 0 1 0 0
-COMPONENT=4624 1 -1 0 0
-COMPONENT=4625 1 0 0 0
-COMPONENT=4626 1 1 0 0
-
 [ITEMDEF i_multi_telescope]
 // telescope
 ID=i_gold
@@ -1427,6 +911,536 @@ COMPONENT=7314 0 -1 0 0
 COMPONENT=7317 -1 1 0 0
 COMPONENT=7316 -1 0 0 0
 COMPONENT=7315 -1 -1 0 0
+
+[MULTIDEF 01f4]
+DEFNAME=i_Wandering_Healer_Camp
+NAME=Wandering Healer Camp
+TYPE=T_MULTI
+MULTIREGION=-6,-5,6,5
+CATEGORY=MULTIS
+SUBSECTION=Wandering Tent
+DESCRIPTION=Wandering Healer Camp
+
+[MULTIDEF 01f5]
+DEFNAME=i_Wandering_Mage_Camp
+NAME=Wandering Mage Camp
+TYPE=T_MULTI
+MULTIREGION=-6,-5,6,5
+CATEGORY=MULTIS
+SUBSECTION=Wandering Tent
+DESCRIPTION=Wandering Mage Camp
+
+[MULTIDEF 01f6]
+DEFNAME=i_Wandering_Bank_Camp
+NAME=Wandering Bank Camp
+TYPE=T_MULTI
+MULTIREGION=-6,-5,6,5
+CATEGORY=MULTIS
+SUBSECTION=Wandering Tent
+DESCRIPTION=Wandering Bank Camp
+
+[MULTIDEF 0fa9]
+DEFNAME=i_Scaffold_and_Trailer
+NAME=Scaffold and Trailer
+TYPE=T_MULTI
+VALUE=166
+MULTIREGION=-2,-1,2,2
+CATEGORY=MULTIS
+SUBSECTION=Misc
+DESCRIPTION=Scaffold and Trailer
+
+[EOF][MULTIDEF 064]
+DEFNAME=i_multi_house_stone_plaster_small
+Name=Small Stone and Plaster House
+TYPE=T_MULTI
+VALUE=43800
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Small Stone and Plaster House
+MULTIREGION=-3,-3,3,4
+COMPONENT=i_door_wood,0,3,7
+COMPONENT=i_sign_brass_2,2,4,5
+
+[MULTIDEF 066]
+DEFNAME=i_multi_house_stone_small
+Name=Small Stone House
+TYPE=T_MULTI
+VALUE=46000
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Small Stone House
+MULTIREGION=-3,-3,3,4
+COMPONENT=i_door_wood,0,3,7
+COMPONENT=i_sign_brass_2,2,4,5
+
+[MULTIDEF 068]
+DEFNAME=i_multi_house_stone_brick_small
+Name=Small Brick House
+TYPE=T_MULTI
+VALUE=43800
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Small Brick House
+MULTIREGION=-3,-3,3,4
+COMPONENT=i_door_wood,0,3,7
+COMPONENT=i_sign_brass_2,2,4,5
+
+[MULTIDEF 06a]
+DEFNAME=i_multi_house_stone_wood_small
+Name=Small Wood House
+TYPE=T_MULTI
+VALUE=43800
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Small Wood House
+MULTIREGION=-3,-3,3,4
+COMPONENT=i_door_wood,0,3,7
+COMPONENT=i_sign_brass_2,2,4,5
+
+[MULTIDEF 06c]
+DEFNAME=i_multi_house_wood_plaster_small
+Name=Small Wood and Plaster House
+TYPE=T_MULTI
+VALUE=43800
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Small Wood and Plaster House
+MULTIREGION=-3,-3,3,4
+COMPONENT=i_door_wood,0,3,7
+COMPONENT=i_sign_brass_2,2,4,5
+
+[MULTIDEF 06d]
+DUPEITEM=0406c
+
+[MULTIDEF 06e]
+DEFNAME=i_multi_house_wood_thatched_small
+Name=Small Wood House Thatched Roof
+TYPE=T_MULTI
+VALUE=43800
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Small Wood House Thatched Roof
+MULTIREGION=-3,-3,3,4
+COMPONENT=i_door_wood,0,3,7
+COMPONENT=i_sign_brass_2,2,4,5
+
+[MULTIDEF 06f]
+DUPEITEM=0406e
+
+[MULTIDEF 070]
+DEFNAME=i_multi_tent_blue
+Name=Blue Tent
+TYPE=T_MULTI
+VALUE=22000
+CATEGORY=Multis
+SUBSECTION=Tents
+DESCRIPTION=Blue Tent
+MULTIREGION=-3,-3,4,4
+COMPONENT=0e43,0,-1,7
+
+[MULTIDEF 071]
+DUPEITEM=04070
+
+[MULTIDEF 072]
+DEFNAME=i_multi_tent_green
+Name=Green Tent
+TYPE=T_MULTI
+VALUE=22000
+CATEGORY=Multis
+SUBSECTION=Tents
+DESCRIPTION=Green Tent
+MULTIREGION=-3,-3,4,4
+COMPONENT=0e43,0,-1,7	// box
+
+[MULTIDEF 073]
+DUPEITEM=04072
+
+[MULTIDEF 074]
+DEFNAME=i_multi_house_3room
+Name=Three Room House
+TYPE=T_MULTI
+VALUE=144500
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Three Room House
+MULTIREGION=-7,-7,6,6
+COMPONENT=i_door_wood,-1, 6, 7
+COMPONENT=06A7,0, 6, 7
+COMPONENT=i_door_wood,-3,-1, 7
+COMPONENT=i_door_wood,3,-1, 7	// Front door.
+COMPONENT=i_sign_brass_2,3, 7, 5	// Place the sign.
+
+[MULTIDEF 075]
+DUPEITEM=04074
+
+[MULTIDEF 076]
+DEFNAME=i_multi_house_wood_plaster_2story
+Name=Two Story Wood and Plaster House
+TYPE=T_MULTI
+VALUE=192400
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Two Story Wood and Plaster House
+MULTIREGION=-7,-7,6,7
+COMPONENT=i_door_wood,-3, 6, 7
+COMPONENT=06A7,-2, 6, 7
+COMPONENT=i_door_wood,-2, 0, 27
+COMPONENT=i_door_wood,-3, 0, 7	// Front door.
+COMPONENT=i_sign_brass_2, 1, 7, 5	// Place the sign.
+
+[MULTIDEF 077]
+DUPEITEM=04076
+
+[MULTIDEF 078]
+DEFNAME=i_multi_house_stone_plaster_2story
+Name=Two Story Stone and Plaster House
+TYPE=T_MULTI
+VALUE=192400
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Two Story Stone and Plaster House
+MULTIREGION=-7,-7,6,7
+COMPONENT=i_door_wood,-3, 6, 7
+COMPONENT=06A7,-2, 6, 7
+COMPONENT=i_door_wood,-3, 0, 27
+COMPONENT=i_door_wood,-3, 0, 7 // Front door.
+COMPONENT=i_sign_brass_2, 1, 7, 5 // Place the sign.
+
+[MULTIDEF 079]
+DUPEITEM=04078
+
+[MULTIDEF 07a]
+DEFNAME=i_multi_tower
+Name=Tower
+TYPE=T_MULTI
+VALUE=433200
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Tower
+MULTIREGION=-11,-7,12,8
+COMPONENT=067D,	 1, 4, 46
+COMPONENT=067D,	 1, 4, 26
+COMPONENT=i_door_metal,	 3,-2, 7
+COMPONENT=0677,	 1, 6, 7	// Front door 2.
+COMPONENT=i_door_metal,	 0, 6, 7	// Front door 1.
+COMPONENT=i_sign_brass_2,	 4, 7, 5	// Place the sign.
+
+[MULTIDEF 07b]
+DUPEITEM=0407a
+
+[MULTIDEF 07c]
+DEFNAME=i_multi_keep
+Name=Keep
+TYPE=T_MULTI
+VALUE=665200
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Keep
+MULTIREGION=-11,-11,12,12
+COMPONENT=0677,	 1, 10, 7	// Front door 2.
+COMPONENT=i_door_metal,	 0, 10, 7	// Front door 1.
+COMPONENT=i_sign_brass_2, 4, 11, 5	// Place the sign.
+
+[MULTIDEF 07d]
+DUPEITEM=0407c
+
+[MULTIDEF 07e]
+DEFNAME=i_multi_castle
+Name=Castle
+TYPE=T_MULTI
+VALUE=1022800
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Castle
+MULTIREGION=-15,-15,15,16
+COMPONENT=0677, 1, 5, 7
+COMPONENT=i_door_metal, 0, 5, 7
+COMPONENT=0677, 1, 15, 7	// Front door 2.
+COMPONENT=i_door_metal, 0, 15, 7	// Front door 1.
+COMPONENT=i_sign_brass_2, 4, 16, 5	// Place the sign.
+
+[MULTIDEF 07f]
+//Name=Castle
+DUPEITEM=0407e
+
+[MULTIDEF 087]
+// ?
+DEFNAME=i_multi_shop_blacksmithy_large_2
+Name=Large Blacksmithy Shop
+TYPE=T_MULTI
+VALUE=180000
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Large Blacksmithy Shop
+MULTIREGION=-7,-7,7,7
+COMPONENT=i_door_wood,	 4, -1, 7
+COMPONENT=06ad,	 1,  4, 7
+COMPONENT=06ad,	 1, -4, 7
+COMPONENT=06A7,	-3, 6, 7	// Front door 2.
+COMPONENT=i_door_wood,	-4, 6, 7	// Front door 1.
+COMPONENT=i_sign_brass_2,	 0, 7, 5	// Place the sign.
+
+[MULTIDEF 08c]
+// minor support diff from 4087
+DEFNAME=i_multi_shop_blacksmithy_large
+Name=Large Blacksmithy Shop
+TYPE=T_MULTI
+VALUE=180000
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Large Blacksmithy Shop
+MULTIREGION=-7,-7,7,7
+COMPONENT=i_door_wood,	 4, -1, 7
+COMPONENT=06ad,	 1,  4, 7
+COMPONENT=06ad,	 1, -4, 7
+COMPONENT=06A7,	-3, 6, 7	// Front door 2.
+COMPONENT=i_door_wood,	-4, 6, 7	// Front door 1.
+COMPONENT=i_sign_brass_2,	 0, 7, 5	// Place the sign.
+
+[MULTIDEF 08d]
+DUPEITEM=0408c
+
+[MULTIDEF 096]
+DEFNAME=i_multi_house_patio_marble
+Name=Large Marble Patio House
+TYPE=T_MULTI
+VALUE=192000
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Large Marble Patio House
+MULTIREGION=-7,-7,7,7
+COMPONENT=i_door_metal, -4, 3, 4
+COMPONENT=0677, -3, 3, 4
+COMPONENT=i_sign_brass_2, 0, 7, 0
+
+[MULTIDEF 098]
+// Small Tower
+DEFNAME=i_multi_tower_wizard
+Name=Wizards Tower
+TYPE=T_MULTI
+VALUE=88500
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Wizards Tower
+MULTIREGION=-3,-3,4,4
+COMPONENT=i_door_metal, 3, 3, 6
+COMPONENT=i_sign_brass_2, 1, 4, 5
+
+[MULTIDEF 09a]
+DEFNAME=i_multi_cabin_log_2story
+Name=Two Story Log Cabin
+TYPE=T_MULTI
+VALUE=97800
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Two Story Log Cabin
+MULTIREGION=-3,-6,4,7
+COMPONENT=06e5, 1, 4, 8
+COMPONENT=06e5, 1, 0, 29
+COMPONENT=i_sign_brass_2, 4, 7, 9
+COMPONENT=08a4, 3, -3, 8   //temp wood ladder, rope not working
+COMPONENT=08a2, 3, -4, 20  //temp wood ladder, rope not working
+
+[MULTIDEF 09c]
+DEFNAME=i_multi_house_patio_sand
+Name=Sandstone Patio House
+TYPE=T_MULTI
+VALUE=90900
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Sandstone Patio House
+MULTIREGION=-5,-4,6,4
+COMPONENT=i_door_wood_2, -1, 3, 6
+COMPONENT=i_sign_brass_2, 2, 4, 1
+
+[MULTIDEF 09e]
+DEFNAME=i_multi_villa_2story
+Name=Two Story Villa
+TYPE=T_MULTI
+VALUE=136500
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Two Story Villa
+MULTIREGION=-5,-5,5,6
+COMPONENT=i_door_wood, -3, -1, 25
+COMPONENT=06b3, 1, 0, 25
+COMPONENT=i_door_wood, 3, 1, 5
+COMPONENT=06a7, 4, 1, 5
+COMPONENT=i_sign_brass_2, 1, 6, 2
+
+[MULTIDEF 0a0]
+DEFNAME=i_multi_shop_stone_small
+Name=Small Stone Shop
+TYPE=T_MULTI
+VALUE=60600
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Small Stone Shop
+MULTIREGION=-3,-3,3,4
+COMPONENT=067b, -2, 0, 27
+COMPONENT=i_sign_brass_2, 3, 4, 7
+
+[MULTIDEF 0a2]
+DEFNAME=i_multi_shop_marble_small
+Name=Small Marble Shop
+TYPE=T_MULTI
+VALUE=63000
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Small Marble Shop
+MULTIREGION=-3,-3,3,4
+COMPONENT=067b, -2, 0, 24
+COMPONENT=i_sign_brass_2, 3, 4, 5
+
+[MULTIDEF 03e8]
+// Treasure multi's don't work
+DEFNAME=i_multi_treasure
+Name=Treasure
+TYPE=T_MULTI
+VALUE=1000
+CATEGORY=Multis
+SUBSECTION=Useless
+DESCRIPTION=Treasure 1
+MULTIREGION=-4,-5,4,5
+
+[MULTIDEF 03e9]
+// Treasure multi's don't work
+DEFNAME=i_multi_treasure2
+Name=Treasure
+TYPE=T_MULTI
+VALUE=2000
+CATEGORY=Multis
+SUBSECTION=Useless
+DESCRIPTION=Treasure 2
+MULTIREGION=-4,-5,4,5
+
+[MULTIDEF 03ea]
+// Treasure multi's don't work
+DEFNAME=i_multi_treasure3
+Name=Treasure
+TYPE=T_MULTI
+VALUE=3000
+CATEGORY=Multis
+SUBSECTION=Useless
+DESCRIPTION=Treasure 3
+MULTIREGION=-4,-5,4,5
+
+[MULTIDEF 03eb]
+// Treasure multi's don't work
+DEFNAME=i_multi_treasure4
+Name=Treasure
+TYPE=T_MULTI
+VALUE=4000
+CATEGORY=Multis
+SUBSECTION=Useless
+DESCRIPTION=Treasure 4
+MULTIREGION=-4,-5,4,5
+
+[MULTIDEF 07d0]
+DEFNAME=i_multi_lattice
+Name=Lattice
+TYPE=T_MULTI
+VALUE=1000
+CATEGORY=Multis
+SUBSECTION=Other
+DESCRIPTION=Lattice 1
+MULTIREGION=-4,-5,4,5
+
+[MULTIDEF 07d7]
+DEFNAME=i_multi_lattice7
+Name=Lattice
+TYPE=T_MULTI
+VALUE=1000
+CATEGORY=Multis
+SUBSECTION=Other
+DESCRIPTION=Lattice 7
+MULTIREGION=-4,-5,4,5
+
+[MULTIDEF 0BB8]
+DEFNAME=i_multi_house_wheat_cottage
+Name=Wheat House
+TYPE=T_MULTI
+VALUE=75000
+CATEGORY=Multis
+SUBSECTION=Houses
+DESCRIPTION=Wheat Cottage
+MULTIREGION=-4,-5,4,5
+
+[MULTIDEF 0e00]
+// N
+DEFNAME=i_multi_carpet_magic_n
+Name=Carpet
+ID=0ac1
+TYPE=T_SHIP
+CATEGORY=Multis
+SUBSECTION=Misc
+DESCRIPTION=Carpet
+MULTIREGION=0,0,0,0
+COMPONENT=0ac3,-1,-1
+COMPONENT=0af7,0,-1
+COMPONENT=0ac5,1,-1
+COMPONENT=0af8,1,0
+COMPONENT=0ac2,1,1
+COMPONENT=0af9,0,1
+COMPONENT=0ac4,-1,1
+COMPONENT=0af6,-1,0
+
+[MULTIDEF 0e01]
+// E
+DEFNAME=i_multi_carpet_magic_e
+Name=Carpet
+ID=0ac1
+TYPE=T_SHIP
+CATEGORY=Multis
+SUBSECTION=Misc
+DESCRIPTION=Carpet
+MULTIREGION=0,0,0,0
+COMPONENT=0ac3,-1,-1
+COMPONENT=0af7,0,-1
+COMPONENT=0ac5,1,-1
+COMPONENT=0af8,1,0
+COMPONENT=0ac2,1,1
+COMPONENT=0af9,0,1
+COMPONENT=0ac4,-1,1
+COMPONENT=0af6,-1,0
+
+[MULTIDEF 0e02]
+// S
+DEFNAME=i_multi_carpet_magic_s
+Name=Carpet
+ID=0ac1
+TYPE=T_SHIP
+CATEGORY=Multis
+SUBSECTION=Misc
+DESCRIPTION=Carpet
+MULTIREGION=0,0,0,0
+COMPONENT=0ac3,-1,-1
+COMPONENT=0af7,0,-1
+COMPONENT=0ac5,1,-1
+COMPONENT=0af8,1,0
+COMPONENT=0ac2,1,1
+COMPONENT=0af9,0,1
+COMPONENT=0ac4,-1,1
+COMPONENT=0af6,-1,0
+
+[MULTIDEF 0e03]
+// W
+DEFNAME=i_multi_carpet_magic_w
+Name=Carpet
+ID=0ac1
+TYPE=T_SHIP
+CATEGORY=Multis
+SUBSECTION=Misc
+DESCRIPTION=Carpet
+MULTIREGION=0,0,0,0
+COMPONENT=0ac3,-1,-1
+COMPONENT=0af7,0,-1
+COMPONENT=0ac5,1,-1
+COMPONENT=0af8,1,0
+COMPONENT=0ac2,1,1
+COMPONENT=0af9,0,1
+COMPONENT=0ac4,-1,1
+COMPONENT=0af6,-1,0
 
 [MULTIDEF 01f4]
 DEFNAME=i_Wandering_Healer_Camp

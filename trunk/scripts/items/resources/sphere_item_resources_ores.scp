@@ -25,9 +25,9 @@ TDATA1=i_ingot_iron
 WEIGHT=2
 VALUE=4
 DUPELIST=019b8,019b9,019ba
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Ore (Small Pile)
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Iron Ore
 
 [ITEMDEF i_ore_dull_copper]
 ID=i_ore_iron
@@ -35,6 +35,9 @@ NAME=Dull Copper Ore
 SKILLMAKE=MINING 65.0
 TDATA1=i_ingot_dull_copper
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Dull Copper Ore
 
 ON=@Create
 COLOR=color_o_dull_copper
@@ -45,6 +48,9 @@ NAME=Shadow Ore
 SKILLMAKE=MINING 70.0
 TDATA1=i_ingot_shadow
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Shadow Ore
 
 ON=@Create
 COLOR=color_o_shadow
@@ -55,6 +61,9 @@ NAME=Copper Ore
 SKILLMAKE=MINING 75.0
 TDATA1=i_ingot_copper
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Iron Ore
 
 ON=@Create
 COLOR=color_o_copper
@@ -65,6 +74,9 @@ NAME=Bronze Ore
 SKILLMAKE=MINING 80.0
 TDATA1=i_ingot_bronze
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Copper Ore
 
 ON=@Create
 COLOR=color_o_bronze
@@ -75,6 +87,9 @@ NAME=Gold Ore
 SKILLMAKE=MINING 85.0
 TDATA1=i_ingot_gold
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Gold Ore
 
 ON=@Create
 COLOR=color_o_gold
@@ -85,6 +100,9 @@ NAME=Agapite Ore
 SKILLMAKE=MINING 90.0
 TDATA1=i_ingot_agapite
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Agapite Ore
 
 ON=@Create
 COLOR=color_o_agapite
@@ -95,6 +113,9 @@ NAME=Verite Ore
 SKILLMAKE=MINING 95.0
 TDATA1=i_ingot_verite
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Verite Ore
 
 ON=@Create
 COLOR=color_o_verite
@@ -105,6 +126,9 @@ NAME=Valorite Ore
 SKILLMAKE=MINING 99.0
 TDATA1=i_ingot_valorite
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Valorite Ore
 
 ON=@Create
 COLOR=color_o_valorite
@@ -120,6 +144,9 @@ NAME=Silver Ore
 SKILLMAKE=MINING 95.0
 TDATA1=i_ingot_silver
 VALUE=7
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Silver Ore
 
 ON=@Create
 COLOR=color_o_silver
@@ -130,6 +157,9 @@ NAME=Rose Ore
 SKILLMAKE=MINING 87.0
 TDATA1=i_ingot_rose
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Rose Ore
 
 ON=@Create
 COLOR=color_o_rose
@@ -140,6 +170,9 @@ NAME=Mytheril Ore
 SKILLMAKE=MINING 99.5
 TDATA1=i_ingot_mytheril
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Mytheril Ore
 
 ON=@Create
 COLOR=color_o_mytheril
@@ -150,6 +183,9 @@ NAME=Blackrock Ore
 SKILLMAKE=MINING 100.0
 TDATA1=i_ingot_blackrock
 VALUE=18
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Blackrock Ore
 
 ON=@Create
 COLOR=color_o_blackrock
@@ -160,6 +196,9 @@ NAME=Bloodrock Ore
 SKILLMAKE=MINING 93.0
 TDATA1=i_ingot_bloodrock
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Bloodrock Ore
 
 ON=@Create
 COLOR=color_o_bloodrock
@@ -170,6 +209,9 @@ NAME=Rusty Ore
 SKILLMAKE=MINING 50.0
 TDATA1=i_ingot_rusty
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Rusty Ore
 
 ON=@Create
 COLOR=color_o_rusty
@@ -180,6 +222,9 @@ NAME=Old Copper Ore
 SKILLMAKE=MINING 60.0
 TDATA1=i_ingot_old_copper
 VALUE=15
+CATEGORY=Resources - Mining
+SUBSECTION=Ores
+DESCRIPTION=Old Copper Ore
 
 ON=@Create
 	COLOR=color_o_oldcopper

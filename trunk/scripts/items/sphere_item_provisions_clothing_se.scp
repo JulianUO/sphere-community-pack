@@ -321,28 +321,3 @@ on=@create
 //Jin-Baori
 [itemdef 027EC]
 dupeitem=027A1
-
-
-[itemdef 02790]
-defname=i_leather_ninja_belt
-name=Leather Ninja Belt
-type=t_clothing
-Weight=1.0
-Flip=1
-reqstr=10
-dye=0
-skillmake=tailoring 50.0,t_sewing_kit
-resources=5 i_hides_cut
-
-dupelist=027DB
-
-category=Provisions - Clothes
-subsection=Samurai Empire
-description=Leather Ninja Belt
-
-on=@create
- hitpoints={50 80}
-
-//Leather Ninja Belt
-[itemdef 027DB]
-dupeitem=02790

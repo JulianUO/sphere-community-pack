@@ -1270,13 +1270,6 @@ DESCRIPTION=Conch Shells
 // Mineral matter.
 DUPELIST=0fc5,0fc6,0fc7,0fc8,0fc9,0fca,0fcb,0fcc
 
-[ITEMDEF I_SAND]
-ID=I_DIRT
-VALUE=1
-
-ON=@Create
-	COLOR=colors_yellow
-
 [ITEMDEF I_CLAY]
 ID=I_ROCK_2
 VALUE=10

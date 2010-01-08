@@ -21,7 +21,8 @@ i_liche_form			i_lich_form
 c_liche				c_lich
 c_m_liche_lord			c_m_lich_lord
 
-[DEFNAME backward_compatibility_defs_weapons]
+[DEFNAME backward_compatibility_defs_scp]
+// weapons
 i_staff_bladed_double		i_double_bladed_staff
 i_staff_bladed			i_bladed_staff
 i_crossbow_repeating		i_repeating_crossbow
@@ -34,6 +35,13 @@ i_mace_diamond			i_diamond_mace
 i_sword_assassin_spike		i_assassin_spike
 i_bow_ruin_o			i_bow_ruin
 i_kryss_ruin_o			i_kryss_ruin
+// craftables
+i_armoir_lt			i_armoire_lt
+i_armoir_dk			i_armoire_dk
+i_tambourine_tas		i_tambourine_tassel
+i_lyre				i_harp_lap
+i_harp_large			i_harp_standing
+
 
 [FUNCTION addnpc]
 IF (<ISNUM <ARGS>>)
