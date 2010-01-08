@@ -46,7 +46,7 @@ SUBSECTION=Black Staves
 DESCRIPTION=Staff of Power
 
 ON=@Create
-HITPOINTS.2
+HITPOINTS={36 48}
 COLOR=04f2
 
 [ITEMDEF i_staff_pyros]
@@ -65,7 +65,7 @@ SUBSECTION=Black Staves
 DESCRIPTION=Staff of Pyros
 
 ON=@Create
-HITPOINTS.2
+HITPOINTS={36 48}
 COLOR=<ColorElementalType>
 
 [ITEMDEF i_staff_magi]
@@ -83,7 +83,7 @@ SUBSECTION=Black Staves
 DESCRIPTION=Staff of the Magi
 
 ON=@Create
-HITPOINTS.2
+HITPOINTS={36 48}
 COLOR=0481
 
 
@@ -143,7 +143,7 @@ SUBSECTION=Gnarled Staves
 DESCRIPTION=Wrath of the Dryad
 
 ON=@Create
-HITPOINTS.2
+HITPOINTS={36 48}
 COLOR=<ColorElementalType>
 
 
@@ -187,7 +187,7 @@ SUBSECTION=Nunchakus
 DESCRIPTION=Dragon Nunchaku
 
 ON=@Create
-HITPOINTS.2
+HITPOINTS={36 48}
 
 
 ///////////////////////////////////////////////////////////////
@@ -343,7 +343,7 @@ SUBSECTION=Tessens
 DESCRIPTION=Pilfered Dancer Fans
 
 ON=@Create
-HITPOINTS.2
+HITPOINTS={36 48}
 
 [ITEMDEF i_wind_edge]
 ID=i_tessen
@@ -359,7 +359,7 @@ SUBSECTION=Tessens
 DESCRIPTION=Wind's Edge
 
 ON=@Create
-HITPOINTS.2
+HITPOINTS={36 48}
 
 ///////////////////////////////////////////////////////////////
 //////// TETSUBOS
@@ -440,7 +440,7 @@ SUBSECTION=War Hammers
 DESCRIPTION=Carapace Crusher
 
 ON=@Create
-HITPOINTS.2
+HITPOINTS={36 48}
 COLOR=colors_black
 
 [ITEMDEF i_titan_hammer]
@@ -457,7 +457,7 @@ SUBSECTION=War Hammers
 DESCRIPTION=Titan's Hammer
 
 ON=@Create
-HITPOINTS.2
+HITPOINTS={36 48}
 
 
 ///////////////////////////////////////////////////////////////

@@ -24,9 +24,9 @@ NAME=log%s
 VALUE=1
 TYPE=T_LOG
 WEIGHT=2
-CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
-DESCRIPTION=Log (SE)
+CATEGORY=Resources - Lumberjacking
+SUBSECTION=Logs
+DESCRIPTION=Log
 DUPELIST=01bde,01bdf,01be0,01be1,01be2
 
 [ITEMDEF i_log_oak]
@@ -34,6 +34,9 @@ NAME=oak log%s
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
+CATEGORY=Resources - Lumberjacking
+SUBSECTION=Logs
+DESCRIPTION=Oak Log
 
 ON=@Create
 COLOR=color_o_oak
@@ -52,6 +55,9 @@ NAME=yew log%s
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
+CATEGORY=Resources - Lumberjacking
+SUBSECTION=Logs
+DESCRIPTION=Yew Log
 
 ON=@Create
 COLOR=color_o_yew
@@ -61,6 +67,9 @@ NAME=heartwood log%s
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
+CATEGORY=Resources - Lumberjacking
+SUBSECTION=Logs
+DESCRIPTION=Heartwood Log
 
 ON=@Create
 COLOR=color_o_heartwood 
@@ -70,6 +79,9 @@ NAME=bloodwood log%s
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
+CATEGORY=Resources - Lumberjacking
+SUBSECTION=Logs
+DESCRIPTION=Bloodwood Log
 
 ON=@Create
 COLOR=color_o_bloodwood 
@@ -79,6 +91,9 @@ NAME=frostwood log%s
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
+CATEGORY=Resources - Lumberjacking
+SUBSECTION=Logs
+DESCRIPTION=Frostwood Log
 
 ON=@Create
 COLOR=color_o_frostwood 
