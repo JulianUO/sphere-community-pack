@@ -142,7 +142,7 @@ HITPOINTS={36 48}
 [ITEMDEF 027ad]
 DEFNAME=i_kama
 NAME=Kama
-TYPE=t_weapon_sword
+TYPE=t_weapon_fence
 RESOURCES=14 i_ingot_iron
 SKILLMAKE=BLACKSMITHING 40.0
 WEIGHT=7
