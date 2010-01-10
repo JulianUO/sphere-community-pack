@@ -141,15 +141,13 @@ endif
 // Passive/Active Meditation, Intelligence, Battle Focus, Equipment
 // If you wonder why Medit / 10 and Focus / 200. Because in Sphere, GM Medit = 1000 and not 100.0
 if <def.scp.NewSkills_Meditation> == 1
-	if <def.scp.Meditation_PassiveRegen> == 1
-		if <meditation> > 99.9 // GM Meditation or better gets 10% bonus.
-		local.MRmi = <feval <floatval (1.1 * ((<meditation> * 3) + <int>)) / 40)>>
-		else
-		local.MRmi = <feval <floatval ((<meditation> * 3) + <int>) / 40>>
-		endif
-		if <tag0.active.medit>
-		local.MRmi *= 2 // Active Meditation gets regen * 2
-		endif
+	if <meditation> > 99.9 // GM Meditation or better gets 10% bonus.
+	local.MRmi = <feval <floatval (1.1 * ((<meditation> * 3) + <int>)) / 40)>>
+	else
+	local.MRmi = <feval <floatval ((<meditation> * 3) + <int>) / 40>>
+	endif
+	if <tag0.meditation.active>
+	local.MRmi *= 2 // Active Meditation gets regen * 2
 	endif
 else
 local.MRmi = 0
