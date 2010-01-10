@@ -106,9 +106,11 @@ scp.jail_cannotmyself		"@,,2 503315"	// Congrats, you've successfully jailed you
 scp.jail_jailed			"@,,2 503268"	// You've been jailed!
 scp.jail_unjailed		"@,,2 503267"	// You've been unjailed!
 
-scp.medit_msg_handsfree		"@,,2 502626"	// Your hands must be free to cast spells or meditate.
-scp.medit_msg_abort		"@,,2 500134"	// You stop meditating.
-scp.medit_msg_armorpenalty	"@,,2 500135"	// Regenerative forces cannot penetrate your armor.
+scp.meditation_activeskill		"@,,2 501845" // You are busy doing something else and cannot focus.
+scp.meditation_maxmana		"@,,2 501846" // You are at peace.
+scp.meditation_armorpenalty	"@,,2 500135"	// Regenerative forces cannot penetrate your armor.
+scp.meditation_success		"@,,2 501851" // You enter a meditative trance.
+scp.meditation_fail			"@,,2 501850" // You cannot focus your concentration.
 
 scp.mining_nosand		"@,,2 1044629"	// There is no sand here to mine.
 scp.mining_mounted		"@,,2 501864"	// You can't mine while riding.
@@ -209,6 +211,14 @@ scp.stealth_reqhiding		"@,,2 502726" // You are not hidden well enough.  Become 
 scp.stealth_armorcheck		"@,,2 502727" // You could not hope to move quietly wearing this much armor.
 scp.stealth_success		"@,,2 502730" // You begin to move quietly.
 scp.stealth_fail		"@,,2 502731" // You fail in your attempt to move unnoticed.
+
+scp.removetrap_start				"@,,2 502368" // Which trap will you attempt to disarm?
+scp.removetrap_lackslockpicking		"@,,2 502366" // You do not know enough about locks.  Become better at picking locks.
+scp.removetrap_lacksdetectinghidden	"@,,2 502367" // You are not perceptive enough.  Become better at detect hidden.
+scp.removetrap_ischar				"@,,2 502816" // You feel that such an action would be inappropriate
+scp.removetrap_nottrapped			"@,,2 502373" // That doesn't appear to be trapped
+scp.removetrap_success				"@,,2 502377" // You successfully render the trap harmless
+scp.removetrap_fail					"@,,2 502372" // You fail to disarm the trap... but you don't set it off
 
 scp.runes_entername		"@88,,1 Type in a name for the rune"
 

@@ -38,6 +38,7 @@ scp.NewSkills_Healing=1
 scp.NewSkills_TasteID=1
 scp.NewSkills_Hiding=1
 scp.NewSkills_Stealth=1
+scp.NewSkills_RemoveTrap=1
 scp.NewSkills_Meditation=1
 scp.NewSkills_Focus=1
 
@@ -168,22 +169,6 @@ scp.Veterinary_UseAnimalLore=1
 // Poison prevents veterinary healing from bandages
 // <boolean> (0 = No / 1 = Yes)
 scp.Veterinary_PoisonNoBandage=1
-
-///////////////////////////////////////////////////////////////
-//////// Skills Settings - Others
-///////////////////////////////////////////////////////////////
-// Allow passive regeneration for meditation?
-// <boolean> (0 = No / 1 = Yes)
-scp.Meditation_PassiveRegen=1
-
-// Need to have your hands free before starting meditation?
-// <boolean> (0 = No / 1 = Yes)
-scp.Meditation_HandsFree=1
-
-// Use the new Armor Penalty for Meditation? (Some armors restrict Meditation)
-// This is affected by "tag.penalty.meditation"
-// <boolean> (0 = No / 1 = Yes)
-scp.Meditation_ArmorPenalty=1
 
 ///////////////////////////////////////////////////////////////
 //////// Combat System Settings

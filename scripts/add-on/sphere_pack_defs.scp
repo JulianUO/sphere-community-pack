@@ -16,26 +16,26 @@ VERSION=0.56b
 // If need to change color, sounds, etc, search around here.
 
 [DEFNAME WAITINGTIMES] // select/start, success, fail, others (in case needed for some skills) - 0 means reset -1 means no action
-skill.1.waittime				"2.0, -1, -1"			// Anatomy (Done)
-skill.2.waittime				"1.0, -1, -1"			// Animal Lore (Done)
-skill.3.waittime				"1.0, -1, -1"			// Item Identification (Done)
-skill.4.waittime				"1.0, -1, -1"			// Arms Lore (Done)
-skill.6.waittime				"21600.0, 10.0, 0, 0"	// Begging (Done)
-skill.9.waittime				"1.0, 10.0, 5.0"		// Peacemaking (Done)
-skill.14.waittime				"6.0, -1, -1"			// Detecting Hidden (Done)
-skill.15.waittime				"1.0, -1, -1"			// Discordance (Done)
-skill.16.waittime				"1.0, -1, -1"			// Evaluating Intelligence (Done)
-skill.19.waittime				"1.0, -1, -1"			// Forensic Evaluation (Done)
-skill.21.waittime				"-1, 10.0, 1.0"			// Hiding (Done)
-skill.22.waittime				"1.0, 10.0, 5.0"		// Provocation (Done)
-skill.30.waittime				"10.0, -1, -1"			// Poisoning (Done)
-skill.32.waittime				"-1, 1.0, 1.0"			// Spirit Speak (Done)
-skill.35.waittime				"21600.0, 0, 0, 0"		// Animal Taming (Done)
-skill.36.waittime				"1.0, -1, -1"			// Taste Identification (Done)
-skill.38.waittime				"10.0, -1, -1"			// Tracking
-skill.46.waittime				"-1, 10.0, 10.0, 2.5"	// Meditation
-skill.47.waittime				"-1, 10.0, 10.0"		// Stealth (Done)
-skill.48.waittime				"10.0, -1, -1"			// Remove Trap
+skill.1.waittime				"2.0, -1, -1"				// Anatomy (Done)
+skill.2.waittime				"1.0, -1, -1"				// Animal Lore (Done)
+skill.3.waittime				"1.0, -1, -1"				// Item Identification (Done)
+skill.4.waittime				"1.0, -1, -1"				// Arms Lore (Done)
+skill.6.waittime				"21600.0, 10.0, 0, 0"		// Begging (Done)
+skill.9.waittime				"1.0, 10.0, 5.0"			// Peacemaking (Done)
+skill.14.waittime				"6.0, -1, -1"				// Detecting Hidden (Done)
+skill.15.waittime				"1.0, -1, -1"				// Discordance (Done)
+skill.16.waittime				"1.0, -1, -1"				// Evaluating Intelligence (Done)
+skill.19.waittime				"1.0, -1, -1"				// Forensic Evaluation (Done)
+skill.21.waittime				"-1, 10.0, 1.0"				// Hiding (Done)
+skill.22.waittime				"1.0, 10.0, 5.0"			// Provocation (Done)
+skill.30.waittime				"10.0, -1, -1"				// Poisoning (Done)
+skill.32.waittime				"-1, 1.0, 1.0"				// Spirit Speak (Done)
+skill.35.waittime				"21600.0, 0, 0, 0"			// Animal Taming (Done)
+skill.36.waittime				"1.0, -1, -1"				// Taste Identification (Done)
+skill.38.waittime				"10.0, -1, -1"				// Tracking
+skill.46.waittime				"-1, 10.0, 10.0, 5.0, 2.5"	// Meditation (Done)
+skill.47.waittime				"-1, 10.0, 10.0"			// Stealth (Done)
+skill.48.waittime				"10.0, -1, -1"				// Remove Trap (Done)
 
 [DEFNAME TITHINGCONSUME]
 spell.201.tithing				"10" // Cleanse by Fire

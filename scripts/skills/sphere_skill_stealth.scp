@@ -97,6 +97,11 @@ if !((<argn1> == detectinghidden) || (<argn1> == itemid) || (<argn1> == anatomy)
 f_reveal
 endif
 
+on=@skillwait
+if !((<argn1> == detectinghidden) || (<argn1> == itemid) || (<argn1> == anatomy) || (<argn1> == armslore) || (<argn1> == animallore) || (<argn1> == evaluatingintel) || (<argn1> == forensics) || (<argn1> == poisoning))
+f_reveal
+endif
+
 on=@personalspace
 src.sysmessage <def.scp.hiding_shoveinvis>
 return 0
