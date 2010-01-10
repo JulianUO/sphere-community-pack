@@ -216,14 +216,13 @@ remove
 on=1
 //place bedroll back in pack
 ref1=<tag0.bedroll>
-ref2=<src.uid>
 if <ref1.isitem>
 	if <ref1.baseid>==i_bedroll
 	ref1.cont = <src.findlayer.21>
 	endif
 endif
 //disconnect client
-timerf 1,sendpacket 0d1 01
+src.timerf 1,sendpacket 0d1 01
 remove
 
 [eof]
