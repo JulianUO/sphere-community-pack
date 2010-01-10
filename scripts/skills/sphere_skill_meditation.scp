@@ -88,7 +88,7 @@ return 0
 on=@userstats
 if <mana> >= <maxmana>
 tag.meditation.active=
-events e_meditating
+events -e_meditating
 endif
 
 [eof]
