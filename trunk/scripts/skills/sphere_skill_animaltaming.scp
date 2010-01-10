@@ -170,11 +170,13 @@ if <more1>
 	cont.tamingfail <link>
 	remove
 	return 1
-	elif <eval (<serv.time> - (<link.attacker.last.elapsed> * 10))> > <tag0.starttime>
-	link.message <def.scp.taming_isangry>
-	cont.tamingfail <link>
-	remove
-	return 1
+	elif <link.attacker>
+		if <eval (<serv.time> - (<link.attacker.last.elapsed> * 10))> > <tag0.starttime>
+		link.message <def.scp.taming_isangry>
+		cont.tamingfail <link>
+		remove
+		return 1
+		endif
 	endif
 cont.say @,,2 { {502790 502793} 1 {1005608 1005613} 1 {1010593 1010596} 1 }
 cont.face <link>
