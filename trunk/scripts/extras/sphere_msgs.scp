@@ -41,6 +41,7 @@ food_full_4			"@,,2 500871"	// You feel quite full after consuming the food.
 food_full_5			"@,,2 500872"	// You are nearly stuffed, but manage to eat the food.
 hiding_revealed			"@,,2 500814"	// You have been revealed!
 itemuse_dye_reach		"@,,2 1042593"	// That is not in your backpack.
+itemuse_weapon_promt	"@,,2 1010018"	//What do you want to use this on?
 lumberjacking_reach		"@,,2 500446"	// That is too far away.
 map_dir_0			"@,,2 1075389"	// North
 map_dir_1			"@,,2 1075388"	// North East
@@ -79,6 +80,7 @@ taming_remember			"@,,2 502799"	// It seems to accept you as master.
 taming_success			"@,,2 502799"	// It seems to accept you as master.
 taming_tame			"@,,2 502467"	// That animal looks tame already.
 taming_tamed			"@,,2 502469"	// That being cannot be tamed.
+target_cancel_1		""	// Targeting cancelled.
 skillwait_3			"@,,2 1045157"	// You must wait to perform another action.
 spell_alcohol_hic		"@,,2 500849"	// *hic*
 spell_gate_am			"@,,2 501025"	// Something is blocking the location.
