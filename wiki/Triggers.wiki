@@ -41,12 +41,6 @@ endif
 }}}
 
 <br>
-*@SkillPreSelect*<br>
-Fired before any skill check (included warmode) takes place. Note that this is only fired when the skill is called from a macro or from the skillmenu, the rest of the skills need to be intercepted on the object that starts the skill (example: t_container for lockpicking).<br>
-Default: Player<br>
-ARGN1: Skill Selected<br>
-
-<br>
 *@ReceivePowerScroll*<br>
 When the player receives a power scroll in the Champion System<br>
 Default: Player
