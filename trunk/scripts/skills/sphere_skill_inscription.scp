@@ -5,7 +5,15 @@
 //****************************************************************************
 // FILE LAST UPDATED: 
 VERSION=0.56b
-
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX - All the script
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// Based on sphere_skillmenu.scp
+//
 [SKILL 23]
 DEFNAME=Skill_Inscription
 KEY=Inscription
@@ -28,5 +36,31 @@ ON=@Fail
 
 ON=@Abort
 	SRC.SYSMESSAGE You scribble on the scroll a bit, but fail to finish it.
+	
+[function f_craft_inscription_mana]
+if <serv.itemdef.<args>.type> != t_scroll
+return 0
+endif
+serv.newitem <args>
+local.spellnum = <new.morex>
+new.remove
+if <mana> >= <serv.spell.<local.spellnum>.manause>
+ctag.craft.message = <def.scp.craft_msg_nomana>
+return 1
+endif
+return 0
+
+[function f_craft_inscription_cancast]
+if <serv.itemdef.<args>.type> != t_scroll
+return 0
+endif
+serv.newitem <args>
+local.spellnum = <new.morex>
+new.remove
+if !<cancast <local.spellnum> 0>
+ctag.craft.message <def.scp.craft_msg_nocast>
+return 1
+endif
+return 0
 
 [eof]
