@@ -222,7 +222,13 @@ if <ref1.isitem>
 	endif
 endif
 //disconnect client
+src.events +e_camping_logout
 src.timerf 1,sendpacket 0d1 01
 remove
+
+[events e_camping_logout]
+on=@logout
+argn2=1
+events -e_camping_logout
 
 [eof]
