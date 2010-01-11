@@ -31,11 +31,11 @@ if <def.scp.NewSkills_Begging> == 1
 	return 1
 	endif
 	if !<act.brain>
-	sysmessage @,,2 500398 // Perhaps just asking would work better.
+	sysmessage <def.scp.begging_isplayer>
 	f_skill_delay <getargv 2,<def.skill.6.waittime>>
 	return 1
-	elseif !((<act.body> == c_man) || (<act.body> == c_woman))
-	sysmessage @,,2 500399 // There is little chance of getting money from that!
+	elseif !((<act.ismale) || (<act.isfemale))
+	sysmessage <def.scp.begging_ismonster>
 	f_skill_delay <getargv 2,<def.skill.6.waittime>>
 	return 1
 	elseif !<distance <act.uid>> < 4
@@ -43,16 +43,16 @@ if <def.scp.NewSkills_Begging> == 1
 	f_skill_delay <getargv 2,<def.skill.6.waittime>>
 	return 1
 	elseif <findlayer.layer_horse.uid>
-	sysmessage @,,2 500404 // They seem unwilling to give you any money.
+	sysmessage <def.scp.begging_mounted>
 	f_skill_delay <getargv 2,<def.skill.6.waittime>>
 	return 1
 	endif
 face <act.uid>
 f_loopanim 32,4,1
-	if <skillsuccess <r1000>,begging>
+	if <skillusequick <r1000> begging>
 	timerf 4,f_begging_success <act>
 	else
-	timerf 4,sysmessage @,,2 500404 // They seem unwilling to give you any money.
+	timerf 4,sysmessage <def.scp.begging_fail>
 	timerf 4,f_skill_delay <getargv 2,<def.skill.6.waittime>>
 	endif
 	return 1
@@ -62,16 +62,17 @@ on=@success
 f_skill_delay <getargv 1,<def.skill.6.waittime>>
 
 on=@fail
-sysmessage @,,2 500404 // They seem unwilling to give you any money.
+sysmessage <def.scp.begging_fail>
 f_skill_delay <getargv 2,<def.skill.6.waittime>>
 
 on=@targetcancel
 f_skill_delay <getargv 3,<def.skill.6.waittime>>
 
+
 [function f_begging_success]
 ref1 = <args>
 if <ref1.gold> < 10
-ref1.say @,,2 500407 // I have not enough money to give thee any!
+ref1.say <def.scp.begging_withoutgold>
 else
 local.getgold = <eval <ref1.gold>/10>
 local.max = <eval (10 + (<fame> / 2500))>

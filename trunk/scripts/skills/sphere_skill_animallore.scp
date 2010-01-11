@@ -13,7 +13,6 @@ TITLE=Scholar
 PROMPT_MSG=@,,2 500328
 DELAY=0.0
 ADV_RATE=2.5,50.0,200.0
-
 STAT_STR=0
 STAT_INT=70
 STAT_DEX=0
@@ -24,7 +23,7 @@ BONUS_STATS=50
 
 on=@wait
 if <def.scp.NewSkills_AnimalLore> == 1
-sysmessage @,,2 500328
+sysmessage <def.scp.animallore_targ>
 targetf f_animallore_start
 f_skill_delay <getargv 0,<def.skill.2.waittime>>
 return 1
@@ -36,12 +35,12 @@ f_skill_delay <getargv 0,<def.skill.2.waittime>>
 on=@success
 f_skill_delay <getargv 1,<def.skill.2.waittime>>
 
-ON=@Fail
+ON=@fail
 f_skill_delay <getargv 2,<def.skill.2.waittime>>
-argo.message @,,2 500334
+argo.message <def.scp.animallore_fail>
 
 [function f_animallore_start]
-if <skillsuccess <r1000>,animallore>
+if <skillusequick <r1000> animallore>
 	if <argo.brain>
 	f_ResendDialog d_animal_lore
 	skillgain AnimalLore <eval <AnimalLore>/10>
@@ -50,30 +49,8 @@ if <skillsuccess <r1000>,animallore>
 	endif
 endif
 f_skill_delay <getargv 2,<def.skill.2.waittime>>
-argo.message @,,2 500334
+argo.message <def.scp.animallore_fail>
 
-// SCRIPT CREDITS
-// --------------
-// ShiryuX - All the script
-//
-// SCRIPT DOCUMENTATION
-// --------------------
-// The override for Animal Lore skill.
-// Popups a dialog (d_alore) with the following info:
-// - <hits>, <maxhits> 
-// - <stam>, <maxstam> 
-// - <mana>, <maxmana>
-// - <str>, <dex>, <int>
-// - <armor>
-// - <wrestling>, <tactics>, <magicresistance>, <anatomy>, <poisoning>
-// - <magery>, <evaluatingintel>, <meditation>
-// - And a cliloc with: <foodcheck>
-
-// foodcheck (function)
-// - returns the cliloc used to display the foodtype
-
-[defname animallore]
-animallore.start	1049594
 
 [dialog d_animal_lore]
 10,10
@@ -141,7 +118,10 @@ xmfhtmlgump 35 100 150 20 3000340 0 0
 button 210 244 5601 5605 0 1 0
 button 185 244 5603 5607 0 2 0
 
-
+// SCRIPT DOCUMENTATION
+// --------------------
+// foodcheck (function)
+// - returns the cliloc used to display the foodtype
 [FUNCTION foodcheck]
 IF (<isempty <ARGV[0]>>)
 return 3000340
@@ -154,5 +134,8 @@ return 1049566
 ELSE
 return 3000340
 ENDIF
+
+[comment animallore]
+animallore.start	1049594
 
 [eof]
