@@ -46,7 +46,7 @@ if !<flags>&statf_hidden
 sysmessage <def.scp.stealth_nothidden>
 f_reveal
 f_skill_delay <getargv 2,<def.skill.47.waittime>>
-elseif <hiding> < 50.0
+elseif <hiding> < <def.scp.stealth_hidingreq>
 sysmessage <def.scp.stealth_reqhiding>
 f_reveal
 f_skill_delay <getargv 2,<def.skill.47.waittime>>
@@ -104,7 +104,7 @@ endif
 
 on=@personalspace
 src.sysmessage <def.scp.hiding_shoveinvis>
-return 0
+return 1
 
 on=@spelleffect
 if <argn1> == s_reveal
