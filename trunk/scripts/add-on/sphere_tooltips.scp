@@ -34,57 +34,55 @@ if <act.tag0.artifact>
 addcliloc 1061078,<act.dtag0.artifact>
 endif
 for 1 <def.itemprops>
+local.prop = <getargv 5 <def.itemprop_<local._for>>>
 local.clil = <getargv 0 <def.itemprop_<local._for>>>
 	if <local.clil> < 0
-	<getargv 5 <def.itemprop_<local._for>>>_cliloc
+	<local.prop>_cliloc
 	elif <local.clil> > 0
-		if <act.tag0.<getargv 5 <def.itemprop_<local._for>>>>
-		addcliloc <local.clil>,<act.dtag0.<getargv 5 <def.itemprop_<local._for>>>>
+		if <act.tag0.<local.prop>>
+			if <def.scp.ItemProp_<local.prop>> == 1
+			addcliloc <local.clil>,<act.dtag0.<local.prop>>
+			endif
 		endif
 	endif
 endfor
-if <act.isweapon>
-	if <eval <act.tag0.DamFire> + <act.tag0.DamCold> + <act.tag0.DamPoison> + <act.tag0.DamEnergy>> < 100
-		if <act.tag0.DamPhysical>
-		addcliloc 1060403,<act.dtag0.damphysical>
-		else
-		local.physical = <eval 100 - (<act.tag0.DamFire> + <act.tag0.DamCold> + <act.tag0.DamPoison> + <act.tag0.DamEnergy>)>
-		addcliloc 1060403,<dlocal.physical>
-		endif
-	endif
-	if <act.tag0.DamFire>
-	addcliloc 1060405,<act.dtag0.damfire>
-	endif
-	if <act.tag0.DamCold>
-	addcliloc 1060404,<act.dtag0.damcold>
-	endif
-	if <act.tag0.DamPoison>
-	addcliloc 1060406,<act.dtag0.dampoison>
-	endif
-	if <act.tag0.DamEnergy>
-	addcliloc 1060407,<act.dtag0.damenergy>
-	endif
+if <act.tag0.DamPhysical> || <act.isweapon>
+local.physical = <eval 100 - (<act.tag0.DamFire> + <act.tag0.DamCold> + <act.tag0.DamPoison> + <act.tag0.DamEnergy>)>
+addcliloc 1060403,<dlocal.physical>
+endif
+if <act.tag0.DamFire>
+addcliloc 1060405,<act.dtag0.DamFire>
+endif
+if <act.tag0.DamCold>
+addcliloc 1060404,<act.dtag0.DamCold>
+endif
+if <act.tag0.DamPoison>
+addcliloc 1060406,<act.dtag0.DamPoison>
+endif
+if <act.tag0.DamEnergy>
+addcliloc 1060407,<act.dtag0.DamEnergy>
+endif
+if <act.isweapon> // Yes! Again, to keep order of this thing.
 addcliloc 1061168,<act.dam>
 addcliloc 1061167,<fval <act.speed>>
-	if <act.range> > 1
-	addcliloc 1061169,<getargv 1 <act.range>>
-	endif
-elif <act.isarmor>
-	if <act.tag0.resphysical>
-	addcliloc 1060448,<act.dtag0.resphysical>
-	endif
-	if <act.tag0.resfire>
-	addcliloc 1060447,<act.dtag0.resfire>
-	endif
-	if <act.tag0.rescold>
-	addcliloc 1060445,<act.dtag0.rescold>
-	endif
-	if <act.tag0.respoison>
-	addcliloc 1060449,<act.dtag0.respoison>
-	endif
-	if <act.tag0.resenergy>
-	addcliloc 1060446,<act.dtag0.resenergy>
-	endif
+endif
+if <act.range> > 1
+addcliloc 1061169,<getargv 1 <act.range>>
+endif
+if <act.tag0.ResPhysical>
+addcliloc 1060448,<act.dtag0.ResPhysical>
+endif
+if <act.tag0.ResFire>
+addcliloc 1060447,<act.dtag0.ResFire>
+endif
+if <act.tag0.ResCold>
+addcliloc 1060445,<act.dtag0.ResCold>
+endif
+if <act.tag0.ResPoison>
+addcliloc 1060449,<act.dtag0.ResPoison>
+endif
+if <act.tag0.ResEnergy>
+addcliloc 1060446,<act.dtag0.ResEnergy>
 endif
 if (<act.reqstr> > 0) && ((<act.isweapon> || (<act.isarmor>) || (<act.type> == t_shield) || (<act.type> == t_clothing))
 addcliloc 1061170,<eval <act.reqstr>>
@@ -92,7 +90,7 @@ endif
 if (<act.layer> == 2) && <act.isweapon>
 addcliloc 1061171
 endif
-if <act.more1h> > 0
+if <act.hitpoints> > 0
 addcliloc 1060639,<act.more1l>,<act.more1h>
 endif
 return 1

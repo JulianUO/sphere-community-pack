@@ -35,11 +35,15 @@ endif
 if !<weapon>
 return wrestling
 endif
-if <weapon.tag0.mageweapon>
-return <combat.bestskill 1>
+if <def.scp.ItemProp_MageWeapon> == 1
+	if <weapon.tag0.mageweapon>
+	return <combat.bestskill 1>
+	endif
 endif
-if <weapon.tag0.BestWeaponSkill>
-return <combat.bestskill>
+if <def.scp.ItemProp_BestWeaponSkill> == 1
+	if <weapon.tag0.BestWeaponSkill>
+	return <combat.bestskill>
+	endif
 endif
 if <weapon.tag0.override.skill>
 return <weapon.tag0.override.skill>
@@ -79,11 +83,11 @@ return <eval 150000 / ((<dex> + 100) * <feval <floatval 150 / <fval <qval <weapo
 		doswitch <def.scp.Combat_HitSpeed>
 		return <eval <serv.SpeedScaleFactor> / ((<dex> + 100) * <feval <floatval 150 / <fval <qval <weapon> ? <weapon.speed> : 50>>>>)>
 		return <eval 150000 / ((<stam> + 100) * <feval <floatval 150 / <fval <qval <weapon> ? <weapon.speed> : 50>>>>)>
-		return <max <eval ((((<fval <qval <weapon> ? <weapon.speed> : 15>> * 4) / 10) - (<stamina> / 30)) * (100.0 / (100 + <tag0.SwingSpeedIncrease>))) / 4>, 13>
+		return <max <eval ((((<fval <qval <weapon> ? <weapon.speed> : 15>> * 4) / 10) - (<stamina> / 30)) * (100.0 / (100 + <qval <def.scp.ItemProp_SwingSpeedIncrease> ? <weapon.tag0.SwingSpeedIncrease> : 0>))) / 4>, 13>
 		enddo
 	end
 return <eval 150000 / ((<stam> + 100) * <feval <floatval 150 / <fval <qval <weapon> ? <weapon.speed> : 50>>>>)>
-return <max <eval ((((<fval <qval <weapon> ? <weapon.speed> : 15>> * 4) / 10) - (<stamina> / 30)) * (100.0 / (100 + <tag0.SwingSpeedIncrease>))) / 4>, 13>
+return <max <eval ((((<fval <qval <weapon> ? <weapon.speed> : 15>> * 4) / 10) - (<stamina> / 30)) * (100.0 / (100 + <qval <def.scp.ItemProp_SwingSpeedIncrease> ? <weapon.tag0.SwingSpeedIncrease> : 0>))) / 4>, 13>
 enddo
 
 
@@ -105,8 +109,12 @@ return <qval <r100> <= <f_combatsys_hitchance_aos> ? 0 : -100>
 end
 
 [function f_combatsys_hitchance_aos]
+if <def.scp.ItemProp_HitChanceIncrease> == 1
 local.hitchance.bonus = <min <tag0.HitChanceIncrease>,<getargv 3 <def.itemprop_08>>>
+endif
+if <def.scp.ItemProp_DefenseChanceIncrease> == 1
 local.defchance.bonus = <min <src.tag0.DefenseChanceIncrease>,<getargv 3 <def.itemprop_03>>>
+endif
 local.hitchance = <eval <muldiv ((<<combat.skill.aos>> / 10) + 20),(100 + <local.hitchance.bonus>),100> * 100>
 local.defchance = <muldiv ((<src.<src.combat.skill.aos>> / 10) + 20),(100 + <local.defchance.bonus>),50>
 return <max <eval <local.hitchance> / <local.defchance>>,2>

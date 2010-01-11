@@ -33,7 +33,9 @@ local.unilength += 4
 local.uniargs .= " 00 00"
 endif
 SendPacket 0df w<local.length> d<uid> w<local.iconid> 00 01 00 00 00 00 w<local.iconid> 00 01 00 00 00 00 w<local.delay> 00 00 00 d<local.cliloc1> d<local.cliloc2> 00 00 00 00 00 01 d<local.unilength> <streat <local.uniargs>>
+if <argv[1]> > 0
 TimerF <argv[1]>,RemoveBuff <def.bufficon_<argv[0]>>
+endif
 
 [function f_asc_to_ucs] //transforms ASCii to UniCodeStream
 local.ucs=" "

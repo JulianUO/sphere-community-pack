@@ -34,6 +34,7 @@ scripts/items/crafting/
 scripts/items/decoration/
 scripts/items/multis/
 scripts/items/profession/
+scripts/items/resources/
 scripts/items/weapons/
 // -----------------------------------
 scripts/sphere_region_resources.scp

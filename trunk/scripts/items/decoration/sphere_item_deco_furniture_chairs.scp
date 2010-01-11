@@ -1,0 +1,22 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 
+VERSION=0.56b
+
+[ITEMDEF 02deb]
+DEFNAME=i_chair_elven_cozy
+NAME=Cozy Elven Chair
+TYPE=t_chair
+FLIP=1
+SKILLMAKE=CARPENTRY 85.0
+RESOURCES=
+WEIGHT=
+DUPELIST=
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=
+
+[eof]

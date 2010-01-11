@@ -30,7 +30,7 @@ VERSION=0.56b
 //
 // PROPERTIES LIST
 // ---------------
-// scp.ItemProp_Resistances
+// *DONE* scp.ItemProp_BestWeaponSkill
 // *DONE* scp.ItemProp_DamageIncrease
 // *DONE* scp.ItemProp_DefenseChanceIncrease
 // *DONE* scp.ItemProp_DexterityBonus
@@ -38,12 +38,20 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_FasterCastRecovery
 // *DONE* scp.ItemProp_FasterCasting
 // *DONE* scp.ItemProp_HitChanceIncrease
+// scp.ItemProp_HitColdArea
 // *DONE* scp.ItemProp_HitDispel
+// scp.ItemProp_HitEnergyArea
+// scp.ItemProp_HitFireArea
+// scp.ItemProp_HitFireball
+// scp.ItemProp_HitHarm
 // *DONE* scp.ItemProp_HitLifeLeech
+// scp.ItemProp_HitLightning
 // *DONE* scp.ItemProp_HitLowerAttack
 // *DONE* scp.ItemProp_HitLowerDefense
+// scp.ItemProp_HitMagicArrow
 // *DONE* scp.ItemProp_HitManaLeech
-// *DONE* scp.ItemProp_HitPointRegeneracion
+// scp.ItemProp_HitPhysicalArea
+// scp.ItemProp_HitPoisonArea
 // *DONE* scp.ItemProp_HitStaminaLeech
 // *DONE* scp.ItemProp_HitPointIncrease
 // *DONE* scp.ItemProp_IntelligenceBonus
@@ -54,17 +62,21 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_MageWeapon
 // *DONE* scp.ItemProp_ManaIncrease
 // *DONE* scp.ItemProp_ManaRegeneration
+// scp.ItemProp_NightSight
 // *DONE* scp.ItemProp_ReflectPhysicalDamage
+// scp.ItemProp_StaminaRegeneration
+// *DONE* scp.ItemProp_HitPointRegeneracion
 // *DONE* scp.ItemProp_SelfRepair
-// *DONE* scp.ItemProp_Slayer
 // *DONE* scp.ItemProp_SkillBonus
+// *DONE* scp.ItemProp_Slayer
 // scp.ItemProp_SpellChanneling
 // *DONE* scp.ItemProp_SpellDamageIncrease
 // *DONE* scp.ItemProp_StaminaIncrease
-// scp.ItemProp_StaminaRegeneration
 // *DONE* scp.ItemProp_StrengthBonus
 // *DONE* scp.ItemProp_SwingSpeedIncrease
-// *DONE* scp.ItemProp_BestWeaponSkill
+// scp.ItemProp_CraftingBonus
+// scp.ItemProp_CraftingExceptionalBonus
+// scp.ItemProp_UsesRemaining
 
 
 [events e_NpcPropertiesEvent]
@@ -165,7 +177,18 @@ local.MRe = <tag0.ManaRegeneration>
 else
 endif
 local.MRt = <eval 2 + <local.MRmi> + <local.MRf> + <local.MRe>> // This is the amount of points in 10 seconds
-tag0.override.regenval_1 = <local.MRt> // We get the 10 second value this way =)
+tag0.override.regenval_1 = <local.MRt>
+
+on=@skillsuccess
+if <argn1> == 45 // Mining, which other works like this?
+	if <def.scp.ItemProp_UsesRemaining> == 1
+	uid.<actprv>.tag0.UsesRemaining -- // ActPRV is the tool used.
+		if <uid.<actprv>.tag0.UsesRemaining> == 0
+		sysmessage <def.scp.mining_tooldestroy>
+		uid.<actprv>.remove
+		endif
+	endif
+endif
 
 on=@spellselect
 // A small check for Faster Cast Recovery. No need for checking if it is activated.
@@ -191,35 +214,20 @@ if <def.scp.ItemProp_LowerReagentCost> == 1
 endif
 
 on=@spellcast
-// MageWeapon in this case something like MageWeaponAndShield
-// Since layer 2 can be used as Two Handed Weapon or Shield
-if <def.scp.ItemProp_MageWeapon> == 1
+// Spell Channeling is the right property. Was wrong with Mage Weapon, sorry.
+// It allows the caster to cast with items equipped in Hand1 or Hand2
+if <def.scp.ItemProp_SpellChanneling> == 1
 	if <argn1> != 104 // exception for Curse Weapon
 		if <findlayer.1.uid>
-			if !(<findlayer.1.tag0.MageWeapon>) || (<findlayer.1.type> == t_wand)
+			if !<findlayer.1.tag0.SpellChanneling>
 			findlayer.1.unequip
 			endif
 		elif <findlayer.2.uid>
-			if (!<findlayer.2.tag0.MageWeapon>) || (!<findlayer.2.tag0.MageArmor>)
+			if !<findlayer.2.tag0.SpellChanneling>
 			findlayer.2.unequip
 			endif
 		endif
 	endif
-endif
-// Now, this is the real MageArmor property. Which apply for every armor slot
-// Except shield, explained it before.
-if <def.scp.ItemProp_MageArmor> == 1
-	for 1 <def.armor_amount>
-		if <findlayer.<def.armor_part.<dlocal._for>>>
-		ref5 = <findlayer.<def.armor_part_<dlocal._for>>.uid>
-			if <ref5.type> == t_armor
-				if <ref5.tag0.MageWeapon> == 0
-				src.sysmessage You can't cast with this armor (<ref5.name>).
-				return 1
-				endif
-			endif
-		endif
-	endfor
 endif
 // A weird property actually. For Mages and Necromancers > 70.0 this is capped at 2.
 // But for Chivalry, Ninjitsu, Bushido and Spellweaving this is capped at 4.
@@ -285,22 +293,26 @@ endif
 // Hit Lower Attack and Hit Lower Defense applies directly to the target HCI/HDI
 // It lasts for 8 seconds and only a 25 percent, though the intensity is used for calculations.
 if <def.scp.ItemProp_HitLowerAttack> == 1
-	if <r100> < <tag0.HitLowerAttack>
-		if <src.restest i_hit_lower_attack>
-		src.findid.i_hit_lower_attack.timer = 8
-		else
-		serv.newitem i_hit_lower_attack
-		src.equip <new.uid>
+	if <weapon>
+		if <r100> < <weapon.tag0.HitLowerAttack>
+			if <src.restest i_hit_lower_attack>
+			src.findid.i_hit_lower_attack.timer = 8
+			else
+			serv.newitem i_hit_lower_attack
+			src.equip <new.uid>
+			endif
 		endif
 	endif
 endif
 if <def.scp.ItemProp_HitLowerDefense> == 1
-	if <r100> < <tag0.HitLowerDefense>
-		if <src.restest i_hit_lower_defense>
-		src.findid.i_hit_lower_defense.timer = 8
-		else
-		serv.newitem i_hit_lower_defense
-		src.equip <new.uid>
+	if <weapon>
+		if <r100> < <weapon.tag0.HitLowerDefense>
+			if <src.restest i_hit_lower_defense>
+			src.findid.i_hit_lower_defense.timer = 8
+			else
+			serv.newitem i_hit_lower_defense
+			src.equip <new.uid>
+			endif
 		endif
 	endif
 endif

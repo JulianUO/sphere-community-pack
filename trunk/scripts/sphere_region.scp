@@ -33,10 +33,10 @@ RESOURCES=1.4 mr_valorite
 // Default water area resources
 // This is not ocean. More like coastlines.
 RESOURCES=50.0 mr_nothing
-RESOURCES=10.0 mr_fish1
-RESOURCES=10.0 mr_fish2
-RESOURCES=10.0 mr_fish3
-RESOURCES=10.0 mr_fish4
+RESOURCES=20.0 mr_fish1
+RESOURCES=20.0 mr_fish2
+RESOURCES=20.0 mr_fish3
+RESOURCES=20.0 mr_fish4
 
 [REGIONTYPE r_water t_water]
 // Default water area resources
@@ -77,7 +77,7 @@ SRC.MUSIC=midi_britain1,midi_ForestA,midi_JungleA,midi_MountainA,midi_Plains,mid
 
 [REGIONTYPE r_brit t_rock]
 // Brit
-RESOURCES=60.0 mr_nothing
+RESOURCES=40.0 mr_nothing
 RESOURCES=30.0 mr_iron
 
 ON=@ENTER
@@ -128,7 +128,7 @@ SRC.MUSIC=midi_BucsDen
 
 [REGIONTYPE r_spooky t_rock]
 // Spooky outdoor area.
-RESOURCES=1000.0 mr_nothing
+RESOURCES=20.0 mr_nothing
 RESOURCES=30.0 mr_iron
 RESOURCES=5.0 mr_shadow
 
@@ -141,7 +141,7 @@ SRC.MUSIC=midi_Approach
 [REGIONTYPE r_dungeon t_rock]
 // Dungeon sounds same day or night.
 // Shadow ore is only found here.
-RESOURCES=100.0 mr_nothing
+RESOURCES=20.0 mr_nothing
 RESOURCES=30.0 mr_iron
 RESOURCES=5.0 mr_shadow
 
