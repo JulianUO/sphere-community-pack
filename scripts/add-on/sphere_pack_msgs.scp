@@ -111,6 +111,7 @@ scp.meditation_maxmana		"@,,2 501846" // You are at peace.
 scp.meditation_armorpenalty	"@,,2 500135"	// Regenerative forces cannot penetrate your armor.
 scp.meditation_success		"@,,2 501851" // You enter a meditative trance.
 scp.meditation_fail			"@,,2 501850" // You cannot focus your concentration.
+scp.meditation_fail			"@,,2 501848" // You cannot focus your concentration.
 
 scp.mining_nosand		"@,,2 1044629"	// There is no sand here to mine.
 scp.mining_mounted		"@,,2 501864"	// You can't mine while riding.

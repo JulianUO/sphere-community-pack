@@ -253,40 +253,53 @@ scp.LimitationGenre=1
 // Enable or disable any of the Item Properties listed below
 // Please, note that the name are very descriptive, if not, drop a message on forums.
 // <boolean> (1 if yes, 0 if not).
+scp.ItemProp_BestWeaponSkill=1
 scp.ItemProp_DamageIncrease=1
 scp.ItemProp_DefenseChanceIncrease=1
 scp.ItemProp_DexterityBonus=1
-scp.ItemProp_EnhancePotion=1
+scp.ItemProp_EnhancePotion=1 // NOT DONE
 scp.ItemProp_FasterCastRecovery=1
 scp.ItemProp_FasterCasting=1
 scp.ItemProp_HitChanceIncrease=1
+scp.ItemProp_HitColdArea=0 // NOT DONE
 scp.ItemProp_HitDispel=1
+scp.ItemProp_HitEnergyArea=0 // NOT DONE
+scp.ItemProp_HitFireArea=0 // NOT DONE
+scp.ItemProp_HitFireball=0 // NOT DONE
+scp.ItemProp_HitHarm=0 // NOT DONE
 scp.ItemProp_HitLifeLeech=1
+scp.ItemProp_HitLightning=0 // NOT DONE
 scp.ItemProp_HitLowerAttack=1
 scp.ItemProp_HitLowerDefense=1
+scp.ItemProp_HitMagicArrow=0 // NOT DONE
 scp.ItemProp_HitManaLeech=1
-scp.ItemProp_HitPointRegeneration=1
+scp.ItemProp_HitPhysicalArea=0 // NOT DONE
+scp.ItemProp_HitPoisonArea=0 // NOT DONE
 scp.ItemProp_HitStaminaLeech=1
 scp.ItemProp_HitPointIncrease=1
 scp.ItemProp_IntelligenceBonus=1
 scp.ItemProp_LowerManaCost=1
-scp.ItemProp_LowerReagentCost=1
+scp.ItemProp_LowerReagentCost=0
 scp.ItemProp_Luck=1
 scp.ItemProp_MageArmor=1
 scp.ItemProp_MageWeapon=1
 scp.ItemProp_ManaIncrease=1
 scp.ItemProp_ManaRegeneration=1
+scp.ItemProp_NightSight=0 // NOT DONE
 scp.ItemProp_ReflectPhysicalDamage=1
+scp.ItemProp_StaminaRegeneration=0 // NOT DONE
+scp.ItemProp_HitPointRegeneration=1
 scp.ItemProp_SelfRepair=1
-scp.ItemProp_Slayer=1
 scp.ItemProp_SkillBonus=1
+scp.ItemProp_Slayer=1
 scp.ItemProp_SpellChanneling=1
 scp.ItemProp_SpellDamageIncrease=1
 scp.ItemProp_StaminaIncrease=1
-scp.ItemProp_StaminaRegeneration=1
 scp.ItemProp_StrengthBonus=1
 scp.ItemProp_SwingSpeedIncrease=1
-scp.ItemProp_BestWeaponSkill=1
+scp.ItemProp_CraftingBonus=0 // NOT DONE
+scp.ItemProp_CraftingExceptionalBonus=0 // NOT DONE
+scp.ItemProp_UsesRemaining=1
 
 // Setting to 1 allows players to cast from the runebook without a spellbook
 // <boolean> (0 = No / 1 = Yes)

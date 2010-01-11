@@ -22,7 +22,7 @@ ADV_RATE=10.0,200.0,800.0
 
 on=@wait
 if <def.scp.NewSkills_Meditation> == 1
-	if <action>
+	if <action> != -1
 	sysmessage <def.scp.meditation_activeskill>
 	f_skill_delay <getargv 3,<def.skill.46.waittime>>
 	elif <mana> >= <maxmana>
@@ -37,13 +37,12 @@ if <def.scp.NewSkills_Meditation> == 1
 		elif <medi_weaponholding 2>
 		findlayer(2).bounce
 		endif
-		
-		local.chance <eval (500 + ((<meditation> - ((<maxmana> - <mana>) * 10)) * 2))>
+	local.chance <eval (500 + ((<meditation> - ((<maxmana> - <mana>) * 10)) * 2))>
 		if <local.chance> > <r>
 		skillgain meditation <min 100,<eval (<meditation> / 10)>>
 		sysmessage <def.scp.meditation_success>
 		f_skill_delay <getargv 1,<def.skill.46.waittime>>
-		// add buff icon
+		//f_AddBuff ActiveMeditation,-1 // Can't find the clilocs
 		tag.meditation.active = 1
 		events +e_meditating
 			if <isplayer>
@@ -61,7 +60,11 @@ on=@select
 f_skill_delay <getargv 0,<def.skill.46.waittime>>
 
 ON=@success
+if <mana> >= <maxmana>
 f_skill_delay <getargv 1,<def.skill.46.waittime>>
+RemoveBuff ActiveMeditation
+tag.meditation.active
+endif
 
 ON=@fail
 f_skill_delay <getargv 2,<def.skill.46.waittime>>
@@ -72,7 +75,7 @@ src.sysmessage <def.scp.medit_msg_abort>
 
 [function medi_armorpenalty]
 for 1 24
-	if <findlayer(<dlocal._for>).tag0.penalty.meditation>
+	if <findlayer(<dlocal._for>).tag0.penalty.meditation> && !<findlayer(<dlocal._for>).tag0.magearmor>
 	return 1
 	endif
 endfor
@@ -83,12 +86,5 @@ if <findlayer(<args>).uid> && (<findlayer(<args>).isweapon> || <findlayer(<args>
 return 1
 endif
 return 0
-
-[events e_meditating]
-on=@userstats
-if <mana> >= <maxmana>
-tag.meditation.active=
-events -e_meditating
-endif
 
 [eof]
