@@ -34,7 +34,7 @@ ADV_RATE=2.5,50.0,200.0
 on=@wait
 if <def.scp.NewSkills_TasteID> == 1
 targetf f_start_tasteid
-sysmessage @,,2 502807 // What would you like to taste?
+sysmessage <def.scp.tasteid_targ>
 f_skill_delay <getargv 0,<def.skill.36.waittime>>
 return 1
 endif
@@ -56,7 +56,7 @@ sysmessage <def.scp.tasteid_ischar>
 f_skill_delay <getargv 2,<def.skill.36.waittime>>
 return 1
 endif
-if <skillsuccess <r1000>,tasteid>
+if <skillusequick <r1000>,tasteid>
 	if <ref15.isfood>
 		if <ref15.morez>
 		sysmessage <def.scp.tasteid_ispoisoned>

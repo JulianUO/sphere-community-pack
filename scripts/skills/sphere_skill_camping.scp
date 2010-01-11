@@ -29,31 +29,12 @@ BONUS_INT=34
 BONUS_STATS=50
 ADV_RATE=2.5,50.0,200.0
 
-ON=@Fail
-	SRC.MESSAGE @,,2 501696
+ON=@fail
+src.message <def.scp.camping_fail>
 
 ON=@Abort
-	SRC.SYSMESSAGE You give up trying to light the campfire.
+SRC.SYSMESSAGE You give up trying to light the campfire.
 
-[typedef t_weapon_sword]
-on=@targon_ground
-if <argn1>
-	if <serv.itemdef.<argn1>.type>==t_tree
-	serv.newitem=i_memory
-	new.camping_harvestkindling <src.uid>,"<src.targp>"
-	return 1
-	endif
-endif
-
-[typedef t_weapon_fence]
-on=@targon_ground
-if <argn1>
-	if <serv.itemdef.<argn1>.type>==t_tree
-	serv.newitem=i_memory
-	new.camping_harvestkindling <src.uid>,"<src.targp>"
-	return 1
-	endif
-endif
 
 //will create a worldgem and harvest it (you cannot collect much kindling from a tree, so kindling drains 5 of the resource each time)
 [function camping_harvestkindling]
@@ -81,10 +62,10 @@ if <ref2.amount> > 4
 ref2.amount -= 5
 serv.newitem = i_kindling
 new.cont=<ref1.findlayer.21>
-ref1.sysmessage @,,2 500491 //you harvest some kindling
-ref1.sysmessage @,,2 500492 //you could use an axe to...
+ref1.sysmessage <def.scp.camping_getkindling>
+ref1.sysmessage <def.scp.camping_useaxe>
 else
-ref1.sysmessage @,,2 500488 //nothing here to harvest
+ref1.sysmessage <def.scp.camping_nokindling>
 endif
 remove
 
@@ -99,7 +80,7 @@ new.events +e_camping_campfire
 new.movenear <src.uid>,1
 consume
 else
-src.sysmessage @,,2 501696  //you fail to ignite the campfire
+src.sysmessage <def.scp.camping_fail>
 endif
 return 1
 
@@ -127,7 +108,7 @@ tag.secure ++
 timer = 3
 else
 	forplayers 7
-	sysmessage @,,2 500621 //camp now secure
+	sysmessage <def.scp.camping_secure>
 	endfor
 timer = 300
 tag.secure = 1
@@ -141,7 +122,7 @@ type=t_eq_script
 name=camping timer
 
 on=@equip
-src.sysmessage @,,2 500620 //you feel it will take a few moment to secure the camp
+src.sysmessage <def.scp.camping_securing>
 timer=4
 
 on=@timer

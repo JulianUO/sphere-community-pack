@@ -67,7 +67,7 @@ elif <argo.type> == t_container
 	return 1
 	endif
 sfx 0241
-	if <skillsuccess <r<eval (<argo.more2> * 10)>,<eval ((<argo.more2> * 10) + 300)>,removetrap>
+	if <skillusequick <r<eval (<argo.more2> * 10)>,<eval ((<argo.more2> * 10) + 300)> removetrap>
 	argo.more1 = 0
 	argo.more2 = 0
 	argo.events -t_trap

@@ -24,7 +24,7 @@ ADV_RATE=2.5,50.0,200.0
 on=@wait
 if <def.scp.NewSkills_ArmsLore> == 1
 targetf f_armslore_start
-sysmessage @,,2 500906
+sysmessage <def.scp.armslore_targ>
 f_skill_delay <getargv 0,<def.skill.4.waittime>>
 return 1
 endif
@@ -35,22 +35,21 @@ f_skill_delay <getargv 0,<def.skill.4.waittime>>
 on=@success
 f_skill_delay <getargv 1,<def.skill.4.waittime>>
 
-ON=@Fail
+ON=@fail
 f_skill_delay <getargv 2,<def.skill.4.waittime>>
-sysmessage @,,2 500353 // You are not certain...
+sysmessage <def.scp.armslore_fail>
 
-[defname arms_lore_cliloc]
-armslore.durability.start	1038284
-armslore.weapon.start		1038215
-armslore.armor.start		1038295
 
 [function f_armslore_start]
-if <skillsuccess <r1000>,armslore>
+if !<skillusequick <r1000> armslore>
+f_skill_delay <getargv 2,<def.skill.4.waittime>>
+sysmessage <def.scp.armslore_fail>
+else
 local.percent = <eval (<argo.more1l>*100)/<argo.more1h>>
-local.dcliloc = <eval (<local.percent>/10)+<def.armslore.durability.start>>
+local.dcliloc = <eval (<local.percent>/10)+<def.scp.armslore_durability>>
 sysmessage @,,2 <local.dcliloc>
 	if <argo.isweapon>
-	local.wcliloc = <def.armslore.weapon.start>
+	local.wcliloc = <def.scp.armslore_weapon>
 	local.weapdam = <eval (<argo.dam.lo>+<argo.dam.hi>)/2>
 	local.wcliloc += <eval ((<local.weapdam>/5)+1)*9>
 		if <argo.layer> == 2
@@ -65,14 +64,11 @@ sysmessage @,,2 <local.dcliloc>
 	sysmessage @,,2 <local.wcliloc>
 	elif <argo.isarmor>
 	local.armor = <eval ((<argo.armor.high>+<argo.tag0.modar>)*<def.armor_<argo.layer>>)/100>
-	local.acliloc = <eval ((<local.armor>/5)+1)+<def.armslore.armor.start>>
+	local.acliloc = <eval ((<local.armor>/5)+1)+<def.scp.armslore_armor>>
 	sysmessage @,,2 <local.acliloc>
 	endif
 skillgain ArmsLore <eval <ArmsLore>/10>
 f_skill_delay <getargv 1,<def.skill.4.waittime>>
-else
-f_skill_delay <getargv 2,<def.skill.4.waittime>>
-sysmessage @,,2 500353 // You are not certain...
 endif
 
 [eof]
