@@ -8,14 +8,77 @@ Most of them are easy to use. If you want to change anything default, just inser
 
 ----
 == Item Tags ==
-*tag.override.map.width*<br>
-Overrides the width of the treasure/cartography map gump size.<br>
+In the item section, we will separate the tags by type. Most of the tags (if not all) are applied and work if you define the tevents in the item. If you forgot to do this, the tag will have no effect at all over the item. Unless there's no typedef specified on the header.<br>
 <br>
-*tag.override.map.height*<br>
-Overrides the height of the treasure/cartography map gump size.<br>
+
+=== Magical Properties (TYPE: t_iprop) ===
+TAG.BestWeaponSkill
+TAG.DamageIncrease
+TAG.DefenseChanceIncrease
+TAG.DexterityBonus
+TAG.EnhancePotion
+TAG.FasterCastRecovery
+TAG.FasterCasting
+TAG.HitChanceIncrease
+TAG.HitColdArea
+TAG.HitDispel
+TAG.HitEnergyArea
+TAG.HitFireArea
+TAG.HitFireball
+TAG.HitHarm
+TAG.HitLifeLeech
+TAG.HitLightning
+TAG.HitLowerAttack
+TAG.HitLowerDefense
+TAG.HitMagicArrow
+TAG.HitManaLeech
+TAG.HitPhysicalArea
+TAG.HitPoisonArea
+TAG.HitStaminaLeech
+TAG.HitPointIncrease
+TAG.IntelligenceBonus
+TAG.LowerManaCost
+TAG.LowerReagentCost
+TAG.Luck
+TAG.MageArmor
+TAG.MageWeapon
+TAG.ManaIncrease
+TAG.ManaRegeneration
+TAG.NightSight
+TAG.ReflectPhysicalDamage
+TAG.StaminaRegeneration
+TAG.HitPointRegeneracion
+TAG.SelfRepair
+TAG.SkillBonus
+TAG.Slayer
+TAG.SpellChanneling
+TAG.SpellDamageIncrease
+TAG.StaminaIncrease
+TAG.StrengthBonus
+TAG.SwingSpeedIncrease
+TAG.CraftingBonus
+TAG.CraftingExceptionalBonus
+TAG.UsesRemaining
 <br>
-*tag.DexterityBonus*<br>
-Adds a bonus to dexterity to whoever equips the item with this tag. In the player there's not tag for this since MODDEX is used instead. 
+
+=== Traps (TYPE: t_trapped) ===
+TAG.Trap.Type = spell
+TAG.Trap.Level = intensity
+<br>
+
+=== Damage and Resistances ===
+TAG.ResPhysical (Replaces ARMOR property)
+TAG.ResFire
+TAG.ResCold
+TAG.ResPoison
+TAG.ResEnergy
+
+TAG.DamPhysical (_NOT_ replace DAMAGE property)
+TAG.DamFire
+TAG.DamCold
+TAG.DamPoison
+TAG.DamEnergy
+<br>
 ----
 
 ----
