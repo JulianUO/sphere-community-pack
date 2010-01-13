@@ -61,18 +61,17 @@ ON=@Abort
 if <argo.ischar>
 sysmessage <def.scp.removetrap_ischar>
 elif <argo.type> == t_container
-	if !<argo.isevent.t_trap>
+	if !<argo.isevent.t_trapped>
 	sysmessage <def.scp.removetrap_nottrapped>
 	f_skill_delay <getargv 2,<def.skill.48.waittime>>
 	return 1
 	endif
 sfx 0241
 	if <skillusequick <r<eval (<argo.more2> * 10)>,<eval ((<argo.more2> * 10) + 300)> removetrap>
-	argo.more1 = 0
-	argo.more2 = 0
-	argo.events -t_trap
+	argo.cleartags Trap
+	argo.events -t_trapped
 	sysmessage <def.scp.removetrap_success>
-	skillgain removetrap <min 100,<eval (<removetrap> / 10)>>
+	skillgain removetrap <min 100,<eval ((<removetrap> / 10) + 1)>>
 	f_skill_delay <getargv 1,<def.skill.48.waittime>>
 	else
 	sysmessage <def.scp.removetrap_fail>
