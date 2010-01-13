@@ -38,34 +38,6 @@ DUPELIST=0e80
 SKILLMAKE=TINKERING 40.0,t_tinker_tools
 RESOURCES=5 i_ingot_iron, 5 i_log
 
-[ITEMDEF 09a9]
-// DEFNAME2=SMALL_CRATE_2
-DEFNAME=i_crate_small
-RESOURCES=8 i_board
-TYPE=t_container
-TDATA2=044
-FLIP=1
-WEIGHT=3
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Wooden Crate (Small)
-DUPELIST=0e7e
-SKILLMAKE=CARPENTRY 10.0, t_carpentry
-
-[ITEMDEF 09aa]
-// DEFNAME2=WOODEN_BOX_2
-DEFNAME=i_box_wood
-RESOURCES=10 i_board
-TYPE=T_CONTAINER
-TDATA2=040
-FLIP=1
-WEIGHT=4
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Wooden Box (W)
-SKILLMAKE=CARPENTRY 21.0, t_carpentry
-DUPELIST=0e7d
-
 [ITEMDEF 09ab]
 //DEFNAME2=METAL_CHEST_4
 DEFNAME=i_chest_metal
@@ -233,26 +205,6 @@ DESCRIPTION=METAL BRASS CHEST (W)
 // DEFNAME2=METAL_CHEST_2
 DUPEITEM=0e40
 
-[ITEMDEF 0e42]
-// DEFNAME2=WOODEN_CHEST_1
-DEFNAME=i_chest_wooden_brass
-RESOURCES=20 i_board
-TYPE=T_CONTAINER
-TDATA2=049
-FLIP=1
-WEIGHT=10
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Wood/Brass Chest (W)
-SKILLMAKE=CARPENTRY 73.6, t_carpentry
-DUPELIST=0e43
-
-[ITEMDEF 0e43]
-// DEFNAME2=CHEST_2
-// DEFNAME2=WOODEN_CHEST_2
-//wooden chest with brass hinges against NE wall lockable
-DUPEITEM=0e42
-
 [ITEMDEF 0e75]
 DEFNAME=i_backpack
 RESOURCES=4 i_hides_cut
@@ -334,16 +286,6 @@ RESOURCES=i_tub_empty
 //DEFNAME2=METAL_CHEST_3
 // Silver Chest similar to 09ab against NW wall
 DUPEITEM=09ab
-
-[ITEMDEF 0e7d]
-// Wooden Box against NW wall
-// DEFNAME2=WOODEN_BOX_1
-DUPEITEM=09aa
-
-[ITEMDEF 0e7e]
-// small Dark Wooden Crate against NW wall
-//DEFNAME2=SMALL_CRATE_1
-DUPEITEM=09a9
 
 [ITEMDEF 0e7f]
 //DEFNAME2=SMALL_KEG

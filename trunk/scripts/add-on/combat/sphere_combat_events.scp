@@ -49,25 +49,27 @@ local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>
 argn1 += <local.totalbonus>
 
 on=@gethit
-if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
-local.physical = <muldiv <argn1>,<src.tag0.DamPhysical>,100>
-local.physical -= <muldiv <argn1>,<tag0.ModAr>,100>
-local.fire = <muldiv <argn1>,<src.tag0.DamFire>,100> 
-local.fire -= <muldiv <argn1>,<tag0.ResFire>,100>
-local.cold = <muldiv <argn1>,<src.tag0.DamCold>,100>
-local.cold -= <muldiv <argn1>,<tag0.ResCold>,100>
-local.poison = <muldiv <argn1>,<src.tag0.DamPoison>,100>
-local.poison -= <muldiv <argn1>,<tag0.ResPoison>,100>
-local.energy = <muldiv <argn1>,<src.tag0.DamEnergy>,100>
-local.energy -= <muldiv <argn1>,<tag0.ResEnergy>,100>
-argn1 = <eval <local.physical> + <local.fire> + <local.cold> + <local.poison> + <local.energy>>
-argn2 |= dam_god
-endif
-if <def.scp.ItemProp_ReflectPhysicalDamage>
-	if <tag0.ReflectPhysicalDamage>
-	src.damage <muldiv <local.physical>,<tag0.ReflectPhysicalDamage>,100> 01 <uid>
+if (<src.action> == skill_magery) || (<src.action> == skill_necromancy) || (<src.action> == skill_chivalry) || (<src.action> == skill_spellweaving)
+// if it's a magic skill...
+// we will do nothing!
+else
+	if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
+	local.realphy = <eval 100 - (<src.tag0.DamFire> + <src.tag0.DamCold> + <src.tag0.DamPoison> + <src.tag0.DamEnergy>)>
+	local.physical = <muldiv <argn1>,<local.realphy>,100>
+	local.physical -= <muldiv <argn1>,<tag0.ModAr>,100>
+	local.fire = <muldiv <argn1>,<src.tag0.DamFire>,100> 
+	local.fire -= <muldiv <argn1>,<tag0.ResFire>,100>
+	local.cold = <muldiv <argn1>,<src.tag0.DamCold>,100>
+	local.cold -= <muldiv <argn1>,<tag0.ResCold>,100>
+	local.poison = <muldiv <argn1>,<src.tag0.DamPoison>,100>
+	local.poison -= <muldiv <argn1>,<tag0.ResPoison>,100>
+	local.energy = <muldiv <argn1>,<src.tag0.DamEnergy>,100>
+	local.energy -= <muldiv <argn1>,<tag0.ResEnergy>,100>
+	argn1 = <eval <local.physical> + <local.fire> + <local.cold> + <local.poison> + <local.energy>>
+	argn2 |= dam_god
 	endif
 endif
+
 
 
 [events e_NpcCombatEvent]
@@ -106,20 +108,25 @@ local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>
 argn1 += <local.totalbonus>
 
 on=@gethit
-if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
-local.realphy = <eval 100 - (<src.tag0.DamFire> + <src.tag0.DamCold> + <src.tag0.DamPoison> + <src.tag0.DamEnergy>)>
-local.physical = <muldiv <argn1>,<local.realphy>,100>
-local.physical -= <muldiv <argn1>,<tag0.ModAr>,100>
-local.fire = <muldiv <argn1>,<src.tag0.DamFire>,100> 
-local.fire -= <muldiv <argn1>,<tag0.ResFire>,100>
-local.cold = <muldiv <argn1>,<src.tag0.DamCold>,100>
-local.cold -= <muldiv <argn1>,<tag0.ResCold>,100>
-local.poison = <muldiv <argn1>,<src.tag0.DamPoison>,100>
-local.poison -= <muldiv <argn1>,<tag0.ResPoison>,100>
-local.energy = <muldiv <argn1>,<src.tag0.DamEnergy>,100>
-local.energy -= <muldiv <argn1>,<tag0.ResEnergy>,100>
-argn1 = <eval <local.physical> + <local.fire> + <local.cold> + <local.poison> + <local.energy>>
-argn2 |= dam_god
+if (<src.action> == skill_magery) || (<src.action> == skill_necromancy) || (<src.action> == skill_chivalry) || (<src.action> == skill_spellweaving)
+// if it's a magic skill...
+// we will do nothing!
+else
+	if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
+	local.realphy = <eval 100 - (<src.tag0.DamFire> + <src.tag0.DamCold> + <src.tag0.DamPoison> + <src.tag0.DamEnergy>)>
+	local.physical = <muldiv <argn1>,<local.realphy>,100>
+	local.physical -= <muldiv <argn1>,<tag0.ModAr>,100>
+	local.fire = <muldiv <argn1>,<src.tag0.DamFire>,100> 
+	local.fire -= <muldiv <argn1>,<tag0.ResFire>,100>
+	local.cold = <muldiv <argn1>,<src.tag0.DamCold>,100>
+	local.cold -= <muldiv <argn1>,<tag0.ResCold>,100>
+	local.poison = <muldiv <argn1>,<src.tag0.DamPoison>,100>
+	local.poison -= <muldiv <argn1>,<tag0.ResPoison>,100>
+	local.energy = <muldiv <argn1>,<src.tag0.DamEnergy>,100>
+	local.energy -= <muldiv <argn1>,<tag0.ResEnergy>,100>
+	argn1 = <eval <local.physical> + <local.fire> + <local.cold> + <local.poison> + <local.energy>>
+	argn2 |= dam_god
+	endif
 endif
 
 [eof]

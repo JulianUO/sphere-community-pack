@@ -24,8 +24,8 @@ scp.trap_2	"20" // Poison
 scp.trap_3	"43" // Explosion
 scp.trap_4	"13" // Magic
 
-// more1 = spell
-[typedef t_trap]
+// TAG.Trap.Type = spell
+[typedef t_trapped]
 on=@dclick
 local.req = <strarg <serv.spell.<more1>.skillreq>>
 if <src.removetrap> >= <local.req>

@@ -4,89 +4,88 @@
 = Introduction =
 TAGs used on this pack to override/change default behavior.
 Most of them are easy to use. If you want to change anything default, just insert or tweak them into your custom code.
-
-
 ----
+<br>
 == Item Tags ==
 In the item section, we will separate the tags by type. Most of the tags (if not all) are applied and work if you define the tevents in the item. If you forgot to do this, the tag will have no effect at all over the item. Unless there's no typedef specified on the header.<br>
 <br>
-
+<br>
 === Magical Properties (TYPE: t_iprop) ===
-TAG.BestWeaponSkill
-TAG.DamageIncrease
-TAG.DefenseChanceIncrease
-TAG.DexterityBonus
-TAG.EnhancePotion
-TAG.FasterCastRecovery
-TAG.FasterCasting
-TAG.HitChanceIncrease
-TAG.HitColdArea
-TAG.HitDispel
-TAG.HitEnergyArea
-TAG.HitFireArea
-TAG.HitFireball
-TAG.HitHarm
-TAG.HitLifeLeech
-TAG.HitLightning
-TAG.HitLowerAttack
-TAG.HitLowerDefense
-TAG.HitMagicArrow
-TAG.HitManaLeech
-TAG.HitPhysicalArea
-TAG.HitPoisonArea
-TAG.HitStaminaLeech
-TAG.HitPointIncrease
-TAG.IntelligenceBonus
-TAG.LowerManaCost
-TAG.LowerReagentCost
-TAG.Luck
-TAG.MageArmor
-TAG.MageWeapon
-TAG.ManaIncrease
-TAG.ManaRegeneration
-TAG.NightSight
-TAG.ReflectPhysicalDamage
-TAG.StaminaRegeneration
-TAG.HitPointRegeneracion
-TAG.SelfRepair
-TAG.SkillBonus
-TAG.Slayer
-TAG.SpellChanneling
-TAG.SpellDamageIncrease
-TAG.StaminaIncrease
-TAG.StrengthBonus
-TAG.SwingSpeedIncrease
-TAG.CraftingBonus
-TAG.CraftingExceptionalBonus
-TAG.UsesRemaining
+TAG.BestWeaponSkill<br>
+TAG.DamageIncrease<br>
+TAG.DefenseChanceIncrease<br>
+TAG.DexterityBonus<br>
+TAG.EnhancePotion<br>
+TAG.FasterCastRecovery<br>
+TAG.FasterCasting<br>
+TAG.HitChanceIncrease<br>
+TAG.HitColdArea<br>
+TAG.HitDispel<br>
+TAG.HitEnergyArea<br>
+TAG.HitFireArea<br>
+TAG.HitFireball<br>
+TAG.HitHarm<br>
+TAG.HitLifeLeech<br>
+TAG.HitLightning<br>
+TAG.HitLowerAttack<br>
+TAG.HitLowerDefense<br>
+TAG.HitMagicArrow<br>
+TAG.HitManaLeech<br>
+TAG.HitPhysicalArea<br>
+TAG.HitPoisonArea<br>
+TAG.HitStaminaLeech<br>
+TAG.HitPointIncrease<br>
+TAG.IntelligenceBonus<br>
+TAG.LowerManaCost<br>
+TAG.LowerReagentCost<br>
+TAG.Luck<br>
+TAG.MageArmor<br>
+TAG.MageWeapon<br>
+TAG.ManaIncrease<br>
+TAG.ManaRegeneration<br>
+TAG.NightSight<br>
+TAG.ReflectPhysicalDamage<br>
+TAG.StaminaRegeneration<br>
+TAG.HitPointRegeneracion<br>
+TAG.SelfRepair<br>
+TAG.SkillBonus<br>
+TAG.Slayer<br>
+TAG.SpellChanneling<br>
+TAG.SpellDamageIncrease<br>
+TAG.StaminaIncrease<br>
+TAG.StrengthBonus<br>
+TAG.SwingSpeedIncrease<br>
+TAG.CraftingBonus<br>
+TAG.CraftingExceptionalBonus<br>
+TAG.UsesRemaining<br>
 <br>
-
+<br>
 === Traps (TYPE: t_trapped) ===
-TAG.Trap.Type = spell
-TAG.Trap.Level = intensity
+TAG.Trap.Type = spell<br>
+TAG.Trap.Level = intensity<br>
 <br>
-
+<br>
 === Damage and Resistances ===
-TAG.ResPhysical (Replaces ARMOR property)
-TAG.ResFire
-TAG.ResCold
-TAG.ResPoison
-TAG.ResEnergy
-
-TAG.DamPhysical (_NOT_ replace DAMAGE property)
-TAG.DamFire
-TAG.DamCold
-TAG.DamPoison
-TAG.DamEnergy
+TAG.ResPhysical (Replaces ARMOR property)<br>
+TAG.ResFire<br>
+TAG.ResCold<br>
+TAG.ResPoison<br>
+TAG.ResEnergy<br>
+<br>
+TAG.DamPhysical (_NOT_ replace DAMAGE property)<br>
+TAG.DamFire<br>
+TAG.DamCold<br>
+TAG.DamPoison<br>
+TAG.DamEnergy<br>
 <br>
 ----
-
+<br>
 ----
 === NPC Tags ===
 *tag.control.slots*<br>
-Followers slots required to control this creature. Default is 1 unless this is set to something different. Setting negatives values will lead to undesired behavior.
+Followers slots required to control this creature. Default is 1 unless this is set to something different. Setting negatives values will lead to undesired behavior.<br>
 ----
-
+<br>
 ----
 === Character Tags ===
 *tag.skillrecovery*<br>
@@ -98,8 +97,9 @@ Followers slots required to control this creature. Default is 1 unless this is s
 *tag.DefenseChanceIncrease*<br>
 *tag.LowerManaCost*<br>
 ----
-
+<br>
 ----
 === Skill Tags ===
 *tag.recovery*<br>
 ----
+<br>
