@@ -47,10 +47,11 @@ local.totalbonus = <f_combatsys_damagebonus_aos>
 enddo
 local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>
 argn1 += <local.totalbonus>
+ctag.hbcs = 1
 
 on=@gethit
-if (<src.action> == skill_magery) || (<src.action> == skill_necromancy) || (<src.action> == skill_chivalry) || (<src.action> == skill_spellweaving)
-// if it's a magic skill...
+if !<ctag0.hbcs>
+// if it's a magic skill... or a custom call of damage function.
 // we will do nothing!
 else
 	if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
@@ -106,10 +107,11 @@ local.totalbonus = <f_combatsys_damagebonus_aos>
 enddo
 local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>
 argn1 += <local.totalbonus>
+ctag.hbcs = 1
 
 on=@gethit
-if (<src.action> == skill_magery) || (<src.action> == skill_necromancy) || (<src.action> == skill_chivalry) || (<src.action> == skill_spellweaving)
-// if it's a magic skill...
+if !<ctag0.hbcs>
+// if it's a magic skill... or a custom call of damage function.
 // we will do nothing!
 else
 	if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)

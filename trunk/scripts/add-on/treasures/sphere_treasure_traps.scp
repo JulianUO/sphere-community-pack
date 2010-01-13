@@ -19,32 +19,23 @@ VERSION=0.56b
 
 [defname spherecommunitypack_traps]
 // spell
-scp.trap_1	"89" // Dart
-scp.trap_2	"20" // Poison
-scp.trap_3	"43" // Explosion
-scp.trap_4	"13" // Magic
+scp.trap_1	"1001" // Dart
+scp.trap_2	"1002" // Poison
+scp.trap_3	"1003" // Explosion
+//scp.trap_4	"1004" // Magic
 
-// TAG.Trap.Type = spell
 [typedef t_trapped]
 on=@dclick
-local.req = <strarg <serv.spell.<more1>.skillreq>>
-if <src.removetrap> >= <local.req>
-local.diff = <eval ((<local.req> - <src.removetrap>) * 2) + 50.0>
-	if <r> < <local.diff>
-	return 0
+if <def.scp.RemoveTraps_PassiveUse> == 1
+	if <src.removetrap> >= <local.req>
+	local.diff = <eval ((<local.req> - <src.removetrap>) * 2) + 50.0>
+		if <r> < <local.diff>
+		tevents -t_trapped
+		return 0
+		endif
 	endif
-else
-itemcast <more1>,<more2>,<src.uid>
 endif
+src.spelleffect <tag0.type>,<tag0.level>,1
 return 1
-
-[function itemcast]
-local.type = 0
-if <serv.spell.<argv[0]>.flags>&spellflag_fx_targ
-local.type = 3
-endif
-trysrc <uid> uid.<argv[2]>.effect <local.type>,<serv.spell.<argv[0]>.effect_id>,1,16,1
-local.todam = <getargv 1 <serv.spell.<argv[0]>.effect>>
-damage <muldiv <local.todam>,<more2>,100> 01 <argv[2]>
 
 [eof]
