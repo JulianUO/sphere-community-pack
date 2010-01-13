@@ -1,3 +1,5 @@
+=== WikiMenu ===
+
  * [SCPDocument SCP Basic Documentation]
    * [SCPTag Tags]
    * [SCPTrigger Triggers]
