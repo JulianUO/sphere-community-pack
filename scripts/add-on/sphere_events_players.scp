@@ -34,6 +34,24 @@ VERSION=0.56b
 // * Spell Damage Increase Items effects are capped at 15% in Player vs. Player combat.
 
 [events e_PlayerGenericEvent]
+on=@UserVirtue
+if (<argn1>==1)
+    for 0 8  // if the player doesn't have max status for first level of virtue
+        if !(<src.tag0.virtuemax_<dlocal._for>>)  
+            src.tag0.virtuemax_<dlocal._for>=4000  // give him the cap.  
+        endif
+    endfor
+    argo.sdialog d_virtue_main
+else
+    if (<argn1>==112)  /// invoke valor virtue (coded for test.)
+        src.targetf f_valor_target
+        return 1
+    endif
+     // TODO : Add virtue systems and check them here if is clicked.
+   //and do not forget to put return 1 for each virtue check.
+src.sysmessage @03c1,6,1,1 This virtue is not active.
+endif
+
 on=@skillwait
 if <def.scp.SkillWaitingTimes> == 1
 	if <ctag0.skillrecovery> > <serv.time>
