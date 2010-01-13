@@ -409,3 +409,77 @@ Note: Mystic weapons were introduced during Ophidian Wars.
 - Fixed: Few wrong defnames and names in armors/weapons.
 - Removed: Duplicate entry for i_wrath_dryad.
 ---- Packed Revision 137
+
+06-01-2010, ShiryuX
+- Updated: some typos in the crafting dialogs which caused errors.
+- Updated: now tooltips also displays the item amount.
+
+07-01-2010, jeem
+- Fixed: updated the code to fix robes not showing on corpses
+
+07-01-2010, ShiryuX
+- Fixed: a typo in sphere_settings.scp (scp.SkillWaitingTimes was named scp.SkillWaitingTime)
+- Removed: some duplicated items.
+- Removed: log line from crafting dialog.
+
+08-01-2010, ShiryuX
+- Updated: Several blacksmithing options.
+- Updated: Scripted a group more of items, reorganized the items folder in subfolders such as decoration, building, multis, etc.
+- Fixed: A lot more of Axis Tags in the items. Also, now resources (from resource gathering) have their own sections "Resources - Skill" 
+
+09-01-2010, ShiryuX
+- Fixed: kama using t_weapon_sword and axes using t_weapon_sword instead of t_weapon_axe.
+
+10-01-2010, jeem
+- Added: ea-like camping skill. thanks pyromapes2k.
+- Added: new remove trap skill which works with ShiryuX's traps
+- Updated: meditation skill to match EA better
+- Updated: skill delays for meditation and remove trap
+- Updated: player can logout instantly with camping now.
+- Fixed: revealing in hiding and stealth when using skills
+- Fixed: failing animal taming when the animal was never attacked by anyone.
+- Fixed: small mistake in camping.
+- Fixed: typo in sphere_skill_meditation.scp
+- Removed: add-on/skills folder and moved its content to skills folder.
+
+11-01-2010, ShiryuX
+- Added: scripted Uses Remaining and Night Sight properties, should work fine.
+- Updated: reorganized item properties, added data of hit spells and hit area.
+- Updated: Several properties to be Item Tag Only. This would reduce memory/space needed.
+  Also, the tag won't be added to player if the property is disabled.
+- Updated: now buff icons will be auto-removed if delay > 0.
+- Updated: Tooltips data:
+  * Not display props if they are disabled.
+  * Display RES* and DAM* tags independient of if it's a weapon or armor.
+  * Show Durability tooltip if use Hitpoints (and not a more value)
+- Updated: region resources % to be more reasonable.
+- Updated: moved some skills messages to sphere_pack_msgs.scp, a lot more to go.
+- Fixed: missing skillsuccess function replaced with internal skillusequick.
+- Fixed: physical damage not reduced if weapon's tag is 0 (or 100 in theory)
+- Fixed: now some item properties 1/0 switches works fine.
+- Fixed: wrong property, was using Mage Weapon as Spell Channeling and Mage Armor wrong.
+- Fixed: meditation was not removing tag when it finish and not using Mage Armor.
+- Fixed: missing loading of items/resources/ folder in spheretables.scp
+
+11-01-2010, jeem
+- Updated: some little tweaks on stealth.
+
+12-01-2010, ShiryuX
+- Updated: t_trap -> t_trapped to avoid confusion.
+- Updated: a few containers for carpentry.
+- Fixed: combat system calculating spells damage, it doesn't affect it anymore!
+- Fixed: bamboo flute id and removed duplicates.
+- Fixed: buffs now are only sent to players and not npcs.
+
+13-01-2010, xantier
+- Added: gump layout for virtues, still need to script behavior.
+
+13-01-2010, jeem
+- Updated: remove trap skill to match changes in trapping code
+
+13-01-2010, ShiryuX
+- Updated: combat system fix to avoid problems with calls of damage function.
+- Updated: traps with pyro's scripts.
+- Updated: removed add-on/skills/ from spheretables.scp
+- Fixed: crafting menu canceling spells menu.
+- Fixed: splash sound every 15/30 seconds no longer plays.
