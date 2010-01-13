@@ -1,0 +1,4 @@
+== Sphere Documentation ==
+ * [SphereAnims NPCs Animations]
+ * [SphereAction Action lists]
+ * [SphereNPCBehavior NPCs Behavior]
