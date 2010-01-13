@@ -6,6 +6,54 @@
 // FILE LAST UPDATED: 
 VERSION=0.56b
 
+[ITEMDEF 09a9]
+DEFNAME=i_crate_small
+TYPE=t_container
+TDATA2=044
+FLIP=1
+SKILLMAKE=CARPENTRY 10.0, t_carpentry
+RESOURCES=8 i_board
+WEIGHT=3
+DUPELIST=0e7e
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Wooden Crate (Small)
+
+[ITEMDEF 0e7e]
+DUPEITEM=09a9
+
+[ITEMDEF 09aa]
+DEFNAME=i_box_wood
+TYPE=T_CONTAINER
+TDATA2=040
+FLIP=1
+SKILLMAKE=CARPENTRY 21.0, t_carpentry
+RESOURCES=10 i_log
+WEIGHT=4
+DUPELIST=0e7d
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Wooden Box (W)
+
+[ITEMDEF 0e7d]
+DUPEITEM=09aa
+
+[ITEMDEF 0e42]
+DEFNAME=i_chest_wooden_brass
+TYPE=t_container
+TDATA2=049
+FLIP=1
+SKILLMAKE=CARPENTRY 73.6, t_carpentry
+RESOURCES=20 i_log
+WEIGHT=10
+DUPELIST=0e43
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Wooden Chest (W)
+
+[ITEMDEF 0e43]
+DUPEITEM=0e42
+
 [ITEMDEF 0a4c]
 DEFNAME=i_armoire_dk
 TYPE=T_CONTAINER
@@ -274,5 +322,22 @@ TDATA4=96005F
 
 [ITEMDEF 0285e]
 DUPEITEM=0285d
+
+[ITEMDEF 02df1]
+DEFNAME=i_chest_rarewood
+TYPE=t_container
+NAME=Rarewood Chest
+TDATA2=
+FLIP=1
+SKILLMAKE=CARPENTRY 80.0, t_carpentry
+RESOURCES=30 i_log
+WEIGHT=25
+DUPELIST=02df2
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Rarewood Chest
+
+[ITEMDEF 02df2]
+DUPEITEM=02df1
 
 [eof]

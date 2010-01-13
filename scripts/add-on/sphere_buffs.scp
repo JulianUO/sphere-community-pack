@@ -9,6 +9,9 @@
 
 // [uid.]f_AddBuff SpellName,Delay[,Arguments]
 [function f_AddBuff]
+if <brain>
+return 0
+endif
 local.iconid = <def.bufficon_<argv[0]>>
 local.cliloc1 = <def.buffcliloc_<argv[0]>_1>
 local.cliloc2 = <def.buffcliloc_<argv[0]>_2>

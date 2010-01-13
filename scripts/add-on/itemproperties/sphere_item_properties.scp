@@ -5,13 +5,6 @@
 //****************************************************************************
 // FILE LAST UPDATED: 
 VERSION=0.56b
-//
-// SCRIPT CREDITS
-// --------------
-//
-// SCRIPT DOCUMENTATION
-// --------------------
-//
 
 [DEFNAME SphereCommunityPack_ItemBase]
 PIB_MELEEWEAP	0001
@@ -36,8 +29,6 @@ IPT_DEFAULT	3	// Use default Char Properties.
 
 [defname SphereCommunityPack_ItemProperties]
 itemprops = 030
-
-hit dmg. spell	2 - 50	hit-spell	No	Yes	Yes
 
 // #name,min,max,cap,type,input,items
 //itemprop_00	1072376 - Part of an Armor Set (~1_val~ pieces)
@@ -96,10 +87,6 @@ itemprop_030	"1060584,1,255,255,01,usesremaining,0400"
 // can't be scripted or not meant to be *special*
 // - lower requeriments
 // - strength requirement
-
-// don't have idea how to script them right now
-// or too lazy to think a solution
-// - nightsight
 
 // too lazy to do it
 // - skill bonus
