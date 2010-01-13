@@ -61,8 +61,6 @@ RESOURCES=1.0 mr_tree
 // Can be eaten by animals?
 RESOURCES=1.0 mr_grass
 
-ON=@REGPERIODIC
-src.SFX={025,1,026,1,027,1,010,1,011,1,012,1,013,1}
 
 
 

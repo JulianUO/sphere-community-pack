@@ -45,6 +45,7 @@ elif <args>==sm_inscription
 craftskill Inscription
 return 1
 endif
+return 0
 
 [function craftskill]
 if <def0.scp.NewCrafting_<args>> == 1
