@@ -1,9 +1,8 @@
 #summary SphereCommunityPack - Triggers
 #sidebar TableOfContents
 
-= SphereCommunityPack - Triggers =
+= SphereCommunityPack Triggers =
 Triggers included in SCP in addition to sphere's default ones.
-<wiki:toc max_depth="2" />
 
 == Item Triggers ==
 || *Trigger* || *Description* ||
