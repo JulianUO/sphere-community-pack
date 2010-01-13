@@ -1,4 +1,4 @@
-=== WikiMenu ===
+=== Wiki Menu ===
 
  * [SCPDocument SCP Basic Documentation]
    * [SCPTag Tags]
