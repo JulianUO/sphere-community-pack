@@ -1,0 +1,78 @@
+#summary SphereCommunityPack - Tags
+#sidebar TableOfContents
+
+= Item Tags =
+In the item section, we will separate the tags by type. Most of the tags (if not all) are applied and work if you define the tevents in the item. If you forgot to do this, the tag will have no effect at all over the item. Unless there's no typedef specified on the header.<br>
+
+=== Magical Properties (TYPE: t_iprop) ===
+|| *Name* || *Description* ||
+|| TAG.BestWeaponSkill || ||
+|| TAG.DamageIncrease || ||
+|| TAG.DefenseChanceIncrease || ||
+|| TAG.DexterityBonus || ||
+|| TAG.EnhancePotion || ||
+|| TAG.FasterCastRecovery || ||
+|| TAG.FasterCasting || ||
+|| TAG.HitChanceIncrease || ||
+|| TAG.HitColdArea || ||
+|| TAG.HitDispel || ||
+|| TAG.HitEnergyArea || ||
+|| TAG.HitFireArea || ||
+|| TAG.HitFireball || ||
+|| TAG.HitHarm || ||
+|| TAG.HitLifeLeech || ||
+|| TAG.HitLightning || ||
+|| TAG.HitLowerAttack || ||
+|| TAG.HitLowerDefense || ||
+|| TAG.HitMagicArrow || ||
+|| TAG.HitManaLeech || ||
+|| TAG.HitPhysicalArea || ||
+|| TAG.HitPoisonArea || ||
+|| TAG.HitStaminaLeech || ||
+|| TAG.HitPointIncrease || ||
+|| TAG.IntelligenceBonus || ||
+|| TAG.LowerManaCost || ||
+|| TAG.LowerReagentCost || ||
+|| TAG.Luck || ||
+|| TAG.MageArmor || ||
+|| TAG.MageWeapon || ||
+|| TAG.ManaIncrease || ||
+|| TAG.ManaRegeneration || ||
+|| TAG.NightSight || ||
+|| TAG.ReflectPhysicalDamage || ||
+|| TAG.StaminaRegeneration || ||
+|| TAG.HitPointRegeneracion || ||
+|| TAG.SelfRepair || ||
+|| TAG.SkillBonus || ||
+|| TAG.Slayer || ||
+|| TAG.SpellChanneling || ||
+|| TAG.SpellDamageIncrease || ||
+|| TAG.StaminaIncrease || ||
+|| TAG.StrengthBonus || ||
+|| TAG.SwingSpeedIncrease || ||
+|| TAG.CraftingBonus || ||
+|| TAG.CraftingExceptionalBonus || ||
+|| TAG.UsesRemaining || ||
+
+=== Traps (TYPE: t_trapped) ===
+|| *Name* || *Description* ||
+|| TAG.Trap.Type || Spell used on the traps. Trap spells start at 1001 ||
+|| TAG.Trap.Level || Intensity of the spell, from 0 to 1000 ||
+
+=== Damage and Resistances ===
+|| *Name* || *Description* ||
+|| TAG.ResPhysical || Amount of Physical Resistance. If uses UO:R damage, it replaces ARMOR property ||
+|| TAG.ResFire || Amount of Fire Resistance ||
+|| TAG.ResCold || Amount of Cold Resistance ||
+|| TAG.ResPoison || Amount of Poison Resistance ||
+|| TAG.ResEnergy || Amount of Energy Resistance ||
+|| TAG.DamPhysical || Amount of Physical Damage in %. This doesn't replace DAMAGE property! ||
+|| TAG.DamFire || Amount of Fire Damage in % ||
+|| TAG.DamCold || Amount of Cold Damage in % ||
+|| TAG.DamPoison || Amount of Poison Damage in % ||
+|| TAG.DamEnergy || Amount of Energy Damage in % ||
+
+
+= NPC Tags =
+|| *Name* || *Description* ||
+|| TAG.control.slots || Followers slots required to control this creature. Default is 1 unless this is set to something different. Setting negatives values will lead to undesired behavior ||

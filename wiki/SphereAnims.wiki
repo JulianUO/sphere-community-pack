@@ -1,0 +1,83 @@
+#summary SphereServer - Animations
+#sidebar TableOfContents
+
+== Human Animations ==
+|| *Number* || *Name / Description* ||
+|| 0x00 || ANIM_WALK_UNARM / Walk (unarmed) ||
+|| 0x01 || ANIM_WALK_ARM / Walk (armed, but not war mode) ||
+|| 0x02 || ANIM_RUN_UNARM / Run (unarmed) ||
+|| 0x03 || ANIM_RUN_ARMED / Run (armed) ||
+|| 0x04 || ANIM_STAND / Stand (armed or unarmed) ||
+|| 0x05 || ANIM_FIDGET1 / Look around ||
+|| 0x06 || ANIM_FIDGET_YAWN / Fidget, Yawn ||
+|| 0x07 || ANIM_STAND_WAR_1H / Stand for 1 hand attack ||
+|| 0x08 || ANIM_STAND_WAR_2H / Stand for 2 hand attack ||
+|| 0x09 || ANIM_ATTACK_WEAPON / 1H generic melee swing, any weapon ||
+|| 0x09 || ANIM_ATTACK_1H_WIDE / 1H sword type ||
+|| 0x0a || ANIM_ATTACK_1H_JAB / 1H fencing jab - fencing type ||
+|| 0x0b || ANIM_ATTACK_1H_DOWN / 1H overhead mace - mace type ||
+|| 0x0c || ANIM_ATTACK_2H_DOWN / 2H mace jab ||
+|| 0x0d || ANIM_ATTACK_2H_WIDE / 2H generic melee swing ||
+|| 0x0e || ANIM_ATTACK_2H_JAB / 2H spear jab ||
+|| 0x0f || ANIM_WALK_WAR / Walk (warmode) ||
+|| 0x10 || ANIM_CAST_DIR / Directional spellcast ||
+|| 0x11 || ANIM_CAST_AREA / Area-effect spellcast ||
+|| 0x12 || ANIM_ATTACK_BOW / Bow attack - Mounted bow attack ||
+|| 0x13 || ANIM_ATTACK_XBOW / Crossbow attack ||
+|| 0x14 || ANIM_GET_HIT / Take a hit ||
+|| 0x15 || ANIM_DIE_BACK / Die onto back ||
+|| 0x16 || ANIM_DIE_FORWARD / (Die onto face) ||
+|| 0x17 || ANIM_HORSE_RIDE_SLOW ||
+|| 0x18 || ANIM_HORSE_RIDE_FAST ||
+|| 0x19 || ANIM_HORSE_STAND ||
+|| 0x1a || ANIM_HORSE_ATTACK ||
+|| 0x1b || ANIM_HORSE_ATTACK_BOW ||
+|| 0x1c || ANIM_HORSE_ATTACK_XBOW ||
+|| 0x1d || ANIM_HORSE_SLAP ||
+|| 0x1e || ANIM_BLOCK / Dodge, Shield Block ||
+|| 0x1f || ANIM_ATTACK_UNARM / Punch - attack while walking? ||
+|| 0x20 || ANIM_BOW ||
+|| 0x21 || ANIM_SALUTE ||
+|| 0x22 || ANIM_EAT ||
+----
+
+== Monster Animations ==
+|| 0x00 || ANIM_MON_WALK ||
+|| 0x01 || ANIM_MON_STAND ||
+|| 0x02 || ANIM_MON_DIE1 / back ||
+|| 0x03 || ANIM_MON_DIE2 / fore or side ||
+|| 0x04 || ANIM_MON_ATTACK1 / ALL creatures have at least this attack ||
+|| 0x05 || ANIM_MON_ATTACK2 / swimming monsters don't have this ||
+|| 0x06 || ANIM_MON_ATTACK3 ||
+|| 0x07 || ANIM_MON_AttackBow / air-fire elem = flail arms ||
+|| 0x08 || ANIM_MON_AttackXBow / Misc Roll over ||
+|| 0x09 || ANIM_MON_AttackThrow ||
+|| 0x0a || ANIM_MON_GETHIT ||
+|| 0x0b || ANIM_MON_PILLAGE / Misc, Stomp, slap ground, lich conjure ||
+|| 0x0c || ANIM_MON_Stomp / Misc Cast, breath fire, elem creation
+|| 0x0d || ANIM_MON_Cast2 / Trolls don't have this ||
+|| 0x0e || ANIM_MON_Cast3 ||
+|| 0x0f || ANIM_MON_BlockRight ||
+|| 0x10 || ANIM_MON_BlockLeft ||
+|| 0x11 || ANIM_MON_FIDGET1 / Idle ||
+|| 0x12 || ANIM_MON_FIDGET2 ||
+|| 0x13 || ANIM_MON_FLY ||
+|| 0x14 || ANIM_MON_LAND / Take off ||
+|| 0x15 || ANIM_MON_DIE_FLIGHT / Get hit in air ||
+----
+
+== Animal Animations ==
+|| 0x00 || ANIM_ANI_WALK ||
+|| 0x01 || ANIM_ANI_RUN ||
+|| 0x02 || ANIM_ANI_STAND ||
+|| 0x03 || ANIM_ANI_EAT ||
+|| 0x04 || ANIM_ANI_ALERT / not all have this ||
+|| 0x05 || ANIM_ANI_ATTACK1 ||
+|| 0x06 || ANIM_ANI_ATTACK2 ||
+|| 0x07 || ANIM_ANI_GETHIT ||
+|| 0x08 || ANIM_ANI_DIE1 ||
+|| 0x09 || ANIM_ANI_FIDGET1 / Idle || 
+|| 0x0a || ANIM_ANI_FIDGET2 ||
+|| 0x0b || ANIM_ANI_SLEEP / Lie down (not all have this) ||
+|| 0x0c || ANIM_ANI_DIE2 ||
+----
