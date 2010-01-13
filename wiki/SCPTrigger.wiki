@@ -1,7 +1,7 @@
 #summary SphereCommunityPack - Triggers
 #sidebar TableOfContents
 
-= SphereCommunityPack Triggers =
+= Sphere Community Pack Triggers =
 Triggers included in SCP in addition to sphere's default ones.
 
 == Item Triggers ==
