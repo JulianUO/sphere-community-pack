@@ -1,0 +1,5 @@
+== SphereCommunityPack Basic Documentation ==
+ * [SCPTag Tags]
+ * [SCPTrigger Triggers]
+ * [SCPFunction Functions]
+ * [SCPOverride Overrides]
