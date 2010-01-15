@@ -3,42 +3,19 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 06-Apr-2009
+// FILE LAST UPDATED: Jueves, 14 de Enero de 2010
 VERSION=0.56b
-//
-// SCRIPT DOCUMENTATION
-// --------------------
-// [EVENTS] @userstats - OSI STATS + BONUS
-// - Max Hits: (Str / 2) + Str Bonus + 50 + Max Hits Bonus
-// - Max Mana: Int + Int Bonus + Max Mana Bonus
-// - Max Stam: Dex + Dex Bonus + Max Stam Bonus
-
-// [EVENTS] @spellcast (TO-DO: PUT FASTER CASTING (ARGN3) IN HERE)
-// - Words of Power for new spells (necro, chivalry, etc)
-// - Plate armor restriction and Weapon unequip
-// - Integration of Mage Armor and Mage Weapon
-// - Spell Cast Recovery and addition of Faster Cast Recovery
-
-// [EVENTS] @spelleffect
-// - Checks for Harm Spell (Spell Damage Bonus)
-// - Checks for Magic Reflection Spell
-// - Implements Magic Resistance Skill
-
-// [EVENTS] @gethit - SPELL DAMAGE BONUS
-// - Eval. Int. Bonus: ((EvalInt * 3) / 100) + 1
-// - Intelligence Bonus: (INT / 10) (Drop decimals from result)
-// - GM Inscription Bonus: 10% Damage Bonus
-// - Spell Damage Increase: Int. Bonus + Inscr. Bonus + Spell Damage Increase Items*
-// - Total Damage: (Base Damage * Eval. Int. Bonus) * ((Spell Damage Increase / 100) + 1) (Drop decimals from result) 
-// - Mind Blast damage: Base Damage + ((Magery + Intelligence) / 5) (Drop decimals from result)
-// * Spell Damage Increase Items effects are capped at 15% in Player vs. Player combat.
 
 [events e_PlayerGenericEvent]
+// Virtue System
 on=@UserVirtue
+if <def.scp.VirtueSystem> == 0
+return 1
+endif
 if (<argn1>==1)
     for 0 8  // if the player doesn't have max status for first level of virtue
-        if !(<src.tag0.virtuemax_<dlocal._for>>)  
-            src.tag0.virtuemax_<dlocal._for>=4000  // give him the cap.  
+        if !(<src.tag0.virtuemax_<dlocal._for>>)
+            src.tag0.virtuemax_<dlocal._for>=4000  // give him the cap.
         endif
     endfor
     argo.sdialog d_virtue_main
@@ -52,6 +29,7 @@ else
 src.sysmessage @03c1,6,1,1 This virtue is not active.
 endif
 
+// Skill delays
 on=@skillwait
 if <def.scp.SkillWaitingTimes> == 1
 	if <ctag0.skillrecovery> > <serv.time>
@@ -60,10 +38,11 @@ if <def.scp.SkillWaitingTimes> == 1
 	endif
 endif
 
+// Limitations by Race
 on=@equiptest
 if <def.scp.LimitationRace> == 1
-	if <tag0.item.gargoyle>
-		if !<src.isgargoyle>
+	if <src.isgargoyle>
+		if !<tag0.item.gargoyle>
 		return 1
 		endif
 	endif
@@ -129,7 +108,7 @@ if <def.scp.Followers> == 1
 maxfollower = <def.scp.MaxFollowers>
 endif
 if <def.scp.OSIStats> == 1
-maxhits = <eval (<str>/2) + <modstr> + 50> 
+maxhits = <eval (<str>/2) + <modstr> + 50>
 maxmana = <eval <int> + <modint>>
 maxstam = <eval <dex> + <moddex>>
 endif
@@ -140,7 +119,7 @@ if <def.scp.followers> == 1
 	if <act.type> == t_figurine
 	local.slots = <qval <serv.chardef.<act.tdata3>.tag0.control.slots> ? <serv.chardef.<act.tdata3>.tag0.control.slots> : 1>
 		if <eval <src.curfollower>+(<local.slots>*<argn>)> > <src.maxfollower>
-		src.sysmessage @,,2 1049612,<serv.chardef.<act.tdata3>.name> // ~1_NAME~ remained in the stables because you have too many followers.	
+		src.sysmessage @,,2 1049612,<serv.chardef.<act.tdata3>.name> // ~1_NAME~ remained in the stables because you have too many followers.
 		src.newgold <local.totalcost>
 		return 1
 		endif
@@ -148,6 +127,7 @@ if <def.scp.followers> == 1
 	endif
 endif
 
+// Crafting System
 on=@skillmenu
 doswitch <def.scp.CraftingSystem>
 return 0
@@ -155,6 +135,7 @@ f_crafting_startosi <args>
 enddo
 return 1
 
+// Chivalry Tithing Points
 on=@spellselect
 if (<argn1> > 199) && (<argn1> < 211)
 	if <tithing> < <def.scp.spell.<argn1>.tithing>
@@ -163,6 +144,8 @@ if (<argn1> > 199) && (<argn1> < 211)
 	endif
 endif
 
+// OSI Spell Difficulty
+// Magic WOPs
 on=@spellcast
 if <def.scp.OSISpellDiff> == 1
 local.skill = <serv.skill.<streat <serv.spell.<argn1>.skillreq>>.key>
@@ -188,12 +171,9 @@ if !<npc>
 	endif
 endif
 
-// OSI Spells Bonus
-// Magic Resistance Skill + Magic Reflection Spell
+// Magic Resistance Skill
+// Magic Reflection Spell
 on=@spelleffect
-if <isdamagespell <argn1>>
-tag0.gothitbyspell = <argn1>
-endif
 if <flags>&statf_reflection
 	if <src.uid> != <uid>
 		if (<serv.spell.<argn1>.flags>&spellflag_harm) || <argn> == 41
@@ -229,50 +209,6 @@ else
 endif
 return 2
 
-// Slayer Weapons + New Parrying 
-// Damage Increase
-on=@hit
-if (<src.findlayer.1>) || (<src.findlayer.2>)
-	if <src.f_cs_chancetoblock> > <r>
-		if (<src.findlayer.2.type> == t_shield) || (<src.findlayer.2.isweapon>)
-			if (<src.trysrc <uid> findlayer.2.trigger @ParryTest>)
-			return 0
-			endif
-		elif <src.findlayer.1.isweapon>
-			if (<src.trysrc <uid> findlayer.1.trigger @ParryTest>)
-			return 0
-			endif
-		endif
-	src.sysmessage "You parry the blow."
-	sysmessage "<src.name> parries the blow."
-	src.sound 0146
-	src.anim 30
-	return 1
-	endif
-endif
-
-// OSI Spells Bonus
-on=@gethit
-if <def.scp.OSISpellDamage> == 0
-return 0
-endif
-if <tag0.gothitbyspell>
-local.damage = <r<serv.spell.<dtag.gothitbyspell>.effect>>
-local.evalint = <eval (((<src.evaluatingintel>*3)/1000)+1)>
-local.damageinc = <eval <src.int>/10>
-	if <src.inscription> >= 100.0
-	local.damageinc += 10
-	endif
-	if <def.scp.ItemProp_SpellDamageIncrease> == 1
-		if <src.tag0.SpellDamageIncrease>
-		local.damageinc += <qval (<src.tag.SpellDamageIncrease> > 15) ? 15 : <src.tag.SpellDamageIncrease>>
-		endif
-	endif
-argn1 = <eval <local.damage>*<local.evalint>>
-argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
-tag.gothitbyspell
-endif
-
 // Proper Statlock Fix
 on=@statchange
 local.statsum = <qval <tag0.override.statsum> ? <tag0.override.statsum> : <serv.skillclass.0.statsum>>
@@ -297,31 +233,8 @@ if <local.stats> == <local.statsum>
 	endif
 endif
 
-// EA Karma Fame
-on=@famechange
-if <def.scp.EAKarmaFame> == 1
-gainfame 
-famelevelcheck
-settitle
-return 0
-endif
-
-// EA Karma Fame
-on=@karmachange
-if <def.scp.EAKarmaFame> == 1
-gainkarma
-karmalevelcheck
-settitle
-return 0
-endif
-
-// EA Karma Fame
 // Quest System
 on=@kill
-if <def.scp.EAKarmaFame> == 1
-ctag.fame.kill = <argo.fame>
-ctag.karma.kill = <argo.karma>
-endif
 if !(<argo.isplayer>)
 	if <tag0.quests>
 		for <tag0.quests>

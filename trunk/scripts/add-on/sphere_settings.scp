@@ -53,7 +53,7 @@ scp.NewBarding_Provocation=0 // NOT TESTED. USE AT OWN RISK. (Report bugs if any
 scp.NewBarding_Discordance=0 // NOT DONE!!
 
 // Enables, switch or disable the new crafting system
-// 0 = Default. 1 = OSI-Like. 
+// 0 = Default. 1 = OSI-Like.
 scp.CraftingSystem=1
 
 // Enable or disable the crafting menu for specific skill.
@@ -75,7 +75,7 @@ scp.NewCrafting_Tinkering=1
 scp.Mining_AllowSand=1
 
 // Allow the new SOS fishing treasure system?
-// <boolean> (1 if enable, 0 if not). Default = 1 
+// <boolean> (1 if enable, 0 if not). Default = 1
 scp.Fishing_SOSTreasure=1
 
 // Can SeaSerpent appear when you fail at fishing?
@@ -95,7 +95,7 @@ scp.Fishing_ChanceSeaSerpent=5
 scp.Fishing_ChanceToAncient=4
 
 // Minimum fishing skill to be able to open a SOS Bottle
-// Setting this to 0 disables it. 
+// Setting this to 0 disables it.
 scp.Fishing_MinToSosBottle=0
 
 ///////////////////////////////////////////////////////////////
@@ -149,7 +149,7 @@ scp.Healing_UseAnatomy=1
 // <boolean> (0 = No / 1 = Yes)
 scp.Healing_PoisonNoBandage=1
 
-// Healing uses your form's brain? 
+// Healing uses your form's brain?
 // Example: if you polymorphed into a bear, you would heal with veterinary
 // <boolean> (0 = No / 1 = Yes)
 scp.Healing_BasedOnForm=0
@@ -162,7 +162,7 @@ scp.Veterinary_MinToCure=0
 // From 0 to 1000. Default = 620 (62.0%)
 scp.Veterinary_MinAnimalLoreToCure=620
 
-// Is animal lore skill used in the cure chance? 
+// Is animal lore skill used in the cure chance?
 // <boolean> (0 = No / 1 = Yes)
 scp.Veterinary_UseAnimalLore=1
 
@@ -207,6 +207,10 @@ scp.Combat_BaseDamage=2
 // 0 = Default. 1 = UO:R. 2 = AOS.
 scp.Combat_DamageBonus=2
 
+// Use Spells Damage Bonus according to AOS?
+// 0 = No. 1 = AOS.
+scp.Combat_SpellBonus=1
+
 // Use or not the Age of Shadows Resistances.
 // Note that this will be used only if scp.Combat_FormulasUsed is 1
 // Automatically used if it is 3.
@@ -238,10 +242,6 @@ scp.OSIStats=1
 // Activate or deactivate the calculation of smelt chances according to OSI.
 // <boolean> (1 if yes, 0 if not).
 scp.OSIOreFormula=1
-
-// Set to 1 if you want to use EvalInt, Int and Inscription as Damage Modifiers for Spells
-// Formula is: (Base Damage * Eval. Int. Bonus) * ((Spell Damage Increase / 100) + 1)
-scp.OSISpellDamage=1
 
 // Set to 1 if you want to calculate the success chance of the spell according to OSI.
 // Formula is: ((CastSkill - SkillRequired) * 2.5) + 50.0
@@ -320,6 +320,10 @@ scp.Rune_NeverFade=1
 // <boolean> (0 = No / 1 = Yes)
 scp.Rune_RenameNoPrefix=1
 
+// Allow or disable the new virtue system. OSI-Like
+// <boolean> (0 = No / 1 = Yes)
+scp.VirtueSystem=1
+
 ///////////////////////////////////////////////////////////////
 //////// Jail System Settings
 ///////////////////////////////////////////////////////////////
@@ -376,33 +380,33 @@ scp.Champions_LevelMinutes=10*60
 ///////////////////////////////////////////////////////////////
 //////// AOS Custom Vendor System
 ///////////////////////////////////////////////////////////////
-// Max ammount of vendors that a player can own 
+// Max ammount of vendors that a player can own
 // 0 = Infinite
 scp.Vendor_PlayerMaxOwn=0
 
-// Max ammount of vendors that a player can rent 
+// Max ammount of vendors that a player can rent
 // 0 = Infinite
 scp.Vendor_PlayerMaxRent=0
 
 // Max characters allowed in items description
 scp.Vendor_MaxItemDescript=40
 
-// Where the vendor search for gold on buy 
+// Where the vendor search for gold on buy
 // 1 = Bag and bank / 0 = Only in bag
 scp.Vendor_GetMoneyFromBank=1
 
-// Vendors will be redeeded when dismissed? 
+// Vendors will be redeeded when dismissed?
 // <boolean> (1 = On / 0 = Off). Default = 0
 scp.Vendor_Redeed=0
 
-// Max weight that vendors can carry 
+// Max weight that vendors can carry
 // Default = 390
 scp.Vendor_MaxWeight=390
 
 // New vendors comes with this shop name
 scp.Vendor_DefaultShopName=Shop Not Yet Named
 
-// Players can place vendors only on houses? 
+// Players can place vendors only on houses?
 // <boolean> (0 = No / 1 = Yes)
 scp.Vendor_HousingOnly=1
 
@@ -413,7 +417,7 @@ scp.Vendor_PlacementRegion=0
 // Basic salary per day, in gp
 scp.Vendor_SalaryBasic=60
 
-// Raise 1gp on salary for each total of X gp's vending 
+// Raise 1gp on salary for each total of X gp's vending
 // Default = 165
 scp.Vendor_SalaryAdditional=165
 
@@ -424,11 +428,11 @@ scp.Vendor_SalaryPaymentDiv=12
 ///////////////////////////////////////////////////////////////
 //////// AOS House System
 ///////////////////////////////////////////////////////////////
-// When a house got demolished, you want get back your house deed or the house value in gold? 
+// When a house got demolished, you want get back your house deed or the house value in gold?
 // (0 = House Value in Gold / 1 = House Deed)
 scp.House_UseDeeds=0
 
-// House decay timer, in days. 
+// House decay timer, in days.
 // 0 = Decay Off
 scp.House_DecayTimer=5
 
@@ -447,11 +451,11 @@ scp.House_AccOwner=1
 // <boolean> (0 = No / 1 = Yes)
 scp.House_UseTrash=1
 
-// Minimum area distance allowed between placed houses. 
+// Minimum area distance allowed between placed houses.
 // Default = 1
 scp.House_PlaceMinDistArea=1
 
-// Minimum front distance allowed between placed houses. 
+// Minimum front distance allowed between placed houses.
 // Default = 5
 scp.House_PlaceMinDistFront=5
 
@@ -459,25 +463,25 @@ scp.House_PlaceMinDistFront=5
 // <boolean> (0 = No / 1 = Yes)
 scp.House_PlaceIlshenar=0
 
-// Period in days that a player must wait to place a new house before house placement. 
+// Period in days that a player must wait to place a new house before house placement.
 // Default = 7
 scp.House_PlaceWaitPeriod=7
 
-// % of house value that will be refunded on demolish 
+// % of house value that will be refunded on demolish
 // Default = 90
 scp.House_DemolishRefund=90
 
-// Use Global Storage Limit value or calculate it by the house area? 
+// Use Global Storage Limit value or calculate it by the house area?
 // 0 = Calculate by House Area / 1 = Global Value
 scp.House_GlobalStorage=0
 
-// Global max secured storage allowed per house 
+// Global max secured storage allowed per house
 // (Secure containers + items inside secure containers)
 scp.House_GlobalSecStorage=600
 
-// Global max locked items allowed per house 
+// Global max locked items allowed per house
 // This value will cont on Secure Storage Limit.
-scp.House_GlobalLockdown		100	
+scp.House_GlobalLockdown		100
 
 // Owner of the house can change the door access?
 // <boolean> (0 = No / 1 = Yes)
@@ -519,7 +523,7 @@ scp.House_SignChange=1
 // <boolean> (0 = No / 1 = Yes)
 scp.House_AoSDesignTool=1
 
-// Price per customized component, in gp's 
+// Price per customized component, in gp's
 // Default = 500
 scp.House_PricePerComp=500
 
@@ -535,7 +539,7 @@ scp.House_UseVendors=0
 // <boolean> (0 = No / 1 = Yes)
 scp.House_VendorsPublic=1
 
-// Use Global Vendor Limit or calculate it by the house area? 
+// Use Global Vendor Limit or calculate it by the house area?
 // 0 = Calculate by House Area / 1 = Global Value
 scp.House_GlobalMaxVendors=0
 
@@ -546,13 +550,13 @@ scp.House_MaxVendors=10
 //////// Quest Bounty Board System
 ///////////////////////////////////////////////////////////////
 // Time before the bounty death dialog is opened to the death player
-scp.Bounty_Delay=8	
+scp.Bounty_Delay=8
 
 // Amount of DAYS before an uncollected bounty decays
-scp.Bounty_Decay=14	
+scp.Bounty_Decay=14
 
 // Minimum amount of gold coins to pay for a bounty
-scp.Bounty_Minimum=1000	
+scp.Bounty_Minimum=1000
 
 
 [EOF]

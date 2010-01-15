@@ -10,12 +10,32 @@ VERSION=0.56b
 // --------------
 // Xantier - Original main gump , virtue status and virtue infos.
 //
-//
-// SCRIPT DOCUMENTATION
-// --------------------
-//
-//
 
+[defname virtue_names]
+// Humilty
+virtue_0_name "1051000"
+virtue_0_description "1052051"
+// Sacrifice
+virtue_1_name "1051001"
+virtue_1_description "1052053"
+// Compassion
+virtue_2_name "1051002"
+virtue_2_description "1052054"
+// Spirituality
+virtue_3_name "1051003"
+virtue_3_description "1052056"
+// Valor
+virtue_4_name "1051004"
+virtue_4_description "1052057"
+// Honor
+virtue_5_name "1051005"
+virtue_5_description "1052058"
+// Justice
+virtue_6_name "1051006"
+virtue_6_description "1052059"
+// Honesty
+virtue_7_name "1051007"
+virtue_7_description "1052060"
 
 [defname virtcolor]
 virtcolor_0 0481
@@ -44,98 +64,6 @@ virtcolor_22 0547
 virtcolor_23 061
 
 
-[function getvirtue]  // get virtue color.
-if (<tag0.virtue_<dargs>> < 4000)
-return <eval 2402>
-else
-local.deger=<dtag0.virtue_<dargs>>
-if (<local.deger> >= 30000)
-local.deger=20000
-endif
-
-return <eval <def.virtcolor_<eval (3*<dargs>)+(<dlocal.deger>/10000)>>>
-endif
-
-[function losevirtue]  // .lostvirtue <virtuenumber>,<point>
-if (<argv[0]>==0)
-    local.erdem="Humility"
-elif (<argv[0]>==1)
-    local.erdem="Sacrifice"
-elif (<argv[0]>==2)
-    local.erdem="Compassion"
-elif (<argv[0]>==3)
-    local.erdem="Spirituality"
-elif (<argv[0]>==4)
-    local.erdem="Valor"
-elif (<argv[0]>==5)
-    local.erdem="Honor"
-elif (<argv[0]>==6)
-    local.erdem="Justice"
-elif (<argv[0]>==7)
-    local.erdem="Honesty"
-endif
-
-if (<argv[1]>)
-    sysmessage You lost in <local.erdem> !
-    tag0.virtue_<dargv[0]> -= <argv[1]>
-        if (<tag0.virtue_<dargv[0]>> < 4000)
-            if (<tag0.virtuemax_<dargv[0]>> == 10000)
-            sysmessage You lost path in <local.erdem> !
-            tag0.virtuemax_<dargv[0]>=4000
-            endif
-        elif (<tag0.virtue_<dargv[0]>> < 10000)
-            if (<tag0.virtuemax_<dargv[0]>> == 20000)
-            sysmessage You lost path in <local.erdem> !
-            tag0.virtuemax_<dargv[0]>=10000
-            endif
-        elif (<eval <tag0.virtue_<dargv[0]>> + <argv[1]>> >= 20000) && (<tag0.virtue_<dargv[0]>> < 20000)
-        sysmessage You lost path in <local.erdem> !
-        tag0.virtuemax_<dargv[0]>=20000
-        endif
-
-endif
-
-
-
-
-
-[function gainvirtue]  // .gainvirtue <virtuenumber>,<point>
-
-if (<argv[0]>==0)
-    local.erdem="Humility"
-elif (<argv[0]>==1)
-    local.erdem="Sacrifice"
-elif (<argv[0]>==2)
-    local.erdem="Compassion"
-elif (<argv[0]>==3)
-    local.erdem="Spirituality"
-elif (<argv[0]>==4)
-    local.erdem="Valor"
-elif (<argv[0]>==5)
-    local.erdem="Honor"
-elif (<argv[0]>==6)
-    local.erdem="Justice"
-elif (<argv[0]>==7)
-    local.erdem="Honesty"
-endif
-
-if (<argv[1]>)
-    sysmessage You gained in <local.erdem> !
-    tag0.virtue_<dargv[0]> += <argv[1]>
-        if (<tag0.virtue_<dargv[0]>> >= <tag0.virtuemax_<dargv[0]>>)
-            sysmessage You gained path in <local.erdem> !
-
-                if (<tag0.virtuemax_<dargv[0]>>==4000)
-                    tag0.virtue_<dargv[0]>=<tag0.virtuemax_<dargv[0]>>
-                    tag0.virtuemax_<dargv[0]>=10000
-                    return 1
-                elif (<tag0.virtuemax_<dargv[0]>>==10000)
-                    tag0.virtue_<dargv[0]>=<tag0.virtuemax_<dargv[0]>>
-                    tag0.virtuemax_<dargv[0]>=20000
-                    return 1
-                endif
-        endif
-endif
 
 [dialog d_virtue_status]
 100,100
@@ -146,28 +74,23 @@ gumppic 47 147 2081
 gumppic 47 217 2081
 gumppic 47 267 2083
 gumppic 70 217 2091
-
-dhtmlgump 140 73 200 20 0 0 The Virtues
-
-dhtmlgump 80 100 100 40 0 0 Humility
-dhtmlgump 80 129 100 40 0 0 Sacrifice
-dhtmlgump 80 159 100 40 0 0 Compassion
-dhtmlgump 80 189 100 40 0 0 Spirituality
-dhtmlgump 200 100 200 40 0 0 Valor
-dhtmlgump 200 129 200 40 0 0 Honor
-dhtmlgump 200 159 200 40 0 0 Justice
-dhtmlgump 200 189 200 40 0 0 Honesty
-
-
-button 60 100 1210 1210 1 0 1 Humility
-button 60 129 1210 1210 1 0 2 Sacrifice
-button 60 159 1210 1210 1 0 3 Compassion
-button 60 189 1210 1210 1 0 4 Spirituality
-button 180 100 1210 1210 1 0 5 Valor
-button 180 129 1210 1210 1 0 6 Honor
-button 180 159 1210 1210 1 0 7 Justice
-button 180 189 1210 1210 1 0 8 Honesty
-
+xmfhtmlgump 140 73 200 20 1077972 0 0
+xmfhtmlgump 80 100 100 40 1051000 0 0
+xmfhtmlgump 80 129 100 40 1051001 0 0
+xmfhtmlgump 80 159 100 40 1051002 0 0
+xmfhtmlgump 80 189 100 40 1051003 0 0
+xmfhtmlgump 200 100 200 40 1051004 0 0
+xmfhtmlgump 200 129 200 40 1051005 0 0
+xmfhtmlgump 200 159 200 40 1051006 0 0
+xmfhtmlgump 200 189 200 40 1051007 0 0
+button 60 100 1210 1210 1 0 1 // Humility
+button 60 129 1210 1210 1 0 2 // Sacrifice
+button 60 159 1210 1210 1 0 3 // Compassion
+button 60 189 1210 1210 1 0 4 // Spirituality
+button 180 100 1210 1210 1 0 5 // Valor
+button 180 129 1210 1210 1 0 6 // Honor
+button 180 159 1210 1210 1 0 7 // Justice
+button 180 189 1210 1210 1 0 8 // Honesty
 dhtmlgump 75 224 200 60 0 0 Click on a blue gem to view your status in that virtue.
 
 [dialog d_virtue_status button]
@@ -188,6 +111,7 @@ dialog d_virtue_info,0 6
 on=8
 dialog d_virtue_info,0 7
 
+
 [dialog d_virtue_info]
 100,100
 page 0
@@ -200,63 +124,33 @@ gumppic 70 217 2091
 
 local.virtue=<tag0.virtue_<dargs>>
 local.virtuemax=<tag0.virtuemax_<dargs>>
-
 if (<local.virtue> < 1)
-    local.yazi="You have not started on the path of this Virtue."
+local.yazi = 1052044 // You have not started on the path of this Virtue.
 elif (<local.virtue> < <eval <tag0.virtuemax_<dargs>>/6>)
-    local.yazi="You have barely begun your journey through the path of this Virtue."
+local.yazi = 1052045 // You have barely begun your journey through the path of this Virtue.
 elif (<local.virtue> < <eval <tag0.virtuemax_<dargs>>/3>)
-    local.yazi="You have progressed in this Virtue, but still have much to do."
+local.yazi = 1052046 // You have progressed in this Virtue, but still have much to do.
 elif (<local.virtue> < <eval <tag0.virtuemax_<dargs>>/2>)
-    local.yazi="Your journey through the path of this Virtue is going well."
+local.yazi = 1052047 // Your journey through the path of this Virtue is going well.
 elif (<local.virtue> < <eval 2*<tag0.virtuemax_<dargs>>/3>)
-    local.yazi="You feel very close to achieving your next path in this Virtue."
+local.yazi = 1052048 // You feel very close to achieving your next path in this Virtue.
 elif (<local.virtue> < <eval 5*<tag0.virtuemax_<dargs>>/6>)
-    local.yazi="You have achieved a path in this Virtue."
+local.yazi = 1052049 // You have achieved a path in this Virtue.
 else
-    local.yazi="You have achieved the highest path in this Virtue."
+local.yazi = 1052050 // You have achieved the highest path in this Virtue.
 endif
-
-if (<dargs>==0)
-    local.erdem="Humility"
-    local.erdemyazi="Humility is perceiving one's place in the world, not according to one's own accomplishments, but according to the intrinsic value of all individuals."
-elif (<dargs>==1)
-    local.erdem="Sacrifice"
-    local.erdemyazi="The courage to give of oneself in the name of love."
-elif (<dargs>==2)
-    local.erdem="Compassion"
-    local.erdemyazi="Compassion is nonjudgmental empathy for one's fellow creatures."
-elif (<dargs>==3)
-    local.erdem="Spirituality"
-    local.erdemyazi="Spirituality is the concern with one's inner being and how one deals with truth, love, and courage."
-elif (<dargs>==4)
-    local.erdem="Valor"
-    local.erdemyazi="Valor is the courage to take actions in support of one's convictions."
-elif (<dargs>==5)
-    local.erdem="Honor"
-    local.erdemyazi="Honor is the courage to stand for the truth, against any odds."
-elif (<dargs>==6)
-    local.erdem="Justice"
-    local.erdemyazi="Justice is the devotion to truth, tempered by love."
-elif (<dargs>==7)
-    local.erdem="Honesty"
-    local.erdemyazi="Honesty is scrupulous respect for truth - the willingness never to deceive oneself or another."
-endif
-
-local.sayi=0
-
-if <tag0.virtue_<dargs>> < 4000
-    local.sayi = <eval <tag0.virtue_<dargs>> / 400>
-elif <tag0.virtue_<dargs>> < 10000 )
-    local.sayi = <eval (<tag0.virtue_<dargs>> - 4000) / 600>
-elif <tag0.virtue_<dargs>> < <tag0.virtuemax_<dargs>> )
-    local.sayi = <eval (<tag0.virtue_<dargs>> - 10000) / ((<tag0.virtuemax_<dargs>>-10000)/10)>
-else
-    local.sayi = 10
-endif
-
 // local.sayi is calculation for blue gem count. max 10 blue gem.
+local.sayi=0
+if <tag0.virtue_<dargs>> < 4000
+local.sayi = <eval <tag0.virtue_<dargs>> / 400>
+elif <tag0.virtue_<dargs>> < 10000 )
+local.sayi = <eval (<tag0.virtue_<dargs>> - 4000) / 600>
+elif <tag0.virtue_<dargs>> < <tag0.virtuemax_<dargs>> )
+local.sayi = <eval (<tag0.virtue_<dargs>> - 10000) / ((<tag0.virtuemax_<dargs>>-10000)/10)>
+else
 
+local.sayi = 10
+endif
 local.i=0
 for 0 10
 if (<local.i> < 10)
@@ -264,11 +158,15 @@ local.i += 1
 endif
 gumppic <eval 95 + (<dlocal.i>*17)> 50 <qval (<dlocal.i> <= <local.sayi>) ? 2362 : 2360>
 endfor
+xmfhtmlgump 157 73 200 40 <eval 1051000 + <args>> 0 0
+xmfhtmlgump 75 95 220 143 <ddef.virtue_<dargs>_description> 0 0
+xmfhtmlgump 70 224 229 60 <dlocal.yazi> 0 0   // progress in the virtue.
 
+[dialog d_virtue_info button]
+on=0
+dialogclose d_virtue_info
+sdialog d_virtue_status
 
-dhtmlgump 157 73 200 40 0 0 <def.u><local.erdem> // the virtue.
-dhtmlgump 75 95 220 143 0 0 <local.erdemyazi>  // explanation of the virtue
-dhtmlgump 70 224 229 60 0 0 <local.yazi>  // progress in the virtue.
 
 [dialog d_virtue_main]
 80,80

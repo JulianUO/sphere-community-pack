@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -67,7 +67,7 @@ local.cliloc = <eval <def.scp.evalint_start> + <local.level>>
 	local.cliloc += 11
 	endif
 sysmessage @,,2 <local.cliloc>
-skillgain EvaluatingIntel <eval <EvaluatingIntel>/10>
+skillgain evaluatingintel <eval (<evaluatingintel> / 10)>
 f_skill_delay <getargv 1,<def.skill.16.waittime>>
 else
 local.cliloc = <def.scp.evalint_fail>

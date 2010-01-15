@@ -1,0 +1,72 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// Xantir - getvirtue, losevirtue and gainvirtue
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// GetVirtue $virtue - returns the color according $virtue points.
+// LoseVirtue $virtue,$points - lose $points in $virtue.
+// GainVirtue $virtue,$points - gain $points in $virtue.
+
+[function getvirtue]  // get virtue color.
+if (<tag0.virtue_<dargs>> < 4000)
+return <eval 2402>
+else
+local.deger=<dtag0.virtue_<dargs>>
+if (<local.deger> >= 30000)
+local.deger=20000
+endif
+return <eval <def.virtcolor_<eval (3*<dargs>)+(<dlocal.deger>/10000)>>>
+endif
+
+[function losevirtue]  // .lostvirtue <virtuenumber>,<point>
+local.erdem = <def.virtue_<argv[0]>_name>
+if (<argv[1]>)
+    sysmessage You lost in <local.erdem> !
+    tag0.virtue_<dargv[0]> -= <argv[1]>
+        if (<tag0.virtue_<dargv[0]>> < 4000)
+            if (<tag0.virtuemax_<dargv[0]>> == 10000)
+            sysmessage You lost path in <local.erdem> !
+            tag0.virtuemax_<dargv[0]>=4000
+            endif
+        elif (<tag0.virtue_<dargv[0]>> < 10000)
+            if (<tag0.virtuemax_<dargv[0]>> == 20000)
+            sysmessage You lost path in <local.erdem> !
+            tag0.virtuemax_<dargv[0]>=10000
+            endif
+        elif (<eval <tag0.virtue_<dargv[0]>> + <argv[1]>> >= 20000) && (<tag0.virtue_<dargv[0]>> < 20000)
+        sysmessage You lost path in <local.erdem> !
+        tag0.virtuemax_<dargv[0]>=20000
+        endif
+
+endif
+
+[function gainvirtue]  // .gainvirtue <virtuenumber>,<point>
+local.erdem = <def.virtue_<argv[0]>_name>
+if (<argv[1]>)
+    sysmessage You gained in <local.erdem> !
+    tag0.virtue_<dargv[0]> += <argv[1]>
+        if (<tag0.virtue_<dargv[0]>> >= <tag0.virtuemax_<dargv[0]>>)
+            sysmessage You gained path in <local.erdem> !
+                if (<tag0.virtuemax_<dargv[0]>>==4000)
+                    tag0.virtue_<dargv[0]>=<tag0.virtuemax_<dargv[0]>>
+                    tag0.virtuemax_<dargv[0]>=10000
+                    return 1
+                elif (<tag0.virtuemax_<dargv[0]>>==10000)
+                    tag0.virtue_<dargv[0]>=<tag0.virtuemax_<dargv[0]>>
+                    tag0.virtuemax_<dargv[0]>=20000
+                    return 1
+                endif
+        endif
+endif
+
+
+[eof]

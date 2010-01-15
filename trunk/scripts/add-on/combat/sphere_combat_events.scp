@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -20,6 +20,11 @@ argn1 = <f_combatsys_hitspeed <argn1>>
 actdiff = <f_combatsys_hitchance <actdiff>>
 endif
 
+on=@spelleffect
+if <isdamagespell <argn1>>
+tag0.gothitbyspell = <argn1>
+endif
+
 on=@hit
 argn1 = <qval <weapon> ? <eval {<weapon.dam>}> : <eval {1,4}>>
 if <src.f_combatsys_blockchance> || (<src.trigger @Shield> == 1)
@@ -27,7 +32,7 @@ src.f_combatsys_block
 	doswitch <def.scp.Combat_BlockChance>
 	local.blank
 	return 1
-		begin	
+		begin
 		local.ar = <qval <weapon.isweapon.archery> ? <src.findlayer.2.armor.high> : <eval <src.findlayer.2.armor.high> / 2>>
 		argn1 = <max <local.ar>,0>
 		end
@@ -58,7 +63,7 @@ else
 	local.realphy = <eval 100 - (<src.tag0.DamFire> + <src.tag0.DamCold> + <src.tag0.DamPoison> + <src.tag0.DamEnergy>)>
 	local.physical = <muldiv <argn1>,<local.realphy>,100>
 	local.physical -= <muldiv <argn1>,<tag0.ModAr>,100>
-	local.fire = <muldiv <argn1>,<src.tag0.DamFire>,100> 
+	local.fire = <muldiv <argn1>,<src.tag0.DamFire>,100>
 	local.fire -= <muldiv <argn1>,<tag0.ResFire>,100>
 	local.cold = <muldiv <argn1>,<src.tag0.DamCold>,100>
 	local.cold -= <muldiv <argn1>,<tag0.ResCold>,100>
@@ -68,6 +73,23 @@ else
 	local.energy -= <muldiv <argn1>,<tag0.ResEnergy>,100>
 	argn1 = <eval <local.physical> + <local.fire> + <local.cold> + <local.poison> + <local.energy>>
 	argn2 |= dam_god
+	endif
+endif
+if <tag0.gothitbyspell>
+	if <def.scp.Combat_SpellBonus> == 1
+	local.damage = <r<serv.spell.<dtag.gothitbyspell>.effect>>
+	local.evalint = <eval (((<src.evaluatingintel>*3)/1000)+1)>
+	local.damageinc = <eval <src.int>/10>
+		if <src.inscription> >= 100.0
+		local.damageinc += 10
+		endif
+		if <def.scp.ItemProp_SpellDamageIncrease> == 1
+			if <src.tag0.SpellDamageIncrease>
+			local.damageinc += <qval (<src.tag.SpellDamageIncrease> > 15) ? 15 : <src.tag.SpellDamageIncrease>>
+			endif
+		endif
+	argn1 = <eval <local.damage>*<local.evalint>>
+	argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
 	endif
 endif
 
@@ -80,6 +102,11 @@ argn1 = <f_combatsys_hitspeed <argn1>>
 actdiff = <f_combatsys_hitchance <actdiff>>
 endif
 
+on=@spelleffect
+if <isdamagespell <argn1>>
+tag0.gothitbyspell = <argn1>
+endif
+
 on=@hit
 argn1 = <qval <weapon> ? <eval {<weapon.dam>}> : <eval {1,4}>>
 if <src.f_combatsys_blockchance> || (<src.trigger @Shield> == 1)
@@ -87,7 +114,7 @@ src.f_combatsys_block
 	doswitch <def.scp.Combat_BlockChance>
 	local.blank
 	return 1
-		begin	
+		begin
 		local.ar = <qval <weapon.isweapon.archery> ? <src.findlayer.2.armor.high> : <eval <src.findlayer.2.armor.high> / 2>>
 		argn1 = <max <local.ar>,0>
 		end
@@ -118,7 +145,7 @@ else
 	local.realphy = <eval 100 - (<src.tag0.DamFire> + <src.tag0.DamCold> + <src.tag0.DamPoison> + <src.tag0.DamEnergy>)>
 	local.physical = <muldiv <argn1>,<local.realphy>,100>
 	local.physical -= <muldiv <argn1>,<tag0.ModAr>,100>
-	local.fire = <muldiv <argn1>,<src.tag0.DamFire>,100> 
+	local.fire = <muldiv <argn1>,<src.tag0.DamFire>,100>
 	local.fire -= <muldiv <argn1>,<tag0.ResFire>,100>
 	local.cold = <muldiv <argn1>,<src.tag0.DamCold>,100>
 	local.cold -= <muldiv <argn1>,<tag0.ResCold>,100>
@@ -128,6 +155,23 @@ else
 	local.energy -= <muldiv <argn1>,<tag0.ResEnergy>,100>
 	argn1 = <eval <local.physical> + <local.fire> + <local.cold> + <local.poison> + <local.energy>>
 	argn2 |= dam_god
+	endif
+endif
+if <tag0.gothitbyspell>
+	if <def.scp.Combat_SpellBonus> == 1
+	local.damage = <r<serv.spell.<dtag.gothitbyspell>.effect>>
+	local.evalint = <eval (((<src.evaluatingintel>*3)/1000)+1)>
+	local.damageinc = <eval <src.int>/10>
+		if <src.inscription> >= 100.0
+		local.damageinc += 10
+		endif
+		if <def.scp.ItemProp_SpellDamageIncrease> == 1
+			if <src.tag0.SpellDamageIncrease>
+			local.damageinc += <qval (<src.tag.SpellDamageIncrease> > 15) ? 15 : <src.tag.SpellDamageIncrease>>
+			endif
+		endif
+	argn1 = <eval <local.damage>*<local.evalint>>
+	argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
 	endif
 endif
 

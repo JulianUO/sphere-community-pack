@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -26,6 +26,7 @@ scp.trap_3	"1003" // Explosion
 
 [typedef t_trapped]
 on=@dclick
+local.req = <strarg <serv.spell.<tag.trap.type>.skillreq>>
 if <def.scp.RemoveTraps_PassiveUse> == 1
 	if <src.removetrap> >= <local.req>
 	local.diff = <eval ((<local.req> - <src.removetrap>) * 2) + 50.0>
@@ -35,7 +36,7 @@ if <def.scp.RemoveTraps_PassiveUse> == 1
 		endif
 	endif
 endif
-src.spelleffect <tag0.type>,<tag0.level>,1
+src.spelleffect <tag0.trap.type>,<tag0.trap.level>,1
 return 1
 
 [eof]
