@@ -49,8 +49,7 @@ In the item section, we will separate the tags by type. Most of the tags (if not
 || TAG.SpellDamageIncrease || Increases the amount of damage spells inflict ||
 || TAG.StaminaIncrease || Increases your maximum stamina by the number of points on the item ||
 || TAG.StrengthBonus || Increases your Strength Stat by the number of points on the item ||
-|| TAG.SwingSpeedIncrease || Increases the base speed at which you swing your weapon.
-(Maximum swing speed = 1 swing per 1.25 seconds) ||
+|| TAG.SwingSpeedIncrease || Increases the base speed at which you swing your weapon ||
 || TAG.CraftingBonus || ||
 || TAG.CraftingExceptionalBonus || ||
 || TAG.UsesRemaining || ||
@@ -76,4 +75,4 @@ In the item section, we will separate the tags by type. Most of the tags (if not
 
 = NPC Tags =
 || *Name* || *Description* ||
-|| TAG.control.slots || Followers slots required to control this creature. Default is 1 unless this is set to something different. Setting negatives values will lead to undesired behavior ||
+|| TAG.Control.Slots || Followers slots required to control this creature. Default is 1 unless this is set to something different. Setting negatives values will lead to undesired behavior ||
