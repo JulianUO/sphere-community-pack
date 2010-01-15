@@ -2,6 +2,7 @@
 
  * [SCPDocument SCP Basic Documentation]
    * [SCPTag Tags]
+     * [Slayer Slayer Groups]
    * [SCPTrigger Triggers]
    * [SCPFunction Functions]
    * [SCPOverride Overrides]
