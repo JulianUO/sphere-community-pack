@@ -1,0 +1,64 @@
+#summary One-sentence summary of this page.
+#sidebar TableOfContents
+
+= TAG.Slayer =
+Slayer groups, used as defnames, bitmask. Pretty much easy to use, works as FLAGS. You will find some examples below of how to apply them to both weapons and npcs.<br>
+----
+
+== Weapons ==
+Weapons can hold two different tags: TAG.Slayer.Super and TAG.Slayer.Less<br>
+TAG.Slayer.Super is the Super Slayer tag, which when doing damage to the specified group in the tag does x2 damage.<br>
+TAG.Slayer.Less is the Lesser Slayer tag, which when doing damage to the specified group in the tag does x3 damage.<br>
+<br>
+Example of use:
+{{{
+TAG.Slayer.Super = SSLAYER_ELEMENTAL
+TAG.Slayer.Less = SLAYER_OGRE
+}}}
+----
+
+== NPCs ==
+NPCs just hold one tag: TAG.Slayer<br>
+It holds the lesser type it comes from, trying to be more precise, a Fire Elemental will only hold SLAYER_FIREELEM his tag, but it will be affected by weapons which hold SLAYER_FIREELEM and SSLAYER_ELEMENTAL.
+{{{
+TAG.Slayer = SLAYER_FIREELEM
+}}}
+----
+
+== Slayer Groups ==
+Complete list of Slayer groups:
+
+=== Lesser Slayers ===
+|| *Flag* || *Description* ||
+|| SLAYER_ORC || Orc Slayer ||
+|| SLAYER_OGRE || Ogre Slayer ||
+|| SLAYER_TROLL || Troll Slayer ||
+|| SLAYER_UNDEAD || Undead Slayer ||
+|| SLAYER_AIRELEM || Air Elemental Slayer ||
+|| SLAYER_BLOODELEM || Blood Elemental Slayer ||
+|| SLAYER_EARTHELEM || Earth Elemental Slayer ||
+|| SLAYER_POISONELEM || Poison Elemental Slayer ||
+|| SLAYER_SNOWELEM || Snow Elemental Slayer ||
+|| SLAYER_WATERELEM || Water Elemental Slayer ||
+|| SLAYER_FIREELEM || Fire Elemental ||
+|| SLAYER_GARGOYLE || Gargoyle Slayer ||
+|| SLAYER_SCORPION || Scorpion Slayer ||
+|| SLAYER_SPIDER || Spider Slayer ||
+|| SLAYER_TERATHAN || Terathan Slayer ||
+|| SLAYER_FEY || Fey Slayer ||
+|| SLAYER_DRAGON || Dragon Slayer ||
+|| SLAYER_LIZARDMAN || Lizardman Slayer ||
+|| SLAYER_OPHIDIAN || Ophidian Slayer ||
+|| SLAYER_SNAKE || Snake Slayer ||
+
+=== Super Slayers ===
+|| *Flag* || *Description* ||
+|| SSLAYER_REPOND || Repond = Orc + Ogre + Troll + Repond ||
+|| SSLAYER_UNDEAD || Undead = Undead ||
+|| SSLAYER_ELEMENTAL || Elemental = Fire + Air + Blood + Earth + Poison + Snow + Water + Elemental ||
+|| SSLAYER_DEMON || Demon = Demon + Gargoyle ||
+|| SSLAYER_ARACHNID || Arachnid = Scorpion + Spider + Terathan ||
+|| SSLAYER_FEY || Fey = Fey ||
+|| SSLAYER_REPTILE || Reptile = Dragon + Lizardman + Ophidian + Snake + Reptile ||
+
+
