@@ -44,7 +44,7 @@ In the item section, we will separate the tags by type. Most of the tags (if not
 || TAG.HitPointRegeneracion || Increases the rate at which you regain hit points. (0.1 hit point per second per hpr point) ||
 || TAG.SelfRepair || Has a chance of regaining durability each time it takes damage in the amount of the self repair ||
 || TAG.SkillBonus || ||
-|| TAG.[Slayer] || Weapons will do double damage against all creatures within a certain group ||
+|| [Slayer TAG.Slayer] || Weapons will do double damage against all creatures within a certain group ||
 || TAG.SpellChanneling || Allows the casting of magery spells while a weapon or shield is equipped ||
 || TAG.SpellDamageIncrease || Increases the amount of damage spells inflict ||
 || TAG.StaminaIncrease || Increases your maximum stamina by the number of points on the item ||
