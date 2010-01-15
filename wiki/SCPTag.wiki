@@ -6,50 +6,51 @@ In the item section, we will separate the tags by type. Most of the tags (if not
 
 === Magical Properties (TYPE: t_iprop) ===
 || *Name* || *Description* ||
-|| TAG.BestWeaponSkill || ||
-|| TAG.DamageIncrease || ||
-|| TAG.DefenseChanceIncrease || ||
-|| TAG.DexterityBonus || ||
+|| TAG.BestWeaponSkill || Substitutes the character's trained weapon skill for that normally required for the weapon type ||
+|| TAG.DamageIncrease || Increases the base damage you inflict with your weapon ||
+|| TAG.DefenseChanceIncrease || Increases your chance to dodge blows ||
+|| TAG.DexterityBonus || Increases your Dexterity Stat by the number of points on the item ||
 || TAG.EnhancePotion || ||
-|| TAG.FasterCastRecovery || ||
-|| TAG.FasterCasting || ||
-|| TAG.HitChanceIncrease || ||
+|| TAG.FasterCastRecovery || Shortens waiting time between casting spells by 0.25 second per point ||
+|| TAG.FasterCasting || Decreases the time required to cast Magery and Chivalry spells by 0.25 seconds per point ||
+|| TAG.HitChanceIncrease || Increases your chance to hit your opponents. ||
 || TAG.HitColdArea || ||
-|| TAG.HitDispel || ||
+|| TAG.HitDispel || Has a percentage chance on each hit to cast the magery spell dispel on any summoned creature ||
 || TAG.HitEnergyArea || ||
 || TAG.HitFireArea || ||
 || TAG.HitFireball || ||
 || TAG.HitHarm || ||
-|| TAG.HitLifeLeech || ||
+|| TAG.HitLifeLeech || On every successful hit, converts a percentage of the damage inflicted by the attack into hit points for the wielder ||
 || TAG.HitLightning || ||
-|| TAG.HitLowerAttack || ||
-|| TAG.HitLowerDefense || ||
+|| TAG.HitLowerAttack || Has a percentage chance on each hit to lower the hit chance of the target (HCI -25). Duration: 8 seconds, not cumulative ||
+|| TAG.HitLowerDefense || Has a percentage chance on each hit to lower the defensive capabilities of the target(DCI -25). Duration: 8 seconds, not cumulative ||
 || TAG.HitMagicArrow || ||
-|| TAG.HitManaLeech || ||
+|| TAG.HitManaLeech || On every successful hit, converts a percentage of the damage inflicted by the attack into mana points for the wielder ||
 || TAG.HitPhysicalArea || ||
 || TAG.HitPoisonArea || ||
-|| TAG.HitStaminaLeech || ||
-|| TAG.HitPointIncrease || ||
-|| TAG.IntelligenceBonus || ||
-|| TAG.LowerManaCost || ||
-|| TAG.LowerReagentCost || ||
-|| TAG.Luck || ||
-|| TAG.MageArmor || ||
-|| TAG.MageWeapon || ||
-|| TAG.ManaIncrease || ||
-|| TAG.ManaRegeneration || ||
-|| TAG.NightSight || ||
-|| TAG.ReflectPhysicalDamage || ||
-|| TAG.StaminaRegeneration || ||
-|| TAG.HitPointRegeneracion || ||
-|| TAG.SelfRepair || ||
+|| TAG.HitStaminaLeech || Has a percentage chance on each hit to convert 100% of the damage inflicted on the target into stamina for the wielder ||
+|| TAG.HitPointIncrease || Increases your maximum hit points by the number of points on the item ||
+|| TAG.IntelligenceBonus || Increases your Intelligence Stat by the number of points on the item ||
+|| TAG.LowerManaCost || Lowers the amount of mana needed to cast a spell or use a special move ||
+|| TAG.LowerReagentCost || Lowers the amount of reagents needed to cast spells, both magery and necromancy. 100% negates the need to carry reagents at all. Tithing points, though unused, are required to be available to cast Chivalry spells ||
+|| TAG.Luck || Potentially increases monster loot in 3 ways: number of items, number of properties, intensty of properties ||
+|| TAG.MageArmor || Negates impediments to both active and passive meditation from armor types that would normally block it ||
+|| TAG.MageWeapon || Allows magery skill to substute for the normal combat skill of the weapon. Special moves cannot be used via this substitution ||
+|| TAG.ManaIncrease || Increases your maximum mana by the number of points on the item ||
+|| TAG.ManaRegeneration || Increases the rate at which you regain mana. (0.1 point per second per point of MR) ||
+|| TAG.NightSight || Negates dark nights ||
+|| TAG.ReflectPhysicalDamage || Reflect Physical Damage will reflect a percentage of any physical damage that is inflicted on you back onto the one who inflicted it ||
+|| TAG.StaminaRegeneration || Increases the rate at which you regain stamina. (0.1 point per second per point of SR.) ||
+|| TAG.HitPointRegeneracion || Increases the rate at which you regain hit points. (0.1 hit point per second per hpr point) ||
+|| TAG.SelfRepair || Has a chance of regaining durability each time it takes damage in the amount of the self repair ||
 || TAG.SkillBonus || ||
-|| TAG.Slayer || ||
-|| TAG.SpellChanneling || ||
-|| TAG.SpellDamageIncrease || ||
-|| TAG.StaminaIncrease || ||
-|| TAG.StrengthBonus || ||
-|| TAG.SwingSpeedIncrease || ||
+|| TAG.Slayer || Weapons will do double damage against all creatures within a certain group ||
+|| TAG.SpellChanneling || Allows the casting of magery spells while a weapon or shield is equipped ||
+|| TAG.SpellDamageIncrease || Increases the amount of damage spells inflict ||
+|| TAG.StaminaIncrease || Increases your maximum stamina by the number of points on the item ||
+|| TAG.StrengthBonus || Increases your Strength Stat by the number of points on the item ||
+|| TAG.SwingSpeedIncrease || Increases the base speed at which you swing your weapon.
+(Maximum swing speed = 1 swing per 1.25 seconds) ||
 || TAG.CraftingBonus || ||
 || TAG.CraftingExceptionalBonus || ||
 || TAG.UsesRemaining || ||
