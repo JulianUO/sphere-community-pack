@@ -1,0 +1,13 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+// Fired on the player when it completes and escort
+// Should add Compassion points in here.
+[function f_compassion_escort]
+
+[eof]
