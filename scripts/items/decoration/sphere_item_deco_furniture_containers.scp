@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 [ITEMDEF 09a9]
@@ -113,6 +113,50 @@ DESCRIPTION=Wooden Shelf (Dark Wood) (Empty)
 
 [ITEMDEF 0a9e]
 DUPEITEM=0a9d
+
+[ITEMDEF 0e3c]
+DEFNAME=i_crate_lg
+TYPE=t_container
+TDATA2=044
+FLIP=1
+SKILLMAKE=CARPENTRY 47.3, t_carpentry
+RESOURCES=18 i_log
+WEIGHT=5
+DUPELIST=0e3d
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Wooden Crate (Large)
+
+[ITEMDEF 0e3d]
+DUPEITEM=0e3c
+
+[ITEMDEF 0e3e]
+DEFNAME=i_crate_md
+TYPE=t_container
+TDATA2=044
+FLIP=1
+SKILLMAKE=CARPENTRY 31.5, t_carpentry
+RESOURCES=15 i_log
+WEIGHT=3
+DUPELIST=0e3f
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Wooden Crate (Medium)
+
+[ITEMDEF 0e3f]
+DUPEITEM=0e3e
+
+[ITEMDEF 0e7f]
+DEFNAME=i_keg_small
+TYPE=T_CONTAINER
+TDATA2=03e
+FLIP=1
+SKILLMAKE=CARPENTRY 57.8,t_tinker_tools
+RESOURCES=1 i_barrel_tap, 1 i_barrel_hoops, 3 i_barrel_staves
+WEIGHT=5
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Keg
 
 [ITEMDEF 0280b]
 DEFNAME=i_chest_wooden_plain
@@ -323,11 +367,62 @@ TDATA4=96005F
 [ITEMDEF 0285e]
 DUPEITEM=0285d
 
+[ITEMDEF 02d05]
+DEFNAME=i_armoire_elven_simple
+TYPE=t_container
+NAME=Elven Armoire (Simple)
+TDATA2=04f
+FLIP=1
+SKILLMAKE=CARPENTRY 80.0, t_carpentry
+RESOURCES=60 i_log
+WEIGHT=25
+DUPELIST=02d06
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Elven Armoire (Simple)
+
+[ITEMDEF 02d06]
+DUPEITEM=02d05
+
+[ITEMDEF 02d07]
+DEFNAME=i_armoire_elven_fancy
+TYPE=t_container
+NAME=Elven Armoire (Fancy)
+TDATA2=04e
+FLIP=1
+SKILLMAKE=CARPENTRY 80.0, t_carpentry
+RESOURCES=60 i_log
+WEIGHT=25
+DUPELIST=02d08
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Elven Armoire (Fancy)
+
+[ITEMDEF 02d08]
+DUPEITEM=02d07
+
+[ITEMDEF 02def]
+DEFNAME=i_bookshelf_arcane
+TYPE=t_container
+NAME=Arcane Bookshelf
+TDATA2=04d
+FLIP=1
+SKILLMAKE=CARPENTRY 94.7, t_carpentry
+RESOURCES=80 i_log
+WEIGHT=25
+DUPELIST=02df0
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Arcane Bookshelf
+
+[ITEMDEF 02df0]
+DUPEITEM=02def
+
 [ITEMDEF 02df1]
 DEFNAME=i_chest_rarewood
 TYPE=t_container
 NAME=Rarewood Chest
-TDATA2=
+TDATA2=04a
 FLIP=1
 SKILLMAKE=CARPENTRY 80.0, t_carpentry
 RESOURCES=30 i_log
@@ -339,5 +434,38 @@ DESCRIPTION=Rarewood Chest
 
 [ITEMDEF 02df2]
 DUPEITEM=02df1
+
+[ITEMDEF 02df3]
+DEFNAME=i_box_decorative
+TYPE=t_normal
+NAME=Decorative Box
+FLIP=1
+SKILLMAKE=CARPENTRY 80.0, t_carpentry
+RESOURCES=25 i_log
+WEIGHT=25
+DUPELIST=02df4
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Decorative Box
+
+[ITEMDEF 02df4]
+DUPEITEM=02df3
+
+[ITEMDEF 04025]
+DEFNAME=i_chest_gargoyle
+TYPE=t_container
+NAME=Gargoyle Chest
+FLIP=1
+TDATA2=04b
+SKILLMAKE=CARPENTRY 80.0, t_carpentry
+RESOURCES=30 i_log
+WEIGHT=25
+DUPELIST=04026
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Gargoyle Chest
+
+[ITEMDEF 04026]
+DUPEITEM=04025
 
 [eof]

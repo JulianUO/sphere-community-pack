@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -12,7 +12,7 @@ VERSION=0.56b
 //
 // SCRIPT DOCUMENTATION
 // --------------------
-// Typedef for Item Properties. 
+// Typedef for Item Properties.
 // Based on EA.
 //
 // FORMULAS USED
@@ -64,7 +64,7 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_ManaRegeneration
 // scp.ItemProp_NightSight
 // *DONE* scp.ItemProp_ReflectPhysicalDamage
-// scp.ItemProp_StaminaRegeneration
+// *DONE* scp.ItemProp_StaminaRegeneration
 // *DONE* scp.ItemProp_HitPointRegeneracion
 // *DONE* scp.ItemProp_SelfRepair
 // *DONE* scp.ItemProp_SkillBonus
@@ -147,7 +147,10 @@ endif
 // Hit Point Generation increases value in the regeneration
 // Formula: (0.1 * intensity)
 if <def.scp.ItemProp_HitPointRegeneration> == 1
-tag0.override.regenval_0 = <eval 0.1 * <tag0.HitPointRegeneration>>
+tag0.override.regenval_0 = <eval 1 + <tag0.HitPointRegeneration>>
+endif
+if <def.scp.ItemProp_StaminaRegeneration> == 1
+tag0.override.regenval_2 = <eval 1 + <tag0.StaminaRegeneration>>
 endif
 // Mana Regeneration is more complicated, since we have to look at:
 // Passive/Active Meditation, Intelligence, Battle Focus, Equipment
@@ -203,7 +206,7 @@ endif
 if <def.scp.ItemProp_LowerReagentCost> == 1
 	if <argn3> == 2
 		if <argn1> < 200
-		f_LowerReagentCost_Reagents <argn1>	
+		f_LowerReagentCost_Reagents <argn1>
 		elif <argn1> > 600
 		return 2
 		else
@@ -239,7 +242,7 @@ local.fcast = <src.tag0.FasterCasting>
 		local.fcast = <min <tag0.FasterCasting>,4>
 		else
 		local.fcast = <getargv 3 <def.itemprop_07>>
-		endif	
+		endif
 	endif
 argn3 -= <local.fcast>
 	if <argn3> < 0
@@ -279,7 +282,7 @@ if <def.scp.ItemProp_Slayer> == 1
 			endif
 		endif
 	endif
-endif		
+endif
 if <def.scp.ItemProp_DamageIncrease> == 1
 	if <tag0.DamageIncrease>
 	local.tempbonus = <tag0.DamageIncrease>
@@ -321,7 +324,7 @@ on=@gethit
 // This three leech properties should be at the end of the trigger
 // AFTER the damage calcs are done. Since they work according to damage dealt.
 // Formula (for both) is: (damage * 0.4) - intensity
-if <def.scp.ItemProp_HitManaLeech> == 1 
+if <def.scp.ItemProp_HitManaLeech> == 1
 float.mtoleech = <floatval (<argn1> * 0.4) - <tag0.HitManaLeech>>
 mana += <feval <float.mtoleech>>
 	if <mana> > <maxmana>
