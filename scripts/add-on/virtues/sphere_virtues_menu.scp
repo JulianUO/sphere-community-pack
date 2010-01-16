@@ -63,8 +63,6 @@ virtcolor_21 0543
 virtcolor_22 0547
 virtcolor_23 061
 
-
-
 [dialog d_virtue_status]
 100,100
 page 0
@@ -91,26 +89,11 @@ button 180 100 1210 1210 1 0 5 // Valor
 button 180 129 1210 1210 1 0 6 // Honor
 button 180 159 1210 1210 1 0 7 // Justice
 button 180 189 1210 1210 1 0 8 // Honesty
-dhtmlgump 75 224 200 60 0 0 Click on a blue gem to view your status in that virtue.
+xmfhtmlgump 75 224 200 60 1052062 0 0 // Click on a blue gem to view your status in that virtue.
 
 [dialog d_virtue_status button]
-on=1
-dialog d_virtue_info,0 0
-on=2
-dialog d_virtue_info,0 1
-on=3
-dialog d_virtue_info,0 2
-on=4
-dialog d_virtue_info,0 3
-on=5
-dialog d_virtue_info,0 4
-on=6
-dialog d_virtue_info,0 5
-on=7
-dialog d_virtue_info,0 6
-on=8
-dialog d_virtue_info,0 7
-
+on=1 8
+sdialog d_virtue_info,0 <eval (<argn1> - 1)>
 
 [dialog d_virtue_info]
 100,100
@@ -122,51 +105,16 @@ gumppic 47 217 2081
 gumppic 47 267 2083
 gumppic 70 217 2091
 
-local.virtue=<tag0.virtue_<dargs>>
-local.virtuemax=<tag0.virtuemax_<dargs>>
-if (<local.virtue> < 1)
-local.yazi = 1052044 // You have not started on the path of this Virtue.
-elif (<local.virtue> < <eval <tag0.virtuemax_<dargs>>/6>)
-local.yazi = 1052045 // You have barely begun your journey through the path of this Virtue.
-elif (<local.virtue> < <eval <tag0.virtuemax_<dargs>>/3>)
-local.yazi = 1052046 // You have progressed in this Virtue, but still have much to do.
-elif (<local.virtue> < <eval <tag0.virtuemax_<dargs>>/2>)
-local.yazi = 1052047 // Your journey through the path of this Virtue is going well.
-elif (<local.virtue> < <eval 2*<tag0.virtuemax_<dargs>>/3>)
-local.yazi = 1052048 // You feel very close to achieving your next path in this Virtue.
-elif (<local.virtue> < <eval 5*<tag0.virtuemax_<dargs>>/6>)
-local.yazi = 1052049 // You have achieved a path in this Virtue.
-else
-local.yazi = 1052050 // You have achieved the highest path in this Virtue.
-endif
-// local.sayi is calculation for blue gem count. max 10 blue gem.
-local.sayi=0
-if <tag0.virtue_<dargs>> < 4000
-local.sayi = <eval <tag0.virtue_<dargs>> / 400>
-elif <tag0.virtue_<dargs>> < 10000 )
-local.sayi = <eval (<tag0.virtue_<dargs>> - 4000) / 600>
-elif <tag0.virtue_<dargs>> < <tag0.virtuemax_<dargs>> )
-local.sayi = <eval (<tag0.virtue_<dargs>> - 10000) / ((<tag0.virtuemax_<dargs>>-10000)/10)>
-else
-
-local.sayi = 10
-endif
-local.i=0
-for 0 10
-if (<local.i> < 10)
-local.i += 1
-endif
-gumppic <eval 95 + (<dlocal.i>*17)> 50 <qval (<dlocal.i> <= <local.sayi>) ? 2362 : 2360>
+for 10
+gumppic <eval 95 + (<dlocal._for>*17)> 50 <qval (<dlocal._for> <= <maxbluegems <args>>) ? 2362 : 2360>
 endfor
 xmfhtmlgump 157 73 200 40 <eval 1051000 + <args>> 0 0
 xmfhtmlgump 75 95 220 143 <ddef.virtue_<dargs>_description> 0 0
-xmfhtmlgump 70 224 229 60 <dlocal.yazi> 0 0   // progress in the virtue.
+xmfhtmlgump 70 224 229 60 <getvirtuestatus <args>> 0 0   // progress in the virtue.
 
 [dialog d_virtue_info button]
 on=0
-dialogclose d_virtue_info
 sdialog d_virtue_status
-
 
 [dialog d_virtue_main]
 80,80
@@ -192,38 +140,4 @@ endif
 on=1
 dialog d_virtue_status
 
-
-////TEST VALOR CODE.
-
-[function f_valor_target]
-obj=<argo.uid>
-if (<src.uid>==<obj.uid>)
-if (<src.tag0.virtue_4> < 20000)
-src.sysmessage You must be Knight of Valor to do this.
-return 1
-endif
-forchars 16
-if !(<isplayer>)
-flee
-flee
-emote flee from battle
-endif
-endfor
-src.losevirtue 4,6000
-endif
-if (<src.tag0.virtue_4> < 4000)
-src.sysmessage You must be at least Seeker of Valor to do this.
-return 1
-endif
-if (<obj.isplayer>)
-src.sysmessage Players don't flee.
-return 1
-endif
-if (<obj.npc>)
-obj.flee
-obj.flee
-obj.emote flee from battle
-src.losevirtue 4,3000
-return 1
-endif
-
+[eof]
