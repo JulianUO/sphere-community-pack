@@ -16,6 +16,7 @@
    * [SCPTreasure Treasure Hunting]
    * [SCPHouseVendor House & Vendor System]
    * [SCPDoom Doom Dungeon]
+   * [SCPVirtues Virtues]
    * [SCPOtherSys Other Systems]
  * [SphereDocument Sphere Documentation]
    * [SphereAnims NPCs Animations]
