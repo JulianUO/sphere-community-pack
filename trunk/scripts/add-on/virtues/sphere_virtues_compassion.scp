@@ -9,5 +9,7 @@ VERSION=0.56b
 // Fired on the player when it completes and escort
 // Should add Compassion points in here.
 [function f_compassion_escort]
+GainVirtue 2,200  // as i checked in RuO codes it gives 200
+
 
 [eof]
