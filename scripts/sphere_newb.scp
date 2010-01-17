@@ -64,7 +64,7 @@ ITEMNEWBIE=i_BOTTLE_EMPTY,4
 ITEMNEWBIE={ i_reag_black_pearl 1 i_reag_blood_moss 1 },3
 ITEMNEWBIE={ i_reag_garlic 1 i_reag_ginseng 1 },3
 ITEMNEWBIE={ i_reag_mandrake_root 1 i_reag_nightshade 1 },3
-ITEMNEWBIE={ i_reag_spider_silk 1 i_reag_sulphur_ash 1 },3
+ITEMNEWBIE={ i_reag_spider_silk 1 i_reag_sulfur_ash 1 },3
 ITEMNEWBIE=i_robe
 COLOR=colors_red
 
