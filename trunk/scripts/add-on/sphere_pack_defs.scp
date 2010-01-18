@@ -3,13 +3,13 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
 // --------------
 // SphereCommunityPack - All the script.
-// 
+//
 // SCRIPT DOCUMENTATION
 // --------------------
 // Default lists, something like "small" settings.
@@ -52,7 +52,7 @@ spell.210.tithing				"20" // Sacred Journey
 [DEFNAME COLORS_SCP]
 colors_gargoyle		{1755 1779}
 colors_horn		{1801 1 1803 1 1805 1 1807 1 1809 1 1891 1 1893 1 1896 1 1899 1 1779 1 1777 1 1775 1 1764 1 1762 1 1760 1}
- 
+
 [DEFNAME DIALOG_COLORS]
 dcolor_white					16777215
 dcolor_red						15540260
@@ -62,16 +62,16 @@ color_o_sos_tile				0
 color_o_sos_ancient				0
 
 [DEFNAME COLOR_LOG]
-color_o_log						0
-color_o_oak						07da
-color_o_ash						04a7
-color_o_yew						04a8
+color_o_log					0
+color_o_oak					07da
+color_o_ash					04a7
+color_o_yew					04a8
 color_o_heartwood				04a9
 color_o_bloodwood				04aa
 color_o_frostwood				047f
 
 [DEFNAME COLOR_ORE]
-color_o_iron					0763 //option: 0
+color_o_iron					0 //option: 0763
 color_o_dull_copper				060a
 color_o_shadow					0770
 color_o_copper					0641 //option: 060c
@@ -113,24 +113,24 @@ snd_spell_spell_trigger			1626
 snd_spell_stone_form			1627
 
 [DEFNAME SA_GARGOYLE_SOUND]
-snd_gargoyle_female_a			1525 
+snd_gargoyle_female_a			1525
 snd_gargoyle_female_d			1526
-snd_gargoyle_female_h			1527 
+snd_gargoyle_female_h			1527
 snd_gargoyle_female_n			1528
-snd_gargoyle_male_a				1529 
+snd_gargoyle_male_a				1529
 snd_gargoyle_male_d				1530
-snd_gargoyle_male_h				1531 
+snd_gargoyle_male_h				1531
 snd_gargoyle_male_n				1532
 
 [DEFNAME SA_MONSTER_SOUND]
-snd_monster_medusa_a			1555 
-snd_monster_medusa_d			1556 
-snd_monster_medusa_h			1557 
+snd_monster_medusa_a			1555
+snd_monster_medusa_d			1556
+snd_monster_medusa_h			1557
 snd_monster_medusa_n			1558
 snd_monster_rotworm_a			1579
 snd_monster_rotworm_d			1580
 snd_monster_rotworm_h			1581
-snd_monster_rotworm_n			1582 
+snd_monster_rotworm_n			1582
 snd_monster_slasher_of_veils_a	1587
 snd_monster_slasher_of_veils_d	1588
 snd_monster_slasher_of_veils_h	1589
@@ -141,17 +141,17 @@ snd_monster_stygian_dragon_h	1601
 snd_monster_stygian_dragon_n	1602
 
 [DEFNAME MISC_SOUNDS]
-snd_quest_abandon				1460 
+snd_quest_abandon				1460
 snd_quest_accept				1461
-snd_quest_complete				1462 
-snd_quest_update				1463 
+snd_quest_complete				1462
+snd_quest_update				1463
 snd_virtuecards_add_remove		1466
 snd_virtuecards_rightcombo		1467
 snd_virtuecards_wrongcombo		1468
-snd_gargoyle_pluck				1489 
+snd_gargoyle_pluck				1489
 snd_imbue						1490
 snd_throw_h						1491
-snd_throw_m						1491 
+snd_throw_m						1491
 snd_mysticism					1619
 
 [DEFNAME NOTO_FLAGS]
