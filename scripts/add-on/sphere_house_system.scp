@@ -26,7 +26,7 @@ VERSION=0.56b
 // The owner of the house can manage the house access list, giving access to others player on
 // some functions, doors and items inside the house.
 //
-// Players on house access list can use some commands to interact with the house: 
+// Players on house access list can use some commands to interact with the house:
 // -I wish to lock this down		//Lock an item on house ground.
 // -I wish to secure this		//Lock an item on house ground and set a minimum required house access to use it.
 // -I wish to release this		//Unlock an item that is locked or secured.
@@ -385,6 +385,9 @@ return 1
 
 [FUNCTION HouseCheckPlacement]
 REF1=<LINK.MORE1>	//Owner
+if !<ref1.uid>
+return 1
+endif
 REF1.HouseRemoveKeys
 IF (<LINK.HouseCheckNearArea>)
   REF1.SYSMESSAGE @,,1 The house could not be created here.  Either something is blocking the house, or the house would not be on valid terrain.
@@ -585,7 +588,7 @@ button 150 10 4006 4007 1 0 1
 dtext 195 10 5 INFORMATION
 
 page 1
-dtext 20 130 1152 Owned By: 
+dtext 20 130 1152 Owned By:
 dtext 210 130 1152 <UID.<MORE2>.NAME>
 dtext 20 170 <QVAL (<TAG0.DEMOLITION_PENDING>)? 37 This house is improperly:5 This house is properly> placed.
 dtext 20 190 5 This house is of modern design.
@@ -1433,7 +1436,7 @@ LOCAL.SIGN=2968
 LOCAL.SIGN += <eval (<ARGN>-70)*2>
 REF1=<UID>
 FORITEMS 30
- IF (<REGION.UID>==<REF1.REGION.UID>)  
+ IF (<REGION.UID>==<REF1.REGION.UID>)
   IF (<DISPIDDEC> >= 2968) && (<DISPIDDEC> <= 2978) && (<LINK>==<REGION.UID>)
    DISPID=<dLOCAL.SIGN>
    UPDATEX
