@@ -32,10 +32,10 @@ PAGE 0
 gumppic 30 30 102
 xmfhtmlgump 95 100 120 100 1060198 0 0 //May your wealth bring blessings to those in need, if tithed upon this most sacred site.
 local.gold = <src.rescount i_gold>
-if <ctag0.offer> > <local.gold>
-ctag0.offer = <local.gold>
-elif <ctag0.offer> < 0
-ctag0.offer = 0
+if <src.ctag0.offer> > <local.gold>
+src.ctag0.offer = <local.gold>
+elif <src.ctag0.offer> < 0
+src.ctag0.offer = 0
 endif
 dtext 57 274 0 Gold:
 dtext 87 274 53 <EVAL <LOCAL.GOLD>-<SRC.CTAG0.OFFER>>
