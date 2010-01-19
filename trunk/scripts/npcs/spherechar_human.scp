@@ -3146,7 +3146,6 @@ SUBSECTION=Religious
 DESCRIPTION=Priest (male)
 
 ON=@Create
-	f_pat_random
 	COLOR=colors_skin
 	STR={41 55}
 	DEX={51 65}
@@ -3189,7 +3188,6 @@ SUBSECTION=Religious
 DESCRIPTION=Priestess (female)
 
 ON=@Create
-	f_pat_random
 	COLOR=colors_skin
 	STR={41 55}
 	DEX={51 65}
@@ -4854,7 +4852,7 @@ ON=@NPCRestock
 	ITEM=random_coin_purse
 	ITEM=random_upper_scroll
 	ITEM=random_upper_scroll
-	
+
 
 [CHARDEF 0497]
 DEFNAME=C_H_EVILMAGE_F
@@ -5611,7 +5609,7 @@ TEVENTS=e_Human_Environ
 CATEGORY=Civilized
 SUBSECTION=Tradesmen
 DESCRIPTION=Tinker (male)
-	
+
 ON=@Create
 	NPC=brain_vendor
 	COLOR=colors_skin
@@ -7803,7 +7801,7 @@ TEVENTS=e_Human_Environ
 CATEGORY=Civilized
 SUBSECTION=Tradesmen
 DESCRIPTION=Armorer (male)
-	
+
 ON=@Create
 	NPC=brain_vendor
 	COLOR=colors_skin
@@ -9127,7 +9125,7 @@ ON=@NPCRestock
 	SELL=VENDOR_S_MAGIC_WEAPONS
 	BUY=VENDOR_B_WEAPONS_BLADED
 	BUY=VENDOR_S_MAGIC_WEAPONS
-	
+
 
 [CHARDEF 0577]
 DEFNAME=C_H_WEAPONSMITH_BLADE_F
