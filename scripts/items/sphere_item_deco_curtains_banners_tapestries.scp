@@ -74,7 +74,7 @@ DUPEITEM=0980
 DEFNAME=i_tapestry
 RESOURCES=1 i_cloth_bolt, 2 I_DYES, 1 I_LOG, 1 I_ROPE
 WEIGHT=8
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 01 (01/02) (N)
 DUPELIST=0eab
@@ -82,7 +82,7 @@ DUPELIST=0eab
 [ITEMDEF 0eab]
 //tapestry
 DUPEITEM=0eaa
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 01 (02/02) (N)
 
@@ -91,7 +91,7 @@ DESCRIPTION=Tapestry 01 (02/02) (N)
 DEFNAME=i_tapestry_2
 RESOURCES=1 i_cloth_bolt, 2 I_DYES, 1 I_LOG, 1 I_ROPE
 WEIGHT=8
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 02 (01/02) (N)
 DUPELIST=0ead
@@ -99,7 +99,7 @@ DUPELIST=0ead
 [ITEMDEF 0ead]
 //tapestry
 DUPEITEM=0eac
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 02 (02/02) (N)
 
@@ -108,7 +108,7 @@ DESCRIPTION=Tapestry 02 (02/02) (N)
 DEFNAME=i_tapestry_3
 RESOURCES=1 i_cloth_bolt, 2 I_DYES, 1 I_LOG, 1 I_ROPE
 WEIGHT=8
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 03 (01/02) (W)
 DUPELIST=0eaf
@@ -116,7 +116,7 @@ DUPELIST=0eaf
 [ITEMDEF 0eaf]
 //tapestry
 DUPEITEM=0eae
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 03 (02/02) (W)
 
@@ -124,7 +124,7 @@ DESCRIPTION=Tapestry 03 (02/02) (W)
 DEFNAME=i_tapestry_4_n
 RESOURCES=1 I_LOG, 12 I_CLOTH, 1 I_THREAD
 WEIGHT=14
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 04 (01/02) (N)
 DUPELIST=0fd6
@@ -132,7 +132,7 @@ DUPELIST=0fd6
 [ITEMDEF 0fd6]
 //tapestry 4 n PART 2
 DUPEITEM=0FD5
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 04 (02/02) (N)
 
@@ -140,7 +140,7 @@ DESCRIPTION=Tapestry 04 (02/02) (N)
 DEFNAME=i_tapestry_4_w
 RESOURCES=1 I_LOG, 12 I_CLOTH, 1 I_THREAD
 WEIGHT=14
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 04 (01/02) (W)
 DUPELIST=0fd8
@@ -148,7 +148,7 @@ DUPELIST=0fd8
 [ITEMDEF 0fd8]
 //tapestry 4 W PART 2
 DUPEITEM=0FD7
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 04 (02/02) (W)
 
@@ -156,7 +156,7 @@ DESCRIPTION=Tapestry 04 (02/02) (W)
 DEFNAME=i_tapestry_5_n
 RESOURCES=1 I_LOG, 12 I_CLOTH, 1 I_THREAD
 WEIGHT=14
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 05 (01/02) (N)
 DUPELIST=0fda
@@ -164,7 +164,7 @@ DUPELIST=0fda
 [ITEMDEF 0fda]
 //tapestry 5 N PART 2
 DUPEITEM=0FD9
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 05 (02/02) (N)
 
@@ -172,7 +172,7 @@ DESCRIPTION=Tapestry 05 (02/02) (N)
 DEFNAME=i_tapestry_5_w
 RESOURCES=1 I_LOG, 12 I_CLOTH, 1 I_THREAD
 WEIGHT=14
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 05 (01/02) (W)
 DUPELIST=0fdc
@@ -180,7 +180,7 @@ DUPELIST=0fdc
 [ITEMDEF 0fdc]
 //tapestry 5 W PART 2
 DUPEITEM=0FDB
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 05 (02/02) (W)
 
@@ -188,7 +188,7 @@ DESCRIPTION=Tapestry 05 (02/02) (W)
 DEFNAME=i_tapestry_6_n
 RESOURCES=1 I_LOG, 12 I_CLOTH, 1 I_THREAD
 WEIGHT=14
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 06 (01/02) (N)
 DUPELIST=0fde
@@ -196,7 +196,7 @@ DUPELIST=0fde
 [ITEMDEF 0fde]
 //tapestry 6 N PART 2
 DUPEITEM=0FDD
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 06 (02/02) (N)
 
@@ -204,7 +204,7 @@ DESCRIPTION=Tapestry 06 (02/02) (N)
 DEFNAME=i_tapestry_6_w
 RESOURCES=1 I_LOG, 12 I_CLOTH, 1 I_THREAD
 WEIGHT=14
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 06 (01/02) (W)
 DUPELIST=0fe0
@@ -212,7 +212,7 @@ DUPELIST=0fe0
 [ITEMDEF 0fe0]
 //tapestry 6 W PART 2
 DUPEITEM=0FDF
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 06 (02/02) (W)
 
@@ -220,7 +220,7 @@ DESCRIPTION=Tapestry 06 (02/02) (W)
 DEFNAME=i_tapestry_7_n
 RESOURCES=1 I_LOG, 12 I_CLOTH, 1 I_THREAD
 WEIGHT=14
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 07 (01/02) (N)
 DUPELIST=0fe2
@@ -228,7 +228,7 @@ DUPELIST=0fe2
 [ITEMDEF 0fe2]
 //tapestry 7 N PART 2
 DUPEITEM=0FE1
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 07 (02/02) (N)
 
@@ -236,7 +236,7 @@ DESCRIPTION=Tapestry 07 (02/02) (N)
 DEFNAME=i_tapestry_7_w
 RESOURCES=1 I_LOG, 12 I_CLOTH, 1 I_THREAD
 WEIGHT=14
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 07 (01/02) (W)
 DUPELIST=0fe4
@@ -244,7 +244,7 @@ DUPELIST=0fe4
 [ITEMDEF 0fe4]
 //tapestry 7 W PART 2
 DUPEITEM=0FE3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 07 (02/02) (W)
 
@@ -431,7 +431,7 @@ DUPEITEM=01638
 DEFNAME=i_banner_1_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 01
 
@@ -439,7 +439,7 @@ DESCRIPTION=Banner 01
 DEFNAME=i_banner_1_part_2
 RESOURCES=1 i_LOG, 2 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 01
 
@@ -447,7 +447,7 @@ DESCRIPTION=Banner 01
 DEFNAME=i_banner_1_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 01
 
@@ -455,7 +455,7 @@ DESCRIPTION=Banner 01
 DEFNAME=i_banner_2_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 02
 
@@ -463,7 +463,7 @@ DESCRIPTION=Banner 02
 DEFNAME=i_banner_2_part_2
 RESOURCES=1 i_LOG, 2 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 02
 
@@ -471,7 +471,7 @@ DESCRIPTION=Banner 02
 DEFNAME=i_banner_2_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 02
 
@@ -479,7 +479,7 @@ DESCRIPTION=Banner 02
 DEFNAME=i_banner_3_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 03
 
@@ -487,7 +487,7 @@ DESCRIPTION=Banner 03
 DEFNAME=i_banner_3_part_2
 RESOURCES=1 i_LOG, 2 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 03
 
@@ -495,7 +495,7 @@ DESCRIPTION=Banner 03
 DEFNAME=i_banner_3_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 03
 
@@ -503,7 +503,7 @@ DESCRIPTION=Banner 03
 DEFNAME=i_banner_hanger_ne
 RESOURCES=1 i_BOARD, 1 i_NAILS
 WEIGHT=1
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner Hanger
 
@@ -511,7 +511,7 @@ DESCRIPTION=Banner Hanger
 DEFNAME=i_banner_4_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 04
 
@@ -519,7 +519,7 @@ DESCRIPTION=Banner 04
 DEFNAME=i_banner_4_part_2
 RESOURCES=1 i_LOG, 2 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 04
 
@@ -527,7 +527,7 @@ DESCRIPTION=Banner 04
 DEFNAME=i_banner_5_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 05
 
@@ -535,7 +535,7 @@ DESCRIPTION=Banner 05
 DEFNAME=i_banner_5_part_2
 RESOURCES=1 i_LOG, 2 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 05
 
@@ -543,7 +543,7 @@ DESCRIPTION=Banner 05
 DEFNAME=i_banner_6_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 06
 
@@ -551,7 +551,7 @@ DESCRIPTION=Banner 06
 DEFNAME=i_banner_6_part_2
 RESOURCES=1 i_LOG, 2 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 06
 
@@ -559,7 +559,7 @@ DESCRIPTION=Banner 06
 DEFNAME=i_banner_6_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 06
 
@@ -567,7 +567,7 @@ DESCRIPTION=Banner 06
 DEFNAME=i_banner_7_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 07
 
@@ -575,7 +575,7 @@ DESCRIPTION=Banner 07
 DEFNAME=i_banner_8_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 08
 
@@ -583,7 +583,7 @@ DESCRIPTION=Banner 08
 DEFNAME=i_banner_8_part_2
 RESOURCES=1 i_LOG, 1 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 08
 
@@ -591,7 +591,7 @@ DESCRIPTION=Banner 08
 DEFNAME=i_banner_7_part_2
 RESOURCES=1 i_LOG, 1 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 07
 
@@ -599,7 +599,7 @@ DESCRIPTION=Banner 07
 DEFNAME=i_banner_7_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 07
 
@@ -607,7 +607,7 @@ DESCRIPTION=Banner 07
 DEFNAME=i_banner_8_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 08
 
@@ -615,7 +615,7 @@ DESCRIPTION=Banner 08
 DEFNAME=i_banner_9_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 09
 
@@ -623,7 +623,7 @@ DESCRIPTION=Banner 09
 DEFNAME=i_banner_9_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 09
 
@@ -631,7 +631,7 @@ DESCRIPTION=Banner 09
 DEFNAME=i_banner_10_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 10
 
@@ -639,7 +639,7 @@ DESCRIPTION=Banner 10
 DEFNAME=i_banner_10_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 10
 
@@ -647,7 +647,7 @@ DESCRIPTION=Banner 10
 DEFNAME=i_banner_11_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 11
 
@@ -655,7 +655,7 @@ DESCRIPTION=Banner 11
 DEFNAME=i_banner_11_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 11
 
@@ -663,7 +663,7 @@ DESCRIPTION=Banner 11
 DEFNAME=i_banner_12_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 12
 
@@ -671,7 +671,7 @@ DESCRIPTION=Banner 12
 DEFNAME=i_banner_12_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 12
 
@@ -679,7 +679,7 @@ DESCRIPTION=Banner 12
 DEFNAME=i_banner_13_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 13
 
@@ -687,7 +687,7 @@ DESCRIPTION=Banner 13
 DEFNAME=i_banner_13_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 13
 
@@ -695,7 +695,7 @@ DESCRIPTION=Banner 13
 DEFNAME=i_banner_14_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 14
 
@@ -703,7 +703,7 @@ DESCRIPTION=Banner 14
 DEFNAME=i_banner_14_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 14
 
@@ -711,7 +711,7 @@ DESCRIPTION=Banner 14
 DEFNAME=i_banner_15_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 15
 
@@ -719,7 +719,7 @@ DESCRIPTION=Banner 15
 DEFNAME=i_banner_15_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 15
 
@@ -727,7 +727,7 @@ DESCRIPTION=Banner 15
 DEFNAME=i_banner_post_1_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 01
 
@@ -735,7 +735,7 @@ DESCRIPTION=Post Banner 01
 DEFNAME=i_banner_post_1_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 01
 
@@ -743,7 +743,7 @@ DESCRIPTION=Post Banner 01
 DEFNAME=i_banner_post_2_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 02
 
@@ -751,7 +751,7 @@ DESCRIPTION=Post Banner 02
 DEFNAME=i_banner_post_2_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 02
 
@@ -759,7 +759,7 @@ DESCRIPTION=Post Banner 02
 DEFNAME=i_banner_post_3_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 03
 
@@ -767,7 +767,7 @@ DESCRIPTION=Post Banner 03
 DEFNAME=i_banner_post_3_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 03
 
@@ -775,7 +775,7 @@ DESCRIPTION=Post Banner 03
 DEFNAME=i_banner_post_4_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 04
 
@@ -783,7 +783,7 @@ DESCRIPTION=Post Banner 04
 DEFNAME=i_banner_post_4_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 04
 
@@ -791,7 +791,7 @@ DESCRIPTION=Post Banner 04
 DEFNAME=i_banner_post_5_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 05
 
@@ -799,7 +799,7 @@ DESCRIPTION=Post Banner 05
 DEFNAME=i_banner_post_5_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 05
 
@@ -807,7 +807,7 @@ DESCRIPTION=Post Banner 05
 DEFNAME=i_banner_post_6_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 06
 
@@ -815,7 +815,7 @@ DESCRIPTION=Post Banner 06
 DEFNAME=i_banner_post_6_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 06
 
@@ -823,7 +823,7 @@ DESCRIPTION=Post Banner 06
 DEFNAME=i_banner_post_7_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 07
 
@@ -831,7 +831,7 @@ DESCRIPTION=Post Banner 07
 DEFNAME=i_banner_post_7_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 07
 
@@ -839,7 +839,7 @@ DESCRIPTION=Post Banner 07
 DEFNAME=i_banner_post_8_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 08
 
@@ -847,7 +847,7 @@ DESCRIPTION=Post Banner 08
 DEFNAME=i_banner_post_8_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 08
 
@@ -855,7 +855,7 @@ DESCRIPTION=Post Banner 08
 DEFNAME=i_banner_post_9_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 09
 
@@ -863,7 +863,7 @@ DESCRIPTION=Post Banner 09
 DEFNAME=i_banner_post_9_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 09
 
@@ -871,7 +871,7 @@ DESCRIPTION=Post Banner 09
 DEFNAME=i_banner_post_10_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 10
 
@@ -879,7 +879,7 @@ DESCRIPTION=Post Banner 10
 DEFNAME=i_banner_post_10_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 10
 
@@ -887,7 +887,7 @@ DESCRIPTION=Post Banner 10
 DEFNAME=i_banner_post_11_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 11
 
@@ -895,7 +895,7 @@ DESCRIPTION=Post Banner 11
 DEFNAME=i_banner_post_11_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 11
 
@@ -903,7 +903,7 @@ DESCRIPTION=Post Banner 11
 DEFNAME=i_banner_post_12_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 12
 
@@ -911,7 +911,7 @@ DESCRIPTION=Post Banner 12
 DEFNAME=i_banner_post_12_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 12
 
@@ -919,7 +919,7 @@ DESCRIPTION=Post Banner 12
 DEFNAME=i_banner_post_13_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 13
 
@@ -927,7 +927,7 @@ DESCRIPTION=Post Banner 13
 DEFNAME=i_banner_post_13_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 13
 
@@ -935,7 +935,7 @@ DESCRIPTION=Post Banner 13
 DEFNAME=i_banner_post_14_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 14
 
@@ -943,7 +943,7 @@ DESCRIPTION=Post Banner 14
 DEFNAME=i_banner_post_14_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 14
 
@@ -951,7 +951,7 @@ DESCRIPTION=Post Banner 14
 DEFNAME=i_banner_post_15_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 15
 
@@ -959,7 +959,7 @@ DESCRIPTION=Post Banner 15
 DEFNAME=i_banner_post_15_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 15
 
@@ -967,7 +967,7 @@ DESCRIPTION=Post Banner 15
 DEFNAME=i_banner_post_16_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 16
 
@@ -975,7 +975,7 @@ DESCRIPTION=Post Banner 16
 DEFNAME=i_banner_post_16_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 16
 
@@ -983,7 +983,7 @@ DESCRIPTION=Post Banner 16
 DEFNAME=i_banner_post_17_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 17
 
@@ -991,7 +991,7 @@ DESCRIPTION=Post Banner 17
 DEFNAME=i_banner_post_17_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 17
 
@@ -999,7 +999,7 @@ DESCRIPTION=Post Banner 17
 DEFNAME=i_banner_post_18_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 18
 
@@ -1007,7 +1007,7 @@ DESCRIPTION=Post Banner 18
 DEFNAME=i_banner_post_18_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 18
 
@@ -1015,7 +1015,7 @@ DESCRIPTION=Post Banner 18
 DEFNAME=i_banner_post_19_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 19
 
@@ -1023,7 +1023,7 @@ DESCRIPTION=Post Banner 19
 DEFNAME=i_banner_post_19_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 19
 
@@ -1031,7 +1031,7 @@ DESCRIPTION=Post Banner 19
 DEFNAME=i_banner_post_20_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 20
 
@@ -1039,7 +1039,7 @@ DESCRIPTION=Post Banner 20
 DEFNAME=i_banner_post_20_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 20
 
@@ -1047,7 +1047,7 @@ DESCRIPTION=Post Banner 20
 DEFNAME=i_banner_post_21_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 21
 
@@ -1055,7 +1055,7 @@ DESCRIPTION=Post Banner 21
 DEFNAME=i_banner_post_21_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 21
 
@@ -1063,7 +1063,7 @@ DESCRIPTION=Post Banner 21
 DEFNAME=i_banner_post_22_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 22
 
@@ -1071,7 +1071,7 @@ DESCRIPTION=Post Banner 22
 DEFNAME=i_banner_post_22_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 22
 
@@ -1079,7 +1079,7 @@ DESCRIPTION=Post Banner 22
 DEFNAME=i_banner_post_23_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 23
 
@@ -1087,7 +1087,7 @@ DESCRIPTION=Post Banner 23
 DEFNAME=i_banner_post_23_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 23
 
@@ -1095,7 +1095,7 @@ DESCRIPTION=Post Banner 23
 DEFNAME=i_banner_post_24_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 24
 
@@ -1103,7 +1103,7 @@ DESCRIPTION=Post Banner 24
 DEFNAME=i_banner_post_24_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 24
 
@@ -1111,7 +1111,7 @@ DESCRIPTION=Post Banner 24
 DEFNAME=i_banner_post_25_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 25
 
@@ -1119,7 +1119,7 @@ DESCRIPTION=Post Banner 25
 DEFNAME=i_banner_post_25_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 25
 
@@ -1127,7 +1127,7 @@ DESCRIPTION=Post Banner 25
 DEFNAME=i_banner_post_26_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 26
 
@@ -1135,7 +1135,7 @@ DESCRIPTION=Post Banner 26
 DEFNAME=i_banner_post_26_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 26
 
@@ -1143,7 +1143,7 @@ DESCRIPTION=Post Banner 26
 DEFNAME=i_banner_post_27_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 27
 
@@ -1151,7 +1151,7 @@ DESCRIPTION=Post Banner 27
 DEFNAME=i_banner_post_27_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 27
 
@@ -1159,7 +1159,7 @@ DESCRIPTION=Post Banner 27
 DEFNAME=i_banner_post_28_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 28
 
@@ -1167,7 +1167,7 @@ DESCRIPTION=Post Banner 28
 DEFNAME=i_banner_post_28_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 28
 
@@ -1175,7 +1175,7 @@ DESCRIPTION=Post Banner 28
 DEFNAME=i_banner_post_29_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 29
 
@@ -1183,7 +1183,7 @@ DESCRIPTION=Post Banner 29
 DEFNAME=i_banner_post_29_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 29
 
@@ -1191,7 +1191,7 @@ DESCRIPTION=Post Banner 29
 DEFNAME=i_banner_post_30_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 30
 
@@ -1199,7 +1199,7 @@ DESCRIPTION=Post Banner 30
 DEFNAME=i_banner_post_30_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 30
 
@@ -1207,7 +1207,7 @@ DESCRIPTION=Post Banner 30
 DEFNAME=i_banner_post_31_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 31
 
@@ -1215,7 +1215,7 @@ DESCRIPTION=Post Banner 31
 DEFNAME=i_banner_post_31_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 31
 
@@ -1223,7 +1223,7 @@ DESCRIPTION=Post Banner 31
 DEFNAME=i_banner_post_32_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 32
 
@@ -1231,7 +1231,7 @@ DESCRIPTION=Post Banner 32
 DEFNAME=i_banner_post_32_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 32
 
@@ -1239,7 +1239,7 @@ DESCRIPTION=Post Banner 32
 DEFNAME=i_banner_post_33_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 33
 
@@ -1247,7 +1247,7 @@ DESCRIPTION=Post Banner 33
 DEFNAME=i_banner_post_33_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 33
 
@@ -1255,7 +1255,7 @@ DESCRIPTION=Post Banner 33
 DEFNAME=i_banner_post_34_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 34
 
@@ -1263,7 +1263,7 @@ DESCRIPTION=Post Banner 34
 DEFNAME=i_banner_post_34_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 34
 
@@ -1271,7 +1271,7 @@ DESCRIPTION=Post Banner 34
 DEFNAME=i_banner_post_35_ne
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 35
 
@@ -1279,7 +1279,7 @@ DESCRIPTION=Post Banner 35
 DEFNAME=i_banner_post_35_nw
 RESOURCES=1 i_LOG, 1 i_ingot_bronze, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 35
 
@@ -1287,7 +1287,7 @@ DESCRIPTION=Post Banner 35
 DEFNAME=i_banner_post_36_ne
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 36
 
@@ -1295,7 +1295,7 @@ DESCRIPTION=Post Banner 36
 DEFNAME=i_banner_post_36_nw
 RESOURCES=1 i_LOG, 1 i_ingot_iron, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Post Banners
 DESCRIPTION=Post Banner 36
 
@@ -1303,7 +1303,7 @@ DESCRIPTION=Post Banner 36
 DEFNAME=i_banner_16_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 16
 
@@ -1311,7 +1311,7 @@ DESCRIPTION=Banner 16
 DEFNAME=i_banner_16_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 16
 
@@ -1319,7 +1319,7 @@ DESCRIPTION=Banner 16
 DEFNAME=i_banner_17_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 17
 
@@ -1327,7 +1327,7 @@ DESCRIPTION=Banner 17
 DEFNAME=i_banner_17_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 17
 
@@ -1335,7 +1335,7 @@ DESCRIPTION=Banner 17
 DEFNAME=i_banner_18_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 18
 
@@ -1343,7 +1343,7 @@ DESCRIPTION=Banner 18
 DEFNAME=i_banner_18_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 18
 
@@ -1351,7 +1351,7 @@ DESCRIPTION=Banner 18
 DEFNAME=i_banner_19_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 19
 
@@ -1359,7 +1359,7 @@ DESCRIPTION=Banner 19
 DEFNAME=i_banner_19_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 19
 
@@ -1367,7 +1367,7 @@ DESCRIPTION=Banner 19
 DEFNAME=i_banner_20_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 20
 
@@ -1375,7 +1375,7 @@ DESCRIPTION=Banner 20
 DEFNAME=i_banner_20_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 20
 
@@ -1383,7 +1383,7 @@ DESCRIPTION=Banner 20
 DEFNAME=i_banner_21_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 21
 
@@ -1391,7 +1391,7 @@ DESCRIPTION=Banner 21
 DEFNAME=i_banner_21_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 21
 
@@ -1399,7 +1399,7 @@ DESCRIPTION=Banner 21
 DEFNAME=i_banner_22_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 22
 
@@ -1407,7 +1407,7 @@ DESCRIPTION=Banner 22
 DEFNAME=i_banner_22_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 22
 
@@ -1415,7 +1415,7 @@ DESCRIPTION=Banner 22
 DEFNAME=i_banner_23_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 23
 
@@ -1423,7 +1423,7 @@ DESCRIPTION=Banner 23
 DEFNAME=i_banner_23_part_2
 RESOURCES=1 i_LOG, 1 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 23
 
@@ -1431,7 +1431,7 @@ DESCRIPTION=Banner 23
 DEFNAME=i_banner_23_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 23
 
@@ -1439,7 +1439,7 @@ DESCRIPTION=Banner 23
 DEFNAME=i_banner_24_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 24
 
@@ -1447,7 +1447,7 @@ DESCRIPTION=Banner 24
 DEFNAME=i_banner_24_part_2
 RESOURCES=1 i_LOG, 1 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 24
 
@@ -1455,7 +1455,7 @@ DESCRIPTION=Banner 24
 DEFNAME=i_banner_24_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 24
 
@@ -1463,7 +1463,7 @@ DESCRIPTION=Banner 24
 DEFNAME=i_banner_25_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 25
 
@@ -1471,7 +1471,7 @@ DESCRIPTION=Banner 25
 DEFNAME=i_banner_25_part_2
 RESOURCES=1 i_LOG, 1 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 25
 
@@ -1479,7 +1479,7 @@ DESCRIPTION=Banner 25
 DEFNAME=i_banner_25_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 25
 
@@ -1487,7 +1487,7 @@ DESCRIPTION=Banner 25
 DEFNAME=i_banner_hanger_nw
 RESOURCES=1 i_BOARD, 1 i_NAILS
 WEIGHT=1
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner Hanger
 
@@ -1495,7 +1495,7 @@ DESCRIPTION=Banner Hanger
 DEFNAME=i_banner_26_part_1
 RESOURCES=1 i_LOG, 1 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 26
 
@@ -1503,7 +1503,7 @@ DESCRIPTION=Banner 26
 DEFNAME=i_banner_26_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 26
 
@@ -1511,7 +1511,7 @@ DESCRIPTION=Banner 26
 DEFNAME=i_banner_27_part_1
 RESOURCES=1 i_LOG, 1 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 27
 
@@ -1519,7 +1519,7 @@ DESCRIPTION=Banner 27
 DEFNAME=i_banner_27_part_2
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 27
 
@@ -1527,7 +1527,7 @@ DESCRIPTION=Banner 27
 DEFNAME=i_banner_28_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 28
 
@@ -1535,7 +1535,7 @@ DESCRIPTION=Banner 28
 DEFNAME=i_banner_28_part_2
 RESOURCES=1 i_LOG, 1 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 28
 
@@ -1543,7 +1543,7 @@ DESCRIPTION=Banner 28
 DEFNAME=i_banner_28_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 28
 
@@ -1551,7 +1551,7 @@ DESCRIPTION=Banner 28
 DEFNAME=i_banner_29_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 29
 
@@ -1559,7 +1559,7 @@ DESCRIPTION=Banner 29
 DEFNAME=i_banner_30_part_1
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 30
 
@@ -1567,7 +1567,7 @@ DESCRIPTION=Banner 30
 DEFNAME=i_banner_30_part_2
 RESOURCES=1 i_LOG, 1 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 30
 
@@ -1575,7 +1575,7 @@ DESCRIPTION=Banner 30
 DEFNAME=i_banner_29_part_2
 RESOURCES=1 i_LOG, 1 i_CLOTH, 1 i_THREAD
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 29
 
@@ -1583,7 +1583,7 @@ DESCRIPTION=Banner 29
 DEFNAME=i_banner_29_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 29
 
@@ -1591,7 +1591,7 @@ DESCRIPTION=Banner 29
 DEFNAME=i_banner_30_part_3
 RESOURCES=1 i_LOG, 1 i_BOARD, 1 i_CLOTH, 1 i_THREAD, 1 i_NAILS
 WEIGHT=3
-CATEGORY=Decoration - Banners and Tapestries
+CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 30
 

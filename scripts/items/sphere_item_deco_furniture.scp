@@ -46,32 +46,6 @@ DUPELIST=045c
 DESCRIPTION=Marble Bench 2 (w)
 DUPEITEM=045b
 
-[ITEMDEF 0a2a]
-// chair - bar stool
-DEFNAME=i_chair_stool_bar
-TYPE=T_CHAIR
-FLIP=1
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Barstool (Cross Bars)
-
-SKILLMAKE=CARPENTRY 11.0, t_carpentry
-RESOURCES=9 i_log
-
-[ITEMDEF 0a2b]
-// chair - dark stool
-DEFNAME=i_chair_stool
-DUPELIST=0b5e
-TYPE=T_CHAIR
-FLIP=1
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Barstool
-SKILLMAKE=CARPENTRY 11.0, t_carpentry
-RESOURCES=9 i_log
-
 [ITEMDEF 0a2c]
 DEFNAME=i_bureau
 RESOURCES=5 I_BOARD, 10 I_NAILS, 3 I_DRAWER
@@ -573,32 +547,6 @@ DESCRIPTION=Fancy Dbl Bed (Head) (NE Wall - N Corner)
 SKILLMAKE=CARPENTRY 94.7, TAILORING 75.0, t_carpentry, t_sewing_kit
 RESOURCES=150 i_log, 150 i_cloth
 
-[ITEMDEF 0a78]
-//Fancy Bed with Blankets
-//fancy double bed foot corner against NE wall - S CORNER PIECE
-//must be overlapped
-DEFNAME=i_bed_20
-TYPE=T_BED
-TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
-DYE=1
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedroom Furniture
-DESCRIPTION=Fancy Dbl Bed w/ Blankets
-
-[ITEMDEF 0a79]
-//Fancy Bed with Blankets
-//fancy double bed foot corner against NW wall - E CORNER PIECE
-//must be overlapped
-DEFNAME=i_bed_21
-TYPE=T_BED
-TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
-DYE=1
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedroom Furniture
-DESCRIPTION=Fancy Dbl Bed w/ Blankets (Foot) (NW Wall - E Corner)
-
 [ITEMDEF 0a7a]
 //Fancy Bed with Blankets
 //fancy double bed headboard against NW wall - W CORNER PIECE
@@ -625,58 +573,6 @@ CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Fancy Dbl Bed w/ Blankets (Head) (NW Wall - N Corner)
 
-[ITEMDEF 0a7c]
-//Fancy Bed with Blankets & Pillows, covers turned down
-//fancy double bed foot corner against NW wall - E CORNER PIECE
-//must be overlapped
-DEFNAME=i_bed_24
-TYPE=T_BED
-TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
-DYE=1
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedroom Furniture
-DESCRIPTION=Fancy Dbl Bed w/ Blankets Covers Turned (Foot) (NW Wall - E Corner)
-
-[ITEMDEF 0a7d]
-//Fancy Bed with Blankets & Pillows, covers turned down
-//fancy double bed headboard against NW wall - W CORNER PIECE
-//must be overlapped
-DEFNAME=i_bed_25
-TYPE=T_BED
-TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
-DYE=1
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedroom Furniture
-DESCRIPTION=Fancy Dbl Bed w/ Blankets Covers Turned(NW Wall - W Corner)
-
-[ITEMDEF 0a7e]
-//Fancy Bed with Blankets
-//fancy double bed foot corner against NW & NE wall - S CORNER PIECE
-//must be  overlapped
-DEFNAME=i_bed_26
-TYPE=T_BED
-TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
-DYE=1
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedroom Furniture
-DESCRIPTION=Fancy Dbl Bed w/ Blankets Covers Turned (NW - NE Wall S Corner)
-
-[ITEMDEF 0a7f]
-//Fancy Bed with Blankets & Pillows, covers turned down
-//fancy double bed headboard against NE wall - W CORNER PIECE
-//must be overlapped
-DEFNAME=i_bed_27
-TYPE=T_BED
-TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
-DYE=1
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedroom Furniture
-DESCRIPTION=Fancy Dbl Bed w/ Blankets Covers Turned (Head) (NE Wall - W Corner)
-
 [ITEMDEF 0a80]
 //Fancy Bed with Blankets
 //fancy double bed headboard corner against NE wall - N CORNER PIECE
@@ -702,21 +598,6 @@ DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Fancy Dbl Bed w/ Blankets (Head) (NE Wall- E Corner)
-
-[ITEMDEF 0a82]
-//bed
-DEFNAME=i_bed_30
-TYPE=T_BED
-TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedroom Furniture
-DESCRIPTION=Bed
-DUPELIST=0a83,0a84,0a85,0a86,0a87,0a88,0a89,0a8a,0a8b,0a8c,0a8d,0a8e,0a8f,0a90,0a91
-
-[ITEMDEF 0a83]
-//bed
-DUPEITEM=0a82
 
 [ITEMDEF 0a84]
 //bed
@@ -1203,91 +1084,6 @@ DUPEITEM=0b26
 ON=@Create
 MOREZ=1
 
-[ITEMDEF 0b2c]
-// bench - dark wooden bench n-s
-DEFNAME=i_bench_wood_dark
-DUPELIST=0b2d
-TYPE=T_CHAIR
-FLIP=1
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Wooden Bench (Dark)
-
-RESOURCES=17 i_log
-SKILLMAKE=CARPENTRY 52.6, t_carpentry
-
-[ITEMDEF 0b2d]
-// bench - dark wooden bench e-w
-DUPEITEM=0b2c
-
-[ITEMDEF 0b2e]
-// chair - dark rough wood chair - N
-DEFNAME=i_chair_wood_rough_dark
-TYPE=T_CHAIR
-FLIP=1
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Wooden Chair (Dark)
-DUPELIST=0b2f,0b30,0b31
-
-SKILLMAKE=CARPENTRY 25.0, t_carpentry
-RESOURCES=17 i_log
-
-[ITEMDEF 0b2f]
-// chair - dark rough wood chair - W
-DUPEITEM=0b2e
-
-[ITEMDEF 0b30]
-// chair - dark rough wood chair - E
-DUPEITEM=0b2e
-
-[ITEMDEF 0b31]
-// chair - dark rough wood chair - S
-DUPEITEM=0b2e
-
-[ITEMDEF 0b32]
-// chair - throne - N
-DEFNAME=i_chair_throne
-DUPELIST=0b33
-TYPE=T_CHAIR
-FLIP=1
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Throne
-SKILLMAKE=CARPENTRY 52.6, t_carpentry
-RESOURCES=17 i_log
-
-[ITEMDEF 0b33]
-// chair - throne - W
-DUPEITEM=0b32
-
-[ITEMDEF 0b34]
-// table - dark rough board nightstand/table end - n/s grain
-//DEFNAME2=i_TABLE
-//DEFNAME2=TABLE_1
-DEFNAME=i_table_nightstand
-TYPE=t_table
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Nightstand, end piece
-DUPELIST=0b35,0b36,0b3a,0b3c
-SKILLMAKE=CARPENTRY 42.1, t_carpentry
-RESOURCES=17 i_log
-
-[ITEMDEF 0b35]
-// table - dark rough board nightstand/table end - e/w grain
-// DEFNAME2=TABLE_2
-DUPEITEM=0b34
-
-[ITEMDEF 0b36]
-// table - identical to 0b35, no need to define
-// Duped only for backward compatibility
-DUPEITEM=0b34
-
 [ITEMDEF 0b37]
 DEFNAME=i_table_nightstand_ext
 // table - dark Rough board nightstand top, no legs n-s
@@ -1308,17 +1104,6 @@ DUPEITEM=0b37
 // duped only for backward compatibility
 // poor graphic, doesn't mesh with table end for extention
 DUPEITEM=0b37
-
-[ITEMDEF 0b3a]
-// table - identical to 0b34, no need to define
-// Duped only for backward compatibility
-DUPEITEM=0b34
-
-[ITEMDEF 0b3c]
-// table - identical to 0b34, no need to define
-// Duped only for backward compatibility
-// poor graphic, doesn't mesh with table end
-DUPEITEM=0b34
 
 [ITEMDEF 0b3d]
 //counter
@@ -1403,144 +1188,6 @@ RESOURCES=2 I_CLAY
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Small Vase 2
-
-[ITEMDEF 0b49]
-// table - writing table E Facing, light wood
-// DEFNAME2=TABLE_3
-DEFNAME=i_table_writing
-TYPE=t_table
-WEIGHT=4
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Writing Table
-DUPELIST=0b4a,0b4b,0b4c
-SKILLMAKE=CARPENTRY 63.1, t_carpentry
-RESOURCES=17 i_log
-
-[ITEMDEF 0b4a]
-// table - writing table S Facing, light wood
-// DEFNAME2=TABLE_4
-DUPEITEM=0b49
-
-[ITEMDEF 0b4b]
-// table - writing table N Facing, light wood
-DUPEITEM=0b49
-
-[ITEMDEF 0b4c]
-// table - writing table W Facing, light wood
-//DEFNAME2=TABLE_6
-DUPEITEM=0b49
-
-[ITEMDEF 0b4e]
-// chair - fancy wooden chair w/ gray cushion, dyeable - W
-DEFNAME=i_chair_wood_fancy_cushion
-DUPELIST=0b4f,0b50,0b51
-TYPE=T_CHAIR
-FLIP=1
-SKILLMAKE=CARPENTRY 42.1, t_carpentry
-RESOURCES=15 i_log
-DYE=1
-VALUE={50 70}
-WEIGHT=3
-
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Chair (Gray Cushion)
-
-[ITEMDEF 0b4f]
-// chair - fancy wooden chair w/ gray cushion, dyeable - N
-DUPEITEM=0b4e
-
-[ITEMDEF 0b50]
-// chair - fancy wooden chair w/ gray cushion, dyeable - S
-DUPEITEM=0b4e
-
-[ITEMDEF 0b51]
-// chair - fancy wooden chair w/ gray cushion, dyeable - E
-DUPEITEM=0b4e
-
-[ITEMDEF 0b52]
-// chair - Wood chair with gray cushion, dyeable - W
-DEFNAME=i_chair_wood_cushion
-DUPELIST=0b53,0b54,0b55
-TYPE=T_CHAIR
-FLIP=1
-RESOURCES=15 i_log
-SKILLMAKE=CARPENTRY 42.1, t_carpentry
-
-DYE=1
-VALUE={50 70}
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Chair (Gray Cushion)
-
-[ITEMDEF 0b53]
-// chair - Wood chair with gray cushion, dyeable - N
-DUPEITEM=0b52
-
-[ITEMDEF 0b54]
-// chair - Wood chair with gray cushion, dyeable - S
-DUPEITEM=0b52
-
-[ITEMDEF 0b55]
-// chair - Wood chair with gray cushion, dyeable - E
-DUPEITEM=0b52
-
-[ITEMDEF 0b56]
-// chair - light wood chair - W
-DEFNAME=i_chair_wood
-DUPELIST=0b57,0b58,0b59
-TYPE=T_CHAIR
-FLIP=1
-SKILLMAKE=CARPENTRY 21.0, t_carpentry
-RESOURCES=13 i_log
-
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Chair (Light Wood)
-
-[ITEMDEF 0b57]
-// chair - light wood chair - N
-DUPEITEM=0b56
-
-[ITEMDEF 0b58]
-// chair - light wood chair - E
-DUPEITEM=0b56
-
-[ITEMDEF 0b59]
-// chair - light wood chair - S
-DUPEITEM=0b56
-
-[ITEMDEF 0b5a]
-// chair - light wood chair with bamboo wicker seat - W
-DEFNAME=i_chair_wood_bamboo
-TYPE=T_CHAIR
-FLIP=1
-RESOURCES=13 i_log
-SKILLMAKE=CARPENTRY 21.0, t_carpentry
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Chair
-DUPELIST=0b5b,0b5c,0b5d
-
-[ITEMDEF 0b5b]
-// chair - light wood chair with bamboo wicker seat - N
-DUPEITEM=0b5a
-
-[ITEMDEF 0b5c]
-// chair - light wood chair with bamboo wicker seat - S
-DUPEITEM=0b5a
-
-[ITEMDEF 0b5d]
-// chair - light wood chair with bamboo wicker seat - E
-DUPEITEM=0b5a
-
-[ITEMDEF 0b5e]
-// chair - light stool
-DUPEITEM=0a2b
 
 [ITEMDEF 0b5f]
 // bench - rough board bench end - S
@@ -1709,35 +1356,6 @@ DUPEITEM=0b77
 // Also used as extention for narrow n-s
 // n-s grain
 
-[ITEMDEF 0b7c]
-// table - Small rough wood table
-DEFNAME=i_table_wood_rough_small
-TYPE=T_TABLE
-
-RESOURCES=23 i_log
-SKILLMAKE=CARPENTRY 63.1, t_carpentry
-
-DUPELIST=0b8f
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table
-
-[ITEMDEF 0b7d]
-// table - Small rough board table
-// picnic table n-s
-DEFNAME=i_table_wood_rough_board
-TYPE=T_TABLE
-
-RESOURCES=27 i_log
-SKILLMAKE=CARPENTRY 40.0, t_carpentry
-
-DUPELIST=0b90
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table
-
 [ITEMDEF 0b7e]
 // table - narrow smooth wood table end - E
 DUPEITEM=0b6b
@@ -1819,15 +1437,6 @@ DUPEITEM=0b8a
 [ITEMDEF 0b8e]
 // table - narrow rough board extention e-w
 DEFNAME=i_table_board_rough_ext
-
-[ITEMDEF 0b8f]
-// table - Small rough wood table
-DUPEITEM=0b7c
-
-[ITEMDEF 0b90]
-// table - Small rough board table
-// picnic table e-w
-DUPEITEM=0b7d
 
 [ITEMDEF 0b91]
 // bench - high-backed bench along wall - E
@@ -2979,14 +2588,6 @@ DEFNAME=i_barrel_hoop
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Barrel Hoops
-
-[ITEMDEF 01db8]
-//barrel lid
-DEFNAME=i_barrel_lid
-CATEGORY=Decoration - Furniture
-SUBSECTION=Broken Furniture
-DESCRIPTION=Barrel Lid
-WEIGHT=2
 
 [ITEMDEF 01dbb]
 // table - sandstone table end - S

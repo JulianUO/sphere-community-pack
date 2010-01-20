@@ -59,22 +59,6 @@ DUPEITEM=091b
 //bees
 DUPEITEM=091b
 
-[ITEMDEF 0dbf]
-//Fishing Pole
-DEFNAME=i_fishing_pole
-TYPE=T_FISH_POLE
-WEIGHT=2
-CATEGORY=Items by Professions
-SUBSECTION=Fisherman
-DESCRIPTION=Fishing Pole
-RESOURCES=5 i_cloth
-SKILLMAKE=CARPENTRY 68.4, TAILORING 40.0, t_carpentry
-DUPELIST=0dc0
-
-[ITEMDEF 0dc0]
-//fishing pole
-DUPEITEM=0dbf
-
 [ITEMDEF 0dc8]
 //fishing net
 DEFNAME=i_fishing_net
@@ -448,15 +432,6 @@ SUBSECTION=Artists
 DESCRIPTION=Easel
 DUPELIST=0f67,0f69
 
-[ITEMDEF 0f66]
-//easel with canvas
-DEFNAME=i_easel_with_canvas
-RESOURCES=15 i_BOARD, 1 i_CANVAS
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Easel With Canvas
-DUPELIST=0f68,0f6a
-
 [ITEMDEF 0f67]
 //easel
 DUPEITEM=0f65
@@ -464,26 +439,12 @@ CATEGORY=Items by Professions
 SUBSECTION=Artists
 DESCRIPTION=Easel
 
-[ITEMDEF 0f68]
-//easel with canvas
-DUPEITEM=0f66
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Easel With Canvas
-
 [ITEMDEF 0f69]
 //easel
 DUPEITEM=0f65
 CATEGORY=Items by Professions
 SUBSECTION=Artists
 DESCRIPTION=Easel
-
-[ITEMDEF 0f6a]
-//easel with canvas
-DUPEITEM=0f66
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Easel With Canvas
 
 [ITEMDEF 0f71]
 //rack of canvases
@@ -2604,24 +2565,6 @@ RESOURCES=4 i_BOARD, i_NAILS
 CATEGORY=Items by Professions
 SUBSECTION=Carpenter
 DESCRIPTION=Lathe Work
-
-[ITEMDEF 01eb1]
-DEFNAME=i_barrel_staves
-RESOURCES=5 i_BOARD
-WEIGHT=5
-CATEGORY=Items by Professions
-SUBSECTION=Tinker
-DESCRIPTION=Barrel Staves
-DUPELIST=01eb2,01eb3,01eb4
-
-[ITEMDEF 01eb2]
-DUPEITEM=01eb1
-
-[ITEMDEF 01eb3]
-DUPEITEM=01eb1
-
-[ITEMDEF 01eb4]
-DUPEITEM=01eb1
 
 [ITEMDEF 01eb5]
 DEFNAME=i_barrel_unfinished

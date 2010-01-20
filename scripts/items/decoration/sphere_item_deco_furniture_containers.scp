@@ -401,6 +401,54 @@ DESCRIPTION=Elven Armoire (Fancy)
 [ITEMDEF 02d08]
 DUPEITEM=02d07
 
+[ITEMDEF 02d0a]
+DEFNAME=i_dresser_elven
+TYPE=t_container
+NAME=Elven Dresser
+TDATA2=048
+SKILLMAKE=CARPENTRY 75.0, t_carpentry
+RESOURCES=45 i_log
+WEIGHT=25
+DUPELIST=02d0b
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Elven Dresser
+
+[ITEMDEF 02d0b]
+DUPEITEM=02d0a
+
+[ITEMDEF 02d0c]
+DEFNAME=i_washbasin_elven
+TYPE=t_container
+NAME=Elven Washbasin
+TDATA2=048
+SKILLMAKE=CARPENTRY 70.0, t_carpentry
+RESOURCES=40 i_log
+WEIGHT=25
+DUPELIST=02d0d
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Elven Washbasin
+
+[ITEMDEF 02d0d]
+DUPEITEM=02d0c
+
+[ITEMDEF 02de9]
+DEFNAME=i_chest_elven_ornate
+TYPE=t_container
+NAME=Ornate Elven Chest
+TDATA2=048
+SKILLMAKE=CARPENTRY 94.7, t_carpentry
+RESOURCES=40 i_log
+WEIGHT=25
+DUPELIST=02dea
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Ornate Elven Chest
+
+[ITEMDEF 02dea]
+DUPEITEM=02de9
+
 [ITEMDEF 02def]
 DEFNAME=i_bookshelf_arcane
 TYPE=t_container

@@ -1722,7 +1722,7 @@ ON=@DCLICK
 	return 1
 
 ON=@TIMER
-	if <dispiddec> < 01666 
+	if <dispiddec> < 01666
 		dispid=<dispiddec>+1
 		timerd=0.2
 	else
@@ -1812,7 +1812,7 @@ ON=@DCLICK
 	return 1
 
 ON=@TIMER
-	if <dispiddec> < 016d8 
+	if <dispiddec> < 016d8
 		dispid=<dispiddec>+1
 		timerd=0.2
 	else
@@ -2826,23 +2826,6 @@ DUPEITEM=01d97
 
 [ITEMDEF 01e5d]
 DUPEITEM=01d97
-
-[ITEMDEF 01e5e]
-DEFNAME=i_bulletin_board
-TYPE=T_BBOARD
-TDATA2=0866
-DUPELIST=01e5f
-
-RESOURCES=20 i_BOARD, 4 i_CLOTH, i_NAILS, i_PAPER, i_FEATHER, i_INK_POT
-SKILLMAKE=CARPENTRY 90.0, t_carpentry
-
-CATEGORY=Miscellaneous
-SUBSECTION=Bulletin Board
-DESCRIPTION=@
-
-[ITEMDEF 01e5f]
-DEFNAME=i_bulletin_board_2
-DUPEITEM=01e5e
 
 [ITEMDEF 01e60]
 DEFNAME=i_trophy_bearhead
