@@ -1722,21 +1722,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Ham (Sliced)
 
-[ITEMDEF 01e2e]
-//dartboard facing SW
-DEFNAME=i_dartboard
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=BarKeep
-DESCRIPTION=Dartboard
-RESOURCES=5 i_log
-SKILLMAKE=CARPENTRY 15.7, t_carpentry
-DUPELIST=01e2f
-
-[ITEMDEF 01e2f]
-//dartboard facing SE
-DUPEITEM=01e2e
-
 [ITEMDEF 01e30]
 DEFNAME=i_dartboard_axe
 RESOURCES=1 i_DARTBOARD, i_axe

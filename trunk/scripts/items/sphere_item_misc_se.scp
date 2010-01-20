@@ -134,17 +134,6 @@ DUPELIST=0295f
 [itemdef 0295f]
 DUPEITEM=0295e
 
-[itemdef 02819]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Furniture
-SUBSECTION=Japanese
-DESCRIPTION=@
-DUPELIST=0281a
-
-[itemdef 0281a]
-DUPEITEM=02819
-
 [itemdef 024ec]
 TYPE=t_normal
 RESOURCES=100 i_log
