@@ -247,6 +247,9 @@ scp.removetrap_nottrapped			"@,,2 502373" // That doesn't appear to be trapped
 scp.removetrap_success				"@,,2 502377" // You successfully render the trap harmless
 scp.removetrap_fail					"@,,2 502372" // You fail to disarm the trap... but you don't set it off
 
+def.scp.detecthidden_start			"@,,2 500819" //Where will you search?
+def.scp.detecthidden_foundnobody	"@,,2 500817" // You can see nothing hidden there.
+
 scp.runes_entername		"@88,,1 Type in a name for the rune"
 
 scp.skill_mustwait		"@,,2 500118"	// You must wait a few moments to use another skill.
