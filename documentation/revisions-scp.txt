@@ -483,3 +483,56 @@ Note: Mystic weapons were introduced during Ophidian Wars.
 - Updated: removed add-on/skills/ from spheretables.scp
 - Fixed: crafting menu canceling spells menu.
 - Fixed: splash sound every 15/30 seconds no longer plays.
+---- Packed Revision 160
+
+13-01-2010, jeem
+- Fixed: small mistakes in taming
+
+14-01-2010, ShiryuX
+- Added: @UserQuestFinish, fired on player and argn1 is the player's quest id.
+You should use <tag.quest.<dargn1>.id> to get the real id.
+- Added: f_compassion_escort added when player finish a escort quest. It should
+add compassion points.
+- Updated: mixed spells bonus with combat system, it belongs there.
+- Updated: scp.OSISpellDamage to scp.Combat_SpellBonus.
+- Updated: virtue system dialogs, added a switch and splited dialogs and
+functions into separate files.
+- Fixed: missing local line at traps.
+- Fixed: skillgain lines where arguments can be 0.
+
+15-01-2010, ShiryuX
+- Added: Stamina Regeneration property.
+- Updated: a few more items for Carpentry.
+---- Packed Revision 181
+
+16-01-2010, jeem
+- Updated: some optimizations in virtues
+
+16-01-2010, xantier
+- Added correct compassion gain point.
+
+17-01-2010, ShiryuX
+- Fixed: Wrong reagent id at alchemy start block.
+
+18-01-2010, ShiryuX
+- Added: Definitions for Ninjitsu and Bushido spells.
+- Fixed: Wrong Armor IDs used on vendor template.
+- Fixed: Small console error when creating a brass sign without a house.
+- Fixed: Iron color should be 0 by default.
+
+18-01-2010, jeem
+- Fixed: two little bugs.
+
+19-01-2010, ShiryuX
+- Updated: A lot more of items for carpentry. And still some more to go.
+- Fixed: Unknown function in 2 NPCs.
+---- Packed Revision 189
+
+26-01-2010, jeem
+- Added: detecting hidden skill. ea-like.
+
+29-01-2010, jeem
+- Fixed: ctags were being used on NPC combat event
+- Fixed: tags in combat event not being deleted after calculations
+- Fixed: misspell in sphere_events_npc.scp
+---- Packed Revision 191
