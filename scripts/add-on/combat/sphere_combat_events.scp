@@ -52,10 +52,10 @@ local.totalbonus = <f_combatsys_damagebonus_aos>
 enddo
 local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>
 argn1 += <local.totalbonus>
-ctag.hbcs = 1
+src.tag.hbcs = 1
 
 on=@gethit
-if !<ctag0.hbcs>
+if !<tag0.hbcs>
 // if it's a magic skill... or a custom call of damage function.
 // we will do nothing!
 else
@@ -92,8 +92,8 @@ if <tag0.gothitbyspell>
 	argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
 	endif
 endif
-
-
+tag.hbcs =
+tag.gothitbyspell =
 
 [events e_NpcCombatEvent]
 on=@hittry
@@ -134,10 +134,10 @@ local.totalbonus = <f_combatsys_damagebonus_aos>
 enddo
 local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>
 argn1 += <local.totalbonus>
-ctag.hbcs = 1
+src.tag.hbcs = 1
 
 on=@gethit
-if !<ctag0.hbcs>
+if !<tag0.hbcs>
 // if it's a magic skill... or a custom call of damage function.
 // we will do nothing!
 else
@@ -174,5 +174,7 @@ if <tag0.gothitbyspell>
 	argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
 	endif
 endif
+tag.hbcs =
+tag.gothitbyspell =
 
 [eof]

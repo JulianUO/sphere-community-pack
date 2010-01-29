@@ -105,7 +105,7 @@ endif
 
 // OSI Spells Bonus
 on=@gethit
-if <def.scp.osispelldamage> == 1
+if <def.scp.Combat_SpellBonus> == 1
 	if <tag0.gothitbyspell>
 	local.damage = <r<serv.spell.<dtag.gothitbyspell>.effect>>
 	local.evalint = <eval (((<src.evaluatingintel>*3)/1000)+1)>
