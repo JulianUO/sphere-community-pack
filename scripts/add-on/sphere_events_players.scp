@@ -174,6 +174,11 @@ endif
 // Magic Resistance Skill
 // Magic Reflection Spell
 on=@spelleffect
+if <isdamagespell <argn1>>
+	if <def.scp.Combat_SpellBonus> == 1
+	tag0.gothitbyspell = <argn1>
+	endif
+endif
 if <flags>&statf_reflection
 	if <src.uid> != <uid>
 		if (<serv.spell.<argn1>.flags>&spellflag_harm) || <argn> == 41
