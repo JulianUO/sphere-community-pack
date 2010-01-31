@@ -118,6 +118,9 @@ ENDWHILE
 ENDIF
 
 [FUNCTION f_skill_delay]
+if !<isplayer>
+return 0
+endif
 if <def.scp.SkillWaitingTimes> == 1
 	if <argn1> != -1
 	ctag.skillrecovery = (<serv.time>+<argn1>)

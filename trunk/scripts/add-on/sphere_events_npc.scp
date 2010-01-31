@@ -44,7 +44,7 @@ endif
 // Followers (Summon)
 on=@spelleffect
 if <isdamagespell <argn1>>
-	if <def.scp.osispelldamage> == 1
+	if <def.scp.Combat_SpellBonus> == 1
 	tag0.gothitbyspell = <argn1>
 	endif
 elif <argn> == 40
@@ -101,22 +101,6 @@ poisoning = 0
 on=@hit
 if <tag0.skill.poisoning>
 src.new_poison <max <eval <tag0.skill.poisoning>-2>,0>,<uid>
-endif
-
-// OSI Spells Bonus
-on=@gethit
-if <def.scp.Combat_SpellBonus> == 1
-	if <tag0.gothitbyspell>
-	local.damage = <r<serv.spell.<dtag.gothitbyspell>.effect>>
-	local.evalint = <eval (((<src.evaluatingintel>*3)/1000)+1)>
-	local.damageinc = <eval <src.int>/10>
-		if <src.inscription> >= 100.0
-		local.damageinc += 10
-		endif
-	argn1 = <eval <local.damage>*<local.evalint>>
-	argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
-	tag.gothitbyspell
-	endif
 endif
 
 [eof]
