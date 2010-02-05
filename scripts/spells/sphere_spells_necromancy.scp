@@ -453,7 +453,7 @@ MANAUSE=17
 SKILLREQ=Necromancy 30.0
 INTERRUPT=100.0,1.0
 
-ON=@Success
+ON=@Select
 skillmenu sm_summon_familiar
 return 1
 

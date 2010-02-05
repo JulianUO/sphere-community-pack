@@ -142,7 +142,7 @@ NAME=Corpse Skin
 ID=i_memory 
 TYPE=t_eq_script
 LAYER=layer_special
-TEVENTS e_armor
+TEVENTS t_armor
 tag.physicalresist=10
 tag.coldresist=10
 tag.fireresist=-10
