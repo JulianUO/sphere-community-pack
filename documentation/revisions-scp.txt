@@ -536,3 +536,13 @@ functions into separate files.
 - Fixed: tags in combat event not being deleted after calculations
 - Fixed: misspell in sphere_events_npc.scp
 ---- Packed Revision 191
+
+31-01-2010, jeem
+- Fixed: spell damage calculations
+- Fixed: console errors when skill waiting time function is used on npcs
+- Fixed: wrong resource id for i_potion_invisibility. changed i_reag_worm_heart
+to i_reag_wyrm_heart
+
+05-02-2010, jeem
+- Fixed: necromancy spells had small typos.
+---- Packed Revision 195
