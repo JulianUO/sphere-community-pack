@@ -440,7 +440,7 @@ ON=@Equip
 timer=1
 
 ON=@Timer
-if (<<uid.<cont.tag0.victim>.flags> & statf_dead)
+if (<uid.<cont.tag0.victim>.flags>&statf_dead)
   finduid.<cont.tag.owner>.findid.i_revenant_tracker.remove
   finduid.<cont.tag.owner>.sysmessage Your revenant succeeded!
   cont.remove
@@ -486,7 +486,7 @@ ON=@Create
     FAME=0
 
 ON=@NPCRestock
-    ITEMNEWBIE=i_death_shroud
+    ITEMNEWBIE=i_deathshroud
     COLOR=0455
     ITEMNEWBIE=i_halberd
     COLOR=0455
