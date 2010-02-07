@@ -85,11 +85,11 @@ elif <argo.owner>
 argo.message <def.scp.taming_alreadytamed>
 f_skill_delay <getargv 2,<def.skill.35.waittime>>
 return 1
-elif (!<argo.allow_female_tamer>) && ((<body> == c_woman>) || (<body> == c_elf_female))
+elif (!<argo.allow_female_tamer>) && (<isfemale>)
 argo.message <def.scp.taming_onlymale>
 f_skill_delay <getargv 2,<def.skill.35.waittime>>
 return 1
-elif (!<argo.allow_male_tamer>) && ((<body> == c_man) || (<body> == c_elf_male))
+elif (!<argo.allow_male_tamer>) && (<ismale>)
 argo.message <def.scp.taming_onlyfemale>
 f_skill_delay <getargv 2,<def.skill.35.waittime>>
 return 1
@@ -246,7 +246,6 @@ owners_count=1
 tag.owner.<ref1> = 1
 endif
 ref1.curfollower += <followerslot>
-ref1.events -e_taming
 ref1.tag.totame=
 update
 
@@ -288,7 +287,7 @@ endif
 return 5
 
 [function must_be_subdued]
-if (<baseid> == c_rune_beetle) || (<baseid> == c_giant_beetle) || (<baseid> == c_m_ice_worm)
+if (<baseid> == c_rune_beetle) || (<baseid> == c_giant_beetle) //|| (<baseid> == c_m_ice_worm)
 return 1
 else
 return 0
