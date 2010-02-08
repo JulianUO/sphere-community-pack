@@ -154,7 +154,7 @@ endif
 local.block.bushido = <max <local.block.bushido>,<local.block.parry>>
 if <shield>
 local.calc = <muldiv <max <eval (((<parrying> - <bushido>) / 4) / 10)>,0>,<eval 100 - <local.block.dex>>,100>
-return <eval <local.calc> + <local.block.bushido>
+return <eval <local.calc> + <local.block.bushido>>
 elif <weapon>
 local.calc = <max <eval ((<parrying> * <bushido>) / <qval <weapon.twohands> ? 41140 : 48000>) + <local.block.bushido>>,<eval (<parrying> / 80) + <local.block.parry>>>
 return <muldiv <local.calc>,<eval 100 - <local.block.dex>>,100>

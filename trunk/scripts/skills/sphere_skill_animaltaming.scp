@@ -237,7 +237,7 @@ local.gaindifficulty = <eval (<ref1.tamingsuccesschance <uid>> / 10)>
 	local.gaindifficulty ++
 	endif
 ref1.skillgain taming <min 100,<dlocal.gaindifficulty>>
-ref1.skillgain animallore <min 100,<eval ((<cont.animallore> / 10) + 1)>>
+ref1.skillgain animallore <min 100,<eval ((<ref1.animallore> / 10) + 1)>>
 else
 ref1.sysmessage @,,2 502797 // That wasn't even challenging.
 endif
