@@ -85,15 +85,15 @@ elif <argo.owner>
 argo.message <def.scp.taming_alreadytamed>
 f_skill_delay <getargv 2,<def.skill.35.waittime>>
 return 1
-elif (!<argo.allow_female_tamer>) && (<isfemale>)
+elif !<argo.allow_female_tamer> && <isfemale>
 argo.message <def.scp.taming_onlymale>
 f_skill_delay <getargv 2,<def.skill.35.waittime>>
 return 1
-elif (!<argo.allow_male_tamer>) && (<ismale>)
+elif !<argo.allow_male_tamer> && <ismale>
 argo.message <def.scp.taming_onlyfemale>
 f_skill_delay <getargv 2,<def.skill.35.waittime>>
 return 1
-elif (<argo.baseid> == c_cu_sidhe) && ((<body> == c_elf_male) || (<body> == c_elf_female)
+elif <argo.baseid> == c_cu_sidhe && !<iselven>
 argo.message <def.scp.taming_onlyelf>
 f_skill_delay <getargv 2,<def.skill.35.waittime>>
 return 1
