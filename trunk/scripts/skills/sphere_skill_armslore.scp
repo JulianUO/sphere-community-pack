@@ -41,7 +41,7 @@ sysmessage <def.scp.armslore_fail>
 
 
 [function f_armslore_start]
-if !<skillusequick <r1000> armslore>
+if !<skillusequick armslore <r1000>>
 f_skill_delay <getargv 2,<def.skill.4.waittime>>
 sysmessage <def.scp.armslore_fail>
 else

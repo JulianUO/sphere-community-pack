@@ -56,7 +56,7 @@ sysmessage <def.scp.tasteid_ischar>
 f_skill_delay <getargv 2,<def.skill.36.waittime>>
 return 1
 endif
-if <skillusequick <r1000>,tasteid>
+if <skillusequick tasteid <r1000>>
 	if <ref15.isfood>
 		if <ref15.morez>
 		sysmessage <def.scp.tasteid_ispoisoned>
