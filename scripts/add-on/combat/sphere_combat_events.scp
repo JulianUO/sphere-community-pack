@@ -28,7 +28,7 @@ endif
 on=@hit
 argn1 = <qval <weapon> ? <eval {<weapon.dam>}> : <eval {1,4}>>
 if <src.f_combatsys_blockchance> || (<src.trigger @Shield> == 1)
-src.f_combatsys_block
+f_combatsys_block
 	doswitch <def.scp.Combat_BlockChance>
 	local.blank
 	return 1

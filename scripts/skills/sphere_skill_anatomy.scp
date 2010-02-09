@@ -40,7 +40,7 @@ f_skill_delay <getargv 2,<def.skill.1.waittime>>
 sysmessage <def.scp.anatomy_fail>
 
 [function f_anatomy_start]
-if <skillusequick <r1000> anatomy>
+if <skillusequick anatomy <r100>>
 local.toadd = <eval (((<argo.str>/10)+1)*11) + ((<argo.dex>/10)+1)>
 local.cliloc = <eval <def.scp.anatomy_start> + <local.toadd>>
 sysmessage @,,2 <local.cliloc>

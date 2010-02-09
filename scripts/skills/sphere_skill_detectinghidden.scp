@@ -44,7 +44,7 @@ ON=@Abort
 	
 [function f_detecthidden_start]
 local.range = <eval (<detectinghidden> / 2)>
-	if !<skillusequick <r1000> detectinghidden>
+	if !<skillusequick detectinghidden <r1000>>
 	local.range /= 2
 	else
 	skillgain detectinghidden <eval ((<detectinghidden> / 12) + 1)>

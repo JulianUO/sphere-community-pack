@@ -67,7 +67,7 @@ elif <argo.type> == t_container
 	return 1
 	endif
 sfx 0241
-	if <skillusequick <r<eval (<argo.more2> * 10)>,<eval ((<argo.more2> * 10) + 300)> removetrap>
+	if <skillusequick removetrap <r<eval (<argo.more2> * 10)>,<eval ((<argo.more2> * 10) + 300)>>
 	argo.cleartags Trap
 	argo.events -t_trapped
 	sysmessage <def.scp.removetrap_success>

@@ -52,7 +52,7 @@ if <argo.isitem>
 sysmessage <def.evalint_item>
 return 1
 endif
-if <skillusequick <r1000> evaluatingintel>
+if <skillusequick evaluatingintel <r1000>>
 local.level = <eval (<argo.int>/10)+1>
 	if <local.level> > 11
 	local.level = 11

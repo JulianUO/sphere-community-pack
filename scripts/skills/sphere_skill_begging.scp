@@ -49,7 +49,7 @@ if <def.scp.NewSkills_Begging> == 1
 	endif
 face <act.uid>
 f_loopanim 32,4,1
-	if <skillusequick <r1000> begging>
+	if <skillusequick begging <r1000>>
 	timerf 4,f_begging_success <act>
 	else
 	timerf 4,sysmessage <def.scp.begging_fail>
