@@ -111,6 +111,11 @@ color_magic_hardening		1353
 color_magic_fortification    	1805
 color_magic_invulnerability	1887
 
+[defname stat_locks]
+lock_up 0
+lock_down 1
+lock_locked 2
+
 // brain types
 [DEFNAME brains]
 brain_none		0
