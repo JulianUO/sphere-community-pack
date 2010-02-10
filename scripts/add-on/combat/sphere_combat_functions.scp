@@ -70,7 +70,7 @@ endif
 return <local.skill>
 
 [function shield]
-return <qval <findlayer.2.type> == t_shield ? <findlayer.2.uid> : 0>
+return <qval <findlayer.2.type> == t_shield ? <findlayer.2.uid>:0>
 
 
 ///////////////////////////////////////////////////////////////
