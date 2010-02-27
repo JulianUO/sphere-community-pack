@@ -198,10 +198,10 @@ endif
 if <def.scp.NewSkills_ResistingSpells> == 0
 return 2
 endif
-if <src.uid> == <uid>
-argn3 = 0
-else
-	if <serv.spell.<argn1>.flags>&spellflag_resist
+if <serv.spell.<argn1>.flags>&spellflag_resist
+	if <src.uid> == <uid>
+	argn3 = 0
+	else
 	local.resist = <eval <magicresistance>-((<src.evaluatingintel>*<spellcircle <argn1>>)/20)>
 		if <local.resist> > (<r>)
 		sysmessage @,,2 501783 // You feel yourself resisting magical energy.
