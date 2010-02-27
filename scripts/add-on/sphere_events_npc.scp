@@ -10,7 +10,6 @@ if <def.scp.followers> == 1
 	ref7.curfollower -= <qval <src.tag0.control.slots> ? <src.tag0.control.slots> : 1>
 	endif
 endif
-
 // Death Robe Fix
 if <findlayer.22>
 tag.robe=<findlayer.22.uid>
@@ -50,7 +49,7 @@ if <isdamagespell <argn1>>
 	if <def.scp.Combat_SpellBonus> == 1
 	tag0.gothitbyspell = <argn1>
 	endif
-elif <argn> == 40
+elif <serv.spell.<argn>.flags>&spellflag_summon
 	if <def.scp.followers> == 1
 	local.slots = <qval <tag0.control.slots> ? <tag0.control.slots> : 1>
 		if <eval <src.curfollower>+<local.slots>> > <src.maxfollower>
@@ -78,10 +77,13 @@ if <flags>&statf_reflection
 		endif
 	endif
 endif
-if <src.uid> == <uid>
-argn3 = 0
-else
-	if <serv.spell.<argn1>.flags>&spellflag_resist
+if <def.scp.NewSkills_ResistingSpells> == 0
+return 2
+endif
+if <serv.spell.<argn1>.flags>&spellflag_resist
+	if <src.uid> == <uid>
+	argn3 = 0
+	else
 	local.resist = <eval <magicresistance>-((<src.evaluatingintel>*<spellcircle <argn1>>)/20)>
 		if <local.resist> > (<r>)
 		sysmessage @,,2 501783 // You feel yourself resisting magical energy.
