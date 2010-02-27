@@ -3612,6 +3612,7 @@ DSPEECH -spk_house_customize
 
 [DIALOG d_house_customize_commit]
 50,50
+noclose
 
 ARGS=<TAG0.CUSTOMIZE.INFO>
 resizepic 0 0 5054 320 320
@@ -3669,6 +3670,7 @@ IF (<ARGN>==1)
  TIMERF 1,FixCustomization
 ENDIF
 TAG.CUSTOMIZE.INFO=
+return 1
 
 
 [FUNCTION FixCustomization]

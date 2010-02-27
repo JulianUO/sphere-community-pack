@@ -89,10 +89,10 @@ local.wid += 20
 local.sidebar ++
 endfor
 if !<isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.sidebar>_name>>
-button 135 267 4005 4007 1 0 400
+button 135 267 4005 4007 1 0 401
 endif
 if <ctag0.craft.page.sidebar> > 0
-button 15 267 4014 4015 1 0 401
+button 15 267 4014 4015 1 0 400
 endif
 
 // notices section
@@ -296,10 +296,10 @@ local.wid += 20
 local.sidebar ++
 endfor
 if !<isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.sidebar>_name>>
-button 135 267 4005 4007 1 0 400
+button 135 267 4005 4007 1 0 401
 endif
 if <ctag0.craft.page.sidebar> > 0
-button 15 267 4014 4015 1 0 401
+button 15 267 4014 4015 1 0 400
 endif
 
 // notices section
@@ -314,7 +314,7 @@ endif
 xmfhtmlgumpcolor 215 38 305 20 <ddef.scp.craft_head_selections> 0 0 <ddef.dcolor_white>
 local.mainbar = <eval 1 + (10 * <ctag0.craft.page.mainbar>)>
 local.y = 60
-for 1 10
+for 0 10
 	if !<isempty <def.<ctag0.craft.skill>_material_<dlocal.mainbar>>>
 	button 220 <local.y> 4005 4007 1 0 <eval 600 + <local.mainbar>>
 	dcroppedtext 255 <local.y> 220 20 0480 <def.<ctag0.craft.skill>_material_<dlocal.mainbar>_name>
@@ -359,6 +359,22 @@ xmfhtmlgumpcolor 305 403 150 20 <ddef.scp.craft_button_makelast> 0 0 <ddef.dcolo
 
 [dialog d_craft_material button]
 on=0
+
+on=400 401 // sidebar buttons
+if <argn> == 401
+ctag0.craft.page.sidebar ++
+else
+ctag0.craft.page.sidebar --
+endif
+f_resenddialog d_craft_material
+
+on=403 404 // mainbar buttons
+if <argn> == 404
+ctag0.craft.page.mainbar ++
+else
+ctag0.craft.page.mainbar --
+endif
+f_resenddialog d_craft_material
 
 on=600 700
 local.skill = <strarg <def.<ctag0.craft.skill>_material_<eval <argn>-600>_skill>>

@@ -38,7 +38,7 @@ if <def.scp.NewSkills_Begging> == 1
 	sysmessage <def.scp.begging_ismonster>
 	f_skill_delay <getargv 2,<def.skill.6.waittime>>
 	return 1
-	elseif !<distance <act.uid>> < 4
+	elseif <distance <act.uid>> > 4
 	sysmessage @,,2 <act.sex 500401/500402> // You are too far away to beg from him/her.
 	f_skill_delay <getargv 2,<def.skill.6.waittime>>
 	return 1
