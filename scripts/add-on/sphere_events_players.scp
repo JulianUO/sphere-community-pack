@@ -78,7 +78,7 @@ return 0
 on=@contextmenuselect
 if <uid> == <src.uid>
 	if <argn> == 101
-	groster
+	guildmenu
 	elif <argn> == 102
 	openquestlog
 	endif
@@ -94,7 +94,7 @@ openquestlog
 
 // OSI Guildstones Menu
 on=@userguildbutton
-src.GuildMenu
+src.guildmenu
 return 1
 
 // Cancel use of Book of Arms
@@ -133,7 +133,6 @@ doswitch <def.scp.CraftingSystem>
 return 0
 f_crafting_startosi <args>
 enddo
-return 1
 
 // Chivalry Tithing Points
 on=@spellselect

@@ -1,6 +1,9 @@
 [EVENTS e_NpcGenericEvent]
 // Followers (Death)
 on=@death
+forcharmemorytype memory_fight
+color |= <def.memory_harmedby>
+endfor
 if <def.scp.followers> == 1
 	if <src.memoryfindtype.memory_ipet>
 	ref7 = <src.memoryfindtype.memory_ipet.link.uid>
