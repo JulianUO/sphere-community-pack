@@ -6,8 +6,10 @@ color |= <def.memory_harmedby>
 endfor
 if <def.scp.followers> == 1
 	if <src.memoryfindtype.memory_ipet>
-	ref7 = <src.memoryfindtype.memory_ipet.link.uid>
-	ref7.curfollower -= <qval <src.tag0.control.slots> ? <src.tag0.control.slots> : 1>
+		if !<src.tag0.summonfail>
+		ref7 = <src.memoryfindtype.memory_ipet.link.uid>
+		ref7.curfollower -= <qval <src.tag0.control.slots> ? <src.tag0.control.slots> : 1>
+		endif
 	endif
 endif
 // Death Robe Fix
@@ -49,11 +51,12 @@ if <isdamagespell <argn1>>
 	if <def.scp.Combat_SpellBonus> == 1
 	tag0.gothitbyspell = <argn1>
 	endif
-elif <serv.spell.<argn>.flags>&spellflag_summon
+elif <serv.spell.<argn1>.flags>&spellflag_summon
 	if <def.scp.followers> == 1
-	local.slots = <qval <tag0.control.slots> ? <tag0.control.slots> : 1>
+	local.slots = <qval <tag0.control.slots> ? <tag0.control.slots>:1>
 		if <eval <src.curfollower>+<local.slots>> > <src.maxfollower>
 		src.sysmessage You have too many followers
+		tag.summonfail = 1
 		hits = 0
 		else
 		src.curfollower += <local.slots>
