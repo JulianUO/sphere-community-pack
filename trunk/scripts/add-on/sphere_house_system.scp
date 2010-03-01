@@ -3597,12 +3597,20 @@ IF !(<HouseDesign>)
  TRIGGER @HouseDesignExit
 ENDIF
 
+ON=@HouseAddItem
+serv.log this is firing!
+if <tag0.commithouse> == 1
+serv.log and I'm commiting
+return 1
+endif
+
 ON=@HouseDesignCommit
 LOCAL.CURCOST = (<ARGN2>-<ARGN1>)*<DEF.scp.House_PricePerComp>
 LOCAL.OLDCOST = (<ARGO.HouseValue <ARGN1>>*<DEF.scp.House_DemolishRefund>)/100
 LOCAL.NEWCOST = <LOCAL.OLDCOST>+<LOCAL.CURCOST>
 ARGO.TAG.CUSTOMIZE.INFO=<LOCAL.OLDCOST>,<LOCAL.NEWCOST>,<LOCAL.CURCOST>
 ARGO.SDIALOG d_house_customize_commit
+tag.commithouse = 1
 return 1
 
 ON=@HouseDesignExit
@@ -3637,6 +3645,7 @@ dhtmlgump 205 290 80 20 0 0 <DEF.BFONT_WHITE>CANCEL
 
 [DIALOG d_house_customize_commit BUTTON]
 ON=0 1
+tag.commithouse =
 IF (<ARGN>==1)
  ARGS=<TAG.CUSTOMIZE.INFO>
  LOCAL.OLDCOST = <dARGV[0]>
@@ -3690,5 +3699,14 @@ ENDFOR
 ON=*
 SRC.SYSMESSAGE @,,1 You cannot speak while customizing your house.
 return 1
+
+[function f_custom_house]
+local.subcmd = <local.7><local.8>
+if (<local.subcmd> == 06) || (<local.subcmd> == 0d) || (<local.subcmd> == 013)
+	if <uid.<local.char>.trigger @HouseAddItem> == 1
+	uid.<uid.<local.char>.housedesign>.resync <local.char>
+	return 1
+	endif
+endif
 
 [EOF]

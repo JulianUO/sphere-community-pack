@@ -10,6 +10,10 @@ INSTALLATION AND USAGE INSTRUCTIONS
   Just like you do with the default script pack. 
   Get the last version from: http://scripts.sphere.torfo.org/
 
+- IMPORTANT! To avoid a bug with the house system, you must do the following:
+  Open sphere.ini and below AGREE=1, add the following line:
+  PACKET215=f_custom_house
+
 - To enable main systems, add the following events to your ini:
   (NOTE: Replace the original settings)
   EventsPet=e_NpcGenericEvent,e_NpcCombatEvent
