@@ -5,13 +5,6 @@
 //****************************************************************************
 // FILE LAST UPDATED:
 VERSION=0.56b
-//
-// SCRIPT CREDITS
-// --------------
-//
-// SCRIPT DOCUMENTATION
-// --------------------
-//
 
 [events e_PlayerCombatEvent]
 on=@hittry
@@ -92,8 +85,24 @@ if <tag0.gothitbyspell>
 	argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
 	endif
 endif
+if <tag.spellhit>
+	if <def.scp.NewSkills_ResistingSpells> == 0
+	return 2
+	endif
+	if <serv.spell.<tag.spellhit>.flags>&spellflag_resist
+	local.resist = <eval <magicresistance>-((<src.evaluatingintel>*<spellcircle <tag.spellhit>>)/20)>
+		if <local.resist> > (<r>)
+		sysmessage @,,2 501783 // You feel yourself resisting magical energy.
+		argn1 -= <r<eval <magicresistance>/6>,<eval <magicresistance>/4>>
+		else
+		argn1 -= <r<eval <magicresistance>/7>>
+		endif
+	endif
+endif
+tag.spellhit =
 tag.hbcs =
 tag.gothitbyspell =
+
 
 [events e_NpcCombatEvent]
 on=@hittry
@@ -174,6 +183,21 @@ if <tag0.gothitbyspell>
 	argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
 	endif
 endif
+if <tag.spellhit>
+	if <def.scp.NewSkills_ResistingSpells> == 0
+	return 0
+	endif
+	if <serv.spell.<tag.spellhit>.flags>&spellflag_resist
+	local.resist = <eval <magicresistance>-((<src.evaluatingintel>*<spellcircle <tag.spellhit>>)/20)>
+		if <local.resist> > (<r>)
+		sysmessage @,,2 501783 // You feel yourself resisting magical energy.
+		argn1 -= <r<eval <magicresistance>/6>,<eval <magicresistance>/4>>
+		else
+		argn1 -= <r<eval <magicresistance>/7>>
+		endif
+	endif
+endif
+tag.spellhit =
 tag.hbcs =
 tag.gothitbyspell =
 

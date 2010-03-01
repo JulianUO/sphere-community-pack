@@ -214,9 +214,10 @@ endif
 // Magic Resistance Skill
 // Magic Reflection Spell
 on=@spelleffect
+tag.spellhit = <argn1>
 if <isdamagespell <argn1>>
 	if <def.scp.Combat_SpellBonus> == 1
-	tag0.gothitbyspell = <argn1>
+	tag.gothitbyspell = <argn1>
 	endif
 endif
 if <flags>&statf_reflection
@@ -236,23 +237,6 @@ if <flags>&statf_reflection
 		endif
 	endif
 endif
-if <def.scp.NewSkills_ResistingSpells> == 0
-return 2
-endif
-if <serv.spell.<argn1>.flags>&spellflag_resist
-	if <src.uid> == <uid>
-	argn3 = 0
-	else
-	local.resist = <eval <magicresistance>-((<src.evaluatingintel>*<spellcircle <argn1>>)/20)>
-		if <local.resist> > (<r>)
-		sysmessage @,,2 501783 // You feel yourself resisting magical energy.
-		argn3 -= <r<eval <magicresistance>/6>,<eval <magicresistance>/4>>
-		else
-		argn3 -= <r<eval <magicresistance>/7>>
-		endif
-	endif
-endif
-return 2
 
 // Proper Statlock Fix
 on=@statchange

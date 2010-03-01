@@ -3598,9 +3598,7 @@ IF !(<HouseDesign>)
 ENDIF
 
 ON=@HouseAddItem
-serv.log this is firing!
 if <tag0.commithouse> == 1
-serv.log and I'm commiting
 return 1
 endif
 
@@ -3616,6 +3614,7 @@ return 1
 ON=@HouseDesignExit
 EVENTS -e_house_customize
 DSPEECH -spk_house_customize
+tag.commithouse =
 
 
 [DIALOG d_house_customize_commit]
