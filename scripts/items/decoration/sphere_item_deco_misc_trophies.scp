@@ -6,16 +6,19 @@
 // FILE LAST UPDATED:
 VERSION=0.56b
 
-[typedef t_weapon_sword]
-on=@targon_ground
-if <argn1>
-	if <serv.itemdef.<argn1>.type>==t_tree
-		if <distance <argn1>> < 3
-		serv.newitem=i_memory
-		new.camping_harvestkindling <src.uid>,"<src.targp>"
-		return 1
-		endif
-	endif
-endif
+[ITEMDEF 03158]
+DEFNAME=i_mounted_dread_horn
+NAME=Mounted Dread Horn
+TYPE=t_normal
+SKILLMAKE=CARPENTRY 90.0, t_carpentry
+RESOURCES=50 i_log, 1 i_pristine_dread_horn
+WEIGHT=5
+DUPELIST=03159
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Trophies
+DESCRIPTION=Dread Horn
+
+[ITEMDEF 03159]
+DUPEITEM=03158
 
 [eof]

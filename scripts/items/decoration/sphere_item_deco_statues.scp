@@ -21,6 +21,21 @@ DESCRIPTION=Arcanist Statue
 [ITEMDEF 02d0f]
 DUPEITEM=02d0e
 
+[ITEMDEF 02d10]
+DEFNAME=i_statue_squirrel
+NAME=Squirrel Statue
+TYPE=t_normal
+SKILLMAKE=CARPENTRY 0.0, t_carpentry
+RESOURCES=250 i_log
+WEIGHT=255
+DUPELIST=02d11
+CATEGORY=Decoration - Statues
+SUBSECTION=Statues
+DESCRIPTION=Squirrel Statue
+
+[ITEMDEF 02d11]
+DUPEITEM=02d10
+
 [ITEMDEF 02d4a]
 DEFNAME=i_acorn_replica_giant
 NAME=Giant Replica Acorn

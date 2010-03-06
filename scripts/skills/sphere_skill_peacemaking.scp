@@ -124,9 +124,9 @@ action -1
 return 1
 
 on=@gethit
-findid.i_peace_memory.remove
+findid.i_new_peacemaking.remove
 attack <src.uid>
-events -e_peace_event
+events -e_peacemaked
 
 [ITEMDEF i_new_peacemaking]
 ID=i_memory
@@ -134,7 +134,7 @@ NAME=new peacemaking
 TYPE=T_EQ_SCRIPT
 
 on=@timer
-cont.events -e_peace_event
+cont.events -e_peacemaked
 cont.tag0.nomovetill
 remove
 return 1

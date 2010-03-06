@@ -445,7 +445,7 @@ RESOURCES=250 i_log
 SKILLMAKE=CARPENTRY 0.0, t_carpentry
 CATEGORY=Provisions - Deeds
 SUBSECTION=House Addons
-DESCRIPTION=Deed for a arcanist statue (east)
+DESCRIPTION=Deed for an arcanist statue (east)
 
 ON=@Create
 MORE=02d0e
@@ -457,9 +457,33 @@ RESOURCES=250 i_log
 SKILLMAKE=CARPENTRY 0.0, t_carpentry
 CATEGORY=Provisions - Deeds
 SUBSECTION=House Addons
-DESCRIPTION=Deed for a arcanist statue (south)
+DESCRIPTION=Deed for an arcanist statue (south)
 
 ON=@Create
 MORE=02d0f
+
+[ITEMDEF i_deed_squirrel_statue_east]
+ID=i_deed
+NAME=Deed for a squirrel statue (east)
+RESOURCES=250 i_log
+SKILLMAKE=CARPENTRY 0.0, t_carpentry
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for a squirrel statue (east)
+
+ON=@Create
+MORE=02d10
+
+[ITEMDEF i_deed_squirrel_statue_south]
+ID=i_deed
+NAME=Deed for a squirrel statue (south)
+RESOURCES=250 i_log
+SKILLMAKE=CARPENTRY 0.0, t_carpentry
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for a squirrel statue (south)
+
+ON=@Create
+MORE=02d11
 
 [EOF]

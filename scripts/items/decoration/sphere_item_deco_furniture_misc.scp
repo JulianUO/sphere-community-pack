@@ -55,6 +55,21 @@ DESCRIPTION=Bulletin Board
 DEFNAME=i_bulletin_board_2
 DUPEITEM=01e5e
 
+[ITEMDEF 024cb]
+DEFNAME=i_shoji_screen
+NAME=Shoji Screen
+TYPE=t_normal
+SKILLMAKE=CARPENTRY 80.0, TAILORING 50.0, t_carpentry
+RESOURCES=75 i_log, 60 i_cloth
+WEIGHT=10
+DUPELIST=024cd
+CATEGORY=Decoration - Furniture
+SUBSECTION=Misc
+DESCRIPTION=Shoji Screen
+
+[ITEMDEF 024cd]
+DUPEITEM=024cb
+
 [ITEMDEF 024d1]
 DEFNAME=i_bamboo_screen
 NAME=Bamboo Screen

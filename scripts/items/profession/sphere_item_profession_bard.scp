@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 [ITEMDEF 0e9c]
@@ -80,6 +80,34 @@ DESCRIPTION=Lute
 
 [ITEMDEF 0eb4]
 DUPEITEM=0eb3
+
+[ITEMDEF 0eb6]
+DEFNAME=i_music_stand_short
+NAME=Short Music Stand
+TYPE=t_normal
+SKILLMAKE=CARPENTRY 78.9, t_carpentry
+RESOURCES=15 i_log
+DUPELIST=0eb8
+CATEGORY=Items by Professions
+SUBSECTION=Bard
+DESCRIPTION=Music Stand (Short)
+
+[ITEMDEF 0eb8]
+DUPEITEM=0eb6
+
+[ITEMDEF 0ebb]
+DEFNAME=i_music_stand_tall
+NAME=Tall Music Stand
+TYPE=t_normal
+SKILLMAKE=CARPENTRY 81.5, t_carpentry
+RESOURCES=20 i_log
+DUPELIST=0ebc
+CATEGORY=Items by Professions
+SUBSECTION=Bard
+DESCRIPTION=Music Stand (Tall)
+
+[ITEMDEF 0ebc]
+DUPEITEM=0ebb
 
 [ITEMDEF 02805]
 DEFNAME=i_flute_bamboo

@@ -1,530 +1,514 @@
-//****************************************************************************
-//SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
-//****************************************************************************
-// FILE LAST UPDATED: Tuesday, January 24, 2006
-//
-// By Makar
-//
-
-//Elf Stuff
-
-[itemdef 11531]
-Defname=i_Elven_washbasin_WE
-type=t_container
-Name=Elven wash basin
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Wash Basins West-East
-
-
-[itemdef 11532]
-Defname=i_Elven_washbasin_sn
-type=t_container
-Name=Elven Wash Basin
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Wash Basins South-North
-
-[itemdef 11530]
-Defname=i_Elven_dresser_SN
-Type=t_container
-Name=Elven Dresser
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Dresser South-North
-
-[itemdef 11529]
-Defname=i_Elven_dresser_we
-Type=t_container
-Name=Elven Dresser
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Dresser West-East
-
-[itemdef 11527]
-Defname=i_Elven_Armorie_we
-type=t_container
-Name=Fancy Elven Armorie
-TDATA2=04e
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Fancy Amorie West-East
-
-[itemdef 11528]
-Defname=i_Elven_Armorie_sn
-type=t_container
-Name=Fancy Elven Armorie
-TDATA2=04e
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Fancy Armorie South-North
-
-[itemdef 11526]
-Defname=i_Elven_sArmorie_we
-type=t_container
-Name=Simple Elven Armorie
-TDATA2=04e
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Simple Armorie West-East
-
-[itemdef 11525]
-Defname=i_Elven_sArmorie_sn
-type=t_container
-Name=Simple Elven Armorie
-TDATA2=04e
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Simple Armorie South-North
-
-//part 1
-[itemdef 12511]
-Defname=i_Elven_washbasin1
-type=t_container
-Name=Elven wash basin
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Washing Basin Part 1
-
-//part 2
-[itemdef 12512]
-Defname=i_Elven_washbasin2
-type=t_container
-Name=Elven wash basin
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Washing Basin Part 2
-
-//part 1
-[itemdef 12513]
-Defname=i_Elven_washbasin3
-type=t_container
-Name=Elven wash basin
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Washing Basin Part 1
-
-//part 2
-[itemdef 12514]
-Defname=i_Elven_washbasin4
-type=t_container
-Name=Elven Dresser
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Washing Basin Part 2
-
-//part 1
-[itemdef 12515]
-Defname=i_Elven_dresser1
-type=t_container
-Name=Elven Dresser
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Dresser Part 1
-
-
-//part 2
-[itemdef 12516]
-Defname=i_Elven_dresser2
-type=t_container
-Name=Elven wash basin
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Dresser Part 2
-
-//part 1
-[itemdef 12517]
-Defname=i_Elven_dresser3
-type=t_container
-Name=Elven Dresser
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Dresser Part 1
-
-//part 2
-[itemdef 12518]
-Defname=i_Elven_dresser4
-type=t_container
-Name=Elven wash basin
-TDATA2=051
-
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Elven Dresser Part 2
-
-//Hair For Humans
-
-[itemdef 12224]
-Defname=i_hair_LF
-Name=Long Feathered Hair
-type=t_hair
-
-CATEGORY=New Items
-SUBSECTION=ML-Hair
-DESCRIPTION=Long Feathered Hair
-
-ON=@Create
-	ATTR=attr_newbie
-
-ON=@TIMER
-	return 1
-
-[itemdef 12225]
-Defname=i_hair_short1
-Name=Short Hair
-type=t_hair
-
-CATEGORY=New Items
-SUBSECTION=ML-Hair
-DESCRIPTION=Short
-
-ON=@Create
-	ATTR=attr_newbie
-
-ON=@TIMER
-	return 1
-
-//Hair For elfs
-
-[itemdef 12223]
-Defname=i_hair_elven_ML
-Name Mid-Long Hair
-type=t_hair
-
-CATEGORY=New Items
-SUBSECTION=ML-Hair
-DESCRIPTION=Elven Mid Long Hair
-
-ON=@Create
-	ATTR=attr_newbie
-
-ON=@TIMER
-	return 1
-
-[itemdef 12226]
-Defname=i_hair_elven_mullet
-Name=Mullet Hair
-type=t_hair
-
-CATEGORY=New Items
-SUBSECTION=ML-Hair
-DESCRIPTION=Elven Mullet Hair
-
-ON=@Create
-	ATTR=attr_newbie
-
-ON=@TIMER
-	return 1
-
-[itemdef 12236]
-Defname=i_hair_elven_flower
-Name=Flower Hair
-type=t_hair
-
-CATEGORY=New Items
-SUBSECTION=ML-Hair
-DESCRIPTION=Elven Flower Hair
-
-ON=@Create
-	ATTR=attr_newbie
-
-ON=@TIMER
-	return 1
-
-[itemdef 12237]
-Defname=i_hair_elven_long2
-Name=Long Hair With Bun
-type=t_hair
-
-CATEGORY=New Items
-SUBSECTION=ML-Hair
-DESCRIPTION=Elven Long Hair with Bun
-
-ON=@Create
-	ATTR=attr_newbie
-
-ON=@TIMER
-	return 1
-
-[itemdef 12238]
-Defname=i_hair_elven_long3
-Name=Long hair with Bun
-type=t_hair
-
-CATEGORY=New Items
-SUBSECTION=ML-Hair
-DESCRIPTION=Elven Long Hair with Bun
-
-ON=@Create
-	ATTR=attr_newbie
-
-ON=@TIMER
-	return 1
-
-[itemdef 12239]
-Defname=i_hair_elven_braid
-Name=Long hair with Braiding
-type=t_hair
-
-CATEGORY=New Items
-SUBSECTION=ML-Hair
-DESCRIPTION=Elven Long with Braiding
-
-ON=@Create
-	ATTR=attr_newbie
-
-ON=@TIMER
-	return 1
-
-[itemdef 12240]
-Defname=i_hair_elven_long4
-Name=Long hair with Bun
-type=t_hair
-
-CATEGORY=New Items
-SUBSECTION=ML-Hair
-DESCRIPTION=Elven Long Hair with Bun
-
-ON=@Create
-	ATTR=attr_newbie
-
-ON=@TIMER
-	return 1
-
-[itemdef 12241]
-Defname=i_hair_elven_spike
-Name=Spiked Hair
-type=t_hair
-
-CATEGORY=New Items
-SUBSECTION=ML-Hair
-DESCRIPTION=Elven Spiked Hair
-
-ON=@Create
-	ATTR=attr_newbie
-
-ON=@TIMER
-	return 1
-
-//Misc
-
-
-
-[itemdef 11524]
-Defname=i_glowing_beetle1
-type=t_normal
-Name=large glowing beetle
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Glowing Beetle
-
-[itemdef 11523]
-Defname=i_glowing_beetle
-type=t_normal
-Name=large glowing beetle
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Glowing Beetle
-
-[itemdef 11522]
-Defname=i_glowing_beetle2
-type=t_normal
-Name=large glowing beetle
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Glowing Beetle
-
-[itemdef 11521]
-Defname=i_glowing_beetle3
-type=t_normal
-Name=large glowing beetle
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Glowing Beetle
-
-[itemdef 11520]
-Defname=i_glowing_beetle4
-type=t_normal
-Name=large glowing beetle
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Glowing Beetle
-
-[itemdef 11519]
-Defname=i_glowing_beetle5
-type=t_normal
-Name=large glowing beetle
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Glowing Beetle
-
-[itemdef 11518]
-Defname=i_glowing_beetle6
-type=t_normal
-Name=large glowing beetle
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Glowing Beetle
-
-[itemdef 11517]
-Defname=i_glowing_beetle7
-type=t_normal
-Name=large glowing beetle
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Glowing Beetle
-
-
-[itemdef 12637]
-Defname=i_horn_dreadHorn
-type=t_normal
-Name=Horn of Dread Horn
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Dread Horn's Horn
-
-[itemdef 12636]
-Defname=i_horn_dreadHorn1
-type=t_normal
-Name=Horn of Dread Horn
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Dread Horn's Horn
-
-[itemdef 12635]
-Defname=i_pristine_dread_horn
-type=t_normal
-Name=Pristine Dread Horn
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Pristine Dread Horn Head
-
-
-[itemdef 12634]
-Defname=i_pristine_dread_horn1
-type=t_normal
-Name=Pristine Dread Horn
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Pristine Dread Horn Head
-
-[itemdef 12633]
-Defname=i_mounted_Dread_horn
-type=t_normal
-Name=Mounted Dread Horn
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Mounted Dread Horn
-
-[itemdef 12632]
-Defname=i_mounted_Dread_horn1
-type=t_normal
-Name=Mounted Dread Horn
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Mounted Dread Horn
-
-[itemdef 12630]
-Defname=i_mangled_Dread_horn
-type=t_normal
-Name=Mangled Dread Horn
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Mangled Dread Horn Head
-
-[itemdef 12631]
-Defname=i_mangled_Dread_horn1
-type=t_normal
-Name=Mangled Dread Horn
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Mangled Dread Horn Head
-
-
-
-
-[itemdef 12589]
-Defname=i_servered_elf_ears
-type=t_normal
-Name=Severed Elf Ears
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Servered Elf Ears
-
-[itemdef 12590]
-Defname=i_servered_elf_ears1
-type=t_normal
-Name=Severed Elf Ears
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Servered Elf Ears 1
-
-[itemdef 12591]
-Defname=i_servered_human_ears
-type=t_normal
-Name=Servered Human Ears
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Servered Human Ears
-
-[itemdef 12592]
-Defname=i_servered_human_ears1
-type=t_normal
-Name=Servered Human Ears
-CATEGORY=New Items
-SUBSECTION=ML-Misc
-DESCRIPTION=Servered Human Ears 1
-
-
-//Elven Clothes
-[itemdef 12658]
-Defname=i_elven_specs
-type=T_CLOTHING
-Name=Elven Glasses
-CATEGORY=New Items
-SUBSECTION=ML-Clothes
-DESCRIPTION=Elven Glasses
-
-[itemdef 12657]
-Defname=i_elven_quiver
-type=t_container
-Name=Elven Quiver
-TDATA2=03c
-WEIGHT=1
-CATEGORY=New Items
-SUBSECTION=ML-Clothes
-DESCRIPTION=Elven Quiver
-
-[EOF]
+//****************************************************************************
+//SPHERE BY : MENASOFT ©1997-2007
+// WWW.SPHERESERVER.NET
+// ALL SPHERE SCRIPT FILES AND FORMATS ARE COPYRIGHT MENASOFT & PARTNERS.
+// THIS FILE MAY BE FREELY EDITED FOR PERSONAL USE, BUT MAY NOT BE DISTRIBUTED
+// IN WHOLE OR IN PART, IN ANY FORMAT WITHOUT EXPRESS WRITTEN PERMISSION FROM
+// MENASOFT & PARTNERS.  ALL DONATIONS AND CONTRIBUTIONS
+// BECOME THE PROPERTY OF MENASOFT & PARTNERS.
+//****************************************************************************
+// FILE LAST UPDATED: TUESDAY, JANUARY 24, 2006
+//
+// BY MAKAR
+//
+
+//ELF STUFF
+
+[ITEMDEF 11531]
+DEFNAME=I_ELVEN_WASHBASIN_WE
+TYPE=T_CONTAINER
+NAME=ELVEN WASH BASIN
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN WASH BASINS WEST-EAST
+
+
+[ITEMDEF 11532]
+DEFNAME=I_ELVEN_WASHBASIN_SN
+TYPE=T_CONTAINER
+NAME=ELVEN WASH BASIN
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN WASH BASINS SOUTH-NORTH
+
+[ITEMDEF 11530]
+DEFNAME=I_ELVEN_DRESSER_SN
+TYPE=T_CONTAINER
+NAME=ELVEN DRESSER
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN DRESSER SOUTH-NORTH
+
+[ITEMDEF 11529]
+DEFNAME=I_ELVEN_DRESSER_WE
+TYPE=T_CONTAINER
+NAME=ELVEN DRESSER
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN DRESSER WEST-EAST
+
+[ITEMDEF 11527]
+DEFNAME=I_ELVEN_ARMORIE_WE
+TYPE=T_CONTAINER
+NAME=FANCY ELVEN ARMORIE
+TDATA2=04E
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN FANCY AMORIE WEST-EAST
+
+[ITEMDEF 11528]
+DEFNAME=I_ELVEN_ARMORIE_SN
+TYPE=T_CONTAINER
+NAME=FANCY ELVEN ARMORIE
+TDATA2=04E
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN FANCY ARMORIE SOUTH-NORTH
+
+[ITEMDEF 11526]
+DEFNAME=I_ELVEN_SARMORIE_WE
+TYPE=T_CONTAINER
+NAME=SIMPLE ELVEN ARMORIE
+TDATA2=04E
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN SIMPLE ARMORIE WEST-EAST
+
+[ITEMDEF 11525]
+DEFNAME=I_ELVEN_SARMORIE_SN
+TYPE=T_CONTAINER
+NAME=SIMPLE ELVEN ARMORIE
+TDATA2=04E
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN SIMPLE ARMORIE SOUTH-NORTH
+
+//PART 1
+[ITEMDEF 12511]
+DEFNAME=I_ELVEN_WASHBASIN1
+TYPE=T_CONTAINER
+NAME=ELVEN WASH BASIN
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN WASHING BASIN PART 1
+
+//PART 2
+[ITEMDEF 12512]
+DEFNAME=I_ELVEN_WASHBASIN2
+TYPE=T_CONTAINER
+NAME=ELVEN WASH BASIN
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN WASHING BASIN PART 2
+
+//PART 1
+[ITEMDEF 12513]
+DEFNAME=I_ELVEN_WASHBASIN3
+TYPE=T_CONTAINER
+NAME=ELVEN WASH BASIN
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN WASHING BASIN PART 1
+
+//PART 2
+[ITEMDEF 12514]
+DEFNAME=I_ELVEN_WASHBASIN4
+TYPE=T_CONTAINER
+NAME=ELVEN DRESSER
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN WASHING BASIN PART 2
+
+//PART 1
+[ITEMDEF 12515]
+DEFNAME=I_ELVEN_DRESSER1
+TYPE=T_CONTAINER
+NAME=ELVEN DRESSER
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN DRESSER PART 1
+
+
+//PART 2
+[ITEMDEF 12516]
+DEFNAME=I_ELVEN_DRESSER2
+TYPE=T_CONTAINER
+NAME=ELVEN WASH BASIN
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN DRESSER PART 2
+
+//PART 1
+[ITEMDEF 12517]
+DEFNAME=I_ELVEN_DRESSER3
+TYPE=T_CONTAINER
+NAME=ELVEN DRESSER
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN DRESSER PART 1
+
+//PART 2
+[ITEMDEF 12518]
+DEFNAME=I_ELVEN_DRESSER4
+TYPE=T_CONTAINER
+NAME=ELVEN WASH BASIN
+TDATA2=051
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML
+DESCRIPTION=ELVEN DRESSER PART 2
+
+//HAIR FOR HUMANS
+
+[ITEMDEF 12224]
+DEFNAME=I_HAIR_LF
+NAME=LONG FEATHERED HAIR
+TYPE=T_HAIR
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-HAIR
+DESCRIPTION=LONG FEATHERED HAIR
+
+ON=@CREATE
+	ATTR=ATTR_NEWBIE
+
+ON=@TIMER
+	RETURN 1
+
+[ITEMDEF 12225]
+DEFNAME=I_HAIR_SHORT1
+NAME=SHORT HAIR
+TYPE=T_HAIR
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-HAIR
+DESCRIPTION=SHORT
+
+ON=@CREATE
+	ATTR=ATTR_NEWBIE
+
+ON=@TIMER
+	RETURN 1
+
+//HAIR FOR ELFS
+
+[ITEMDEF 12223]
+DEFNAME=I_HAIR_ELVEN_ML
+NAME MID-LONG HAIR
+TYPE=T_HAIR
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-HAIR
+DESCRIPTION=ELVEN MID LONG HAIR
+
+ON=@CREATE
+	ATTR=ATTR_NEWBIE
+
+ON=@TIMER
+	RETURN 1
+
+[ITEMDEF 12226]
+DEFNAME=I_HAIR_ELVEN_MULLET
+NAME=MULLET HAIR
+TYPE=T_HAIR
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-HAIR
+DESCRIPTION=ELVEN MULLET HAIR
+
+ON=@CREATE
+	ATTR=ATTR_NEWBIE
+
+ON=@TIMER
+	RETURN 1
+
+[ITEMDEF 12236]
+DEFNAME=I_HAIR_ELVEN_FLOWER
+NAME=FLOWER HAIR
+TYPE=T_HAIR
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-HAIR
+DESCRIPTION=ELVEN FLOWER HAIR
+
+ON=@CREATE
+	ATTR=ATTR_NEWBIE
+
+ON=@TIMER
+	RETURN 1
+
+[ITEMDEF 12237]
+DEFNAME=I_HAIR_ELVEN_LONG2
+NAME=LONG HAIR WITH BUN
+TYPE=T_HAIR
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-HAIR
+DESCRIPTION=ELVEN LONG HAIR WITH BUN
+
+ON=@CREATE
+	ATTR=ATTR_NEWBIE
+
+ON=@TIMER
+	RETURN 1
+
+[ITEMDEF 12238]
+DEFNAME=I_HAIR_ELVEN_LONG3
+NAME=LONG HAIR WITH BUN
+TYPE=T_HAIR
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-HAIR
+DESCRIPTION=ELVEN LONG HAIR WITH BUN
+
+ON=@CREATE
+	ATTR=ATTR_NEWBIE
+
+ON=@TIMER
+	RETURN 1
+
+[ITEMDEF 12239]
+DEFNAME=I_HAIR_ELVEN_BRAID
+NAME=LONG HAIR WITH BRAIDING
+TYPE=T_HAIR
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-HAIR
+DESCRIPTION=ELVEN LONG WITH BRAIDING
+
+ON=@CREATE
+	ATTR=ATTR_NEWBIE
+
+ON=@TIMER
+	RETURN 1
+
+[ITEMDEF 12240]
+DEFNAME=I_HAIR_ELVEN_LONG4
+NAME=LONG HAIR WITH BUN
+TYPE=T_HAIR
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-HAIR
+DESCRIPTION=ELVEN LONG HAIR WITH BUN
+
+ON=@CREATE
+	ATTR=ATTR_NEWBIE
+
+ON=@TIMER
+	RETURN 1
+
+[ITEMDEF 12241]
+DEFNAME=I_HAIR_ELVEN_SPIKE
+NAME=SPIKED HAIR
+TYPE=T_HAIR
+
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-HAIR
+DESCRIPTION=ELVEN SPIKED HAIR
+
+ON=@CREATE
+	ATTR=ATTR_NEWBIE
+
+ON=@TIMER
+	RETURN 1
+
+//MISC
+
+
+
+[ITEMDEF 11524]
+DEFNAME=I_GLOWING_BEETLE1
+TYPE=T_NORMAL
+NAME=LARGE GLOWING BEETLE
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=GLOWING BEETLE
+
+[ITEMDEF 11523]
+DEFNAME=I_GLOWING_BEETLE
+TYPE=T_NORMAL
+NAME=LARGE GLOWING BEETLE
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=GLOWING BEETLE
+
+[ITEMDEF 11522]
+DEFNAME=I_GLOWING_BEETLE2
+TYPE=T_NORMAL
+NAME=LARGE GLOWING BEETLE
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=GLOWING BEETLE
+
+[ITEMDEF 11521]
+DEFNAME=I_GLOWING_BEETLE3
+TYPE=T_NORMAL
+NAME=LARGE GLOWING BEETLE
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=GLOWING BEETLE
+
+[ITEMDEF 11520]
+DEFNAME=I_GLOWING_BEETLE4
+TYPE=T_NORMAL
+NAME=LARGE GLOWING BEETLE
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=GLOWING BEETLE
+
+[ITEMDEF 11519]
+DEFNAME=I_GLOWING_BEETLE5
+TYPE=T_NORMAL
+NAME=LARGE GLOWING BEETLE
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=GLOWING BEETLE
+
+[ITEMDEF 11518]
+DEFNAME=I_GLOWING_BEETLE6
+TYPE=T_NORMAL
+NAME=LARGE GLOWING BEETLE
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=GLOWING BEETLE
+
+[ITEMDEF 11517]
+DEFNAME=I_GLOWING_BEETLE7
+TYPE=T_NORMAL
+NAME=LARGE GLOWING BEETLE
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=GLOWING BEETLE
+
+
+[ITEMDEF 12637]
+DEFNAME=I_HORN_DREADHORN
+TYPE=T_NORMAL
+NAME=HORN OF DREAD HORN
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=DREAD HORN'S HORN
+
+[ITEMDEF 12636]
+DEFNAME=I_HORN_DREADHORN1
+TYPE=T_NORMAL
+NAME=HORN OF DREAD HORN
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=DREAD HORN'S HORN
+
+[ITEMDEF 12635]
+DEFNAME=I_PRISTINE_DREAD_HORN
+TYPE=T_NORMAL
+NAME=PRISTINE DREAD HORN
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=PRISTINE DREAD HORN HEAD
+
+
+[ITEMDEF 12634]
+DEFNAME=I_PRISTINE_DREAD_HORN1
+TYPE=T_NORMAL
+NAME=PRISTINE DREAD HORN
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=PRISTINE DREAD HORN HEAD
+
+[ITEMDEF 12630]
+DEFNAME=I_MANGLED_DREAD_HORN
+TYPE=T_NORMAL
+NAME=MANGLED DREAD HORN
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=MANGLED DREAD HORN HEAD
+
+[ITEMDEF 12631]
+DEFNAME=I_MANGLED_DREAD_HORN1
+TYPE=T_NORMAL
+NAME=MANGLED DREAD HORN
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=MANGLED DREAD HORN HEAD
+
+
+
+
+[ITEMDEF 12589]
+DEFNAME=I_SERVERED_ELF_EARS
+TYPE=T_NORMAL
+NAME=SEVERED ELF EARS
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=SERVERED ELF EARS
+
+[ITEMDEF 12590]
+DEFNAME=I_SERVERED_ELF_EARS1
+TYPE=T_NORMAL
+NAME=SEVERED ELF EARS
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=SERVERED ELF EARS 1
+
+[ITEMDEF 12591]
+DEFNAME=I_SERVERED_HUMAN_EARS
+TYPE=T_NORMAL
+NAME=SERVERED HUMAN EARS
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=SERVERED HUMAN EARS
+
+[ITEMDEF 12592]
+DEFNAME=I_SERVERED_HUMAN_EARS1
+TYPE=T_NORMAL
+NAME=SERVERED HUMAN EARS
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-MISC
+DESCRIPTION=SERVERED HUMAN EARS 1
+
+
+//ELVEN CLOTHES
+[ITEMDEF 12658]
+DEFNAME=I_ELVEN_SPECS
+TYPE=T_CLOTHING
+NAME=ELVEN GLASSES
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-CLOTHES
+DESCRIPTION=ELVEN GLASSES
+
+[ITEMDEF 12657]
+DEFNAME=I_ELVEN_QUIVER
+TYPE=T_CONTAINER
+NAME=ELVEN QUIVER
+TDATA2=03C
+WEIGHT=1
+CATEGORY=NEW ITEMS
+SUBSECTION=ML-CLOTHES
+DESCRIPTION=ELVEN QUIVER
+
+[EOF]

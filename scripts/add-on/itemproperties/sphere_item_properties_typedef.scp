@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -12,7 +12,7 @@ VERSION=0.56b
 //
 // SCRIPT DOCUMENTATION
 // --------------------
-// Typedef for Item Properties. 
+// Typedef for Item Properties.
 // Based on EA.
 
 // *DONE* scp.ItemProp_BestWeaponSkill - Item Only
@@ -48,7 +48,9 @@ on=@damage
 // Self Repair, auto repairs the weapon for its intensity
 // SR 1 would add one point, SR 5 would add 5, and so...
 if <def.scp.ItemProp_SelfRepair>
-more1l += <tag0.selfrepair>
+	if <tag0.selfrepair>
+	more1l += <tag0.selfrepair>
+	endif
 endif
 
 on=@equip
