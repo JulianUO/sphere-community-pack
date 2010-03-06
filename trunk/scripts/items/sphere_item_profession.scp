@@ -306,23 +306,13 @@ DESCRIPTION=Music Stand
 SKILLMAKE=CARPENTRY 78.9, t_carpentry
 DUPELIST=0eb7
 
-[ITEMDEF 0eb6]
-//music stand
-DEFNAME=i_music_stand_book
-RESOURCES=i_music_stand, i_sheet_music
-SKILLMAKE=CARPENTRY 78.9, t_carpentry
-CATEGORY=Items by Professions
-SUBSECTION=Bard
-DESCRIPTION=Music Stand (books)
-DUPELIST=0eb8
+
 
 [ITEMDEF 0eb7]
 //music stand
 DUPEITEM=0eb5
 
-[ITEMDEF 0eb8]
-//music stand
-DUPEITEM=0eb6
+
 
 [ITEMDEF 0eb9]
 //music stand
@@ -334,17 +324,6 @@ DUPELIST=0eba
 [ITEMDEF 0eba]
 //music stand
 DUPEITEM=0eb9
-
-[ITEMDEF 0ebb]
-//music stand
-DEFNAME=i_music_stand_tall
-RESOURCES=20 i_log
-SKILLMAKE=CARPENTRY 81.5, t_carpentry
-DUPELIST=0ebc
-
-[ITEMDEF 0ebc]
-//music stand
-DUPEITEM=0ebb
 
 [ITEMDEF 0ebd]
 //sheet music

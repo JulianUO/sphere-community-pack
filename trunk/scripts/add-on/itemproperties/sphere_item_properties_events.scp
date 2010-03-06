@@ -220,7 +220,7 @@ on=@spellcast
 // Spell Channeling is the right property. Was wrong with Mage Weapon, sorry.
 // It allows the caster to cast with items equipped in Hand1 or Hand2
 if <def.scp.ItemProp_SpellChanneling> == 1
-	if <argn1> != 104 // exception for Curse Weapon
+	if (<argn1> != 104) || (<argn1> != 203) // exception for Curse Weapon and Consecrate Weapon
 		if <findlayer.1.uid>
 			if !<findlayer.1.tag0.SpellChanneling>
 			findlayer.1.unequip

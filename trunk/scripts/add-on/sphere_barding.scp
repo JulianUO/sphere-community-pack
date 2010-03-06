@@ -4,7 +4,7 @@
 // i = character
 [function f_barding_calculation]
 // to-do: first thing here is ask if got bard difficulty or not
-// calculations are really different. 
+// calculations are really different.
 // and takes another things in count.
 ref9 = <argv[0]>
 ref5 = <argv[1]>
@@ -38,6 +38,9 @@ if <tag0.instrument>
 	targetf f_onbarding_start_targ <args>
 	sysmessage <def.scp.bard_<serv.skill.<args>.key>_targ>
 	return 1
+	else
+	targetf f_onbarding_instrument <args>
+	sysmessage <def.scp.bard_instrument_targ>
 	endif
 else
 targetf f_onbarding_instrument <args>
