@@ -153,7 +153,7 @@ else
 	if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
 	local.realphy = <eval 100 - (<src.tag0.DamFire> + <src.tag0.DamCold> + <src.tag0.DamPoison> + <src.tag0.DamEnergy>)>
 	local.physical = <muldiv <argn1>,<local.realphy>,100>
-	local.physical -= <muldiv <argn1>,<ModAr>,100>
+	local.physical -= <muldiv <argn1>,<eval <armor> + <modar>>,100>
 	local.fire = <muldiv <argn1>,<src.tag0.DamFire>,100>
 	local.fire -= <muldiv <argn1>,<ResFire>,100>
 	local.cold = <muldiv <argn1>,<src.tag0.DamCold>,100>
