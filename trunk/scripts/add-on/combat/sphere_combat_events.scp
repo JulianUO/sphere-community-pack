@@ -19,7 +19,14 @@ tag0.gothitbyspell = <argn1>
 endif
 
 on=@hit
-argn1 = <qval <weapon> ? <eval {<weapon.dam>}> : <eval {1,4}>>
+if <weapon>
+argn1 = <eval {<weapon.dam>}>
+	if <weapon.attr>&attr_magic
+	argn1 += <eval <weapon.morey> / 7>
+	endif
+else
+argn1 = <eval 1,4>
+endif
 if <src.f_combatsys_blockchance> || (<src.trigger @Shield> == 1)
 src.f_combatsys_block
 	doswitch <def.scp.Combat_BlockChance>
@@ -117,7 +124,14 @@ tag0.gothitbyspell = <argn1>
 endif
 
 on=@hit
-argn1 = <qval <weapon> ? <eval {<weapon.dam>}> : <eval {1,4}>>
+if <weapon>
+argn1 = <eval {<weapon.dam>}>
+	if <weapon.attr>&attr_magic
+	argn1 += <eval <weapon.morey> / 7>
+	endif
+else
+argn1 = <eval {dam}>
+endif
 if <src.f_combatsys_blockchance> || (<src.trigger @Shield> == 1)
 src.f_combatsys_block
 	doswitch <def.scp.Combat_BlockChance>

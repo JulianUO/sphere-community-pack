@@ -1,0 +1,23 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[ITEMDEF 02ddb]
+DEFNAME=i_oven_elven
+NAME=Elven Oven
+TYPE=t_fire
+SKILLMAKE=CARPENTRY 85.0, t_carpentry
+RESOURCES=80 i_log
+DUPELIST=02ddc
+CATEGORY=Decoration - Fireplaces, Chimneys & Ovens
+SUBSECTION=Ovens
+DESCRIPTION=Elven Oven
+
+[ITEMDEF 02ddc]
+DUPEITEM=02ddb
+
+[eof]

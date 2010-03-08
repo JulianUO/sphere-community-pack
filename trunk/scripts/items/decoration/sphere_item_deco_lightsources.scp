@@ -40,4 +40,38 @@ DESCRIPTION=Red Hanging Lantern (Unlit)
 DUPEITEM=024c2
 TDATA3=024c3
 
+[ITEMDEF 024c5]
+DEFNAME=i_lantern_hanging_white_lit
+NAME=White Hanging Lantern
+TYPE=t_light_lit
+TDATA3=024c6
+TDATA4=024c6
+SKILLMAKE=CARPENTRY 65.0, t_carpentry
+RESOURCES=5 i_log
+DUPELIST=024c7
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=White Hanging Lantern (Lit)
+
+[ITEMDEF 024c7]
+DUPEITEM=024c5
+TDATA3=024c8
+TDATA3=024c8
+
+[ITEMDEF 024c6]
+DEFNAME=i_lantern_hanging_white
+NAME=White Hanging Lantern
+TYPE=t_light_out
+TDATA3=024c5
+SKILLMAKE=CARPENTRY 65.0, t_carpentry
+RESOURCES=5 i_log
+DUPELIST=024c8
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=White Hanging Lantern (Unlit)
+
+[ITEMDEF 024c8]
+DUPEITEM=024c6
+TDATA3=024c7
+
 [eof]

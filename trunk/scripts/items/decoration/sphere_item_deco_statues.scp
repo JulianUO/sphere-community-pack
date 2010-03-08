@@ -36,6 +36,21 @@ DESCRIPTION=Squirrel Statue
 [ITEMDEF 02d11]
 DUPEITEM=02d10
 
+[ITEMDEF 02d12]
+DEFNAME=i_statue_warrior
+NAME=Warrior Statue
+TYPE=t_normal
+SKILLMAKE=CARPENTRY 0.0, t_carpentry
+RESOURCES=250 i_log
+WEIGHT=255
+DUPELIST=02d13
+CATEGORY=Decoration - Statues
+SUBSECTION=Statues
+DESCRIPTION=Warrior Statue
+
+[ITEMDEF 02d13]
+DUPEITEM=02d12
+
 [ITEMDEF 02d4a]
 DEFNAME=i_acorn_replica_giant
 NAME=Giant Replica Acorn

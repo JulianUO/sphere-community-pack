@@ -486,4 +486,52 @@ DESCRIPTION=Deed for a squirrel statue (south)
 ON=@Create
 MORE=02d11
 
+[ITEMDEF i_deed_warrior_statue_east]
+ID=i_deed
+NAME=Deed for a warrior statue (east)
+RESOURCES=250 i_log
+SKILLMAKE=CARPENTRY 0.0, t_carpentry
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for a warrior statue (east)
+
+ON=@Create
+MORE=02d12
+
+[ITEMDEF i_deed_warrior_statue_south]
+ID=i_deed
+NAME=Deed for a warrior statue (south)
+RESOURCES=250 i_log
+SKILLMAKE=CARPENTRY 0.0, t_carpentry
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for a warrior statue (south)
+
+ON=@Create
+MORE=02d13
+
+[ITEMDEF i_deed_elven_oven_east]
+ID=i_deed
+NAME=Deed for a elven oven (east)
+RESOURCES=80 i_log
+SKILLMAKE=CARPENTRY 85.0, t_carpentry
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for a warrior statue (east)
+
+ON=@Create
+MORE=02ddb
+
+[ITEMDEF i_deed_elven_oven_south]
+ID=i_deed
+NAME=Deed for a elven oven (south)
+RESOURCES=80 i_log
+SKILLMAKE=CARPENTRY 85.0, t_carpentry
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for a elven oven (south)
+
+ON=@Create
+MORE=02ddc
+
 [EOF]
