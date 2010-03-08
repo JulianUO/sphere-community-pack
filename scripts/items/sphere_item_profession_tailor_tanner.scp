@@ -50,25 +50,6 @@ DUPEITEM=0e1d
 // DEFNAME2=BALL_OF_YARN_3
 DUPEITEM=0e1d
 
-[ITEMDEF 0ec6]
-//dress form
-DEFNAME=i_dress_form
-RESOURCES=25 i_log,10 i_cloth
-WEIGHT=5
-CATEGORY=Items by Professions
-SUBSECTION=Tailor
-DESCRIPTION=Dress Form
-SKILLMAKE=CARPENTRY 63.1, TAILORING 65.0, t_carpentry, t_sewing_kit
-
-[ITEMDEF 0ec7]
-//dress form
-WEIGHT=5
-CATEGORY=Items by Professions
-SUBSECTION=Tailor
-DESCRIPTION=Dress Form
-RESOURCES=10 i_cloth
-SKILLMAKE=CARPENTRY 63.1, TAILORING 65.0, t_carpentry, t_sewing_kit
-
 [ITEMDEF 0f95]
 //Bolt of Cloth
 // DEFNAME2=BOLT_OF_CLOTH
