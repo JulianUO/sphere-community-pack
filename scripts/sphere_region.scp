@@ -50,6 +50,7 @@ RESOURCES=1.5 mr_fish_highly_peculiar
 RESOURCES=1.5 mr_fish_prized
 RESOURCES=1.5 mr_fish_wondrous
 RESOURCES=1.5 mr_fish_truly_rare
+RESOURCES=0.5 mr_sos_bottle
 
 [REGIONTYPE r_default_tree t_tree]
 // Default tree area resources.
