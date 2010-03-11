@@ -13,6 +13,11 @@ INSTALLATION AND USAGE INSTRUCTIONS
 - IMPORTANT! To avoid a bug with the house system, you must do the following:
   Open sphere.ini and below AGREE=1, add the following line:
   PACKET215=f_custom_house
+  
+- To enable jail system, search the following line in sphere.ini:
+  //CommandTrigger=f_oncommand
+  And uncomment it, it should look like this:
+  CommandTrigger=f_oncommand
 
 - To enable main systems, add the following events to your ini:
   (NOTE: Replace the original settings)

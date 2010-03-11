@@ -63,12 +63,13 @@ color_o_sos_ancient				0
 
 [DEFNAME COLOR_LOG]
 color_o_log					0
-color_o_oak					07da
+color_o_oak					04a6
 color_o_ash					04a7
 color_o_yew					04a8
 color_o_heartwood				04a9
 color_o_bloodwood				04aa
-color_o_frostwood				047f
+color_o_frostwood				04ab
+color_o_sunwood					04ac
 
 [DEFNAME COLOR_ORE]
 color_o_iron					0 //option: 0763
@@ -89,6 +90,9 @@ color_o_blackrock				0455
 color_o_mytheril				052d //or 0528
 color_o_rose					0665
 color_o_rusty					0750
+
+[DEFNAME COLOR_SETS]
+color_o_darkwood_set				0494
 
 [DEFNAME SPELLWEAVING_SOUNDS]
 snd_spell_arcane_circle			1472

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -101,10 +101,12 @@ elif <argo.taming_min_skill> > <taming>
 argo.message <def.scp.taming_nochance>
 f_skill_delay <getargv 2,<def.skill.35.waittime>>
 return 1
-elif (<argo.followerslot> + <curfollower>) > <maxfollower>
-sysmessage <def.scp.taming_manyfollowers>
-f_skill_delay <getargv 2,<def.skill.35.waittime>>
-return 1
+elif <def.scp.Followers> == 1
+	if (<argo.followerslot> + <curfollower>) > <maxfollower>
+	sysmessage <def.scp.taming_manyfollowers>
+	f_skill_delay <getargv 2,<def.skill.35.waittime>>
+	return 1
+	endif
 elif <argo.owners_count> >= <argo.maxowners>
 argo.message <def.scp.taming_manyowners>
 f_skill_delay <getargv 2,<def.skill.35.waittime>>

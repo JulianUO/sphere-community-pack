@@ -2028,6 +2028,7 @@ SRC.SYSMESSAGE @,,1 New access level set.
 
 [REGIONTYPE r_house_system]
 ON=@Enter
+SRC.DSPEECH +spk_player_house
 REF1=<UID.<UID>.MORE2>
 IF (<REF1.HousePlayerAccess <SRC>>==-1)
   SRC.SYSMESSAGE @,,1 You may not enter.
@@ -2059,6 +2060,9 @@ ELSE
    return 1
   ENDIF
 ENDIF
+
+ON=@Exit
+SRC.DSPEECH -spk_player_house
 
 
 [EVENTS e_aos_house_vendor]
@@ -2798,11 +2802,9 @@ return <DEF.L1>a href = "?ForceTopic<ARGV0>"<DEF.R1><STREAT <ARGS>><DEF.L1>/a<DE
 //////////////////////////////////////////////////////////////////////////////////
 
 
-[SPEECH spk_player]
+[SPEECH spk_player_house]
 ON=I wish to lock*
-IF !STRMATCH("t_multi*","<UID.<REGION.UID>.TYPE>")
- return 0
-ENDIF
+ON=Yo quiero fijar esto*
 REF1=<UID.<SRC.REGION.UID>.MORE2>
 IF (<REF1.HousePlayerAccess <SRC>> >= 3)
  IF (<REF1.House_AvaibleLockdowns>)
@@ -2814,9 +2816,7 @@ IF (<REF1.HousePlayerAccess <SRC>> >= 3)
 ENDIF
 
 ON=I wish to secure*
-IF !STRMATCH("t_multi*","<UID.<REGION.UID>.TYPE>")
- return 0
-ENDIF
+ON=Yo quiero asegurar esto*
 REF1=<UID.<SRC.REGION.UID>.MORE2>
 IF (<REF1.HousePlayerAccess <SRC>> >= 3)
  IF (<REF1.House_AvaibleLockdowns>)
@@ -2828,9 +2828,7 @@ IF (<REF1.HousePlayerAccess <SRC>> >= 3)
 ENDIF
 
 ON=I wish to release*
-IF !STRMATCH("t_multi*","<UID.<REGION.UID>.TYPE>")
- return 0
-ENDIF
+ON=Yo quiero liberar esto*
 REF1=<UID.<SRC.REGION.UID>.MORE2>
 IF (<REF1.HousePlayerAccess <SRC>> >= 3)
  SRC.TARGETF f_house_release <REF1>
@@ -2838,7 +2836,8 @@ IF (<REF1.HousePlayerAccess <SRC>> >= 3)
 ENDIF
 
 ON=I ban thee
-IF !(<DEF.scp.House_BanEngine>) || !STRMATCH("t_multi*","<UID.<REGION.UID>.TYPE>")
+ON=Te baneo
+IF !(<DEF.scp.House_BanEngine>)
  return 0
 ENDIF
 REF1=<UID.<SRC.REGION.UID>.MORE2>
@@ -2848,7 +2847,8 @@ IF (<REF1.HousePlayerAccess <SRC>> >= 2)
 ENDIF
 
 ON=Remove thyself
-IF !(<DEF.scp.House_BanEngine>) || !STRMATCH("t_multi*","<UID.<REGION.UID>.TYPE>")
+ON=Te expulso
+IF !(<DEF.scp.House_BanEngine>)
  return 0
 ENDIF
 REF1=<UID.<SRC.REGION.UID>.MORE2>
@@ -2858,7 +2858,8 @@ IF (<REF1.HousePlayerAccess <SRC>> >= 2)
 ENDIF
 
 ON=I wish to place a trash barrel
-IF !(<DEF.scp.House_UseTrash>) || !STRMATCH("t_multi*","<UID.<REGION.UID>.TYPE>")
+ON=Yo quiero un tacho de basura
+IF !(<DEF.scp.House_UseTrash>)
   return 0
 ENDIF
 REF1=<UID.<SRC.REGION.UID>.MORE2>
@@ -2879,6 +2880,16 @@ IF (<REF1.HousePlayerAccess <SRC>> >= 3)
     SRC.SYSMESSAGE @,,1 You have a new trash barrel.  Three minutes after you put something in the barrel, the trash will be emptied.  Be forewarned, this is permanent!
   ENDIF
 ENDIF
+
+ON=I want to access my bank*
+ON=Quiero acceder al banco
+if <def.scp.House_AllowBanking> == 0
+return 0
+endif
+ref1 = <uid.<src.region.uid>.more2>
+if (<ref1.HousePlayerAccess <src.uid>> >= 1)
+src.bankself
+endif
 
 //////////////////////////////////////////////////////////////////////////////////
 

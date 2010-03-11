@@ -92,6 +92,11 @@ endif
 if <tag0.luck.loot>
 local.chanceinc = <feval <floatval <ref8.luck> @ (5 / 9)>>
 args = <tag0.luck.loot>
+	if <argv[2]>
+	serv.newitem <eval <argv[2]>>
+	new.cont = <local.corpse>
+	return 0
+	endif
 local.items = <r<argv[0]>>
 	if <r100> < <local.chanceinc>
 	local.items ++
@@ -219,7 +224,7 @@ if <def.scp.ItemProp_SpellChanneling> == 1
 endif
 // Lower Mana Cost
 if <def.scp.ItemProp_LowerManaCost> == 1
-argn2 = <eval (<argn2> * (<tag0.LowerManaCost> + 1)) / 100>
+argn2 -= <eval (<argn2> * (<tag0.LowerManaCost> + 1)) / 100>
 endif
 // Lower Reagent Cost
 if <def.scp.ItemProp_LowerReagentCost> == 1
