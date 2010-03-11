@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -13,9 +13,109 @@ VERSION=0.56b
 // --------------------
 // Typedefs for Armor/Weapon SETS
 
+[defname sets_list]
+t_set_darkwood.pieces	6
+t_set_virtue.pieces	8
+
+t_set_marksman.pieces	2
+t_set_juggernaut.pieces	2
+
+
 [TYPEDEF t_set_darkwood]
-[TYPEDEF t_set_marksman]
-[TYPEDEF t_set_evocarius]
+on=@equip
+f_getset_pieces_equip t_set_darkwood
+
+on=@unequip
+f_getset_pieces_unequip t_set_darkwood
+
+ON=@SetEquip
+src.ModStr += 10
+src.Luck += 100
+TAG0.ReflectPhysicalDamage += 25
+
+ON=@SetUnEquip
+src.ModStr -= 10
+src.Luck -= 100
+TAG0.ReflectPhysicalDamage -= 25
+
+ON=@ItemSetEquip
+COLOR = color_o_darkwood_set
+TAG.SelfRepair = 3
+src.ModAr += 2
+src.ResFire += 5
+src.ResCold += 5
+src.ResPoison += 3
+src.ResEnergy += 5
+
+ON=@ItemSetUnequip
+COLOR = 0
+TAG.SelfRepair = 0
+src.ModAr -= 2
+src.ResFire -= 5
+src.ResCold -= 5
+src.ResPoison -= 3
+src.ResEnergy -= 5
+
+
 [TYPEDEF t_set_virtue]
+on=@equip
+f_getset_pieces_equip t_set_virtue
+
+on=@unequip
+f_getset_pieces_unequip t_set_virtue
+
+ON=@ItemSetEquip
+COLOR = 0
+TAG.SelfRepair = 3
+src.ModAr += 5
+src.ResFire += 5
+src.ResCold += 5
+src.ResPoison += 5
+src.ResEnergy += 5
+
+ON=@ItemSetUnequip
+COLOR = color_o_virtue_set
+TAG.SelfRepair = 5
+src.ModAr -= 5
+src.ResFire -= 5
+src.ResCold -= 5
+src.ResPoison -= 5
+src.ResEnergy -= 5
+
+
+
+[TYPEDEF t_set_marksman]
+on=@equip
+f_getset_pieces_equip t_set_marksman
+
+on=@unequip
+f_getset_pieces_unequip t_set_marksman
+
+ON=@SetEquip
+
+ON=@SetUnEquip
+
+ON=@ItemSetEquip
+
+ON=@ItemSetUnequip
+
+[TYPEDEF t_set_juggernaut]
+on=@equip
+f_getset_pieces_equip t_set_evocarius
+
+on=@unequip
+f_getset_pieces_unequip t_set_evocarius
+
+ON=@SetEquip
+
+ON=@SetUnEquip
+
+ON=@ItemSetEquip
+
+ON=@ItemSetUnequip
+
+
+
+
 
 [eof]

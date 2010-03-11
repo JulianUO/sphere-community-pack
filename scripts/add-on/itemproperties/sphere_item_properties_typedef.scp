@@ -66,7 +66,7 @@ if <tag0.DefenseChanceIncrease>
 endif
 if <tag0.DexterityBonus>
 	if <def.scp.ItemProp_DexterityBonus> == 1
-	src.tag0.DexterityBonus += <tag0.DexterityBonus>
+	src.ModDex += <tag0.DexterityBonus>
 	endif
 endif
 if <tag0.FasterCastRecovery>
@@ -96,7 +96,7 @@ if <tag0.HitPointIncrease>
 endif
 if <tag0.IntelligenceBonus>
 	if <def.scp.ItemProp_IntelligenceBonus> == 1
-	src.tag0.IntelligenceBonus += <tag0.IntelligenceBonus>
+	src.ModInt += <tag0.IntelligenceBonus>
 	endif
 endif
 if <tag0.LowerManaCost>
@@ -146,7 +146,7 @@ if <tag0.StaminaIncrease>
 endif
 if <tag0.StrengthBonus>
 	if <def.scp.ItemProp_StrengthBonus> == 1
-	src.tag0.StrengthBonus += <tag0.StrengthBonus>
+	src.ModStr += <tag0.StrengthBonus>
 	endif
 endif
 if <tag0.NightSight>
@@ -169,7 +169,7 @@ if <tag0.DefenseChanceIncrease>
 endif
 if <tag0.DexterityBonus>
 	if <def.scp.ItemProp_DexterityBonus> == 1
-	src.tag0.DexterityBonus -= <tag0.DexterityBonus>
+	src.ModDex -= <tag0.DexterityBonus>
 	endif
 endif
 if <tag0.FasterCastRecovery>
@@ -199,7 +199,7 @@ if <tag0.HitPointIncrease>
 endif
 if <tag0.IntelligenceBonus>
 	if <def.scp.ItemProp_IntelligenceBonus> == 1
-	src.tag0.IntelligenceBonus -= <tag0.IntelligenceBonus>
+	src.ModInt -= <tag0.IntelligenceBonus>
 	endif
 endif
 if <tag0.LowerManaCost>
@@ -249,7 +249,7 @@ if <tag0.StaminaIncrease>
 endif
 if <tag0.StrengthBonus>
 	if <def.scp.ItemProp_StrengthBonus> == 1
-	src.tag0.StrengthBonus -= <tag0.StrengthBonus>
+	src.ModStr -= <tag0.StrengthBonus>
 	endif
 endif
 // NightSight requires a "special" code. It may be used by several layers.

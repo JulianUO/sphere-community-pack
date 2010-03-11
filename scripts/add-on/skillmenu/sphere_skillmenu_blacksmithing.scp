@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -35,7 +35,7 @@ VERSION=0.56b
 //          If empty, option won't show in the skill menu.
 //
 // _check: A small check before trying to create the item.
-//         Things like asking for a forge or mana would work, 
+//         Things like asking for a forge or mana would work,
 //         RETURN 1 in this function cancels crafting.
 //
 // _check_notice: Text displayed if the _check property returns 1.
@@ -72,6 +72,7 @@ blacksmithing_category_7_name	"1011082" // Bashing
 blacksmithing_category_8_name	"1011083" // Axes
 blacksmithing_category_9_name	"1011084" // Polearms
 blacksmithing_category_10_name	"1060885" // Dragon Scale Armor
+blacksmithing_category_11_name	"1044117" // Throwing
 
 blacksmithing_category_1_1	"i_ringmail_gloves"
 blacksmithing_category_1_2	"i_ringmail_leggings"
@@ -231,6 +232,10 @@ blacksmithing_category_10_2	"i_dragon_helm"
 blacksmithing_category_10_3	"i_dragon_leggings"
 blacksmithing_category_10_4	"i_dragon_sleeves"
 blacksmithing_category_10_5	"i_dragon_chest"
+
+blacksmithing_category_11_1	"i_boomerang"
+blacksmithing_category_11_2	"i_cyclone"
+blacksmithing_category_11_3	"i_soul_glaive"
 
 
 [defname sphere_crafting_blacksmithing_colored]

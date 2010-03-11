@@ -26,6 +26,11 @@ argn1 = <eval {<weapon.dam>}>
 	endif
 else
 argn1 = <eval 1,4>
+	if <flags>&statf_polymorph
+		if <def.scp.Combat_PolymorphDamage> == 1
+		argn1 = <eval {<serv.chardef.<body>.dam>}>
+		endif
+	endif
 endif
 if <src.f_combatsys_blockchance> || (<src.trigger @Shield> == 1)
 src.f_combatsys_block
