@@ -2401,6 +2401,8 @@ ELIF !(<ARGO.ISSTORAGE>)
   SRC.SYSMESSAGE @,,1 That isn't locked down...
 ELIF (<UID.<ARGS>.HousePlayerAccess <SRC>> < <ARGO.TAG0.Access>)
   SRC.SYSMESSAGE @,,1 You lack privilege to release this.
+ELIF !<ARGO.ISTEVENT.t_locked_down>
+  SRC.SYSMESSAGE @,,1 You need an axe to remove this.
 ELSE
   IF (<ARGO.TYPE>==t_container)
     IF (<ARGO.IsStorage>==1)
@@ -2921,21 +2923,28 @@ ENDIF
 
 
 [TYPEDEF t_weapon_sword]
-ON=@TargOn_Item
-IF (<ARGO.CanSee>) && !STRCMP("addon","<STRSUB 2 5 <ARGO.BASEID>>")
- REF1=<UID.<ARGO.REGION.UID>.MORE2>
- IF (<REF1.IsOwner <SRC>>) || (<REF1.IsCoOwner <SRC>>)
-  IF (<SERV.ITEMDEF.i_deed_<STRSUB 8 0 <ARGO.BASEID>>>)
-   SERV.NEWITEM i_deed_<STRSUB 8 0 <ARGO.BASEID>>,1,<SRC.FINDLAYER.21>
-  ENDIF
-  SRC.FACE <ARGO>
-  ARGO.SOUND 011c
-  ARGO.RemoveAddOn
-  ARGO.REMOVE
-  SRC.SYSMESSAGE @,,1 You destroy the item.
- ENDIF
- return 1
-ENDIF
+on=@targon_item
+if <argo.cansee>
+ref1 = <uid.<argo.region.uid>.more2>
+	if <argo.baseid> == i_addon_trash_barrel
+	src.face <argo>
+	argo.sound 011c
+	argo.remove
+	src.sysmessage @,,1 You destroy the item.
+	endif
+	if (<ref1.isowner <src>>) || (<ref1.iscoowner <src>>)
+		if <argo.tag0.deed>
+		local.toadd = <argo.tag0.deed>
+		argo.remove
+		elif <argo.link.tag0.deed>
+		local.toadd = <argo.link.tag0.deed>
+		argo.link.remove
+		endif
+	serv.newitem <local.toadd>
+	new.cont = <src.findlayer.21>
+	return 1
+	endif
+endif
 
 //////////////////////////////////////////////////////////////////////////////////
 
