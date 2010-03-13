@@ -120,43 +120,6 @@ ON=@Create
 ON=@NPCRestock
 	ITEM=loot_ZOMBIE
 
-[CHARDEF 04]
-DEFNAME=c_gargoyle
-//DEFNAME2=GARGOYLES
-NAME=Gargoyle
-SOUND=snd_MONSTER_GARGYL1
-ICON=i_pet_GARG
-ANIM=03fbc7f
-CAN=MT_WALK|MT_FLY|MT_USEHANDS
-DAM=3,18
-ARMOR=16
-RESOURCES=8 i_ribs_raw
-FOODTYPE=15 t_meat_raw
-DESIRES=c_GARGOYLE
-//SHELTER=r_caves,r_dungeon
-AVERSIONS=t_TRAP,r_civilization
-CATEGORY=Monsters
-SUBSECTION=Daemons & Gargoyles
-DESCRIPTION=Gargoyle
-
-ON=@Create
-	NPC=brain_monster
-	FAME=5000
-	KARMA={-4000 -4999}
-	STR={145 175}
-	DEX={76 95}
-	INT={81 105}
-	PARRYING={35.0 45.0}
-	MAGERY={70.0 85.0}
-	MAGICRESISTANCE={70.0 85.0}
-	TACTICS={50.0 70.0}
-	WRESTLING={40.0 80.0}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=4 8
-
-ON=@NPCRestock
-	ITEM=loot_GARGOYLE
-
 [CHARDEF 05]
 DEFNAME=c_eagle
 NAME=Eagle
@@ -290,43 +253,6 @@ ON=@Create
 
 ON=@NPCRestock
 	ITEM=loot_CORPSER
-
-[CHARDEF 09]
-DEFNAME=c_daemon
-NAME=#NAMES_DAEMON the Daemon
-//TITLE=the Daemon
-SOUND=snd_MONSTER_DAEMON1
-ICON=i_pet_DAEMON
-ANIM=03fbc7f
-CAN=MT_WALK|MT_FLY|MT_USEHANDS
-DAM=20,25
-ARMOR={3 18}
-RESOURCES=9 i_ribs_raw, 8 i_reag_daemon_bone
-FOODTYPE=
-DESIRES=i_gold
-//SHELTER=r_dungeon,r_caves
-AVERSIONS=r_civilization
-CATEGORY=Monsters
-SUBSECTION=Daemons & Gargoyles
-DESCRIPTION=Daemon
-
-ON=@Create
-	NPC=brain_monster
-	FAME={4000 8000}
-	KARMA={-5000 -5999}
-	STR={475 505}
-	DEX={76 95}
-	INT={300 325}
-	PARRYING={65.0 75.0}
-	MAGERY={70.0 85.0}
-	MAGICRESISTANCE={70.0 80.0}
-	TACTICS={70.0 80.0}
-	WRESTLING={60.0 80.0}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=6 8
-
-ON=@NPCRestock
-	ITEM=loot_DAEMON
 
 [CHARDEF 0A]
 DEFNAME=c_daemon_w_sword
@@ -865,41 +791,6 @@ ON=@Create
 	TACTICS={43.0 58.0}
 	WRESTLING={43.0 58.0}
 	TAMING=5.0
-
-[CHARDEF 01e]
-DEFNAME=c_harpy
-NAME=Harpy
-SOUND=snd_MONSTER_HARPY1
-ICON=i_pet_HARPY
-ANIM=03f8c7f
-DAM=3,9
-ARMOR=14
-CAN=MT_WALK|MT_FLY|MT_FEMALE|MT_USEHANDS
-RESOURCES=9 i_ribs_raw,50 i_feather
-FOODTYPE=5 t_meat_raw
-DESIRES=i_gold, c_harpy
-//SHELTER=r_forests,r_mountains
-AVERSIONS=r_civilization
-CATEGORY=Monsters
-SUBSECTION=Miscellaneous
-DESCRIPTION=Harpy
-
-ON=@Create
-	NPC=brain_monster
-	FAME={300 1000}
-	KARMA={-2000 -2999}
-	//ALIGNMENT=EVIL
-	STR={96 120}
-	DEX={86 110}
-	INT={51 75}
-	PARRYING={75.0 90.0}
-	MAGICRESISTANCE={50.0 65.0}
-	TACTICS={70.0 100.0}
-	WRESTLING={60.0 90.0}
-
-ON=@NPCRestock
-	ITEM=i_backpack
-	ITEM=loot_HARPEY
 
 [CHARDEF 01f]
 DEFNAME=c_headless

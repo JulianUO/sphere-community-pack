@@ -11,57 +11,6 @@
 
 VERSION=0.56b
 
-[CHARDEF 095]
-DEFNAME=c_Succubus
-NAME=Succubus
-SOUND=04B5
-ICON=9770
-DAM=57,94
-RESDISPDNID=c_woman
-RESLEVEL=2
-RESDISPDNHUE=01
-CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_FLY|MT_FEMALE
-MOVERATE=30
-ARMOR=85
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman,t_corpse
-CATEGORY=New Monsters
-SUBSECTION=LBR
-DESCRIPTION=Succubus
-
-ON=@Create
-	NPC=brain_monster
-	FAME=10000
-	KARMA=-10000
-	STR={488 620}
-	MAXHITS={312 353}
-	INT={498 657}
-	DEX={121 170}
-	MAGICRESISTANCE={100.0 150.0}
-	TACTICS={80.0 90.0}
-	WRESTLING={80.0 90.0}
-	MAGERY={99.0 100.0}
-	EVALUATINGINTEL={90.0 100.0}
-	ITEMNEWBIE=i_spellbook
-	ADDCIRCLE 8,1
-
-ON=@NpcRestock
-	ITEM=i_gold,{1000 1200}
-
-ON=@GetHit
-	LOCAL.TMP=<OBJ>
-	OBJ=<UID>
-	FORCHARS 3
-		IF (<ISPLAYER>) || (<FLAGS>&statf_pet)
-			LOCAL.DAM=<R10,40>
-			DAMAGE <LOCAL.DAM> <DEF.DAM_PHYSICAL> <OBJ>
-			OBJ.HITS += <LOCAL.DAM>
-			IF (<OBJ.HITS> > <OBJ.MAXHITS>)
-				OBJ.HITS=<OBJ.MAXHITS>
-			endif
-		endif
-	end
-	OBJ=<LOCAL.TMP>
-
 [CHARDEF 098]
 DEFNAME=c_terathan_avenger
 NAME=Terathan Avenger
@@ -347,47 +296,6 @@ ON=@NpcRestock
 	ITEM=i_gold,{133 260}
 	ITEM=i_minion_leather
 
-[chardef 130]
-defname=c_fire_gargoyle
-name=Fire Gargoyle
-SOUND=snd_monster_gargyl1
-ICON=i_pet_garg
-ARMOR=30
-DAM=22,45
-CAN=MT_WALK|MT_USEHANDS|MT_FLY
-FOODTYPE=1 t_meat_raw
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman
-RESDISPDNID=c_gargoyle
-RESLEVEL=2
-RESDISPDNHUE=36
-CATEGORY=New Monsters
-SUBSECTION=LBR
-DESCRIPTION=Fire Gargoyle
-MOVERATE=60
-
-ON=@Create
-	NPC=brain_monster
-	FAME=3500
-	KARMA=-3500
-	STR={351 400}
-	MAXHITS={211 244}
-	INT={226 250}
-	DEX={126 145}
-	MAGICRESISTANCE={90.0 105.0}
-	ANATOMY={75.0 85.0}
-	MAGERY={90.0 105.0}
-	EVALUATINGINTEL={90.0 105.0}
-	MEDITATION={90.0 105.0}
-	TACTICS={80.0 100.0}
-	WRESTLING={40.0 80.0}
-	ITEMNEWBIE=i_spellbook
-	ADDCIRCLE 6,1
-	ADDSPELL=S_FLAMESTRIKE
-
-ON=@NpcRestock
-	ITEM=i_gold,{200 300}
-	ITEM=i_scroll_flamestrike
-
 [chardef 779]
 defname=c_bogling
 NAME=Bogling
@@ -421,9 +329,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{85 145}
 
 ON=@Hit
-	IF !(<SRC.FLAGS>&statf_poisoned)
-		SRC.SPELLEFFECT S_POISON,300,<UID>
-	endif
+IF !(<SRC.FLAGS>&statf_poisoned)
+SRC.SPELLEFFECT S_POISON,300,<UID>
+endif
 
 [chardef 784]
 defname=c_arcane_daemon

@@ -453,45 +453,6 @@ ON=@NPCRestock
 	ITEM=loot_MUMMY
 
 
-[CHARDEF 01023]
-DEFNAME=c_m_imp
-NAME=Imp
-ID=C_MONGBAT
-SOUND=snd_MONSTER_MNGBAT1
-ICON=i_pet_mongbat
-DAM=3,18
-ARMOR=15
-RESOURCES=3 i_ribs_raw, 6 i_hide
-CAN=MT_FLY|MT_WALK
-FOODTYPE=9 t_meat_raw
-DESIRES=C_M_IMP
-//SHELTER==r_caves,r_dungeon,r_spooky
-AVERSIONS=r_civilization,r_water
-CATEGORY=Monsters
-SUBSECTION=Miscellaneous
-DESCRIPTION=Imp
-
-ON=@Create
-	COLOR=color_red1
-	STR={76 100}
-	DEX={61 80}
-	INT={86 110}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=2,4
-	PARRYING={50.0 60.0}
-	MAGERY={40.0 60.0}
-	MAGICRESISTANCE={35.0 50.0}
-	TACTICS={55.0 70.0}
-	WRESTLING={60.0 75.0}
-	TAMING=90.0
-	NPC=brain_monster
-	FAME={100 300}
-	KARMA={-2000 -2999}
-
-ON=@NPCRestock
-	ITEM=loot_IMP
-
-
 [CHARDEF 01024]
 DEFNAME=c_m_kraken
 NAME=Kraken
@@ -601,44 +562,6 @@ ON=@Create
 
 ON=@NPCRestock
 	ITEM=loot_BALRON
-
-
-[CHARDEF 01033]
-DEFNAME=c_m_gargoyle_stone
-NAME=Stone Gargoyle
-ID=c_GARGOYLE
-SOUND=snd_MONSTER_GARGYL1
-ICON=i_pet_GARG
-CAN=MT_WALK|MT_FLY
-DAM=4,24
-ARMOR=25
-RESOURCES=8 i_ribs_raw, 5 tm_rocks
-FOODTYPE=2 t_arock, 2 t_meat_raw
-DESIRES=c_m_gargoyle_stone,c_GARGOYLE,t_bone,i_gold,t_wand
-//SHELTER==r_caves,r_dungeon
-AVERSIONS=r_civilization
-CATEGORY=Monsters
-SUBSECTION=Daemons & Gargoyles
-DESCRIPTION=Stone Gargoyle
-
-ON=@Create
-	COLOR=color_rock
-	STR={96 125}
-	DEX={86 105}
-	INT={140 165}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=3,6
-	PARRYING={55.0 65.0}
-	MAGERY={50.0 65.0}
-	MAGICRESISTANCE={50.0 65.0}
-	TACTICS={50.0 70.0}
-	WRESTLING={50.0 70.0}
-	NPC=brain_monster
-	FAME={100 2000}
-	KARMA={-3000 -3999}
-
-ON=@NPCRestock
-	ITEM=loot_STONE_GARGOYLE
 
 
 [CHARDEF 01034]
@@ -953,7 +876,7 @@ ON=@Create
 
 ON=@NPCRestock
 	ITEM=loot_PHOENIX
-	
+
 
 [CHARDEF 01043]
 DEFNAME=c_m_elem_poison

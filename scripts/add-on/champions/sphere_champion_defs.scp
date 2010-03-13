@@ -11,14 +11,17 @@ SPHERECHAMPIONS_STATSUMINCREASE_3 240
 SPHERECHAMPIONS_STATSUMINCREASE_4 245
 SPHERECHAMPIONS_STATSUMINCREASE_5 250
 
-[DEFNAME champions_monstergroups]
-champ_Abyss_1 {c_m_mongbat_arboreal 1 c_m_imp 1}
-champ_Abyss_2 {c_gargoyle 1 c_harpy 1}
-champ_Abyss_3 {c_m_gargoyle_stone 1 c_fire_gargoyle 1}
-champ_Abyss_4 {c_m_scorpion_thrall 1 c_daemon 1}
-champ_Abyss_champion c_semidar
-champ_Abyss_Reward {i_gladiator_collar 1 i_Lieutenant_Royal_guard 1}
 
+[DEFNAME champions_monstergroups]
+champ_abyss_1 {c_mongbat 1 c_imp 1}
+champ_abyss_2 {c_gargoyle 1 c_harpy 1}
+champ_abyss_3 {c_fire_gargoyle 1 c_stone_gargoyle 1}
+champ_abyss_4 {c_daemon 1 c_succubus 1}
+champ_abyss_champion	c_semidar
+champ_abyss_reward	{i_gladiator_collar 1 i_Lieutenant_Royal_guard 1}
+
+
+// Old Champions Spawns by Cloud
 champ_Arachnid_1 {c_fire_gargoyle 1 c_spider_giant 1}
 champ_Arachnid_2 {c_terathan_drone 1 c_terathan_warrior 1}
 champ_Arachnid_3 {c_dread_spider 1 c_terathan_matriarch 1}

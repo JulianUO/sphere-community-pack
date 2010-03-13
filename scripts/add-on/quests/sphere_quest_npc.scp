@@ -31,7 +31,7 @@ ON=@Create
 
 ON=@NPCRestock
 	ITEM=i_backpack
-	ITEM=loot_HARPEY
+	ITEM=loot_harpy
 	ITEM=i_salivas_feather
 
 
@@ -89,7 +89,7 @@ CATEGORY=New Creatures
 SUBSECTION=Monsters LBR
 DESCRIPTION=Plague Spawn
 
-ON=@Create 
+ON=@Create
 	NPC=brain_monster
 	FAME=10000
 	KARMA=-10000
@@ -105,7 +105,7 @@ ON=@NpcRestock
 	ITEM=random_jewel, {1 2}
 	ITEM=random_jewel, {1 2},R3
 	ITEM=i_gold,{450 600}
-	
+
 ON=@Hit
 	IF !(<SRC.FLAGS>&statf_poisoned)
 		SRC.SPELLEFFECT S_POISON,500,<UID>
@@ -141,7 +141,7 @@ CATEGORY=New Creatures
 SUBSECTION=Monsters LBR
 DESCRIPTION=Plague Beast Lord
 
-ON=@Create 
+ON=@Create
 	NPC=brain_monster
 	FAME=10000
 	KARMA=-10000
@@ -157,7 +157,7 @@ ON=@NpcRestock
 	ITEM=random_jewel, {1 2}
 	ITEM=random_jewel, {1 2},R3
 	ITEM=i_gold,{450 600}
-	
+
 ON=@Hit
 	IF !(<SRC.FLAGS>&statf_poisoned)
 		SRC.SPELLEFFECT S_POISON,500,<UID>
@@ -178,7 +178,7 @@ ON=@ItemStep
 	endif
 
 
-[chardef c_abscess] 
+[chardef c_abscess]
 defname=c_Hydra
 name=abscess
 //SOUND=snd_monster_daemon1
@@ -188,7 +188,7 @@ RESDISPDNHUE=33
 RESDISPDNID=c_man
 DAM=20,35
 ARMOR=30
-RESOURCES=15 i_ribs_raw 
+RESOURCES=15 i_ribs_raw
 DESIRES=i_gold,e_notoriety
 AVERSIONS=t_TRAP,t_eerie_stuff
 CAN=MT_WALK
@@ -196,14 +196,14 @@ CATEGORY=Do Not use
 SUBSECTION=Quest System
 DESCRIPTION=Abscess
 
-ON=@Create 
+ON=@Create
 	NPC=brain_monster
-	FAME={100 3000} 
-	KARMA={-5000 -6999} 
+	FAME={100 3000}
+	KARMA={-5000 -6999}
 	STR={150 220}
 	MAXHITS=250
-	INT={150 300} 
-	DEX={100 200} 
+	INT={150 300}
+	DEX={100 200}
 	PARRYING={70.0 95.0}
 	MAGICRESISTANCE={60.0 70.0}
 	MAGERY={70.0 85.0}
