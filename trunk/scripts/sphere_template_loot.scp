@@ -951,24 +951,6 @@ ITEM={ i_log 1 i_board 1 },{ 5 10 }
 ITEM=i_reag_executioners_cap,{ 2 5 }
 ITEM=i_gold,{ 0 50 }
 
-[TEMPLATE loot_DAEMON]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Daemon
-CONTAINER=i_backpack
-ITEM=random_potion,{ 2 3 }
-ITEM=random_potion,{ 2 3 }
-ITEM=ttm_lvl4,R99
-ITEM=random_scroll,{ 2 3 }
-ITEM=random_reagent,{ 4 6 }
-ITEM=random_reagent,{ 4 6 }
-ITEM=random_jewel
-ITEM=random_jewel
-ITEM=random_magic_wands
-ITEM=random_magic_wands
-ITEM=i_scroll_blank,{ 1 2 }
-ITEM=i_gold,{150 600}
-
 [TEMPLATE loot_DEEP_SEA_SERPENT]
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
@@ -1051,18 +1033,7 @@ ITEM=random_jewel
 ITEM=random_jewel
 ITEM=i_gold,{150 300}
 
-[TEMPLATE loot_GARGOYLE]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Gargoyle
-CONTAINER=i_backpack
-ITEM=random_potion
-ITEM=random_potion
-ITEM=random_jewel
-ITEM=random_jewel
-ITEM=random_scroll,{1 3}
-ITEM=random_scroll,{1 3}
-ITEM=i_gold,{50 150}
+
 
 [TEMPLATE loot_GAZER]
 CATEGORY=Item Templates
@@ -1084,13 +1055,6 @@ CONTAINER=i_backpack
 ITEM=RANDOM_JEWEL
 ITEM=RANDOM_JEWEL
 ITEM=RANDOM_BONE_ARMOR
-ITEM=i_gold,{50 150}
-
-[TEMPLATE loot_HARPEY]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Harpy
-CONTAINER=i_backpack
 ITEM=i_gold,{50 150}
 
 [TEMPLATE loot_HEADLESS]
@@ -1155,11 +1119,6 @@ ITEM=RANDOM_REAGENT,{ 4 6 }
 ITEM=RANDOM_JEWEL
 ITEM=I_SCROLL_BLANK
 ITEM=i_gold,{0 250}
-
-[TEMPLATE loot_MONGBAT]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Mongbat
 
 [TEMPLATE loot_OGRE]
 CATEGORY=Item Templates
@@ -1487,11 +1446,6 @@ CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
 DESCRIPTION=Ice Snake
 
-[TEMPLATE loot_IMP]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Imp
-
 [TEMPLATE loot_KRAKEN]
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
@@ -1621,18 +1575,6 @@ ITEM=i_ore_iron,{5 10}
 ITEM=i_reag_black_pearl,{5 10}
 ITEM=i_gold,{200 250}
 ITEM=TTM_LVL2,R99 //Tattered Treasure Map Level 2
-
-[TEMPLATE loot_STONE_GARGOYLE]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Stone Gargoyle
-CONTAINER=i_backpack
-ITEM=Random_Potion
-ITEM=Random_Potion
-ITEM=RANDOM_SCROLL
-ITEM=RANDOM_SCROLL
-ITEM=TTM_LVL3,R99 //Tattered Treasure Map Level 2
-ITEM=i_gold,{150 250}
 
 [TEMPLATE loot_STONE_HARPY]
 CATEGORY=Item Templates

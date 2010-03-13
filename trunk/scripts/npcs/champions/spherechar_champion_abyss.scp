@@ -1,0 +1,469 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[CHARDEF 027]
+DEFNAME=c_mongbat
+NAME=Mongbat
+SOUND=snd_MONSTER_MNGBAT1
+ICON=i_pet_mongbat
+ANIM=03f8c7f
+DAM=1,2
+CAN=MT_WALK|MT_FLY
+FOODTYPE=9 t_meat_raw
+DESIRES=C_MONGBAT
+RESOURCES=1 i_ribs_raw
+AVERSIONS=r_civilization
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Mongbat
+TAG.Slayer=SLAYER_BAT
+TAG.Barding.Diff=9.9
+ARMOR={5 10}
+
+ON=@Create
+NPC=brain_monster
+STR={6 10}
+DEX={26 38}
+INT={6 14}
+MAXHITS={4 6}
+WRESTLING={5.1 10.0}
+TACTICS={5.1 10.0}
+MAGICRESISTANCE={5.1 14.0}
+FAME=150
+KARMA=-150
+
+ON=@NPCRestock
+ITEM=loot_mongbat
+
+
+[CHARDEF 02f6]
+DEFNAME=c_imp
+NAME=Imp
+SOUND=snd_MONSTER_MNGBAT1
+ICON=i_pet_mongbat
+DAM=15,24
+CAN=MT_FLY|MT_WALK
+FOODTYPE=9 t_meat_raw
+DESIRES=c_imp
+RESOURCES=1 i_ribs_raw, 6 i_hide
+AVERSIONS=r_civilization,r_water
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Imp
+TAG.Slayer=SLAYER_DEMON
+TAG.Barding.Diff=70.0
+TAG.Control.Slots=2
+ARMOR={25 35}
+ResFire={40 50}
+ResCold={20 30}
+ResPoison={30 40}
+ResEnergy={30 40}
+DamFire=50
+DamPoison=50
+
+ON=@Create
+NPC=brain_monster
+STR={91 115}
+DEX={61 80}
+INT={86 110}
+MAXHITS={55 69}
+WRESTLING={40.1 44.0}
+TACTICS={42.1 50.0}
+MAGICRESISTANCE={30.1 50.0}
+MAGERY={90.0 100.0}
+EVALUATINGINTEL={20.1 30.0}
+TAMING=83.1
+FAME=2500
+KARMA=-2500
+
+ON=@NPCRestock
+ITEM=loot_imp
+
+
+[CHARDEF 04]
+DEFNAME=c_gargoyle
+NAME=Gargoyle
+SOUND=snd_MONSTER_GARGYL1
+ICON=i_pet_GARG
+ANIM=03fbc7f
+CAN=MT_WALK|MT_FLY|MT_USEHANDS
+DAM=14,27
+FOODTYPE=15 t_meat_raw
+DESIRES=c_GARGOYLE
+RESOURCES=1 i_ribs_raw
+AVERSIONS=t_TRAP,r_civilization
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Gargoyle
+TAG.Slayer=SLAYER_DEMON|SLAYER_GARGOYLE
+TAG.Barding.Diff=72.5
+TAG.Luck.Loot=0,0,loot_gargoyle_luck
+ARMOR={30 35}
+ResFire={25 35}
+ResCold={5 10}
+ResPoison={15 25}
+
+ON=@Create
+NPC=brain_monster
+STR={146 175}
+DEX={76 95}
+INT={81 105}
+MAXHITS={88 105}
+WRESTLING={40.0 80.0}
+TACTICS={50.0 70.0}
+MAGICRESISTANCE={70.0 85.0}
+MAGERY={70.0 85.0}
+EVALUATINGINTEL={70.0 85.0}
+FAME=3500
+KARMA=-3500
+
+ON=@NPCRestock
+ITEM=loot_gargoyle
+
+
+[CHARDEF 01e]
+DEFNAME=c_harpy
+NAME=Harpy
+SOUND=snd_MONSTER_HARPY1
+ICON=i_pet_HARPY
+ANIM=03f8c7f
+CAN=MT_WALK|MT_FLY|MT_FEMALE|MT_USEHANDS
+DAM=9,13
+FOODTYPE=5 t_meat_raw
+RESOURCES=4 i_ribs_raw,50 i_feather
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Harpy
+TAG.Barding.Diff=56.4
+ARMOR={25 30}
+ResFire={10 20}
+ResCold={10 30}
+ResPoison={20 30}
+ResEnergy={10 30}
+
+ON=@Create
+NPC=brain_monster
+STR={96 120}
+DEX={86 110}
+INT={51 75}
+MAXHITS={58 72}
+WRESTLING={60.0 90.0}
+TACTICS={70.0 100.0}
+MAGICRESISTANCE={50.0 65.0}
+FAME=2500
+KARMA=-2500
+
+ON=@NPCRestock
+ITEM=loot_harpy
+
+
+[CHARDEF 082]
+DEFNAME=c_fire_gargoyle
+NAME=Fire Gargoyle
+SOUND=snd_monster_gargyl1
+ICON=i_pet_garg
+DAM=22,45
+CAN=MT_WALK|MT_USEHANDS|MT_FLY
+FOODTYPE=1 t_meat_raw
+RESOURCES=1 i_ribs_raw
+RESDISPDNID=c_gargoyle
+RESLEVEL=2
+RESDISPDNHUE=1652
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Fire Gargoyle
+TAG.Luck.Loot=0,0,loot_fire_gargoyle_luck
+TAG.Slayer=SLAYER_GARGOYLE
+TAG.Barding.Diff=96.0
+ARMOR={30 35}
+ResFire={50 60}
+ResCold={-10 0}
+ResPoison={20 30}
+ResEnergy={20 30}
+DamFire=80
+
+ON=@Create
+NPC=brain_monster
+STR={351 400}
+DEX={126 145}
+INT={226 250}
+MAXHITS={211 240}
+WRESTLING={40.0 80.0}
+TACTICS={80.0 100.0}
+MAGICRESISTANCE={90.0 105.0}
+ANATOMY={75.0 85.0}
+MAGERY={90.0 105.0}
+EVALUATINGINTEL={90.0 105.0}
+MEDITATION={90.0 105.0}
+FAME=3500
+KARMA=-3500
+ITEMNEWBIE=i_spellbook
+ADDCIRCLE 6,1
+ADDSPELL=S_FLAMESTRIKE
+
+ON=@NpcRestock
+ITEM=loot_fire_gargoyle
+
+
+[CHARDEF 043]
+DEFNAME=c_stone_gargoyle
+NAME=Stone Gargoyle
+SOUND=snd_MONSTER_GARGYL1
+ICON=i_pet_GARG
+CAN=MT_WALK|MT_FLY
+DAM=25,40
+FOODTYPE=2 t_arock, 2 t_meat_raw
+DESIRES=c_m_gargoyle_stone,c_GARGOYLE,t_bone,i_gold,t_wand
+AVERSIONS=r_civilization
+RESDISPDNID=c_gargoyle
+RESLEVEL=2
+RESDISPDNHUE=1401
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Stone Gargoyle
+TAG.Luck.Loot=0,0,loot_gargoyle_stone_luck
+TAG.Slayer=SLAYER_GARGOYLE
+TAG.Barding.Diff=71.4
+ARMOR={45 55}
+ResFire={20 30}
+ResCold={10 20}
+ResPoison={30 40}
+ResEnergy={30 40}
+
+ON=@Create
+NPC=brain_monster
+STR={246 275}
+DEX={76 95}
+INT={81 105}
+MAXHITS={148 165}
+WRESTLING={60.0 100.0}
+TACTICS={80.0 100.0}
+MAGICRESISTANCE={85.0 100.0}
+FAME=4000
+KARMA=-4000
+
+ON=@NPCRestock
+ITEM=loot_gargoyle_stone
+
+
+[CHARDEF 09]
+DEFNAME=c_daemon
+NAME=#NAMES_DAEMON the Daemon
+SOUND=snd_MONSTER_DAEMON1
+ICON=i_pet_DAEMON
+ANIM=03fbc7f
+CAN=MT_WALK|MT_FLY|MT_USEHANDS
+DAM=20,25
+RESOURCES=1 i_ribs_raw
+FOODTYPE=
+DESIRES=i_gold
+AVERSIONS=r_civilization
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Daemon
+TAG.Luck.Loot=0,0,loot_daemon_luck
+TAG.Slayer=SLAYER_DEMON
+TAG.Barding.Diff=89.8
+ARMOR={45 60}
+ResFire={50 60}
+ResCold={30 40}
+ResPoison={20 30}
+ResEnergy={30 40}
+
+ON=@Create
+NPC=brain_monster
+STR={476 505}
+DEX={76 95}
+INT={301 325}
+MAXHITS={286 303}
+WRESTLING={60.0 80.0}
+TACTICS={70.0 80.0}
+MAGICRESISTANCE={85.0 95.0}
+MAGERY={70.0 80.0}
+EVALUATINGINTEL={70.0 80.0}
+FAME=15000
+KARMA=-15000
+
+ON=@NPCRestock
+ITEM=loot_daemon
+
+
+[CHARDEF 095]
+DEFNAME=c_succubus
+NAME=Succubus
+SOUND=04B5
+ICON=9770
+DAM=57,94
+RESDISPDNID=c_woman
+RESLEVEL=2
+RESDISPDNHUE=01
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_FLY|MT_FEMALE
+MOVERATE=30
+DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman,t_corpse
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Succubus
+TAG.Luck.Loot=0,0,loot_succubus_luck
+TAG.Slayer=SLAYER_DEMON
+TAG.Barding.Diff=107.2
+ARMOR={80 90}
+ResFire={70 80}
+ResCold={40 50}
+ResPoison={50 60}
+ResEnergy={50 60}
+DamEnergy=25
+
+ON=@Create
+NPC=brain_monster
+STR={488 620}
+DEX={121 170}
+INT={498 657}
+MAXHITS={312 353}
+WRESTLING={80.0 90.0}
+TACTICS={80.0 90.0}
+MAGICRESISTANCE={100.0 150.0}
+MAGERY={99.0 100.0}
+EVALUATINGINTEL={90.0 100.0}
+MEDITATION={90.0 100.0}
+FAME=24000
+KARMA=-24000
+ITEMNEWBIE=i_spellbook
+ADDCIRCLE 8,1
+
+ON=@NpcRestock
+ITEM=loot_succubus
+
+ON=@GetHit
+LOCAL.TMP=<OBJ>
+OBJ=<UID>
+FORCHARS 3
+	IF (<ISPLAYER>) || (<FLAGS>&statf_pet)
+	LOCAL.DAM=<R10,40>
+	DAMAGE <LOCAL.DAM> <DEF.DAM_PHYSICAL> <OBJ>
+	OBJ.HITS += <LOCAL.DAM>
+		IF (<OBJ.HITS> > <OBJ.MAXHITS>)
+		OBJ.HITS=<OBJ.MAXHITS>
+		ENDIF
+	endif
+END
+OBJ=<LOCAL.TMP>
+
+
+[TEMPLATE loot_mongbat]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Mongbat
+CONTAINER=i_backpack
+ITEM=i_gold,{25 50}
+
+[TEMPLATE loot_imp]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Imp
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=random_scroll_low,1
+
+[TEMPLATE loot_gargoyle]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Gargoyle
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+ITEM=random_scroll_medium,{1 3}
+ITEM=random_jewel,{1 4}
+
+[TEMPLATE loot_gargoyle_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Gargoyle
+ITEM={i_gargoyle_pickaxe 1 0 4}
+// Treasure Map Level 1
+
+[TEMPLATE loot_harpy]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Harpy
+CONTAINER=i_backpack
+ITEM=i_gold,{100 150}
+
+[TEMPLATE loot_gargoyle_fire]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Fire Gargoyle
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=random_scroll_medium,1
+
+[TEMPLATE loot_gargoyle_fire_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Fire Gargoyle
+// Treasure Map Level 1
+
+[TEMPLATE loot_gargoyle_stone]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Stone Gargoyle
+CONTAINER=i_backpack
+ITEM=i_gold,{250 325}
+ITEM=random_jewel,{1 3}
+ITEM=i_ore_iron,{6 20}
+
+[TEMPLATE loot_gargoyle_stone_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Stone Gargoyle
+ITEM={i_gargoyle_pickaxe 1 0 4}
+// Treasure Map Level 2
+
+[TEMPLATE loot_daemon]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Daemon
+CONTAINER=i_backpack
+ITEM=i_gold,{550 650}
+ITEM=random_scroll_medium,{1 2}
+ITEM=random_scroll_medium,{1 2}
+ITEM=random_reagent,{ 4 6 }
+ITEM=random_reagent,{ 4 6 }
+ITEM=random_potion,{ 2 3 }
+ITEM=random_potion,{ 2 3 }
+ITEM=random_magic_wands
+ITEM=random_magic_wands
+ITEM=i_scroll_blank,{ 1 2 }
+
+[TEMPLATE loot_daemon_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Daemon
+// Treasure Map Level 4
+
+[TEMPLATE loot_succubus]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Succubus
+CONTAINER=i_backpack
+ITEM=i_gold,{1000 1200}
+ITEM=random_scroll_medium,{1 2}
+ITEM=random_scroll_medium,{1 2}
+ITEM=random_reagent,{ 4 6 }
+ITEM=random_reagent,{ 4 6 }
+ITEM=random_potion,{ 2 3 }
+ITEM=random_potion,{ 2 3 }
+ITEM=random_magic_wands
+ITEM=random_magic_wands
+ITEM=i_scroll_blank,{ 1 2 }
+
+[TEMPLATE loot_succubus_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Succubus
+// Treasure Map Level 5
+
+[EOF]
