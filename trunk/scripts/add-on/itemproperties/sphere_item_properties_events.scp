@@ -205,23 +205,6 @@ if <dtag0.spellrecovery> > <serv.time>
 src.sysmessage @03c1,6,2 502644 // You have not yet recovered from casting a spell
 return 1
 endif
-// Spell Channeling is the right property. Was wrong with Mage Weapon, sorry.
-// It allows the caster to cast with items equipped in Hand1 or Hand2
-if <def.scp.ItemProp_SpellChanneling> == 1
-	if <argn1> != 104 // exception for Curse Weapon
-		if <argn1> != 203 // exception for Consecrate Weapon
-			if <findlayer.1.uid>
-				if !<findlayer.1.tag0.SpellChanneling>
-				findlayer.1.unequip
-				endif
-			elif <findlayer.2.uid>
-				if !<findlayer.2.tag0.SpellChanneling>
-				findlayer.2.unequip
-				endif
-			endif
-		endif
-	endif
-endif
 // Lower Mana Cost
 if <def.scp.ItemProp_LowerManaCost> == 1
 argn2 -= <eval (<argn2> * (<tag0.LowerManaCost> + 1)) / 100>
@@ -241,6 +224,24 @@ if <def.scp.ItemProp_LowerReagentCost> == 1
 endif
 
 on=@spellcast
+// Spell Channeling is the right property. Was wrong with Mage Weapon, sorry.
+// It allows the caster to cast with items equipped in Hand1 or Hand2
+if <def.scp.ItemProp_SpellChanneling> == 1
+	if <argn1> != 104 // exception for Curse Weapon
+		if <argn1> != 203 // exception for Consecrate Weapon
+			if <findlayer.1.uid>
+				if !<findlayer.1.tag0.SpellChanneling>
+				findlayer.1.unequip
+				endif
+			endif
+			if <findlayer.2.uid>
+				if !<findlayer.2.tag0.SpellChanneling>
+				findlayer.2.unequip
+				endif
+			endif
+		endif
+	endif
+endif
 // A weird property actually. For Mages and Necromancers > 70.0 this is capped at 2.
 // But for Chivalry, Ninjitsu, Bushido and Spellweaving this is capped at 4.
 // So just do (cap * 2) in the last case.
