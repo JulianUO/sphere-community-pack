@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -41,7 +41,7 @@ bowcraft_category_2_3		"i_fukiya_dart"
 bowcraft_category_3_1		"i_bow"
 bowcraft_category_3_2		"i_composite_bow"
 bowcraft_category_3_3		"i_crossbow"
-bowcraft_category_3_4		"i_elven_composite_bow"
+bowcraft_category_3_4		"i_elven_composite_longbow"
 bowcraft_category_3_5		"i_crossbow_heavy"
 bowcraft_category_3_6		"i_magical_shortbow"
 bowcraft_category_3_7		"i_repeating_crossbow"
@@ -120,5 +120,117 @@ bowcraft_material_6_shield_res	"0,0,3,0,0,f_colored_shield_frostwood"
 bowcraft_material_6_weaps_dam	"0,0,40,0,0,f_colored_weaps_frostwood"
 bowcraft_material_6_color	"color_o_frostwood"
 bowcraft_material_6_resourceid	"i_log_frostwood"
+
+
+[function f_colored_armor_oak]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+tag.Luck = <eval <tag0.Luck> + 40>
+
+[function f_colored_weaps_oak]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+tag.Luck = <eval <tag0.Luck> + 40>
+tag.DamageIncrease = 5
+
+[function f_colored_armor_ash]
+tag.LowerRequeriments = 20
+
+[function f_colored_weaps_ash]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+tag.SwingSpeedIncrease = 10
+tag.LowerRequeriments = 20
+
+[function f_colored_armor_yew]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+tag.HitPointRegeneration = 1
+
+[function f_colored_weaps_yew]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+tag.HitChanceIncrease = 5
+tag.DamageIncrease = 10
+
+[function f_colored_armor_bloodwood]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+tag.HitPointRegeneration = 2
+
+[function f_colored_shield_bloodwood]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+tag.Luck = 40
+tag.HitPointRegeneration = 2
+
+[function f_colored_weaps_bloodwood]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+tag.HitPointRegeneration = 2
+tag.HitLifeLeech = 16
+
+[function f_colored_armor_heartwood]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+//dorand 6
+//tag.Luck = 40
+//hitpoints += <eval <hitpoints> / 2>
+//tag.LowerRequeriments = 20
+//tag.DamageIncrease = 10
+//tag.HitChanceIncrease = 5
+//tag.MageArmor = 1
+//enddo
+
+[function f_colored_shield_heartwood]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+//dorand 7
+//tag.DexterityBonus = 2
+//tag.StrengthBonus = 2
+//tag.ResPhysical = 5
+//tag.ReflectPhysicalDamage = 5
+//tag.SelfRepair = 2
+//tag.ResCold = 3
+//tag.SpellChanneling = 1
+//enddo
+
+[function f_colored_weaps_heartwood]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+//dorand 7
+//tag.Luck = 40
+//hitpoints += <eval <hitpoints> / 2>
+//tag.LowerRequeriments = 20
+//tag.SwingSpeedIncrease = 10
+//tag.HitChanceIncrease = 5
+//tag.HitLifeLeech = <r100>
+//tag.Luck = 10
+//enddo
+
+[function f_colored_shield_frostwood]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+tag.SpellChanneling = 1
+tag.FasterCasting = -1
+
+[function f_colored_weaps_frostwood]
+if !<istevent.t_iprop>
+events +t_iprop
+endif
+tag.DamageIncrease = 12
+DamCold = 40
 
 [eof]

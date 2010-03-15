@@ -312,17 +312,17 @@ endif
 
 // material list section
 xmfhtmlgumpcolor 215 38 305 20 <ddef.scp.craft_head_selections> 0 0 <ddef.dcolor_white>
-local.mainbar = <eval 1 + (10 * <ctag0.craft.page.mainbar>)>
+local.mainbar = <eval 10 * <ctag0.craft.page.mainbar>>
 local.y = 60
 for 0 10
-	if !<isempty <def.<ctag0.craft.skill>_material_<dlocal.mainbar>>>
+	if !<isempty <def.<ctag0.craft.skill>_material_<dlocal.mainbar>_name>>
 	button 220 <local.y> 4005 4007 1 0 <eval 600 + <local.mainbar>>
 	dcroppedtext 255 <local.y> 220 20 0480 <def.<ctag0.craft.skill>_material_<dlocal.mainbar>_name>
 	endif
 local.mainbar ++
 local.y += 20
 endfor
-if !<isempty <def.<ctag0.craft.skill>_material_<dlocal.mainbar>>>
+if !<isempty <def.<ctag0.craft.skill>_material_<dlocal.mainbar>_name>>
 button 380 267 4005 4007 1 0 404
 xmfhtmlgumpcolor 415 268 150 20 <ddef.scp.craft_button_nextpage> 0 0 <ddef.dcolor_white>
 endif
@@ -377,6 +377,11 @@ endif
 f_resenddialog d_craft_material
 
 on=600 700
+if <argn> == 600
+ctag.craft.material.<ctag0.craft.skill>
+f_resenddialog d_craft_material
+return 0
+endif
 local.skill = <strarg <def.<ctag0.craft.skill>_material_<eval <argn>-600>_skill>>
 local.skillreq = <streat <def.<ctag0.craft.skill>_material_<eval <argn>-600>_skill>>
 if <<local.skill>> < <local.skillreq>

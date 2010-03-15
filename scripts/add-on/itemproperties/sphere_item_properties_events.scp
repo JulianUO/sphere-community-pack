@@ -334,27 +334,31 @@ on=@gethit
 // AFTER the damage calcs are done. Since they work according to damage dealt.
 // Formula (for both) is: (damage * 0.4) - intensity
 if <def.scp.ItemProp_HitManaLeech> == 1
-float.mtoleech = <floatval (<argn1> * 0.4) - <tag0.HitManaLeech>>
-mana += <feval <float.mtoleech>>
-	if <mana> > <maxmana>
-	mana = <maxmana>
+	if <src.tag0.HitManaLeech>
+	float.mtoleech = <floatval (<argn1> * 0.4) - <src.tag0.HitManaLeech>>
+	mana -= <feval <float.mtoleech>>
+	src.mana += <feval <float.mtoleech>>
+		if <src.mana> > <src.maxmana>
+		src.mana = <src.maxmana>
+		endif
 	endif
-src.mana -= <feval <float.mtoleech>>
 endif
 if <def.scp.ItemProp_HitLifeLeech> == 1
-float.htoleech = <floatval (<argn1> * 0.4) - <tag0.HitLifeLeech>>
-hits += <feval <float.htoleech>>
-	if <hits> > <maxhits>
-	hits = <maxhits>
+	if <src.tag0.HitLifeLeech>
+	float.htoleech = <floatval (<argn1> * 0.4) - <src.tag0.HitLifeLeech>>
+	hits -= <feval <float.htoleech>>
+	src.hits += <feval <float.htoleech>>
+		if <src.hits> > <src.maxhits>
+		src.hits = <src.maxhits>
+		endif
 	endif
-src.hits -= <feval <float.htoleech>>
 endif
 // This one works a little different to the rest of the leech properties
 // It uses the % of the player to calc success and gains the damage amount in stamina
 // Still, it doesn't "leech" stamina from the target
 if <def.scp.ItemProp_HitStaminaLeech> == 1
-	if <r100> < <tag0.HitStaminaLeech>
-	stam += <argn1>
+	if <r100> < <src.tag0.HitStaminaLeech>
+	src.stam += <argn1>
 	endif
 endif
 

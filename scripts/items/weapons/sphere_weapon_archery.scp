@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 ///////////////////////////////////////////////////////////////
@@ -276,7 +276,7 @@ HITPOINTS={255 255}
 COLOR=<ColorElementalType>
 
 [ITEMDEF i_slayer_longbow]
-ID=i_elven_composite_bow
+ID=i_elven_composite_longbow
 NAME=Slayer Longbow
 SKILLMAKE=Bowcraft 70.0
 RESOURCES=20 i_log, 1 i_gem_brilliant_amber
@@ -290,7 +290,7 @@ f_slayer // Random Slayer Group
 HITPOINTS={36 48}
 
 [ITEMDEF i_wildfire_bow]
-ID=i_elven_composite_bow
+ID=i_elven_composite_longbow
 NAME=Wildfire Bow
 TEVENTS=t_iprop
 TAG.Skill.Bonus.1=Archery,10.0
