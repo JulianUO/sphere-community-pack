@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 ///////////////////////////////////////////////////////////////
@@ -221,24 +221,6 @@ DESCRIPTION=Blackthorn's Kryss - Museum of Vesper Replica
 
 ON=@Create
 HITPOINTS=255
-
-[ITEMDEF i_fang_ractus]
-ID=i_kryss
-NAME=Fang of Ractus
-TEVENTS=t_iprop
-TAG.SpellChanneling=1
-TAG.HitPoisonArea=20
-TAG.HitChanceIncrease=5
-TAG.DefenseChanceIncrease=5
-TAG.DamageIncrease=35
-TAG.ResPoison=15
-CATEGORY=Provisions - Weapons
-SUBSECTION=Krysses
-DESCRIPTION=Fang of Ractus
-
-ON=@Create
-HITPOINTS=150
-COLOR=colors_green
 
 [ITEMDEF i_serpents_fang]
 ID=i_kryss

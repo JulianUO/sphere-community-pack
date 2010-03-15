@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 ///////////////////////////////////////////////////////////////
@@ -41,7 +41,7 @@ DUPEITEM=08ff
 [ITEMDEF 0901]
 DEFNAME=i_cyclone
 NAME=Cyclone
-TYPE=
+TYPE=t_weapon_bow
 DAM=13,17
 SKILL=Throwing
 REQSTR=40
@@ -72,7 +72,7 @@ DUPEITEM=0901
 [ITEMDEF 090A]
 DEFNAME=i_soul_glaive
 NAME=Soul Glaive
-TYPE=
+TYPE=t_weapon_bow
 DAM=18,22
 SKILL=Throwing
 REQSTR=60

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 ///////////////////////////////////////////////////////////////
@@ -75,23 +75,6 @@ DESCRIPTION=Legacy of the Dread Lord
 ON=@Create
 HITPOINTS=255
 COLOR=39
-
-[ITEMDEF i_quell]
-ID=i_bardiche
-NAME=Quell [Replica]
-TEVENTS=t_iprop
-TAG.SpellChanneling=1
-TAG.HitManaLeech=100
-TAG.HitChanceIncrease=10
-TAG.SwingSpeedIncrease=20
-TAG.DamageIncrease=50
-TAG.BestWeaponSkill=1
-CATEGORY=Provisions - Weapons - Swordsmanship
-SUBSECTION=Bardiches
-DESCRIPTION=Quell [Replica]
-
-ON=@Create
-HITPOINTS=150
 
 
 ///////////////////////////////////////////////////////////////
@@ -369,22 +352,6 @@ DESCRIPTION=Blaze of Death
 ON=@Create
 HITPOINTS=255
 COLOR=51
-
-[ITEMDEF i_calm]
-ID=i_halberd
-NAME=Calm - Replica
-TEVENTS=t_iprop
-TAG.SpellChanneling=1
-TAG.HitManaLeech=100
-TAG.SwingSpeedIncrease=20
-TAG.DamageIncrease=50
-TAG.BestWEaponSkill=1
-CATEGORY=Provisions - Weapons - Swordsmanship
-SUBSECTION=Halberds
-DESCRIPTION=Calm - Replica
-
-ON=@Create
-HITPOINTS=150
 
 
 ///////////////////////////////////////////////////////////////
@@ -803,23 +770,6 @@ HITPOINTS={36 48}
 
 [ITEMDEF 026ca]
 DUPEITEM=026c0
-
-[ITEMDEF i_subdue]
-ID=i_scythe
-NAME=Subdue [Replica]
-TEVENTS=t_iprop
-TAG.SpellChanneling=1
-TAG.HitManaLeech=100
-TAG.HitChanceIncrease=10
-TAG.SwingSpeedIncrease=20
-TAG.DamageIncrease=50
-TAG.BestWeaponSkill=1
-CATEGORY=Provisions - Weapons - Swordsmanship
-SUBSECTION=Scythes
-DESCRIPTION=Subdue [Replica]
-
-ON=@Create
-HITPOINTS=255
 
 
 ///////////////////////////////////////////////////////////////

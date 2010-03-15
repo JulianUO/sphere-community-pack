@@ -10,15 +10,6 @@ WEIGHT=5
 ON=@Create
 DISPID=i_skull_pole
 
-[ITEMDEF i_acid_proof_robe]
-ID=i_robe
-NAME=Acid-Proof Robe (replica)
-
-ON=@Create
-HITPOINTS=150
-COLOR=0902
-ATTR=ATTR_NEWBIE
-
 [ITEMDEF i_robe_britannia_ari]
 ID=i_hooded_shroud
 NAME=The Robe of Britannia "Ari" (Replica)
@@ -156,22 +147,6 @@ ID=i_pet_plaguebeast
 NAME=Plague Beast Statue
 TYPE=T_NORMAL
 
-[ITEMDEF i_orc_chief_helm]
-ID=i_helm_orc
-NAME=orc Chief Helm
-REQSTR=30
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
-TEVENTS=T_LUCK_ITEM
-TAG.LUCK=100
-TAG.HITSREGENERATION=3
-TAG.HITSINCREASE=30
-ARMOR=80
-
-ON=@Create
-COLOR=colors_green
-HITPOINTS=150
-
 [ITEMDEF i_royal_guard_survival_knife]
 ID=i_knife_butcher
 NAME=Royal Guard Survival Knife
@@ -220,22 +195,6 @@ ID=i_pet_dreadspider
 NAME=Dread Spider Statue
 TYPE=T_NORMAL
 
-[ITEMDEF i_shroud_deceit]
-ID=i_hooded_shroud
-NAME=Shroud of Deceit
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
-TAG.MANAINCREASE=10
-TAG.SKILLINCREASE=MagicResistance
-TAG.SKILLINCREASEVALUE=100
-ARMOR=6
-REQSTR=15
-WEIGHT=0
-
-ON=@Create
-COLOR=colors_black
-HITPOINTS=150
-
 [ITEMDEF i_captain_john_hat]
 ID=i_hat_tricorne
 NAME=Captain Johns Hat
@@ -257,21 +216,6 @@ SRC.SPELLEFFECT S_NIGHT_SIGHT,1000,<SRC>
 
 ON=@ClientToolTip
 SRC.ADDCLILOC 1015008
-
-[ITEMDEF i_crown_talkeesh]
-ID=i_bandana
-NAME=Crown of Tal'Keesh
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=T_STATUS_BONUS
-TAG.INTINCREASE=8
-TAG.MAGICDAMINCREASE=10
-TAG.MANAREGENERATION=4
-ARMOR=150
-REQSTR=20
-
-ON=@Create
-COLOR=colors_blue
-HITPOINTS=150
 
 [ITEMDEF i_brave_knight_britannia]
 ID=i_katana
@@ -298,20 +242,5 @@ TYPE=T_NORMAL
 ID=i_pet_ophid_war
 NAME=Ophidian Warrior Statue
 TYPE=T_NORMAL
-
-[ITEMDEF i_gladiator_collar]
-ID=i_platemail_gorget
-NAME=Gladiator's Collar
-REQSTR=45
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
-TAG.HITSINCREASE=10
-TAG.HITCHANCEINCREASE=10
-TAG.DAMINCREASE=10
-ARMOR=80
-
-ON=@Create
-COLOR=colors_o_rose
-HITPOINTS=150
 
 [EOF]

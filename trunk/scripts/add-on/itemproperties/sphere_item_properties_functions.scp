@@ -18,7 +18,7 @@ VERSION=0.56b
 ///////////////////////////////////////////////////////////////
 //////// LUCK RANDOM LOOT FUNCTIONS
 ///////////////////////////////////////////////////////////////
-// This includes a new NPC tag: tag.luck.loot = items,properties
+// This includes a new NPC tag: tag.luck.loot = items,properties,template
 // Items is the max amount of items that you can get from loot
 // Properties is the max amount of properties per single item
 [function f_getbasetype]
