@@ -2405,7 +2405,7 @@ ELIF !(<ARGO.ISSTORAGE>)
   SRC.SYSMESSAGE @,,1 That isn't locked down...
 ELIF (<UID.<ARGS>.HousePlayerAccess <SRC>> < <ARGO.TAG0.Access>)
   SRC.SYSMESSAGE @,,1 You lack privilege to release this.
-ELIF !<ARGO.ISTEVENT.t_locked_down>
+ELIF !<ARGO.ISEVENT.t_locked_down>
   SRC.SYSMESSAGE @,,1 You need an axe to remove this.
 ELSE
   IF (<ARGO.TYPE>==t_container)
