@@ -455,6 +455,10 @@ scp.House_AccOwner=1
 // <boolean> (0 = No / 1 = Yes)
 scp.House_UseTrash=1
 
+// Enable or disable the decay of unlocked items inside the house.
+// NOTE: If you change this, it will only affect NEW HOUSES.
+scp.House_DecayUnlockedItems=1
+
 // Minimum area distance allowed between placed houses.
 // Default = 1
 scp.House_PlaceMinDistArea=1

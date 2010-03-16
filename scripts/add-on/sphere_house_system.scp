@@ -400,7 +400,10 @@ IF (<LINK.HouseCheckNearArea>)
     return 1
   ENDIF
 ELSE
-  REF1.SYSMESSAGE @,,1 This is a valid location.
+	if <def.scp.House_DecayUnlockedItems> == 1
+	region.flags = <region.flags>&~region_flag_nodecay
+	endif
+REF1.SYSMESSAGE @,,1 This is a valid location.
 ENDIF
 TRYSRC <REF1> DIALOG d_house_placement
 
