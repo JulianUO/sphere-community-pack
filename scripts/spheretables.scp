@@ -21,6 +21,7 @@ scripts/sphere_backward_compatibility.scp
 scripts/sphere_events_human.scp
 scripts/sphere_events_npcs.scp
 scripts/npcs/
+scripts/npcs/champions/
 scripts/sphere_admin.scp
 scripts/sphere_dialog.scp
 // -----------------------------------
