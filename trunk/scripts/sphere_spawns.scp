@@ -99,7 +99,7 @@ SUBSECTION=Monsters
 DESCRIPTION=Misc Monsters - Magic
 ID=c_gazer
 ID=c_m_gazer_elder
-ID=c_m_imp
+ID=c_imp
 
 [SPAWN 08007]
 DEFNAME=SPAWN_MonstersMiscAll
@@ -126,7 +126,7 @@ ID=c_m_stoneharpy
 ID=c_slime
 ID=c_gazer
 ID=c_m_gazer_elder
-ID=c_m_imp
+ID=c_imp
 
 [SPAWN 08008]
 DEFNAME=SPAWN_Orcs
@@ -272,7 +272,7 @@ ID=c_m_stoneharpy
 ID=c_slime
 ID=c_gazer
 ID=c_m_gazer_elder
-ID=c_m_imp
+ID=c_imp
 ID=c_orc_w_club
 ID=c_orc
 ID=c_orc_lord
@@ -819,7 +819,7 @@ ID=c_DAEMON 10
 ID=c_DAEMON_W_SWORD 3
 ID=c_m_balron
 ID=c_GARGOYLE 5
-ID=c_m_gargoyle_stone 2
+ID=c_stone_gargoyle 2
 
 [SPAWN 08041]
 DEFNAME=SPAWN_Deceit2
