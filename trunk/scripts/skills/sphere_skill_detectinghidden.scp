@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 [SKILL 14]
@@ -23,25 +23,25 @@ ADV_RATE=2.5,50.0,200.0
 
 on=@wait
 if <def.scp.NewSkills_DetectHidden>
-f_skill_delay <getargv 0,<def.skill.14.waittime>>
+f_skill_delay <getargv 0 <def.skill.14.waittime>>
 targetfg f_detecthidden_start
 sysmessage <def.scp.detecthidden_start>
 return 1
 endif
 
 on=@select
-f_skill_delay <getargv 0,<def.skill.14.waittime>>
+f_skill_delay <getargv 0 <def.skill.14.waittime>>
 
 on=@success
-f_skill_delay <getargv 1,<def.skill.14.waittime>>
+f_skill_delay <getargv 1 <def.skill.14.waittime>>
 
 ON=@Fail
-f_skill_delay <getargv 2,<def.skill.14.waittime>>
+f_skill_delay <getargv 2 <def.skill.14.waittime>>
 	SRC.MESSAGE @,,2 500817
 
 ON=@Abort
 	SRC.SYSMESSAGE You stop looking for anything hidden.
-	
+
 [function f_detecthidden_start]
 local.range = <eval (<detectinghidden> / 2)>
 	if !<skillusequick detectinghidden <r1000>>
@@ -64,7 +64,7 @@ local.range = <eval (<detectinghidden> / 2)>
 		endif
 	new.remove
 	endif
-f_skill_delay <getargv 1,<def.skill.14.waittime>>
+f_skill_delay <getargv 1 <def.skill.14.waittime>>
 
 [function f_checkforhidden]
 ref1 = <argv[1]>

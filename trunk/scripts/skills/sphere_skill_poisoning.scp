@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -36,7 +36,7 @@ if <def.scp.NewSkills_Poisoning> == 1
 	if !<ctag0.skill.poisoning>
 	sysmessage <def.scp.poisoning_poisonwhat
 	targetf f_skill_poison
-	f_skill_delay <getargv 0,<def.skill.30.waittime>>
+	f_skill_delay <getargv 0 <def.skill.30.waittime>>
 	else
 	sysmessage <def.scp.poisoning_youmustwait>
 	endif
@@ -44,13 +44,13 @@ if <def.scp.NewSkills_Poisoning> == 1
 endif
 
 on=@select
-f_skill_delay <getargv 0,<def.skill.30.waittime>>
+f_skill_delay <getargv 0 <def.skill.30.waittime>>
 
 on=@success
-f_skill_delay <getargv 1,<def.skill.30.waittime>>
+f_skill_delay <getargv 1 <def.skill.30.waittime>>
 
 on=@fail
-f_skill_delay <getargv 2,<def.skill.30.waittime>>
+f_skill_delay <getargv 2 <def.skill.30.waittime>>
 src.sysmessage <def.scp.poisoning_failtoapply>
 
 ON=@Abort
@@ -219,7 +219,7 @@ ctag.skill.poisoning =
 local.chance = <eval {(<poisoning> / 2) <poisoning>}>
 if <local.chance> > <def0.poisontype_<eval <argv[1]>>_applicationdifficulty>
 sysmessage <def.scp.poisoning_youapplypoison>
-f_skill_delay <getargv 1,<def.skill.30.waittime>>
+f_skill_delay <getargv 1 <def.skill.30.waittime>>
 ref1.tag.poison.level = <argv[1]>
 	if <def0.poisonfood_<ref1.type>>
 	ref1.events +t_food_poisoned
@@ -238,11 +238,11 @@ ref1.resendtooltip
 	endif
 elif <local.chance> < <def0.poisontype_<eval <argv[1]>>_applicationdifficulty> - (<def0.poisontype_<eval <argv[1]>>_applicationdifficulty> / 3)
 sysmessage <def.scp.poisoning_gravemistake>
-f_skill_delay <getargv 2,<def.skill.30.waittime>>
+f_skill_delay <getargv 2 <def.skill.30.waittime>>
 new_poison <qval <argv[1]> ? (<argv[1]> +- 1) : 0>
 else
 sysmessage <def.scp.poisoning_failapplypoison>
-f_skill_delay <getargv 2,<def.skill.30.waittime>>
+f_skill_delay <getargv 2 <def.skill.30.waittime>>
 	if <poisoning> < 150
 	skillgain poisoning,1
 	endif
@@ -541,9 +541,9 @@ on=@targon_item
 ref1 = <src.targ.uid>
 if <ref1.isweapon>
 	if !<isempty <ref1.tag.poison.level>>
-	ref1.tag.poison.level = 
+	ref1.tag.poison.level =
 	ref1.events -t_weapon_poisoned
-	ref1.tag.poison.charges = 
+	ref1.tag.poison.charges =
 		if <src.findlayer.<ref1.layer>.uid>==<ref1.uid>
 		src.events -e_weapon_poisoned
 		endif
