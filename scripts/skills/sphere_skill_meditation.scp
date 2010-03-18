@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 [SKILL 46]
@@ -24,13 +24,13 @@ on=@wait
 if <def.scp.NewSkills_Meditation> == 1
 	if <action> != -1
 	sysmessage <def.scp.meditation_activeskill>
-	f_skill_delay <getargv 3,<def.skill.46.waittime>>
+	f_skill_delay <getargv 3 <def.skill.46.waittime>>
 	elif <mana> >= <maxmana>
 	sysmessage <def.scp.meditation_maxmana>
-	f_skill_delay <getargv 2,<def.skill.46.waittime>>
+	f_skill_delay <getargv 2 <def.skill.46.waittime>>
 	elif <medi_armorpenalty>
 	sysmessage <def.scp.meditation_armorpenalty>
-	f_skill_delay <getargv 2,<def.skill.46.waittime>>
+	f_skill_delay <getargv 2 <def.skill.46.waittime>>
 	else
 		if <medi_weaponholding 1>
 		findlayer(1).bounce
@@ -41,7 +41,7 @@ if <def.scp.NewSkills_Meditation> == 1
 		if <local.chance> > <r>
 		skillgain meditation <min 100,<eval (<meditation> / 10)>>
 		sysmessage <def.scp.meditation_success>
-		f_skill_delay <getargv 1,<def.skill.46.waittime>>
+		f_skill_delay <getargv 1 <def.skill.46.waittime>>
 		//f_AddBuff ActiveMeditation,-1 // Can't find the clilocs
 		tag.meditation.active = 1
 			if <isplayer>
@@ -49,24 +49,24 @@ if <def.scp.NewSkills_Meditation> == 1
 			endif
 		else
 		sysmessage <def.scp.meditation_fail>
-		f_skill_delay <getargv 2,<def.skill.46.waittime>>
+		f_skill_delay <getargv 2 <def.skill.46.waittime>>
 		endif
 	endif
 	return 1
 endif
 
 on=@select
-f_skill_delay <getargv 0,<def.skill.46.waittime>>
+f_skill_delay <getargv 0 <def.skill.46.waittime>>
 
 ON=@success
 if <mana> >= <maxmana>
-f_skill_delay <getargv 1,<def.skill.46.waittime>>
+f_skill_delay <getargv 1 <def.skill.46.waittime>>
 RemoveBuff ActiveMeditation
 tag.meditation.active
 endif
 
 ON=@fail
-f_skill_delay <getargv 2,<def.skill.46.waittime>>
+f_skill_delay <getargv 2 <def.skill.46.waittime>>
 SRC.SYSMESSAGE You lose your concentration.
 
 on=@abort

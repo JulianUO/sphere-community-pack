@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -16,7 +16,7 @@ VERSION=0.56b
 // By default, only a few comes scripted, so I did this to save time.
 // Before using this, you need to define the colored materials to generate.
 // Along with the items, it will generate a table for each color.
-// 
+//
 // Now, how this baby works...
 // Mainly, it loops through all the items in all the categories of all skills
 // For each item, it will do the following proccess:
@@ -117,7 +117,11 @@ new.color = <def.<local.skill>_material_<dlocal.material>_color>
 	new.tag0.DamPoison = <eval <new.tag0.DamPhysical> + <argv[3]>>
 	new.tag0.DamEnergy = <eval <new.tag0.DamPhysical> + <argv[4]>>
 		if !<isempty <argv[5]>>
-		new.<argv[5]>
+			if (strmatch("<def.<local.skill>_material_<dlocal.material>_name>","heartwood"))
+			local.tocall = <argv[5]>
+			else
+			new.<argv[5]>
+			endif
 		endif
 	elif <new.isarmor>
 	new.hitpoints = 48
@@ -128,7 +132,11 @@ new.color = <def.<local.skill>_material_<dlocal.material>_color>
 	new.tag0.ResPoison = <eval <new.tag0.ResPoison> + <argv[3]>>
 	new.tag0.ResEnergy = <eval <new.tag0.ResEnergy> + <argv[4]>>
 		if !<isempty <argv[5]>>
-		new.<argv[5]>
+			if (strmatch("<def.<local.skill>_material_<dlocal.material>_name>","heartwood"))
+			local.tocall = <argv[5]>
+			else
+			new.<argv[5]>
+			endif
 		endif
 	endif
 call f_script_item <new.uid>
@@ -240,6 +248,9 @@ file.writeline "DESCRIPTION=<ref1.name>"
 	endif
 file.writeline " "
 file.writeline "ON=@Create"
+	if !(strmatch("<local.tocall>","0"))
+	file.writeline "<local.tocall>"
+	endif
 file.writeline "HITPOINTS={<eval <ref1.hitpoints>-12> <ref1.hitpoints>}"
 file.writeline "COLOR=<ref1.color>"
 file.writeline " "

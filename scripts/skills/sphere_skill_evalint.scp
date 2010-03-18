@@ -34,18 +34,18 @@ on=@wait
 if <def.scp.NewSkills_EvalInt> == 1
 	targetf f_start_evaluatingintel
 	sysmessage @,,2 500906
-	f_skill_delay <getargv 0,<def.skill.16.waittime>>
+	f_skill_delay <getargv 0 <def.skill.16.waittime>>
 	return 1
 endif
 
 on=@select
-f_skill_delay <getargv 0,<def.skill.16.waittime>>
+f_skill_delay <getargv 0 <def.skill.16.waittime>>
 
 on=@success
-f_skill_delay <getargv 1,<def.skill.16.waittime>>
+f_skill_delay <getargv 1 <def.skill.16.waittime>>
 
 on=@fail
-f_skill_delay <getargv 2,<def.skill.16.waittime>>
+f_skill_delay <getargv 2 <def.skill.16.waittime>>
 
 [function f_start_evaluatingintel]
 if <argo.isitem>
@@ -68,7 +68,7 @@ local.cliloc = <eval <def.scp.evalint_start> + <local.level>>
 	endif
 sysmessage @,,2 <local.cliloc>
 skillgain evaluatingintel <eval (<evaluatingintel> / 10)>
-f_skill_delay <getargv 1,<def.skill.16.waittime>>
+f_skill_delay <getargv 1 <def.skill.16.waittime>>
 else
 local.cliloc = <def.scp.evalint_fail>
 if <argo.brain>
@@ -80,7 +80,7 @@ if <argo.id> == c_woman
 local.cliloc += 1
 endif
 sysmessage @,,2 <local.cliloc>
-f_skill_delay <getargv 2,<def.skill.16.waittime>>
+f_skill_delay <getargv 2 <def.skill.16.waittime>>
 endif
 
 [eof]

@@ -122,9 +122,9 @@ if !<isplayer>
 return 0
 endif
 if <def.scp.SkillWaitingTimes> == 1
-	if <argn1> != -1
-	ctag.skillrecovery = (<serv.time>+<argn1>)
-		if <serv.time> <= <ctag.skillrecovery>
+	if <args> != -1
+	ctag.skillrecovery = <eval <serv.time> + <args>>
+		if <serv.time> > <ctag.skillrecovery>
 		ctag.skillrecovery =
 		endif
 	endif

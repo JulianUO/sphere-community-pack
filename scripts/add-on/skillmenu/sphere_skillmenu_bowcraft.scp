@@ -182,42 +182,42 @@ tag.HitLifeLeech = 16
 if !<istevent.t_iprop>
 events +t_iprop
 endif
-//dorand 6
-//tag.Luck = 40
-//hitpoints += <eval <hitpoints> / 2>
-//tag.LowerRequeriments = 20
-//tag.DamageIncrease = 10
-//tag.HitChanceIncrease = 5
-//tag.MageArmor = 1
-//enddo
+dorand 6
+tag.Luck = 40
+hitpoints += <eval <hitpoints> / 2>
+tag.LowerRequeriments = 20
+tag.DamageIncrease = 10
+tag.HitChanceIncrease = 5
+tag.MageArmor = 1
+enddo
 
 [function f_colored_shield_heartwood]
 if !<istevent.t_iprop>
 events +t_iprop
 endif
-//dorand 7
-//tag.DexterityBonus = 2
-//tag.StrengthBonus = 2
-//tag.ResPhysical = 5
-//tag.ReflectPhysicalDamage = 5
-//tag.SelfRepair = 2
-//tag.ResCold = 3
-//tag.SpellChanneling = 1
-//enddo
+dorand 7
+tag.DexterityBonus = 2
+tag.StrengthBonus = 2
+tag.ResPhysical = 5
+tag.ReflectPhysicalDamage = 5
+tag.SelfRepair = 2
+tag.ResCold = 3
+tag.SpellChanneling = 1
+enddo
 
 [function f_colored_weaps_heartwood]
 if !<istevent.t_iprop>
 events +t_iprop
 endif
-//dorand 7
-//tag.Luck = 40
-//hitpoints += <eval <hitpoints> / 2>
-//tag.LowerRequeriments = 20
-//tag.SwingSpeedIncrease = 10
-//tag.HitChanceIncrease = 5
-//tag.HitLifeLeech = <r100>
-//tag.Luck = 10
-//enddo
+dorand 7
+tag.Luck = 40
+hitpoints += <eval <hitpoints> / 2>
+tag.LowerRequeriments = 20
+tag.SwingSpeedIncrease = 10
+tag.HitChanceIncrease = 5
+tag.HitLifeLeech = <r100>
+tag.Luck = 10
+enddo
 
 [function f_colored_shield_frostwood]
 if !<istevent.t_iprop>
@@ -231,6 +231,6 @@ if !<istevent.t_iprop>
 events +t_iprop
 endif
 tag.DamageIncrease = 12
-DamCold = 40
+tag.DamCold = 40
 
 [eof]
