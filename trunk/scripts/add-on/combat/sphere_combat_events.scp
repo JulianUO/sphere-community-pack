@@ -25,7 +25,7 @@ argn1 = <eval {<weapon.dam>}>
 	argn1 += <eval <weapon.morey> / 7>
 	endif
 else
-argn1 = <eval 1,4>
+argn1 = <eval <r1,4>>
 	if <flags>&statf_polymorph
 		if <def.scp.Combat_PolymorphDamage> == 1
 		argn1 = <eval {<serv.chardef.<body>.dam>}>
@@ -135,7 +135,7 @@ argn1 = <eval {<weapon.dam>}>
 	argn1 += <eval <weapon.morey> / 7>
 	endif
 else
-argn1 = <eval {dam}>
+argn1 = <eval {<dam>}>
 endif
 if <src.f_combatsys_blockchance> || (<src.trigger @Shield> == 1)
 src.f_combatsys_block

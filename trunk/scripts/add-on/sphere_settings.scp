@@ -225,6 +225,17 @@ scp.Combat_ResistancesCap=70
 scp.Combat_PolymorphDamage=1
 
 ///////////////////////////////////////////////////////////////
+//////// NPC AI Configuration
+///////////////////////////////////////////////////////////////
+// If this is set to 1, summoned npcs will also be able to attack their creators.
+// NOTE: This only affect red creatures as blue monsters don't attack players.
+scp.NPCAI_Summon_AttackCaster=0
+
+// If this is set to 0, summoned npcs will not attack blue chars if the creator is blue.
+// NOTE: This only affect red creatures as blue monsters don't attack inocent people.
+scp.NPCAI_Summon_AttackBlue=0
+
+///////////////////////////////////////////////////////////////
 //////// General Settings
 ///////////////////////////////////////////////////////////////
 // Activate or deactivate the current/max followers system
@@ -553,18 +564,5 @@ scp.House_GlobalMaxVendors=0
 
 // Max number of vendors allowed per house
 scp.House_MaxVendors=10
-
-///////////////////////////////////////////////////////////////
-//////// Quest Bounty Board System
-///////////////////////////////////////////////////////////////
-// Time before the bounty death dialog is opened to the death player
-scp.Bounty_Delay=8
-
-// Amount of DAYS before an uncollected bounty decays
-scp.Bounty_Decay=14
-
-// Minimum amount of gold coins to pay for a bounty
-scp.Bounty_Minimum=1000
-
 
 [EOF]

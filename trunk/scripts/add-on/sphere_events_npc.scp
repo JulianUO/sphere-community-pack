@@ -61,6 +61,7 @@ elif <serv.spell.<argn1>.flags>&spellflag_summon
 		hits = 0
 		else
 		src.curfollower += <local.slots>
+		events +e_NpcSummoned
 		endif
 	endif
 endif
