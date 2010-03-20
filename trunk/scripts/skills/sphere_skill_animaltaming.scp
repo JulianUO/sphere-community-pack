@@ -70,6 +70,10 @@ if <argo.uid> == <uid>
 sysmessage <def.scp.taming_tameself>
 f_skill_delay <getargv 2 <def.skill.35.waittime>>
 return 1
+elif <argo.isplayer>
+sysmessage <def.scp.taming_player>
+f_skill_delay <getargv 2 <def.skill.35.waittime>>
+return 1
 elif !<argo.ischar>
 sysmessage <def.scp.taming_notchar>
 f_skill_delay <getargv 2 <def.skill.35.waittime>>

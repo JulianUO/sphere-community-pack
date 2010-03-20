@@ -170,6 +170,7 @@ scp.taming_abort		"You give up trying to tame the creature."
 scp.taming_youdead		"@,,2 502796"	// You are dead, and cannot continue taming.
 scp.taming_cantseelos		"@,,2 1049654"	// You do not have a clear path to the animal you are taming, and must cease your attempt.
 scp.taming_isangry		"@,,2 502794"	// The animal is too angry to continue taming.
+scp.taming_player		"@,,2 502801"	// You can't tame that!
 
 scp.tasteid_targ		"@,,2 502807"	// What would you like to taste?
 scp.tasteid_ischar		"@,,2 502816"	// You feel that such an action would be inappropriate.

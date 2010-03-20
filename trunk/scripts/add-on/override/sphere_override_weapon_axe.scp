@@ -1,0 +1,34 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[TYPEDEF t_weapon_axe]
+on=@targon_item
+if <src.cansee <argo.uid>>
+ref1 = <uid.<argo.region.uid>.more2>
+	if <argo.baseid> == i_addon_trash_barrel
+	src.face <argo>
+	argo.sound 011c
+	argo.remove
+	src.sysmessage @,,1 You destroy the item.
+	return 1
+	endif
+	if (<ref1.isowner <src>>) || (<ref1.iscoowner <src>>)
+		if <argo.tag0.deed>
+		local.toadd = <argo.tag0.deed>
+		argo.remove
+		elif <argo.link.tag0.deed>
+		local.toadd = <argo.link.tag0.deed>
+		argo.link.remove
+		endif
+	serv.newitem <local.toadd>
+	new.cont = <src.findlayer.21>
+	return 1
+	endif
+endif
+
+[eof]

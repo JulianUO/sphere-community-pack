@@ -42,7 +42,7 @@ argo.message <def.scp.animallore_fail>
 [function f_animallore_start]
 if <skillusequick animallore <r1000>>
 	if <argo.brain>
-	f_ResendDialog d_animal_lore
+	argo.f_resenddialog d_animal_lore
 	skillgain animallore <eval (<animallore> / 10) + 1>
 	f_skill_delay <getargv 1 <def.skill.2.waittime>>
 	return 1
