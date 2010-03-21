@@ -58,15 +58,15 @@ DESCRIPTION=Imp
 TAG.Slayer=SLAYER_DEMON
 TAG.Barding.Diff=70.0
 TAG.Control.Slots=2
+TAG.DamFire=50
+TAG.DamPoison=50
 ARMOR={25 35}
+
+ON=@Create
 ResFire={40 50}
 ResCold={20 30}
 ResPoison={30 40}
 ResEnergy={30 40}
-DamFire=50
-DamPoison=50
-
-ON=@Create
 NPC=brain_monster
 STR={91 115}
 DEX={61 80}
@@ -104,11 +104,11 @@ TAG.Slayer=SLAYER_DEMON|SLAYER_GARGOYLE
 TAG.Barding.Diff=72.5
 TAG.Luck.Loot=0,0,loot_gargoyle_luck
 ARMOR={30 35}
+
+ON=@Create
 ResFire={25 35}
 ResCold={5 10}
 ResPoison={15 25}
-
-ON=@Create
 NPC=brain_monster
 STR={146 175}
 DEX={76 95}
@@ -141,12 +141,12 @@ SUBSECTION=Miscellaneous
 DESCRIPTION=Harpy
 TAG.Barding.Diff=56.4
 ARMOR={25 30}
+
+ON=@Create
 ResFire={10 20}
 ResCold={10 30}
 ResPoison={20 30}
 ResEnergy={10 30}
-
-ON=@Create
 NPC=brain_monster
 STR={96 120}
 DEX={86 110}
@@ -180,14 +180,14 @@ DESCRIPTION=Fire Gargoyle
 TAG.Luck.Loot=0,0,loot_fire_gargoyle_luck
 TAG.Slayer=SLAYER_GARGOYLE
 TAG.Barding.Diff=96.0
+TAG.DamFire=80
 ARMOR={30 35}
+
+ON=@Create
 ResFire={50 60}
 ResCold={-10 0}
 ResPoison={20 30}
 ResEnergy={20 30}
-DamFire=80
-
-ON=@Create
 NPC=brain_monster
 STR={351 400}
 DEX={126 145}
@@ -207,7 +207,7 @@ ADDCIRCLE 6,1
 ADDSPELL=S_FLAMESTRIKE
 
 ON=@NpcRestock
-ITEM=loot_fire_gargoyle
+ITEM=loot_gargoyle_fire
 
 
 [CHARDEF 043]
@@ -230,12 +230,12 @@ TAG.Luck.Loot=0,0,loot_gargoyle_stone_luck
 TAG.Slayer=SLAYER_GARGOYLE
 TAG.Barding.Diff=71.4
 ARMOR={45 55}
+
+ON=@Create
 ResFire={20 30}
 ResCold={10 20}
 ResPoison={30 40}
 ResEnergy={30 40}
-
-ON=@Create
 NPC=brain_monster
 STR={246 275}
 DEX={76 95}
@@ -270,12 +270,12 @@ TAG.Luck.Loot=0,0,loot_daemon_luck
 TAG.Slayer=SLAYER_DEMON
 TAG.Barding.Diff=89.8
 ARMOR={45 60}
+
+ON=@Create
 ResFire={50 60}
 ResCold={30 40}
 ResPoison={20 30}
 ResEnergy={30 40}
-
-ON=@Create
 NPC=brain_monster
 STR={476 505}
 DEX={76 95}
@@ -311,14 +311,14 @@ DESCRIPTION=Succubus
 TAG.Luck.Loot=0,0,loot_succubus_luck
 TAG.Slayer=SLAYER_DEMON
 TAG.Barding.Diff=107.2
+TAG.DamEnergy=25
 ARMOR={80 90}
+
+ON=@Create
 ResFire={70 80}
 ResCold={40 50}
 ResPoison={50 60}
 ResEnergy={50 60}
-DamEnergy=25
-
-ON=@Create
 NPC=brain_monster
 STR={488 620}
 DEX={121 170}
