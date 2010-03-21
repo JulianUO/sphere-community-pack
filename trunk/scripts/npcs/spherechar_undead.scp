@@ -1,0 +1,546 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[CHARDEF 03]
+DEFNAME=c_zombie
+NAME=Zombie
+SOUND=snd_MONSTER_ZOMBIE1
+ICON=i_pet_ZOMBIE
+ANIM=078c7f
+DAM=5,10
+CAN=MT_WALK
+FOODTYPE=20 t_meat_raw
+DESIRES=i_gold,t_meat_raw,t_corpse
+BLOODCOLOR=colors_green
+TEVENTS=e_undead
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Zombie
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=34.2
+ARMOR=15,20
+
+ON=@Create
+ResCold={20 30}
+ResPoison={5 10}
+NPC=brain_undead
+STR={46 70}
+DEX={31 50}
+INT={26 40}
+MAXHITS={28 42}
+WRESTLING={35.1 50.0}
+TACTICS={35.1 50.0}
+MAGICRESISTANCE={15.1 40.0}
+KARMA=-600
+FAME=600
+
+ON=@NPCRestock
+ITEM=loot_zombie
+
+
+[CHARDEF 018]
+DEFNAME=c_lich
+NAME=Lich
+SOUND=snd_MONSTER_Lich1
+ICON=i_pet_LICH
+ANIM=07bc7f
+DAM=24,26
+CAN=MT_WALK|MT_USEHANDS
+FOODTYPE=
+DESIRES=t_bone,i_gold,t_wand,t_reagent
+BLOODCOLOR=colors_green
+TEVENTS=e_undead
+TEVENTS=e_npcai_immune_poison
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Lich
+TAG.Luck.Loot=0,0,loot_lich_luck
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=85.0
+TAG.DamCold=40
+TAG.DamEnergy=50
+ARMOR={40 60}
+
+ON=@Create
+ResFire={20 30}
+ResCold={50 60}
+ResPoison={55 65}
+ResEnergy={40 50}
+NPC=brain_undead
+FAME=8000
+KARMA=-8000
+STR={171 200}
+DEX={126 145}
+INT={276 305}
+MAXHITS={103 120}
+MAGERY={70.0 80.0}
+MAGICRESISTANCE={80.0 100.0}
+TACTICS={70.0 90.0}
+EVALUATINGINTEL=100.0
+MEDITATION={85.1 90.0}
+ITEMNEWBIE=i_spellbook
+ADDSPELL=s_Clumsy
+ADDSPELL=s_Weaken
+ADDSPELL=s_feeblemind
+ADDSPELL=s_Harm
+ADDSPELL=s_magic_arrow
+ADDSPELL=s_fireball
+ADDSPELL=s_poison
+ADDSPELL=s_curse
+ADDSPELL=s_paralyze
+ADDSPELL=s_dispel
+ADDSPELL=s_summon_undead
+ADDSPELL=s_animate_dead
+ADDSPELL=s_fire_bolt
+
+ON=@NPCRestock
+ITEM=loot_lich
+
+
+[CHARDEF 01a]
+DEFNAME=c_spectre
+NAME=Spectre
+SOUND=snd_MONSTER_GHOST1
+ICON=i_pet_GHOUL
+ANIM=078c7f
+DAM=7,11
+CAN=MT_WALK|MT_GHOST
+FOODTYPE=
+BLOODCOLOR=colors_green
+TEVENTS=e_undead
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Spectre
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=69.4
+TAG.DamCold=50
+ARMOR={25 30}
+
+ON=@Create
+ResCold={15 25}
+ResPoison={10 20}
+NPC=brain_undead
+STR={76 100}
+DEX={76 95}
+INT={36 60}
+MAXHITS={46 60}
+WRESTLING={45.0 55.0}
+TACTICS={45.0 60.0}
+MAGICRESISTANCE={45.0 60.0}
+MAGERY={55.0 70.0}
+EVALUATINGINTEL={55.0 70.0}
+FAME=4000
+KARMA=-4000
+
+ON=@NPCRestock
+ITEM=loot_spectre
+
+
+[CHARDEF 032]
+DEFNAME=c_skeleton
+NAME=Skeleton
+SOUND=snd_MONSTER_SKLETN1
+ICON=i_pet_SKELETON
+ANIM=078c7f
+CAN=MT_WALK
+DAM=3,7
+FOODTYPE=
+DESIRES=t_bone,i_gold
+BLOODCOLOR=-1
+TEVENTS=e_undead
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Skeleton
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=38.9
+ARMOR={15 20}
+
+ON=@Create
+ResFire={5 10}
+ResCold={25 40}
+ResPoison={25 35}
+ResEnergy={5 15}
+NPC=brain_undead
+STR={56 80}
+DEX={56 75}
+INT={16 40}
+MAXHITS={34 48}
+WRESTLING={45.0 55.0}
+TACTICS={45.0 50.0}
+MAGICRESISTANCE={45.0 60.0}
+FAME=450
+KARMA=-450
+
+ON=@NPCRestock
+ITEM=loot_skeleton
+
+
+[CHARDEF 039]
+DEFNAME=c_skeletal_knight
+NAME=Skeletal Knight
+SOUND=snd_MONSTER_SKLETN1
+ICON=i_pet_SKELETON
+ANIM=078c7f
+CAN=MT_WALK|MT_USEHANDS|MT_EQUIP
+DAM=18,43
+DESIRES=t_bone,i_gold
+FOODTYPE=
+BLOODCOLOR=-1
+TEVENTS=e_undead
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Skeletal Knight
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=67.4
+TAG.DamCold=60
+ARMOR={35 45}
+
+ON=@Create
+ResFire={20 30}
+ResCold={50 60}
+ResPoison={20 30}
+ResEnergy={30 40}
+NPC=brain_undead
+STR={196 250}
+DEX={76 95}
+INT={36 60}
+MAXHITS={118 150}
+WRESTLING={85.0 95.0}
+TACTICS={85.0 100.0}
+MAGICRESISTANCE={65.0 80.0}
+FAME=3000
+KARMA=-3000
+
+ON=@NPCRestock
+ITEM=loot_skeletal_knight
+
+
+[CHARDEF 094]
+DEFNAME=c_skeletal_mage
+NAME=Skeletal Mage
+SOUND=snd_MONSTER_SKLETN1
+ICON=i_pet_SKELETON
+CAN=MT_WALK
+DAM=4,11
+FOODTYPE=
+DESIRES=t_bone,i_gold
+BLOODCOLOR=-1
+TEVENTS=e_undead
+RESLEVEL=2
+RESDISPDNHUE=1625
+RESDISPDNID=c_skeleton
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Skeletal Mage
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=71.8
+ARMOR={35 40}
+
+ON=@Create
+ResFire={20 30}
+ResCold={50 60}
+ResPoison={20 30}
+ResEnergy={30 40}
+NPC=brain_undead
+STR={76 100}
+DEX={56 75}
+INT={185 210}
+MAXHITS={46 60}
+WRESTLING={45.0 55.0}
+TACTICS={45.0 60.0}
+MAGICRESISTANCE={55.0 70.0}
+MAGERY={60.0 70.0}
+EVALUATINGINTEL={60.0 70.0}
+FAME=3000
+KARMA=-3000
+
+ON=@NPCRestock
+ITEM=loot_skeletal_mage
+
+
+[CHARDEF 09a]
+DEFNAME=c_mummy
+NAME=Mummy
+SOUND=snd_MONSTER_GHOST1
+ICON=i_pet_mummy
+DAM=31,55
+RESDISPDNID=c_zombie
+RESLEVEL=2
+CAN=MT_WALK|MT_USEHANDS
+MOVERATE=110
+DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman,t_corpse
+TEVENTS=e_undead
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Mummy
+TAG.Luck.Loot=0,0,loot_mummy_luck
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=63.1
+TAG.DamCold=60
+ARMOR={45 55}
+
+ON=@Create
+ResFire={10 20}
+ResCold={50 60}
+ResPoison={20 30}
+ResEnergy={20 30}
+NPC=brain_monster
+STR={346 370}
+DEX={71 90}
+INT={26 40}
+MAXHITS={208 222}
+WRESTLING={35.1 50.0}
+TACTICS={35.1 50.0}
+MAGICRESISTANCE={15.1 40.0}
+FAME=4000
+KARMA=-4000
+
+ON=@NpcRestock
+ITEM=loot_mummy
+
+
+[CHARDEF c_lich_lord]
+NAME=Lich Lord
+ID=c_lich
+ICON=i_pet_LICH
+DAM=30,38
+CAN=MT_WALK
+DESIRES=t_bone,i_gold,t_wand,t_reagent,e_undead
+TEVENTS=e_undead
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Lich Lord
+TAG.Luck.Loot=0,0,loot_lich_lord_luck
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=106.4
+TAG.DamCold=60
+TAG.DamEnergy=40
+ARMOR={40 50}
+
+ON=@Create
+ResFire={30 40}
+ResCold={50 60}
+ResPoison={50 60}
+ResEnergy={40 50}
+NPC=brain_undead
+STR={415 505}
+DEX={145 165}
+INT={565 655}
+MAXHITS={250 303}
+WRESTLING={60.0 80.0}
+TACTICS={50.0 70.0}
+MAGICRESISTANCE={150.0 200.0}
+MAGERY={90.0 100.0}
+EVALUATINGINTEL={90.0 100.0}
+FAME=18000
+KARMA=-18000
+
+ON=@NPCRestock
+ITEM=loot_lich_lord
+
+
+[CHARDEF c_wraith]
+NAME=Wraith
+SOUND=snd_MONSTER_GHOST1
+ICON=i_pet_GHOUL
+ID=c_spectre
+FOODTYPE=
+CAN=MT_GHOST|MT_WALK
+DAM=11,18
+TEVENTS=e_Undead
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Wraith
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=68.2
+TAG.DamCold=50
+ARMOR={25 30}
+
+ON=@Create
+ResCold={15 25}
+ResPoison={10 20}
+COLOR=color_spectral
+NPC=brain_undead
+STR={76 100}
+DEX={76 95}
+INT={36 60}
+MAXHITS={46 60}
+WRESTLING={45.0 55.0}
+TACTICS={45.0 60.0}
+MAGICRESISTANCE={55.0 70.0}
+MAGERY={55.0 70.0}
+EVALUATINGINTEL={55.0 70.0}
+FAME=4000
+KARMA=-4000
+
+ON=@NPCRestock
+ITEM=loot_wraith
+
+
+[CHARDEF c_shade]
+NAME=Shade
+SOUND=snd_MONSTER_GHOST1
+ICON=i_pet_GHOUL
+ID=c_spectre
+FOODTYPE=
+CAN=MT_GHOST|MT_WALK
+DAM=11,18
+TEVENTS=e_Undead
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Shade
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=69.4
+TAG.DamCold=50
+ARMOR={25 30}
+
+ON=@Create
+ResCold={15 25}
+ResPoison={10 20}
+COLOR=color_spectral
+NPC=brain_undead
+STR={76 100}
+DEX={76 95}
+INT={36 60}
+MAXHITS={46 60}
+WRESTLING={45.0 55.0}
+TACTICS={45.0 60.0}
+MAGICRESISTANCE={55.0 70.0}
+MAGERY={55.0 70.0}
+EVALUATINGINTEL={55.0 70.0}
+FAME=4000
+KARMA=-4000
+
+ON=@NPCRestock
+ITEM=loot_shade
+
+
+[TEMPLATE loot_zombie]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Zombie
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=random_bone_armor
+
+[TEMPLATE loot_lich]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Lich
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=random_scroll_medium,2
+ITEM=random_reagent_necro,{4 6}
+ITEM=random_reagent_necro,{4 6}
+ITEM=random_reagent_necro,{4 6}
+ITEM=random_jewel
+ITEM=random_jewel
+ITEM=random_magic_wands
+ITEM=i_staff_gnarled
+
+[TEMPLATE loot_lich_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Lich
+// Treasure Map Level 3
+
+[TEMPLATE loot_spectre]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Spectre
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=random_reagent,5
+ITEM=random_reagent,5
+
+[TEMPLATE loot_skeleton]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Skeleton
+CONTAINER=i_backpack
+ITEM=i_gold,{25 50}
+ITEM=random_bone_armor
+
+[TEMPLATE loot_skeletal_knight]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Skeletal Knight
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=random_platemail_armor
+
+[TEMPLATE loot_skeletal_mage]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Skeletal Mage
+CONTAINER=i_backpack
+ITEM=i_gold,{125 150}
+ITEM=random_scroll_medium
+ITEM=random_reagent,3
+ITEM=random_reagent_necro,{3 6}
+ITEM=random_reagent_necro,{3 6}
+
+[TEMPLATE loot_mummy]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Mummy
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=i_reag_garlic,5
+ITEM=i_bandage,10
+ITEM=random_potion
+ITEM=random_jewel
+ITEM=random_spells_medium,{1 2}
+
+[TEMPLATE loot_mummy_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Mummy
+// Treasure Map Level 1
+// Fragrant Seed
+// Peculiar Seed
+
+[TEMPLATE loot_wraith]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Wraith
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=random_reagent,{4 6}
+ITEM=random_reagent,{4 6}
+
+[TEMPLATE loot_shade]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Shade
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=random_reagent,{4 6}
+ITEM=random_reagent,{4 6}
+
+[TEMPLATE loot_lich_lord]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Lich Lord
+CONTAINER=i_backpack
+ITEM=i_gold,{450 600}
+ITEM=random_reagent_necro,{20 30}
+ITEM=random_reagent_necro,{20 30}
+ITEM=random_reagent_necro,{20 30}
+ITEM=random_scroll_medium,2
+ITEM=random_jewel
+ITEM=random_magic_wands
+ITEM=i_staff_gnarled
+
+[TEMPLATE loot_lich_lord_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Lich Lord
+// Treasure Map Level 4
+
+[eof]

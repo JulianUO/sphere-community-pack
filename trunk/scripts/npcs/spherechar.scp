@@ -84,42 +84,6 @@ ON=@Create
 ON=@NPCRestock
 	ITEM=loot_ETTIN
 
-[CHARDEF 03]
-DEFNAME=c_zombie
-NAME=Zombie
-SOUND=snd_MONSTER_ZOMBIE1
-ICON=i_pet_ZOMBIE
-ANIM=078c7f
-CAN=MT_WALK
-DAM=2,8
-ARMOR=9
-RESOURCES=10 t_eerie_stuff
-FOODTYPE=20 t_meat_raw
-DESIRES=i_gold,t_meat_raw, t_corpse
-//SHELTER=r_dungeon,r_spooky
-AVERSIONS=t_TRAP
-BLOODCOLOR=colors_green
-TEVENTS=e_undead
-CATEGORY=Monsters
-SUBSECTION=Undeads
-DESCRIPTION=Zombie
-
-ON=@Create
-	NPC=brain_undead
-	STR={46 70}
-	DEX={31 50}
-	INT={26 40}
-	PARRYING={20.0 30.0}
-	MAGICRESISTANCE={15.0 40.0}
-	TACTICS={35.0 50.0}
-	WRESTLING={35.0 50.0}
-	FAME=300
-	KARMA={-2000 -3999}
-	//ALIGNMENT=EVIL
-
-ON=@NPCRestock
-	ITEM=loot_ZOMBIE
-
 [CHARDEF 05]
 DEFNAME=c_eagle
 NAME=Eagle
@@ -639,93 +603,6 @@ ON=@Create
 ON=@NPCRestock
 	ITEM=loot_GAZER
 
-[CHARDEF 018]
-DEFNAME=c_lich
-NAME=Lich
-SOUND=snd_MONSTER_Lich1
-ICON=i_pet_LICH
-ANIM=07bc7f
-DAM=15,25
-ARMOR=20
-//RESOURCES=10 t_eerie_stuff
-CAN=MT_WALK|MT_USEHANDS
-FOODTYPE=
-//SHELTER=r_dungeon,r_caves,r_spooky
-DESIRES=t_bone,i_gold,t_wand,t_reagent
-BLOODCOLOR=colors_green
-TEVENTS=e_undead
-CATEGORY=Monsters
-SUBSECTION=Undeads
-DESCRIPTION=Lich
-
-ON=@Create
-	NPC=brain_undead
-	FAME={600 5000}
-	KARMA={-4000 -4999}
-	//ALIGNMENT=EVIL
-	STR={105 135}
-	DEX={66 85}
-	INT={175 205}
-	PARRYING={55.0 65.0}
-	MAGERY={70.0 80.0}
-	MAGICRESISTANCE={70.0 90.0}
-	TACTICS={70.0 90.0}
-	//SPELLCIRCLES=2-4
-	// knows undead type spells.
-	ITEMNEWBIE=i_spellbook
-	ADDSPELL=s_Clumsy
-	ADDSPELL=s_Weaken
-	ADDSPELL=s_feeblemind
-	ADDSPELL=s_Harm
-	ADDSPELL=s_magic_arrow
-	ADDSPELL=s_fireball
-	ADDSPELL=s_poison
-	ADDSPELL=s_curse
-	ADDSPELL=s_paralyze
-	ADDSPELL=s_dispel
-	ADDSPELL=s_summon_undead
-	ADDSPELL=s_animate_dead
-	ADDSPELL=s_fire_bolt
-	ADDSPELL=s_Hallucination
-
-ON=@NPCRestock
-	ITEM=loot_LICH
-
-[CHARDEF 01a]
-//SPECTRE (Ghoul,Ghost or Spectre)
-DEFNAME=c_spectre
-//DEFNAME2=SPECTRE
-NAME=Spectre
-SOUND=snd_MONSTER_GHOST1
-ICON=i_pet_GHOUL
-ANIM=078c7f
-DAM=6,12
-ARMOR=14
-CAN=MT_WALK|MT_GHOST
-FOODTYPE=
-//SHELTER=r_spooky,r_dungeon
-BLOODCOLOR=colors_green
-TEVENTS=e_undead
-CATEGORY=Monsters
-SUBSECTION=Undeads
-DESCRIPTION=Spectre
-
-ON=@Create
-	NPC=brain_undead
-	FAME={600 2000}
-	KARMA={-1000 -1999}
-	//ALIGNMENT=EVIL
-	STR={76 100}
-	DEX={76 95}
-	INT={36 60}
-	PARRYING={45.0 55.0}
-	MAGICRESISTANCE={35.0 50.0}
-	TACTICS={45.0 60.0}
-	WRESTLING={45.0 55.0}
-
-ON=@NPCRestock
-	ITEM=loot_SPECTRE
-
 [CHARDEF 01c]
 DEFNAME=c_spider_giant
 NAME=Giant Spider
@@ -1176,42 +1053,6 @@ ON=@Create
 	KARMA={-2000 -2999}
 	//ALIGNMENT=EVIL
 
-[CHARDEF 032]
-DEFNAME=c_skeleton
-//DEFNAME2=BONE_MAGE
-NAME=Skeleton
-SOUND=snd_MONSTER_SKLETN1
-ICON=i_pet_SKELETON
-ANIM=078c7f
-CAN=MT_WALK
-DAM=2,8
-ARMOR=8
-RESOURCES=8 i_reag_bone
-FOODTYPE=
-//SHELTER=r_spooky
-DESIRES=t_bone,i_gold
-BLOODCOLOR=-1
-TEVENTS=e_undead
-CATEGORY=Monsters
-SUBSECTION=Undeads
-DESCRIPTION=Skeleton
-
-ON=@Create
-	NPC=brain_undead
-	FAME={100 2000}
-	KARMA={-999 -4999}
-	//ALIGNMENT=EVIL
-	STR={56 80}
-	DEX={56 75}
-	INT={16 40}
-	PARRYING={45.0 55.0}
-	MAGICRESISTANCE={45.0 60.0}
-	TACTICS={45.0 50.0}
-	WRESTLING={45.0 55.0}
-
-ON=@NPCRestock
-	ITEM=loot_SKELETON
-
 [CHARDEF 033]
 DEFNAME=c_slime
 NAME=Slime
@@ -1423,45 +1264,6 @@ ON=@Create
 ON=@NPCRestock
 	ITEM=i_axe_battle
 	ITEM={ meager_undead_backpack 1 average_undead_backpack 2 0 1 }
-
-[CHARDEF 039]
-DEFNAME=c_skeleton_w_sword
-//DEFNAME2=BONE_KNIGHT
-NAME=Skeleton
-SOUND=snd_MONSTER_SKLETN1
-ICON=i_pet_SKELETON
-ANIM=078c7f
-CAN=MT_WALK|MT_USEHANDS|MT_EQUIP
-DAM=7,13
-ARMOR=9
-RESOURCES=8 i_reag_bone
-DESIRES=t_bone,i_gold
-FOODTYPE=
-//SHELTER=r_spooky
-BLOODCOLOR=-1
-TEVENTS=e_undead
-CATEGORY=Monsters
-SUBSECTION=Undeads
-DESCRIPTION=Skeleton (Sword & Shield)
-
-ON=@Create
-	NPC=brain_undead
-	STR={56 80}
-	DEX={56 75}
-	INT={16 40}
-	SWORDSMANSHIP={50.0 55.0}
-	PARRYING={45.0 55.0}
-	MAGICRESISTANCE={45.0 60.0}
-	TACTICS={45.0 60.0}
-	WRESTLING={45.0 55.0}
-	FAME={100 2000}
-	KARMA={-999 -5999}
-	//ALIGNMENT=EVIL
-
-ON=@NPCRestock
-	ITEM=i_shield_wood
-	ITEM=i_CUTLASS
-	ITEM={ meager_undead_backpack 1 average_undead_backpack 2 }
 
 [CHARDEF 03a]
 DEFNAME=c_wisp

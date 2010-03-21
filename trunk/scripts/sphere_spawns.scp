@@ -19,21 +19,22 @@ DEFNAME=SPAWN_Undead_Weak
 CATEGORY=Spawn Groups
 SUBSECTION=Undead
 DESCRIPTION=Weak Undead
-ID=c_SPECTRE 2
-ID=c_SKELETON_W_AXE
-ID=c_SKELETON_W_SWORD
+ID=c_zombie 10
 ID=c_skeleton 5
-ID=c_ZOMBIE 10
+ID=c_spectre 2
 
 [SPAWN 08002]
 DEFNAME=SPAWN_Undead_Strong
 CATEGORY=Spawn Groups
 SUBSECTION=Undead
 DESCRIPTION=Strong Undead
-ID=c_m_skeleton_mage 3
+ID=c_skeletal_mage 3
 ID=c_lich 4
-ID=c_m_lich_lord
-ID=c_skeleton_w_sword
+ID=c_skeletal_knight
+ID=c_lich_lord
+ID=c_mummy
+ID=c_wraith
+ID=c_shade
 
 [SPAWN 08003]
 DEFNAME=SPAWN_Undead_All
@@ -41,14 +42,15 @@ CATEGORY=Spawn Groups
 SUBSECTION=Undead
 DESCRIPTION=All Undead
 ID=c_zombie
-ID=c_spectre
-ID=c_skeleton_w_axe
-ID=c_skeleton_w_sword
-ID=c_skeleton_w_sword
-ID=c_skeleton
-ID=c_m_skeleton_mage
 ID=c_lich
-ID=c_m_lich_lord
+ID=c_spectre
+ID=c_skeleton
+ID=c_skeletal_knight
+ID=c_skeletal_mage
+ID=c_mummy
+ID=c_lich_lord
+ID=c_wraith
+ID=c_shade
 
 [SPAWN 08004]
 DEFNAME=SPAWN_elems
@@ -237,13 +239,12 @@ SUBSECTION=Monsters
 DESCRIPTION=All Monsters
 ID=c_zombie
 ID=c_spectre
+ID=c_skeletal_knight
+ID=c_skeletal_mage
 ID=c_skeleton_w_axe
-ID=c_skeleton_w_sword
 ID=c_skeleton
-ID=c_m_skeleton_mage
 ID=c_lich
-ID=c_m_lich_lord
-ID=c_skeleton_w_sword
+ID=c_lich_lord
 ID=c_elem_air
 ID=c_elem_earth
 ID=c_elem_fire
@@ -838,7 +839,7 @@ ID=c_mongbat 7
 ID=c_scorpion_giant 4
 ID=c_skeleton 2
 ID=c_skeleton_w_axe 2
-ID=c_skeleton_w_sword 2
+ID=c_skeletal_knight 2
 ID=c_ZOMBIE 8
 ID=c_spectre 4
 
@@ -935,7 +936,7 @@ ID=c_scorpion_giant
 ID=c_snake_giant
 ID=c_spider_giant
 ID=c_spectre
-ID=c_skeleton_w_sword
+ID=c_skeletal_knight
 ID=c_skeleton_w_axe
 
 [SPAWN 08048]
