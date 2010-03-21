@@ -418,41 +418,6 @@ ON=@NPCRestock
 	ITEM=loot_MONGBAT
 
 
-[CHARDEF 01022]
-DEFNAME=c_m_mummy
-NAME=Mummy
-ID=c_ZOMBIE
-SOUND=snd_MONSTER_GHOST1
-ICON=i_pet_ZOMBIE
-DAM=4,32
-ARMOR=25
-RESOURCES=7 t_eerie_stuff
-//ALIGNMENT=EVIL
-CAN=MT_WALK
-//SHELTER==r_dungeon,r_spooky
-DESIRES=i_gold
-TEVENTS=e_undead
-CATEGORY=Monsters
-SUBSECTION=Undeads
-DESCRIPTION=Mummy
-
-ON=@Create
-	NPC=brain_undead
-	COLOR=color_rock
-	STR={345 370}
-	DEX={71 90}
-	INT={26 40}
-	PARRYING={20.0 60.0}
-	MAGICRESISTANCE={15.0 40.0}
-	TACTICS={35.0 50.0}
-	WRESTLING={35.0 50.0}
-	FAME={100 2000}
-	KARMA={-4000 -4999}
-
-ON=@NPCRestock
-	ITEM=loot_MUMMY
-
-
 [CHARDEF 01024]
 DEFNAME=c_m_kraken
 NAME=Kraken
@@ -808,41 +773,6 @@ ON=@NPCRestock
 	ITEM=loot_OGRE_LORD
 
 
-[CHARDEF 01041]
-DEFNAME=c_m_lich_lord
-NAME=Lich Lord
-ID=c_Lich
-ICON=i_pet_LICH
-DAM=6,18
-ARMOR=25
-RESOURCES=
-CAN=MT_WALK
-//SHELTER==r_dungeon,r_caves,r_spooky
-DESIRES=t_bone,i_gold,t_wand,t_reagent,e_undead
-TEVENTS=e_undead
-CATEGORY=Monsters
-SUBSECTION=Undeads
-DESCRIPTION=Lich Lord
-
-ON=@Create
-	NPC=brain_undead
-	STR={415 505}
-	DEX={96 115}
-	INT={565 655}
-	PARRYING={55.0 65.0}
-	MAGERY={90.0 100.0}
-	MAGICRESISTANCE={90.0 100.0}
-	TACTICS={50.0 70.0}
-	WRESTLING={60.0 80.0}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=5,8
-	FAME={100 2000}
-	KARMA={-5000 -5999}
-
-ON=@NPCRestock
-	ITEM=loot_LICH_LORD
-
-
 [CHARDEF 01042]
 DEFNAME=c_m_phoenix
 NAME=Phoenix
@@ -979,69 +909,6 @@ ON=@NPCRestock
 	ITEM={ random_jewel 1 0 1 }
 	ITEM={ random_jewel 1 0 1 }
 	ITEM={ random_jewel 1 0 1 }
-
-
-[CHARDEF 01046]
-DEFNAME=c_m_skeleton_mage
-NAME=Skeleton Mage
-ID=c_skeleton
-DAM=2,8
-ARMOR=19
-RESOURCES=8 i_reag_bone
-//SHELTER==r_spooky
-TEVENTS=e_Undead
-CATEGORY=Monsters
-SUBSECTION=Undeads
-DESCRIPTION=Skeleton Mage
-
-ON=@Create
-	NPC=brain_undead
-	COLOR=colors_red
-	STR={76 100}
-	DEX={56 75}
-	INT={185 210}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=3,6
-	PARRYING={45.0 55.0}
-	MAGERY={60.0 70.0}
-	MAGICRESISTANCE={45.0 60.0}
-	TACTICS={45.0 60.0}
-	WRESTLING={45.0 55.0}
-	FAME={100 2000}
-	KARMA={-3000 -3999}
-
-ON=@NPCRestock
-	ITEM=loot_SKELETAL_MAGE
-
-
-[CHARDEF 01047]
-DEFNAME=c_m_skeleton_knight
-NAME=Skeleton Knight
-ID=c_skeleton_w_sword
-DAM=2,20
-ARMOR=18
-RESOURCES=8 i_reag_bone
-//ALIGNMENT=EVIL
-//SHELTER==r_spooky
-TEVENTS=e_Undead
-CATEGORY=Monsters
-SUBSECTION=Undeads
-DESCRIPTION=Skeleton Knight
-
-ON=@Create
-	NPC=brain_undead
-	STR={195 250}
-	DEX={76 95}
-	INT={36 60}
-	PARRYING={85.0 95.0}
-	MAGICRESISTANCE={65.0 80.0}
-	TACTICS={85.0 100.0}
-	WRESTLING={85.0 95.0}
-	FAME={100 2000}
-	KARMA={-3000 -3999}
-
-ON=@NPCRestock
-	ITEM=loot_SKELETAL_KNIGHT
 
 
 [CHARDEF 01048]
@@ -1565,39 +1432,6 @@ ON=@Create
 
 ON=@NPCRestock
 	ITEM=loot_GHOUL
-
-
-[CHARDEF 01068]
-DEFNAME=c_m_wraith
-NAME=Wraith
-SOUND=snd_MONSTER_GHOST1
-ICON=i_pet_GHOUL
-ID=c_SPECTRE
-FOODTYPE=
-CAN=MT_GHOST|MT_WALK
-DAM=12,20
-ARMOR=20,25
-TEVENTS=e_Undead
-CATEGORY=Monsters
-SUBSECTION=Undeads
-DESCRIPTION=Wraith
-
-ON=@Create
-	NPC=BRAIN_UNDEAD
-	COLOR=colors_gray
-	STR={100 125}
-	DEX={90 120}
-	INT={60 90}
-	//ALIGNMENT=EVIL
-	MAGICRESISTANCE={60.0 85.0}
-	PARRYING={60.0 85.0}
-	TACTICS={60.0 85.0}
-	WRESTLING={60.0 85.0}
-	KARMA={-4000 -2000}
-	FAME={1500 3000}
-
-ON=@NPCRestock
-	ITEM=loot_WRAITH
 
 
 [CHARDEF 01069]

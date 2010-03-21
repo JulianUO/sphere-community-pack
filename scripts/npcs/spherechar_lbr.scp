@@ -47,40 +47,6 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{550 650}
 
-[CHARDEF 09a]
-DEFNAME=c_mummy
-NAME=Mummy
-SOUND=snd_MONSTER_GHOST1
-ICON=i_pet_mummy
-DAM=31,55
-RESDISPDNID=c_man
-RESLEVEL=2
-RESDISPDNHUE=01
-CAN=MT_WALK|MT_USEHANDS
-MOVERATE=110
-ARMOR=50
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman,t_corpse
-CATEGORY=New Monsters
-SUBSECTION=LBR
-DESCRIPTION=Mummy
-
-ON=@Create
-	NPC=brain_monster
-	FAME=4000
-	KARMA=-4000
-	STR={346 370}
-	MAXHITS={208 222}
-	INT={26 40}
-	DEX={71 90}
-	MAGICRESISTANCE={15.1 40.0}
-	TACTICS={35.1 50.0}
-	WRESTLING={35.1 50.0}
-
-ON=@NpcRestock
-	ITEM=i_gold,{275 325}
-	ITEM=i_reag_garlic,10
-	ITEM=i_bandage,10
-
 [chardef 797]
 defname=c_reptile_lord
 NAME=Reptile Lord
