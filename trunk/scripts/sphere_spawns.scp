@@ -7,9 +7,66 @@
 // Menasoft & Partners.  All donations and contributions
 // become the property of Menasoft & Partners.
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 24, 2006
-//
+// FILE LAST UPDATED: Lunes, 22 de Marzo de 2010
 VERSION=0.56b
+
+[SPAWN spawn_cemeteries_jhelom]
+CATEGORY=Spawn Groups
+SUBSECTION=Cemeteries of Britannia
+DESCRIPTION=Jhelom Graveyard
+ID=c_skeleton 4
+ID=c_zombie 4
+ID=c_spectre 2
+ID=c_shade 2
+ID=c_wraith 2
+
+[SPAWN spawn_cemeteries_vesper]
+CATEGORY=Spawn Groups
+SUBSECTION=Cemeteries of Britannia
+DESCRIPTION=Vesper Graveyard
+ID=c_skeleton 5
+ID=c_zombie 5
+ID=c_spectre 2
+ID=c_wraith 1
+
+[SPAWN spawn_cemeteries_britain]
+CATEGORY=Spawn Groups
+SUBSECTION=Cemeteries of Britannia
+DESCRIPTION=Britain Graveyard
+ID=c_skeleton 5
+ID=c_zombie 5
+ID=c_spectre 2
+ID=c_wraith 1
+
+[SPAWN spawn_cemeteries_yew]
+CATEGORY=Spawn Groups
+SUBSECTION=Cemeteries of Britannia
+DESCRIPTION=Yew Graveyard
+ID=c_skeleton
+
+[SPAWN spawn_cemeteries_cove]
+CATEGORY=Spawn Groups
+SUBSECTION=Cemeteries of Britannia
+DESCRIPTION=Cove Graveyard
+ID=c_skeleton 3
+ID=c_zombie 3
+ID=c_spectre 2
+ID=c_wraith 2
+ID=c_shade 2
+ID=c_lich 1
+
+[SPAWN spawn_cemeteries_moonglow]
+CATEGORY=Spawn Groups
+SUBSECTION=Cemeteries of Britannia
+DESCRIPTION=Moonglow Graveyard
+ID=c_skeleton 3
+ID=c_zombie 3
+ID=c_spectre 2
+ID=c_wraith 2
+ID=c_shade 2
+ID=c_lich 1
+
+
 
 // Random Spawn, T2A critters included are just alterations to old art (colors, stats). T2A is not needed.
 // WEIGHT= need not add up to any special value. purely relative weight

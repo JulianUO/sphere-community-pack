@@ -39,7 +39,7 @@ ON=@EnvironChange
 	if (<tag0.lightstr>)
 		return 0
 	endif
-	if ( <flags>&statf_conjured	) 
+	if ( <flags>&statf_conjured	)
 		remove
 		return 1
 	endif
@@ -66,8 +66,4 @@ ON=@EnvironChange
 
 [EVENTS e_Ophidian]
 
-[EVENTS e_Horses]
-
 [EVENTS e_Notoriety]
-
-[EVENTS e_Ostards]

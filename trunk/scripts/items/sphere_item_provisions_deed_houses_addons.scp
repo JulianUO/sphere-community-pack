@@ -6,6 +6,7 @@
 // FILE LAST UPDATED: Viernes, 12 de Marzo de 2010
 VERSION=0.56b
 
+//****************************************************************************
 [TYPEDEF t_deed_house_addon]
 ON=@dclick
 if <cont> != <src.findlayer.21>
@@ -22,6 +23,15 @@ endif
 return 1
 
 [function f_place_house_addon]
+serv.newnpc c_pig
+new.flags = statf_invul|statf_insubstantial
+new.p = <src.targp>
+ref1 = <uid.<new.region.uid>.more2>
+new.remove
+if (<ref1.HousePlayerAccess <src.uid>> < 2)
+src.sysmessage That is not your house!
+return 1
+endif
 if <serv.itemdef.<src.targ.more>.type> == t_multi
 local.itemcomps = <strarg <serv.itemdef.<src.targ.more>.component>>
 serv.newitem <src.targ.more>
@@ -60,14 +70,14 @@ src.targ.remove
 else
 serv.newitem <src.targ.more>
 new.p <src.targp>
-new.tag.deed = <src.targ.baseid>
-new.attr = <new.attr>&~attr_decay
-new.attr = <new.attr>|attr_move_never
 	if !<new.AddonCanBePlaced>
 	new.remove
 	src.sysmessage This can't be placed here
 	return 1
 	endif
+new.tag.deed = <src.targ.baseid>
+new.attr = <new.attr>&~attr_decay
+new.attr = <new.attr>|attr_move_never
 src.targ.remove
 endif
 
@@ -88,7 +98,6 @@ if <isneartype t_wall 0 1>
 return 0
 endif
 return 1
-
 //****************************************************************************
 
 [ITEMDEF i_deed_anvil_east]

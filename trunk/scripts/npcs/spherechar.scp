@@ -1943,40 +1943,6 @@ ON=@Create
 	//ALIGNMENT=NEUTRAL
 	//Animals
 
-[CHARDEF 0C8]
-//HORSE (Warm Tan)(light brown)
-DEFNAME=c_horse_tan
-NAME=Horse
-SOUND=snd_ANIMALS_HORSE1
-ICON=i_pet_horse_tan
-ANIM=01fff
-CAN=MT_WALK|MT_RUN
-RESOURCES=15 i_ribs_raw, 10 i_hide
-FOODTYPE=55 t_crops,55 t_fruit,55 t_grain, 64 t_grass
-DAM=3,4
-ARMOR=9
-DESIRES=e_horses,c_man,c_woman
-TEVENTS=e_horses
-//SHELTER=r_stables,e_Human_Greet
-AVERSIONS=e_carnivores3
-DESCRIPTION=Horse (Beige)
-SUBSECTION=Land (Domestic)
-CATEGORY=Animals
-
-ON=@Create
-	NPC=brain_animal
-	FAME=0
-	KARMA=-1
-	STR={44 120}
-	DEX={36 55}
-	INT={6 10}
-	PARRYING={35.0 45.0}
-	MAGICRESISTANCE={25.0 30.0}
-	TACTICS={29.0 44.0}
-	WRESTLING={29.0 44.0}
-	TAMING=45.0
-	//ALIGNMENT=NEUTRAL
-
 [CHARDEF 0c9]
 DEFNAME=c_cat
 NAME=Cat
@@ -2074,40 +2040,6 @@ ON=@Create
 	TACTICS=5.0
 	WRESTLING=5.0
 	TAMING=30.0
-
-[CHARDEF 0CC]
-//HORSE (Brown)
-DEFNAME=c_horse_brown_dk
-NAME=Horse
-ANIM=01fff
-SOUND=snd_ANIMALS_HORSE1
-ICON=i_pet_horse_brown_dk
-CAN=MT_WALK|MT_RUN
-DAM=3,4
-ARMOR=9
-RESOURCES=15 i_ribs_raw,10 i_hide
-FOODTYPE=55 t_crops,55 t_fruit,55 t_grain,64 t_grass
-DESIRES=e_horses,c_man,c_woman
-TEVENTS=e_horses
-//SHELTER=r_stables,e_Human_Greet
-AVERSIONS=e_carnivores3
-DESCRIPTION=Horse (Brown)
-SUBSECTION=Land (Domestic)
-CATEGORY=Animals
-
-ON=@Create
-	NPC=brain_animal
-	STR={44 120}
-	DEX={36 55}
-	INT={6 10}
-	PARRYING={35.0 45.0}
-	MAGICRESISTANCE={25.0 30.0}
-	TACTICS={29.0 44.0}
-	WRESTLING={29.0 44.0}
-	TAMING=45.0
-	FAME=0
-	KARMA={1 99}
-	//ALIGNMENT=NEUTRAL
 
 [CHARDEF 0CD]
 DEFNAME=c_rabbit
@@ -2276,40 +2208,6 @@ ON=@Create
 	FAME=20
 	KARMA={-1 -99}
 	//ALIGNMENT=NEUTRAL
-
-[CHARDEF 0d2]
-//OSTARD (OCLOCK) Desert Ostard
-DEFNAME=c_ostard_desert
-NAME=Oclock
-SOUND=snd_ANIMAL_OSTARD_DESERT1
-ICON=i_pet_OSTARD_Desert
-DAM=7,15
-ARMOR=9
-RESOURCES=15 i_ribs_raw
-CAN=MT_WALK|MT_RUN
-FOODTYPE=55 t_crops, 55 t_fruit, 64 t_grass
-//SHELTER=r_stables
-DESIRES=e_OSTARDS
-ANIM=01fff
-RESLEVEL=1
-RESDISPDNID=c_horse_tan
-RESDISPDNHUE=0100
-DESCRIPTION=Oclock
-SUBSECTION=T2A Animals
-CATEGORY=Animals
-
-ON=@Create
-	NPC=brain_animal
-	STR={94 170}
-	DEX={36 55}
-	INT={6 10}
-	PARRYING={25.0 35.0}
-	MAGICRESISTANCE={27.0 32.0}
-	TACTICS={29.0 44.0}
-	WRESTLING={29.0 44.0}
-	TAMING=45.0
-	FAME=0
-	KARMA={-300 -599}
 
 [CHARDEF 0D3]
 DEFNAME=c_bear_brown
@@ -2547,106 +2445,6 @@ ON=@Create
 	WRESTLING={19.0 31.0}
 	TAMING=3.0
 
-[CHARDEF 0da]
-DEFNAME=c_ostard_zostrich
-NAME=Zostrich
-SOUND=snd_ANIMAL_OSTARD_FRENZIED1
-ICON=i_pet_OSTARD_ZOSTRICH
-CAN=MT_WALK|MT_RUN
-DAM=8,23
-ARMOR=15
-RESOURCES=15 i_ribs_raw
-FOODTYPE=55 t_crops, 55 t_fruit, 64 t_grass
-//SHELTER=r_stables
-DESIRES=e_OSTARDS
-ANIM=01fff
-RESLEVEL=1
-RESDISPDNID=c_horse_tan
-RESDISPDNHUE=0150
-DESCRIPTION=Zostrich
-SUBSECTION=T2A Animals
-CATEGORY=Animals
-
-ON=@Create
-	NPC=brain_animal
-	STR={94 170}
-	DEX={96 115}
-	INT={6 10}
-	PARRYING={75.0 85.0}
-	MAGICRESISTANCE={75.0 80.0}
-	TACTICS={79.0 94.0}
-	WRESTLING={79.0 94.0}
-	TAMING=85.0
-	FAME=0
-	KARMA={-400 -599}
-	//ALIGNMENT=NEUTRAL
-
-[CHARDEF 0db]
-DEFNAME=c_ostard_forest
-NAME=Orn
-SOUND=snd_ANIMAL_OSTARD_DESERT1
-ICON=i_pet_OSTARD_Forest
-CAN=MT_WALK|MT_RUN
-DAM=4,12
-ARMOR=9
-RESOURCES=15 i_ribs_raw
-FOODTYPE=55 t_crops, 55 t_fruit, 64 t_grass
-//SHELTER=r_stables,spk_human_prime
-DESIRES=e_OSTARDS,c_man,c_woman
-AVERSIONS=e_carnivores3
-ANIM=01fff
-RESLEVEL=1
-RESDISPDNID=c_horse_tan
-RESDISPDNHUE=0166
-DESCRIPTION=Orn
-SUBSECTION=T2A Animals
-CATEGORY=Animals
-
-ON=@Create
-	NPC=brain_animal
-	STR={94 170}
-	DEX={36 55}
-	INT={6 10}
-	PARRYING={35.0 45.0}
-	MAGICRESISTANCE={25.0 30.0}
-	TACTICS={29.0 44.0}
-	WRESTLING={29.0 44.0}
-	TAMING=45.0
-	FAME=0
-	KARMA={-400 -599}
-	//ALIGNMENT=NEUTRAL
-
-[CHARDEF 0dc]
-DEFNAME=c_llama
-NAME=Llama
-SOUND=snd_ANIMALS_LLAMA3
-ICON=i_pet_LLAMA
-CAN=MT_WALK|MT_RUN
-ANIM=01fff
-DAM=2,6
-ARMOR=8
-RESOURCES=7 i_ribs_raw,2 i_fur_light
-FOODTYPE=5 t_crops, 5 t_fruit, 5 t_grain, 5 i_hay, 64 t_grass
-//SHELTER=r_stables,spk_human_prime
-DESIRES=c_llama,c_llama_pack,spk_human_prime
-DESCRIPTION=Llama
-SUBSECTION=Land (Domestic)
-CATEGORY=Animals
-
-ON=@Create
-	NPC=brain_animal
-	STR={21 49}
-	DEX={36 55}
-	INT={16 30}
-	PARRYING={35.0 45.0}
-	MAGICRESISTANCE={15.0 20.0}
-	TACTICS={19.0 29.0}
-	WRESTLING={19.0 29.0}
-	TAMING=50.0
-	FAME=10
-	KARMA={-1 -99}
-	//ALIGNMENT=NEUTRAL
-
 [CHARDEF 0dd]
 DEFNAME=c_walrus
 NAME=Walrus
@@ -2743,73 +2541,6 @@ ON=@Create
 	TAMING=40.0
 	FAME=200
 	KARMA={-300 -399}
-	//ALIGNMENT=NEUTRAL
-
-[CHARDEF 0E2]
-//HORSE,Gray,White
-DEFNAME=c_horse_gray
-NAME=Horse
-SOUND=snd_ANIMALS_HORSE1
-ICON=i_pet_horse_gray
-CAN=MT_WALK|MT_RUN
-ANIM=01fff
-DAM=3,4
-ARMOR=9
-DESIRES=c_horse_gray,c_man,c_woman
-FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
-//SHELTER=r_stables,e_Human_Greet
-AVERSIONS=e_carnivores3
-RESOURCES=15 i_ribs_raw,10 i_hide
-DESCRIPTION=Horse (White)
-SUBSECTION=Land (Domestic)
-CATEGORY=Animals
-
-ON=@Create
-	NPC=brain_animal
-	STR={44 120}
-	DEX={36 55}
-	INT={6 10}
-	PARRYING={35.0 45.0}
-	MAGICRESISTANCE={25.0 30.0}
-	TACTICS={29.0 44.0}
-	WRESTLING={29.0 44.0}
-	TAMING=45.0
-	FAME=0
-	KARMA=0
-	//ALIGNMENT=NEUTRAL
-
-[CHARDEF 0E4]
-//HORSE3 light tan
-DEFNAME=c_horse_brown_lt
-NAME=Horse
-SOUND=snd_ANIMALS_HORSE1
-ICON=i_pet_horse_brown_lt
-ANIM=01fff
-DAM=3,4
-ARMOR=9
-RESOURCES=15 i_ribs_raw,10 i_hide
-CAN=MT_WALK|MT_RUN
-FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
-//SHELTER=r_stables,e_Human_Greet
-DESIRES=e_horses,c_man,c_woman
-TEVENTS=e_horses
-AVERSIONS=e_carnivores3
-DESCRIPTION=Horse (Tan)
-SUBSECTION=Land (Domestic)
-CATEGORY=Animals
-
-ON=@Create
-	NPC=brain_animal
-	STR={44 120}
-	DEX={36 55}
-	INT={6 10}
-	PARRYING={35.0 45.0}
-	MAGICRESISTANCE={25.0 30.0}
-	TACTICS={29.0 44.0}
-	WRESTLING={29.0 44.0}
-	TAMING=45.0
-	FAME=0
-	KARMA=0
 	//ALIGNMENT=NEUTRAL
 
 [CHARDEF 0e7]
