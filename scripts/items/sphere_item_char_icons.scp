@@ -463,16 +463,6 @@ CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Gorilla
 
-[ITEMDEF 020f6]
-DEFNAME=i_pet_llama
-NAME=Llama
-TYPE=T_FIGURINE
-TDATA3=c_llama
-
-CATEGORY=Miscellaneous
-SUBSECTION=Character Icons
-DESCRIPTION=Llama
-
 [ITEMDEF 020f7]
 // don't use this it looks like crap.
 DEFNAME=i_pet_panther_junk
@@ -741,42 +731,6 @@ CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Grizzly Bear
 
-[ITEMDEF 0211f]
-//horse frame, gray
-DEFNAME=i_pet_horse_gray
-NAME=Gray Horse
-TYPE=T_FIGURINE
-TDATA3=c_horse_gray
-VALUE={280 400}
-SKILLMAKE=MAGERY 35.0
-
-CATEGORY=Miscellaneous
-SUBSECTION=Character Icons
-DESCRIPTION=Horse (gray)
-
-[ITEMDEF 02120]
-//horse frame
-DEFNAME=i_pet_horse_brown_lt
-NAME=Horse
-TYPE=T_FIGURINE
-TDATA3=c_horse_brown_lt
-VALUE={280 400}
-
-CATEGORY=Miscellaneous
-SUBSECTION=Character Icons
-DESCRIPTION=Horse (light brown)
-DUPELIST=020dd
-
-[ITEMDEF 02121]
-//horse frame dark brown
-DEFNAME=i_pet_horse_brown_dk
-VALUE={280 400}
-TYPE=T_FIGURINE
-TDATA3=c_horse_brown_dk
-CATEGORY=Miscellaneous
-SUBSECTION=Character Icons
-DESCRIPTION=Horse (dark brown)
-
 [ITEMDEF 02122]
 //wolf
 DEFNAME=i_pet_wolf_gray
@@ -797,17 +751,6 @@ VALUE={2 3}
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Rat
-
-[ITEMDEF 02124]
-//horse warm tan
-DEFNAME=i_pet_horse_tan
-Name=Horse
-TYPE=T_FIGURINE
-TDATA3=c_horse_tan
-VALUE={280 400}
-CATEGORY=Miscellaneous
-SUBSECTION=Character Icons
-DESCRIPTION=Horse (tan)
 
 [ITEMDEF 02125]
 DEFNAME=i_pet_rabbit
@@ -945,39 +888,6 @@ TDATA3=c_OPHIDIAN_queen
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Ophidian
-
-[ITEMDEF 02135]
-DEFNAME=i_pet_ostard_desert
-Name=Ostard
-TYPE=T_FIGURINE
-TDATA3=c_OSTARD_Desert
-VALUE={280 400}
-
-CATEGORY=Miscellaneous
-SUBSECTION=Character Icons
-DESCRIPTION=Ostard
-
-[ITEMDEF 02136]
-DEFNAME=i_pet_ostard_zostrich
-Name=Ostard
-TYPE=T_FIGURINE
-TDATA3=c_OSTARD_Zostrich
-VALUE={280 400}
-
-CATEGORY=Miscellaneous
-SUBSECTION=Character Icons
-DESCRIPTION=Ostard
-
-[ITEMDEF 02137]
-DEFNAME=i_pet_ostard_forest
-Name=Ostard
-TYPE=T_FIGURINE
-TDATA3=c_OSTARD_Forest
-VALUE={280 400}
-
-CATEGORY=Miscellaneous
-SUBSECTION=Character Icons
-DESCRIPTION=Ostard
 
 [ITEMDEF 02013]
 //leatherworker

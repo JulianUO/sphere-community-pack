@@ -100,6 +100,18 @@ scp.Fishing_ChanceToAncient=4
 scp.Fishing_MinToSosBottle=0
 
 ///////////////////////////////////////////////////////////////
+//////// Skills Settings - Cartography Treasures
+///////////////////////////////////////////////////////////////
+// Set the minimum skill to get the treasures per level
+// The map level is the number at the end of the setting (_1, _2, etc)
+scp.Cartography_TMapLevel_1=27.0
+scp.Cartography_TMapLevel_2=71.0
+scp.Cartography_TMapLevel_3=81.0
+scp.Cartography_TMapLevel_4=91.0
+scp.Cartography_TMapLevel_5=100.0
+scp.Cartography_TMapLevel_6=100.0
+
+///////////////////////////////////////////////////////////////
 //////// Skills Settings - Poisoning/Healing/Veterinary
 ///////////////////////////////////////////////////////////////
 // Undead monsters are immune to poison
@@ -338,6 +350,10 @@ scp.Rune_RenameNoPrefix=1
 // Allow or disable the new virtue system. OSI-Like
 // <boolean> (0 = No / 1 = Yes)
 scp.VirtueSystem=1
+
+// Delay used when "casting" an ethereal mount, in seconds.
+// Default = 2.
+scp.EtherealMount_Delay=2
 
 ///////////////////////////////////////////////////////////////
 //////// Jail System Settings

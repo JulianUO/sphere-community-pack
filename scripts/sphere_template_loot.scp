@@ -1349,11 +1349,6 @@ CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
 DESCRIPTION=Lava Lizard
 
-[TEMPLATE loot_NIGHTMARE]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Nightmare
-
 [TEMPLATE loot_OPHIDIAN_MAGE]
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates

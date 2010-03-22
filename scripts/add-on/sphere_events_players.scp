@@ -127,6 +127,15 @@ if <def.scp.followers> == 1
 	endif
 endif
 
+// Ethereal Mounts
+on=@dismount
+if <argo.tag0.EthMount>
+serv.newitem <argo.tag.EthMount>
+new.cont = <src.uid>
+argo.remove
+return 1
+endif
+
 // Crafting System
 on=@skillmenu
 if <def.scp.CraftingSystem> == 0

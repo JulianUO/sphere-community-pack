@@ -263,10 +263,6 @@ ON=@ClientToolTip
 	SRC.ADDCLILOC 1060485,10
 	SRC.ADDCLILOC 1015008
 
-[ITEMDEF 9658]
-DEFNAME=i_seahorse_statuette
-NAME=Sea Horse
-
 [ITEMDEF Ship_Model_HMSCape]
 ID=i_model_ship
 NAME=Ship Model of the H.M.S. Cape
