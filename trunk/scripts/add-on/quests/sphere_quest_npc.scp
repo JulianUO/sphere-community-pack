@@ -1,3 +1,35 @@
+[CHARDEF c_quester_humanm]
+ID=c_man
+NAME=#NAMES_HUMANMALE
+TEVENTS=e_questers
+CAN=MT_USEHANDS|MT_EQUIP
+CATEGORY=Civilized
+SUBSECTION=Questers
+DESCRIPTION=Human Male
+
+ON=@Create
+FLAGS=statf_invul
+NPC=BRAIN_HUMAN
+DEX=10
+INT=10
+STR=10
+
+[CHARDEF c_quester_humanf]
+ID=c_woman
+NAME=#NAMES_HUMANFEMALE
+TEVENTS=e_questers
+CAN=MT_USEHANDS|MT_EQUIP|MT_FEMALE
+CATEGORY=Civilized
+SUBSECTION=Questers
+DESCRIPTION=Human Female
+
+ON=@Create
+FLAGS=statf_invul
+NPC=BRAIN_HUMAN
+DEX=10
+INT=10
+STR=10
+
 //Quest npcs required
 
 //quests 4 & 35

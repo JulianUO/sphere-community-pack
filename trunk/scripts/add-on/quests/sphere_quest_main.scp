@@ -547,37 +547,11 @@ sDIALOG d_quest_log
 
 ///////////////////////////////////
 
-[CHARDEF c_quester_humanm]
-ID=c_man
-NAME=quest dummy
-TEVENTS=e_questers
-CAN=MT_USEHANDS|MT_EQUIP|MT_WALK
-
-ON=@Create
-FLAGS=statf_invul
-NPC=BRAIN_HUMAN
-DEX=10
-INT=10
-STR=10
-
-[CHARDEF c_quester_humanf]
-ID=c_woman
-NAME=quest dummy
-TEVENTS=e_questers
-CAN=MT_USEHANDS|MT_EQUIP|MT_WALK|MT_FEMALE
-
-ON=@Create
-FLAGS=statf_invul
-NPC=BRAIN_HUMAN
-DEX=10
-INT=10
-STR=10
-
 [CHARDEF c_quester_elff]
 ID=c_elf_female
 NAME=quest dummy
 TEVENTS=e_questers
-CAN=MT_USEHANDS|MT_EQUIP|MT_WALK|MT_FEMALE
+CAN=MT_USEHANDS|MT_EQUIP|MT_FEMALE
 
 ON=@Create
 FLAGS=statf_invul
@@ -590,7 +564,7 @@ STR=10
 ID=c_elf_male
 NAME=quest dummy
 TEVENTS=e_questers
-CAN=MT_USEHANDS|MT_EQUIP|MT_WALK
+CAN=MT_USEHANDS|MT_EQUIP
 
 ON=@Create
 FLAGS=statf_invul
