@@ -277,20 +277,22 @@ TIMER=30
 
 ON=@DClick
 IF (<LINK.TYPE> == t_multi) || (<LINK.TYPE> == t_multi_custom)
- IF ((<SRC.ACCOUNT.PLEVEL> >= 4) && (<SRC.ISGM>)) || ((<SRC.ACCOUNT.PLEVEL> > 1) && (<SRC.ACCOUNT.PLEVEL> < 4))
-   SDIALOG d_house_information
-   return 1
- ELIF (<HousePlayerAccess <SRC>> >= 2)
-   SRC.SYSMESSAGE @,,1 Welcome back, <SRC.NAME>.
-   IF (<DEF.scp.House_DecayTimer> > 0) && (<isempty <TAG.DEMOLITION_PENDING>>)
-    TIMER=<eval <DEF.scp.House_DecayTimer>*24*60*60>
-   ENDIF
-   SDIALOG d_house_information
-   return 1
- ENDIF
- TAG0.VISITS ++
- SDIALOG d_house_visitor
- return 1
+	IF ((<SRC.ACCOUNT.PLEVEL> >= 4) && (<SRC.ISGM>)) || ((<SRC.ACCOUNT.PLEVEL> > 1) && (<SRC.ACCOUNT.PLEVEL> < 4))
+	SDIALOG d_house_information
+	return 1
+	ELIF (<HousePlayerAccess <SRC>> >= 2)
+	SRC.SYSMESSAGE @,,1 Welcome back, <SRC.NAME>.
+	if <def.scp.House_DecayUse> == 1
+		IF (<DEF.scp.House_DecayTimer> > 0) && (<isempty <TAG.DEMOLITION_PENDING>>)
+		TIMER=<eval <DEF.scp.House_DecayTimer>*24*60*60>
+		ENDIF
+	endif
+	SDIALOG d_house_information
+	return 1
+	ENDIF
+TAG0.VISITS ++
+SDIALOG d_house_visitor
+return 1
 ENDIF
 
 ON=@ClientToolTip
@@ -326,7 +328,7 @@ IF !(<MORE2>)
  ENDIF
  REF1.NOTICE Too much time has passed and the test house you created has been deleted.  Please try again!
  LINK.REMOVE
-ELIF (<DEF.scp.House_DecayTimer>) || (<TAG0.DEMOLITION_PENDING>)
+ELIF (<DEF.scp.House_DecayUse>) || (<TAG0.DEMOLITION_PENDING>)
  FOR <TAG0.Vendors>
   REF1=<TAG0.Vendor<dLOCAL._FOR>>
   IF (<REF1>)
@@ -577,6 +579,20 @@ ELIF (<ARGS>==9)
 ELIF (<ARGS>==10)
   DIALOG d_house_security 2,1,1
   return 1
+ELIF <ARGS> == 15
+	if <def.scp.House_DecayUse> == 2
+	local.fee = <def.scp.House_DecayFee>
+	elif <def.scp.House_DecayUse> == 3
+	local.fee = <eval (<link.HouseValue> * <def.scp.House_DecayFee>) / 100>
+	endif
+local.topay = <eval (((<def.scp.House_DecayTimer>*24*60*60) - <timer>) * <local.fee>) / (<def.scp.House_DecayTimer>*24*60*60)>
+	if <src.gold> < <local.topay>
+	src.sysmessage @,,1 You don't have enought money to refresh your house.
+	return 1
+	endif
+src.gold -= <local.topay>
+timer = <eval <def.scp.House_DecayTimer>*24*60*60>
+src.sysmessage @,,1 Your house has been refreshed
 ENDIF
 
 
@@ -598,10 +614,16 @@ dtext 20 190 5 This house is of modern design.
 dtext 20 210 5 This is a <QVAL (<LINK.TYPE> != t_multi_custom)? pre:custom>-built house.
 dtext 20 230 5 This house is <QVAL !(<TAG0.Public>)? private:open to the public>.
 IF (<TAG0.DEMOLITION_PENDING>)
- dtext 20 250 37 This house is Condemned.
- dtext 20 270 37 This house will decay in: <eval <TIMER>/86400> days, <eval (<TIMER>%86400)/3600> hours and <eval ((<TIMER>%86400)%3600)/60> minutes.
-ELIF (<DEF.scp.House_DecayTimer>) && (<TIMER> > 0)
- dtext 20 250 5 This house will decay in: <eval <TIMER>/86400> days, <eval (<TIMER>%86400)/3600> hours and <eval ((<TIMER>%86400)%3600)/60> minutes.
+dtext 20 250 37 This house is Condemned.
+dtext 20 270 37 This house will decay in: <eval <TIMER>/86400> days, <eval (<TIMER>%86400)/3600> hours and <eval ((<TIMER>%86400)%3600)/60> minutes.
+ELIF <def.scp.House_DecayUse> > 0
+	if (<DEF.scp.House_DecayTimer>) && (<TIMER> > 0)
+	dtext 20 250 5 This house will decay in: <eval <TIMER>/86400> days, <eval (<TIMER>%86400)/3600> hours and <eval ((<TIMER>%86400)%3600)/60> minutes.
+	endif
+	if <def.scp.House_DecayUse> > 1
+	button 20 270 4005 4007 1 0 15
+	dtext 60 270 1152 Refresh your house now!
+	endif
 ELSE
  dtext 20 250 5 This house is Automatically refreshed.
 ENDIF
@@ -3573,6 +3595,8 @@ DClick
 
 //////////////////////////////////////////////////////////////////////////////////
 
+
+
 [EVENTS e_house_customize]
 ON=@SkillStart
 SYSMESSAGE @,,1 You cannot do that while customizing a house.
@@ -3601,6 +3625,11 @@ IF !(<HouseDesign>)
 ENDIF
 
 ON=@HouseAddItem
+if <tag0.commithouse> == 1
+return 1
+endif
+
+ON=@HouseDesignButton
 if <tag0.commithouse> == 1
 return 1
 endif
@@ -3647,7 +3676,7 @@ dhtmlgump 205 290 80 20 0 0 <DEF.BFONT_WHITE>CANCEL
 
 [DIALOG d_house_customize_commit BUTTON]
 ON=0 1
-tag.commithouse =
+src.tag.commithouse =
 IF (<ARGN>==1)
  ARGS=<TAG.CUSTOMIZE.INFO>
  LOCAL.OLDCOST = <dARGV[0]>
@@ -3676,6 +3705,7 @@ IF (<ARGN>==1)
     SRC.SYSMESSAGE @,,1 <dLOCAL.CURCOST> gold has been taken out of your account to pay for the construction.
    ENDIF
  ENDIF
+ RESYNC <src.uid>
  COMMIT
  ENDCUSTOMIZE
  TIMERF 1,FixCustomization
@@ -3706,6 +3736,12 @@ return 1
 local.subcmd = <local.7><local.8>
 if (<local.subcmd> == 06) || (<local.subcmd> == 0d) || (<local.subcmd> == 013)
 	if <uid.<local.char>.trigger @HouseAddItem> == 1
+	uid.<uid.<local.char>.housedesign>.resync <local.char>
+	return 1
+	endif
+endif
+if (<local.subcmd> == 02) || (<local.subcmd> == 03) || (<local.subcmd> == 04) || (<local.subcmd> == 010) || (<local.subcmd> == 01a)
+	if <uid.<local.char>.trigger @HouseDesignButton> == 1
 	uid.<uid.<local.char>.housedesign>.resync <local.char>
 	return 1
 	endif

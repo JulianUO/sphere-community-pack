@@ -463,9 +463,21 @@ scp.Vendor_SalaryPaymentDiv=12
 // (0 = House Value in Gold / 1 = House Deed)
 scp.House_UseDeeds=0
 
+// Select the time to refresh and decay to use:
+// 0 = No decay, no refresh needed
+// 1 = Decay, refreshed opening the menu
+// 2 = Decay, refreshed with money through the menu.
+// 3 = Decay, refreshed with money through the menu. But the money is a % of the house value
+scp.House_DecayUse=2
+
 // House decay timer, in days.
 // 0 = Decay Off
-scp.House_DecayTimer=5
+scp.House_DecayTimer=30
+
+// House decay fee, amount to pay for house refreshing. Will pay according time to decay
+// if scp.House_DecayUse is 2, this should be the total to pay.
+// if it is 3, this should be the percent of the value to pay (example 15%).
+scp.House_DecayFee=30000
 
 // House decay timer for Demolition Pending houses, in days.
 // Houses can only be pended to demolition by a Game Master.
