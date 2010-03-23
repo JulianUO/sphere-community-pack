@@ -152,4 +152,12 @@ local.toret = <strarg <args>>
 args = <streat <args>>
 return <argv[<local.toret>]>
 
+[function isdialogopen]
+for 0 <eval <dialoglist.count> - 1>
+	if strmatch("<dialoglist.<dlocal._for>.id>","<args>")
+	return 1
+	endif
+endfor
+return 0
+
 [eof]
