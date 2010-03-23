@@ -26,7 +26,7 @@ VERSION=0.56b
 //
 // Custom Vendors needs a diary salary to keep working. And the value of the salary
 // is calculated based on the total amount of VALUE that the vendor is selling on
-// his inventory. 
+// his inventory.
 // Salary is paid automatically by the vendor, and it uses the gold on vendor bankbox.
 // Only the vendor owner can give it more gold, and the gold is increased too when someone
 // buy something from the vendor.
@@ -116,7 +116,7 @@ ELIF !(<SRC.ISGM>)
         return 1
       ENDIF
     ENDIF
-  ENDIF  
+  ENDIF
   FOROBJS 1
     IF (<BASEID>==i_vendor_rental_contract)
      SRC.SYSMESSAGE @,,1 You cannot place a vendor or barkeep on top of a rental contract!
@@ -330,7 +330,10 @@ ON=@ItemDropOn_Item
 IF (<ARGO.TOPOBJ.ISCHAR>)
   REF1=<ARGO.TOPOBJ>
   IF (<REF1.ISMYPET>) && (<REF1.TAG0.Salary>)
-   IF (<eval <REF1.WEIGHT>+<SRC.TARG.WEIGHT>> > <REF1.MAXWEIGHT>)
+   IF <SRC.TARG.TYPE> == t_gold
+    REF1.SAY @,,1 I can't sell that.
+    return 1
+   ELIF (<eval <REF1.WEIGHT>+<SRC.TARG.WEIGHT>> > <REF1.MAXWEIGHT>)
     REF1.SAY @,,1 I can't carry anymore.
     return 1
    ELSE
@@ -483,7 +486,7 @@ EVENTS=-t_fix_attr
 
 //////////////////////////////////////////////////////////////////////////////////
 
-[SPEECH s_player_vendors] 
+[SPEECH s_player_vendors]
 ON=*browse
 SRC.EVENTS=+e_vendor_player
 FINDLAYER.21.OPEN
@@ -670,6 +673,8 @@ ELSE
     LOCAL.PRICE=<STRARG <ARGS>>
     IF !(<isnum <LOCAL.PRICE>>)
       SYSMESSAGE @,,1 Invalid price, using default value.
+    ELIF <local.price> < 0
+      SYSMESSAGE @,,1 You cannot set negative price on items, using default value.
     ELIF ((<eval STRLEN(<LOCAL.PRICE>)> > 7) || (<LOCAL.PRICE> > 5000000))
       SYSMESSAGE @,,1 You cannot price items above 100,000,000 gold.  The price has been adjusted.
       REF1.TAG.PRICE=5000000
@@ -695,7 +700,7 @@ ENDIF
 REF1=<CTAG.VENDOR>
 IF (<isempty <ARGS>>) || (<isnum <ARGS>>) || (<eval STRLEN(<ARGS>)> > 20) || (<eval STRLEN(<ARGS>)> < 4) || STRMATCH(*<ASC [[]>*,<ASC <ARGS>>) || STRMATCH(*<ASC ]>*,<ASC <ARGS>>) || STRMATCH(*<ASC [(]>*,<ASC <ARGS>>) || STRMATCH(*<ASC ->*,<ASC <ARGS>>) || STRMATCH(*<ASC [}`>?´;:^%$*¨!<#._~|=+&/æ{]>*,<ASC <ARGS>>) || STRMATCH(*<ASC @>*,<ASC <ARGS>>)
   SYSMESSAGE @,,1 That name is unacceptable.
-  return 1 
+  return 1
 ENDIF
 TRY REF1.<CTAG.RENAME>=<ARGS>
 REF1.UPDATE
@@ -752,7 +757,7 @@ page 1
 IF (<ARGS>==1)
  resizepic 25 10 5054 530 180
  gumppictiled 35 20 510 160 2624
- checkertrans 35 20 510 160 
+ checkertrans 35 20 510 160
  gumppic 10 0 028dc
  gumppic 537 175 028dc
  gumppic 10 175 028dc
@@ -761,12 +766,12 @@ IF (<ARGS>==1)
   dhtmlgump 40 35 260 20 0 0 <DEF.BFONT_WHITE>Gold needed for 1 day of vendor salary:
   dhtmlgump 300 35 90 20 0 0 <DEF.BFONT_LRED><eval <TAG0.Salary>-<GOLD>>
  ELSE
-  dhtmlgump 40 35 260 20 0 0 <DEF.BFONT_WHITE># of days Vendor salary is paid for: 
+  dhtmlgump 40 35 260 20 0 0 <DEF.BFONT_WHITE># of days Vendor salary is paid for:
   dhtmlgump 300 35 90 20 0 0 <DEF.BFONT_WHITE><eval <GOLD>/<TAG0.Salary>>
  ENDIF
- dhtmlgump 40 58 260 20 0 0 <DEF.BFONT_WHITE>My charge per real world day is: 
+ dhtmlgump 40 58 260 20 0 0 <DEF.BFONT_WHITE>My charge per real world day is:
  dhtmlgump 300 58 90 20 0 0 <DEF.BFONT_WHITE><dTAG0.Salary>
- dhtmlgump 40 82 260 20 0 0 <DEF.BFONT_WHITE>Gold held in my account: 
+ dhtmlgump 40 82 260 20 0 0 <DEF.BFONT_WHITE>Gold held in my account:
  dhtmlgump 300 82 90 20 0 0 <DEF.BFONT_WHITE><GOLD>
  dhtmlgump 40 106 90 20 0 0 <DEF.BFONT_WHITE>Shop Name:
  dhtmlgump 120 106 180 20 0 0 <DEF.CENTER><DEF.BFONT_SHOPNAME><TAG.NAMESHOP><DEF.CENTERE>
@@ -791,9 +796,9 @@ IF (<ARGS>==2)
  resizepic 0 0 013be 370 370
  gumppictiled 10 10 350 20 2624
  gumppictiled 10 40 350 20 2624
- gumppictiled 10 70 350 260 2624  
- gumppictiled 10 340 350 20 2624 
- checkertrans 10 10 350 350 
+ gumppictiled 10 70 350 260 2624
+ gumppictiled 10 340 350 20 2624
+ checkertrans 10 10 350 350
  dhtmlgump 10 10 350 18 0 0 <DEF.BFONT_WHITE><DEF.CENTER>VENDOR CUSTOMIZATION MENU
  dhtmlgump 10 40 150 18 0 0 <DEF.BFONT_lGRAY><DEF.CENTER>HAIR
  button 10 250 0fa5 0fa7 1 0 98
@@ -896,7 +901,7 @@ DIALOG d_custom_vendor 1,1
 //////////////////////////////////////////////////////////////////////////////////
 
 [DIALOG d_custom_vendor_sell_confirm]
-200,200 
+200,200
 
 page 0
 resizepic 0 20 5054 300 150
@@ -908,7 +913,7 @@ dhtmlgump 25 80 250 20 0 0 <DEF.BFONT_WHITE>for the amount of:
 dtext 25 105 47 <DTAG.PRICE> gp's
 
 page 1
-button 150 140 4005 4007 1 0 0 
+button 150 140 4005 4007 1 0 0
 dhtmlgump 185 140 100 20 0 0 <DEF.BFONT_WHITE>CANCEL
 button 20 140 4005 4007 1 0 1
 dhtmlgump 55 140 100 20 0 0 <DEF.BFONT_WHITE>OKAY
