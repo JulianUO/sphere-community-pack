@@ -29,7 +29,7 @@ sdialog d_craft_menu
 [function craft]
 local.recipe = <getargv 3 <ctag0.craft.item.options>>
 if <local.recipe> == 1
-	if !<tag0.recipe.<serv.itemdef.<ctag0.craft.item>.id>>
+	if !<tag0.recipe.<serv.itemdef.<ctag0.craft.item>.baseid>>
 	ctag.craft.message = <def.scp.craft_msg_norecipe>
 	f_resenddialog d_craft_menu
 	return 1
