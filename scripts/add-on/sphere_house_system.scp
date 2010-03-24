@@ -281,7 +281,7 @@ IF (<LINK.TYPE> == t_multi) || (<LINK.TYPE> == t_multi_custom)
 	SDIALOG d_house_information
 	return 1
 	ELIF (<HousePlayerAccess <SRC>> >= 2)
-	SRC.SYSMESSAGE @,,1 Welcome back, <SRC.NAME>.
+	SRC.SYSMESSAGE <def.scp.house_msg_welcomeback>
 	if <def.scp.House_DecayUse> == 1
 		IF (<DEF.scp.House_DecayTimer> > 0) && (<isempty <TAG.DEMOLITION_PENDING>>)
 		TIMER=<eval <DEF.scp.House_DecayTimer>*24*60*60>
@@ -296,10 +296,10 @@ return 1
 ENDIF
 
 ON=@ClientToolTip
-SRC.ADDCLILOC 1042971,A House Sign
-SRC.ADDCLILOC 1061639,<NAME>
-SRC.ADDCLILOC 1061640,<UID.<LINK.MORE1>.NAME>
-SRC.ADDCLILOC <QVAL (<TAG0.Public>)? 1061641:1061642>
+src.addcliloc 1061638
+src.addcliloc 1061639,<name>
+src.addcliloc 1061640,<uid.<link.more1>.name>
+src.addcliloc <qval (<tag0.public>) ? 1061641:1061642>
 return 1
 
 ON=@ContextMenuRequest
@@ -310,7 +310,7 @@ ENDIF
 ON=@ContextMenuSelect
 IF (<ARGN>==747)
  IF (<DISTANCE> > 5)
-  SRC.SYSMESSAGE @,,1 You must be within five paces of the house sign to use this option.
+  SRC.SYSMESSAGE <def.scp.house_msg_housedistance>
   return 1
  ENDIF
  SDIALOG d_house_vendor_list
@@ -326,7 +326,7 @@ IF !(<MORE2>)
  IF (<REF1.ISONLINE>)
   TRYSRC <REF1> DIALOGCLOSE d_house_placement
  ENDIF
- REF1.NOTICE Too much time has passed and the test house you created has been deleted.  Please try again!
+ REF1.NOTICE Too much time has passed and the test house you created has been deleted.  Please try again! // 1060647
  LINK.REMOVE
 ELIF (<DEF.scp.House_DecayUse>) || (<TAG0.DEMOLITION_PENDING>)
  FOR <TAG0.Vendors>
@@ -2308,34 +2308,34 @@ ARGO.SYSMESSAGE @,,1 You have been granted access to this house.
 
 
 [FUNCTION f_house_banish]
-REF1=<ARGS>
-IF (<ARGO.ISITEM>)
- SRC.SYSMESSAGE @,,1 You cannot ban that.
- return 1
+ref1 = <args>
+if <argo.isitem>
+src.sysmessage <def.scp.house_msg_ejectitem>
+return 1
 ELIF (<REF1.TAG0.Access.Total.-1> >= <DEF.scp.House_MaxBans>)
- SRC.SYSMESSAGE @,,1 The ban limit for this house has been reached!
- return 1
+SRC.SYSMESSAGE <def.scp.house_msg_banlimit>
+return 1
 ELIF (<ARGO>==<SRC>)
- SRC.SYSMESSAGE @,,1 You can't ban yourself!
- return 1
+SRC.SYSMESSAGE @,,1 You can't ban yourself!
+return 1
 ELIF (<REF1.IsBanned <ARGO>>)
- SRC.SYSMESSAGE @,,1 <ARGO.NAME> is already banned from this house!
- return 1
+SRC.SYSMESSAGE @,,1 <ARGO.NAME> is already banned from this house!
+return 1
 ELIF (<ARGO.IsHouseVendor>)
- SRC.SYSMESSAGE @,,1 You can't ban a house vendor!
- return 1
+SRC.SYSMESSAGE <def.scp.house_ejectvendor>
+return 1
 ELIF (<REF1.IsOwner <ARGO>>)
- SRC.SYSMESSAGE @,,1 You can't ban the house owner!
- return 1
+SRC.SYSMESSAGE @,,1 You can't ban the house owner!
+return 1
 ELIF (<REF1.IsCoOwner <ARGO>>)
- SRC.SYSMESSAGE @,,1 You can't ban a house co-owner!
- return 1
+SRC.SYSMESSAGE @,,1 You can't ban a house co-owner!
+return 1
 ELIF (<REF1.IsFriend <ARGO>>)
- SRC.SYSMESSAGE @,,1 You can't ban a house friend!
- return 1
+SRC.SYSMESSAGE <def.scp.house_msg_ejectfriend>
+return 1
 ELIF (<ARGO.REGION.UID> != <REF1.REGION.UID>)
- SRC.SYSMESSAGE @,,1 You may not eject someone who is not in your house!
- return 1
+SRC.SYSMESSAGE <def.scp.house_msg_ejectnotinside>
+return 1
 ENDIF
 REF1.HouseAddAccess <ARGO>,-1
 ARGO.GO <REF1.P>

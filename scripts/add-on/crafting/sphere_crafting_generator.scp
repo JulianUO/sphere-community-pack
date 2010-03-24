@@ -77,7 +77,7 @@ if <file.open <local.topen>>
 file.writeline "[defname sphere_crafting_blacksmithing_<def.<local.skill>_material_<dlocal.material>>]"
 	for y 1 20
 		if !<isempty <def.<local.skill>_category_<dlocal.y>_1>>
-		local.items = 0
+		local.items = 1
 			for z 1 100
 				if !<isempty <def.<local.skill>_category_<dlocal.y>_<dlocal.z>>>
 					if <isempty <def.<local.skill>_category_<dlocal.y>_<dlocal.z>_opt>>
@@ -86,7 +86,7 @@ file.writeline "[defname sphere_crafting_blacksmithing_<def.<local.skill>_materi
 					local.colored = <getargv 2 <def.<local.skill>_category_<dlocal.y>_<dlocal.z>_opt>>
 					endif
 					if <local.colored> == 1
-					file.writeline <local.skill>_<dlocal.material>_category_<dlocal.y>_<dlocal.z> "<def.<local.skill>_category_<dlocal.y>_<dlocal.z>>_<def.<local.skill>_material_<dlocal.material>>"
+					file.writeline <local.skill>_<dlocal.material>_category_<dlocal.y>_<dlocal.items> "<def.<local.skill>_category_<dlocal.y>_<dlocal.z>>_<def.<local.skill>_material_<dlocal.material>>"
 					local.items ++
 					endif
 				endif
@@ -149,7 +149,7 @@ file.mode.append = 1
 local.topen = scripts/items/crafting/sphere_crafting_<local.skill>_<def.<local.skill>_material_<dlocal.material>>.scp
 if <file.open <local.topen>>
 file.writeline "[ITEMDEF <ref1.baseid>_<def.<local.skill>_material_<dlocal.material>>]"
-file.writeline "ID=<ref1.baseid>"
+file.writeline "ID=<ref1.id>"
 file.writeline "NAME=<ref1.name>"
 file.writeline "TYPE=<ref1.type>"
 args = <serv.itemdef.<ref1.baseid>.resources>

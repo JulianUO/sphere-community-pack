@@ -9,8 +9,6 @@ VERSION=0.56b
 [defname blacksmithing_options]
 // $skill_category_#_#_opt	"mark,exceptional,colored,recipe,expansion"
 
-Retains Color	Makers Mark	Requires Recipe	Skill Required	Success Chance	Except. Chance
-
 blacksmithing_category_1_1_opt	"1,1,1,0,0"
 blacksmithing_category_1_2_opt	"1,1,1,0,0"
 blacksmithing_category_1_3_opt	"1,1,1,0,0"
@@ -104,9 +102,6 @@ blacksmithing_category_6_51_opt "1,1,1,1,5"
 blacksmithing_category_6_52_opt "1,1,1,1,5"
 blacksmithing_category_6_53_opt "1,1,1,1,5"
 blacksmithing_category_6_54_opt "1,1,1,1,5"
-blacksmithing_category_6_55_opt "1,1,1,1,5"
-blacksmithing_category_6_56_opt "1,1,1,1,5"
-blacksmithing_category_6_57_opt "1,1,1,1,5"
 
 blacksmithing_category_7_9_opt	"1,1,1,1,5"
 blacksmithing_category_7_10_opt	"1,1,1,1,5"
@@ -130,11 +125,11 @@ blacksmithing_category_9_11_opt	"1,1,1,1,5"
 blacksmithing_category_9_12_opt	"1,1,1,1,5"
 blacksmithing_category_9_13_opt	"1,1,1,1,5"
 
-blacksmithing_category_10_1_opt	"1,1,1,0,5"
-blacksmithing_category_10_2_opt	"1,1,1,0,5"
-blacksmithing_category_10_3_opt	"1,1,1,0,5"
-blacksmithing_category_10_4_opt	"1,1,1,0,5"
-blacksmithing_category_10_5_opt	"1,1,1,0,5"
+blacksmithing_category_10_1_opt	"1,1,0,0,5"
+blacksmithing_category_10_2_opt	"1,1,0,0,5"
+blacksmithing_category_10_3_opt	"1,1,0,0,5"
+blacksmithing_category_10_4_opt	"1,1,0,0,5"
+blacksmithing_category_10_5_opt	"1,1,0,0,5"
 
 blacksmithing_category_11_1_opt	"1,1,1,0,7"
 blacksmithing_category_11_2_opt	"1,1,1,0,7"

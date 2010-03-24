@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 [SKILL 33]
@@ -22,6 +22,10 @@ BONUS_STATS=10
 ADV_RATE=10.0,200.0,800.0
 
 ON=@Start
+IF (<TARG.TOPOBJ.ISEVENT.e_custom_vendor>)
+ACTION=-1
+return 1
+ENDIF
 IF (<ACT.TAG0.DOOMARTIFACT>) && !(<STEALING> >= 900)
 SRC.SYSMESSAGE You need 90.0 or more on stealing to take this artifact.
 RETURN 1

@@ -33,43 +33,6 @@ VERSION=0.56b
 // If the vendor can't pay his salary, it will place all inventory items on his owner
 // bankbox, and then the vendor will disappear.
 //
-// INSTALLATION NOTES
-// ------------------
-// 1st step:
-//  -Open sphere.ini
-//  -add this code under [SPHERE]:
-//	PACKET149=f_hue_picker
-//
-// 2nd step:
-//  -Open scripts\sphere_speech.scp
-//  -Add this code under [SPEECH spk_pet]
-//   at sections: ON=TRANSFER, ON=RELEASE and
-//   ON=FRIEND
-//	IF (<ISEVENT.e_custom_vendor>)
-//	 return 1
-//	ENDIF
-//
-// 3rd step:
-//  -Open scripts\sphere_serv_triggers.scp
-//  -Add this code function f_onserver_timer
-//	VendorSalary
-//
-// 4th step:
-//  -Open scripts\sphere_skills.scp
-//  -Add this code at [SKILL 33]:
-//    ON=@Start
-//    IF (<TARG.TOPOBJ.ISEVENT.e_custom_vendor>)
-//     ACTION=-1
-//     return 1
-//    ENDIF
-//
-// 5th step:
-//  -Open scripts\sphere_template_vend.scp
-//  -Add this code under
-//   [TEMPLATE VENDOR_S_TAVERNKEEPER] and
-//   [TEMPLATE VENDOR_S_INNKEEPER]:
-//	SELL=i_deed_vendor,{2 6}
-//	SELL=i_vendor_rental_contract,{2 6}
 
 [DEFNAME VENDOR_SYSTEM]
 //Script variables (DO NOT MAKE CHANGES HERE)
@@ -89,13 +52,13 @@ VALUE=1200
 
 ON=@DClick
 IF (<CONT> != <SRC.FINDLAYER.21>)
-  SRC.SYSMESSAGE @,,1 That must be in your pack for you to use it.
-  return 1
+SRC.SYSMESSAGE <def.scp.vendor_contractinpack>
+return 1
 ELIF !(<SRC.ISGM>)
-  IF !(<CanOwnVendor>)
-    SRC.SYSMESSAGE @,,1 You reach the limit of vendors.
-    return 1
-  ENDIF
+	IF !(<CanOwnVendor>)
+	SRC.SYSMESSAGE @,,1 You reach the limit of vendors.
+	return 1
+	ENDIF
   IF (<DEF.scp.Vendor_PlacementRegion> != 0)
     IF !STRMATCH("<SRC.REGION.REGION.NAME>","<DEF.scp.Vendor_PlacementRegion>")
       SRC.SYSMESSAGE @,,1 Vendors are unable to be created there

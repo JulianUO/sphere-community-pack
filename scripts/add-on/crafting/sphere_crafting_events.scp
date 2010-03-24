@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -32,11 +32,13 @@ return 0
 endif
 if <def0.scp.NewCrafting_<serv.skill.<argn>.key>> == 1
 	if !<isempty <ctag.craft.skill>>
+	ctag.craft.message = <def.scp.craft_msg_fail>
 	craftskill <ctag0.craft.skill>
 	endif
 endif
 
 on=@skillmakeitem
+ctag.craft.message =
 if <def.scp.CraftingSystem> == 0
 return 0
 endif

@@ -260,6 +260,16 @@ scp.runes_entername		"@88,,1 Type in a name for the rune"
 
 scp.skill_mustwait		"@,,2 500118"	// You must wait a few moments to use another skill.
 
+scp.house_msg_welcomeback	"@,,2 501293"	// Welcome back to the house, friend!
+scp.house_msg_housedistance	"@,,2 1062429"	// You must be within five paces of the house sign to use this option.
+scp.house_msg_ejectitem		"@,,2 501347"	// You cannot eject that from the house!
+scp.house_msg_ejectvendor	"@,,2 501351"	// You cannot eject a vendor.
+scp.house_msg_ejectfriend	"@,,2 501348"	// You cannot eject a friend of the house!
+scp.house_msg_ejectnotinside	"@,,2 501352"	// You may not eject someone who is not in your house!
+scp.house_msg_banlimit		"@,,2 501355"	// The ban limit for this house has been reached!
+
+scp.vendor_contractinpack	"@,,2 1047012"	// The contract must be in your backpack to use it.
+
 scp.spell.animatedead_target	"@,,2 1061083"	// Animate what corpse?
 scp.spell.curseweapon_noweap	"@,,2 501078"	// You must be holding a weapon.
 scp.spell.arcanecircle_notin	"@,,2 1072705"	// You must be standing on an arcane circle, pentagram or abbatoir to use this spell.

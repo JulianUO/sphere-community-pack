@@ -10,8 +10,9 @@ INSTALLATION AND USAGE INSTRUCTIONS
   Just like you do with the default script pack. 
   Get the last version from: http://scripts.sphere.torfo.org/
 
-- IMPORTANT! To avoid a bug with the house system, you must do the following:
+- IMPORTANT! To avoid a bugs with the house/vendor system, you must do the following:
   Open sphere.ini and below AGREE=1, add the following line:
+  PACKET149=f_hue_picker
   PACKET215=f_custom_house
   
 - To enable jail system, search the following line in sphere.ini:

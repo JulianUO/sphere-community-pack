@@ -35,17 +35,28 @@ ON=Help Guards*
 [SPEECH spk_pet]
 // Pets that cannot talk
 ON=RELEASE
+if <isevent.e_custom_vendor>
+return 1
+endif
 if <def.scp.Followers> == 1
 src.curfollower -= <qval <tag0.control.slots> ? <tag0.control.slots> : 1>
 endif
 
 ON=TRANSFER
+if <isevent.e_custom_vendor>
+return 1
+endif
 if <def.scp.Followers> == 1
 	if <memoryfindtype.memory_ipet.link.uid> == <src.uid>
 	targetf f_transfer <uid>
 	src.sysmessage Transfer to who?
 	return 1
 	endif
+endif
+
+on=FRIEND
+if <isevent.e_custom_vendor>
+return 1
 endif
 
 ON=ATTACK
@@ -57,7 +68,6 @@ ON=DROP ALL
 ON=FETCH
 ON=FOLLOW
 ON=FOLLOW ME
-ON=FRIEND
 ON=GO
 ON=GUARD
 ON=GUARD ME

@@ -1096,7 +1096,8 @@ SELL=i_chessboard,{5 25}
 SELL=i_checkerboard,{5 25}
 SELL=i_backgammon_game,{5 25}
 SELL=i_dice_cup,{5 25}
-SELL=i_deed_vendor,{5 25}
+SELL=i_deed_vendor,{2 6}
+SELL=i_vendor_rental_contract,{2 6}
 
 [TEMPLATE VENDOR_B_INNKEEPER]
 CATEGORY=Vendor Templates
@@ -1389,6 +1390,8 @@ SELL=i_chessboard,{6 26}
 SELL=i_checkerboard,{6 26}
 SELL=i_backgammon_game,{6 26}
 SELL=i_dice_cup,{6 26}
+SELL=i_deed_vendor,{2 6}
+SELL=i_vendor_rental_contract,{2 6}
 
 [TEMPLATE VENDOR_B_TAVERNKEEPER]
 CATEGORY=Vendor Templates
