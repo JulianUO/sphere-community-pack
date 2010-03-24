@@ -96,6 +96,8 @@ serv.savestatics
 // ARGN1 --> Time to block the IP for in tenths of a second (writable)
 [FUNCTION f_onserver_blockip]
 
+[FUNCTION f_onserver_timer]
+VendorSalary
 
 [FUNCTION f_oncommand]
 if <def.scp.JailSystem> == 1

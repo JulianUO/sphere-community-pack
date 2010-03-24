@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 ///////////////////////////////////////////////////////////////
@@ -308,7 +308,7 @@ HITPOINTS=120
 DEFNAME=i_tessen
 NAME=Tessen
 TYPE=t_weapon_fence
-RESOURCES=10 i_cloth, 16 i_ingot_iron
+RESOURCES=16 i_ingot_iron, 10 i_cloth
 SKILLMAKE=BLACKSMITHING 85.0, TAILORING 50.0
 WEIGHT=6
 TWOHANDS=Y

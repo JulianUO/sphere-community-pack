@@ -27,14 +27,15 @@ sdialog d_craft_menu
 
 
 [function craft]
-if <getargv 3 <ctag0.craft.item.options>>
+local.recipe = <getargv 3 <ctag0.craft.item.options>>
+if <local.recipe> == 1
 	if !<tag0.recipe.<serv.itemdef.<ctag0.craft.item>.id>>
 	ctag.craft.message = <def.scp.craft_msg_norecipe>
 	f_resenddialog d_craft_menu
 	return 1
 	endif
 endif
-if <resdisp> < <getargv 4 <ctag0.craft.item.options>>
+if <account.resdisp> < <getargv 4 <ctag0.craft.item.options>>
 ctag.craft.message = <def.scp.craft_msg_noexpansion>
 f_resenddialog d_craft_menu
 return 1

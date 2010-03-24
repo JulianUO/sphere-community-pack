@@ -68,6 +68,10 @@ scp.NewCrafting_Inscription=1
 scp.NewCrafting_Tailoring=1
 scp.NewCrafting_Tinkering=1
 
+// If the item needs a recipe and the player doesn't have it, display resources as "????"
+// If this is 0, it will display the skillmake/resources normally.
+scp.NewCrafting_RecipeNeeded=1
+
 ///////////////////////////////////////////////////////////////
 //////// Skills Settings - Resource Gathering
 ///////////////////////////////////////////////////////////////

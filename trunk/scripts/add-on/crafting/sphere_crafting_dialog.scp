@@ -64,25 +64,18 @@ checkertrans 10 10 510 417	// transparency layer
 xmfhtmlgumpcolor 10 13 530 20 <ddef.scp.craft_title_<ctag0.craft.skill>> 0 0 <ddef.dcolor_white> // menu header
 
 page 1
-// sidebar section
 xmfhtmlgumpcolor 10 38 200 20 <ddef.scp.craft_head_categories> 0 0 <ddef.dcolor_white>
-button 15 60 4005 4007 1 0 5010
 xmfhtmlgumpcolor 50 61 115 20 <ddef.scp.craft_button_lastten> 0 0 <ddef.dcolor_white>
-local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<dctag0.craft.material.<ctag0.craft.skill>>_" : "_">
-local.sidebar = <eval 1 + (10 * <ctag0.craft.page.sidebar>)>
+button 15 60 4005 4007 1 0 5010
 local.wid = 80
-if <ctag0.craft.material.<ctag.craft.skill>>
-	if <isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>
-	local.resource = "_"
-	endif
-endif
+local.sidebar = <eval 1 + (10 * <ctag0.craft.page.sidebar>)>
 for z <local.sidebar> <eval <local.sidebar>+9>
-	if !<isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>
+	if !<isempty <def.<ctag0.craft.skill>_category_<dlocal.z>_name>>
 	button 15 <dlocal.wid> 4005 4007 1 0 <local.sidebar>
-		if (<isnum <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>)
-		xmfhtmlgumpcolor 50 <eval <local.wid>+2> 115 20 <ddef.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name> 0 0 <ddef.dcolor_white>
+		if (<isnum <def.<ctag0.craft.skill>_category_<dlocal.z>_name>>)
+		xmfhtmlgumpcolor 50 <eval <local.wid>+2> 115 20 <ddef.<ctag0.craft.skill>_category_<dlocal.z>_name> 0 0 <ddef.dcolor_white>
 		else
-		dcroppedtext 50 <eval <local.wid>+2> 115 20 0480 <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>
+		dcroppedtext 50 <eval <local.wid>+2> 115 20 0480 <def.<ctag0.craft.skill>_category_<dlocal.z>_name>
 		endif
 	endif
 local.wid += 20
@@ -105,14 +98,10 @@ endif
 
 // item list section
 xmfhtmlgumpcolor 215 38 305 20 <ddef.scp.craft_head_selections> 0 0 <ddef.dcolor_white>
+
+local.y = 60
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<dctag0.craft.material.<ctag0.craft.skill>>_" : "_">
 local.mainbar = <eval 1 + (10 * <ctag0.craft.page.mainbar>)>
-local.y = 60
-if <ctag0.craft.material.<ctag.craft.skill>>
-	if <isempty <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<dlocal.mainbar>>>
-	local.resource = "_"
-	endif
-endif
 for 1 10
 local.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<dlocal.mainbar>>
 	if <local.item> != 0
@@ -191,7 +180,12 @@ if <ctag0.craft.material.<ctag.craft.skill>>
 	local.resource = "_"
 	endif
 endif
-craft <qval (<ctag0.craft.item> != 0) ? <ctag0.craft.item> : <def.<ctag0.craft.skill><local.resource>category_<dctag.craft.sidebar>_<eval <argn>-600>>>
+ctag.craft.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<eval <argn>-600>>
+ctag.craft.item.options = <def.<ctag0.craft.skill>_options_default>
+if !<isempty <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-600>_opt>>
+ctag.craft.item.options = <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-600>_opt>
+endif
+craft <ctag0.craft.item>
 
 on=400 401 // sidebar buttons
 if <argn> == 401
@@ -418,11 +412,18 @@ xmfhtmlgumpcolor 10 13 530 20 <ddef.scp.craft_title_<ctag0.craft.skill>> 0 0 <dd
 args = <ctag0.craft.item>
 serv.newitem <argv[0]>
 ref1=<new>
+if <def.scp.NewCrafting_RecipeNeeded> == 1
+local.recipe = <getargv 3 <ctag0.craft.item.options>>
+endif
 tilepichue 30 80 <ref1.dispiddec> <dref1.color>
 dcroppedtext 170 37 265 20 0480 ITEM
 dcroppedtext 330 37 265 20 88 <ref1.name>
 dcroppedtext 170 74 330 20 0480 Success Chance
+if <local.recipe> == 1
+dcroppedtext 430 74 50 20 0480 ??.?%
+else
 dcroppedtext 430 74 50 20 0480 <fval <ref1.craftsuccesschance <ref1.baseid>>>%
+endif
 button 15 387 4014 4016 1 0 0
 dtext 50 388 0480 Back
 button 270 387 4011 4012 1 0 1
@@ -431,16 +432,26 @@ args = <ref1.skillmake>
 dorigin 170 112
 for 1 <argv>
 	if (<serv.skill.<ref1.skillmake.<local._for>.key>>)
-	dcroppedtext 170 *20 170 20 0480 <serv.skill.<ref1.skillmake.<local._for>.key>.name>
-	dcroppedtext 430 *0 50 20 0480 <fval <ref1.skillmake.<local._for>.val>>
+		if <local.recipe> == 1
+		dcroppedtext 170 *20 170 20 0480 ??????????
+		dcroppedtext 430 *0 50 20 0480 ??.?
+		else
+		dcroppedtext 170 *20 170 20 0480 <serv.skill.<ref1.skillmake.<local._for>.key>.name>
+		dcroppedtext 430 *0 50 20 0480 <fval <ref1.skillmake.<local._for>.val>>
+		endif
 	endif
 endfor
 xmfhtmlgumpcolor 10 215 155 20 1044055 0 0 <ddef.dcolor_white>
 args = <ref1.resmake>
 dorigin 170 197
 for 1 <argv>
-dcroppedtext 170 *20 170 20 0480 <serv.itemdef.<ref1.resources.<local._for>.key>.name>
-dcroppedtext 430 *0 50 20 0480 <ref1.resources.<local._for>.val>
+	if <local.recipe> == 1
+	dcroppedtext 170 *20 170 20 0480 ??????????
+	dcroppedtext 430 *0 50 20 0480 ??
+	else
+	dcroppedtext 170 *20 170 20 0480 <serv.itemdef.<ref1.resources.<local._for>.key>.name>
+	dcroppedtext 430 *0 50 20 0480 <ref1.resources.<local._for>.val>
+	endif
 endfor
 ref1.remove
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<dctag0.craft.material.<ctag0.craft.skill>>_" : "_">
