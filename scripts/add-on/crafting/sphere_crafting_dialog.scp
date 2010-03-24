@@ -81,7 +81,7 @@ for z <local.sidebar> <eval <local.sidebar>+9>
 local.wid += 20
 local.sidebar ++
 endfor
-if !<isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.sidebar>_name>>
+if !<isempty <def.<ctag0.craft.skill>_category_<dlocal.sidebar>_name>>
 button 135 267 4005 4007 1 0 401
 endif
 if <ctag0.craft.page.sidebar> > 0
@@ -414,6 +414,9 @@ serv.newitem <argv[0]>
 ref1=<new>
 if <def.scp.NewCrafting_RecipeNeeded> == 1
 local.recipe = <getargv 3 <ctag0.craft.item.options>>
+	if <tag0.recipe.<new.baseid>>
+	local.recipe = 0
+	endif
 endif
 tilepichue 30 80 <ref1.dispiddec> <dref1.color>
 dcroppedtext 170 37 265 20 0480 ITEM
