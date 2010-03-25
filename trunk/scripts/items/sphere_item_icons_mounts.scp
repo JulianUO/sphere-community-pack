@@ -93,6 +93,7 @@ CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts
 DESCRIPTION=Fire Steed
 
+
 [ITEMDEF 025a0]
 DEFNAME=i_pet_kirin
 NAME=Ki-Rin
@@ -119,5 +120,32 @@ TDATA3=c_unicorn
 CATEGORY=Miscellaneous
 SUBSECTION=Icon - Mounts
 DESCRIPTION=Unicorn
+
+[ITEMDEF 0260f]
+DEFNAME=i_pet_giant_beetle
+NAME=Giant Beetle
+TYPE=t_figurine
+TDATA3=c_giant_beetle
+CATEGORY=Miscellaneous
+SUBSECTION=Icon - Mounts
+DESCRIPTION=Giant Beetle
+
+[ITEMDEF 02615]
+DEFNAME=i_pet_ridgeback
+NAME=Ridgeback
+TYPE=t_figurine
+TDATA3=c_ridgeback
+CATEGORY=Miscellaneous
+SUBSECTION=Icon - Mounts
+DESCRIPTION=Ridgeback
+
+[ITEMDEF i_pet_savage_ridgeback]
+ID=i_pet_ridgeback
+NAME=Savage Ridgeback
+TYPE=t_figurine
+TDATA3=c_savage_ridgeback
+CATEGORY=Miscellaneous
+SUBSECTION=Icon - Mounts
+DESCRIPTION=Savage Ridgeback
 
 [eof]

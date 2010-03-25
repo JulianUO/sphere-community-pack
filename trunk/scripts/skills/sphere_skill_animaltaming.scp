@@ -112,10 +112,12 @@ elif <argo.owners_count> >= <argo.maxowners>
 argo.message <def.scp.taming_manyowners>
 f_skill_delay <getargv 2 <def.skill.35.waittime>>
 return 1
-elif <argo.must_be_subdued>
-argo.message <def.scp.taming_mustsubdue>
-f_skill_delay <getargv 2 <def.skill.35.waittime>>
-return 1
+elif <argo.isevent.e_Subdued>
+	if !<argo.tag.issubdue>
+	argo.message <def.scp.taming_mustsubdue>
+	f_skill_delay <getargv 2 <def.skill.35.waittime>>
+	return 1
+	endif
 elif <argo.tag0.beingtamed>
 argo.message <def.scp.taming_ontame>
 f_skill_delay <getargv 2 <def.skill.35.waittime>>
@@ -288,13 +290,6 @@ endif
 
 [function maxowners]
 return 5
-
-[function must_be_subdued]
-if (<baseid> == c_rune_beetle) || (<baseid> == c_giant_beetle) //|| (<baseid> == c_m_ice_worm)
-return 1
-else
-return 0
-endif
 
 [function can_anger_on_tame]
 if (<baseid> == c_m_hiryu) || (<baseid> == c_m_nightmare) || (<baseid> == c_armored_swamp_dragon) || (<baseid> == c_swamp_dragon) || (<body> == c_dragon_red) || (<body> == c_dragon_green) || (<body> == c_dragon_small_black) || (<body> == c_dragon_small_red)

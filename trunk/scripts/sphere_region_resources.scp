@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -160,6 +160,13 @@ REGEN=60*60
 skill=100.0,120.0
 amount=9,15
 REAP=i_log_frostwood
+REGEN=60*60
+
+[REGIONRESOURCE mr_bark_fragment]
+// t_tree
+skill=100.0,120.0
+amount=1,2
+REAP=i_ingredient_diseased_bark
 REGEN=60*60
 
 

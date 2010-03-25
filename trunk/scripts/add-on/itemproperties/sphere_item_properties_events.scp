@@ -62,21 +62,21 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_MageWeapon
 // *DONE* scp.ItemProp_ManaIncrease
 // *DONE* scp.ItemProp_ManaRegeneration
-// scp.ItemProp_NightSight
+// *DONE* scp.ItemProp_NightSight
 // *DONE* scp.ItemProp_ReflectPhysicalDamage
 // *DONE* scp.ItemProp_StaminaRegeneration
 // *DONE* scp.ItemProp_HitPointRegeneracion
 // *DONE* scp.ItemProp_SelfRepair
 // *DONE* scp.ItemProp_SkillBonus
 // *DONE* scp.ItemProp_Slayer
-// scp.ItemProp_SpellChanneling
+// *DONE* scp.ItemProp_SpellChanneling
 // *DONE* scp.ItemProp_SpellDamageIncrease
 // *DONE* scp.ItemProp_StaminaIncrease
 // *DONE* scp.ItemProp_StrengthBonus
 // *DONE* scp.ItemProp_SwingSpeedIncrease
 // scp.ItemProp_CraftingBonus
 // scp.ItemProp_CraftingExceptionalBonus
-// scp.ItemProp_UsesRemaining
+// *DONE* scp.ItemProp_UsesRemaining
 
 
 [events e_NpcPropertiesEvent]
@@ -89,14 +89,27 @@ ref8 = <attacker.max>
 if <ref8.memoryfindtype.memory_ipet>
 ref8 = <ref8.memoryfindtype.memory_ipet.link.uid>
 endif
-if <tag0.luck.loot>
-local.chanceinc = <feval <floatval <ref8.luck> @ (5 / 9)>>
-args = <tag0.luck.loot>
-	if <argv[2]>
-	serv.newitem <eval <argv[2]>>
-	new.cont = <local.corpse>
+if <tag0.luck> > 0
+	if <def.scp.ItemProp_LuckLoot> == 1
+	local.chanceinc = <feval <floatval <ref8.luck> @ <def.scp.ItemProp_LuckScaleFactor>>
+		if <r100> < <local.chanceinc>
+		serv.newitem <tag0.luck.loot>
+		new.cont = <local.corpse>
+		endif
+		if !<tag0.luck.randloot>
+		return 0
+		endif
+	elif <def.scp.ItemProp_LuckLoot> == 2
+		if <r<ref8.luck>> > <r<tag0.luck>>
+		serv.newitem <tag0.luck.loot>
+		new.cont = <local.corpse>
+		endif
 	return 0
 	endif
+endif
+if ((<tag0.luck.loot>) && (<def.scp.ItemProp_LuckLoot> == 3)) || (<tag0.luck.randloot>)
+args = <qval <tag0.luck.randloot>?<tag0.luck.randloot>:<tag.luck.loot>>
+local.chanceinc = <feval <floatval <ref8.luck> @ <def.scp.ItemProp_LuckScaleFactor>>
 local.items = <r<argv[0]>>
 	if <r100> < <local.chanceinc>
 	local.items ++
@@ -107,7 +120,7 @@ local.items = <r<argv[0]>>
 		local.props ++
 		endif
 	else
-	local.props = 1
+	local.props = <r<argv[0]>>
 	endif
 	for 1 <local.items>
 		if <r2>
