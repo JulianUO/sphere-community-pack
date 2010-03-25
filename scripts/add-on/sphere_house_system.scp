@@ -585,14 +585,14 @@ ELIF <ARGS> == 15
 	elif <def.scp.House_DecayUse> == 3
 	local.fee = <eval (<link.HouseValue> * <def.scp.House_DecayFee>) / 100>
 	endif
-local.topay = <eval (((<def.scp.House_DecayTimer>*24*60*60) - <timer>) * <local.fee>) / (<def.scp.House_DecayTimer>*24*60*60)>
+local.topay = <eval (<local.fee> * (<def.scp.House_DecayTimer> - (<timer>/86400))) / <def.scp.House_DecayTimer>>
 	if <src.gold> < <local.topay>
 	src.sysmessage @,,1 You don't have enought money to refresh your house.
 	return 1
 	endif
 src.gold -= <local.topay>
 timer = <eval <def.scp.House_DecayTimer>*24*60*60>
-src.sysmessage @,,1 Your house has been refreshed
+src.sysmessage @,,1 Your house has been refreshed!
 ENDIF
 
 
@@ -622,7 +622,13 @@ ELIF <def.scp.House_DecayUse> > 0
 	endif
 	if <def.scp.House_DecayUse> > 1
 	button 20 270 4005 4007 1 0 15
-	dtext 60 270 1152 Refresh your house now!
+			if <def.scp.House_DecayUse> == 2
+			local.fee = <def.scp.House_DecayFee>
+			elif <def.scp.House_DecayUse> == 3
+			local.fee = <eval (<link.HouseValue> * <def.scp.House_DecayFee>) / 100>
+			endif
+	local.topay = <eval (<local.fee> * (<def.scp.House_DecayTimer> - (<timer>/86400))) / <def.scp.House_DecayTimer>>
+	dtext 60 270 1152 Refresh your house now! It will cost you <dlocal.topay>gps.
 	endif
 ELSE
  dtext 20 250 5 This house is Automatically refreshed.
@@ -639,7 +645,7 @@ dtext 20 360 5 Number of visits this building has had:
 dtext 350 360 1152 <dTAG0.VISITS>
 
 [DIALOG d_house_information BUTTON]
-ON=1 10
+ON=1 15
 DefaultHouseDialogButtons <ARGN>
 
 

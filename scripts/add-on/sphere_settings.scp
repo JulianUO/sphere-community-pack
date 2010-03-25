@@ -288,6 +288,29 @@ scp.LimitationRace=1
 // <boolean> (1 if yes, 0 if not).
 scp.LimitationGenre=1
 
+// Setting to 1 allows players to cast from the runebook without a spellbook
+// <boolean> (0 = No / 1 = Yes)
+scp.Runebook_NoSpellBook=1
+
+// If this is 1, the runes will never fade, 0 will keep them old-style
+// NOTE: in EA the runes never fade.
+scp.Rune_NeverFade=1
+
+// Set to 1 if you want to remove the "Rune to:" prefix
+// <boolean> (0 = No / 1 = Yes)
+scp.Rune_RenameNoPrefix=1
+
+// Allow or disable the new virtue system. OSI-Like
+// <boolean> (0 = No / 1 = Yes)
+scp.VirtueSystem=1
+
+// Delay used when "casting" an ethereal mount, in seconds.
+// Default = 2.
+scp.EtherealMount_Delay=2
+
+///////////////////////////////////////////////////////////////
+//////// Item Magic Properties Settings
+///////////////////////////////////////////////////////////////
 // Enable or disable any of the Item Properties listed below
 // Please, note that the name are very descriptive, if not, drop a message on forums.
 // <boolean> (1 if yes, 0 if not).
@@ -339,25 +362,15 @@ scp.ItemProp_CraftingBonus=0 // NOT DONE
 scp.ItemProp_CraftingExceptionalBonus=0 // NOT DONE
 scp.ItemProp_UsesRemaining=1
 
-// Setting to 1 allows players to cast from the runebook without a spellbook
-// <boolean> (0 = No / 1 = Yes)
-scp.Runebook_NoSpellBook=1
+// Determine the way of Luck to act with the NPC's Loot.
+// Setting it to 1, Chances to loot = <PlayerLuck> @ <LuckScaleFactor>
+// 2 = Compare player luck with npc luck, make a random of both.
+// 3 = Make a random of items, and with chances (explained in 1) increase items.
+scp.ItemProp_LuckLoot=1
 
-// If this is 1, the runes will never fade, 0 will keep them old-style
-// NOTE: in EA the runes never fade.
-scp.Rune_NeverFade=1
-
-// Set to 1 if you want to remove the "Rune to:" prefix
-// <boolean> (0 = No / 1 = Yes)
-scp.Rune_RenameNoPrefix=1
-
-// Allow or disable the new virtue system. OSI-Like
-// <boolean> (0 = No / 1 = Yes)
-scp.VirtueSystem=1
-
-// Delay used when "casting" an ethereal mount, in seconds.
-// Default = 2.
-scp.EtherealMount_Delay=2
+// Luck Scale Factor, works to increase/decrease chances of player
+// Formula is: <PlayerLuck> @ <LuckScaleFactor> = Chances
+scp.ItemProp_LuckScaleFactor=0.55
 
 ///////////////////////////////////////////////////////////////
 //////// Jail System Settings

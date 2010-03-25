@@ -55,7 +55,14 @@ RESOURCES=0.5 mr_sos_bottle
 [REGIONTYPE r_default_tree t_tree]
 // Default tree area resources.
 // They all produce the same log anyway.
-RESOURCES=1.0 mr_tree
+RESOURCES=50.0 mr_tree
+RESOURCES=8.4 mr_oak
+RESOURCES=7.0 mr_ash
+RESOURCES=4.2 mr_yew
+RESOURCES=2.8 mr_heartwood
+RESOURCES=1.4 mr_bloodwood
+RESOURCES=1.2 mr_frostwood
+RESOURCES=0.2 mr_bark_fragment
 
 [REGIONTYPE r_default_grass t_grass]
 // Default grass area resources

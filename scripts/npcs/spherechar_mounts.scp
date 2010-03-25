@@ -361,6 +361,125 @@ ON=@NPCRestock
 ITEM=loot_fire_steed
 
 
+[CHARDEF 0bb]
+DEFNAME=c_ridgeback
+NAME=Ridgeback
+SOUND=snd_animal_ostard_desert1
+ICON=i_pet_ridgeback
+ANIM=01fff
+CAN=MT_WALK|MT_RUN
+RESOURCES=12 i_hide, 1 i_ribs_raw
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+DAM=4,7
+DESIRES=c_man,c_woman
+MOVERATE=40
+RESLEVEL=2
+RESDISPDNID=c_llama
+RESDISPDNHUE=033
+CATEGORY=Animals
+SUBSECTION=Mounts
+DESCRIPTION=Ridgeback
+TAG.Barding.Diff=29.1
+ARMOR={15 20}
+
+ON=@Create
+ResFire={5 10}
+ResCold={5 10}
+ResPoison={5 10}
+ResEnergy={5 10}
+NPC=brain_animal
+STR={58 100}
+DEX={56 75}
+INT={16 30}
+MAXHITS={41 54}
+WRESTLING={35.0 45.0}
+TACTICS={29.0 44.0}
+MAGICRESISTANCE={25.0 40.0}
+FAME=300
+KARMA=0
+TAMING=83.1
+
+
+[CHARDEF 0bc]
+DEFNAME=c_savage_ridgeback
+NAME=Savage Ridgeback
+SOUND=snd_animal_ostard_frenzied1
+ICON=i_pet_savage_ridgeback
+ANIM=01fff
+CAN=MT_WALK|MT_RUN
+RESOURCES=12 i_hide, 1 i_ribs_raw
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+DAM=4,7
+DESIRES=c_man,c_woman
+MOVERATE=40
+RESLEVEL=2
+RESDISPDNID=c_llama
+RESDISPDNHUE=033
+CATEGORY=Animals
+SUBSECTION=Mounts
+DESCRIPTION=Savage Ridgeback
+TAG.Barding.Diff=29.1
+ARMOR={15 20}
+
+ON=@Create
+ResFire={10 15}
+ResCold={10 15}
+ResPoison={10 15}
+ResEnergy={10 15}
+NPC=brain_animal
+STR={58 100}
+DEX={56 75}
+INT={16 30}
+MAXHITS={41 54}
+WRESTLING={35.0 45.0}
+TACTICS={29.0 44.0}
+MAGICRESISTANCE={25.0 40.0}
+FAME=300
+KARMA=0
+TAMING=83.1
+
+
+[CHARDEF 0317]
+DEFNAME=c_giant_beetle
+NAME=Giant Beetle
+SOUND=snd_rune_beetle
+ICON=i_pet_giant_beetle
+ANIM=01fff
+CAN=MT_WALK|MT_RUN
+FOODTYPE=40 t_meat_raw
+DAM=18,51
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+MOVERATE=40
+TEVENTS=e_Subdued,e_PackMount
+RESLEVEL=2
+RESDISPDNID=c_horse_gray
+RESDISPDNHUE=080c9
+CATEGORY=Monsters
+SUBSECTION=New Mounts
+DESCRIPTION=Giant Beetle
+TAG.Control.Slots=3
+TAG.Barding.Diff=88.1
+ARMOR={30 40}
+
+ON=@Create
+//FINDLAYER.21.TAG.OVERRIDE.MAXWEIGHT=1600
+ResFire={20 30}
+ResCold={20 30}
+ResPoison={20 30}
+ResEnergy={20 30}
+NPC=brain_animal
+STR=300
+DEX=100
+INT=500
+MAXHITS=200
+WRESTLING=100.0
+TACTICS=100.0
+MAGICRESISTANCE=80.0
+FAME=4000
+KARMA=-4000
+
+
 [CHARDEF 084]
 DEFNAME=c_kirin
 NAME=Ki-Rin
