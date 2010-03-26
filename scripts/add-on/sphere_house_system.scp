@@ -2063,8 +2063,8 @@ if !<src.brain>
 SRC.DSPEECH +spk_player_house
 endif
 if <def.scp.House_DecayUnlockedItems> == 1
-	if <src.region.flags>&region_flag_nodecay
-	src.region.flags = <src.region.flags>&~region_flag_nodecay
+	if <flags>&region_flag_nodecay
+	flags = <flags>&~region_flag_nodecay
 	endif
 endif
 REF1=<UID.<UID>.MORE2>
