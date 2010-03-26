@@ -7,6 +7,9 @@ if <cont> != <src.findlayer.21>
 src.sysmessage <def.scp.mining_smelt_notinpack>
 elif <src.mining> >= <eval <skillmake.1.value>-100>
 	if <src.isneartype t_forge 2>
+		forclients 18
+		spelleffect 0,i_fire,0,0,0,0,1,1,<src.isneartype.p t_forge 1>,<eval <serv.map(<src.isneartype.p t_forge 1>).terrain.z>+7>,<src.isneartype.p t_forge 1>,<eval <serv.map(<src.isneartype.p t_forge 1>).terrain.z>+12>,0
+		endfor
 		if <r> <= <eval (((<src.mining> - <skillmake.1.value>)*2)+50)>
 		serv.newitem <tdata1>
 		new.amount <eval ((<amount>*(<src.mining>/10))/100)>
