@@ -93,7 +93,6 @@ CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts
 DESCRIPTION=Fire Steed
 
-
 [ITEMDEF 025a0]
 DEFNAME=i_pet_kirin
 NAME=Ki-Rin
@@ -138,6 +137,26 @@ TDATA3=c_ridgeback
 CATEGORY=Miscellaneous
 SUBSECTION=Icon - Mounts
 DESCRIPTION=Ridgeback
+
+[ITEMDEF 02617]
+DEFNAME=i_pet_skeletal_mount
+NAME=Hellsteed (Skeletal Mount)
+TYPE=t_figurine
+TDATA3=c_skeletal_mount
+CATEGORY=Miscellaneous
+SUBSECTION=Icon - Mounts
+DESCRIPTION=Hellsteed (Skeletal Mount)
+
+[ITEMDEF 02619]
+DEFNAME=i_pet_swamp_dragon
+NAME=Swamp Dragon
+TYPE=t_figurine
+TDATA3=c_swamp_dragon
+CATEGORY=Miscellaneous
+SUBSECTION=Icon - Mounts
+DESCRIPTION=Swamp Dragon
+
+
 
 [ITEMDEF i_pet_savage_ridgeback]
 ID=i_pet_ridgeback

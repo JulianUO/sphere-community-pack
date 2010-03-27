@@ -10,49 +10,6 @@
 // FILE LAST UPDATED: April 28 2008
 VERSION=0.56b
 
-////////// BEGIN Swamp Dragon script ///////////
-
-[ITEMDEF 9753]
-DEFNAME=i_pet_swampdragon
-NAME=Swamp Dragon
-
-[CHARDEF 031a]
-DEFNAME=c_swamp_dragon
-NAME=Swamp Dragon
-DAM=6,24
-ARMOR=20
-SOUND=snd_monster_dragon1
-ICON=i_pet_swampdragon
-CAN=MT_WALK|MT_FLY|MT_FIRE_IMMUNE
-RESOURCES=60 i_ribs_raw
-FOODTYPE=80 t_meat_raw
-DESIRES=i_gold
-AVERSIONS=r_civilization,r_water
-MOVERATE=40
-TEVENTS=e_horses
-RESLEVEL=2
-RESDISPDNID=c_horse_gray
-RESDISPDNHUE=2129
-
-CATEGORY=Monsters
-SUBSECTION=New Mounts
-DESCRIPTION=Swamp Dragon
-
-ON=@Create
-	NPC=brain_animal
-	COLOR=2129
-	KARMA=-2000
-	STR={160 200}
-	DEX={83 92}
-	INT={51 90}
-	FAME={3000 9000}
-	PARRYING={65.0 80.0}
-	MAGICRESISTANCE={65.0 80.0}
-	TACTICS={65.0 90.0}
-	WRESTLING={65.0 80.0}
-	TAMING=100.0
-
-////////// END Swamp dragon script //////////////
 ////////// BEGIN Armored Swamp Dragon script ////////
 
 [CHARDEF 031f]
@@ -89,48 +46,6 @@ ON=@Create
 	TAMING=90.0
 
 /////// end of armored swamp dragon mount script //
-////// BEGIN SKELETAL MOUNT SCRIPT //////
-
-[ITEMDEF 9751]
-DEFNAME=i_pet_skeletalmount
-NAME=Skeletal Mount
-
-[CHARDEF 0319]
-DEFNAME=c_skeletal_mount
-NAME=Skeletal Mount
-SOUND=snd_monster_skletn1
-ICON=i_pet_skeletalmount
-DAM=18,22
-ARMOR=30
-RESOURCES=25 i_ribs_raw,10 i_hide
-CAN=MT_WALK|MT_RUN
-FOODTYPE=40 t_meat_raw
-DESIRES=e_horses,c_man,c_woman
-AVERSIONS=e_carnivores3
-MOVERATE=60
-TEVENTS=e_horses
-RESLEVEL=2
-RESDISPDNID=c_horse_gray
-RESDISPDNHUE=08097
-CATEGORY=Monsters
-SUBSECTION=New Mounts
-DESCRIPTION=Skeletal Mount
-
-ON=@Create
-	NPC=brain_animal
-	KARMA=-2000
-	FAME={100 2000}
-	STR={200 230}
-	INT={300 340}
-	DEX={86 105}
-	PARRYING={55.0 95.0}
-	MAGICRESISTANCE={99.0 100.0}
-	TACTICS={98.0 100.0}
-	WRESTLING={90.0 93.0}
-	TAMING=105.0
-	MAGERY=100.0
-
-//////////////  END SKELETAL MOUNT //////
 ///Hiryu
 
 [ITEMDEF 10090]

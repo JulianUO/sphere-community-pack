@@ -3004,6 +3004,13 @@ ENDIF
 [TYPEDEF t_locked_down]
 ON=@ClientToolTip
 SRC.ADDCLILOC <QVAL (<TAG0.Access>==0)? 501643:501644>	//locked down & secure
+if <tag.access> == 4
+src.addcliloc 1061277
+elif <tag.access> == 3
+src.addcliloc 1061278
+elif <tag.access> == 2
+src.addcliloc 1061279
+endif
 
 ON=@ContextMenuRequest
 IF (<TYPE> == t_container) && (<TYPE> != t_door_locked)

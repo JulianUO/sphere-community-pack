@@ -812,7 +812,7 @@ TDATA3=c_kirin
 DEFNAME=i_mt_unicorn
 TYPE=T_EQ_HORSE
 LAYER=layer_horse
-TDATA3=c_m_unicorn
+TDATA3=c_unicorn
 
 [ITEMDEF 03eb8]
 //stern (really used as horse equipped)
