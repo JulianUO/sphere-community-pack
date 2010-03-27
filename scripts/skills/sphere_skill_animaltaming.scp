@@ -268,7 +268,7 @@ return 1
 endif
 
 [function allow_male_tamer]
-if (<baseid> == c_m_unicorn)
+if (<baseid> == c_unicorn)
 return 0
 else
 return 1

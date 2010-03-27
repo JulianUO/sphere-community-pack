@@ -455,8 +455,8 @@ TEVENTS=e_Subdued,e_PackMount
 RESLEVEL=2
 RESDISPDNID=c_horse_gray
 RESDISPDNHUE=080c9
-CATEGORY=Monsters
-SUBSECTION=New Mounts
+CATEGORY=Animals
+SUBSECTION=Mounts
 DESCRIPTION=Giant Beetle
 TAG.Control.Slots=3
 TAG.Barding.Diff=88.1
@@ -478,6 +478,89 @@ TACTICS=100.0
 MAGICRESISTANCE=80.0
 FAME=4000
 KARMA=-4000
+
+
+[CHARDEF 031a]
+DEFNAME=c_swamp_dragon
+NAME=Swamp Dragon
+SOUND=snd_monster_dragon1
+ICON=i_pet_swamp_dragon
+ANIM=01fff
+CAN=MT_WALK|MT_FLY|MT_FIRE_IMMUNE
+RESOURCES=5 i_reag_scale_green, 20 i_hide, 19 i_ribs_raw
+FOODTYPE=80 t_meat_raw
+DAM=7,9
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+MOVERATE=40
+RESLEVEL=2
+RESDISPDNID=c_horse_gray
+RESDISPDNHUE=2129
+CATEGORY=Animals
+SUBSECTION=Mounts
+DESCRIPTION=Swamp Dragon
+TAG.Slayer=SLAYER_DRAGON
+TAG.Barding.Diff=59.0
+TAG.DamPoison=25
+ARMOR={35 40}
+
+ON=@Create
+ResFire={20 30}
+ResCold={20 40}
+ResPoison={20 30}
+ResEnergy={30 40}
+NPC=brain_animal
+COLOR=2129
+STR={200 300}
+DEX={65 85}
+INT={60 100}
+MAXHITS={120 180}
+WRESTLING={45.0 55.0}
+TACTICS={45.0 55.0}
+MAGICRESISTANCE={45.0 55.0}
+ANATOMY={45.0 55.0}
+FAME=2000
+KARMA=-2000
+TAMING=93.9
+
+
+[CHARDEF 0319]
+DEFNAME=c_skeletal_mount
+NAME=Hellsteed
+SOUND=snd_monster_skletn1
+ICON=i_pet_skeletal_mount
+CAN=MT_WALK|MT_RUN
+FOODTYPE=40 t_meat_raw
+DAM=40,47
+DESIRES=e_horses,c_man,c_woman
+AVERSIONS=e_carnivores3
+MOVERATE=60
+RESLEVEL=2
+RESDISPDNID=c_horse_gray
+RESDISPDNHUE=08097
+CATEGORY=Animals
+SUBSECTION=Mounts
+DESCRIPTION=Hellsteed (Skeletal Mount)
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=78.4
+TAG.NoProvoke.1=1
+TAG.DamFire=75
+ARMOR={60 70}
+
+ON=@Create
+ResFire=90
+ResPoison=100
+NPC=brain_animal
+STR={200 210}
+DEX={100 110}
+INT={100 115}
+MAXHITS={200 220}
+WRESTLING={90.0 110.0}
+TACTICS=50.0
+MAGICRESISTANCE={90.0 110.0}
+FAME={100 2000}
+KARMA=-2000
+TAMING=105.0
 
 
 [CHARDEF 084]
