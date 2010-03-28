@@ -11,34 +11,34 @@
 
 VERSION=0.56b
 
-[STARTS]	// new client
+[STARTS]   // new client
 Yew
 The Sturdy Bow
-567,978,0,0
+2771,977,0,0
 Minoc
 The Barnacle Tavern
-2477,407,15,0
+567,978,0,0
 Britain
 Sweet Dreams Inn
-1496,1629,10,0
+2477,407,15,0
 Moonglow
 The Scholars Inn
-4404,1169,0,0
+1496,1629,10,0
 Trinsic
 The Traveller's Inn
-1844,2745,0,0
+4404,1169,0,0
 Magincia
 The Great Horns Tavern
-3738,2223,20,0
+2477,407,15,0 // Magincia is empty in OSI, so we use Britain coords.
 Jhelom
 The Morning Star Inn
-1378,3817,0,0
+3738,2223,20,0
 Skara Brae
 The Falconers Inn
-594,2227,0,0
+1378,3817,0,0
 Vesper
 The Ironwood Inn
-2771,977,0,0
+594,2227,0,0
 
 [MoonGates]
 1336,1997,5,0=mg_britain

@@ -35,7 +35,6 @@ on=@wait
 if <def.scp.NewSkills_AnimalTaming> == 1
 sysmessage @,,1 Tame which animal?
 targetf f_start_taming
-f_skill_delay <getargv 0 <def.skill.35.waittime>>
 return 1
 endif
 
@@ -131,6 +130,7 @@ elif <argo.can_anger_on_tame> && !<argo.isevent.e_peacemaked>
 	return 1
 	endif
 endif
+f_skill_delay <getargv 0 <def.skill.35.waittime>>
 message <def.scp.taming_started>
 forplayers
 	if <uid> != <src.uid>
