@@ -38,7 +38,7 @@ champ_ColdBlood_Reward {i_crown_talkeesh 17 i_knowlegable_person 11 i_brave_knig
 
 champ_ForestLord_1 {c_pixie 1 c_shadow_wisp 1}
 champ_ForestLord_2 {c_kirin 1 c_wisp 1}
-champ_ForestLord_3 {c_centaur 1 c_m_unicorn 1}
+champ_ForestLord_3 {c_centaur 1 c_unicorn 1}
 champ_ForestLord_4 {c_serpentine_dragon 1 c_forest_lord 1}
 champ_ForestLord_champion c_Lord_Oaks
 champ_ForestLord_Reward {i_orc_chief_helm 17 i_fx_spin_head 50 i_Djinn_Ring 6 i_Detective_boots 6 i_Lieutenant_Royal_guard 6 i_knowlegable_person 6 i_samaritan_robe 6 i_royal_guard_survival_knife 6}
@@ -102,7 +102,7 @@ champ_Minotaur_Reward {i_subdue 33 i_pet_minotaur 66}
 
 //champ_ForestLord_1 {c_pixie 1 c_shadow_wisp 1}
 //champ_ForestLord_2 {c_kirin 1 c_wisp 1}
-//champ_ForestLord_3 {c_centaur 1 c_m_unicorn 1}
+//champ_ForestLord_3 {c_centaur 1 c_unicorn 1}
 //champ_ForestLord_4 {c_serpentine_dragon 1 c_forest_lord 1}
 //champ_ForestLord_champion c_Lord_Oaks
 //champ_ForestLord_Reward {i_orc_chief_helm 17 i_fx_spin_head 50 i_Djinn_Ring 6 i_Detective_boots 6 i_Lieutenant_Royal_guard 6 i_knowlegable_person 6 i_samaritan_robe 6 i_royal_guard_survival_knife 6}

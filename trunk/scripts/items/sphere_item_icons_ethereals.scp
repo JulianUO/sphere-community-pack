@@ -58,7 +58,7 @@ endif
 [ITEMDEF i_ethereal_horse]
 NAME=Ethereal Horse Statuette
 ID=i_pet_horse
-TYPE=t_ethereal_statuette
+TYPE=t_figurine_ethereal
 TDATA3=c_horse_ethereal
 CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts - Ethereal
@@ -71,7 +71,7 @@ ATTR=04
 [ITEMDEF i_ethereal_llama]
 NAME=Ethereal Llama Statuette
 ID=i_pet_llama
-TYPE=t_ethereal_statuette
+TYPE=t_figurine_ethereal
 TDATA3=c_llama_ethereal
 CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts - Ethereal
@@ -84,7 +84,7 @@ ATTR=04
 [ITEMDEF i_ethereal_ostard]
 NAME=Ethereal Ostard Statuette
 ID=i_pet_ostard_forest
-TYPE=t_ethereal_statuette
+TYPE=t_figurine_ethereal
 TDATA3=c_ostard_ethereal
 CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts - Ethereal
@@ -97,7 +97,7 @@ ATTR=04
 [ITEMDEF i_ethereal_unicorn]
 NAME=Ethereal Unicorn Statuette
 ID=i_pet_unicorn
-TYPE=t_ethereal_statuette
+TYPE=t_figurine_ethereal
 TDATA3=c_unicorn
 CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts - Ethereal
@@ -110,7 +110,7 @@ ATTR=04
 [ITEMDEF i_ethereal_ridgeback]
 NAME=Ethereal Ridgeback Statuette
 ID=i_pet_ridgeback
-TYPE=t_ethereal_statuette
+TYPE=t_figurine_ethereal
 TDATA3=c_ridgeback
 CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts - Ethereal
@@ -123,7 +123,7 @@ ATTR=04
 [ITEMDEF i_ethereal_kirin]
 NAME=Ethereal Kirin Statuette
 ID=i_pet_kirin
-TYPE=t_ethereal_statuette
+TYPE=t_figurine_ethereal
 TDATA3=c_kirin
 CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts - Ethereal
@@ -136,7 +136,7 @@ ATTR=04
 [ITEMDEF i_ethereal_beetle]
 NAME=Ethereal Beetle Statuette
 ID=i_pet_giantbeetle
-TYPE=t_ethereal_statuette
+TYPE=t_figurine_ethereal
 TDATA3=c_giant_beetle
 CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts - Ethereal
@@ -149,7 +149,7 @@ ATTR=04
 [ITEMDEF i_ethereal_swamp_dragon]
 NAME=Ethereal Swamp Dragon Statuette
 ID=i_pet_swampdragon
-TYPE=t_ethereal_statuette
+TYPE=t_figurine_ethereal
 TDATA3=c_swamp_dragon
 CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts - Ethereal
@@ -162,7 +162,7 @@ ATTR=04
 [ITEMDEF i_ethereal_hiryu]
 NAME=Ethereal Hiryu Statuette
 ID=i_pet_hiryu
-TYPE=t_ethereal_statuette
+TYPE=t_figurine_ethereal
 TDATA3=c_m_hiryu
 CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts - Ethereal
@@ -175,7 +175,7 @@ ATTR=04
 [ITEMDEF i_ethereal_cusidhe]
 NAME=Ethereal Cu Sidhe Statuette
 ID=i_pet_wolf
-TYPE=t_ethereal_statuette
+TYPE=t_figurine_ethereal
 TDATA3=c_cu_sidhe
 CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts - Ethereal
@@ -188,7 +188,7 @@ ATTR=04
 [ITEMDEF i_ethereal_polar_bear]
 NAME=Ethereal Polar Bear Statuette
 ID=i_pet_bear_polar
-TYPE=t_ethereal_statuette
+TYPE=t_figurine_ethereal
 TDATA3=c_bear_polar
 CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts - Ethereal
