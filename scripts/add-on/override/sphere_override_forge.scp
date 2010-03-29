@@ -10,6 +10,7 @@ VERSION=0.56b
 on=@targon_item
 if <argo.type> == t_ore
 src.dclick <argo.uid>
+return 1
 endif
 
 [eof]
