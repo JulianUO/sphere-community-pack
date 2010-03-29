@@ -145,8 +145,8 @@ scp.mining_canseelos		"@,,2 500346"	// Target cannot be seen.
 scp.mining_sand_fail		"@,,2 1044630"	// You dig for a while but fail to find any of sufficient quality for glassblowing.
 scp.mining_smelt_target		"What do you want to smelt?"
 scp.mining_smelt_notinpack	"@,,2 1042010"
-scp.mining_smelt_fail		"@,,2 501988"	// You smelt the ore removing the impurities and put the metal in your backpack.
-scp.mining_smelt_success	"@,,2 501989"	// You burn away the impurities but are left with no useable metal.
+scp.mining_smelt_fail		"@,,2 501989"	// You burn away the impurities but are left with no useable metal.
+scp.mining_smelt_success	"@,,2 501988"	// You smelt the ore removing the impurities and put the metal in your backpack.
 scp.mining_smelt_noforge	"You must be near a forge to smelt."
 scp.mining_smelt_noskill	"@,,2 501986"	// You have no idea how to smelt this strange ore!
 
