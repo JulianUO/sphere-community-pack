@@ -124,6 +124,7 @@ DUPELIST=0f3a
 CATEGORY=Items by Professions
 SUBSECTION=Miner
 DESCRIPTION=Shovel
+TEVENTS=t_shovel
 
 ON=@Create
 	HITPOINTS={50 60}

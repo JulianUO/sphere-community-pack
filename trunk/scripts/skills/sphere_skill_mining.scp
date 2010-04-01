@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -76,7 +76,7 @@ serv.newitem i_worldgem_bit
 new.type = t_sand
 new.more1 = <args>
 new.amount = <serv.regionresource.<args>.amount>
-new.attr = attr_invis
+new.attr = attr_invis|attr_decay
 new.p <targp>
 new.timer = <serv.regionresource.<args>.regen>
 return <new.uid>
