@@ -11,7 +11,7 @@
 
 VERSION=0.56b
 
-[REGIONTYPE r_default t_sand]
+[REGIONTYPE r_default_sand t_sand]
 // Default sand area resources
 RESOURCES=25.0 mr_nothing
 RESOURCES=50.0 mr_sand
