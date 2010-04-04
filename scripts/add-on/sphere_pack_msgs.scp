@@ -260,6 +260,7 @@ scp.detecthidden_foundnobody	"@,,2 500817" // You can see nothing hidden there.
 
 scp.runes_entername		"@88,,1 Type in a name for the rune"
 
+scp.skill_youaredead		"@,,2 500949"	// You can't do that when you're dead.
 scp.skill_mustwait		"@,,2 500118"	// You must wait a few moments to use another skill.
 
 scp.house_msg_welcomeback	"@,,2 501293"	// Welcome back to the house, friend!
