@@ -31,6 +31,10 @@ endif
 
 // Skill delays
 on=@skillwait
+if <flags>&statf_dead
+src.sysmessage <def.scp.skill_youaredead>
+return 1
+endif
 if <def.scp.SkillWaitingTimes> == 1
 	if <ctag0.skillrecovery> > <serv.time>
 	src.sysmessage <def.scp.skill_mustwait>

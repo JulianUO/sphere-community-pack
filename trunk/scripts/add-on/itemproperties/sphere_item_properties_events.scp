@@ -243,8 +243,10 @@ if <def.scp.ItemProp_SpellChanneling> == 1
 	if <argn1> != 104 // exception for Curse Weapon
 		if <argn1> != 203 // exception for Consecrate Weapon
 			if <findlayer.1.uid>
-				if !<findlayer.1.tag0.SpellChanneling>
-				findlayer.1.unequip
+				if <findlayer.1.type> != t_wand
+					if !<findlayer.1.tag0.SpellChanneling>
+					findlayer.1.unequip
+					endif
 				endif
 			endif
 			if <findlayer.2.uid>
