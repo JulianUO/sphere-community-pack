@@ -3076,7 +3076,7 @@ IF (<TAG0.Access>)	//Secured
   ENDIF
   REF2.TAG0.SECURE_CONT += <LOCAL.Items>
   TAG.FixStack=1,<FCOUNT>
-  TIMERD = 1
+  timerf 1,f_fix_contitems
  ENDIF
  return 0
 ELSE			//Locked
@@ -3093,7 +3093,7 @@ ELSE			//Locked
   ENDIF
   REF2.TAG0.LOCKED_ITEMS += <LOCAL.Items>
   TAG.FixStack=1,<FCOUNT>
-  TIMERD = 1
+  timerf 1,f_fix_contitems
  ENDIF
  return 0
 ENDIF
@@ -3113,7 +3113,7 @@ IF (<TAG0.Access>)	//Secured
   REF1.FixHouseSubcontainers 0
  ENDIF
  TAG.FixStack=0,<FCOUNT>
- TIMERD = 1
+ timerf 1,f_fix_contitems
  return 0
 ELSE			//Locked
  REF2.TAG0.LOCKED_ITEMS --
@@ -3122,7 +3122,7 @@ ELSE			//Locked
   REF1.FixHouseSubcontainers 0
  ENDIF
  TAG.FixStack=0,<FCOUNT>
- TIMERD = 1
+ timerf 1,f_fix_contitems
  return 0
 ENDIF
 
@@ -3139,14 +3139,6 @@ IF STRMATCH("t_multi*","<UID.<REGION.UID>.TYPE>")
  ENDIF
 ENDIF
 
-ON=@Timer
-IF (<TAG0.FixStack> != 0)
- HouseFixStackedStorage <TAG0.FixStack>
- TAG.FixStack=
- return 1
-ENDIF
-
-
 [TYPEDEF t_subcont]
 ON=@DropOn_Self
 IF (<TOPOBJ> != <UID>)
@@ -3160,6 +3152,12 @@ IF (<TOPOBJ> != <UID>)
  TOPOBJ.TRIGGER @PickUp_Self
 ENDIF
 
+
+[FUNCTION f_fix_contitems]
+IF (<TAG0.FixStack> != 0)
+HouseFixStackedStorage <TAG0.FixStack>
+TAG.FixStack=
+ENDIF
 
 [FUNCTION HouseFixStackedStorage]
 IF (<FCOUNT> == <ARGV1>)
