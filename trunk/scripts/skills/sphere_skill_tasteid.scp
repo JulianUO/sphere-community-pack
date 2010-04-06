@@ -80,6 +80,7 @@ if <skillusequick tasteid <r1000>>
 	skillgain tasteid <eval (<tasteid> / 10) + 1>
 	else
 	sysmessage <def.scp.tasteid_cannot>
+	skillgain tasteid <eval (<tasteid> / 7) + 1>
 	f_skill_delay <getargv 2 <def.skill.36.waittime>>
 	endif
 else

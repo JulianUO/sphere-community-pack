@@ -43,9 +43,10 @@ sysmessage <def.scp.armslore_fail>
 [function f_armslore_start]
 if !<skillusequick armslore <r1000>>
 f_skill_delay <getargv 2 <def.skill.4.waittime>>
+skillgain armslore <eval (<armslore> / 7) + 1>
 sysmessage <def.scp.armslore_fail>
 else
-local.percent = <eval (<argo.more1l>*100)/<argo.more1h>>
+local.percent = <eval (<argo.more1l> * 100) / (<argo.more1h> + 1)>
 local.dcliloc = <eval (<local.percent>/10)+<def.scp.armslore_durability>>
 sysmessage @,,2 <local.dcliloc>
 	if <argo.isweapon>

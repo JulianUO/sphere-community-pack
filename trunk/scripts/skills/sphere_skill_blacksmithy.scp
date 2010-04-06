@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -38,11 +38,11 @@ ON=@Abort
 	SRC.SYSMESSAGE You fail to complete the item.
 
 [function f_craft_blacksmith_checkforge]
-if (!<isneartype t_forge 3>) || (!<isneartype t_anvil 3>)
-return 0
-endif
+if !<isneartype t_forge 3>
 ctag.craft.message = <def.scp.craft_msg_needforge>
 return 1
+endif
+return 0
 
 [function f_craft_blacksmith_exceptionalbonus]
 ref5 = <args>

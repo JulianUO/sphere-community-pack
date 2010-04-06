@@ -57,6 +57,7 @@ if <skillusequick itemid <r1000>>
 	endif
 else
 	sysmessage @,,2 500353 // You are not certain...
+	skillgain itemid <eval (<itemid> / 7) + 1>
 	f_skill_delay <getargv 2 <def.skill.3.waittime>>
 endif
 

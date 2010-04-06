@@ -49,6 +49,7 @@ if <skillusequick animallore <r1000>>
 	endif
 endif
 f_skill_delay <getargv 2 <def.skill.2.waittime>>
+skillgain animallore <eval (<animallore> / 7) + 1>
 sysmessage <def.scp.animallore_fail>
 
 

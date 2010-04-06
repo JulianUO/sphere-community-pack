@@ -10,7 +10,7 @@ VERSION=0.56b
 [function f_valor_target]
 if <uid> == <argo>
 	if <tag0.virtue_4> < 20000
-	sysmessage 1054036 // You must be a Knight of Valor to summon the champion's spawn in this manner!
+	sysmessage @,,2 1054036 // You must be a Knight of Valor to summon the champion's spawn in this manner!
 	return 1
 	endif
 	forchars 16

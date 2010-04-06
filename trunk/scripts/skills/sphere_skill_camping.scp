@@ -80,6 +80,7 @@ new.events +e_camping_campfire
 new.movenear <src.uid>,1
 consume
 else
+src.skillgain camping <eval (<src.camping> / 7)>
 src.sysmessage <def.scp.camping_fail>
 endif
 return 1

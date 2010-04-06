@@ -258,6 +258,7 @@ update
 ref1=<args>
 ref1.tag.beingtamed=
 tag.totame=
+skillgain taming <eval (<taming> / 7) + 1>
 f_skill_delay <getargv 2 <def.skill.35.waittime>>
 
 [function allow_female_tamer]

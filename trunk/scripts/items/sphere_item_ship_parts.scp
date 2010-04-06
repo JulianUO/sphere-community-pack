@@ -753,17 +753,17 @@ TDATA3=c_ostard_desert
 
 [ITEMDEF 03ea4]
 //ship (really used as horse equipped)
-DEFNAME=i_mt_ostard_zostrich
+DEFNAME=i_mt_ostard_frenzied
 TYPE=T_EQ_HORSE
 LAYER=layer_horse
-TDATA3=c_ostard_zostrich
+TDATA3=c_ostard_frenzied
 
 [ITEMDEF 03ea5]
 //ship (really used as horse equipped)
 DEFNAME=i_mt_ostard_forest
 TYPE=T_EQ_HORSE
 LAYER=layer_horse
-TDATA3=c_OSTARD_Forest
+TDATA3=c_ostard_Forest
 
 [ITEMDEF 03ea6]
 //ship (really used as horse equipped)
