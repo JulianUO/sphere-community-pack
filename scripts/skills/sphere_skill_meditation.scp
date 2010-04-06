@@ -49,6 +49,7 @@ if <def.scp.NewSkills_Meditation> == 1
 			endif
 		else
 		sysmessage <def.scp.meditation_fail>
+		skillgain meditation <eval (<meditation> / 7) + 1>
 		f_skill_delay <getargv 2 <def.skill.46.waittime>>
 		endif
 	endif

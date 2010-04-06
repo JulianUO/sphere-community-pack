@@ -70,6 +70,7 @@ if !<local.inhouse>
 	endif
 endif
 if <local.fail>
+skillgain hiding <eval (<hiding> / 7) +1>
 sysmessage <def.scp.hiding_fail>
 f_skill_delay <getargv 2 <def.skill.21.waittime>>
 else

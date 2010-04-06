@@ -58,6 +58,7 @@ else
 	else
 		if <r1,1200> > <max 150,<stealth>> // we might need a better success chance formula
 		sysmessage <def.scp.stealth_fail>
+		skillgain stealth <eval (<stealth> / 7) + 1>
 		f_reveal
 		f_skill_delay <getargv 2 <def.skill.47.waittime>>
 		else

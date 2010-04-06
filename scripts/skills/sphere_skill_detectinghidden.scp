@@ -46,8 +46,9 @@ ON=@Abort
 local.range = <eval (<detectinghidden> / 2)>
 	if !<skillusequick detectinghidden <r1000>>
 	local.range /= 2
+	skillgain detectinghidden <eval ((<detectinghidden> / 7) + 1)>
 	else
-	skillgain detectinghidden <eval ((<detectinghidden> / 12) + 1)>
+	skillgain detectinghidden <eval ((<detectinghidden> / 10) + 1)>
 	endif
 	if (<uid.<region.uid>.type> == t_multi) || (<uid.<region.uid>.type> == t_multi_custom)
 		if <uid.<region.uid>.link.houseplayeraccess <uid>> >= 2

@@ -80,6 +80,7 @@ if <argo.id> == c_woman
 local.cliloc += 1
 endif
 sysmessage @,,2 <local.cliloc>
+skillgain evaluatingintel <eval (<evaluatingintel> / 7)>
 f_skill_delay <getargv 2 <def.skill.16.waittime>>
 endif
 

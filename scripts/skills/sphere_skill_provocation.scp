@@ -99,8 +99,10 @@ if <argo.brain>
 			sysmessage <def.scp.bard_provocation_success>
 			uid.<args>.attack <argo.uid>
 			f_skill_delay <getargv 1 <def.skill.22.waittime>>
+			skillgain provocation <eval (<provocation> / 10) + 1>
 			else
 			sysmessage <def.scp.bard_provocation_fail>
+			skillgain provocation <eval (<provocation> / 7) + 1>
 			f_skill_delay <getargv 2 <def.skill.22.waittime>>
 			return 1
 			endif

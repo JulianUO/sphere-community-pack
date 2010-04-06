@@ -75,6 +75,7 @@ sfx 0241
 	f_skill_delay <getargv 1 <def.skill.48.waittime>>
 	else
 	sysmessage <def.scp.removetrap_fail>
+	skillgain removetrap <eval (<removetrap> / 7) + 1>
 	f_skill_delay <getargv 2 <def.skill.48.waittime>>
 	endif
 // to-do here: faction traps
