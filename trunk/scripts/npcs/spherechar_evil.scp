@@ -84,40 +84,6 @@ ON=@Create
 ON=@NPCRestock
 	ITEM=loot_ICE_DRAGON
 
-[CHARDEF 01012]
-DEFNAME=c_m_elem_blood
-NAME=Blood Elemental
-ID=c_elem_water
-SOUND=snd_ELEMENTL_WATREL1
-DAM=4,40
-ARMOR=30
-RESOURCES=
-CAN=MT_WALK
-//SHELTER==r_dungeon
-DESIRES=r_dungeon
-CATEGORY=Monsters
-SUBSECTION=Elementals
-DESCRIPTION=Blood Elemental
-
-ON=@Create
-	NPC=BRAIN_MONSTER
-	COLOR=colors_blood
-	STR={526 615}
-	DEX={66 85}
-	INT={190 315}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=6,7
-	PARRYING={85.0 95.0}
-	MAGERY={85.0 100.0}
-	MAGICRESISTANCE={80.0 95.0}
-	TACTICS={80.0 100.0}
-	WRESTLING={80.0 100.0}
-	FAME={1000 2000}
-	KARMA={-5000 -5999}
-
-ON=@NPCRestock
-	ITEM=loot_elem_blood
-
 [CHARDEF 01013]
 DEFNAME=c_ice_snake
 NAME=Ice Snake
@@ -275,40 +241,6 @@ ON=@Create
 ON=@NPCRestock
 	CONTAINER=i_backpack
 	ITEM=i_reag_sulfur_ash,{1 5}
-
-[CHARDEF 01018]
-DEFNAME=c_m_elem_ice
-NAME=Ice Elemental
-ID=c_elem_earth
-SOUND=snd_ELEMENTL_ERTHEL1
-ICON=i_pet_elem_earth
-DAM=5,26
-ARMOR=20
-CAN=MT_WALK
-RESOURCES=8 t_magic
-//SHELTER==r_caves,r_mountains
-DESIRES=r_caves
-CATEGORY=Monsters
-SUBSECTION=Elementals
-DESCRIPTION=Ice Elemental
-
-ON=@Create
-	COLOR=color_ice
-	STR={155 185}
-	DEX={86 115}
-	INT={170 192}
-	//ALIGNMENT=EVIL
-	PARRYING={40.0 65.0}
-	MAGICRESISTANCE={40.0 95.0}
-	TACTICS={70.0 100.0}
-	WRESTLING={60.0 100.0}
-	NPC=brain_monster
-	FAME={100 2000}
-	KARMA={-3000 -3999}
-
-ON=@NPCRestock
-	ITEM=loot_elem_ice
-
 
 [CHARDEF 01019]
 DEFNAME=c_m_icefiend
@@ -664,42 +596,6 @@ ON=@Create
 	FAME={100 2000}
 	KARMA={-3000 -3999}
 
-[CHARDEF 01038]
-DEFNAME=c_m_efreet
-NAME=Efreet
-ID=c_elem_air
-SOUND=snd_ELEMENTL_AIRELEM1
-ICON=i_pet_elem_air
-DAM=8,16
-ARMOR=25
-RESOURCES=8 t_magic
-CAN=MT_WALK
-FOODTYPE=
-//SHELTER==r_mountains
-DESIRES=r_mountains
-CATEGORY=Monsters
-SUBSECTION=Elementals
-DESCRIPTION=Efreet
-
-ON=@Create
-	COLOR=color_rock
-	STR={325 355}
-	DEX={265 285}
-	INT={170 195}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=2,5
-	PARRYING={65.0 75.0}
-	MAGERY={60.0 75.0}
-	MAGICRESISTANCE={60.0 75.0}
-	TACTICS={60.0 80.0}
-	WRESTLING={60.0 80.0}
-	NPC=brain_monster
-	FAME={100 2000}
-	KARMA={-3000 -3999}
-
-ON=@NPCRestock
-	ITEM=loot_EFREET
-
 
 [CHARDEF 01040]
 DEFNAME=c_m_ogre_lord
@@ -769,42 +665,6 @@ ON=@Create
 
 ON=@NPCRestock
 	ITEM=loot_PHOENIX
-
-
-[CHARDEF 01043]
-DEFNAME=c_m_elem_poison
-NAME=Poison Elemental
-ID=c_elem_air
-SOUND=snd_ELEMENTL_WATREL1
-ICON=i_pet_elem_air
-CAN=MT_WALK
-DAM=5,25
-ARMOR=35
-RESOURCES=3 t_magic
-//SHELTER==r_dungeon
-DESIRES=r_dungeon
-CATEGORY=Monsters
-SUBSECTION=Elementals
-DESCRIPTION=Poison Elemental
-
-ON=@Create
-	NPC=brain_monster
-	COLOR=colors_poison
-	STR={425 515}
-	DEX={165 185}
-	INT={360 435}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=3,6
-	PARRYING={75.0 85.0}
-	MAGERY={80.0 95.0}
-	MAGICRESISTANCE={80.0 95.0}
-	TACTICS={80.0 100.0}
-	WRESTLING={70.0 90.0}
-	FAME={100 2000}
-	KARMA={-5000 -5999}
-
-ON=@NPCRestock
-	ITEM=loot_elem_poison
 
 
 [CHARDEF 01044]
@@ -973,39 +833,6 @@ ON=@NPCRestock
 	ITEM=loot_LAVA_LIZARD
 
 
-[CHARDEF 01051]
-DEFNAME=c_m_elem_snow
-NAME=Snow Elemental
-ID=c_elem_earth
-SOUND=snd_ELEMENTL_AIRELEM1
-ICON=i_pet_elem_earth
-DAM=4,24
-ARMOR=25
-RESOURCES=8 t_magic
-DESIRES=r_mountains
-//SHELTER==r_mountains
-CATEGORY=Monsters
-SUBSECTION=Elementals
-DESCRIPTION=Snow Elemental
-
-ON=@Create
-	NPC=brain_monster
-	COLOR=color_snow
-	STR={325 355}
-	DEX={165 185}
-	INT={71 95}
-	PARRYING={65.0 75.0}
-	MAGICRESISTANCE={60.0 75.0}
-	TACTICS={80.0 100.0}
-	WRESTLING={80.0 100.0}
-	FAME={100 2000}
-	KARMA={-4000 -4999}
-	//ALIGNMENT=EVIL
-
-ON=@NPCRestock
-	ITEM=loot_elem_snow
-
-
 [CHARDEF 01052]
 DEFNAME=c_m_frostspider
 NAME=Frost Spider
@@ -1146,83 +973,11 @@ ON=@NPCRestock
 	ITEM=loot_TERATHAN_AVENGER
 
 
-[CHARDEF 01057]
-DEFNAME=c_m_orc_captain
-NAME=Orc Captain
-ID=c_orc_lord
-DAM=2,18
-ARMOR=17
-RESOURCES=8 i_ribs_raw //, ORCCAMP
-FOODTYPE=15 t_meat_raw
-//ALIGNMENT=EVIL
-//SPELLCIRCLES=3,6
-//SHELTER==r_caves,r_dungeon,r_orc_camp
-DESIRES=i_gold,spk_orc
-TSPEECH=spk_orc
-CATEGORY=Monsters
-SUBSECTION=Orcs
-DESCRIPTION=Orc Captain
-
-ON=@Create
-	STR={110 145}
-	DEX={100 135}
-	INT={86 110}
-	SWORDSMANSHIP={70.0 85.0}
-	PARRYING={70.0 95.0}
-	MAGICRESISTANCE={70.0 85.0}
-	TACTICS={85.0 100.0}
-	NPC=brain_monster
-	FAME={100 2000}
-	KARMA={-2000 -2999}
-
-ON=@NPCRestock
-	CONTAINER=i_backpack
-	ITEM=loot_ORC_CAPTAIN
-
-
-[CHARDEF 01058]
-DEFNAME=c_m_orc_mage
-NAME=#NAMES_ORC the Orc Mage
-ID=c_ORC
-DAM=2,16
-ARMOR=15
-RESOURCES=8 i_ribs_raw
-FOODTYPE=15 t_meat_raw
-//SHELTER==r_caves,r_dungeon,r_orc_camp
-DESIRES=i_gold,spk_orc
-TSPEECH=spk_orc
-CATEGORY=Monsters
-SUBSECTION=Orcs
-DESCRIPTION=Orc Mage
-
-ON=@Create
-	COLOR=colors_green
-	STR={115 150}
-	DEX={91 115}
-	INT={160 185}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=5,7
-	PARRYING={60.0 85.0}
-	MAGERY={70.0 95.0}
-	MAGICRESISTANCE={70.0 85.0}
-	TACTICS={75.0 90.0}
-	NPC=BRAIN_MONSTER
-	FAME={100 2000}
-	KARMA={-3000 -3999}
-	ITEMNEWBIE=i_spellbook
-	//ADDSPELL=
-	MORE1=06c0a0895
-	MORE2=00000000
-
-ON=@NPCRestock
-	ITEM=loot_ORCISH_MAGE
-
-
 [CHARDEF 01063]
 DEFNAME=c_m_energy_vortex
 NAME=Energy Vortex
 SOUND=snd_ELEMENTL_AIRELEM5
-ID=c_elem_air
+ID=c_air_elemental
 ICON=37eb
 DAM=8,10
 ARMOR=10

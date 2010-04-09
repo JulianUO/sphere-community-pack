@@ -443,41 +443,6 @@ ON=@NpcRestock
 	ITEM=random_jewel,3
 	ITEM=random_jewel,{1 2}
 
-[chardef 300]
-defname=c_crystal_elemental
-NAME=Crystal Elemental
-SOUND=snd_monster_harpy1
-ICON=i_pet_crystalelemental
-DAM=19,27
-RESDISPDNID=c_elem_air
-RESLEVEL=3
-RESDISPDNHUE=55
-ARMOR=20
-CAN=MT_USEHANDS|MT_WALK|MT_RUN
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman,t_corpse
-CATEGORY=New Monsters
-SUBSECTION=AOS
-DESCRIPTION=Crystal Elemental
-
-ON=@Create
-	NPC=brain_monster
-	FAME={100 3000}
-	KARMA={-5000 -6999}
-	STR={100 150}
-	MAXHITS={300 400}
-	INT=230
-	DEX={70 110}
-	MAGICRESISTANCE={70.0 80.0}
-	TACTICS=70.0
-	WRESTLING=70.0
-	MAGERY=100.0
-	ITEMNEWBIE=i_spellbook
-	ADDCIRCLE 8,1
-
-ON=@NpcRestock
-	ITEM=i_reag_nightshade,{3 7}
-	ITEM=i_gold,{195 245}
-	ITEM=random_jewel
 
 [chardef 307]
 defname=c_gibberling

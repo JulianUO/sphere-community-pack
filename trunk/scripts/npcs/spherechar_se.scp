@@ -455,33 +455,6 @@ EvaluatingIntel={80.0 90.0}
 Fame=2500
 Karma=-2500
 
-[CHARDEF 199]
-Name=Rai-Ju
-DEFNAME=c_rai_ju
-RESDISPDNID=c_elem_air
-ICON=i_pet_raiju
-SOUND=snd_elementl_airelem5
-RESLEVEL=3
-RESDISPDNHUE=33
-ARMOR=15
-CAN=MT_WALK|MT_RUN
-DAM=6,18
-CATEGORY=New Monsters
-SUBSECTION=SE
-DESCRIPTION=Rai-Ju
-on=@create
-NPC=BRAIN_MONSTER
-Str={105 155}
-MAXHITS={225 335}
-Dex={85 135}
-Int={175 180}
-Anatomy={25.1 35.0}
-MagicResistance={110.2 120.0}
-Tactics={55.1 65.0}
-Wrestling={85.1 95.0}
-Fame=4500
-Karma=-4500
-
 [CHARDEF 252]
 Name=Lady of the Snow
 DEFNAME=c_lady_of_snow
@@ -509,34 +482,6 @@ Magery={95.0 110.0}
 Meditation={85.0 90.0}
 Fame=1500
 Karma=-3500
-
-[CHARDEF 196]
-Name=Kaze Kemono
-DEFNAME=c_kaze_kemono
-RESDISPDNID=c_elem_air
-RESLEVEL=3
-RESDISPDNHUE=33
-ARMOR=35
-CAN=MT_WALK|MT_RUN
-ICON=i_pet_kazekemono
-DAM=9,23
-CATEGORY=New Monsters
-SUBSECTION=SE
-DESCRIPTION=Kaze Kemono
-SOUND=snd_elementl_airelem5
-on=@create
-NPC=BRAIN_MONSTER
-Str={105 175}
-MAXHITS={275 375}
-Dex={100 155}
-Int={100 110}
-Anatomy={25.0 35.0}
-Magery={95.0 105.0}
-MagicResistance={110.0 120.0}
-Tactics={55.0 65.0}
-Wrestling={85.0 95.0}
-Fame=4500
-Karma=-4500
 
 [CHARDEF 98]
 Name=Ice Hound

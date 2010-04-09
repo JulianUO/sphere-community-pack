@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 [SKILL 11]
@@ -27,5 +27,15 @@ SRC.SYSMESSAGE @,,2 1044043
 
 ON=@Abort
 	SRC.SYSMESSAGE You fail to complete the item.
+
+
+[function f_craft_carpentry_checkboard]
+if <args> == i_board
+serv.newitem i_board
+new.amount = <findid.i_log.amount>
+findid.i_log.remove
+ctag.craft.message = You've created the boards succesfully.
+return 1
+endif
 
 [eof]

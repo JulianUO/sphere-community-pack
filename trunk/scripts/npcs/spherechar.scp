@@ -148,41 +148,6 @@ ON=@Create
 	WRESTLING=5.0
 	TAMING=10.0
 
-[CHARDEF 07]
-DEFNAME=c_orc_lord
-//DEFNAME2=c_ORC_LORD
-NAME=#NAMES_ORC the Orc Lord
-SOUND=snd_MONSTER_ORC1
-ICON=i_pet_ORC
-ANIM=078c7f
-CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
-DAM=2,16
-ARMOR=15
-RESOURCES=8 i_ribs_raw
-FOODTYPE=15 t_meat_raw
-//SHELTER=r_caves,r_dungeon,r_orc_camp
-DESIRES=i_gold,spk_orc
-TSPEECH=spk_orc
-CATEGORY=Monsters
-SUBSECTION=Orcs
-DESCRIPTION=Orc Lord
-
-ON=@Create
-	NPC=brain_monster
-	FAME={2000 4000}
-	KARMA={-2000 -2999}
-	STR={150 320}
-	DEX={65 160}
-	INT={95 190}
-	PARRYING={60.0 85.0}
-	MAGICRESISTANCE={70.0 85.0}
-	TACTICS={75.0 90.0}
-	SWORDSMANSHIP={60.0 85.0}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=4 7
-
-ON=@NPCRestock
-	ITEM=loot_ORCISH_LORD
 
 [CHARDEF 08]
 DEFNAME=c_corpser
@@ -294,207 +259,6 @@ ON=@Create
 
 ON=@NPCRestock
 	ITEM=loot_DRAGON
-
-[CHARDEF 0d]
-DEFNAME=c_elem_air
-NAME=Air Elemental
-SOUND=snd_ELEMENTL_AIRELEM1
-ICON=i_pet_elem_air
-ANIM=079dff
-DAM=5,13
-ARMOR=20
-CAN=MT_WALK|MT_FLY
-FOODTYPE=
-//SHELTER=r_mountains
-DESIRES=r_mountains
-BLOODCOLOR=colors_white
-CATEGORY=Monsters
-SUBSECTION=Elementals
-DESCRIPTION=Air Elemental
-
-ON=@Create
-	NPC=brain_monster
-	FAME={1000 6000}
-	KARMA={-4000 -4999}
-	//ALIGNMENT=EVIL
-	STR={125 155}
-	DEX={165 185}
-	INT={71 95}
-	PARRYING={65.0 75.0}
-	MAGERY={60.0 75.0}
-	MAGICRESISTANCE={60.0 75.0}
-	TACTICS={60.0 80.0}
-	WRESTLING={60.0 80.0}
-	//SPELLCIRCLES=3 7
-
-ON=@NPCRestock
-	ITEM=loot_elem_air
-
-[CHARDEF 0e]
-// Should eat metals and ores.
-DEFNAME=c_elem_earth
-NAME=Earth Elemental
-SOUND=snd_ELEMENTL_ERTHEL1
-ICON=i_pet_elem_earth
-ANIM=079c7f
-DAM=5,20
-ARMOR=17
-RESOURCES=8 tm_rocks
-CAN=MT_WALK|MT_GHOST
-FOODTYPE=15 t_arock,t_coin,t_ore,t_ingot
-//SHELTER=r_mountains,r_caves,r_dungeon
-DESIRES=r_caves
-BLOODCOLOR=colors_brown
-CATEGORY=Monsters
-SUBSECTION=Elementals
-DESCRIPTION=Earth Elemental
-
-ON=@Create
-	NPC=brain_monster
-	FAME={1000 6000}
-	KARMA={-3000 -3999}
-	//ALIGNMENT=EVIL
-	STR={125 155}
-	DEX={66 85}
-	INT={71 92}
-	PARRYING={40.0 65.0}
-	MAGICRESISTANCE={50.0 95.0}
-	TACTICS={60.0 100.0}
-	WRESTLING={60.0 100.0}
-	MINING=80.0
-
-ON=@NPCRestock
-	ITEM=loot_elem_earth
-
-[CHARDEF 0f]
-DEFNAME=c_elem_fire
-NAME=Fire Elemental
-SOUND=snd_ELEMENTL_FIRELEM1
-ICON=i_pet_elem_fire
-ANIM=079dff
-DAM=4,12
-ARMOR=20
-RESOURCES=8 t_MAGIC
-CAN=MT_WALK|MT_FIRE_IMMUNE|MT_RUN|MT_USEHANDS
-FOODTYPE=t_fire
-//SHELTER=t_LAVA
-DESIRES=t_LAVA
-BLOODCOLOR=colors_red
-CATEGORY=Monsters
-SUBSECTION=Elementals
-DESCRIPTION=Fire Elemental
-
-ON=@Create
-	NPC=brain_monster
-	STR={125 155}
-	DEX={165 185}
-	INT={71 95}
-	PARRYING={55.0 65.0}
-	MAGERY={60.0 75.0}
-	MAGICRESISTANCE={60.0 75.0}
-	TACTICS={80.0 100.0}
-	WRESTLING={70.0 100.0}
-	FAME={1000 6000}
-	KARMA={-4000 -4999}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLE=3 5
-	ITEMNEWBIE=i_light_source
-	ITEMNEWBIE=i_spellbook	// knows fire type spells.
-	ADDSPELL=s_magic_arrow
-	ADDSPELL=s_fireball
-	ADDSPELL=s_fire_field
-	ADDSPELL=s_explosion
-	ADDSPELL=s_flamestrike
-	ADDSPELL=s_meteor_swarm
-	ADDSPELL=s_summon_elem_fire
-	ADDSPELL=s_fire_bolt
-
-ON=@NPCRestock
-	ITEM=loot_elem_fire
-
-ON=@Death
-	// Create death explosion to damage those nearby.
-	NEWITEM=i_fx_explode
-	act.TYPE=T_EXPLOSION
-	act.ATTR=ATTR_MOVE_NEVER | ATTR_CAN_DECAY
-	act.LINK=<uid>
-	act.morex=10 // damage
-	act.morey=090 // wFlags DAMAGE_GENERAL
-	act.morez=2 // iDist
-	act.p=<p>
-	act.TIMERD=1 // immediate decay
-
-[CHARDEF 010]
-DEFNAME=c_elem_water
-NAME=Water Elemental
-SOUND=snd_ELEMENTL_WATREL1
-ICON=i_pet_elem_water
-ANIM=079dff
-DAM=4,12
-ARMOR=20
-RESOURCES=8 t_MAGIC
-CAN=MT_WALK|MT_SWIM|MT_USEHANDS
-FOODTYPE=t_water_wash
-//SHELTER=r_water
-DESIRES=r_WATER
-BLOODCOLOR=colors_blue
-CATEGORY=Monsters
-SUBSECTION=Elementals
-DESCRIPTION=Water Elemental
-
-ON=@Create
-	NPC=brain_monster
-	FAME={1000 6000}
-	KARMA={-3000 -3999}
-	STR={125 155}
-	DEX={66 85}
-	INT={71 95}
-	PARRYING={55.0 65.0}
-	MAGERY={60.0 75.0}
-	MAGICRESISTANCE={60.0 75.0}
-	TACTICS={55.0 65.0}
-	WRESTLING={70.0 90.0}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=3 7
-
-ON=@NPCRestock
-	ITEM=loot_elem_water
-
-[CHARDEF 011]
-DEFNAME=c_orc
-NAME=#NAMES_ORC the Orc
-SOUND=snd_MONSTER_ORC1
-ICON=i_pet_ORC
-ANIM=078c7f
-DAM=3,9
-ARMOR=14
-CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
-RESOURCES=8 i_ribs_raw
-FOODTYPE=15 t_meat_raw
-//SHELTER=r_caves,r_dungeon,r_orc_camp
-DESIRES=i_gold,spk_orc
-TSPEECH=spk_orc
-CATEGORY=Monsters
-SUBSECTION=Orcs
-DESCRIPTION=Orc
-
-ON=@Create
-	NPC=brain_monster
-	FAME={100 1000}
-	KARMA={-1000 -5000}
-	STR={96 120}
-	DEX={81 105}
-	INT={36 60}
-	PARRYING={50.0 75.0}
-	MAGICRESISTANCE={50.0 75.0}
-	TACTICS={55.0 80.0}
-	WRESTLING={50.0 70.0}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=2 3
-
-ON=@NPCRestock
-	ITEM=i_backpack
-	ITEM=loot_ORC
 
 [CHARDEF 012]
 // Ettin with big stone axe.
@@ -3114,7 +2878,7 @@ DAM=8,10
 ARMOR=10
 FOODTYPE=
 RESLEVEL=1
-RESDISPDNID=c_elem_air
+RESDISPDNID=c_air_elemental
 RESDISPDNHUE=01a2
 BLOODCOLOR=colors_pink
 CATEGORY=Miscellaneous
@@ -3122,7 +2886,7 @@ SUBSECTION=Blade Spirits
 DESCRIPTION=Energy Vortex
 
 ON=@Create
-	BODY=c_elem_air //Edit Out to be New Style
+	BODY=c_air_elemental
 	NAME=Energy Vortex
 	COLOR=0d // Edit out to be new style
 	NPC=brain_berserk

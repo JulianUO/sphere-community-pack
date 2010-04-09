@@ -275,21 +275,6 @@ DUPELIST=0a5b
 //brown twin bed upper half, from head against NW wall
 DUPEITEM=0a5a
 
-[ITEMDEF 0a5c]
-//gray twin bed lower half, from head against NE wall
-DEFNAME=i_bed_2
-TYPE=T_BED
-TDATA1=0
-RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS, 1 I_PILLOW
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedroom Furniture
-DESCRIPTION=Twin Bed (Grey) (NE)
-DUPELIST=0a5d
-
-[ITEMDEF 0a5d]
-//gray twin bed upper half, from head against NW wall
-DUPEITEM=0a5c
-
 [ITEMDEF 0a5e]
 //white twin bed upper half, from head against NE wall
 DEFNAME=i_bed_3
@@ -319,21 +304,6 @@ DUPELIST=0a61
 [ITEMDEF 0a61]
 //white twin bed lower half, from head against NW wall
 DUPEITEM=0a60
-
-[ITEMDEF 0a62]
-//gray twin bed lower half, from head against NW wall
-DEFNAME=i_bed_5
-TYPE=T_BED
-TDATA1=0
-RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS, 1 I_PILLOW
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedroom Furniture
-DESCRIPTION=Twin Bed (Grey) (NE)
-DUPELIST=0a63
-
-[ITEMDEF 0a63]
-//gray twin bed upper half, from head against NE wall
-DUPEITEM=0a62
 
 [ITEMDEF 0a64]
 //brown twin bed upper half, from head against NE wall
