@@ -25,7 +25,7 @@ champ_abyss_reward	{i_gladiator_collar 1 i_Lieutenant_Royal_guard 1}
 champ_Arachnid_1 {c_fire_gargoyle 1 c_spider_giant 1}
 champ_Arachnid_2 {c_terathan_drone 1 c_terathan_warrior 1}
 champ_Arachnid_3 {c_dread_spider 1 c_terathan_matriarch 1}
-champ_Arachnid_4 {c_m_elem_poison 1 c_terathan_avenger 1}
+champ_Arachnid_4 {c_poison_elemental 1 c_terathan_avenger 1}
 champ_Arachnid_champion c_Mephitis
 champ_Arachnid_Reward {010dc 17 010db 17 i_spider_statue 17 i_calm 17 i_oblivion_needle 33}
 
@@ -89,7 +89,7 @@ champ_Minotaur_Reward {i_subdue 33 i_pet_minotaur 66}
 //champ_Arachnid_1 {c_scorpion_giant 1 c_spider_giant 1}
 //champ_Arachnid_2 {c_terathan_drone 1 c_terathan_warrior 1}
 //champ_Arachnid_3 {c_dread_spider 1 c_terathan_matriarch 1}
-//champ_Arachnid_4 {c_m_elem_poison 1 c_terathan_avenger 1}
+//champ_Arachnid_4 {c_poison_elemental 1 c_terathan_avenger 1}
 //champ_Arachnid_champion c_Mephitis
 //champ_Arachnid_Reward {010dc 17 010db 17 i_spider_statue 17 i_calm 17 i_oblivion_needle 33}
 

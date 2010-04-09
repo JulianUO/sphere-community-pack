@@ -235,28 +235,6 @@ blacksmithing_category_11_2	"i_cyclone"
 blacksmithing_category_11_3	"i_soul_glaive"
 
 
-[function f_craft_blacksmith_smelt]
-targetf f_smelt_item
-sysmessage <def.scp.mining_smelt_target>
-return 1
-
-[function f_smelt_item]
-if !<isneartype t_forge 2>
-sysmessage <def.scp.mining_smelt_noforge>
-return 1
-endif
-args = <argo.resmake>
-for 1 <argv>
-	if <serv.itemdef.<argo.resources.<local._for>.key>.type> == t_ingot
-	serv.newitem <argo.resources.<local._for>.key>
-	new.amount = <eval (<argo.resources.<local._for>.val> * <def.scp.Mining_SmeltingPercent>) / 100>
-	new.cont = <findlayer.21>
-	argo.remove
-	return 1
-	endif
-endfor
-
-
 [defname sphere_crafting_blacksmithing_colored]
 blacksmithing_material_0		""
 blacksmithing_material_0_name		"IRON"

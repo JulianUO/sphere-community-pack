@@ -67,24 +67,18 @@ ID=c_shade 2
 ID=c_lich 1
 
 
-
-// Random Spawn, T2A critters included are just alterations to old art (colors, stats). T2A is not needed.
-// WEIGHT= need not add up to any special value. purely relative weight
-
-[SPAWN 08001]
-DEFNAME=SPAWN_Undead_Weak
+[SPAWN spawn_undead_weak]
 CATEGORY=Spawn Groups
-SUBSECTION=Undead
-DESCRIPTION=Weak Undead
+SUBSECTION=Monsters
+DESCRIPTION=Undead (Weak)
 ID=c_zombie 10
 ID=c_skeleton 5
 ID=c_spectre 2
 
-[SPAWN 08002]
-DEFNAME=SPAWN_Undead_Strong
+[SPAWN spawn_undead_strong]
 CATEGORY=Spawn Groups
-SUBSECTION=Undead
-DESCRIPTION=Strong Undead
+SUBSECTION=Monsters
+DESCRIPTION=Undead (Strong)
 ID=c_skeletal_mage 3
 ID=c_lich 4
 ID=c_skeletal_knight
@@ -93,11 +87,10 @@ ID=c_mummy
 ID=c_wraith
 ID=c_shade
 
-[SPAWN 08003]
-DEFNAME=SPAWN_Undead_All
+[SPAWN spawn_undead_all]
 CATEGORY=Spawn Groups
-SUBSECTION=Undead
-DESCRIPTION=All Undead
+SUBSECTION=Monsters
+DESCRIPTION=Undeads
 ID=c_zombie
 ID=c_lich
 ID=c_spectre
@@ -109,24 +102,46 @@ ID=c_lich_lord
 ID=c_wraith
 ID=c_shade
 
-[SPAWN 08004]
-DEFNAME=SPAWN_elems
+[SPAWN spawn_orcs]
+CATEGORY=Spawn Groups
+SUBSECTION=Monsters
+DESCRIPTION=Orcs
+ID=c_orc
+ID=c_orc_bomber
+ID=c_orc_brute
+ID=c_orc_captain
+ID=c_orc_chopper
+ID=c_orc_scout
+ID=c_orc_lord
+ID=c_orc_mage
+
+[SPAWN spawn_elementals]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Elementals
-ID=c_elem_air
-ID=c_elem_earth
-ID=c_elem_fire
-ID=c_elem_water
-ID=c_m_elem_blood
-ID=c_m_elem_ice
-ID=c_m_elem_poison
-ID=c_m_elem_snow
-//ID=c_daemon
-//ID=c_daemon_w_sword
-//ID=c_m_balron
-//ID=c_gargoyle
+ID=c_air_elemental
+ID=c_earth_elemental
+ID=c_dull_copper_elemental
+ID=c_shadow_iron_elemental
+ID=c_copper_elemental
+ID=c_bronze_elemental
+ID=c_golden_elemental
+ID=c_agapite_elemental
+ID=c_verite_elemental
+ID=c_valorite_elemental
+ID=c_fire_elemental
+ID=c_water_elemental
+ID=c_blood_elemental
+ID=c_ice_elemental
+ID=c_efreet
+ID=c_poison_elemental
+ID=c_snow_elemental
+ID=c_rai_ju
+ID=c_kaze_kemono
 
+
+// Random Spawn, T2A critters included are just alterations to old art (colors, stats). T2A is not needed.
+// WEIGHT= need not add up to any special value. purely relative weight
 [SPAWN 08005]
 DEFNAME=SPAWN_MonstMisc_NoMagic
 CATEGORY=Spawn Groups
@@ -187,16 +202,7 @@ ID=c_gazer
 ID=c_m_gazer_elder
 ID=c_imp
 
-[SPAWN 08008]
-DEFNAME=SPAWN_Orcs
-CATEGORY=Spawn Groups
-SUBSECTION=Monsters
-DESCRIPTION=Orcs
-ID=c_orc_lord
-ID=c_m_orc_mage
-ID=c_ORC 3
-ID=c_orc_w_club 4
-ID=c_m_orc_captain 2
+
 
 [SPAWN 08009]
 DEFNAME=SPAWN_Lizardmen
@@ -287,7 +293,7 @@ DESCRIPTION=Water Creatures
 ID=c_dolphin 10
 ID=c_sea_serpent 3
 ID=c_sea_monster
-ID=c_elem_water 4
+ID=c_water_elemental 4
 
 [SPAWN 0800f]
 DEFNAME=SPAWN_AllMonsters
@@ -302,13 +308,13 @@ ID=c_skeleton_w_axe
 ID=c_skeleton
 ID=c_lich
 ID=c_lich_lord
-ID=c_elem_air
-ID=c_elem_earth
-ID=c_elem_fire
-ID=c_elem_water
-ID=c_m_elem_blood
-ID=c_m_elem_ice
-ID=c_m_elem_poison
+ID=c_air_elemental
+ID=c_earth_elemental
+ID=c_fire_elemental
+ID=c_water_elemental
+ID=c_blood_elemental
+ID=c_ice_elemental
+ID=c_poison_elemental
 ID=c_daemon
 ID=c_daemon_w_sword
 ID=c_m_balron
@@ -469,9 +475,9 @@ ID=C_OGRE 5
 ID=c_ETTIN_W_AXE 5
 ID=c_troll 3
 ID=c_ORC 8
-ID=c_m_orc_captain 3
+ID=c_orc_captain 3
 ID=c_orc_w_club 5
-ID=c_m_orc_mage 2
+ID=c_orc_mage 2
 ID=C_M_MONGBAT_ARBOREAL 10
 ID=c_corpser
 ID=c_gazer
@@ -884,9 +890,9 @@ DEFNAME=SPAWN_Deceit2
 CATEGORY=Spawn Groups
 SUBSECTION=Dungeons
 DESCRIPTION=Deceit 2
-ID=c_elem_air
-ID=c_elem_earth 2
-ID=c_elem_fire
+ID=c_air_elemental
+ID=c_earth_elemental 2
+ID=c_fire_elemental
 ID=c_rat_giant 10
 ID=c_headless 10
 ID=c_lizardman 2
@@ -927,9 +933,9 @@ ID=c_DRAGON_RED
 ID=c_DRAGON_SMALL_BLACK 3
 ID=c_DRAGON_SMALL_RED 3
 ID=c_m_wyvern 3
-ID=c_elem_air 2
-ID=c_elem_earth 2
-ID=c_elem_fire 2
+ID=c_air_elemental 2
+ID=c_earth_elemental 2
+ID=c_fire_elemental 2
 ID=c_spectre 4
 ID=c_lich 2
 
@@ -1053,10 +1059,10 @@ ID=c_dragon_red
 ID=c_m_wyvern
 ID=c_headless
 ID=c_orc_lord
-ID=c_m_orc_mage
+ID=c_orc_mage
 ID=c_lizardman
 ID=c_m_goblin_chief
-ID=c_elem_earth
+ID=c_earth_elemental
 ID=c_ettin_w_axe
 ID=c_ogre
 
@@ -1124,8 +1130,8 @@ DESCRIPTION=Shame 3
 ID=c_m_wyvern
 ID=c_DRAGON_SMALL_RED
 ID=c_DRAGON_SMALL_BLACK
-ID=c_elem_air
-ID=c_elem_earth
+ID=c_air_elemental
+ID=c_earth_elemental
 ID=c_ETTIN
 ID=c_ETTIN_W_AXE
 ID=C_OGRE
@@ -1137,20 +1143,20 @@ ID=c_snake_giant
 ID=c_spider_giant
 ID=c_gazer
 ID=c_orc_lord
-ID=c_m_orc_mage
+ID=c_orc_mage
 
 [SPAWN 08053]
 DEFNAME=SPAWN_Shame4
 CATEGORY=Spawn Groups
 SUBSECTION=Dungeons
 DESCRIPTION=Shame 4
-ID=c_elem_water
+ID=c_water_elemental
 ID=c_ETTIN_W_AXE 3
 ID=c_ETTIN_W_AXE
 ID=c_troll
 ID=c_troll_w_mace
 ID=c_troll_w_axe
-ID=c_elem_air
+ID=c_air_elemental
 ID=c_snake_giant
 ID=c_gazer
 

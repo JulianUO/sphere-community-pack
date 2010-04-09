@@ -226,7 +226,7 @@ QUEST_15_TEXTUNCOMPLETELOCALIZED 1073584
 QUEST_15_TEXTREFUSELOCALIZED 1073580
 QUEST_15_OBJECTIVEAMOUNT 1
 QUEST_15_OBJECTIVE1_TYPE 2
-QUEST_15_OBJECTIVE1 12 c_elem_earth
+QUEST_15_OBJECTIVE1 12 c_earth_elemental
 QUEST_15_PRIZES 1
 QUEST_15_PRIZETYPE1 1 //item
 QUEST_15_PRIZEID1 tm_questbagtreasure A bag of treasure.
@@ -468,7 +468,7 @@ QUEST_32_TEXTUNCOMPLETELOCALIZED 1073740
 QUEST_32_TEXTREFUSELOCALIZED 1073734
 QUEST_32_OBJECTIVEAMOUNT 1
 QUEST_32_OBJECTIVE1_TYPE 2
-QUEST_32_OBJECTIVE1 8 c_m_efreet
+QUEST_32_OBJECTIVE1 8 c_efreet
 QUEST_32_PRIZES 1
 QUEST_32_PRIZETYPE1 1 //item
 QUEST_32_PRIZEID1 tm_questlargebagtreasure A large bag of treasure.
@@ -856,11 +856,11 @@ QUEST_59_TEXTUNCOMPLETELOCALIZED 1073599
 QUEST_59_TEXTREFUSELOCALIZED 1073580
 QUEST_59_OBJECTIVEAMOUNT 3
 QUEST_59_OBJECTIVE1_TYPE 2
-QUEST_59_OBJECTIVE1 4 c_elem_fire
+QUEST_59_OBJECTIVE1 4 c_fire_elemental
 QUEST_59_OBJECTIVE2_TYPE 2
-QUEST_59_OBJECTIVE2 4 c_elem_water
+QUEST_59_OBJECTIVE2 4 c_water_elemental
 QUEST_59_OBJECTIVE3_TYPE 2
-QUEST_59_OBJECTIVE3 4 c_elem_earth
+QUEST_59_OBJECTIVE3 4 c_earth_elemental
 QUEST_59_PRIZES 1
 QUEST_59_PRIZETYPE1 1 //item
 QUEST_59_PRIZEID1 tm_questbagtreasure A bag of treasure.
@@ -876,7 +876,7 @@ QUEST_60_OBJECTIVEAMOUNT 2
 QUEST_60_OBJECTIVE1_TYPE 2
 QUEST_60_OBJECTIVE1 6 c_orc_bomber
 QUEST_60_OBJECTIVE2_TYPE 2
-QUEST_60_OBJECTIVE2 4 c_m_orc_captain
+QUEST_60_OBJECTIVE2 4 c_orc_captain
 QUEST_60_PRIZES 1
 QUEST_60_PRIZETYPE1 1 //item
 QUEST_60_PRIZEID1 tm_questbagtreasure A bag of treasure.
@@ -1014,7 +1014,7 @@ QUEST_69_TEXTREFUSELOCALIZED 1074745
 QUEST_69_OBJECTIVEAMOUNT 2
 QUEST_69_OBJECTIVE1_TYPE 2
 QUEST_69_OBJECTIVE1_LOCATION Palace of Paroxysmus
-QUEST_69_OBJECTIVE1 3 c_m_elem_poison
+QUEST_69_OBJECTIVE1 3 c_poison_elemental
 QUEST_69_OBJECTIVE2_TYPE 2
 QUEST_69_OBJECTIVE2_LOCATION Palace of Paroxysmus
 QUEST_69_OBJECTIVE2 6 c_acid_elemental
@@ -1511,7 +1511,7 @@ QUEST_103_TEXTUNCOMPLETELOCALIZED 1073743
 QUEST_103_TEXTREFUSELOCALIZED 1073733
 QUEST_103_OBJECTIVEAMOUNT 1
 QUEST_103_OBJECTIVE1_TYPE 2
-QUEST_103_OBJECTIVE1 15 c_m_elem_ice
+QUEST_103_OBJECTIVE1 15 c_ice_elemental
 QUEST_103_PRIZES 1
 QUEST_103_PRIZETYPE1 1 //item
 QUEST_103_PRIZEID1 tm_questlargebagtreasure A large bag of treasure.
@@ -1896,7 +1896,7 @@ QUEST_500_PRIZES 1
 QUEST_500_PRIZETYPE1 1 //item
 QUEST_500_PRIZEID1 tm_questbagtreasure A bag of treasure.
 
-//QUEST_501_NAMELOCALIZED Flour Power 
+//QUEST_501_NAMELOCALIZED Flour Power
 //QUEST_501_TEXTLOCALIZED How am I expected to bake when I don't have my flour yet?
 //QUEST_501_TEXTCOMPLETELOCALIZED Wow thank you, now perhaps I can get back to mining.
 //QUEST_501_TEXTUNCOMPLETELOCALIZED Kill the golden elementals for me
@@ -1908,7 +1908,7 @@ QUEST_500_PRIZEID1 tm_questbagtreasure A bag of treasure.
 //QUEST_501_PRIZETYPE1 1 //item
 //QUEST_501_PRIZEID1 tm_questbagtreasure A bag of treasure.
 
-QUEST_501_NAMELOCALIZED Flour Power 
+QUEST_501_NAMELOCALIZED Flour Power
 QUEST_501_TEXTLOCALIZED How am I expected to bake when I don't have my flour yet?
 QUEST_501_TEXTCOMPLETELOCALIZED Wow thank you, now perhaps I can get back to mining.
 QUEST_501_TEXTUNCOMPLETELOCALIZED Kill the golden elementals for me
@@ -1929,7 +1929,7 @@ QUEST_502_TEXTUNCOMPLETELOCALIZED I need wheat to make the flour
 QUEST_502_TEXTREFUSELOCALIZED Hmph!
 QUEST_502_OBJECTIVEAMOUNT 1
 QUEST_502_OBJECTIVE1_TYPE 3
-QUEST_502_OBJECTIVE1 1 i_millers_message_quest502 
+QUEST_502_OBJECTIVE1 1 i_millers_message_quest502
 QUEST_502_OBJECTIVE1_RECEIVER Olphin the Farmer
 QUEST_502_PRIZES 1
 QUEST_502_PRIZETYPE1 2 //nothing
@@ -1944,7 +1944,7 @@ QUEST_503_TEXTUNCOMPLETELOCALIZED I can't leave here, please take the wheat
 QUEST_503_TEXTREFUSELOCALIZED Hmph!
 QUEST_503_OBJECTIVEAMOUNT 1
 QUEST_503_OBJECTIVE1_TYPE 3
-QUEST_503_OBJECTIVE1 10 i_wheat_sheaf_quest503 
+QUEST_503_OBJECTIVE1 10 i_wheat_sheaf_quest503
 QUEST_503_OBJECTIVE1_RECEIVER Alatariel the Miller
 QUEST_503_PRIZES 1
 QUEST_503_PRIZETYPE1 2 //nothing
@@ -2037,7 +2037,7 @@ QUEST_508_PRIZETYPE1 3 //function
 QUEST_508_PRIZEID1 ilshkey_check=080 The key to Valor.
 
 QUEST_509_NAMELOCALIZED A Test of Virtue (Honor)
-QUEST_509_TEXTLOCALIZED The honor of our dear Lord British, may he rest in peice, is being called into question by Lord Garrison, a land owner from Minoc way.... Lord British should not be dishonored this way, visit this Garrison and make an example of him, so that all may see what happens to those who speak ill of the dead. 
+QUEST_509_TEXTLOCALIZED The honor of our dear Lord British, may he rest in peice, is being called into question by Lord Garrison, a land owner from Minoc way.... Lord British should not be dishonored this way, visit this Garrison and make an example of him, so that all may see what happens to those who speak ill of the dead.
 QUEST_509_TEXTCOMPLETELOCALIZED You have done well, Lord British's honor is saved
 QUEST_509_TEXTUNCOMPLETELOCALIZED I want his head to place on a pike!
 QUEST_509_TEXTREFUSELOCALIZED You will not defend the Honor of your dead king?
@@ -2050,7 +2050,7 @@ QUEST_509_PRIZEID1 ilshkey_check=004 The key to Honor.
 
 //QUEST_510_NAMELOCALIZED A Test of Virtue (Honesty)
 //QUEST_510_TEXTLOCALIZED I found this unusual item, I don't know who it belongs to, do you think you could do a little investigative work and return it to it's rightful owner?
-//QUEST_510_TEXTCOMPLETELOCALIZED 
+//QUEST_510_TEXTCOMPLETELOCALIZED
 //QUEST_510_TEXTUNCOMPLETELOCALIZED I don't know who's it is... Perhaps it has some marking I cannot see?
 //QUEST_510_TEXTREFUSELOCALIZED And yet you have such an Honest face.
 //QUEST_510_OBJECTIVEAMOUNT 1

@@ -174,8 +174,7 @@ DESCRIPTION=Dragon
 DEFNAME=i_pet_elem_earth
 NAME=Earth Elemental
 TYPE=T_FIGURINE
-TDATA3=c_elem_earth
-
+TDATA3=c_earth_elemental
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Earth Elemental
@@ -376,8 +375,7 @@ DESCRIPTION=Zombie
 DEFNAME=i_pet_elem_air
 NAME=Air Elemental
 TYPE=T_FIGURINE
-TDATA3=c_elem_air
-
+TDATA3=c_air_elemental
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Air Elemental
@@ -437,8 +435,7 @@ DESCRIPTION=Eagle
 DEFNAME=i_pet_elem_fire
 NAME=Fire Elemental
 TYPE=T_FIGURINE
-TDATA3=c_elem_fire
-
+TDATA3=c_fire_elemental
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Fire Elemental
@@ -650,8 +647,7 @@ DESCRIPTION=Headless
 DEFNAME=i_pet_elem_water
 NAME=Water Elemental
 TYPE=T_FIGURINE
-TDATA3=c_elem_water
-
+TDATA3=c_water_elemental
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Water Elemental
