@@ -597,41 +597,6 @@ ON=@Create
 	KARMA={-3000 -3999}
 
 
-[CHARDEF 01040]
-DEFNAME=c_m_ogre_lord
-NAME=Ogre Lord
-ID=c_OGRE
-SOUND=snd_MONSTER_OGRE1
-ICON=i_pet_OGRE_2
-DAM=10,42
-ARMOR=25
-RESOURCES=10 i_ribs_raw
-//ALIGNMENT=EVIL
-CAN=MT_WALK
-FOODTYPE=15 t_meat_raw
-//SHELTER==r_forests,r_mountains
-DESIRES=C_OGRE
-AVERSIONS=r_civilization
-CATEGORY=Monsters
-SUBSECTION=Ettins, Ogres, Trolls, Cyclops, and Titans
-DESCRIPTION=Ogre Lord
-
-ON=@Create
-	STR={765 945}
-	DEX={66 75}
-	INT={46 70}
-	PARRYING={75.0 85.0}
-	MAGICRESISTANCE={65.0 80.0}
-	TACTICS={90.0 100.0}
-	WRESTLING={90.0 100.0}
-	NPC=BRAIN_MONSTER
-	FAME={100 2000}
-	KARMA={-4000 -4999}
-
-ON=@NPCRestock
-	ITEM=loot_OGRE_LORD
-
-
 [CHARDEF 01042]
 DEFNAME=c_m_phoenix
 NAME=Phoenix
@@ -901,42 +866,6 @@ ON=@Create
 
 ON=@NPCRestock
 	ITEM=loot_SWAMP_TENTACLE
-
-
-[CHARDEF 01054]
-DEFNAME=c_m_frost_troll
-NAME=Frost Troll
-ID=c_TROLL
-SOUND=snd_MONSTER_TROLL1
-ICON=i_pet_TITAN
-DAM=9,25
-ARMOR=25
-RESOURCES=10 i_ribs_raw
-CAN=MT_WALK
-FOODTYPE=15 t_meat_raw
-//SHELTER==r_forests,r_mountains
-DESIRES=i_gold
-AVERSIONS=r_civilization
-CATEGORY=Monsters
-SUBSECTION=Ettins, Ogres, Trolls, Cyclops, and Titans
-DESCRIPTION=Frost Troll
-
-ON=@Create
-	COLOR=color_snow
-	STR={175 205}
-	DEX={46 65}
-	INT={46 70}
-	//ALIGNMENT=EVIL
-	PARRYING={65.0 80.0}
-	MAGICRESISTANCE={65.0 80.0}
-	TACTICS={80.0 100.0}
-	WRESTLING={80.0 100.0}
-	NPC=BRAIN_MONSTER
-	FAME={100 2000}
-	KARMA={-2000 -2999}
-
-ON=@NPCRestock
-	ITEM=loot_FROST_TROLL
 
 
 [CHARDEF 01063]

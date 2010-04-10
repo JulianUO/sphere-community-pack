@@ -15,74 +15,6 @@
 // Make sure all humans have proper speech blocks.
 VERSION=0.56
 
-[CHARDEF 01]
-DEFNAME=c_ogre
-NAME=#NAMES_OGRE the Ogre
-SOUND=snd_MONSTER_OGRE1
-ICON=i_pet_OGRE
-ANIM=078c7f
-CAN=MT_WALK|MT_USEHANDS
-DAM=5,15
-ARMOR=16
-RESOURCES=6 i_ribs_raw
-FOODTYPE=15 t_meat_raw
-DESIRES=c_ogre, t_arock
-//ALIGNMENT=EVIL
-//SHELTER=r_forests,r_mountains
-AVERSIONS=t_TRAP,r_civilization
-CATEGORY=Monsters
-SUBSECTION=Ettins, Ogres, Trolls, Cyclops, and Titans
-DESCRIPTION=Ogre
-
-ON=@Create	// stuff that happens to the created instance of a char.
-	NPC=brain_monster
-	STR={165 195}
-	DEX={46 65}
-	INT={46 70}
-	PARRYING={45.0 55.0}
-	MAGICRESISTANCE={45.0 60.0}
-	TACTICS={60.0 70.0}
-	WRESTLING={70.0 80.0}
-	FAME=4500
-	KARMA={-1000 -1999}
-
-ON=@NPCRestock
-	ITEM=loot_OGRE
-
-[CHARDEF 02]
-// Ettin with no stone axe.
-DEFNAME=c_ettin
-NAME=Ettin
-SOUND=snd_MONSTER_ETTIN1
-ICON=i_pet_ETTIN
-ANIM=078c7f
-CAN=MT_WALK|MT_USEHANDS
-DAM=4,20
-ARMOR=19
-RESOURCES=8 i_ribs_raw
-FOODTYPE=15 t_meat_raw
-DESIRES=c_ettin,c_ettin_w_axe,t_arock
-//SHELTER=r_forests,r_mountains
-AVERSIONS=r_civilization
-CATEGORY=Monsters
-SUBSECTION=Ettins, Ogres, Trolls, Cyclops, and Titans
-DESCRIPTION=Ettin
-
-ON=@Create
-	NPC=brain_monster
-	FAME=5000
-	KARMA={-2000 -2999}
-	STR={135 165}
-	DEX={56 75}
-	INT={31 55}
-	PARRYING={50.0 60.0}
-	MAGICRESISTANCE={40.0 55.0}
-	TACTICS={50.0 70.0}
-	WRESTLING={50.0 60.0}
-	//ALIGNMENT=EVIL
-
-ON=@NPCRestock
-	ITEM=loot_ETTIN
 
 [CHARDEF 05]
 DEFNAME=c_eagle
@@ -886,41 +818,6 @@ ON=@Create
 	FAME=20
 	KARMA={-99 -199}
 
-[CHARDEF 035]
-DEFNAME=c_troll_w_axe
-NAME=Troll
-SOUND=snd_MONSTER_TROLL1
-ICON=i_pet_TROLL
-ANIM=078c7f
-DAM=10,23
-ARMOR=20
-RESOURCES=10 i_ribs_raw
-CAN=MT_WALK|MT_USEHANDS
-FOODTYPE=15 t_meat_raw
-//SHELTER=r_forests,r_mountains
-DESIRES=i_gold
-AVERSIONS=r_civilization
-CATEGORY=Monsters
-SUBSECTION=Ettins, Ogres, Trolls, Cyclops, and Titans
-DESCRIPTION=Troll (Sword)
-
-ON=@Create
-	NPC=brain_monster
-	STR={175 205}
-	DEX={46 65}
-	INT={46 70}
-	SWORDSMANSHIP={50.0 70.0}
-	PARRYING={45.0 60.0}
-	MAGICRESISTANCE={45.0 60.0}
-	TACTICS={50.0 70.0}
-	WRESTLING={50.0 70.0}
-	FAME={100 5000}
-	KARMA={-3000 -3999}
-	//ALIGNMENT=EVIL
-
-ON=@NPCRestock
-	ITEM=i_sword_broad
-	ITEM=loot_TROLL
 
 [CHARDEF 036]
 DEFNAME=c_troll
