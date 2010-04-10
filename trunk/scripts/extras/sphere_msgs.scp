@@ -41,7 +41,7 @@ food_full_4			"@,,2 500871"	// You feel quite full after consuming the food.
 food_full_5			"@,,2 500872"	// You are nearly stuffed, but manage to eat the food.
 hiding_revealed			"@,,2 500814"	// You have been revealed!
 itemuse_dye_reach		"@,,2 1042593"	// That is not in your backpack.
-itemuse_weapon_promt	"@,,2 1010018"	//What do you want to use this on?
+itemuse_weapon_promt		"@,,2 1010018"	//What do you want to use this on?
 lumberjacking_reach		"@,,2 500446"	// That is too far away.
 map_dir_0			"@,,2 1075389"	// North
 map_dir_1			"@,,2 1075388"	// North East
@@ -55,7 +55,9 @@ mining_2			"@,,2 501866"	// There is no metal here to mine.
 mining_3			"@,,2 501866"	// There is no metal here to mine.
 mining_4			"@,,2 501862"	// You can't mine there.
 mining_forge			"@,,2 500420"	// You are not near a forge.
+mining_nothing			"@,,2 501989"	// You burn away the impurities but are left with no useable metal.
 mining_reach			"@,,2 500446"	// That is too far away.
+mining_skill			"@,,2 501986"	// You have no idea how to smelt this strange ore!
 msg_fatigue			"@,,2 500110"	// You are too fatigued to move.
 msg_frozen			"@,,2 500111"	// You are frozen and cannot move.
 msg_forgiven			"@,,2 503267"	// You've been unjailed!
@@ -80,7 +82,7 @@ taming_remember			"@,,2 502799"	// It seems to accept you as master.
 taming_success			"@,,2 502799"	// It seems to accept you as master.
 taming_tame			"@,,2 502467"	// That animal looks tame already.
 taming_tamed			"@,,2 502469"	// That being cannot be tamed.
-target_cancel_1		""	// Targeting cancelled.
+target_cancel_1			""		// Targeting cancelled.
 skillwait_3			"@,,2 1045157"	// You must wait to perform another action.
 spell_alcohol_hic		"@,,2 500849"	// *hic*
 spell_gate_am			"@,,2 501025"	// Something is blocking the location.
@@ -429,8 +431,6 @@ server_worldsave		""
 //mining_ingots		"Use a smith hammer to make items from ingots."
 //mining_los		"You have no line of sight to that location"
 //mining_not_ore		"You need to target the ore you want to smelt"
-//mining_nothing		"You smelt the %s but are left with nothing useful."
-//mining_skill		"You lack the skill to smelt %s"
 //mining_tool		"You must use a shovel or pick."
 //mining_smelt		"smelt"
 //msg_acc_badpass		"Bad password for this account."
