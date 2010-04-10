@@ -330,7 +330,7 @@ ITEM=i_reag_mandrake_root,{6 10}
 
 [TEMPLATE loot_orc_bomber_luck]
 CATEGORY=Item Templates
-SUBSECTION=Orcs Loot Luck
+SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Orc Bomber
 // Bola Ball
 
@@ -349,7 +349,7 @@ ITEM=random_scroll_medium,{1 2}
 
 [TEMPLATE loot_orc_brute_luck]
 CATEGORY=Item Templates
-SUBSECTION=Orcs Loot Luck
+SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Orc Brute
 // Evil Orc Helm
 // Mask of Orcish Kin
@@ -392,7 +392,7 @@ ITEM=i_bow
 
 [TEMPLATE loot_orc_scout_luck]
 CATEGORY=Item Templates
-SUBSECTION=Orcs Loot Luck
+SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Orc Scout
 // An Orcish Bow
 
@@ -406,7 +406,7 @@ ITEM=i_ringmail_tunic
 
 [TEMPLATE loot_orc_lord_luck]
 CATEGORY=Item Templates
-SUBSECTION=Orcs Loot Luck
+SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Orc Lord
 // Bola Ball
 // Evil Orc Helm
@@ -424,7 +424,7 @@ ITEM=random_reagent,6
 
 [TEMPLATE loot_orc_mage_luck]
 CATEGORY=Item Templates
-SUBSECTION=Orcs Loot Luck
+SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Orc Mage
 // Mask of Orcish Kin
 // Treasure Map Level #1

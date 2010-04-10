@@ -1,0 +1,331 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[CHARDEF 087]
+DEFNAME=c_arctic_ogre_lord
+NAME=Arctic Ogre Lord
+SOUND=snd_MONSTER_OGRE1
+ICON=i_pet_OGRE
+ANIM=078c7f
+CAN=MT_WALK|MT_USEHANDS
+DAM=82,111
+TAG.DamCold=70
+TAG.Luck.Loot=loot_arctic_ogre_lord_luck
+TAG.Slayer=SLAYER_OGRE
+TAG.Barding.Diff=88.8
+ARMOR={45 55}
+RESOURCES=2 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+CATEGORY=Monsters
+SUBSECTION=Ettins, Ogres & Trolls
+DESCRIPTION=Arctic Ogre Lord
+
+ON=@Create
+    NPC=brain_monster
+    ResPoison={100 100}
+    ResFire={-10 0}
+    ResEnergy={40 50}
+    ResCold={60 70}
+    FAME=15000
+    KARMA=-15000
+    //ALIGNMENT=EVIL
+    STR={767 945}
+    DEX={66 75}
+    INT={46 70}
+    MAXHITS={476 552}
+    MAGICRESISTANCE={125.1 140.0}
+    TACTICS={90.1 100.0}
+    WRESTLING={90.1 100.0}
+
+ON=@NPCRestock
+ITEM=loot_arctic_ogre_lord
+
+
+[CHARDEF 002]
+DEFNAME=c_ettin
+NAME=Ettin
+SOUND=snd_MONSTER_OGRE1
+ICON=i_pet_OGRE
+ANIM=078c7f
+CAN=MT_WALK|MT_USEHANDS
+DAM=13,35
+TAG.Luck.Loot=loot_ettin_luck
+TAG.Barding.Diff=47.3
+ARMOR={35 40}
+RESOURCES=4 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+CATEGORY=Monsters
+SUBSECTION=Ettins, Ogres & Trolls
+DESCRIPTION=Ettin
+
+ON=@Create
+    NPC=brain_monster
+    ResPoison={15 25}
+    ResFire={15 25}
+    ResEnergy={15 25}
+    ResCold={40 50}
+    FAME=3000
+    KARMA=-3000
+    //ALIGNMENT=EVIL
+    STR={136 165}
+    DEX={56 75}
+    INT={31 55}
+    MAXHITS={82 99}
+    MAGICRESISTANCE={40.1 55.0}
+    TACTICS={50.1 70.0}
+    WRESTLING={50.1 60.0}
+
+ON=@NPCRestock
+ITEM=loot_ettin
+
+
+[CHARDEF 037]
+DEFNAME=c_frost_troll
+NAME=Frost Troll
+SOUND=snd_MONSTER_TROLL1
+ICON=i_pet_TROLL
+ANIM=078c7f
+CAN=MT_WALK|MT_USEHANDS
+DAM=34,49
+TAG.DamCold=25
+TAG.Slayer=SLAYER_TROLL
+TAG.Luck.Loot=loot_frost_troll_luck
+TAG.Barding.Diff=67.7
+ARMOR={45 55}
+RESOURCES=2 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+CATEGORY=Monsters
+SUBSECTION=Ettins, Ogres & Trolls
+DESCRIPTION=Frost Troll
+
+ON=@Create
+    NPC=brain_monster
+    ResPoison={5 10}
+    ResEnergy={5 10}
+    ResCold={40 50}
+    FAME=4000
+    KARMA=-4000
+    //ALIGNMENT=EVIL
+    STR={227 265}
+    DEX={66 85}
+    INT={46 70}
+    MAXHITS={140 156}
+    MAGICRESISTANCE={65.1 80.0}
+    TACTICS={80.1 100.0}
+    WRESTLING={80.1 100.0}
+
+ON=@NPCRestock
+ITEM=loot_frost_troll
+
+
+[CHARDEF 001]
+DEFNAME=c_ogre
+NAME=Ogre
+SOUND=snd_MONSTER_OGRE1
+ICON=i_pet_OGRE
+CAN=MT_WALK|MT_USEHANDS
+DAM=18,22
+TAG.Slayer=SLAYER_OGRE
+TAG.Luck.Loot=loot_ogre_luck
+TAG.Barding.Diff=48.8
+ARMOR={30 35}
+RESOURCES=2 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+CATEGORY=Monsters
+SUBSECTION=Ettins, Ogres & Trolls
+DESCRIPTION=Ogre
+
+ON=@Create
+    NPC=brain_monster
+    ResFire={15 25}
+    ResPoison={15 25}
+    ResEnergy={25 25}
+    ResCold={15 25}
+    FAME=4000
+    KARMA=-4000
+    //ALIGNMENT=EVIL
+    STR={166 195}
+    DEX={46 65}
+    INT={46 70}
+    MAXHITS={100 117}
+    MAGICRESISTANCE={55.1 70.0}
+    TACTICS={60.1 70.0}
+    WRESTLING={70.1 80.0}
+
+ON=@NPCRestock
+ITEM=loot_ogre
+
+
+[CHARDEF 053]
+DEFNAME=c_ogre_lord
+NAME=Ogre Lord
+SOUND=snd_MONSTER_OGRE1
+ICON=i_pet_OGRE
+CAN=MT_WALK|MT_USEHANDS
+DAM=84,111
+TAG.Slayer=SLAYER_OGRE
+TAG.Luck.Loot=loot_ogre_lord_luck
+TAG.Barding.Diff=103.7
+ARMOR={45 55}
+RESOURCES=2 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+CATEGORY=Monsters
+SUBSECTION=Ettins, Ogres & Trolls
+DESCRIPTION=Ogre Lord
+
+ON=@Create
+    NPC=brain_monster
+    ResFire={30 40}
+    ResPoison={40 50}
+    ResEnergy={40 50}
+    ResCold={30 40}
+    FAME=15000
+    KARMA=-15000
+    //ALIGNMENT=EVIL
+    STR={767 945}
+    DEX={66 75}
+    INT={46 70}
+    MAXHITS={767 945}
+    MAGICRESISTANCE={125.1 140.0}
+    TACTICS={90.1 100.0}
+    WRESTLING={90.1 100.0}
+
+ON=@NPCRestock
+ITEM=loot_ogre_lord
+
+
+[CHARDEF 035]
+DEFNAME=c_troll
+NAME=Troll
+SOUND=snd_MONSTER_TROLL1
+ICON=i_pet_TROLL
+ANIM=078c7f
+CAN=MT_WALK|MT_USEHANDS
+DAM=16,28
+TAG.Slayer=SLAYER_TROLL
+TAG.Luck.Loot=loot_troll_luck
+TAG.Barding.Diff=54.5
+ARMOR={35 45}
+RESOURCES=2 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+CATEGORY=Monsters
+SUBSECTION=Ettins, Ogres & Trolls
+DESCRIPTION=Troll
+
+ON=@Create
+    NPC=brain_monster
+    ResFire={25 35}
+    ResPoison={5 15}
+    ResEnergy={5 15}
+    ResCold={15 25}
+    FAME=3500
+    KARMA=-3500
+    //ALIGNMENT=EVIL
+    STR={176 205}
+    DEX={46 65}
+    INT={46 70}
+    MAXHITS={106 123}
+    MAGICRESISTANCE={45.1 60.0}
+    TACTICS={50.1 70.0}
+    WRESTLING={50.1 70.0}
+
+ON=@NPCRestock
+ITEM=loot_troll
+
+
+[TEMPLATE loot_arctic_ogre_lord]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Arctic Ogre Lord
+CONTAINER=i_backpack
+ITEM=i_gold,{750 950}
+ITEM=i_club
+ITEM=random_potion,{1 2}
+ITEM=random_wand,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_arctic_ogre_lord_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Arctic Ogre Lord
+// Treasure Map Level #3
+
+[TEMPLATE loot_ettin]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ettin
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=random_potion,1
+
+[TEMPLATE loot_ettin_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ettin
+// Treasure Map Level #1
+
+[TEMPLATE loot_frost_troll]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Frost Troll
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+ITEM=random_jewelry
+ITEM=random_weapon
+
+[TEMPLATE loot_frost_troll_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Frost Troll
+// Treasure Map Level #1
+
+[TEMPLATE loot_ogre]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ogre
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+ITEM=i_club
+
+[TEMPLATE loot_ogre_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ogre
+// Treasure Map Level #1
+
+[TEMPLATE loot_ogre_lord]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ogre Lord
+CONTAINER=i_backpack
+ITEM=i_gold,{600 650}
+ITEM=i_club
+ITEM=random_potion,{1 2}
+ITEM=random_wand,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_ogre_lord_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ogre Lord
+// Treasure Map Level #3
+
+[TEMPLATE loot_troll]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Troll
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+
+[TEMPLATE loot_troll_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Troll
+// Treasure Map Level #1
+
+[EOF]

@@ -1,0 +1,221 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[CHARDEF 098]
+Name=Terathan Avenger
+DEFNAME=c_terathan_avenger
+SOUND=snd_MONSTER_TERA_DRONE1
+ICON=i_pet_terathan_drone
+CAN=MT_WALK|MT_USEHANDS
+DAM=59,77
+TAG.DamPoison=50
+TAG.Luck.Loot=loot_terathan_avenger_luck
+TAG.Slayer=SLAYER_TERATHAN
+TAG.Barding.Diff=91.5
+ARMOR={40 50}
+RESOURCES=2 i_ribs_raw
+FOODTYPE=20 t_meat_raw
+CATEGORY=Monsters
+SUBSECTION=Terathans
+DESCRIPTION=Terathan Avenger
+
+on=@create
+NPC=brain_monster
+    ResPoison={90 100}
+    ResFire={30 40}
+    ResEnergy={35 45}
+    ResCold={35 45}
+    FAME=15000
+    KARMA=-15000
+    //ALIGNMENT=EVIL
+    STR={467 645}
+    DEX={77 95}
+    INT={126 150}
+    MAXHITS={296 372}
+    MAGICRESISTANCE={65.1 80.0}
+    TACTICS={90.1 100.0}
+    WRESTLING={90.1 100.0}
+    MAGERY={70.3 100.0}
+    EVALUATINGINT={70.3 100.0}
+
+ON=@NPCRestock
+ITEM=loot_terathan_avenger
+
+
+[CHARDEF 047]
+Name=Terathan Drone
+DEFNAME=c_terathan_drone
+CAN=MT_WALK|MT_USEHANDS
+SOUND=snd_MONSTER_TERA_DRONE1
+ICON=i_pet_terathan_drone
+DAM=9,16
+TAG.Slayer=SLAYER_TERATHAN
+TAG.Barding.Diff=36.9
+ARMOR={20 25}
+RESOURCES=4 i_ribs_raw
+FOODTYPE=20 t_meat_raw
+CATEGORY=Monsters
+SUBSECTION=Terathans
+DESCRIPTION=Terathan Drone
+
+on=@create
+NPC=brain_monster
+    ResPoison={30 40}
+    ResFire={10 20}
+    ResEnergy={15 25}
+    ResCold={15 25}
+    FAME=2000
+    KARMA=-2000
+    //ALIGNMENT=EVIL
+    STR={36 65}
+    DEX={96 145}
+    INT={21 45}
+    MAXHITS={22 39}
+    MAGICRESISTANCE={30.1 45.0}
+    TACTICS={30.1 50.0}
+    WRESTLING={40.1 50.0}
+
+ON=@NPCRestock
+ITEM=loot_terathan_drone
+
+
+[CHARDEF 048]
+Name=Terathan Matriarch
+DEFNAME=c_terathan_matriarch
+CAN=MT_WALK|MT_USEHANDS
+SOUND=snd_MONSTER_TERA_MATRIARCH1
+ICON=i_pet_terathan_queen
+DAM=26,47
+TAG.Luck.Loot=loot_terathan_matriarch_luck
+TAG.Slayer=SLAYER_TERATHAN
+TAG.Barding.Diff=91.2
+ARMOR={45 55}
+FOODTYPE=20 t_meat_raw
+CATEGORY=Monsters
+SUBSECTION=Terathans
+DESCRIPTION=Terathan Matriarch
+
+on=@create
+NPC=brain_monster
+    ResPoison={40 50}
+    ResFire={30 40}
+    ResEnergy={35 45}
+    ResCold={35 45}
+    FAME=10000
+    KARMA=-10000
+    //ALIGNMENT=EVIL
+    STR={316 405}
+    DEX={96 115}
+    INT={366 455}
+    MAXHITS={190 243}
+    MAGICRESISTANCE={90.1 100.0}
+    TACTICS={50.1 70.0}
+    WRESTLING={60.1 80.0}
+
+ON=@NPCRestock
+ITEM=loot_terathan_matriarch
+
+
+[CHARDEF 046]
+Name=Terathan Warrior
+DEFNAME=c_terathan_warrior
+CAN=MT_WALK|MT_USEHANDS
+SOUND=snd_MONSTER_TERA_WARRIOR1
+ICON=i_pet_terathan_war
+DAM=16,38
+TAG.Luck.Loot=loot_terathan_warrior_luck
+TAG.Slayer=SLAYER_TERATHAN
+TAG.Barding.Diff=70.6
+RESOURCES=4 i_ribs_raw
+ARMOR={30 35}
+FOODTYPE=20 t_meat_raw
+CATEGORY=Monsters
+SUBSECTION=Terathans
+DESCRIPTION=Terathan Warrior
+
+
+on=@create
+NPC=brain_monster
+    ResPoison={30 40}
+    ResFire={20 30}
+    ResEnergy={25 35}
+    ResCold={25 35}
+    FAME=4000
+    KARMA=-4000
+    //ALIGNMENT=EVIL
+    STR={166 215}
+    DEX={96 145}
+    INT={41 65}
+    MAXHITS={100 129}
+    MAGICRESISTANCE={60.1 75.0}
+    TACTICS={80.1 100.0}
+    WRESTLING={80.1 90.0}
+
+ON=@NPCRestock
+ITEM=loot_terathan_warrior
+
+
+
+[TEMPLATE loot_terathan_avenger]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Terathan Avenger
+CONTAINER=i_backpack
+ITEM=i_gold,{550 650}
+ITEM=random_jewelry,{1 2}
+ITEM=random_potion,{1 2}
+ITEM=random_wand,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_terathan_avenger_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Terathan Avenger
+// Treasure Map Level #3
+
+[TEMPLATE loot_terathan_drone]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Terathan Drone
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=i_reag_spider_silk,2
+
+[TEMPLATE loot_terathan_matriarch]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Terathan Matriarch
+CONTAINER=i_backpack
+ITEM=i_gold,{550 650}
+ITEM=i_reag_spider_silk,5
+ITEM=random_reagent_necro,1
+ITEM=random_potion,1
+ITEM=random_scroll_medium,2
+
+[TEMPLATE loot_terathan_matriarch_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Terathan Matriarch
+// Treasure Map Level #4
+
+[TEMPLATE loot_terathan_warrior]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Terathan Warrior
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+
+[TEMPLATE loot_terathan_warrior_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Terathan Warrior
+// Treasure Map Level #1
+// Fragrant Seed
+// Peculiar Seed
+
+[EOF]
