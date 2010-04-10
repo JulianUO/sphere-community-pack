@@ -188,6 +188,18 @@ elif <args>==sm_inscription
 endif
 return 0
 
+// Fishing coast lines
+on=@RegionResourceFound
+if <src.action> == skill_fishing
+	if <def.scp.Fishing_CoastLines> == 1
+		if !<src.isneartype t_water <def.scp.Fishing_CoastLine_Distance>>
+		local.newbit = <serv.regiontype.r_water.resources.<eval <serv.regiontype.r_water.calcmemberindex <src.uid>>+1>.key>
+		argo.more1 = <local.newbit>
+		argo.amount = <r<serv.regionresource.<argo.more1>.reapamount>>
+		endif
+	endif
+endif
+
 // Chivalry Tithing Points
 on=@spellselect
 if (<argn1> > 199) && (<argn1> < 211)

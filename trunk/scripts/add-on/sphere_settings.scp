@@ -83,6 +83,15 @@ scp.Mining_AllowSand=1
 // From 0 to 100%.
 scp.Mining_SmeltingPercent=75
 
+// Fishing makes a difference between coast lines and deep ocean.
+// Will use r_water as deep ocean. And r_default_water as coast lines.
+// <boolean> (1 if enable, 0 if not). Default = 1
+scp.Fishing_CoastLines=1
+
+// Distance between coast and deep ocean. Start counting from the last static item.
+// Default = 15.
+scp.Fishing_CoastLine_Distance=15
+
 // Allow the new SOS fishing treasure system?
 // <boolean> (1 if enable, 0 if not). Default = 1
 scp.Fishing_SOSTreasure=1
