@@ -192,7 +192,7 @@ return 0
 on=@RegionResourceFound
 if <src.action> == skill_fishing
 	if <def.scp.Fishing_CoastLines> == 1
-		if !<src.isneartype t_water <def.scp.Fishing_CoastLine_Distance>>
+		if <serv.map(<src.targp>).type> == t_water
 		local.newbit = <serv.regiontype.r_water.resources.<eval <serv.regiontype.r_water.calcmemberindex <src.uid>>+1>.key>
 		argo.more1 = <local.newbit>
 		argo.amount = <r<serv.regionresource.<argo.more1>.reapamount>>

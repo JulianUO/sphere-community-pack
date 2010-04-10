@@ -18,7 +18,7 @@ VERSION=0.56b
 DEFNAME=SKILL_MINING
 KEY=Mining
 TITLE=Miner
-PROMPT_MSG=Where would you like to mine?
+PROMPT_MSG=@,,2 503033
 DELAY=1.0
 STAT_STR=85
 STAT_INT=30
@@ -31,10 +31,8 @@ ADV_RATE=2.5,50.0,200.0
 VALUES=1,10,80
 
 ON=@Fail
-	SRC.SYSMESSAGE You loosen some rocks but fail to find any useable ore.
+SRC.SYSMESSAGE <def.scp.mining_fail>
 
-ON=@Abort
-	SRC.SYSMESSAGE You decide not to mine for now.
 
 // f_FindResourceWorldgem $targp
 [function f_FindResourceWorldgem]

@@ -88,10 +88,6 @@ scp.Mining_SmeltingPercent=75
 // <boolean> (1 if enable, 0 if not). Default = 1
 scp.Fishing_CoastLines=1
 
-// Distance between coast and deep ocean. Start counting from the last static item.
-// Default = 15.
-scp.Fishing_CoastLine_Distance=15
-
 // Allow the new SOS fishing treasure system?
 // <boolean> (1 if enable, 0 if not). Default = 1
 scp.Fishing_SOSTreasure=1

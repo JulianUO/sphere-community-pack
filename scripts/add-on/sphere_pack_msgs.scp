@@ -131,18 +131,19 @@ scp.jail_cannotmyself		"@,,2 503315"	// Congrats, you've successfully jailed you
 scp.jail_jailed			"@,,2 503268"	// You've been jailed!
 scp.jail_unjailed		"@,,2 503267"	// You've been unjailed!
 
-scp.meditation_activeskill		"@,,2 501845" // You are busy doing something else and cannot focus.
+scp.meditation_activeskill	"@,,2 501845" // You are busy doing something else and cannot focus.
 scp.meditation_maxmana		"@,,2 501846" // You are at peace.
 scp.meditation_armorpenalty	"@,,2 500135"	// Regenerative forces cannot penetrate your armor.
 scp.meditation_success		"@,,2 501851" // You enter a meditative trance.
-scp.meditation_fail			"@,,2 501850" // You cannot focus your concentration.
-scp.meditation_fail			"@,,2 501848" // You cannot focus your concentration.
+scp.meditation_fail		"@,,2 501850" // You cannot focus your concentration.
+scp.meditation_abort		"@,,2 501848" // You cannot focus your concentration.
 
 scp.mining_nosand		"@,,2 1044629"	// There is no sand here to mine.
 scp.mining_mounted		"@,,2 501864"	// You can't mine while riding.
 scp.mining_faraway		"@,,2 500295"	// You are too far away to do that.
 scp.mining_canseelos		"@,,2 500346"	// Target cannot be seen.
 scp.mining_sand_fail		"@,,2 1044630"	// You dig for a while but fail to find any of sufficient quality for glassblowing.
+scp.mining_fail			"@,,2 503043"	// You loosen some rocks but fail to find any useable ore.
 scp.mining_smelt_target		"What do you want to smelt?"
 scp.mining_smelt_notinpack	"@,,2 1042010"
 scp.mining_smelt_fail		"@,,2 501989"	// You burn away the impurities but are left with no useable metal.

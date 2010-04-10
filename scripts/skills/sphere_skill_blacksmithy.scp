@@ -35,7 +35,7 @@ on=@fail
 src.sysmessage @,,2 <def.scp.craft_msg_fail>
 
 ON=@Abort
-	SRC.SYSMESSAGE You fail to complete the item.
+src.sysmessage @,,2 <def.scp.craft_msg_fail>
 
 [function f_craft_blacksmith_checkforge]
 if !<isneartype t_forge 3>

@@ -68,10 +68,11 @@ endif
 
 ON=@fail
 f_skill_delay <getargv 2 <def.skill.46.waittime>>
-SRC.SYSMESSAGE You lose your concentration.
+SRC.SYSMESSAGE <def.scp.meditation_fail>
 
 on=@abort
-src.sysmessage <def.scp.medit_msg_abort>
+f_skill_delay <getargv 2 <def.skill.46.waittime>>
+src.sysmessage <def.scp.meditation_abort>
 
 [function medi_armorpenalty]
 for 1 24
