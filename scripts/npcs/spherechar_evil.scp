@@ -939,40 +939,6 @@ ON=@NPCRestock
 	ITEM=loot_FROST_TROLL
 
 
-[CHARDEF 01055]
-DEFNAME=c_m_terathan_avenger
-NAME=Terathan Avenger
-ID=c_TERATHAN_WARRIOR
-SOUND=snd_MONSTER_TERA_WARRIOR1
-ICON=i_pet_terathan_war
-DAM=10,30
-ARMOR=25
-RESOURCES=10 i_ribs_raw
-//ALIGNMENT=EVIL
-CAN=MT_WALK
-FOODTYPE=15 t_meat_raw
-AVERSIONS=r_civilization
-CATEGORY=Monsters
-SUBSECTION=T2A Monsters
-DESCRIPTION=Terathan Avenger
-
-ON=@Create
-	STR={465 645}
-	DEX={66 75}
-	INT={46 70}
-	PARRYING={75.0 85.0}
-	MAGERY={70.0 80.0}
-	MAGICRESISTANCE={65.0 80.0}
-	TACTICS={90.0 100.0}
-	WRESTLING={90.0 100.0}
-	NPC=brain_monster
-	FAME={100 2000}
-	KARMA={-5000 -5999}
-
-ON=@NPCRestock
-	ITEM=loot_TERATHAN_AVENGER
-
-
 [CHARDEF 01063]
 DEFNAME=c_m_energy_vortex
 NAME=Energy Vortex

@@ -1341,53 +1341,6 @@ CONTAINER=i_backpack
 ITEM=i_reag_garlic,{5 10}
 ITEM=i_gold,{50 150}
 
-[TEMPLATE loot_TERATHAN_AVENGER]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Terathan Avenger
-CONTAINER=i_backpack
-ITEM=Random_Potion
-ITEM=Random_Potion
-ITEM=RANDOM_JEWEL
-ITEM=RANDOM_JEWEL
-ITEM=RANDOM_SCROLL
-ITEM=RANDOM_SCROLL
-ITEM=TTM_LVL3,R99 //Tattered Treasure Map Level 2
-ITEM=i_gold,{200 250}
-
-[TEMPLATE loot_TERATHAN_DRONE]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Terathan Drone
-CONTAINER=i_backpack
-ITEM=i_reag_spider_silk,{5 10}
-ITEM=i_gold,{0 50}
-
-[TEMPLATE loot_TERATHAN_MATRIARCH]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Terathan Matriarch
-CONTAINER=i_backpack
-ITEM=i_reag_spider_silk,{5 10}
-ITEM=Random_Potion
-ITEM=Random_Potion
-ITEM=RANDOM_JEWEL
-ITEM=RANDOM_JEWEL
-ITEM=RANDOM_SCROLL
-ITEM=RANDOM_SCROLL
-ITEM=TTM_LVL3,R99 //Tattered Treasure Map Level 3
-ITEM=i_gold,{150 300}
-
-[TEMPLATE loot_TERATHAN_WARRIOR]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Terathan Warrior
-CONTAINER=i_backpack
-ITEM=Random_Potion
-ITEM=Random_Potion
-ITEM=TTM_LVL1,R99 //Tattered Treasure Map Level 2
-ITEM=i_gold,{50 150}
-
 [TEMPLATE loot_TITAN]
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
