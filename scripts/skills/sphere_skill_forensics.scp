@@ -28,7 +28,7 @@ on=@success
 f_skill_delay <getargv 1 <def.skill.19.waittime>>
 
 ON=@Fail
-src.sysmessageloc @,,2 1055048
+src.sysmessage @,,2 1055048
 f_skill_delay <getargv 2 <def.skill.19.waittime>>
 
 ON=@Abort
