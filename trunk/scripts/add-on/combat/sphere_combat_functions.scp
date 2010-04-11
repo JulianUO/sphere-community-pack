@@ -200,7 +200,7 @@ endif
 local.bonus.anatomy = <eval (<anatomy> / 2) + 5>
 local.bonus.lumber = <eval <lumberjacking> / 50>
 if <lumberjacking> >= 100.0
-local.bonus += 10
+local.bonus.lumber += 10
 endif
 float.bonus.str = <floatval <str> * 0.3>
 if <str> >= 100

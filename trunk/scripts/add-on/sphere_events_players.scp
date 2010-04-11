@@ -195,7 +195,7 @@ if <src.action> == skill_fishing
 		if <serv.map(<src.targp>).type> == t_water
 		local.newbit = <serv.regiontype.r_water.resources.<eval <serv.regiontype.r_water.calcmemberindex <src.uid>>+1>.key>
 		argo.more1 = <local.newbit>
-		argo.amount = <r<serv.regionresource.<argo.more1>.reapamount>>
+		argo.amount = <r<serv.regionresource.<argo.more1>.amount>>
 		endif
 	endif
 endif
