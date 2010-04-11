@@ -158,6 +158,11 @@ snd_throw_h						1491
 snd_throw_m						1491
 snd_mysticism					1619
 
+[DEFNAME STAT_NAMES]
+stat_0_name	str
+stat_1_name	int
+stat_2_name	dex
+
 [DEFNAME NOTO_FLAGS]
 NotoGood						1
 NotoGuildSame					2
