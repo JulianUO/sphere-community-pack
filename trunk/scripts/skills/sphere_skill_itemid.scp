@@ -40,7 +40,7 @@ f_skill_delay <getargv 2 <def.skill.3.waittime>>
 SRC.MESSAGE @,,2 500334
 
 [function f_itemid_start]
-if <skillusequick itemid <r1000>>
+if <skillusequick itemid <r60>>
 	if <argo.isitem>
 		if (<argo.isarmor>) || (<argo.isweapon>)
 		argo.attr |= attr_identified
