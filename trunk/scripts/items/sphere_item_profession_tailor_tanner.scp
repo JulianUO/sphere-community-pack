@@ -302,21 +302,6 @@ DUPEITEM=01069
 //stretched hide
 DUPEITEM=01069
 
-[ITEMDEF 01078]
-// DEFNAME2=PILE_HIDES
-DEFNAME=i_hide
-TYPE=t_hide // T_HIDE made into t_leather later ?
-WEIGHT=5
-VALUE=5
-CATEGORY=Items by Professions
-SUBSECTION=Tanner
-DESCRIPTION=Hides (Pile)
-DUPELIST=01079
-
-[ITEMDEF 01079]
-//pile of hides
-DUPEITEM=01078
-
 [ITEMDEF 0107a]
 // dark brown small stretched hide in frame facing SW
 CATEGORY=Items by Professions

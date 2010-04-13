@@ -113,6 +113,9 @@ maxfollower = <def.scp.MaxFollowers>
 endif
 if <def.scp.OSIStats> == 1
 maxhits = <eval (<str>/2) + <modstr> + 50>
+	if <hits> > <maxhits>
+	hits = <maxhits>
+	endif
 maxmana = <eval <int> + <modint>>
 maxstam = <eval <dex> + <moddex>>
 endif

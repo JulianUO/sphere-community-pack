@@ -376,51 +376,6 @@ ON=@Hit
 		SRC.SPELLEFFECT S_POISON,500,<UID>
 	endif
 
-[chardef 798]
-defname=c_ancient_wyrm
-NAME=Ancient Wyrm
-SOUND=snd_monster_dragon1
-ICON=i_pet_dragon
-DAM=146,182
-RESDISPDNID=c_dragon_red
-RESLEVEL=2
-RESDISPDNHUE=78
-ARMOR=35
-CAN=MT_USEHANDS|MT_WALK|MT_FLY
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman,t_corpse
-MOVERATE=50
-CATEGORY=New Monsters
-SUBSECTION=LBR
-DESCRIPTION=Ancient Wyrm
-
-ON=@Create
-	NPC=brain_monster
-	FAME={100 3000}
-	KARMA={-5000 -6999}
-	STR={200 300}
-	MAXHITS={750 900}
-	INT=550
-	DEX={40 90}
-	MAGICRESISTANCE={100.0 150.0}
-	TACTICS={97.0 100.0}
-	WRESTLING={97.0 100.0}
-	MAGERY={80.0 100.0}
-	EVALUATINGINTEL=100.0
-	ITEMNEWBIE=i_spellbook
-	ADDCIRCLE 8,1
-
-ON=@NpcRestock
-	ITEM={rich_monster_backpack 1 filthy_rich_monster_backpack 3}
-	ITEM={rich_monster_backpack 1 filthy_rich_monster_backpack 3}
-	ITEM={rich_monster_backpack 1 filthy_rich_monster_backpack 3}
-	ITEM={rich_gold_pile 1 filthy_rich_gold_pile 3}
-	ITEM={rich_gold_pile 1 filthy_rich_gold_pile 3}
-	ITEM=random_jewel, {1 4}, R2
-	ITEM=random_jewel, {1 4}, R2
-	ITEM=random_jewel, {1 4}, R2
-	ITEM=random_jewel, {1 4}, R2
-	ITEM=i_reag_nightshade,{8 15}
-	ITEM=i_gold,{1295 1745}
 
 [chardef 778]
 defname=c_swarm

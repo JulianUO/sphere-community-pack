@@ -3,14 +3,14 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
 // --------------
 // Swindler, Kell, Melen, syn - Original credits from original version
 // ShiryuX - Updating and adapting to 56b Sphere Community Pack
-// 
+//
 // SCRIPT DOCUMENTATION
 // --------------------
 // Functions used in the SOS. Such as sextant coordinates and others.
@@ -57,6 +57,7 @@ new.attack <uid>
 local.seamon = <new.uid>
 serv.newitem i_fishing_spawn_remover
 uid.<local.seamon>.equip <new.uid>
+sector.allclients update
 
 [function f_pullout_treasure]
 // finally got the treasure chest in your hands!

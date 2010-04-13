@@ -385,45 +385,6 @@ ON=@NPCRestock
 	ITEM=loot_KRAKEN
 
 
-[CHARDEF 01025]
-DEFNAME=c_m_dragon_wyrm
-//DEFNAME2=C_M_WYRM
-NAME=Wyrm
-ID=c_DRAGON_GREEN
-SOUND=snd_MONSTER_DRAGON1
-ICON=i_pet_dragon
-DAM=11,53
-ARMOR=35
-RESOURCES=99 i_ribs_raw,20 i_hide,8 i_reag_dragon_blood
-//ALIGNMENT=CHAOTIC
-CAN=MT_WALK|MT_FLY
-//SPELLCIRCLES=4,8
-FOODTYPE=80 t_meat_raw
-//SHELTER==r_caves,r_dungeon
-DESIRES=i_gold
-AVERSIONS=r_civilization,r_water
-CATEGORY=Monsters
-SUBSECTION=Dragons and Drakes
-DESCRIPTION=Wyrm
-
-ON=@Create
-	COLOR=colors_wyrm
-	STR={1095 1185}
-	DEX={86 175}
-	INT={685 775}
-	PARRYING={55.0 95.0}
-	MAGERY=99.0
-	MAGICRESISTANCE={99.0 100.0}
-	TACTICS={98.0 100.0}
-	WRESTLING={90.0 93.0}
-	NPC=brain_dragon
-	FAME={3000 9000}
-	KARMA={-6000 -6999}
-
-ON=@NPCRestock
-	ITEM=loot_ANCIENT_WYRM
-
-
 [CHARDEF 01028]
 DEFNAME=c_m_balron
 NAME=Balron

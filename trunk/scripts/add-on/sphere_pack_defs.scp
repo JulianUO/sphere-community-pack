@@ -55,7 +55,7 @@ colors_horn		{1801 1 1803 1 1805 1 1807 1 1809 1 1891 1 1893 1 1896 1 1899 1 177
 
 [DEFNAME DIALOG_COLORS]
 dcolor_white					16777215
-dcolor_red						15540260
+dcolor_red					15540260
 
 [DEFNAME COLOR_FISH]
 color_o_sos_tile				0
@@ -71,16 +71,22 @@ color_o_bloodwood				04aa
 color_o_frostwood				04ab
 color_o_sunwood					04ac
 
+[DEFNAME COLOR_HIDE]
+color_o_leather					0
+color_o_spined					08ac
+color_o_horned					0845
+color_o_barbed					0851
+
 [DEFNAME COLOR_ORE]
-color_o_iron					0 //option: 0763
-color_o_dull_copper				060a
-color_o_shadow					0770
-color_o_copper					0641 //option: 060c
-color_o_bronze					06d6
-color_o_gold					045e //option: 084d
-color_o_agapite					0400
-color_o_verite					07d1
-color_o_valorite				0515
+color_o_iron					0
+color_o_dull_copper				0973
+color_o_shadow					0966
+color_o_copper					096d
+color_o_bronze					0972
+color_o_gold					08a5
+color_o_agapite					0979
+color_o_verite					089f
+color_o_valorite				08ab
 
 [DEFNAME COLOR_ORE_BACKWARDS]
 color_o_oldcopper				0590
