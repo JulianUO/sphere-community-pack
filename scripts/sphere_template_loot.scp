@@ -861,20 +861,6 @@ ITEM={ random_reagent 1 0 2 },{ 5 20 }
 ITEM={ random_reagent 1 0 2 },{ 5 20 }
 ITEM={ random_reagent 1 0 2 },{ 5 20 }
 
-[TEMPLATE loot_ANCIENT_WYRM]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Ancient Wyrm
-CONTAINER=i_backpack
-ITEM=random_potion,{ 2 3 }
-ITEM=random_potion,{ 2 3 }
-ITEM=random_scroll,{2 3}
-ITEM=random_scroll,{2 3}
-ITEM=random_magic_wands
-ITEM=random_magic_wands
-ITEM=i_scroll_blank,{ 1 2 }
-ITEM=i_gold,{1100 1300}
-
 [TEMPLATE loot_BALRON]
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
@@ -891,8 +877,6 @@ ITEM=random_magic_wands
 ITEM=i_scroll_blank,{ 1 2 }
 ITEM=random_magic_sword
 ITEM=i_gold,{800 1200}
-
-
 
 [TEMPLATE loot_BONE_KNIGHT]
 CATEGORY=Item Templates

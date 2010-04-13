@@ -151,6 +151,9 @@ scp.mining_smelt_success	"@,,2 501988"	// You smelt the ore removing the impurit
 scp.mining_smelt_noforge	"You must be near a forge to smelt."
 scp.mining_smelt_noskill	"@,,2 501986"	// You have no idea how to smelt this strange ore!
 
+scp.tailor_cut_inpack		"@,,2 502437"	// Items you wish to cut must be in your backpack.
+scp.tailor_cut_invalid		"@,,2 502440"	// Scissors cannot be used on that to produce anything.
+
 scp.taming_tameself		"@,,1 You are your own master."
 scp.taming_notchar		"@,,2 502801"	// You can't tame that!
 scp.taming_notameable		"@,,2 1049655"	// That creature cannot be tamed.

@@ -85,47 +85,6 @@ ON=@NPCRestock
 ITEM=loot_imp
 
 
-[CHARDEF 04]
-DEFNAME=c_gargoyle
-NAME=Gargoyle
-SOUND=snd_MONSTER_GARGYL1
-ICON=i_pet_GARG
-ANIM=03fbc7f
-CAN=MT_WALK|MT_FLY|MT_USEHANDS
-DAM=14,27
-FOODTYPE=15 t_meat_raw
-DESIRES=c_GARGOYLE
-RESOURCES=1 i_ribs_raw
-AVERSIONS=t_TRAP,r_civilization
-CATEGORY=Monsters
-SUBSECTION=Daemons & Gargoyles
-DESCRIPTION=Gargoyle
-TAG.Slayer=SLAYER_DEMON|SLAYER_GARGOYLE
-TAG.Barding.Diff=72.5
-TAG.Luck.Loot=loot_gargoyle_luck
-ARMOR={30 35}
-
-ON=@Create
-ResFire={25 35}
-ResCold={5 10}
-ResPoison={15 25}
-NPC=brain_monster
-STR={146 175}
-DEX={76 95}
-INT={81 105}
-MAXHITS={88 105}
-WRESTLING={40.0 80.0}
-TACTICS={50.0 70.0}
-MAGICRESISTANCE={70.0 85.0}
-MAGERY={70.0 85.0}
-EVALUATINGINTEL={70.0 85.0}
-FAME=3500
-KARMA=-3500
-
-ON=@NPCRestock
-ITEM=loot_gargoyle
-
-
 [CHARDEF 01e]
 DEFNAME=c_harpy
 NAME=Harpy
@@ -160,95 +119,6 @@ KARMA=-2500
 
 ON=@NPCRestock
 ITEM=loot_harpy
-
-
-[CHARDEF 082]
-DEFNAME=c_fire_gargoyle
-NAME=Fire Gargoyle
-SOUND=snd_monster_gargyl1
-ICON=i_pet_garg
-DAM=22,45
-CAN=MT_WALK|MT_USEHANDS|MT_FLY
-FOODTYPE=1 t_meat_raw
-RESOURCES=1 i_ribs_raw
-RESDISPDNID=c_gargoyle
-RESLEVEL=2
-RESDISPDNHUE=1652
-CATEGORY=Monsters
-SUBSECTION=Daemons & Gargoyles
-DESCRIPTION=Fire Gargoyle
-TAG.Luck.Loot=loot_fire_gargoyle_luck
-TAG.Slayer=SLAYER_GARGOYLE
-TAG.Barding.Diff=96.0
-TAG.DamFire=80
-ARMOR={30 35}
-
-ON=@Create
-ResFire={50 60}
-ResCold={-10 0}
-ResPoison={20 30}
-ResEnergy={20 30}
-NPC=brain_monster
-STR={351 400}
-DEX={126 145}
-INT={226 250}
-MAXHITS={211 240}
-WRESTLING={40.0 80.0}
-TACTICS={80.0 100.0}
-MAGICRESISTANCE={90.0 105.0}
-ANATOMY={75.0 85.0}
-MAGERY={90.0 105.0}
-EVALUATINGINTEL={90.0 105.0}
-MEDITATION={90.0 105.0}
-FAME=3500
-KARMA=-3500
-ITEMNEWBIE=i_spellbook
-ADDCIRCLE 6,1
-ADDSPELL=S_FLAMESTRIKE
-
-ON=@NpcRestock
-ITEM=loot_gargoyle_fire
-
-
-[CHARDEF 043]
-DEFNAME=c_stone_gargoyle
-NAME=Stone Gargoyle
-SOUND=snd_MONSTER_GARGYL1
-ICON=i_pet_GARG
-CAN=MT_WALK|MT_FLY
-DAM=25,40
-FOODTYPE=2 t_arock, 2 t_meat_raw
-DESIRES=c_stone_gargoyle,c_gargoyle
-AVERSIONS=r_civilization
-RESDISPDNID=c_gargoyle
-RESLEVEL=2
-RESDISPDNHUE=1401
-CATEGORY=Monsters
-SUBSECTION=Daemons & Gargoyles
-DESCRIPTION=Stone Gargoyle
-TAG.Luck.Loot=loot_gargoyle_stone_luck
-TAG.Slayer=SLAYER_GARGOYLE
-TAG.Barding.Diff=71.4
-ARMOR={45 55}
-
-ON=@Create
-ResFire={20 30}
-ResCold={10 20}
-ResPoison={30 40}
-ResEnergy={30 40}
-NPC=brain_monster
-STR={246 275}
-DEX={76 95}
-INT={81 105}
-MAXHITS={148 165}
-WRESTLING={60.0 100.0}
-TACTICS={80.0 100.0}
-MAGICRESISTANCE={85.0 100.0}
-FAME=4000
-KARMA=-4000
-
-ON=@NPCRestock
-ITEM=loot_gargoyle_stone
 
 
 [CHARDEF 09]
@@ -369,58 +239,12 @@ CONTAINER=i_backpack
 ITEM=i_gold,{50 100}
 ITEM=random_scroll_low,1
 
-[TEMPLATE loot_gargoyle]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Gargoyle
-CONTAINER=i_backpack
-ITEM=i_gold,{125 175}
-ITEM=random_scroll_medium,{1 3}
-ITEM=random_jewel,{1 4}
-
-[TEMPLATE loot_gargoyle_luck]
-CATEGORY=Item Templates
-SUBSECTION=Monster Special Loot Templates
-DESCRIPTION=Gargoyle
-ITEM={i_gargoyle_pickaxe 1 0 4}
-// Treasure Map Level 1
-
 [TEMPLATE loot_harpy]
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
 DESCRIPTION=Harpy
 CONTAINER=i_backpack
 ITEM=i_gold,{100 150}
-
-[TEMPLATE loot_gargoyle_fire]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Fire Gargoyle
-CONTAINER=i_backpack
-ITEM=i_gold,{275 325}
-ITEM=random_scroll_medium,1
-
-[TEMPLATE loot_gargoyle_fire_luck]
-CATEGORY=Item Templates
-SUBSECTION=Monster Special Loot Templates
-DESCRIPTION=Fire Gargoyle
-// Treasure Map Level 1
-
-[TEMPLATE loot_gargoyle_stone]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Stone Gargoyle
-CONTAINER=i_backpack
-ITEM=i_gold,{250 325}
-ITEM=random_jewel,{1 3}
-ITEM=i_ore_iron,{6 20}
-
-[TEMPLATE loot_gargoyle_stone_luck]
-CATEGORY=Item Templates
-SUBSECTION=Monster Special Loot Templates
-DESCRIPTION=Stone Gargoyle
-ITEM={i_gargoyle_pickaxe 1 0 4}
-// Treasure Map Level 2
 
 [TEMPLATE loot_daemon]
 CATEGORY=Item Templates
