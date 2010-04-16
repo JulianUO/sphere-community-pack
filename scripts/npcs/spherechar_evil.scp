@@ -215,7 +215,7 @@ CAN=MT_WALK|MT_FIRE_IMMUNE
 RESOURCES=6 i_ribs_raw
 FOODTYPE=15 t_meat_raw
 //SHELTER==r_caves
-DESIRES=C_M_HELLHOUND,c_daemon,c_daemon_w_sword
+DESIRES=C_M_HELLHOUND,c_daemon
 CATEGORY=Monsters
 SUBSECTION=Miscellaneous
 DESCRIPTION=Hell Hound
@@ -242,41 +242,6 @@ ON=@NPCRestock
 	CONTAINER=i_backpack
 	ITEM=i_reag_sulfur_ash,{1 5}
 
-[CHARDEF 01019]
-DEFNAME=c_m_icefiend
-NAME=Ice Fiend
-ID=c_DAEMON
-SOUND=snd_MONSTER_DAEMON1
-ICON=i_pet_DAEMON
-DAM=3,24
-ARMOR=30
-RESOURCES=9 i_ribs_raw, 8 i_reag_daemon_bone
-CAN=MT_FLY|MT_WALK
-//SHELTER==r_caves,r_dungeon
-DESIRES=i_gold
-AVERSIONS=r_civilization,r_water
-CATEGORY=Monsters
-SUBSECTION=Daemons & Gargoyles
-DESCRIPTION=Ice Fiend
-
-ON=@Create
-	COLOR=color_ice
-	STR={375 405}
-	DEX={175 195}
-	INT={200 225}
-	//ALIGNMENT=EVIL
-	//SPELLCIRCLES=5,7
-	PARRYING={75.0 85.0}
-	MAGERY={80.0 90.0}
-	MAGICRESISTANCE={80.0 90.0}
-	TACTICS={80.0 90.0}
-	WRESTLING={80.0 100.0}
-	NPC=brain_monster
-	FAME={100 2000}
-	KARMA={-5000 -5999}
-
-ON=@NPCRestock
-	ITEM=loot_ICE_FIEND
 
 [CHARDEF 01020]
 DEFNAME=c_m_stoneharpy
@@ -385,43 +350,6 @@ ON=@NPCRestock
 	ITEM=loot_KRAKEN
 
 
-[CHARDEF 01028]
-DEFNAME=c_m_balron
-NAME=Balron
-ID=c_DAEMON_W_SWORD
-SOUND=snd_MONSTER_DAEMON1
-ICON=i_pet_dragon
-DAM=30
-ARMOR=18,51
-RESOURCES=9 i_ribs_raw, 8 i_reag_daemon_bone
-//ALIGNMENT=EVIL
-CAN=MT_WALK|MT_FLY
-//SPELLCIRCLES=6,8
-//SHELTER==r_dungeon,r_caves
-DESIRES=c_DAEMON,i_gold,t_wand
-AVERSIONS=r_water,r_mountains
-CATEGORY=Monsters
-SUBSECTION=Daemons & Gargoyles
-DESCRIPTION=Balron
-
-ON=@Create
-	COLOR=colors_daemon
-	STR={985 1185}
-	DEX={175 255}
-	INT={15 25}
-	PARRYING={90.0 100.0}
-	MAGERY={90.0 100.0}
-	MAGICRESISTANCE={90.0 100.0}
-	TACTICS={90.0 100.0}
-	WRESTLING={90.0 100.0}
-	NPC=brain_monster
-	FAME={4000 8000}
-	KARMA={-6000 -6999}
-
-ON=@NPCRestock
-	ITEM=loot_BALRON
-
-
 [CHARDEF 01034]
 DEFNAME=c_m_gazer_elder
 NAME=Elder Gazer
@@ -502,7 +430,7 @@ ARMOR=15
 RESOURCES=6 i_ribs_raw,2 i_fur_dark
 CAN=MT_WALK
 FOODTYPE=2 t_meat_raw
-DESIRES=c_m_hellcat,c_daemon,c_daemon_w_sword
+DESIRES=c_m_hellcat,c_daemon
 //SHELTER==r_caves
 AVERSIONS=r_water,r_civilization
 DESCRIPTION=Hellcat

@@ -299,44 +299,6 @@ IF !(<SRC.FLAGS>&statf_poisoned)
 SRC.SPELLEFFECT S_POISON,300,<UID>
 endif
 
-[chardef 784]
-defname=c_arcane_daemon
-NAME=Arcane Daemon
-SOUND=snd_monster_dragon1
-ICON=i_pet_arcanedaemon
-DAM=23,31
-RESDISPDNID=c_man
-RESLEVEL=2
-RESDISPDNHUE=33
-ARMOR=30
-CAN=MT_WALK|MT_FLY|MT_RUN
-MOVERATE=45
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman,t_corpse
-CATEGORY=New Monsters
-SUBSECTION=LBR
-DESCRIPTION=Arcane Daemon
-
-ON=@Create
-	NPC=brain_monster
-	FAME={100 3000}
-	KARMA={-5000 -6999}
-	STR={131 150}
-	MAXHITS={101 115}
-	INT={301 350}
-DEX={126 145}
-	MAGICRESISTANCE={85.0 95.0}
-	TACTICS={70.0 80.0}
-	WRESTLING={60.0 80.0}
-	MAGERY={80.0 90.0}
-	EVALUATINGINTEL={70.0 80.0}
-	MEDITATION={70.0 80.0}
-	ITEMNEWBIE=i_spellbook
-	ADDCIRCLE 8,1
-
-ON=@NpcRestock
-	ITEM=random_jewel, {1 2}
-	ITEM=random_jewel, {1 2}
-	ITEM=i_gold,{295 345}
 
 [chardef 787]
 defname=c_ant_lion
@@ -486,36 +448,6 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{275 325}
 
-[chardef 792]
-defname=c_chaos_daemon
-name=Chaos Daemon
-SOUND=snd_monster_daemon1
-ICON=i_pet_chaosdaemon
-DAM=22,32
-RESDISPDNID=c_man
-RESLEVEL=2
-RESDISPDNHUE=33
-ARMOR=60
-RESOURCES=15 i_ribs_raw,10 i_hide
-CAN=MT_WALK|MT_USEHANDS|MT_FLY|MT_RUN
-FOODTYPE=40 t_meat_raw
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman
-AVERSIONS=e_carnivores3
-CATEGORY=New Monsters
-SUBSECTION=LBR
-DESCRIPTION=Chaos Daemon
-
-ON=@Create
-	NPC=brain_monster
-	FAME={100 3000}
-	KARMA={-5000 -6999}
-	STR={106 130}
-	MAXHITS={91 110}
-	INT={56 80}
-	DEX={170 200}
-	MAGICRESISTANCE={85.0 95.0}
-	TACTICS={70.0 80.0}
-	WRESTLING={95.0 100.0}
 
 [chardef 104]
 defname=c_skeletal_dragon
@@ -1108,40 +1040,6 @@ ON=@Hit
 		SRC.MANA=0
 	endif
 
-[chardef 785]
-defname=c_Moloch
-name=Moloch
-SOUND=snd_monster_daemon1
-ICON=i_pet_fourarmed_daemon
-ARMOR=68
-DAM=41,61
-RESOURCES=1 i_ore_iron
-CAN=MT_WALK|MT_USEHANDS
-FOODTYPE=1 t_meat_raw
-DESIRES=999 t_corpse
-RESDISPDNID=c_man
-RESLEVEL=2
-RESDISPDNHUE=33
-MOVERATE=60
-CATEGORY=New Monsters
-SUBSECTION=LBR
-DESCRIPTION=Moloch
-
-ON=@Create
-	NPC=brain_monster
-	FAME=6800
-	KARMA=-6800
-	STR={331 360}
-	MAXHITS={171 200}
-	INT={41 64}
-	DEX={66 85}
-	MAGICRESISTANCE={65.0 75.0}
-	TACTICS={75.0 90.0}
-	WRESTLING={70.0 90.0}
-
-ON=@NpcRestock
-	ITEM=i_gold,{300 350}
-	ITEM=random_weapon
 
 [chardef 752]
 defname=c_iron_golem

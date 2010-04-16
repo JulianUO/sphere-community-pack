@@ -861,23 +861,6 @@ ITEM={ random_reagent 1 0 2 },{ 5 20 }
 ITEM={ random_reagent 1 0 2 },{ 5 20 }
 ITEM={ random_reagent 1 0 2 },{ 5 20 }
 
-[TEMPLATE loot_BALRON]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Balron
-CONTAINER=i_backpack
-ITEM=random_potion,{ 2 3 }
-ITEM=random_potion,{ 2 3 }
-ITEM=ttm_lvl5,R99
-ITEM=random_scroll,{ 2 3 }
-ITEM=random_reagent,{ 4 6 }
-ITEM=random_reagent,{ 4 6 }
-ITEM=random_magic_wands
-ITEM=random_magic_wands
-ITEM=i_scroll_blank,{ 1 2 }
-ITEM=random_magic_sword
-ITEM=i_gold,{800 1200}
-
 [TEMPLATE loot_BONE_KNIGHT]
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
@@ -1095,18 +1078,6 @@ DESCRIPTION=Giant Ice Serpent
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
 DESCRIPTION=Hellcat
-
-[TEMPLATE loot_ICE_FIEND]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Ice Fiend
-CONTAINER=i_backpack
-ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 4
-ITEM=RANDOM_SCROLL
-ITEM=RANDOM_SCROLL
-ITEM=RANDOM_SCROLL
-ITEM=RANDOM_SCROLL
-ITEM=i_gold,{300 500}
 
 [TEMPLATE loot_ICE_SNAKE]
 CATEGORY=Item Templates

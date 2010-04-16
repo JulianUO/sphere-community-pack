@@ -121,48 +121,6 @@ ON=@NPCRestock
 ITEM=loot_harpy
 
 
-[CHARDEF 09]
-DEFNAME=c_daemon
-NAME=#NAMES_DAEMON the Daemon
-SOUND=snd_MONSTER_DAEMON1
-ICON=i_pet_DAEMON
-ANIM=03fbc7f
-CAN=MT_WALK|MT_FLY|MT_USEHANDS
-DAM=20,25
-RESOURCES=1 i_ribs_raw
-FOODTYPE=
-DESIRES=i_gold
-AVERSIONS=r_civilization
-CATEGORY=Monsters
-SUBSECTION=Daemons & Gargoyles
-DESCRIPTION=Daemon
-TAG.Luck.Loot=loot_daemon_luck
-TAG.Slayer=SLAYER_DEMON
-TAG.Barding.Diff=89.8
-ARMOR={45 60}
-
-ON=@Create
-ResFire={50 60}
-ResCold={30 40}
-ResPoison={20 30}
-ResEnergy={30 40}
-NPC=brain_monster
-STR={476 505}
-DEX={76 95}
-INT={301 325}
-MAXHITS={286 303}
-WRESTLING={60.0 80.0}
-TACTICS={70.0 80.0}
-MAGICRESISTANCE={85.0 95.0}
-MAGERY={70.0 80.0}
-EVALUATINGINTEL={70.0 80.0}
-FAME=15000
-KARMA=-15000
-
-ON=@NPCRestock
-ITEM=loot_daemon
-
-
 [CHARDEF 095]
 DEFNAME=c_succubus
 NAME=Succubus
@@ -245,28 +203,6 @@ SUBSECTION=Monster Loot Templates
 DESCRIPTION=Harpy
 CONTAINER=i_backpack
 ITEM=i_gold,{100 150}
-
-[TEMPLATE loot_daemon]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Daemon
-CONTAINER=i_backpack
-ITEM=i_gold,{550 650}
-ITEM=random_scroll_medium,{1 2}
-ITEM=random_scroll_medium,{1 2}
-ITEM=random_reagent,{ 4 6 }
-ITEM=random_reagent,{ 4 6 }
-ITEM=random_potion,{ 2 3 }
-ITEM=random_potion,{ 2 3 }
-ITEM=random_magic_wands
-ITEM=random_magic_wands
-ITEM=i_scroll_blank,{ 1 2 }
-
-[TEMPLATE loot_daemon_luck]
-CATEGORY=Item Templates
-SUBSECTION=Monster Special Loot Templates
-DESCRIPTION=Daemon
-// Treasure Map Level 4
 
 [TEMPLATE loot_succubus]
 CATEGORY=Item Templates

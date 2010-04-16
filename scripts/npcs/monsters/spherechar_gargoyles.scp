@@ -259,7 +259,7 @@ ITEM=random_jewelry
 
 [TEMPLATE loot_gargoyle_enslaved_luck]
 CATEGORY=Item Templates
-SUBSECTION=Gargoyles Loot Luck
+SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Enslaved Gargoyle
 // Treasure Map Level #1
 ITEM={i_gargoyle_pickaxe 1 0 4}
@@ -307,7 +307,7 @@ ITEM=random_wand,{1 2}
 
 [TEMPLATE loot_gargoyle_destroyer_luck]
 CATEGORY=Item Templates
-SUBSECTION=Gargoyles Loot Luck
+SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Gargoyle Destroyer
 ITEM={i_gargoyle_pickaxe 1 0 4}
 
@@ -323,7 +323,7 @@ ITEM=random_wand,{1 2}
 
 [TEMPLATE loot_gargoyle_enforcer_luck]
 CATEGORY=Item Templates
-SUBSECTION=Gargoyles Loot Luck
+SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Gargoyle Enforcer
 ITEM={i_gargoyle_pickaxe 1 0 4}
 

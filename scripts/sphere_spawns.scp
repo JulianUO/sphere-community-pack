@@ -67,53 +67,20 @@ ID=c_shade 2
 ID=c_lich 1
 
 
-[SPAWN spawn_undead_weak]
-CATEGORY=Spawn Groups
-SUBSECTION=Monsters
-DESCRIPTION=Undead (Weak)
-ID=c_zombie 10
-ID=c_skeleton 5
-ID=c_spectre 2
 
-[SPAWN spawn_undead_strong]
-CATEGORY=Spawn Groups
-SUBSECTION=Monsters
-DESCRIPTION=Undead (Strong)
-ID=c_skeletal_mage 3
-ID=c_lich 4
-ID=c_skeletal_knight
-ID=c_lich_lord
-ID=c_mummy
-ID=c_wraith
-ID=c_shade
 
-[SPAWN spawn_undead_all]
+[SPAWN spawn_daemons]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
-DESCRIPTION=Undeads
-ID=c_zombie
-ID=c_lich
-ID=c_spectre
-ID=c_skeleton
-ID=c_skeletal_knight
-ID=c_skeletal_mage
-ID=c_mummy
-ID=c_lich_lord
-ID=c_wraith
-ID=c_shade
-
-[SPAWN spawn_orcs]
-CATEGORY=Spawn Groups
-SUBSECTION=Monsters
-DESCRIPTION=Orcs
-ID=c_orc
-ID=c_orc_bomber
-ID=c_orc_brute
-ID=c_orc_captain
-ID=c_orc_chopper
-ID=c_orc_scout
-ID=c_orc_lord
-ID=c_orc_mage
+DESCRIPTION=Daemons
+ID=c_arcane_daemon
+ID=c_balron
+ID=c_black_gate_daemon
+ID=c_bone_daemon
+ID=c_daemon
+ID=c_chaos_daemon
+ID=c_ice_fiend
+ID=c_moloch
 
 [SPAWN spawn_elementals]
 CATEGORY=Spawn Groups
@@ -138,6 +105,67 @@ ID=c_poison_elemental
 ID=c_snow_elemental
 ID=c_rai_ju
 ID=c_kaze_kemono
+
+[SPAWN spawn_gargoyles]
+CATEGORY=Spawn Groups
+SUBSECTION=Monsters
+DESCRIPTION=Gargoyles
+ID=c_enslaved_gargoyle
+ID=c_fire_gargoyle
+ID=c_gargoyle
+ID=c_gargoyle_destroyer
+ID=c_gargoyle_enforcer
+ID=c_stone_gargoyle
+
+[SPAWN spawn_ogres_ettins_trolls]
+CATEGORY=Spawn Groups
+SUBSECTION=Monsters
+DESCRIPTION=Ogres, Ettins & Trolls
+ID=c_arctic_ogre_lord
+ID=c_ettin
+ID=c_frost_troll
+ID=c_ogre
+ID=c_ogre_lord
+ID=c_troll
+
+[SPAWN spawn_orcs]
+CATEGORY=Spawn Groups
+SUBSECTION=Monsters
+DESCRIPTION=Orcs
+ID=c_orc
+ID=c_orc_bomber
+ID=c_orc_brute
+ID=c_orc_captain
+ID=c_orc_chopper
+ID=c_orc_scout
+ID=c_orc_lord
+ID=c_orc_mage
+
+[SPAWN spawn_terathans]
+CATEGORY=Spawn Groups
+SUBSECTION=Monsters
+DESCRIPTION=Terathans
+ID=c_terathan_avenger
+ID=c_terathan_drone
+ID=c_terathan_matriarch
+ID=c_terathan_warrior
+
+[SPAWN spawn_undead]
+CATEGORY=Spawn Groups
+SUBSECTION=Monsters
+DESCRIPTION=Undeads
+ID=c_zombie
+ID=c_lich
+ID=c_spectre
+ID=c_skeleton
+ID=c_skeletal_knight
+ID=c_skeletal_mage
+ID=c_mummy
+ID=c_lich_lord
+ID=c_wraith
+ID=c_shade
+
+
 
 
 // Random Spawn, T2A critters included are just alterations to old art (colors, stats). T2A is not needed.
@@ -212,18 +240,6 @@ DESCRIPTION=Lizard Men
 ID=c_lizardman
 ID=c_lizardman_mace
 ID=c_lizardman_spear
-
-[SPAWN 0800a]
-DEFNAME=SPAWN_Giants
-CATEGORY=Spawn Groups
-SUBSECTION=Monsters
-DESCRIPTION=Giants
-ID=TROLLS
-ID=c_ogre
-ID=c_ettin
-ID=c_ettin_w_axe
-ID=c_m_frost_troll
-ID=c_m_ogre_lord
 
 [SPAWN 0800b]
 DEFNAME=SPAWN_Dragons
@@ -874,17 +890,6 @@ ID=c_ratman_w_mace
 ID=c_ratman
 ID=c_ratman_w_sword
 
-[SPAWN 08040]
-DEFNAME=SPAWN_Daemons
-CATEGORY=Spawn Groups
-SUBSECTION=Monsters
-DESCRIPTION=Daemons
-ID=c_DAEMON 10
-ID=c_DAEMON_W_SWORD 3
-ID=c_m_balron
-ID=c_GARGOYLE 5
-ID=c_stone_gargoyle 2
-
 [SPAWN 08041]
 DEFNAME=SPAWN_Deceit2
 CATEGORY=Spawn Groups
@@ -1170,3 +1175,4 @@ ID=c_h_GUARD
 
 
 [eof]
+
