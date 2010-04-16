@@ -376,39 +376,6 @@ ON=@NpcRestock
 	ITEM=random_jewel,{1 2}
 	ITEM=i_reag_daemon_bone,{2 6}
 
-[chardef 308]
-defname=c_bone_daemon
-NAME=Bone Daemon
-SOUND=snd_monster_skletn1
-ICON=i_pet_bonedaemon
-DAM=10,40
-RESDISPDNID=c_skeleton
-RESLEVEL=3
-RESDISPDNHUE=55
-ARMOR=20
-CAN=MT_USEHANDS|MT_WALK|MT_RUN
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman,t_corpse
-CATEGORY=New Monsters
-SUBSECTION=AOS
-DESCRIPTION=Bone Daemon
-
-ON=@Create
-	NPC=brain_monster
-	FAME={100 3000}
-	KARMA={-5000 -6999}
-	STR=310
-	MAXHITS={500 600}
-	INT=100
-	DEX={170 210}
-	MAGICRESISTANCE={50.0 60.0}
-	TACTICS=80.0
-	WRESTLING=100.0
-
-ON=@NpcRestock
-	ITEM=i_gold,{300 390}
-	ITEM=random_jewel,3
-	ITEM=random_jewel,{1 2}
-	ITEM=i_reag_daemon_bone,{5 10}
 
 [chardef 312]
 defname=c_abyssmal_horror
