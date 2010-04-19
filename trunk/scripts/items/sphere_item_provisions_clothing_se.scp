@@ -48,31 +48,6 @@ on=@create
 dupeitem=02783
 
 
-[itemdef 0278F]
-defname=i_cloth_ninja_hood
-name=Cloth Ninja Hood
-type=t_clothing
-weight=2.0
-flip=1
-reqstr=10
-dye=1
-skillmake=tailoring 80.0,t_sewing_kit
-resources=13 i_cloth
-
-dupelist=027DA
-
-category=Provisions - Clothes
-subsection=Samurai Empire
-description=Cloth Ninja Hood
-
-on=@create
- hitpoints={50 80}
-
-//Cloth Ninja Hood
-[itemdef 027DA]
-dupeitem=0278F
-
-
 [itemdef 02794]
 defname=i_cloth_ninja_jacket
 name=Cloth Ninja Jacket
@@ -96,31 +71,6 @@ on=@create
 //Cloth Ninja Jacket
 [itemdef 027DF]
 dupeitem=02794
-
-
-[itemdef 02798]
-defname=i_kasa
-name=Kasa
-type=t_clothing
-weight=3.0
-flip=1
-reqstr=10
-dye=1
-skillmake=tailoring 60.0,t_sewing_kit
-resources=12 i_cloth
-
-dupelist=027E3
-
-category=Provisions - Clothes
-subsection=Samurai Empire
-description=Kasa
-
-on=@create
- hitpoints={50 80}
-
-//Kasa
-[itemdef 027E3]
-dupeitem=02798
 
 
 [itemdef 02799]
@@ -246,56 +196,6 @@ on=@create
 //Obi
 [itemdef 027EB]
 dupeitem=027A0
-
-
-[itemdef 02796]
-defname=i_waraji_tabi
-name=Waraji and Tabi
-type=t_clothing
-weight=2.0
-flip=1
-reqstr=10
-dye=1
-skillmake=tailoring 20.0,t_sewing_kit
-resources=6 i_cloth
-
-dupelist=027E1
-
-category=Provisions - Clothes
-subsection=Samurai Empire
-description=Waraji and Tabi
-
-on=@create
- hitpoints={50 80}
-
-//Waraji and Tabi
-[itemdef 027E1]
-dupeitem=02796
-
-
-[itemdef 02797]
-defname=i_ninja_tabi
-name=Ninja Tabi
-type=t_clothing
-weight=2.0
-flip=1
-reqstr=10
-dye=1
-skillmake=tailoring 70.0,t_sewing_kit
-resources=10 i_cloth
-
-dupelist=027E2
-
-category=Provisions - Clothes
-subsection=Samurai Empire
-description=Ninja Tabi
-
-on=@create
- hitpoints={50 80}
-
-//Ninja Tabi
-[itemdef 027E2]
-dupeitem=02797
 
 
 [itemdef 027A1]

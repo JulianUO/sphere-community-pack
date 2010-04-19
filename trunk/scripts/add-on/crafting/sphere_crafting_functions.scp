@@ -58,7 +58,7 @@ makeitem <args>
 craftsuccesschance <args>
 ctag.craft.message = "Creating <serv.itemdef.<args>.name>..."
 ctag.craft.last.<ctag0.craft.skill> = <args>
-if !strcmp("Cooking","<ctag0.craft.skill>")
+if !strcmpi("Cooking","<ctag0.craft.skill>")
 timerf <eval <serv.skill.13.delay>/10>,craftcooking <args>,<actdiff> // Cooking Fix
 endif
 

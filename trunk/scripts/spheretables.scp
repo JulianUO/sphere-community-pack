@@ -84,10 +84,10 @@ scripts/add-on/crafting/
 scripts/add-on/farming/
 scripts/add-on/itemproperties/
 scripts/add-on/npcai/
-scripts/add-on/override/
 scripts/add-on/quests/
 scripts/add-on/skillmenu/
 scripts/add-on/treasures/
+scripts/add-on/typedefs/
 scripts/add-on/virtues/
 
 

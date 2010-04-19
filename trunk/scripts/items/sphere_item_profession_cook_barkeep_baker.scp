@@ -78,28 +78,6 @@ DUPELIST=0979
 //slice of bacon
 DUPEITEM=0978
 
-[ITEMDEF 097a]
-// raw_fish
-DEFNAME=i_fish_cut_raw
-TYPE=T_FOOD_RAW
-TDATA1=i_fish_cut_cooked
-VALUE=3
-WEIGHT=0.1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Fish Steak (Raw)
-
-[ITEMDEF 097b]
-// Cooked_fish
-DEFNAME=i_fish_cut_cooked
-RESOURCES=1 I_FISH_SMALL
-TYPE=T_FOOD
-VALUE=3
-WEIGHT=0.1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Fish Steak (Cooked)
-
 [ITEMDEF 097c]
 DEFNAME=i_cheese_wedge
 RESOURCES=5 i_pitcher_milk, 1 i_reag_fertile_DIRT
@@ -119,24 +97,6 @@ WEIGHT=0.1
 CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Cut Cheese
-
-[ITEMDEF 097e]
-// DEFNAME2=CHEESE
-DEFNAME=i_cheese_wheel
-RESOURCES=5 i_pitcher_milk, 1 i_reag_fertile_DIRT
-TYPE=T_FOOD
-VALUE={22 28}
-WEIGHT=0.2
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Wheel of Cheese
-
-[ITEMDEF 097f]
-DEFNAME=i_fry_pan
-RESOURCES=1 i_ore_iron
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Frypan
 
 [ITEMDEF 098c]
 DEFNAME=i_bread_french
@@ -188,17 +148,6 @@ WEIGHT=5
 CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Fruit Basket
-
-[ITEMDEF 0994]
-// DEFNAME2=pear
-DEFNAME=i_fruit_pear
-TYPE=T_FRUIT
-VALUE=1
-WEIGHT=0.1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Pear
-DUPELIST=0172d
 
 [ITEMDEF 0995]
 DEFNAME=i_mug_ceramic
@@ -340,35 +289,6 @@ DESCRIPTION=Goblet
 SKILLMAKE=TINKERING 42.0,t_tinker_tools
 RESOURCES=3 i_ingot_iron
 
-[ITEMDEF 09b6]
-DEFNAME=i_eggs_fried
-RESOURCES=1 i_EGGS_FRESH
-TYPE=T_FOOD
-VALUE={5 9}
-WEIGHT=0.1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Fried Eggs
-
-[ITEMDEF 09b7]
-//DEFNAME2=COOKED_BIRD
-DEFNAME=i_bird_cooked
-RESOURCES=1 I_BIRD_RAW
-TYPE=T_FOOD
-WEIGHT=0.5
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Cooked Bird
-DUPELIST=09b8
-
-[ITEMDEF 09b8]
-//cooked bird
-DUPEITEM=09b7
-
-[ITEMDEF 09ba]
-//raw bird
-DUPEITEM=09b9
-
 [ITEMDEF 09bc]
 //roast pig
 DUPEITEM=09bb
@@ -392,21 +312,6 @@ CATEGORY=Items by Professions
 SUBSECTION=BarKeep
 DESCRIPTION=Goblet
 DUPELIST=09cb
-
-[ITEMDEF 09c0]
-DEFNAME=i_sausages
-RESOURCES=1 I_reag_GARLIC, 1 I_HAM
-TYPE=T_FOOD
-VALUE={12 16}
-WEIGHT=0.1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Sausages
-DUPELIST=09c1
-
-[ITEMDEF 09c1]
-//sausages
-DUPEITEM=09c0
 
 [ITEMDEF 09c2]
 DEFNAME=i_spoon
@@ -595,17 +500,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Dirty Pot
 
-[ITEMDEF 09e9]
-DEFNAME=i_cake
-TYPE=T_FOOD
-VALUE={8 12}
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Cake
-SKILLMAKE=COOKING 30.0
-RESOURCES=3 i_FLOUR_SACK
-
 [ITEMDEF 09ea]
 DEFNAME=i_muffin
 RESOURCES=1 i_bowl_dough, 1 I_TRAY
@@ -615,25 +509,6 @@ WEIGHT=0.1
 CATEGORY=Items by Professions
 SUBSECTION=Baker
 DESCRIPTION=Muffin
-
-[ITEMDEF 09eb]
-DEFNAME=i_muffins
-WEIGHT=0.5
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Muffins
-SKILLMAKE=COOKING 10.0
-RESOURCES=1 i_FLOUR_SACK
-
-[ITEMDEF 09ec]
-// DEFNAME2=HONEY_OBJ
-DEFNAME=i_jar_honey
-TYPE=T_FOOD
-VALUE={2 4}
-WEIGHT=0.5
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Jar of Honey
 
 [ITEMDEF 09ed]
 DEFNAME=i_kettle
@@ -657,28 +532,6 @@ DUPEITEM=09ee
 
 [ITEMDEF 09f0]
 DUPEITEM=09ad
-
-[ITEMDEF 09f1]
-// DEFNAME2=RAW_RIBS
-DEFNAME=i_ribs_raw
-TYPE=t_meat_raw
-TDATA1=i_ribs_cooked
-VALUE=3
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Ribs (Raw)
-
-[ITEMDEF 09f2]
-// DEFNAME2=COOKED_RIBS
-DEFNAME=i_ribs_cooked
-RESOURCES=1 i_ribs_raw
-TYPE=T_FOOD
-VALUE={12 24}
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Ribs (Cooked)
 
 [ITEMDEF 09f3]
 DEFNAME=i_pan
@@ -916,22 +769,7 @@ DUPEITEM=09a7
 //glass pitcher
 DUPEITEM=09a7
 
-[ITEMDEF 0ff8]
-//Pitcher of Water
-DEFNAME=i_pitcher_water
-RESOURCES=10 I_WATER, 1 i_pitcher_glass
-TYPE=T_DRINK
-TDATA1=i_pitcher_glass
-FLIP=1
-WEIGHT=2
-CATEGORY=Items by Professions
-SUBSECTION=Barkeep
-DESCRIPTION=Pitcher of Water
-DUPELIST=0ff9,01f9d,01f9e
 
-[ITEMDEF 0ff9]
-//pitcher of water
-DUPEITEM=0ff8
 
 [ITEMDEF 0ffa]
 //bucket of water
@@ -1005,32 +843,12 @@ CATEGORY=Items by Professions
 SUBSECTION=BarKeep
 DESCRIPTION=Barrel Tap
 
-[ITEMDEF 01039]
-DEFNAME=i_flour_sack
-RESOURCES=4 i_wheat_sheaf, 1 i_CLOTH
-WEIGHT=5
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Sack of Flour
-DUPELIST=0103a,01045,01046
-
 [ITEMDEF 0103a]
 DEFNAME=i_flour_sack_open
 DUPEITEM=01039
 CATEGORY=Items by Professions
 SUBSECTION=Baker
 DESCRIPTION=Open Sack of Flour
-
-[ITEMDEF 0103b]
-// Has a bite ?
-DEFNAME=i_bread_loaf
-TYPE=T_FOOD
-SKILLMAKE=1 COOKING
-RESOURCES=1 i_FLOUR_SACK
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Bread Loaf
 
 [ITEMDEF 0103c]
 DEFNAME=i_bread_wonder
@@ -1043,45 +861,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Baker
 DESCRIPTION=Bread Loaf
 
-[ITEMDEF 0103d]
-DEFNAME=i_dough
-//DEFNAME2=i_DOUGH_2
-RESOURCES=1 i_WATER, 1 i_EGG, 2 i_FLOUR_BOWL
-TYPE=T_FOOD_RAW
-TDATA1=i_bread_loaf
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Dough
-
-[ITEMDEF 0103e]
-DEFNAME=i_flour_sifter
-RESOURCES=1 i_ingot_iron
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Flour Sifter
-
-[ITEMDEF 0103f]
-DEFNAME=i_cookie_mix
-TYPE=T_FOOD_RAW
-TDATA1=i_pan_cookies
-RESOURCES=1 i_bowl_dough, 1 i_POT
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Cookie Mix
-
-[ITEMDEF 01040]
-DEFNAME=i_pizza
-RESOURCES=3 i_FLOUR_SACK
-WEIGHT=1
-TYPE=T_FOOD
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Pizza
-SKILLMAKE=COOKING 20.0
-
 [ITEMDEF 01041]
 DEFNAME=i_pie_baked
 RESOURCES=3 i_FLOUR_SACK
@@ -1092,24 +871,6 @@ SUBSECTION=Baker
 DESCRIPTION=Baked Pie
 SKILLMAKE=COOKING 20.0
 
-[ITEMDEF 01042]
-DEFNAME=i_pie_unbaked
-TYPE=T_FOOD_RAW
-TDATA1=i_pie_baked
-RESOURCES=1 i_bowl_dough, 1 T_FRUIT, 1 i_POT, i_lard
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Unbaked Pie
-
-[ITEMDEF 01043]
-DEFNAME=i_rolling_pin
-RESOURCES=1 i_BOARD, 1 i_ingot_iron
-WEIGHT=2
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Rolling Pin
-
 [ITEMDEF 01044]
 DEFNAME=i_spam
 RESOURCES=1 i_HAM, 1 i_POT
@@ -1119,29 +880,12 @@ CATEGORY=Items by Professions
 SUBSECTION=Baker
 DESCRIPTION=Spam
 
-[ITEMDEF 01045]
-//sack of flour
-DUPEITEM=01039
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Sack of Flour
-
 [ITEMDEF 01046]
 //open sack of flour
 DUPEITEM=01039
 CATEGORY=Items by Professions
 SUBSECTION=Baker
 DESCRIPTION=Open Sack of Flour
-
-[ITEMDEF 01083]
-DEFNAME=i_pizza_uncooked
-RESOURCES=1 i_bowl_dough, 1 i_cheese_wheel, 1 i_POT, i_lard, i_tomato_sauce
-TYPE=T_FOOD_RAW
-TDATA1=i_pizza
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Uncooked Pizza
 
 [ITEMDEF 010e1]
 DEFNAME=i_barrel_hoops
@@ -1283,49 +1027,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Tomato Soup
 
-[ITEMDEF 01608]
-//DEFNAME2=cooked_chick_leg
-DEFNAME=i_chicken_leg
-RESOURCES=I_CHICKEN_LEG_RAW
-WEIGHT=1
-TYPE=T_FOOD
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Chicken Leg (Cooked)
-
-[ITEMDEF 01609]
-// DEFNAME2=MUTTON_LEG
-DEFNAME=i_lamb_leg_raw
-//RESOURCES=BASE ITEMS THAT ARE RESOURCES DO NOT ALWAYS HAVE RESOURCES
-TYPE=T_FOOD_RAW
-TDATA1=i_lamb_leg
-WEIGHT=2
-VALUE=2
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Lamb of Leg (Raw)
-
-[ITEMDEF 0160a]
-// DEFNAME2=COOKED_MUTTON
-DEFNAME=i_lamb_leg
-TYPE=T_FOOD
-RESOURCES=i_lamb_leg_raw
-SKILLMAKE=cooking 10.0
-WEIGHT=2
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Lamb of Leg (Cooked)
-
-[ITEMDEF 0160b]
-DEFNAME=i_pan_cookies
-RESOURCES=1 i_FLOUR_SACK
-WEIGHT=1
-TYPE=T_FOOD
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Pan of Cookies
-SKILLMAKE=COOKING 10.0
-
 [ITEMDEF 0160c]
 // DEFNAME2=Cookie_plate
 DEFNAME=i_plate_cookies
@@ -1413,13 +1114,6 @@ TYPE=T_FOOD
 CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Limes (1/2 Peeled)
-
-[ITEMDEF 0172c]
-//peach
-DUPEITEM=09d2
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Peach
 
 [ITEMDEF 0187e]
 DEFNAME=i_FLOUR_SPILLED
@@ -2007,14 +1701,6 @@ DUPELIST=01f9c
 [ITEMDEF 01f9c]
 //pitcher of wine
 DUPEITEM=01f9b
-
-[ITEMDEF 01f9d]
-//pitcher of water
-DUPEITEM=0ff8
-
-[ITEMDEF 01f9e]
-//pitcher of water
-DUPEITEM=0ff8
 
 [ITEMDEF 01e16]
 //raw fish, cut open facing NE

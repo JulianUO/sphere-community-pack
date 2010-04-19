@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
 [SKILL 13]
@@ -27,5 +27,14 @@ SRC.MESSAGE @,,2 500686
 
 ON=@Abort
 	SRC.SYSMESSAGE You stop cooking the food.
+
+[FUNCTION f_craft_cooking_checkfire]
+if <serv.itemdef.<args>.type> == t_food_raw
+	if <isneartype t_fire 2> || <isneartype t_campfire 2>
+	return 0
+	endif
+ctag.craftmessage = You need to be near a heat source to cook this.
+return 1
+endif
 
 [eof]

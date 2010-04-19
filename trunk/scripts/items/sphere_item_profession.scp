@@ -2607,17 +2607,6 @@ DESCRIPTION=Tinker's Tools
 SKILLMAKE=TINKERING 35.0,t_tinker_tools
 RESOURCES=4 i_ingot_iron
 
-[ITEMDEF 01ebd]
-//Food for animals only? Is there a distinction?
-DEFNAME=i_wheat_sheaf
-//RESOURCES=20 I_CROP_WHEAT
-TYPE=t_grain
-VALUE=5
-WEIGHT=10
-CATEGORY=Items by Professions
-SUBSECTION=StableMaster
-DESCRIPTION=Sheaf of Wheat
-
 [ITEMDEF 01ec0]
 DEFNAME=i_pickpocket_dip_n
 DUPEITEM=01e2c
