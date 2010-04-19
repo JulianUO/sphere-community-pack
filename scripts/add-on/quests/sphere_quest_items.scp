@@ -138,21 +138,6 @@ VALUE=1000
 ON=@Create
 COLOR=colors_gray
 
-[ITEMDEF 02305]
-DEFNAME=i_flower_garland
-NAME=flower garland
-TYPE=T_CLOTHING
-VALUE=10
-SKILLMAKE=SKILL_TAILORING 10.0,t_sewing_kit
-RESOURCES=5 i_cloth
-REQSTR=10
-ARMOR=40
-TEVENTS=T_LUCK_ITEM
-TAG.LUCK=30
-
-ON=@Create
-HITPOINTS={50 100}
-
 [ITEMDEF i_librarian_key]
 ID=i_key_copper
 NAME=Librarian's Key
@@ -389,7 +374,7 @@ TYPE=t_FEATHER
 NAME=Saliva's Feather
 VALUE=2
 WEIGHT=.1
-CATEGORY=Do Not Use 
+CATEGORY=Do Not Use
 SUBSECTION=Quest Items
 DESCRIPTION=Saliva's Feather
 

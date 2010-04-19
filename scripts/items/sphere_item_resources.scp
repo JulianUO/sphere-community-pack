@@ -18,27 +18,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Eggshells
 
-[ITEMDEF 09b5]
-DEFNAME=i_eggs_fresh
-VALUE=1
-TYPE=T_FOOD_RAW
-TDATA1=i_eggs_fried
-WEIGHT=0.1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Eggs
-
-[ITEMDEF 09b9]
-DEFNAME=i_bird_raw
-VALUE=1
-TYPE=T_FOOD_RAW
-TDATA1=i_bird_cooked
-WEIGHT=0.5
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Raw Bird
-DUPELIST=09ba
-
 [ITEMDEF 09bb]
 // DEFNAME2=ROAST_PIG
 DEFNAME=i_pig_roast
@@ -60,15 +39,6 @@ SUBSECTION=Cook
 DESCRIPTION=Ham
 DUPELIST=09d3
 
-[ITEMDEF 09D0]
-DEFNAME=i_fruit_apple
-VALUE=1
-TYPE=T_FRUIT
-WEIGHT=0.1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Apple
-
 [ITEMDEF 09d1]
 DEFNAME=i_fruit_grapes
 VALUE=1
@@ -79,16 +49,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Grape Bunch
 DUPELIST=0d1a
-
-[ITEMDEF 09d2]
-DEFNAME=i_fruit_peach
-VALUE=1
-TYPE=T_FRUIT
-WEIGHT=0.1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Peach
-DUPELIST=0172c
 
 [ITEMDEF 0c37]
 //flowers
@@ -996,17 +956,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Butcher
 DESCRIPTION=Skinned Rabbit
 
-[ITEMDEF 01607]
-//DEFNAME=i_CHICKEN_LEG
-DEFNAME=i_chicken_leg_raw
-TYPE=t_food_raw
-TDATA1=i_chicken_leg
-VALUE=2
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Chicken Leg
-
 [ITEMDEF 0171f]
 DEFNAME=i_fruit_banana
 VALUE=2
@@ -1269,14 +1218,4 @@ ON=@Create
 ID=i_hay_sheaf
 VALUE=1
 
-[ITEMDEF I_EGG]
-ID=i_fruit_coconut
-VALUE=1
-
-ON=@Create
-	COLOR=colors_white
-
-
-
-
-
+[EOF]

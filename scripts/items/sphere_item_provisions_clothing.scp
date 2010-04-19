@@ -11,6 +11,482 @@
 //
 VERSION=0.56b
 
+///////////////////////////////////////////////////////////////
+//////// FOOTWEAR
+///////////////////////////////////////////////////////////////
+[ITEMDEF 0170b]
+DEFNAME=i_boots_calf
+TYPE=t_clothing
+SKILLMAKE=TAILORING 33.1, t_sewing_kit
+RESOURCES=8 i_hides_cut
+WEIGHT=3
+REQSTR=10
+DYE=1
+DUPELIST=0170c
+CATEGORY=Provisions - Clothing
+SUBSECTION=Footwear
+DESCRIPTION=Boots (R)
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 0170c]
+DUPEITEM=0170b
+
+[ITEMDEF 02307]
+DEFNAME=i_fur_boots
+TYPE=t_clothing
+SKILLMAKE=TAILORING 50.0, t_sewing_kit
+RESOURCES=12 i_cloth
+WEIGHT=3
+REQSTR=10
+DYE=1
+DUPELIST=02308
+CATEGORY=Provisions - Clothing
+SUBSECTION=Footwear
+DESCRIPTION=Fur Boots
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 02308]
+DUPEITEM=02307
+
+[ITEMDEF 041d8]
+DEFNAME=i_leather_gargoyle_talons
+NAME=Gargish Leather Talons
+TYPE=t_clothing
+SKILLMAKE=TAILORING 40.4, t_sewing_kit
+RESOURCES=6 i_hides_cut
+WEIGHT=2
+REQSTR=10
+DYE=1
+DUPELIST=041d9
+CATEGORY=Provisions - Clothing
+SUBSECTION=Footwear
+DESCRIPTION=Gargish Leather Talons
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 041d9]
+DUPEITEM=041d8
+
+[ITEMDEF 02797]
+DEFNAME=i_ninja_tabi
+NAME=Ninja Tabi
+TYPE=t_clothing
+SKILLMAKE=TAILORING 70.0,t_sewing_kit
+RESOURCES=10 i_cloth
+WEIGHT=2.0
+REQSTR=10
+DYE=1
+DUPELIST=027E2
+CATEGORY=Provisions - Clothing
+SUBSECTION=Footwear
+DESCRIPTION=Ninja Tabi
+
+ON=@Create
+HITPOINTS={50 80}
+
+[ITEMDEF 027e2]
+DUPEITEM=02797
+
+[ITEMDEF 0170d]
+DEFNAME=i_sandals
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 12.4, t_sewing_kit
+RESOURCES=4 i_hides_cut
+WEIGHT=1
+REQSTR=10
+DYE=1
+DUPELIST=0170e
+CATEGORY=Provisions - Clothing
+SUBSECTION=Footwear
+DESCRIPTION=Sandals (R)
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 0170e]
+DUPEITEM=0170d
+
+[ITEMDEF 0170f]
+DEFNAME=i_shoes_plain
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 16.5, t_sewing_kit
+RESOURCES=6 i_hides_cut
+WEIGHT=2
+REQSTR=10
+DYE=1
+DUPELIST=01710
+CATEGORY=Provisions - Clothing
+SUBSECTION=Footwear
+DESCRIPTION=Shoes (R)
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 01710]
+DUPEITEM=0170f
+
+[ITEMDEF 01711]
+DEFNAME=i_boots_thigh
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 41.4, t_sewing_kit
+RESOURCES=10 i_hides_cut
+WEIGHT=5
+REQSTR=10
+DYE=1
+DUPELIST=01712
+CATEGORY=Provisions - Clothing
+SUBSECTION=Footwear
+DESCRIPTION=Thigh Boots (R)
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 01712]
+DUPEITEM=01711
+
+[ITEMDEF 02796]
+DEFNAME=i_waraji_tabi
+NAME=Waraji and Tabi
+TYPE=t_clothing
+SKILLMAKE=TAILORING 20.0, t_sewing_kit
+RESOURCES=6 i_cloth
+WEIGHT=2.0
+REQSTR=10
+DYE=1
+DUPELIST=027E1
+CATEGORY=Provisions - Clothing
+SUBSECTION=Footwear
+DESCRIPTION=Waraji and Tabi
+
+ON=@Create
+HITPOINTS={50 80}
+
+[ITEMDEF 027e1]
+DUPEITEM=02796
+
+
+///////////////////////////////////////////////////////////////
+//////// HATS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 0153f]
+DEFNAME=i_bandana
+TYPE=t_clothing
+SKILLMAKE=TAILORING 0.0, t_sewing_kit
+RESOURCES=2 i_cloth
+WEIGHT=1
+REQSTR=10
+DYE=1
+DUPELIST=01540
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Bandana
+TAG.ResFire=3
+TAG.ResCold=5
+TAG.ResPoison=8
+TAG.ResEnergy=8
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 01540]
+DUPEITEM=0153f
+
+[ITEMDEF 01719]
+DEFNAME=i_bonnet
+TYPE=t_clothing
+SKILLMAKE=TAILORING 6.2, t_sewing_kit
+RESOURCES=11 i_cloth
+WEIGHT=1
+REQSTR=10
+DYE=1
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Bonnet
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 01715]
+DEFNAME=i_cap
+TYPE=t_clothing
+SKILLMAKE=TAILORING 6.2, t_sewing_kit
+RESOURCES=11 i_cloth
+WEIGHT=1
+REQSTR=10
+DYE=1
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Cap
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 0278f]
+DEFNAME=i_cloth_ninja_hood
+NAME=Cloth Ninja Hood
+TYPE=t_clothing
+SKILLMAKE=TAILORING 80.0, t_sewing_kit
+RESOURCES=13 i_cloth
+WEIGHT=2.0
+REQSTR=10
+DUPELIST=027da
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Cloth Ninja Hood
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={50 80}
+
+[ITEMDEF 027da]
+DUPEITEM=0278f
+
+[ITEMDEF 0171a]
+DEFNAME=i_hat_feather
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 6.2, t_sewing_kit
+RESOURCES=11 i_cloth, 1 i_feather
+WEIGHT=2
+REQSTR=10
+DYE=1
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Feathered Hat
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 01713]
+DEFNAME=i_hat_floppy
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 6.2, t_sewing_kit
+RESOURCES=11 i_cloth
+WEIGHT=2
+REQSTR=10
+DYE=1
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Floppy Hat
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 02305]
+DEFNAME=i_flower_garland
+NAME=Flower Garland
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 10.0,t_sewing_kit
+RESOURCES=5 i_cloth
+WEIGHT=2
+REQSTR=10
+DUPELIST=02306
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Flower Garland
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 02306]
+DUPEITEM=02305
+
+[ITEMDEF 0171c]
+DEFNAME=i_hat_jester
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 7.2, t_sewing_kit
+RESOURCES=15 i_cloth
+WEIGHT=2
+REQSTR=10
+DYE=1
+DUPELIST=0172e
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Jester Hat
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 0172e]
+DUPEITEM=0171c
+
+[ITEMDEF 02798]
+DEFNAME=i_kasa
+NAME=Kasa
+TYPE=t_clothing
+SKILLMAKE=TAILORING 60.0, t_sewing_kit
+RESOURCES=12 i_cloth
+WEIGHT=2.0
+REQSTR=10
+DYE=1
+DUPELIST=027E3
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Kasa
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={50 80}
+
+[ITEMDEF 027e3]
+DUPEITEM=02798
+
+[ITEMDEF 01543]
+DEFNAME=i_skull_cap
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 0.0, t_sewing_kit
+RESOURCES=2 i_cloth
+WEIGHT=1
+REQSTR=10
+DYE=1
+DUPELIST=01544
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Skullcap
+TAG.ResFire=3
+TAG.ResCold=5
+TAG.ResPoison=8
+TAG.ResEnergy=8
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 01544]
+DUPEITEM=01543
+
+[ITEMDEF 01717]
+DEFNAME=i_hat_straw
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 6.2, t_sewing_kit
+RESOURCES=10 i_cloth
+WEIGHT=1
+REQSTR=10
+DYE=1
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Straw Hat
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 01716]
+DEFNAME=i_hat_straw_tall
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 6.7, t_sewing_kit
+RESOURCES=13 i_cloth
+WEIGHT=1
+REQSTR=10
+DYE=1
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Tall Straw Hat
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 0171b]
+DEFNAME=i_hat_tricorne
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 6.2, t_sewing_kit
+RESOURCES=12 i_cloth
+WEIGHT=2
+REQSTR=10
+DYE=1
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Tricorne Hat
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 01714]
+DEFNAME=i_hat_wide_brim
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 6.2, t_sewing_kit
+RESOURCES=12 i_cloth
+WEIGHT=2
+REQSTR=10
+DYE=1
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Wide Brim Hat
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 01718]
+DEFNAME=i_hat_wizards
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 7.2, t_sewing_kit
+RESOURCES=15 i_cloth
+WEIGHT=2
+REQSTR=10
+DYE=1
+CATEGORY=Provisions - Clothing
+SUBSECTION=Hats
+DESCRIPTION=Wizard's Hat
+TAG.ResFire=5
+TAG.ResCold=9
+TAG.ResPoison=5
+TAG.ResEnergy=5
+
+ON=@Create
+HITPOINTS={21 23}
+
+
+///////////////////////////////////////////////////////////////
+//////// OLD CLOTH (Not rescripted yet)
+///////////////////////////////////////////////////////////////
 [ITEMDEF 01515]
 DEFNAME=i_cape
 RESOURCES=14 i_cloth
@@ -204,26 +680,6 @@ HITPOINTS={21 23}
 //Full Apron
 DUPEITEM=0153d
 
-[ITEMDEF 0153f]
-DEFNAME=i_bandana
-RESOURCES=2 i_cloth
-WEIGHT=1
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=1
-DUPELIST=01540
-SKILLMAKE=TAILORING 0.1, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Miscellaneous
-DESCRIPTION=Bandana
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01540]
-//bandana
-DUPEITEM=0153f
 
 [ITEMDEF 01541]
 DEFNAME=i_sash
@@ -245,27 +701,6 @@ HITPOINTS={21 23}
 [ITEMDEF 01542]
 //body sash
 DUPEITEM=01541
-
-[ITEMDEF 01543]
-DEFNAME=i_skull_cap
-RESOURCES=2 i_cloth
-WEIGHT=1
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=1
-DUPELIST=01544
-SKILLMAKE=TAILORING 0.1, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Miscellaneous
-DESCRIPTION=SkullCap
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01544]
-//skullcap
-DUPEITEM=01543
 
 [ITEMDEF 01545]
 DEFNAME=i_mask_bear
@@ -347,263 +782,7 @@ HITPOINTS={21 23}
 //tribal mask
 DUPEITEM=0154b
 
-[ITEMDEF 0170b]
-DEFNAME=i_boots_calf
-RESOURCES=8 i_hides_cut
-WEIGHT=3
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=7
-DUPELIST=0170c
-SKILLMAKE=TAILORING 36.3, t_sewing_kit
 
-CATEGORY=Provisions - Clothes
-SUBSECTION=Footwear
-DESCRIPTION=Boots (R)
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 0170c]
-//boots
-DUPEITEM=0170b
-
-[ITEMDEF 0170d]
-DEFNAME=i_sandals
-RESOURCES=4 i_hides_cut
-WEIGHT=1
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-DUPELIST=0170e
-SKILLMAKE=TAILORING 13.6, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Footwear
-DESCRIPTION=Sandals (R)
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 0170e]
-//Sandals
-DUPEITEM=0170d
-
-[ITEMDEF 0170f]
-DEFNAME=i_shoes_plain
-//DEFNAME=i_shoes_plain
-RESOURCES=6 i_hides_cut
-WEIGHT=2
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-DUPELIST=01710
-SKILLMAKE=TAILORING 18.1, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Footwear
-DESCRIPTION=Shoes (R)
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01710]
-//Shoes
-DUPEITEM=0170f
-DESCRIPTION=Shoes (L)
-
-[ITEMDEF 01711]
-//DEFNAME2=THIGHBOOTS
-DEFNAME=i_boots_thigh
-TYPE=T_CLOTHING
-FLIP=1
-SKILLMAKE=TAILORING 25.0, t_sewing_kit
-RESOURCES=10 i_hides_cut
-WEIGHT=5
-DYE=1
-ARMOR=6
-DUPELIST=01712
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Footwear
-DESCRIPTION=Thigh Boots (R)
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01712]
-//Thigh Boots
-DUPEITEM=01711
-DESCRIPTION=Thigh Boots (L)
-
-[ITEMDEF 01713]
-DEFNAME=i_hat_floppy
-RESOURCES=11 i_cloth
-WEIGHT=2
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-SKILLMAKE=TAILORING 6.8, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Hats
-DESCRIPTION=Floppy Hat
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01714]
-// DEFNAME2=BUMPKIN_STRAW_HAT
-DEFNAME=i_hat_wide_brim
-RESOURCES=12 i_cloth
-WEIGHT=2
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-SKILLMAKE=TAILORING 6.8, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Hats
-DESCRIPTION=Wide Brim Hat
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01715]
-// DEFNAME=DARBY_HAT
-DEFNAME=i_cap
-RESOURCES=4 i_CLOTH, 1 i_CANVAS, 1 i_THREAD
-WEIGHT=2
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Hats
-DESCRIPTION=Cap
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01716]
-// DEFNAME=POINTY_HAT
-DEFNAME=i_hat_straw_tall
-RESOURCES=12 i_cloth,
-WEIGHT=1
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-SKILLMAKE=TAILORING 6.8, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Hats
-DESCRIPTION=Tall Straw Hat
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01717]
-// DEFNAME=BANDED_STRAW_HAT
-DEFNAME=i_hat_straw
-RESOURCES=10 i_cloth
-WEIGHT=1
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-SKILLMAKE=TAILORING 6.8, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Hats
-DESCRIPTION=Straw Hat
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01718]
-DEFNAME=i_hat_wizards
-RESOURCES=7 i_CLOTH, 1 i_CANVAS, 1 i_THREAD
-SKILLMAKE=TAILORING 16.8, t_sewing_kit
-WEIGHT=2
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Hats
-DESCRIPTION=Wizards Hat
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01719]
-DEFNAME=i_bonnet
-RESOURCES=11 i_cloth
-WEIGHT=1
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-SKILLMAKE=TAILORING 6.8, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Hats
-DESCRIPTION=Bonnet
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 0171a]
-DEFNAME=i_hat_feather
-WEIGHT=2
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-SKILLMAKE=TAILORING 6.8, t_sewing_kit
-RESOURCES=12 i_cloth,i_feather
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Hats
-DESCRIPTION=Feathered Hat
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 0171b]
-//DEFNAME=STRAW_BOATER
-DEFNAME=i_hat_tricorne
-RESOURCES=12 i_cloth
-WEIGHT=2
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-SKILLMAKE=TAILORING 6.8, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Hats
-DESCRIPTION=Tricorne Hat
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 0171c]
-DEFNAME=i_hat_jester
-RESOURCES=15 i_cloth
-WEIGHT=2
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-DUPELIST=0172e
-SKILLMAKE=TAILORING 7.9, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Hats
-DESCRIPTION=Jester's Cap
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 0172e]
-//Jester's Cap
-DUPEITEM=0171c
 
 [ITEMDEF 01efd]
 //Fancy Shirt

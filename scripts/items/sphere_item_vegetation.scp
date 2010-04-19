@@ -358,26 +358,6 @@ DESCRIPTION=Sprouts
 ON=@Create
 FRUIT=0	// not sure what this turns into ?
 
-[ITEMDEF 0c6a]
-//Pumpkin
-DEFNAME=i_fruit_pumpkin
-TYPE=T_FRUIT
-TDATA1=i_crop_vines1
-VALUE=2
-WEIGHT=1
-CATEGORY=Vegetation
-SUBSECTION=Fruits and Vegetables
-DESCRIPTION=Pumpkin
-DUPELIST=0c6b,0c6c
-
-[ITEMDEF 0c6b]
-//pumpkin
-DUPEITEM=0c6a
-
-[ITEMDEF 0c6c]
-//pumpkin - smaller
-DUPEITEM=0c6a
-
 [ITEMDEF 0c6d]
 //Onion
 // ONION_OBJ

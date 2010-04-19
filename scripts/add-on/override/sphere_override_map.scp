@@ -1,5 +1,0 @@
-[typedef t_map]
-on=@dclick
-tdata1 = <qval <tag0.override.map.width> ? <tag0.override.map.width> : <tdata1>>
-tdata2 = <qval <tag0.override.map.height> ? <tag0.override.map.height> : <tdata2>>
-
