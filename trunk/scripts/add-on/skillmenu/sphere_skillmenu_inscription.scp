@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -34,8 +34,9 @@ inscription_category_5_name	"1044373"
 inscription_category_6_name	"1044374"
 inscription_category_7_name	"1044375"
 inscription_category_8_name	"1044376"
-inscription_category_9_name	"Necromancy Spells"
-inscription_category_10_name	"Magic Books"
+inscription_category_9_name	"1061677"
+inscription_category_10_name	"1111671"
+inscription_category_11_name	"1015100"
 
 inscription_category_1_1	"i_scroll_clumsy"
 inscription_category_1_2	"i_scroll_create_food"
@@ -126,8 +127,26 @@ inscription_category_9_14	"i_scroll_vengeful_spirit"
 inscription_category_9_15	"i_scroll_wither"
 inscription_category_9_16	"i_scroll_wraith_form"
 
-inscription_category_10_1	"i_spellbook"
-inscription_category_10_2	"i_spellbook_necromancy"
-inscription_category_10_3	"i_runebook"
+inscription_category_10_1	"i_scroll_nether_bolt"
+inscription_category_10_2	"i_scroll_healing_stone"
+inscription_category_10_3	"i_scroll_purge_magic"
+inscription_category_10_4	"i_scroll_enchant_weapon"
+inscription_category_10_5	"i_scroll_sleep"
+inscription_category_10_6	"i_scroll_eagle_strike"
+inscription_category_10_7	"i_scroll_animated_weapon"
+inscription_category_10_8	"i_scroll_stone_form"
+inscription_category_10_9	"i_scroll_spell_trigger"
+inscription_category_10_10	"i_scroll_mass_sleep"
+inscription_category_10_11	"i_scroll_cleansing_winds"
+inscription_category_10_12	"i_scroll_bombard"
+inscription_category_10_13	"i_scroll_spell_plague"
+inscription_category_10_14	"i_scroll_hail_storm"
+inscription_category_10_15	"i_scroll_nether_cyclone"
+inscription_category_10_16	"i_scroll_rising_colossus"
+
+inscription_category_11_1	"i_runebook"
+inscription_category_11_2	"i_spellbook"
+inscription_category_11_3	"i_spellbook_necromancy"
+inscription_category_11_4	"i_spellbook_mystic"
 
 [eof]

@@ -2062,11 +2062,6 @@ ON=@Enter
 if !<src.brain>
 SRC.DSPEECH +spk_player_house
 endif
-if <def.scp.House_DecayUnlockedItems> == 1
-	if <flags>&region_flag_nodecay
-	flags = <flags>&~region_flag_nodecay
-	endif
-endif
 REF1=<UID.<UID>.MORE2>
 IF (<REF1.HousePlayerAccess <SRC>>==-1)
   SRC.SYSMESSAGE @,,1 You may not enter.
@@ -2098,6 +2093,13 @@ ELSE
    return 1
   ENDIF
 ENDIF
+if <def.scp.House_DecayUnlockedItems> == 1
+	if (<uid.<uid>.type> == t_multi) || (<uid.<uid>.type> == t_multi_custom)
+		if <flags>&region_flag_nodecay
+		flags = <flags>&~region_flag_nodecay
+		endif
+	endif
+endif
 
 ON=@Exit
 if !<src.brain>

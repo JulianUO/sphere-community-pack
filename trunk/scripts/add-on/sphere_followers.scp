@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -16,32 +16,58 @@ VERSION=0.56b
 // Followers functions and support.
 
 // Transfer Function
-[function f_transfer]
+[function f_transfer_pet]
 ref12 = <args>
-if <argo.uid> == <src.uid>
-src.sysmessage You can't transfer to yourself!
+if <argo.uid> == <uid>
+sysmessage You can't transfer to yourself!
 return 1
 endif
-	if !<argo.brain>
-	local.slots = <qval <ref12.tag0.control.slots> ? <ref12.tag0.control.slots> : 1>
-		if <eval <argo.curfollower>+<local.slots>> > <argo.maxfollower>
-		argo.sysmessage You have too many followers.
-		return 1
-		endif
-	ref12.memoryfindtype.memory_ipet.remove
-	ref12.newitem = i_memory
-	new.color = 02
-	new.cont = <ref12.uid>
-	new.link = <argo.uid>
-	new.more2 = <argo.uid>
-	sysmessage You have given <ARGO.NAME> your pet.
-	src.curfollower -= <local.slots>
-	argo.curfollower += <local.slots>
-	argo.sysmessage <ref12.name> is your new pet.
-	else
-	src.sysmessage That's not a player.
-	endif
+if <def.scp.Followers> == 1
+local.slots = <qval <ref12.tag0.control.slots> ? <ref12.tag0.control.slots> : 1>
+	if <eval <argo.curfollower>+<local.slots>> > <argo.maxfollower>
+	argo.sysmessage You have too many followers.
+	return 1
+endif
+if <argo.findtype.t_eq_trade_window>
+sysmessage @,,2 1010507
 return 1
+endif
+argo.events +e_pet_transfer
+serv.newitem <serv.chardef.<ref12.baseid>.icon>
+new.attr = attr_move_never
+new.color = <ref12.color>
+new.link = <args>
+new.more1 = <uid>
+new.type = t_trade_pet
+new.timerf 2,trigger @timer
+argo.trysrc <uid> TradeWindow <new>
+return 1
+
+[events e_pet_transfer]
+on=@tradeaccepted
+if <def.scp.Followers> == 1
+	for <argn1>
+		if <ref<dlocal._for>.type> == t_trade_pet
+		local.slots = <qval <ref<dlocal._for>.link.tag0.control.slots> ? <ref<dlocal._for>.link.tag0.control.slots> : 1>
+			if <eval <curfollower>+<local.slots>> > <maxfollower>
+			sysmessage You have too many followers.
+			return 1
+			endif
+		src.curfollower -= <local.slots>
+		ref<dlocal._for>.link.memoryfindtype.memory_ipet.remove
+		ref<dlocal._for>.link.f_MakePetOf <uid>
+		ref<dlocal._for>.remove
+		endif
+	endfor
+endif
+
+[typedef t_trade_pet]
+ON=@Click
+message <link.name>
+return 1
+
+ON=@ClientToolTip
+src.addcliloc 1062613,<link.name>
 
 // Shrinked animals
 [typedef t_figurine]

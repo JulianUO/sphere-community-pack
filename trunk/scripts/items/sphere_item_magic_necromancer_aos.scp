@@ -4,7 +4,7 @@
 // All SPHERE script files and formats are copyright Menasoft & Partners.
 // This file may be freely edited for personal use, but may not be distributed
 // in whole or in part, in any format without express written permission from
-// Menasoft & Partners. All donations and contributions become 
+// Menasoft & Partners. All donations and contributions become
 // the property of Menasoft & Partners.
 //****************************************************************************
 // FILE LAST UPDATED: Wednesday May 27th 2009, by Strider/Wiccanian
@@ -14,7 +14,8 @@ VERSION=0.56b
 DEFNAME=i_spellbook_necromancy
 NAME=Necromancy Book
 TYPE=t_spellbook_necro
-RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
+RESOURCES=10 i_scroll_blank, 1 i_hide, 1 i_cloth
+SKILLMAKE=INSCRIPTION 50.0
 WEIGHT=1
 
 ON=@Create

@@ -249,7 +249,7 @@ TYPE=t_deed_house_addon
 NAME=Deed for an arcane circle
 RESOURCES=100 i_log, 2 i_gem_blue_diamond, 2 i_gem_fire_ruby, 2 i_gem_perfect_emerald
 SKILLMAKE=CARPENTRY 94.7, t_carpentry
-CARPENTRY=Provisions - Deeds
+CATEGORY=Provisions - Deeds
 SUBSECTION=House Addons
 DESCRIPTION=Deed for an Arcane Circle
 
