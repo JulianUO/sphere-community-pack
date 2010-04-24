@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -19,7 +19,7 @@ VERSION=0.56b
 DEFNAME=i_runebook
 TYPE=t_rune
 NAME=Runebook
-RESOURCES=80 i_scroll_blank, 1 I_CLOTH, 10 I_scroll_recall
+RESOURCES=8 i_scroll_blank, 1 i_scroll_gate_travel, 1 i_scroll_recall, 1 i_rune_recall
 SKILLMAKE=INSCRIPTION 75.0, MAGERY 70.0
 
 ON=@CREATE
@@ -123,9 +123,9 @@ ENDIF
 ENDFOR
 ENDIF
 
-[DIALOG d_runebook_dialog] 
+[DIALOG d_runebook_dialog]
 50,50
-PAGE 0 
+PAGE 0
 gumppic 0 0 2200
 
 gumppic 29 46 57
@@ -265,7 +265,7 @@ ENDIF
 ENDIF
 
 
-[DIALOG d_runebook_dialog BUTTON] 
+[DIALOG d_runebook_dialog BUTTON]
 
 ON=0
 Src.Sound 85

@@ -84,7 +84,7 @@ serv.savestatics
 // This function is called after server completely finished saving (also at end of background save).
 // ARGS --> Time it took to save (in seconds, 4 digit precision)
 [FUNCTION f_onserver_save_finished]
-
+serv.allclients sysmessage @,,1 World save completed, took <args> seconds.
 
 // This function is called when a server is triggeted a shutdown, after all
 // saves and everything finished

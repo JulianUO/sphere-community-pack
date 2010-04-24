@@ -152,7 +152,8 @@ DUPEITEM=0e3a
 //Spellbook, Empty
 //Client Anomaly requires this out of order dupeitem with 0e3b
 DEFNAME=i_spellbook
-RESOURCES=80 I_PARCHMENT, 1 I_HIDE, 1 I_CLOTH
+RESOURCES=10 i_scroll_blank, 1 i_hide, 1 i_cloth
+SKILLMAKE=INSCRIPTION 50.0
 TYPE=T_SPELLBOOK
 WEIGHT=1
 LAYER=1	// this is wrong in TILEDATA ?
@@ -952,7 +953,7 @@ ON=@Create
 
 [ITEMDEF 01f50]
 DEFNAME=i_scroll_magic_reflection
-NAME=Magic Reflection	
+NAME=Magic Reflection
 RESOURCES=i_scroll_blank, i_reag_garlic, i_reag_mandrake_root, i_reag_spider_silk
 SKILLMAKE=INSCRIPTION 50.0, MAGERY 40.0
 TYPE=T_SCROLL

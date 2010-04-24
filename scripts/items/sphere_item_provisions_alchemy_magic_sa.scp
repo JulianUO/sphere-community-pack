@@ -14,8 +14,8 @@
 DEFNAME=i_spellbook_mystic
 TYPE=t_spellbook_mystic
 NAME=Mystic Spellbook
-RESOURCES=80 i_parchment, 1 i_hide, 1 i_cloth
-
+RESOURCES=10 i_scroll_blank, 1 i_hide, 1 i_cloth
+SKILLMAKE=INSCRIPTION 50.0
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Mysticism
 DESCRIPTION=Mystic Spellbook
