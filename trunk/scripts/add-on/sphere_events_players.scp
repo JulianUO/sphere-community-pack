@@ -239,15 +239,8 @@ if !<npc>
 	endif
 endif
 
-// Magic Resistance Skill
 // Magic Reflection Spell
 on=@spelleffect
-tag.spellhit = <argn1>
-if <isdamagespell <argn1>>
-	if <def.scp.Combat_SpellBonus> == 1
-	tag.gothitbyspell = <argn1>
-	endif
-endif
 if <flags>&statf_reflection
 	if <src.uid> != <uid>
 		if (<serv.spell.<argn1>.flags>&spellflag_harm) || <argn> == 41
@@ -259,9 +252,9 @@ if <flags>&statf_reflection
 			src.findid.i_rune_magic_reflection.remove
 			src.effect 3,i_fx_bless_effect,16,16
 			else
-			src.spelleffect <argn1>,<argn2>
+			spelleffect <argn1> <argn2> <argo.uid>
+			return 1
 			endif
-		return 1
 		endif
 	endif
 endif

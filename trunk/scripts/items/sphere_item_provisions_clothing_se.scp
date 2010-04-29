@@ -98,56 +98,6 @@ on=@create
 dupeitem=02799
 
 
-[itemdef 0279A]
-defname=i_hakama
-name=Hakama
-type=t_clothing
-weight=2.0
-flip=1
-reqstr=10
-dye=1
-skillmake=tailoring 50.0,t_sewing_kit
-resources=16 i_cloth
-
-dupelist=027E5
-
-category=Provisions - Clothes
-subsection=Samurai Empire
-description=Hakama
-
-on=@create
- hitpoints={50 80}
-
-//Hakama
-[itemdef 027E5]
-dupeitem=0279A
-
-
-[itemdef 0279B]
-defname=i_tattsuke_hakama
-name=Tattsuke-Hakama
-type=t_clothing
-weight=2.0
-flip=1
-reqstr=10
-dye=1
-skillmake=tailoring 50.0,t_sewing_kit
-resources=16 i_cloth
-
-dupelist=027E6
-
-category=Provisions - Clothes
-subsection=Samurai Empire
-description=Tattsuke-Hakama
-
-on=@create
- hitpoints={50 80}
-
-//Tattsuke-Hakama
-[itemdef 027E6]
-dupeitem=0279B
-
-
 [itemdef 0279C]
 defname=i_hakama_shita
 name=Hakama-Shita

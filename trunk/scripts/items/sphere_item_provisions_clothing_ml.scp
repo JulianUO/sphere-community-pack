@@ -54,20 +54,6 @@ CATEGORY=Provisions - Clothes
 SUBSECTION=Mondain's Legacy
 DESCRIPTION=Female Elven Robe
 
-[ITEMDEF 02fc3]
-DEFNAME=i_elven_pants
-NAME=Elven Pants
-TYPE=t_clothing
-ARMOR=3
-REQSTR=10
-SKILLMAKE=TAILORING 80.0
-RESOURCES=12 i_cloth
-DUPELIST=03179
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Mondain's Legacy
-DESCRIPTION=Elven Pants
-
 [ITEMDEF 02fc4]
 DEFNAME=i_elven_boots
 NAME=Elven Boots
@@ -124,9 +110,6 @@ DUPEITEM=03175
 
 [ITEMDEF 03178]
 DUPEITEM=03176
-
-[ITEMDEF 03179]
-DUPEITEM=02fc3
 
 [ITEMDEF 0317a]
 DUPEITEM=02fc4

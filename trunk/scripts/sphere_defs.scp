@@ -157,7 +157,7 @@ random_male_tops       { i_shirt_plain 1 i_pants_long 1 i_doublet 1 i_tunic 1 i_
 random_shoes           { i_shoes_plain 1 i_sandals 1 i_boots_calf 1 }
 random_footwear        { i_boots_thigh 1 i_boots_calf 1 i_shoes_plain 1 i_sandals 1 }
 random_pants           { i_pants_short 1 i_pants_long 1 }
-random_skirt           { i_skirt_long 1 i_kilt 1 i_skirt_short 1 }
+random_skirt           { i_skirt_long 1 i_kilt 1 }
 
 [DEFNAME items_armor]
 random_leg_armor       { i_studded_leggings 1 i_platemail_leggings 1 i_chainmail_leggings 1 i_leather_leggings 1 i_ringmail_leggings 1 }

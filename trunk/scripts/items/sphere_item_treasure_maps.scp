@@ -11,146 +11,45 @@
 //
 VERSION=0.56b
 
-[DEFNAME TREASURE_MAPS]
-TMOS       0FFFFFED4 //Treasure Map Offset
-TMS        08c //Treasure Map Size   200x200 pixels - pins are in pixels
-TMTILES    { i_plant_fern 1 i_plant_rushes 1 i_plant_fern 1 i_plant_fern_5 1 i_plant_bulrushes 1 i_plant_grasses 1 i_plant_fern_3 1 i_plant_fern_4 1 }
+[ITEMDEF i_treasure_map_lvl_1]
+ID=i_map
+NAME=Treasure Map Level 1
+TYPE=t_map
+TEVENTS=t_treasure_map
+TAG.Map.Level=1
 
-[DEFNAME TREASURE_MAPS_SPEECH]
-msg_no_pickaxe      Where is your Pickaxe?
-msg_no_cartography  You are not a good enough cartographer for this!
-msg_dig_treasure    WOW a treasure !! OOPS!!
-msg_cant_open_yet   You can not open the chest yet!
+[ITEMDEF i_treasure_map_lvl_2]
+ID=i_map
+NAME=Treasure Map Level 2
+TYPE=t_map
+TEVENTS=t_treasure_map
+TAG.Map.Level=2
 
-[TYPEDEF T_L1MAP]
-//LEVEL1MAP Deciphering
-ON=@DCLICK
-	IF (!<SRC.RESTEST 1 i_pickaxe>)
-		SRC.MESSAGE <def.msg_no_pickaxe>
-		RETURN 1
-	endif
-	IF (<SRC.CARTOGRAPHY><50.0)
-		SRC.MESSAGE <def.msg_no_cartography>
-		RETURN 1
-	endif
-	IF (<MORE><0FFFF)
-		NAME=Deciphered Treasure Map
-		TYPE=T_MAP
-		MORE1=((<MOREX> -180)*010000)+(<MOREY> -180)
-		MORE2=((<MOREX> +180)*010000)+(<MOREY> +180)
-		PIN=105,105   // dead center.
-		NEWITEM <DEF.TMTILES> //Place trigger random tile on UO Map
-		NEW.TYPE=T_L1MAP_CHEST
-		NEW.TIMER=-1
-		NEW.ATTR=attr_static|attr_move_never
-		NEW.LINK=<UID>
-		NEW.P=<MOREP>
-		RETURN 0
-	ENDIF
+[ITEMDEF i_treasure_map_lvl_3]
+ID=i_map
+NAME=Treasure Map Level 3
+TYPE=t_map
+TEVENTS=t_treasure_map
+TAG.Map.Level=3
 
-[TYPEDEF T_L2MAP]
-//LEVEL2MAP Deciphering
-ON=@DCLICK
-	IF (!<SRC.RESTEST 1 i_pickaxe>)
-		SRC.MESSAGE <def.msg_no_pickaxe>
-		RETURN 1
-	endif
-	IF (<SRC.CARTOGRAPHY><60.0)
-		SRC.MESSAGE <def.msg_no_cartography>
-		RETURN 1
-	endif
-	IF (<MORE><0FFFF)
-		NAME=Deciphered Treasure Map
-		TYPE=T_MAP
-		MORE1=((<MOREX> -180)*010000)+(<MOREY> -180)
-		MORE2=((<MOREX> +180)*010000)+(<MOREY> +180)
-		PIN=105,105   // dead center.
-		NEWITEM <DEF.TMTILES> //Place trigger random tile on UO Map
-		NEW.TYPE=T_L2MAP_CHEST
-		NEW.TIMER=-1
-		NEW.ATTR=attr_static|attr_move_never
-		NEW.LINK=<UID>
-		NEW.P=<MOREP>
-		RETURN 0
-	ENDIF
+[ITEMDEF i_treasure_map_lvl_4]
+ID=i_map
+NAME=Treasure Map Level 4
+TYPE=t_map
+TEVENTS=t_treasure_map
+TAG.Map.Level=4
 
-[TYPEDEF T_L3MAP]
-//LEVEL3MAP Deciphering
-ON=@DCLICK
-	IF (!<SRC.RESTEST 1 i_pickaxe>)
-		SRC.MESSAGE <def.msg_no_pickaxe>
-		RETURN 1
-	endif
-	IF (<SRC.CARTOGRAPHY><70.0)
-		SRC.MESSAGE <def.msg_no_cartography>
-		RETURN 1
-	endif
-	IF (<MORE><0FFFF)
-		NAME=Deciphered Treasure Map
-		TYPE=T_MAP
-		MORE1=((<MOREX> -180)*010000)+(<MOREY> -180)
-		MORE2=((<MOREX> +180)*010000)+(<MOREY> +180)
-		PIN=105,105   // dead center.
-		NEWITEM <DEF.TMTILES> //Place trigger random tile on UO Map
-		NEW.TYPE=T_L3MAP_CHEST
-		NEW.TIMER=-1
-		NEW.ATTR=attr_static|attr_move_never
-		NEW.LINK=<UID>
-		NEW.P=<MOREP>
-		RETURN 0
-	ENDIF
+[ITEMDEF i_treasure_map_lvl_5]
+ID=i_map
+NAME=Treasure Map Level 5
+TYPE=t_map
+TEVENTS=t_treasure_map
+TAG.Map.Level=5
 
-[TYPEDEF T_L4MAP]
-//LEVEL4MAP Deciphering
-ON=@DCLICK
-	IF (!<SRC.RESTEST 1 i_pickaxe>)
-		SRC.MESSAGE <def.msg_no_pickaxe>
-		RETURN 1
-	endif
-	IF (<SRC.CARTOGRAPHY><80.0)
-		SRC.MESSAGE <def.msg_no_cartography>
-		RETURN 1
-	endif
-	IF (<MORE><0FFFF)
-		NAME=Deciphered Treasure Map
-		TYPE=T_MAP
-		MORE1=((<MOREX> -180)*010000)+(<MOREY> -180)
-		MORE2=((<MOREX> +180)*010000)+(<MOREY> +180)
-		PIN=105,105   // dead center.
-		NEWITEM <DEF.TMTILES> //Place trigger random tile on UO Map
-		NEW.TYPE=T_L4MAP_CHEST
-		NEW.TIMER=-1
-		NEW.ATTR=attr_static|attr_move_never
-		NEW.LINK=<UID>
-		NEW.P=<MOREP>
-		RETURN 0
-	ENDIF
 
-[TYPEDEF T_L5MAP]
-//LEVEL5MAP Deciphering
-ON=@DCLICK
-	IF (!<SRC.RESTEST 1 i_pickaxe>)
-		SRC.MESSAGE <def.msg_no_pickaxe>
-		RETURN 1
-	endif
-	IF (<SRC.CARTOGRAPHY><90.0)
-		SRC.MESSAGE <def.msg_no_cartography>
-		RETURN 1
-	endif
-	IF (<MORE><0FFFF)
-		NAME=Deciphered Treasure Map
-		TYPE=T_MAP
-		MORE1=((<MOREX> -180)*010000)+(<MOREY> -180)
-		MORE2=((<MOREX> +180)*010000)+(<MOREY> +180)
-		PIN=105,105   // dead center.
-		NEWITEM <DEF.TMTILES> //Place trigger random tile on UO Map
-		NEW.TYPE=T_L5MAP_CHEST
-		NEW.TIMER=-1
-		NEW.ATTR=attr_static|attr_move_never
-		NEW.LINK=<UID>
-		NEW.P=<MOREP>
-		RETURN 0
-	ENDIF
+[TYPEDEF t_treasure_tile]
+on=@itemtargon_self
+say GOOO!!
 
 [TYPEDEF T_L1MAP_CHEST]
 //LEVEL1MAP Treasure map Chest Spawn

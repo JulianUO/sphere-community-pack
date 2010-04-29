@@ -1,0 +1,36 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[TYPEDEF t_treasure_map]
+on=@dclick
+if !<src.restest 1 i_pickaxe>
+src.sysmessage <def.scp.tmap_nopickaxe>
+return 1
+endif
+if <src.cartography> < <def.scp.Cartography_TMapLevel_<dtag0.map.level>>
+src.sysmessage <def.scp.tmap_nocartography>
+return 1
+endif
+if <src.skillusequick cartography <r<def.scp.Cartography_TMapLevel_<dtag0.map.level>>>>
+name = Deciphered Treasure Map
+tevents -t_treasure_map
+morep = <f_generate_coords_tmap>
+more1 = <eval ((<morex> - 280) * 010000) + (<morey> - 280)>
+more2 = <eval ((<morex> + 280) * 010000) + (<morey> + 280)>
+pin 150,150
+serv.newitem { i_plant_fern 1 i_plant_rushes 1 i_plant_fern 1 i_plant_fern_5 1 i_plant_bulrushes 1 i_plant_grasses 1 i_plant_fern_3 1 i_plant_fern_4 1 }
+new.type = t_treasure_tile
+new.tag.map.level = <tag0.map.level>
+new.timer = -1
+new.attr = attr_static|attr_move_never
+new.link = <uid>
+new.p = <morep>
+return 1
+endif
+
+[eof]

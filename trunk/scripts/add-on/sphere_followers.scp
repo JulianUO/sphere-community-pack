@@ -37,7 +37,7 @@ serv.newitem <serv.chardef.<ref12.baseid>.icon>
 new.attr = attr_move_never
 new.color = <ref12.color>
 new.link = <args>
-new.more1 = <uid>
+new.more1 = <argo.uid>
 new.type = t_trade_pet
 new.timerf 2,trigger @timer
 argo.trysrc <uid> TradeWindow <new>
@@ -45,21 +45,23 @@ return 1
 
 [events e_pet_transfer]
 on=@tradeaccepted
-if <def.scp.Followers> == 1
-	for <argn1>
-		if <ref<dlocal._for>.type> == t_trade_pet
+for <argn1>
+	if <ref<dlocal._for>.type> == t_trade_pet
+		if <def.scp.Followers> == 1
 		local.slots = <qval <ref<dlocal._for>.link.tag0.control.slots> ? <ref<dlocal._for>.link.tag0.control.slots> : 1>
 			if <eval <curfollower>+<local.slots>> > <maxfollower>
 			sysmessage You have too many followers.
 			return 1
 			endif
 		src.curfollower -= <local.slots>
-		ref<dlocal._for>.link.memoryfindtype.memory_ipet.remove
-		ref<dlocal._for>.link.f_MakePetOf <uid>
-		ref<dlocal._for>.remove
+		curfollower += <local.slots>
 		endif
-	endfor
-endif
+	ref<dlocal._for>.link.memoryfindtype.memory_ipet.remove
+	ref<dlocal._for>.link.f_MakePetOf <uid>
+	ref<dlocal._for>.remove
+	endif
+endfor
+events -e_pet_transfer
 
 [typedef t_trade_pet]
 ON=@Click
@@ -68,6 +70,15 @@ return 1
 
 ON=@ClientToolTip
 src.addcliloc 1062613,<link.name>
+
+ON=@Timer
+if <cont.type> == t_eq_trade_window
+timerf 2,trigger @Timer
+else
+uid.<more1>.events -e_pet_transfer
+remove
+endif
+return 1
 
 // Shrinked animals
 [typedef t_figurine]

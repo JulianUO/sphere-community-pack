@@ -62,6 +62,14 @@ src.remove_invalid_houses
 
 // This function is called on server startup
 [FUNCTION f_onserver_start]
+if <serv.MySQL> == 1
+db.connect
+	if <db.connected>
+	serv.log @MySQL: Connected Succesfully!
+	else
+	serv.log @MySQL: Failed to Connect!
+	endif
+endif
 
 // This function is called before server is going to save.
 // ARGN1 --> save is forced (writable)
