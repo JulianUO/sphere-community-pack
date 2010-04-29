@@ -14,6 +14,7 @@ actdiff = <f_combatsys_hitchance <actdiff>>
 endif
 
 on=@spelleffect
+tag.spellhit = <argn1>
 if <isdamagespell <argn1>>
 tag0.gothitbyspell = <argn1>
 endif
@@ -124,6 +125,7 @@ actdiff = <f_combatsys_hitchance <actdiff>>
 endif
 
 on=@spelleffect
+tag.spellhit = <argn1>
 if <isdamagespell <argn1>>
 tag0.gothitbyspell = <argn1>
 endif

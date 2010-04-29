@@ -255,4 +255,31 @@ buffcliloc_strength_2			1075846
 buffcliloc_bless_1				1075847
 buffcliloc_bless_2				1075848
 
+[DEFNAME tables_html_tags]
+p_table_head			<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#fffff0"><tr><td>
+p_table_head_end		</td></tr></table>
+p_table				<table width="100%">
+p_table_end			</table>
+th				<th>
+the				</th>
+tr				<tr>
+tre				</tr>
+td				<td>
+tde				</td>
+
+[defname tables_spells]
+magery_morez			1
+magery_spells			63
+necromancy_morez		100
+necromancy_spells		18
+chivalry_morez			200
+chivalry_spells			25
+spellweaving_morez		600
+spellweaving_spells		16
+
+[defname tables_resources]
+sandmining_region		r_default_sand
+mining_region			r_default_rock
+fishing_region			r_default_water
+
 [eof]

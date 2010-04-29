@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -70,7 +70,7 @@ tinkering_category_3_13		"i_hammer_smith"
 tinkering_category_3_14		"i_tinker_tools"
 tinkering_category_3_15		"i_toolkit"
 tinkering_category_3_16		"i_hammer_smith"
-tinkering_category_3_17		"i_watering_bucket_empty"
+//tinkering_category_3_17		"i_watering_bucket_empty"
 
 tinkering_category_4_1		"i_key_ring"
 tinkering_category_4_2		"i_key_copper"

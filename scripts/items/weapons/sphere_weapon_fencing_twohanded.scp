@@ -330,7 +330,7 @@ HITPOINTS={36 48}
 DUPEITEM=01402
 
 [ITEMDEF i_enchanted_titan_leg_bone]
-ID=i_short_spear
+ID=i_spear_short
 NAME=Enchanted Titan Leg Bone
 TEVENTS=t_iprop
 TAG.HitLightning=40

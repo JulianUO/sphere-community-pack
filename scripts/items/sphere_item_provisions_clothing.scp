@@ -485,6 +485,170 @@ HITPOINTS={21 23}
 
 
 ///////////////////////////////////////////////////////////////
+//////// PANTS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 02fc3]
+DEFNAME=i_elven_pants
+NAME=Elven Pants
+TYPE=t_clothing
+SKILLMAKE=TAILORING 80.0, t_sewing_kit
+RESOURCES=12 i_cloth
+WEIGHT=1
+REQSTR=10
+DYE=1
+DUPELIST=03179
+CATEGORY=Provisions - Clothing
+SUBSECTION=Pants
+DESCRIPTION=Elven Pants
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 03179]
+DUPEITEM=02fc3
+
+[ITEMDEF 0230b]
+DEFNAME=i_fur_sarong
+NAME=Fur Sarong
+TYPE=t_clothing
+SKILLMAKE=TAILORING 35.0, t_sewing_kit
+RESOURCES=12 i_cloth
+WEIGHT=1
+REQSTR=10
+DYE=1
+DUPELIST=0230c
+CATEGORY=Provisions - Clothing
+SUBSECTION=Pants
+DESCRIPTION=Fur Sarong
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 0230c]
+DUPEITEM=0230b
+
+[ITEMDEF 0279a]
+DEFNAME=i_hakama
+NAME=Hakama
+TYPE=t_clothing
+SKILLMAKE=TAILORING 50.0, t_sewing_kit
+RESOURCES=16 i_cloth
+WEIGHT=1.0
+REQSTR=10
+DYE=1
+DUPELIST=027e5
+CATEGORY=Provisions - Clothing
+SUBSECTION=Pants
+DESCRIPTION=Hakama
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 027e5]
+DUPEITEM=0279a
+
+[ITEMDEF 01537]
+DEFNAME=i_kilt
+NAME=Kilt
+TYPE=t_clothing
+SKILLMAKE=TAILORING 20.7, t_sewing_kit
+RESOURCES=8 i_cloth
+WEIGHT=1.0
+REQSTR=10
+DYE=1
+DUPELIST=01538
+CATEGORY=Provisions - Clothing
+SUBSECTION=Pants
+DESCRIPTION=Kilt
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 01538]
+DUPEITEM=01537
+
+[ITEMDEF 01539]
+DEFNAME=i_pants_long
+NAME=Long Pants
+TYPE=t_clothing
+SKILLMAKE=TAILORING 24.8, t_sewing_kit
+RESOURCES=8 i_cloth
+WEIGHT=1.0
+REQSTR=10
+DYE=1
+DUPELIST=0153a
+CATEGORY=Provisions - Clothing
+SUBSECTION=Pants
+DESCRIPTION=Long Pants
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 0153a]
+DUPEITEM=01539
+
+[ITEMDEF 0152e]
+DEFNAME=i_pants_short
+NAME=Short Pants
+TYPE=T_CLOTHING
+SKILLMAKE=TAILORING 24.8, t_sewing_kit
+RESOURCES=6 i_cloth
+WEIGHT=1.0
+REQSTR=10
+DYE=1
+DUPELIST=0152f
+CATEGORY=Provisions - Clothing
+SUBSECTION=Pants
+DESCRIPTION=Short Pants
+
+ON=@Create
+HITPOINTS={21 23}
+
+[ITEMDEF 0152f]
+DUPEITEM=0152e
+
+[ITEMDEF 01516]
+DEFNAME=i_skirt_long
+NAME=Skirt
+TYPE=t_clothing
+SKILLMAKE=TAILORING 29.0, t_sewing_kit
+RESOURCES=10 i_cloth
+WEIGHT=1.0
+REQSTR=10
+DYE=1
+DUPELIST=01531
+CATEGORY=Provisions - Clothing
+SUBSECTION=Pants
+DESCRIPTION=Skirt
+
+ON=@CREATE
+HITPOINTS={21 23}
+
+[ITEMDEF 01531]
+DUPEITEM=01516
+
+[ITEMDEF 0279b]
+DEFNAME=i_tattsuke_hakama
+NAME=Tattsuke-Hakama
+TYPE=t_clothing
+SKILLMAKE=TAILORING 50.0, t_sewing_kit
+RESOURCES=16 i_cloth
+WEIGHT=1.0
+REQSTR=10
+DYE=1
+DUPELIST=027e6
+CATEGORY=Provisions - Clothing
+SUBSECTION=Pants
+DESCRIPTION=Tattsuke-Hakama
+
+ON=@CREATE
+HITPOINTS={21 23}
+
+[ITEMDEF 027e6]
+DUPEITEM=0279b
+
+
+///////////////////////////////////////////////////////////////
 //////// OLD CLOTH (Not rescripted yet)
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 01515]
@@ -502,22 +666,6 @@ SUBSECTION=Shirts & Robes
 DESCRIPTION=Cloak, Cape
 
 ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01516]
-DEFNAME=i_skirt_long
-RESOURCES=10 i_cloth
-WEIGHT=4
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=4
-SKILLMAKE=TAILORING 31.8, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Pants & Skirts
-DESCRIPTION=Long Skirt
-
-ON=@CREATE
 HITPOINTS={21 23}
 
 [ITEMDEF 01517]
@@ -541,45 +689,9 @@ HITPOINTS={21 23}
 //plain shirt
 DUPEITEM=01517
 
-[ITEMDEF 0152e]
-DEFNAME=i_pants_short
-RESOURCES=6 i_cloth
-WEIGHT=2
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-DUPELIST=0152f
-SKILLMAKE=TAILORING 6.8, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Pants & Skirts
-DESCRIPTION=Short Pants
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 0152f]
-//Short Pants
-DUPEITEM=0152e
-
 [ITEMDEF 01530]
 //cloak, cape
 DUPEITEM=01515
-
-[ITEMDEF 01531]
-DEFNAME=i_skirt_short
-RESOURCES=10 i_CLOTH, 1 i_THREAD
-WEIGHT=4
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=4
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Pants & Skirts
-DESCRIPTION=Skirt (Tea Length)
-
-ON=@Create
-HITPOINTS={21 23}
 
 [ITEMDEF 01535]
 //This item is unwearable but may be used for decoration.
@@ -595,48 +707,6 @@ DESCRIPTION=Gold Belt (Unwearable)
 [ITEMDEF 01536]
 //gold belt
 DUPEITEM=01535
-
-[ITEMDEF 01537]
-DEFNAME=i_kilt
-RESOURCES=8 i_cloth
-WEIGHT=2
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-DUPELIST=01538
-SKILLMAKE=TAILORING 22.7, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Pants & Skirts
-DESCRIPTION=Kilt
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 01538]
-//Kilt
-DUPEITEM=01537
-
-[ITEMDEF 01539]
-DEFNAME=i_pants_long
-RESOURCES=8 i_cloth
-WEIGHT=3
-TYPE=T_CLOTHING
-DYE=1
-ARMOR=3
-DUPELIST=0153a
-SKILLMAKE=TAILORING 27.2, t_sewing_kit
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Pants & Skirts
-DESCRIPTION=Long Pants
-
-ON=@Create
-HITPOINTS={21 23}
-
-[ITEMDEF 0153a]
-//Long Pants
-DUPEITEM=01539
 
 [ITEMDEF 0153b]
 DEFNAME=i_apron_half

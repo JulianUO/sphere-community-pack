@@ -160,4 +160,21 @@ for 0 <eval <dialoglist.count> - 1>
 endfor
 return 0
 
+[function GetDispID]
+serv.newitem <args>
+local.disp = <new.dispid>
+new.remove
+return <local.disp>
+
+[function f_GetColor]
+serv.new<argv[0]> <argv[1]>
+local.color = <new.color>
+new.remove
+return <local.color>
+
+[function f_ReturnInfo]
+serv.new<argv[0]> <argv[1]>
+local.<argv[3]> = <eval <new.<argv[2]>>>
+new.remove
+
 [eof]
