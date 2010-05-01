@@ -48,4 +48,60 @@ DESCRIPTION=Barbed Hide
 ON=@Create
 COLOR=color_o_barbed
 
+
+[ITEMDEF 01067]
+DEFNAME=i_hides_cut
+TYPE=T_LEATHER
+RESOURCES=1 i_HIDE
+WEIGHT=1
+DUPELIST=01068,01081,01082
+CATEGORY=Resources - Tailoring
+SUBSECTION=Leather
+DESCRIPTION=Cut-up Leather
+
+[ITEMDEF 01068]
+DUPEITEM=01067
+
+[ITEMDEF 01081]
+DUPEITEM=01067
+
+[ITEMDEF 01082]
+DUPEITEM=01067
+
+[ITEMDEF i_leather_spined]
+ID=i_hides_cut
+NAME=spined Leather
+TYPE=t_leather
+RESOURCES=1 i_hide_spined
+CATEGORY=Resources - Tailoring
+SUBSECTION=Leather
+DESCRIPTION=Spined Leather
+
+ON=@Create
+COLOR=color_o_spined
+
+[ITEMDEF i_leather_horned]
+ID=i_hides_cut
+NAME=Horned Leather
+TYPE=t_leather
+RESOURCES=1 i_hide_horned
+CATEGORY=Resources - Tailoring
+SUBSECTION=Leather
+DESCRIPTION=Horned Leather
+
+ON=@Create
+COLOR=color_o_horned
+
+[ITEMDEF i_leather_barded]
+ID=i_hides_cut
+NAME=Barbed Leather
+TYPE=t_leather
+RESOURCES=1 i_hide_barbed
+CATEGORY=Resources - Tailoring
+SUBSECTION=Leather
+DESCRIPTION=Barbed Leather
+
+ON=@Create
+COLOR=color_o_barbed
+
 [eof]

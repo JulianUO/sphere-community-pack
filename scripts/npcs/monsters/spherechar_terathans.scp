@@ -176,7 +176,7 @@ ITEM=random_scroll_medium,{2 3}
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Terathan Avenger
-// Treasure Map Level #3
+ITEM=i_treasure_map_lvl_3
 
 [TEMPLATE loot_terathan_drone]
 CATEGORY=Item Templates
@@ -201,7 +201,7 @@ ITEM=random_scroll_medium,2
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Terathan Matriarch
-// Treasure Map Level #4
+ITEM=i_treasure_map_lvl_4
 
 [TEMPLATE loot_terathan_warrior]
 CATEGORY=Item Templates
@@ -214,7 +214,7 @@ ITEM=i_gold,{125 175}
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Terathan Warrior
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 // Fragrant Seed
 // Peculiar Seed
 

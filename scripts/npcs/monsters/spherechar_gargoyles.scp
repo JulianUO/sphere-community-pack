@@ -261,7 +261,7 @@ ITEM=random_jewelry
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Enslaved Gargoyle
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 ITEM={i_gargoyle_pickaxe 1 0 4}
 
 [TEMPLATE loot_gargoyle_fire]
@@ -276,7 +276,7 @@ ITEM=random_scroll_medium,1
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Fire Gargoyle
-// Treasure Map Level 1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_gargoyle]
 CATEGORY=Item Templates
@@ -292,7 +292,7 @@ CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Gargoyle
 ITEM={i_gargoyle_pickaxe 1 0 4}
-// Treasure Map Level 1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_gargoyle_destroyer]
 CATEGORY=Item Templates
@@ -341,6 +341,6 @@ CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Stone Gargoyle
 ITEM={i_gargoyle_pickaxe 1 0 4}
-// Treasure Map Level 2
+ITEM=i_treasure_map_lvl_2
 
 [EOF]

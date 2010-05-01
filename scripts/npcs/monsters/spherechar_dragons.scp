@@ -1,0 +1,611 @@
+//****************************************************************************
+// SPHERE by : Menasoft ©1997-2009
+// www.sphereserver.net
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// FILE LAST UPDATED: April 07 2010
+VERSION=0.56b
+
+[CHARDEF 031e]
+Name=Ancient Wyrm
+DEFNAME=c_ancient_wyrm
+CAN=MT_WALK|MT_RUN|MT_FLY
+ICON=i_pet_dragon
+DAM=146,182
+TAG.DamFire=25
+TAG.Luck.Loot=loot_ancient_wyrm_luck
+TAG.Slayer=SLAYER_DRAGON
+TAG.Barding.Diff=160.0
+ARMOR={65 75}
+RESOURCES=19 i_ribs_raw,12 i_dragon_scale
+FOODTYPE=50 t_meat_raw
+SOUND=snd_MONSTER_DRAGON1
+CATEGORY=Monsters
+SUBSECTION=Dragons
+DESCRIPTION=Ancient Wyrm
+
+ON=@Create
+	NPC=brain_dragon
+	ResPoison={60 70}
+	ResFire={80 90}
+	ResEnergy={60 70}
+	ResCold={70 80}
+	FAME=22500
+	KARMA=-22500
+	//ALIGNMENT=EVIL
+	STR={1096 1185}
+	DEX={86 175}
+	INT={686 775}
+	MAXHITS={658 711}
+	MAGICRESISTANCE={100.5 150.0}
+	TACTICS={97.6 100.0}
+	WRESTLING={97.6 100.0}
+	MAGERY={80.1 100.0}
+	EVALUATINGINTEL={80.1 100.0}
+	MEDITATION={52.5 75.0}
+
+ON=@NPCRestock
+	ITEM=loot_ancient_wyrm
+
+
+[CHARDEF 0c]
+DEFNAME=c_dragon_red
+NAME=#NAMES_DRAGON the Dragon
+CAN=MT_WALK|MT_RUN|MT_FLY
+ICON=i_pet_dragon
+DAM=65,90
+TAG.Luck.Loot=loot_dragon_luck
+TAG.Slayer=SLAYER_DRAGON
+TAG.Control.Slots=3
+TAG.Barding.Diff=105.0
+ARMOR={55 65}
+RESOURCES=19 i_ribs_raw,7 i_reag_scale_red
+FOODTYPE=40 t_meat_raw
+SOUND=snd_MONSTER_DRAGON1
+CATEGORY=Monsters
+SUBSECTION=Dragons
+DESCRIPTION=Dragon (Red)
+
+ON=@Create
+	NPC=brain_dragon
+	ResPoison={25 35}
+	ResFire={60 70}
+	ResEnergy={35 45}
+	ResCold={30 40}
+	FAME=15000
+	KARMA=-15000
+	//ALIGNMENT=EVIL
+	STR={796 825}
+	DEX={86 105}
+	INT={436 475}
+	MAXHITS={478 495}
+	MAGICRESISTANCE={99.1 100.0}
+	TACTICS={97.6 100.0}
+	WRESTLING={90.1 92.5}
+	MAGERY={30.1 35.1}
+	EVALUATINGINTEL={30.1 40.0}
+	TAMING=93.9
+
+ON=@NPCRestock
+	ITEM=loot_dragon
+
+
+[CHARDEF 03b]
+DEFNAME=c_dragon_grey
+NAME=#NAMES_DRAGON the Dragon
+CAN=MT_WALK|MT_RUN|MT_FLY
+ICON=i_pet_dragon
+DAM=65,90
+TAG.Luck.Loot=loot_dragon_luck
+TAG.Slayer=SLAYER_DRAGON
+TAG.Control.Slots=3
+TAG.Barding.Diff=105.0
+ARMOR={55 65}
+RESOURCES=19 i_ribs_raw,7 i_reag_scale_yellow
+FOODTYPE=40 t_meat_raw
+SOUND=snd_MONSTER_DRAGON1
+CATEGORY=Monsters
+SUBSECTION=Dragons
+DESCRIPTION=Dragon (Grey)
+
+ON=@Create
+	NPC=brain_dragon
+	ResPoison={25 35}
+	ResFire={60 70}
+	ResEnergy={35 45}
+	ResCold={30 40}
+	FAME=15000
+	KARMA=-15000
+	//ALIGNMENT=EVIL
+	STR={796 825}
+	DEX={86 105}
+	INT={436 475}
+	MAXHITS={478 495}
+	MAGICRESISTANCE={99.1 100.0}
+	TACTICS={97.6 100.0}
+	WRESTLING={90.1 92.5}
+	MAGERY={30.1 35.1}
+	EVALUATINGINTEL={30.1 40.0}
+	TAMING=93.9
+
+ON=@NPCRestock
+	ITEM=loot_dragon
+
+
+[CHARDEF 03c]
+Name=Drake
+DEFNAME=c_drake_grey
+CAN=MT_WALK|MT_RUN|MT_FLY
+ICON=i_pet_dragon
+DAM=30,46
+TAG.DamFire=20
+TAG.Luck.Loot=loot_drake_luck
+TAG.Slayer=SLAYER_DRAGON
+TAG.Control.Slots=2
+TAG.Barding.Diff=80.6
+ARMOR={45 50}
+RESOURCES=10 i_ribs_raw,2 i_dragon_scale
+FOODTYPE=25 t_meat_raw
+SOUND=snd_MONSTER_DRAGON1
+CATEGORY=Monsters
+SUBSECTION=Dragons
+DESCRIPTION=Drake (Grey)
+
+ON=@Create
+	NPC=brain_dragon
+	ResPoison={20 30}
+	ResFire={50 60}
+	ResEnergy={30 40}
+	ResCold={40 50}
+	FAME=5500
+	KARMA=-5500
+	//ALIGNMENT=EVIL
+	STR={401 430}
+	DEX={133 152}
+	INT={101 140}
+	MAXHITS={241 258}
+	MAGICRESISTANCE={65.1 80.0}
+	TACTICS={65.1 90.0}
+	WRESTLING={65.1 80.0}
+	TAMING=84.3
+
+ON=@NPCRestock
+	ITEM=loot_drake
+
+
+[CHARDEF 03d]
+Name=Drake
+DEFNAME=c_drake_red
+CAN=MT_WALK|MT_RUN|MT_FLY
+ICON=i_pet_dragon
+DAM=30,46
+TAG.DamFire=20
+TAG.Luck.Loot=loot_drake_luck
+TAG.Slayer=SLAYER_DRAGON
+TAG.Control.Slots=2
+TAG.Barding.Diff=80.6
+ARMOR={45 50}
+RESOURCES=10 i_ribs_raw,2 i_dragon_scale
+FOODTYPE=25 t_meat_raw
+SOUND=snd_MONSTER_DRAGON1
+CATEGORY=Monsters
+SUBSECTION=Dragons
+DESCRIPTION=Drake (Red)
+
+ON=@Create
+	NPC=brain_dragon
+	ResPoison={20 30}
+	ResFire={50 60}
+	ResEnergy={30 40}
+	ResCold={40 50}
+	FAME=5500
+	KARMA=-5500
+	//ALIGNMENT=EVIL
+	STR={401 430}
+	DEX={133 152}
+	INT={101 140}
+	MAXHITS={241 258}
+	MAGICRESISTANCE={65.1 80.0}
+	TACTICS={65.1 90.0}
+	WRESTLING={65.1 80.0}
+	TAMING=84.3
+
+ON=@NPCRestock
+	ITEM=loot_drake
+
+[CHARDEF c_greater_dragon]
+Name=Greater Dragon
+ID=c_dragon_grey
+CAN=MT_WALK|MT_RUN|MT_FLY
+ICON=i_pet_dragon
+DAM=24,33
+TAG.Luck.Loot=loot_greater_dragon_luck
+TAG.Slayer=SLAYER_DRAGON
+TAG.Control.Slots=5
+ARMOR={60 85}
+RESOURCES=19 i_ribs_raw,7 i_dragon_scale
+FOODTYPE=50 t_meat_raw
+SOUND=snd_MONSTER_DRAGON1
+CATEGORY=Monsters
+SUBSECTION=Dragons
+DESCRIPTION=Greater Dragon
+
+ON=@Create
+	NPC=brain_dragon
+	ResPoison={40 60}
+	ResFire={65 90}
+	ResEnergy={50 75}
+	ResCold={40 55}
+	FAME=15000
+	KARMA=-15000
+	//ALIGNMENT=EVIL
+	STR={1025 1425}
+	DEX={81 148}
+	INT={475 675}
+	MAXHITS={1002 1998}
+	MAGICRESISTANCE={110.0 140.0}
+	TACTICS={110.0 140.0}
+	WRESTLING={115.0 145.0}
+	MAGERY={110.0 140.0}
+	EVALUATINGINTEL={110.0 140.0}
+	TAMING=104.7
+
+ON=@NPCRestock
+	ITEM=loot_greater_dragon
+
+[CHARDEF 067]
+Name=Serpentine Dragon
+DEFNAME=c_serpentine_dragon
+CAN=MT_WALK|MT_RUN|MT_FLY
+ICON=i_pet_dragon
+DAM=24,33
+TAG.Luck.Loot=loot_serpentine_dragon_luck
+TAG.Slayer=SLAYER_DRAGON
+TAG.Control.Slots=5
+ARMOR={60 85}
+RESOURCES=19 i_ribs_raw,7 i_dragon_scale
+FOODTYPE=30 t_meat_raw
+SOUND=snd_MONSTER_DRAGON1
+CATEGORY=Monsters
+SUBSECTION=Dragons
+DESCRIPTION=Serpentine Dragon
+
+ON=@Create
+NPC=brain_dragon
+	ResPoison={40 60}
+	ResFire={65 90}
+	ResEnergy={50 75}
+	ResCold={40 55}
+	FAME=15000
+	KARMA=-15000
+	//ALIGNMENT=EVIL
+	STR={1025 1425}
+	DEX={81 148}
+	INT={475 675}
+	MAXHITS={1002 1998}
+	MAGICRESISTANCE={110.0 140.0}
+	TACTICS={110.0 140.0}
+	WRESTLING={115.0 145.0}
+	MAGERY={110.0 140.0}
+	EVALUATINGINTEL={110.0 140.0}
+	TAMING=104.7
+
+ON=@NPCRestock
+	ITEM=loot_serpentine_dragon
+
+[CHARDEF 06a]
+Name=Shadow Wyrm
+DEFNAME=c_shadow_wyrm
+CAN=MT_WALK|MT_RUN|MT_FLY
+ICON=i_pet_dragon
+DAM=130,165
+TAG.Luck.Loot=loot_shadow_wyrm_luck
+TAG.Barding.Diff=124.9
+TAG.Slayer=SLAYER_DRAGON
+ARMOR={65 75}
+RESOURCES=19 i_ribs_raw,10 i_dragon_scale
+FOODTYPE=50 t_meat_raw
+SOUND=snd_MONSTER_DRAGON1
+CATEGORY=Monsters
+SUBSECTION=Dragons
+DESCRIPTION=Shadow Wyrm
+
+ON=@Create
+	NPC=brain_dragon
+	ResPoison={20 30}
+	ResFire={50 60}
+	ResEnergy={50 60}
+	ResCold={45 55}
+	FAME=22500
+	KARMA=-22500
+	//ALIGNMENT=EVIL
+	STR={898 1030}
+	DEX={68 200}
+	INT={488 620}
+	MAXHITS={558 599}
+	MAGICRESISTANCE={100.3 130.0}
+	TACTICS={97.6 100.0}
+	WRESTLING={97.6 100.0}
+	MAGERY={80.1 100.0}
+	EVALUATINGINTEL={80.1 100.0}
+	MEDITATION={52.5 75.0}
+
+ON=@NPCRestock
+	ITEM=loot_shadow_wyrm
+
+[CHARDEF 068]
+Name=Skeletal Dragon
+DEFNAME=c_skeletal_dragon
+CAN=MT_WALK|MT_RUN|MT_FLY
+ICON=i_pet_dragon
+DAM=127,166
+TAG.Luck.Loot=loot_skeletal_dragon_luck
+TAG.Barding.Diff=118.3
+TAG.Slayer=SLAYER_DRAGON
+ARMOR={75 80}
+RESOURCES=19 i_ribs_raw
+SOUND=snd_MONSTER_DRAGON1
+CATEGORY=Monsters
+SUBSECTION=Dragons
+DESCRIPTION=Skeletal Dragon
+
+ON=@Create
+	NPC=brain_dragon
+	ResPoison={70 80}
+	ResFire={40 60}
+	ResEnergy={40 60}
+	ResCold={40 60}
+	FAME=22500
+	KARMA=-22500
+	//ALIGNMENT=EVIL
+	STR={898 1030}
+	DEX={68 200}
+	INT={488 620}
+	MAXHITS={558 599}
+	MAGICRESISTANCE={100.3 130.0}
+	TACTICS={97.6 100.0}
+	WRESTLING={97.6 100.0}
+	MAGERY={80.1 100.0}
+	EVALUATINGINTEL={80.1 100.0}
+
+ON=@NPCRestock
+	ITEM=loot_skeletal_dragon
+
+[CHARDEF 0b4]
+Name=White Wyrm
+DEFNAME=c_white_wyrm
+CAN=MT_WALK|MT_RUN|MT_FLY
+ICON=i_pet_dragon
+DAM=67,98
+TAG.Luck.Loot=loot_white_wyrm_luck
+TAG.DamCold=50
+TAG.Control.Slots=3
+TAG.Barding.Diff=100.3
+TAG.Slayer=SLAYER_DRAGON
+ARMOR={55 70}
+RESOURCES=19 i_ribs_raw, 9 i_dragon_scale
+FOODTYPE=50 t_meat_raw
+SOUND=snd_MONSTER_DRAGON1
+CATEGORY=Monsters
+SUBSECTION=Dragons
+DESCRIPTION=White Wyrm
+
+ON=@Create
+	NPC=brain_dragon
+	ResPoison={40 50}
+	ResFire={15 25}
+	ResEnergy={40 50}
+	ResCold={80 90}
+	FAME=18000
+	KARMA=-18000
+	//ALIGNMENT=EVIL
+	STR={721 760}
+	DEX={101 130}
+	INT={386 425}
+	MAXHITS={433 456}
+	MAGICRESISTANCE={99.1 100.0}
+	TACTICS={97.6 100.0}
+	WRESTLING={90.1 100.0}
+	MAGERY={99.1 100.0}
+	EVALUATINGINTEL={99.1 100.0}
+	TAMING=96.3
+
+ON=@NPCRestock
+	ITEM=loot_white_wyrm
+
+
+[CHARDEF 03e]
+Name=Wyvern
+DEFNAME=c_wyvern
+CAN=MT_WALK|MT_RUN|MT_FLY
+ICON=i_pet_wyvern
+DAM=20,43
+TAG.Luck.Loot=loot_wyvern_luck
+TAG.DamPoison=50
+TAG.Barding.Diff=78.2
+TAG.Slayer=SLAYER_DRAGON
+ARMOR={35 45}
+RESOURCES=10 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+SOUND=snd_MONSTER_DRAGON1
+CATEGORY=Monsters
+SUBSECTION=Dragons
+DESCRIPTION=Wyvern
+
+ON=@Create
+NPC=brain_dragon
+	ResPoison={90 100}
+	ResFire={30 40}
+	ResEnergy={30 40}
+	ResCold={20 30}
+	FAME=4000
+	KARMA=-4000
+	//ALIGNMENT=EVIL
+	STR={202 240}
+	DEX={153 172}
+	INT={51 90}
+	MAXHITS={125 141}
+	MAGICRESISTANCE={65.1 80.0}
+	TACTICS={65.1 90.0}
+	WRESTLING={65.1 80.0}
+	POISONING={60.1 80.0}
+
+ON=@NPCRestock
+	ITEM=loot_wyvern
+
+
+
+
+[TEMPLATE loot_ancient_wyrm]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ancient Wyrm
+CONTAINER=i_backpack
+ITEM=i_gold,{1600 1800}
+ITEM=random_jewelry,5
+ITEM=random_potion,{1 2}
+ITEM=random_wand,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_ancient_wyrm_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ancient Wyrm
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_dragon]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Dragon
+CONTAINER=i_backpack
+ITEM=i_gold,{1600 1800}
+ITEM=random_jewelry,5
+ITEM=random_potion,{1 2}
+ITEM=random_wand,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_dragon_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Dragon
+ITEM=i_treasure_map_lvl_4
+
+[TEMPLATE loot_drake]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Drake
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=random_jewelry,5
+ITEM=random_potion,{1 2}
+ITEM=random_wand,{1 2}
+ITEM=random_scroll_medium,2
+ITEM=random_reagent,3
+
+[TEMPLATE loot_drake_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Drake
+ITEM=i_treasure_map_lvl_2
+
+[TEMPLATE loot_greater_dragon]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Greater Dragon
+ITEM=i_gold,{1500 2000}
+ITEM=random_jewelry,{8 16}
+ITEM=random_potion,{1 2}
+ITEM=random_wand,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_greater_dragon_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Greater Dragon
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_serpentine_dragon]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Serpentine Dragon
+ITEM=i_gold,{1500 2000}
+ITEM=random_jewelry,{8 16}
+ITEM=random_potion,{1 2}
+ITEM=random_wand,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_serpentine_dragon_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Serpentine Dragon
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_shadow_wyrm]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Shadow Wyrm
+ITEM=i_gold,{1550 1800}
+ITEM=random_jewelry,5
+ITEM=random_potion,{1 2}
+ITEM=random_wand,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_shadow_wyrm_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Shadow Wyrm
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_skeletal_dragon]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Skeletal Dragon
+ITEM=i_gold,{1600 1800}
+ITEM=random_jewelry,5
+ITEM=random_potion,{1 2}
+ITEM=random_wand,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_skeletal_dragon_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Skeletal Dragon
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_white_wyrm]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=White Wyrm
+CONTAINER=i_backpack
+ITEM=i_gold,{1200 1400}
+ITEM=random_jewelry,{1 5}
+ITEM=random_potion,{1 2}
+ITEM=random_wand,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_white_wyrm_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=White Wyrm
+ITEM=i_treasure_map_lvl_4
+
+[TEMPLATE loot_wyvern]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Wyvern
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=random_potion,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_wyvern_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Wyvern
+ITEM=i_treasure_map_lvl_2
+
+[EOF]

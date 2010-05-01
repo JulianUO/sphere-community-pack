@@ -448,47 +448,6 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{275 325}
 
-
-[chardef 104]
-defname=c_skeletal_dragon
-name=Skeletal Dragon
-SOUND=snd_monster_dragon1
-ICON=i_pet_dragon
-DAM=127,166
-RESDISPDNID=c_man
-RESLEVEL=2
-RESDISPDNHUE=33
-ARMOR=78
-RESOURCES=15 i_ribs_raw,10 i_hide
-CAN=MT_WALK|MT_USEHANDS|MT_FLY
-FOODTYPE=40 t_meat_raw
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman
-AVERSIONS=e_carnivores3
-MOVERATE=50
-CATEGORY=New Monsters
-SUBSECTION=LBR
-DESCRIPTION=Skeletal Dragon
-
-ON=@Create
-	NPC=brain_dragon
-	FAME=10000
-	KARMA=-10000
-	STR={898 1030}
-	MAXHITS={558 599}
-	INT={488 620}
-	DEX={68 200}
-	MAGICRESISTANCE={100.3 130.0}
-	TACTICS={97.6 100.0}
-	WRESTLING={97.6 100.0}
-	MAGERY={80.0 100.0}
-	EVALUATINGINTEL={80.0 100.0}
-	ITEMNEWBIE=i_spellbook
-	ADDCIRCLE 8,1
-
-ON=@NpcRestock
-	ITEM=i_gold,{1600 1800}
-	ITEM=random_jewel,5
-
 [chardef 128]
 defname=c_pixie
 name=Pixie
@@ -1479,44 +1438,5 @@ ON=@Create
 
 ON=@NpcRestock
 	ITEM=i_gold,{80 130}
-	////Wyvern
-
-[chardef 62]
-defname=c_wyvern_mutant
-name=Wyvern
-SOUND=snd_monster_dragon1
-ICON=i_pet_mutantwyvern
-DAM=20,43
-RESDISPDNID=c_man
-RESLEVEL=2
-RESDISPDNHUE=33
-ARMOR=40
-RESOURCES=15 i_ribs_raw,10 i_hide
-CAN=MT_WALK|MT_USEHANDS|MT_FLY
-FOODTYPE=40 t_meat_raw
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman
-AVERSIONS=e_carnivores3
-MOVERATE=40
-CATEGORY=New Monsters
-SUBSECTION=LBR
-DESCRIPTION=Wyvern
-
-ON=@Create
-	NPC=brain_dragon
-	FAME=4000
-	KARMA=-4000
-	STR={202 240}
-	MAXHITS={125 141}
-	INT={51 90}
-	DEX={153 172}
-	MAGICRESISTANCE={65.0 80.0}
-	TACTICS={65.0 90.0}
-	WRESTLING={65.0 80.0}
-	POISONING={60.0 80.0}
-
-ON=@NpcRestock
-	ITEM=i_gold,{175 225}
-	ITEM=i_potion_poisonless
-	ITEM=RANDOM_SCROLL
 
 [EOF]

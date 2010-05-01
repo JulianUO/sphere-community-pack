@@ -173,37 +173,6 @@ ON=@Create
 	FAME=150
 	KARMA={-600 -999}
 
-[CHARDEF 01016]
-DEFNAME=c_m_wyvern
-NAME=Wyvern
-ID=c_DRAGON_RED
-DAM=3,24
-ARMOR=20
-RESOURCES=50 i_ribs_raw, 20 i_hide
-FOODTYPE=25 t_meat_raw
-//SHELTER==r_caves,r_dungeon
-DESIRES=i_gold
-AVERSIONS=r_civilization,r_water
-CATEGORY=Monsters
-SUBSECTION=Dragons and Drakes
-DESCRIPTION=Wyvern
-
-ON=@Create
-	NPC=brain_dragon
-	STR={400 430}
-	DEX={153 172}
-	INT={51 90}
-	//ALIGNMENT=EVIL
-	PARRYING={65.0 80.0}
-	MAGICRESISTANCE={65.0 80.0}
-	TACTICS={65.0 90.0}
-	WRESTLING={65.0 80.0}
-	FAME={3000 9000}
-	KARMA={-5000 -5999}
-
-ON=@NPCRestock
-	ITEM=loot_WYVERN
-
 [CHARDEF 01017]
 DEFNAME=c_m_hellhound
 NAME=Hell Hound

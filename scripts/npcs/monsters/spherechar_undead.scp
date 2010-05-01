@@ -447,7 +447,7 @@ ITEM=i_staff_gnarled
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Lich
-// Treasure Map Level 3
+ITEM=i_treasure_map_lvl_3
 
 [TEMPLATE loot_spectre]
 CATEGORY=Item Templates
@@ -501,7 +501,7 @@ ITEM=random_spells_medium,{1 2}
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Mummy
-// Treasure Map Level 1
+ITEM=i_treasure_map_lvl_1
 // Fragrant Seed
 // Peculiar Seed
 
@@ -541,6 +541,6 @@ ITEM=i_staff_gnarled
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Lich Lord
-// Treasure Map Level 4
+ITEM=i_treasure_map_lvl_4
 
 [eof]

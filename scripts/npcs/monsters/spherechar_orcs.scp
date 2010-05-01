@@ -313,7 +313,7 @@ ITEM=random_weapon
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Orc
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 // Bola Ball
 
 [TEMPLATE loot_orc_bomber]
@@ -410,7 +410,7 @@ SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Orc Lord
 // Bola Ball
 // Evil Orc Helm
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_orc_mage]
 CATEGORY=Item Templates
@@ -427,6 +427,6 @@ CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Orc Mage
 // Mask of Orcish Kin
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [eof]

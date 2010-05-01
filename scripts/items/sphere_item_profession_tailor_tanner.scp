@@ -253,21 +253,6 @@ DUPEITEM=0105f
 // loom - E piece - S
 DUPEITEM=0105f
 
-[ITEMDEF 01067]
-DEFNAME=i_hides_cut
-RESOURCES=1 i_HIDE
-TYPE=T_LEATHER
-DYE=1
-WEIGHT=1
-DUPELIST=01068,01081,01082
-CATEGORY=Items by Professions
-SUBSECTION=Tanner
-DESCRIPTION=Cut-up Leather
-
-[ITEMDEF 01068]
-//cut up leather
-DUPEITEM=01067
-
 [ITEMDEF 01069]
 DEFNAME=i_HIDE_STRETCHED
 TYPE=T_LEATHER
@@ -332,15 +317,6 @@ DUPEITEM=0107a
 [ITEMDEF 01080]
 // PARTIAL light brown small stretched hide in frame facing SW
 DUPEITEM=0107a
-
-[ITEMDEF 01081]
-//cut up leather strips facing SW
-DEFNAME=i_hides_cut_2
-DUPEITEM=01067
-
-[ITEMDEF 01082]
-//cut up leather strips facing SE
-DUPEITEM=01067
 
 [ITEMDEF 011f4]
 //DEFNAME2=LLAMA_HIDES_4

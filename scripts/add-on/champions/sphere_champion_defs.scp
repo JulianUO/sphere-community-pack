@@ -21,6 +21,14 @@ champ_abyss_champion	c_semidar
 champ_abyss_reward	{i_gladiator_collar 1 i_Lieutenant_Royal_guard 1}
 
 
+champ_UnholyTerror_1 {c_spectre 1 c_m_ghoul 1 c_wraith 1 c_ghost 1}
+champ_UnholyTerror_2 {c_m_skeleton_mage 1 c_m_mummy 1 c_m_wraith 1}
+champ_UnholyTerror_3 {c_liche 1 c_m_skeleton_knight 1 c_m_liche_lord 1}
+champ_UnholyTerror_4 {c_m_liche_lord 1 c_rotting_corpse 1}
+champ_UnholyTerror_champion	c_neira
+champ_UnholyTerror_Reward	{i_blood_drips 50 i_captain_john_hat 11 i_detective_boots 11 i_necromancer_shroud 11 i_shroud_deceit 17}
+
+
 // Old Champions Spawns by Cloud
 champ_Arachnid_1 {c_fire_gargoyle 1 c_spider_giant 1}
 champ_Arachnid_2 {c_terathan_drone 1 c_terathan_warrior 1}
@@ -50,12 +58,7 @@ champ_VerminHord_4 {c_archer_ratman 1 c_m_silver_serpent 1}
 champ_VerminHord_champion c_Barracoon
 champ_VerminHord_Reward {i_fang_ractus 17 i_slime_statue 50 i_oak_leaf_cloak 9 i_gauntlets_anger 9 i_Detective_boots 9 i_Djinn_Ring 9}
 
-champ_UnholyTerror_1 {c_spectre 1 c_m_ghoul 1 c_m_wraith 1 c_m_ghost 1}
-champ_UnholyTerror_2 {c_m_skeleton_mage 1 c_m_mummy 1 c_m_wraith 1}
-champ_UnholyTerror_3 {c_liche 1 c_m_skeleton_knight 1 c_m_liche_lord 1}
-champ_UnholyTerror_4 {c_m_liche_lord 1 c_rotting_corpse 1}
-champ_UnholyTerror_champion c_Neira
-champ_UnholyTerror_Reward {i_blood_drips 50 i_captain_john_hat 11 i_detective_boots 11 i_necromancer_shroud 11 i_shroud_deceit 17}
+
 
 champ_SleepingDragon_1 {c_big_worm_hatch 1 c_lizardman 1}
 champ_SleepingDragon_2 {c_big_worm 1 c_kappa 1}
