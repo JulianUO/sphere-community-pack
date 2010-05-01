@@ -26,92 +26,9 @@ CATEGORY=Provisions - Clothes
 SUBSECTION=Mondain's Legacy
 DESCRIPTION=Elven Glasses
 
-[ITEMDEF 02fb9]
-DEFNAME=i_elven_robe
-NAME=Elven Robe
-TYPE=t_clothing
-ARMOR=7
-REQSTR=10
-SKILLMAKE=TAILORING 80.0
-RESOURCES=30 i_cloth
-DUPELIST=03173
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Mondain's Legacy
-DESCRIPTION=Elven Robe
-
-[ITEMDEF 02fba]
-DEFNAME=i_elven_robe_female
-NAME=Female Elven Robe
-TYPE=t_clothing
-ARMOR=7
-REQSTR=10
-SKILLMAKE=TAILORING 80.0
-RESOURCES=30 i_cloth
-DUPELIST=03174
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Mondain's Legacy
-DESCRIPTION=Female Elven Robe
-
-[ITEMDEF 02fc4]
-DEFNAME=i_elven_boots
-NAME=Elven Boots
-TYPE=t_clothing
-ARMOR=3
-REQSTR=10
-SKILLMAKE=TAILORING 80.0
-RESOURCES=15 i_hides_cut
-DUPELIST=0317a
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Mondain's Legacy
-DESCRIPTION=Elven Pants
-
 [ITEMDEF 03172]
 DUPEITEM=02fb8
 
-[ITEMDEF 03173]
-DUPEITEM=02fb9
 
-[ITEMDEF 03174]
-DUPEITEM=02fba
-
-[ITEMDEF 03175]
-DEFNAME=i_elven_shirt
-NAME=Elven Shirt
-TYPE=t_clothing
-ARMOR=2
-REQSTR=10
-SKILLMAKE=TAILORING 80.0
-RESOURCES=10 i_cloth
-DUPELIST=03177
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Mondain's Legacy
-DESCRIPTION=Elven Shirt
-
-[ITEMDEF 03176]
-DEFNAME=i_elven_shirt_dark
-NAME=Elven Shirt
-TYPE=t_clothing
-ARMOR=2
-REQSTR=10
-SKILLMAKE=TAILORING 80.0
-RESOURCES=10 i_cloth
-DUPELIST=03178
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Mondain's Legacy
-DESCRIPTION=Elven Shirt (Dark)
-
-[ITEMDEF 03177]
-DUPEITEM=03175
-
-[ITEMDEF 03178]
-DUPEITEM=03176
-
-[ITEMDEF 0317a]
-DUPEITEM=02fc4
 
 [EOF]

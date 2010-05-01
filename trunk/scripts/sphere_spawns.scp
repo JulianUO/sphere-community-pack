@@ -67,7 +67,20 @@ ID=c_shade 2
 ID=c_lich 1
 
 
-
+[SPAWN spawn_ants]
+CATEGORY=Spawn Groups
+SUBSECTION=Monsters
+DESCRIPTION=Ants
+ID=c_black_solen_infiltrator_queen
+ID=c_black_solen_infiltrator_warrior
+ID=c_black_solen_queen
+ID=c_black_solen_warrior
+ID=c_black_solen_worker
+ID=c_red_solen_infiltrator_queen
+ID=c_red_solen_infiltrator_warrior
+ID=c_red_solen_queen
+ID=c_red_solen_warrior
+ID=c_red_solen_worker
 
 [SPAWN spawn_daemons]
 CATEGORY=Spawn Groups
@@ -81,6 +94,22 @@ ID=c_daemon
 ID=c_chaos_daemon
 ID=c_ice_fiend
 ID=c_moloch
+
+[SPAWN spawn_dragons]
+CATEGORY=Spawn Groups
+SUBSECTION=Monsters
+DESCRIPTION=Dragons
+ID=c_ancient_wyrm
+ID=c_dragon_red
+ID=c_dragon_grey
+ID=c_drake_red
+ID=c_drake_grey
+ID=c_greater_dragon
+ID=c_serpentine_dragon
+ID=c_shadow_wyrm
+ID=c_skeletal_dragon
+ID=c_white_wyrm
+ID=c_wyvern
 
 [SPAWN spawn_elementals]
 CATEGORY=Spawn Groups
@@ -166,6 +195,92 @@ ID=c_wraith
 ID=c_shade
 
 
+[SPAWN spawn_all_monsters]
+CATEGORY=Spawn Groups
+SUBSECTION=Monsters
+DESCRIPTION=All Monsters
+ID=c_black_solen_infiltrator_queen
+ID=c_black_solen_infiltrator_warrior
+ID=c_black_solen_queen
+ID=c_black_solen_warrior
+ID=c_black_solen_worker
+ID=c_red_solen_infiltrator_queen
+ID=c_red_solen_infiltrator_warrior
+ID=c_red_solen_queen
+ID=c_red_solen_warrior
+ID=c_red_solen_worker
+ID=c_arcane_daemon
+ID=c_balron
+ID=c_black_gate_daemon
+ID=c_bone_daemon
+ID=c_daemon
+ID=c_chaos_daemon
+ID=c_ice_fiend
+ID=c_moloch
+ID=c_ancient_wyrm
+ID=c_dragon_red
+ID=c_dragon_grey
+ID=c_drake_red
+ID=c_drake_grey
+ID=c_greater_dragon
+ID=c_serpentine_dragon
+ID=c_shadow_wyrm
+ID=c_skeletal_dragon
+ID=c_white_wyrm
+ID=c_wyvern
+ID=c_air_elemental
+ID=c_earth_elemental
+ID=c_dull_copper_elemental
+ID=c_shadow_iron_elemental
+ID=c_copper_elemental
+ID=c_bronze_elemental
+ID=c_golden_elemental
+ID=c_agapite_elemental
+ID=c_verite_elemental
+ID=c_valorite_elemental
+ID=c_fire_elemental
+ID=c_water_elemental
+ID=c_blood_elemental
+ID=c_ice_elemental
+ID=c_efreet
+ID=c_poison_elemental
+ID=c_snow_elemental
+ID=c_rai_ju
+ID=c_kaze_kemono
+ID=c_enslaved_gargoyle
+ID=c_fire_gargoyle
+ID=c_gargoyle
+ID=c_gargoyle_destroyer
+ID=c_gargoyle_enforcer
+ID=c_stone_gargoyle
+ID=c_arctic_ogre_lord
+ID=c_ettin
+ID=c_frost_troll
+ID=c_ogre
+ID=c_ogre_lord
+ID=c_troll
+ID=c_orc
+ID=c_orc_bomber
+ID=c_orc_brute
+ID=c_orc_captain
+ID=c_orc_chopper
+ID=c_orc_scout
+ID=c_orc_lord
+ID=c_orc_mage
+ID=c_terathan_avenger
+ID=c_terathan_drone
+ID=c_terathan_matriarch
+ID=c_terathan_warrior
+ID=c_zombie
+ID=c_lich
+ID=c_spectre
+ID=c_skeleton
+ID=c_skeletal_knight
+ID=c_skeletal_mage
+ID=c_mummy
+ID=c_lich_lord
+ID=c_wraith
+ID=c_shade
 
 
 // Random Spawn, T2A critters included are just alterations to old art (colors, stats). T2A is not needed.
@@ -230,8 +345,6 @@ ID=c_gazer
 ID=c_m_gazer_elder
 ID=c_imp
 
-
-
 [SPAWN 08009]
 DEFNAME=SPAWN_Lizardmen
 CATEGORY=Spawn Groups
@@ -240,19 +353,6 @@ DESCRIPTION=Lizard Men
 ID=c_lizardman
 ID=c_lizardman_mace
 ID=c_lizardman_spear
-
-[SPAWN 0800b]
-DEFNAME=SPAWN_Dragons
-CATEGORY=Spawn Groups
-SUBSECTION=Monsters
-DESCRIPTION=Dragons
-ID=c_DRAGON_GREEN 10
-ID=c_DRAGON_RED 15
-ID=c_DRAGON_SMALL_BLACK 15
-ID=c_DRAGON_SMALL_RED 20
-ID=c_m_dragon_wyrm
-ID=c_m_wyvern 10
-
 
 [SPAWN 0800c]
 DEFNAME=SPAWN_ANIMALS
@@ -310,68 +410,6 @@ ID=c_dolphin 10
 ID=c_sea_serpent 3
 ID=c_sea_monster
 ID=c_water_elemental 4
-
-[SPAWN 0800f]
-DEFNAME=SPAWN_AllMonsters
-CATEGORY=Spawn Groups
-SUBSECTION=Monsters
-DESCRIPTION=All Monsters
-ID=c_zombie
-ID=c_spectre
-ID=c_skeletal_knight
-ID=c_skeletal_mage
-ID=c_skeleton_w_axe
-ID=c_skeleton
-ID=c_lich
-ID=c_lich_lord
-ID=c_air_elemental
-ID=c_earth_elemental
-ID=c_fire_elemental
-ID=c_water_elemental
-ID=c_blood_elemental
-ID=c_ice_elemental
-ID=c_poison_elemental
-ID=c_daemon
-ID=c_daemon_w_sword
-ID=c_m_balron
-ID=c_gargoyle
-ID=c_corpser
-ID=c_snake_giant
-ID=c_spider_giant
-ID=c_rat_giant
-ID=c_harpy
-ID=c_headless
-ID=c_mongbat
-ID=c_reaper
-ID=c_snake
-ID=c_a_direwolf
-ID=c_scorpion_giant
-ID=c_m_hellcat
-ID=c_m_hellhound
-ID=c_m_stoneharpy
-ID=c_slime
-ID=c_gazer
-ID=c_m_gazer_elder
-ID=c_imp
-ID=c_orc_w_club
-ID=c_orc
-ID=c_orc_lord
-ID=c_lizardman
-ID=c_ogre
-ID=c_ettin
-ID=c_ettin_w_axe
-ID=c_m_dragon_wyrm
-ID=c_m_wyvern
-ID=c_ratman
-ID=c_ratman_w_sword
-ID=c_ratman_w_mace
-ID=c_dragon_green
-ID=c_dragon_red
-ID=c_m_frost_troll
-ID=c_m_ogre_lord
-ID=c_dragon_small_black
-ID=c_dragon_small_red
-ID=TROLLS
 
 [SPAWN 08010]
 DEFNAME=SPAWN_ForestAnimals
@@ -890,60 +928,6 @@ ID=c_ratman_w_mace
 ID=c_ratman
 ID=c_ratman_w_sword
 
-[SPAWN 08041]
-DEFNAME=SPAWN_Deceit2
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Deceit 2
-ID=c_air_elemental
-ID=c_earth_elemental 2
-ID=c_fire_elemental
-ID=c_rat_giant 10
-ID=c_headless 10
-ID=c_lizardman 2
-ID=c_lizardman_mace 2
-ID=c_lizardman_spear 2
-ID=c_mongbat 7
-ID=c_scorpion_giant 4
-ID=c_skeleton 2
-ID=c_skeleton_w_axe 2
-ID=c_skeletal_knight 2
-ID=c_ZOMBIE 8
-ID=c_spectre 4
-
-[SPAWN 08042]
-DEFNAME=SPAWN_Deceit3
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Deceit 3
-ID=c_gazer
-ID=c_scorpion_giant 3
-ID=c_spider_giant 3
-ID=c_ratman_w_mace 3
-ID=c_ratman 3
-ID=c_ratman_w_sword 3
-ID=c_snake_giant 2
-ID=c_ZOMBIE 5
-ID=c_spectre 3
-
-[SPAWN 08043]
-DEFNAME=SPAWN_Deceit4
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Deceit 4
-ID=c_DAEMON
-ID=c_DAEMON_W_SWORD
-ID=c_DRAGON_GREEN
-ID=c_DRAGON_RED
-ID=c_DRAGON_SMALL_BLACK 3
-ID=c_DRAGON_SMALL_RED 3
-ID=c_m_wyvern 3
-ID=c_air_elemental 2
-ID=c_earth_elemental 2
-ID=c_fire_elemental 2
-ID=c_spectre 4
-ID=c_lich 2
-
 [SPAWN 08044]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
@@ -955,57 +939,6 @@ ID=C_H_BRIGAND_F 2
 ID=C_H_BRIGAND 2
 ID=C_H_THIEF_F 3
 ID=C_H_THIEF 3
-
-[SPAWN 08045]
-DEFNAME=SPAWN_Despise1
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Despise 1
-ID=c_ZOMBIE
-ID=c_headless
-ID=c_mongbat
-ID=c_slime
-ID=c_m_goblin
-ID=c_rat_giant
-
-[SPAWN 08046]
-DEFNAME=SPAWN_Despise2
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Despise 2
-ID=c_ZOMBIE
-ID=c_skeleton
-ID=c_skeleton_w_axe
-ID=c_spectre 2
-ID=c_ORC
-ID=c_orc_w_club
-ID=c_ratman_w_mace
-ID=c_ratman
-ID=c_lizardman
-ID=c_lizardman_spear
-ID=c_lizardman_mace
-ID=c_spider_giant
-ID=c_scorpion_giant
-ID=c_m_goblin
-ID=c_m_goblin_CHIEF
-
-[SPAWN 08047]
-DEFNAME=SPAWN_Despise3
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Despise 3
-ID=c_ORC
-ID=c_orc_lord 2
-ID=c_m_goblin_MAGE 2
-ID=C_OGRE
-ID=c_troll
-ID=c_ETTIN_W_AXE
-ID=c_scorpion_giant
-ID=c_snake_giant
-ID=c_spider_giant
-ID=c_spectre
-ID=c_skeletal_knight
-ID=c_skeleton_w_axe
 
 [SPAWN 08048]
 DEFNAME=SPAWN_Fishermen
@@ -1051,119 +984,6 @@ SUBSECTION=Shopkeepers
 DESCRIPTION=Veterinarians
 ID=C_H_VET_F
 ID=C_H_VET
-
-[SPAWN 0804d]
-DEFNAME=SPAWN_Destard1
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Destard 1
-ID=c_dragon_small_black
-ID=c_dragon_small_red
-ID=c_dragon_green
-ID=c_dragon_red
-ID=c_m_wyvern
-ID=c_headless
-ID=c_orc_lord
-ID=c_orc_mage
-ID=c_lizardman
-ID=c_m_goblin_chief
-ID=c_earth_elemental
-ID=c_ettin_w_axe
-ID=c_ogre
-
-[SPAWN 0804e]
-DEFNAME=SPAWN_Destard2
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Destard 2
-ID=c_DRAGON_GREEN
-ID=c_DRAGON_RED
-ID=c_DRAGON_SMALL_BLACK
-ID=c_DRAGON_SMALL_RED
-ID=c_m_wyvern
-ID=c_ETTIN_W_AXE
-ID=c_troll
-ID=C_OGRE
-
-[SPAWN 0804f]
-DEFNAME=SPAWN_Destard3
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Destard 3
-ID=c_DRAGON_GREEN 4
-ID=c_DRAGON_RED 4
-ID=c_DRAGON_SMALL_BLACK 2
-ID=c_DRAGON_SMALL_RED 2
-ID=c_m_wyvern 2
-ID=c_m_dragon_wyrm
-
-[SPAWN 08050]
-DEFNAME=SPAWN_Shame1
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Shame 1
-ID=c_headless
-ID=c_slime
-ID=c_mongbat
-ID=c_ORC
-ID=c_orc_w_club
-ID=c_ratman
-ID=c_lizardman
-ID=c_lizardman_mace
-ID=c_ratman_w_sword
-ID=c_m_goblin
-
-[SPAWN 08051]
-DEFNAME=SPAWN_Shame2
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Shame 2
-ID=c_lizardman_mace
-ID=c_lizardman_spear
-ID=c_orc_lord
-ID=C_OGRE
-ID=c_m_goblin_CHIEF
-ID=c_m_goblin_MAGE
-ID=c_slime
-ID=c_spider_giant
-
-[SPAWN 08052]
-DEFNAME=SPAWN_Shame3
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Shame 3
-ID=c_m_wyvern
-ID=c_DRAGON_SMALL_RED
-ID=c_DRAGON_SMALL_BLACK
-ID=c_air_elemental
-ID=c_earth_elemental
-ID=c_ETTIN
-ID=c_ETTIN_W_AXE
-ID=C_OGRE
-ID=c_troll
-ID=c_troll_w_mace
-ID=c_troll_w_axe
-ID=c_scorpion_giant
-ID=c_snake_giant
-ID=c_spider_giant
-ID=c_gazer
-ID=c_orc_lord
-ID=c_orc_mage
-
-[SPAWN 08053]
-DEFNAME=SPAWN_Shame4
-CATEGORY=Spawn Groups
-SUBSECTION=Dungeons
-DESCRIPTION=Shame 4
-ID=c_water_elemental
-ID=c_ETTIN_W_AXE 3
-ID=c_ETTIN_W_AXE
-ID=c_troll
-ID=c_troll_w_mace
-ID=c_troll_w_axe
-ID=c_air_elemental
-ID=c_snake_giant
-ID=c_gazer
 
 [SPAWN 08054]
 DEFNAME=SPAWN_Guards

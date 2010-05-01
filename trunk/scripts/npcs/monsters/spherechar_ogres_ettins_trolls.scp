@@ -253,7 +253,7 @@ ITEM=random_scroll_medium,{2 3}
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Arctic Ogre Lord
-// Treasure Map Level #3
+ITEM=i_treasure_map_lvl_3
 
 [TEMPLATE loot_ettin]
 CATEGORY=Item Templates
@@ -267,7 +267,7 @@ ITEM=random_potion,1
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Ettin
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_frost_troll]
 CATEGORY=Item Templates
@@ -282,7 +282,7 @@ ITEM=random_weapon
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Frost Troll
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_ogre]
 CATEGORY=Item Templates
@@ -296,7 +296,7 @@ ITEM=i_club
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Ogre
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_ogre_lord]
 CATEGORY=Item Templates
@@ -313,7 +313,7 @@ ITEM=random_scroll_medium,{2 3}
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Ogre Lord
-// Treasure Map Level #3
+ITEM=i_treasure_map_lvl_3
 
 [TEMPLATE loot_troll]
 CATEGORY=Item Templates
@@ -326,6 +326,6 @@ ITEM=i_gold,{125 175}
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Troll
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [EOF]

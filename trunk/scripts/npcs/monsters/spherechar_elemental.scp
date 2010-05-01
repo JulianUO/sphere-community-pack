@@ -893,7 +893,7 @@ ITEM={random_scroll_low 1 random_scroll_medium 1},1
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Air
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_elemental_earth]
 CATEGORY=Item Templates
@@ -910,7 +910,7 @@ ITEM=i_reag_mandrake_root,1
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Earth
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_elemental_dull_copper]
 CATEGORY=Item Templates
@@ -925,7 +925,7 @@ ITEM=random_jewel,2
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Dull Copper
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 // Crystalline Blackrock
 
 [TEMPLATE loot_elemental_shadow_iron]
@@ -941,7 +941,7 @@ ITEM=random_jewel,2
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Shadow Iron
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 // Crystalline Blackrock
 
 [TEMPLATE loot_elemental_copper]
@@ -957,7 +957,7 @@ ITEM=random_jewel,2
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Copper
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_elemental_bronze]
 CATEGORY=Item Templates
@@ -972,7 +972,7 @@ ITEM=random_jewel,2
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Bronze
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_elemental_golden]
 CATEGORY=Item Templates
@@ -987,7 +987,7 @@ ITEM=random_jewel,2
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Golden
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_elemental_agapite]
 CATEGORY=Item Templates
@@ -1002,7 +1002,7 @@ ITEM=random_jewel,2
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Agapite
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_elemental_verite]
 CATEGORY=Item Templates
@@ -1017,7 +1017,7 @@ ITEM=random_jewel,2
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Verite
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_elemental_valorite]
 CATEGORY=Item Templates
@@ -1034,7 +1034,7 @@ ITEM=random_scroll_medium,1
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Valorite
-// Treasure Map Level #1
+ITEM=i_treasure_map_lvl_1
 
 [TEMPLATE loot_elemental_fire]
 CATEGORY=Item Templates
@@ -1049,7 +1049,7 @@ ITEM=i_reag_sulfur_ash,3
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Fire
-// Treasure Map Level #2
+ITEM=i_treasure_map_lvl_2
 
 [TEMPLATE loot_elemental_water]
 CATEGORY=Item Templates
@@ -1064,7 +1064,7 @@ ITEM=i_reag_black_pearl,3
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Water
-// Treasure Map Level #2
+ITEM=i_treasure_map_lvl_2
 
 [TEMPLATE loot_elemental_crystal]
 CATEGORY=Item Templates
@@ -1090,7 +1090,7 @@ ITEM=random_jewel,{2 4}
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Blood
-// Treasure Map Level #5
+ITEM=i_treasure_map_lvl_5
 
 [TEMPLATE loot_elemental_ice]
 CATEGORY=Item Templates
@@ -1113,7 +1113,7 @@ ITEM=i_gold,{400 500}
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Efreet
-// Treasure Map Level #4
+ITEM=i_treasure_map_lvl_4
 // Daemon Bone Armor
 
 [TEMPLATE loot_elemental_poison]
@@ -1132,7 +1132,7 @@ ITEM=random_jewel,1
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Poison
-// Treasure Map Level #5
+ITEM=i_treasure_map_lvl_5
 
 [TEMPLATE loot_elemental_snow]
 CATEGORY=Item Templates
@@ -1147,7 +1147,7 @@ ITEM=i_reag_black_pearl,3
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Elemental Snow
-// Treasure Map Level #2
+ITEM=i_treasure_map_lvl_2
 
 [TEMPLATE loot_rai_ju]
 CATEGORY=Item Templates

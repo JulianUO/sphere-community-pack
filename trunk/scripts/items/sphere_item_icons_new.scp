@@ -133,10 +133,6 @@ NAME=meer warrior
 DEFNAME=i_pet_droppelganger
 NAME=droppelganger
 
-[ITEMDEF 9684]
-DEFNAME=i_pet_mutantwyvern
-NAME=mutant wyvern
-
 ///AOS///
 
 [ITEMDEF 9770]

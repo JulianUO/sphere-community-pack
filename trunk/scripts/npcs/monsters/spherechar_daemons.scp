@@ -359,7 +359,7 @@ ITEM=random_scroll_medium,2
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Balron
-// Treasure Map Level #5
+ITEM=i_treasure_map_lvl_5
 
 [TEMPLATE loot_bone_daemon]
 CATEGORY=Item Templates
@@ -392,7 +392,7 @@ ITEM=i_scroll_blank,{ 1 2 }
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Daemon
-// Treasure Map Level 4
+ITEM=i_treasure_map_lvl_4
 
 [TEMPLATE loot_chaos_daemon]
 CATEGORY=Item Templates
@@ -416,7 +416,7 @@ ITEM=random_scroll_medium,2
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Ice	Fiend
-// Treasure Map Level #4
+ITEM=i_treasure_map_lvl_4
 
 [TEMPLATE loot_moloch]
 CATEGORY=Item Templates

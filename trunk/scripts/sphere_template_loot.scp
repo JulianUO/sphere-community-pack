@@ -899,34 +899,6 @@ DESCRIPTION=Deep Sea Serpent
 ITEM=random_fishing_junk
 ITEM=random_fishing_junk
 
-[TEMPLATE loot_DRAGON]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Dragon
-CONTAINER=i_backpack
-ITEM=random_potion,{ 2 3 }
-ITEM=random_magic_bow
-ITEM=random_scroll,{2 3}
-ITEM=random_scroll,{2 3}
-ITEM=random_jewel
-ITEM=random_jewel
-ITEM=i_scroll_blank,{ 1 2 }
-ITEM=i_gold,{1200 1400}
-
-[TEMPLATE loot_DRAKE]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Drake
-CONTAINER=i_backpack
-ITEM=i_reag_garlic
-ITEM={ random_magic_bow 1 random_magic_sword 1 }
-ITEM=random_scroll,{2 3}
-ITEM=random_scroll,{2 3}
-ITEM=random_jewel
-ITEM=random_jewel
-ITEM=i_scroll_blank,{ 1 2 }
-ITEM=i_gold,{400 500}
-
 [TEMPLATE loot_ELDER_GAZER]
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
@@ -1224,16 +1196,6 @@ ITEM=Random_Potion
 ITEM=Random_Potion
 ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 3
 ITEM=i_gold,{600 1400}
-
-[TEMPLATE loot_WYVERN]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Wyvern
-CONTAINER=i_backpack
-ITEM=Random_Potion
-ITEM=Random_Potion
-ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 3
-ITEM=i_gold,{1000 1400}
 
 [TEMPLATE loot_LIZARDMAN_MACE]
 CATEGORY=Item Templates

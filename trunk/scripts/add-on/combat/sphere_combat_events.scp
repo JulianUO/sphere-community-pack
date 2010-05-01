@@ -61,10 +61,7 @@ argn1 += <local.totalbonus>
 src.tag.hbcs = 1
 
 on=@gethit
-if !<tag0.hbcs>
-// if it's a magic skill... or a custom call of damage function.
-// we will do nothing!
-else
+if <tag0.hbcs>
 	if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
 	local.realphy = <eval 100 - (<src.tag0.DamFire> + <src.tag0.DamCold> + <src.tag0.DamPoison> + <src.tag0.DamEnergy>)>
 	local.physical = <muldiv <argn1>,<local.realphy>,100>
@@ -167,10 +164,7 @@ argn1 += <local.totalbonus>
 src.tag.hbcs = 1
 
 on=@gethit
-if !<tag0.hbcs>
-// if it's a magic skill... or a custom call of damage function.
-// we will do nothing!
-else
+if <tag0.hbcs>
 	if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
 	local.realphy = <eval 100 - (<src.tag0.DamFire> + <src.tag0.DamCold> + <src.tag0.DamPoison> + <src.tag0.DamEnergy>)>
 	local.physical = <muldiv <argn1>,<local.realphy>,100>

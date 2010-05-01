@@ -14,60 +14,6 @@ VERSION=0.56b
 
 // Gargoyle Clothing
 
-[ITEMDEF 04000]
-DEFNAME=i_gargish_robe
-NAME=Gargish Robe
-WEIGHT=4
-TYPE=t_clothing
-DYE=1
-ARMOR=7
-DUPELIST=04001
-SKILLMAKE=TAILORING 59.0, t_sewing_kit
-RESOURCES=20 i_cloth
-
-CATEGORY=Provisions - Clothes
-SUBSECTION=Stygian Abyss
-DESCRIPTION=Gargish Robe
-
-[ITEMDEF 04001]
-DUPEITEM=04000
-
-[ITEMDEF 04002]
-DEFNAME=i_gargish_robe_fancy
-NAME=Gargish Fancy Robe
-WEIGHT=5
-TYPE=t_clothing
-DYE=1
-ARMOR=7
-DUPELIST=04003
-SKILLMAKE=TAILORING 59.0, t_sewing_kit
-RESOURCES=26 i_cloth
-
-CATEGORY=Provisions - Clothing
-SUBSECTION=Stygian Abyss
-DESCRIPTION=Gargish Fancy Robe
-
-[ITEMDEF 04003]
-DUPEITEM=04002
-
-[ITEMDEF 0405F]
-DEFNAME=i_gargoyle_clothing_arms_f
-NAME=Gargoyle Clothing Arms
-WEIGHT=3
-TYPE=t_clothing
-DYE=1
-ARMOR=3
-DUPELIST=0403
-SKILLMAKE=TAILORING 20.0, t_sewing_kit
-RESOURCES=8 i_cloth
-
-CATEGORY=Provisions - Clothing
-SUBSECTION=Stygian Abyss
-DESCRIPTION=Gargoyle Clothing Arms
-
-[ITEMDEF 0403]
-DUPEITEM=0405F
-
 [ITEMDEF 04060]
 DEFNAME=i_gargoyle_clothing_arms_m
 NAME=Gargoyle Clothing Arms
@@ -86,24 +32,6 @@ DESCRIPTION=Gargoyle Clothing Arms
 [ITEMDEF 0404]
 DUPEITEM=04060
 
-[ITEMDEF 04061]
-DEFNAME=i_gargoyle_clothing_chest_f
-NAME=Gargoyle Clothing Chest
-WEIGHT=6
-TYPE=t_clothing
-DYE=1
-ARMOR=5
-DUPELIST=0405
-SKILLMAKE=TAILORING 25.0, t_sewing_kit
-RESOURCES=12 i_cloth
-
-CATEGORY=Provisions - Clothing
-SUBSECTION=Stygian Abyss
-DESCRIPTION=Gargoyle Clothing Chest
-
-[ITEMDEF 0405]
-DUPEITEM=04061
-
 [ITEMDEF 04062]
 DEFNAME=i_gargoyle_clothing_chest_m
 NAME=Gargoyle Clothing Chest
@@ -121,24 +49,6 @@ DESCRIPTION=Gargoyle Clothing Chest
 
 [ITEMDEF 0406]
 DUPEITEM=04062
-
-[ITEMDEF 04063]
-DEFNAME=i_gargoyle_clothing_kilt_f
-NAME=Gargoyle Clothing Kilt
-WEIGHT=5
-TYPE=t_clothing
-DYE=1
-ARMOR=4
-DUPELIST=0407
-SKILLMAKE=TAILORING 25.0, t_sewing_kit
-RESOURCES=15 i_cloth
-
-CATEGORY=Provisions - Clothing
-SUBSECTION=Stygian Abyss
-DESCRIPTION=Gargoyle Clothing Kilt
-
-[ITEMDEF 0407]
-DUPEITEM=04063
 
 [ITEMDEF 04064]
 DEFNAME=i_gargoyle_clothing_kilt_m
@@ -175,23 +85,5 @@ DESCRIPTION=Gargoyle Clothing Legs
 
 [ITEMDEF 0409]
 DUPEITEM=04065
-
-[ITEMDEF 04066]
-DEFNAME=i_gargoyle_clothing_legs_m
-NAME=Gargoyle Clothing Legs
-WEIGHT=2
-TYPE=t_clothing
-DYE=1
-ARMOR=2
-DUPELIST=040A
-SKILLMAKE=TAILORING 16.0, t_sewing_kit
-RESOURCES=8 i_cloth
-
-CATEGORY=Provisions - Clothing
-SUBSECTION=Stygian Abyss
-DESCRIPTION=Gargoyle Clothing Legs
-
-[ITEMDEF 040A]
-DUPEITEM=04066
 
 [EOF]
