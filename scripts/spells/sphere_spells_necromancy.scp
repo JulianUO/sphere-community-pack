@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -13,7 +13,22 @@ VERSION=0.56b
 // SCRIPT DOCUMENTATION
 // --------------------
 // Necromancy main spell sections.
-//
+// -DONE- Animate Dead
+// Blood Oath
+// Corpse Skin
+// Curse Weapon
+// Evil Omen
+// -DONE- Horrific Beast
+// -DONE- Lich Form
+// Mind Rot
+// Pain Spike
+// Poison Strike
+// Strangle
+// Summon Familiar
+// Vampiric Embrace
+// -DONE- Wither
+// -DONE- Wraith Form
+// Exorcism
 
 [SPELL 101]
 DEFNAME=s_animate_dead
@@ -89,8 +104,8 @@ act.consume i_corpse_skin
 return 1
 endif
 serv.newitem i_lich_fx
-new.attr=attr_static|attr_decay 
-new.timer=2 
+new.attr=attr_static|attr_decay
+new.timer=2
 new.p=<act.p>
 serv.newitem i_corpse_skin
 new.timer=(<eval <src.spiritspeak>-<act.magicresistance>>/25)+40
@@ -180,23 +195,28 @@ MANAUSE=11
 SKILLREQ=Necromancy 40.0
 INTERRUPT=100.0,1.0
 
-ON=@Success
-serv.newitem=i_beast_fx
-new.attr=attr_static|attr_decay 
-new.timer=1 
-new.p=<act.p>
-if !(<src.body>==c_Moloch)
-src.consume i_lich_form
-src.consume i_wraith_form
-src.consume i_vampire_form
-serv.newitem i_beast_form
-new.timer=1
-act.equip <new>
-src.updatex
-else
-src.consume i_beast_form
-src.updatex
+ON=@Select
+if <restest 1 i_rune_polymorph>
+	if <body> == c_moloch
+	consume i_rune_polymorph
+	body = <obody>
+	update
+	endif
+return 1
 endif
+
+ON=@Effect
+serv.newitem = i_fx_horrific_beast
+new.attr = attr_static|attr_decay
+new.timer = 1
+new.p = <p>
+serv.newitem i_rune_polymorph
+new.layer = 40
+new.timer = -1
+new.link = <uid>
+new.cont = <uid>
+body = c_moloch
+update
 
 [SPELL 107]
 DEFNAME=s_lich_form
@@ -204,40 +224,39 @@ NAME=Lich Form
 SOUND=00fb
 RUNES=
 CAST_TIME=4
-RESOURCES=i_reag_grave_dust, i_reag_nox_crystal, i_reag_daemon_blood
+RESOURCES=i_reag_grave_dust,i_reag_nox_crystal,i_reag_daemon_blood
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_lich_form
 FLAGS=SPELLFLAG_RESIST
-EFFECT_ID=0
+EFFECT_ID=i_fx_lich_form
 EFFECT=0
 DURATION=0
 MANAUSE=23
-SKILLREQ=Necromancy 70.0
+SKILLREQ=NECROMANCY 70.0
 INTERRUPT=100.0,1.0
 
-ON=@Effect
-serv.newitem=i_lich_fx
-new.attr=attr_static|attr_decay 
-new.timer=1 
-new.p=<src.p>
-
-ON=@Success
-serv.newitem=i_lich_fx
-new.attr=attr_static|attr_decay 
-new.timer=1 
-new.p=<act.p>
-if !(<src.body>==c_lich)
-src.consume i_beast_form
-src.consume i_wraith_form
-src.consume i_vampire_form
-serv.newitem i_lich_form
-new.timer=10
-act.equip <new>
-src.updatex
-else
-src.consume i_lich_form
-src.updatex
+ON=@Select
+if <restest 1 i_rune_polymorph>
+	if <body> == c_lich
+	consume i_rune_polymorph
+	body = <obody>
+	update
+	endif
+return 1
 endif
+
+ON=@Effect
+serv.newitem = i_fx_lich_form
+new.attr = attr_static|attr_decay
+new.timer = 1
+new.p = <p>
+serv.newitem i_rune_polymorph
+new.layer = 40
+new.timer = -1
+new.link = <uid>
+new.cont = <uid>
+body = c_lich
+sector.allclients update
 
 [spell 108]
 DEFNAME=s_mind_rot
@@ -262,8 +281,8 @@ act.consume i_mind_rot
 return 1
 endif
 serv.newitem=i_fx_curse
-new.attr=attr_static|attr_decay 
-new.timer=1 
+new.attr=attr_static|attr_decay
+new.timer=1
 new.p=<act.p>
 serv.newitem i_mind_rot
 new.timer=(<eval <src.spiritspeak>-<act.magicresistance>>/50)+20
@@ -326,54 +345,54 @@ new.attr=attr_static|attr_decay
 new.more1=30
 new.timer={5 10}
 new.p=<act.p>
-serv.newitem i_poison_cloud 
+serv.newitem i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=30
 new.timer={5 10}
-new.p=<act.p> 
+new.p=<act.p>
 new.move n
-serv.newitem i_poison_cloud 
+serv.newitem i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=30
 new.timer={5 10}
-new.p=<act.p> 
+new.p=<act.p>
 new.move s
-serv.newitem i_poison_cloud 
+serv.newitem i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=30
 new.timer={5 10}
-new.p=<act.p> 
+new.p=<act.p>
 new.move e
-serv.newitem i_poison_cloud 
+serv.newitem i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=30
 new.timer={5 10}
-new.p=<act.p> 
+new.p=<act.p>
 new.move w
 serv.newitem=i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=15
 new.timer={5 10}
 new.p=<act.p>
-new.move <eval(rand(6))> <eval(rand(6))> 
-serv.newitem=i_poison_cloud
-new.attr=attr_static|attr_decay
-new.more1=15
-new.timer={5 10} 
-new.p=<act.p>
-new.move <eval(rand(6))> <eval(rand(6))> 
+new.move <eval(rand(6))> <eval(rand(6))>
 serv.newitem=i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=15
 new.timer={5 10}
 new.p=<act.p>
-new.move <eval(rand(6))> <eval(rand(6))> 
-serv.newitem=i_poison_cloud 
+new.move <eval(rand(6))> <eval(rand(6))>
+serv.newitem=i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=15
 new.timer={5 10}
 new.p=<act.p>
-new.move <eval(rand(6))> <eval(rand(6))> 
+new.move <eval(rand(6))> <eval(rand(6))>
+serv.newitem=i_poison_cloud
+new.attr=attr_static|attr_decay
+new.more1=15
+new.timer={5 10}
+new.p=<act.p>
+new.move <eval(rand(6))> <eval(rand(6))>
 serv.newitem=i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=15
@@ -385,31 +404,31 @@ new.attr=attr_static|attr_decay
 new.more1=10
 new.timer={5 10}
 new.p=<act.p>
-new.move <eval(rand(6))+-(rand(6))> <eval(rand(6))+-(rand(6))> 
+new.move <eval(rand(6))+-(rand(6))> <eval(rand(6))+-(rand(6))>
 serv.newitem=i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=10
 new.timer={5 10}
 new.p=<act.p>
-new.move <eval(rand(6))+-(rand(6))> <eval(rand(6))+-(rand(6))> 
+new.move <eval(rand(6))+-(rand(6))> <eval(rand(6))+-(rand(6))>
 serv.newitem=i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=10
 new.timer={5 10}
 new.p=<act.p>
-new.move <eval(rand(6))+-(rand(6))> <eval(rand(6))+-(rand(6))> 
+new.move <eval(rand(6))+-(rand(6))> <eval(rand(6))+-(rand(6))>
 serv.newitem=i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=10
 new.timer={5 10}
 new.p=<act.p>
-new.move <eval(rand(6))+-(rand(6))> <eval(rand(6))+-(rand(6))> 
+new.move <eval(rand(6))+-(rand(6))> <eval(rand(6))+-(rand(6))>
 serv.newitem=i_poison_cloud
 new.attr=attr_static|attr_decay
 new.more1=10
 new.timer={5 10}
 new.p=<act.p>
-new.move <eval(rand(6))+-(rand(6))> <eval(rand(6))+-(rand(6))> 
+new.move <eval(rand(6))+-(rand(6))> <eval(rand(6))+-(rand(6))>
 
 [SPELL 111]
 DEFNAME=s_strangle
@@ -436,7 +455,7 @@ new.more2=(<eval <src.spiritspeak>>/100)
 new.timer=<new.more1>
 act.equip <new>
 
-[SPELL 112] 
+[SPELL 112]
 DEFNAME=s_summon_familiar
 NAME=Summon Familiar
 SOUND=0214
@@ -477,27 +496,27 @@ INTERRUPT=100.0,1.0
 ON=@Success
 serv.newitem i_fx_bless_effect
   new.color=00B38
-  new.attr=attr_static|attr_decay 
-  new.timer=2 
-  new.p=<src.p> 
-  new.move n 
+  new.attr=attr_static|attr_decay
+  new.timer=2
+  new.p=<src.p>
+  new.move n
 serv.newitem i_fx_bless_effect
   new.color=00B38
-  new.attr=attr_static|attr_decay 
-  new.timer=2 
-  new.p=<src.p> 
+  new.attr=attr_static|attr_decay
+  new.timer=2
+  new.p=<src.p>
   new.move s
 serv.newitem i_fx_bless_effect
   new.color=00B38
-  new.attr=attr_static|attr_decay 
-  new.timer=2 
-  new.p=<src.p> 
-  new.move e 
+  new.attr=attr_static|attr_decay
+  new.timer=2
+  new.p=<src.p>
+  new.move e
 serv.newitem i_fx_bless_effect
   new.color=00B38
-  new.attr=attr_static|attr_decay 
-  new.timer=2 
-  new.p=<src.p> 
+  new.attr=attr_static|attr_decay
+  new.timer=2
+  new.p=<src.p>
   new.move w
 if !(<src.body>==c_vampire_bat)
   src.consume i_beast_form
@@ -599,23 +618,28 @@ MANAUSE=17
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
 
-ON=@Success
-  serv.newitem=i_wraith_fx
-  new.attr=attr_static|attr_decay 
-  new.timer=1 
-  new.p=<act.p>
-if !(<src.body>==c_Harrower)
-  src.consume i_beast_form
-  src.consume i_lich_form
-  src.consume i_vampire_form
-  serv.newitem i_wraith_form
-  act.equip <new>
-  src.updatex
-else
-  src.consume i_wraith_form
-  src.updatex
+ON=@Select
+if <restest 1 i_rune_polymorph>
+	if <body> == c_harrower
+	consume i_rune_polymorph
+	body = <obody>
+	update
+	endif
+return 1
 endif
 
+ON=@Effect
+serv.newitem = i_fx_wraith_form
+new.attr = attr_static|attr_decay
+new.timer = 1
+new.p = <p>
+serv.newitem i_rune_polymorph
+new.layer = 40
+new.timer = -1
+new.link = <uid>
+new.cont = <uid>
+body = c_harrower
+update
 
 [SPELL 117]
 DEFNAME=s_exorcism
@@ -638,7 +662,7 @@ on=@select
 if <spiritspeak> < 100.0
 actdiff = -1
 endif
- 
+
 ON=@Success
 ref11 = <uid>
 forchars 26
