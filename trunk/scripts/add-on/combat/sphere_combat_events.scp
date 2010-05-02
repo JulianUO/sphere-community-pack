@@ -62,7 +62,10 @@ src.tag.hbcs = 1
 
 on=@gethit
 if <tag0.hbcs>
-	if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
+	if <tag0.ignore.combat>
+	argn2 |= dam_god
+	tag.ignore.combat
+	elif ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
 	local.realphy = <eval 100 - (<src.tag0.DamFire> + <src.tag0.DamCold> + <src.tag0.DamPoison> + <src.tag0.DamEnergy>)>
 	local.physical = <muldiv <argn1>,<local.realphy>,100>
 	local.physical -= <muldiv <local.physical>,<eval <armor> + <modar>>,100>
@@ -165,7 +168,10 @@ src.tag.hbcs = 1
 
 on=@gethit
 if <tag0.hbcs>
-	if ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
+	if <tag0.ignore.combat>
+	argn2 |= dam_god
+	tag.ignore.combat
+	elif ((<def.scp.Combat_FormulasUsed> == 1) && <def.scp.Combat_UseResistances>) || (<def.scp.Combat_FormulasUsed> == 3)
 	local.realphy = <eval 100 - (<src.tag0.DamFire> + <src.tag0.DamCold> + <src.tag0.DamPoison> + <src.tag0.DamEnergy>)>
 	local.physical = <muldiv <argn1>,<local.realphy>,100>
 	local.physical -= <muldiv <local.physical>,<eval <armor> + <modar>>,100>

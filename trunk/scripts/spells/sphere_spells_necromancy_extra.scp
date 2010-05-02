@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -16,6 +16,31 @@ VERSION=0.56b
 // We move them here just to keep clean the main files and can tweak it without problems.
 //
 
+// These items are used for effects, just like i_fx_curse for magery spells =)
+[itemdef i_fx_lich_form]
+name=lich fx
+id=i_fire_column
+type=t_script
+
+on=@create
+color=01
+
+[itemdef i_fx_horrific_beast]
+name=beast fx
+id=i_fx_smoke
+type=t_script
+
+on=@create
+color=colors_neutral
+
+[itemdef i_fx_wraith_form]
+name=wraith fx
+id=i_fx_smoke
+
+on=@create
+color=00afd
+
+
 // Animate Dead
 [function f_AnimateDeadTarg]
 if <argo.type> == t_corpse
@@ -24,7 +49,7 @@ if <argo.type> == t_corpse
 	return 0
 	endif
 local.castability = <eval (((<necromancy>*3)+(<spiritspeak>*7))/10)*18>
-local.delay = <eval 5>
+local.delay = <eval (<necromancy> / 10) + <spiritspeak>>
 	if <local.castability> > <argo.tag0.corpsefame>
 		if <serv.chardef.<argo.morex>.tag0.animateid>
 		serv.newnpc <serv.chardef.<argo.morex>.tag0.animateid>
@@ -80,7 +105,7 @@ on=@Hit
 uid.<tag0.bloodoath>.damage <eval (<argn1>*20)/100> <argn2> <uid>
 
 on=@SpellCast
-uid.<tag0.bloodoath>.spelleffect <argn> <argn2>
+uid.<tag0.bloodoath>.spelleffect <argn1> <argn2>
 
 on=@SpellEffect
 if (<argn> == 34) || (<argn> == 41)
@@ -101,7 +126,7 @@ hits += <args>
 
 [itemdef i_curse_weapon]
 NAME=Curse Weapon
-ID=i_memory 
+ID=i_memory
 TYPE=t_eq_script
 LAYER=layer_special
 
@@ -139,7 +164,7 @@ endif
 
 [itemdef i_corpse_skin]
 NAME=Corpse Skin
-ID=i_memory 
+ID=i_memory
 TYPE=t_eq_script
 LAYER=layer_special
 TEVENTS t_armor
@@ -189,7 +214,7 @@ endif
 
 [itemdef i_wraith_form]
 NAME=Wraith Form
-ID=i_memory 
+ID=i_memory
 TYPE=t_eq_script
 LAYER=layer_special
 
@@ -221,20 +246,12 @@ if (<argn>==56)
   return 1
 endif
 
-[itemdef i_wraith_fx]
-defname=i_wraith_fx
-name=wraith fx
-id=i_fx_smoke
-
-on=@create
-color=00afd
-
 //#################################################\\
 //#                   Mind Rot                    #\\
 //#################################################\\
 
 [itemdef i_mind_rot]
-ID=i_memory 
+ID=i_memory
 name=mind rot
 TYPE=t_eq_script
 
@@ -293,7 +310,7 @@ SUMMON=c_familiar_vampire_bat
 
 [itemdef i_beast_form]
 NAME=Beast Form
-ID=i_memory 
+ID=i_memory
 TYPE=t_eq_script
 LAYER=layer_special
 
@@ -325,13 +342,6 @@ if !((<argn>==106) || (<argn>==107) || (<argn>==113) || (<argn>==116))
   return 1
 endif
 
-[itemdef i_beast_fx]
-defname=i_beast_fx
-name=beast fx
-id=i_fx_smoke
-
-on=@create
-color=colors_neutral
 
 //#################################################\\
 //#                  Poison Strike                #\\
@@ -361,7 +371,7 @@ ON=@Step
 
 [itemdef i_strangle]
 NAME=Strangle
-ID=i_memory 
+ID=i_memory
 TYPE=t_eq_script
 LAYER=layer_special
 
@@ -383,7 +393,7 @@ ON=@Timer
 
 [itemdef i_lich_form]
 NAME=lich Form
-ID=i_memory 
+ID=i_memory
 TYPE=t_eq_script
 LAYER=layer_special
 
@@ -413,26 +423,19 @@ if (<argn>==56)
   return 1
 endif
 
-[itemdef i_lich_fx]
-defname=i_lich_fx
-name=lich fx
-id=i_fire_column
-type=t_script
 
-on=@create
-color=001
 
 //#################################################\\
 //#                 Vengeful Spirit               #\\
 //#################################################\\
 
 [ITEMDEF i_revenant_tracker]
-ID=i_memory 
+ID=i_memory
 NAME=Revenant Tracker
 TYPE=t_eq_script
 
 [ITEMDEF i_vengeful_spirit]
-ID=i_memory 
+ID=i_memory
 NAME=Vengeful Spirit
 TYPE=t_eq_script
 
@@ -447,7 +450,7 @@ if (<uid.<cont.tag0.victim>.flags>&statf_dead)
   return 1
 else
   cont.p=<uid.<cont.tag.victim>.p>
-  cont.move <eval(rand(3))+-(rand(3))> 
+  cont.move <eval(rand(3))+-(rand(3))>
   cont.attack <uid.<cont.tag.victim>>
   more1 -= 1
   if (<more1> < 1)
@@ -509,7 +512,7 @@ endif
 
 [itemdef i_vampire_form]
 NAME=Vampire Form
-ID=i_memory 
+ID=i_memory
 TYPE=t_eq_script
 LAYER=layer_special
 
