@@ -6,8 +6,6 @@
 // FILE LAST UPDATED:
 VERSION=0.56b
 
-/////////////////////////////// Black Solen Infiltrator (Queen) /////////////////////////////////
-
 [CHARDEF 0327]
 Name=Black Solen Infiltrator (Queen)
 DEFNAME=c_black_solen_infiltrator_queen
@@ -114,7 +112,6 @@ ON=@Create
 ON=@NPCRestock
 	ITEM=loot_black_solen_queen
 
-/////////////////////////////// Black Solen Warrior /////////////////////////////////
 
 [CHARDEF 0326]
 Name=Black Solen Warrior
