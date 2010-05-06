@@ -56,7 +56,7 @@ endif
 
 bAddPollinationState 106, 116
 bAddResourcesState 149, 116
-bAddSeedsState 199, 116 
+bAddSeedsState 199, 116
 
 [dialog d_plant_polen button]
 on=1
@@ -73,53 +73,53 @@ src.codexofwisdom 68,1
 
 on=6
 if !(<biscrossable>)
-src.sysmessageloc -1,1053050 // mutated plants do not produce polen
+src.sysmessage @,,2 1053050 // mutated plants do not produce polen
 return 1
 endif
 
 if !(<bpollenproducing>)
-src.sysmessageloc -1,1053051 // You cannot gather pollen from a plant in this stage of development!
+src.sysmessage @,,2 1053051 // You cannot gather pollen from a plant in this stage of development!
 return 1
 endif
 
 if !strmatch('<bhealth>','Vibrent') && !strmatch('<bhealth>','healthy')
-src.sysmessageloc -1,1053052 // You cannot gather pollen from an unhealthy plant!
+src.sysmessage @,,2 1053052 // You cannot gather pollen from an unhealthy plant!
 return 1
 endif
 morex=10
 target
-src.sysmessageloc -1,1053054 // Target the plant you wish to cross-pollinate to.
+src.sysmessage @,,2 1053054 // Target the plant you wish to cross-pollinate to.
 return 1
 
 on=7
 if (<def0.planttype_<dtag0.m_planttype>_resources_<dtag0.m_planthue>>) && (<def0.planthue_<dtag0.m_planthue>_resources_<dtag0.m_planttype>>)
 	if !(<def0.planttype_<dtag0.m_planttype>_resources_<dtag0.m_planthue>>==<def0.planthue_<dtag0.m_planthue>_resources_<dtag0.m_planttype>>)
-	src.sysmessageloc -1,1053056 // This plant has no resources to gather!
+	src.sysmessage @,,2 1053056 // This plant has no resources to gather!
 	return 1
 	endif
 else
-src.sysmessageloc -1,1053056 // This plant has no resources to gather!
+src.sysmessage @,,2 1053056 // This plant has no resources to gather!
 return 1
 endif
 
 if !(<dtag0.m_availableresources>)
-src.sysmessageloc -1,1053056 // This plant has no resources to gather!
+src.sysmessage @,,2 1053056 // This plant has no resources to gather!
 return 1
 endif
 
 tag0.m_availableresources -= 1
 serv.newitem <def0.planttype_<dtag0.m_planttype>_resources_<dtag0.m_planthue>>
 new.cont=<src.findlayer.layeR_pack.uid>
-src.sysmessageloc -1,1053059 // you gather some resources
+src.sysmessage @,,2 1053059 // you gather some resources
 
 on=8
 if !(<biscrossable>)
-src.sysmessageloc -1,1053060 // mutated plants do not give seed..
+src.sysmessage @,,2 1053060 // mutated plants do not give seed..
 return 1
 endif
 
 if !(<dtag0.m_availableseeds>)
-src.sysmessageloc -1,1053061 // no seed left
+src.sysmessage @,,2 1053061 // no seed left
 return 1
 endif
 
@@ -130,7 +130,7 @@ new.tag0.m_planttype=<bSeedType>
 new.tag0.showtype=1
 new.color=<def.planthue_<bseedhue>_hue>
 new.cont=<src.findlayer.layeR_pack.uid>
-src.sysmessageloc -1,1053063 // You gather seeds from the plant.
+src.sysmessage @,,2 1053063 // You gather seeds from the plant.
 
 on=10
 dialog d_plant_decorative
@@ -230,7 +230,7 @@ if (!<local.total>)
 dtext <eval <argv[0]>+5> <argv[1]> 021 X
 else
 dtext <argv[0]> <argv[1]> <def0.planthue_<dtag0.m_planthue>_gumphue> <dtag0.m_availableresources>/<dlocal.total>
-endif		
+endif
 
 [function bAddSeedsState]
 local.total=<eval <dtag0.m_availableseeds>+<dtag0.m_leftseeds>>
@@ -238,7 +238,7 @@ if (!<biscrossable> || !<local.total>)
 dtext <eval <argv[0]>+5> <argv[1]> 021 X
 else
 dtext <argv[0]> <argv[1]> <def0.planthue_<bSeedHue>_gumphue> <dtag0.m_availableseeds>/<dlocal.total>
-endif		
+endif
 
 [dialog d_plant_decorative]
 20,20
@@ -262,7 +262,7 @@ dialog d_plant_polen
 on=2
 tag0.m_status=10 // it is decorative now.
 bupdate
-src.sysmessageloc -1,1053077 // you prune the plant.
+src.sysmessage @,,2 1053077 // you prune the plant.
 return 1
 
 [eof]

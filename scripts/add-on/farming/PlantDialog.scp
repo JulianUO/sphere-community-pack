@@ -34,26 +34,26 @@ tilepic 120 112 0914
 tilepic 135 112 0914
 
 	if ( <tag0.m_status> >= 2 )
-	tilepic 127 112 0C62 
+	tilepic 127 112 0C62
 	endif
 	if ( <tag0.m_status> >= 3 )
-	tilepic 129 85 0C7E 
+	tilepic 129 85 0C7E
 	endif
 	if ( <tag0.m_status> >= 4 )
-	tilepic 121 117 0C62 
-	tilepic 133 117 0C62 
+	tilepic 121 117 0C62
+	tilepic 133 117 0C62
 	endif
 	if ( <tag0.m_status> >= 5 )
-	tilepic 110 100 0C62 
-	tilepic 140 100 0C62 
-	tilepic 110 130 0C62 
-	tilepic 140 130 0C62 
+	tilepic 110 100 0C62
+	tilepic 140 100 0C62
+	tilepic 110 130 0C62
+	tilepic 140 130 0C62
 	endif
 	if ( <tag0.m_status> >= 6 )
-	tilepic 105 115 0C62 
-	tilepic 145 115 0C62 
-	tilepic 125 90 0C62 
-	tilepic 125 135 0C62 
+	tilepic 105 115 0C62
+	tilepic 145 115 0C62
+	tilepic 125 90 0C62
+	tilepic 125 135 0C62
 	endif
 else
 tilepichue 130 96 <def.planttype_<dtag0.m_planttype>_itemid> <def.planthue_<dtag0.m_planthue>_gumphue>
@@ -160,19 +160,19 @@ on=1
 dialog d_plant_polen
 
 on=2
-src.codexofwisdom 54,1
+src.CodexOfWisdomDialog 54 1
 
 on=3
-src.codexofwisdom 56,1
+src.CodexOfWisdomDialog 56 1
 
 on=4
-src.codexofwisdom 58,1
+src.CodexOfWisdomDialog 58 1
 
 on=5
-src.codexofwisdom 60,1
+src.CodexOfWisdomDialog 60 1
 
 on=11
-src.codexofwisdom 48,1
+src.CodexOfWisdomDialog 48 1
 
 on=12
 dialog d_empty_plant
@@ -180,25 +180,25 @@ dialog d_empty_plant
 on=7
 morex=3
 //add a poison
-target 
+target
 return 1
 
 on=8
 morex=4
 //add a cure
-target 
+target
 return 1
 
 on=9
 morex=5
 //add a heal
-target 
+target
 return 1
 
 on=10
-morex=6 
+morex=6
 //strength
-target 
+target
 return 1
 
 on=6
@@ -228,7 +228,7 @@ dtext <argv[0]> <argv[1]> 035 +
 dtext <argv[0]> <argv[1]> 021 +
 enddo
 
-[function bAddGrowthIndicator]		
+[function bAddGrowthIndicator]
 if !(<tag0.m_status>)
 return 1
 endif
@@ -239,7 +239,7 @@ doswitch <tag0.m_indicator>
 	dtext <argv[0]> <argv[1]> 035 -
 	dtext <argv[0]> <argv[1]> 03 +
 	dtext <argv[0]> <argv[1]> 03f +
-enddo		
+enddo
 
 [function bHealth]
 local.perc=<eval (100*<tag0.m_hits>)/<bmaxhits>>

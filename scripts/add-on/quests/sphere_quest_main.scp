@@ -313,16 +313,16 @@ radio 20 210 9722 9723 0 2
 [DIALOG d_quest_resign BUTTON]
 ON=1
 IF (<ARGCHK[1]>)
-sysmessageloc -1,1049015
+sysmessage @,,2 1049015
 QUITQUEST <CTAG0.QUESTVIEWID>
 ELIF (<ISONLINE>)
-sysmessageloc -1,1049014
+sysmessage @,,2 1049014
 SDIALOG d_quest_log
 ENDIF
 
 ON=0
 IF (<ISONLINE>)
-sysmessageloc -1,1049014
+sysmessage @,,2 1049014
 SDIALOG d_quest_log
 ENDIF
 
@@ -474,7 +474,7 @@ IF (<TAG0.ESCORTED>)
 SAY @946,,2 500897
 RETURN 1
 ENDIF
-SRC.sysmessageloc -1,1049019
+SRC.sysmessage @,,2 1049019
 FOR 10
 IF (<SRC.TAG0.QUEST<dLOCAL._FOR>.ID>==<ARGN1>)
 SDIALOG d_QUEST_OFFER 6
@@ -925,7 +925,7 @@ ENDFOR
 ENDIF
 src.trigger @UserQuestFinish,<def.tat_as_argn>,<local.questid>
 SRC.QUITQUEST <LOCAL.QUESTID> <UID>
-SRC.sysmessageloc -1,1046258
+SRC.sysmessage @,,2 1046258
 
 ////////////////////////////
 
@@ -1028,7 +1028,7 @@ ON=@Timer
 FOR <CONT.TAG0.QUESTS>
 IF (<CONT.TAG0.QUEST<dLOCAL._FOR>.ID>==<MORE1>)
 TRY CONT.TAG.QUEST<dLOCAL._FOR>.FAILED=1
-CONT.sysmessageloc -1,1074777
+CONT.sysmessage @,,2 1074777
 CONT.REMOVEALLQUESTIMERS <MORE1>
 RETURN 1
 ENDIF
@@ -1046,7 +1046,7 @@ ENDIF
 ENDIF
 ENDFOR
 TRY SRC.TAG.QUEST<EVAL <LOCAL.QUESTDELIVERID>>.FAILED=1
-SRC.sysmessageloc -1,1074777
+SRC.sysmessage @,,2 1074777
 REMOVE
 
 ON=@Dropon_Item
@@ -1092,7 +1092,7 @@ ENDIF
 ENDFOR
 
 TRY SRC.TAG.QUEST<EVAL <LOCAL.QUESTDELIVERID>>.FAILED=1
-SRC.sysmessageloc -1,1074777
+SRC.sysmessage @,,2 1074777
 REMOVE
 RETURN 1
 

@@ -15,7 +15,7 @@ VERSION=0.56b
 // This system lets you grow custom plants to decorate or recover hybrID=seeds !
 
 [function isAccessible]
-if <uid.<region.uid>.link.houseplayeraccess <uid>> >= 3
+if <uid.<region.uid>.link.houseplayeraccess <src.uid>> >= 3
 return 1
 endif
 return 0
@@ -47,7 +47,7 @@ bupdate
 
 on=@dclick
 if !(<tag0.m_dirt>) && !(<tag0.m_fertiledirt>)  // no dirt or fertile dirt ?
-src.messageloc -1,1061897  //select a dirt patch to use
+src.message @,,2 1061897  //select a dirt patch to use
 targetg
 morex=1
 return 1
@@ -57,19 +57,17 @@ else
 	return 1
 	else
 		if !(<isaccessible>)
-		src.message @03c1,6,1,1 You do not have access ! 
+		src.message @03c1,6,1,1 You do not have access !
 		return 1
 		endif
-
 		if (<topobj.uid>==<src.uid>)
 			if (<tag0.cantaat> < <serv.time>) && !(<tag0.m_status>==0)
 			src.message @03c1,6,1,1 The plant has died due to poison..
 			bReset
 			bupdate
-			return 1		
+			return 1
 			endif
 		endif
-
 		if (<tag0.m_status>==11)  // died status
 		bReset
 		bupdate
@@ -85,20 +83,20 @@ on=@targon_item
 if (<morex>==1) // dirt adding operation :P
 	if (<src.targ.baseid>==i_reag_fertile_dirt)
 		if !(<src.targ.amount> >= 40)
-		src.sysmessageloc -1,1061896  // not enough fertile dirt.
+		src.sysmessage @,,2 1061896  // not enough fertile dirt.
 		return 1
 		endif
 		if !(<src.targ.topobj.uiD>==<src.uid>)
-		src.sysmessageloc -1,1042664  // not in pack ?
+		src.sysmessage @,,2 1042664  // not in pack ?
 		return 1
 		endif
 	tag0.m_fertiledirt=1
 	src.targ.consume=40
-	src.sysmessageloc -1,1061895  // added dirt yeah !
+	src.sysmessage @,,2 1061895  // added dirt yeah !
 	bUpdate
 	return 1
 	else
-	src.sysmessageloc -1,1061893  // not a dirt
+	src.sysmessage @,,2 1061893  // not a dirt
 	return 1
 	endif
 endif
@@ -241,12 +239,12 @@ if (<morex>==10)  // MUTATE THE PLANT
 	endif
 
 	if !(<src.targ.bisgrowable>) || (<src.targ.tag0.m_status> < 7)
-	src.sysmessageloc -1,1053051   // You cannot gather pollen from a plant in this stage of development!
+	src.sysmessage @,,2 1053051   // You cannot gather pollen from a plant in this stage of development!
 	return 1
 	endif
 
 	if !(<src.targ.biscrossable>)
-	src.sysmessageloc -1,1053050  // you can't cross mutated plants..
+	src.sysmessage @,,2 1053050  // you can't cross mutated plants..
 	return 1
 	endif
 
@@ -257,12 +255,12 @@ if (<morex>==10)  // MUTATE THE PLANT
 	endif
 
 	if (<src.targ.tag0.m_pollinated>)
-	src.sysmessageloc -1,1053072 // already pollinated..
+	src.sysmessage @,,2 1053072 // already pollinated..
 	return 1
 	endif
 
 	if !strmatch('<src.targ.bhealth>','Vibrent') && !strmatch('<src.targ.bhealth>','healthy')
-	src.sysmessageloc -1,1053075 // unhealthy plants
+	src.sysmessage @,,2 1053075 // unhealthy plants
 	return 1
 	endif
 
@@ -270,12 +268,12 @@ if (<morex>==10)  // MUTATE THE PLANT
 	tag0.m_pollinated=1
 	tag0.m_seedhue=<dtag0.m_planthue>
 	tag0.m_seedTYPE=<dtag0.m_planttype>
-	src.sysmessageloc -1,1053071 // // You pollinate the plant with its own pollen.
+	src.sysmessage @,,2 1053071 // // You pollinate the plant with its own pollen.
 	else
 	src.targ.tag0.m_pollinated=1
 	src.targ.tag0.m_seedhue=<bHuetoPlant <bhuecross <uid>,<src.targ.uid>>>
 	src.targ.tag0.m_seedTYPE=<btypecross <uid>,<src.targ.uid>>
-	src.sysmessageloc -1,1053076 // You successfully cross-pollinate the plant.
+	src.sysmessage @,,2 1053076 // You successfully cross-pollinate the plant.
 	endif
 endif
 return 1
@@ -285,11 +283,11 @@ if (<morex>==1)
 //DIRT TERRAIN
 	if (<src.targp.terrain>==09) || (<src.targp.terrain>==015) || (<src.targp.terrain>==071) || (<src.targp.terrain>==07c) || (<src.targp.terrain>==082) || (<src.targp.terrain>==0a7) || (<src.targp.terrain>==0dc) || (<src.targp.terrain>==0e3) || (<src.targp.terrain>==0e8) || (<src.targp.terrain>==0eb) || (<src.targp.terrain>==0141) || (<src.targp.terrain>==0144) || (<src.targp.terrain>==014c) || (<src.targp.terrain>==015c) || (<src.targp.terrain>==0169) || (<src.targp.terrain>==0174) || (<src.targp.terrain>==01dc) || (<src.targp.terrain>==01ef) || (<src.targp.terrain>==0272) || (<src.targp.terrain>==0275) || (<src.targp.terrain>==027e) || (<src.targp.terrain>==0281) || (<src.targp.terrain>==02d0) || (<src.targp.terrain>==02d7) || (<src.targp.terrain>==02e5) || (<src.targp.terrain>==02ff) || (<src.targp.terrain>==0303) || (<src.targp.terrain>==031f) || (<src.targp.terrain>==032c) || (<src.targp.terrain>==032f) || (<src.targp.terrain>==033d) || (<src.targp.terrain>==0340) || (<src.targp.terrain>==0345) || (<src.targp.terrain>==0345) || (<src.targp.terrain>==034c) || (<src.targp.terrain>==0355) || (<src.targp.terrain>==0358) || (<src.targp.terrain>==0367) || (<src.targp.terrain>==036e) || (<src.targp.terrain>==0377) || (<src.targp.terrain>==037a) || (<src.targp.terrain>==038d) || (<src.targp.terrain>==0390) || (<src.targp.terrain>==0395) || (<src.targp.terrain>==039c) || (<src.targp.terrain>==03a5) || (<src.targp.terrain>==03a8) || (<src.targp.terrain>==03f6) || (<src.targp.terrain>==0405) || (<src.targp.terrain>==0547) || (<src.targp.terrain>==054e) || (<src.targp.terrain>==0553) || (<src.targp.terrain>==0556) || (<src.targp.terrain>==0597) || (<src.targp.terrain>==059e) || (<src.targp.terrain>==0623) || (<src.targp.terrain>==063a) || (<src.targp.terrain>==06f3) || (<src.targp.terrain>==06fa) || (<src.targp.terrain>==0777) || (<src.targp.terrain>==0791) || (<src.targp.terrain>==079a) || (<src.targp.terrain>==07a9) || (<src.targp.terrain>==07ae) || (<src.targp.terrain>==07b1) || (<src.targp.terrain>==0983) || (<src.targp.terrain>==070) || (<src.targp.terrain>==071) || (<src.targp.terrain>==072) || (<src.targp.terrain>==073) || (<src.targp.terrain>==074) || (<src.targp.terrain>==075) || (<src.targp.terrain>==076) || (<src.targp.terrain>==077) || (<src.targp.terrain>==078) || (<src.targp.terrain>==079) || (<src.targp.terrain>==080)
 	tag0.m_dirt=1
-	src.sysmessageloc -1,1061895  // you fill bowl with fresh dirt
+	src.sysmessage @,,2 1061895  // you fill bowl with fresh dirt
 	bUpdate
 	return 1
 	else
-	src.sysmessageloc -1,1061893 // not a dirt !!
+	src.sysmessage @,,2 1061893 // not a dirt !!
 	return 1
 	endif
 endif
@@ -322,7 +320,7 @@ else
 		local.yazi1=sopping wet
 		local.cliloc1=1060829
 		endif
-		
+
 		if (<tag0.m_status> <= 1)
 		local.yazi2=seed
 		elif (<tag0.m_status> <= 2)
@@ -400,17 +398,17 @@ return <eval 10+(<tag0.m_status>*2)>
 
 [function bUpdate]
 if ( <tag0.m_status> >= 11 )
-dispID== 01B9D
+dispid = 01B9D
 color = <def.planthue_<dtag0.m_planthue>_hue>
 elif ( <tag0.m_status> >= 7 )
-dispID== <def.planttype_<dtag0.m_planttype>_itemid>
+dispid = <def.planttype_<dtag0.m_planttype>_itemid>
 color = <def.planthue_<dtag0.m_planthue>_hue>
 elif ( <tag0.m_status> >= 4 )
-dispID== 01600
+dispid = 01600
 color = 0
 else
-dispID== 01602
-	if (<tag0.m_Status>==0) 
+dispid = 01602
+	if (<tag0.m_Status>==0)
 		if (<tag0.m_fertiledirt>) || (<tag0.m_dirt>)
 		dispid=01602
 		else
@@ -418,7 +416,7 @@ dispID== 01602
 		endif
 	endif
 color = 0
-endif			
+endif
 
 [function bApplyBeneficEffects]
 if ( <tag0.m_poisonpotion> >= <tag0.m_Infestation> )
@@ -477,7 +475,7 @@ if ( <tag0.m_Disease> > 0 )
 local.damage += <eval <tag0.m_Disease> * (2+rand(2))>
 endif
 if ( <tag0.m_Water> > 2 )
-local.damage += <eval ( <eval <tag0.m_Water> - 2> ) * (2+rand(2))>						
+local.damage += <eval ( <eval <tag0.m_Water> - 2> ) * (2+rand(2))>
 elif ( <tag0.m_Water> < 2 )
 local.damage += <eval ( <eval 2 - <tag0.m_Water>> ) * (2+rand(2))>
 endif
@@ -494,8 +492,8 @@ if (<tag0.m_status> >= 7) && (<biscrossable>)
 return 1
 else
 return 0
-endif			
-		
+endif
+
 [function newSeed]
 serv.newitem i_seed_plain
 new.tag0.m_plantTYPE=<argv[0]>
@@ -634,7 +632,7 @@ tag0.m_AvailableSeeds = 0
 tag0.m_LeftSeeds = 8
 
 tag0.m_AvailableResources = 0
-tag0.m_LeftResources = 8		
+tag0.m_LeftResources = 8
 
 [function biscrossable]
 if (<def.planttype_<dtag0.m_planttype>_crossable>) && (<def.planthue_<dtag0.m_planthue>_planthue>&<def.planthue.crossable>)
