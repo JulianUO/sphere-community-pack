@@ -16,42 +16,36 @@ VERSION=0.56b
 
 [typedef t_yem]
 on=@dclick
-src.sysmessageloc -1,1061916 // select a bowl etc. etc.
+src.sysmessage @,,2 1061916 // select a bowl etc. etc.
 target
 return 1
 
 on=@targon_item
 if (<src.targ.type>==t_plant_base)
 	if !(<src.targ.tag0.m_dirt>) && !(<src.targ.tag0.m_fertiledirt>)
-	src.targ.messageloc -1,1061919 // no dirt wtf etc..
+	src.targ.message @,,2 1061919 // no dirt wtf etc..
 	return 1
 	endif
-
 	if (<src.targ.tag0.m_status>)
 	src.targ.message @03c1,6,1,1 There's already a seed.
 	return 1
 	endif
-
 	if (<src.targ.tag0.m_water> < 2)
-	src.targ.messageloc -1,1061920 // dirt must be softened.
+	src.targ.message @,,2 1061920 // dirt must be softened.
 	return 1
 	endif
-
 	if (<src.targ.topobj.uid> == <src.uid>)
 	src.targ.message @03c1,6,1,1 It must be secured on ground.
 	return 1
 	endif
-
 	if (<src.targ.distance> > 2)
-	src.targ.messageloc -1,1061921 // too far away.
+	src.targ.message @,,2 1061921 // too far away.
 	return 1
 	endif
-
 	if !(<src.targ.isaccessible>)
 	src.targ.message @03c1,6,1,1 You have no access for this.// YOU HAVE NO ACCESS TO THIS.
 	return 1
 	endif
-
 src.targ.tag0.m_indicator=2
 src.targ.tag0.m_status += 1
 src.targ.tag0.m_planttype=<tag0.m_planttype>
@@ -61,15 +55,15 @@ src.targ.tag0.m_leftresources <eval <tag0.m_leftresources>+8>
 src.targ.bhits=<src.targ.bmaxhits>
 src.targ.timer=60*60*23
 src.targ.morez=0
-src.sysmessageloc -1,1061922 // you plant it etc.
+src.sysmessage @,,2 1061922 // you plant it etc.
 remove
 return 1
 endif
 
 [itemdef i_Seed_plain]
-id 0dcf
-name plain seed
-type t_yem
+id=0dcf
+name=plain seed
+type=t_yem
 
 on=@create
 tag0.m_planttype=<bgeneratetype>

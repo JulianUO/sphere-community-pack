@@ -414,7 +414,7 @@ IF (<REF1.TAG0.ACTIVE>) && (!(<REF1.TAG0.CHAMPIONUP>))
 		NEW.name=<NEW.POWERSCROLLNAME> Power Scroll of <SERV.SKILL.<NEW.MORE1>.NAME> (105 Skill)
 		REF25.TRIGGER @ReceivePowerScroll
 		REF25.BOUNCE <NEW>
-		REF25.SYSMESSAGELOC -1,1049524
+		REF25.sysmessage @,,2 1049524
 		NEW=<LOCAL.OLDNEW>
 		ENDIF
 		IF (<FLOATVAL 0.001> > <RANDOMDOUBLE>)
@@ -517,7 +517,7 @@ IF (<ATTACKER>)
 					ENDIF
 				NEW=<LOCAL.OLDNEW>
 				REF2.TRIGGER @ReceivePowerScroll
-				REF2.SYSMESSAGELOC -1,1049524
+				REF2.sysmessage @,,2 1049524
 				ENDIF
 				IF ((<FLOATVAL 0.35> > <RANDOMDOUBLE>) && (!(<LOCAL.GAVEREWARD>)))
 				LOCAL.OLDNEW=<NEW>
@@ -1129,11 +1129,11 @@ ENDIF
 
 [FUNCTION ILHENIRSLAYERTITLE]
 IF (<TAG0.CHAMPION.c_Ilhenir> == 1)
-RETURN Cleanser of the Corrupt 
+RETURN Cleanser of the Corrupt
 ELIF (<TAG0.CHAMPION.c_Ilhenir> == 2)
-RETURN Expunger of the Corrupt 
+RETURN Expunger of the Corrupt
 ELIF (<TAG0.CHAMPION.c_Ilhenir> >= 3)
-RETURN Slayer of the Corrupt 
+RETURN Slayer of the Corrupt
 ENDIF
 
 [FUNCTION closealldialogs]
