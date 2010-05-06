@@ -1437,18 +1437,16 @@ button 255 180 4005 4007 1 0 123
 tilepic 280 180 041
 button 335 180 4005 4007 1 0 124
 tilepic 360 180 065
-//IF (<SERV.FeatureML> & 01)
-// button 15 280 4005 4007 1 0 125
-// tilepic 40 280 02df7
-// button 95 280 4005 4007 1 0 126
-// tilepic 120 280 02dfb
-//ENDIF
-//IF (<SERV.FeatureML> & 02)
-// button 175 280 4005 4007 1 0 127
-// tilepic 200 280 03672
-// button 255 280 4005 4007 1 0 128
-// tilepic 280 280 03676
-//ENDIF
+if <src.account.resdisp> > 4
+button 15 280 4005 4007 1 0 125
+tilepic 40 280 02df7
+button 95 280 4005 4007 1 0 126
+tilepic 120 280 02dfb
+button 175 280 4005 4007 1 0 127
+tilepic 200 280 03672
+button 255 280 4005 4007 1 0 128
+tilepic 280 280 03676
+endif
 
 
 [DIALOG d_house_features BUTTON]
