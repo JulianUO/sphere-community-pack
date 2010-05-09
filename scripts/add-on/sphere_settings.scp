@@ -115,7 +115,7 @@ scp.Fishing_MinToSosBottle=0
 ///////////////////////////////////////////////////////////////
 //////// Skills Settings - Cartography Treasures
 ///////////////////////////////////////////////////////////////
-// Set the minimum skill to get the treasures per level
+// Set the minimum skill to decypher the treasures per level
 // The map level is the number at the end of the setting (_1, _2, etc)
 scp.Cartography_TMapLevel_1=27.0
 scp.Cartography_TMapLevel_2=71.0
@@ -123,6 +123,24 @@ scp.Cartography_TMapLevel_3=81.0
 scp.Cartography_TMapLevel_4=91.0
 scp.Cartography_TMapLevel_5=100.0
 scp.Cartography_TMapLevel_6=100.0
+
+// Set the minimum skill to dig up the treasures per level
+// The map level is the number at the end of the setting (_1, _2, etc)
+scp.Mining_TMapLevel_1=27.0
+scp.Mining_TMapLevel_2=71.0
+scp.Mining_TMapLevel_3=81.0
+scp.Mining_TMapLevel_4=91.0
+scp.Mining_TMapLevel_5=100.0
+scp.Mining_TMapLevel_6=100.0
+
+// The default monsters that will spawn on every chest.
+// The map level is the number at the end of the setting (_1, _2, etc)
+scp.Monsters_TMapLevel_1 = {c_headless 1 c_mongbat 1 c_ratman 1 c_skeleton 1 c_zombie 1}
+scp.Monsters_TMapLevel_2 = {c_earth_elemental 1 c_gazer 1 c_gargoyle 1 c_m_hellhound 1 c_orc_mage 1}
+scp.Monsters_TMapLevel_3 = {c_air_elemental 1 c_dread_spider 1 c_fire_elemental 1 c_lich 1 c_ogre_lord 1}
+scp.Monsters_TMapLevel_4 = {c_m_gazer_elder 1 c_daemon 1 c_dread_spider 1 c_lich_lord 1 c_ogre_lord 1}
+scp.Monsters_TMapLevel_5 = {c_blood_elemental 1 c_m_gazer_elder 1 c_daemon 1 c_lich_lord 1 c_poison_elemental 1}
+scp.Monsters_TMapLevel_6 = {c_ancient_wyrm 1 c_balron 1 c_blood_elemental 1 c_poison_elemental 1 c_titan 1}
 
 ///////////////////////////////////////////////////////////////
 //////// Skills Settings - Poisoning/Healing/Veterinary

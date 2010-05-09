@@ -11,86 +11,25 @@
 //
 VERSION=0.56b
 
-[ITEMDEF i_keg_potion]
-NAME=empty potion Keg
-ID=i_KEG_WOOD
-TYPE=t_script
-VALUE={200 300}
+[ITEMDEF 01940]
+DEFNAME=i_keg_potion
+NAME=Potion Keg
+TYPE=t_container
+SKILLMAKE=TINKERING 75.0, t_tinker_tools
+RESOURCES=1 i_keg_small, 10 i_bottle_empty, 1 i_barrel_lid, 1 i_barrel_tap
+TDATA2=03e
 WEIGHT=40
-RESOURCES=8 i_BOARD, 1 i_BARREL_TAP, 1 i_BARREL_HOOPS
-SKILLMAKE=TINKERING 65.0,t_tinker_tools
-CATEGORY=Unique Items
-SUBSECTION=Tinker
-DESCRIPTION=empty potion Keg
+FLIP=1
+DUPELIST=01ad6,01ad7
+CATEGORY=Items by Professions
+SUBSECTION=Alchemist
+DESCRIPTION=Keg
 
-ON=@Create
-	MOREP=0 0 0	//number of potions stored in keg
-	MORE1=0 	//store BASEID of first potion (i_potion_heal)
-	MORE2=0		//store skillvalue off added potion
+[ITEMDEF 01ad6]
+DUPEITEM=01940
 
-ON=@DCLICK
-	SRC.SYSMESSAGE What potion would you like to fill the keg with?
-	TARGET
-	return 1
-
-ON=@TARGON_ITEM
-	if (<src.action> != -1 )
-		SRC.SYSMESSAGE You can't use this yet!
-		return 1
-	elif <src.targ.baseid>==i_bottle_empty
-		if 0 >= <morex>
-			SRC.SYSMESSAGE You can't use this on a empty keg!
-			return 1
-		endif
-		if ( <src.targ.topobj.uid> != <src.uid> )
-			SRC.SYSMESSAGE The empty bottle should be in your backpack!
-			return 1
-		endif
-		SRC.SYSMESSAGE You fill an empty bottle.
-		SOUND=snd_Z_END_LIQUID
-		SRC.NEWITEM=<MORE1>
-		SRC.ACT.MORE2=<MORE2> //restore skillvalue 
-		SRC.ACT.ATTR=0
-		SRC.ACT.TIMER=-1
-		SRC.ACT.BOUNCE
-		MOREX = <MOREX> - 1
-		IF (<MOREX> == 0)
-			NAME=	//set original name
-			MORE1=0	//clear potion id	
-			MORE2=0	//clear makeskillvalue
-		ELSE
-			NAME=a <SRC.ACT.NAME> Keg(<MOREX>)
-		endif
-		src.targ.CONSUME 1
-		RETURN 1
-	elif <SRC.TARG.TYPE> != T_POTION
-		SRC.SYSMESSAGE Thats not a potion!
-		RETURN 1
-	elif <MORE1> && (<SRC.TARG.BASEID>!=<MORE1>)
-		SRC.SYSMESSAGE You can't mix potion types!
-		RETURN 1
-	elif (<MOREX> > 99) //max 100 potion
-		SRC.SYSMESSAGE There's no space for further potions!
-		RETURN 1
-	elif (<MOREX>==0)
-		MORE1=<SRC.TARG.BASEID> // store potion baseid i_potion_xxx
-	elif (<MORE1>!=<SRC.TARG.BASEID>)
-		SRC.SYSMESSAGE You can't fill up the keg with this potions!
-		RETURN 1
-	endif
-	MORE2=(<MORE2>*<MOREX>)
-	MOREX=(<MOREX> + 1)
-	MORE2=(<MORE2> + <SRC.TARG.MORE2>) //store average makeskillvalue
-	MORE2=(<MORE2> / <MOREX>)
-	NAME=a <SRC.TARG.NAME> Keg(<MOREX>)
-	SRC.SOUND=snd_Z_END_LIQUID
-	SRC.SYSMESSAGE You fill up the keg with a <SRC.TARG.NAME> Potion!
-	SRC.TARG.REMOVE
-	SRC.NEWITEM=i_bottle_empty
-	SRC.ACT.ATTR=0
-	SRC.ACT.TIMER=-1
-	SRC.ACT.BOUNCE
-	return 1
+[ITEMDEF 01ad7]
+DUPEITEM=01940
 
 [ITEMDEF i_potion_Agility]
 ID=i_bottle_blue

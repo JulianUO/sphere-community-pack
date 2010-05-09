@@ -1,0 +1,166 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[TEMPLATE tm_treasure_chest_lvl_1]
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Treasure Chest Level #1
+CONTAINER=i_chest_metal
+ITEM=i_gold,1000
+ITEM=random_jewel,3
+ITEM=random_scroll,2
+ITEM=random_scroll,2
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_magic_items,5
+
+[TEMPLATE tm_treasure_chest_lvl_2]
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Treasure Chest Level #2
+CONTAINER=i_chest_metal
+ITEM=i_gold,2000
+ITEM=random_jewel,6
+ITEM=random_scroll,2
+ITEM=random_scroll,2
+ITEM=random_scroll,2
+ITEM=random_scroll,2
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_magic_items,10
+
+[TEMPLATE tm_treasure_chest_lvl_3]
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Treasure Chest Level #3
+CONTAINER=i_chest_metal
+ITEM=i_gold,3000
+ITEM=random_jewel,9
+ITEM=random_scroll,3
+ITEM=random_scroll,3
+ITEM=random_scroll,3
+ITEM=random_scroll,3
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_magic_items,15
+
+[TEMPLATE tm_treasure_chest_lvl_4]
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Treasure Chest Level #4
+CONTAINER=i_chest_metal
+ITEM=i_gold,4000
+ITEM=random_jewel,6
+ITEM=random_jewel,6
+ITEM=random_scroll,4
+ITEM=random_scroll,4
+ITEM=random_scroll,4
+ITEM=random_scroll,4
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_magic_items,38
+
+[TEMPLATE tm_treasure_chest_lvl_5]
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Treasure Chest Level #5
+CONTAINER=i_chest_metal
+ITEM=i_gold,5000
+ITEM=random_jewel,8
+ITEM=random_jewel,7
+ITEM=random_scroll,5
+ITEM=random_scroll,5
+ITEM=random_scroll,5
+ITEM=random_scroll,5
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_magic_items,50
+
+[TEMPLATE tm_treasure_chest_lvl_6]
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Treasure Chest Level #6
+CONTAINER=i_chest_metal
+ITEM=i_gold,6000
+ITEM=random_jewel,6
+ITEM=random_jewel,6
+ITEM=random_jewel,6
+ITEM=random_scroll,4
+ITEM=random_scroll,4
+ITEM=random_scroll,4
+ITEM=random_scroll,4
+ITEM=random_scroll,4
+ITEM=random_scroll,4
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_reagent,{10 30}
+ITEM=random_magic_items,60
+
+
+[TEMPLATE random_magic_items]
+CATEGORY=Item Templates
+SUBSECTION=Treasure Hunting
+DESCRIPTION=Magic Items
+ITEM=random_rich_magic_goodie
+ITEM={random_rich_magic_loot 1 random_average_magic_loot 1}
+ITEM=random_rich_magic_loot
+ITEM={random_rich_magic_loot 1 random_average_magic_loot 1}
+ITEM=random_rich_magic_loot
+ITEM=random_magic_wands,R3
+
+[eof]

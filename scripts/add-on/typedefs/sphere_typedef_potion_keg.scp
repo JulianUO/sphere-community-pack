@@ -1,0 +1,73 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[TYPEDEF t_potion_keg]
+ON=@Dclick
+src.sysmessage @,,1 What potion would you like to fill the keg with?
+target
+return 1
+
+ON=@TargOn_Item
+if <src.action> != -1
+src.sysmessage You can't use this yet!
+return 1
+endif
+if <argo.baseid> == i_bottle_empty
+	if <morex> < 1
+	src.sysmessage @,,2 502230
+	return 1
+	endif
+	if <argo.topobj.uid> != <src.uid>
+	src.sysmessage @,,1 The empty bottle should be in your backpack!
+	return 1
+	endif
+src.sysmessage @,,1 You fill an empty bottle.
+sound = snd_z_end_liquid
+serv.newitem <tag0.potion.type>,1,<src.uid>
+new.more2 = <more2>
+new.attr = 0
+new.timer = -1
+morex --
+	if <morex> == 0
+	name =
+	tag.potion.type =
+	more2 = 0
+	else
+	name = a <argo.name> Keg (<morex>)
+	endif
+argo.consume 1
+return 1
+elif <argo.type> != t_potion
+src.sysmessage @,,1 That's not a potion.
+return 1
+elif <tag0.potion.type> && (<argo.baseid> != <tag0.potion.type>)
+src.sysmessage @,,2 502236
+return 1
+elif <morex> > 99
+src.sysmessage @,,2 502233
+return 1
+elif <morex> == 0
+tag.potion.type = <argo.baseid>
+elif <tag0.potion.type> != <argo.baseid>
+src.sysmessage @,,2 502236
+return 1
+endif
+more2 = <eval <more2> * <morex>>
+morex ++
+more2 = <eval <more2> + <argo.more2>>
+more2 /= <morex>
+name = <argo.name> Keg (<morex>)
+src.sound = snd_z_end_liquid
+src.sysmessage  @,,1 You fill up the keg with a <argo.name> potion!
+argo.consume 1
+serv.newitem i_bottle_empty,1,<src.uid>
+new.attr = 0
+new.timer = -1
+return 1
+
+[eof]
