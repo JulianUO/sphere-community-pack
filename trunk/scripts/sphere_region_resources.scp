@@ -73,6 +73,12 @@ amount=9,30
 REAP=i_fish_big_4
 REGEN=60*60
 
+[REGIONRESOURCE mr_footwear]
+SKILL=1.0,75.0
+AMOUNT=1
+REAP=random_footwear
+REGEN=60*60
+
 [REGIONRESOURCE mr_fish_highly_peculiar]
 SKILL=1.0,100.0
 AMOUNT=1,2

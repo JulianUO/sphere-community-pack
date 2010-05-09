@@ -1,0 +1,39 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[TYPEDEF t_weapon_mace_pick]
+ON=@TargOn_Item
+if <argo.type> == t_treasure_tile
+	if <src.distance <argo.uid>> < <eval <src.mining> / 250>
+	src.sysmessage <def.scp.tmap_toofaraway>
+	endif
+	if <src.mining> < <def.scp.Mining_TMapLevel_<argo.dtag.map.level>>
+	src.sysmessage <def.scp.tmap_nomining>
+	return 1
+	endif
+	if <src.skillusequick mining <r<def.scp.Mining_TMapLevel_<argo.dtag.map.level>>>>
+	serv.newitem tm_treasure_chest_lvl_<argo.dtag.map.level>
+	new.p = <argo.p>
+	new.morey = <r3,4>
+	new.events +t_treasure_chest
+	new.tag.map.level = <argo.tag.map.level>
+	local.chest = <new.uid>
+		if <r3> > 0
+			for 1 <r1,2>
+			serv.newnpc <eval <def.scp.Monsters_TMapLevel_<argo.dtag.map.level>>
+			new.attack <src.uid>
+			uid.<local.chest>.morey --
+			endfor
+		endif
+	src.sysmessage <def.scp.tmap_digup>
+	argo.remove
+	endif
+return 1
+endif
+
+[eof]

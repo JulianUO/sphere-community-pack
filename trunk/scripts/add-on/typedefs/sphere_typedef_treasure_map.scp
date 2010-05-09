@@ -8,6 +8,9 @@ VERSION=0.56b
 
 [TYPEDEF t_treasure_map]
 on=@dclick
+if <tag0.decyphered>
+return 0
+endif
 if !<src.restest 1 i_pickaxe>
 src.sysmessage <def.scp.tmap_nopickaxe>
 return 1
@@ -18,7 +21,7 @@ return 1
 endif
 if <src.skillusequick cartography <r<def.scp.Cartography_TMapLevel_<dtag0.map.level>>>>
 name = Deciphered Treasure Map
-tevents -t_treasure_map
+tag.decyphered = 1
 morep = <f_generate_coords_tmap>
 more1 = <eval ((<morex> - 280) * 010000) + (<morey> - 280)>
 more2 = <eval ((<morex> + 280) * 010000) + (<morey> + 280)>

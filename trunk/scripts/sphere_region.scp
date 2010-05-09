@@ -37,6 +37,7 @@ RESOURCES=20.0 mr_fish1
 RESOURCES=20.0 mr_fish2
 RESOURCES=20.0 mr_fish3
 RESOURCES=20.0 mr_fish4
+RESOURCES=0.2 mr_footwear
 
 [REGIONTYPE r_water t_water]
 // Default water area resources
