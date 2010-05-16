@@ -225,6 +225,7 @@ new.link=<ref1>
 new.cont=<uid>
 flags |= statf_pet
 tag.beingtamed=
+home = -1,-1
 if <owners_count> == 0
 	if <argv[1]>
 	f_skill_loss 86

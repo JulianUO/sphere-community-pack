@@ -198,7 +198,13 @@ local.MRe = <tag0.ManaRegeneration>
 else
 endif
 local.MRt = <eval 2 + <local.MRmi> + <local.MRf> + <local.MRe>> // This is the amount of points in 10 seconds
+if <tag0.meditation.active>
+tag0.override.regenval_1 = <eval <local.MRt> / 10>
+tag0.override.regen_1 = 10.0
+else
 tag0.override.regenval_1 = <local.MRt>
+tag.override.regen_1 =
+endif
 
 on=@skillsuccess
 if <argn1> == 45 // Mining, which other works like this?
