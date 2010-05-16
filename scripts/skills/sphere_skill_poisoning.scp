@@ -34,7 +34,7 @@ VALUES=1,30,200
 on=@wait
 if <def.scp.NewSkills_Poisoning> == 1
 	if !<ctag0.skill.poisoning>
-	sysmessage <def.scp.poisoning_poisonwhat
+	sysmessage <def.scp.poisoning_poisonwhat>
 	targetf f_skill_poison
 	f_skill_delay <getargv 0 <def.skill.30.waittime>>
 	else

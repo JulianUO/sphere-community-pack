@@ -17,6 +17,12 @@ local.max = <tag0.DamEnergy>
 endif
 return <local.hue>
 
+[function ishuman]
+if (<body> == c_man) || (<body> == c_woman)
+return 1
+endif
+return 0
+
 [function isgargoyle]
 if (<body> == c_gargoyle_male) || (<body> == c_gargoyle_female)
 return 1

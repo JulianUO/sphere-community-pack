@@ -89,9 +89,10 @@ scp.armslore_targ		"@,,2 500906"	// What would you like to evaluate?
 scp.armslore_fail		"@,,2 500353"	// You are not certain...
 scp.begging_isplayer		"@,,2 500398"	// Perhaps just asking would work better.
 scp.begging_ismonster		"@,,2 500399"	// There is little chance of getting money from that!
+scp.begging_isitem		"@,,2 500400"	// There is little chance of getting money from that!
 scp.begging_mounted		"@,,2 500404"	// They seem unwilling to give you any money.
 scp.begging_fail		"@,,2 500404"	// They seem unwilling to give you any money.
-scp.begging_withoutgold		"@,,2 500407" // I have not enough money to give thee any!
+scp.begging_withoutgold		"@,,2 500407"	// I have not enough money to give thee any!
 scp.blacksmith_forgeanvil	"@,,2 1044267"	// You must be near a forge and and anvil to repair items.
 
 scp.camping_fail		"@,,2 501696"	// You fail to ignite the campfire.

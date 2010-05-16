@@ -27,6 +27,7 @@ f_skill_delay <getargv 0 <def.skill.6.waittime>>
 on=@start
 if <def.scp.NewSkills_Begging> == 1
 	if <act.isitem>
+	sysmessage <def.scp.begging_isitem>
 	f_skill_delay <getargv 2 <def.skill.6.waittime>>
 	return 1
 	endif
