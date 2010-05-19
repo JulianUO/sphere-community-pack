@@ -120,7 +120,7 @@ tag.gothitbyspell =
 [events e_NpcCombatEvent]
 on=@hittry
 if <def.scp.Combat_FormulasUsed> != 0
-argn1 = <f_combatsys_hitspeed <argn1>>
+//argn1 = <f_combatsys_hitspeed <argn1>>
 actdiff = <f_combatsys_hitchance <actdiff>>
 endif
 
@@ -168,6 +168,7 @@ src.tag.hbcs = 1
 
 on=@gethit
 if <tag0.hbcs>
+SERV.LOG WTF1
 	if <tag0.ignore.combat>
 	argn2 |= dam_god
 	tag.ignore.combat
@@ -188,6 +189,7 @@ if <tag0.hbcs>
 	endif
 endif
 if <tag0.gothitbyspell>
+SERV.LOG WTF12
 	if <def.scp.Combat_SpellBonus> == 1
 	local.damage = <r<serv.spell.<dtag.gothitbyspell>.effect>>
 	local.evalint = <eval (((<src.evaluatingintel>*3)/1000)+1)>

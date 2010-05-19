@@ -148,14 +148,11 @@ on=@effect
 if <weapon>
 src.sysmessage @,,2 1072198 // Target must be wielding a weapon!
 endif
-
 sfx 05c3
 effect 2,03728,1,13,0,0455,7
 effect 2,03779,1,15,0,03f,7
-
 local.level = <src.findid.i_arcane_focus.more1>
 local.duration = <eval ((10 + <max 1,<eval (<src.spellweaving> / 240)>>) + <local.focus>)>
-
 serv.newitem i_attunement
 new.link = <src>
 new.tag0.weap = <weapon>

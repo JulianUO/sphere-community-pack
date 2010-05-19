@@ -437,16 +437,36 @@ scp.Karma_MinLimit=-25000
 // Default = 25000
 scp.Fame_Maxlimit=25000
 
+
+///////////////////////////////////////////////////////////////
+//////// NPCs AI Settings
+///////////////////////////////////////////////////////////////
+// Uses as percentage, will heal if hits is less than x%
+// Default is 30
+HealSelf=30
+
+// Percentage. Will run of the attacker if hits is less than x%
+// Default is 10
+FearOfDeath=10
+
 ///////////////////////////////////////////////////////////////
 //////// OSI Champion System
 ///////////////////////////////////////////////////////////////
+// Time to respawn the champion idol (when it's killed)
+// In seconds. Default = 2/4 hours
+scp.Champions_Respawn=60*60*{2 4}
+
 // Chance to get a champ artifact in % (0-100)
 // 100 = Always. 0 = Never.
 scp.Champions_ArtyChamp=30
 
 // Amount of monsters spawned by champion spawn.
 // Caution! Check MaxComplexity setting in sphere.ini!
-scp.Champions_TotalMonsters=128
+scp.Champions_MaxMonsters=128
+
+// Maximum distance from the spawn to move the monsters
+// In tiles. Default = 60
+scp.Champions_DistanceFromSpawn=60
 
 // Countdown timer for level restart or regression
 // In seconds. Example: 10*60 = 10 minutes

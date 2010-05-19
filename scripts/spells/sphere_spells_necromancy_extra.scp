@@ -114,8 +114,11 @@ endif
 
 // Pain Spike
 [function f_PainSpikeDispel]
-tag0.painspike
+serv.log called this
+tag0.spell.painspike
+if !(<flags>&statf_dead)
 hits += <args>
+endif
 
 
 

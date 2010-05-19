@@ -1035,9 +1035,6 @@ ELIF (<IsOwner <SRC>>)
     ELIF (<LINK.DESIGNER>)
      SRC.SYSMESSAGE @,,1 <UID.<LINK.DESIGNER>.NAME> is designing this house.
      return 1
-    ELIF !(<SRC.ISEVENT.e_house_customize>)
-     SRC.EVENTS +e_house_customize
-     SRC.DSPEECH +spk_house_customize
     ENDIF
     REF1=<LINK>
     FORCLIENTS 18
@@ -1048,6 +1045,10 @@ ELIF (<IsOwner <SRC>>)
       ENDIF
     ENDFOR
     SRC.GO <P>
+    IF !(<SRC.ISEVENT.e_house_customize>)
+     SRC.EVENTS +e_house_customize
+     SRC.DSPEECH +spk_house_customize
+    ENDIF
     LINK.CUSTOMIZE
    ENDIF
    return 1
