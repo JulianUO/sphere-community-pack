@@ -13,21 +13,22 @@ VERSION=0.56b
 // SCRIPT DOCUMENTATION
 // --------------------
 // Necromancy main spell sections.
-// -DONE- Animate Dead
+// * Horrific Beast
+// * Lich Form
+// * Wraith Form
+// * Wither
+/////////////////////////////////////////
+// Animate Dead
 // Blood Oath
 // Corpse Skin
 // Curse Weapon
 // Evil Omen
-// -DONE- Horrific Beast
-// -DONE- Lich Form
 // Mind Rot
 // Pain Spike
 // Poison Strike
 // Strangle
 // Summon Familiar
 // Vampiric Embrace
-// -DONE- Wither
-// -DONE- Wraith Form
 // Exorcism
 
 [SPELL 101]
@@ -60,7 +61,7 @@ CAST_TIME=1.5
 RESOURCES=i_reag_daemon_blood
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_blood_oath
-FLAGS=SPELLFLAG_TARG_PLAYER | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_FX_TARG| SPELLFLAG_RESIST
+FLAGS=SPELLFLAG_TARG_PLAYER | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_FX_TARG | SPELLFLAG_RESIST
 EFFECT_ID=0
 EFFECT=0
 DURATION=0
@@ -307,7 +308,7 @@ INTERRUPT=100.0,1.0
 
 on=@success
 local.damage = <eval ((<src.necromancy> - <act.magicresistance>) / 100) + 30>
-if <act.tag0.painspike>
+if <act.tag0.spell.painspike>
 local.damage /= 2
 else
 if <local.damage> < 1
@@ -315,6 +316,7 @@ local.damage = 1
 endif
 local.dmgret = <eval <local.damage>/10>
 local.delay = <r7,10>
+tag.spell.painspike = 1
 timerf <local.delay>,f_PainSpikeDispel <local.dmgret>
 act.damage <local.damage> dam_god <uid>
 act.effect 3,i_fx_glow_spike,1,18,0,39,3
@@ -596,6 +598,7 @@ forchars 5
 		if <local.damage> > 40
 		local.damage = 40
 		endif
+	local.damage /= <src.distance <uid>>
 	damage <local.damage> dam_cold <src.uid>
 	effect 3,i_fx_vortex_full,5,20,0,0,3
 	endif

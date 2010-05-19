@@ -26,7 +26,7 @@ Guild.Priv.CanUseChat			"0"
 
 //Misc Settings
 Guild.RegistrationFee			"25000"		//Price for create a new guild
-Guild.NameMaxLenght				"20"
+Guild.NameMaxLenght			"20"
 Guild.NameChangeDelay			"6048000"	//6048000 = 7 Days (in tenths of second)
 Guild.AbbrevMaxLenght			"4"
 Guild.AbbrevChangeDelay			"6048000"
@@ -34,10 +34,10 @@ Guild.CharterMaxLenght			"50"
 Guild.WebsiteMaxLenght			"50"
 Guild.PlayerTitleMaxLenght		"20"
 Guild.EnableChangeName			"0"
-Guild.EnableChangeAbbrev			"0"
-Guild.EnableAlign				"0"
+Guild.EnableChangeAbbrev		"1"
+Guild.EnableAlign			"1"
 Guild.EnableAdvancedSearch		"1"
-Guild.EnableVoteForGuildMaster	"1"
+Guild.EnableVoteForGuildMaster		"1"
 Guild.EnableChangeChatColor		"0"
 Guild.DisbandRefundPercent		"0"		//% of 'RegistrationFee' that will return to GuildMaster on guild disband
 Guild.CharGenericEvent			"e_guild"

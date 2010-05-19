@@ -31,6 +31,10 @@ endif
 
 // Skill delays
 on=@skillwait
+if (<flags>&statf_freeze) || (<flags>&statf_stone)
+src.sysmessage <def.scp.skill_cantuse>
+return 1
+endif
 if <flags>&statf_dead
 src.sysmessage <def.scp.skill_youaredead>
 return 1
