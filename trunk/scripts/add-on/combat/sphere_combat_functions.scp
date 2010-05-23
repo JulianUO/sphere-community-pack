@@ -77,17 +77,22 @@ return <qval <findlayer.2.type> == t_shield ? <findlayer.2.uid>:0>
 //////// HIT SPEED
 ///////////////////////////////////////////////////////////////
 [function f_combatsys_hitspeed]
+if !<isempty <args>>
+local.speed = <args>
+else
+local.speed = <qval <weapon> ? <weapon.speed> : 20>
+endif
 doswitch <def.scp.Combat_FormulasUsed>
-return <eval (<serv.SpeedScaleFactor> * 10) / ((<dex> + 100) * <feval <floatval 150 / <fval <qval <weapon> ? <weapon.speed> : 20>>>>)>
-	begin // Custom - Reference to scp.Combat_HitSpeed
-		doswitch <def.scp.Combat_HitSpeed>
-		return <eval (<serv.SpeedScaleFactor> * 10) / ((<dex> + 100) * <feval <floatval 150 / <fval <qval <weapon> ? <weapon.speed> : 20>>>>)>
-		return <eval 150000 / ((<stam> + 100) * <feval <floatval 150 / <fval <qval <weapon> ? <weapon.speed> : 20>>>>)>
-		return <max <eval ((((<fval <qval <weapon> ? <weapon.speed> : 20>> * 4) / 10) - (<stamina> / 30)) * (100.0 / (100 + <qval <def.scp.ItemProp_SwingSpeedIncrease> ? <weapon.tag0.SwingSpeedIncrease> : 0>))) / 4>, 13>
-		enddo
-	end
-return <eval 150000 / ((<stam> + 100) * <feval <floatval 150 / <fval <qval <weapon> ? <weapon.speed> : 20>>>>)>
-return <max <eval ((((<fval <qval <weapon> ? <weapon.speed> : 20>> * 4) / 10) - (<stamina> / 30)) * (100.0 / (100 + <qval <def.scp.ItemProp_SwingSpeedIncrease> ? <weapon.tag0.SwingSpeedIncrease> : 0>))) / 4>, 13>
+    return <eval (<serv.SpeedScaleFactor> * 10) / ((<dex> + 100) * <feval <floatval 150 / <fval <local.speed>>>>)>
+    begin // Custom - Reference to scp.Combat_HitSpeed
+        doswitch <def.scp.Combat_HitSpeed>
+            return <eval (<serv.SpeedScaleFactor> * 10) / ((<dex> + 100) * <feval <floatval 150 / <fval <local.speed>>>>)>
+            return <eval 150000 / ((<stam> + 100) * <feval <floatval 150 / <fval <local.speed>>>>)>
+            return <max <eval ((((<fval <local.speed>> * 4) / 10) - (<stamina> / 30)) * (100.0 / (100 + <qval <def.scp.ItemProp_SwingSpeedIncrease> ? <weapon.tag0.SwingSpeedIncrease> : 0>))) / 4>, 13>
+        enddo
+    end
+    return <eval 150000 / ((<stam> + 100) * <feval <floatval 150 / <fval <local.speed>>>>)>
+    return <max <eval ((((<fval <local.speed>> * 4) / 10) - (<stamina> / 30)) * (100.0 / (100 + <qval <def.scp.ItemProp_SwingSpeedIncrease> ? <weapon.tag0.SwingSpeedIncrease> : 0>))) / 4>, 13>
 enddo
 
 

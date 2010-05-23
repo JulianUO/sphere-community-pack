@@ -168,7 +168,6 @@ src.tag.hbcs = 1
 
 on=@gethit
 if <tag0.hbcs>
-SERV.LOG WTF1
 	if <tag0.ignore.combat>
 	argn2 |= dam_god
 	tag.ignore.combat
@@ -189,7 +188,6 @@ SERV.LOG WTF1
 	endif
 endif
 if <tag0.gothitbyspell>
-SERV.LOG WTF12
 	if <def.scp.Combat_SpellBonus> == 1
 	local.damage = <r<serv.spell.<dtag.gothitbyspell>.effect>>
 	local.evalint = <eval (((<src.evaluatingintel>*3)/1000)+1)>
