@@ -81,6 +81,7 @@ endif
 
 [function f_hide]
 addbuff 1012,1075655,1075656,0,0
+removefromview
 flags |= statf_hidden
 events +e_skill_hiding
 update

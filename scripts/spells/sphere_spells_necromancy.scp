@@ -13,18 +13,20 @@ VERSION=0.56b
 // SCRIPT DOCUMENTATION
 // --------------------
 // Necromancy main spell sections.
+// * Animate Dead
+// * Blood Oath
+// * Corpse Skin
+// * Curse Weapon
+// * Pain Spike
+// * Wither
+/////////////////////////////////////////
+
+
 // * Horrific Beast
 // * Lich Form
 // * Wraith Form
-// * Wither
-/////////////////////////////////////////
-// Animate Dead
-// Blood Oath
-// Corpse Skin
-// Curse Weapon
 // Evil Omen
 // Mind Rot
-// Pain Spike
 // Poison Strike
 // Strangle
 // Summon Familiar
@@ -61,7 +63,7 @@ CAST_TIME=1.5
 RESOURCES=i_reag_daemon_blood
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_blood_oath
-FLAGS=SPELLFLAG_TARG_PLAYER | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_FX_TARG | SPELLFLAG_RESIST
+FLAGS=SPELLFLAG_TARG_PLAYER|SPELLFLAG_DIR_ANIM|SPELLFLAG_HARM|SPELLFLAG_FX_TARG|SPELLFLAG_RESIST
 EFFECT_ID=0
 EFFECT=0
 DURATION=0
@@ -69,18 +71,21 @@ MANAUSE=13
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
 
-ON=@Success
-if <src.tag0.bloodoathcast>
-src.tag.bloodoathcast =
-return 1
+ON=@Select
+if <tag0.BloodOathCaster>
+uid.<tag0.BloodOathCaster>.tag.BloodOath
+uid.<tag0.BloodOathCaster>.events -e_BloodOathCurse
+tag.BloodOathCaster
 endif
-local.delay = <eval ((<src.spiritspeak>-<act.magicresistance>)/80)+8>
-src.tag0.bloodoathcast = 1
-act.tag0.bloodoath = <src.uid>
+
+ON=@Success
+local.delay = <eval ((<spiritspeak> - <act.magicresistance>) / 80) + 8>
+tag0.BloodOathCaster = <act.uid>
+act.tag0.BloodOath = <uid>
 act.events +e_BloodOath
-act.TimerF <local.delay>,f_BloodOathDispel
-src.f_AddBuff BloodOathCaster,<dlocal.delay>,<act.name>
-act.f_AddBuff BloodOathCurse,<dlocal.delay>,<src.name>
+timerf <local.delay>,f_BloodOathDispel
+f_AddBuff BloodOathCaster,<dlocal.delay>,<act.name>
+act.f_AddBuff BloodOathCurse,<dlocal.delay>,<name>
 
 [SPELL 103]
 DEFNAME=s_corpse_skin
@@ -91,7 +96,7 @@ CAST_TIME=2
 RESOURCES=i_reag_grave_dust, i_reag_batwing
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_corpse_skin
-FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM | SPELLFLAG_FX_TARG | SPELLFLAG_RESIST
+FLAGS=SPELLFLAG_TARG_CHAR|SPELLFLAG_DIR_ANIM|SPELLFLAG_HARM|SPELLFLAG_FX_TARG|SPELLFLAG_RESIST
 EFFECT_ID=0
 EFFECT=0
 DURATION=0
@@ -100,17 +105,16 @@ SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
 
 ON=@Success
-if <act.restest i_corpse_skin>
-act.consume i_corpse_skin
+if <act.restest i_rune_corpse_skin>
+act.consume i_rune_corpse_skin
 return 1
 endif
-serv.newitem i_lich_fx
-new.attr=attr_static|attr_decay
-new.timer=2
-new.p=<act.p>
-serv.newitem i_corpse_skin
-new.timer=(<eval <src.spiritspeak>-<act.magicresistance>>/25)+40
-act.equip <new>
+serv.newitem i_fx_lich_form
+new.attr = attr_static|attr_decay
+new.timer = 2
+new.p = <act.p>
+serv.newitem i_rune_corpse_skin,1,<act.uid>,1
+new.timer = <eval ((<spiritspeak> - <act.magicresistance>) / 25) + 40>
 
 [SPELL 104]
 DEFNAME=s_curse_weapon
@@ -129,31 +133,19 @@ MANAUSE=7
 SKILLREQ=Necromancy 0.0
 INTERRUPT=100.0,1.0
 
-on=@select
-if <findlayer.1.uid>
-	if <findlayer.1.isweapon>
-	ctag.weap.layer = 1
-	return 0
-	endif
-elif <findlayer.2.uid>
-	if <findlayer.2.isweapon>
-	ctag.weap.layer = 2
-	return 0
-	endif
-endif
-src.sysmessage <def.scp.spell.curseweapon_noweap>
+ON=@Select
+if !<weapon>
+sysmessage <def.scp.spell.curseweapon_noweap>
 return 1
+endif
+if <restest i_rune_curse_weapon>
+consume i_rune_curse_weapon
+return 1
+endif
 
 ON=@Success
-if <src.restest i_curse_weapon>
-src.consume i_curse_weapon
-return 1
-endif
-src.tag.cursed_weapon=<findlayer.<ctag0.weap.layer>.uid>
-serv.newitem i_curse_weapon
-new.timer=(<eval <src.spiritspeak>/75>)+1
-new.equip <src>
-ctag.weap.layer
+weapon.events +e_CurseWeapon
+weapon.timerf <eval <spiritspeak> / 75>,f_CurseWeaponDispel
 
 [SPELL 105]
 DEFNAME=s_evil_omen
@@ -257,7 +249,7 @@ new.timer = -1
 new.link = <uid>
 new.cont = <uid>
 body = c_lich
-sector.allclients update
+update
 
 [spell 108]
 DEFNAME=s_mind_rot
@@ -310,7 +302,7 @@ on=@success
 local.damage = <eval ((<src.necromancy> - <act.magicresistance>) / 100) + 30>
 if <act.tag0.spell.painspike>
 local.damage /= 2
-else
+endif
 if <local.damage> < 1
 local.damage = 1
 endif

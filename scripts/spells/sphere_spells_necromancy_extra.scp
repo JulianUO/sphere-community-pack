@@ -15,7 +15,6 @@ VERSION=0.56b
 // Necromancy functions and other things used.
 // We move them here just to keep clean the main files and can tweak it without problems.
 //
-
 // These items are used for effects, just like i_fx_curse for magery spells =)
 [itemdef i_fx_lich_form]
 name=lich fx
@@ -92,25 +91,83 @@ endif
 [function f_AnimateDeadDispel]
 uid.<args>.hits = 0
 
+
 // Blood Oath
 [function f_BloodOathDispel]
-events -e_BloodOath
-uid.<tag0.bloodoath>.removebuff <def.bufficon_bloodoathcaster>
-uid.<tag0.bloodoath>.tag0.bloodoathcast
-removebuff <def.bufficon_bloodoathcurse>
-tag0.bloodoath
+if <tag0.BloodOathCaster>
+uid.<tag0.BloodOathCaster.tag.BloodOath
+uid.<tag0.BloodOathCaster>.events -e_BloodOathCurse
+tag.BloodOathCaster
+endif
 
 [events e_BloodOath]
-on=@Hit
-uid.<tag0.bloodoath>.damage <eval (<argn1>*20)/100> <argn2> <uid>
+ON=@Hit
+uid.<tag0.BloodOath>.damage <eval (<argn1>*20)/100> <argn2> <uid>
 
-on=@SpellCast
-uid.<tag0.bloodoath>.spelleffect <argn1> <argn2>
+ON=@SpellCast
+uid.<tag0.BloodOath>.spelleffect <argn> <argn2>
 
-on=@SpellEffect
+ON=@SpellEffect
 if (<argn> == 34) || (<argn> == 41)
 f_BloodOathDispel
 endif
+
+
+// Corpse Skin
+[itemdef i_rune_corpse_skin]
+NAME=Corpse Skin Effect
+ID=i_memory
+TYPE=t_eq_script
+LAYER=layer_special
+TEVENTS=t_armor
+TAG.ResPhysical=10
+TAG.ResCold=10
+TAG.ResFire=-10
+TAG.ResPoison=-10
+
+ON=@Equip
+src.color = 059f
+src.events +e_CorpseSkin
+
+ON=@UnEquip
+cont.color = <cont.oskin>
+cont.events -e_CorpseSkin
+
+ON=@Timer
+remove
+return 1
+
+[events e_CorpseSkin]
+ON=@SpellEffect
+if (<argn> == 34) || (<argn> == 41)
+consume i_rune_corpse_skin
+endif
+
+
+// Curse Weapon
+[events e_CurseWeapon]
+ON=@Equip
+if !<src.isevent.e_CurseWeaponEffect>
+src.events +e_CurseWeaponEffect
+endif
+
+ON=@Unequip
+src.events -e_CurseWeaponEffect
+
+[events e_CurseWeaponEffect]
+ON=@Hit
+sound 1317
+hits += <eval <argn1> / 2>
+if <hits> > <maxhits>
+hits = <maxhits>
+endif
+
+[function f_CurseWeaponDispel]
+if <cont.isplayer>
+cont.events -e_CurseWeaponEffect
+events -e_CurseWeapon
+endif
+
 
 // Pain Spike
 [function f_PainSpikeDispel]
@@ -126,6 +183,7 @@ endif
 //#################################################\\
 //#                 Curse Weapon                  #\\
 //#################################################\\
+
 
 [itemdef i_curse_weapon]
 NAME=Curse Weapon
@@ -157,44 +215,6 @@ if (<argo.uid>==<tag0.cursed_weapon>)
 endif
 
 //#################################################\\
-//#                  Pain Spike                   #\\
-//#################################################\\
-
-
-//#################################################\\
-//#                  Corpse Skin                  #\\
-//#################################################\\
-
-[itemdef i_corpse_skin]
-NAME=Corpse Skin
-ID=i_memory
-TYPE=t_eq_script
-LAYER=layer_special
-TEVENTS t_armor
-tag.physicalresist=10
-tag.coldresist=10
-tag.fireresist=-10
-tag.poisonresist=10
-
-ON=@Equip
-  src.color=0059f
-  src.events +e_corpse
-
-ON=@UnEquip
-  cont.color=<cont.oskin>
-  cont.events -e_corpse
-
-ON=@Timer
-  remove
-  return 1
-
-[events e_corpse]
-ON=@Spelleffect
-if (<argn> == 34) || (<argn> == 41)
-  consume i_corpse_skin
-endif
-
-//#################################################\\
 //#                   Evil Omen                   #\\
 //#################################################\\
 
@@ -208,9 +228,6 @@ if (<argn> == 34) || (<argn> == 41)
   events -e_evil_omen
 endif
 
-//#################################################\\
-//#                  Blood Oath                   #\\
-//#################################################\\
 //#################################################\\
 //#                 Wraith Form                   #\\
 //#################################################\\
@@ -365,10 +382,6 @@ ON=@Step
   return 1
 
 //#################################################\\
-//#                      Wither                   #\\
-//#################################################\\
-
-//#################################################\\
 //#                     Strangle                  #\\
 //#################################################\\
 
@@ -497,7 +510,7 @@ ON=@NPCRestock
     ITEMNEWBIE=i_halberd
     COLOR=0455
 
-[EVENTS e_revenant]
+[events e_revenant]
 ON=@Death
 finduid.<src.tag.owner>.findid.i_revenant_tracker.remove
 finduid.<src.tag.owner>.sysmessage Your revenant failed

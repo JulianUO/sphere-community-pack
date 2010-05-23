@@ -170,4 +170,30 @@ CATEGORY=Items by Professions
 SUBSECTION=Archers/Bowyers
 DESCRIPTION=Arrow (Straight)
 
+
+[ITEMDEF i_bola_ball]
+DEFNAME=i_bola_ball
+ID=i_cannon_ball
+NAME=Bola ball%s
+WEIGHT=4.0
+SKILLMAKE=TINKERING 45.0, t_tinker_tools
+RESOURCES=10 i_ingot_iron
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Bola
+DESCRIPTION=Bola Ball
+
+ON=@Create
+COLOR=08ac
+
+[ITEMDEF i_bola]
+ID=026ac
+NAME=Bola
+TYPE=t_bola
+WEIGHT=4.0
+SKILLMAKE=TINKERING 60.0, t_tinker_tools
+RESOURCES=4 i_bola_ball, 3 i_hides_cut
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Bola
+DESCRIPTION=Bola
+
 [EOF]
