@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -31,6 +31,7 @@ DUPELIST=01bde,01bdf,01be0,01be1,01be2
 
 [ITEMDEF i_log_oak]
 NAME=oak log%s
+ID=i_log
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
@@ -43,6 +44,7 @@ COLOR=color_o_oak
 
 [ITEMDEF i_log_ash]
 NAME=ash log%s
+ID=i_log
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
@@ -52,6 +54,7 @@ COLOR=color_o_ash
 
 [ITEMDEF i_log_yew]
 NAME=yew log%s
+ID=i_log
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
@@ -64,6 +67,7 @@ COLOR=color_o_yew
 
 [ITEMDEF i_log_heartwood]
 NAME=heartwood log%s
+ID=i_log
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
@@ -72,10 +76,11 @@ SUBSECTION=Logs
 DESCRIPTION=Heartwood Log
 
 ON=@Create
-COLOR=color_o_heartwood 
+COLOR=color_o_heartwood
 
 [ITEMDEF i_log_bloodwood]
 NAME=bloodwood log%s
+ID=i_log
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
@@ -84,10 +89,11 @@ SUBSECTION=Logs
 DESCRIPTION=Bloodwood Log
 
 ON=@Create
-COLOR=color_o_bloodwood 
+COLOR=color_o_bloodwood
 
 [ITEMDEF i_log_frostwood]
 NAME=frostwood log%s
+ID=i_log
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
@@ -96,6 +102,6 @@ SUBSECTION=Logs
 DESCRIPTION=Frostwood Log
 
 ON=@Create
-COLOR=color_o_frostwood 
+COLOR=color_o_frostwood
 
 [eof]
