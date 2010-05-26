@@ -5383,7 +5383,7 @@ EVENTS=r_default,r_default_rock,r_default_water,r_default_tree,r_default_grass
 NAME=Star Chamber
 GROUP=Green Acres
 FLAGS=0180
-P=5147,1767,31,0
+P=5140,1773,0,0
 RECT=5123,1743,5171,1792,0
 
 [AREADEF a_green_acres_3_1]

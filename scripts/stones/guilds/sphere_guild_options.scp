@@ -18,8 +18,8 @@ Guild.Priv.CanInvitePlayer		"1"
 Guild.Priv.CanKickPlayers		"2"
 Guild.Priv.AccessGuildItems		"1"	//Unused
 Guild.Priv.CanPromoteDemote		"2"
-Guild.Priv.AllianceControl		"2"	//Unused
-Guild.Priv.CanControlWarStatus	"2"
+Guild.Priv.AllianceControl		"2"
+Guild.Priv.CanControlWarStatus		"2"
 Guild.Priv.CanSetMemberTitle		"2"
 Guild.Priv.CanVoteForGuildMaster	"1"
 Guild.Priv.CanUseChat			"0"
@@ -57,6 +57,7 @@ Guild.ChatColor.5		"03a"
 [DEFNAME GuildHTMLDefinitions]
 Guild.DialogFont.DarkBlue	"<basefont color=#00007b>"
 Guild.DialogFont.Green		"<basefont color=#006300>"
+Guild.DialogFont.Red		"<basefont color=#b22222>"
 
 
 // ------------------------------------------------------

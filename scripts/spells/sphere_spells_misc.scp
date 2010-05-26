@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -33,7 +33,7 @@ SKILLREQ=MAGERY 30.0, NECROMANCY 40.0
 INTERRUPT=100.0,100.0
 
 [Spell 66]
-DEFNAME=s_animate_dead
+DEFNAME=s_animate_dead_backwards
 NAME=Animate Dead
 SOUND=snd_SPELL_ANIMATE_DEAD
 RUNES=IAMG
