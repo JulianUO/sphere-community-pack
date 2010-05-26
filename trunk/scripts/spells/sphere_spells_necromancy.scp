@@ -74,7 +74,7 @@ INTERRUPT=100.0,1.0
 ON=@Select
 if <tag0.BloodOathCaster>
 uid.<tag0.BloodOathCaster>.tag.BloodOath
-uid.<tag0.BloodOathCaster>.events -e_BloodOathCurse
+uid.<tag0.BloodOathCaster>.events -e_BloodOath
 tag.BloodOathCaster
 endif
 
@@ -83,7 +83,7 @@ local.delay = <eval ((<spiritspeak> - <act.magicresistance>) / 80) + 8>
 tag0.BloodOathCaster = <act.uid>
 act.tag0.BloodOath = <uid>
 act.events +e_BloodOath
-timerf <local.delay>,f_BloodOathDispel
+act.timerf <dlocal.delay>,f_BloodOathDispel
 f_AddBuff BloodOathCaster,<dlocal.delay>,<act.name>
 act.f_AddBuff BloodOathCurse,<dlocal.delay>,<name>
 

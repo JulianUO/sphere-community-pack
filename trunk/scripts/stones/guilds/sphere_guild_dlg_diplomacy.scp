@@ -44,12 +44,22 @@ FOR <eval (<SRC.CTAG0.GuildDiplomacy.Page>-1)*8> <eval (<SRC.CTAG0.GuildDiplomac
   FOR Table 3
    LOCAL.Width = <STRARG <DEF.GuildDiplomacyTable.<dLOCAL.Table>>>
    IF (<LOCAL.Table>==1)
-    ARGS=<QVAL (<REF1>==<SRC.GUILD>)? <DEF.Guild.DialogFont.Green>><REF1.NAME>
+    IF (<REF1>==<SRC.GUILD>)
+    ARGS=<DEF.Guild.DialogFont.Green><REF1.NAME>
+    ELIF (<IsAlly <REF1>>)
+    ARGS=<DEF.Guild.DialogFont.Green><REF1.NAME>
+    ELIF (<IsWarRing <REF1>>)
+    ARGS=<DEF.Guild.DialogFont.Red><REF1.NAME>
+    ELSE
+    ARGS=<REF1.NAME>
+    ENDIF
    ELIF (<LOCAL.Table>==2)
     ARGS=<REF1.ABBREV>
    ELIF (<LOCAL.Table>==3)
     IF (<IsWarRing <REF1>>)
      ARGS=War
+    ELIF (<IsAlly <REF1>>)
+     ARGS=Alliance
     ELSE
      ARGS=Peace
     ENDIF

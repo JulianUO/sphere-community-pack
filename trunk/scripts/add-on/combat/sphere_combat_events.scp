@@ -100,7 +100,8 @@ if <tag0.gothitbyspell>
 endif
 if <tag.spellhit>
 	if <def.scp.NewSkills_ResistingSpells> == 0
-	return 2
+	tag.spellhit =
+	return 0
 	endif
 	if <serv.spell.<tag.spellhit>.flags>&spellflag_resist
 	local.resist = <eval <magicresistance>-((<src.evaluatingintel>*<spellcircle <tag.spellhit>>)/20)>
@@ -206,6 +207,7 @@ if <tag0.gothitbyspell>
 endif
 if <tag.spellhit>
 	if <def.scp.NewSkills_ResistingSpells> == 0
+	tag.spellhit =
 	return 0
 	endif
 	if <serv.spell.<tag.spellhit>.flags>&spellflag_resist
