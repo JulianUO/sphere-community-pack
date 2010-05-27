@@ -109,12 +109,12 @@ VendorSalary
 
 [FUNCTION f_oncommand]
 if <def.scp.JailSystem> == 1
-	if (strmatch(*jail*,<args>))
+	if !strcmpi(jail,<strarg <args>>)
 		if <account.plevel> >= 4
 		f_resenddialog d_jailcore
 		endif
 	return 1
-	elif (strmatch(*forgive*,<args>))
+	elif !strcmpi(forgive,<strarg <args>>)
 		if <account.plevel> >= 4
 		targetf f_forgive
 		endif
@@ -122,9 +122,47 @@ if <def.scp.JailSystem> == 1
 	endif
 endif
 if <def.scp.PageSystem> == 1
-	if (strmatch(*page*,<args>))
+	if !strcmpi(page,<strarg <args>>)
 		if <account.plevel> > 1
+			if !strcmpi(<streat <args>>,help)
+			sysmessage @,,1 .page delete = deletes the page you are handling
+			sysmessage @,,1 .page origin = goes to the position which the player sent the page you are handling
+			sysmessage @,,1 .page undo/queue = stop handling page
+			sysmessage @,,1 .page go = goes to the player's current position
+			sysmessage @,,1 .page jail = jails the player
+			return 1
+			endif
 			if <LIST.pages_handle.FINDELEM <uid>> != -1
+				if !strcmpi(<streat <args>>,delete)
+				PageRemove <LIST.pages_handle.FINDELEM <uid>>
+				sysmessage @,,1 Page has been removed.
+				return 1
+				elif !strcmpi(<streat <args>>,origin)
+				go <LIST.pages_pos.<LIST.pages_handle.FINDELEM <uid>>>
+				return 1
+				elif !strcmpi(<streat <args>>,undo) || !strcmpi(<streat <args>>,queue)
+				LIST.pages_handle.<LIST.pages_handle.FINDELEM <uid>> = 0
+				sysmessage @,,1 You stopped handling this page.
+				return 1
+				elif !strcmpi(<streat <args>>,go)
+				ref1 = <LIST.pages_uid.<LIST.pages_handle.FINDELEM <uid>>>
+				go <ref1.p>
+				return 1
+				elif !strcmpi(<streat <args>>,jail)
+					if <account.plevel> < 4
+					LIST.pages_handle.<LIST.pages_handle.FINDELEM <uid>> = 0
+					src.sysmessage You can't jail people.
+					return 1
+					endif
+				ref1 = <LIST.pages_uid.<LIST.pages_handle.FINDELEM <uid>>>
+				serv.newitem i_jail_timer
+				new.timer 60*15 // 15 minutes seemed appropriate to me
+				new.tag0.reason = Paging
+				ref1.equip <new.uid>
+				ref1.sysmessage <def.scp.jail_jailed>
+				sysmessage @,,1 <ref1.name> has been jailed.
+				return 1
+				endif
 			sdialog d_page_handling
 			return 1
 			endif
