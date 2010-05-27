@@ -110,15 +110,27 @@ VendorSalary
 [FUNCTION f_oncommand]
 if <def.scp.JailSystem> == 1
 	if (strmatch(*jail*,<args>))
-		if <account.plevel> > 4
+		if <account.plevel> >= 4
 		f_resenddialog d_jailcore
 		endif
 	return 1
 	elif (strmatch(*forgive*,<args>))
-		if <account.plevel> > 4
+		if <account.plevel> >= 4
 		targetf f_forgive
 		endif
 	return 1
+	endif
+endif
+if <def.scp.PageSystem> == 1
+	if (strmatch(*page*,<args>))
+		if <account.plevel> > 1
+			if <LIST.pages_handle.FINDELEM <uid>> != -1
+			sdialog d_page_handling
+			return 1
+			endif
+		sdialog d_page_queue
+		return 1
+		endif
 	endif
 endif
 

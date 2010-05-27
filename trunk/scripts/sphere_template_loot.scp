@@ -1081,40 +1081,6 @@ ITEM=RANDOM_SCROLL
 ITEM=TTM_LVL3,R99 //Tattered Treasure Map Level 2
 ITEM=i_gold,{50 150}
 
-[TEMPLATE loot_OPHIDIAN_AVENGER]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Ophidian Avenger
-CONTAINER=i_backpack
-ITEM=Random_Potion
-ITEM=Random_Potion
-ITEM=RANDOM_REAGENT,{ 4 6 }
-ITEM=RANDOM_REAGENT,{ 4 6 }
-ITEM=RANDOM_SCROLL
-ITEM=RANDOM_SCROLL
-ITEM=TTM_LVL3,R99 //Tattered Treasure Map Level 2
-ITEM=i_gold,{200 300}
-
-
-[TEMPLATE loot_OPHIDIAN_ENFORCER]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Ophidian Enforcer
-
-[TEMPLATE loot_OPHIDIAN_KNIGHT]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Ophidian Knight
-CONTAINER=i_backpack
-ITEM=Random_Potion
-ITEM=Random_Potion
-ITEM=RANDOM_REAGENT,{ 4 6 }
-ITEM=RANDOM_REAGENT,{ 4 6 }
-ITEM=RANDOM_SCROLL
-ITEM=RANDOM_SCROLL
-ITEM=TTM_LVL3,R99 //Tattered Treasure Map Level 2
-ITEM=i_gold,{200 300}
-
 [TEMPLATE loot_OPHIDIAN_ARCHMAGE]
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
@@ -1126,23 +1092,6 @@ ITEM=RANDOM_JEWEL
 ITEM=RANDOM_JEWEL
 ITEM=TTM_LVL1,R99 //Tattered Treasure Map Level 2
 ITEM=i_gold,{200 400}
-
-[TEMPLATE loot_OPHIDIAN_SHAMAN]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Ophidian Shaman
-
-[TEMPLATE loot_OPHIDIAN_WARRIOR]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Ophidian Warrior
-CONTAINER=i_backpack
-ITEM=Random_Potion
-ITEM=Random_Potion
-ITEM=RANDOM_JEWEL
-ITEM=RANDOM_JEWEL
-ITEM=TTM_LVL1,R99 //Tattered Treasure Map Level 2
-ITEM=i_gold,{50 150}
 
 [TEMPLATE loot_PHOENIX]
 CATEGORY=Item Templates

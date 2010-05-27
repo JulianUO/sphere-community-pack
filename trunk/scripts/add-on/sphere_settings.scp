@@ -289,6 +289,10 @@ scp.Followers=1
 // Only used if "scp.Followers" is equal 1. Default = 5
 scp.MaxFollowers=5
 
+// Enable or disable the new page system.
+// 1 if yes, 0 if want to use the old menu system.
+scp.PageSystem=1
+
 // Delay for re-resurrection in ankhs. 0 deactivates it.
 // In seconds. Default = 60
 scp.ResurrectionDelay=60

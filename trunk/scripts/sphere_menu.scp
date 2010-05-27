@@ -15,7 +15,11 @@ VERSION=0.56b
 
 [FUNCTION HelpPage]
 // HelpPage is executed whenever someone presses the "HelpPage" button
-MENU MENU_PAGEGM
+if <def.scp.PageSystem> == 1
+sdialog d_help_menu
+else
+menu menu_pagegm
+endif
 
 [MENU MENU_PAGEGM] // PAGEGM is executed whenever someone presses the "Page GM" button
 SPHERE Main Support Menu
@@ -79,7 +83,7 @@ ON=@Create
 
 ON=@Equip
 	TIMER=1
-	
+
 ON=@Timer
 	// Take the effect we would like.
 	if ( <CONT> )
@@ -89,7 +93,7 @@ ON=@Timer
 			TIMER=1
 			return 1
 		else
-			CONT.go <MOREP>	
+			CONT.go <MOREP>
 		endif
 	endif
 	// normal timer fall through is to delete the item
@@ -2697,7 +2701,7 @@ ON=i_DISPLAYCASE_1_BASE Display 1 Base
 ADD i_DISPLAYCASE_1_BASE
 ON=i_DISPLAYCASE_2_BASE Display 2 Base (no rails)
 ADD i_DISPLAYCASE_2_BASE
-ON=i_DISPLAYCASE_BASE_CUSTOM_BLOCK Custom Case Base, Block 
+ON=i_DISPLAYCASE_BASE_CUSTOM_BLOCK Custom Case Base, Block
 ADD i_DISPLAYCASE_BASE_CUSTOM_BLOCK
 ON=i_DISPLAYCASE_BASE_CUSTOM_CORNER Custom Case Base, Corner
 ADD i_DISPLAYCASE_BASE_CUSTOM_CORNER
