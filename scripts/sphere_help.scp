@@ -1,0 +1,286 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[DIALOG d_help_menu]
+50,50
+resizepic 50 25 2600 540 430
+
+page 0
+xmfhtmlgump 150 50 360 40 1001002 0 0 // <CENTER><U>Ultima Online Help Menu</U></CENTER>
+button 425 415 2073 2072 1 0 0 // Close
+
+page 1
+xmfhtmlgump 110 90 450 74 1001003 1 1	// <U>General question about Ultima Online</U>: Select this option if you are having difficulties learning to use a skill, if you have a general gameplay question, or you would like to search the UO Knowledge Base.
+xmfhtmlgump 110 170 450 74 1001004 1 1	// <u>My character is physically stuck in the game.</u> This choice only covers cases where your character is physically stuck in a location they cannot move out of. This option will only work two times in 24 hours.
+xmfhtmlgump 110 250 450 74 1001005 1 1	// <u>Another player is harassing me.</u> Another player is verbally harassing your character. When you select this option you will be sending a text log to Origin Systems. To see what constitutes harassment please visit http://support.uo.com/gm_9.html.
+xmfhtmlgump 110 330 450 74 1001006 1 1	// <u>Other.</u> If you are experiencing a problem in the game that does not fall into one of the other categories or is not addressed on the Support web page (located at http://support.uo.com), please use this option.
+button 80 90 5540 5541 1 0 1	// General
+button 80 170 5540 5541 1 0 2	// Stuck
+button 80 250 5540 5541 0 3 0	// Harrasing
+button 80 330 5540 5541 0 2 0	// Other
+
+page 2
+xmfhtmlgump 110 90 450 74 1001009 1 1	// <U>Report a bug</U>: Use this option to launch your web browser submit a bug report.  Your report will be read by our Quality Assurance staff.  We apologize for not being able to reply to individual bug reports.
+xmfhtmlgump 110 170 450 74 1001010 1 1	// <U>Contact a Counselor</U>: A Counselor is an experienced Ultima Online player who has volunteered their time to help answer general gameplay questions.  Selecting this option will let you send a message to a Counselor.  Please remember that Counselors are volunteers and may not be available at all times so please be patient and remember to check the website for additional help.;Original
+xmfhtmlgump 110 250 450 74 1074795 1 1	// <U>Suggestion for the Game</U>: If you'd like to make a suggestion for the game it should be directed to the Development Team Members who participate in the discussion forums.  Choosing this option will take you to the discussion forums.
+xmfhtmlgump 110 330 450 74 1001006 1 1	// <u>Other.</u> If you are experiencing a problem in the game that does not fall into one of the other categories or is not addressed on the Support web page (located at http://support.uo.com), please use this option.
+button 80 90 5540 5541 1 0 3	// Bug
+button 80 170 5540 5541 1 0 4	// Counselor
+button 80 250 5540 5541 1 0 5	// Suggestion
+button 80 330 5540 5541 1 0 6	// Other
+
+page 3
+xmfhtmlgump 110 90 450 145 1062572 1 1	// Verbal Harassment
+xmfhtmlgump 110 240 450 145 1062573 1 1	// Physical Harassment
+xmfhtmlgump 180 390 335 40 1001015 0 0	// Wrong section
+button 80 90 5540 5541 1 0 7	// Verbal
+button 80 240 5540 5541 1 0 8	// Physical
+button 150 390 5540 5541 0 1 0	// Wrong section
+
+[DIALOG d_help_menu BUTTON]
+ON=0
+sysmessage @035,,2 501235
+return 1
+
+ON=1 8
+doswitch <argn>
+local.blank
+local.reason = General
+local.reason = Stuck
+local.reason = Bug
+local.reason = Counselor
+local.reason = Suggestion
+local.reason = Other
+local.reason = Verbal Harassment
+local.reason = Physical Harassment
+enddo
+if <argn> == 2
+stuck
+endif
+ctag0.page.reason = <local.reason>
+sdialog d_page_request
+return 1
+
+
+[DIALOG d_page_request]
+0,0
+resizepic 50 50 2600 540 350
+
+page 0
+xmfhtmlgump 264 80 200 24 1062524 0 0 // Enter Description
+xmfhtmlgump 120 108 420 48 1062638 0 0 // Please enter a brief description (up to 200 characters) of your problem:
+resizepic 100 148 3500 440 200
+dtextentry 120 168 400 200 1153 1
+button 175 355 2074 2075 1 0 1
+button 405 355 2073 2072 1 0 0
+
+[DIALOG d_page_request BUTTON]
+ON=0
+sysmessage @035,,2 501235
+ctag.page.reason
+return 1
+
+ON=1
+if <isempty <argtxt[1]>>
+sysmessage @035,,1 You must enter a description.
+sdialog d_page_request
+else
+sysmessage @035,,2 501234 // The next available Counselor/Game Master will respond as soon as possible. Please check your Journal for messages every few minutes.
+PageAdd <uid> <ctag0.page.reason> <argtxt[1]>
+ctag.page.reason
+endif
+return 1
+
+
+[DIALOG d_page_queue]
+30,30
+
+page 0
+gumppictiled 0 0 410 448 0a40
+checkertrans 1 1 408 446
+dtext 180 12 2100 Page Queue
+
+if <LIST.pages_uid.COUNT>
+page 1
+    for 0 <eval (<LIST.pages_uid.COUNT> - 1)>
+        if (<local._for> >= 5) && (<eval (<local._for> % 5)> == 0)
+        button 368 12 0fa5 0fa7 0 <eval ((<local._for> / 5) + 1)>
+        dtext 398 12 2100 Next Page
+        page <eval ((<local._for> / 5) + 1)>
+        button 12 12 0fae 0fb0 0 <eval (<local._for> / 5))>
+        dtext 398 12 2100 Previous Page
+        endif
+    dhtmlgump 12 <eval (44 + ((<local._for> % 5) * 80)> 350 70 1 1 [<LIST.pages_type.<dlocal._for>>] <strsub 2 <eval strlen(<LIST.pages_text.<dlocal._for>>) - 3> <LIST.pages_text.<dlocal._for>>> <def.l1>basefont color=#<qval !(<LIST.pages_handle.<dlocal._for>>) ? 0ff0000:0ff><def.r1>[<def.l1>u<def.r1><qval !(<LIST.pages_handle.<dlocal._for>>) ? Unhandled:Handling><def.l1>/u<def.r1>]<def.l1>/basefont<def.r1>
+        if !(<LIST.pages_handle.<dlocal._for>>)
+        button 370 <eval ((24 + ((<local._for> % 5) * 80)) + 24)> 0fa5 0fa7 1 0 <eval (<local._for> + 1)>
+        endif
+    endfor
+else
+dtext 12 44 2100 The page queue is empty.
+endif
+
+[DIALOG d_page_queue BUTTON]
+ON=1 65000
+if <LIST.pages_handle.FINDELEM <uid>> == -1
+LIST.pages_handle.<eval (<argn1> - 1)> = <uid>
+sdialog d_page_handling
+endif
+
+
+[DIALOG d_page_handling]
+30,30
+
+page 0
+gumppictiled 0 0 510 128 0a40
+checkertrans 1 1 508 126
+dtext 30 12 2100 You are handling this page:
+
+local.handle = <LIST.pages_handle.FINDELEM <uid>>
+dhtmlgump 12 44 350 70 1 1 [<LIST.pages_type.<dlocal._for>>] <strsub 2 <eval strlen(<LIST.pages_text.<dlocal.handle>>) - 3> <LIST.pages_text.<dlocal.handle>>>
+button 370 44 0fa5 0fa7 1 0 1 // Go to the sender
+button 370 66 0fae 0fb0 1 0 2 // Summon the sender
+button 370 88 0fbd 0fbf 1 0 3 // Answer the page
+button 440 44 0fb1 0fb3 1 0 4 // Delete page
+button 440 66 0fb4 0fb6 1 0 5 // Stop handling the page
+button 440 88 0fa2 0fa4 1 0 6 // Jail the pager
+
+[DIALOG d_page_handling BUTTON]
+ON=1
+ref1 = <LIST.pages_uid.<LIST.pages_handle.FINDELEM <uid>>>
+go <ref1.p>
+
+ON=2
+ref1 = <LIST.pages_uid.<LIST.pages_handle.FINDELEM <uid>>>
+ref1.summonto
+
+ON=3
+sdialog d_page_answer
+
+ON=4
+PageRemove <LIST.pages_handle.FINDELEM <uid>>
+sysmessage @,,1 Page has been removed.
+
+ON=5
+LIST.pages_handle.<LIST.pages_handle.FINDELEM <uid>> = 0
+sysmessage @,,1 You stopped handling this page.
+
+ON=6
+if <account.plevel> < 4
+LIST.pages_handle.<LIST.pages_handle.FINDELEM <uid>> = 0
+src.sysmessage You can't jail people.
+return 1
+endif
+ref1 = <LIST.pages_uid.<LIST.pages_handle.FINDELEM <uid>>>
+serv.newitem i_jail_timer
+new.timer 60*15 // 15 minutes seemed appropriate to me
+new.tag0.reason = Paging
+ref1.equip <new.uid>
+ref1.sysmessage <def.scp.jail_jailed>
+sysmessage @,,1 <ref1.name> has been jailed.
+
+
+[DIALOG d_page_answer]
+30,30
+
+page 0
+gumppictiled 0 0 410 408 0a40
+checkertrans 1 1 408 406
+dtext 30 12 2100 You are handling this page:
+local.handle = <LIST.pages_handle.FINDELEM <uid>>
+dhtmlgump 12 44 350 70 1 1 [<LIST.pages_type.<dlocal.handle>>] <strsub 2 <eval strlen(<LIST.pages_text.<dlocal.handle>>) - 3> <LIST.pages_text.<dlocal.handle>>>
+resizepic 12 148 3500 350 200
+dtextentry 32 168 310 200 1153 1
+button 75 355 2074 2075 1 0 1
+button 305 355 2073 2072 1 0 0
+
+[DIALOG d_page_answer BUTTON]
+ON=1
+ref1 = <LIST.pages_uid.<LIST.pages_handle.FINDELEM <uid>>>
+ref1.tag.page_response = a<argtxt[1]>
+PageRemove <LIST.pages_handle.FINDELEM <uid>>
+if <ref1.isonline>
+trysrc <ref1> sdialog d_page_response
+else
+ref1.events +e_offline_page_response
+endif
+
+
+[DIALOG d_page_response]
+30,30
+noclose
+
+page 0
+resizepic 0 0 0a3c 92 75
+gumppictiled 5 7 82 61 0a40
+checkertrans 5 7 82 61
+gumppictiled 9 11 21 53 0bbc
+button 10 12 07d2 07d2 1 0 1
+xmfhtmlgumpcolor 34 28 65 24 3001002 0 0 16777215
+
+[DIALOG d_page_response BUTTON]
+ON=1
+sdialog d_page_response_read
+
+
+[DIALOG d_page_response_read]
+30,30
+
+page 0
+gumppictiled 0 0 410 128 0a40
+checkertrans 1 1 408 126
+dtext 30 12 2100 Answer to your page:
+dhtmlgump 12 44 350 70 1 1 <strsub 1 <eval strlen(<tag0.page_response>) - 1> <tag0.page_response>>
+
+[DIALOG d_page_response_read BUTTON]
+ON=0
+events -e_offline_page_response
+tag.page_response =
+
+
+[events e_offline_page_response]
+on=@login
+sdialog d_page_response
+
+
+[function PageAdd]
+if <LIST.pages_uid.COUNT>
+    for 0 <eval (<LIST.pages_uid.COUNT> - 1)>
+        if <LIST.pages_uid.<dlocal._for>> == <strarg <args>>
+        LIST.pages_uid.<dlocal._for> = <strarg <args>>
+        LIST.pages_type.<dlocal._for> = <strarg <streat <args>>>
+        LIST.pages_text.<dlocal._for> = a<streat <streat <args>>>
+        LIST.pages_time.<dlocal._for> = <serv.rticks>
+        LIST.pages_pos.<dlocal._for> = <p>
+        LIST.pages_handle.<dlocal._for> = 0
+        return 1
+        endif
+    endif
+endif
+LIST.pages_uid.ADD <strarg <args>>
+LIST.pages_type.ADD <strarg <streat <args>>>
+LIST.pages_text.ADD a<streat <streat <args>>>
+LIST.pages_time.ADD <serv.rticks>
+LIST.pages_pos.ADD <p>
+LIST.pages_handle.ADD 0
+
+[function PageRemove]
+LIST.pages_uid.<argn1>.REMOVE
+LIST.pages_type.<argn1>.REMOVE
+LIST.pages_text.<argn1>.REMOVE
+LIST.pages_time.<argn1>.REMOVE
+LIST.pages_pos.<argn1>.REMOVE
+LIST.pages_handle.<argn1>.REMOVE
+
+[function PageHandle]
+if <LIST.pages_handle.FINDELEM <uid>> != -1
+sdialog d_page_handling
+return 1
+endif
+sdialog d_page_queue
+
+[eof]
