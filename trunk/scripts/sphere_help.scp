@@ -283,4 +283,12 @@ return 1
 endif
 sdialog d_page_queue
 
+[function PageClear]
+LIST.pages_uid.CLEAR
+LIST.pages_type.CLEAR
+LIST.pages_text.CLEAR
+LIST.pages_time.CLEAR
+LIST.pages_pos.CLEAR
+LIST.pages_handle.CLEAR
+
 [eof]

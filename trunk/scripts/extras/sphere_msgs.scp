@@ -26,23 +26,23 @@
 //    0x02 = Forces message to show as a system message
 
 [DEFMESSAGE messages]
-anatomy_magic		"This is a magical creature"
-
-fishing_4			"@,,2 500978"	// You need water to fish in!
-fishing_los			"@,,2 500979"	// You cannot see that location.
-fishing_promt			"@,,2 500974"	// What water do you want to fish in?
-fishing_reach			"@,,2 500446"	// That is too far away.
-fishing_success			"@,,2 1043297,%s" // You pull out ~1_ITEM_NAME~!
 food_canteatf			"@,,2 500867"	// You are simply too full to eat any more!
 food_full_1			"@,,2 500868"	// You eat the food, but are still extremely hungry.
 food_full_2			"@,,2 500869"	// You eat the food, and begin to feel more satiated.
 food_full_3			"@,,2 500870"	// After eating the food, you feel much less hungry.
 food_full_4			"@,,2 500871"	// You feel quite full after consuming the food.
 food_full_5			"@,,2 500872"	// You are nearly stuffed, but manage to eat the food.
-hiding_revealed			"@,,2 500814"	// You have been revealed!
+
 itemuse_dye_reach		"@,,2 1042593"	// That is not in your backpack.
 itemuse_weapon_promt		"@,,2 1010018"	//What do you want to use this on?
+
+anatomy_magic			"This is a magical creature"
+
+hiding_revealed			"@,,2 500814"	// You have been revealed!
+
 lumberjacking_reach		"@,,2 500446"	// That is too far away.
+lumberjacking_4			"@,,2 500493"	// There's not enough wood here to harvest.
+
 map_dir_0			"@,,2 1075389"	// North
 map_dir_1			"@,,2 1075388"	// North East
 map_dir_2			"@,,2 1075387"	// East
@@ -51,6 +51,13 @@ map_dir_4			"@,,2 1075386"	// South
 map_dir_5			"@,,2 1075391"	// South West
 map_dir_6			"@,,2 1075390"	// West
 map_dir_7			"@,,2 1076205"	// North West
+
+fishing_4			"@,,2 500978"	// You need water to fish in!
+fishing_los			"@,,2 500979"	// You cannot see that location.
+fishing_promt			"@,,2 500974"	// What water do you want to fish in?
+fishing_reach			"@,,2 500446"	// That is too far away.
+fishing_success			"@,,2 1043297,%s" // You pull out ~1_ITEM_NAME~!
+
 mining_2			"@,,2 501866"	// There is no metal here to mine.
 mining_3			"@,,2 501866"	// There is no metal here to mine.
 mining_4			"@,,2 501862"	// You can't mine there.
@@ -58,19 +65,7 @@ mining_forge			"@,,2 500420"	// You are not near a forge.
 mining_nothing			"@,,2 501989"	// You burn away the impurities but are left with no useable metal.
 mining_reach			"@,,2 500446"	// That is too far away.
 mining_skill			"@,,2 501986"	// You have no idea how to smelt this strange ore!
-msg_fatigue			"@,,2 500110"	// You are too fatigued to move.
-msg_frozen			"@,,2 500111"	// You are frozen and cannot move.
-msg_forgiven			"@,,2 503267"	// You've been unjailed!
-msg_gmpage_notified		"@,,2 500087"	// GM help request entered.
-msg_gmpage_qued			"@,,2 500095"	// Transfered request to GM queue
-msg_invis_off			"@,,2 503328"	// You're now visible.
-msg_invis_on			"@,,2 503327"	// You're now invisible.
-msg_invul_off			"@,,2 500008"	// You are no longer invulnerable.
-msg_jailed			"@,,2 503268"	// You've been jailed!
-msg_region_guards_1		"@,,2 500112"	// You are now under the protection of the town guards.
-msg_region_guards_2		"@,,2 500113"	// You have left the protection of the town guards.
-msg_region_guardsp		"@,,2 500112"	// You are now under the protection of the town guards.
-msg_steal			"@,,2 3000270"	// That item does not belong to you.  You'll have to steal it.
+
 taming_1			"@,,2 502790"	// Will you be my friend?
 taming_2			"@,,2 502791"	// I always wanted a pet like you
 taming_3			"@,,2 502792"	// Don't be afraid.
@@ -84,6 +79,7 @@ taming_tame			"@,,2 502467"	// That animal looks tame already.
 taming_tamed			"@,,2 502469"	// That being cannot be tamed.
 target_cancel_1			""		// Targeting cancelled.
 skillwait_3			"@,,2 1045157"	// You must wait to perform another action.
+
 spell_alcohol_hic		"@,,2 500849"	// *hic*
 spell_gate_am			"@,,2 501025"	// Something is blocking the location.
 spell_recall_blank		"@,,2 502409"	// This rune does not have a marked location.
@@ -93,9 +89,29 @@ spell_try_nomana		"@,,2 501903"	// You don't have enough mana to cast that spell
 spell_try_noregs		"@,,2 501904"	// You don't have the proper reagents.
 spell_wand_nocharge		"@,,2 501250"	// This magic item is out of charges.
 
+party_added			"@-1,,2 1005445"	// You have been added to the party
+party_decline_1			"@-1,,3 1008091,01,%s"	// %s : Does not wish to join the party.
+party_decline_2			"@-1,,2 1008092"	// You notify them that you do not wish to join the party.
+party_disbanded			"@-1,,2 1005449"	// Your party has disbanded.
+party_invite			"@-1,,2 1008090"	// You have invited them to join the party.
+party_invite_targ		"@-1,,3 1008089,01,%s"	// %s : You are invited to join the party. Type /accept to join or /decline to decline the offer.
+
 msg_serv_shutdown		"@,,3 503377,0,Server going down in %i minute(s)."
 msg_serv_shutdown_cancel	"@,,3 503377,0,Shutdown has been interrupted."
 msg_serv_shutdown_soon		"@,,3 503377,0,The system is scheduled to shutdown soon"
+msg_fatigue			"@,,2 500110"	// You are too fatigued to move.
+msg_frozen			"@,,2 500111"	// You are frozen and cannot move.
+msg_forgiven			"@,,2 503267"	// You've been unjailed!
+msg_gmpage_notified		"@,,2 500087"	// GM help request entered.
+msg_gmpage_qued			"@,,2 500095"	// Transfered request to GM queue
+msg_invis_off			"@,,2 503328"	// You're now visible.
+msg_invis_on			"@,,2 503327"	// You're now invisible.
+msg_invul_off			"@,,2 500008"	// You are no longer invulnerable.
+msg_jailed			"@,,2 503268"	// You've been jailed!
+msg_region_guards_1		"@,,2 500112"	// You are now under the protection of the town guards.
+msg_region_guards_2		"@,,2 500113"	// You have left the protection of the town guards.
+msg_region_guardsp		"@,,2 500112"	// You are now under the protection of the town guards.
+msg_steal			"@,,2 3000270"	// That item does not belong to you.  You'll have to steal it.
 
 non_alive			""
 server_worldsave		""
@@ -400,7 +416,6 @@ server_worldsave		""
 //lumberjacking_1		"Try chopping elsewhere."
 //lumberjacking_2		"There is nothing here to chop."
 //lumberjacking_3		"This is not a tree."
-//lumberjacking_4		"There is no wood left to harvest."
 //lumberjacking_5		"You hack at the tree and produce some kindling."
 //lumberjacking_6		"Try chopping a tree."
 //lumberjacking_close	"You cannot chop so close to yourself."
@@ -758,30 +773,30 @@ server_worldsave		""
 //npc_vendor_stat_gold_3		"I have %d items to sell."
 //npc_vendor_stat_gold_4		"I restock to %d gold in %d minutes."
 //npc_vendor_ty		"I thank thee for thy business."
-//party_added			"You have been added to the party"
-//party_decline_1		"%s does not wish to join your party"
-//party_decline_2		"You notify %s that you do not wish to join the party"
-//party_disbanded		"Your party has disbanded."
-//party_invite			"You have invited %s to join your party."
-//party_invite_targ		"You have been invited to join %s's party. Type /accept to join or /decline to decline offer."
-//party_joined			"%s has joined the party"
+
+
+
+//party_joined		"%s has joined the party"
 //party_leave_1		"%s has %s your party"
 //party_leave_2		"You have %s the party"
-//party_loot_allow		"You have chosen to allow your party to loot your corpse"
-//party_loot_block		"You have chosen to prevent your party from looting your corpse"
-//party_msg			"[PARTY]: %s"
-//party_no_self_add		"[PARTY]: You cannot add yourself to a party"
-//party_part_1			"been removed from"
-//party_part_2			"left"
-//party_select			"Select a person to join your party."
-//party_targ_who		"Who would you like to add to your party?"
-//party_nonpcadd		"The creature ignores your offer"
-//party_add_notleader	"You may only add members to the party if you are the leader."
-//party_is_full		"You may only have 10 in your party."
-//party_already_in_this	"This person is already in your party!"
-//party_already_in		"This person is already in a party!"
+party_loot_allow	"@-1,,2 1005447"	// You have chosen to allow your party to loot your corpse
+party_loot_block	"@-1,,2 1005448"	// You have chosen to prevent your party from looting your corpse
+//party_msg		"[PARTY]: %s"
+//party_no_self_add	"[PARTY]: You cannot add yourself to a party"
+//party_part_1		"been removed from"
+//party_part_2		"left"
+//party_select		"Select a person to join your party."
+party_targ_who		"@-1,,2 1005454"	// Who would you like to add to your party?
+party_nonpcadd		"@-1,,2 1005444"	// The creature ignores your offer
+party_add_notleader	"@-1,,2 1005453"	// You may only add members to the party if you are the leader.
+party_is_full		"@-1,,2 1008095"	// You may only have 10 in your party (this includes candidates).
+party_already_in_this	"@-1,,2 1005440"	// This person is already in your party!
+party_already_in	"@-1,,2 1005441"	// This person is already in a party!
 //party_autodecline		"This person auto refuse any invite!"
-//party_add_too_fast	"You must wait a bit before inviting someone else!"
+//party_add_too_fast		"You must wait a bit before inviting someone else!"
+
+
+
 //poisoning_select_1		"What poison do you want to use?"
 //poisoning_success		"You apply the poison."
 //poisoning_witem		"You can only poison food or piercing weapons."
