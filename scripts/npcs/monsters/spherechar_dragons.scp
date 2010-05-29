@@ -21,7 +21,7 @@ TAG.Luck.Loot=loot_ancient_wyrm_luck
 TAG.Slayer=SLAYER_DRAGON
 TAG.Barding.Diff=160.0
 ARMOR={65 75}
-RESOURCES=19 i_ribs_raw,12 i_dragon_scale
+RESOURCES=19 i_ribs_raw,12 i_reag_dragon_scale
 FOODTYPE=50 t_meat_raw
 SOUND=snd_MONSTER_DRAGON1
 CATEGORY=Monsters
@@ -54,7 +54,7 @@ ON=@NPCRestock
 
 [CHARDEF 0c]
 DEFNAME=c_dragon_red
-NAME=#NAMES_DRAGON the Dragon
+NAME=Dragon (Red)
 CAN=MT_WALK|MT_RUN|MT_FLY
 ICON=i_pet_dragon
 DAM=65,90
@@ -71,6 +71,7 @@ SUBSECTION=Dragons
 DESCRIPTION=Dragon (Red)
 
 ON=@Create
+	NAME=#NAMES_DRAGON the Dragon
 	NPC=brain_dragon
 	ResPoison={25 35}
 	ResFire={60 70}
@@ -96,7 +97,7 @@ ON=@NPCRestock
 
 [CHARDEF 03b]
 DEFNAME=c_dragon_grey
-NAME=#NAMES_DRAGON the Dragon
+NAME=Dragon (Grey)
 CAN=MT_WALK|MT_RUN|MT_FLY
 ICON=i_pet_dragon
 DAM=65,90
@@ -113,6 +114,7 @@ SUBSECTION=Dragons
 DESCRIPTION=Dragon (Grey)
 
 ON=@Create
+	NAME=#NAMES_DRAGON the Dragon
 	NPC=brain_dragon
 	ResPoison={25 35}
 	ResFire={60 70}
@@ -137,8 +139,8 @@ ON=@NPCRestock
 
 
 [CHARDEF 03c]
-Name=Drake
 DEFNAME=c_drake_grey
+NAME=Drake (Grey)
 CAN=MT_WALK|MT_RUN|MT_FLY
 ICON=i_pet_dragon
 DAM=30,46
@@ -148,7 +150,7 @@ TAG.Slayer=SLAYER_DRAGON
 TAG.Control.Slots=2
 TAG.Barding.Diff=80.6
 ARMOR={45 50}
-RESOURCES=10 i_ribs_raw,2 i_dragon_scale
+RESOURCES=10 i_ribs_raw,2 i_reag_dragon_scale
 FOODTYPE=25 t_meat_raw
 SOUND=snd_MONSTER_DRAGON1
 CATEGORY=Monsters
@@ -156,6 +158,7 @@ SUBSECTION=Dragons
 DESCRIPTION=Drake (Grey)
 
 ON=@Create
+	NAME=#NAMES_DRAGON the Drake
 	NPC=brain_dragon
 	ResPoison={20 30}
 	ResFire={50 60}
@@ -178,8 +181,8 @@ ON=@NPCRestock
 
 
 [CHARDEF 03d]
-Name=Drake
 DEFNAME=c_drake_red
+Name=Drake (Red)
 CAN=MT_WALK|MT_RUN|MT_FLY
 ICON=i_pet_dragon
 DAM=30,46
@@ -189,7 +192,7 @@ TAG.Slayer=SLAYER_DRAGON
 TAG.Control.Slots=2
 TAG.Barding.Diff=80.6
 ARMOR={45 50}
-RESOURCES=10 i_ribs_raw,2 i_dragon_scale
+RESOURCES=10 i_ribs_raw,2 i_reag_dragon_scale
 FOODTYPE=25 t_meat_raw
 SOUND=snd_MONSTER_DRAGON1
 CATEGORY=Monsters
@@ -197,6 +200,7 @@ SUBSECTION=Dragons
 DESCRIPTION=Drake (Red)
 
 ON=@Create
+	NAME=#NAMES_DRAGON the Drake
 	NPC=brain_dragon
 	ResPoison={20 30}
 	ResFire={50 60}
@@ -227,7 +231,7 @@ TAG.Luck.Loot=loot_greater_dragon_luck
 TAG.Slayer=SLAYER_DRAGON
 TAG.Control.Slots=5
 ARMOR={60 85}
-RESOURCES=19 i_ribs_raw,7 i_dragon_scale
+RESOURCES=19 i_ribs_raw,7 i_reag_dragon_scale
 FOODTYPE=50 t_meat_raw
 SOUND=snd_MONSTER_DRAGON1
 CATEGORY=Monsters
@@ -267,7 +271,7 @@ TAG.Luck.Loot=loot_serpentine_dragon_luck
 TAG.Slayer=SLAYER_DRAGON
 TAG.Control.Slots=5
 ARMOR={60 85}
-RESOURCES=19 i_ribs_raw,7 i_dragon_scale
+RESOURCES=19 i_ribs_raw,7 i_reag_dragon_scale
 FOODTYPE=30 t_meat_raw
 SOUND=snd_MONSTER_DRAGON1
 CATEGORY=Monsters
@@ -307,7 +311,7 @@ TAG.Luck.Loot=loot_shadow_wyrm_luck
 TAG.Barding.Diff=124.9
 TAG.Slayer=SLAYER_DRAGON
 ARMOR={65 75}
-RESOURCES=19 i_ribs_raw,10 i_dragon_scale
+RESOURCES=19 i_ribs_raw,10 i_reag_dragon_scale
 FOODTYPE=50 t_meat_raw
 SOUND=snd_MONSTER_DRAGON1
 CATEGORY=Monsters
@@ -387,7 +391,7 @@ TAG.Control.Slots=3
 TAG.Barding.Diff=100.3
 TAG.Slayer=SLAYER_DRAGON
 ARMOR={55 70}
-RESOURCES=19 i_ribs_raw, 9 i_dragon_scale
+RESOURCES=19 i_ribs_raw, 9 i_reag_dragon_scale
 FOODTYPE=50 t_meat_raw
 SOUND=snd_MONSTER_DRAGON1
 CATEGORY=Monsters
@@ -468,7 +472,7 @@ CONTAINER=i_backpack
 ITEM=i_gold,{1600 1800}
 ITEM=random_jewelry,5
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,{2 3}
 
 [TEMPLATE loot_ancient_wyrm_luck]
@@ -485,7 +489,7 @@ CONTAINER=i_backpack
 ITEM=i_gold,{1600 1800}
 ITEM=random_jewelry,5
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,{2 3}
 
 [TEMPLATE loot_dragon_luck]
@@ -502,7 +506,7 @@ CONTAINER=i_backpack
 ITEM=i_gold,{275 325}
 ITEM=random_jewelry,5
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,2
 ITEM=random_reagent,3
 
@@ -519,7 +523,7 @@ DESCRIPTION=Greater Dragon
 ITEM=i_gold,{1500 2000}
 ITEM=random_jewelry,{8 16}
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,{1 2}
 
 [TEMPLATE loot_greater_dragon_luck]
@@ -535,7 +539,7 @@ DESCRIPTION=Serpentine Dragon
 ITEM=i_gold,{1500 2000}
 ITEM=random_jewelry,{8 16}
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,{1 2}
 
 [TEMPLATE loot_serpentine_dragon_luck]
@@ -551,7 +555,7 @@ DESCRIPTION=Shadow Wyrm
 ITEM=i_gold,{1550 1800}
 ITEM=random_jewelry,5
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,{1 2}
 
 [TEMPLATE loot_shadow_wyrm_luck]
@@ -567,7 +571,7 @@ DESCRIPTION=Skeletal Dragon
 ITEM=i_gold,{1600 1800}
 ITEM=random_jewelry,5
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,{1 2}
 
 [TEMPLATE loot_skeletal_dragon_luck]
@@ -584,7 +588,7 @@ CONTAINER=i_backpack
 ITEM=i_gold,{1200 1400}
 ITEM=random_jewelry,{1 5}
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,{1 2}
 
 [TEMPLATE loot_white_wyrm_luck]

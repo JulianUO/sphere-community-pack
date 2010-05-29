@@ -495,7 +495,7 @@ ITEM=i_reag_garlic,5
 ITEM=i_bandage,10
 ITEM=random_potion
 ITEM=random_jewel
-ITEM=random_spells_medium,{1 2}
+ITEM=random_scroll_medium,{1 2}
 
 [TEMPLATE loot_mummy_luck]
 CATEGORY=Item Templates

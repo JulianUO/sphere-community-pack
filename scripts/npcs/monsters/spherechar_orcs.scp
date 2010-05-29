@@ -293,7 +293,7 @@ ON=@Create
     TACTICS={50.1 65.0}
     WRESTLING={40.1 50.0}
     MAGERY={60.1 72.5}
-    EVALUATINGINT={60.1 72.5}
+    EVALUATINGINTEL={60.1 72.5}
 
 ON=@NPCRestock
     ITEM=loot_orc_mage
@@ -344,7 +344,7 @@ ITEM=i_ore_shadow,25
 ITEM=i_ore_iron,10
 ITEM=random_jewelry,{3 6}
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,{1 2}
 
 [TEMPLATE loot_orc_brute_luck]
@@ -386,7 +386,7 @@ DESCRIPTION=Orc Scout
 CONTAINER=i_backpack
 ITEM=i_gold,{125 175}
 ITEM=i_arrow,{60 70}
-ITEM=i_apple,{3 5}
+ITEM=i_fruit_apple,{3 5}
 ITEM=i_bandage,{1 15}
 ITEM=i_bow
 

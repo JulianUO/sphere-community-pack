@@ -730,7 +730,7 @@ DEFNAME=c_sea_horse
 NAME=Sea Horse
 SOUND=snd_ANIMALS_HORSE1
 ICON=i_pet_sea_horse
-CAN=MT_WALK|MT_RUN|MT_SWIM
+CAN=MT_SWIM
 RESOURCES=3 i_ribs_raw, 10 i_hide
 FOODTYPE=55 t_crops,55 t_fruit,55 t_grain, 64 t_grass
 DESIRES=c_man
@@ -747,7 +747,6 @@ MAXHITS={28 45}
 WRESTLING={29.0 44.0}
 TACTICS={29.0 44.0}
 MAGICRESISTANCE={25.0 30.0}
-TAMING=120.0
 FAME=300
 KARMA=0
 
@@ -759,7 +758,7 @@ DESCRIPTION=Nightmare
 CONTAINER=i_backpack
 ITEM=i_gold,{400 500}
 ITEM=i_reag_sulfur_ash,3
-ITEM=random_spell_low,1
+ITEM=random_scroll_low,1
 ITEM=random_potion,1
 
 [TEMPLATE loot_fire_steed]
@@ -776,7 +775,7 @@ SUBSECTION=Monster Loot Templates
 DESCRIPTION=Kirin
 CONTAINER=i_backpack
 ITEM=i_gold,{300 350}
-ITEM=random_spell_low,1
+ITEM=random_scroll_low,1
 ITEM=random_potion,1
 
 [TEMPLATE loot_unicorn]
@@ -785,7 +784,7 @@ SUBSECTION=Monster Loot Templates
 DESCRIPTION=Unicorn
 CONTAINER=i_backpack
 ITEM=i_gold,{300 350}
-ITEM=random_spell_low,1
+ITEM=random_scroll_low,1
 ITEM=random_potion,1
 
 [eof]

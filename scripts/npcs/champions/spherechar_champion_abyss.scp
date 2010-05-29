@@ -127,12 +127,8 @@ NAME=Succubus
 SOUND=04B5
 ICON=9770
 DAM=57,94
-RESDISPDNID=c_woman
-RESLEVEL=2
-RESDISPDNHUE=01
 CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_FLY|MT_FEMALE
 MOVERATE=30
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman,t_corpse
 CATEGORY=Monsters
 SUBSECTION=Miscellaneous
 DESCRIPTION=Succubus
@@ -167,19 +163,59 @@ ON=@NpcRestock
 ITEM=loot_succubus
 
 ON=@GetHit
-LOCAL.TMP=<OBJ>
-OBJ=<UID>
-FORCHARS 3
-	IF (<ISPLAYER>) || (<FLAGS>&statf_pet)
-	LOCAL.DAM=<R10,40>
-	DAMAGE <LOCAL.DAM> <DEF.DAM_PHYSICAL> <OBJ>
-	OBJ.HITS += <LOCAL.DAM>
-		IF (<OBJ.HITS> > <OBJ.MAXHITS>)
-		OBJ.HITS=<OBJ.MAXHITS>
-		ENDIF
+ref11 = <uid>
+forchars 3
+	if <isplayer> || (<flags>&statf_pet)
+	local.dam = <r10,40>
+	damage <local.dam> dam_physical <ref11.uid>
+	ref11.hits += <local.dam>
+		if <ref11.hits> > <ref11.maxhits>
+		ref11.hits = <ref11.maxhits>
+		endif
 	endif
-END
-OBJ=<LOCAL.TMP>
+endfor
+
+[CHARDEF 174]
+DEFNAME=c_semidar
+NAME=Semidar
+SOUND=snd_monster_daemon1
+ICON=i_pet_wailingbanshee
+DAM=92,123
+CAN=MT_WALK|MT_RUN|MT_USEHANDS
+MOVERATE=60
+RESOURCES=1 i_ribs_raw
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Semidar
+TAG.Luck.Loot=loot_semidar_luck
+TAG.Slayer=SLAYER_DEMON
+TAG.Barding.Diff=160.0
+TAG.Override.RegenVal_1=30
+TAG.IsChampion=1
+
+ON=@Create
+	NPC=brain_monster
+	ResPhysical={20 30}
+	ResFire={50 60}
+	ResCold={20 30}
+	ResPoison={20 30}
+	ResEnergy={10 20}
+	KARMA=-24000
+	FAME=24000
+	STR={502 600}
+	DEX={102 200}
+	INT={600 750}
+	MAXHITS=1500
+	WRESTLING={90.0 105.0}
+	TACTICS={90.0 105.0}
+	MAGICRESISTANCE={120.0 140.0}
+	MAGERY={90.0 105.0}
+	MEDITATION={95.0 105.0}
+	EVALUATINGINTEL={95.0 105.0}
+
+ON=@NPCRestock
+	ITEM=loot_semidar
+
 
 
 [TEMPLATE loot_mongbat]
@@ -224,6 +260,18 @@ ITEM=i_scroll_blank,{ 1 2 }
 CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Succubus
-// Treasure Map Level 5
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_semidar]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Semidar
+ITEM=i_gold,{6000 6500}
+
+[TEMPLATE loot_semidar_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Semidar
+ITEM=i_treasure_map_lvl_5
 
 [EOF]
