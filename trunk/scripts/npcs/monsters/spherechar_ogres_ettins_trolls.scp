@@ -246,7 +246,7 @@ CONTAINER=i_backpack
 ITEM=i_gold,{750 950}
 ITEM=i_club
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,{2 3}
 
 [TEMPLATE loot_arctic_ogre_lord_luck]
@@ -306,7 +306,7 @@ CONTAINER=i_backpack
 ITEM=i_gold,{600 650}
 ITEM=i_club
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,{2 3}
 
 [TEMPLATE loot_ogre_lord_luck]

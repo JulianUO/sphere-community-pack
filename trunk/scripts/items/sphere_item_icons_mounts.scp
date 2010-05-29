@@ -93,6 +93,15 @@ CATEGORY=Miscellaneous
 SUBSECTION=Icons - Mounts
 DESCRIPTION=Fire Steed
 
+[ITEMDEF 0259c]
+DEFNAME=i_pet_nightmare
+NAME=Nightmare
+TYPE=t_figurine
+TDATA3=c_nightmare
+CATEGORY=Miscellaneous
+SUBSECTION=Icons - Mounts
+DESCRIPTION=Nightmare
+
 [ITEMDEF 025a0]
 DEFNAME=i_pet_kirin
 NAME=Ki-Rin

@@ -142,4 +142,6 @@ for n 0 <eval <attacker> -1 >
 endfor
 attack <local.most_dangerous_enemy>
 
+[events e_npcai_immune_poison]
+
 [eof]

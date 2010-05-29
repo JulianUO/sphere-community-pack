@@ -37,10 +37,6 @@ NAME=horde daemon
 DEFNAME=i_pet_bogling
 NAME=bogling
 
-[ITEMDEF 9733]
-DEFNAME=i_pet_arcanedaemon
-NAME=arcane daemon
-
 [ITEMDEF 9754]
 DEFNAME=i_pet_swarm
 NAME=swarm
@@ -48,10 +44,6 @@ NAME=swarm
 [ITEMDEF 9634]
 DEFNAME=i_pet_kraken
 NAME=kraken
-
-[ITEMDEF 9737]
-DEFNAME=i_pet_chaosdaemon
-NAME=chaos daemon
 
 [ITEMDEF 9654]
 DEFNAME=i_pet_pixie
@@ -68,18 +60,6 @@ NAME=exodus minion
 [ITEMDEF 9668]
 DEFNAME=i_pet_dreadspider
 NAME=dread spider
-
-[ITEMDEF 9730]
-DEFNAME=i_pet_fireant_queen
-NAME=fire ant queen
-
-[ITEMDEF 9731]
-DEFNAME=i_pet_fireant_warrior
-NAME=fire ant warrior
-
-[ITEMDEF 9732]
-DEFNAME=i_pet_fireant_worker
-NAME=fire ant worker
 
 [ITEMDEF 9736]
 DEFNAME=i_pet_bogthing
@@ -100,10 +80,6 @@ NAME=meet eternal
 [ITEMDEF 9722]
 DEFNAME=i_pet_meercaptain
 NAME=meer captain
-
-[ITEMDEF 9742]
-DEFNAME=i_pet_fourarmed_daemon
-NAME=four armed daemon
 
 [ITEMDEF 9744]
 DEFNAME=i_pet_irongolem
@@ -178,10 +154,6 @@ NAME=flesh golem
 [ITEMDEF 9763]
 DEFNAME=i_pet_devourer_souls
 NAME=devourer of souls
-
-[ITEMDEF 9768]
-DEFNAME=i_pet_bonedaemon
-NAME=bone daemon
 
 [ITEMDEF 9772]
 DEFNAME=i_pet_abysmallhorror

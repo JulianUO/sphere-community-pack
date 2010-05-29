@@ -148,7 +148,7 @@ ATTR=04
 
 [ITEMDEF i_ethereal_swamp_dragon]
 NAME=Ethereal Swamp Dragon Statuette
-ID=i_pet_swampdragon
+ID=i_pet_swamp_dragon
 TYPE=t_figurine_ethereal
 TDATA3=c_swamp_dragon
 CATEGORY=Miscellaneous

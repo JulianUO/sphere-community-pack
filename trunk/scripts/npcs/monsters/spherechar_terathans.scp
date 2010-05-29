@@ -41,7 +41,7 @@ NPC=brain_monster
     TACTICS={90.1 100.0}
     WRESTLING={90.1 100.0}
     MAGERY={70.3 100.0}
-    EVALUATINGINT={70.3 100.0}
+    EVALUATINGINTEL={70.3 100.0}
 
 ON=@NPCRestock
 ITEM=loot_terathan_avenger
@@ -169,7 +169,7 @@ CONTAINER=i_backpack
 ITEM=i_gold,{550 650}
 ITEM=random_jewelry,{1 2}
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 ITEM=random_scroll_medium,{2 3}
 
 [TEMPLATE loot_terathan_avenger_luck]

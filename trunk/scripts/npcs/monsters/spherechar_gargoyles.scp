@@ -303,7 +303,7 @@ ITEM=i_gold,{750 950}
 ITEM=random_jewelry,2
 ITEM=random_scroll_medium
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 
 [TEMPLATE loot_gargoyle_destroyer_luck]
 CATEGORY=Item Templates
@@ -319,7 +319,7 @@ CONTAINER=i_backpack
 ITEM=i_gold,{275 325}
 ITEM=random_scroll_medium,{1 2}
 ITEM=random_potion,{1 2}
-ITEM=random_wand,{1 2}
+ITEM=random_wands,{1 2}
 
 [TEMPLATE loot_gargoyle_enforcer_luck]
 CATEGORY=Item Templates

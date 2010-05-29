@@ -130,16 +130,6 @@ CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Corpser
 
-[ITEMDEF 020d3]
-DEFNAME=i_pet_daemon
-NAME=Daemon
-TYPE=T_FIGURINE
-TDATA3=c_daemon
-
-CATEGORY=Miscellaneous
-SUBSECTION=Character Icons
-DESCRIPTION=Daemon
-
 [ITEMDEF 020d4]
 DEFNAME=i_pet_deer
 NAME=Deer
@@ -164,7 +154,7 @@ DESCRIPTION=Dog
 DEFNAME=i_pet_dragon
 NAME=Dragon
 TYPE=T_FIGURINE
-TDATA3=c_DRAGON_GREEN
+TDATA3=c_dragon_red
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons

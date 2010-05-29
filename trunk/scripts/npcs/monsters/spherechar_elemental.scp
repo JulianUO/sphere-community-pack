@@ -761,6 +761,7 @@ DEFNAME=c_snow_elemental
 NAME=Snow Elemental
 SOUND=snd_ELEMENTL_AIRELEM1
 ICON=i_pet_elem_earth
+CAN=MT_WALK
 DAM=31,45
 TAG.DamCold=80
 TAG.Slayer=SLAYER_SNOWELEM
