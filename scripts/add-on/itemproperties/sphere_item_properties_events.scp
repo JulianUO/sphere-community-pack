@@ -153,6 +153,14 @@ on=@userstats
 // Hit Point Increase, just add the TAG or Cap (whichever is smaller) to the maxhits
 // Safe zone since EVENTS on EventsPlayer are called last.
 // Same goes for ManaIncrease, StaminaIncrease
+if <def.scp.OSIStats> == 1
+maxhits = <eval (<str>/2) + <modstr> + 50>
+	if <hits> > <maxhits>
+	hits = <maxhits>
+	endif
+maxmana = <eval <int> + <modint>>
+maxstam = <eval <dex> + <moddex>>
+endif
 if <def.scp.ItemProp_HitPointIncrease> == 1
 maxhits += <min <tag0.HitPointIncrease>,<getargv 3 <def.itemprop_010>>>
 endif

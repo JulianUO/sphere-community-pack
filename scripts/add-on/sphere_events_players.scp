@@ -115,14 +115,6 @@ on=@userstats
 if <def.scp.Followers> == 1
 maxfollower = <def.scp.MaxFollowers>
 endif
-if <def.scp.OSIStats> == 1
-maxhits = <eval (<str>/2) + <modstr> + 50>
-	if <hits> > <maxhits>
-	hits = <maxhits>
-	endif
-maxmana = <eval <int> + <modint>>
-maxstam = <eval <dex> + <moddex>>
-endif
 
 // Followers control
 on=@itembuy
@@ -199,7 +191,7 @@ return 0
 on=@RegionResourceFound
 if <src.action> == skill_fishing
 	if <def.scp.Fishing_CoastLines> == 1
-		if <serv.map(<src.targp>).type> == t_water
+		if <serv.map(<src.targp.x>,<src.targp.y>,<src.targp.m>).type> == t_water
 		local.newbit = <serv.regiontype.r_water.resources.<eval <serv.regiontype.r_water.calcmemberindex <src.uid>>+1>.key>
 		argo.more1 = <local.newbit>
 		argo.amount = <r<serv.regionresource.<argo.more1>.amount>>
