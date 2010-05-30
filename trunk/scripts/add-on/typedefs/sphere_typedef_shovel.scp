@@ -44,6 +44,7 @@ if <serv.map(<src.targp.x>,<src.targp.y>,<src.targp.m>).type> == t_sand
 	src.f_LoopAnim 11,3,1
 	src.timerf 3,sysmessage <def.scp.mining_sand_fail>
 	endif
+src.f_skill_delay 3.0
 return 1
 endif
 
