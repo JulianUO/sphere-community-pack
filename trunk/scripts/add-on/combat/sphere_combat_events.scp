@@ -98,7 +98,7 @@ if <tag0.gothitbyspell>
 	argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
 	endif
 endif
-if <tag.spellhit>
+if <tag0.spellhit>
 	if <def.scp.NewSkills_ResistingSpells> == 0
 	tag.spellhit =
 	return 0
@@ -205,7 +205,7 @@ if <tag0.gothitbyspell>
 	argn1 += <eval ((<argn1>*<local.damageinc>)/100)+1>
 	endif
 endif
-if <tag.spellhit>
+if <tag0.spellhit>
 	if <def.scp.NewSkills_ResistingSpells> == 0
 	tag.spellhit =
 	return 0

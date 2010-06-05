@@ -31,12 +31,12 @@ f_getset_pieces_unequip t_set_darkwood
 ON=@SetEquip
 src.ModStr += 10
 src.Luck += 100
-TAG0.ReflectPhysicalDamage += 25
+src.TAG0.ReflectPhysicalDamage += 25
 
 ON=@SetUnEquip
 src.ModStr -= 10
 src.Luck -= 100
-TAG0.ReflectPhysicalDamage -= 25
+src.TAG0.ReflectPhysicalDamage -= 25
 
 ON=@ItemSetEquip
 COLOR = color_o_darkwood_set
@@ -107,12 +107,20 @@ on=@unequip
 f_getset_pieces_unequip t_set_evocarius
 
 ON=@SetEquip
+src.ModStr += 10
+src.TAG0.DefenseChanceIncrease += 10
+src.TAG0.SwingSpeedIncrease += 35
 
 ON=@SetUnEquip
+src.ModStr -= 10
+src.TAG0.DefenseChanceIncrease -= 10
+src.TAG0.SwingSpeedIncrease -= 35
 
 ON=@ItemSetEquip
+COLOR = 0900
 
 ON=@ItemSetUnequip
+COLOR = 0
 
 
 

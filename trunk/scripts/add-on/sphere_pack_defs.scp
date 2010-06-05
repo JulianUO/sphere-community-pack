@@ -267,6 +267,83 @@ tre				</tr>
 td				<td>
 tde				</td>
 
+[defname tables_files]
+alchemy_file			Alchemy.html
+animaltaming_file		AnimalTaming.html
+archery_file			Archery.html
+blacksmithing_file		Blacksmithing.html
+bowcraft_file			Bowcraft.html
+carpentry_file			Carpentry.html
+cartography_file		Cartography.html
+chivalry_file			Chivalry.html
+cooking_file			Cooking.html
+fencing_file			Fencing.html
+fishing_file			Fishing.html
+inscription_file		Inscription.html
+macefighting_file		Macefighting.html
+magery_file			Magery.html
+magicresistance_file		ResistingSpells.html
+mining_file			Mining.html
+necromancy_file			Necromancy.html
+spellweaving_file		Spellweaving.html
+swordsmanship_file		Swordsmanship.html
+tailoring_file			Tailoring.html
+tinkering_file			Tinkering.html
+crossbow_file			Archery.html
+axefighting_file		Swordsmanship.html
+sandmining_file			Mining.html
+itemprop_file			itemprop.php
+
+[defname tables_settings]
+// $skill.Table	$props
+// Lists the data to insert in the table.
+// So when you execute the command you have to define:
+// local.$prop = <value>
+// Example: if $prop = name.
+// Code: local.name = <serv.itemdef.<local.item>.name>
+// Crafting Tables
+Alchemy.Table				Name,Resources,Skillmake,PotionStrength
+Blacksmithing.Table			Name,Resources,Skillmake
+Bowcraft.Table				Name,Resources,Skillmake
+Carpentry.Table				Name,Resources,Skillmake
+Cartography.Table			Name,Resources,Skillmake
+Cooking.Table				Name,Resources,Skillmake
+Tailoring.Table				Name,Resources,Skillmake
+Tinkering.Table				Name,Resources,Skillmake
+Inscription.Table			Name,Resources,Skillmake
+// Resources Tables
+Mining.Table				Name,MinSkill,MaxSkill,Chance
+SandMining.Table			Name,MinSkill,MaxSkill,Chance
+Fishing.Table				Name,MinSkill,MaxSkill,Chance
+// Magic Tables
+Magery.Table				Spell,Resources,Mana,SkillReq
+Necromancy.Table			Spell,Resources,Mana,SkillReq
+Chivalry.Table				Spell,Tithing,Mana,SkillReq
+Spellweaving.Table			Spell,Mana,SkillReq
+// Combat Tables
+Swordsmanship.Table			Weapon,StrReq,Damage,Speed
+Archery.Table				Weapon,StrReq,Damage,Speed
+Axefighting.Table			Weapon,StrReq,Damage,Speed
+Macefighting.Table			Weapon,StrReq,Damage,Speed
+Fencing.Table				Weapon,StrReq,Damage,Speed
+Crossbow.Table				Weapon,StrReq,Damage,Speed
+// NPCs Related Tables
+AnimalTaming.Table			Name,SkillReq
+
+// $prop.$key
+// $key could be:
+// - Name: The text to write in the web table
+// - FixedPoint: If 1, FVAL instead of EVAL the number.
+Chance.FixedPoint			"1"
+MinSkill.FixedPoint			"1"
+MinSkill.Name				"Min Skill"
+MaxSkill.FixedPoint			"1"
+MaxSkill.Name				"Max Skill"
+PotionStrength.Name			"Strength"
+PotionStrength.FixedPoint		"1"
+SkillReq.Name				"Skill Required"
+StrReq.Name				"Required STR"
+
 [defname tables_spells]
 magery_morez			1
 magery_spells			63
