@@ -257,6 +257,8 @@ if <LIST.pages_uid.COUNT>
         LIST.pages_time.<dlocal._for> = <serv.rticks>
         LIST.pages_pos.<dlocal._for> = <p>
         LIST.pages_handle.<dlocal._for> = 0
+	serv.log @PageSys :: Page from <name> [<uid>] @ <p.x>,<p.y>,<p.z>,<p.m>: ['<strarg <streat <args>>>'] <streat <streat <args>>>
+	serv.allclients NotifyGMs "Page from <name> [<uid>] @ <p.x>,<p.y>,<p.z>,<p.m>: ['<strarg <streat <args>>>'] <streat <streat <args>>>"
         return 1
         endif
     endif
@@ -267,6 +269,8 @@ LIST.pages_text.ADD a<streat <streat <args>>>
 LIST.pages_time.ADD <serv.rticks>
 LIST.pages_pos.ADD <p>
 LIST.pages_handle.ADD 0
+serv.log @PageSys :: Page from <name> [<uid>] @ <p.x>,<p.y>,<p.z>,<p.m>: ['<strarg <streat <args>>>'] <streat <streat <args>>>
+serv.allclients NotifyGMs "Page from <name> [<uid>] @ <p.x>,<p.y>,<p.z>,<p.m>: ['<strarg <streat <args>>>'] <streat <streat <args>>>"
 
 [function PageRemove]
 LIST.pages_uid.<argn1>.REMOVE
@@ -290,5 +294,10 @@ LIST.pages_text.CLEAR
 LIST.pages_time.CLEAR
 LIST.pages_pos.CLEAR
 LIST.pages_handle.CLEAR
+
+[function NotifyGMs]
+if <account.plevel> > 1
+sysmessage @035,,1 <args>
+endif
 
 [eof]

@@ -53,14 +53,17 @@ local.delay = <eval (<necromancy> / 10) + <spiritspeak>>
 		if <serv.chardef.<argo.morex>.tag0.animateid>
 		serv.newnpc <serv.chardef.<argo.morex>.tag0.animateid>
 		else
-		serv.newnpc <f_AnimateCharacter>
+		serv.newnpc <f_AnimateCharacter> <local.castability>
 		endif
-	TimerF <local.delay>,f_AnimateDeadDispel <new.uid>
 	new.p = <argo.p>
 	new.flags ^= statf_conjured
 	new.maxhits = <eval <local.castability>/50>
 	new.hits = <new.maxhits>
 	new.f_MakePetOf <uid>
+	ref10 = <new.uid>
+	serv.newitem i_rune_summon_creature
+	new.timer = <local.delay>
+	ref10.equip <new.uid>
 	endif
 else
 sysmessage @,,2 1061084 // You cannot animate that.
@@ -68,21 +71,21 @@ return 0
 endif
 
 [function f_AnimateCharacter]
-if (<local.casterability> > 17500)
+if (<args> > 17500)
 return c_skeletal_dragon
-elseif (<local.casterability> > 15000)
+elseif (<args> > 15000)
 return c_m_liche_lord
-elseif (<local.casterability> > 12500)
+elseif (<args> > 12500)
 return c_flesh_golem
-elseif (<local.casterability> > 10000)
+elseif (<args> > 10000)
 return c_mummy
-elseif (<local.casterability> > 8000)
+elseif (<args> > 8000)
 return c_liche
-elseif (<local.casterability> > 6000)
+elseif (<args> > 6000)
 return c_m_skeleton_knight
-elseif (<local.casterability> > 4000)
+elseif (<args> > 4000)
 return c_m_skeleton_mage
-elseif (<local.casterability> > 2000)
+elseif (<args> > 2000)
 return c_patchwork_skeleton
 else
 return c_mound_maggots
