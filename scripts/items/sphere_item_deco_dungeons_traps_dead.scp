@@ -146,6 +146,14 @@ SUBSECTION=Graves & Gravestones
 DESCRIPTION=GraveStone (Guildstone)
 DUPELIST=0ede
 
+[ITEMDEF i_stone_alliance]
+ID=i_guildstone
+TYPE=T_NORMAL
+VALUE=15000
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Graves & Gravestones
+DESCRIPTION=GraveStone (Alliance Stone)
+
 [ITEMDEF 0ede]
 //gravestone
 DUPEITEM=0edd
