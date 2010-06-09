@@ -318,53 +318,53 @@ ENDIF
 
 ON=@Timer
 IF !(<MORE2>)
- REF1=<LINK.MORE1>
- IF (<LINK.TAG0.PLACEMENT> != i_gold)
-  SERV.NEWITEM <LINK.TAG0.PLACEMENT>
-  NEW.CONT=<UID.<LINK.MORE1>.FINDLAYER.21>
- ENDIF
- IF (<REF1.ISONLINE>)
-  TRYSRC <REF1> DIALOGCLOSE d_house_placement
- ENDIF
- REF1.NOTICE Too much time has passed and the test house you created has been deleted.  Please try again! // 1060647
- LINK.REMOVE
+REF1=<LINK.MORE1>
+	IF (<LINK.TAG0.PLACEMENT> != i_gold)
+	SERV.NEWITEM <LINK.TAG0.PLACEMENT>
+	NEW.CONT=<UID.<LINK.MORE1>.FINDLAYER.21>
+	ENDIF
+	IF (<REF1.ISONLINE>)
+	TRYSRC <REF1> DIALOGCLOSE d_house_placement
+	ENDIF
+REF1.NOTICE Too much time has passed and the test house you created has been deleted.  Please try again! // 1060647
+LINK.REMOVE
 ELIF (<DEF.scp.House_DecayUse>) || (<TAG0.DEMOLITION_PENDING>)
- FOR <TAG0.Vendors>
-  REF1=<TAG0.Vendor<dLOCAL._FOR>>
-  IF (<REF1>)
-   IF (<REF1.TAG0.Rent.End>)
-    REF1.CLEARTAGS Rent.Renew
-    LOCAL.HasRentedVendors ++
-   ELSE
-    REF1.HouseVendorRemove
-    REF1.REMOVE
-   ENDIF
-  ENDIF
- ENDFOR
- IF (<LOCAL.HasRentedVendors>)
-  MORE2=
-  LINK.MORE1=
-  CLEARTAGS Access
-  FOR <TAG0.Vendors>
-   REF1=<TAG.Vendor<dLOCAL._FOR>>
-   IF (<REF1.TAG0.Rent.End>)
-    REF1.TAG.DemolishHouse=1
-   ENDIF
-  ENDFOR
-  TIMER=-1
-  return 1
- ENDIF
- FOR 1 3
-  ARGS=<HouseAccessList <LOCAL._FOR>>
-  FOR x <TAG0.Access.Total.<LOCAL._FOR>>
-   IF !(<isempty <ARGV[<dLOCAL.X>]>>)
-    UID.<ARGV[<dLOCAL.X>]>.NOTICE You got removed from the <DEF.Access_<LOCAL._FOR>> list of the house '<NAME>' because it was decayed on <serv.rtime.format %d>/<serv.rtime.format %m>/<serv.rtime.format %Y> <strsub 11 0 <serv.rtime>>.
-   ENDIF
-  ENDFOR
- ENDFOR
- TRY UID.<MORE2>.NOTICE=Your house '<NAME>' was decayed on <serv.rtime.format %d>/<serv.rtime.format %m>/<serv.rtime.format %Y> <strsub 11 0 <serv.rtime>> because <QVAL (<STRARG <TAG0.DEMOLITION_PENDING>>)? you didn't remove it in a period of <dSTRARG <dTAG0.DEMOLITION_PENDING>> days(s) determined by the Staff to remove this house.:your house has inactive for <dDEF.scp.House_DecayTimer> days>.
- LINK.f_house_demolish 1
- LINK.REMOVE
+	FOR <TAG0.Vendors>
+	REF1=<TAG0.Vendor<dLOCAL._FOR>>
+		IF (<REF1>)
+			IF (<REF1.TAG0.Rent.End>)
+			REF1.CLEARTAGS Rent.Renew
+			LOCAL.HasRentedVendors ++
+			ELSE
+			REF1.HouseVendorRemove
+			REF1.REMOVE
+			ENDIF
+		ENDIF
+	ENDFOR
+	IF (<LOCAL.HasRentedVendors>)
+	MORE2=
+	LINK.MORE1=
+	CLEARTAGS Access
+		FOR <TAG0.Vendors>
+		REF1=<TAG.Vendor<dLOCAL._FOR>>
+			IF (<REF1.TAG0.Rent.End>)
+			REF1.TAG.DemolishHouse=1
+			ENDIF
+		ENDFOR
+	TIMER=-1
+	RETURN 1
+	ENDIF
+	FOR 1 3
+	ARGS=<HouseAccessList <LOCAL._FOR>>
+		FOR x <TAG0.Access.Total.<LOCAL._FOR>>
+			IF !(<isempty <ARGV[<dLOCAL.X>]>>)
+			UID.<ARGV[<dLOCAL.X>]>.NOTICE You got removed from the <DEF.Access_<LOCAL._FOR>> list of the house '<NAME>' because it was decayed on <serv.rtime.format %d>/<serv.rtime.format %m>/<serv.rtime.format %Y> <strsub 11 0 <serv.rtime>>.
+			ENDIF
+		ENDFOR
+	ENDFOR
+TRY UID.<MORE2>.NOTICE=Your house '<NAME>' was decayed on <serv.rtime.format %d>/<serv.rtime.format %m>/<serv.rtime.format %Y> <strsub 11 0 <serv.rtime>> because <QVAL (<STRARG <TAG0.DEMOLITION_PENDING>>)? you didn't remove it in a period of <dSTRARG <dTAG0.DEMOLITION_PENDING>> days(s) determined by the Staff to remove this house.:your house has inactive for <dDEF.scp.House_DecayTimer> days>.
+LINK.f_house_demolish 1
+LINK.REMOVE
 ENDIF
 
 
