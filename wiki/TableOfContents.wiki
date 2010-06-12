@@ -5,7 +5,7 @@
      * [Slayer Slayer Groups]
    * [SCPTrigger Triggers]
    * [SCPFunction Functions]
-   * [SCPOverride Overrides]
+   * [SCPTrypedef Item Types (Typedef)]
  * [SCPSystems SCP Systems Documentation]
    * [SCPChamps Champions System]
    * [SCPCombat Combat System]
