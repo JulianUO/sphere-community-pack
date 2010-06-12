@@ -52,7 +52,7 @@ ON=@NPCRestock
 	ITEM=loot_ancient_wyrm
 
 
-[CHARDEF 0c]
+[CHARDEF 03b]
 DEFNAME=c_dragon_red
 NAME=Dragon (Red)
 CAN=MT_WALK|MT_RUN|MT_FLY
@@ -95,7 +95,7 @@ ON=@NPCRestock
 	ITEM=loot_dragon
 
 
-[CHARDEF 03b]
+[CHARDEF 0c]
 DEFNAME=c_dragon_grey
 NAME=Dragon (Grey)
 CAN=MT_WALK|MT_RUN|MT_FLY
