@@ -1,0 +1,23 @@
+#summary Item types used in SCP
+
+= Typedefs =
+
+|| t_armor ||
+|| t_bola ||
+|| t_champion_idol ||
+|| t_cooking_tool ||
+|| t_fish_pole ||
+|| t_forge ||
+|| t_ninja_belt ||
+|| t_ore ||
+|| t_potion_keg ||
+|| t_scissors ||
+|| t_shovel ||
+|| t_shrine ||
+|| t_treasure_chest ||
+|| t_treasure_map ||
+|| t_treasure_tile ||
+|| t_weapon_axe ||
+|| t_weapon_fence ||
+|| t_weapon_mace_pick ||
+|| t_weapon_sword ||
