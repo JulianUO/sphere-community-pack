@@ -16,6 +16,18 @@ VERSION=0.56b
 // OSI-Like? Seems so.
 
 [typedef t_shovel]
+on=@dclick
+if <topobj.uid> != <src.uid>
+src.sysmessage It must be in your pack.
+return 1
+endif
+if <def.scp.SkillWaitingTimes> == 1
+	if <src.ctag0.skillrecovery> > <serv.time>
+	src.sysmessage <def.scp.skill_mustwait>
+	return 1
+	endif
+endif
+
 on=@targon_ground
 if <serv.map(<src.targp.x>,<src.targp.y>,<src.targp.m>).type> == t_sand
 	if <def.scp.Mining_AllowSand> == 0
