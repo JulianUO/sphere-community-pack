@@ -34,7 +34,7 @@ INTERRUPT=100.0,100.0
 
 on=@select
 if !<IsInArcaneCircle>
-sysmessage <def.scp.spell.arcanecircle_notin>
+sysmessage <def.scp.spell_arcanecircle_notin>
 return 1
 endif
 forchars 1
@@ -43,7 +43,7 @@ forchars 1
 	endif
 endfor
 if <local.weaver> < 2
-sysmessage <def.scp.spell.arcanecircle_noplayer>
+sysmessage <def.scp.spell_arcanecircle_noplayer>
 return 1
 endif
 

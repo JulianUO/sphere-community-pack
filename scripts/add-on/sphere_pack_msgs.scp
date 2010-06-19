@@ -81,19 +81,60 @@ scp.craft_msg_gotrecipe		"1073427"	// You already know this recipe.
 // The following are sysmessages, messages, say, etc.
 // You can change it for everything, even for text.
 scp.alchemy_abort		"@33,,2 500290"	// You stop mixing and empty the mortar.
+
 scp.anatomy_targ		"@,,2 500321"	// Whom shall I examine?
 scp.anatomy_fail		"@,,2 1042915"	// Although you know this creature, you can't seem to think of any uses for it.
+
 scp.animallore_targ		"@,,2 500328"	// What animal should I look at?
 scp.animallore_fail		"@,,2 500334"	// You can't think of anything you know offhand.
+
 scp.armslore_targ		"@,,2 500906"	// What would you like to evaluate?
 scp.armslore_fail		"@,,2 500353"	// You are not certain...
+
+scp.bard_noinstrument		"@,,2 1062488"	// The instrument you are trying to play is no longer in your backpack!
+scp.bard_instrument_targ	"@,,2 500617"	// What instrument shall you play?
+scp.bard_instrument_wrong	"@,,2 500619"	// That is not a musical instrument.
+scp.bard_toofaraway		"@,,2 501816"	// You are too far away to do that.
+
+scp.bard_peacemaking_targ	"@,,2 1049525"	// Whom do you wish to calm?
+scp.bard_peacemaking_isitem	"@,,2 1049528"	// You cannot calm that!
+scp.bard_peacemaking_peaced	"@,,2 500616"	// You hear lovely music, and forget to continue battling!
+scp.bard_peacemaking_success	"@,,2 500615"	// You play your hypnotic music, stopping the battle.
+scp.bard_peacemaking_fail	"@,,2 500613"	// You attempt to calm everyone, but fail.
+scp.bard_peacemaking_norange	"@,,2 1049648"	// You play hypnotic music, but there is nothing in range for you to calm.
+scp.bard_peacemaking_tfail	"@,,2 1049531"	// You attempt to calm your target, but fail.
+scp.bard_peacemaking_tsuccess	"@,,2 1049532"	// You play hypnotic music, calming your target.
+
+scp.bard_provocation_cannot	"@,,2 1049446"	// You have no chance of provoking those creatures.
+scp.bard_provocation_tamed	"@,,2 501590"	// They are too loyal to their master to be provoked.
+scp.bard_provocation_fail	"@,,2 501599"	// Your music fails to incite enough anger.
+scp.bard_provocation_notevil	"@,,2 501589"	// You can't incite that!
+scp.bard_provocation_nochance	"@,,2 1049446"	// You have no chance of provoking those creatures.
+scp.bard_provocation_2ndtarg	"@,,2 1008085"	// You play your music and your target becomes angered.  Whom do you wish them to attack?
+scp.bard_provocation_faraway	"@,,2 1049450"	// The creatures you are trying to provoke are too far away from each other for your music to have an effect.
+scp.bard_provocation_success	"@,,2 501602"	// Your music succeeds, as you start a fight.
+scp.bard_provocation_sametarg	"@,,2 501593"	// You can't tell someone to attack themselves!
+scp.bard_provocation_nonpc	"@,,2 501589"	// You can't incite that!
+
 scp.begging_isplayer		"@,,2 500398"	// Perhaps just asking would work better.
 scp.begging_ismonster		"@,,2 500399"	// There is little chance of getting money from that!
 scp.begging_isitem		"@,,2 500400"	// There is little chance of getting money from that!
 scp.begging_mounted		"@,,2 500404"	// They seem unwilling to give you any money.
 scp.begging_fail		"@,,2 500404"	// They seem unwilling to give you any money.
 scp.begging_withoutgold		"@,,2 500407"	// I have not enough money to give thee any!
+
 scp.blacksmith_forgeanvil	"@,,2 1044267"	// You must be near a forge and and anvil to repair items.
+
+scp.bola_notinpack		"@,,2 1040019"	// The bola must be in your pack to use it.
+scp.bola_cantusenow		"@,,2 1049624"	// You have to wait a few moments before you can use another bola!
+scp.bola_inuse			"@,,2 1049631"	// This bola is already being used.
+scp.bola_handsfree		"@,,2 1040015"	// Your hands must be free to use this
+scp.bola_youremounted		"@,,2 1040016"	// You cannot use this while riding a mount
+scp.bola_polymorphed		"@,,2 1070902"	// You can't use this while in an animal form!
+scp.bola_beginfrom		"@03b2,,2 1049632"	// * You begin to swing the bola...*"
+scp.bola_beginto		"@03b2,,2 1049633"	// ~1_NAME~ begins to menacingly swing a bola...
+scp.bola_noreason		"@,,2 1049628"	// You have no reason to throw a bola at that.
+scp.bola_knocked		"@,,2 1040023"	// You have been knocked off of your mount!
 
 scp.camping_fail		"@,,2 501696"	// You fail to ignite the campfire.
 scp.camping_getkindling		"@,,2 500491"	// You harvest some kindling
@@ -116,6 +157,9 @@ scp.craft_smelt_notitem		"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_notsmeltable	"@,,2 1044272"	// You can't melt that down into ingots.
 scp.craft_smelt_success		"@,,2 1044270"	// You melt the item down into ingots.
 
+scp.detecthidden_start		"@,,2 500819"	// Where will you search?
+scp.detecthidden_foundnobody	"@,,2 500817"	// You can see nothing hidden there.
+
 scp.evalint_item		"@,,2 500908"	// It looks smarter than a rock, but dumber than a piece of wood.
 
 scp.fishing_treasure		"@,,2 503175"	// You pull up a heavy chest from the depths of the ocean!
@@ -123,8 +167,26 @@ scp.fishing_nofish		"@,,2 503168"	// The fish don't seem to be biting here.
 scp.fishing_ischar		""
 scp.fishing_fail		"@,,2 503171"	// You fish a while, but fail to catch anything.
 
-scp.hiding_fail			"@,,2 501241"	//
-scp.hiding_abort		"@,,2 501241"	//
+scp.guild_alliance_already	"@,,2 1063426"	// ~1_val~ already belongs to an alliance.
+scp.guild_alliance_consider	"@,,2 1063416"	// ~1_val~ is currently considering another alliance proposal.
+scp.guild_alliance_nopriv	"@,,2 1063436"	// You don't have permission to negotiate an alliance.
+
+scp.hiding_fail			"@,,2 501241"		// You fail to hide.
+scp.hiding_abort		"@,,2 501241"		// You fail to hide.
+scp.hiding_spellactive		"@,,2 501238"		// You are busy doing something else and cannot hide.
+scp.hiding_activecombat		"@022,,2 501237"	// You can't seem to hide right now.
+scp.hiding_success		"@01f4,,2 501240"	// You have hidden yourself well.
+scp.hiding_fail			"@022,,2 501241"	// You fail to hide.
+scp.hiding_reveal		"@,,2 501242"		// You are no longer hidden.
+scp.hiding_shoveinvis		"@,,2 1019041"		// You shove something invisible out of the way.
+
+scp.house_msg_welcomeback	"@,,2 501293"	// Welcome back to the house, friend!
+scp.house_msg_housedistance	"@,,2 1062429"	// You must be within five paces of the house sign to use this option.
+scp.house_msg_ejectitem		"@,,2 501347"	// You cannot eject that from the house!
+scp.house_msg_ejectvendor	"@,,2 501351"	// You cannot eject a vendor.
+scp.house_msg_ejectfriend	"@,,2 501348"	// You cannot eject a friend of the house!
+scp.house_msg_ejectnotinside	"@,,2 501352"	// You may not eject someone who is not in your house!
+scp.house_msg_banlimit		"@,,2 501355"	// The ban limit for this house has been reached!
 
 scp.jail_cancelled		"@,,2 503314"	// Imprisoning Cancelled
 scp.jail_notplayer		"@,,2 503312"	// Only players can be jailed.
@@ -152,8 +214,64 @@ scp.mining_smelt_success	"@,,2 501988"	// You smelt the ore removing the impurit
 scp.mining_smelt_noforge	"You must be near a forge to smelt."
 scp.mining_smelt_noskill	"@,,2 501986"	// You have no idea how to smelt this strange ore!
 
+scp.poisoning_immune		"@,,2 1005534"	// * The poison seems to have no effect. *
+scp.poisoning_beenpoisoned	"@,,2 1010512"	// You have been poisoned!
+scp.poisoning_beencured		"@,,2 1010059"	// You have been cured of all poisons!
+scp.poisoning_wornoff		"@,,2 502136"	// The poison seems to have worn off.
+scp.poisoning_curedtarget	"@,,2 1010058"	// You have cured the target of all poisons!
+scp.poisoning_failcuretarg	"@,,2 1010650"	// You have failed to cure your target!
+scp.poisoning_notpoisoned	"@,,2 1042000"	// You are not poisoned.
+scp.poisoning_targnotpoisoned	"@,,2 1060176"	// That creature is not poisoned!
+scp.poisoning_poisonwhat	"@,,2 502142"	// To what do you wish to apply the poison?
+scp.poisoning_youmustwait	"@,,2 501789"	// You must wait before trying again.
+scp.poisoning_failtoapply	"@,,2 1010518"	// You fail to apply a sufficient dose of poison.
+scp.poisoning_mustbeinpack	"@,,2 1062334"	// This item must be in your backpack to be used.
+scp.poisoning_cantworkonthat	"@,,2 500422"	// You can't work on that item.
+scp.poisoning_notpoisonable	"@,,2 500422"	// You can't work on that item.
+scp.poisoning_notpoison2hands	"@,,2 500422"	// You can't work on that item.
+scp.poisoning_whatpoisonuse	"@,,2 1010611"	// Which poison potion will you use?
+scp.poisoning_targettoofar	"@,,2 501853"	// Target is too far away.
+scp.poisoning_notpoisonpot	"@,,2 502139"	// That is not a poison potion.
+scp.poisoning_youapplypoison	"@,,2 1010517"	// You apply the poison.
+scp.poisoning_gravemistake	"@,,2 502152"	// You make a grave mistake while applying the poison.
+scp.poisoning_failapplypoison	"@,,2 1010518"	// You fail to apply a sufficient dose of poison.
+scp.poisoning_bloodmixpoison	"@,,2 1005537"	// Blood mixes with poison and begins to corrode your weapon.
+scp.poisoning_cleaneditem	"@,,2 1010496"	// You have cleaned the item, but you have used up the rag.
+scp.poisoning_mustbecleaned	"@,,2 1005536"	// This weapon must be wiped clean before it can be poisoned.
+scp.poisoning_usethison		"@,,2 1010086"	// What do you want to use this on?
+
+scp.removetrap_start			"@,,2 502368" // Which trap will you attempt to disarm?
+scp.removetrap_lackslockpicking		"@,,2 502366" // You do not know enough about locks.  Become better at picking locks.
+scp.removetrap_lacksdetectinghidden	"@,,2 502367" // You are not perceptive enough.  Become better at detect hidden.
+scp.removetrap_ischar			"@,,2 502816" // You feel that such an action would be inappropriate
+scp.removetrap_nottrapped		"@,,2 502373" // That doesn't appear to be trapped
+scp.removetrap_success			"@,,2 502377" // You successfully render the trap harmless
+scp.removetrap_fail			"@,,2 502372" // You fail to disarm the trap... but you don't set it off
+
+scp.runes_entername		"@88,,1 Type in a name for the rune"
+
 scp.tailor_cut_inpack		"@,,2 502437"	// Items you wish to cut must be in your backpack.
 scp.tailor_cut_invalid		"@,,2 502440"	// Scissors cannot be used on that to produce anything.
+
+scp.skill_youaredead		"@,,2 500949"	// You can't do that when you're dead.
+scp.skill_mustwait		"@,,2 500118"	// You must wait a few moments to use another skill.
+
+scp.stealth_nothidden		"@,,2 502725" // You must hide first
+scp.stealth_reqhiding		"@,,2 502726" // You are not hidden well enough.  Become better at hiding.
+scp.stealth_armorcheck		"@,,2 502727" // You could not hope to move quietly wearing this much armor.
+scp.stealth_success		"@,,2 502730" // You begin to move quietly.
+scp.stealth_fail		"@,,2 502731" // You fail in your attempt to move unnoticed.
+
+scp.spell_animatedead_target	"@,,2 1061083"	// Animate what corpse?
+scp.spell_curseweapon_noweap	"@,,2 501078"	// You must be holding a weapon.
+scp.spell_arcanecircle_notin	"@,,2 1072705"	// You must be standing on an arcane circle, pentagram or abbatoir to use this spell.
+scp.spell_arcanecircle_noplayer	"@,,2 1080452"	// There are not enough spellweavers present to create an Arcane Focus.
+
+scp.spiritspeak_fullhealed	"@03c1,3,2 502444"	// You establish contact with the netherworld.
+scp.spiritspeak_nomana		"@03c1,3,2 1061285"	// You lack the mana required to use this skill.
+scp.spiritspeak_wop		"@03b2,3,2 1062074"	// Anh Mi Sah Ko
+scp.spiritspeak_healcorpse	"@03c1,3,2 1061287"	// You channel energy from a nearby corpse to heal your wounds.
+scp.spiritspeak_healself	"@03c1,3,2 1061286"	// You channel your own spiritual energy to heal your wounds.
 
 scp.taming_tameself		"@,,1 You are your own master."
 scp.taming_notchar		"@,,2 502801"	// You can't tame that!
@@ -189,114 +307,7 @@ scp.tasteid_knowkeg		"@,,2 502229"	// You are already familiar with this keg's c
 scp.tasteid_cannot		"@,,2 502820"	// That's not something you can taste.
 scp.tasteid_fail		"@,,2 502823"	// You cannot discern anything about this substance.
 
-scp.bard_noinstrument		"@,,2 1062488"	// The instrument you are trying to play is no longer in your backpack!
-scp.bard_instrument_targ	"@,,2 500617"	// What instrument shall you play?
-scp.bard_instrument_wrong	"@,,2 500619"	// That is not a musical instrument.
-scp.bard_toofaraway		"@,,2 501816"	// You are too far away to do that.
-scp.bard_peacemaking_targ	"@,,2 1049525"	// Whom do you wish to calm?
-scp.bard_peacemaking_isitem	"@,,2 1049528"	// You cannot calm that!
-scp.bard_peacemaking_peaced	"@,,2 500616"	// You hear lovely music, and forget to continue battling!
-scp.bard_peacemaking_success	"@,,2 500615"	// You play your hypnotic music, stopping the battle.
-scp.bard_peacemaking_fail	"@,,2 500613"	// You attempt to calm everyone, but fail.
-scp.bard_peacemaking_norange	"@,,2 1049648"	// You play hypnotic music, but there is nothing in range for you to calm.
-scp.bard_peacemaking_tfail	"@,,2 1049531"	// You attempt to calm your target, but fail.
-scp.bard_peacemaking_tsuccess	"@,,2 1049532"	// You play hypnotic music, calming your target.
-
-scp.bard_provocation_cannot	"@,,2 1049446"	// You have no chance of provoking those creatures.
-scp.bard_provocation_tamed	"@,,2 501590"	// They are too loyal to their master to be provoked.
-scp.bard_provocation_fail	"@,,2 501599"	// Your music fails to incite enough anger.
-scp.bard_provocation_notevil	"@,,2 501589"	// You can't incite that!
-scp.bard_provocation_nochance	"@,,2 1049446"	// You have no chance of provoking those creatures.
-scp.bard_provocation_2ndtarg	"@,,2 1008085"	// You play your music and your target becomes angered.  Whom do you wish them to attack?
-scp.bard_provocation_faraway	"@,,2 1049450"	// The creatures you are trying to provoke are too far away from each other for your music to have an effect.
-scp.bard_provocation_success	"@,,2 501602"	// Your music succeeds, as you start a fight.
-scp.bard_provocation_sametarg	"@,,2 501593"	// You can't tell someone to attack themselves!
-scp.bard_provocation_nonpc	"@,,2 501589"	// You can't incite that!
-
-scp.poisoning_immune		"@,,2 1005534"	// * The poison seems to have no effect. *
-scp.poisoning_beenpoisoned	"@,,2 1010512"	// You have been poisoned!
-scp.poisoning_beencured		"@,,2 1010059"
-scp.poisoning_wornoff		"@,,2 502136"
-scp.poisoning_curedtarget	"@,,2 1010058"
-scp.poisoning_failcuretarg	"@,,2 1010650"
-scp.poisoning_notpoisoned	"@,,2 1042000"
-scp.poisoning_targnotpoisoned	"@,,2 1060176"
-scp.poisoning_poisonwhat	"@,,2 502142"
-scp.poisoning_youmustwait	"@,,2 501789"
-scp.poisoning_failtoapply	"@,,2 1010518"
-scp.poisoning_mustbeinpack	"@,,2 1062334"
-scp.poisoning_cantworkonthat	"@,,2 500422"
-scp.poisoning_notpoisonable	"@,,2 500422"
-scp.poisoning_notpoison2hands	"@,,2 500422"
-scp.poisoning_whatpoisonuse	"@,,2 1010611"
-scp.poisoning_targettoofar	"@,,2 501853"
-scp.poisoning_notpoisonpot	"@,,2 502139"
-scp.poisoning_youapplypoison	"@,,2 1010517"
-scp.poisoning_gravemistake	"@,,2 502152"
-scp.poisoning_failapplypoison	"@,,2 1010518"
-scp.poisoning_bloodmixpoison	"@,,2 1005537"
-scp.poisoning_cleaneditem	"@,,2 1010496"
-scp.poisoning_mustbecleaned	"@,,2 1005536"
-scp.poisoning_usethison		"@,,2 1010086"
-
-scp.hiding_spellactive		"@,,2 501238"		// You are busy doing something else and cannot hide.
-scp.hiding_activecombat		"@022,,2 501237"	// You can't seem to hide right now.
-scp.hiding_success		"@01f4,,2 501240"	// You have hidden yourself well.
-scp.hiding_fail			"@022,,2 501241"	// You fail to hide.
-scp.hiding_reveal		"@,,2 501242"		// You are no longer hidden.
-scp.hiding_shoveinvis		"@,,2 1019041"		// You shove something invisible out of the way.
-
-scp.stealth_nothidden		"@,,2 502725" // You must hide first
-scp.stealth_reqhiding		"@,,2 502726" // You are not hidden well enough.  Become better at hiding.
-scp.stealth_armorcheck		"@,,2 502727" // You could not hope to move quietly wearing this much armor.
-scp.stealth_success		"@,,2 502730" // You begin to move quietly.
-scp.stealth_fail		"@,,2 502731" // You fail in your attempt to move unnoticed.
-
-scp.removetrap_start				"@,,2 502368" // Which trap will you attempt to disarm?
-scp.removetrap_lackslockpicking		"@,,2 502366" // You do not know enough about locks.  Become better at picking locks.
-scp.removetrap_lacksdetectinghidden	"@,,2 502367" // You are not perceptive enough.  Become better at detect hidden.
-scp.removetrap_ischar				"@,,2 502816" // You feel that such an action would be inappropriate
-scp.removetrap_nottrapped			"@,,2 502373" // That doesn't appear to be trapped
-scp.removetrap_success				"@,,2 502377" // You successfully render the trap harmless
-scp.removetrap_fail					"@,,2 502372" // You fail to disarm the trap... but you don't set it off
-
-scp.detecthidden_start			"@,,2 500819" //Where will you search?
-scp.detecthidden_foundnobody	"@,,2 500817" // You can see nothing hidden there.
-
-scp.runes_entername		"@88,,1 Type in a name for the rune"
-
-scp.skill_youaredead		"@,,2 500949"	// You can't do that when you're dead.
-scp.skill_mustwait		"@,,2 500118"	// You must wait a few moments to use another skill.
-
-scp.house_msg_welcomeback	"@,,2 501293"	// Welcome back to the house, friend!
-scp.house_msg_housedistance	"@,,2 1062429"	// You must be within five paces of the house sign to use this option.
-scp.house_msg_ejectitem		"@,,2 501347"	// You cannot eject that from the house!
-scp.house_msg_ejectvendor	"@,,2 501351"	// You cannot eject a vendor.
-scp.house_msg_ejectfriend	"@,,2 501348"	// You cannot eject a friend of the house!
-scp.house_msg_ejectnotinside	"@,,2 501352"	// You may not eject someone who is not in your house!
-scp.house_msg_banlimit		"@,,2 501355"	// The ban limit for this house has been reached!
-
 scp.vendor_contractinpack	"@,,2 1047012"	// The contract must be in your backpack to use it.
-
-scp.spell.animatedead_target	"@,,2 1061083"	// Animate what corpse?
-scp.spell.curseweapon_noweap	"@,,2 501078"	// You must be holding a weapon.
-scp.spell.arcanecircle_notin	"@,,2 1072705"	// You must be standing on an arcane circle, pentagram or abbatoir to use this spell.
-scp.spell.arcanecircle_noplayer	"@,,2 1080452"	//There are not enough spellweavers present to create an Arcane Focus.
-
-scp.guild.alliance_already	"@,,2 1063426"	// ~1_val~ already belongs to an alliance.
-scp.guild.alliance_consider	"@,,2 1063416"	// ~1_val~ is currently considering another alliance proposal.
-scp.guild.alliance_nopriv	"@,,2 1063436"	// You don't have permission to negotiate an alliance.
-
-scp.bola_notinpack		"@,,2 1040019"	// The bola must be in your pack to use it.
-scp.bola_cantusenow		"@,,2 1049624"	// You have to wait a few moments before you can use another bola!
-scp.bola_inuse			"@,,2 1049631"	// This bola is already being used.
-scp.bola_handsfree		"@,,2 1040015"	// Your hands must be free to use this
-scp.bola_youremounted		"@,,2 1040016"	// You cannot use this while riding a mount
-scp.bola_polymorphed		"@,,2 1070902"	// You can't use this while in an animal form!
-scp.bola_beginfrom		"@03b2,,2 1049632"	// * You begin to swing the bola...*"
-scp.bola_beginto		"@03b2,,2 1049633"	// ~1_NAME~ begins to menacingly swing a bola...
-scp.bola_noreason		"@,,2 1049628"	// You have no reason to throw a bola at that.
-scp.bola_knocked		"@,,2 1040023"	// You have been knocked off of your mount!
 
 
 [DEFNAME SphereCommunityPack_WordsOfPower]

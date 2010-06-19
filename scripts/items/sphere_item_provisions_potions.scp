@@ -285,32 +285,39 @@ ON=@Create
 	MORE2=100.0
 	COLOR=color_gray_lt
 
-ON=@Dropon_char
-  obj=<argo>
-  IF !(0<obj.ISMYPET>)
-    src.sysMESSAGE="<obj.NAME> this is not your pet."
-  RETURN 1
-  ENDIF
-  obj.SHRINK
-  remove
-  RETURN 1
+ON=@DropOn_Char
+if !<argo.ismypet>
+src.sysmessage "<argo.name> is not your pet."
+return 1
+endif
+if <def.scp.Followers> == 1
+src.curfollower -= <qval <argo.tag0.control.slots> ? <argo.tag0.control.slots> : 1>
+endif
+argo.shrink
+remove
+return 1
 
-on=@dclick
-  target="what do you want to shrink?"
-  return 1
+ON=@DClick
+if <topobj.uid> == <src.uid>
+target What do you want to shrink?
+endif
+return 1
 
-on=@targon_char
-  IF !<src.targ.ismypet>
-    src.sysMESSAGE="<src.targ.NAME> this is not your pet."
-    RETURN 1
-  ENDIF
-  src.targ.SHRINK
-  remove
-  RETURN 1
+ON=@TargOn_Char
+if !<argo.ismypet>
+src.sysmessage "<argo.name> is not your pet."
+return 1
+endif
+if <def.scp.Followers> == 1
+src.curfollower -= <qval <argo.tag0.control.slots> ? <argo.tag0.control.slots> : 1>
+endif
+argo.shrink
+remove
+return 1
 
-on=@targon_item
-  src.sysmessage="Items cannot be shrunk this way"
-  return 1
+ON=@TargOn_Item
+src.sysmessage "Items cannot be shrunk this way"
+return 1
 
 
 [ITEMDEF i_potion_Invisibility]

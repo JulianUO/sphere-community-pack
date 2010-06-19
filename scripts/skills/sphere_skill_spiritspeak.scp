@@ -32,10 +32,10 @@ ADV_RATE=2.5,50.0,200.0
 on=@wait
 if <def.scp.NewSkills_SpiritSpeak> == 1
 	if <hits> >= <maxhits>
-	src.sysmessage @03c1,3,2 502444
+	src.sysmessage <def.scp.spiritspeak_fullhealed>
 	return 1
 	elif <src.mana> <= 10
-	src.sysmessage @03c1,3,2 1061285
+	src.sysmessage <def.scp.spiritspeak_nomana>
 	return 1
 	endif
 endif
@@ -61,14 +61,14 @@ foritems 3
 				src.hits += <local.maxdamhealed>
 				endif
 			src.sound 586
-			src.say @03b2,3,2 1062074
+			src.say <def.scp.spiritspeak_wop>
 			src.anim 17
 			morey=1
 			color=0349
 				if <src.hits> > <src.maxhits>
 				src.hits=<src.maxhits>
 				endif
-			src.sysmessage @03c1,3,2 1061287
+			src.sysmessage <def.scp.spiritspeak_healcorpse>
 			src.effect 3,i_fx_bless_effect,1,20
 			return 1
 			endif
@@ -81,7 +81,7 @@ src.hits += <r<local.mindamhealed>,<eval <local.maxdamhealed>+1>>
 	if <src.hits> > <src.maxhits>
 	src.hits=<src.maxhits>
 	endif
-src.sysmessage @03c1,3,2 1061286
+src.sysmessage <def.scp.spiritspeak_healself>
 src.mana -= 10
 src.effect 3,i_fx_bless_effect,1,20
 return 1
