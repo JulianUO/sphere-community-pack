@@ -51,7 +51,7 @@ SKILLREQ=Necromancy 40.0
 INTERRUPT=100.0,1.0
 
 on=@success
-src.sysmessage <def.scp.spell.animatedead_target>
+src.sysmessage <def.scp.spell_animatedead_target>
 src.targetf f_AnimateDeadTarg
 
 [SPELL 102]
@@ -135,7 +135,7 @@ INTERRUPT=100.0,1.0
 
 ON=@Select
 if !<weapon>
-sysmessage <def.scp.spell.curseweapon_noweap>
+sysmessage <def.scp.spell_curseweapon_noweap>
 return 1
 endif
 if <restest i_rune_curse_weapon>
