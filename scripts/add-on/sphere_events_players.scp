@@ -113,7 +113,11 @@ return 1
 // OSI Calculation + Stats Bonus
 on=@userstats
 if <def.scp.Followers> == 1
-maxfollower = <def.scp.MaxFollowers>
+	if <isgm>
+	maxfollower = 255
+	else
+	maxfollower = <def.scp.MaxFollowers>
+	endif
 endif
 
 // Followers control
