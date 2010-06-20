@@ -16,7 +16,6 @@ VERSION=0.56b
 [defname sets_list]
 t_set_darkwood.pieces	6
 t_set_virtue.pieces	8
-
 t_set_marksman.pieces	2
 t_set_juggernaut.pieces	2
 
@@ -83,7 +82,6 @@ src.ResPoison -= 5
 src.ResEnergy -= 5
 
 
-
 [TYPEDEF t_set_marksman]
 on=@equip
 f_getset_pieces_equip t_set_marksman
@@ -92,12 +90,23 @@ on=@unequip
 f_getset_pieces_unequip t_set_marksman
 
 ON=@SetEquip
+src.ModDex += 8
+src.TAG0.HitChanceIncrease += 15
+src.TAG0.SwingSpeedIncrease += 30
 
 ON=@SetUnEquip
+src.ModDex -= 8
+src.TAG0.HitChanceIncrease -= 15
+src.TAG0.SwingSpeedIncrease -= 30
 
 ON=@ItemSetEquip
+COLOR = 946
+TAG.SelfRepair = 3
 
 ON=@ItemSetUnequip
+COLOR = 0
+TAG.SelfRepair = 0
+
 
 [TYPEDEF t_set_juggernaut]
 on=@equip
