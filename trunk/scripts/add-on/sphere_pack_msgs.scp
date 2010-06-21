@@ -307,6 +307,8 @@ scp.tasteid_knowkeg		"@,,2 502229"	// You are already familiar with this keg's c
 scp.tasteid_cannot		"@,,2 502820"	// That's not something you can taste.
 scp.tasteid_fail		"@,,2 502823"	// You cannot discern anything about this substance.
 
+scp.quest_complete		"@,,2 1075050"	// You have killed all the required quest creatures of this type.
+
 scp.vendor_contractinpack	"@,,2 1047012"	// The contract must be in your backpack to use it.
 
 
