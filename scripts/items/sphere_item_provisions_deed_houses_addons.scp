@@ -672,4 +672,30 @@ DESCRIPTION=Deed for a elven oven (south)
 ON=@Create
 MORE=02ddc
 
+[ITEMDEF i_deed_elven_spinning_wheel_east]
+ID=i_deed
+TYPE=t_deed_house_addon
+NAME=Deed for a elven spinning wheel (east)
+RESOURCES=60 i_log, 40 i_cloth
+SKILLMAKE=CARPENTRY 75.0, TAILORING 65.0, t_carpentry, t_sewing_kit
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for a elven spinning wheel (east)
+
+ON=@Create
+MORE=02dda
+
+[ITEMDEF i_deed_elven_spinning_wheel_south]
+ID=i_deed
+TYPE=t_deed_house_addon
+NAME=Deed for a elven spinning wheel (south)
+RESOURCES=60 i_log, 40 i_cloth
+SKILLMAKE=CARPENTRY 75.0, TAILORING 65.0, t_carpentry, t_sewing_kit
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Addons
+DESCRIPTION=Deed for a elven spinning wheel (south)
+
+ON=@Create
+MORE=02dd9
+
 [EOF]
