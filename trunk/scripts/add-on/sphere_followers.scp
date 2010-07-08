@@ -83,7 +83,7 @@ return 1
 // Shrinked animals
 [typedef t_figurine]
 on=@dclick
-if <isgm>
+if <src.isgm>
 return 0
 endif
 if <def.scp.Followers> == 0

@@ -38,6 +38,7 @@ scripts/items/multis/
 scripts/items/profession/
 scripts/items/resources/
 scripts/items/weapons/
+scripts/items/artifacts/
 // -----------------------------------
 scripts/sphere_region_resources.scp
 scripts/sphere_region.scp
