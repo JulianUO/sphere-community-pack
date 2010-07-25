@@ -305,9 +305,9 @@ if !(<argo.isplayer>) && (<tag0.quests>)
 						endif
 					endif
 				endif
-			endfor
+			endif
 		endfor
-	endif
+	endfor
 endif
 
 // Death Robe Fix
