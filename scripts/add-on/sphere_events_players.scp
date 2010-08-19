@@ -7,22 +7,31 @@
 VERSION=0.56b
 
 [events e_PlayerGenericEvent]
+on=@attack
+return <src.trigger @Attacked,<def.tat_as_argo>,<uid>>
+
 // Virtue System
 on=@UserVirtue
 if <def.scp.VirtueSystem> == 0
 return 1
 endif
 if (<argn1>==1)
-    for 0 8  // if the player doesn't have max status for first level of virtue
-        if !(<src.tag0.virtuemax_<dlocal._for>>)
-            src.tag0.virtuemax_<dlocal._for>=4000  // give him the cap.
-        endif
-    endfor
-    argo.sdialog d_virtue_main
+	for 0 8  // if the player doesn't have max status for first level of virtue
+		if !(<src.tag0.virtuemax_<dlocal._for>>)
+		src.tag0.virtuemax_<dlocal._for>=4000  // give him the cap.
+		endif
+	endfor
+argo.sdialog d_virtue_main
 else
-    if (<argn1>==112)  /// invoke valor virtue (coded for test.)
-        src.targetf f_valor_target
-        return 1
+	if (<argn1>==112)  /// invoke valor virtue (coded for test.)
+	src.targetf f_valor_target
+	return 1
+	elif <argn1> == 107
+	f_start_honor
+	return 1
+	elif <argn1> == 105
+	sysmessage @,,2 1053001 // This virtue is not activated through the virtue menu.
+	return 1
     endif
      // TODO : Add virtue systems and check them here if is clicked.
    //and do not forget to put return 1 for each virtue check.
