@@ -9,7 +9,7 @@ var0.<uid>_damagebonus += 50
 endif
 }}}
 
-[I]: Hitter<br>
+DEFAULT: Hitter<br>
 SRC: Hit<br>
 ARGO: Weapon used to hit<br>
 
