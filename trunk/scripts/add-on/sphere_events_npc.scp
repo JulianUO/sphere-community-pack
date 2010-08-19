@@ -1,4 +1,7 @@
 [EVENTS e_NpcGenericEvent]
+on=@attack
+return <src.trigger @Attacked,<def.tat_as_argo>,<uid>>
+
 // Followers (Death)
 on=@death
 forcharmemorytype memory_fight

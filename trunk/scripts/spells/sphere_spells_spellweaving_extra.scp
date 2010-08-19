@@ -110,9 +110,9 @@ remove
 return 1
 
 [events e_attunement]
-on=@afterhit
-if <argn2> == <findid(i_attunement).tag0.weap> && <src> == <findid(i_attunement).link>
-return <eval (<argn1> / 2)>
+on=@hitdamagebonus
+if <argo> == <findid(i_attunement).tag0.weap> && <src> == <findid(i_attunement).link>
+var0.<uid>_damagebonus += 50
 endif
 
 [EOF]

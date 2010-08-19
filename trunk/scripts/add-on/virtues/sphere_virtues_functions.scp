@@ -79,17 +79,19 @@ endif
 [function gainvirtue]  // .gainvirtue <virtuenumber>,<point>
 local.virtue = <def.virtue_<dargv[0]>_name>
 if <argv[1]>
-sysmessage You gained in <local.virtue> !
 tag0.virtue_<dargv[0]> += <argv[1]>
 	if <tag0.virtue_<dargv[0]>> >= <tag0.virtuemax_<dargv[0]>>
-	sysmessage You gained path in <local.virtue> !
 		if <tag0.virtuemax_<dargv[0]>> == 4000
 		tag0.virtuemax_<dargv[0]> = 10000
 		elif <tag0.virtuemax_<dargv[0]>> == 10000
 		tag0.virtuemax_<dargv[0]> = 20000
 		endif
+		if <tag0.virtue_<dargv[0]>> >= 20000
+		tag.virtue_<dargv[0]> = 20000
+		endif
+	return 1
 	endif
 endif
-
+return 0
 
 [eof]

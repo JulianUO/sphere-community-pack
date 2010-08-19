@@ -57,7 +57,12 @@ local.totalbonus = <f_combatsys_damagebonus_uor>
 local.totalbonus = <f_combatsys_damagebonus_aos>
 enddo
 local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>
+trigger @HitDamageBonus,<def.tat_as_argo>,<argo>
+local.additionalbonus = <var0.<uid>_damagebonus>
+var.<uid>_damagebonus =
+local.additionalbonus = <muldiv <argn1>,<local.additionalbonus>,100>
 argn1 += <local.totalbonus>
+argn1 += <local.additionalbonus>
 src.tag.hbcs = 1
 
 on=@gethit
@@ -164,7 +169,12 @@ local.totalbonus = <f_combatsys_damagebonus_uor>
 local.totalbonus = <f_combatsys_damagebonus_aos>
 enddo
 local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>
+trigger @HitDamageBonus,<def.tat_as_argo>,<argo>
+local.additionalbonus = <var0.<uid>_damagebonus>
+var.<uid>_damagebonus =
+local.additionalbonus = <muldiv <argn1>,<local.additionalbonus>,100>
 argn1 += <local.totalbonus>
+argn1 += <local.additionalbonus>
 src.tag.hbcs = 1
 
 on=@gethit
