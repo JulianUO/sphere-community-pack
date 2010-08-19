@@ -1,14 +1,16 @@
 #summary Additional bonus after a hit was done and damage calculated
 
 = Usage =
-`[events e_attunement]
+{{{
+[events e_attunement]
 on=@hitdamagebonus
 if <argo> == <findid(i_attunement).tag0.weap> && <src> == <findid(i_attunement).link>
 var0.<uid>_damagebonus += 50
-endif`
+endif
+}}}
 
-[I]: Hitter
-SRC: Hit
-ARGO: Weapon used to hit
+[I]: Hitter<br>
+SRC: Hit<br>
+ARGO: Weapon used to hit<br>
 
-var0.<uid>_damagebonus +=: Used to add additional damage, in percentage.
+var0.UIDofCharacter_damagebonus +=: Used to add additional damage, in percentage.
