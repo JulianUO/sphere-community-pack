@@ -15,6 +15,7 @@ VERSION=0.56b
 //Discordance (Desponder)
 // Tribulaion; In Jux Hur Rel; Upkeep 16
 // Despair; Kal Des Mani Tym; Upkeep 18
+//Will add more info later.
 
 [SPELL 701]
 DEFNAME=s_inspire
