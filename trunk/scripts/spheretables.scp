@@ -221,6 +221,10 @@ HELP
 PASSWORD
 EMAIL
 HelpPage
+OpenQuestLog
+GuildMenu
+GC
+TC
 
 [PLEVEL 2]	// extra counselor commands.
 ANIM

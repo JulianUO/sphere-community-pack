@@ -240,6 +240,10 @@ scp.poisoning_cleaneditem	"@,,2 1010496"	// You have cleaned the item, but you h
 scp.poisoning_mustbecleaned	"@,,2 1005536"	// This weapon must be wiped clean before it can be poisoned.
 scp.poisoning_usethison		"@,,2 1010086"	// What do you want to use this on?
 
+scp.quest_alreaydoing		"@88,3,1 It looks like you're already doing this task for someone else."
+scp.quest_failed		"@33,3,1 You have failed your quest objectives!"
+scp.quest_nothaveitem		"@33,3,1 You don't seem to actually have all those items..."
+
 scp.removetrap_start			"@,,2 502368" // Which trap will you attempt to disarm?
 scp.removetrap_lackslockpicking		"@,,2 502366" // You do not know enough about locks.  Become better at picking locks.
 scp.removetrap_lacksdetectinghidden	"@,,2 502367" // You are not perceptive enough.  Become better at detect hidden.

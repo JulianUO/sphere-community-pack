@@ -93,9 +93,9 @@ VERSION=0.56b
 535,992,0,0=7046,332,10,0=Elven_City_Entrance
 7046,332,10,0=535,992,0,0=Elven_City_Exit
 
-=5655,1796,2,0=tp_SolenHive_Entrance_A1
-=5923,1793,2,0=tp_SolenHive_Entrance_B1
-=5657,2023,0,0=tp_SolenHive_Entrance_C1
-=5912,1890,0,0=tp_SolenHive_Entrance_D1
+//=5655,1796,2,0=tp_SolenHive_Entrance_A1
+//=5923,1793,2,0=tp_SolenHive_Entrance_B1
+//=5657,2023,0,0=tp_SolenHive_Entrance_C1
+//=5912,1890,0,0=tp_SolenHive_Entrance_D1
 
 [EOF]

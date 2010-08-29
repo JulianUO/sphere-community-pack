@@ -892,13 +892,6 @@ ITEM={ i_log 1 i_board 1 },{ 5 10 }
 ITEM=i_reag_executioners_cap,{ 2 5 }
 ITEM=i_gold,{ 0 50 }
 
-[TEMPLATE loot_DEEP_SEA_SERPENT]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Deep Sea Serpent
-ITEM=random_fishing_junk
-ITEM=random_fishing_junk
-
 [TEMPLATE loot_ELDER_GAZER]
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
@@ -979,13 +972,6 @@ ITEM=i_LOG,{ 10 15 }
 ITEM=i_reag_dead_wood,{ 4 6 }
 ITEM=i_gold,{0 150}
 
-[TEMPLATE loot_SEA_SERPENT]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Sea Serpent
-ITEM=RANDOM_FISHING_JUNK
-ITEM=RANDOM_FISHING_JUNK
-
 [TEMPLATE loot_SLIME]
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
@@ -1040,11 +1026,6 @@ ITEM=i_reag_spider_silk,{ 5 10 }
 CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
 DESCRIPTION=Giant Frog
-
-[TEMPLATE loot_GIANT_ICE_SERPENT]
-CATEGORY=Item Templates
-SUBSECTION=Monster Loot Templates
-DESCRIPTION=Giant Ice Serpent
 
 [TEMPLATE loot_HELLCAT]
 CATEGORY=Item Templates
