@@ -8,7 +8,7 @@
 // become the property of Menasoft & Partners.
 //****************************************************************************
 // FILE LAST UPDATED: 06-June-2006 / Ellessar
-    
+
 
 [FUNCTION TRANSFERGUILD]
 src.targetf f_transferguild <uid>
@@ -540,13 +540,6 @@ ON=@DCLICK
 	// The rest is debugging to check if you linked it to an invalid spawn bit. :)
 	//
 	// Mercury,
-
-[TYPEDEF T_TRAPPED]// Item Trap
-// I have no idea why I made this, but you might want to fool with it
-ON=@EQUIP
-	SRC.SOUND=snd_SPELL_EXPLOSION
-	SRC.DAMAGE={ 100 500 }
-	SRC.MESSAGE=The Item Was Trapped!
 
 [TYPEDEF T_GATE_WEREWOLF]
 ON=@DClick
