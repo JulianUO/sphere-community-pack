@@ -395,9 +395,10 @@ CATEGORY=Monsters
 SUBSECTION=Undeads
 DESCRIPTION=Shade
 TAG.Slayer=SLAYER_UNDEAD
-TAG.Barding.Diff=69.4
+TAG.Barding.Diff=128.8
 TAG.DamCold=50
-ARMOR={25 30}
+TAG.DamPoison=50
+ARMOR={35 45}
 
 ON=@Create
 ResCold={15 25}
@@ -418,6 +419,43 @@ KARMA=-4000
 
 ON=@NPCRestock
 ITEM=loot_shade
+
+
+[CHARDEF c_rotting_corpse]
+ID=C_ZOMBIE
+NAME=Rotting Corpse
+CAN=MT_WALK|MT_USEHANDS
+DAM=21,26
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Rotting Corpse
+TAG.Luck.Loot=loot_rotting_corpse_luck
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=69.4
+TAG.DamCold=50
+ARMOR=40
+
+ON=@Create
+RESFIRE={20 30}
+RESCOLD={50 70}
+RESPOISON={40 50}
+RESENERGY={20 30}
+COLOR=02fc
+NPC=brain_monster
+STR={301 350}
+DEX=75
+INT={151 200}
+MAXHITS=1200
+MAXSTAM=150
+WRESTLING={90.1 100.0}
+TACTICS=100.0
+MAGICRESISTANCE=250.0
+POISONING=120.0
+FAME=12500
+KARMA=-12500
+
+ON=@NpcRestock
+ITEM=loot_rotting_corpse
 
 
 [TEMPLATE loot_zombie]
@@ -542,5 +580,18 @@ CATEGORY=Item Templates
 SUBSECTION=Monster Special Loot Templates
 DESCRIPTION=Lich Lord
 ITEM=i_treasure_map_lvl_4
+
+[TEMPLATE loot_rotting_corpse]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Rotting Corpse
+CONTAINER=i_backpack
+ITEM=i_gold,{1000 1250}
+
+[TEMPLATE loot_rotting_corpse_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Rotting Corpse
+ITEM=i_treasure_map_lvl_5
 
 [eof]

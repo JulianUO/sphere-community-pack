@@ -34,10 +34,8 @@ COLOR=colors_all
 [ITEMDEF i_oak_leaf_cloak]
 ID=i_hooded_shroud
 NAME=Embroidered Oak Leaf Cloak
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
-TAG.SKILLINCREASE=Stealth
-TAG.SKILLINCREASEVALUE=50
+TEVENTS=t_iprop
+tag.skill.bonus.1=Stealth,5.0
 
 ON=@Create
 COLOR=colors_green
@@ -46,11 +44,10 @@ HITPOINTS=150
 [ITEMDEF i_Djinn_Ring]
 ID=i_ring_gold
 NAME=Djinn's Ring
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
-TAG.INTINCREASE=5
-TAG.MAGICDAMINCREASE=10
-TAG.FASTERCASTING=2
+TEVENTS=t_iprop
+tag.intelligencebonus=5
+tag.spelldamageincrease=10
+tag.fastercasting=2
 
 ON=@Create
 COLOR=04ac
@@ -59,36 +56,34 @@ COLOR=04ac
 ID=i_boots_calf
 NAME=Detective boots
 REQSTR=10
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
+TEVENTS=t_iprop
 
 ON=@Create
 HITPOINTS=150
 COLOR=colors_all
 DORAND 3
-BEGIN
-TAG.INTINCREASE=2
-NAME=Legendary Detective of the Royal Guard
-END
-BEGIN
-TAG.INTINCREASE=3
-NAME=Elder Detective of the Royal Guard
-END
-BEGIN
-TAG.INTINCREASE=4
-NAME=Mythical Detective of the Royal Guard
-END
+	BEGIN
+	TAG.intelligencebonus=2
+	NAME=Legendary Detective of the Royal Guard
+	END
+	BEGIN
+	TAG.intelligencebonus=3
+	NAME=Elder Detective of the Royal Guard
+	END
+	BEGIN
+	TAG.intelligencebonus=4
+	NAME=Mythical Detective of the Royal Guard
+	END
 ENDDO
 
 [ITEMDEF i_gauntlets_anger]
 ID=i_platemail_gloves
 NAME=Gauntlets of Anger
 REQSTR=70
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
-TAG.HITCHANCEDECREASE=10
-TAG.HITSINCREASE=8
-TAG.HITSREGENERATION=2
+TEVENTS=t_iprop
+tag.defensechanceincrease=10
+tag.hitpointincrease=8
+tag.hitpointregeneration=2
 ARMOR=90
 
 ON=@Create
@@ -99,13 +94,12 @@ HITPOINTS=150
 ID=i_dagger
 NAME=Oblivion's Needle
 REQSTR=10
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
-TAG.HITCHANCEINCREASE=20
-TAG.HITCHANCEDECREASE=20
-TAG.DAMINCREASE=40
-TAG.STAMLEECH=50
-TAG.STAMINCREASE=20
+TEVENTS=t_iprop
+tag.hitchanceincrease=20
+tag.defensechanceincrease=20
+tag.damageincrease=40
+tag.hitstaminaleech=50
+tag.staminaincrease=20
 
 ON=@Create
 HITPOINTS=150
@@ -114,7 +108,6 @@ COLOR=33
 [ITEMDEF i_necromancer_shroud]
 ID=i_hooded_shroud
 NAME=Necromancer Shroud
-//TEVENTS=T_PROPRIEDADES
 ARMOR=8
 
 ON=@Create
@@ -124,11 +117,10 @@ HITPOINTS=150
 [ITEMDEF i_Lieutenant_Royal_guard]
 ID=i_sash
 NAME=Lieutenant of The Britannian Royal Guard
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
-TAG.INTINCREASE=5
-TAG.LOWERREAGENTCOST=10
-TAG.MANAREGENERATION=2
+TEVENTS=t_iprop
+tag.intelligencebonus=5
+tag.lowerreagentcost=10
+tag.manaregeneration=2
 
 ON=@Create
 COLOR=colors_all
@@ -147,17 +139,30 @@ ID=i_pet_plaguebeast
 NAME=Plague Beast Statue
 TYPE=T_NORMAL
 
+[ITEMDEF i_orc_chief_helm]
+ID=i_helm_orc
+NAME=orc Chief Helm
+REQSTR=30
+TEVENTS=t_iprop
+tag.Luck=100
+tag.HitPointRegeneration=3
+tag.HitPointIncrease=30
+ARMOR=80
+
+ON=@Create
+COLOR=colors_green
+HITPOINTS=150
+
 [ITEMDEF i_royal_guard_survival_knife]
 ID=i_knife_butcher
 NAME=Royal Guard Survival Knife
 REQSTR=2
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=T_LUCK_ITEM
-TAG.LUCK=140
-TAG.ENCHANCEPOTIONS=25
-TAG.DAMINCREASE=20
-TAG.LIFELEECH=20
-TAG.USEBESTWEAPONSKILL=1
+TEVENTS=t_iprop
+tag.luck=140
+tag.enhancepotion=25
+tag.damageincrease=20
+tag.hitlifeleech=20
+tag.bestweaponskill=1
 
 ON=@Create
 HITPOINTS=150
@@ -165,11 +170,9 @@ HITPOINTS=150
 [ITEMDEF i_samaritan_robe]
 ID=i_robe
 NAME=Samaritan Robe
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
-TAG.HITSINCREASE=5
-TAG.SKILLINCREASE=Healing
-TAG.SKILLINCREASEVALUE=50
+TEVENTS=t_iprop
+tag.hitpointincrease=5
+tag.skill.bonus.1=Healing,5.0
 ARMOR=8
 REQSTR=15
 
@@ -180,9 +183,8 @@ HITPOINTS=150
 [ITEMDEF i_knowlegable_person]
 ID=i_hooded_shroud
 NAME=The Most Knowlegable Person
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
-TAG.HITSINCREASE=5
+TEVENTS=t_iprop
+tag.hitpointincrease=5
 ARMOR=10
 REQSTR=15
 
@@ -198,12 +200,11 @@ TYPE=T_NORMAL
 [ITEMDEF i_captain_john_hat]
 ID=i_hat_tricorne
 NAME=Captain Johns Hat
-//TEVENTS=T_PROPRIEDADES
-TEVENTS=t_status_bonus
-TAG.DEXINCREASE=8
-TAG.SKILLINCREASE=Swordsmanship
-TAG.SKILLINCREASEVALUE=200
-TAG.HITCHANCEDECREASE=15
+TEVENTS=t_iprop
+tag.nightsight=1
+tag.dexteritybonus=8
+tag.skill.bonus.1=Swordsmanship,20.0
+tag.hitchanceincrease=15
 ARMOR=80
 REQSTR=20
 
@@ -211,23 +212,17 @@ ON=@Create
 COLOR=colors_black
 HITPOINTS=150
 
-ON=@Equip
-SRC.SPELLEFFECT S_NIGHT_SIGHT,1000,<SRC>
-
-ON=@ClientToolTip
-SRC.ADDCLILOC 1015008
-
 [ITEMDEF i_brave_knight_britannia]
 ID=i_katana
 NAME=Brave Knight of the Britannia
 REQSTR=25
-//TEVENTS=T_PROPRIEDADES
-TAG.HITCHANCEINCREASE=11
-TAG.DAMINCREASE=35
-TAG.LIFELEECH=45
-TAG.STAMLEECH=45
-TAG.HITHARM=46
-TAG.SELFREPAIR=5
+TEVENTS=t_iprop
+tag.hitchanceincrease=11
+tag.damageincrease=35
+tag.hitlifeleech=45
+tag.hitstaminaleech=45
+tag.hitharm=46
+tag.selfrepair=5
 
 ON=@Create
 COLOR=0481

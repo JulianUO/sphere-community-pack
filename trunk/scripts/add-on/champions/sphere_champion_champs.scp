@@ -37,7 +37,7 @@ ON=@Death
 RANDMAGICITEMGREAT
 
 [CHARDEF c_Mephitis]
-ID=c_spider_lord
+ID=c_Giant_Black_Widow
 NAME=Mephitis
 CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
 DAM=70,128
@@ -116,7 +116,7 @@ ON=@NPCRestock
 ITEM=i_gold,{4000 5000}
 
 [CHARDEF c_Lord_Oaks]
-ID=c_forest_lord
+ID=c_Ethereal_Warrior
 NAME=Lord Oaks
 CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
 DAM=68,113
@@ -186,7 +186,7 @@ ENDIF
 
 ON=@NPCRestock
 ITEM=i_gold,{3500 6000}
-ITEM=i_mapa_tesouro
+ITEM=i_treasure_map_lvl_5
 
 [CHARDEF c_Silvani]
 ID=c_forest_queen
