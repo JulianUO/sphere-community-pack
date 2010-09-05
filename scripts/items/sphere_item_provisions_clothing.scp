@@ -1334,4 +1334,28 @@ HITPOINTS={21 23}
 //tribal mask
 DUPEITEM=0154b
 
+[ITEMDEF 02683]
+DEFNAME=i_hooded_shroud
+NAME=hooded shroud
+WEIGHT=4
+TYPE=t_clothing
+LAYER=layer_robe
+FLIP=1
+DUPELIST=02684
+DYE=1
+SKILLMAKE=TAILORING 79.0, t_sewing_kit
+RESOURCES=400 i_cloth
+ARMOR=0 // 0
+
+Category=Provisions - Clothes
+Subsection=Shirts & Robes
+Description=Hooded Shroud
+
+On=@Create
+HITPOINTS={31 33}
+
+[ITEMDEF 02684]
+// hooded shroud
+DUPEITEM=02683
+
 [EOF]

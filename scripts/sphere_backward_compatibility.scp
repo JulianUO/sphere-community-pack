@@ -20,6 +20,7 @@ i_liche_fx			i_lich_fx
 i_liche_form			i_lich_form
 c_liche				c_lich
 c_m_liche_lord			c_m_lich_lord
+c_spider_lord		c_Giant_Black_Widow
 
 [DEFNAME backward_compatibility_defs_scp]
 // weapons
