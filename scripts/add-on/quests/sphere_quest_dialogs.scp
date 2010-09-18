@@ -1,0 +1,678 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Martes, 27 de Julio de 2010
+VERSION=0.56b
+
+//****************************************************************************
+
+[DIALOG d_quest_log]
+250,100
+src.closealldialogs
+
+page 0
+resizepic 30 15 5120 430 410
+for 29
+gumppic <eval (<local._for> * 15) + 15> 15 0280a
+	if <local._for> < 29
+	gumppic <eval (<local._for> * 15) + 13> 420 0280a
+	endif
+endfor
+gumppic 445 420 0280a
+gumppic 415 30 203
+gumppic 415 75 203
+gumppic 415 105 203
+for 13
+gumppic 415 <eval (<local._for> * 30) + 2> 10460
+endfor
+gumppic 30 30 202
+gumppic 30 75 202
+gumppic 30 105 202
+gumppic 29 105 0242f
+for 13
+gumppic 45 <eval (<local._for> * 30) + 2> 10460
+endfor
+gumppic 425 300 028ac
+gumppic 425 150 028ab
+gumppic 425 0 028aa
+gumppic -5 10 028b5
+gumppic 25 0 028b4
+gumppic 45 130 028ab
+gumppic -22 280 028a2
+gumppic 368 50 0589
+gumppic 377 60 01580
+gumppic 85 35 0232d
+xmfhtmlgumpcolor 125 45 100 35 1046026 0 0 32767
+gumppictiled 125 65 150 1 9101
+button 310 400 02eec 02eed 1 0 0
+
+page 1
+if <tag0.quests>
+	for <tag0.quests>
+		if <def0.quest_<dtag0.quest<dlocal._for>.id>_namelocalized>
+			if <ehnum <def.quest_<dtag0.quest<dlocal._for>.id>_namelocalized>>
+				if !<tag0.quest<dlocal._for>.failed>
+				xmfhtmlgumpcolor 100 <eval (<local._for> * 25) + 105> 240 20 <eval <def.quest_<dtag0.quest<dlocal._for>.id>_namelocalized>> 0 0 32767
+				else
+				xmfhtmlgumpcolor 100 <eval (<local._for> * 25) + 105> 240 20 <eval <def.quest_<dtag0.quest<dlocal._for>.id>_namelocalized>> 0 0 24673
+				endif
+			else
+				if !<tag0.quest<dlocal._for>.failed>
+				dhtmlgump 100 <eval (<local._for>*25)+105> 240 20 0 0 <def.bfont_white><def.quest_<eval <tag0.quest<dlocal._for>.id>>_namelocalized>
+				else
+				dhtmlgump 100 <eval (<local._for>*25)+105> 240 20 0 0 <def.bfont_dred><def.quest_<eval <tag0.quest<dlocal._for>.id>>_namelocalized>
+				endif
+			endif
+		else
+			if !<tag0.quest<dlocal._for>.failed>
+			dhtmlgump 100 <eval (<local._for>*25)+105> 240 20 0 0 <def.bfont_white><def.quest_<eval <tag0.quest<dlocal._for>.id>>_name>
+			else
+			dhtmlgump 100 <eval (<local._for>*25)+105> 240 20 0 0 <def.bfont_dred><def.quest_<eval <tag0.quest<dlocal._for>.id>>_name>
+			endif
+		endif
+	button 360 <eval (<local._for> * 25) + 105> 026b0 026b1 1 0 <local._for>
+	endfor
+endif
+xmfhtmlgumpcolor 90 400 50 20 3001024 0 0 26574
+dtext 140 400 1153 <dtag0.quests>
+dhtmlgump 160 401 50 20 0 0 <def.bfont_white>/ 10
+
+page 2
+if <ctag0.questviewid>
+	if <def0.quest_<dtag0.quest<dlocal._for>.id>_namelocalized>
+		if <ehnum <def.quest_<dtag0.quest<dctag0.questviewid>.id>_namelocalized>>
+		xmfhtmlgumpcolor 155 105 200 20 <eval <def.quest_<dtag0.quest<dctag0.questviewid>.id>_namelocalized>> 0 0 7952
+		else
+		dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<dctag0.questviewid>.id>_namelocalized>
+		endif
+	else
+	dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<dctag0.questviewid>.id>_name>
+	endif
+	if <def0.quest_<dtag0.quest<dctag0.questviewid>.id>_ischain> || <def0.quest_<dtag0.quest<dctag0.questviewid>.id>_chain>
+	xmfhtmlgumpcolor 93 135 150 20 1075024 0 0 7952
+	else
+	xmfhtmlgumpcolor 93 135 150 20 1072202 0 0 7952
+	endif
+	if <def0.quest_<dtag0.quest<dlocal._for>.id>_textlocalized>
+		if <ehnum <def.quest_<dtag0.quest<dctag0.questviewid>.id>_textlocalized>>
+		xmfhtmlgumpcolor 93 150 317 190 <eval <def.quest_<dtag0.quest<dctag0.questviewid>.id>_textlocalized>> 0 1 26574
+		else
+		dhtmlgump 93 150 317 190 0 0 <def.bfont_questtext><def.quest_<dtag0.quest<dctag0.questviewid>.id>_textlocalized>
+		endif
+	else
+	dhtmlgump 93 150 317 190 0 0 <def.bfont_questtext><def.quest_<dtag0.quest<dctag0.questviewid>.id>_text>
+	endif
+button 125 370 02eef 02ef0 0 1 0
+button 280 370 02ee9 02eeb 0 3 0
+button 95 400 02ef5 02ef7 1 0 101
+	if <tag0.quest<dctag0.questviewid>.failed>
+	xmfhtmlgumpcolor 250 120 50 20 500039 0 0 24673
+	endif
+endif
+
+page 3
+if <ctag0.questviewid>
+	if <def0.quest_<dtag0.quest<dlocal._for>.id>_namelocalized>
+		if <ehnum <def.quest_<dtag0.quest<dctag0.questviewid>.id>_namelocalized>>
+		xmfhtmlgumpcolor 155 105 200 20 <eval <def.quest_<dtag0.quest<dctag0.questviewid>.id>_namelocalized>> 0 0 7952
+		else
+		dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<dctag0.questviewid>.id>_namelocalized>
+		endif
+	else
+	dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<dctag0.questviewid>.id>_name>
+	endif
+xmfhtmlgumpcolor 93 135 70 20 1049073 0 0 7952
+xmfhtmlgumpcolor 93 150 130 20 1072208 0 0 7952
+dorigin 93 140
+	if <tag0.quest<dctag0.questviewid>.failed>
+	xmfhtmlgumpcolor 250 150 50 20 500039 0 0 24673
+	endif
+	if <def0.quest_<dtag0.quest<dctag0.questviewid>.id>_riddle>
+	dtext 220 172 1153 RIDDLE
+	else
+		for <def.quest_<dtag0.quest<dctag0.questviewid>.id>_objectiveamount>
+		args = <strarg <def.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>>>,<streat <def.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>>>
+			doswitch <def0.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>_type>
+			local.blank
+				begin // objective type = 1 = get
+				xmfhtmlgumpcolor *0 *28 70 20 1072205 0 0 26574
+				dtext +42 *0 1153 <argv[0]> <serv.itemdef.<argv[1]>.name>
+				tilepichue +272 *0 <serv.itemdef.<argv[1]>.id> <itemtilepiccolor <argv[1]>>
+					if <def0.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>_time>
+					xmfhtmlgumpcolor +7 *15 130 20 1062379 0 0 26574
+					dtext +127 *0 1153 <questtimeremaining <tag0.quest<dctag0.questviewid>.id>>
+					endif
+				xmfhtmlgumpcolor +7 *15 70 20 3000152 0 0 26574
+				local.needed = <qval <restest <def.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>>> ? "<argv[0]>" : "<rescount <argv[1]>>">
+				dtext +127 *0 1153 <dlocal.needed>
+				xmfhtmlgumpcolor +7 *15 70 20 1074782 0 0 26574
+				dtext +127 *0 1153 <uid.<tag0.quest<dctag0.questviewid>.questeruid>.name> (<uid.<tag0.quest<dctag0.questviewid>.questeruid>.region.name>)
+				end
+				begin // objective type = 2 = kill
+				xmfhtmlgumpcolor *0 *28 70 20 3005010 0 0 26574
+				dtext +32 *0 1153 <argv[0]> <serv.chardef.<argv[1]>.name>
+					if <def0.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>_time>
+					xmfhtmlgumpcolor +7 *15 130 20 1062379 0 0 26574
+					dtext +127 *0 1153 <questtimeremaining <tag0.quest<dctag0.questviewid>.id>>
+					endif
+					if !<isempty <def.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>_location>>
+					xmfhtmlgumpcolor +7 *15 70 20 3005105 0 0 26574
+					dtext +127 *0 1153 <def.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>_location>
+					endif
+				xmfhtmlgumpcolor +7 *15 70 20 3000152 0 0 26574
+				dtext +127 *0 1153 <eval <argv[0]> - <tag0.quest<dctag0.questviewid>.slay<argv[1]>>>
+				xmfhtmlgumpcolor +7 *15 70 20 1074782 0 0 26574
+				dtext +127 *0 1153 <uid.<tag0.quest<dctag0.questviewid>.questeruid>.name> (<uid.<tag0.quest<dctag0.questviewid>.questeruid>.region.name>)
+				end
+				begin // objective type = 3 = deliver
+				local.deliverquest = 1
+				xmfhtmlgumpcolor *0 *28 70 20 1072207 0 0 26574
+				dtext +47 *0 1153 <argv[0]> <serv.itemdef.<argv[1]>.name>
+					if <def0.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>_time>
+					xmfhtmlgumpcolor +7 *15 130 20 1062379 0 0 26574
+					dtext +127 *0 1153 <questtimeremaining <tag0.quest<dctag0.quesviewid>.id>>
+					endif
+				xmfhtmlgumpcolor +7 *15 70 20 1072379 0 0 26574
+				dtext +127 *0 1153 <def.quest_<dtag0.quest<dctag0.quesviewid>.id>_objective<dlocal._for>_receiver>
+				end
+				begin // objective type = 4 = escort
+				xmfhtmlgumpcolor *0 *28 70 20 1072206 0 0 26574
+				dtext +67 *0 1153 <def.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>>
+					if <def0.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>_time>
+					xmfhtmlgumpcolor +7 *15 130 20 1062379 0 0 26574
+					dtext +127 *0 1153 <questtimeremaining <tag0.quest<dctag0.quesviewid>.id>>
+					endif
+				end
+				begin // objective type = 5 = craft
+				local.blank
+				end
+				begin // objective type = 6 = loot
+				args = <strarg <def.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>_targ>>,<streat <def.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>_targ>>
+				xmfhtmlgumpcolor *0 *28 70 20 1072205 0 0 26574
+				dtext +42 *0 1153 <argv[0]> <serv.itemdef.<argv[1]>.name>
+				tilepichue +272 *0 <serv.itemdef.<argv[1]>.id> <itemtilepiccolor <argv[1]>>
+					if <def0.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>_time>
+					xmfhtmlgumpcolor +7 *15 130 20 1062379 0 0 26574
+					dtext +127 *0 1153 <questtimeremaining <tag0.quest<dctag0.questviewid>.id>>
+					endif
+				xmfhtmlgumpcolor +7 *15 70 20 3000152 0 0 26574
+				local.needed = <qval <restest <def.quest_<dtag0.quest<dctag0.questviewid>.id>_objective<dlocal._for>_targ>> ? <argv[0]>:<rescount <argv[1]>>>
+				dtext +127 +0 1153 <dlocal.needed>
+				xmfhtmlgumpcolor +7 *15 70 20 1074782 0 0 26574
+				dtext +127 +0 1153 <uid.<tag0.quest<dctag0.questviewid>.questeruid>.name> (<uid.<tag0.quest<dctag0.questviewid>.questeruid>.region.name>)
+				end
+			enddo
+		endfor
+	endif
+button 125 370 02eef 02ef0 0 2 0
+button 280 370 02ee9 02eeb 0 4 0
+button 95 400 02ef5 02ef7 1 0 101
+endif
+
+page 4
+if <ctag0.questviewid>
+	if <def0.quest_<dtag0.quest<dctag0.questviewid>.id>_namelocalized>
+		if <ehnum <def.quest_<dtag0.quest<dctag0.questviewid>.id>_namelocalized>>
+		xmfhtmlgumpcolor 155 105 200 20 <eval <def.quest_<dtag0.quest<dctag0.questviewid>.id>_namelocalized>> 0 0 7952
+		else
+		dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<dctag0.questviewid>.id>_namelocalized>
+		endif
+	else
+	dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<dctag0.questviewid>.id>_name>
+	endif
+xmfhtmlgumpcolor 93 135 70 20 1072842 0 0 7952
+dorigin 100 135
+	for <def.quest_<dtag0.quest<dctag0.questviewid>.id>_prizes>
+	gumppic +0 *25 1210
+	dhtmlgump +30 -1 280 20 0 0 <def.bfont_questprizetextcolor><streat <def.quest_<dtag0.quest<dctag0.questviewid>.id>_prizeid<dlocal._for>>>
+	endfor
+button 125 370 02eef 02ef0 0 3 0
+button 95 400 02ef5 02ef7 1 0 101
+	if <tag0.quest<dctag0.questviewid>.failed>
+	xmfhtmlgumpcolor 250 140 50 20 500039 0 0 24673
+	endif
+endif
+
+[DIALOG d_quest_log BUTTON]
+ON=1 10
+ctag.questviewid = <argn1>
+sdialog d_quest_log 2
+
+ON=101
+sdialog d_quest_resign
+
+//****************************************************************************
+
+[DIALOG d_quest_resign]
+200,170
+src.closealldialogs
+
+page 0
+gumppic 0 0 2702
+gumppic 70 0 2702
+gumppic 0 46 2702
+gumppic 70 46 2702
+checkertrans 0 0 345 260
+for 20
+gumppic <eval (<local._for> * 15) + 5> 0 0280a
+gumppic <eval (<local._for> * 15) + 5> 240 0280a
+	if <local._for> < 16
+	gumppic 0 <eval <local._for> * 15> 027dd
+	gumppic 325 <eval <local._for> * 15> 027dd
+	endif
+endfor
+gumppic 310 0 0280e
+gumppic 310 240 0280e
+gumppic 15 0 0280c
+gumppic 15 240 0280c
+gumppic 0 225 027dc
+gumppic 325 225 027dc
+gumppic 0 15 027da
+gumppic 325 15 027da
+gumppic 328 244 10006
+gumppic 328 3 10006
+gumppic 3 244 10006
+gumppic 3 3 10006
+button 260 215 247 248 1 0 1
+xmfhtmlgumpcolor 20 20 200 20 1049000 0 0 24673
+gumppictiled 20 40 240 3 9357
+xmfhtmlgumpcolor 20 55 305 165 1060836 0 0 32767
+xmfhtmlgumpcolor 55 180 250 20 1049005 0 0 32767
+xmfhtmlgumpcolor 55 215 250 20 1049006 0 0 32767
+radio 20 175 9722 9723 1 1
+radio 20 210 9722 9723 0 2
+
+[DIALOG d_quest_resign BUTTON]
+ON=1
+if <argchk[1]>
+sysmessage @,,2 1049015
+quitquest <ctag0.questviewid>
+elif <isonline>
+sysmessage @,,2 1049014
+sdialog d_quest_log
+endif
+
+ON=0
+if (<isonline>)
+sysmessage @,,2 1049014
+sdialog d_quest_log
+endif
+
+//****************************************************************************
+
+[DIALOG d_questupdate]
+0,0
+src.sound snd_questlog_update
+PAGE 0
+resizepic 0 120 5120 135 80
+checkertrans 0 120 135 80
+gumppic 0 50 0589
+button 9 60 015c8 015c8 1 0 1
+xmfhtmlgumpcolor 10 130 130 60 1049080 0 0 32767
+
+[DIALOG d_questupdate BUTTON]
+ON=1
+sdialog d_quest_log
+
+//****************************************************************************
+
+[DIALOG d_quest_offer]
+250,100
+src.closealldialogs
+
+page 0
+resizepic 30 15 5120 430 410
+for 29
+gumppic <eval (<local._for> * 15) + 15> 15 0280a
+	if (<local._for> < 29)
+	gumppic <eval (<local._for> * 15) + 13> 420 0280a
+	endif
+endfor
+gumppic 445 420 0280a
+gumppic 415 30 203
+gumppic 415 75 203
+gumppic 415 105 203
+for 13
+gumppic 415 <eval (<local._for>*30)+2> 10460
+endfor
+gumppic 30 30 202
+gumppic 30 75 202
+gumppic 30 105 202
+gumppic 29 105 0242f
+for 13
+gumppic 45 <eval (<local._for>*30)+2> 10460
+endfor
+gumppic 425 300 028ac
+gumppic 425 150 028ab
+gumppic 425 0 028aa
+gumppic -5 10 028b5
+gumppic 25 0 028b4
+gumppic 45 130 028ab
+gumppic -22 280 028a2
+gumppic 368 50 0589
+gumppic 377 60 01580
+gumppic 85 35 0232d
+xmfhtmlgumpcolor 125 45 100 35 1046013 0 0 32767
+gumppictiled 125 65 150 1 9101
+
+page 1
+if <tag0.quests>
+dorigin 100 80
+	for <tag0.quests>
+		if !(<def0.quest_<dtag0.quest<dlocal._for>.id>_ischain>) && !(<src.hasthischain <tag0.quest<dlocal._for>.id>>)
+			if <def0.quest_<dtag0.quest<dlocal._for>.id>_namelocalized>
+				if <ehnum <def.quest_<dtag0.quest<dlocal._for>.id>_namelocalized>>
+				xmfhtmlgumpcolor *0 *25 240 20 <eval <def.quest_<dtag0.quest<dlocal._for>.id>_namelocalized>> 0 0 32767
+				else
+				dhtmlgump *0 *25 240 20 0 0 <def.bfont_white><def.quest_<dtag0.quest<dlocal._for>.id>_namelocalized>
+				endif
+			else
+			dhtmlgump *0 *25 240 20 0 0 <def.bfont_white><def.quest_<dtag0.quest<dlocal._for>.id>_name>
+			endif
+		button +260 *0 026b0 026b1 1 0 <dlocal._for>
+		endif
+	endfor
+endif
+
+page 2
+if <src.ctag0.questviewid>
+	if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+		if <ehnum <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>>
+		xmfhtmlgumpcolor 155 105 200 20 <eval <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>> 0 0 7952
+		else
+		dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+		endif
+	else
+	dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_name>
+	endif
+	if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_ischain> || <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_chain>
+	xmfhtmlgumpcolor 93 135 150 20 1075024 0 0 7952
+	else
+	xmfhtmlgumpcolor 93 135 150 20 1072202 0 0 7952
+	endif
+	if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textlocalized>
+		if <ehnum <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textlocalized>>
+		xmfhtmlgumpcolor 93 150 317 190 <eval <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textlocalized>> 0 1 26574
+		else
+		dhtmlgump 93 150 317 190 0 0 <def.bfont_questtext><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textlocalized>
+		endif
+	else
+	dhtmlgump 93 150 317 190 0 0 <def.bfont_questtext><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_text>
+	endif
+	if <isempty <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_ischain>>
+	button 125 370 02eef 02ef0 0 1 0
+	endif
+button 280 370 02ee9 02eea 0 3 0
+button 95 400 02ee0 02ee1 1 0 101
+button 310 400 02ef2 02ef3 1 0 102
+endif
+
+page 3
+if <src.ctag0.questviewid>
+	if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+		if <ehnum <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>>
+		xmfhtmlgumpcolor 155 105 200 20 <eval <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>> 0 0 7952
+		else
+		dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+		endif
+	else
+	dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_name>
+	endif
+xmfhtmlgumpcolor 93 135 70 20 1049073 0 0 7952
+xmfhtmlgumpcolor 93 150 130 20 1072208 0 0 7952
+dorigin 93 140
+	if <tag0.quest<src.dctag0.questviewid>.failed>
+	xmfhtmlgumpcolor 250 150 50 20 500039 0 0 24673
+	endif
+	if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_riddle>
+	dtext 220 172 1153 RIDDLE
+	else
+		for <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objectiveamount>
+		args = <strarg <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>>>,<streat <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>>>
+			doswitch <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>_type>
+			local.blank
+				begin // objective type = 1 = get
+				xmfhtmlgumpcolor *0 *28 70 20 1072205 0 0 26574
+				dtext +42 *0 1153 <argv[0]> <serv.itemdef.<argv[1]>.name>
+				tilepichue +272 *0 <serv.itemdef.<argv[1]>.id> <itemtilepiccolor <argv[1]>>
+					if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>_time>
+					xmfhtmlgumpcolor +7 *15 130 20 1062379 0 0 26574
+					dtext +127 *0 1153 <questtimeremaining <tag0.quest<src.dctag0.questviewid>.id>>
+					endif
+				end
+				begin // objective type = 2 = kill
+				xmfhtmlgumpcolor *0 *28 70 20 3005010 0 0 26574
+				dtext +32 *0 1153 <argv[0]> <serv.chardef.<argv[1]>.name>
+					if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>_time>
+					xmfhtmlgumpcolor +7 *15 130 20 1062379 0 0 26574
+					dtext +127 *0 1153 <questtimeremaining <tag0.quest<src.dctag0.questviewid>.id>>
+					endif
+					if !<isempty <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>_location>>
+					xmfhtmlgumpcolor +7 *15 70 20 3005105 0 0 26574
+					dtext +127 *0 1153 <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>_location>
+					endif
+				end
+				begin // objective type = 3 = deliver
+				local.deliverquest = 1
+				xmfhtmlgumpcolor *0 *28 70 20 1072207 0 0 26574
+				dtext +47 *0 1153 <argv[0]> <serv.itemdef.<argv[1]>.name>
+					if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>_time>
+					xmfhtmlgumpcolor +7 *15 130 20 1062379 0 0 26574
+					dtext +127 *0 1153 <questtimeremaining <tag0.quest<dctag0.quesviewid>.id>>
+					endif
+				end
+				begin // objective type = 4 = escort
+				xmfhtmlgumpcolor *0 *28 70 20 1072206 0 0 26574
+				dtext +67 *0 1153 <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>>
+					if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>_time>
+					xmfhtmlgumpcolor +7 *15 130 20 1062379 0 0 26574
+					dtext +127 *0 1153 <questtimeremaining <tag0.quest<dctag0.quesviewid>.id>>
+					endif
+				end
+				begin // objective type = 5 = craft
+				local.blank
+				end
+				begin // objective type = 6 = loot
+				args = <strarg <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>_targ>>,<streat <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>_targ>>
+				xmfhtmlgumpcolor *0 *28 70 20 1072205 0 0 26574
+				dtext +42 *0 1153 <argv[0]> <serv.itemdef.<argv[1]>.name>
+				tilepichue +272 *0 <serv.itemdef.<argv[1]>.id> <itemtilepiccolor <argv[1]>>
+					if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_objective<dlocal._for>_time>
+					xmfhtmlgumpcolor +7 *15 130 20 1062379 0 0 26574
+					dtext +127 *0 1153 <questtimeremaining <tag0.quest<src.dctag0.questviewid>.id>>
+					endif
+				end
+			enddo
+		endfor
+	endif
+button 125 370 02eef 02ef0 0 2 0
+button 280 370 02ee9 02eea 0 4 0
+button 95 400 02ee0 02ee1 1 0 101
+button 310 400 02ef2 02ef3 1 0 102
+endif
+
+page 4
+if <src.ctag0.questviewid>
+	if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+		if <ehnum <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>>
+		xmfhtmlgumpcolor 155 105 200 20 <eval <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>> 0 0 7952
+		else
+		dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+		endif
+	else
+	dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_name>
+	endif
+xmfhtmlgumpcolor 93 140 70 20 1072842 0 0 7952
+dorigin 100 140
+	for <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_prizes>
+	gumppic +0 *25 1210
+	dhtmlgump +30 -1 280 20 0 0 <def.bfont_questprizetextcolor><streat <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_prizeid<dlocal._for>>>
+	endfor
+button 125 370 02eef 02ef0 0 3 0
+button 95 400 02ee0 02ee1 1 0 101
+button 310 400 02ef2 02ef3 1 0 102
+endif
+
+page 5
+if <src.ctag0.questviewid>
+gumppic 135 107 1210
+	if !<isempty <args>>
+		if <def0.quest_<src.dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+			if <ehnum <def.quest_<src.dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>>
+			xmfhtmlgumpcolor 155 105 200 20 <eval <def.quest_<src.dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>> 0 0 7952
+			else
+			dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<src.dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+			endif
+		else
+		dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<src.dtag0.quest<src.dctag0.questviewid>.id>_name>
+		endif
+		if <def0.quest_<src.dtag0.quest<src.dctag0.questviewid>.id>_textrefuselocalized>
+			if <ehnum <def.quest_<src.dtag0.quest<src.dctag0.questviewid>.id>_textrefuselocalized>>
+			xmfhtmlgumpcolor 93 155 317 190 <eval <def.quest_<src.dtag0.quest<src.dctag0.questviewid>.id>_textrefuselocalized>> 0 1 7952
+			else
+			dhtmlgump 93 155 317 190 0 0 <def.bfont_questodesc><def.quest_<src.dtag0.quest<src.dctag0.questviewid>.id>_textrefuselocalized>
+			endif
+		else
+		dhtmlgump 93 155 317 190 0 0 <def.bfont_questodesc><def.quest_<src.dtag0.quest<src.dctag0.questviewid>.id>_textrefuse>
+		endif
+	else
+		if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+			if <ehnum <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>>
+			xmfhtmlgumpcolor 155 105 200 20 <eval <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>> 0 0 7952
+			else
+			dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+			endif
+		else
+		dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_name>
+		endif
+		if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textrefuselocalized>
+			if <ehnum <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textrefuselocalized>>
+			xmfhtmlgumpcolor 93 155 317 190 <eval <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textrefuselocalized>> 0 1 26574
+			else
+			dhtmlgump 93 155 317 190 0 0 <def.bfont_questtext><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textrefuselocalized>
+			endif
+		else
+		dhtmlgump 93 155 317 190 0 0 <def.bfont_questtext><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textrefuse>
+		endif
+	endif
+button 310 400 02ee6 02ee8 1 0 0
+endif
+
+page 6
+if <src.ctag0.questviewid>
+gumppic 135 107 1210
+	if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+		if <ehnum <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>>
+		xmfhtmlgumpcolor 155 105 200 20 <eval <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>> 0 0 7952
+		else
+		dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+		endif
+	else
+	dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_name>
+	endif
+	if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textuncompletelocalized>
+		if <ehnum <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textuncompletelocalized>>
+		xmfhtmlgumpcolor 93 155 317 190 <eval <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textuncompletelocalized>> 0 1 26574
+		else
+		dhtmlgump 93 155 317 190 0 0 <def.bfont_questtext><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textuncompletelocalized>
+		endif
+	else
+	dhtmlgump 93 155 317 190 0 0 <def.bfont_questtext><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textuncomplete>
+	endif
+button 310 400 02ee6 02ee8 1 0 0
+endif
+
+page 7
+if <src.ctag0.questviewid>
+gumppic 135 107 1210
+	if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+		if <ehnum <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>>
+		xmfhtmlgumpcolor 155 105 200 20 <eval <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>> 0 0 7952
+		else
+		dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_namelocalized>
+		endif
+	else
+	dhtmlgump 155 105 200 20 0 0 <def.bfont_questodesc><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_name>
+	endif
+	if <def0.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textcompletelocalized>
+		if <ehnum <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textcompletelocalized>>
+		xmfhtmlgumpcolor 93 155 317 190 <eval <def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textcompletelocalized>> 0 1 26574
+		else
+		dhtmlgump 93 155 317 190 0 0 <def.bfont_questtext><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textcompletelocalized>
+		endif
+	else
+	dhtmlgump 93 155 317 190 0 0 <def.bfont_questtext><def.quest_<dtag0.quest<src.dctag0.questviewid>.id>_textcomplete>
+	endif
+button 310 400 02ee0 02ee2 1 0 201
+endif
+
+[DIALOG d_quest_offer BUTTON]
+ON=1 20
+src.ctag.questviewid = <argn1>
+for <src.tag0.quests>
+	if <src.tag0.quest<dlocal._for>.id> == <tag0.quest<src.dctag0.questviewid>.id>
+		if <src.tag0.quest<dlocal._for>.questeruid> == <uid>
+		sdialog d_quest_offer 6
+		else
+		say <def.scp.quest_alreadydoing>
+		endif
+	return 1
+	endif
+endfor
+sdialog d_quest_offer 2
+
+ON=101
+startquest <tag0.quest<src.dctag0.questviewid>.id>
+
+ON=102
+if <src.isonline>
+sdialog d_quest_offer 5 1
+endif
+
+ON=201
+local.questid = <src.ctag0.questviewid>
+if <src.tag0.quest<dlocal.questid>.failed>
+src.trigger @UserQuestFail,<def.tat_as_argn>,<local.questid>
+say <def.scp.quest_failed>
+return 1
+endif
+local.notok = 0
+local.ok = 0
+for j 1 <def.quest_<src.dtag0.quest<dlocal.questid>.id>_objectiveamount>
+	if <def.quest_<src.dtag0.quest<dlocal.questid>.id>_objective<dlocal.j>_type> == 1
+	local.notok ++
+		if <src.restest <def.quest_<src.dtag0.quest<dlocal.questid>.id>_objective<dlocal.j>>>
+		local.ok ++
+		local.toconsume .= <def.quest_<src.dtag0.quest<dlocal.questid>.id>_objective<dlocal.j>>,
+		endif
+	elif <def.quest_<src.dtag0.quest<dlocal.questid>.id>_objective<dlocal.j>_type> == 6
+	local.notok ++
+		if <src.restest <def.quest_<src.dtag0.quest<dlocal.questid>.id>_objective<dlocal.j>_targ>>
+		local.ok ++
+		local.toconsume .= <def.quest_<src.dtag0.quest<dlocal.questid>.id>_objective<dlocal.j>_targ>,
+		endif
+	endif
+endfor
+if <local.ok> == <local.notok>
+src.consume <local.toconsume>
+else
+say <def.scp.quest_nothaveitem>
+return 1
+endif
+if <def.quest_<src.dtag0.quest<dlocal.questid>.id>_prizes>
+	for z 1 <def.quest_<src.dtag0.quest<dlocal.questid>.id>_prizes>
+		if <def.quest_<src.dtag0.quest.<dlocal.questid>.id>_prizetype<dlocal.z>> == 1
+		serv.newitem <strarg <def.quest_<src.dtag0.quest<dlocal.questid>.id>_prizeid<dlocal.z>>>
+		new.bounce
+		elif <def.quest_<src.dtag0.quest.<dlocal.questid>.id>_prizetype<dlocal.z>> == 3
+		src.<strarg <def.quest_<src.dtag0.quest<dlocal.questid>.id>_prizeid<dlocal.z>>>
+		endif
+	endfor
+endif
+src.trigger @UserQuestFinish,<def.tat_as_argn>,<local.questid>
+src.quitquest <local.questid> <uid>
+src.sysmessage @,,2 1046258
+
+[eof]

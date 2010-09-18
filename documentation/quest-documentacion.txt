@@ -1,0 +1,41 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+// tipos de quest
+// --------------
+1 = get
+2 = kill
+3 = deliver
+4 = escort
+5 = craft
+6 = loot
+
+// configuracion de quest
+// ----------------------
+quest_1000_namelocalized
+quest_1000_textlocalized
+quest_1000_textcompletelocalized
+quest_1000_textuncompletelocalized
+quest_1000_textrefuselocalized
+
+quest_1000_objectiveamount
+quest_1000_objective#_type
+quest_1000_objective#
+quest_1000_objective#_targ
+quest_1000_objective#_location
+quest_1000_objective#_receiver
+quest_1000_objective#_time
+
+quest_1000_prizes
+quest_1000_prizetype#
+quest_1000_prizeid#
+
+quest_1000_chain
+quest_1000_ischain
+
+[eof]

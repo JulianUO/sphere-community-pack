@@ -1,10 +1,12 @@
 /////////////////////////////////////////////////////
 //////////Quests//////////////
 [COMMENT OBJECTIVETYPES]
-1 = get
-2 = kill
-3 = deliver
-4 = escort
+1 = get // get from anywhere
+2 = kill // kill an npc
+3 = deliver // deliver a package
+4 = escort // escort a npc
+5 = craft // craft some items
+6 = get // kill and loot from npc
 
 [DEFNAME QUESTS_DEFINITIONS]
 BFONT_QUESTPRIZETEXTCOLOR <basefont color="#DDFB75">
