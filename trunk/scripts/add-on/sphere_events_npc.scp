@@ -22,7 +22,34 @@ tag.robe=<findlayer.22.uid>
 	tag.feet=<findlayer.3.uid>
 	endif
 endif
+// Quest System
+ref42 = <attacker.max>
+if (<ref42.tag0.quests>)
+	for <ref42.tag0.quests>
+		for x 1 <def.quest_<ref42.dtag0.quest<dlocal._for>.id>_objectiveamount>
+			if <def.quest_<ref42.dtag0.quest<dlocal._for>.id>_objective<dlocal.x>_type> == 2
+				if (<baseid> == <streat <def.quest_<ref42.dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>>)
+					if (<ref42.tag0.quest<dlocal._for>.slay<streat <def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>>>)
+						if !(<isempty <def.quest_<ref42.dtag0.quest<dlocal._for>.id>_objective<dlocal.x>_location>>)
+							if (strmatch(*<def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>_location>*,<region.name>))
+							ref42.tag.quest<dlocal._for>.slay<streat <def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>> --
+							endif
+						else
+						ref42.tag.quest<dlocal._for>.slay<streat <def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>> --
+						endif
+						if !(<ref42.tag0.quest<dlocal._for>.slay<streat <def.quest_<ref42.dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>>>)
+						sysmessage <def.scp.quest_complete>
+						else
+						sysmessage @,,2 1075051,<ref42.dtag0.quest<dlocal._for>.slay<streat <def.quest_<ref42.dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>>>
+						endif
+					endif
+				endif
+			endif
+		endfor
+	endfor
+endif
 
+// Quest System
 on=@deathcorpse
 if <tag0.robe>
 uid.<tag.robe>.z = 3
@@ -30,6 +57,24 @@ uid.<tag.feet>.z = 8
 tag.robe=
 tag.feet=
 argo.update
+endif
+ref94 = <attacker.max>
+if <ref94.tag0.quests>
+	for x 1 <ref94.tag0.quests>
+		for y 1 <def.quest_<ref94.dtag0.quest<dlocal.x>.id>_objectiveamount>
+			if <def.quest_<ref94.dtag0.quest<dlocal.x>.id>_objective<dlocal.y>_type> == 6
+				if <baseid> == <streat <def.quest_<ref94.dtag0.quest<dlocal.x>.id>_objective<dlocal.y>>>
+					if <isempty <def.quest_<ref94.dtag0.quest<dlocal.x>.id>_objective<dlocal.y>_location>>
+					ref94.f_quest_gotitem <uid>,<local.x>,<local.y>
+					else
+						if (strmatch(<ref94.region.name>,*<def.quest_<ref94.dtag0.quest<dlocal.x>.id>_objective<dlocal.y>_location>*))
+						ref94.f_quest_gotitem <uid>,<local.x>,<local.y>
+						endif
+					endif
+				endif
+			endif
+		endfor
+	endfor
 endif
 
 // Followers (Death?)

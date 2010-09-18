@@ -293,26 +293,13 @@ if <local.stats> == <local.statsum>
 endif
 
 // Quest System
-on=@kill
-if !(<argo.isplayer>) && (<tag0.quests>)
-	for <tag0.quests>
-		for x 1 <def.quest_<dtag0.quest<dlocal._for>.id>_objectiveamount>
-			if <def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>_type> == 2
-				if (<argo.baseid> == <streat <def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>>)
-					if (<tag0.quest<dlocal._for>.slay<streat <def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>>>)
-						if !(<isempty <def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>_location>>)
-							if (strmatch(*<def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>_location>*,<argo.region.name>))
-							tag.quest<dlocal._for>.slay<streat <def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>> --
-							endif
-						else
-						tag.quest<dlocal._for>.slay<streat <def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>> --
-						endif
-						if !(<tag0.quest<dlocal._for>.slay<streat <def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>>>)
-						sysmessage <def.scp.quest_complete>
-						else
-						sysmessage @,,2 1075051,<dtag0.quest<dlocal._for>.slay<streat <def.quest_<dtag0.quest<dlocal._for>.id>_objective<dlocal.x>>>>
-						endif
-					endif
+on=@skillmakeitem
+if <tag0.quests>
+	for x <tag0.quests>
+		for y <def.quest_<dtag0.quest.<local._for>.id>_objective_amount>
+			if <def.quest_<dtag0.quest.<local._for>.id>_objective_<dlocal.y>_type> == questobj_craft
+				if <argo.id> == <def.quest_<dtag0.quest.<local._for>.id>_objective_<dlocal.y>_craft>
+				f_quest_craftitem <argo.uid>,<local.x>,<local.y>
 				endif
 			endif
 		endfor
