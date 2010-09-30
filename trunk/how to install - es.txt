@@ -1,0 +1,53 @@
+SPHERE COMMUNITY PACK - Leeme!
+GUIA DE INSTALACION E INSTRUCCIONES.
+------------------------------------
+
+1. Requisitos
+- SphereServer 0.56b ( en su última versión ).
+
+2. Instrucciones:
+- Descargar el pack y descomprimirlo dentro de la carpeta del Sphere (previamente 
+  descomprimida).
+  El proceso es similar a la instalación del paquete "scripts default".
+  Consiga la última versión en http://scripts.sphere.torfo.org/ .
+
+- IMPORTANTE!. Para evitar errores con el sistema de "house/vendor" usted debe 
+  hacer lo siguiente:
+  Debe abrir el archivo sphere.ini y por debajo de la linea "AGREE=1" , deben 
+  agregar las siguientes lineas:
+
+  PACKET149=f_hue_picker
+  PACKET215=f_custom_house
+
+  Luego, guardar.
+
+- Para habilitar el sistema carcelario, buscar la siguiente línea en sphere.ini: 
+  //CommandTrigger = f_oncommand 
+  Descomentarla, debería tener este aspecto: 
+  CommandTrigger = f_oncommand 
+
+- Para habilitar los sistemas principales ( Events ) que afectan tanto a players como
+  a mascotas, agregue los siguientes eventos a su sphere.ini: 
+
+  ( NOTA: Busque en su sphere.ini y reemplacelo por las siguientes lineas. ) 
+  EventsPet = e_NpcGenericEvent, e_NpcCombatEvent, e_NpcPropertiesEvent 
+  EventsPlayer = e_PlayerGenericEvent , e_PlayerCraftingEvent, e_PlayerCombatEvent, e_PlayerPropertiesEvent
+
+- Opcional: Para habilitar los sistemas experimentales, agregue los siguientes eventos: 
+
+  ( NOTA: Coloque el evento al final de las línea en el anterior paso. ) 
+  EventsPlayer = e_PlayerTooltipEvent 
+  *E_PlayerTooltipEvent: Nuevo elemento generador de tooltips (Experimental).
+
+- * Otros ajustes necesarios *: 
+  Regeneración de Mana, Puntos de vida , Destreza. En EA las utilizan en 10 segundos para cada stat. 
+  Nuestros sistemas calcula la cantidad de puntos regenerados cada 10 segundos. 
+  Revise su sphere.ini para los siguientes ajustes y modificarlos para adaptarse a este ejemplo: 
+  Regen0 = 10 
+  Regen1 = 10 
+  Regen2 = 10 
+ 
+- Para configurar el sistema a su gusto, utilice: 
+  scripts / add-on / sphere_settings.scp 
+
+- Que lo disfruten!  
