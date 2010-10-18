@@ -92,7 +92,7 @@ DESCRIPTION=Horned Leather
 ON=@Create
 COLOR=color_o_horned
 
-[ITEMDEF i_leather_barded]
+[ITEMDEF i_leather_barbed]
 ID=i_hides_cut
 NAME=Barbed Leather
 TYPE=t_leather

@@ -1138,19 +1138,6 @@ ON=@dclick
 	SRC.SKILLMENU=sm_bolts
 	return 1
 
-[ITEMDEF 01bd7]
-//DEFNAME2=lumber
-DEFNAME=i_board
-RESOURCES=i_log
-SKILLMAKE=1 carpentry, t_carpentry
-VALUE=2
-WEIGHT=1
-TYPE=T_BOARD
-CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
-DESCRIPTION=Board
-DUPELIST=01bd8,01bd9,01bda,01bdb,01bdc
-
 [ITEMDEF 010b8]
 DEFNAME=i_spiderweb
 VALUE=2

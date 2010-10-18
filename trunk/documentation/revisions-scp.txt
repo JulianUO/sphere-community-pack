@@ -546,3 +546,10 @@ to i_reag_wyrm_heart
 05-02-2010, jeem
 - Fixed: necromancy spells had small typos.
 ---- Packed Revision 195
+
+17-10-2010, Khaos
+- Fixed: Typo in the hides resources in an ITEMDEF with i_leather_barbed, was 
+i_leather_barded !
+- Modified: Added Axis Cats to ash log.
+- Added: sphere_item_resources_boards. Containers all the boards for their respective
+log entries.
