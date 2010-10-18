@@ -48,6 +48,9 @@ ID=i_log
 VALUE=5
 TYPE=T_LOG
 WEIGHT=2
+CATEGORY=Resources - Lumberjacking
+SUBSECTION=Logs
+DESCRIPTION=Ash Log
 
 ON=@Create
 COLOR=color_o_ash
