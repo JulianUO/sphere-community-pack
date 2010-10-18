@@ -1,0 +1,44 @@
+SPHERE COMMUNITY PACK - LEGGIMI
+ISTRUZIONI PER L'INSTALLAZIONE E L'UTILIZZO
+-------------------------------------------
+
+1. Requisiti
+- SphereServer 0.56b (ultima versione)
+
+2. Istruzioni
+- Scaricate il Pack e scompattatelo nella vostra cartella di Sphere.
+  Scompattatelo mentre avete lo script pack di base.
+  L'ultima versione la trovate qui: http://scripts.sphere.torfo.org/
+
+- IMPORTANTE! Per evitare un bug con il sistema casa/vendor, dovete cambiare il .ini:
+  Aprite sphere.ini e sotto la riga AGREE=1, aggiungete:
+  PACKET149=f_hue_picker
+  PACKET215=f_custom_house
+
+- Per attivare il sistema Jail, cercate la seguente linea nello Sphere.ini:
+  //CommandTrigger=f_oncommand
+  E togliete gli slash del commento, in questo modo:
+  CommandTrigger=f_oncommand
+
+- Per abilitare i sistemi principali, aggiungete i seguenti events all'ini:
+  (NOTA: Rimpiazzate le impostazioni originali)
+  EventsPet=e_NpcGenericEvent,e_NpcCombatEvent,e_NpcPropertiesEvent
+  EventsPlayer=e_PlayerGenericEvent,e_PlayerCraftingEvent,e_PlayerCombatEvent,e_PlayerPropertiesEvent
+
+- Per abilitare i sistemi opzionali/sperimentali, aggiungete i seguenti events:
+  (NOTA: attaccate gli events alla fine delle linee nell'ultimo passo)
+  EventsPlayer=e_PlayerTooltipEvent
+  * e_PlayerTooltipEvent: New Item Tooltips Generator (Experimental)
+
+- Altri settaggi *necessari*:
+  Mana, Stamina, Dexterity Regeneration, nella EA usano un guadagno di 10 secondi per stat.
+  I nostri sistemi calcolano la quantità dei punti rigenerati ogni 10 secondi.
+  Cercate nel vostro sphere.ini i seguenti settaggi e modificateli in questo modo:
+  Regen0=10
+  Regen1=10
+  Regen2=10
+
+- Per configurare il sistema, cercate nella cartella scripts il file:
+  scripts/add-on/sphere_settings.scp
+
+- Buon divertimento!
