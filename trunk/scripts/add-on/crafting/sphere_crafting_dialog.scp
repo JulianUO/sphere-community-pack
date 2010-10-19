@@ -176,7 +176,7 @@ f_resenddialog d_craft_itemprop
 on=600 800 // craft item button
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<dctag0.craft.material.<ctag0.craft.skill>>_" : "_">
 if <ctag0.craft.material.<ctag.craft.skill>>
-	if <isempty <def.<ctag0.craft.skill><local.resource>category_<dlocal.z>_name>>
+	if <isempty <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_name>>
 	local.resource = "_"
 	endif
 endif
