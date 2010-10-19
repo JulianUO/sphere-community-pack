@@ -1,0 +1,44 @@
+SPHERE COMMUNITY PACK - BENÝOKU
+KURULUM VE KULLANIM YÖNERGELERÝ
+-----------------------------------
+
+1. Gereksinimler
+- SphereServer 0.56b Son Sürümü
+
+2. Yönergeler
+- Pakedi indirip, default script pakedinde yaptýðýnýz gibi, sphere klasörünüze açýn.
+  Son sürümü bu adresten edinebilirsiniz: http://scripts.sphere.torfo.org/
+
+- ÖNEMLÝ! Ev/tezgahtar sisteminde hatalarla karþýlaþmamak için aþaðýda yazýlaný yapmalýsýnýz:
+  Sphere.ini'yi açýn ve AGREE=1 altýna aþaðýdaki satýrlarý ekleyin:
+  PACKET149=f_hue_picker
+  PACKET215=f_custom_house
+
+
+- Hapis sistemini etkinleþtirmek için sphere.ini'de aþaðýdaki satýrý bulun:
+  //CommandTrigger=f_oncommand
+  Baþýndaki taksim iþaretlerini kaldýrýn, satýr bu þekilde gözükmeli:
+  CommandTrigger=f_oncommand
+
+- Ana sistemleri etkinleþtirmek için, aþaðýdaki event'leri sphere.ini'ye ekleyin:
+  (NOT: Orijinal ayarlarý deðiþtirin)
+  EventsPet=e_NpcGenericEvent,e_NpcCombatEvent,e_NpcPropertiesEvent
+  EventsPlayer=e_PlayerGenericEvent,e_PlayerCraftingEvent,e_PlayerCombatEvent,e_PlayerPropertiesEvent
+
+- Ýsteðe baðlý/deneysel sistemleri etkinleþtirmek için, aþaðýdaki event'leri ekleyin.
+  (NOT: Event'leri bir önceki adýmda eklediklerinizden hemen sonra ekleyin.)
+  EventsPlayer=e_PlayerTooltipEvent
+  * e_PlayerTooltipEvent: Yeni Eþya Tooltip Üreticisi (Deneysel)
+
+- Diðer *gerekli* ayarlar:
+  Mana, Stamina, Dexterity Yenilenmesi, EA'de 10 stat'ler 10 saniyede bir yenilenir.
+  Bizim sistemlerimiz 10 saniyede bir yenilenen miktarý hesaplar.
+  Sphere.ini'nizde aþaðýdaki deðerleri bulup aþaðýdaki gibi deðiþtirin:
+  Regen0=10
+  Regen1=10
+  Regen2=10
+
+- Sistemlerde ayar yapmak için, scripts klasörünüzde bu dosyaya göz atýn:
+  scripts/add-on/sphere_settings.scp
+
+- Ýyi kullanýmlar!
