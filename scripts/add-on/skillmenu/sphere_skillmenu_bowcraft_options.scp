@@ -3,10 +3,10 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 
-[defname sphere_crafting_carpentry_options]
+[defname sphere_crafting_bowcraft_options]
 // $skill_category_#_#_opt	"mark,exceptional,colored,recipe,expansion"
 bowcraft_category_3_1_opt	"1,1,1,0,0"
 bowcraft_category_3_2_opt	"1,1,1,0,0"
