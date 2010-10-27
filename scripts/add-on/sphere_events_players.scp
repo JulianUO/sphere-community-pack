@@ -326,4 +326,71 @@ tag.feet=
 argo.update
 endif
 
+// Hunger System triggers
+on=@login
+if (<ddef0.scp.hunger_on_off>)
+	if (<src.findid.i_food_and_drink_sys_mem>)
+		src.findid.i_food_and_drink_sys_mem.timer=60
+	else
+		src.f_alimentation
+	endif
+	return 0
+endif
+
+on=@logout
+if (<src.findid.i_food_and_drink_sys_mem>)
+	if (<src.findid.i_food_and_drink_sys_mem.timer> >= 0)
+		src.findid.i_food_and_drink_sys_mem.timer=-1
+	endif
+	return 0
+endif
+
+ON=@ITEMDCLICK
+IF (<DDEF0.SCP.HUNGER_ON_OFF>)
+	IF (!<SRC.FINDID.i_food_and_drink_sys_mem>)
+		SRC.F_ALIMENTATION
+	ENDIF
+	IF (<ACT.TYPE> == T_FOOD) || (<ACT.TYPE> == t_fruit)
+		IF (<SRC.FOOD> >= <DDEF0.SCP.MAXFOOD>)
+			SRC.SYSMESSAGELOC -1,1042971,You're satiated.
+			RETURN 1
+		ELSEIF (<SRC.RESTEST 1 <ACT.BASEID>>)
+			SRC.CONSUME 1 <ACT.BASEID>
+			IF (<SRC.FOOD> < <DDEF0.SCP.MAXFOOD>)
+				SRC.FOOD_INCRESE
+				RETURN 0
+			ELSE
+				SRC.SYSMESSAGELOC -1,1042971,You're satiated.
+				RETURN 1	
+			ENDIF
+		ELSE
+			SRC.SYSMESSAGELOC -1,1042971,You must have it in your pack.
+			RETURN 1
+		ENDIF
+	ELSEIF (<ACT.TYPE> == t_booze) || (<ACT.TYPE> == t_drink) || (<ACT.TYPE> == t_water_wash)
+		IF (<SRC.DTAG0.DRINK> >= <DDEF0.SCP.MAXDRINK>)
+			SRC.SYSMESSAGELOC -1,1042971,You aren't thirsty.
+			RETURN 1
+		ELSEIF (<SRC.RESTEST 1 <ACT.BASEID>>)
+			SRC.CONSUME 1 <ACT.BASEID>
+			IF (<SRC.DTAG0.DRINK> < 10)
+				SRC.DRINK_INCREASE
+				RETURN 0
+			ELSE
+				SRC.SYSMESSAGELOC -1,1042971,You aren't thirsty.
+				RETURN 1	
+			ENDIF
+		ELSE
+			SRC.SYSMESSAGELOC -1,1042971,You must have it in your pack.
+			RETURN 1
+		ENDIF
+	ENDIF
+ENDIF
+
+ON=@Hunger
+IF (<DDEF0.SCP.HUNGER_ON_OFF>)
+	RETURN 1
+ENDIF
+
+
 [eof]
