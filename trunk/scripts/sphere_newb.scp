@@ -65,36 +65,83 @@ ITEMNEWBIE={ i_reag_black_pearl 1 i_reag_blood_moss 1 },3
 ITEMNEWBIE={ i_reag_garlic 1 i_reag_ginseng 1 },3
 ITEMNEWBIE={ i_reag_mandrake_root 1 i_reag_nightshade 1 },3
 ITEMNEWBIE={ i_reag_spider_silk 1 i_reag_sulfur_ash 1 },3
+
+[NEWBIE ALCHEMY HUMAN]
 ITEMNEWBIE=i_robe
 COLOR=colors_red
 
+[NEWBIE ALCHEMY ELF]
+if <obody> == c_elf_male
+serv.newitem i_elven_robe
+new.equip
+elif <obody> == c_elf_female
+serv.newitem i_elven_robe_female
+new.equip
+endif
+
 [NEWBIE ANATOMY]
 // Anatomy is best skill
-ITEMNEWBIE=i_robe
-COLOR=colors_brown
 ITEMNEWBIE=i_bandage,3
 
-[NEWBIE ANIMALLORE]
+[NEWBIE ANATOMY HUMAN]
+ITEMNEWBIE=i_robe
+COLOR=colors_brown
+
+[NEWBIE ANATOMY ELF]
+if <obody> == c_elf_male
+serv.newitem i_elven_robe
+new.attr |= attr_newbie
+new.equip
+elif <obody> == c_elf_female
+serv.newitem i_elven_robe_female
+new.attr |= attr_newbie
+new.equip
+endif
+
+[NEWBIE ANIMALLORE HUMAN]
 // Animal Lore is best skill
 ITEMNEWBIE=i_robe
 COLOR=colors_green
 ITEMNEWBIE=i_shepherds_crook
 
-[NEWBIE ITEMID]
+[NEWBIE ANIMALLORE ELF]
+serv.newitem i_wild_staff
+new.attr |= attr_newbie
+new.equip
+if <obody> == c_elf_male
+serv.newitem i_elven_robe
+new.attr |= attr_newbie
+new.equip
+elif <obody> == c_elf_female
+serv.newitem i_elven_robe_female
+new.attr |= attr_newbie
+new.equip
+endif
+
+[NEWBIE ITEMID HUMAN]
 // Item Identification is best skill
 ITEMNEWBIE=i_staff_gnarled
 
-[NEWBIE ARMSLORE]
+[NEWBIE ITEMID ELF]
+ITEMNEWBIE=i_wild_staff
+
+[NEWBIE ARMSLORE HUMAN]
 // Armslore is best skill
 ITEMNEWBIE=random_start_weapon
+
+[NEWBIE ARMSLORE ELF]
+ITEMNEWBIE={ i_leafblade 1 i_rune_blade 1 i_diamond_mace 1 }
 
 [NEWBIE PARRYING]
 // Parrying is best skill
 ITEMNEWBIE=i_shield_wood
 
-[NEWBIE BEGGING]
+[NEWBIE BEGGING HUMAN]
 // Begging is best skill
 ITEMNEWBIE=i_staff_gnarled
+
+[NEWBIE BEGGING ELF]
+ITEMNEWBIE=i_wild_staff
 
 [NEWBIE BLACKSMITHING]
 // Blacksmithing is best skill
@@ -160,15 +207,23 @@ ITEMNEWBIE=i_scissors
 [NEWBIE FISHING]
 // Fishing is best skill
 ITEMNEWBIE=i_fishing_pole
+
+[NEWBIE FISHING HUMAN]
 ITEMNEWBIE=i_hat_floppy
 COLOR=colors_brown
+
+[NEWBIE FISHING ELF]
+ITEMNEWBIE=i_circlet
 
 [NEWBIE FORENSICS]
 // Forensics is best skill
 
-[NEWBIE HERDING]
+[NEWBIE HERDING HUMAN]
 // Herding is best skill
 ITEMNEWBIE=i_shepherds_crook
+
+[NEWBIE HERDING ELF]
+ITEMNEWBIE=i_wild_staff
 
 [NEWBIE HIDING]
 // Hiding is best skill
@@ -215,12 +270,33 @@ ITEMNEWBIE={ i_scroll_night_sight 1 i_scroll_clumsy 1 i_scroll_feeblemind 1 i_sc
 ITEMNEWBIE={ i_scroll_agility 1 i_scroll_cunning 1 i_scroll_harm 1 i_scroll_magic_trap 1 i_scroll_strength 1 }
 ITEMNEWBIE={ i_scroll_fireball 1 i_scroll_magic_lock 1 i_scroll_poison 1 i_scroll_unlock 1 i_scroll_wall_of_stone 1 i_scroll_archprotection 1 i_scroll_archcure 1 i_scroll_lightning 1 i_scroll_mana_drain 1 i_scroll_recall 1 }
 
+[NEWBIE MAGERY HUMAN]
+ITEMNEWBIE=i_hat_wizards
+COLOR=color_blue
+
+[NEWBIE MAGERY ELF]
+serv.newitem i_circlet
+new.attr |= attr_newbie
+new.equip
+if <obody> == c_elf_male
+serv.newitem i_elven_robe
+new.attr |= attr_newbie
+new.equip
+elif <obody> == c_elf_female
+serv.newitem i_elven_robe_female
+new.attr |= attr_newbie
+new.equip
+endif
+
 [NEWBIE MAGICRESISTANCE]
 // Resisting Spells is best skill
 
-[NEWBIE TACTICS]
+[NEWBIE TACTICS HUMAN]
 // Tactics is best skill
 ITEMNEWBIE=i_katana
+
+[NEWBIE TACTICS ELF]
+ITEMNEWBIE=i_rune_blade
 
 [NEWBIE SNOOPING]
 // Snooping is best skill
@@ -236,8 +312,13 @@ ITEMNEWBIE=i_potion_poison,2
 
 [NEWBIE ARCHERY]
 // Archery is best skill
-ITEMNEWBIE=i_bow
 ITEMNEWBIE=i_arrow,25
+
+[NEWBIE ARCHERY HUMAN]
+ITEMNEWBIE=i_bow
+
+[NEWBIE ARCHERY ELF]
+ITEMNEWBIE=i_elven_composite_longbow
 
 [NEWBIE SPIRITSPEAK]
 // Spirit Speak is best skill
@@ -255,7 +336,6 @@ ITEMNEWBIE=i_CLOTH_BOLT
 
 [NEWBIE TAMING]
 // Animal Training is best skill
-ITEMNEWBIE=i_shepherds_crook
 
 [NEWBIE TASTEID]
 // Taste Identification is best skill
@@ -273,29 +353,46 @@ ITEMNEWBIE=i_tinker_tools
 [NEWBIE TRACKING]
 // Tracking is best skill
 ITEMNEWBIE=i_knife_skinning
+
+[NEWBIE TRACKING HUMAN]
 ITEMNEWBIE=i_boots_calf
 COLOR=colors_brown
+
+[NEWBIE TRACKING ELF]
+ITEMNEWBIE=i_elven_boots
 
 [NEWBIE VETERINARY]
 // Veterinary is best skill
 ITEMNEWBIE=i_bandage,5
 ITEMNEWBIE=i_scissors
 
-[NEWBIE SWORDSMANSHIP]
+[NEWBIE SWORDSMANSHIP HUMAN]
 // Swordsmanship is best skill
 ITEMNEWBIE=i_katana
 
-[NEWBIE MACEFIGHTING]
+[NEWBIE SWORDSMANSHIP ELF]
+ITEMNEWBIE=i_rune_blade
+
+[NEWBIE MACEFIGHTING HUMAN]
 // Mace Fighting is best skill
 ITEMNEWBIE=i_club
 
-[NEWBIE FENCING]
+[NEWBIE MACEFIGHTING ELF]
+ITEMNEWBIE=i_diamond_mace
+
+[NEWBIE FENCING HUMAN]
 // Fencing is best skill
 ITEMNEWBIE=i_kryss
 
-[NEWBIE WRESTLING]
+[NEWBIE FENCING ELF]
+ITEMNEWBIE=i_leafblade
+
+[NEWBIE WRESTLING HUMAN]
 // Wrestling is best skill
 ITEMNEWBIE=i_leather_gloves
+
+[NEWBIE WRESTLING ELF]
+ITEMNEWBIE=i_leaf_gloves
 
 [NEWBIE LUMBERJACKING]
 // Lumberjacking is best skill
@@ -311,12 +408,9 @@ ITEMNEWBIE=i_kasa
 ITEMNEWBIE=i_spellbook_bushido
 
 [NEWBIE FOCUS]
-ITEMNEWBIE=i_robe
-COLOR=colors_red
-ITEMNEWBIE=i_dagger
 
 [NEWBIE CHIVALRY]
-//None.
+ITEMNEWBIE=i_spellbook_paladin
 
 [NEWBIE NECROMANCY]
 ITEMNEWBIE=i_spellbook_necromancy
