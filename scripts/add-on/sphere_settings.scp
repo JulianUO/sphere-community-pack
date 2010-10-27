@@ -661,4 +661,44 @@ scp.House_GlobalMaxVendors=0
 // Max number of vendors allowed per house
 scp.House_MaxVendors=10
 
+
+////////////////////////////////////////////////////////////////
+////////////// HUNGER SYSTEM SETTINGS //////////////////////////
+////////////////////////////////////////////////////////////////
+// NOTE: The system is switchable On and Off, you need only it. When you turn off the system all features are checked and disabled. When you turn on again
+//       after a turn off you can use the "F_food_drink_reset_after_switch" function to regenerate the system.
+
+//1 = ON; 0 = OFF
+SCP.HUNGER_ON_OFF 0
+
+//The max value for TAG.DRINK (normally equals to MAXFOOD)
+SCP.MAXDRINK 15
+
+//The max value for <FOOD>
+SCP.MAXFOOD 15
+
+//Change this to modify the chance of the player to get anemia or scabies -- Low value = more chance
+SCP.CHANCE_ILLINESS 100
+
+//It's the damage to the player when he has FOOD <= 5
+SCP.DAMAGE_AMOUNT_FOOD 5
+
+//Like above but for DRINK <= 3 (normally it's more than food)
+SCP.DAMAGE_AMOUNT_DRINK 7
+
+//It's the amount of stamina decreased to the player when he has FOOD <= 5 -- just set it to 0 for delete the effect
+SCP.STAMINA_AMOUNT_FOOD 5
+
+//Like above but for DRINK <= 3 (normally it's more than food)
+SCP.STAMINA_AMOUNT_DRINK 7
+
+//It's the max count for food (every 1 min) when a player lost a point of food (MAXCOUNT=25 ==> player loses 1 point of food every 25 mins)
+SCP.MAXCOUNT_FOOD 25
+
+//Like above but for drink
+SCP.MAXCOUNT_DRINK 15
+
+//ALLOWS PLAYERS TO CONTRACT MORE OF ONE ILLINESS
+SCP.MORE_ILLINESS 1
+
 [EOF]
