@@ -382,4 +382,65 @@ scp.spell_691_wop	"Kal Des Ylem"		// Hail Storm
 scp.spell_692_wop	"Grav Hur"		// Nether Cyclone
 scp.spell_693_wop	"Kal Vas Xen Corp Ylem"	// Rising Colossus
 
+[DEFNAME SphereCommunityPack_HUNGERSYSTEM_messages]
+//////FOOD MESSAGES
+SCP.FOOD_1 You are starving!
+SCP.FOOD_2 You are VERY VERY hungry.
+SCP.FOOD_3 You are VERY VERY hungry.
+SCP.FOOD_4 You are VERY hungry.
+SCP.FOOD_5 You are VERY hungry.
+SCP.FOOD_6 You are hungry.
+SCP.FOOD_7 You are hungry.
+SCP.FOOD_8 You are some hungry.
+SCP.FOOD_9 You are some hungry.
+SCP.FOOD_10 You are a little hungry.
+SCP.FOOD_11 You are a little hungry.
+SCP.FOOD_12 You are nearly satiated.
+SCP.FOOD_13 You are nearly satiated.
+SCP.FOOD_14 You are nearly satiated.
+SCP.FOOD_15 You are satiated.
+
+//DRINK MESSAGES
+SCP.DRINK_1 You are dying of thirst!
+SCP.DRINK_2 You are VERY VERY thirsty.
+SCP.DRINK_3 You are VERY VERY thirsty.
+SCP.DRINK_4 You are VERY thirsty.
+SCP.DRINK_5 You are VERY thirsty.
+SCP.DRINK_6 You are thirsty.
+SCP.DRINK_7 You are thirsty.
+SCP.DRINK_8 You are some thirsty.
+SCP.DRINK_9 You are some thirsty.
+SCP.DRINK_10 You are a little thirsty.
+SCP.DRINK_11 You are a little thirsty.
+SCP.DRINK_12 You are nearly thirsty.
+SCP.DRINK_13 You are nearly thirsty.
+SCP.DRINK_14 You are nearly thirsty.
+SCP.DRINK_15 You aren't thirsty.
+
+//SCABIES ILLINESS MESSAGES
+//FORMAT: SCABIES LEVEL | RANGE OF MANA MALUS | MESSAGE
+SCP.SCABIES_1 15 You are very very weak and must search a healer!
+SCP.SCABIES_2 12 Search a healer you have a dangerous ill!
+SCP.SCABIES_3 11 You are tired! You must search a healer!
+SCP.SCABIES_4 10 Search a healer! You're ill!
+SCP.SCABIES_5 8 You are very tired!
+SCP.SCABIES_6 7 You are tired and begin to be weak!
+SCP.SCABIES_7 6 You are tired and ill!
+SCP.SCABIES_8 5 You're tired! Perhaps you have some dangerous illiness!
+SCP.SCABIES_9 4 Begin to be tired!
+SCP.SCABIES_10 2 You're illed!
+
+//ANEMIA ILLINESS MESSAGES
+//FORMAT: ANEMIA LEVEL | RANGE OF STAMINA MALUS | MESSAGE
+SCP.anemia_1 8 You are very very weak and must search a healer!
+SCP.anemia_2 7 Search a healer you have a dangerous ill!
+SCP.anemia_3 7 You are tired! You must search a healer!
+SCP.anemia_4 6 Search a healer! You're ill!
+SCP.anemia_5 6 You are very tired!
+SCP.anemia_6 6 You are tired and begin to be weak!
+SCP.anemia_7 5 You are tired and ill!
+SCP.anemia_8 5 You're tired! Perhaps you have some dangerous illiness!
+SCP.anemia_9 4 Begin to be tired!
+SCP.anemia_10 4 You're illed!
+
 [eof]
