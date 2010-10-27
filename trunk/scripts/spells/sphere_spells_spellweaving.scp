@@ -168,13 +168,30 @@ CAST_TIME=1.5
 RESOURCES=
 RUNE_ITEM=0
 SCROLL_ITEM=0
-FLAGS=0
+FLAGS=spellflag_targ_xyz|spellflag_harm
 EFFECT_ID=0
 EFFECT=0
 DURATION=0.0
-MANAUSE=29
+MANAUSE=32
 SKILLREQ=SPELLWEAVING 10.1
 INTERRUPT=100.0,100.0
+
+on=@success
+sfx 05ce
+local.level = <src.findid.i_arcane_focus.more1>
+local.damage = <eval ((<max 11,<eval (10 + (<src.spellweaving> / 240))>) + <local.level>)>
+
+local.pvmdamage = <eval (<local.damage> + <muldiv <local.damage>,<src.tag0.SpellDamageIncrease>,100>)>
+local.pvpdamage = <eval (<local.damage> + <muldiv <local.damage>,<min 15,<src.tag0.SpellDamageIncrease>>,100>)>
+
+local.range = <eval (2 + <local.level>)>
+local.duration = <eval (5 + <local.level>)>
+
+serv.newitem i_gold
+new.attr |= attr_invis
+new.p = <src.targp>
+new.DoThunderstormDamage <local.pvmdamage>,<local.pvpdamage>,<local.range>,<local.duration>,<src>
+new.remove
 
 [SPELL 606]
 DEFNAME=s_nature_fury
@@ -189,8 +206,8 @@ FLAGS=0
 EFFECT_ID=0
 EFFECT=0
 DURATION=0.0
-MANAUSE=29
-SKILLREQ=SPELLWEAVING 10.1
+MANAUSE=24
+SKILLREQ=SPELLWEAVING 0.1
 INTERRUPT=100.0,100.0
 
 [SPELL 607]
@@ -240,9 +257,22 @@ FLAGS=0
 EFFECT_ID=0
 EFFECT=0
 DURATION=0.0
-MANAUSE=34
-SKILLREQ=SPELLWEAVING 38.1
+MANAUSE=24
+SKILLREQ=SPELLWEAVING 34.1
 INTERRUPT=100.0,100.0
+
+on=@success
+sfx 01ba
+if <body> == c_reaper_redux
+findid(i_reaper_form).remove
+return 1
+endif
+
+local.level = <src.findid.i_arcane_focus.more1>
+
+serv.newitem i_reaper_form
+new.tag0.Bonus = <eval (10 + <local.level>)>
+new.equip
 
 [SPELL 610]
 DEFNAME=s_wildfire

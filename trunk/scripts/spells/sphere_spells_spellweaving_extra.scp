@@ -115,4 +115,62 @@ if <argo> == <findid(i_attunement).tag0.weap> && <src> == <findid(i_attunement).
 var0.<uid>_damagebonus += 50
 endif
 
+// Thunderstorm
+[function DoThunderstormDamage]
+ref1 = <uid>
+forchars <argv[2]>
+	if <canseelos <uid>>
+		if <action> == skill_magery || <action> == skill_necromancy || <action> == skill_chivalry || <action> == skill_spellweaving || <action> == skill_mysticism
+		tag0.FasterCastRecovery -= 6
+		timerf <argv[3]>,tag0.FasterCastRecovery += 6
+		f_AddBuff Thunderstorm,<dargv[3]>,6
+		endif
+		
+		if <isplayer>
+		damage <argv[1]>,dam_magic|dam_lightning|dam_energy,<argv[4]>
+		else
+		damage <argv[0]>,dam_magic|dam_lightning|dam_energy,<argv[4]>
+		endif
+	endif
+endfor
+
+// Reaper Form
+[itemdef i_reaper_form]
+id=i_memory
+type=t_eq_script
+
+on=@equip
+tag.Body = <cont.body>
+cont.body = c_reaper_redux
+if <cont.resfire> >= 25
+tag0.resfiredecrease = 25
+cont.resfire -= 25
+else
+tag0.resfiredecrease = <cont.resfire>
+cont.resfire = 0
+endif
+cont.modar += 5
+cont.rescold += 5
+cont.respoison += 5
+cont.resenergy += 5
+
+cont.tag0.SwingSpeedIncrease += <tag0.Bonus>
+cont.tag0.SpellDamageIncrease += <tag0.Bonus>
+
+cont.SpeedMode = 2
+
+on=@unequip
+cont.body = <tag0.Body>
+
+cont.resfire += <tag0.resfiredecrease>
+cont.modar -= 5
+cont.rescold -= 5
+cont.respoison -= 5
+cont.resenergy -= 5
+
+cont.tag0.SwingSpeedIncrease -= <tag0.Bonus>
+cont.tag0.SpellDamageIncrease -= <tag0.Bonus>
+
+cont.SpeedMode = 0
+
 [EOF]
