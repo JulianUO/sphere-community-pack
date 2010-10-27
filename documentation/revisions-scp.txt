@@ -553,3 +553,6 @@ i_leather_barded !
 - Modified: Added Axis Cats to ash log.
 - Added: sphere_item_resources_boards. Containers all the boards for their respective
 log entries.
+
+27-10-2010, NeliX
+- Added: Hunger System with 2 illiness in. The main system is in sphere_hunger_system.scp file, settings and messages are in sphere_setting.scp and sphere_pack_msgs.scp. EnJoy!
