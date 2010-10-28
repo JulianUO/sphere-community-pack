@@ -393,4 +393,14 @@ IF (<DDEF0.SCP.HUNGER_ON_OFF>)
 ENDIF
 
 
+ON=@ItemSell
+IF (<ACT.TYPE> == t_container)
+ FORCONT <act.uid> 0	//Looking for ANY item in the container.
+  IF <IsItem>
+   SMSGL -1,500196	//You may not sell containers unless they are empty
+   RETURN 1		//Stop the sale.
+  ENDIF
+ ENDFOR
+ENDIF
+
 [eof]
