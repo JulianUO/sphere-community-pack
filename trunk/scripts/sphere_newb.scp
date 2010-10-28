@@ -67,6 +67,12 @@ ITEMNEWBIE={ i_reag_mandrake_root 1 i_reag_nightshade 1 },3
 ITEMNEWBIE={ i_reag_spider_silk 1 i_reag_sulfur_ash 1 },3
 
 [NEWBIE ALCHEMY HUMAN]
+ITEMNEWBIE=i_mortar_pestle
+ITEMNEWBIE=i_BOTTLE_EMPTY,4
+ITEMNEWBIE={ i_reag_black_pearl 1 i_reag_blood_moss 1 },3
+ITEMNEWBIE={ i_reag_garlic 1 i_reag_ginseng 1 },3
+ITEMNEWBIE={ i_reag_mandrake_root 1 i_reag_nightshade 1 },3
+ITEMNEWBIE={ i_reag_spider_silk 1 i_reag_sulfur_ash 1 },3
 ITEMNEWBIE=i_robe
 COLOR=colors_red
 
@@ -78,6 +84,12 @@ elif <obody> == c_elf_female
 serv.newitem i_elven_robe_female
 new.equip
 endif
+ITEMNEWBIE=i_mortar_pestle
+ITEMNEWBIE=i_BOTTLE_EMPTY,4
+ITEMNEWBIE={ i_reag_black_pearl 1 i_reag_blood_moss 1 },3
+ITEMNEWBIE={ i_reag_garlic 1 i_reag_ginseng 1 },3
+ITEMNEWBIE={ i_reag_mandrake_root 1 i_reag_nightshade 1 },3
+ITEMNEWBIE={ i_reag_spider_silk 1 i_reag_sulfur_ash 1 },3
 
 [NEWBIE ANATOMY]
 // Anatomy is best skill
@@ -86,6 +98,7 @@ ITEMNEWBIE=i_bandage,3
 [NEWBIE ANATOMY HUMAN]
 ITEMNEWBIE=i_robe
 COLOR=colors_brown
+ITEMNEWBIE=i_bandage,3
 
 [NEWBIE ANATOMY ELF]
 if <obody> == c_elf_male
@@ -97,6 +110,7 @@ serv.newitem i_elven_robe_female
 new.attr |= attr_newbie
 new.equip
 endif
+ITEMNEWBIE=i_bandage,3
 
 [NEWBIE ANIMALLORE HUMAN]
 // Animal Lore is best skill
@@ -209,10 +223,12 @@ ITEMNEWBIE=i_scissors
 ITEMNEWBIE=i_fishing_pole
 
 [NEWBIE FISHING HUMAN]
+ITEMNEWBIE=i_fishing_pole
 ITEMNEWBIE=i_hat_floppy
 COLOR=colors_brown
 
 [NEWBIE FISHING ELF]
+ITEMNEWBIE=i_fishing_pole
 ITEMNEWBIE=i_circlet
 
 [NEWBIE FORENSICS]
@@ -272,6 +288,31 @@ ITEMNEWBIE=i_reag_spider_silk,30
 ITEMNEWBIE=i_reag_mandrake_root,30
 
 [NEWBIE MAGERY HUMAN]
+ITEMNEWBIE=i_spellbook
+ADDSPELL=s_magic_arrow
+ADDSPELL=s_night_sight
+ADDSPELL=s_heal
+ADDSPELL=s_cure
+ADDSPELL=s_harm
+ADDSPELL=s_strength
+ADDSPELL=s_fireball
+ADDSPELL=s_teleport
+ADDSPELL=s_poison
+ADDSPELL=s_lightning
+ADDSPELL=s_greater_heal
+ADDSPELL=s_fire_field
+ITEMNEWBIE={ i_scroll_clumsy 1 i_scroll_create_food 1 i_scroll_feeblemind 1 i_scroll_reactive_armor 1 i_scroll_weaken 1 }
+ITEMNEWBIE={ i_scroll_agility 1 i_scroll_cunning 1 i_scroll_magic_trap 1 i_scroll_remove_trap 1 i_scroll_protection 1 }
+ITEMNEWBIE={ i_scroll_bless 1 i_scroll_magic_lock 1 i_scroll_telekinesis 1 i_scroll_unlock 1 i_scroll_wall_of_stone 1 i_scroll_archprotection 1 i_scroll_archcure 1 i_scroll_curse 1 i_scroll_mana_drain 1 i_scroll_recall 1 }
+CONTAINER=i_bag
+ITEMNEWBIE=i_reag_black_pearl,30
+ITEMNEWBIE=i_reag_blood_moss,30
+ITEMNEWBIE=i_reag_garlic,30
+ITEMNEWBIE=i_reag_ginseng,30
+ITEMNEWBIE=i_reag_nightshade,30
+ITEMNEWBIE=i_reag_sulfur_ash,30
+ITEMNEWBIE=i_reag_spider_silk,30
+ITEMNEWBIE=i_reag_mandrake_root,30
 ITEMNEWBIE=i_hat_wizards
 COLOR=color_blue
 
@@ -288,6 +329,31 @@ serv.newitem i_elven_robe_female
 new.attr |= attr_newbie
 new.equip
 endif
+ITEMNEWBIE=i_spellbook
+ADDSPELL=s_magic_arrow
+ADDSPELL=s_night_sight
+ADDSPELL=s_heal
+ADDSPELL=s_cure
+ADDSPELL=s_harm
+ADDSPELL=s_strength
+ADDSPELL=s_fireball
+ADDSPELL=s_teleport
+ADDSPELL=s_poison
+ADDSPELL=s_lightning
+ADDSPELL=s_greater_heal
+ADDSPELL=s_fire_field
+ITEMNEWBIE={ i_scroll_clumsy 1 i_scroll_create_food 1 i_scroll_feeblemind 1 i_scroll_reactive_armor 1 i_scroll_weaken 1 }
+ITEMNEWBIE={ i_scroll_agility 1 i_scroll_cunning 1 i_scroll_magic_trap 1 i_scroll_remove_trap 1 i_scroll_protection 1 }
+ITEMNEWBIE={ i_scroll_bless 1 i_scroll_magic_lock 1 i_scroll_telekinesis 1 i_scroll_unlock 1 i_scroll_wall_of_stone 1 i_scroll_archprotection 1 i_scroll_archcure 1 i_scroll_curse 1 i_scroll_mana_drain 1 i_scroll_recall 1 }
+CONTAINER=i_bag
+ITEMNEWBIE=i_reag_black_pearl,30
+ITEMNEWBIE=i_reag_blood_moss,30
+ITEMNEWBIE=i_reag_garlic,30
+ITEMNEWBIE=i_reag_ginseng,30
+ITEMNEWBIE=i_reag_nightshade,30
+ITEMNEWBIE=i_reag_sulfur_ash,30
+ITEMNEWBIE=i_reag_spider_silk,30
+ITEMNEWBIE=i_reag_mandrake_root,30
 
 [NEWBIE MAGICRESISTANCE]
 // Resisting Spells is best skill
@@ -317,9 +383,11 @@ ITEMNEWBIE=i_arrow,25
 
 [NEWBIE ARCHERY HUMAN]
 ITEMNEWBIE=i_bow
+ITEMNEWBIE=i_arrow,25
 
 [NEWBIE ARCHERY ELF]
 ITEMNEWBIE=i_elven_composite_longbow
+ITEMNEWBIE=i_arrow,25
 
 [NEWBIE SPIRITSPEAK]
 // Spirit Speak is best skill
@@ -415,6 +483,8 @@ ITEMNEWBIE=i_spellbook_paladin
 MORE1=03ff // Full
 
 [NEWBIE CHIVALRY HUMAN]
+ITEMNEWBIE=i_spellbook_paladin
+MORE1=03ff // Full
 ITEMNEWBIE=i_sword_broad
 ITEMNEWBIE=i_helm_open
 ITEMNEWBIE=i_platemail_gorget
@@ -429,6 +499,8 @@ ITEMNEWBIE=i_sash
 COLOR=0cf
 
 [NEWBIE CHIVALRY ELF]
+ITEMNEWBIE=i_spellbook_paladin
+MORE1=03ff // Full
 ITEMNEWBIE=i_elven_machete
 ITEMNEWBIE=i_helm_winged
 ITEMNEWBIE=i_leaf_gorget
@@ -453,6 +525,19 @@ ITEMNEWBIE=i_reag_pig_iron_2,50
 ITEMNEWBIE=i_reag_nox_crystal,50
 
 [NEWBIE NECROMANCY HUMAN]
+ITEMNEWBIE=i_spellbook_necromancy
+ADDSPELL=s_animate_dead
+ADDSPELL=s_mind_rot
+ADDSPELL=s_pain_spike
+ADDSPELL=s_summon_familiar
+ADDSPELL=s_wraith_form
+CONTAINER=i_bag
+COLOR=COLORS_BLACK
+ITEMNEWBIE=i_reag_bat_wings,50
+ITEMNEWBIE=i_reag_daemon_blood,50
+ITEMNEWBIE=i_reag_grave_dust,50
+ITEMNEWBIE=i_reag_pig_iron_2,50
+ITEMNEWBIE=i_reag_nox_crystal,50
 ITEMNEWBIE=i_bone_harvester
 ITEMNEWBIE=i_leather_gloves
 COLOR=0455
@@ -468,6 +553,19 @@ ITEMNEWBIE=i_sandals
 COLOR=08fd
 
 [NEWBIE NECROMANCY ELF]
+ITEMNEWBIE=i_spellbook_necromancy
+ADDSPELL=s_animate_dead
+ADDSPELL=s_mind_rot
+ADDSPELL=s_pain_spike
+ADDSPELL=s_summon_familiar
+ADDSPELL=s_wraith_form
+CONTAINER=i_bag
+COLOR=COLORS_BLACK
+ITEMNEWBIE=i_reag_bat_wings,50
+ITEMNEWBIE=i_reag_daemon_blood,50
+ITEMNEWBIE=i_reag_grave_dust,50
+ITEMNEWBIE=i_reag_pig_iron_2,50
+ITEMNEWBIE=i_reag_nox_crystal,50
 ITEMNEWBIE=i_elven_machete
 ITEMNEWBIE=i_leaf_tunic
 COLOR=0455
