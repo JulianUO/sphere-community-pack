@@ -552,7 +552,15 @@ to i_reag_wyrm_heart
 i_leather_barded !
 - Modified: Added Axis Cats to ash log.
 - Added: sphere_item_resources_boards. Containers all the boards for their respective
-log entries.
+  log entries.
 
 27-10-2010, NeliX
-- Added: Hunger System with 2 illiness in. The main system is in sphere_hunger_system.scp file, settings and messages are in sphere_setting.scp and sphere_pack_msgs.scp. EnJoy!
+- Added: Hunger System with 2 illiness in. The main system is in sphere_hunger_system.scp
+  file, settings and messages are in sphere_setting.scp and sphere_pack_msgs.scp. EnJoy!
+
+28-10-2010, Khaos
+- Added: Check for container with items in it on sale to a vendor. If there is items in
+  the container it will stop the sale.
+- Removed: spherechar_human.scp all files are now seperated individually and placed in
+  folders. Removed Numeric Chardef values as well as this might interfere with later
+  animation updates from EA. They now use their defnames.
