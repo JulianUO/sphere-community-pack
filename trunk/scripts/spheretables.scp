@@ -23,16 +23,23 @@ scripts/sphere_events_npcs.scp
 scripts/npcs/
 scripts/npcs/monsters/
 scripts/npcs/champions/
-scripts/npcs/townfolk/
-scripts/npcs/townfolk/Fighters/
-scripts/npcs/townfolk/Arts and Music/
-scripts/npcs/townfolk/Guards and Law/
-scripts/npcs/townfolk/Guildmasters/
-scripts/npcs/townfolk/Misc/
-scripts/npcs/townfolk/Religious/
-scripts/npcs/townfolk/Tradesman/
-scripts/npcs/townfolk/Villagers/
-scripts/npcs/townfolk/Outlaws and Rogues/
+scripts/npcs/Civilized/
+scripts/npcs/Civilized/Fighters/
+scripts/npcs/Civilized/Arts and Music/
+scripts/npcs/Civilized/Guards and Law/
+scripts/npcs/Civilized/Guildmasters/
+scripts/npcs/Civilized/Misc/
+scripts/npcs/Civilized/Religious/
+scripts/npcs/Civilized/Tradesman/
+scripts/npcs/Civilized/Villagers/
+scripts/npcs/Civilized/Outlaws and Rogues/
+scripts/npcs/Civilized/Dark Elves/
+scripts/npcs/Civilized/Barbarians/
+scripts/npcs/Civilized/Dread Lords/
+scripts/npcs/Civilized/Frost Elves/
+scripts/npcs/Civilized/Sprite Elves/
+scripts/npcs/Civilized/Wood Elves/
+scripts/npcs/Civilized/Witches/
 scripts/sphere_admin.scp
 scripts/sphere_dialog.scp
 // -----------------------------------
