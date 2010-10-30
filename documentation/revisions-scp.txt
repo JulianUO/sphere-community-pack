@@ -564,3 +564,13 @@ i_leather_barded !
 - Removed: spherechar_human.scp all files are now seperated individually and placed in
   folders. Removed Numeric Chardef values as well as this might interfere with later
   animation updates from EA. They now use their defnames.
+
+30-10-2010, Khaos
+- Updated: Most of the NPC's that are human or elf have been updated. I reorganized townfolk;
+  which is now the Civilized section for the final time. Remember most female counterparts are
+  in same file as the original males.
+- Fixed: All elf type NPCs now use elven bodies with resdisp settings for older clients.
+- Updated: Removed numeric defs and replaced with the defname strings incase of overwrite from
+  EA animations.
+- Fixed: Cleaned up some bad axis cats on NPC's.
+- Updated: spheretables.scp to access the folders. Sorry, I forgot to update it last time.
