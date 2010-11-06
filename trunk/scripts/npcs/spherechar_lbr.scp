@@ -293,6 +293,7 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=random_jewel,{1 2}
 	ITEM=i_gold,{85 145}
+	ITEM=i_seed_plain,R3
 
 ON=@Hit
 IF !(<SRC.FLAGS>&statf_poisoned)
@@ -739,6 +740,7 @@ ON=@Create
 
 ON=@NpcRestock
 	ITEM=i_gold,{200 300}
+	ITEM=i_seed_plain,R3
 
 ON=@Hit
 	IF !(<SRC.FLAGS>&statf_poisoned)
