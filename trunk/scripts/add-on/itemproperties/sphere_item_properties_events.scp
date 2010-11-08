@@ -306,6 +306,26 @@ if <def.scp.ItemProp_HitDispel> == 1
 		endif
 	endif
 endif
+if <def.scp.ItemProp_HitFireball == 1
+	if <r100> < <tag0.HitFireball>
+	src.spelleffect s_fireball,1000,<uid>
+	endif
+endif
+if <def.scp.ItemProp_HitHarm == 1
+	if <r100> < <tag0.HitHarm>
+	src.spelleffect s_harm,1000,<uid>
+	endif
+endif
+if <def.scp.ItemProp_HitLightning == 1
+	if <r100> < <tag0.HitLightning>
+	src.spelleffect s_lightning,1000,<uid>
+	endif
+endif
+if <def.scp.ItemProp_HitMagicArrow == 1
+	if <r100> < <tag0.HitMagicArrow>
+	src.spelleffect s_magic_arrow,1000,<uid>
+	endif
+endif
 // Slayer groups are just like flags, only need to see if the weapon exist
 // check if the weapon got a slayer tag and if the target got a slayer tag.
 // Lesser Slayers do x3 damage while Super Slayers do x2.
