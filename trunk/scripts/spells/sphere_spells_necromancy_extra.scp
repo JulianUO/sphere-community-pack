@@ -356,8 +356,8 @@ timer=1
 return 1
 
 [events e_beast_form]
-ON=@Hit
-argn1 += <argn1>/4
+on=@hitdamagebonus
+var.<uid>_damagebonus += 25
 
 ON=@Spellcast
 if !((<argn>==106) || (<argn>==107) || (<argn>==113) || (<argn>==116))

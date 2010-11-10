@@ -121,7 +121,7 @@ endif
 
 on=@personalspace
 src.sysmessage <def.scp.hiding_shoveinvis>
-return 0
+return 1
 
 on=@spelleffect
 if <argn1> == s_reveal

@@ -6,10 +6,14 @@ REMOVEBUFF 1011
 ADDBUFF 1011 1060498 1075654 <dLOCAL.DELAY> 50 a <SERV.CHARDEF.<SRC.BASEID>.NAME> 100 //this isn't working
 ELIF (!(<SRC.ISPLAYER>))
     IF (<SRC.BASEID> == <TAG.ENEMYOFONE.TARGET>)
-    ARGN1 += <EVAL <ARGN1>/2>
     SRC.EFFECT 3,i_fx_glow,16,20,,02b
     ENDIF
 ENDIF
+
+on=@hitdamagebonus
+if <src.baseid> == <tag.enemyofone.target>
+var.<uid>_damagebonus += 50
+endif
 
 ON=@GetHit
 IF (!(<ISEMPTY <TAG.ENEMYOFONE.TARGET>>))
