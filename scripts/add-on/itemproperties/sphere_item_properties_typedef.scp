@@ -18,19 +18,19 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_BestWeaponSkill - Item Only
 // scp.ItemProp_EnhancePotion - Not Done
 // scp.ItemProp_HitColdArea - Item Only - Not Done
-// scp.ItemProp_HitDispel - Item Only - Not Done
+// *DONE* scp.ItemProp_HitDispel - Item Only
 // scp.ItemProp_HitEnergyArea - Item Only - Not Done
 // scp.ItemProp_HitFireArea - Item Only - Not Done
-// scp.ItemProp_HitFireball - Item Only - Not Done
-// scp.ItemProp_HitHarm - Item Only - Not Done
-// scp.ItemProp_HitLightning - Item Only - Not Done
-// *DONE* scp.ItemProp_HitLowerAttack - Item Only - Not Done
-// *DONE* scp.ItemProp_HitLowerDefense - Item Only - Not Done
-// scp.ItemProp_HitMagicArrow - Item Only - Not Done
-// scp.ItemProp_HitManaLeech - Item Only - Not Done
+// *DONE* scp.ItemProp_HitFireball - Item Only
+// *DONE* scp.ItemProp_HitHarm - Item Only
+// *DONE* scp.ItemProp_HitLightning - Item Only
+// *DONE* scp.ItemProp_HitLowerAttack - Item Only
+// *DONE* scp.ItemProp_HitLowerDefense - Item Only
+// *DONE* scp.ItemProp_HitMagicArrow - Item Only
+// *DONE* scp.ItemProp_HitManaLeech - Item Only - Not Done
 // scp.ItemProp_HitPhysicalArea - Item Only - Not Done
 // scp.ItemProp_HitPoisonArea - Item Only - Not Done
-// scp.ItemProp_HitStaminaLeech - Item Only - Not Done
+// *DONE* scp.ItemProp_HitStaminaLeech - Item Only - Not Done
 // *DONE* scp.ItemProp_MageArmor - Item Only
 // *DONE* scp.ItemProp_MageWeapon - Item Only
 // *DONE* scp.ItemProp_SelfRepair - Item Only
@@ -39,7 +39,7 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_SpellChanneling - Item Only
 // *DONE* scp.ItemProp_SwingSpeedIncrease - Item Only - Not Done
 // *DONE* scp.ItemProp_UsesRemaining - Item Only
-// scp.ItemProp_StaminaRegeneration - Not Done
+// *DONE* scp.ItemProp_StaminaRegeneration - Not Done
 // scp.ItemProp_CraftingBonus - Not Done
 // scp.ItemProp_CraftingExceptionalBonus - Not Done
 
@@ -144,6 +144,11 @@ if <tag0.StaminaIncrease>
 	src.tag0.StaminaIncrease += <tag0.StaminaIncrease>
 	endif
 endif
+if <tag0.StaminaRegeneration>
+	if <def.scp.ItemProp_StaminaRegeneration> == 1
+	src.tag0.StaminaRegeneration += <tag0.StaminaRegeneration>
+	endif
+endif
 if <tag0.StrengthBonus>
 	if <def.scp.ItemProp_StrengthBonus> == 1
 	src.ModStr += <tag0.StrengthBonus>
@@ -153,6 +158,41 @@ if <tag0.NightSight>
 	if <def.scp.ItemProp_NightSight> == 1
 	src.tag0.NightSight ++
 	src.nightsight 1
+	endif
+endif
+if <tag0.HitDispel>
+	if <def.scp.ItemProp_HitDispel> == 1
+	src.tag0.HitDispel += <tag0.HitDispel>
+	endif
+endif
+if <tag0.HitHarm>
+	if <def.scp.ItemProp_HitHarm> == 1
+	src.tag0.HitHarm += <tag0.HitHarm>
+	endif
+endif
+if <tag0.HitFireball>
+	if <def.scp.ItemProp_HitFireball> == 1
+	src.tag0.HitFireball += <tag0.HitFireball>
+	endif
+endif
+if <tag0.HitLightning>
+	if <def.scp.ItemProp_HitLightning> == 1
+	src.tag0.HitLightning += <tag0.HitLightning>
+	endif
+endif
+if <tag0.HitMagicArrow>
+	if <def.scp.ItemProp_HitMagicArrow> == 1
+	src.tag0.HitMagicArrow += <tag0.HitMagicArrow>
+	endif
+endif
+if <tag0.HitManaLeech>
+	if <def.scp.ItemProp_HitManaLeech> == 1
+	src.tag0.HitManaLeech += <tag0.HitManaLeech>
+	endif
+endif
+if <tag0.HitStaminaLeech>
+	if <def.scp.ItemProp_HitStaminaLeech> == 1
+	src.tag0.HitStaminaLeech += <tag0.HitStaminaLeech>
 	endif
 endif
 
@@ -261,6 +301,31 @@ if <tag0.NightSight>
 		src.nightsight 0
 		endif
 	src.tag0.NightSight --
+	endif
+endif
+if <tag0.HitDispel>
+	if <def.scp.ItemProp_HitDispel> == 1
+	src.tag0.HitDispel -= <tag0.HitDispel>
+	endif
+endif
+if <tag0.HitHarm>
+	if <def.scp.ItemProp_HitHarm> == 1
+	src.tag0.HitHarm -= <tag0.HitHarm>
+	endif
+endif
+if <tag0.HitFireball>
+	if <def.scp.ItemProp_HitFireball> == 1
+	src.tag0.HitFireball -= <tag0.HitFireball>
+	endif
+endif
+if <tag0.HitLightning>
+	if <def.scp.ItemProp_HitLightning> == 1
+	src.tag0.HitLightning -= <tag0.HitLightning>
+	endif
+endif
+if <tag0.HitMagicArrow>
+	if <def.scp.ItemProp_HitMagicArrow> == 1
+	src.tag0.HitMagicArrow -= <tag0.HitMagicArrow>
 	endif
 endif
 
