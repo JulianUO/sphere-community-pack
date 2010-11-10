@@ -42,13 +42,13 @@ VERSION=0.56b
 // *DONE* scp.ItemProp_HitDispel
 // scp.ItemProp_HitEnergyArea
 // scp.ItemProp_HitFireArea
-// scp.ItemProp_HitFireball
-// scp.ItemProp_HitHarm
+// *DONE*scp.ItemProp_HitFireball
+// *DONE*scp.ItemProp_HitHarm
 // *DONE* scp.ItemProp_HitLifeLeech
-// scp.ItemProp_HitLightning
+// *DONE*scp.ItemProp_HitLightning
 // *DONE* scp.ItemProp_HitLowerAttack
 // *DONE* scp.ItemProp_HitLowerDefense
-// scp.ItemProp_HitMagicArrow
+// *DONE*scp.ItemProp_HitMagicArrow
 // *DONE* scp.ItemProp_HitManaLeech
 // scp.ItemProp_HitPhysicalArea
 // scp.ItemProp_HitPoisonArea
@@ -306,50 +306,24 @@ if <def.scp.ItemProp_HitDispel> == 1
 		endif
 	endif
 endif
-if <def.scp.ItemProp_HitFireball == 1
+if <def.scp.ItemProp_HitFireball> == 1
 	if <r100> < <tag0.HitFireball>
 	src.spelleffect s_fireball,1000,<uid>
 	endif
 endif
-if <def.scp.ItemProp_HitHarm == 1
+if <def.scp.ItemProp_HitHarm> == 1
 	if <r100> < <tag0.HitHarm>
 	src.spelleffect s_harm,1000,<uid>
 	endif
 endif
-if <def.scp.ItemProp_HitLightning == 1
+if <def.scp.ItemProp_HitLightning> == 1
 	if <r100> < <tag0.HitLightning>
 	src.spelleffect s_lightning,1000,<uid>
 	endif
 endif
-if <def.scp.ItemProp_HitMagicArrow == 1
+if <def.scp.ItemProp_HitMagicArrow> == 1
 	if <r100> < <tag0.HitMagicArrow>
 	src.spelleffect s_magic_arrow,1000,<uid>
-	endif
-endif
-// Slayer groups are just like flags, only need to see if the weapon exist
-// check if the weapon got a slayer tag and if the target got a slayer tag.
-// Lesser Slayers do x3 damage while Super Slayers do x2.
-if <def.scp.ItemProp_Slayer> == 1
-	if !<isempty <argo.uid>>
-		if <src.tag0.slayer.less>
-			if <argo.tag0.slayer.less> == <src.tag0.slayer>
-			argn1 *= 3
-			endif
-		elif <src.tag0.slayer.super>
-			if <argo.tag0.slayer.super>&<src.tag0.slayer>
-			argn1 *= 2
-			endif
-		endif
-	endif
-endif
-if <def.scp.ItemProp_DamageIncrease> == 1
-	if <tag0.DamageIncrease>
-	local.tempbonus = <tag0.DamageIncrease>
-	local.dicap = <getargv 3 <def.itemprop_01>>
-		if <tag0.DamageIncrease> > <local.dicap>
-		local.tempbonus = <local.dicap>
-		endif
-	argn1 += <eval ((<local.tempbonus> * <argn1>) / 100) + 1>
 	endif
 endif
 // Hit Lower Attack and Hit Lower Defense applies directly to the target HCI/HDI
@@ -376,6 +350,34 @@ if <def.scp.ItemProp_HitLowerDefense> == 1
 			src.equip <new.uid>
 			endif
 		endif
+	endif
+endif
+
+on=@hitdamagebonus
+// Slayer groups are just like flags, only need to see if the weapon exist
+// check if the weapon got a slayer tag and if the target got a slayer tag.
+// Lesser Slayers do x3 damage while Super Slayers do x2.
+if <def.scp.ItemProp_Slayer> == 1
+	if !<isempty <argo.uid>>
+		if <src.tag0.slayer.less>
+			if <argo.tag0.slayer.less> == <src.tag0.slayer>
+			var0.<uid>_damagebonus += 200
+			endif
+		elif <src.tag0.slayer.super>
+			if <argo.tag0.slayer.super>&<src.tag0.slayer>
+			var0.<uid>_damagebonus += 100
+			endif
+		endif
+	endif
+endif
+if <def.scp.ItemProp_DamageIncrease> == 1
+	if <tag0.DamageIncrease>
+	local.tempbonus = <tag0.DamageIncrease>
+	local.dicap = <getargv 3 <def.itemprop_01>>
+		if <tag0.DamageIncrease> > <local.dicap>
+		local.tempbonus = <local.dicap>
+		endif
+	var0.<uid>_damagebonus += <dlocal.tempbonus>
 	endif
 endif
 
