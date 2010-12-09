@@ -743,8 +743,8 @@ ON=@Create
 	KARMA={-99 -199}
 
 
-[CHARDEF 036]
-DEFNAME=c_troll
+[CHARDEF 035]
+DEFNAME=c_troll_w_axe
 NAME=Troll
 SOUND=snd_MONSTER_TROLL1
 ICON=i_pet_TROLL

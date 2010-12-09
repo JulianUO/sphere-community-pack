@@ -75,7 +75,7 @@ FOR <eval (<SRC.CTAG0.GuildDiplomacy.Page>-1)*8> <eval (<SRC.CTAG0.GuildDiplomac
  ENDIF
 ENDFOR
 
-IF (<SRC.CTAG0.GuildDiplomacy.Page> == <eval 1+(<QVAL (<SRC.CTAG0.GuildDiplomacy.SearchTotal>)? <SRC.CTAG0.GuildDiplomacy.SearchTotal>:<SERV.GUILDS>>)/8)>)
+IF (<SRC.CTAG0.GuildDiplomacy.Page> == <eval 1+(<QVAL (<SRC.CTAG0.GuildDiplomacy.SearchTotal>)? <SRC.CTAG0.GuildDiplomacy.SearchTotal>:<SERV.GUILDS>>/8)>)
  LOCAL.Y += 10
  IF (<SRC.CTAG0.GuildDiplomacy.OnlyRelationship>)
   ARGS=Showing Guilds With Relationship

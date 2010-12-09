@@ -59,6 +59,7 @@ If (<ref1.memberfromuid.<argo.uid>.uid> != <argo.uid>)
     else
       f_townsys_addchartotown <ref1.uid>,<argo.uid>,0
     endif
+  endif
 else
   sysmessage @038A They are already a candidate.
 endif
@@ -79,7 +80,7 @@ endif
 if (!<ref2.isevent.<def.TOWNSCONFIG_CHAREVENT_NAME>>)
   ref2.events +<def.TOWNSCONFIG_CHAREVENT_NAME>
 endif
-  
+
 if (!<ref2.isdspeech.<def.TOWNSCFGSPEECH_NAME>>)
 	ref2.dspeech +<def.TOWNSCFGSPEECH_NAME>
 endif
@@ -193,7 +194,7 @@ while (<local.search_uid>)
       local.search_found += 1
     endif
   endif
-  
+
   local.search_num += 1
   local.search_uid=<serv.townstones.<local.search_num>.uid>
   If (<def0.TOWNSCONFIG_MAX_NSEARCH_RES>)

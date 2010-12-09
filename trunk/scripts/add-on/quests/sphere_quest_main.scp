@@ -70,7 +70,7 @@ new.timer=-1
 new.name=<src.name>
 GOTO <SRC.P>
 NEW=<LOCAL.OLDNEW>
-elif (<def0.quest_<argn1>_objective<dlocal.x>_type> == 5
+elif (<def0.quest_<argn1>_objective<dlocal.x>_type> == 5)
 try src.tag.quest<local._for>.craft<streat <def.quest_<argn1>_objective<dlocal.x>>> = <strarg <def.quest_<argn1>_objective<dlocal.x>>>
 endif
 ENDFOR

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -20,7 +20,7 @@ on=@itemclienttooltip
 addcliloc 1042971,<act.name>
 if <act.amount> > 1
 addcliloc 1070722,Amount: <eval <act.amount>>
-endif 
+endif
 //if <act.tag0.setid> > 0
 //addcliloc 1072376,<def.set_<act.tag0.setid>_pieces>
 //endif
@@ -84,7 +84,7 @@ endif
 if <act.tag0.ResEnergy>
 addcliloc 1060446,<act.dtag0.ResEnergy>
 endif
-if (<act.reqstr> > 0) && ((<act.isweapon> || (<act.isarmor>) || (<act.type> == t_shield) || (<act.type> == t_clothing))
+if (<act.reqstr> > 0) && ((<act.isweapon>) || (<act.isarmor>) || (<act.type> == t_shield) || (<act.type> == t_clothing))
 addcliloc 1061170,<eval <act.reqstr>>
 endif
 if (<act.layer> == 2) && <act.isweapon>

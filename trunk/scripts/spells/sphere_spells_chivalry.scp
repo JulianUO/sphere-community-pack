@@ -425,7 +425,7 @@ IF (<ISITEM>)
     SRC.MESSAGE @,,2 501805 //that rune is not yet marked
     ELIF (<SERV.MAP(<MOREX>,<MOREY>,<MOREM>).REGION.FLAGS>&region_antimagic_recall_in)
     SRC.SYSMESSAGE @,,2 1019004  // You are not allowed to travel there.
-    ELIF (<SRC.REGION.FLAGS>&region_antimagic_recall_out
+    ELIF (<SRC.REGION.FLAGS>&region_antimagic_recall_out)
     SRC.SYSMESSAGE @,,2 501035    //You cannot teleport from here to the destination.
     ELIF (<SRC.FLAGS>&STATF_CRIMINAL)
     SRC.SYSMESSAGE @,,2 1005561 // Thou'rt a criminal and cannot escape so easily.

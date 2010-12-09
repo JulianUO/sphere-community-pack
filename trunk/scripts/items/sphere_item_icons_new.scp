@@ -237,4 +237,248 @@ NAME=kaze kemono
 DEFNAME=i_pet_oni
 NAME=oni
 
+////ML////
+
+[ITEMDEF 02D82]
+DEFNAME=i_pet_chief_paroxysmus
+NAME=Chief Paroxysmus
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Chief Paroxysmus
+
+
+[ITEMDEF 02D83]
+DEFNAME=i_pet_dread_horn
+NAME=Dread Horn
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Dread Horn
+
+
+[ITEMDEF 02D84]
+DEFNAME=i_pet_lady_melisande
+NAME=Lady Melisande
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Lady Melisande
+
+
+[ITEMDEF 02D85]
+DEFNAME=i_pet_monstrous_interred_grizzle
+NAME=Monstrous Interred Grizzle
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Monstrous Interred Grizzle
+
+
+[ITEMDEF 02D86]
+DEFNAME=i_pet_travesty
+NAME=Travesty
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Travesty (Don't use)
+
+
+[ITEMDEF 02D87]
+DEFNAME=i_pet_shimmering_effusion
+NAME=Shimmering Effusion
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Shimmering Effusion
+
+
+[ITEMDEF 02D88]
+DEFNAME=i_pet_tormented_minotaur
+NAME=Tormented Minotaur
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Tormented Minotaur
+
+
+[ITEMDEF 02D89]
+DEFNAME=i_pet_minotaur
+NAME=Minotaur
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Minotaur
+
+
+[ITEMDEF 02D8A]
+DEFNAME=i_pet_changeling
+NAME=Changeling
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Changeling
+
+
+[ITEMDEF 02D8B]
+DEFNAME=i_pet_hydra
+NAME=Hydra
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Hydra
+
+
+[ITEMDEF 02D8C]
+DEFNAME=i_pet_insane_dryad
+NAME=Insane Dryad
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Insane Dryad
+
+
+[ITEMDEF 02D8D]
+DEFNAME=i_pet_troglodyte
+NAME=Troglodyte
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Troglodyte
+
+
+[ITEMDEF 02D8E]
+DEFNAME=i_pet_thorn_bat
+NAME=Thorn Bat
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Thorn Bat (Don't use)
+
+
+[ITEMDEF 02D8F]
+DEFNAME=i_pet_bulbous_putrifaction
+NAME=Bulbous Putrifaction
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Bulbous Putrifaction (Don't use)
+
+
+[ITEMDEF 02D90]
+DEFNAME=i_pet_enslaved_satyr
+NAME=Enslaved Satyr
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Enslaved Satyr
+
+
+[ITEMDEF 02D91]
+DEFNAME=i_pet_interred_grizzle
+NAME=Interred Grizzle
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Interred Grizzle (Don't use)
+
+
+[ITEMDEF 02D92]
+DEFNAME=i_pet_fetid_essence
+NAME=Fetid Essence
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Fetid Essence
+
+
+[ITEMDEF 02D93]
+DEFNAME=i_pet_mantra_effervescence
+NAME=Mantra Effervescence
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Mantra Effervescence
+
+
+[ITEMDEF 02D94]
+DEFNAME=i_pet_corporeal_brume
+NAME=Corporeal Brume
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Corporeal Brume
+
+
+[ITEMDEF 02D95]
+DEFNAME=i_pet_reptalon
+NAME=Reptalon
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Reptalon
+
+
+[ITEMDEF 02D96]
+DEFNAME=i_pet_cu_sidhe
+NAME=Cu Sidhe
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Cu Sidhe
+
+
+[ITEMDEF 02D97]
+DEFNAME=i_pet_squirrel
+NAME=Squirrel
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Squirrel
+
+
+[ITEMDEF 02D98]
+DEFNAME=i_pet_ferret
+NAME=Ferret
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Ferret
+
+
+[ITEMDEF 02D99]
+DEFNAME=i_pet_minotaur_scout
+NAME=Minotaur Scout
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Minotaur Scout
+
+
+[ITEMDEF 02D9A]
+DEFNAME=i_pet_armored_minotaur
+NAME=Armored Minotaur
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Armored Minotaur
+
+
+[ITEMDEF 02D9B]
+DEFNAME=i_pet_parrot
+NAME=Parrot
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Parrot
+
+
+[ITEMDEF 02D9C]
+DEFNAME=i_pet_charger
+NAME=Charger
+
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Charger
+
 [EOF]

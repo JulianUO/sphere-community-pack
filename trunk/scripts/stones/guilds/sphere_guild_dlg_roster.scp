@@ -63,7 +63,7 @@ FOR <eval (<SRC.CTAG0.GuildRoster.Page>-1)*8> <eval (<SRC.CTAG0.GuildRoster.Page
  ENDIF
 ENDFOR
 
-IF (<SRC.CTAG0.GuildRoster.Page> == <eval 1+(<QVAL (<SRC.CTAG0.GuildRoster.SearchTotal>)? <SRC.CTAG0.GuildRoster.SearchTotal>:<MEMBER.COUNT>>)/8)>)
+IF (<SRC.CTAG0.GuildRoster.Page> == <eval 1+(<QVAL (<SRC.CTAG0.GuildRoster.SearchTotal>)? <SRC.CTAG0.GuildRoster.SearchTotal>:<MEMBER.COUNT>>/8)>)
  LOCAL.Y += 10
  resizepic 225 <LOCAL.Y> 02486 150 26
  button 230 <eval <LOCAL.Y>+5> 0845 0846 1 0 3

@@ -38,7 +38,7 @@ elif <tag0.virtue_<args>> < <eval (<tag0.virtuemax_<dargs>> / 2)>
 return 1052047 // Your journey through the path of this Virtue is going well.
 elif <tag0.virtue_<args>> < <eval ((2 * <tag0.virtuemax_<dargs>>) / 3)>
 return 1052048 // You feel very close to achieving your next path in this Virtue.
-elif (<tag0.virtue_<args>> < <eval ((5 * <tag0.virtuemax_<dargs>>) / 6)>
+elif (<tag0.virtue_<args>> < <eval ((5 * <tag0.virtuemax_<dargs>>) / 6)>)
 return 1052049 // You have achieved a path in this Virtue.
 else
 return 1052050 // You have achieved the highest path in this Virtue.

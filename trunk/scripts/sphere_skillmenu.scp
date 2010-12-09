@@ -460,7 +460,7 @@ POLY c_DAEMON
 
 ON=i_pet_DRAGON Dragon
 TEST=MAGERY 98.0
-POLY { c_dragon_green 1 c_dragon_red 1 }
+POLY { c_dragon_grey 1 c_dragon_red 1 }
 
 [SKILLMENU sm_cartography]
 What sort of map do you want to draw ?
@@ -2222,7 +2222,7 @@ SKILLMENU=sm_wood_tables
 ON=i_staff_gnarled Weapons & Tools
 SKILLMENU=sm_wood_weapons_tools
 
-ON=i_armoir_dk Furniture
+ON=i_armoire_dk Furniture
 SKILLMENU=sm_wood_furniture
 
 ON=i_portrait_7 Paintings
@@ -2354,11 +2354,11 @@ Furniture
 ON=i_table_writing <name> (<resmake>)
 MAKEITEM=i_table_writing
 
-ON=i_ARMOIR_DK <name> (<resmake>)
-MAKEITEM=i_ARMOIR_DK
+ON=i_armoire_dk <name> (<resmake>)
+MAKEITEM=i_armoire_dk
 
-ON=i_ARMOIR_LT <name> (<resmake>)
-MAKEITEM=i_ARMOIR_LT
+ON=i_armoire_lt <name> (<resmake>)
+MAKEITEM=i_armoire_lt
 
 ON=i_BOOKCASE <name> (<resmake>)
 MAKEITEM=i_BOOKCASE
@@ -2915,8 +2915,8 @@ Instruments
 ON=i_tambourine <name> (<resmake>)
 MAKEITEM=i_tambourine
 
-ON=i_tambourine_tas <name> (<resmake>)
-MAKEITEM=i_tambourine_tas
+ON=i_tambourine_tassel <name> (<resmake>)
+MAKEITEM=i_tambourine_tassel
 
 ON=i_drum <name> (<resmake>)
 MAKEITEM=i_drum
@@ -2924,11 +2924,11 @@ MAKEITEM=i_drum
 ON=i_lute <name> (<resmake>)
 MAKEITEM=i_lute
 
-ON=i_lyre <name> (<resmake>)
-MAKEITEM=i_lyre
+ON=i_harp_lap <name> (<resmake>)
+MAKEITEM=i_harp_lap
 
-ON=i_HARP_LARGE <name> (<resmake>)
-MAKEITEM=i_HARP_LARGE
+ON=i_harp_standing <name> (<resmake>)
+MAKEITEM=i_harp_standing
 
 [SKILLMENU sm_tools]
 Tools

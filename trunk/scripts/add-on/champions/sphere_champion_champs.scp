@@ -304,7 +304,7 @@ COLOR=038b
 
 ON=@Timer
 IF (<SECTOR.complexity> < <serv.maxcomplexity>)
-SERV.NEWNPC {c_skeleton 1 c_skeleton_w_sword 1 c_skeleton_w_axe 1 c_patchwork_skeleton 1 c_liche 1 c_m_skeletonarcher 1 c_m_mummy 1 c_spectre 1 c_m_wraith 1}
+SERV.NEWNPC {c_skeleton 1 c_skeletal_knight 1 c_skeleton_w_axe 1 c_patchwork_skeleton 1 c_lich 1 c_m_skeletonarcher 1 c_mummy 1 c_spectre 1 c_wraith 1}
 NEW.P=<P>
 NEW.UPDATEX
 NEW.FLAGS |= statf_conjured
@@ -363,10 +363,8 @@ ITEM=i_gold,{4000 5000}
 ON=@GetHit
 IF (5 >= <R1,100>)
 	FOR <R2,3>
-		DORAND 5
-		SERV.NEWNPC C_ARCHER_RATMAN
+		DORAND 3
 		SERV.NEWNPC C_RATMAN
-		SERV.NEWNPC C_ARCHER_RATMAN
 		SERV.NEWNPC C_RATMAN_W_SWORD
 		SERV.NEWNPC C_RATMAN_W_MACE
 		ENDDO

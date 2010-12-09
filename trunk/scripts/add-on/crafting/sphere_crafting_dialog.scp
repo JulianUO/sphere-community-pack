@@ -116,7 +116,7 @@ if !<isempty <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.side
 button 380 267 4005 4007 1 0 404
 xmfhtmlgumpcolor 415 268 150 20 <ddef.scp.craft_button_nextpage> 0 0 <ddef.dcolor_white>
 endif
-if <ctag0.craft.page.mainbar> > 0)
+if (<ctag0.craft.page.mainbar> > 0)
 button 220 267 4014 4015 1 0 403
 xmfhtmlgumpcolor 255 268 150 20 <ddef.scp.craft_button_prevpage> 0 0 <ddef.dcolor_white>
 endif
@@ -320,7 +320,7 @@ if !<isempty <def.<ctag0.craft.skill>_material_<dlocal.mainbar>_name>>
 button 380 267 4005 4007 1 0 404
 xmfhtmlgumpcolor 415 268 150 20 <ddef.scp.craft_button_nextpage> 0 0 <ddef.dcolor_white>
 endif
-if <ctag0.craft.page.mainbar> > 0)
+if (<ctag0.craft.page.mainbar> > 0)
 button 220 267 4014 4015 1 0 403
 xmfhtmlgumpcolor 255 268 150 20 <ddef.scp.craft_button_prevpage> 0 0 <ddef.dcolor_white>
 endif

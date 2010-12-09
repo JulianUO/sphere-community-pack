@@ -10,7 +10,6 @@ VERSION=0.56b
 on=@targon_item
 if (<argo.type> == t_cloth_bolt) || (<argo.type> == t_cloth)
 return 0
-endif
 elif <argo.type> == t_hide
 	if <argo.topobj.uid> == <src.uid>
 		if <argo.more1>

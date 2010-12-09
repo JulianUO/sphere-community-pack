@@ -199,7 +199,7 @@ ON=@NPCRestock
 ITEM=loot_ogre_lord
 
 
-[CHARDEF 035]
+[CHARDEF 036]
 DEFNAME=c_troll
 NAME=Troll
 SOUND=snd_MONSTER_TROLL1
