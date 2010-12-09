@@ -42,6 +42,7 @@ new.type = t_trade_pet
 new.timerf 2,trigger @timer
 argo.trysrc <uid> TradeWindow <new>
 return 1
+endif
 
 [events e_pet_transfer]
 on=@tradeaccepted
@@ -101,7 +102,6 @@ argo.shrink
 	ref77.tag0.master = <src.uid>
 	ref77.cont = <args>
 	argo.sysmessage You have saved your pet.
-	endif
 endif
 
 [eof]

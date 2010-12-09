@@ -146,7 +146,7 @@ random_male_hair        { i_hair_short 1 i_hair_long 1 i_hair_ponytail 1 i_hair_
 random_facial_hair      { i_beard_long 1 i_beard_short 1 i_beard_goatee 1 i_beard_mustache 1 i_beard_short_med 1 i_beard_long_med 1 i_beard_vandyke 1 }
 
 [DEFNAME items_clothing]
-random_hats            { i_floppy_hat 1 i_wide_brim_hat 1 i_cap 1 i_tall_straw_hat 1 i_straw_hat 1 i_wizards_hat 1 i_bonnet 1 i_feathered_hat 1 i_bandana 1 i_skull_cap 1 }
+random_hats            { i_hat_floppy 1 i_hat_wide_brim 1 i_cap 1 i_hat_straw_tall 1 i_hat_straw 1 i_hat_wizards 1 i_bonnet 1 i_hat_feather 1 i_bandana 1 i_skull_cap 1 }
 random_over_armor      { i_tunic 1 i_doublet 1 i_sash 1 }
 random_female_tops     { i_shirt_plain 1 i_shirt_fancy 1 i_doublet 1 i_tunic 1 i_dress_full 1 i_dress_plain 1 i_robe 1 }
 random_female_pants    { i_pants_short 1 i_pants_long 1 i_kilt 1 i_skirt_long 1 i_dress_full 1 i_dress_plain 1 }
@@ -192,7 +192,7 @@ random_reagent         { i_reag_black_pearl 1 i_reag_blood_moss 1 i_reag_garlic 
 random_reagent_necro   { i_reag_grave_dust 1 i_reag_daemon_blood 1 i_reag_batwing 1 i_reag_pig_iron 1 i_reag_nox_crystal 1 }
 
 [DEFNAME items_misc]
-random_instrument      { i_drum 1 i_tambourine 1 i_lyre 1 i_lute 1 }
+random_instrument      { i_drum 1 i_tambourine 1 i_harp_lap 1 i_lute 1 }
 
 [DEFNAME items_jewels]
 random_necklace        { i_necklace_silver_beads 1 i_necklace_gold_beads 1 i_necklace_gold 1 i_necklace_silver 1 }
@@ -222,9 +222,9 @@ random_upper_scroll    { random_fifth_circle 1 random_sixth_circle 1 random_seve
 //stratics scrolls
 random_scroll_low	 { i_scroll_blank 1 random_first_circle 1 random_second_circle 1 random_third_circle 1 }
 random_scroll_medium	 { random_fourth_circle 1 random_fifth_circle 1 random_sixth_circle 1 random_seventh_circle 1 }
-random_scroll_high	 { random_eigth_circle 1 }
+random_scroll_high	 { random_eighth_circle 1 }
 
-random_scroll_necro_low	 { i_scroll_animate_dead 1 i_scroll_blood_oath 1 i_scroll_corpse_skin 1 i_scroll_curse_weapon 1 i_scroll_evil_omen 1 i_scroll_horrific_beast 1 i_scroll_mind_rot 1 i_scroll_rot_mind 1 i_scroll_summon_familiar 1 i_scroll_wraith_form 1 }
+random_scroll_necro_low	 { i_scroll_animate_dead 1 i_scroll_blood_oath 1 i_scroll_corpse_skin 1 i_scroll_curse_weapon 1 i_scroll_evil_omen 1 i_scroll_horrific_beast 1 i_scroll_mind_rot 1 i_scroll_summon_familiar 1 i_scroll_wraith_form 1 }
 random_scroll_necro_med	 { i_scroll_lich_form 1 i_scroll_poison_strike 1 i_scroll_strangle 1 i_scroll_wither 1 }
 random_scroll_necro_high { i_scroll_vengeful_spirit 1 i_scroll_vampiric_embrace 1 i_scroll_exorcism 1 }
 
@@ -321,7 +321,7 @@ random_body_parts_2        { i_flesh_torso 1 i_flesh_head 1 i_flesh_left_arm 1 i
 horses                 { c_horse_tan 1 c_horse_gray 1 c_horse_brown_lt 1 c_horse_brown_dk 1 }
 lizard_men             { c_lizardman 1 c_lizardman_spear 1 c_lizardman_mace 1 }
 ratmen                 { c_ratman 1 c_ratman_w_sword 1 c_ratman_w_mace 1 }
-skeletons              { c_skeleton 1 c_skeleton_w_sword 1 c_skeleton_w_axe 1}
+skeletons              { c_skeleton 1 c_skeletal_knight 1 c_skeleton_w_axe 1}
 trolls                 { c_troll 1 c_troll_w_axe 1 c_troll_w_mace 1 }
 
 [DEFNAME sounds]
@@ -1418,10 +1418,10 @@ height_0ED	8	//DEFNAME=c_doe
 height_0D9	5	//DEFNAME=c_dog
 height_097	4	//DEFNAME=c_dolphin
 height_0309	16	//DEFNAME=c_Doppelganger
-height_0c	35	//DEFNAME=c_dragon_green
+height_0c	35	//DEFNAME=c_dragon_grey
 height_03b	35	//DEFNAME=c_dragon_red
-height_03c	30	//DEFNAME=c_dragon_small_black
-height_03d	30	//DEFNAME=c_dragon_small_red
+height_03c	30	//DEFNAME=c_drake_grey
+height_03d	30	//DEFNAME=c_drake_red
 height_0101	16	//DEFNAME=c_dread_horn
 height_0b	10	//DEFNAME=c_dread_spider
 height_010a	14	//DEFNAME=c_Dryad

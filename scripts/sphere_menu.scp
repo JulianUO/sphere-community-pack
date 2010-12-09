@@ -844,16 +844,16 @@ ON=0 Spectre
 ADDNPC c_SPECTRE
 ON=0 Headless
 ADDNPC c_Headless
-ON=0 Liche
-ADDNPC c_liche
-ON=0 Liche Lord
-ADDNPC c_m_liche_lord
+ON=0 Lich
+ADDNPC c_lich
+ON=0 Lich Lord
+ADDNPC c_m_lich_lord
 ON=0 Skeleton
 ADDNPC c_skeleton
 ON=0 Skeleton (with axe)
 ADDNPC c_skeleton_w_axe
 ON=0 Skeleton (with sword)
-ADDNPC c_skeleton_w_sword
+ADDNPC c_skeletal_knight
 ON=0 Skeletal Knight
 ADDNPC c_m_skeleton_knight
 ON=0 Skeletal Mage
@@ -878,11 +878,11 @@ ADDNPC c_WISP
 ON=0 Dragon (red)
 ADDNPC c_DRAGON_RED
 ON=0 Dragon (green)
-ADDNPC c_DRAGON_GREEN
+ADDNPC c_dragon_grey
 ON=0 Drake (red)
-ADDNPC c_DRAGON_SMALL_RED
+ADDNPC c_drake_red
 ON=0 Drake (Black)
-ADDNPC c_DRAGON_SMALL_BLACK
+ADDNPC c_drake_grey
 ON=0 Daemon
 ADDNPC c_DAEMON
 ON=0 Balron (Elder Daemon)
@@ -917,7 +917,7 @@ ADDNPC C_M_KRAKEN
 ON=0 Lava Lizard
 ADDNPC c_m_lava_lizard
 ON=0 Mummy
-ADDNPC C_M_MUMMY
+ADDNPC c_mummy
 ON=0 Nightmare
 ADDNPC C_M_NIGHTMARE
 ON=0 Phoenix
@@ -2525,10 +2525,10 @@ ON=i_bureau Chest of Drawers
 ADD i_bureau
 ON=i_bureau_2 Dark Chest of Drawers
 ADD i_bureau_2
-ON=i_armoir_lt Wood Armoire
-ADD i_armoir_lt
-ON=i_armoir_dk Dark Wood Armoire
-ADD i_armoir_dk
+ON=i_armoire_lt Wood Armoire
+ADD i_armoire_lt
+ON=i_armoire_dk Dark Wood Armoire
+ADD i_armoire_dk
 
 [MENU M_ADDI_PROV_TWIN]
 Equip (Twin Beds)

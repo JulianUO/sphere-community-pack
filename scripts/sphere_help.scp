@@ -257,11 +257,11 @@ if <LIST.pages_uid.COUNT>
         LIST.pages_time.<dlocal._for> = <serv.rticks>
         LIST.pages_pos.<dlocal._for> = <p>
         LIST.pages_handle.<dlocal._for> = 0
-	serv.log @PageSys :: Page from <name> [<uid>] @ <p.x>,<p.y>,<p.z>,<p.m>: ['<strarg <streat <args>>>'] <streat <streat <args>>>
-	serv.allclients NotifyGMs "Page from <name> [<uid>] @ <p.x>,<p.y>,<p.z>,<p.m>: ['<strarg <streat <args>>>'] <streat <streat <args>>>"
+        serv.log @PageSys :: Page from <name> [<uid>] @ <p.x>,<p.y>,<p.z>,<p.m>: ['<strarg <streat <args>>>'] <streat <streat <args>>>
+        serv.allclients NotifyGMs "Page from <name> [<uid>] @ <p.x>,<p.y>,<p.z>,<p.m>: ['<strarg <streat <args>>>'] <streat <streat <args>>>"
         return 1
         endif
-    endif
+    endfor
 endif
 LIST.pages_uid.ADD <strarg <args>>
 LIST.pages_type.ADD <strarg <streat <args>>>

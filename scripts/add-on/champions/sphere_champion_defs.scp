@@ -98,7 +98,7 @@ champ_Minotaur_Reward {i_subdue 33 i_pet_minotaur 66}
 
 //champ_ColdBlood_1 {c_lizardman 1 c_snake 1}
 //champ_ColdBlood_2 {c_m_lava_lizard 1 c_ophidian_warrior 1 c_ophidian_enforcer 1}
-//champ_ColdBlood_3 {c_dragon_small_red 1 c_ophidian_justiciar 1 c_ophidian_zealot 1}
+//champ_ColdBlood_3 {c_drake_red 1 c_ophidian_justiciar 1 c_ophidian_zealot 1}
 //champ_ColdBlood_4 {c_dragon_red 1 c_ophidian_avenger 1 c_m_ophidian_knight 1}
 //champ_ColdBlood_champion c_Rikktor
 //champ_ColdBlood_Reward {i_crown_talkeesh 17 i_knowlegable_person 11 i_brave_knight_britannia 11 i_Lieutenant_Royal_guard 11 i_ophidianarchmage_statue 25 i_ophidianwarrior_statue 25}
@@ -117,10 +117,10 @@ champ_Minotaur_Reward {i_subdue 33 i_pet_minotaur 66}
 //champ_VerminHord_champion c_Barracoon
 //champ_VerminHord_Reward {i_fang_ractus 17 i_slime_statue 50 i_oak_leaf_cloak 9 i_gauntlets_anger 9 i_Detective_boots 9 i_Djinn_Ring 9}
 
-//champ_UnholyTerror_1 {c_spectre 1 c_m_ghoul 1 c_m_wraith 1 c_m_ghost 1}
-//champ_UnholyTerror_2 {c_m_skeleton_mage 1 c_m_mummy 1 c_m_wraith 1}
-//champ_UnholyTerror_3 {c_liche 1 c_m_skeleton_knight 1 c_m_mummy 1}
-//champ_UnholyTerror_4 {c_m_liche_lord 1 c_rotting_corpse 1}
+//champ_UnholyTerror_1 {c_spectre 1 c_m_ghoul 1 c_wraith 1 c_m_ghost 1}
+//champ_UnholyTerror_2 {c_m_skeleton_mage 1 c_mummy 1 c_wraith 1}
+//champ_UnholyTerror_3 {c_lich 1 c_m_skeleton_knight 1 c_mummy 1}
+//champ_UnholyTerror_4 {c_m_lich_lord 1 c_rotting_corpse 1}
 //champ_UnholyTerror_champion c_Neira
 //champ_UnholyTerror_Reward {i_blood_drips 50 i_captain_john_hat 11 i_detective_boots 11 i_necromancer_shroud 11 i_shroud_deceit 17}
 

@@ -1159,7 +1159,7 @@ ON=@NPCRestock
 
 [CHARDEF 01107]
 DEFNAME=c_m_dragon_greendrake
-ID=c_DRAGON_SMALL_BLACK
+ID=c_drake_grey
 NAME=#NAMES_DRAGON the Green Drake
 SOUND=snd_MONSTER_DRAGON1
 ICON=i_pet_dragon
@@ -1201,7 +1201,7 @@ ON=@NPCRestock
 
 [CHARDEF 01108]
 DEFNAME=c_m_dragon_copperdrake
-ID=c_DRAGON_SMALL_BLACK
+ID=c_drake_grey
 NAME=#NAMES_DRAGON the Copper Drake
 DAM=4,24
 ARMOR=23
@@ -1241,7 +1241,7 @@ ON=@NPCRestock
 
 [CHARDEF 01109]
 DEFNAME=c_m_dragon_bluedrake
-ID=c_DRAGON_SMALL_BLACK
+ID=c_drake_grey
 NAME=#NAMES_DRAGON the Blue Drake
 SOUND=snd_MONSTER_DRAGON1
 ICON=i_pet_dragon
@@ -1283,7 +1283,7 @@ ON=@NPCRestock
 
 [CHARDEF 01110]
 DEFNAME=c_m_dragon_golddrake
-ID=c_DRAGON_SMALL_BLACK
+ID=c_drake_grey
 NAME=#NAMES_DRAGON the Gold Drake
 SOUND=snd_MONSTER_DRAGON1
 ICON=i_pet_dragon
@@ -1325,7 +1325,7 @@ ON=@NPCRestock
 
 [CHARDEF 01111]
 DEFNAME=c_m_dragon_blackdrake
-ID=c_DRAGON_SMALL_BLACK
+ID=c_drake_grey
 NAME=#NAMES_DRAGON the Black Drake
 SOUND=snd_MONSTER_DRAGON1
 ICON=i_pet_dragon
@@ -1367,7 +1367,7 @@ ON=@NPCRestock
 
 [CHARDEF 01112]
 DEFNAME=c_m_dragon_silverdrake
-ID=c_DRAGON_SMALL_RED
+ID=c_drake_red
 NAME=#NAMES_DRAGON the Silver Drake
 SOUND=snd_MONSTER_DRAGON1
 ICON=i_pet_dragon
@@ -1409,7 +1409,7 @@ ON=@NPCRestock
 
 [CHARDEF 01113]
 DEFNAME=c_m_dragon_crystaldrake
-ID=c_DRAGON_SMALL_RED
+ID=c_drake_red
 NAME=#NAMES_DRAGON the Crystal Drake
 SOUND=snd_MONSTER_DRAGON1
 ICON=i_pet_dragon

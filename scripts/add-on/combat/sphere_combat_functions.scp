@@ -111,7 +111,7 @@ return <args> // SPHERE
 	end
 return <qval <r100> <= <eval ((<<combat.skill.uor>> * 10) + 5000) / (((<src.<src.combat.skill.uor>> / 10) + 50) * 2)> ? 0 : -100>
 return <qval <r100> <= <f_combatsys_hitchance_aos> ? 0 : -100>
-end
+enddo
 
 [function f_combatsys_hitchance_aos]
 if <def.scp.ItemProp_HitChanceIncrease> == 1

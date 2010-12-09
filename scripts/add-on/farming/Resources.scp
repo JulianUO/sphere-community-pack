@@ -187,7 +187,6 @@ src.events +e_orange_petal
 serv.newitem i_mem_petal
 src.new.equip
 return 1
-endif
 
 [events e_orange_petal]
 on=@spelleffect
