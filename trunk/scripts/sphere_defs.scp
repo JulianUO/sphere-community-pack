@@ -140,6 +140,14 @@ brain_beserk		brain_berserk
 random_coin_purse      { backpack_poor 1 backpack_meager 1 backpack_average 1 backpack_rich 1 }
 random_gold_pile       { poor_gold_pile 1 meager_gold_pile 1 average_gold_pile 1 rich_gold_pile 1 filthy_rich_gold_pile 1 }
 
+[defname elf_stuff]
+random_elf_male_hair    { i_hair_elven_mullet 1 i_hair_elven_spike 1 i_hair_elven_braid 1 i_hair_elven_long2 1 i_hair_LF 1 i_hair_short1 1}
+random_elf_female_hair  { i_hair_elven_ML 1 i_hair_LF 1 i_hair_elven_flower 1 i_hair_elven_long2 1 i_hair_elven_long3 1 i_hair_elven_braid 1 i_hair_elven_long4 1 }
+//start on row 6
+colors_elf { {024d 024f} 1 051d 1 04de 1 076c 1 0835 1 0430 1 0bf 1 04a7 1 0361 1 0375 1 0367 1 03e8 1 03de 1 0353 1 0903 1 076d 1 0384 1 0579 1 03e9 1 0374 1 }
+//start on row 5
+colors_elf_hair { 0211 1 0128 1 034 3 039 1 101 1 06b8 1 0207 1 026c 1 02c3 1 02c9 1 01e4 1 0239 1 0369 1 059d 1 0583 1 092 1 0159 1 }
+
 [DEFNAME items_hair]
 random_female_hair      { i_hair_short 1 i_hair_long 1 i_hair_ponytail 1 i_hair_pageboy 1 i_hair_buns 1 i_hair_afro 1 i_hair_receding 1 i_hair_2_pigtails 1 i_hair_krisna 1 }
 random_male_hair        { i_hair_short 1 i_hair_long 1 i_hair_ponytail 1 i_hair_mohawk 1 i_hair_pageboy 1 i_hair_afro 1 i_hair_receding 1 i_hair_2_pigtails 1 i_hair_krisna 1 }
@@ -773,6 +781,47 @@ midi_dungeon2           46
 midi_cove               47
 midi_moonglow           48
 
+midi_zento		49
+midi_tokunodungeon	50
+midi_taiko		51
+midi_dread_horn_area	52
+midi_elf_city_1		53
+midi_grizzle_dungeon	54
+midi_melisandes_lair	55
+midi_paroxysmus_lair	56
+midi_Gwenno		57
+midi_GoodEndGame	58
+midi_GoodVsEvil		59
+midi_GreatEarthSerpent	60
+midi_HumanoidsU9	61
+midi_MinocNegative	62
+midi_Paws		63
+midi_SelimsBar		64
+midi_SICombat		65
+midi_valoriaShips	66
+midi_theWanderer	67
+midi_Castle		68
+midi_Festival		69
+midi_Honor		70
+midi_Medieval		71
+midi_BattleOnStones	72
+midi_Docktown		73
+midi_GargoyleQueen	74
+midi_GenericCombat	75
+midi_Holycity		76
+midi_HumanLevel		77
+midi_LoginLoop		78
+midi_ForestStones	79
+midi_PrimevalLich	80
+midi_QueenPalace	81
+midi_RoyalCity		82
+midi_SlasherVeil	83
+midi_StygianAbyss	84
+midi_StygianDragon	85
+midi_Void		86
+midi_CodexShrine	87
+
+
 [DEFNAME needstofix]
 // need to be defined. needs and aversions
 // none 0
@@ -992,6 +1041,7 @@ t_spellbook_arcanist    189	// ML Spellweaver spellbook (should have MOREZ=600 b
 t_multi_custom          190	// Customisable multi
 t_spellbook_mystic      191	// SA Mysticism spellbook (should have MOREX=677 by default)
 t_hoverover             192	// Hover-over item (CAN_C_HOVER can hover over blocking items)
+t_spellbook_bard        193	// SA Bard spellbook (should have MOREZ=700 by default)
 
 [DEFNAME layers]
 layer_hand1		1

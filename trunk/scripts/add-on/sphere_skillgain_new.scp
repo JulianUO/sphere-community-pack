@@ -403,3 +403,5 @@ elif (<argv[1]> >= <floatval 1.0>)
 endif
 
 return <CheckSkill <argv[0]>,<argv[1]>,<argv[2]>>
+
+[EOF]

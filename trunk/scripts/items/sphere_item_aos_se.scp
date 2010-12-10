@@ -324,3 +324,5 @@ DEFNAME=i_crystal_1
 NAME=Crystal
 TYPE=t_wall
 CAN=CAN_I_BLOCK
+
+[EOF]

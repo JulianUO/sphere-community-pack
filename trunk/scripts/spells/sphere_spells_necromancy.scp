@@ -689,3 +689,4 @@ foritems <args>
 	endif
 endfor
 return 0
+[EOF]

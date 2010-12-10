@@ -63,3 +63,4 @@ ON=@NPCRestock
 	ITEM=i_gold,{400 600}
 	ITEM=random_upper_scroll
 	ITEM=random_upper_scroll
+[EOF]

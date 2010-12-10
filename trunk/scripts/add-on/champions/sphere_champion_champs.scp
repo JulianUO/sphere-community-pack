@@ -304,7 +304,7 @@ COLOR=038b
 
 ON=@Timer
 IF (<SECTOR.complexity> < <serv.maxcomplexity>)
-SERV.NEWNPC {c_skeleton 1 c_skeletal_knight 1 c_skeleton_w_axe 1 c_patchwork_skeleton 1 c_lich 1 c_m_skeletonarcher 1 c_mummy 1 c_spectre 1 c_wraith 1}
+SERV.NEWNPC {c_skeleton 1 c_skeletal_knight 1 c_skeleton_w_axe 1 c_patchwork_skeleton 1 c_lich 1 c_mummy 1 c_spectre 1 c_wraith 1}
 NEW.P=<P>
 NEW.UPDATEX
 NEW.FLAGS |= statf_conjured

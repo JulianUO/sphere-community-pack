@@ -89,7 +89,7 @@ ON=@Create
 	TACTICS={60.0 90.0}
 	WRESTLING={60.0 90.0}
 	SWORDSMANSHIP={60.0 90.0}
-	ITEMNEWBIE=i_staff_bladed_double
+	ITEMNEWBIE=i_double_bladed_staff
 
 ON=@NpcRestock
 	ITEM=random_jewel,{1 4}

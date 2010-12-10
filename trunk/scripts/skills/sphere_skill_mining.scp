@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: 10-DEC-2010 by WildGenie
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -33,6 +33,45 @@ VALUES=1,10,80
 ON=@Fail
 SRC.SYSMESSAGE <def.scp.mining_fail>
 
+ON=@PRESTART
+if (<DEF.scp.mining_on_mount> == 0)
+	if (<SRC.FINDLAYER.layer_horse>)
+		SRC.SYSMESSAGE <DEF.scp.mining_mounted>
+		RETURN 1
+	endif
+endif
+if (<DEF.scp.mining_polymorph> == 0)
+	if (<SRC.flags>&statf_polymorph)
+		SRC.SYSMESSAGE <DEF.scp.mining_polymorphed>
+		RETURN 1
+	endif
+endif
+
+ON=@SUCCESS
+if (<DEF.scp.mining_stop_nocarry> == 0)
+	if (<eval <SRC.WEIGHT>+10> > <SRC.MAXWEIGHT>)
+		SRC.SYSMESSAGE <DEF.scp.mining_nocarry>
+		RETURN 1
+	endif
+endif
+if <def.scp.Mining_Bonus_1>  == 1
+LOCAL.bonusharvest <f_FindBonusHarvest Mining>
+if <LOCAL.bonusharvest>
+	SERV.NEWITEM <getargv 3 <DEF.scp.Mining_Bonus_1_<dLOCAL.bonusharvest>>>,1,<SRC.FINDLAYER.layer_pack>
+	SRC.SYSMESSAGE "@,,3 <getargv 2 <DEF.scp.Mining_Bonus_1_<dLOCAL.bonusharvest>>>"
+endif
+endif
+
+[FUNCTION f_FindBonusHarvest]
+float.randomValue <floatval <RANDOMDOUBLE> * 100>
+local.bonusno 0
+while (!<ISEMPTY <DEF.scp.<args>_Bonus_1_<dlocal.bonusno>>> )
+if ( <float.randomValue>  <= <floatval <getargv 1 <DEF.scp.<args>_Bonus_1_<dlocal.bonusno>>>> )
+		return <dlocal.bonusno>
+	endif
+	float.randomValue -= <floatval <getargv 1 <DEF.scp.<args>_Bonus_1_<dlocal.bonusno>>>>
+	local.bonusno += 1
+endwhile
 
 // f_FindResourceWorldgem $targp
 [function f_FindResourceWorldgem]

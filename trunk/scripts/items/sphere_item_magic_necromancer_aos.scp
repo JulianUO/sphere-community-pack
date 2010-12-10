@@ -164,7 +164,7 @@ SKILLMAKE=INSCRIPTION 69.6
 ON=@Create
 ATTR=attr_magic
 MORE1=040
-MOREX=s_liche_form
+MOREX=s_lich_form
 MOREY={10 10}
 
 CATEGORY=Provisions - Alchemy & Magic

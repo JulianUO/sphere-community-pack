@@ -238,7 +238,7 @@ SELL=i_hair_elven_flower,10
 ATTR=attr_decay
 SELL=i_hair_elven_long2,10
 ATTR=attr_decay
-SELL=i_hair_elven_long_3,10
+SELL=i_hair_elven_long3,10
 ATTR=attr_decay
 SELL=i_hair_elven_braid,10
 ATTR=attr_decay
@@ -330,7 +330,7 @@ SELL=i_hair_elven_flower,10
 ATTR=attr_decay
 SELL=i_hair_elven_long2,10
 ATTR=attr_decay
-SELL=i_hair_elven_long_3,10
+SELL=i_hair_elven_long3,10
 ATTR=attr_decay
 SELL=i_hair_elven_braid,10
 ATTR=attr_decay
@@ -3834,7 +3834,6 @@ SUBSECTION=Tradesmen (Elven)
 DESCRIPTION=Waiter (male)
 
 [CHARDEF C_E_WAITRESS]
-DEFNAME=
 NAME=#NAMES_ELF_FEMALE the Waitress
 ID=C_ELF_FEMALE
 
@@ -3891,7 +3890,6 @@ SUBSECTION=Tradesmen (Elven)
 DESCRIPTION=Waitress (female)
 
 [CHARDEF C_E_ALCHEMIST]
-DEFNAME=
 NAME=#NAMES_ELF_MALE the Alchemist
 ID=C_ELF_MALE
 

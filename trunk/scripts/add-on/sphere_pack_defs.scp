@@ -150,6 +150,28 @@ snd_monster_stygian_dragon_d	1600
 snd_monster_stygian_dragon_h	1601
 snd_monster_stygian_dragon_n	1602
 
+snd_monster_chicken_lizard   1509
+snd_monster_medusa                 1555
+snd_monster_goblin                 1534
+snd_monster_gargoyle_undead  1607
+snd_monster_navreynighteyes  1563
+snd_monster_slith            1591
+snd_monster_skree            1583
+snd_monster_mimic                       1559
+snd_monster_dragon_faerie       1513
+snd_monster_dragon_wolf   1517
+snd_abyssal_infernal     1493
+snd_monster_elem_lava           1547
+snd_monster_maddening_horror 1551
+snd_monster_boura                       1505
+snd_death_beetle1                 1264
+snd_monster_stoneform           1595
+snd_monster_bloodworm   1501
+snd_monster_rotworm             1579
+snd_monster_raptor                 1571
+snd_monster_kepetch               1543
+snd_monster_homunculous   1542
+
 [DEFNAME MISC_SOUNDS]
 snd_quest_abandon				1460
 snd_quest_accept				1461

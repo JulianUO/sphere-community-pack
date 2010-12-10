@@ -1301,7 +1301,7 @@ RETURN 1
 /////////////////////////////
 
 [CHARDEF C_DARK_GUARDIAN]
-ID=c_liche
+ID=c_lich
 DEFNAME=C_DARK_GUARDIAN
 NAME=Dark Guardian
 DAM=30,40

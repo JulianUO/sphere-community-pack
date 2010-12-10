@@ -565,3 +565,5 @@ DUPEITEM=01f24
 [ITEMDEF 01f27]
 //bedroll square
 DUPEITEM=01f24
+
+[EOF]

@@ -73,8 +73,8 @@ ELIF !(<SRC.ISGM>)
     ELIF (<REF1.MORE1> != <SRC>)
       SRC.SYSMESSAGE @,,1 Only the house owner can directly place vendors.  Please ask the house owner to offer you a vendor contract so that you may place a vendor in this house.
       return 1
-    ELIF (<DEF.HOUSE_USE_VENDORS>)		//AOS House System script compatibility
-      IF (<DEF.HOUSE_VENDORS_PUBLIC_ONLY>) && !(<UID.<REF1.MORE2>.TAG0.PUBLIC>)
+    ELIF (<DEF.SCP.HOUSE_USEVENDORS>)		//AOS House System script compatibility
+      IF (<DEF.SCP.House_VendorsPublic>) && !(<UID.<REF1.MORE2>.TAG0.PUBLIC>)
         SRC.SYSMESSAGE @,,1 You cannot place this vendor or barkeep.  Make sure the house is public and has sufficient storage available.
         return 1
       ENDIF
@@ -330,7 +330,7 @@ IF !(<SRC.TARG.ISEVENT.t_vendor_sell>)
   ENDIF
   IF (<isnum <UID.<SRC.TARG.CONT>.TAG.PRICE>>)
     IF (<SRC.TARG.TOPOBJ> != <SRC.TARG.CONT>)
-      SRC.SYSMESSAGE @,,1 You can only drop itens in Not-For-Sale containers.
+      SRC.SYSMESSAGE @,,1 You can only drop items in Not-For-Sale containers.
       SRC.TARG.BOUNCE
       return 1
     ENDIF
@@ -396,7 +396,7 @@ ON=@DropOn_Item
 IF (<CONT>)
   IF (<TAG0.BAGBACK>)
     IF (<isnum <ARGO.TAG.PRICE>>)
-      SRC.SYSMESSAGE @,,1 You can only drop itens in Not-For-Sale container.
+      SRC.SYSMESSAGE @,,1 You can only drop items in Not-For-Sale container.
       MOREM ++
       CONT=<UID.<TAG.BAGBACK>.FINDLAYER.21>
       MOREM --
@@ -952,7 +952,7 @@ NEW.P=<SRC.TARGP>
 IF (<NEW.CanPlaceRentalContract>)
  TAG.Rent.Landlord=<SRC>
  P=<NEW.P>
- IF (<DEF.HOUSE_USE_VENDORS>)		//AOS House System script compatibility
+ IF (<DEF.SCP.HOUSE_USEVENDORS>)		//AOS House System script compatibility
   HouseSetLockedProps 1
  ENDIF
 ENDIF
@@ -961,12 +961,12 @@ return 1
 
 ON=@TargOn_Char
 SERV.NEWNPC c_pig
-NEW.FLAGS=statf_invis|statf_invul
+NEW.FLAGS=statf_insubstantial|statf_invul
 NEW.P=<SRC.TARGP>
 IF (<NEW.CanPlaceRentalContract>)
  TAG.Rent.Landlord=<SRC>
  P=<NEW.P>
- IF (<DEF.HOUSE_USE_VENDORS>)		//AOS House System script compatibility
+ IF (<DEF.SCP.HOUSE_USEVENDORS>)		//AOS House System script compatibility
   HouseSetLockedProps 1
  ENDIF
 ENDIF
@@ -1191,8 +1191,8 @@ ELIF !(<SRC.CanSeeLOS <UID>>)
 ELIF (<IsStuck>)
   SRC.SYSMESSAGE @,,1 That location is cluttered.  Please clear out any objects there and try again.
   return 0
-ELIF (<DEF.HOUSE_USE_VENDORS>)		//AOS House System script compatibility
-  IF (<DEF.HOUSE_VENDORS_PUBLIC_ONLY>) && !(<REF2.TAG0.PUBLIC>)
+ELIF (<DEF.SCP.HOUSE_USEVENDORS>)		//AOS House System script compatibility
+  IF (<DEF.SCP.House_VendorsPublic>) && !(<REF2.TAG0.PUBLIC>)
     SRC.SYSMESSAGE @,,1 Rental contracts can only be placed in public houses.
     return 0
   ELIF !(<REF2.House_AvaibleLockdowns>)
@@ -1301,7 +1301,7 @@ NEW.CLEARTAGS Rent.Renew
 NEW.TAG.Rent.Renter=
 NEW.TAG.Rent.End=
 NEW.P=<P>
-IF (<DEF.HOUSE_USE_VENDORS>)		//AOS House System script compatibility
+IF (<DEF.SCP.HOUSE_USEVENDORS>)		//AOS House System script compatibility
  NEW.HouseSetLockedProps 1
 ENDIF
 

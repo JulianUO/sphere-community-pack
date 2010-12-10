@@ -792,3 +792,5 @@ ON=@Create
 	NPC=brain_animal
 	FAME=75
 	KARMA={-300 -399}
+
+[EOF]

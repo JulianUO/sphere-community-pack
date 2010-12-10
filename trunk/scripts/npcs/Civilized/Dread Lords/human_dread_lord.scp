@@ -61,3 +61,4 @@ ON=@NPCRestock
 	ITEM={ random_jewel 1 0 1 }
 	ITEM={ random_jewel 1 0 1 }
 	ITEM=i_gold,{250 450}
+[EOF]

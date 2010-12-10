@@ -199,12 +199,32 @@ amount=5,15
 REAP=i_ore_iron
 REGEN=60*60
 
+on=@resourcefound
+if <def.scp.Mining_Granit> == 1
+if <src.mining> >= <def.scp.Mining_MinToGranit>
+if <r100> <= <DEF.scp.Mining_ChanceGranit>
+argo.more1 = mr_iron_granit
+argo.amount = <r<serv.regionresource.<argo.more1>.amount>>
+endif
+endif
+endif
+
 [REGIONRESOURCE mr_dull_copper]
 // t_rock
 skill=65.0,90.0
 amount=5,15
 REAP=i_ore_dull_copper
 REGEN=60*60
+
+on=@resourcefound
+if <def.scp.Mining_Granit> == 1
+if <src.mining> >= <def.scp.Mining_MinToGranit>
+if <r100> <= <DEF.scp.Mining_ChanceGranit>
+argo.more1 = mr_dull_copper_granit
+argo.amount = <r<serv.regionresource.<argo.more1>.amount>>
+endif
+endif
+endif
 
 [REGIONRESOURCE mr_shadow]
 // t_rock
@@ -213,12 +233,32 @@ amount=5,15
 REAP=i_ore_shadow
 REGEN=60*60
 
+on=@resourcefound
+if <def.scp.Mining_Granit> == 1
+if <src.mining> >= <def.scp.Mining_MinToGranit>
+if <r100> <= <DEF.scp.Mining_ChanceGranit>
+argo.more1 = mr_shadow_granit
+argo.amount = <r<serv.regionresource.<argo.more1>.amount>>
+endif
+endif
+endif
+
 [REGIONRESOURCE mr_copper]
 // t_rock
 skill=75.0,100.0
 amount=5,15
 REAP=i_ore_copper
 REGEN=60*60
+
+on=@resourcefound
+if <def.scp.Mining_Granit> == 1
+if <src.mining> >= <def.scp.Mining_MinToGranit>
+if <r100> <= <DEF.scp.Mining_ChanceGranit>
+argo.more1 = mr_copper_granit
+argo.amount = <r<serv.regionresource.<argo.more1>.amount>>
+endif
+endif
+endif
 
 [REGIONRESOURCE mr_bronze]
 // t_rock
@@ -227,12 +267,32 @@ amount=5,15
 REAP=i_ore_bronze
 REGEN=60*60
 
+on=@resourcefound
+if <def.scp.Mining_Granit> == 1
+if <src.mining> >= <def.scp.Mining_MinToGranit>
+if <r100> <= <DEF.scp.Mining_ChanceGranit>
+argo.more1 = mr_bronze_granit
+argo.amount = <r<serv.regionresource.<argo.more1>.amount>>
+endif
+endif
+endif
+
 [REGIONRESOURCE mr_gold]
 // t_rock
 skill=85.0,110.0
 amount=5,15
 REAP=i_ore_gold
 REGEN=60*60*10
+
+on=@resourcefound
+if <def.scp.Mining_Granit> == 1
+if <src.mining> >= <def.scp.Mining_MinToGranit>
+if <r100> <= <DEF.scp.Mining_ChanceGranit>
+argo.more1 = mr_gold_granit
+argo.amount = <r<serv.regionresource.<argo.more1>.amount>>
+endif
+endif
+endif
 
 [REGIONRESOURCE mr_agapite]
 // t_rock
@@ -241,6 +301,16 @@ amount=5,15
 REAP=i_ore_agapite
 REGEN=60*60
 
+on=@resourcefound
+if <def.scp.Mining_Granit> == 1
+if <src.mining> >= <def.scp.Mining_MinToGranit>
+if <r100> <= <DEF.scp.Mining_ChanceGranit>
+argo.more1 = mr_agapite_granit
+argo.amount = <r<serv.regionresource.<argo.more1>.amount>>
+endif
+endif
+endif
+
 [REGIONRESOURCE mr_verite]
 // t_rock
 skill=95.0,120.0
@@ -248,12 +318,32 @@ amount=5,15
 REAP=i_ore_verite
 REGEN=60*60
 
+on=@resourcefound
+if <def.scp.Mining_Granit> == 1
+if <src.mining> >= <def.scp.Mining_MinToGranit>
+if <r100> <= <DEF.scp.Mining_ChanceGranit>
+argo.more1 = mr_verite_granit
+argo.amount = <r<serv.regionresource.<argo.more1>.amount>>
+endif
+endif
+endif
+
 [REGIONRESOURCE mr_valorite]
 // t_rock
 skill=99.0,120.0
 amount=5,15
 REAP=i_ore_valorite
 REGEN=60*60
+
+on=@resourcefound
+if <def.scp.Mining_Granit> == 1
+if <src.mining> >= <def.scp.Mining_MinToGranit>
+if <r100> <= <DEF.scp.Mining_ChanceGranit>
+argo.more1 = mr_valorite_granit
+argo.amount = <r<serv.regionresource.<argo.more1>.amount>>
+endif
+endif
+endif
 
 
 ///////////////////////////////////////////////////////////////
@@ -370,5 +460,72 @@ skill=60.0,110.0
 amount=1,4
 REAP=i_gem_Tourmaline
 REGEN=60*60*10
+
+///////////////////////////////////////////////////////////////
+//////// T_ROCK (OSI) DISTRIBUTION
+///////////////////////////////////////////////////////////////
+// These are generally used in t_rock. OSI-Like.
+[REGIONRESOURCE mr_iron_granit]
+// t_rock
+skill=0.1,50.0
+amount=1,5
+REAP=i_granite
+REGEN=60*60
+
+[REGIONRESOURCE mr_dull_copper_granit]
+// t_rock
+skill=65.0,90.0
+amount=1,5
+REAP=i_granite_dull_copper
+REGEN=60*60
+
+[REGIONRESOURCE mr_shadow_granit]
+// t_rock
+skill=70.0,95.0
+amount=1,5
+REAP=i_granite_shadow
+REGEN=60*60
+
+[REGIONRESOURCE mr_copper_granit]
+// t_rock
+skill=75.0,100.0
+amount=1,5
+REAP=i_granite_copper
+REGEN=60*60
+
+[REGIONRESOURCE mr_bronze_granit]
+// t_rock
+skill=80.0,105.0
+amount=1,5
+REAP=i_granite_bronze
+REGEN=60*60
+
+[REGIONRESOURCE mr_gold_granit]
+// t_rock
+skill=85.0,110.0
+amount=1,5
+REAP=i_granite_gold
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_agapite_granit]
+// t_rock
+skill=90.0,115.0
+amount=1,5
+REAP=i_granite_agapite
+REGEN=60*60
+
+[REGIONRESOURCE mr_verite_granit]
+// t_rock
+skill=95.0,120.0
+amount=1,5
+REAP=i_granite_verite
+REGEN=60*60
+
+[REGIONRESOURCE mr_valorite_granit]
+// t_rock
+skill=99.0,120.0
+amount=1,5
+REAP=i_granite_valorite
+REGEN=60*60
 
 [eof]
