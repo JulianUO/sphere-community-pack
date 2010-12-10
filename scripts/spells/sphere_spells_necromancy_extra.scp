@@ -74,17 +74,17 @@ endif
 if (<args> > 17500)
 return c_skeletal_dragon
 elseif (<args> > 15000)
-return c_m_liche_lord
+return c_lich_lord
 elseif (<args> > 12500)
 return c_flesh_golem
 elseif (<args> > 10000)
 return c_mummy
 elseif (<args> > 8000)
-return c_liche
+return c_lich
 elseif (<args> > 6000)
-return c_m_skeleton_knight
+return c_skeletal_knight
 elseif (<args> > 4000)
-return c_m_skeleton_mage
+return c_skeletal_mage
 elseif (<args> > 2000)
 return c_patchwork_skeleton
 else
@@ -463,8 +463,8 @@ timer=1
 
 ON=@Timer
 if (<uid.<cont.tag0.victim>.flags>&statf_dead)
-  finduid.<cont.tag.owner>.findid.i_revenant_tracker.remove
-  finduid.<cont.tag.owner>.sysmessage Your revenant succeeded!
+  uid.<cont.tag.owner>.findid.i_revenant_tracker.remove
+  uid.<cont.tag.owner>.sysmessage Your revenant succeeded!
   cont.remove
   return 1
 else
@@ -473,8 +473,8 @@ else
   cont.attack <uid.<cont.tag.victim>>
   more1 -= 1
   if (<more1> < 1)
-    finduid.<cont.tag.owner>.findid.i_revenant_tracker.remove
-    finduid.<cont.tag.owner>.sysmessage Your revenant failed
+    uid.<cont.tag.owner>.findid.i_revenant_tracker.remove
+    uid.<cont.tag.owner>.sysmessage Your revenant failed
     cont.remove
   endif
   timer=10
@@ -515,13 +515,13 @@ ON=@NPCRestock
 
 [events e_revenant]
 ON=@Death
-finduid.<src.tag.owner>.findid.i_revenant_tracker.remove
-finduid.<src.tag.owner>.sysmessage Your revenant failed
+uid.<src.tag.owner>.findid.i_revenant_tracker.remove
+uid.<src.tag.owner>.sysmessage Your revenant failed
 
 ON=@Kill
 if (<argo.uid>==<src.tag.victim>)
-  finduid.<src.tag.owner>.findid.i_revenant_tracker.remove
-  finduid.<src.tag.owner>.sysmessage Your revenant succeeded!
+  uid.<src.tag.owner>.findid.i_revenant_tracker.remove
+  uid.<src.tag.owner>.sysmessage Your revenant succeeded!
   remove
 endif
 

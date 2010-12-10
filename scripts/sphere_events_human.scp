@@ -1448,3 +1448,5 @@ ON=@NPCRefuseItem
 		endif
 	endif
 	return 1
+
+[EOF]

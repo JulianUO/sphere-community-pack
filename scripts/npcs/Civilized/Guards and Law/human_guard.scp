@@ -144,3 +144,4 @@ ON=@NPCRestock
 ON=@NPCRefuseItem
 	SAY I cannot be bribed. be gone.
 	return 1
+[EOF]

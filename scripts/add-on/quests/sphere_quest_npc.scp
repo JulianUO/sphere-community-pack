@@ -245,3 +245,5 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=random_jewel,{1 4}
 	ITEM=i_gold,{80 130}
+
+[EOF]

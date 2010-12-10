@@ -165,3 +165,5 @@ ITEM=random_reagents,{10 30}
 ITEM=i_mortar_pestle
 ATTR=ATTR_NEWBIE
 ITEM=i_bottle_empty,{3 10}
+
+[EOF]

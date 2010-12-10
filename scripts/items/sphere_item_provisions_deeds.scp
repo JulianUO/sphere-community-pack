@@ -147,3 +147,5 @@ DESCRIPTION=Pickpocket Dip (W)
 
 ON=@Create
 	MORE=i_pickpocket_dip_w
+
+[EOF]

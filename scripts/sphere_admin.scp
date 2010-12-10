@@ -510,3 +510,5 @@ TRYSRV obj.account.tag.note_<eval <obj.account.tag0.numnotes>>_time=<serv.rtime>
 sysmessage Note added to account <obj.account.name>!
 obj.dialog d_sphereplayernotes
 obj=<local.oldobj>
+
+[EOF]

@@ -1682,3 +1682,5 @@ DUPEITEM=01f9b
 [ITEMDEF 01e16]
 //raw fish, cut open facing NE
 DUPEITEM=01e15
+
+[EOF]

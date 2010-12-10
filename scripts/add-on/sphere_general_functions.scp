@@ -47,6 +47,12 @@ return 1
 endif
 return 0
 
+[FUNCTION ishumanaid]
+if (<ismale> || <isfemale>)
+RETURN 1
+endif
+RETURN 0
+
 [function f_resenddialog]
 dialogclose <ARGV[0]>
 sdialog <ARGS>

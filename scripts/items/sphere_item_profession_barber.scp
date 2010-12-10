@@ -573,3 +573,5 @@ ON=@TIMER
 	new.color=<cont.findlayer(layer_beard).color>
 	cont.equip <new.uid>
 	return 1
+
+[EOF]

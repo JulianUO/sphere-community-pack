@@ -535,3 +535,5 @@ ON=@UnEquip
 ON=@ClientToolTip
 	SRC.addcliloc 1060451,<SERV.SKILL.<TAG0.SKILL>.KEY>,10
 	SRC.addcliloc 1015008
+
+[EOF]

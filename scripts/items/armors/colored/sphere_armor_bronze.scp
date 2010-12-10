@@ -441,3 +441,4 @@ TAG.ResEnergy=4
 ON=@Create
 	COLOR=color_o_bronze
 	HITPOINTS={30 45}
+[EOF]

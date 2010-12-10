@@ -162,7 +162,7 @@ SELL=i_plane_smoothing,{10 30}
 SELL=i_plane_jointing,{10 30}
 SELL=i_drum,{10 30}
 SELL=i_tambourine,{10 30}
-SELL=i_lyre,{10 30}
+SELL=i_harp_lap,{10 30}
 SELL=i_lute,{10 30}
 
 [TEMPLATE VENDOR_B_CARPENTER]
@@ -171,7 +171,7 @@ SUBSECTION=Buy Templates
 DESCRIPTION=Carpenter
 BUY=i_drum,{5 15}
 BUY=i_tambourine,{5 15}
-BUY=i_lyre,{5 15}
+BUY=i_harp_lap,{5 15}
 BUY=i_lute,{5 15}
 BUY=i_sticks,{5 15}
 BUY=i_log,{5 15}
@@ -206,9 +206,9 @@ BUY=i_crate_md,{5 15}
 BUY=i_crate_lg,{5 15}
 BUY=i_chest_metal,{5 15}
 BUY=i_chest_wooden_brass,{5 15}
-BUY=i_bookcase,{5 15}
-BUY=i_armoir_dk,{5 15}
-BUY=i_armoir_lt,{5 15}
+BUY=i_shelf_wooden,{5 15}
+BUY=i_armoire_dk,{5 15}
+BUY=i_armoire_lt,{5 15}
 
 [TEMPLATE VENDOR_S_COBBLER]
 CATEGORY=Vendor Templates
@@ -224,7 +224,7 @@ CATEGORY=Vendor Templates
 SUBSECTION=Buy Templates
 DESCRIPTION=Cobbler
 BUY=i_hides_cut,{2 6}
-BUY=i_hides_cut_2,{2 6}
+//BUY=i_hides_cut_2,{2 6}
 BUY=i_hide,{2 6}
 BUY=i_fur_light,{2 6}
 BUY=i_fur_dark,{2 6}
@@ -338,7 +338,7 @@ DESCRIPTION=Tanner
 
 SELL=VENDOR_S_ARMORER_LEATHER
 
-SELL=i_hides_cut_2,{5 55}
+//SELL=i_hides_cut_2,{5 55}
 
 SELL=i_knife_skinning,{5 55}
 SELL=i_bag,{5 55}
@@ -353,7 +353,7 @@ DESCRIPTION=Tanner
 BUY=VENDOR_B_ARMORER_LEATHER
 
 BUY=i_hides_cut,{5 55}
-BUY=i_hides_cut_2,{5 55}
+//BUY=i_hides_cut_2,{5 55}
 BUY=i_hide,{5 55}
 BUY=i_fur_light,{5 55}
 BUY=i_fur_dark,{5 55}
@@ -894,7 +894,7 @@ SELL=i_plane_jointing,{4 34}
 SELL=i_pickaxe,{4 34}
 SELL=i_drum,{4 34}
 SELL=i_tambourine,{4 34}
-SELL=i_lyre,{4 34}
+SELL=i_harp_lap,{4 34}
 SELL=i_lute,{4 34}
 
 [TEMPLATE VENDOR_B_TINKER]
@@ -903,7 +903,7 @@ SUBSECTION=Buy Templates
 DESCRIPTION=Tinker
 BUY=i_drum,{4 34}
 BUY=i_tambourine,{4 34}
-BUY=i_lyre,{4 34}
+BUY=i_harp_lap,{4 34}
 BUY=i_lute,{4 34}
 BUY=i_kindling,{4 34}
 BUY=i_clock,{4 34}
@@ -2388,7 +2388,7 @@ BUY=i_axe_war_ruin
 BUY=i_axe_war_might
 BUY=i_axe_war_force
 BUY=i_axe_war_power
-BUY=i_axe_war_vanquisihng
+BUY=i_axe_war_vanq
 BUY=i_axe_battle_large_ruin
 BUY=i_axe_battle_large_might
 BUY=i_axe_battle_large_force
