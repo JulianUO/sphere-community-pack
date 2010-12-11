@@ -69,7 +69,7 @@ page 0
 resizepic 0 0 5054 220 170
 resizepic 10 10 3000 200 150
 
-xmfhtmlgump 20 20 180 70 1018319 1 0 // Do you wish to dry dock this boat?
+xmfhtmlgump 20 20 180 70 1116329 1 0 // Select the ship direction for placement.
 
 xmfhtmlgump 55 100 140 25 1116330 0 0 // WEST
 button 20 100 4005 4007 1 0 1
