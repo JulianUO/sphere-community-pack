@@ -54,7 +54,7 @@ endif
 RETURN 0
 
 [function f_resenddialog]
-dialogclose <ARGV[0]>
+src.dialogclose <ARGV[0]>
 sdialog <ARGS>
 
 [function f_resources]
@@ -188,5 +188,23 @@ return <local.color>
 serv.new<argv[0]> <argv[1]>
 local.<argv[3]> = <eval <new.<argv[2]>>>
 new.remove
+
+[function abs] // Absolute value: <abs x>
+if <argn1> < 0
+	return <eval (<argn1> * -1)>
+endif
+return <argn1>
+
+[function getpinpos] // Original position of pin. <getpinpos Pin#>
+local.dX = <eval (<more2h> - <more1h>)>
+local.dY = <eval (<more2l> - <more1l>)>
+
+local.mapX = <qval (<tdata1>) ? <tdata1>:200>
+local.mapY = <qval (<tdata2>) ? <tdata2>:200>
+
+float.x = <floatval (((<dlocal.dX> / <dlocal.mapX>) * <strarg <pin.<argn1>>>) + <more1h>)>
+float.y = <floatval (((<dlocal.dY> / <dlocal.mapY>) * <streat <pin.<argn1>>>) + <more1l>)>
+
+return <feval <float.x>>,<feval <float.y>>
 
 [eof]

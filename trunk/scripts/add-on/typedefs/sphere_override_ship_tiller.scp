@@ -1,0 +1,141 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[TYPEDEF t_ship_tiller]
+on=@dropon_self
+if <argo.type> == t_map_blank
+	say @,,2 502575 // Ar, that is not a map, tis but a blank piece of paper!
+	return 1
+elif <argo.type> == t_map
+	if !<argo.pins>
+		say @,,2 502576 // Arrrr, this map has no course on it!
+	else
+		link.stopmovement
+		for <argo.pins>
+			if <serv.map(<argo.getpinpos <dlocal._for>>,<argo.morem>).type> == t_water
+				link.add_destination <argo.getpinpos <dlocal._for>>
+			endif
+		endfor
+		say @,,2 502577 // A map!
+	endif
+	return 1
+endif
+
+on=@dclick
+if <region.uid> != <src.region.uid>
+	ref1=<link>
+	forcont <src.findlayer(layer_pack)>
+		if <type> == t_key
+			if <link> == <ref1>
+				local.key = <uid>
+			endif
+		endif
+	endfor
+	forobjs
+		if <region.uid> == <ref1>
+			if <isitem>
+				if <link> == <ref1> && <uid> != <ref1>
+					local.item ++
+				endif
+			else
+				local.char ++
+			endif
+		endif
+	endfor
+	if <src.flags>&statf_dead
+		src.sysmessage @,,2 502493 // You appear to be dead.
+	elif !<local.key>
+		src.sysmessage @,,2 502494 // You must have a key to the ship to dock the boat.
+	elif !<link.tag0.anchor>
+		src.sysmessage @,,2 1010570 // You must lower the anchor to dock the boat.
+	elif <local.char>
+		src.sysmessage @,,2 502495 // You cannot dock the ship with beings on board!
+	elif <local.item>
+		src.sysmessage @,,2 502496 // You cannot dock the ship with a cluttered deck.
+	elif <ref1.hatch.count>
+		src.sysmessage @,,2 502497 // Make sure your hold is empty, and try again!
+	else
+		f_ResendDialog d_DryDocking
+	endif
+	return 1
+endif
+
+[dialog d_drydocking]
+150,200
+
+page 0
+resizepic 0 0 5054 220 170
+resizepic 10 10 3000 200 150
+
+xmfhtmlgump 20 20 180 70 1018319 1 0 // Do you wish to dry dock this boat?
+
+xmfhtmlgump 55 100 140 25 1011011 0 0 // CONTINUE
+button 20 100 4005 4007 1 0 1
+
+xmfhtmlgump 55 125 140 25 1011012 0 0 // CANCEL
+button 20 125 4005 4007 1 0 0
+
+[dialog d_drydocking button]
+on=1
+if <region.uid> != <src.region.uid>
+	ref1=<link>
+	forcont <src.findlayer(layer_pack)>
+		if <type> == t_key
+			if <link> == <ref1>
+				local.key = <uid>
+			endif
+		endif
+	endfor
+	forobjs
+		if <region.uid> == <ref1>
+			if <isitem>
+				if <link> == <ref1> && <uid> != <ref1>
+					local.item ++
+				endif
+			else
+				local.char ++
+			endif
+		endif
+	endfor
+	if <src.flags>&statf_dead
+		src.sysmessage @,,2 502493 // You appear to be dead.
+	elif !<local.key>
+		src.sysmessage @,,2 502494 // You must have a key to the ship to dock the boat.
+	elif !<link.tag0.anchor>
+		src.sysmessage @,,2 1010570 // You must lower the anchor to dock the boat.
+	elif <local.char>
+		src.sysmessage @,,2 502495 // You cannot dock the ship with beings on board!
+	elif <local.item>
+		src.sysmessage @,,2 502496 // You cannot dock the ship with a cluttered deck.
+	elif <ref1.hatch.count>
+		src.sysmessage @,,2 502497 // Make sure your hold is empty, and try again!
+	else
+		forcont <src.findlayer(layer_pack)>
+			if <type> == t_key
+				if <link> == <ref1>
+					remove
+				endif
+			endif
+		endfor
+		forcont <src.findlayer(layer_bankbox)>
+			if <type> == t_key
+				if <link> == <ref1>
+					remove
+				endif
+			endif
+		endfor
+		serv.newitem i_deed_ship
+		new.more1 = <ref1.baseid>
+		new.name = Deed to a <ref1.name>
+		new.bounce
+		ref1.remove
+	endif
+	return 1
+endif
+
+[eof]
