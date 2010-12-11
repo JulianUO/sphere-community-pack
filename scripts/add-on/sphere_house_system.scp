@@ -3446,56 +3446,6 @@ NEW.REMOVEFROMVIEW
 NEW.USE
 
 
-[TYPEDEF t_deed]
-ON=@DClick
-IF (<CONT> != <SRC.FINDLAYER.21>)
-  SRC.SYSMESSAGE @,,1 The item must be on your backpack.
-  return 1
-ELIF !(<SRC.ISGM>)
-  IF STRMATCH("t_multi*","<SERV.ITEMDEF.<MORE1>.TYPE>")
-   IF (<SRC.CHECK_ACCOUNT_TYPEDEF t_multi*> >= <DEF.scp.House_MaxPerAccount>)
-    SRC.SYSMESSAGE @,,1 You already own <QVAL (<DEF.scp.House_MaxPerAccount>==1)? a house:<dDEF.scp.House_MaxPerAccount> houses>, you may not place another!
-    TRIGGER @TargOn_Cancel
-    return 1
-   ENDIF
-  ENDIF
-ENDIF
-IF (<DISPID>==i_gold)
- TIMERF 60,TRIGGER @TargOn_Cancel
-ENDIF
-
-ON=@TargOn_Ground
-IF !(<SRC.ISGM>)
-  IF !STRMATCH("*ship*","<BASEID>")
-    IF (<SRC.TAG0.House.PlacementDelay> > <SERV.TIME>)
-      SRC.SYSMESSAGE @,,1 Number of days until you can place another house: <eval (<SRC.TAG0.House.PlacementDelay>-<SERV.TIME>)/864000>
-      return 1
-    ELIF !(<DEF.scp.House_PlaceIlshenar>) && (<SRC.TARGP.M>==2)
-      SRC.SYSMESSAGE @,,1 Housing cannot be created in this area.
-      TRIGGER @TargOn_Cancel
-      return 1
-    ENDIF
-  ENDIF
-  SRC.TIMERF 1,HouseIsPlaced <MORE1> <BASEID> <SRC.TARGP>
-ENDIF
-
-ON=@TargOn_Char
-SRC.SYSMESSAGE @,,1 You must place your house on ground.
-TRIGGER @TargOn_Cancel
-return 1
-
-ON=@TargOn_Item
-SRC.SYSMESSAGE @,,1 You must place your house on ground.
-TRIGGER @TargOn_Cancel
-return 1
-
-ON=@TargOn_Cancel
-IF (<DISPID>==i_gold)
- SRC.SDIALOG d_house_placement_tool
- REMOVE
-ENDIF
-
-
 [FUNCTION HouseIsPlaced]
 SERV.NEWITEM i_gold
 NEW.P <STREAT <STREAT <ARGS>>>

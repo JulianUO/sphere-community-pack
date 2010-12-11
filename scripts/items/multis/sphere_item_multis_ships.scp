@@ -6,6 +6,171 @@
 // FILE LAST UPDATED: 
 VERSION=0.56b
 
+[SPEECH spk_ship_cmds]
+ON=Raise Anchor
+ON=Hoist Anchor
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+TAG.Anchor = 0
+SHIPANCHORRAISE
+
+ON=Drop Anchor
+ON=Lower Anchor
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+TAG.Anchor = 1
+STOPMOVEMENT
+SHIPANCHORDROP
+
+ON=Forward
+ON=Unfurl sail		// Moves ship forward.
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+PAUSEMOVEMENT
+SHIPFORE
+
+ON=Back
+ON=Backward			// Move ship backwards
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+PAUSEMOVEMENT
+SHIPBACK
+
+ON=Right			// Move ship in desired direction.
+ON=Drift Right
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+PAUSEMOVEMENT
+SHIPDRIFTRIGHT
+
+ON=Left				// Move ship in desired direction.
+ON=Drift Left
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+PAUSEMOVEMENT
+SHIPDRIFTLEFT
+
+ON=Start			// Start auto-pilot movement
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+if <tag0.anchor>
+	tiller.say @,,2 501419 // Ar, the anchor is down sir!
+	return 0
+elif !<tag0.ship_dest_total>
+	tiller.say @,,2 502513 // I have seen no map, sir.
+	return 0
+endif
+STARTMOVEMENT
+
+ON=Start Tracking	// Starts tracking other ships
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+if <tag0.anchor>
+	tiller.say @,,2 501419 // Ar, the anchor is down sir!
+	return 0
+endif
+STOPMOVEMENT
+
+ON=Furl sail
+ON=Stop				// Stops current ship movement.
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+PAUSEMOVEMENT
+SHIPSTOP
+
+ON=Stop Tracking	// Stops tracking other ships
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+STOPMOVEMENT
+
+ON=Turn around		// Turns ship around and proceeds.
+ON=Come about
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+PAUSEMOVEMENT
+SHIPTURN
+
+ON=Turn Left
+ON=Port				// Turn Left
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+PAUSEMOVEMENT
+SHIPTURNLEFT
+
+ON=Turn Right
+ON=Starboard		// Turn Right
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+PAUSEMOVEMENT
+SHIPTURNRIGHT
+
+ON=Remove Name
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+	NAME=<serv.itemdef(<baseid>).name>
+
+ON=Forward Left
+PAUSEMOVEMENT
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+SHIPFORELEFT
+
+ON=Forward Right
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+PAUSEMOVEMENT
+SHIPFORERIGHT
+
+ON=Backward Left
+ON=Back Left
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+PAUSEMOVEMENT
+SHIPBACKLEFT
+
+ON=Backward Right
+ON=Back Right
+if <src.flags>&statf_dead
+	tiller.say @,,2 502582 // You appear to be dead.
+	return 0
+endif
+PAUSEMOVEMENT
+SHIPBACKRIGHT
+
 [MULTIDEF 00]
 // Face N
 DEFNAME=i_multi_ship_small_n

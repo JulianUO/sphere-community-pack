@@ -1,0 +1,107 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[TYPEDEF t_deed]
+ON=@DClick
+IF (<CONT> != <SRC.FINDLAYER.21>)
+  SRC.SYSMESSAGE @,,1 The item must be on your backpack.
+  return 1
+ELIF !(<SRC.ISGM>)
+  IF STRMATCH("t_multi*","<SERV.ITEMDEF.<MORE1>.TYPE>")
+   IF (<SRC.CHECK_ACCOUNT_TYPEDEF t_multi*> >= <DEF.scp.House_MaxPerAccount>)
+    SRC.SYSMESSAGE @,,1 You already own <QVAL (<DEF.scp.House_MaxPerAccount>==1)? a house:<dDEF.scp.House_MaxPerAccount> houses>, you may not place another!
+    TRIGGER @TargOn_Cancel
+    return 1
+   ENDIF
+  ENDIF
+ENDIF
+IF (<DISPID>==i_gold)
+ TIMERF 60,TRIGGER @TargOn_Cancel
+ENDIF
+if <serv.itemdef(<more1>).type> == t_ship
+	if !<tag0.target>
+		f_ResendDialog d_ship_placement
+		return 1
+	endif
+endif
+
+ON=@TargOn_Ground
+IF !(<SRC.ISGM>)
+  IF !STRMATCH("*ship*","<BASEID>")
+    IF (<SRC.TAG0.House.PlacementDelay> > <SERV.TIME>)
+      SRC.SYSMESSAGE @,,1 Number of days until you can place another house: <eval (<SRC.TAG0.House.PlacementDelay>-<SERV.TIME>)/864000>
+      return 1
+    ELIF !(<DEF.scp.House_PlaceIlshenar>) && (<SRC.TARGP.M>==2)
+      SRC.SYSMESSAGE @,,1 Housing cannot be created in this area.
+      TRIGGER @TargOn_Cancel
+      return 1
+    ENDIF
+  ENDIF
+  SRC.TIMERF 1,HouseIsPlaced <MORE1> <BASEID> <SRC.TARGP>
+ENDIF
+
+ON=@TargOn_Char
+SRC.SYSMESSAGE @,,1 You must place your house on ground.
+TRIGGER @TargOn_Cancel
+return 1
+
+ON=@TargOn_Item
+SRC.SYSMESSAGE @,,1 You must place your house on ground.
+TRIGGER @TargOn_Cancel
+return 1
+
+ON=@TargOn_Cancel
+IF (<DISPID>==i_gold)
+ SRC.SDIALOG d_house_placement_tool
+ REMOVE
+ENDIF
+tag.target =
+
+[dialog d_ship_placement]
+150,200
+
+page 0
+resizepic 0 0 5054 220 170
+resizepic 10 10 3000 200 150
+
+xmfhtmlgump 20 20 180 70 1018319 1 0 // Do you wish to dry dock this boat?
+
+xmfhtmlgump 55 100 140 25 1116330 0 0 // WEST
+button 20 100 4005 4007 1 0 1
+
+xmfhtmlgump 145 100 140 25 1116331 0 0 // NORTH
+button 110 100 4005 4007 1 0 2
+
+xmfhtmlgump 55 125 140 25 1116332 0 0 // SOUTH
+button 20 125 4005 4007 1 0 3
+
+xmfhtmlgump 145 125 140 25 1116333 0 0 // EAST
+button 110 125 4005 4007 1 0 4
+
+[dialog d_ship_placement button]
+on=1
+more1 = <strsub 0 <eval strlen(<more1>) - 1> <more1>>w
+tag.target = 1
+use
+
+on=2
+more1 = <strsub 0 <eval strlen(<more1>) - 1> <more1>>n
+tag.target = 1
+use
+
+on=3
+more1 = <strsub 0 <eval strlen(<more1>) - 1> <more1>>s
+tag.target = 1
+use
+
+on=4
+more1 = <strsub 0 <eval strlen(<more1>) - 1> <more1>>e
+tag.target = 1
+use
+
+[eof]
