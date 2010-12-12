@@ -373,7 +373,7 @@ endif
 if <def.scp.ItemProp_DamageIncrease> == 1
 	if <tag0.DamageIncrease>
 	local.tempbonus = <tag0.DamageIncrease>
-	local.dicap = <getargv 3 <def.itemprop_01>>
+	local.dicap = <getargv 3 <def.itemprop_02>>
 		if <tag0.DamageIncrease> > <local.dicap>
 		local.tempbonus = <local.dicap>
 		endif

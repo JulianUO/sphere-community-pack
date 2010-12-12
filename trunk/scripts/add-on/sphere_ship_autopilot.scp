@@ -10,9 +10,8 @@ VERSION=0.56b
 // --------------
 // jeem - All the script
 //
-//
 // SCRIPT DOCUMENTATION
-// Auto-pilot for ships. Make pins on a map, then move it onto the tiller man. Give the command "start"
+// Auto-pilot for ships. Make pins on a map, then drop the map onto the tiller man. Give the command "start"
 // to start moving toward destination.
 // For manual selection of the destination. Execute ".xadd_destination X,Y" and then ".xstartmovement"
 // functions on the ship.
@@ -204,7 +203,7 @@ for x_axis <eval (<local.x> + <argv[0]>)> <eval (<local.x> + <argv[2]>)>
 		endif
 		if <serv.map(<dlocal.x_axis>,<dlocal.y_axis>,<dlocal.m>).statics>
 			for 0 <eval (<serv.map(<dlocal.x_axis>,<dlocal.y_axis>,<dlocal.m>).statics> - 1)>
-				if <serv.map(<dlocal.x_axis>,<dlocal.y_axis>,<dlocal.m>).statics.<dlocal._for>.type> != t_water
+				if (<serv.map(<dlocal.x_axis>,<dlocal.y_axis>,<dlocal.m>).statics.<dlocal._for>.tflags>&tilef_impassable) || (<serv.map(<dlocal.x_axis>,<dlocal.y_axis>,<dlocal.m>).statics.<dlocal._for>.can>&can_i_block)
 					return 0
 				endif
 			endfor
