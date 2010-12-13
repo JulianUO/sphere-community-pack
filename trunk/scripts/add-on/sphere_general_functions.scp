@@ -207,4 +207,15 @@ float.y = <floatval (((<dlocal.dY> / <dlocal.mapY>) * <streat <pin.<argn1>>>) + 
 
 return <feval <float.x>>,<feval <float.y>>
 
+[function emoteloc] // emoteloc self_cliloc_id, others_cliloc_id, color1(optional), color2 (optional - color1 can be used if not set), args for 2nd cliloc (@ : seperator)
+ref1=<uid>
+local.color1 = <qval ((<argv> < 3) || (<argv[2]> == 0)) ? 03b2:<argv[2]>>
+local.color2 = <qval ((<argv> < 4) || (<argv[3]> == 0)) ? <local.color1>:<argv[3]>>
+trysrc <ref1> uid.<ref1>.message @<local.color1>,,2 <argv[0]>
+forclients
+	if <ref1> != <uid>
+		trysrc <uid> uid.<ref1>.message @<local.color2>,,2 <argv[1]>,<explode @,<argv[4]>>
+	endif
+endfor
+
 [eof]
