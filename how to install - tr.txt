@@ -29,6 +29,7 @@ KURULUM VE KULLANIM YÖNERGELERÝ
   (NOT: Event'leri bir önceki adýmda eklediklerinizden hemen sonra ekleyin.)
   EventsPlayer=e_PlayerTooltipEvent
   * e_PlayerTooltipEvent: Yeni Eþya Tooltip Üreticisi (Deneysel)
+  * e_special_moves : EA Special Moves (isteðe baðlý)
 
 - Diðer *gerekli* ayarlar:
   Mana, Stamina, Dexterity Yenilenmesi, EA'de 10 stat'ler 10 saniyede bir yenilenir.

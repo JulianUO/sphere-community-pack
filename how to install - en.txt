@@ -27,8 +27,9 @@ INSTALLATION AND USAGE INSTRUCTIONS
 
 - To enable optional/experimental systems, add the following events:
   (NOTE: Attach the events at the end of the lines in the last step)
-  EventsPlayer=e_PlayerTooltipEvent
+  EventsPlayer=e_PlayerTooltipEvent,e_special_moves
   * e_PlayerTooltipEvent: New Item Tooltips Generator (Experimental)
+  * e_special_moves : EA Special Moves (optional)
 
 - Other *needed* settings:
   Mana, Stamina, Dexterity Regeneration, in EA they use 10-second gains for stats.
