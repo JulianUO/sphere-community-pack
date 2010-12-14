@@ -20,6 +20,7 @@ layer=1
 
 ON=@Create
 	ATTR=attr_magic|attr_newbie
+	MOREZ=200
 	CATEGORY=Provisions - Alchemy & Magic
 	SUBSECTION=Paladin
 	DESCRIPTION=Paladin Spellbook
@@ -34,6 +35,7 @@ layer=1
 
 ON=@Create
 	ATTR=attr_magic|attr_newbie
+	MOREZ=400
 	CATEGORY=Provisions - Alchemy & Magic
 	SUBSECTION=Bushido
 	DESCRIPTION=Bushido Spellbook
@@ -48,6 +50,7 @@ layer=1
 
 ON=@Create
 	ATTR=attr_magic|attr_newbie
+	MOREZ=500
 	CATEGORY=Provisions - Alchemy & Magic
 	SUBSECTION=Ninjitsu
 	DESCRIPTION=Ninjitsu Spellbook
@@ -62,6 +65,7 @@ layer=1
 
 ON=@Create
 	ATTR=attr_magic|attr_newbie
+	MOREZ=600
 	CATEGORY=Provisions - Alchemy & Magic
 	SUBSECTION=Arcanist
 	DESCRIPTION=Arcanist Spellbook
