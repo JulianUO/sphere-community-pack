@@ -328,68 +328,69 @@ scp.tracking_lost "@,,2 503177" // You have lost your quarry.
 [DEFNAME SphereCommunityPack_WordsOfPower]
 // Words of Power for spells. Necromancy, Chivalry and Spellweaving.
 // Chivalry is the only one using clilocs.
-scp.spell_101_wop	"Uus Corp"		// Animate Dead
-scp.spell_102_wop	"In Jux Mani Xen"	// Blood Oath
-scp.spell_103_wop	"In Agle Corp Ylem"	// Corpse Skin
-scp.spell_104_wop	"An Sanct Gra Char"	// Curse Weapon
-scp.spell_105_wop	"Pas Tym An Sanct"	// Evil Omen
-scp.spell_106_wop	"Rel Xen Vas Bal"	// Horrific Beast
-scp.spell_107_wop	"Rel Xen Corp Ort"	// Liche Form
-scp.spell_108_wop	"Wis An Ben"		// Mind Rot
-scp.spell_109_wop	"In Sar"		// Pain Spike
-scp.spell_110_wop	"In Vas Nox"		// Poison Strike
-scp.spell_111_wop	"In Bal Nox"		// Strangle
-scp.spell_112_wop	"Kal Xen Bal"		// Summon Familiar
-scp.spell_113_wop	"Rel Xen An Sanct"	// Vampiric Embrace
-scp.spell_114_wop	"Kal Xen Bal Beh"	// Vengeful Spirit
-scp.spell_115_wop	"Kal Vas An Flam"	// Wither
-scp.spell_116_wop	"Rel Xen Um"		// Wraith Form
-scp.spell_117_wop	"Ort Corp Grav"		// Exorcism
+// *Update: Spell Says Move to Spells Script ( like Runes=.@,,2 1060718 )
+//scp.spell_101_wop	"Uus Corp"		// Animate Dead
+//scp.spell_102_wop	"In Jux Mani Xen"	// Blood Oath
+//scp.spell_103_wop	"In Agle Corp Ylem"	// Corpse Skin
+//scp.spell_104_wop	"An Sanct Gra Char"	// Curse Weapon
+//scp.spell_105_wop	"Pas Tym An Sanct"	// Evil Omen
+//scp.spell_106_wop	"Rel Xen Vas Bal"	// Horrific Beast
+//scp.spell_107_wop	"Rel Xen Corp Ort"	// Liche Form
+//scp.spell_108_wop	"Wis An Ben"		// Mind Rot
+//scp.spell_109_wop	"In Sar"		// Pain Spike
+//scp.spell_110_wop	"In Vas Nox"		// Poison Strike
+//scp.spell_111_wop	"In Bal Nox"		// Strangle
+//scp.spell_112_wop	"Kal Xen Bal"		// Summon Familiar
+//scp.spell_113_wop	"Rel Xen An Sanct"	// Vampiric Embrace
+//scp.spell_114_wop	"Kal Xen Bal Beh"	// Vengeful Spirit
+//scp.spell_115_wop	"Kal Vas An Flam"	// Wither
+//scp.spell_116_wop	"Rel Xen Um"		// Wraith Form
+//scp.spell_117_wop	"Ort Corp Grav"		// Exorcism
 
-scp.spell_201_wop	"1060718"		// Cleanse by Fire
-scp.spell_202_wop	"1060719"		// Close Wounds
-scp.spell_203_wop	"1060720"		// Consecrate Weapon
-scp.spell_204_wop	"1060721"		// Dispel Evil
-scp.spell_205_wop	"1060722"		// Divine Fury
-scp.spell_206_wop	"1060723"		// Enemy of One
-scp.spell_207_wop	"1060724"		// Holy Light
-scp.spell_208_wop	"1060725"		// Noble Sacrifice
-scp.spell_209_wop	"1060726"		// Remove Curse
-scp.spell_210_wop	"1060727"		// Sacred Journey
+//scp.spell_201_wop	"1060718"		// Cleanse by Fire
+//scp.spell_202_wop	"1060719"		// Close Wounds
+//scp.spell_203_wop	"1060720"		// Consecrate Weapon
+//scp.spell_204_wop	"1060721"		// Dispel Evil
+//scp.spell_205_wop	"1060722"		// Divine Fury
+//scp.spell_206_wop	"1060723"		// Enemy of One
+//scp.spell_207_wop	"1060724"		// Holy Light
+//scp.spell_208_wop	"1060725"		// Noble Sacrifice
+//scp.spell_209_wop	"1060726"		// Remove Curse
+//scp.spell_210_wop	"1060727"		// Sacred Journey
 
-scp.spell_601_wop	"Myrshalee"		// Arcane Circle
-scp.spell_602_wop	"Olorisstra"		// Gift of Renewal
-scp.spell_603_wop	"Thalshara"		// Immolating Weapon
-scp.spell_604_wop	"Haeldril"		// Attune Weapon
-scp.spell_605_wop	"Erelonia"		// Thunderstorm
-scp.spell_606_wop	"Rauvvrae"		// Nature's Fury
-scp.spell_607_wop	"Alalithra"		// Summon Fey
-scp.spell_608_wop	"Nylisstra"		// Summon Fiend
-scp.spell_609_wop	"Tarisstree"		// Reaper Form
-scp.spell_610_wop	"Haelyn"		// Wildfire
-scp.spell_611_wop	"Anathrae"		// Essence of Wind
-scp.spell_612_wop	"Rathril"		// Dryad Allure
-scp.spell_613_wop	"Orlavdra"		// Ethereal Voyage
-scp.spell_614_wop	"Nyraxle"		// Word of Death
-scp.spell_615_wop	"Illorae"		// Gift of Life
-scp.spell_616_wop	"Aslavdra"		// Arcane Empowerment
+//scp.spell_601_wop	"Myrshalee"		// Arcane Circle
+//scp.spell_602_wop	"Olorisstra"		// Gift of Renewal
+//scp.spell_603_wop	"Thalshara"		// Immolating Weapon
+//scp.spell_604_wop	"Haeldril"		// Attune Weapon
+//scp.spell_605_wop	"Erelonia"		// Thunderstorm
+//scp.spell_606_wop	"Rauvvrae"		// Nature's Fury
+//scp.spell_607_wop	"Alalithra"		// Summon Fey
+//scp.spell_608_wop	"Nylisstra"		// Summon Fiend
+//scp.spell_609_wop	"Tarisstree"		// Reaper Form
+//scp.spell_610_wop	"Haelyn"		// Wildfire
+//scp.spell_611_wop	"Anathrae"		// Essence of Wind
+//scp.spell_612_wop	"Rathril"		// Dryad Allure
+//scp.spell_613_wop	"Orlavdra"		// Ethereal Voyage
+//scp.spell_614_wop	"Nyraxle"		// Word of Death
+//scp.spell_615_wop	"Illorae"		// Gift of Life
+//scp.spell_616_wop	"Aslavdra"		// Arcane Empowerment
 
-scp.spell_678_wop	"In Corp Ylem"		// Nether Bolt
-scp.spell_679_wop	"Kal In Mani"		// Healing Stone
-scp.spell_680_wop	"An Ort Sanct"		// Purge Magic
-scp.spell_681_wop	"In Ort Ylem"		// Enchant
-scp.spell_682_wop	"In Zu"			// Sleep
-scp.spell_683_wop	"Kal Por Xen"		// Eagle Strike
-scp.spell_684_wop	"In Jux Por Ylem"	// Animated Weapon
-scp.spell_685_wop	"In Rel Ylem"		// Stone Form
-scp.spell_686_wop	"In Vas Ort Ex"		// Spell Trigger
-scp.spell_687_wop	"Vas Zu"		// Mass Sleep
-scp.spell_688_wop	"In Vas Mani Hur"	// Cleansing Winds
-scp.spell_689_wop	"Corp Por Ylem"		// Bombard
-scp.spell_690_wop	"Vas Rel Jux Ort"	// Spell Plague
-scp.spell_691_wop	"Kal Des Ylem"		// Hail Storm
-scp.spell_692_wop	"Grav Hur"		// Nether Cyclone
-scp.spell_693_wop	"Kal Vas Xen Corp Ylem"	// Rising Colossus
+//scp.spell_678_wop	"In Corp Ylem"		// Nether Bolt
+//scp.spell_679_wop	"Kal In Mani"		// Healing Stone
+//scp.spell_680_wop	"An Ort Sanct"		// Purge Magic
+//scp.spell_681_wop	"In Ort Ylem"		// Enchant
+//scp.spell_682_wop	"In Zu"			// Sleep
+//scp.spell_683_wop	"Kal Por Xen"		// Eagle Strike
+//scp.spell_684_wop	"In Jux Por Ylem"	// Animated Weapon
+//scp.spell_685_wop	"In Rel Ylem"		// Stone Form
+//scp.spell_686_wop	"In Vas Ort Ex"		// Spell Trigger
+//scp.spell_687_wop	"Vas Zu"		// Mass Sleep
+//scp.spell_688_wop	"In Vas Mani Hur"	// Cleansing Winds
+//scp.spell_689_wop	"Corp Por Ylem"		// Bombard
+//scp.spell_690_wop	"Vas Rel Jux Ort"	// Spell Plague
+//scp.spell_691_wop	"Kal Des Ylem"		// Hail Storm
+//scp.spell_692_wop	"Grav Hur"		// Nether Cyclone
+//scp.spell_693_wop	"Kal Vas Xen Corp Ylem"	// Rising Colossus
 
 [DEFNAME SphereCommunityPack_HUNGERSYSTEM_messages]
 //////FOOD MESSAGES
