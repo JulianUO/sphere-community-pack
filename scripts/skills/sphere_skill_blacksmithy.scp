@@ -101,7 +101,7 @@ sysmessage <def.scp.craft_smelt_targ>
 
 [function f_craft_blacksmith_smelt_targ]
 if (!<isneartype t_forge 3>) || (!<isneartype t_anvil 3>)
-sysmessage <def.scp.craft_blacks_forgeanvil>
+sysmessage <def.scp.blacksmith_forgeanvil>
 return 1
 elif !<argo.isitem>
 sysmessage <def.scp.craft_smelt_notitem>

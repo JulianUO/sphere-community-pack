@@ -18,6 +18,12 @@
 //
 // THIS IS THE SPHERE_MSGS.SCP FOR SPHERE 56B. IF YOU ARE USING SPHERE 57 YOU
 // SHOULD REPLACE THIS WITH THE SPHERE_MSGS.SCP LOCATED IN THE SCRIPT57 FOLDER.
+// "@hue,font,2 clilocid[,arguments]"
+// "@hue,font,3 clilocid,flags,affix[,arguments]"
+// Known possible values for flags are:
+//    0x00 = Append text to message
+//    0x01 = Prepend text to message
+//    0x02 = Forces message to show as a system message
 
 [DEFMESSAGE messages]
 //alchemy_dunno		"You have no clue how to make this potion."
