@@ -20,7 +20,7 @@ on=@dclick
 if <f_cannot_mount>
 return 1
 else
-src.tag.nomovetill = <eval (<serv.time> + (<def.scp.EtherealMount_Delay> * 10))>
+SRC.nomoves <EVAL (<def.scp.EtherealMount_Delay> * 10)>,0,<DEF.nv_t_EtherealMount>
 src.f_LoopAnim 16,<eval (<def.scp.EtherealMount_Delay> / 2)>,2
 timerf <def.scp.EtherealMount_Delay>,f_mount_ethereal <tdata1>
 endif

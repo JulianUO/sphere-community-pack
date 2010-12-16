@@ -15,7 +15,7 @@ VERSION=0.56b
 ON=@GetHit
 if <hits> <= <eval <maxhits> / 10>
 tag.issubdue = 1
-tag.nomovetill = <eval <serv.time> + 16>
+nomoves 16,0,<DEF.nv_t_Subdued>
 message <def.scp.taming_subdued>
 timerf 15,f_UnSubdue
 endif
@@ -56,9 +56,9 @@ endif
 [FUNCTION f_UnSubdue]
 if <hits> > <eval <maxhits> / 10>
 tag.issubdue
-tag.nomovetill
+f_nomove_removeby_type <DEF.nv_t_Subdued>
 else
-tag.nomovetill = <eval <serv.time> + 6>
+nomoves 6,0,<DEF.nv_t_Subdued>
 timerf 5,f_UnSubdue
 endif
 
