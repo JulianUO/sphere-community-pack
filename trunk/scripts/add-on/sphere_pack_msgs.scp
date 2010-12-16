@@ -200,6 +200,7 @@ scp.meditation_armorpenalty	"@,,2 500135"	// Regenerative forces cannot penetrat
 scp.meditation_success		"@,,2 501851" // You enter a meditative trance.
 scp.meditation_fail		"@,,2 501850" // You cannot focus your concentration.
 scp.meditation_abort		"@,,2 501848" // You cannot focus your concentration.
+scp.meditation_stop		"@,,2 500134" // // You stop meditating.
 
 scp.mining_nosand		"@,,2 1044629"	// There is no sand here to mine.
 scp.mining_mounted		"@,,2 501864"	// You can't mine while riding.
