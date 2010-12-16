@@ -27,6 +27,7 @@ nv_t_potion	3
 nv_t_Subdued	4
 nv_t_EtherealMount	5
 nv_t_peacemaked	6
+nv_t_stuned	7
 
 // usage: nomoves time,flag,type,removecall
 // time: per tick  0.1 sec ( 1 sec = 10 ) ( -1 no decay )
