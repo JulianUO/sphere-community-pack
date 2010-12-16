@@ -3,7 +3,17 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: 17-Dec-2010
+//
+// SCRIPT CREDITS
+// --------------
+// ShiryuX 
+// WildGenie - update
+//
+// SCRIPT DOCUMENTATION
+// --------------------
+// TODO: Disruptive Action Config
+//
 VERSION=0.56b
 
 [SKILL 46]
@@ -43,10 +53,14 @@ if <def.scp.NewSkills_Meditation> == 1
 		sysmessage <def.scp.meditation_success>
 		f_skill_delay <getargv 1 <def.skill.46.waittime>>
 		//f_AddBuff ActiveMeditation,-1 // Can't find the clilocs
+			addbuff <def.bufficon_activemeditation>,1075657,1075658,0,0
 		tag.meditation.active = 1
 			if <isplayer>
 			sfx 0f9
 			endif
+			EVENTS=+e_medi_active
+			f_PlayerCheckStats
+			TIMERF 2,trigger @meditationtick
 		else
 		sysmessage <def.scp.meditation_fail>
 		skillgain meditation <eval (<meditation> / 7) + 1>
@@ -59,20 +73,74 @@ endif
 on=@select
 f_skill_delay <getargv 0 <def.skill.46.waittime>>
 
+ON=@START
+addbuff <def.bufficon_activemeditation>,1075657,1075658,0,0
+
 ON=@success
 if <mana> >= <maxmana>
 f_skill_delay <getargv 1 <def.skill.46.waittime>>
-RemoveBuff ActiveMeditation
+RemoveBuff <DEF.bufficon_activemeditation>
 tag.meditation.active
 endif
 
 ON=@fail
 f_skill_delay <getargv 2 <def.skill.46.waittime>>
 SRC.SYSMESSAGE <def.scp.meditation_fail>
+RemoveBuff <DEF.bufficon_activemeditation>
+tag.meditation.active
 
 on=@abort
 f_skill_delay <getargv 2 <def.skill.46.waittime>>
 src.sysmessage <def.scp.meditation_abort>
+RemoveBuff <DEF.bufficon_activemeditation>
+tag.meditation.active
+
+[function f_medi_false]
+EVENTS -e_medi_active
+tag.meditation.active
+RemoveBuff <DEF.bufficon_activemeditation>
+f_PlayerCheckStats
+
+[EVENTS e_medi_active]
+
+ON=@meditationtick
+if <mana> >= <maxmana>
+	sysmessage <def.scp.meditation_maxmana>
+	f_medi_false
+else
+	skillgain meditation <eval (<meditation> / 7) + 1>
+	TIMERF 2,trigger @meditationtick
+endif
+
+ON=@skillwait
+if (<argn>!=46)
+sysmessage <def.scp.meditation_stop>
+f_medi_false
+endif
+
+ON=@skillstart
+sysmessage <def.scp.meditation_stop>
+f_medi_false
+
+ON=@itemEQUIP
+if ((<ACT.layer> <= 24) && (<ACT.layer> >= 1))
+sysmessage <def.scp.meditation_stop>
+f_medi_false
+endif
+
+ON=@itemPICKUP_SELF
+sysmessage <def.scp.meditation_stop>
+f_medi_false
+
+ON=@itemPICKUP_GROUND
+sysmessage <def.scp.meditation_stop>
+f_medi_false
+
+ON=@UserStats
+if <mana> >= <maxmana>
+sysmessage <def.scp.meditation_maxmana>
+f_medi_false
+endif
 
 [function medi_armorpenalty]
 for 1 24
