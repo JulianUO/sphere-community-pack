@@ -67,3 +67,5 @@ ON=@EnvironChange
 [EVENTS e_Ophidian]
 
 [EVENTS e_Notoriety]
+
+[EOF]

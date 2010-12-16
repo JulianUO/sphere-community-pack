@@ -229,9 +229,9 @@ end
 enddo
 
 [FUNCTION ARROWQUESTN] // call method : "ARROWQUESTN 5 <p>" (5 is arrow no) 
-ARROWQUEST <StrEat <args>> // TODO: Check client version
+ARROWQUEST <StrEat <args>>,<StrArg <args>>
 return 0
-//for > 7.0.x client packet need for core check
+// for > 7.0.x client packet need for core check
 LOCAL.arrowno <StrArg <args>>
 ARGS=<StrEat <args>>
 LOCAL.X <argn1>
