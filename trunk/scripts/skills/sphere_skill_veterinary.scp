@@ -87,8 +87,8 @@ VetSys_Self_DexDivide = 20
 
 //Same as above, but for healing others.
 //As per OSI standard, the settings here set the heal time as 2 seconds with no alterations from dex
-VetSys_Other_BaseTime = 4
-VetSys_Other_DexDivide = 60
+VetSys_Other_BaseTime = 2
+VetSys_Other_DexDivide = 30000
 
 
 //Healing Defs (Amount to Heal)
