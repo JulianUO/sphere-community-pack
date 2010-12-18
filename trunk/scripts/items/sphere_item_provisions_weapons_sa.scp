@@ -49,14 +49,14 @@ DUPEITEM=08FE
 [ITEMDEF 0900]
 DEFNAME=i_stone_war_sword
 NAME=Stone War Sword
-TYPE=T_WEAPON_SWORD
+TYPE=t_weapon_sword
 DAM=15,17
-SKILL=Swordsmanship
+SKILL=swordsmanship
 REQSTR=40
 TWOHANDS=N
 SKILLMAKE=55.0 Carpentry
 RESOURCES=18 i_granite
-SPEED=40
+SPEED=3.7
 WEIGHT=6.0
 DUPELIST=04071
 
