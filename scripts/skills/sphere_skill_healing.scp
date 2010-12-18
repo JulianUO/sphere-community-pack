@@ -251,6 +251,10 @@ if <link.hits> >= <link.maxhits>
 	return 1
 	endif
 endif
+if <link.tag0.noheal>
+	src.sysmessage @,,2 <qval (<link> == <src>) ? 1005000:1010398>
+	return 1
+endif
 
 src.sysmessage @,,2 <def0.healcliloc_youbeginapply>
 

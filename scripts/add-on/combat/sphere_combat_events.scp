@@ -12,6 +12,9 @@ if <def.scp.Combat_FormulasUsed> != 0
 argn1 = <f_combatsys_hitspeed <argn1>>
 actdiff = <f_combatsys_hitchance <actdiff>>
 endif
+if !<isempty <tag.override.hitspeed>>
+	tag.override.hitspeed =
+endif
 
 on=@spelleffect
 tag.spellhit = <argn1>
@@ -125,6 +128,9 @@ on=@hittry
 if <def.scp.Combat_FormulasUsed> != 0
 argn1 = <f_combatsys_hitspeed <argn1>>
 actdiff = <f_combatsys_hitchance <actdiff>>
+endif
+if !<isempty <tag.override.hitspeed>>
+	tag.override.hitspeed =
 endif
 
 on=@spelleffect

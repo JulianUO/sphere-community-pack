@@ -255,11 +255,11 @@ message @,,2 1062413,<dtag0.poison.charges>
 on=@clienttooltip
 src.addcliloc 1062413,<dtag0.poison.charges>
 
-on=@equip
-src.events +e_weapon_poisoned
+// on=@equip
+// src.events +e_weapon_poisoned
 
-on=@unequip
-src.events -e_weapon_poisoned
+// on=@unequip
+// src.events -e_weapon_poisoned
 
 [typedef t_food_poisoned]
 on=@dclick
