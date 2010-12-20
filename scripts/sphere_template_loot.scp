@@ -945,7 +945,7 @@ CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
 DESCRIPTION=Evil Mage
 CONTAINER=i_backpack
-ITEM=TTM_LVL1,R99
+ITEM=i_treasure_map_lvl_1,R99
 ITEM=RANDOM_SCROLL,{ 2 3 }
 ITEM=RANDOM_SCROLL,{ 2 3 }
 ITEM=RANDOM_REAGENT,{ 4 6 }
@@ -996,7 +996,7 @@ ITEM=random_potion
 ITEM=random_potion
 ITEM=random_jewel
 ITEM=random_jewel
-ITEM=ttm_lvl2,R99 //tattered treasure map level 2
+ITEM=i_treasure_map_lvl_2,R99 //tattered treasure map level 2
 ITEM=tm_boulders,R8
 ITEM=tm_rocks,R2
 ITEM=tm_rocks,R2
@@ -1059,7 +1059,7 @@ ITEM=RANDOM_REAGENT,{ 4 6 }
 ITEM=RANDOM_REAGENT,{ 4 6 }
 ITEM=RANDOM_SCROLL
 ITEM=RANDOM_SCROLL
-ITEM=TTM_LVL3,R99 //Tattered Treasure Map Level 2
+ITEM=i_treasure_map_lvl_3,R99 //Tattered Treasure Map Level 2
 ITEM=i_gold,{50 150}
 
 [TEMPLATE loot_OPHIDIAN_ARCHMAGE]
@@ -1071,7 +1071,7 @@ ITEM=Random_Potion
 ITEM=Random_Potion
 ITEM=RANDOM_JEWEL
 ITEM=RANDOM_JEWEL
-ITEM=TTM_LVL1,R99 //Tattered Treasure Map Level 2
+ITEM=i_treasure_map_lvl_1,R99 //Tattered Treasure Map Level 2
 ITEM=i_gold,{200 400}
 
 [TEMPLATE loot_PHOENIX]
@@ -1094,7 +1094,7 @@ CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
 DESCRIPTION=Stone Harpy
 CONTAINER=i_backpack
-ITEM=TTM_LVL1,R99 //Tattered Treasure Map Level 1
+ITEM=i_treasure_map_lvl_1,R99 //Tattered Treasure Map Level 1
 ITEM=RANDOM_JEWEL
 ITEM=RANDOM_JEWEL
 ITEM=i_gold,{400 500}
@@ -1114,7 +1114,7 @@ DESCRIPTION=Titan
 CONTAINER=i_backpack
 ITEM=Random_Potion
 ITEM=Random_Potion
-ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 3
+ITEM=i_treasure_map_lvl_4,R99 //Tattered Treasure Map Level 3
 ITEM=i_gold,{300 600}
 
 [TEMPLATE loot_ICE_DRAGON]
@@ -1124,7 +1124,7 @@ DESCRIPTION=Ice Dragon
 CONTAINER=i_backpack
 ITEM=Random_Potion
 ITEM=Random_Potion
-ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 3
+ITEM=i_treasure_map_lvl_4,R99 //Tattered Treasure Map Level 3
 ITEM=i_gold,{600 1400}
 
 [TEMPLATE loot_LIZARDMAN_MACE]

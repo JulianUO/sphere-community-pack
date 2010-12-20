@@ -174,7 +174,7 @@ return
 
 ON=@trackingstop
 CTAG.tracking_who
-ARROWQUESTN 100
+ARROWQUESTN 100 0,0
 SYSMESSAGE <DEF.scp.tracking_lost>
 EVENTS -e_tracking
 

@@ -30,8 +30,8 @@ EVALUATINGINTEL={95.0 105.0}
 
 ON=@NPCRestock
 ITEM=i_gold,{6000 6500}
-ITEM=i_mapa_tesouro
-ITEM=i_mapa_tesouro
+//ITEM=i_mapa_tesouro
+//ITEM=i_mapa_tesouro
 
 ON=@Death
 RANDMAGICITEMGREAT
@@ -400,13 +400,13 @@ POISONING=150.0
 
 ON=@NPCRestock
 ITEM=i_gold,{5000 6000}
-ITEM=i_semente_ns
-ITEM=i_semente_ns
-ITEM=i_semente_ns
-ITEM=i_semente_sa
-ITEM=i_semente_ns
-ITEM=i_semente_sa
-ITEM=i_deed_farm55
+//ITEM=i_semente_ns
+//ITEM=i_semente_ns
+//ITEM=i_semente_ns
+//ITEM=i_semente_sa
+//ITEM=i_semente_ns
+//ITEM=i_semente_sa
+//ITEM=i_deed_farm55
 
 [CHARDEF c_Ilhenir]
 ID=c_Monstrous_Interred_Grizzle

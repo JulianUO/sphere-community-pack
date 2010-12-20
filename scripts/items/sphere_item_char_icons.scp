@@ -849,7 +849,7 @@ DUPELIST=020da
 DEFNAME=i_pet_ophid_mage
 NAME=Ophidian
 TYPE=T_FIGURINE
-TDATA3=c_OPHIDIAN_mage
+TDATA3=c_ophidian_apprentice_mage
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -869,7 +869,7 @@ DESCRIPTION=Ophidian
 DEFNAME=i_pet_ophid_queen
 NAME=Ophidian
 TYPE=T_FIGURINE
-TDATA3=c_OPHIDIAN_queen
+TDATA3=c_ophidian_matriarch
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons

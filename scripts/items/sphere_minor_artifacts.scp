@@ -159,7 +159,7 @@ SKILL=swordsmanship
 SPEED=30
 WEIGHT=3.1
 DAM=15,35
-TEVENTS=t_aos_weapon
+//TEVENTS=t_aos_weapon
 TEVENTS=T_PROPRIEDADES
 TAG.DAMINCREASE=30
 TAG.HITCHANCEINCREASE=60
@@ -222,7 +222,7 @@ ON=@Timer
 DEFNAME=i_sprinter_legs
 NAME=Sprinter Legs
 TYPE=t_armor_leather
-ID=i_Elven_armor_plate_legs
+ID=i_woodland_leggings
 ARMOR=80
 REQSTR=25
 TEVENTS=T_PROPRIEDADES
@@ -509,8 +509,8 @@ TYPE=T_NORMAL
 ON=@Create
 	COLOR=33
 
-[ITEMDEF i_Phillip_Wooden_Steed]
-ID=16382
+[ITEMDEF 03FFE]
+DEFNAME=i_Phillip_Wooden_Steed
 NAME=Phillip's Wooden Steed
 TYPE=T_NORMAL
 

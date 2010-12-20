@@ -684,11 +684,11 @@ T2A Creatures (Ophidian & Terathan)
 ON=0 Ophidian Arch Mage
 ADDNPC C_M_OPHIDIAN_ARCHMAGE
 ON=0 Ophidian Mage
-ADDNPC c_OPHIDIAN_MAGE
+ADDNPC c_ophidian_apprentice_mage
 ON=0 Ophidian Knight
 ADDNPC C_M_OPHIDIAN_KNIGHT
 ON=0 Ophidian Matriarch
-ADDNPC c_OPHIDIAN_QUEEN
+ADDNPC c_ophidian_matriarch
 ON=0 Ophidian Warrior
 ADDNPC c_OPHIDIAN_WARRIOR
 ON=0 Terathan Avenger
@@ -847,7 +847,7 @@ ADDNPC c_Headless
 ON=0 Lich
 ADDNPC c_lich
 ON=0 Lich Lord
-ADDNPC c_m_lich_lord
+ADDNPC c_lich_lord
 ON=0 Skeleton
 ADDNPC c_skeleton
 ON=0 Skeleton (with axe)
@@ -855,9 +855,9 @@ ADDNPC c_skeleton_w_axe
 ON=0 Skeleton (with sword)
 ADDNPC c_skeletal_knight
 ON=0 Skeletal Knight
-ADDNPC c_m_skeleton_knight
+ADDNPC c_skeletal_knight
 ON=0 Skeletal Mage
-ADDNPC c_m_skeleton_mage
+ADDNPC c_skeletal_mage
 ON=0 Zombie
 ADDNPC c_ZOMBIE
 ON=0 PREVIOUS MENU
@@ -4373,8 +4373,6 @@ ON=084a Fence
 ADD 084a
 ON=084b Fence
 ADD 084b
-ON=i_GATE_WOOD_2 Fence
-ADD i_GATE_WOOD_2
 ON=085d Fence
 ADD 085d
 ON=085e Fence

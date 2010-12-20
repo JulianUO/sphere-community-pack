@@ -36,7 +36,7 @@ DESCRIPTION=Gargoyle Female
 DEFNAME=i_pet_bird_phoenix
 NAME=Phoenix Bird
 TYPE=T_FIGURINE
-TDATA3=c_bird_phoenix
+TDATA3=c_m_phoenix
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -46,7 +46,7 @@ DESCRIPTION=Phoenix Bird
 DEFNAME=i_pet_bird_parrot
 NAME=Parrot Bird
 TYPE=T_FIGURINE
-TDATA3=c_bird_parrot
+TDATA3=c_parrot
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -66,7 +66,7 @@ DESCRIPTION=Abyssal Infernal
 DEFNAME=i_pet_beetle_iron
 NAME=Iron Beetle
 TYPE=T_FIGURINE
-TDATA3=c_beetle_iron
+TDATA3=//c_beetle_iron // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -76,7 +76,7 @@ DESCRIPTION=Iron Beetle
 DEFNAME=i_pet_boura
 NAME=Boura
 TYPE=T_FIGURINE
-TDATA3=c_boura
+TDATA3=//c_boura // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -86,7 +86,7 @@ DESCRIPTION=Boura
 DEFNAME=i_pet_chicken_lizard
 NAME=Chicken Lizard
 TYPE=T_FIGURINE
-TDATA3=c_chicken_lizard
+TDATA3=//c_chicken_lizard // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -96,7 +96,7 @@ DESCRIPTION=Chicken Lizard
 DEFNAME=i_pet_clockwork_scorpion
 NAME=Clockwork Scorpion
 TYPE=T_FIGURINE
-TDATA3=c_clockwork_scorpion
+TDATA3=//c_clockwork_scorpion // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -106,7 +106,7 @@ DESCRIPTION=Clockwork Scorpion
 DEFNAME=i_pet_dragon_faerie
 NAME=Dragon Faerie
 TYPE=T_FIGURINE
-TDATA3=c_dragon_faerie
+TDATA3=//c_dragon_faerie // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -116,7 +116,7 @@ DESCRIPTION=Dragon Faerie
 DEFNAME=i_pet_dragon_wolf
 NAME=Dragon Wolf
 TYPE=T_FIGURINE
-TDATA3=c_dragon_wolf
+TDATA3=//c_dragon_wolf // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -126,7 +126,7 @@ DESCRIPTION=Dragon Wolf
 DEFNAME=i_pet_elemental_lava
 NAME=Elemental Lava
 TYPE=T_FIGURINE
-TDATA3=c_elemental_lava
+TDATA3=//c_elemental_lava // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -136,7 +136,7 @@ DESCRIPTION=Elemental Lava
 DEFNAME=i_pet_flayer
 NAME=Flayer
 TYPE=T_FIGURINE
-TDATA3=c_flayer
+TDATA3=//c_flayer // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -146,7 +146,7 @@ DESCRIPTION=Flyer
 DEFNAME=i_pet_gargoyle_pet
 NAME=Gargoyle Pet
 TYPE=T_FIGURINE
-TDATA3=c_gargoyle_pet
+TDATA3=c_stone_gargoyle
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -156,7 +156,7 @@ DESCRIPTION=Gargoyle Pet
 DEFNAME=i_pet_gargoyle_undead
 NAME=Undead Gargoyle
 TYPE=T_FIGURINE
-TDATA3=c_gargoyle_undead
+TDATA3=//c_gargoyle_undead  // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -166,7 +166,7 @@ DESCRIPTION=Undead Gargoyle
 DEFNAME=i_pet_goblin_green
 NAME=Green Goblin
 TYPE=T_FIGURINE
-TDATA3=c_goblin_green
+TDATA3=//c_goblin_green  // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -176,7 +176,7 @@ DESCRIPTION=Green Goblin
 DEFNAME=i_pet_goblin_grey
 NAME=Grey Goblin
 TYPE=T_FIGURINE
-TDATA3=c_goblin_grey
+TDATA3=//c_goblin_grey  // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -186,7 +186,7 @@ DESCRIPTION=Grey Goblin
 DEFNAME=i_pet_gremlin
 NAME=Gremlin
 TYPE=T_FIGURINE
-TDATA3=c_gremlin
+TDATA3=//c_gremlin  // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -196,7 +196,7 @@ DESCRIPTION=Gremlin
 DEFNAME=i_pet_humunculous
 NAME=Humunculous
 TYPE=T_FIGURINE
-TDATA3=c_humunculous
+TDATA3=//c_humunculous  // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -206,7 +206,7 @@ DESCRIPTION=Humunculous
 DEFNAME=i_pet_kepetch
 NAME=Kepetch
 TYPE=T_FIGURINE
-TDATA3=c_kepetch
+TDATA3=//c_kepetch // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -216,7 +216,7 @@ DESCRIPTION=Kepetch
 DEFNAME=i_pet_kepetch_shorn
 NAME=Kepetch Shorn
 TYPE=T_FIGURINE
-TDATA3=c_kepetch_shorn
+TDATA3=//c_kepetch_shorn // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -226,7 +226,7 @@ DESCRIPTION=Kepetch Shorn
 DEFNAME=i_pet_medusa
 NAME=Medusa
 TYPE=T_FIGURINE
-TDATA3=c_medusa
+TDATA3=//c_medusa // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -236,7 +236,7 @@ DESCRIPTION=Medusa
 DEFNAME=i_pet_mimic
 NAME=Mimic
 TYPE=T_FIGURINE
-TDATA3=c_mimic
+TDATA3=//c_mimic // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -246,7 +246,7 @@ DESCRIPTION=Mimic
 DEFNAME=i_pet_primeval_lich
 NAME=Primeval Lich
 TYPE=T_FIGURINE
-TDATA3=c_primeval_lich
+TDATA3=//c_primeval_lich // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -256,7 +256,7 @@ DESCRIPTION=Primeval Lich
 DEFNAME=i_pet_raptor
 NAME=Raptor
 TYPE=T_FIGURINE
-TDATA3=c_raptor
+TDATA3=//c_raptor // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -266,7 +266,7 @@ DESCRIPTION=Raptor
 DEFNAME=i_pet_rising_colossus
 NAME=Rising Colossus
 TYPE=T_FIGURINE
-TDATA3=c_rising_colossus
+TDATA3=//c_rising_colossus // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -276,7 +276,7 @@ DESCRIPTION=Rising Colossus
 DEFNAME=i_pet_rotworm
 NAME=RotWorm
 TYPE=T_FIGURINE
-TDATA3=c_rotworm
+TDATA3=//c_rotworm // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -286,7 +286,7 @@ DESCRIPTION=RotWorm
 DEFNAME=i_pet_shadow_dweller
 NAME=Shadow Dweller
 TYPE=T_FIGURINE
-TDATA3=c_shadow_dweller
+TDATA3//=c_shadow_dweller // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -296,7 +296,7 @@ DESCRIPTION=Shadow Dweller
 DEFNAME=i_pet_skree
 NAME=Skree
 TYPE=T_FIGURINE
-TDATA3=c_skree
+TDATA3=//c_skree // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -306,7 +306,7 @@ DESCRIPTION=Skree
 DEFNAME=i_pet_slasher_of_the_veils
 NAME=Slasher of the Veils
 TYPE=T_FIGURINE
-TDATA3=c_slasher_of_the_veils
+TDATA3=//c_slasher_of_the_veils // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -316,7 +316,7 @@ DESCRIPTION=Slasher of the Veils
 DEFNAME=i_pet_slith
 NAME=Slith
 TYPE=T_FIGURINE
-TDATA3=c_slith
+TDATA3=//c_slith // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -326,7 +326,7 @@ DESCRIPTION=Slith
 DEFNAME=i_pet_spider_female
 NAME=Spider Female
 TYPE=T_FIGURINE
-TDATA3=c_spider_female
+TDATA3=//c_spider_female // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -336,7 +336,7 @@ DESCRIPTION=Spider Female
 DEFNAME=i_pet_spider_male
 NAME=Spider Male
 TYPE=T_FIGURINE
-TDATA3=c_spider_male
+TDATA3=//c_spider_male // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -346,7 +346,7 @@ DESCRIPTION=Spider Male
 DEFNAME=i_pet_spider_trapdoor
 NAME=Spider Trapdoor
 TYPE=T_FIGURINE
-TDATA3=c_spider_trapdoor
+TDATA3=//c_spider_trapdoor // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -356,7 +356,7 @@ DESCRIPTION=Spider Trapdoor
 DEFNAME=i_pet_stone_form
 NAME=Stone Form
 TYPE=T_FIGURINE
-TDATA3=c_stone_form
+TDATA3=//c_stone_form // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -366,7 +366,7 @@ DESCRIPTION=Stone Form
 DEFNAME=i_pet_stygian_dragon
 NAME=Stygian Dragon
 TYPE=T_FIGURINE
-TDATA3=c_stygian_dragon
+TDATA3=//c_stygian_dragon // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -376,7 +376,7 @@ DESCRIPTION=Stygian Dragon
 DEFNAME=i_pet_trapdoor_creature
 NAME=Trapdoor Creature
 TYPE=T_FIGURINE
-TDATA3=c_trapdoor_creature
+TDATA3=//c_trapdoor_creature // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -386,7 +386,7 @@ DESCRIPTION=Trapdoor Creature
 DEFNAME=i_pet_tunnel_spirit_body
 NAME=Tunnel Spirit Body
 TYPE=T_FIGURINE
-TDATA3=c_tunnel_spirit_body
+TDATA3=//c_tunnel_spirit_body // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
@@ -396,7 +396,7 @@ DESCRIPTION=Tunnel Spirit Body
 DEFNAME=i_pet_wolf_leather
 NAME=Wolf Leather
 TYPE=T_FIGURINE
-TDATA3=c_wolf_leather
+TDATA3=//c_wolf_leather // TODO
 
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons

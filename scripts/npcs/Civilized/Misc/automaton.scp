@@ -67,7 +67,7 @@ on=@Create
  swordsmanship={ 80.0 100.0 }
 
  itemnewbie=random_male_hair
- colors=color_o_iron
+ color=color_o_iron
 
  item=loot_automaton
 
@@ -128,7 +128,7 @@ on=@Create
  swordsmanship={ 80.0 100.0 }
 
  itemnewbie=random_female_hair
- colors=color_o_iron
+ color=color_o_iron
 
  item=loot_automaton
 
@@ -175,3 +175,4 @@ on=@DClick
  else
   src.msg This corpse has already been scavenged.
  endif
+[EOF]

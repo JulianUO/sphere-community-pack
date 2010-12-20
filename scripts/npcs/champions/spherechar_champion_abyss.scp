@@ -184,6 +184,7 @@ DAM=92,123
 CAN=MT_WALK|MT_RUN|MT_USEHANDS
 MOVERATE=60
 RESOURCES=1 i_ribs_raw
+ARMOR={20 30}
 CATEGORY=Monsters
 SUBSECTION=Champions
 DESCRIPTION=Semidar
@@ -195,7 +196,7 @@ TAG.IsChampion=1
 
 ON=@Create
 	NPC=brain_monster
-	ResPhysical={20 30}
+	//ResPhysical={20 30}
 	ResFire={50 60}
 	ResCold={20 30}
 	ResPoison={20 30}
@@ -216,7 +217,47 @@ ON=@Create
 ON=@NPCRestock
 	ITEM=loot_semidar
 
+[CHARDEF 713]
+DEFNAME=c_abyssal_infernal
+NAME=Abyssal Infernal
+SOUND=snd_abyssal_infernal
+ICON=i_pet_abyssal_infernal
+DAM=11,18 //TODO
+CAN=MT_WALK|MT_RUN|MT_USEHANDS
+MOVERATE=60
+RESOURCES=1 i_ribs_raw
+ARMOR=60
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Abyssal Infernal
+TAG.Luck.Loot=loot_abyssal_infernal
+TAG.Slayer=SLAYER_DEMON
+TAG.Barding.Diff=160.0
+TAG.Override.RegenVal_1=30
+TAG.IsChampion=1
 
+ON=@Create
+	NPC=brain_monster
+	//ResPhysical=60
+	ResFire=20
+	ResCold=20
+	ResPoison=39
+	ResEnergy=72
+	KARMA=-24000
+	FAME=24000
+	STR=1234
+	DEX=110
+	INT=623
+	MAXHITS=1500
+	WRESTLING=113.8
+	TACTICS=119.8
+	MAGICRESISTANCE=120.0
+	MAGERY=132.2
+	MEDITATION={95.0 105.0}
+	EVALUATINGINTEL=123.9
+
+ON=@NPCRestock
+	ITEM=loot_abyssal_infernal
 
 [TEMPLATE loot_mongbat]
 CATEGORY=Item Templates
@@ -255,6 +296,13 @@ ITEM=random_potion,{ 2 3 }
 ITEM=random_magic_wands
 ITEM=random_magic_wands
 ITEM=i_scroll_blank,{ 1 2 }
+
+[TEMPLATE loot_abyssal_infernal]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Abyssal Infernal
+CONTAINER=i_backpack
+// TODO
 
 [TEMPLATE loot_succubus_luck]
 CATEGORY=Item Templates

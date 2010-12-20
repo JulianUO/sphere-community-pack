@@ -404,7 +404,7 @@ CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Keys
 DESCRIPTION=Magic Key
 SKILLMAKE=TINKERING 80.0, MAGERY 50.0,t_tinker_tools
-RESOURCES=5 i_ingot_gold, 5 i_ingot_silver, 5 i_ingot_copper
+RESOURCES=5 i_ingot_gold, 5 i_ingot_iron, 5 i_ingot_copper
 
 ON=@Create
 	ATTR=attr_magic|attr_newbie
@@ -412,7 +412,7 @@ ON=@Create
 [ITEMDEF 01013]
 // DEFNAME2=RUSTY_KEY
 DEFNAME=i_key_rusty
-RESOURCES=1 i_INGOT_RUSTY
+RESOURCES=1 i_ingot_iron
 WEIGHT=1
 TYPE=T_KEY
 CATEGORY=Provisions - Miscellaneous

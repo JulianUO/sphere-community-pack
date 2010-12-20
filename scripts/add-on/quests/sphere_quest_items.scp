@@ -294,7 +294,7 @@ SUBSECTION=QUEST MONSTERS
 DESCRIPTION=Lord Garrison
 
 ON=@Create
-EVENTS +e_resist_magic
+//EVENTS +e_resist_magic
 COLOR=colors_skin
 STR={125 160}
 DEX={81 95}
@@ -382,7 +382,7 @@ ON=@CREATE
 COLOR=COLORS_YELLOW
 
 [ITEMDEF i_hydra_scale]
-ID=i_reag_serpent_scale
+ID=i_scale
 NAME=hydra's scales
 TYPE=T_INGOT
 VALUE=3
@@ -391,6 +391,9 @@ WEIGHT=.1
 CATEGORY=Do Not Use
 SUBSECTION=Quest Items
 DESCRIPTION=Hydra Scales
+
+ON=@Create
+ COLOR=002B4
 
 [ITEMDEF i_thrashers_tail]
 ID=i_hide

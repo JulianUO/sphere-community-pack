@@ -76,7 +76,7 @@ src.skillgain camping <eval (<src.camping> / 10)>
 serv.newitem=i_campfire
 new.tag.secure=-9
 new.timer=2
-new.events +e_camping_campfire
+new.events +t_camping_campfire
 new.movenear <src.uid>,1
 consume
 else
@@ -85,7 +85,7 @@ src.sysmessage <def.scp.camping_fail>
 endif
 return 1
 
-[typedef e_camping_campfire]
+[TYPEDEF t_camping_campfire]
 on=@timer
 if <tag0.secure> < 0
 	if <tag0.secure> < -20 //camp left alone
@@ -113,7 +113,7 @@ else
 	endfor
 timer = 300
 tag.secure = 1
-events -e_camping_campfire
+events -t_camping_campfire
 endif
 return 1
 
@@ -166,7 +166,7 @@ if <ref1.isitem>
 	if <ref1.baseid>==i_campfire
 	ref1.tag.secure=-9
 	ref1.timer=1
-	ref1.events +e_camping_campfire
+	ref1.events +t_camping_campfire
 	endif
 endif
 remove
@@ -190,7 +190,7 @@ if <ref1.isitem>
 	if <ref1.baseid>==i_campfire
 	ref1.tag.secure=-9
 	ref1.timer=1
-	ref1.events +e_camping_campfire
+	ref1.events +t_camping_campfire
 	endif
 endif
 remove

@@ -211,7 +211,7 @@ ON=@ItemStep
 
 
 [chardef c_abscess]
-defname=c_Hydra
+id=c_Hydra
 name=abscess
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit

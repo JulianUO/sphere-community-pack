@@ -55,7 +55,7 @@ ITEM=i_reag_bone,{10 30}
 ITEM=i_reag_dragon_blood,{10 30}
 ITEM=i_reag_executioners_cap,{10 30}
 ITEM=i_reag_eye_of_newt,{10 30}
-ITEM=i_reag_worm_heart,{10 30}
+//ITEM=i_reag_wyrm_heart,{10 30}
 ITEM=RANDOM_FILTHY_RICH_MONSTER_GOODIE
 
 [TEMPLATE tm_sos_pillows]
@@ -70,7 +70,7 @@ ITEM={ i_pillow 1 i_pillow_2 1 i_pillow_large 1 i_pillow_9 1 i_pillow_10 1 i_pil
 CATEGORY=Item Templates
 SUBSECTION=Treasure Hunting
 DESCRIPTION=Paintings
-ITEM={ i_portrait_1 1 i_portrait_2 1 i_portrait_3 1 i_portrait_4 1 i_portrait_5 1 i_portrait_6 1 i_portrait_7 1 i_portrait_big 1 i_painting_ruined 1 }
+ITEM={ i_portrait_1 1 i_portrait_2 1 i_portrait_3 1 i_portrait_4 1 i_portrait_5 1 i_portrait_6 1 i_portrait_7 1 i_portrait_big 1 }//i_painting_ruined 1 }
 
 [TEMPLATE tm_sos_bodyparts]
 // decorative items fished up from treasure tile

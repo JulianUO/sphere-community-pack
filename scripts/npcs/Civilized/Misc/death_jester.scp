@@ -15,7 +15,7 @@ desires=t_coin, t_gem, t_magic
 bloodcolor=0
 
 tevents=e_evil_jester
-tspeech=spk_evil_jester
+//tspeech=spk_evil_jester
 tspeech=spk_human_prime
 tspeech=spk_human_default
 
@@ -102,9 +102,9 @@ on=@NPCRestock
  item=loot_death_jester
 
 on=@Death
- newloot=i_pants_jester
+ newloot=i_pants_long
  new.color=color_o_shadow
- newloot=i_shoes_jester
+ newloot=i_shoes_plain
  new.color=color_o_shadow
 
 [template loot_death_jester]
@@ -125,3 +125,4 @@ item=random_jewel, { 4 8 }
 item=random_food, { 2 4 }
 //item=random_drink
 //item=random_magic_weapon
+[EOF]

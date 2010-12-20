@@ -40,7 +40,7 @@ TAG.ResPoison=18
 TAG.ResEnergy=16
 
 ON=@Create
-COLOR=colors_o_rose
+COLOR=0665
 HITPOINTS=150
 
 [ITEMDEF i_pacify]

@@ -312,7 +312,7 @@ COLOR=colors_hair
 
 
 ON=@NPCRestock
-ITEM=random_dress
+ITEM=i_dress_plain
 COLOR=colors_all
 ITEM=random_shoes
 COLOR=colors_neutral
@@ -2811,7 +2811,7 @@ SUBSECTION=Religious
 DESCRIPTION=Priest (male)
 
 ON=@Create
-f_pat_random
+//f_pat_random
 COLOR=colors_elf
 STR={41 55}
 DEX={51 65}
@@ -2859,7 +2859,7 @@ SUBSECTION=Religious
 DESCRIPTION=Priestess (female)
 
 ON=@Create
-f_pat_random
+//f_pat_random
 COLOR=colors_elf
 STR={41 55}
 DEX={51 65}

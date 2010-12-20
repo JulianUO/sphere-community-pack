@@ -147,9 +147,7 @@ local.items = <r<argv[0]>>
 	endfor
 endif
 
-
-[events e_PlayerPropertiesEvent]
-on=@userstats
+[FUNCTION f_PlayerCheckStats]
 // Hit Point Increase, just add the TAG or Cap (whichever is smaller) to the maxhits
 // Safe zone since EVENTS on EventsPlayer are called last.
 // Same goes for ManaIncrease, StaminaIncrease
@@ -213,6 +211,14 @@ else
 tag0.override.regenval_1 = <local.MRt>
 tag.override.regen_1 =
 endif
+
+
+[EVENTS e_PlayerPropertiesEvent]
+on=@userstats
+// Hit Point Increase, just add the TAG or Cap (whichever is smaller) to the maxhits
+// Safe zone since EVENTS on EventsPlayer are called last.
+// Same goes for ManaIncrease, StaminaIncrease
+f_PlayerCheckStats
 
 on=@skillsuccess
 if <argn1> == 45 // Mining, which other works like this?

@@ -1493,7 +1493,7 @@ DESCRIPTION=Iron Wire
 
 [ITEMDEF 01877]
 DEFNAME=i_wire_silver
-RESOURCES=1 i_ingot_silver
+RESOURCES=1 i_ingot_iron
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Tinker

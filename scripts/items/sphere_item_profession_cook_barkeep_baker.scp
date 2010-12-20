@@ -295,7 +295,7 @@ DUPEITEM=09bb
 
 [ITEMDEF 09bd]
 DEFNAME=i_silverware
-RESOURCES=1 i_ingot_silver
+RESOURCES=1 i_ingot_iron
 CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Silverware
@@ -375,7 +375,7 @@ DUPEITEM=09c9
 
 [ITEMDEF 09d4]
 DEFNAME=i_silverware_2
-RESOURCES=3 i_ingot_silver
+RESOURCES=3 i_ingot_iron
 CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Silverware

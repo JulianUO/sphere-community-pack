@@ -127,7 +127,7 @@ COLOR=colors_all
 HITPOINTS=150
 
 [ITEMDEF i_reddeath_statue]
-ID=i_pet_skeletalmount
+ID=i_pet_skeletal_mount
 NAME=Red Death Statue
 TYPE=T_NORMAL
 

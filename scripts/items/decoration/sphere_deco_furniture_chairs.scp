@@ -269,7 +269,7 @@ CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Gargish Couch (East - 1 of 2)
 
-[ITEMDEF 04020]
+[ITEMDEF 04029]
 DEFNAME=i_gargish_couch_s_2_2
 DUPEITEM=04027
 CATEGORY=Decoration - Furniture

@@ -769,7 +769,7 @@ DUPEITEM=013b9
 [ITEMDEF i_evocarius]
 ID=i_sword_viking
 NAME=Evocarius
-TEVENTS=t_set_evocarius
+TEVENTS=t_set_juggernaut
 TEVENTS=t_iprop
 TAG.DamageIncrease=50
 CATEGORY=Provisions - Weapons - Swordsmanship

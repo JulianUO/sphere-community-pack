@@ -123,10 +123,10 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=random_jewel, {1 2}
 	ITEM=i_gold,{125 175}
-	ITEM=i_orb,1,R6
-	MORE1=08
-	NAME=Poison Orb
-	COLOR=0ad
+//	ITEM=i_orb,1,R6
+//	MORE1=08
+//	NAME=Poison Orb
+//	COLOR=0ad
 
 ON=@Hit
 	IF !(<SRC.FLAGS>&statf_poisoned)
@@ -165,10 +165,10 @@ ON=@NpcRestock
 	ITEM=random_jewel, {1 2}
 	ITEM=random_jewel, {1 2},R3
 	ITEM=i_gold,{450 600}
-	ITEM=i_orb,1,R6
-	MORE1=08
-	NAME=Poison Orb
-	COLOR=0ad
+//	ITEM=i_orb,1,R6
+//	MORE1=08
+//	NAME=Poison Orb
+//	COLOR=0ad
 
 ON=@Hit
 	IF !(<SRC.FLAGS>&statf_poisoned)
@@ -223,10 +223,10 @@ ON=@Create
 
 ON=@NpcRestock
 	ITEM=i_gold,{333 400}
-	ITEM=i_orb,1,R4
+//	ITEM=i_orb,1,R4
 	ITEM=random_weapon
 	ITEM=i_boulder
-	ITEM=i_minion_leather
+//	ITEM=i_minion_leather
 
 [chardef 795]
 defname=c_Horde_Daemon_Medium
@@ -260,7 +260,7 @@ ON=@Create
 
 ON=@NpcRestock
 	ITEM=i_gold,{133 260}
-	ITEM=i_minion_leather
+//	ITEM=i_minion_leather
 
 [chardef 779]
 defname=c_bogling

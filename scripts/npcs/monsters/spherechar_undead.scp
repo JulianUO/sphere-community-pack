@@ -179,6 +179,44 @@ KARMA=-450
 ON=@NPCRestock
 ITEM=loot_skeleton
 
+[CHARDEF 038]
+DEFNAME=c_skeleton_w_axe
+NAME=Skeleton
+SOUND=snd_MONSTER_SKLETN1
+ICON=i_pet_SKELETON
+ANIM=078c7f
+CAN=MT_WALK|MT_USEHANDS
+DAM=3,7
+FOODTYPE=
+DESIRES=t_bone,i_gold
+BLOODCOLOR=-1
+TEVENTS=e_undead
+CATEGORY=Monsters
+SUBSECTION=Undeads
+DESCRIPTION=Skeleton (Axe)
+TAG.Slayer=SLAYER_UNDEAD
+TAG.Barding.Diff=38.9
+ARMOR={15 20}
+
+ON=@Create
+ResFire={5 10}
+ResCold={25 40}
+ResPoison={25 35}
+ResEnergy={5 15}
+NPC=brain_undead
+STR={56 80}
+DEX={56 75}
+INT={16 40}
+MAXHITS={34 48}
+WRESTLING={45.0 55.0}
+TACTICS={45.0 50.0}
+MAGICRESISTANCE={45.0 60.0}
+FAME=450
+KARMA=-450
+
+ON=@NPCRestock
+ITEM=i_axe_battle
+ITEM=loot_skeleton
 
 [CHARDEF 039]
 DEFNAME=c_skeletal_knight
