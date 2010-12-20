@@ -42,6 +42,42 @@ ON=@Create
 ON=@NPCRestock
     ITEM=loot_orc
 
+[CHARDEF 029]
+DEFNAME=c_orc_w_club
+NAME=Orc
+ICON=i_pet_orc
+DAM=9,13
+CAN=MT_WALK|MT_RUN|MT_USEHANDS
+FOODTYPE=15 t_meat_raw
+RESOURCES=1 i_ribs_raw
+TAG.Luck.Loot=loot_orc_luck
+TAG.Slayer=SLAYER_ORC
+TAG.Barding.Diff=49.1
+ARMOR={25 30}
+CATEGORY=Monsters
+SUBSECTION=Orcs
+DESCRIPTION=Orc (Club)
+
+ON=@Create
+    NPC=brain_monster
+    ResCold={10 20}
+    ResPoison={10 20}
+    ResFire={20 30}
+    ResEnergy={20 30}
+    FAME=1500
+    KARMA=-1500
+    STR={96 120}
+    DEX={81 105}
+    INT={36 60}
+    MAXHITS={58 72}
+    MAGICRESISTANCE={50.1 75.0}
+    TACTICS={55.1 80.0}
+    WRESTLING={50.1 70.0}
+    MACEFIGHTING={50.1 70.0}
+
+ON=@NPCRestock
+    ITEM=I_CLUB
+    ITEM=loot_orc
 
 [CHARDEF 0b6]
 DEFNAME=c_orc_bomber

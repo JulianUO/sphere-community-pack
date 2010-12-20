@@ -114,7 +114,7 @@ DESCRIPTION=Highly Peculiar Fish
 VALUE=1000
 
 on=@create
-COLOR=0b0
+COLOR=color_o_fishpeculiarhighly
 
 on=@dclick
 if <src.stam> == <src.maxstam>

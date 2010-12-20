@@ -106,7 +106,7 @@ Dupeitem=0409B
 
 [Itemdef 0409C]
 Type=t_door_open
-Dupelist=0409E,040A0,040A3
+Dupelist=0409E,040A0,040A2
 
 Category=Buildings - Doors
 Subsection=Stygian Abyss
@@ -118,7 +118,7 @@ Dupeitem=0409C
 [Itemdef 040A0]
 Dupeitem=0409C
 
-[Itemdef 040A3]
+[ITEMDEF 040A2]
 Dupeitem=0409C
 
 

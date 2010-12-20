@@ -86,7 +86,7 @@ COMPONENT=i_door_wood,0,3,7
 COMPONENT=i_sign_brass_2,2,4,5
 
 [MULTIDEF 06d]
-DUPEITEM=0406c
+DUPEITEM=01006c
 
 [MULTIDEF 06e]
 DEFNAME=i_multi_house_wood_thatched_small
@@ -101,7 +101,7 @@ COMPONENT=i_door_wood,0,3,7
 COMPONENT=i_sign_brass_2,2,4,5
 
 [MULTIDEF 06f]
-DUPEITEM=0406e
+DUPEITEM=01006e
 
 [MULTIDEF 070]
 DEFNAME=i_multi_tent_blue
@@ -115,7 +115,7 @@ MULTIREGION=-3,-3,4,4
 COMPONENT=0e43,0,-1,7
 
 [MULTIDEF 071]
-DUPEITEM=04070
+DUPEITEM=010070
 
 [MULTIDEF 072]
 DEFNAME=i_multi_tent_green
@@ -129,7 +129,7 @@ MULTIREGION=-3,-3,4,4
 COMPONENT=0e43,0,-1,7	// box
 
 [MULTIDEF 073]
-DUPEITEM=04072
+DUPEITEM=010072
 
 [MULTIDEF 074]
 DEFNAME=i_multi_house_3room
@@ -147,7 +147,7 @@ COMPONENT=i_door_wood,3,-1, 7	// Front door.
 COMPONENT=i_sign_brass_2,3, 7, 5	// Place the sign.
 
 [MULTIDEF 075]
-DUPEITEM=04074
+DUPEITEM=010074
 
 [MULTIDEF 076]
 DEFNAME=i_multi_house_wood_plaster_2story
@@ -165,7 +165,7 @@ COMPONENT=i_door_wood,-3, 0, 7	// Front door.
 COMPONENT=i_sign_brass_2, 1, 7, 5	// Place the sign.
 
 [MULTIDEF 077]
-DUPEITEM=04076
+DUPEITEM=010076
 
 [MULTIDEF 078]
 DEFNAME=i_multi_house_stone_plaster_2story
@@ -183,7 +183,7 @@ COMPONENT=i_door_wood,-3, 0, 7 // Front door.
 COMPONENT=i_sign_brass_2, 1, 7, 5 // Place the sign.
 
 [MULTIDEF 079]
-DUPEITEM=04078
+DUPEITEM=010078
 
 [MULTIDEF 07a]
 DEFNAME=i_multi_tower
@@ -202,7 +202,7 @@ COMPONENT=i_door_metal,	 0, 6, 7	// Front door 1.
 COMPONENT=i_sign_brass_2,	 4, 7, 5	// Place the sign.
 
 [MULTIDEF 07b]
-DUPEITEM=0407a
+DUPEITEM=01007a
 
 [MULTIDEF 07c]
 DEFNAME=i_multi_keep
@@ -218,7 +218,7 @@ COMPONENT=i_door_metal,	 0, 10, 7	// Front door 1.
 COMPONENT=i_sign_brass_2, 4, 11, 5	// Place the sign.
 
 [MULTIDEF 07d]
-DUPEITEM=0407c
+DUPEITEM=01007c
 
 [MULTIDEF 07e]
 DEFNAME=i_multi_castle
@@ -237,7 +237,7 @@ COMPONENT=i_sign_brass_2, 4, 16, 5	// Place the sign.
 
 [MULTIDEF 07f]
 //Name=Castle
-DUPEITEM=0407e
+DUPEITEM=01007e
 
 [MULTIDEF 087]
 // ?
@@ -274,7 +274,7 @@ COMPONENT=i_door_wood,	-4, 6, 7	// Front door 1.
 COMPONENT=i_sign_brass_2,	 0, 7, 5	// Place the sign.
 
 [MULTIDEF 08d]
-DUPEITEM=0408c
+DUPEITEM=01008c
 
 [MULTIDEF 096]
 DEFNAME=i_multi_house_patio_marble

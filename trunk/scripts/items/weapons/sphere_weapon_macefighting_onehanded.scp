@@ -410,7 +410,7 @@ HITPOINTS=255
 [ITEMDEF 0df2]
 //wand
 DEFNAME=i_wand_1
-RESOURCES=2 i_ingot_silver, 2 i_ingot_gold, 1 I_GEM_DIAMOND
+RESOURCES=2 i_ingot_iron, 2 i_ingot_gold, 1 I_GEM_DIAMOND
 TYPE=T_WAND
 DAM=9,11
 SPEED=2.2
@@ -429,7 +429,7 @@ HITPOINTS={36 48}
 [ITEMDEF 0df3]
 //wand
 DEFNAME=i_wand_2
-RESOURCES=2 i_ingot_silver, 2 i_ingot_gold, 1 I_GEM_DIAMOND
+RESOURCES=2 i_ingot_iron, 2 i_ingot_gold, 1 I_GEM_DIAMOND
 TYPE=T_WAND
 DAM=9,11
 SPEED=2.2

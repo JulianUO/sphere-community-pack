@@ -615,7 +615,7 @@ DUPEITEM=01aa4
 
 [ITEMDEF 01ad4]
 DEFNAME=i_nest_with_eggs
-RESOURCES=8 i_STRAW, 3 i_EGG
+RESOURCES=8 i_STRAW
 WEIGHT=3
 CATEGORY=Miscellaneous
 SUBSECTION=Birds Nest
@@ -1010,7 +1010,7 @@ ON=@Create
 ID=I_GEM_SAPPHIRE
 NAME=Die
 WEIGHT=.2
-RESOURCES3=1 i_bone, 1 i_ink
+//RESOURCES3=1 i_bone, 1 i_ink
 
 ON=@Create
 	COLOR=colors_white

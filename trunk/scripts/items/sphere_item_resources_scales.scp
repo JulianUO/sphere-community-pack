@@ -1,5 +1,5 @@
-[ITEMDEF 026b1]
-DEFNAME=i_reag_scale
+[ITEMDEF 026b4]
+DEFNAME=i_scale
 TYPE=t_normal
 NAME=Scale%s
 PILE=1
@@ -9,30 +9,29 @@ VALUE=5
 CATEGORY=Provisions - Blacksmithing
 SUBSECTION=Scales
 DESCRIPTION=@
-DUPELIST=026b2,026b3,026b4,026b5,026b6
+DUPELIST=026b2,026b3,026b1,026b5,026b6
 
-[itemdef 026b2]
-DUPEITEM=026b1
+[ITEMDEF 026b2]
+DUPEITEM=026b4
 
-[itemdef 026b3]
-DUPEITEM=026b1
+[ITEMDEF 026b3]
+DUPEITEM=026b4
 
-[itemdef 026b4]
-DUPEITEM=026b1
+[ITEMDEF 026b1]
+DUPEITEM=026b4
 
-[itemdef 026b5]
-DUPEITEM=026b1
+[ITEMDEF 026b5]
+DUPEITEM=026b4
 
-[itemdef 026b6]
-DUPEITEM=026b1
+[ITEMDEF 026b6]
+DUPEITEM=026b4
 
 
 //For backwards compatability
 [ITEMDEF i_reag_dragon_scale]
 DEFNAME=i_reag_dragon_scale
-ID=026B4
+ID=i_scale
 NAME=Dragon Scale%s
-TYPE=t_reagent
 WEIGHT=0.1
 VALUE=5
 
@@ -41,12 +40,10 @@ SUBSECTION=Scales
 DESCRIPTION=Dragon Scale
 
 
-
-[ITEMDEF i_reag_scale_black]
-DEFNAME=i_reag_scale_black
-ID=026B4
+[ITEMDEF i_scale_black]
+DEFNAME=i_scale_black
+ID=i_scale
 NAME=Dragon Scale%s
-TYPE=t_reagent
 WEIGHT=0.1
 VALUE=5
 
@@ -58,11 +55,10 @@ ON=@Create
  COLOR=002C3
 
 
-[ITEMDEF i_reag_scale_blue]
-DEFNAME=i_reag_scale_blue
-ID=026B4
-NAME=Dragon Scale%s
-TYPE=t_reagent
+[ITEMDEF i_scale_blue]
+DEFNAME=i_scale_blue
+ID=i_scale
+NAME=Sea Serpent Scale%s
 WEIGHT=0.1
 VALUE=5
 
@@ -74,11 +70,10 @@ ON=@Create
  COLOR=002B4
 
 
-[ITEMDEF i_reag_scale_green]
-DEFNAME=i_reag_scale_green
-ID=026B4
+[ITEMDEF i_scale_green]
+DEFNAME=i_scale_green
+ID=i_scale
 NAME=Dragon Scale%s
-TYPE=t_reagent
 WEIGHT=0.1
 VALUE=5
 
@@ -90,11 +85,10 @@ ON=@Create
  COLOR=00304
 
 
-[ITEMDEF i_reag_scale_red]
-DEFNAME=i_reag_scale_red
-ID=026B4
+[ITEMDEF i_scale_red]
+DEFNAME=i_scale_red
+ID=i_scale
 NAME=Dragon Scale%s
-TYPE=t_reagent
 WEIGHT=0.1
 VALUE=5
 
@@ -106,11 +100,10 @@ ON=@Create
  COLOR=00151
 
 
-[ITEMDEF i_reag_scale_white]
-DEFNAME=i_reag_scale_white
-ID=026B4
+[ITEMDEF i_scale_white]
+DEFNAME=i_scale_white
+ID=i_scale
 NAME=Dragon Scale%s
-TYPE=t_reagent
 WEIGHT=0.1
 VALUE=5
 
@@ -122,11 +115,10 @@ ON=@Create
  COLOR=002C2
 
 
-[ITEMDEF i_reag_scale_yellow]
-DEFNAME=i_reag_scale_yellow
-ID=026B4
+[ITEMDEF i_scale_yellow]
+DEFNAME=i_scale_yellow
+ID=i_scale
 NAME=Dragon Scale%s
-TYPE=t_reagent
 WEIGHT=0.1
 VALUE=5
 
@@ -136,4 +128,5 @@ DESCRIPTION=Yellow Scale
 
 ON=@Create
  COLOR=00224
+
 [EOF]

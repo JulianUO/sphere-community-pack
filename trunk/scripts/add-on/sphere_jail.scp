@@ -70,8 +70,11 @@ endif
 On=@DClick
 resendtooltip
 
-On=@SkillStart
+On=@SkillPreStart
 ACTION = -1
+return 1
+
+On=@SkillWait
 return 1
 
 On=@SkillSelect

@@ -212,13 +212,13 @@ ITEM={ i_armor_female_bustier 1 i_armor_female_skirt 1 i_armor_female_leather 1 
 CATEGORY=Item Templates
 SUBSECTION=Random Armour
 DESCRIPTION=Ringmail
-ITEM={ i_ringmail_leggings_decoration 1 i_ringmail_tunic_decoration 1 i_ringmail_sleeves_decoration 1 i_ringmail_gloves 1 i_ringmail_tunic 1 i_ringmail_sleeves 1 i_ringmail_leggings 1 }
+ITEM={ i_ringmail_gloves 1 i_ringmail_tunic 1 i_ringmail_sleeves 1 i_ringmail_leggings 1 }
 
 [TEMPLATE RANDOM_STUDDED_ARMOR]
 CATEGORY=Item Templates
 SUBSECTION=Random Armour
 DESCRIPTION=Studded
-ITEM={ i_studded_sleeves 1 i_studded_gloves 1 i_studded_gorget 1 i_studded_sleeves_decoration 1 i_studded_leggings_decoration 1 i_studded_tunic_decoration 1 i_studded_leggings 1 i_studded_tunic 1 i_armor_female_shorts 1 }
+ITEM={ i_studded_sleeves 1 i_studded_gloves 1 i_studded_gorget 1 i_studded_leggings 1 i_studded_tunic 1 i_armor_female_shorts 1 }
 
 [TEMPLATE RANDOM_SWORDTYPE_RUIN]
 CATEGORY=Item Templates

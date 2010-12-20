@@ -110,10 +110,10 @@ TAG.SelfRepair = 0
 
 [TYPEDEF t_set_juggernaut]
 on=@equip
-f_getset_pieces_equip t_set_evocarius
+f_getset_pieces_equip t_set_juggernaut
 
 on=@unequip
-f_getset_pieces_unequip t_set_evocarius
+f_getset_pieces_unequip t_set_juggernaut
 
 ON=@SetEquip
 src.ModStr += 10

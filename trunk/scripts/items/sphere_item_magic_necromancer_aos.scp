@@ -122,7 +122,7 @@ DEFNAME=i_scroll_evil_omen
 NAME=Evil Omen Scroll
 TYPE=t_scroll
 WEIGHT=1
-RESOURCES=i_scroll_blank, i_reag_batwing, i_reag_serpent_scale
+RESOURCES=i_scroll_blank, i_reag_batwing, i_reag_nox_crystal
 SKILLMAKE=INSCRIPTION 19.6
 
 ON=@Create
@@ -158,7 +158,7 @@ DEFNAME=i_scroll_lich_form
 NAME=Lich Form Scroll
 TYPE=t_scroll
 WEIGHT=1
-RESOURCES=i_scroll_blank,i_reag_volcanic_ash, i_reag_serpent_scale, i_reag_blood_vial
+RESOURCES=i_scroll_blank,i_reag_volcanic_ash, i_reag_nox_crystal, i_reag_blood_vial
 SKILLMAKE=INSCRIPTION 69.6
 
 ON=@Create
@@ -212,7 +212,7 @@ DEFNAME=i_scroll_poison_strike
 NAME=Poison Strike Scroll
 TYPE=t_scroll
 WEIGHT=1
-RESOURCES=i_scroll_blank, i_reag_serpent_scale
+RESOURCES=i_scroll_blank, i_reag_nox_crystal
 SKILLMAKE=INSCRIPTION 49.6
 
 ON=@Create
@@ -230,7 +230,7 @@ DEFNAME=i_scroll_strangle
 NAME=Strangle Scroll
 TYPE=t_scroll
 WEIGHT=1
-RESOURCES=i_scroll_blank, i_reag_blood_vial, i_reag_serpent_scale
+RESOURCES=i_scroll_blank, i_reag_blood_vial, i_reag_nox_crystal
 SKILLMAKE=INSCRIPTION 64.6
 
 ON=@Create
@@ -266,7 +266,7 @@ DEFNAME=i_scroll_vampiric_embrace
 NAME=Vampiric Embrace Scroll
 TYPE=t_scroll
 WEIGHT=1
-RESOURCES=i_scroll_blank, i_reag_batwing, i_reag_pig_iron, i_reag_serpent_scale
+RESOURCES=i_scroll_blank, i_reag_batwing, i_reag_pig_iron, i_reag_nox_crystal
 SKILLMAKE=INSCRIPTION 98.6
 
 ON=@Create
@@ -302,7 +302,7 @@ DEFNAME=i_scroll_wither
 NAME=Wither Scroll
 TYPE=t_scroll
 WEIGHT=1
-RESOURCES=i_scroll_blank, i_reag_volcanic_ash, i_reag_serpent_scale, i_reag_pig_iron
+RESOURCES=i_scroll_blank, i_reag_volcanic_ash, i_reag_nox_crystal, i_reag_pig_iron
 SKILLMAKE=INSCRIPTION 59.6
 
 ON=@Create
@@ -320,7 +320,7 @@ DEFNAME=i_scroll_wraith_form
 NAME=Wraith Form Scroll
 TYPE=t_scroll
 WEIGHT=1
-RESOURCES=i_scroll_blank, i_reag_serpent_scale, i_reag_pig_iron
+RESOURCES=i_scroll_blank, i_reag_nox_crystal, i_reag_pig_iron
 SKILLMAKE=INSCRIPTION 79.6
 
 ON=@Create
@@ -339,7 +339,7 @@ NAME=Exorcism Scroll
 ID=i_scroll_animate_dead
 TYPE=t_scroll
 WEIGHT=1
-RESOURCES=i_scroll_blank, i_reag_volcanic_ash, i_reag_serpent_scale
+RESOURCES=i_scroll_blank, i_reag_volcanic_ash, i_reag_nox_crystal
 SKILLMAKE=INSCRIPTION 79.6
 
 ON=@Create

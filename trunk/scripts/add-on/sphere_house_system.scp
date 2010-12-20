@@ -3569,6 +3569,14 @@ ON=@SkillStart
 SYSMESSAGE @,,1 You cannot do that while customizing a house.
 return 1
 
+ON=@SkillPreStart
+SYSMESSAGE @,,1 You cannot do that while customizing a house.
+return 1
+
+ON=@SkillWait
+SYSMESSAGE @,,1 You cannot do that while customizing a house.
+return 1
+
 ON=@SkillUseQuick
 return 1
 

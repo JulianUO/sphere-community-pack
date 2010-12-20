@@ -127,7 +127,7 @@ HITPOINTS={36 48}
 COLOR=04ab
  
 [ITEMDEF i_barbed_longbow_frostwood]
-ID=i_barbed_longbow
+ID=i_elven_composite_longbow
 NAME=Frostwood Barbed Longbow
 TYPE=t_weapon_bow
 RESOURCES=20 i_log_frostwood, 1 i_gem_fire_ruby
@@ -144,7 +144,7 @@ HITPOINTS={36 48}
 COLOR=04ab
  
 [ITEMDEF i_slayer_longbow_frostwood]
-ID=i_slayer_longbow
+ID=i_elven_composite_longbow
 NAME=Frostwood Slayer Longbow
 TYPE=t_weapon_bow
 RESOURCES=20 i_log_frostwood, 1 i_gem_brilliant_amber
@@ -161,7 +161,7 @@ HITPOINTS={36 48}
 COLOR=04ab
  
 [ITEMDEF i_frozen_longbow_frostwood]
-ID=i_frozen_longbow
+ID=i_elven_composite_longbow
 NAME=Frostwood Frozen Longbow
 TYPE=t_weapon_bow
 RESOURCES=20 i_log_frostwood, 1 i_gem_turquoise
@@ -178,7 +178,7 @@ HITPOINTS={36 48}
 COLOR=04ab
  
 [ITEMDEF i_longbow_might_frostwood]
-ID=i_longbow_might
+ID=i_elven_composite_longbow
 NAME=Frostwood Longbow of Might
 TYPE=t_weapon_bow
 RESOURCES=20 i_log_frostwood, 1 i_gem_blue_diamond
@@ -195,7 +195,7 @@ HITPOINTS={36 48}
 COLOR=04ab
  
 [ITEMDEF i_ranger_shortbow_frostwood]
-ID=i_ranger_shortbow
+ID=i_magical_shortbow
 NAME=Frostwood Ranger's Shortbow
 TYPE=t_weapon_bow
 RESOURCES=15 i_log_frostwood, 1 i_gem_perfect_emerald
@@ -212,7 +212,7 @@ HITPOINTS={36 48}
 COLOR=04ab
  
 [ITEMDEF i_lightweight_shortbow_frostwood]
-ID=i_lightweight_shortbow
+ID=i_magical_shortbow
 NAME=Frostwood Lightweight Shortbow
 TYPE=t_weapon_bow
 RESOURCES=15 i_log_frostwood, 1 i_gem_white_pearl
@@ -229,7 +229,7 @@ HITPOINTS={36 48}
 COLOR=04ab
  
 [ITEMDEF i_mystical_shortbow_frostwood]
-ID=i_mystical_shortbow
+ID=i_magical_shortbow
 NAME=Frostwood Mystical Shortbow
 TYPE=t_weapon_bow
 RESOURCES=15 i_log_frostwood, 1 i_gem_ecru_citrine
@@ -246,7 +246,7 @@ HITPOINTS={36 48}
 COLOR=04ab
  
 [ITEMDEF i_assassin_shortbow_frostwood]
-ID=i_assassin_shortbow
+ID=i_magical_shortbow
 NAME=Frostwood Assassin's Shortbow
 TYPE=t_weapon_bow
 RESOURCES=15 i_log_frostwood, 1 i_gem_dark_sapphire

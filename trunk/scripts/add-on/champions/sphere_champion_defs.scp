@@ -117,10 +117,10 @@ champ_Minotaur_Reward {i_subdue 33 i_pet_minotaur 66}
 //champ_VerminHord_champion c_Barracoon
 //champ_VerminHord_Reward {i_fang_ractus 17 i_slime_statue 50 i_oak_leaf_cloak 9 i_gauntlets_anger 9 i_Detective_boots 9 i_Djinn_Ring 9}
 
-//champ_UnholyTerror_1 {c_spectre 1 c_m_ghoul 1 c_wraith 1 c_m_ghost 1}
-//champ_UnholyTerror_2 {c_m_skeleton_mage 1 c_mummy 1 c_wraith 1}
-//champ_UnholyTerror_3 {c_lich 1 c_m_skeleton_knight 1 c_mummy 1}
-//champ_UnholyTerror_4 {c_m_lich_lord 1 c_rotting_corpse 1}
+//champ_UnholyTerror_1 {c_spectre 1 c_m_ghoul 1 c_wraith 1 c_m_ghost 1} //c_m_ghost=c_harrower
+//champ_UnholyTerror_2 {c_skeletal_mage 1 c_mummy 1 c_wraith 1}
+//champ_UnholyTerror_3 {c_lich 1 c_skeletal_knight 1 c_mummy 1}
+//champ_UnholyTerror_4 {c_lich_lord 1 c_rotting_corpse 1}
 //champ_UnholyTerror_champion c_Neira
 //champ_UnholyTerror_Reward {i_blood_drips 50 i_captain_john_hat 11 i_detective_boots 11 i_necromancer_shroud 11 i_shroud_deceit 17}
 

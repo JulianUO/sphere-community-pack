@@ -27,7 +27,7 @@ desires=t_coin, t_gem, t_magic
 bloodcolor=0
 
 tevents=e_evil_jester
-tspeech=spk_evil_jester
+//tspeech=spk_evil_jester
 tspeech=spk_human_prime
 tspeech=spk_human_default
 
@@ -145,3 +145,4 @@ item=random_jewel, { 1 2 }
 item=random_food, { 2 4 }
 //item=random_drink
 //item=random_magic_weapon
+[EOF]

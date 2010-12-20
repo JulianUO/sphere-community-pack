@@ -2360,8 +2360,8 @@ MAKEITEM=i_armoire_dk
 ON=i_armoire_lt <name> (<resmake>)
 MAKEITEM=i_armoire_lt
 
-ON=i_BOOKCASE <name> (<resmake>)
-MAKEITEM=i_BOOKCASE
+ON=i_shelf_wooden <name> (<resmake>)
+MAKEITEM=i_shelf_wooden
 
 ON=i_BOOKCASE_FULL <name> (<resmake>)
 MAKEITEM=i_BOOKCASE_FULL

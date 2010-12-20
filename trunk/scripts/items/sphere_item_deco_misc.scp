@@ -325,12 +325,12 @@ DUPEITEM=01580
 
 [ITEMDEF 01582]
 DEFNAME=i_decorative_shield_12_sword_under_ne
-RESOURCES=8 i_ingot_iron, 2 i_ingot_silver, 1 i_BOARD
+RESOURCES=10 i_ingot_iron, 1 i_BOARD
 WEIGHT=17
 
 [ITEMDEF 01583]
 DEFNAME=i_decorative_shield_12_sword_over_ne
-RESOURCES=8 i_ingot_iron, 2 i_ingot_silver, 1 i_BOARD
+RESOURCES=10 i_ingot_iron, 1 i_BOARD
 WEIGHT=17
 
 [ITEMDEF 01584]
@@ -760,7 +760,7 @@ DESCRIPTION=Humility (04/04) (N)
 
 [ITEMDEF 014e3]
 DEFNAME=i_shrine_chaos_1
-RESOURCES=20 i_MARBLE, 2 i_ingot_bloodrock, 2 i_rock_plain
+RESOURCES=20 i_MARBLE, 2 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Chaos
@@ -1421,7 +1421,7 @@ ON=@DCLICK
 [ITEMDEF 01512]
 DEFNAME=i_decorative_armor2
 FLIP=1
-RESOURCES=10 i_ingot_bronze, 13 i_ingot_rose, 2 i_ingot_iron, 2 i_LOG, 1 i_BOARD
+RESOURCES=10 i_ingot_bronze, 13 i_ingot_dull_copper, 2 i_ingot_iron, 2 i_LOG, 1 i_BOARD
 WEIGHT=34
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Decorative Armor
@@ -1458,7 +1458,7 @@ ON=@DCLICK
 
 [ITEMDEF 01514]
 DEFNAME=i_serpent_crest
-RESOURCES=20 i_ingot_silver, 4 i_ingot_bloodrock
+RESOURCES=20 i_ingot_iron
 WEIGHT=35
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Serpent Crest
@@ -1673,7 +1673,7 @@ DUPEITEM=0156c
 
 [ITEMDEF 01634]
 DEFNAME=i_decorative_shield_12_sword_over_nw
-RESOURCES=8 i_ingot_iron, 2 i_ingot_silver, 1 i_BOARD
+RESOURCES=10 i_ingot_iron, 1 i_BOARD
 WEIGHT=17
 CATEGORY=Decoration - Weapons & Shields
 SUBSECTION=Shields
@@ -1681,7 +1681,7 @@ DESCRIPTION=Shield
 
 [ITEMDEF 01635]
 DEFNAME=i_decorative_shield_12_sword_under_nw
-RESOURCES=8 i_ingot_iron, 2 i_ingot_silver, 1 i_BOARD
+RESOURCES=10 i_ingot_iron, 1 i_BOARD
 WEIGHT=17
 CATEGORY=Decoration - Weapons & Shields
 SUBSECTION=Shields

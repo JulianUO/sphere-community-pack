@@ -119,7 +119,7 @@ HITPOINTS={36 48}
 COLOR=04a6
  
 [ITEMDEF i_barbed_longbow_oak]
-ID=i_barbed_longbow
+ID=i_elven_composite_longbow
 NAME=Oak Barbed Longbow
 TYPE=t_weapon_bow
 RESOURCES=20 i_log_oak, 1 i_gem_fire_ruby
@@ -135,7 +135,7 @@ HITPOINTS={36 48}
 COLOR=04a6
  
 [ITEMDEF i_slayer_longbow_oak]
-ID=i_slayer_longbow
+ID=i_elven_composite_longbow
 NAME=Oak Slayer Longbow
 TYPE=t_weapon_bow
 RESOURCES=20 i_log_oak, 1 i_gem_brilliant_amber
@@ -151,7 +151,7 @@ HITPOINTS={36 48}
 COLOR=04a6
  
 [ITEMDEF i_frozen_longbow_oak]
-ID=i_frozen_longbow
+ID=i_elven_composite_longbow
 NAME=Oak Frozen Longbow
 TYPE=t_weapon_bow
 RESOURCES=20 i_log_oak, 1 i_gem_turquoise
@@ -167,7 +167,7 @@ HITPOINTS={36 48}
 COLOR=04a6
  
 [ITEMDEF i_longbow_might_oak]
-ID=i_longbow_might
+ID=i_elven_composite_longbow
 NAME=Oak Longbow of Might
 TYPE=t_weapon_bow
 RESOURCES=20 i_log_oak, 1 i_gem_blue_diamond
@@ -183,7 +183,7 @@ HITPOINTS={36 48}
 COLOR=04a6
  
 [ITEMDEF i_ranger_shortbow_oak]
-ID=i_ranger_shortbow
+ID=i_magical_shortbow
 NAME=Oak Ranger's Shortbow
 TYPE=t_weapon_bow
 RESOURCES=15 i_log_oak, 1 i_gem_perfect_emerald
@@ -199,7 +199,7 @@ HITPOINTS={36 48}
 COLOR=04a6
  
 [ITEMDEF i_lightweight_shortbow_oak]
-ID=i_lightweight_shortbow
+ID=i_magical_shortbow
 NAME=Oak Lightweight Shortbow
 TYPE=t_weapon_bow
 RESOURCES=15 i_log_oak, 1 i_gem_white_pearl
@@ -215,7 +215,7 @@ HITPOINTS={36 48}
 COLOR=04a6
  
 [ITEMDEF i_mystical_shortbow_oak]
-ID=i_mystical_shortbow
+ID=i_magical_shortbow
 NAME=Oak Mystical Shortbow
 TYPE=t_weapon_bow
 RESOURCES=15 i_log_oak, 1 i_gem_ecru_citrine
@@ -231,7 +231,7 @@ HITPOINTS={36 48}
 COLOR=04a6
  
 [ITEMDEF i_assassin_shortbow_oak]
-ID=i_assassin_shortbow
+ID=i_magical_shortbow
 NAME=Oak Assassin's Shortbow
 TYPE=t_weapon_bow
 RESOURCES=15 i_log_oak, 1 i_gem_dark_sapphire

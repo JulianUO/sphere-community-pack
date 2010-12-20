@@ -1585,7 +1585,6 @@ ON=@NPCRestock
 	ITEM=random_eighth_circle,R20
 	ITEM=random_eighth_circle,R20
 	ITEM=random_all_armor
-	ITEM=i_deed,R5000
 
 
 [CHARDEF 01127]

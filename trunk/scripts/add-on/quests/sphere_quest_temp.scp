@@ -34,7 +34,7 @@ NAME=A Bag of Treasure
 COLOR=55
 EVENTS=t_bagtreasure
 ITEM=i_gold,{3000 6800}
-ITEM=i_mapa_tesouro,1,R4
+//ITEM=i_mapa_tesouro,1,R4
 
 [TYPEDEF t_bagtreasure]
 ON=@Clienttooltip
@@ -50,8 +50,8 @@ NAME=A Large Bag of Treasure
 COLOR=04ac
 EVENTS=t_largebagtreasure
 ITEM=i_gold,{5000 12000}
-ITEM=i_mapa_tesouro,1,R2
-ITEM=i_mapa_tesouro,1,R6
+//ITEM=i_mapa_tesouro,1,R2
+//ITEM=i_mapa_tesouro,1,R6
 
 [TYPEDEF t_largebagtreasure]
 ON=@Clienttooltip
@@ -62,12 +62,12 @@ EVENTS -t_largebagtreasure
 RESENDTOOLTIP
 
 [TEMPLATE tm_queststrongbox]
-CONTAINER=i_ornate_elven_chest_sm
+CONTAINER=i_box_decorative
 NAME=A Strong Box
 EVENTS=t_strongbox
 ITEM=i_gold,{8000 16000}
-ITEM=i_mapa_tesouro,1,R2
-ITEM=i_mapa_tesouro,1,R6
+//ITEM=i_mapa_tesouro,1,R2
+//ITEM=i_mapa_tesouro,1,R6
 
 [TYPEDEF t_strongbox]
 ON=@Clienttooltip
@@ -122,8 +122,8 @@ ITEM=i_ingot_iron,{8 20}
 ITEM=i_hammer_smith
 ATTR=ATTR_NEWBIE
 // ITEM=i_white_pearl,1,R4
-ITEM={i_deed_anvil 1 i_deed_forge 1 0 1}
-ITEM={i_ingot_bronze 1 i_ingot_copper 1 i_ingot_agapite 1 i_ingot_gold 1 i_ingot_silver 1 i_ingot_dullcopper 1 i_ingot_oldcopper 1},{1 2}
+ITEM={i_deed_anvil 1 i_deed_forge_small 1 0 1}
+ITEM={i_ingot_bronze 1 i_ingot_copper 1 i_ingot_agapite 1 i_ingot_gold 1 i_ingot_dull_copper 1},{1 2}
 
 [TEMPLATE  tm_questtinkercraftsatchel]
 CONTAINER=i_backpack

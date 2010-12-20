@@ -100,6 +100,15 @@ color_o_rusty					0750
 [DEFNAME COLOR_SETS]
 color_o_darkwood_set				0494
 
+[DEFNAME COLOR_FISH]
+color_o_fishprize				51
+color_o_fishwondrous			86
+color_o_fishtrulyrare			76
+color_o_fishpeculiarhighly		66
+
+[DEFNAME COLOR_GRANITE]
+color_o_granite					0
+
 [DEFNAME SPELLWEAVING_SOUNDS]
 snd_spell_arcane_circle			1472
 snd_spell_gift_renewal			1481
