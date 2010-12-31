@@ -34,7 +34,7 @@ ON=@Create
 	SWORDSMANSHIP={50.0 70.0}
 
 	ITEMNEWBIE=i_hair_long
-//	ITEMNEWBIE=i_beard_goatee
+	//	ITEMNEWBIE=i_beard_goatee
 
 ON=@NPCRestock
 	ITEM=i_CAPE
@@ -57,3 +57,5 @@ ON=@NPCRestock
 	COLOR=045e
 	ITEM=i_arrow,{10 30}
 	ITEM=i_gold,{80 200}
+
+[EOF]

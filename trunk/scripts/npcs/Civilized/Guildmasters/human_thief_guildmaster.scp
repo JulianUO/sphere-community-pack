@@ -124,3 +124,5 @@ ON=@NPCRestock
 	ITEM=i_dagger
 	ITEM=random_coin_purse
 	ITEM=i_lockpick
+
+[EOF]

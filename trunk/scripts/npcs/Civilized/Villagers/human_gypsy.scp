@@ -1,4 +1,4 @@
-[CHARDEF C_H_GYPSY]
+[CHARDEF c_h_gypsy]
 DEFNAME=C_H_GYPSY
 NAME=#NAMES_HUMANMALE the Gypsy
 ID=C_MAN
@@ -63,7 +63,7 @@ ON=@NPCRestock
 	ITEM=random_coin_purse
 
 
-[CHARDEF C_H_GYPSY_F]
+[CHARDEF c_h_gypsy_f]
 DEFNAME=C_H_GYPSY_F
 NAME=#NAMES_HUMANFEMALE the Gypsy
 ID=C_WOMAN
@@ -124,3 +124,5 @@ ON=@NPCRestock
 	COLOR=colors_blue
 	ITEM=random_footwear
 	ITEM=random_coin_purse
+
+[EOF]

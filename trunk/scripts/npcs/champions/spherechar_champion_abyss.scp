@@ -26,19 +26,19 @@ TAG.Barding.Diff=9.9
 ARMOR={5 10}
 
 ON=@Create
-NPC=brain_monster
-STR={6 10}
-DEX={26 38}
-INT={6 14}
-MAXHITS={4 6}
-WRESTLING={5.1 10.0}
-TACTICS={5.1 10.0}
-MAGICRESISTANCE={5.1 14.0}
-FAME=150
-KARMA=-150
+	NPC=brain_monster
+	STR={6 10}
+	DEX={26 38}
+	INT={6 14}
+	MAXHITS={4 6}
+	WRESTLING={5.1 10.0}
+	TACTICS={5.1 10.0}
+	MAGICRESISTANCE={5.1 14.0}
+	FAME=150
+	KARMA=-150
 
 ON=@NPCRestock
-ITEM=loot_mongbat
+	ITEM=loot_mongbat
 
 
 [CHARDEF 02f6]
@@ -63,26 +63,26 @@ TAG.DamPoison=50
 ARMOR={25 35}
 
 ON=@Create
-ResFire={40 50}
-ResCold={20 30}
-ResPoison={30 40}
-ResEnergy={30 40}
-NPC=brain_monster
-STR={91 115}
-DEX={61 80}
-INT={86 110}
-MAXHITS={55 69}
-WRESTLING={40.1 44.0}
-TACTICS={42.1 50.0}
-MAGICRESISTANCE={30.1 50.0}
-MAGERY={90.0 100.0}
-EVALUATINGINTEL={20.1 30.0}
-TAMING=83.1
-FAME=2500
-KARMA=-2500
+	ResFire={40 50}
+	ResCold={20 30}
+	ResPoison={30 40}
+	ResEnergy={30 40}
+	NPC=brain_monster
+	STR={91 115}
+	DEX={61 80}
+	INT={86 110}
+	MAXHITS={55 69}
+	WRESTLING={40.1 44.0}
+	TACTICS={42.1 50.0}
+	MAGICRESISTANCE={30.1 50.0}
+	MAGERY={90.0 100.0}
+	EVALUATINGINTEL={20.1 30.0}
+	TAMING=83.1
+	FAME=2500
+	KARMA=-2500
 
 ON=@NPCRestock
-ITEM=loot_imp
+	ITEM=loot_imp
 
 
 [CHARDEF 01e]
@@ -102,23 +102,23 @@ TAG.Barding.Diff=56.4
 ARMOR={25 30}
 
 ON=@Create
-ResFire={10 20}
-ResCold={10 30}
-ResPoison={20 30}
-ResEnergy={10 30}
-NPC=brain_monster
-STR={96 120}
-DEX={86 110}
-INT={51 75}
-MAXHITS={58 72}
-WRESTLING={60.0 90.0}
-TACTICS={70.0 100.0}
-MAGICRESISTANCE={50.0 65.0}
-FAME=2500
-KARMA=-2500
+	ResFire={10 20}
+	ResCold={10 30}
+	ResPoison={20 30}
+	ResEnergy={10 30}
+	NPC=brain_monster
+	STR={96 120}
+	DEX={86 110}
+	INT={51 75}
+	MAXHITS={58 72}
+	WRESTLING={60.0 90.0}
+	TACTICS={70.0 100.0}
+	MAGICRESISTANCE={50.0 65.0}
+	FAME=2500
+	KARMA=-2500
 
 ON=@NPCRestock
-ITEM=loot_harpy
+	ITEM=loot_harpy
 
 
 [CHARDEF 095]
@@ -139,43 +139,43 @@ TAG.DamEnergy=25
 ARMOR={80 90}
 
 ON=@Create
-ResFire={70 80}
-ResCold={40 50}
-ResPoison={50 60}
-ResEnergy={50 60}
-NPC=brain_monster
-STR={488 620}
-DEX={121 170}
-INT={498 657}
-MAXHITS={312 353}
-WRESTLING={80.0 90.0}
-TACTICS={80.0 90.0}
-MAGICRESISTANCE={100.0 150.0}
-MAGERY={99.0 100.0}
-EVALUATINGINTEL={90.0 100.0}
-MEDITATION={90.0 100.0}
-FAME=24000
-KARMA=-24000
-ITEMNEWBIE=i_spellbook
-ADDCIRCLE 8,1
+	ResFire={70 80}
+	ResCold={40 50}
+	ResPoison={50 60}
+	ResEnergy={50 60}
+	NPC=brain_monster
+	STR={488 620}
+	DEX={121 170}
+	INT={498 657}
+	MAXHITS={312 353}
+	WRESTLING={80.0 90.0}
+	TACTICS={80.0 90.0}
+	MAGICRESISTANCE={100.0 150.0}
+	MAGERY={99.0 100.0}
+	EVALUATINGINTEL={90.0 100.0}
+	MEDITATION={90.0 100.0}
+	FAME=24000
+	KARMA=-24000
+	ITEMNEWBIE=i_spellbook
+	ADDCIRCLE 8,1
 
 ON=@NpcRestock
-ITEM=loot_succubus
+	ITEM=loot_succubus
 
 ON=@GetHit
 ref11 = <uid>
 forchars 3
 	if <isplayer> || (<flags>&statf_pet)
-	local.dam = <r10,40>
-	damage <local.dam> dam_physical <ref11.uid>
-	ref11.hits += <local.dam>
+		local.dam = <r10,40>
+		damage <local.dam> dam_physical <ref11.uid>
+		ref11.hits += <local.dam>
 		if <ref11.hits> > <ref11.maxhits>
-		ref11.hits = <ref11.maxhits>
+			ref11.hits = <ref11.maxhits>
 		endif
 	endif
 endfor
 
-[CHARDEF 174]
+[CHARDEF 0ae]
 DEFNAME=c_semidar
 NAME=Semidar
 SOUND=snd_monster_daemon1
@@ -217,7 +217,7 @@ ON=@Create
 ON=@NPCRestock
 	ITEM=loot_semidar
 
-[CHARDEF 713]
+[CHARDEF 02c9]
 DEFNAME=c_abyssal_infernal
 NAME=Abyssal Infernal
 SOUND=snd_abyssal_infernal

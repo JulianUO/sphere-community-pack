@@ -130,3 +130,5 @@ ON=@NPCRestock
 	ITEM=random_coin_purse
 	ITEM=i_bow
 	ITEM=i_arrow,{5 20}
+
+[EOF]

@@ -49,3 +49,5 @@ ON=@NPCRestock
 	ITEM=i_reag_eye_of_newt,{ 1 5 }
 	ITEM=i_staff_gnarled
 	ITEM=i_gold,{50 80}
+
+[EOF]

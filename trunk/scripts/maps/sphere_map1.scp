@@ -13,7 +13,7 @@ VERSION=0.56b
 
 [AREADEF a_world_map1] // UO Renaissance (T2A, map0,statics0,staidx0), map #0
 NAME=Special World
-FLAGS=02000
+FLAGS=region_flag_safe
 GROUP=ALLMAP
 P=1323,1624,55,1
 RECT=0,0,7168,4096,1

@@ -26,7 +26,7 @@ RECT=656,1192,816,1320,4
 [ROOMDEF a_zento_inn]
 NAME=Zento Inn
 GROUP=Tokuno Islands
-FLAGS=0880
+FLAGS=region_flag_nobuilding|region_flag_underground
 P=686,1211,30,4
 RECT=674,1203,699,1219,4
 

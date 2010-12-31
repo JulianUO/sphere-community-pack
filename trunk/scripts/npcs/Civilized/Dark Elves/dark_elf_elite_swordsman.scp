@@ -51,3 +51,4 @@ ON=@NPCRestock
 	COLOR=0455
 	ITEM=i_shield_round_metal
 	ITEM=i_gold,{100 300}
+[EOF]

@@ -1,4 +1,4 @@
-[CHARDEF C_H_ARMORER]
+[CHARDEF c_h_armorer]
 //Male ARMORER
 DEFNAME=C_H_ARMORER
 NAME=#NAMES_HUMANMALE the Armorer
@@ -23,7 +23,7 @@ TEVENTS=e_Human_Environ
 CATEGORY=Civilized
 SUBSECTION=Tradesmen
 DESCRIPTION=Armorer (male)
-	
+
 ON=@Create
 	NPC=brain_vendor
 	COLOR=colors_skin
@@ -75,7 +75,7 @@ ON=@NPCRestock
 	BUY=i_log
 
 
-[CHARDEF C_H_ARMORER_F]
+[CHARDEF c_h_armorer_f]
 DEFNAME=C_H_ARMORER_F
 NAME=#NAMES_HUMANFEMALE the Armorer
 ID=C_WOMAN
@@ -147,3 +147,5 @@ ON=@NPCRestock
 	BUY=VENDOR_B_COLOURED_ARMOR
 	BUY=VENDOR_B_MAGIC_ARMOR
 	BUY=i_log
+
+[EOF]

@@ -1,4 +1,4 @@
-[CHARDEF C_H_BANKER]
+[CHARDEF c_h_banker]
 DEFNAME=C_H_BANKER
 NAME=#NAMES_HUMANMALE the Banker
 ID=C_MAN
@@ -51,7 +51,7 @@ ON=@NPCRestock
 	ITEM=random_coin_purse
 
 
-[CHARDEF C_H_BANKER_F]
+[CHARDEF c_h_banker_f]
 DEFNAME=C_H_BANKER_F
 NAME=#NAMES_HUMANFEMALE the Banker
 ID=C_WOMAN
@@ -103,3 +103,5 @@ ON=@NPCRestock
 	COLOR=colors_neutral
 	ITEM=random_coin_purse
 	ITEM=RANDOM_LIGHT
+
+[EOF]

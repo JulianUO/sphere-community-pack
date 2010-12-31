@@ -49,3 +49,5 @@ ON=@NPCRestock
 	COLOR=0455
 	ITEM=i_shield_wood
 	ITEM=i_sword_broad
+
+[EOF]

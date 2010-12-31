@@ -9,82 +9,82 @@
 //****************************************************************************
 // FILE LAST UPDATED: 17-Jan-2006 / RanX
 
-[itemdef 11513]
-Name=Decorative Vines
+[ITEMDEF 02cf9]
+NAME=Decorative Vines
 CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Deco Vines
 
-[itemdef 11514]
-Name=Decorative Vines
+[ITEMDEF 02cfa]
+NAME=Decorative Vines
 CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Deco Vines
 
-[itemdef 11515]
-Name=Decorative Vines
+[ITEMDEF 02cfb]
+NAME=Decorative Vines
 CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Deco Vines
 
-[itemdef 11516]
-Name=Decorative Vines
+[ITEMDEF 02cfc]
+NAME=Decorative Vines
 CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Deco Vines
 
-[itemdef 11534]
-Name=Arcanist Statue
+[ITEMDEF 02d0e]
+NAME=Arcanist Statue
 CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Arcanist Statue
 
-[itemdef 11535]
-Name=Arcanist Statue
+[ITEMDEF 02d0f]
+NAME=Arcanist Statue
 CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Arcanist Statue
 
-[itemdef 11536]
-Name=Squirrel Statue
+[ITEMDEF 02d10]
+NAME=Squirrel Statue
 CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Squirrel Statue
 
-[itemdef 11537]
-Name=Squirrel Statue
+[ITEMDEF 02d11]
+NAME=Squirrel Statue
 CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Squirrel Statue
 
-[itemdef 11538]
-Name=Warrior Statue
+[ITEMDEF 02d12]
+NAME=Warrior Statue
 CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Warrior Statue
 
-[itemdef 11539]
-Name=Warrior Statue
+[ITEMDEF 02d13]
+NAME=Warrior Statue
 CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Warrior Statue
 
-[ITEMDEF 12120]
+[ITEMDEF 02f58]
 DEFNAME=i_talisman1
 NAME=Talisman
 TYPE=t_jewelry
 
-[ITEMDEF 12121]
+[ITEMDEF 02f59]
 DEFNAME=i_talisman2
 NAME=Talisman
 TYPE=t_jewelry
 
-[ITEMDEF 12122]
+[ITEMDEF 02f5a]
 DEFNAME=i_talisman3
 NAME=Talisman
 TYPE=t_jewelry
 
-[ITEMDEF 12123]
+[ITEMDEF 02f5b]
 DEFNAME=i_talisman4
 NAME=Talisman
 TYPE=t_jewelry
@@ -370,7 +370,7 @@ CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Full Moon Fish
 
-On=@CREATE
-COLOR=colors_brown
+ON=@CREATE
+	COLOR=colors_brown
 
 [EOF]

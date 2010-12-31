@@ -11,9 +11,9 @@
 // by Rattlehead, few changes & fixes by ClouD_BR & Ellessar
 VERSION=0.56b
 
-[chardef 244]
-defname=c_rune_beetle
-name=Rune Beetle
+[CHARDEF 0f4]
+DEFNAME=c_rune_beetle
+NAME=Rune Beetle
 SOUND=snd_rune_beetle
 ICON=i_pet_runebeetle
 RESDISPDNID=c_man
@@ -56,9 +56,9 @@ ON=@NpcRestock
 
 ////////////////////////////
 
-[chardef 245]
-defname=c_Yomotsu_Warrior
-name=Yomotsu Warrior
+[CHARDEF 0f5]
+DEFNAME=c_Yomotsu_Warrior
+NAME=Yomotsu Warrior
 SOUND=snd_yomotsu
 ICON=i_pet_yomotsu_warrior
 RESDISPDNID=c_man
@@ -97,9 +97,9 @@ ON=@NpcRestock
 
 ////////////////////////////
 
-[chardef 253]
-defname=c_Yomotsu_Priest
-name=Yomotsu Priest
+[CHARDEF 0fd]
+DEFNAME=c_Yomotsu_Priest
+NAME=Yomotsu Priest
 SOUND=snd_yomotsu
 ICON=i_pet_yomotsu_priest
 DAM=8,16
@@ -140,9 +140,9 @@ ON=@NpcRestock
 
 ////////////////////////////
 
-[chardef 255]
-defname=c_Yomotsu_Elder
-name=Yomotsu Elder
+[CHARDEF 0ff]
+DEFNAME=c_Yomotsu_Elder
+NAME=Yomotsu Elder
 SOUND=snd_yomotsu
 ICON=i_pet_yomotsu_elder
 DAM=10,25
@@ -184,9 +184,9 @@ ON=@NpcRestock
 
 ///////////////////////
 
-[chardef 240]
-defname=c_kappa
-name=Kappa
+[CHARDEF 0f0]
+DEFNAME=c_kappa
+NAME=Kappa
 SOUND=snd_kappa
 ICON=i_pet_kappa
 DAM=5,15
@@ -220,9 +220,9 @@ ON=@NpcRestock
 
 ////////////////////////////
 
-[chardef 242]
-defname=c_deathwatch_beetle
-name=deathwatch beetle
+[CHARDEF 0f2]
+DEFNAME=c_deathwatch_beetle
+NAME=deathwatch beetle
 SOUND=snd_monster_lavalizard1
 ICON=i_pet_deathwatch_beetle
 DAM=4,30
@@ -254,15 +254,15 @@ ON=@Create
 	WRESTLING={95.0 100.0}
 
 ON=@Hit
-	IF !(<SRC.FLAGS>&statf_poisoned)
-		SRC.SPELLEFFECT S_POISON,1000,<UID>
-	endif
+if !(<SRC.FLAGS>&statf_poisoned)
+	SRC.SPELLEFFECT S_POISON,1000,<UID>
+endif
 
 ON=@NpcRestock
 	ITEM=random_jewel,{1 4}
 	ITEM=i_gold,{380 630}
 
-[CHARDEF 246]
+[CHARDEF 0f6]
 NAME=Bake Kitsune
 DEFNAME=c_bake_kitsune
 SOUND=snd_z_end_spirtspk
@@ -291,8 +291,8 @@ ON=@Create
 	Fame=150
 	Karma=-2150
 
-[CHARDEF 254]
-Name=Crane
+[CHARDEF 0fe]
+NAME=Crane
 DEFNAME=c_crane
 DAM=2,8
 SOUND=snd_crane
@@ -305,21 +305,22 @@ RESDISPDNID=c_man
 RESLEVEL=3
 RESDISPDNHUE=33
 DESCRIPTION=Crane
-on=@create
-NPC=BRAIN_ANIMAL
-Str={25 35}
-Dex={15 25}
-Int={10 15}
-MagicResistance={4.0 5.0}
-Tactics={10.0 11.0}
-Wrestling={10.0 11.0}
-Anatomy={5.0 6.0}
-Taming=40.0
-Fame=15
-Karma=0
 
-[CHARDEF 247]
-Name=Fan Dancer
+ON=@create
+	NPC=BRAIN_ANIMAL
+	Str={25 35}
+	Dex={15 25}
+	Int={10 15}
+	MagicResistance={4.0 5.0}
+	Tactics={10.0 11.0}
+	Wrestling={10.0 11.0}
+	Anatomy={5.0 6.0}
+	Taming=40.0
+	Fame=15
+	Karma=0
+
+[CHARDEF 0f7]
+NAME=Fan Dancer
 DEFNAME=c_fan_dancer
 ARMOR=15
 CAN=MT_WALK|MT_RUN
@@ -332,21 +333,22 @@ RESDISPDNID=c_woman
 RESLEVEL=3
 RESDISPDNHUE=33
 DESCRIPTION=Fan Dancer
-on=@create
-NPC=BRAIN_MONSTER
-Str={115 175}
-MAXHITS={315 415}
-Dex={200 255}
-Int={20 25}
-MagicResistance={100.0 110.0}
-Tactics={100.0 120.0}
-Wrestling={85.0 95.0}
-Anatomy={85.0 95.0}
-Fame=300
-Karma=-3000
 
-[CHARDEF 248]
-Name=Gaman
+ON=@create
+	NPC=BRAIN_MONSTER
+	Str={115 175}
+	MAXHITS={315 415}
+	Dex={200 255}
+	Int={20 25}
+	MagicResistance={100.0 110.0}
+	Tactics={100.0 120.0}
+	Wrestling={85.0 95.0}
+	Anatomy={85.0 95.0}
+	Fame=300
+	Karma=-3000
+
+[CHARDEF 0f8]
+NAME=Gaman
 DEFNAME=c_gaman
 ARMOR=20
 ICON=i_pet_gaman
@@ -359,20 +361,21 @@ RESLEVEL=3
 RESDISPDNHUE=33
 SUBSECTION=SE
 DESCRIPTION=Gaman
-on=@create
-NPC=BRAIN_MONSTER
-Str={145 175}
-Dex={115 145}
-Int={45 60}
-MagicResistance={35.0 45.0}
-Tactics={70.0 85.0}
-Wrestling={50.0 60.0}
-Anatomy={10.0 40.0}
-Fame=900
-Karma=-5000
 
-[CHARDEF 249]
-Name=Yamandon
+ON=@create
+	NPC=BRAIN_MONSTER
+	Str={145 175}
+	Dex={115 145}
+	Int={45 60}
+	MagicResistance={35.0 45.0}
+	Tactics={70.0 85.0}
+	Wrestling={50.0 60.0}
+	Anatomy={10.0 40.0}
+	Fame=900
+	Karma=-5000
+
+[CHARDEF 0f9]
+NAME=Yamandon
 DEFNAME=c_yamandon
 ICON=i_pet_yamandon
 ARMOR=18
@@ -385,21 +388,22 @@ RESDISPDNHUE=33
 CATEGORY=New Monsters
 SUBSECTION=SE
 DESCRIPTION=Yamandon
-on=@create
-NPC=BRAIN_MONSTER
-Str={285 330}
-MAXHITS={950 1100}
-Dex={50 65}
-Int={100 120}
-MagicResistance={115.0 135.0}
-Tactics={115.0 135.0}
-Wrestling={110.0 135.0}
-Poisoning={120.0 140.0}
-Fame=2000
-Karma=-5000
 
-[CHARDEF 250]
-Name=Tsuki Wolf
+ON=@create
+	NPC=BRAIN_MONSTER
+	Str={285 330}
+	MAXHITS={950 1100}
+	Dex={50 65}
+	Int={100 120}
+	MagicResistance={115.0 135.0}
+	Tactics={115.0 135.0}
+	Wrestling={110.0 135.0}
+	Poisoning={120.0 140.0}
+	Fame=2000
+	Karma=-5000
+
+[CHARDEF 0fa]
+NAME=Tsuki Wolf
 DEFNAME=c_tsuki_wolf
 ARMOR=35
 CAN=MT_WALK|MT_RUN
@@ -412,21 +416,22 @@ DAM=13,30
 CATEGORY=New Monsters
 SUBSECTION=SE
 DESCRIPTION=Tsuki Wolf
-on=@create
-NPC=BRAIN_MONSTER
-Str={200 250}
-MAXHITS=500
-Dex={150 200}
-Int={65 75}
-MagicResistance={65.0 70.0}
-Tactics={95.0 110.0}
-Wrestling={98.0 108.0}
-Anatomy={65.0 75.0}
-Fame=2000
-Karma=-5000
 
-[CHARDEF 251]
-Name=Revenant Lion
+ON=@create
+	NPC=BRAIN_MONSTER
+	Str={200 250}
+	MAXHITS=500
+	Dex={150 200}
+	Int={65 75}
+	MagicResistance={65.0 70.0}
+	Tactics={95.0 110.0}
+	Wrestling={98.0 108.0}
+	Anatomy={65.0 75.0}
+	Fame=2000
+	Karma=-5000
+
+[CHARDEF 0fb]
+NAME=Revenant Lion
 DEFNAME=c_revenant_lion
 SOUND=snd_rav_lion
 RESDISPDNID=c_dog
@@ -439,24 +444,25 @@ ICON=i_pet_ravlion
 CATEGORY=New Monsters
 SUBSECTION=SE
 DESCRIPTION=Ravenant Lion
-on=@create
-NPC=BRAIN_MONSTER
-Str={175 220}
-MAXHITS={300 400}
-Dex={155 175}
-Int={75 105}
-MagicResistance={70.0 80.0}
-Tactics={60.0 80.0}
-Wrestling={80.0 90.0}
-Poisoning={120.0 130.0}
-Magery={80.0 90.0}
-Meditation={85.0 95.0}
-EvaluatingIntel={80.0 90.0}
-Fame=2500
-Karma=-2500
 
-[CHARDEF 252]
-Name=Lady of the Snow
+ON=@create
+	NPC=BRAIN_MONSTER
+	Str={175 220}
+	MAXHITS={300 400}
+	Dex={155 175}
+	Int={75 105}
+	MagicResistance={70.0 80.0}
+	Tactics={60.0 80.0}
+	Wrestling={80.0 90.0}
+	Poisoning={120.0 130.0}
+	Magery={80.0 90.0}
+	Meditation={85.0 95.0}
+	EvaluatingIntel={80.0 90.0}
+	Fame=2500
+	Karma=-2500
+
+[CHARDEF 0fc]
+NAME=Lady of the Snow
 DEFNAME=c_lady_of_snow
 RESDISPDNID=c_woman
 RESLEVEL=3
@@ -469,22 +475,23 @@ CATEGORY=New Monsters
 SUBSECTION=SE
 DESCRIPTION=Lady of Snow
 SOUND=snd_elementl_airelem5
-on=@create
-NPC=BRAIN_MONSTER
-Str={115 205}
-MAXHITS={300 400}
-Dex={105 125}
-Int={470 490}
-MagicResistance={90.0 105.0}
-Tactics={85.0 100.0}
-Wrestling={85.0 100.0}
-Magery={95.0 110.0}
-Meditation={85.0 90.0}
-Fame=1500
-Karma=-3500
 
-[CHARDEF 98]
-Name=Ice Hound
+ON=@create
+	NPC=BRAIN_MONSTER
+	Str={115 205}
+	MAXHITS={300 400}
+	Dex={105 125}
+	Int={470 490}
+	MagicResistance={90.0 105.0}
+	Tactics={85.0 100.0}
+	Wrestling={85.0 100.0}
+	Magery={95.0 110.0}
+	Meditation={85.0 90.0}
+	Fame=1500
+	Karma=-3500
+
+[CHARDEF 062]
+NAME=Ice Hound
 DEFNAME=c_ice_hound
 RESDISPDNID=c_dog
 RESLEVEL=3
@@ -493,22 +500,23 @@ ICON=i_pet_dog
 RESDISPDNHUE=2
 CAN=MT_WALK|MT_RUN
 DAM=11,17
-Armor=30
+ARMOR=30
 CATEGORY=New Monsters
 SUBSECTION=SE
 DESCRIPTION=Ice Hound
-on=@create
-NPC=BRAIN_MONSTER
-Str={70 100}
-MAXHITS=200
-Dex={81 105}
-Int={36 60}
-Swordsmanship=99.0
-Fame=3400
-Karma=-3400
 
-[CHARDEF 241]
-Name=Oni
+ON=@create
+	NPC=BRAIN_MONSTER
+	Str={70 100}
+	MAXHITS=200
+	Dex={81 105}
+	Int={36 60}
+	Swordsmanship=99.0
+	Fame=3400
+	Karma=-3400
+
+[CHARDEF 0f1]
+NAME=Oni
 DEFNAME=c_oni
 RESDISPDNID=c_man
 SOUND=snd_oni
@@ -521,19 +529,20 @@ CAN=MT_WALK|MT_RUN
 CATEGORY=New Monsters
 SUBSECTION=SE
 DESCRIPTION=Oni
-on=@create
-NPC=BRAIN_MONSTER
-Str={500 605}
-MAXHITS={800 1000}
-Dex={150 200}
-Int={170 200}
-MagicResistance={85.0 100.0}
-Tactics={85.0 100.0}
-Wrestling={90.0 100.0}
-Magery={96.0 106.0}
-Meditation={27.5 42.5}
-EvaluatingIntel={100.0 125.0}
-Fame=2000
-Karma=-5000
+
+ON=@create
+	NPC=BRAIN_MONSTER
+	Str={500 605}
+	MAXHITS={800 1000}
+	Dex={150 200}
+	Int={170 200}
+	MagicResistance={85.0 100.0}
+	Tactics={85.0 100.0}
+	Wrestling={90.0 100.0}
+	Magery={96.0 106.0}
+	Meditation={27.5 42.5}
+	EvaluatingIntel={100.0 125.0}
+	Fame=2000
+	Karma=-5000
 
 [EOF]

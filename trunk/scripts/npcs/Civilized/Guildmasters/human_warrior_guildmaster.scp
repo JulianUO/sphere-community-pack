@@ -115,3 +115,5 @@ ON=@NPCRestock
 	ITEM=i_platemail_gorget
 	ITEM=i_axe_double
 	ITEM=random_coin_purse
+
+[EOF]

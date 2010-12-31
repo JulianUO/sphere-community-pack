@@ -105,3 +105,5 @@ ON=@NPCRestock
 	ITEM=random_instrument
 	ITEM=random_instrument
 	ITEM=random_coin_purse
+
+[EOF]

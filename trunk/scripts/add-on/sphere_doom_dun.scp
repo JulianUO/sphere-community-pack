@@ -536,7 +536,7 @@ REMOVE
 //////Chefes////////
 
 
-[CHARDEF 313]
+[CHARDEF 0139]
 DEFNAME=c_Darknight_Creeper
 NAME=Darknight Creeper
 ARMOR=65
@@ -566,7 +566,7 @@ MEDITATION=150.0
 FAME=10000
 KARMA=-10000
 
-[CHARDEF 315]
+[CHARDEF 013b]
 DEFNAME=c_flesh_renderer
 NAME=Flesh Renderer
 ARMOR=80
@@ -598,7 +598,7 @@ IF (<SRC.FLAGS>&statf_onhorse)
 SRC.DCLICK <SRC>
 ENDIF
 
-[CHARDEF 306]
+[CHARDEF 0132]
 DEFNAME=c_impaler
 NAME=Impaler
 CAN=MT_WALK|MT_RUN|MT_USEHANDS
@@ -674,7 +674,7 @@ Montobulus
 Usuhl
 Zul
 
-[CHARDEF 311]
+[CHARDEF 0137]
 DEFNAME=c_shadow_knight
 NAME=#NAMES_SHADOW_KNIGHT the Shadow Knight
 ARMOR=85
@@ -787,7 +787,7 @@ addspell=s_paralyze
 addspell=s_summon_daemon
 
 
-[chardef 318]
+[CHARDEF 013e]
 DEFNAME=C_dark_father
 NAME=#NAMES_DARK_FATHER the Dark Father
 CAN=MT_WALK|MT_RUN|MT_USEHANDS

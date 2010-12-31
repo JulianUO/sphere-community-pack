@@ -11,8 +11,8 @@
 
 VERSION=0.56b
 
-[chardef 310]
-defname=c_Wailing_Banshee
+[CHARDEF 0136]
+DEFNAME=c_Wailing_Banshee
 NAME=Wailing Banshee
 SOUND=snd_monster_zombie1
 ICON=i_pet_wailingbanshee
@@ -42,8 +42,8 @@ ON=@NpcRestock
 	ITEM=i_gold,{50 100}
 	ITEM=i_reag_daemon_bone,{2 6}
 
-[chardef 317]
-defname=c_vampire_bat
+[CHARDEF 013d]
+DEFNAME=c_vampire_bat
 NAME=Vampire Bat
 SOUND=snd_monster_mngbat1
 ICON=i_pet_vampirebat
@@ -73,13 +73,13 @@ ON=@NpcRestock
 	ITEM=i_gold,{90 120}
 
 ON=@Hit
-	HITS += <EVAL (<ARGN1>/3)*2>
-	IF (<HITS> > <MAXHITS>)
-		HITS=<MAXHITS>
-	endif
+HITS += <EVAL (<ARGN1>/3)*2>
+if (<HITS> > <MAXHITS>)
+	HITS=<MAXHITS>
+endif
 
-[chardef 301]
-defname=c_treefellow
+[CHARDEF 012d]
+DEFNAME=c_treefellow
 NAME=Treefellow
 SOUND=snd_monster_orc1
 ICON=i_pet_treefellow
@@ -110,8 +110,8 @@ ON=@NpcRestock
 	ITEM=i_gold,{290 320}
 	ITEM=i_log,{10 20}
 
-[chardef 302]
-defname=c_skittering_hopper
+[CHARDEF 012e]
+DEFNAME=c_skittering_hopper
 NAME=skittering hopper
 SOUND=snd_monster_lzrdmn1
 ICON=i_pet_skithopper
@@ -140,8 +140,8 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{90 120}
 
-[chardef 314]
-defname=c_ravager
+[CHARDEF 013a]
+DEFNAME=c_ravager
 NAME=Ravager
 SOUND=snd_monster_daemon1
 ICON=i_pet_ravager
@@ -173,8 +173,8 @@ ON=@NpcRestock
 	ITEM=i_reag_daemon_bone,{2 9}
 	ITEM=i_club
 
-[chardef 309]
-defname=c_patchwork_skeleton
+[CHARDEF 0135]
+DEFNAME=c_patchwork_skeleton
 NAME=Patchwork Skeleton
 SOUND=snd_monster_skletn1
 ICON=i_pet_patchwork_sklt
@@ -205,8 +205,8 @@ ON=@NpcRestock
 	ITEM=i_gold,{200 300}
 	ITEM=i_reag_daemon_bone,{5 7}
 
-[chardef 319]
-defname=c_mound_maggots
+[CHARDEF 013f]
+DEFNAME=c_mound_maggots
 NAME=Mound of Maggots
 SOUND=snd_monster_slime1
 ICON=i_pet_mound_maggots
@@ -237,8 +237,8 @@ ON=@NpcRestock
 	ITEM=i_gold,{100 200}
 	ITEM=i_reag_daemon_bone,{2 10}
 
-[chardef 305]
-defname=c_Gore_Fiend
+[CHARDEF 0131]
+DEFNAME=c_Gore_Fiend
 NAME=Gore Fiend
 SOUND=snd_monster_zombie1
 ICON=i_pet_gorefiend
@@ -269,8 +269,8 @@ ON=@NpcRestock
 	ITEM=i_gold,{150 300}
 	ITEM=i_reag_daemon_bone,{2 10}
 
-[chardef 316]
-defname=c_wanderer_void
+[CHARDEF 013c]
+DEFNAME=c_wanderer_void
 NAME=Wanderer of the Void
 SOUND=snd_monster_wisp1
 ICON=i_pet_wanderervoid
@@ -305,8 +305,8 @@ ON=@NpcRestock
 	ITEM=random_jewel,3
 	ITEM=i_reag_daemon_bone,{20 60}
 
-[chardef 304]
-defname=c_flesh_golem
+[CHARDEF 0130]
+DEFNAME=c_flesh_golem
 NAME=Flesh Golem
 SOUND=snd_monster_zombie1
 ICON=i_pet_fleshgolem
@@ -342,8 +342,8 @@ ON=@NpcRestock
 	ITEM=random_jewel,{1 2}
 	ITEM=i_reag_daemon_bone,{2 6}
 
-[chardef 303]
-defname=c_devourer_souls
+[CHARDEF 012f]
+DEFNAME=c_devourer_souls
 NAME=Devourer of Souls
 SOUND=snd_monster_zombie1
 ICON=i_pet_devourer_souls
@@ -377,8 +377,8 @@ ON=@NpcRestock
 	ITEM=i_reag_daemon_bone,{2 6}
 
 
-[chardef 312]
-defname=c_abyssmal_horror
+[CHARDEF 0138]
+DEFNAME=c_abyssmal_horror
 NAME=Abyssmal Horror
 SOUND=snd_monster_slime1
 ICON=i_pet_abysmallhorror
@@ -411,8 +411,8 @@ ON=@NpcRestock
 	ITEM=random_jewel,{1 2}
 
 
-[chardef 307]
-defname=c_gibberling
+[CHARDEF 0133]
+DEFNAME=c_gibberling
 NAME=Gibberling
 SOUND=snd_monster_harpy1
 ICON=i_pet_gibberling

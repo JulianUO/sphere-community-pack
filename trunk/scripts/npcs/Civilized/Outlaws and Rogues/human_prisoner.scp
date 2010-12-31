@@ -92,3 +92,5 @@ ON=@NPCRestock
 	ITEM=random_skirt
 	COLOR=colors_all
 	ITEM=backpack_poor
+
+[EOF]

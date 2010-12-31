@@ -46,3 +46,5 @@ ON=@NPCRestock
 	ITEM=backpack_average
 	ITEM=random_scroll
 	ITEM=random_scroll
+
+[EOF]

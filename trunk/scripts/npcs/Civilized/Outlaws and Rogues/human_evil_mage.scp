@@ -114,3 +114,5 @@ ON=@NPCRestock
 	ITEM=random_coin_purse
 	ITEM=random_upper_scroll
 	ITEM=random_upper_scroll
+
+[EOF]
