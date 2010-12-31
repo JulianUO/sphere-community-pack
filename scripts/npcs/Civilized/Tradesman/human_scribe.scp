@@ -1,4 +1,4 @@
-[CHARDEF C_H_SCRIBE]
+[CHARDEF c_h_scribe]
 DEFNAME=C_H_SCRIBE
 NAME=#NAMES_HUMANMALE the Scribe
 ID=C_MAN
@@ -63,7 +63,7 @@ ON=@NPCRestock
 	BUY=i_deed_GUILDSTONE,{1 2}
 
 
-[CHARDEF C_H_SCRIBE_F]
+[CHARDEF c_h_scribe_f]
 DEFNAME=C_H_SCRIBE_F
 NAME=#NAMES_HUMANFEMALE the Scribe
 ID=C_WOMAN
@@ -124,3 +124,5 @@ ON=@NPCRestock
 	BUY=i_book_sm_pub,{6 24}
 	BUY=i_book_lg_pub,{6 24}
 	BUY=i_deed_GUILDSTONE,{1 2}
+
+[EOF]

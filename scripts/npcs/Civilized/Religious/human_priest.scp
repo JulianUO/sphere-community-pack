@@ -91,3 +91,5 @@ ON=@NPCRestock
 	COLOR=colors_gray
 	ITEM=i_sandals
 	ITEM=random_coin_purse
+
+[EOF]

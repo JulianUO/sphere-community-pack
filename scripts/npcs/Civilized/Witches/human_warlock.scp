@@ -55,3 +55,5 @@ ON=@NPCRestock
 	ITEM=i_reag_nightshade,{ 1 15 }
 	ITEM=i_reag_sulfur_ash,{ 1 15 }
 	ITEM=i_reag_spider_silk,{ 1 15 }
+
+[EOF]

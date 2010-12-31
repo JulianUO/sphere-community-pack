@@ -13,233 +13,233 @@ VERSION=0.56b
 
 ///LBR///
 
-[ITEMDEF 9674]
+[ITEMDEF 025ca]
 DEFNAME=i_pet_terathanavenger
 NAME=terathan avenger
 
-[ITEMDEF 9685]
+[ITEMDEF 025d5]
 DEFNAME=i_pet_mummy
 NAME=mummy
 
-[ITEMDEF 9748]
+[ITEMDEF 02614]
 DEFNAME=i_pet_quagmire
 NAME=quagmire
 
-[ITEMDEF 9747]
+[ITEMDEF 02613]
 DEFNAME=i_pet_plaguebeast
 NAME=plague beast
 
-[ITEMDEF 9745]
+[ITEMDEF 02611]
 DEFNAME=i_pet_hordedaemon
 NAME=horde daemon
 
-[ITEMDEF 9735]
+[ITEMDEF 02607]
 DEFNAME=i_pet_bogling
 NAME=bogling
 
-[ITEMDEF 9754]
+[ITEMDEF 0261a]
 DEFNAME=i_pet_swarm
 NAME=swarm
 
-[ITEMDEF 9634]
+[ITEMDEF 025a2]
 DEFNAME=i_pet_kraken
 NAME=kraken
 
-[ITEMDEF 9654]
+[ITEMDEF 025b6]
 DEFNAME=i_pet_pixie
 NAME=pixie
 
-[ITEMDEF 9740]
+[ITEMDEF 0260c]
 DEFNAME=i_pet_exodus_overseer
 NAME=exodus overseer
 
-[ITEMDEF 9739]
+[ITEMDEF 0260b]
 DEFNAME=i_pet_exodus_minion
 NAME=exodus minion
 
-[ITEMDEF 9668]
+[ITEMDEF 025c4]
 DEFNAME=i_pet_dreadspider
 NAME=dread spider
 
-[ITEMDEF 9736]
+[ITEMDEF 02608]
 DEFNAME=i_pet_bogthing
 NAME=bog thing
 
-[ITEMDEF 9667]
+[ITEMDEF 025c3]
 DEFNAME=i_pet_spiderlord
 NAME=spider lord
 
-[ITEMDEF 9609]
+[ITEMDEF 02589]
 DEFNAME=i_pet_forestlord
 NAME=forest lord
 
-[ITEMDEF 9720]
+[ITEMDEF 025f8]
 DEFNAME=i_pet_meereternal
 NAME=meet eternal
 
-[ITEMDEF 9722]
+[ITEMDEF 025fa]
 DEFNAME=i_pet_meercaptain
 NAME=meer captain
 
-[ITEMDEF 9744]
+[ITEMDEF 02610]
 DEFNAME=i_pet_irongolem
 NAME=iron golem
 
-[ITEMDEF 9601]
+[ITEMDEF 02581]
 DEFNAME=i_pet_centaur
 NAME=centaur
 
-[ITEMDEF 9746]
+[ITEMDEF 02612]
 DEFNAME=i_pet_juggernaught
 NAME=juggernaught
 
-[ITEMDEF 9752]
+[ITEMDEF 02618]
 DEFNAME=i_pet_sphynx
 NAME=sphynx
 
-[ITEMDEF 9756]
+[ITEMDEF 0261c]
 DEFNAME=i_pet_meermage
 NAME=meer mage
 
-[ITEMDEF 9757]
+[ITEMDEF 0261d]
 DEFNAME=i_pet_meerwarrior
 NAME=meer warrior
 
-[ITEMDEF 9741]
+[ITEMDEF 0260d]
 DEFNAME=i_pet_droppelganger
 NAME=droppelganger
 
 ///AOS///
 
-[ITEMDEF 9770]
+[ITEMDEF 0262a]
 DEFNAME=i_pet_wailingbanshee
 NAME=Wailing Banshee
 
-[ITEMDEF 9777]
+[ITEMDEF 02631]
 DEFNAME=i_pet_vampirebat
 NAME=vampire bat
 
-[ITEMDEF 9761]
+[ITEMDEF 02621]
 DEFNAME=i_pet_treefellow
 NAME=treefellow
 
-[ITEMDEF 9762]
+[ITEMDEF 02622]
 DEFNAME=i_pet_skithopper
 NAME=skittering hopper
 
-[ITEMDEF 9774]
+[ITEMDEF 0262e]
 DEFNAME=i_pet_ravager
 NAME=ravager
 
-[ITEMDEF 9769]
+[ITEMDEF 02629]
 DEFNAME=i_pet_patchwork_sklt
 NAME=patchwork skeleton
 
-[ITEMDEF 9779]
+[ITEMDEF 02633]
 DEFNAME=i_pet_mound_maggots
 NAME=mound of maggots
 
-[ITEMDEF 9765]
+[ITEMDEF 02625]
 DEFNAME=i_pet_gorefiend
 NAME=gore fiend
 
-[ITEMDEF 9776]
+[ITEMDEF 02630]
 DEFNAME=i_pet_wanderervoid
 NAME=wanderer of the void
 
-[ITEMDEF 9764]
+[ITEMDEF 02624]
 DEFNAME=i_pet_fleshgolem
 NAME=flesh golem
 
-[ITEMDEF 9763]
+[ITEMDEF 02623]
 DEFNAME=i_pet_devourer_souls
 NAME=devourer of souls
 
-[ITEMDEF 9772]
+[ITEMDEF 0262c]
 DEFNAME=i_pet_abysmallhorror
 NAME=abysmall horror
 
-[ITEMDEF 9760]
+[ITEMDEF 02620]
 DEFNAME=i_pet_crystalelemental
 NAME=crystal elemental
 
-[ITEMDEF 9767]
+[ITEMDEF 02627]
 DEFNAME=i_pet_gibberling
 NAME=gibberling
 
 ////SE////
 
-[ITEMDEF 10095]
+[ITEMDEF 0276f]
 DEFNAME=i_pet_runebeetle
 NAME=runebeetle
 
-[ITEMDEF 10267]
+[ITEMDEF 0281b]
 DEFNAME=i_pet_yomotsu_warrior
 NAME=yomotsu warrior
 
-[ITEMDEF 10099]
+[ITEMDEF 02773]
 DEFNAME=i_pet_yomotsu_priest
 NAME=yomotsu priest
 
-[ITEMDEF 10098]
+[ITEMDEF 02772]
 DEFNAME=i_pet_yomotsu_elder
 NAME=yomotsu elder
 
-[ITEMDEF 10091]
+[ITEMDEF 0276b]
 DEFNAME=i_pet_kappa
 NAME=kappa
 
-[ITEMDEF 10085]
+[ITEMDEF 02765]
 DEFNAME=i_pet_deathwatch_beetle
 NAME=deathwatch beetle
 
-[ITEMDEF 10083]
+[ITEMDEF 02763]
 DEFNAME=i_pet_bakekitsune
 NAME=bake kitsune
 
-[ITEMDEF 10084]
+[ITEMDEF 02764]
 DEFNAME=i_pet_crane
 NAME=crane
 
-[ITEMDEF 10087]
+[ITEMDEF 02767]
 DEFNAME=i_pet_fandancer
 NAME=fan dancer
 
-[ITEMDEF 10088]
+[ITEMDEF 02768]
 DEFNAME=i_pet_gaman
 NAME=gaman
 
-[ITEMDEF 10097]
+[ITEMDEF 02771]
 DEFNAME=i_pet_yamandon
 NAME=yamandon
 
-[ITEMDEF 10096]
+[ITEMDEF 02770]
 DEFNAME=i_pet_tsukiwolf
 NAME=tsuki wolf
 
-[ITEMDEF 10094]
+[ITEMDEF 0276e]
 DEFNAME=i_pet_ravlion
 NAME=ravenant lion
 
-[ITEMDEF 10086]
+[ITEMDEF 02766]
 DEFNAME=i_pet_raiju
 NAME=rai-ju
 
-[ITEMDEF 10092]
+[ITEMDEF 0276c]
 DEFNAME=i_pet_ladysnow
 NAME=lady of snow
 
-[ITEMDEF 10089]
+[ITEMDEF 02769]
 DEFNAME=i_pet_kazekemono
 NAME=kaze kemono
 
-[ITEMDEF 10093]
+[ITEMDEF 0276d]
 DEFNAME=i_pet_oni
 NAME=oni
 
 ////ML////
 
-[ITEMDEF 02D82]
+[ITEMDEF 02d82]
 DEFNAME=i_pet_chief_paroxysmus
 NAME=Chief Paroxysmus
 
@@ -248,7 +248,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Chief Paroxysmus
 
 
-[ITEMDEF 02D83]
+[ITEMDEF 02d83]
 DEFNAME=i_pet_dread_horn
 NAME=Dread Horn
 
@@ -257,7 +257,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Dread Horn
 
 
-[ITEMDEF 02D84]
+[ITEMDEF 02d84]
 DEFNAME=i_pet_lady_melisande
 NAME=Lady Melisande
 
@@ -266,7 +266,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Lady Melisande
 
 
-[ITEMDEF 02D85]
+[ITEMDEF 02d85]
 DEFNAME=i_pet_monstrous_interred_grizzle
 NAME=Monstrous Interred Grizzle
 
@@ -275,7 +275,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Monstrous Interred Grizzle
 
 
-[ITEMDEF 02D86]
+[ITEMDEF 02d86]
 DEFNAME=i_pet_travesty
 NAME=Travesty
 
@@ -284,7 +284,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Travesty (Don't use)
 
 
-[ITEMDEF 02D87]
+[ITEMDEF 02d87]
 DEFNAME=i_pet_shimmering_effusion
 NAME=Shimmering Effusion
 
@@ -293,7 +293,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Shimmering Effusion
 
 
-[ITEMDEF 02D88]
+[ITEMDEF 02d88]
 DEFNAME=i_pet_tormented_minotaur
 NAME=Tormented Minotaur
 
@@ -302,7 +302,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Tormented Minotaur
 
 
-[ITEMDEF 02D89]
+[ITEMDEF 02d89]
 DEFNAME=i_pet_minotaur
 NAME=Minotaur
 
@@ -311,7 +311,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Minotaur
 
 
-[ITEMDEF 02D8A]
+[ITEMDEF 02d8a]
 DEFNAME=i_pet_changeling
 NAME=Changeling
 
@@ -320,7 +320,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Changeling
 
 
-[ITEMDEF 02D8B]
+[ITEMDEF 02d8b]
 DEFNAME=i_pet_hydra
 NAME=Hydra
 
@@ -329,7 +329,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Hydra
 
 
-[ITEMDEF 02D8C]
+[ITEMDEF 02d8c]
 DEFNAME=i_pet_insane_dryad
 NAME=Insane Dryad
 
@@ -338,7 +338,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Insane Dryad
 
 
-[ITEMDEF 02D8D]
+[ITEMDEF 02d8d]
 DEFNAME=i_pet_troglodyte
 NAME=Troglodyte
 
@@ -347,7 +347,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Troglodyte
 
 
-[ITEMDEF 02D8E]
+[ITEMDEF 02d8e]
 DEFNAME=i_pet_thorn_bat
 NAME=Thorn Bat
 
@@ -356,7 +356,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Thorn Bat (Don't use)
 
 
-[ITEMDEF 02D8F]
+[ITEMDEF 02d8f]
 DEFNAME=i_pet_bulbous_putrifaction
 NAME=Bulbous Putrifaction
 
@@ -365,7 +365,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Bulbous Putrifaction (Don't use)
 
 
-[ITEMDEF 02D90]
+[ITEMDEF 02d90]
 DEFNAME=i_pet_enslaved_satyr
 NAME=Enslaved Satyr
 
@@ -374,7 +374,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Enslaved Satyr
 
 
-[ITEMDEF 02D91]
+[ITEMDEF 02d91]
 DEFNAME=i_pet_interred_grizzle
 NAME=Interred Grizzle
 
@@ -383,7 +383,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Interred Grizzle (Don't use)
 
 
-[ITEMDEF 02D92]
+[ITEMDEF 02d92]
 DEFNAME=i_pet_fetid_essence
 NAME=Fetid Essence
 
@@ -392,7 +392,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Fetid Essence
 
 
-[ITEMDEF 02D93]
+[ITEMDEF 02d93]
 DEFNAME=i_pet_mantra_effervescence
 NAME=Mantra Effervescence
 
@@ -401,7 +401,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Mantra Effervescence
 
 
-[ITEMDEF 02D94]
+[ITEMDEF 02d94]
 DEFNAME=i_pet_corporeal_brume
 NAME=Corporeal Brume
 
@@ -410,7 +410,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Corporeal Brume
 
 
-[ITEMDEF 02D95]
+[ITEMDEF 02d95]
 DEFNAME=i_pet_reptalon
 NAME=Reptalon
 
@@ -419,7 +419,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Reptalon
 
 
-[ITEMDEF 02D96]
+[ITEMDEF 02d96]
 DEFNAME=i_pet_cu_sidhe
 NAME=Cu Sidhe
 
@@ -428,7 +428,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Cu Sidhe
 
 
-[ITEMDEF 02D97]
+[ITEMDEF 02d97]
 DEFNAME=i_pet_squirrel
 NAME=Squirrel
 
@@ -437,7 +437,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Squirrel
 
 
-[ITEMDEF 02D98]
+[ITEMDEF 02d98]
 DEFNAME=i_pet_ferret
 NAME=Ferret
 
@@ -446,7 +446,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Ferret
 
 
-[ITEMDEF 02D99]
+[ITEMDEF 02d99]
 DEFNAME=i_pet_minotaur_scout
 NAME=Minotaur Scout
 
@@ -455,7 +455,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Minotaur Scout
 
 
-[ITEMDEF 02D9A]
+[ITEMDEF 02d9a]
 DEFNAME=i_pet_armored_minotaur
 NAME=Armored Minotaur
 
@@ -464,7 +464,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Armored Minotaur
 
 
-[ITEMDEF 02D9B]
+[ITEMDEF 02d9b]
 DEFNAME=i_pet_parrot
 NAME=Parrot
 
@@ -473,7 +473,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Parrot
 
 
-[ITEMDEF 02D9C]
+[ITEMDEF 02d9c]
 DEFNAME=i_pet_charger
 NAME=Charger
 

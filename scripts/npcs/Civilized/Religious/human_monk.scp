@@ -94,3 +94,5 @@ ON=@NPCRestock
 	COLOR=colors_neutral
 	ITEM=i_sandals
 	ITEM=backpack_poor
+
+[EOF]

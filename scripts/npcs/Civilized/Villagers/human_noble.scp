@@ -1,4 +1,4 @@
-[CHARDEF C_H_NOBLE]
+[CHARDEF c_h_noble]
 DEFNAME=C_H_NOBLE
 NAME=#NAMES_HUMANMALE the Noble
 ID=C_MAN
@@ -58,7 +58,7 @@ ON=@NPCRestock
 	ITEM=backpack_loaded
 
 
-[CHARDEF C_H_NOBLE_F]
+[CHARDEF c_h_noble_f]
 DEFNAME=C_H_NOBLE_F
 NAME=#NAMES_HUMANFEMALE the Noble
 ID=C_WOMAN
@@ -112,3 +112,5 @@ ON=@NPCRestock
 	ITEM=random_boots
 	ITEM=i_sword_long
 	ITEM=backpack_loaded
+
+[EOF]

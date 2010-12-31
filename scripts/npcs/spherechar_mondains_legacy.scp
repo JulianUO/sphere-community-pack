@@ -10,9 +10,9 @@
 // FILE LAST UPDATED: April 28 2008
 VERSION=0.56b
 
-[chardef 256]
-defname=c_chief_paroxysmus
-name=Chief Paroxysmus
+[CHARDEF 0100]
+DEFNAME=c_chief_paroxysmus
+NAME=Chief Paroxysmus
 SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -53,9 +53,9 @@ ON=@NpcRestock
 	ADDSPELL=s_paralyze
 
 //Dread Horn
-[chardef 257]
-defname=c_dread_horn
-name=Dread Horn
+[CHARDEF 0101]
+DEFNAME=c_dread_horn
+NAME=Dread Horn
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -90,9 +90,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{80 130}
 
 //Lady M
-[chardef 258]
-defname=c_lady_m
-name=Lady Melisande
+[CHARDEF 0102]
+DEFNAME=c_lady_m
+NAME=Lady Melisande
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -129,9 +129,9 @@ ON=@NpcRestock
 	ADDSPELL=s_harm
 
 //Monstrous Interred Grizzle
-[chardef 259]
-defname=c_monstrous_interred_grizzle
-name=Monstrous Interred Grizzle
+[CHARDEF 0103]
+DEFNAME=c_monstrous_interred_grizzle
+NAME=Monstrous Interred Grizzle
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -202,9 +202,9 @@ ON=@NpcRestock
 //ITEM=i_gold,{80 130}
 
 //Shimmering Effusion
-[chardef 261]
-defname=c_Shimmering_Effusion
-name=Shimmering Effusion
+[CHARDEF 0105]
+DEFNAME=c_Shimmering_Effusion
+NAME=Shimmering Effusion
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -239,9 +239,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{80 130}
 
 //Tormented Minotaur
-[chardef 262]
-defname=c_Tormented_Minotaur
-name=Tormented Minotaur
+[CHARDEF 0106]
+DEFNAME=c_Tormented_Minotaur
+NAME=Tormented Minotaur
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -276,9 +276,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{80 130}
 
 //Minotaur
-[chardef 263]
-defname=c_Minotaur
-name=Minotaur
+[CHARDEF 0107]
+DEFNAME=c_Minotaur
+NAME=Minotaur
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -313,9 +313,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{80 130}
 
 //Changeling
-[chardef 264]
-defname=c_Changeling
-name=Changeling
+[CHARDEF 0108]
+DEFNAME=c_Changeling
+NAME=Changeling
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -350,9 +350,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{80 130}
 
 //Hydra
-[chardef 265]
-defname=c_Hydra
-name=Hydra
+[CHARDEF 0109]
+DEFNAME=c_Hydra
+NAME=Hydra
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -387,9 +387,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{80 130}
 
 //Dryad
-[chardef 266]
-defname=c_Dryad
-name=Dryad
+[CHARDEF 010a]
+DEFNAME=c_Dryad
+NAME=Dryad
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -424,9 +424,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{80 130}
 
 //Troglodyte
-[chardef 267]
-defname=c_Troglodyte
-name=Troglodyte
+[CHARDEF 010b]
+DEFNAME=c_Troglodyte
+NAME=Troglodyte
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -561,9 +561,9 @@ ON=@NpcRestock
 //ITEM=i_gold,{80 130}
 
 //Satyr
-[chardef 271]
-defname=c_Satyr
-name=Satyr
+[CHARDEF 010f]
+DEFNAME=c_Satyr
+NAME=Satyr
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -582,7 +582,7 @@ DESCRIPTION=Satyr
 ON=@Create
 	NPC=brain_monster
 	FAME={100 160}
-KARMA=0
+	KARMA=0
 	STR={70 90}
 	MAXHITS=150
 	INT={100 200}
@@ -598,9 +598,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{80 130}
 
 //Fetid Essence
-[chardef 273]
-defname=c_Fetid_Essence
-name=Fetid Essence
+[CHARDEF 0111]
+DEFNAME=c_Fetid_Essence
+NAME=Fetid Essence
 //SOUND=snd_monster_daemon1
 ICON=i_worldgem_bit
 RESLEVEL=5
@@ -638,9 +638,9 @@ ON=@NpcRestock
 ////RACES///////////////
 
 //Elfs
-[CHARDEF 605]
+[CHARDEF 025d]
 DEFNAME=c_elf_male
-Name=Elf Male
+NAME=Elf Male
 ICON=i_pet_MAN
 RESLEVEL=5
 RESDISPDNHUE=0410
@@ -669,9 +669,9 @@ ON=@Create
 	MAGICRESISTANCE={15.0 38.0}
 	TACTICS={15.0 38.0}
 
-[CHARDEF 606]
+[CHARDEF 025e]
 DEFNAME=c_elf_female
-Name=Elf Female
+NAME=Elf Female
 ICON=i_pet_woman
 RESLEVEL=5
 RESDISPDNHUE=0410
@@ -700,9 +700,9 @@ ON=@Create
 	MAGICRESISTANCE={15.0 38.0}
 	TACTICS={15.0 38.0}
 
-[CHARDEF 607]
+[CHARDEF 025f]
 DEFNAME=c_elf_ghost_man
-Name=Elf male Ghost
+NAME=Elf male Ghost
 ICON=i_pet_MAN
 RESLEVEL=5
 RESDISPDNHUE=0
@@ -731,9 +731,9 @@ ON=@Create
 	MAGICRESISTANCE={15.0 38.0}
 	TACTICS={15.0 38.0}
 
-[CHARDEF 608]
+[CHARDEF 0260]
 DEFNAME=c_elf_ghost_woman
-Name=Elf Female Ghost
+NAME=Elf Female Ghost
 ICON=i_pet_woman
 RESLEVEL=5
 RESDISPDNHUE=0
@@ -765,9 +765,9 @@ ON=@Create
 // Second Part //
 //By Rattlehead
 
-[chardef 277]
-name=Cu Sidhe
-defname=c_cu_sidhe
+[CHARDEF 0115]
+NAME=Cu Sidhe
+DEFNAME=c_cu_sidhe
 ICON=i_pet_wolf
 DAM=10,15
 ARMOR=20
@@ -793,9 +793,9 @@ ON=@Create
 	tactics=95.0
 	anatomy=67.0
 
-[chardef 278]
-name=Squirrel
-defname=c_squirrel
+[CHARDEF 0116]
+NAME=Squirrel
+DEFNAME=c_squirrel
 ICON=i_pet_rabbit
 DAM=2,5
 ARMOR=10
@@ -816,9 +816,9 @@ ON=@Create
 	dex=10
 	int=10
 
-[chardef 279]
-name=Ferret
-defname=c_ferret
+[CHARDEF 0117]
+NAME=Ferret
+DEFNAME=c_ferret
 ICON=i_pet_rabbit
 DAM=2,3
 ARMOR=10
@@ -839,9 +839,9 @@ ON=@Create
 	dex=68
 	int=52
 
-[chardef 280]
-name=Minotaur Captain
-defname=c_minotaur_captain
+[CHARDEF 0118]
+NAME=Minotaur Captain
+DEFNAME=c_minotaur_captain
 ICON=i_pet_dragon
 DAM=25,38
 ARMOR=60
@@ -869,9 +869,9 @@ ON=@NpcRestock
 	ITEM=random_jewel,{1 4}
 	ITEM=i_gold,{80 130}
 
-[chardef 281]
-name=Minotaur Scout
-defname=c_minotaur_scout
+[CHARDEF 0119]
+NAME=Minotaur Scout
+DEFNAME=c_minotaur_scout
 ICON=i_pet_dragon
 DAM=20,32
 ARMOR=50
@@ -899,9 +899,9 @@ ON=@NpcRestock
 	ITEM=random_jewel,{1 4}
 	ITEM=i_gold,{80 130}
 
-[chardef 282]
-name=Parrot
-defname=c_parrot
+[CHARDEF 011a]
+NAME=Parrot
+DEFNAME=c_parrot
 ICON=i_pet_bird
 DAM=2,8
 ARMOR=10
@@ -922,9 +922,9 @@ ON=@Create
 	dex=70
 	int=35
 
-[chardef 283]
-name=Crow
-defname=c_black_crow
+[CHARDEF 011b]
+NAME=Crow
+DEFNAME=c_black_crow
 ICON=i_pet_bird
 DAM=5,9
 ARMOR=10
@@ -945,9 +945,9 @@ ON=@Create
 	dex=75
 	int=40
 
-[chardef 284]
-name=Armor Steed
-defname=c_m_armor_steed
+[CHARDEF 011c]
+NAME=Armor Steed
+DEFNAME=c_m_armor_steed
 ICON=i_pet_horse
 DAM=10,15
 ARMOR=20
@@ -972,9 +972,9 @@ ON=@Create
 	tactics=78.0
 	anatomy=75.6
 
-[chardef 285]
-name=Reaper Redux
-defname=c_reaper_redux
+[CHARDEF 011d]
+NAME=Reaper Redux
+DEFNAME=c_reaper_redux
 ICON=020fa
 DAM=10,15
 ARMOR=40
@@ -999,9 +999,9 @@ ON=@NpcRestock
 	ITEM=random_jewel,{1 4}
 	ITEM=i_gold,{80 130}
 
-[chardef 276]
-name=Reptalon
-defname=c_m_reptalon
+[CHARDEF 0114]
+NAME=Reptalon
+DEFNAME=c_m_reptalon
 ICON=i_pet_dragon
 DAM=10,15
 ARMOR=30

@@ -120,3 +120,5 @@ ON=@NPCRestock
 	COLOR=colors_all
 	ITEM=random_mace
 	ITEM=random_coin_purse
+
+[EOF]

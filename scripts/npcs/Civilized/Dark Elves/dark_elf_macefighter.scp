@@ -50,3 +50,5 @@ ON=@NPCRestock
 	ITEM=i_shield_wood
 	ITEM=i_studded_leggings
 	COLOR=0455
+
+[EOF]

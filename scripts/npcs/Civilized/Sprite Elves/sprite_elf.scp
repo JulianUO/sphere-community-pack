@@ -50,3 +50,5 @@ ON=@NPCRestock
 	COLOR=0599
 	ITEM=random_coin_purse
 	ITEM={ backpack_meager 1 backpack_average 2 }
+
+[EOF]

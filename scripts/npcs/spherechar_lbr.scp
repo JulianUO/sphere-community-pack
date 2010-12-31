@@ -47,8 +47,8 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{550 650}
 
-[chardef 797]
-defname=c_reptile_lord
+[CHARDEF 031d]
+DEFNAME=c_reptile_lord
 NAME=Reptile Lord
 SOUND=snd_monster_dragon1
 ICON=i_pet_dragon
@@ -91,8 +91,8 @@ ON=@NpcRestock
 	ITEM=i_reag_nightshade,{8 15}
 	ITEM=i_gold,{695 745}
 
-[chardef 789]
-defname=c_quagmire
+[CHARDEF 0315]
+DEFNAME=c_quagmire
 NAME=Quagmire
 SOUND=snd_monster_slime1
 ICON=i_pet_quagmire
@@ -123,18 +123,18 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=random_jewel, {1 2}
 	ITEM=i_gold,{125 175}
-//	ITEM=i_orb,1,R6
-//	MORE1=08
-//	NAME=Poison Orb
-//	COLOR=0ad
+	//	ITEM=i_orb,1,R6
+	//	MORE1=08
+	//	NAME=Poison Orb
+	//	COLOR=0ad
 
 ON=@Hit
-	IF !(<SRC.FLAGS>&statf_poisoned)
-		SRC.SPELLEFFECT S_POISON,500,<UID>
-	endif
+if !(<SRC.FLAGS>&statf_poisoned)
+	SRC.SPELLEFFECT S_POISON,500,<UID>
+endif
 
-[chardef 775]
-defname=c_plague_beast
+[CHARDEF 0307]
+DEFNAME=c_plague_beast
 NAME=Plague Beast
 SOUND=snd_monster_slime1
 ICON=i_pet_plaguebeast
@@ -165,33 +165,33 @@ ON=@NpcRestock
 	ITEM=random_jewel, {1 2}
 	ITEM=random_jewel, {1 2},R3
 	ITEM=i_gold,{450 600}
-//	ITEM=i_orb,1,R6
-//	MORE1=08
-//	NAME=Poison Orb
-//	COLOR=0ad
+	//	ITEM=i_orb,1,R6
+	//	MORE1=08
+	//	NAME=Poison Orb
+	//	COLOR=0ad
 
 ON=@Hit
-	IF !(<SRC.FLAGS>&statf_poisoned)
-		SRC.SPELLEFFECT S_POISON,500,<UID>
-	endif
+if !(<SRC.FLAGS>&statf_poisoned)
+	SRC.SPELLEFFECT S_POISON,500,<UID>
+endif
 
 ON=@Death
-	RANDMAGICITEM
-	RANDMAGICITEM
+RANDMAGICITEM
+RANDMAGICITEM
 
 ON=@ItemStep
-	IF (<ACT.TYPE>==t_corpse)
-		IF !(<ACT.TAG0.PLAGUEEATEN>)
-			MAXHITS += 200
-			HITS += 200
-			ACT.TAG.PLAGUEEATEN=1
-			SAY @03c1,3,1 * <NAME> eats a corpse *
-		endif
+if (<ACT.TYPE>==t_corpse)
+	if !(<ACT.TAG0.PLAGUEEATEN>)
+		MAXHITS += 200
+		HITS += 200
+		ACT.TAG.PLAGUEEATEN=1
+		SAY @03c1,3,1 * <NAME> eats a corpse *
 	endif
+endif
 
-[chardef 796]
-defname=c_Horde_Daemon_Large
-name=Horde Daemon Large
+[CHARDEF 031c]
+DEFNAME=c_Horde_Daemon_Large
+NAME=Horde Daemon Large
 ICON=i_pet_hordedaemon
 SOUND=snd_monster_ogre1
 RESDISPDNID=c_man
@@ -223,14 +223,14 @@ ON=@Create
 
 ON=@NpcRestock
 	ITEM=i_gold,{333 400}
-//	ITEM=i_orb,1,R4
+	//	ITEM=i_orb,1,R4
 	ITEM=random_weapon
 	ITEM=i_boulder
-//	ITEM=i_minion_leather
+	//	ITEM=i_minion_leather
 
-[chardef 795]
-defname=c_Horde_Daemon_Medium
-name=Horde Daemon Medium
+[CHARDEF 031b]
+DEFNAME=c_Horde_Daemon_Medium
+NAME=Horde Daemon Medium
 SOUND=snd_monster_ogre1
 ICON=i_pet_hordedaemon
 RESDISPDNID=c_man
@@ -260,10 +260,10 @@ ON=@Create
 
 ON=@NpcRestock
 	ITEM=i_gold,{133 260}
-//	ITEM=i_minion_leather
+	//	ITEM=i_minion_leather
 
-[chardef 779]
-defname=c_bogling
+[CHARDEF 030b]
+DEFNAME=c_bogling
 NAME=Bogling
 SOUND=snd_monster_headls1
 ICON=i_pet_bogling
@@ -296,13 +296,13 @@ ON=@NpcRestock
 	ITEM=i_seed_plain,R3
 
 ON=@Hit
-IF !(<SRC.FLAGS>&statf_poisoned)
-SRC.SPELLEFFECT S_POISON,300,<UID>
+if !(<SRC.FLAGS>&statf_poisoned)
+	SRC.SPELLEFFECT S_POISON,300,<UID>
 endif
 
 
-[chardef 787]
-defname=c_ant_lion
+[CHARDEF 0313]
+DEFNAME=c_ant_lion
 NAME=Ant Lion
 SOUND=snd_monster_grat1
 ICON=i_worldgem_bit
@@ -335,13 +335,13 @@ ON=@NpcRestock
 	ITEM=i_gold,{295 345}
 
 ON=@Hit
-	IF !(<SRC.FLAGS>&statf_poisoned)
-		SRC.SPELLEFFECT S_POISON,500,<UID>
-	endif
+if !(<SRC.FLAGS>&statf_poisoned)
+	SRC.SPELLEFFECT S_POISON,500,<UID>
+endif
 
 
-[chardef 778]
-defname=c_swarm
+[CHARDEF 030a]
+DEFNAME=c_swarm
 NAME=Gazer Larva
 SOUND=snd_monster_gazer1
 ICON=i_pet_swarm
@@ -374,9 +374,9 @@ ON=@NpcRestock
 	ITEM=i_reag_nightshade,{2 6}
 	ITEM=i_gold,{25 55}
 
-[chardef c_leviathan]
+[CHARDEF c_leviathan]
 ID=c_kraken
-defname=c_leviathan
+DEFNAME=c_leviathan
 NAME=Leviathan
 SOUND=snd_monster_seaserp1
 ICON=i_pet_kraken
@@ -417,8 +417,8 @@ ON=@NpcRestock
 	//ITEM={minorartis}
 	//ITEM={minorartis}
 
-[chardef 77]
-defname=c_kraken
+[CHARDEF 04d]
+DEFNAME=c_kraken
 NAME=Kraken
 SOUND=snd_monster_seaserp1
 ICON=i_pet_kraken
@@ -449,9 +449,9 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{275 325}
 
-[chardef 128]
-defname=c_pixie
-name=Pixie
+[CHARDEF 080]
+DEFNAME=c_pixie
+NAME=Pixie
 SOUND=snd_pixie
 ICON=i_pet_pixie
 DAM=11,17
@@ -491,9 +491,9 @@ ON=@NpcRestock
 	ITEM=i_reag_garlic,{2 5}
 	ITEM=random_scroll
 
-[chardef 756]
-defname=c_exodus_overseer
-name=Exodus Overseer
+[CHARDEF 02f4]
+DEFNAME=c_exodus_overseer
+NAME=Exodus Overseer
 SOUND=snd_elec_1
 ICON=i_pet_exodus_overseer
 DAM=43,67
@@ -524,9 +524,9 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{360 410}
 
-[chardef 763]
-defname=c_exodus_minionlord
-name=Exodus Minion Lord
+[CHARDEF 02fb]
+DEFNAME=c_exodus_minionlord
+NAME=Exodus Minion Lord
 SOUND=snd_elec_1
 ICON=i_pet_exodus_minion
 DAM=79,102
@@ -557,9 +557,9 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{490 550}
 
-[chardef 757]
-defname=c_exodus_minion
-name=Exodus Minion
+[CHARDEF 02f5]
+DEFNAME=c_exodus_minion
+NAME=Exodus Minion
 SOUND=snd_elec_2
 ICON=i_pet_exodus_minion
 DAM=69,98
@@ -590,9 +590,9 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{400 500}
 
-[chardef 999]
-defname=c_multicolored_horde_minion
-name=Multi Colored Horde Daemon
+[CHARDEF 03e7]
+DEFNAME=c_multicolored_horde_minion
+NAME=Multi Colored Horde Daemon
 SOUND=snd_monster_daemon1
 ICON=i_pet_hordedaemon
 DAM=1,40
@@ -626,9 +626,9 @@ ON=@NpcRestock
 	ITEM=i_boulder
 	ITEM=i_boulder
 
-[chardef 11]
-defname=c_dread_spider
-name=Dread Spider
+[CHARDEF 0b]
+DEFNAME=c_dread_spider
+NAME=Dread Spider
 SOUND=snd_monster_gispidr1
 ICON=i_pet_dreadspider
 ARMOR=40
@@ -664,13 +664,13 @@ ON=@NpcRestock
 	ITEM=i_reag_spider_silk,{8 12}
 
 ON=@Hit
-	IF !(<SRC.FLAGS>&statf_poisoned)
-		SRC.SPELLEFFECT S_POISON,800,<UID>
-	endif
+if !(<SRC.FLAGS>&statf_poisoned)
+	SRC.SPELLEFFECT S_POISON,800,<UID>
+endif
 
-[chardef 755]
-defname=c_destroyer_gargoyle
-name=Destroyer Gargoyle
+[CHARDEF 02f3]
+DEFNAME=c_destroyer_gargoyle
+NAME=Destroyer Gargoyle
 SOUND=snd_monster_gargyl1
 ICON=i_pet_GARG
 ARMOR=50
@@ -709,9 +709,9 @@ ON=@NpcRestock
 	ITEM=random_scroll
 	ITEM=random_scroll
 
-[chardef 780]
-defname=c_bog_thing
-name=Bog Thing
+[CHARDEF 030c]
+DEFNAME=c_bog_thing
+NAME=Bog Thing
 SOUND=snd_monster_corpsr1
 ICON=i_pet_bogthing
 ARMOR=35
@@ -743,13 +743,13 @@ ON=@NpcRestock
 	ITEM=i_seed_plain,R3
 
 ON=@Hit
-	IF !(<SRC.FLAGS>&statf_poisoned)
-		SRC.SPELLEFFECT S_POISON,1000,<UID>
-	endif
+if !(<SRC.FLAGS>&statf_poisoned)
+	SRC.SPELLEFFECT S_POISON,1000,<UID>
+endif
 
-[chardef 173]
-defname=c_Giant_Black_Widow
-name=Giant Black Widow
+[CHARDEF 0ad]
+DEFNAME=c_Giant_Black_Widow
+NAME=Giant Black Widow
 SOUND=snd_monster_gispidr1
 ICON=i_pet_spiderlord
 ARMOR=25
@@ -785,22 +785,22 @@ ON=@NpcRestock
 	ITEM=i_potion_poison
 
 ON=@Hit
-	IF !(<SRC.FLAGS>&statf_poisoned)
-		SRC.SPELLEFFECT S_POISON,<POISONING>,<UID>
-	endif
+if !(<SRC.FLAGS>&statf_poisoned)
+	SRC.SPELLEFFECT S_POISON,<POISONING>,<UID>
+endif
 
 ON=@GetHit
-	IF !(<R9>)
-		SERV.NEWNPC C_DREAD_SPIDER
-		NEW.P=<P>
-		NEW.HOME=<NEW.P>
-		NEW.HOMEDIST=7
-		NEW.REMOVETIMER 120
-	endif
+if !(<R9>)
+	SERV.NEWNPC C_DREAD_SPIDER
+	NEW.P=<P>
+	NEW.HOME=<NEW.P>
+	NEW.HOMEDIST=7
+	NEW.REMOVETIMER 120
+endif
 
-[chardef 176]
-defname=c_forest_queen
-name=Forest Queen
+[CHARDEF 0b0]
+DEFNAME=c_forest_queen
+NAME=Forest Queen
 SOUND=snd_pixie
 ICON=i_pet_pixie
 ARMOR=10
@@ -834,9 +834,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{770 920}
 	ITEM=random_weapon
 
-[chardef 175]
-defname=c_Ethereal_Warrior
-name=Ethereal Warrior
+[CHARDEF 0af]
+DEFNAME=c_Ethereal_Warrior
+NAME=Ethereal Warrior
 SOUND=snd_pixie
 ICON=i_pet_forestlord
 ARMOR=80
@@ -874,31 +874,31 @@ ON=@NpcRestock
 	ITEM=i_gold,{900 1000}
 
 ON=@Hit
-	HITS += <EVAL <ARGN1>/6>
-	IF (<HITS> > <MAXHITS>)
-		HITS=<MAXHITS>
-	endif
-	STAM += <EVAL <ARGN1>/12>
-	IF (<STAM> > <MAXSTAM>)
-		STAM=<MAXSTAM>
-	endif
-	SRC.STAM -= <EVAL <ARGN1>/12>
-	IF (<SRC.STAM> < 0)
-		SRC.STAM=0
-	endif
-	MANA += <EVAL <ARGN1>/9>
-	IF (<MANA> > <MAXMANA>)
-		MANA=<MAXMANA>
-	endif
-	SRC.MANA -= <EVAL <ARGN1>/9>
-	IF (<SRC.MANA> < 0)
-		SRC.MANA=0
-	endif
+HITS += <EVAL <ARGN1>/6>
+if (<HITS> > <MAXHITS>)
+	HITS=<MAXHITS>
+endif
+STAM += <EVAL <ARGN1>/12>
+if (<STAM> > <MAXSTAM>)
+	STAM=<MAXSTAM>
+endif
+SRC.STAM -= <EVAL <ARGN1>/12>
+if (<SRC.STAM> < 0)
+	SRC.STAM=0
+endif
+MANA += <EVAL <ARGN1>/9>
+if (<MANA> > <MAXMANA>)
+	MANA=<MAXMANA>
+endif
+SRC.MANA -= <EVAL <ARGN1>/9>
+if (<SRC.MANA> < 0)
+	SRC.MANA=0
+endif
 
 
-[chardef 752]
-defname=c_iron_golem
-name=Iron Golem
+[CHARDEF 02f0]
+DEFNAME=c_iron_golem
+NAME=Iron Golem
 SOUND=snd_monster_daemon1
 ICON=i_pet_irongolem
 ARMOR=55
@@ -933,9 +933,9 @@ ON=@NpcRestock
 	ITEM=i_dawns_music_box,1,R10
 
 
-[chardef 102]
-defname=c_exodus
-name=Exodus
+[CHARDEF 066]
+DEFNAME=c_exodus
+NAME=Exodus
 SOUND=snd_monster_daemon1
 ICON=i_pet_DAEMON
 DAM=21,40
@@ -969,9 +969,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{770 1120}
 	ITEM=random_weapon
 
-[chardef 101]
-defname=c_centaur
-name=Centaur
+[CHARDEF 065]
+DEFNAME=c_centaur
+NAME=Centaur
 SOUND=snd_centaur
 ICON=i_pet_centaur
 DAM=47,53
@@ -1004,9 +1004,9 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{200 400}
 
-[chardef 174]
-defname=c_abyss_lord
-name=Abyss Lord
+[CHARDEF 0ae]
+DEFNAME=c_abyss_lord
+NAME=Abyss Lord
 SOUND=snd_monster_daemon1
 ICON=i_pet_wailingbanshee
 DAM=10,20
@@ -1044,9 +1044,9 @@ ON=@NpcRestock
 	ITEM=i_gold,{700 1100}
 	ITEM=random_weapon
 
-[chardef 0300]
-defname=c_Blackthorn_Juggernaught
-name=Blackthorn Juggernaught
+[CHARDEF 0300]
+DEFNAME=c_Blackthorn_Juggernaught
+NAME=Blackthorn Juggernaught
 SOUND=snd_elec_2
 ICON=i_pet_juggernaught
 DAM=37,64
@@ -1082,9 +1082,9 @@ ON=@NpcRestock
 	ITEM=random_weapon
 	ITEM=random_jewel,2
 
-[chardef 0314]
-defname=c_Sphynx
-name=Sphynx
+[CHARDEF 0314]
+DEFNAME=c_Sphynx
+NAME=Sphynx
 SOUND=snd_elementl_watrel1
 ICON=i_pet_sphynx
 DAM=51,80
@@ -1123,7 +1123,7 @@ ON=@NpcRestock
 	ITEM=random_jewel,5
 
 [CHARDEF 0302]
-defname=c_meer_mage
+DEFNAME=c_meer_mage
 NAME=Meer Mage
 SOUND=snd_human_foomph09
 ICON=i_pet_meermage
@@ -1160,9 +1160,9 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{500 600}
 
-[chardef 0303]
-defname=c_Meer_Warrior
-name=Meer Warrior
+[CHARDEF 0303]
+DEFNAME=c_Meer_Warrior
+NAME=Meer Warrior
 SOUND=snd_human_foomph09
 ICON=i_pet_meerwarrior
 DAM=22,34
@@ -1195,7 +1195,7 @@ ON=@NpcRestock
 	ITEM=i_gold,{50 100}
 
 [CHARDEF 0304]
-defname=c_meer_eternal
+DEFNAME=c_meer_eternal
 NAME=Meer Eternal
 SOUND=snd_human_foomph09
 ICON=i_pet_meereternal
@@ -1233,7 +1233,7 @@ ON=@NpcRestock
 	ITEM=i_gold,{1000 1200}
 
 [CHARDEF 0305]
-defname=c_meer_captain
+DEFNAME=c_meer_captain
 NAME=Meer Captain
 SOUND=snd_human_foomph09
 ICON=i_pet_meercaptain
@@ -1266,9 +1266,9 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{50 100}
 
-[chardef 0308]
-defname=c_horde_minion
-name=horde minion
+[CHARDEF 0308]
+DEFNAME=c_horde_minion
+NAME=horde minion
 SOUND=snd_monster_headls1
 ICON=i_pet_hordedaemon
 RESDISPDNID=c_man
@@ -1300,9 +1300,9 @@ ON=@Create
 ON=@NpcRestock
 	ITEM=i_gold,{13 23}
 
-[chardef 0309]
-defname=c_Doppelganger
-name=Doppelganger
+[CHARDEF 0309]
+DEFNAME=c_Doppelganger
+NAME=Doppelganger
 SOUND=snd_monster_gazer1
 ICON=i_pet_droppelganger
 RESDISPDNID=c_zombie

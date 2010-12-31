@@ -34,7 +34,7 @@ NEW=<LOCAL.OLDNEW>
 
 //////////////////////////////
 
-[CHARDEF 146]
+[CHARDEF 092]
 DEFNAME=c_Harrower
 NAME=Harrower
 CAN=MT_WALK|MT_USEHANDS

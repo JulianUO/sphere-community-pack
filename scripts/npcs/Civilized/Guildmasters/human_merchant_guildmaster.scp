@@ -110,3 +110,5 @@ ON=@NPCRestock
 	COLOR=colors_neutral
 	ITEM=random_rings
 	ITEM=random_coin_purse
+
+[EOF]

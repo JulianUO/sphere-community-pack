@@ -1,4 +1,4 @@
-[CHARDEF C_H_VENDOR]
+[CHARDEF c_h_vendor]
 DEFNAME=C_H_VENDOR
 NAME=#NAMES_HUMANMALE the Vendor
 ID=C_MAN
@@ -52,7 +52,7 @@ ON=@Create
 	ITEMNEWBIE=random_shoes
 	COLOR=colors_neutral
 
-[CHARDEF C_H_VENDOR_F]
+[CHARDEF c_h_vendor_f]
 NAME=#NAMES_HUMANFEMALE the Vendor
 ID=C_WOMAN
 CAN=0
@@ -106,3 +106,5 @@ ON=@NPCRestock
 	ITEM=random_shoes
 	COLOR=colors_neutral
 	ITEM=random_coin_purse
+
+[EOF]

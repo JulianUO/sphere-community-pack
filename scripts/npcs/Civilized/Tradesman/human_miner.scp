@@ -1,4 +1,4 @@
-[CHARDEF C_H_MINER]
+[CHARDEF c_h_miner]
 DEFNAME=C_H_MINER
 NAME=#NAMES_HUMANMALE Miner
 ID=C_MAN
@@ -57,7 +57,7 @@ ON=@NPCRestock
 	ITEM=backpack_meager
 
 
-[CHARDEF C_H_MINER_F]
+[CHARDEF c_h_miner_f]
 DEFNAME=C_H_MINER_F
 NAME=#NAMES_HUMANFEMALE the Miner
 ID=C_WOMAN
@@ -112,3 +112,5 @@ ON=@NPCRestock
 	COLOR=colors_brown
 	ITEM=i_pickaxe
 	ITEM=backpack_meager
+
+[EOF]

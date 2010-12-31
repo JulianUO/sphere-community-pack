@@ -1,4 +1,4 @@
-[CHARDEF C_H_RANCHER]
+[CHARDEF c_h_rancher]
 DEFNAME=C_H_RANCHER
 NAME=#NAMES_HUMANMALE the Rancher
 ID=C_MAN
@@ -66,7 +66,7 @@ ON=@NPCRestock
 	BUY=i_fruit_carrot,50
 
 
-[CHARDEF C_H_RANCHER_F]
+[CHARDEF c_h_rancher_f]
 DEFNAME=C_H_RANCHER_F
 NAME=#NAMES_HUMANFEMALE the Rancher
 ID=C_WOMAN
@@ -130,3 +130,5 @@ ON=@NPCRestock
 	BUY=i_hay_sheaf,{50 300}
 	BUY=i_fruit_apple,{20 50}
 	BUY=i_fruit_carrot,50
+
+[EOF]

@@ -1,4 +1,4 @@
-[CHARDEF C_H_BEEKEEPER]
+[CHARDEF c_h_beekeeper]
 DEFNAME=C_H_BEEKEEPER
 NAME=#NAMES_HUMANMALE the Beekeeper
 ID=C_MAN
@@ -54,7 +54,7 @@ ON=@NPCRestock
 	BUY=i_jar_honey,{4 10}
 
 
-[CHARDEF C_H_BEEKEEPER_F]
+[CHARDEF c_h_beekeeper_f]
 DEFNAME=C_H_BEEKEEPER_F
 NAME=#NAMES_HUMANFEMALE the Beekeeper
 ID=C_WOMAN
@@ -107,3 +107,5 @@ ON=@NPCRestock
 	ITEM=random_coin_purse
 	SELL=i_jar_honey,{14 40}
 	BUY=i_jar_honey,{4 10}
+
+[EOF]

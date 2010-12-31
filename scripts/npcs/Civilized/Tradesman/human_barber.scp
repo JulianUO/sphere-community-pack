@@ -1,4 +1,4 @@
-[CHARDEF C_H_BARBER]
+[CHARDEF c_h_barber]
 DEFNAME=C_H_BARBER
 NAME=#NAMES_HUMANMALE the Barber
 ID=C_MAN
@@ -92,7 +92,7 @@ ON=@NPCRestock
 	ATTR=attr_decay
 	SELL=i_bottle_hair_dye,10
 
-[CHARDEF C_H_BARBER_F]
+[CHARDEF c_h_barber_f]
 DEFNAME=C_H_BARBER_F
 NAME=#NAMES_HUMANFEMALE the Barber
 ID=C_WOMAN
@@ -183,3 +183,5 @@ ON=@NPCRestock
 	SELL=i_beard_NONE,10
 	ATTR=attr_decay
 	SELL=i_bottle_hair_dye,10
+
+[EOF]

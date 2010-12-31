@@ -47,3 +47,5 @@ ON=@NPCRestock
 	ITEM=random_jewel
 	ITEM=random_average_magic_loot
 	ITEM=backpack_loaded
+
+[EOF]

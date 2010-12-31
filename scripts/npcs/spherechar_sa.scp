@@ -10,7 +10,7 @@
 // FILE LAST UPDATED: Friday, August 14 2009
 VERSION=0.56b
 
-[CHARDEF 666]
+[CHARDEF 029a]
 DEFNAME=c_gargoyle_male
 NAME=Gargoyle Male
 ICON=i_pet_gargoyle_male
@@ -41,7 +41,7 @@ ON=@Create
 	MAGICRESISTANCE = {15.0 38.0}
 	TACTICS = {15.0 38.0}
 
-[CHARDEF 667]
+[CHARDEF 029b]
 DEFNAME=c_gargoyle_female
 NAME=Gargoyle Female
 ICON=i_pet_gargoyle_female
@@ -72,7 +72,7 @@ ON=@Create
 	MAGICRESISTANCE = {15.0 38.0}
 	TACTICS = {15.0 38.0}
 
-[CHARDEF 694]
+[CHARDEF 02b6]
 DEFNAME=c_garg_ghost_man
 NAME=Gargoyle Male Ghost
 ICON=i_pet_gargoyle_male
@@ -103,7 +103,7 @@ ON=@Create
 	MAGICRESISTANCE = {15.0 38.0}
 	TACTICS = {15.0 38.0}
 
-[CHARDEF 695]
+[CHARDEF 02b7]
 DEFNAME=c_garg_ghost_woman
 NAME=Gargoyle Female Ghost
 ICON=i_pet_gargoyle_female

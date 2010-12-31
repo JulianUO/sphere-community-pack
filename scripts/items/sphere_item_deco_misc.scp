@@ -1391,14 +1391,14 @@ DESCRIPTION=@
 DUPELIST=0151c
 
 ON=@DCLICK
-	if ( <dispid> == i_decorative_armor )
-		ID=i_decorative_armor_d
-	else
-		ID=i_decorative_armor_d2
-	endif
-	sfx snd_WEAPONS_GILOTIN1
-	update
-	return 1
+if ( <dispid> == i_decorative_armor )
+	ID=i_decorative_armor_d
+else
+	ID=i_decorative_armor_d2
+endif
+sfx snd_WEAPONS_GILOTIN1
+update
+return 1
 
 [ITEMDEF 01509]
 DEFNAME=i_decorative_armor_d
@@ -1410,13 +1410,13 @@ DESCRIPTION=@
 DUPELIST=0151d
 
 ON=@DCLICK
-	if ( <dispid> == i_decorative_armor_d )
-		ID=i_decorative_armor
-	else
-		ID=i_decorative_armor_2
-	endif
-	update
-	return 1
+if ( <dispid> == i_decorative_armor_d )
+	ID=i_decorative_armor
+else
+	ID=i_decorative_armor_2
+endif
+update
+return 1
 
 [ITEMDEF 01512]
 DEFNAME=i_decorative_armor2
@@ -1429,14 +1429,14 @@ DESCRIPTION=@
 DUPELIST=0151a
 
 ON=@DCLICK
-	if ( <dispid> == i_decorative_armor2 )
-		ID=i_decorative_armor2_d
-	else
-		ID=i_decorative_armor2_d2
-	endif
-	sfx snd_WEAPONS_GILOTIN1
-	update
-	return 1
+if ( <dispid> == i_decorative_armor2 )
+	ID=i_decorative_armor2_d
+else
+	ID=i_decorative_armor2_d2
+endif
+sfx snd_WEAPONS_GILOTIN1
+update
+return 1
 
 [ITEMDEF 01513]
 DEFNAME=i_decorative_armor2_d
@@ -1448,13 +1448,13 @@ DESCRIPTION=@
 DUPELIST=0151b
 
 ON=@DCLICK
-	if ( <dispid> == i_decorative_armor2_d )
-		ID=i_decorative_armor2
-	else
-		ID=i_decorative_armor2_2
-	endif
-	update
-	return 1
+if ( <dispid> == i_decorative_armor2_d )
+	ID=i_decorative_armor2
+else
+	ID=i_decorative_armor2_2
+endif
+update
+return 1
 
 [ITEMDEF 01514]
 DEFNAME=i_serpent_crest
@@ -1716,21 +1716,21 @@ DUPEITEM=01262
 DUPELIST=01664,01665,01666
 
 ON=@DCLICK
-	dispid=01664
-	update
-	timerd=0.2
-	return 1
+dispid=01664
+update
+timerd=0.2
+return 1
 
 ON=@TIMER
-	if <dispiddec> < 01666
-		dispid=<dispiddec>+1
-		timerd=0.2
-	else
-		dispid=01663
-		sfx 43
-	endif
-	update
-	return 1
+if <dispiddec> < 01666
+	dispid=<dispiddec>+1
+	timerd=0.2
+else
+	dispid=01663
+	sfx 43
+endif
+update
+return 1
 
 [ITEMDEF 01664]
 //catapult
@@ -1749,16 +1749,16 @@ DUPEITEM=01663
 DUPELIST=0168e,0168f,01690
 
 ON=@DCLICK
-	dispid=0168e
-	update
-	timerd=1.5
-	return 1
+dispid=0168e
+update
+timerd=1.5
+return 1
 
 ON=@TIMER
-	dispid=0168d
-	update
-	sfx 43
-	return 1
+dispid=0168d
+update
+sfx 43
+return 1
 
 [ITEMDEF 0168e]
 //catapult swinging (self anim)
@@ -1777,21 +1777,21 @@ DUPEITEM=0168d
 DUPELIST=016b2,016b3
 
 ON=@DCLICK
-	dispid=016b2
-	update
-	timerd=0.2
-	return 1
+dispid=016b2
+update
+timerd=0.2
+return 1
 
 ON=@TIMER
-	if <dispiddec> < 016b3
-		dispid=<dispiddec>+1
-		timerd=0.2
-	else
-		dispid=016b1
-		sfx 43
-	endif
-	update
-	return 1
+if <dispiddec> < 016b3
+	dispid=<dispiddec>+1
+	timerd=0.2
+else
+	dispid=016b1
+	sfx 43
+endif
+update
+return 1
 
 [ITEMDEF 016b2]
 //catapult
@@ -1806,21 +1806,21 @@ DUPEITEM=016b1
 DUPELIST=016d7,016d8
 
 ON=@DCLICK
-	dispid=016d7
-	update
-	timerd=0.2
-	return 1
+dispid=016d7
+update
+timerd=0.2
+return 1
 
 ON=@TIMER
-	if <dispiddec> < 016d8
-		dispid=<dispiddec>+1
-		timerd=0.2
-	else
-		dispid=016d6
-		sfx 43
-	endif
-	update
-	return 1
+if <dispiddec> < 016d8
+	dispid=<dispiddec>+1
+	timerd=0.2
+else
+	dispid=016d6
+	sfx 43
+endif
+update
+return 1
 
 [ITEMDEF 016d7]
 //catapult
@@ -3766,4 +3766,4 @@ DUPEITEM=03f3f
 DUPEITEM=03f3f
 
 
-[eof]
+[EOF]

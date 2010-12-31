@@ -114,3 +114,5 @@ ON=@NPCRestock
 	ITEM=i_boots_calf
 	COLOR=colors_neutral
 	ITEM=random_coin_purse
+
+[EOF]

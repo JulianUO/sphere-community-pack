@@ -1,4 +1,4 @@
-[CHARDEF C_H_PEASANT]
+[CHARDEF c_h_peasant]
 DEFNAME=C_H_PEASANT
 NAME=#NAMES_HUMANMALE the Peasant
 ID=C_MAN
@@ -51,7 +51,7 @@ ON=@NPCRestock
 	ITEM=backpack_poor
 
 
-[CHARDEF C_H_PEASANT_F]
+[CHARDEF c_h_peasant_f]
 DEFNAME=C_H_PEASANT_F
 NAME=#NAMES_HUMANFEMALE the Peasant
 ID=C_WOMAN
@@ -100,3 +100,5 @@ ON=@NPCRestock
 	ITEM=random_skirt
 	COLOR=colors_all
 	ITEM=backpack_poor
+
+[EOF]

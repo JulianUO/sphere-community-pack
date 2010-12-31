@@ -48,3 +48,5 @@ ON=@NPCRestock
 	ITEM=i_bow
 	ITEM=i_sandals
 	ITEM=i_gold,{ 50 110 }
+
+[EOF]

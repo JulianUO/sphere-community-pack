@@ -1,4 +1,4 @@
-[CHARDEF C_H_THIEF]
+[CHARDEF c_h_thief]
 DEFNAME=C_H_THIEF
 NAME=#NAMES_HUMANMALE the Thief
 ID=C_MAN
@@ -65,7 +65,7 @@ ON=@NPCRestock
 	ITEM=i_lockpick
 
 
-[CHARDEF C_H_THIEF_F]
+[CHARDEF c_h_thief_f]
 DEFNAME=C_H_THIEF_F
 NAME=#NAMES_HUMANFEMALE the Thief
 ID=C_WOMAN
@@ -127,3 +127,5 @@ ON=@NPCRestock
 	ITEM=random_dagger
 	ITEM=random_coin_purse
 	ITEM=i_lockpick
+
+[EOF]

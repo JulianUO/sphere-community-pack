@@ -32,7 +32,7 @@ ON=@Create
 	WRESTLING={25.0 40.0}
 
 	ITEMNEWBIE=i_hair_long
-//	ITEMNEWBIE=i_beard_goatee
+	//	ITEMNEWBIE=i_beard_goatee
 
 ON=@NPCRestock
 	ITEM=i_sword_viking
@@ -54,3 +54,5 @@ ON=@NPCRestock
 	ITEM=i_boots_calf
 	COLOR=045e
 	ITEM=i_gold,{90 200}
+
+[EOF]

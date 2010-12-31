@@ -15,9 +15,9 @@ VERSION=0.56b
 // This system lets you grow custom plants to decorate or recover hybrID=seeds !
 
 [itemdef i_green_thorn]
-id i_arrow_x
-name green thorn
-type t_normal
+ID=i_arrow_x
+NAME=green thorn
+TYPE=t_normal
 
 on=@create
 color=042
@@ -131,9 +131,9 @@ if (<moreX>==1)
 endif
 
 [itemdef i_red_leaf]
-name red leaf
-id 01e85
-type t_normal
+NAME=red leaf
+ID=01e85
+TYPE=t_normal
 
 on=@create
 color=021
@@ -165,9 +165,9 @@ return 1
 endif
 
 [itemdef i_orange_petal]
-id 01021
-name orange petal
-type t_normal
+ID=01021
+NAME=orange petal
+TYPE=t_normal
 
 on=@create
 color=02b
@@ -195,9 +195,9 @@ return 1
 endif
 
 [itemdef i_mem_petal]
-id i_memory
-type t_eq_script
-layer layer_special
+ID=i_memory
+TYPE=t_eq_script
+LAYER=layer_special
 
 on=@create
 timer 120

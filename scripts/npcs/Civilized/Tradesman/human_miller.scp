@@ -1,4 +1,4 @@
-[CHARDEF C_H_MILLER]
+[CHARDEF c_h_miller]
 DEFNAME=C_H_MILLER
 NAME=#NAMES_HUMANMALE the Miller
 ID=C_MAN
@@ -55,7 +55,7 @@ ON=@NPCRestock
 	BUY=i_hay_sheaf,{4 10}
 
 
-[CHARDEF C_H_MILLER_F]
+[CHARDEF c_h_miller_f]
 DEFNAME=C_H_MILLER_F
 NAME=#NAMES_HUMANFEMALE the Miller
 ID=C_WOMAN
@@ -108,3 +108,5 @@ ON=@NPCRestock
 	SELL=i_hay_sheaf,{4 10}
 	BUY=i_FLOUR_SACK,{4 10}
 	BUY=i_hay_sheaf,{4 10}
+
+[EOF]

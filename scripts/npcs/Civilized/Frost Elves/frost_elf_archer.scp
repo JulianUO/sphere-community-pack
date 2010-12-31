@@ -44,3 +44,5 @@ ON=@NPCRestock
 	ITEM=i_arrow,{10 50}
 	ITEM=random_jewel
 	ITEM=i_gold,{60 80}
+
+[EOF]

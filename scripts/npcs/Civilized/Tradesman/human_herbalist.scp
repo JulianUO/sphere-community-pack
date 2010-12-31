@@ -1,4 +1,4 @@
-[CHARDEF C_H_HERBALIST]
+[CHARDEF c_h_herbalist]
 DEFNAME=C_H_HERBALIST
 NAME=#NAMES_HUMANMALE the Herbalist
 ID=C_MAN
@@ -68,7 +68,7 @@ ON=@NPCRestock
 	BUY=i_mortar_pestle,{4 19}
 
 
-[CHARDEF C_H_HERBALIST_F]
+[CHARDEF c_h_herbalist_f]
 DEFNAME=C_H_HERBALIST_F
 NAME=#NAMES_HUMANFEMALE the Herbalist
 ID=C_WOMAN
@@ -134,3 +134,5 @@ ON=@NPCRestock
 	BUY=i_reag_nightshade,{4 19}
 	BUY=i_reag_blood_moss,{4 19}
 	BUY=i_mortar_pestle,{4 19}
+
+[EOF]

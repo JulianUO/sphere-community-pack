@@ -48,11 +48,11 @@ ON=@Create
 /////// end of armored swamp dragon mount script //
 ///Hiryu
 
-[ITEMDEF 10090]
+[ITEMDEF 0276a]
 DEFNAME=i_pet_hiryu
 NAME=Hiryu
 
-[CHARDEF 243]
+[CHARDEF 0f3]
 DEFNAME=c_m_hiryu
 NAME=Hiryu
 SOUND=snd_hiryu

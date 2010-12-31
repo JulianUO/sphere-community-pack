@@ -429,6 +429,7 @@ P=1011,1508,0,2
 RECT=912,1456,1024,1584,2
 GROUP=Cyclops Dungeon
 FLAGS=region_flag_underground|region_flag_nobuilding|region_antimagic_recall_in|region_antimagic_gate
+
 [AREADEF a_lizard_passage]
 NAME=Lizard Passage
 P=285,1585,-27,2
@@ -495,7 +496,7 @@ NAME=Sorcerer's Dungeon Passage
 P=266,132,-28,2
 RECT=256,120,288,152,2
 GROUP=Sorcerer's Dungeon
-FLAGS=region_flag_underground|region_flag_nobuilding|region_antimagic_recall_in|region_antimagic_gate 
+FLAGS=region_flag_underground|region_flag_nobuilding|region_antimagic_recall_in|region_antimagic_gate
 
 [AREADEF a_enter_ancient_lair]
 NAME=Entrace Ancient Lair
@@ -630,7 +631,7 @@ GROUP=Ilshenar Dungeon
 NAME=Desert Outpost
 P=1620,596,0,2
 RECT=1496,512,1744,680,2
-FLAGS=080
+FLAGS=region_flag_nobuilding
 GROUP=Ilshenar Unknown
 
 [AREADEF a_Twisted_Weald]
