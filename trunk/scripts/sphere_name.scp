@@ -226,95 +226,147 @@ Wedachek
 Wikchichoki
 Wochickeki
 
-
-[NAMES names_daemon]
-85
+[NAMES NAMES_DEMON]
+139
 Aamon
+Abaddon
+Abigor
+Adramelech
 Agalierept
 Agares
 Aglasis
 Aiwaz
+Alocer
+Amduscias
+Andras
 Astaroth
+Astarte
+Aym
 Ayperos
 Azatoth
 Azmodaeus
 Azrael
 Baal
 Ba'al
+Baalberith
+Balan
 Barbatos
 Bathim
 Bathsin
 Bechard
-Be'elzubub
+Be'elzebub
 Be'elzebubba
 Beelzebuth
+Belial
+Belphegor
 Botis
 Brulefer
 Bucon
 Buer
+Caym
+Charon
+Chax
 Clauneck
 Clitheret
+Cresil
 Cthulhu
 Druzil
 El Chupacabra
 Eleogap
 Eliezer
 Eligor
-Eracove
+Eurynomus
 Faraii
 Fleurety
 Frimost
 Frucissiere
-Fruitimere
+Fruitimiere
+Furfur
+Geryon
 Glassyalabolas
 Grimm Omen
 Guland
 Gusoyn
 Hael
 Haristum
+Hecate
 Heramael
 Hiepacth
 Huictiigara
 Humots
-Inocard
+Jezebeth
+Kasdeya
 Khil
-Maleki
+Kobal
+Lilith
+Malphas
+Mammon
 Marbas
+Mastema
+Melchom
 Mephistopheles
+Merihim
 Mersilde
 Minoson
 Molech
 Moloch
 Morail
+Mullin
+Murmur
 Musisin
 Naberrs
+Naburus
 Nebiros
 Nebirots
+Nurgal
 Nyarlathotep
+Nybras
+Nysrogh
+Orias
+Orthon
+Paymon
 Pentagnony
+Philotanus
 Proculo
+Proserpine
 Pruslas
 Pursan
+Raum
+Rimmon
 Rofocale
+Ronwe
+Samael
 Sargatans
 Satanchia
 Satanciae
 Segal
+Semiazas
 Sergulath
 Sergutthy
+Shabiri
 Sidragrosam
 Sirchade
+Sonneillon
+Starr
+Cuccorbenoth
 Surgat
 Sustugriel
 Tarchimache
 Tarihimal
+Thamuz
 Trimasel
+Ukobach
+Uphir
 Vaelfar
+Verdelet
+Verin
+Vetis
 Wormius
+Xaphan
 Yog-Sothoth
-Y'reif Eci
+Zaebos
+Zagam
 Zoray
-
 
 [NAMES NAMES_ORC]
 705
@@ -1421,71 +1473,12 @@ Zalifar
 Zathrix
 Zunrek
 
-
-[NAMES names_evil_mage_lord]
-4
-Kwan Li, Lord of the Mists
-Bazerion, the Wizard-Lord
-Ylthallynon, the Insane
-Xarot the Black Archmage
-
-
-[NAMES names_evil_mage]
-152
-Ronlyn
-Merkul
-Zasfus
-Zain
-Doraghir
-Danaghir
-Staylin
-Kraylin
-Limnoch
-Kranor
-Kraenor
-Kranostil
-Kranostir
-Lilithack
-Terus
-Thaelin
-Thulack
-Jiltharis
-Garigor
-Banothil
-Bainothil
-Quain
-Ilzinias
-Mardis the Avenger
-Phalil the Unexpected
-Lord Adnoc
-Leje the Invincible
-Master Akris
-Sartan
-Zejron the Wild
-Pitt the Elder
-Puzilan the Puzzler
-Vantrom
-Singhe-Dul
-Tyrin Kuhl
-Xarot the Black
-Kwan Li, Lord of the Mists
-Viktor Blackoak
-Odilion
-Raith, Lord of Rats
-Bazerion, the Wizard-Lord
-Tybevriat Varn
-Keldor the Modoc
-Magelord Varsan
-Izlay the Ebonheart
-Slirith Iceblood
-Alcor
-Vitar
-Feenark
-Sang Qui
-Lyticant
+[NAMES NAMES_THE_DRAGON]
+107
 Aegnor
 Aelfric
 Ainvar
+Alcor
 Arazion
 Ardarion
 Arkanis
@@ -1501,10 +1494,11 @@ Chamdar
 Ciric
 Cruzado
 Cyphrak
-D'Harun
 Daelon
 Daktar
+Darkkill
 Darvain
+D'Harun
 Dracus
 Dradar
 Draelin
@@ -1514,6 +1508,7 @@ Eklor
 Elrak
 Fangorn
 Farynthane
+Feenark
 Galtor
 Gemma
 Gragus
@@ -1521,7 +1516,6 @@ Irian
 Israfel
 Jaden
 Jefahn
-K'shar
 Kalimus
 Kallomane
 Kanax
@@ -1529,14 +1523,15 @@ Kelnos
 Kharn
 Khir
 Kragon
+K'shar
 Kylnath
 Larac
 Lathis
 Lenroc
 Lonthorynthoryl
 Lorreck
+Lyticant
 Mattrick
-Mazrim
 Mazrim
 Modrei
 Morturus
@@ -1552,8 +1547,10 @@ Nazgul
 Paorin
 Quillan
 Rendar
+Sang Qui
 Scythyn
 Shilor
+Smaug
 Sobran
 Soltak
 Sorz
@@ -1565,14 +1562,15 @@ Tyrnar
 Ulath
 Vandor
 Vermithrax
+Vitar
 Vlade
 Volan
 Wydstrin
-X'calak
 Xaelin
 Xandor
 Xarthos
 Xaxtox
+X'calak
 Xenix
 Xiltanth
 Xylor
@@ -1583,6 +1581,167 @@ Ylthallynon
 Ythoryn
 Zalifar
 Zathrix
+Zunrek
+
+[NAMES names_evil_mage_lord]
+4
+Kwan Li, Lord of the Mists
+Bazerion, the Wizard-Lord
+Ylthallynon, the Insane
+Xarot the Black Archmage
+
+[NAMES names_evil_mage]
+151
+Aegnor
+Aelfric
+Ainvar
+Alcor
+Arazion
+Ardarion
+Arkanis
+Athrax
+Bainothil
+Banothil
+Barghest
+Baros
+Bazerion, the Wizard-Lord
+Begarin
+Beynlore
+Burat
+Cairne
+Carthon
+Chamdar
+Ciric
+Cruzado
+Cyphrak
+D'Harun
+Daelon
+Daktar
+Danaghir
+Darvain
+Doraghir
+Dracus
+Dradar
+Draelin
+Draenor
+Durodund
+Eklor
+Elrak
+Fangorn
+Farynthane
+Feenark
+Galtor
+Garigor
+Gemma
+Gragus
+Ilzinias
+Irian
+Israfel
+Izlay the Ebonheart
+Jaden
+Jefahn
+Jiltharis
+K'shar
+Kalimus
+Kallomane
+Kanax
+Keldor the Modoc
+Kelnos
+Kharn
+Khir
+Kraenor
+Kragon
+Kranor
+Kranostil
+Kranostir
+Kraylin
+Kwan Li, Lord of the Mists
+Kylnath
+Larac
+Lathis
+Leje the Invincible
+Lenroc
+Lilithack
+Limnoch
+Lonthorynthoryl
+Lord Adnoc
+Lorreck
+Lyticant
+Magelord Varsan
+Mardis the Avenger
+Master Akris
+Mattrick
+Mazrim
+Merkul
+Modrei
+Morturus
+Muktar
+Murdon
+Murron
+Myndon
+Mythran
+Mytor
+Nabius
+Nalynkal
+Nazgul
+Odilion
+Paorin
+Phalil the Unexpected
+Pitt the Elder
+Puzilan the Puzzler
+Quain
+Quillan
+Raith, Lord of Rats
+Rendar
+Ronlyn
+Sang Qui
+Sartan
+Scythyn
+Shilor
+Singhe-Dul
+Slirith Iceblood
+Sobran
+Soltak
+Sorz
+Staylin
+Taban
+Telzar
+Teron
+Terus
+Thaelin
+Thulack
+Trethovian
+Tybevriat Varn
+Tyrin Kuhl
+Tyrnar
+Ulath
+Vandor
+Vantrom
+Vermithrax
+Viktor Blackoak
+Vitar
+Vlade
+Volan
+Wydstrin
+X'calak
+Xaelin
+Xandor
+Xarot the Black
+Xarthos
+Xaxtox
+Xenix
+Xiltanth
+Xylor
+Xystil
+Yazad
+Yllthane
+Ylthallynon
+Ythoryn
+Zain
+Zalifar
+Zasfus
+Zathrix
+Zejron the Wild
 Zunrek
 
 [NAMES NAMES_OGRE]
@@ -3794,6 +3953,259 @@ Zenon
 Zion
 Ziven
 Zorn
+
+[NAMES NAMES_ELFKIND]
+250
+Abadluan
+Abagraid
+Abaralaar
+Abeldogt
+Abenbeud
+Abeneih
+Abesanoac
+Acacils
+Acebagaan
+Acetecicr
+Acetgors
+Acirars
+Adanaih
+Adcaag
+Addorl
+Adigdias
+Adinobh
+Agacagasr
+Agasitn
+Agelahail
+Agelbalr
+Ahagataat
+Aharaac
+Aharetd
+Ahdalr
+Ahedobirr
+Ahelhaor
+Aherisn
+Alahier
+Alalagh
+Alerruar
+Alitann
+Alobins
+Analeah
+Anarand
+Anhaor
+Anididenb
+Anilanl
+Anilteat
+Anonahedb
+Anrath
+Antind
+Arabaig
+Aratnatg
+Arceog
+Arellanh
+Aresidabl
+Arganl
+Arhael
+Aritahaah
+Aritibaor
+Aroluen
+Aroreuh
+Arunibeor
+Asehliir
+Ashaid
+Aslisn
+Asrihd
+Asurruan
+Atadnaut
+Ataterelh
+Atcetb
+Ateruct
+Atlohc
+Badibl
+Begetnual
+Beranl
+Bibaad
+Bitabl
+Bohedguad
+Budeac
+Budhiol
+Bulohriet
+Carirredn
+Cehorioc
+Cilinaon
+Conaddids
+Cosalehc
+Cububaat
+Dagosseur
+Dalogedr
+Datrisl
+Dehald
+Dehrian
+Dohablaid
+Dolelsaoh
+Dorruec
+Dudlehn
+Ebodhuor
+Ebruoc
+Ecaletehh
+Ecanall
+Edgeas
+Egaluul
+Ehteas
+Elagalutb
+Elasanegr
+Eletual
+Enduen
+Enhihl
+Ennaar
+Enohill
+Eraralell
+Eribeod
+Erordeor
+Erried
+Esaloraul
+Esanaloac
+Gacinrieh
+Galabaon
+Galdunl
+Gecoglugg
+Gehuslatr
+Getudadb
+Getunl
+Ginusnaat
+Habogeng
+Hahaet
+Halalicr
+Halehial
+Hegicn
+Hehadtetl
+Helcaen
+Herabhasn
+Hidolnian
+Hidreur
+Hodabiib
+Horaob
+Hucnaod
+Huhtigt
+Hunidr
+Hutecranl
+Ibigait
+Ibiroet
+Ibriel
+Idahasorn
+Iduhahaug
+Igtalb
+Ilanegaln
+Inahaar
+Inibaan
+Inildelh
+Inusier
+Ireroliin
+Irgear
+Iseranisl
+Isterr
+Ittiog
+Labulolg
+Lacanb
+Ladaas
+Ladnors
+Lanebagt
+Lariat
+Larnaat
+Latucurd
+Lehaloer
+Lenluan
+Leshill
+Lirnaeg
+Litleat
+Lolunerd
+Lulatn
+Nagdauc
+Naguctatd
+Naheed
+Nalihatd
+Nantail
+Narubronn
+Naserhelh
+Natgouh
+Neglotn
+Nenanall
+Netabroar
+Nigteul
+Nihadb
+Nilatier
+Nodaud
+Nohabd
+Nolahaes
+Nonanarr
+Nosedt
+Noseghiad
+Nuccaer
+Nudatheth
+Nurabh
+Ocegeer
+Olareob
+Olelredn
+Olgern
+Onalarion
+Oragacurc
+Oresubitr
+Orirurl
+Orotibt
+Otadenoas
+Otesuboah
+Ralacoet
+Ralasuil
+Raloleab
+Raribhiog
+Rarsinl
+Rasadear
+Raslanb
+Rasudn
+Ratabiln
+Rateteah
+Ratuor
+Regand
+Rehenboal
+Rehleub
+Rerbien
+Rerebegr
+Retluul
+Ribodsabs
+Riderl
+Rigontidl
+Riloredr
+Rinoscear
+Rinsiod
+Rociriag
+Rorahbecn
+Roshent
+Rubadabd
+Saratitt
+Senahicn
+Sicratb
+Sihaag
+Sirsegh
+Sisotgaul
+Tadacerl
+Tadibitr
+Tanirabl
+Tarorlern
+Telorilh
+Tenitgenr
+Tibecnean
+Tiliddoan
+Tilrotn
+Tinuddaar
+Toladecl
+Tothail
+Ucoroceag
+Udanibuls
+Udenhitl
+Udigiur
+Ugabitobt
+Uneragial
+Unnais
+Urhert
 
 [NAMES NAMES_HUMANFEMALE]
 2191
@@ -6508,11 +6920,37 @@ Woodpigeon
 Wren
 
 [NAMES NAMES_TROPICAL_BIRDS]
-4
+15
+Ani
+Aracari
+Canary
+Cuckoo
+Finch
+Hummingbird
 I'iwi
+Jacamar
+Macaw
 Macaw
 Mynah
+Parakeet
 Parrot
+Quetzal
+Toucan
+
+[NAMES NAMES_EAGLES]
+12
+Bald Eagle
+Barred Hawk
+Black Eagle
+Black Hawk
+Crested Eagle
+Golden Eagle
+Harpy Eagle
+Nighthawk
+Savanna Hawk
+Solitary Eagle
+White-tailed Eagle
+White-tailed Hawk
 
 [NAMES NAMES_GOBLIN]
 500

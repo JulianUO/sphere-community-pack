@@ -185,5 +185,12 @@ ENDIF
 ON=@REGPERIODIC
 src.SFX={0e,10,0f,10,022,1,023,1,024,1,0267,1}
 
+[REGIONTYPE r_graveyards]
+// Creepy sounds day or night.
+
+[REGIONTYPE r_ruins]
+// Creepy sounds day or night.
+
+
 [EOF]
 
