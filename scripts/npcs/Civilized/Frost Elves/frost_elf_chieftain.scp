@@ -1,7 +1,6 @@
 [CHARDEF c_frost_elf_chieftain]
-DEFNAME=c_frost_elf_chieftain
+ID=c_elf_male
 NAME=#NAMES_ELF_MALE the Frost Elf Chieftain
-ID=C_ELF_MALE
 DAM=20,25
 ARMOR=20
 CAN=MT_EQUIP|MT_USEHANDS|MT_WALK|MT_MALE

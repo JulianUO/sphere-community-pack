@@ -1,7 +1,6 @@
 [CHARDEF c_frost_elf_warrior]
-DEFNAME=c_frost_elf_warrior
+ID=c_elf_male
 NAME=#NAMES_ELF_MALE the Frost Elf Warrior
-ID=C_ELF_MALE
 CAN=MT_EQUIP|MT_USEHANDS|MT_WALK|MT_MALE
 //ALIGNMENT=EVIL
 DAM=10,20
@@ -44,11 +43,9 @@ ON=@NPCRestock
 	ITEM=i_halberd
 	ITEM=random_jewel
 
-
 [CHARDEF c_frost_elf_warrior_f]
-DEFNAME=c_frost_elf_warrior_f
+ID=c_elf_female
 NAME=#NAMES_ELF_FEMALE the Frost Elf Warrioress
-ID=C_ELF_FEMALE
 DAM=10,20
 ARMOR=15
 CAN=MT_EQUIP|MT_USEHANDS|MT_WALK|MT_FEMALE

@@ -1,5 +1,4 @@
 [CHARDEF c_black_cat]
-DEFNAME=c_black_cat
 NAME=Black Cat
 SOUND=snd_ANIMALS_CAT1
 ID=c_cat

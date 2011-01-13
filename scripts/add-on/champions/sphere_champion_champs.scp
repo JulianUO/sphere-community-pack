@@ -1,5 +1,5 @@
 [CHARDEF c_semidar]
-ID=c_abyss_lord
+ID=c_champ_semidar
 NAME=Semidar
 CAN=MT_WALK|MT_RUN|MT_USEHANDS
 DAM=85,121
@@ -37,7 +37,7 @@ ON=@Death
 RANDMAGICITEMGREAT
 
 [CHARDEF c_Mephitis]
-ID=c_Giant_Black_Widow
+ID=c_champ_mephitis
 NAME=Mephitis
 CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
 DAM=70,128
@@ -81,7 +81,7 @@ ITEM=RANDOM_JEWEL
 ITEM=RANDOM_JEWEL
 
 [CHARDEF c_Rikktor]
-ID=c_reptile_lord
+ID=c_champ_rikktor
 NAME=Rikktor
 CAN=MT_WALK|MT_USEHANDS
 DAM=134,175
@@ -116,7 +116,7 @@ ON=@NPCRestock
 ITEM=i_gold,{4000 5000}
 
 [CHARDEF c_Lord_Oaks]
-ID=c_Ethereal_Warrior
+ID=c_champ_lord_oaks
 NAME=Lord Oaks
 CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
 DAM=68,113
@@ -189,7 +189,7 @@ ITEM=i_gold,{3500 6000}
 ITEM=i_treasure_map_lvl_5
 
 [CHARDEF c_Silvani]
-ID=c_forest_queen
+ID=c_champ_silvani
 NAME=Silvani
 CAN=MT_WALK|MT_RUN|MT_USEHANDS
 DAM=57,89
@@ -323,7 +323,7 @@ REMOVE
 ENDIF
 
 [CHARDEF c_Barracoon]
-ID=c_man
+ID=c_satyr
 NAME=Barracoon the Piper
 CAN=MT_WALK|MT_RUN|MT_USEHANDS
 DAM=66,100
@@ -441,7 +441,7 @@ ON=@NPCRestock
 ITEM=i_gold,{5000 6000}
 
 [CHARDEF c_Meraktus]
-ID=c_minotaur
+ID=c_tormented_minotaur
 NAME=Meraktus the Tormented
 CAN=MT_WALK|MT_USEHANDS
 DAM=90,110

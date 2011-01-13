@@ -1,7 +1,6 @@
 [CHARDEF c_frost_elf_shaman]
-DEFNAME=c_frost_elf_shaman
+ID=c_elf_male
 NAME=#NAMES_ELF_MALE the Frost Elf Shaman
-ID=C_ELF_MALE
 //ALIGNMENT=EVIL
 CAN=MT_EQUIP|MT_USEHANDS|MT_WALK|MT_MALE
 DAM=15,20
