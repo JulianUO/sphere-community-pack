@@ -1,34 +1,4 @@
 //////////////////////////////////////////////////
-//Missing in sphere monsters:
-[CHARDEF c_plague_spawn]
-ID=c_slime
-NAME=plague spawn
-DAM=21,35
-ARMOR=40
-CAN=MT_WALK
-DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman,t_corpse
-CATEGORY=Novos Monstros
-SUBSECTION=LBR
-DESCRIPTION=Plague Spawn
-
-ON=@Create 
-NPC=brain_monster
-FAME=1000
-KARMA=-1000
-STR={201 300}
-MAXHITS={121 180}
-INT={16 20}
-DEX=80
-MAGICRESISTANCE=25.0
-TACTICS=25.0
-WRESTLING=50.0
-COLOR=0ad
-
-ON=@Hit
-IF !(<SRC.FLAGS>&statf_poisoned)
-SRC.SPELLEFFECT S_POISON,500,<UID>
-ENDIF
-
 [chardef c_pestilent_bandages]
 ID=c_zombie
 name=Pestilent Bandages

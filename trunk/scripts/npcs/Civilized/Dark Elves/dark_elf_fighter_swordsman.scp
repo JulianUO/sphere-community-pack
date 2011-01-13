@@ -1,8 +1,7 @@
 [CHARDEF c_dark_elf_swordsman]
-DEFNAME=c_dark_elf_swordsman
+ID=C_ELF_MALE
 NAME=#NAMES_ELF_MALE the Dark-Elf Fighter
 SOUND=snd_HUMAN_M_DIE_01
-ID=C_ELF_MALE
 DAM=10,20
 ARMOR=15,15
 CAN=MT_EQUIP|MT_RUN|MT_USEHANDS|MT_WALK
@@ -49,5 +48,3 @@ ON=@NPCRestock
 	COLOR=0455
 	ITEM=i_shield_wood
 	ITEM=i_sword_broad
-
-[EOF]

@@ -1,8 +1,7 @@
 [CHARDEF c_dark_elf_grunt]
-DEFNAME=c_dark_elf_grunt
+ID=c_elf_male
 NAME=#NAMES_ELF_MALE the Dark-Elf Grunt
 SOUND=snd_HUMAN_M_DIE_01
-ID=C_ELF_MALE
 DAM=10,20
 ARMOR=15,15
 CAN=MT_EQUIP|MT_RUN|MT_USEHANDS|MT_WALK

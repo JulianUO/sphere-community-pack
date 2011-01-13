@@ -1,7 +1,6 @@
 [CHARDEF c_frost_elf_archer]
-DEFNAME=c_frost_elf_archer
+ID=c_elf_male
 NAME=#NAMES_ELF_MALE the Frost Elf Archer
-ID=C_ELF_MALE
 DAM=10,20
 ARMOR=15
 CAN=MT_EQUIP|MT_USEHANDS|MT_WALK|MT_MALE
