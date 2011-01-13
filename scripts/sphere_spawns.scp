@@ -53,7 +53,7 @@ ID=c_zombie 3
 ID=c_spectre 2
 ID=c_wraith 2
 ID=c_shade 2
-ID=c_lich 1
+ID=c_liche 1
 
 [SPAWN spawn_cemeteries_moonglow]
 CATEGORY=Spawn Groups
@@ -64,74 +64,74 @@ ID=c_zombie 3
 ID=c_spectre 2
 ID=c_wraith 2
 ID=c_shade 2
-ID=c_lich 1
+ID=c_liche 1
 
 
 [SPAWN spawn_ants]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Ants
-ID=c_black_solen_infiltrator_queen
-ID=c_black_solen_infiltrator_warrior
-ID=c_black_solen_queen
-ID=c_black_solen_warrior
-ID=c_black_solen_worker
-ID=c_red_solen_infiltrator_queen
-ID=c_red_solen_infiltrator_warrior
-ID=c_red_solen_queen
-ID=c_red_solen_warrior
-ID=c_red_solen_worker
+ID=c_solen_infiltrator_queen_black
+ID=c_solen_infiltrator_warrior_black
+ID=c_solen_queen_black
+ID=c_solen_warrior_black
+ID=c_solen_worker_black
+ID=c_solen_infiltrator_queen
+ID=c_solen_infiltrator_warrior
+ID=c_solen_queen
+ID=c_solen_warrior
+ID=c_solen_worker
 
 [SPAWN spawn_daemons]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Daemons
-ID=c_arcane_daemon
-ID=c_balron
-ID=c_black_gate_daemon
-ID=c_bone_daemon
-ID=c_daemon
-ID=c_chaos_daemon
-ID=c_ice_fiend
-ID=c_moloch
+ID=c_demon_arcane
+ID=c_demon_balron
+ID=c_demon_blackgate
+ID=c_bone_demon
+ID=c_demon
+ID=c_demon_chaos
+ID=c_demon_ice
+ID=c_demon_moloch
 
 [SPAWN spawn_dragons]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Dragons
-ID=c_ancient_wyrm
+ID=c_wyrm_ancient
 ID=c_dragon_red
-ID=c_dragon_grey
+ID=c_dragon
 ID=c_drake_red
-ID=c_drake_grey
-ID=c_greater_dragon
+ID=c_drake
+ID=c_dragon_greater
 ID=c_serpentine_dragon
-ID=c_shadow_wyrm
+ID=c_wyrm_shadow
 ID=c_skeletal_dragon
-ID=c_white_wyrm
-ID=c_wyvern
+ID=c_wyrm_white
+ID=c_dragon_wyvern
 
 [SPAWN spawn_elementals]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Elementals
-ID=c_air_elemental
-ID=c_earth_elemental
-ID=c_dull_copper_elemental
-ID=c_shadow_iron_elemental
-ID=c_copper_elemental
-ID=c_bronze_elemental
-ID=c_golden_elemental
-ID=c_agapite_elemental
-ID=c_verite_elemental
-ID=c_valorite_elemental
-ID=c_fire_elemental
-ID=c_water_elemental
-ID=c_blood_elemental
-ID=c_ice_elemental
+ID=c_elemental_air
+ID=c_elemental_earth
+ID=c_elemental_ore_copper_dull
+ID=c_elemental_ore_shadow
+ID=c_elemental_ore_copper
+ID=c_elemental_ore_bronze
+ID=c_elemental_ore_gold
+ID=c_elemental_ore_agapite
+ID=c_elemental_ore_verite
+ID=c_elemental_ore_valorite
+ID=c_elemental_fire
+ID=c_elemental_water
+ID=c_elemental_blood
+ID=c_elemental_ice
 ID=c_efreet
-ID=c_poison_elemental
-ID=c_snow_elemental
+ID=c_elemental_poison
+ID=c_elemental_snow
 ID=c_rai_ju
 ID=c_kaze_kemono
 
@@ -139,18 +139,18 @@ ID=c_kaze_kemono
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Gargoyles
-ID=c_enslaved_gargoyle
-ID=c_fire_gargoyle
+ID=c_gargoyle_enslaved
+ID=c_gargoyle_fire
 ID=c_gargoyle
 ID=c_gargoyle_destroyer
 ID=c_gargoyle_enforcer
-ID=c_stone_gargoyle
+ID=c_gargoyle_stone
 
 [SPAWN spawn_ogres_ettins_trolls]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Ogres, Ettins & Trolls
-ID=c_arctic_ogre_lord
+ID=c_ogre_lord_arctic
 ID=c_ettin
 ID=c_frost_troll
 ID=c_ogre
@@ -184,13 +184,13 @@ CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Undeads
 ID=c_zombie
-ID=c_lich
+ID=c_liche
 ID=c_spectre
 ID=c_skeleton
-ID=c_skeletal_knight
-ID=c_skeletal_mage
+ID=c_skeleton_knight
+ID=c_skeleton_mage
 ID=c_mummy
-ID=c_lich_lord
+ID=c_liche_lord
 ID=c_wraith
 ID=c_shade
 
@@ -199,61 +199,61 @@ ID=c_shade
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=All Monsters
-ID=c_black_solen_infiltrator_queen
-ID=c_black_solen_infiltrator_warrior
-ID=c_black_solen_queen
-ID=c_black_solen_warrior
-ID=c_black_solen_worker
-ID=c_red_solen_infiltrator_queen
-ID=c_red_solen_infiltrator_warrior
-ID=c_red_solen_queen
-ID=c_red_solen_warrior
-ID=c_red_solen_worker
-ID=c_arcane_daemon
-ID=c_balron
-ID=c_black_gate_daemon
-ID=c_bone_daemon
-ID=c_daemon
-ID=c_chaos_daemon
-ID=c_ice_fiend
-ID=c_moloch
-ID=c_ancient_wyrm
+ID=c_solen_infiltrator_queen_black
+ID=c_solen_infiltrator_warrior_black
+ID=c_solen_queen_black
+ID=c_solen_warrior_black
+ID=c_solen_worker_black
+ID=c_solen_infiltrator_queen
+ID=c_solen_infiltrator_warrior
+ID=c_solen_queen
+ID=c_solen_warrior
+ID=c_solen_worker
+ID=c_demon_arcane
+ID=c_demon_balron
+ID=c_demon_blackgate
+ID=c_bone_demon
+ID=c_demon
+ID=c_demon_chaos
+ID=c_demon_ice
+ID=c_demon_moloch
+ID=c_wyrm_ancient
 ID=c_dragon_red
-ID=c_dragon_grey
+ID=c_dragon
 ID=c_drake_red
-ID=c_drake_grey
-ID=c_greater_dragon
+ID=c_drake
+ID=c_dragon_greater
 ID=c_serpentine_dragon
-ID=c_shadow_wyrm
+ID=c_wyrm_shadow
 ID=c_skeletal_dragon
-ID=c_white_wyrm
-ID=c_wyvern
-ID=c_air_elemental
-ID=c_earth_elemental
-ID=c_dull_copper_elemental
-ID=c_shadow_iron_elemental
-ID=c_copper_elemental
-ID=c_bronze_elemental
-ID=c_golden_elemental
-ID=c_agapite_elemental
-ID=c_verite_elemental
-ID=c_valorite_elemental
-ID=c_fire_elemental
-ID=c_water_elemental
-ID=c_blood_elemental
-ID=c_ice_elemental
+ID=c_wyrm_white
+ID=c_dragon_wyvern
+ID=c_elemental_air
+ID=c_elemental_earth
+ID=c_elemental_ore_copper_dull
+ID=c_elemental_ore_shadow
+ID=c_elemental_ore_copper
+ID=c_elemental_ore_bronze
+ID=c_elemental_ore_gold
+ID=c_elemental_ore_agapite
+ID=c_elemental_ore_verite
+ID=c_elemental_ore_valorite
+ID=c_elemental_fire
+ID=c_elemental_water
+ID=c_elemental_blood
+ID=c_elemental_ice
 ID=c_efreet
-ID=c_poison_elemental
-ID=c_snow_elemental
+ID=c_elemental_poison
+ID=c_elemental_snow
 ID=c_rai_ju
 ID=c_kaze_kemono
-ID=c_enslaved_gargoyle
-ID=c_fire_gargoyle
+ID=c_gargoyle_enslaved
+ID=c_gargoyle_fire
 ID=c_gargoyle
 ID=c_gargoyle_destroyer
 ID=c_gargoyle_enforcer
-ID=c_stone_gargoyle
-ID=c_arctic_ogre_lord
+ID=c_gargoyle_stone
+ID=c_ogre_lord_arctic
 ID=c_ettin
 ID=c_frost_troll
 ID=c_ogre
@@ -272,21 +272,20 @@ ID=c_terathan_drone
 ID=c_terathan_matriarch
 ID=c_terathan_warrior
 ID=c_zombie
-ID=c_lich
+ID=c_liche
 ID=c_spectre
 ID=c_skeleton
-ID=c_skeletal_knight
-ID=c_skeletal_mage
+ID=c_skeleton_knight
+ID=c_skeleton_mage
 ID=c_mummy
-ID=c_lich_lord
+ID=c_liche_lord
 ID=c_wraith
 ID=c_shade
 
 
 // Random Spawn, T2A critters included are just alterations to old art (colors, stats). T2A is not needed.
 // WEIGHT= need not add up to any special value. purely relative weight
-[SPAWN 08005]
-DEFNAME=SPAWN_MonstMisc_NoMagic
+[SPAWN SPAWN_MonstMisc_NoMagic]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Misc Monsters - No Magic
@@ -301,25 +300,23 @@ ID=c_ratman
 ID=c_ratman_w_sword
 ID=c_ratman_w_mace
 ID=c_snake
-ID=c_a_direwolf
+ID=c_wolf_dire
 ID=c_scorpion_giant
-ID=c_m_hellcat
-ID=c_m_hellhound
-ID=c_m_stoneharpy
+ID=c_hellcat
+ID=c_hellhound
+ID=c_harpy_stone
 ID=c_slime
 ID=c_reaper
 
-[SPAWN 08006]
-DEFNAME=SPAWN_MonstMisc_Magic
+[SPAWN SPAWN_MonstMisc_Magic]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Misc Monsters - Magic
 ID=c_gazer
-ID=c_m_gazer_elder
+ID=c_gazer_elder
 ID=c_imp
 
-[SPAWN 08007]
-DEFNAME=SPAWN_MonstersMiscAll
+[SPAWN SPAWN_MonstersMiscAll]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Misc Monsters - All
@@ -335,18 +332,17 @@ ID=c_ratman_w_sword
 ID=c_ratman_w_mace
 ID=c_reaper
 ID=c_SNAKE
-ID=c_a_direwolf
+ID=c_wolf_dire
 ID=c_scorpion_giant
-ID=c_m_hellcat
-ID=c_m_hellhound
-ID=c_m_stoneharpy
+ID=c_hellcat
+ID=c_hellhound
+ID=c_harpy_stone
 ID=c_slime
 ID=c_gazer
-ID=c_m_gazer_elder
+ID=c_gazer_elder
 ID=c_imp
 
-[SPAWN 08009]
-DEFNAME=SPAWN_Lizardmen
+[SPAWN SPAWN_Lizardmen]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=Lizard Men
@@ -354,88 +350,83 @@ ID=c_lizardman
 ID=c_lizardman_mace
 ID=c_lizardman_spear
 
-[SPAWN 0800c]
-DEFNAME=SPAWN_ANIMALS
+[SPAWN SPAWN_Animals]
 CATEGORY=Spawn Groups
 SUBSECTION=Animals
 DESCRIPTION=All Animals
-ID=c_GORILLA
-ID=c_WISP
-ID=HORSES
-ID=c_SNAKE
-ID=c_PIG
+ID=c_gorilla
+ID=c_wisp
+ID=horses
+ID=c_snake
+ID=c_pig
 ID=c_pig_big
 ID=c_rabbit
-ID=c_SHEEP_WOOLLY
-ID=c_GOAT
+ID=c_sheep_woolly
+ID=c_goat
 ID=c_bear_brown
-ID=c_bear_brown
+ID=c_bear_black
 ID=c_bear_grizzly
 ID=c_panther
 ID=c_llama
-ID=c_wolf
+ID=c_wolf_silver
 ID=c_cow_bw
 ID=c_cow_brown
 ID=c_bull_brown_lt
 ID=c_bull_brown_dk
-ID=c_DOE
+ID=c_doe
 ID=c_stag
 ID=c_cat
 ID=c_dog
 ID=c_rat
-ID=c_a_mountain_goat
-ID=c_ALLIGATOR
+ID=c_goat_mountain
+ID=c_alligator
 ID=c_a_jackrabbit
-ID=C_A_SNOW_LEOPARD
-ID=c_a_wolf_gray
-ID=C_A_WOLF_WHITE
+ID=c_leopard_snow
+ID=c_wolf_grey
+ID=c_wolf_white
 
-[SPAWN 0800d]
-DEFNAME=SPAWN_Birds
+[SPAWN SPAWN_Birds]
 CATEGORY=Spawn Groups
 SUBSECTION=Animals
 DESCRIPTION=Birds
-ID=c_EAGLE
-ID=C_BIRD_CROW
-ID=C_BIRD_MAGPIE
-ID=C_BIRD_RAVEN
-ID=C_BIRD_TROPICAL
+ID=c_eagle
+ID=c_bird_crow
+ID=c_bird_magpie
+ID=c_bird_raven
+ID=c_bird_tropical
 
-[SPAWN 0800e]
-DEFNAME=SPAWN_WaterCreatures
+[SPAWN SPAWN_WaterCreatures]
 CATEGORY=Spawn Groups
 SUBSECTION=Animals
 DESCRIPTION=Water Creatures
 ID=c_dolphin 10
 ID=c_sea_serpent 3
 ID=c_sea_monster
-ID=c_water_elemental 4
+ID=c_elemental_water 4
 
-[SPAWN 08010]
-DEFNAME=SPAWN_ForestAnimals
+[SPAWN SPAWN_ForestAnimals]
 CATEGORY=Spawn Groups
 SUBSECTION=Animals
 DESCRIPTION=Forest Animals
 ID=c_eagle
 ID=c_bird 5
-ID=c_a_black_bear
+ID=c_bear_black
 ID=c_pig_big
 ID=c_bear_brown
-ID=c_a_cougar
-ID=c_a_direwolf
-ID=c_a_wolf_gray
+ID=c_cougar
+ID=c_wolf_dire
+ID=c_wolf_grey
+ID=c_wolf_silver
 ID=c_bear_grizzly
 ID=c_stag 3
 ID=c_doe 5
 ID=c_a_jackrabbit 2
 ID=c_panther
 ID=c_rat 3
-ID=c_SNAKE 2
-ID=c_wolf 2
+ID=c_snake 2
 ID=c_rabbit 3
 
-[SPAWN 08011]
-DEFNAME=SPAWN_FarmAnimals
+[SPAWN SPAWN_FarmAnimals]
 CATEGORY=Spawn Groups
 SUBSECTION=Animals
 DESCRIPTION=Farm Animals
@@ -450,30 +441,27 @@ ID=c_sheep_shorn 2
 ID=c_PIG 2
 ID=c_GOAT 2
 
-[SPAWN 08012]
-DEFNAME=SPAWN_JungleCreatures
+[SPAWN SPAWN_JungleCreatures]
 CATEGORY=Spawn Groups
 SUBSECTION=Animals
 DESCRIPTION=Jungle Creatures
-ID=C_BIRD_TROPICAL 5
-ID=c_GORILLA
-ID=c_SNAKE
+ID=c_bird_tropical 5
+ID=c_gorilla
+ID=c_snake
 
-[SPAWN 08013]
-DEFNAME=SPAWN_SwampCreatures
+[SPAWN SPAWN_SwampCreatures]
 CATEGORY=Spawn Groups
 SUBSECTION=Animals
 DESCRIPTION=Swamp Creatures
 ID=c_bullfrog
 ID=c_rat
 ID=c_rat_giant
-ID=c_SNAKE 2
+ID=c_snake 2
 ID=c_slime
-ID=C_M_SWAMP_TENTACLES
-ID=c_ALLIGATOR 2
+ID=c_swamp_tentacles
+ID=c_alligator 2
 
-[SPAWN 08014]
-DEFNAME=SPAWN_Villagers
+[SPAWN SPAWN_Villagers]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Villagers
@@ -504,8 +492,7 @@ ID=C_H_BARD
 ID=C_H_SCULPTOR_F
 ID=C_H_SCULPTOR
 
-[SPAWN 08015]
-DEFNAME=SPAWN_Brigands
+[SPAWN SPAWN_Brigands]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Brigands
@@ -520,66 +507,61 @@ ID=C_H_GYPSY
 ID=C_H_PIRATE_F
 ID=C_H_PIRATE
 
-[SPAWN 08016]
-DEFNAME=SPAWN_ForestMonsters
+[SPAWN SPAWN_ForestMonsters]
 CATEGORY=Spawn Groups
 SUBSECTION=Nasties
 DESCRIPTION=Forest Monsters
-ID=C_OGRE 5
-ID=c_ETTIN_W_AXE 5
+ID=c_ogre 5
+ID=c_ettin_w_hammer 5
 ID=c_troll 3
-ID=c_ORC 8
+ID=c_orc 8
 ID=c_orc_captain 3
 ID=c_orc_w_club 5
 ID=c_orc_mage 2
-ID=C_M_MONGBAT_ARBOREAL 10
+ID=c_m_mongbat_arboreal 10
 ID=c_corpser
 ID=c_gazer
 ID=c_harpy 3
 ID=c_headless 10
 ID=c_reaper
-ID=c_WISP 5
+ID=c_wisp 5
 ID=c_lizardman 3
 ID=c_lizardman_mace 3
 ID=c_lizardman_spear 3
 ID=c_scorpion_giant 5
 ID=c_spider_giant 5
 
-[SPAWN 08017]
-DEFNAME=SPAWN_SwampMonsters
+[SPAWN SPAWN_SwampMonsters]
 CATEGORY=Spawn Groups
 SUBSECTION=Nasties
 DESCRIPTION=Swamp Monsters
 ID=c_lizardman 5
 ID=c_lizardman_mace 5
 ID=c_lizardman_spear 5
-ID=C_M_SWAMP_TENTACLES 3
-ID=c_TOAD_GIANT 3
+ID=c_swamp_tentacles 3
+ID=c_toad_giant 3
 ID=c_snake_giant 3
-ID=c_ALLIGATOR 5
-ID=c_SNAKE 5
+ID=c_alligator 5
+ID=c_snake 5
 ID=c_rat_giant 5
 
-[SPAWN 08018]
-DEFNAME=SPAWN_JungleMonsters
+[SPAWN SPAWN_JungleMonsters]
 CATEGORY=Spawn Groups
 SUBSECTION=Nasties
 DESCRIPTION=Jungle Monsters
 ID=c_snake_giant 5
-ID=C_M_MONGBAT_ARBOREAL 10
+ID=c_m_mongbat_arboreal 10
 ID=c_corpser 5
-ID=c_SNAKE 8
+ID=c_snake 8
 
-[SPAWN 08019]
-DEFNAME=SPAWN_Alchemists
+[SPAWN SPAWN_Alchemists]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Alchemists
 ID=C_H_ALCHEMIST_F
 ID=C_H_ALCHEMIST
 
-[SPAWN 0801a]
-DEFNAME=SPAWN_Weaponsmiths
+[SPAWN SPAWN_Weaponsmiths]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Weaponsmiths
@@ -588,8 +570,7 @@ ID=C_H_WEAPONSMITH_BLUNT_F
 ID=C_H_WEAPONSMITH_BLADE
 ID=C_H_WEAPONSMITH_BLUNT
 
-[SPAWN 0801b]
-DEFNAME=SPAWN_Tailors
+[SPAWN SPAWN_Tailors]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Tailors
@@ -598,128 +579,112 @@ ID=C_H_TAILOR
 ID=C_H_WEAVER_F
 ID=C_H_WEAVER
 
-[SPAWN 0801c]
-DEFNAME=SPAWN_Blacksmiths
+[SPAWN SPAWN_Blacksmiths]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Blacksmiths
 ID=C_H_BLACKSMITH_F 5
 ID=C_H_BLACKSMITH 5
 
-[SPAWN 0801d]
-DEFNAME=SPAWN_Carpenters
+[SPAWN SPAWN_Carpenters]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Carpenters
 ID=C_H_CARPENTER_F
 ID=C_H_CARPENTER
 
-[SPAWN 0801e]
-DEFNAME=SPAWN_Vegetable_Sellers
+[SPAWN SPAWN_Vegetable_Sellers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Vegetable Sellers
 ID=C_H_VEGISELLER_F
 ID=C_H_VEGISELLER
 
-[SPAWN 0801f]
-DEFNAME=SPAWN_Animal_Trainers
+[SPAWN SPAWN_Animal_Trainers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Animal Trainers
 ID=C_H_ANIMALTRAINER_F
 ID=C_H_ANIMALTRAINER
 
-[SPAWN 08020]
-DEFNAME=SPAWN_Bankers
+[SPAWN SPAWN_Bankers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Bankers
 ID=C_H_BANKER_F
 ID=C_H_BANKER
 
-[SPAWN 08021]
-DEFNAME=SPAWN_Beekeepers
+[SPAWN SPAWN_Beekeepers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Beekeepers
 ID=C_H_BEEKEEPER_F
 ID=C_H_BEEKEEPER
 
-[SPAWN 08022]
-DEFNAME=SPAWN_Armourers
+[SPAWN SPAWN_Armourers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Armourers
 ID=C_H_ARMORER_F
 ID=C_H_ARMORER
 
-[SPAWN 08023]
-DEFNAME=SPAWN_Butchers
+[SPAWN SPAWN_Butchers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Butchers
 ID=C_H_BUTCHER_F
 ID=C_H_BUTCHER
 
-[SPAWN 08024]
-DEFNAME=SPAWN_Mages
+[SPAWN SPAWN_Mages]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Mages
 ID=C_H_MAGESHOP_F
 ID=C_H_MAGESHOP
 
-[SPAWN 08025]
-DEFNAME=SPAWN_Bowyers
+[SPAWN SPAWN_Bowyers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Bowyers
 ID=C_H_BOWYER_F
 ID=C_H_BOWYER
 
-[SPAWN 08026]
-DEFNAME=SPAWN_Provisioners
+[SPAWN SPAWN_Provisioners]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Provisioners
 ID=C_H_PROVIS_F
 ID=C_H_PROVIS
 
-[SPAWN 08027]
-DEFNAME=SPAWN_Architects
+[SPAWN SPAWN_Architects]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Architects
 ID=C_H_ARCHITECT_F
 ID=C_H_ARCHITECT
 
-[SPAWN 08028]
-DEFNAME=SPAWN_Cobbler
+[SPAWN SPAWN_Cobbler]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Cobblers
 ID=C_H_COBBLER_F
 ID=C_H_COBBLER
 
-[SPAWN 08029]
-DEFNAME=SPAWN_Tavernkeepers
+[SPAWN SPAWN_Tavernkeepers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Tavernkeepers
 ID=C_H_TAVERNKEEPER_F
 ID=C_H_TAVERNKEEPER
 
-[SPAWN 0802a]
-DEFNAME=SPAWN_Waitstaff
+[SPAWN SPAWN_Waitstaff]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Waitstaff
 ID=C_H_WAITER
 ID=C_H_WAITRESS
 
-[SPAWN 0802b]
-DEFNAME=SPAWN_Tavernfolk
+[SPAWN SPAWN_Tavernfolk]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Tavernfolk
@@ -734,8 +699,7 @@ ID=C_H_PEASANT
 ID=C_H_MERCENARY_F
 ID=C_H_MERCENARY
 
-[SPAWN 0802c]
-DEFNAME=SPAWN_Cooks
+[SPAWN SPAWN_Cooks]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Cooks
@@ -744,16 +708,14 @@ ID=C_H_BAKER
 ID=C_H_COOK_F
 ID=C_H_COOK
 
-[SPAWN 0802d]
-DEFNAME=SPAWN_Healers
+[SPAWN SPAWN_Healers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Healers
 ID=C_H_HEALER_F
 ID=C_H_HEALER
 
-[SPAWN 0802e]
-DEFNAME=SPAWN_Dockhands
+[SPAWN SPAWN_Dockhands]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Dockhands
@@ -762,40 +724,35 @@ ID=C_H_SAILOR
 ID=C_H_FISHER
 ID=C_H_FISHER_F
 
-[SPAWN 0802f]
-DEFNAME=SPAWN_Innkeepers
+[SPAWN SPAWN_Innkeepers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Innkeepers
 ID=C_H_INNKEEPER_F
 ID=C_H_INNKEEPER
 
-[SPAWN 08030]
-DEFNAME=SPAWN_Shipwrights
+[SPAWN SPAWN_Shipwrights]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Shipwrights
 ID=C_H_SHIPWRIGHT_F
 ID=C_H_SHIPWRIGHT
 
-[SPAWN 08031]
-DEFNAME=SPAWN_Cartographers
+[SPAWN SPAWN_Cartographers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Cartographers
 ID=C_H_MAPMAKER_F
 ID=C_H_MAPMAKER
 
-[SPAWN 08032]
-DEFNAME=SPAWN_Farmers
+[SPAWN SPAWN_Farmers]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Farmers
 ID=C_H_FARMER_F
 ID=C_H_FARMER
 
-[SPAWN 08033]
-DEFNAME=SPAWN_Rangers
+[SPAWN SPAWN_Rangers]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Rangers
@@ -804,8 +761,7 @@ ID=C_H_RANGER 5
 ID=C_H_GUILD_RANGER_F
 ID=C_H_GUILD_RANGER
 
-[SPAWN 08034]
-DEFNAME=SPAWN_Peasants
+[SPAWN SPAWN_Peasants]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Peasants
@@ -816,17 +772,14 @@ ID=C_H_THIEF
 ID=C_H_BEGGER_F
 ID=C_H_BEGGER
 
-[SPAWN 08035]
-DEFNAME=SPAWN_Goblins
+[SPAWN SPAWN_Goblins]
 CATEGORY=Spawn Groups
 SUBSECTION=Nasties
 DESCRIPTION=Goblins
-ID=c_m_goblin 8
-ID=c_m_goblin_CHIEF
-ID=c_m_goblin_MAGE 2
+ID=c_goblin_gray 8
+ID=c_goblin_green
 
-[SPAWN 08036]
-DEFNAME=SPAWN_Performers
+[SPAWN SPAWN_Performers]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Performers
@@ -837,24 +790,21 @@ ID=C_H_ARTIST_F
 ID=C_H_BARD_F
 ID=C_H_BARD
 
-[SPAWN 08037]
-DEFNAME=SPAWN_Jewelers
+[SPAWN SPAWN_Jewelers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Jewelers
 ID=C_H_JEWELER_F
 ID=C_H_JEWELER
 
-[SPAWN 08038]
-DEFNAME=SPAWN_Tinkers
+[SPAWN SPAWN_Tinkers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Tinkers
 ID=C_H_TINKER_F
 ID=C_H_TINKER
 
-[SPAWN 08039]
-DEFNAME=SPAWN_Mercenaries
+[SPAWN SPAWN_Mercenaries]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Mercenaries
@@ -871,16 +821,14 @@ ID=C_H_WARRIOR
 ID=C_H_WEAPONSTRAINER_F
 ID=C_H_WEAPONSTRAINER
 
-[SPAWN 0803a]
-DEFNAME=SPAWN_Bakers
+[SPAWN SPAWN_Bakers]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Bakers
 ID=C_H_BAKER_F
 ID=C_H_BAKER
 
-[SPAWN 0803b]
-DEFNAME=SPAWN_Tanners
+[SPAWN SPAWN_Tanners]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Tanners
@@ -889,8 +837,7 @@ ID=C_H_TANNER 5
 ID=C_H_FURTRADER_F
 ID=C_H_FURTRADER
 
-[SPAWN 0803c]
-DEFNAME=SPAWN_MaginciaTownMembers
+[SPAWN SPAWN_MaginciaTownMembers]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Magincia Town Members
@@ -899,8 +846,7 @@ ID=C_H_MAGINCIA_COUNCIL 3
 ID=C_H_MAGINCIA_SERVANT_F
 ID=C_H_MAGINCIA_SERVANT
 
-[SPAWN 0803d]
-DEFNAME=SPAWN_Religious
+[SPAWN SPAWN_Religious]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Religious
@@ -911,16 +857,14 @@ ID=C_H_PRIESTESS_F
 ID=C_H_CASHUAL
 ID=C_H_CASHUAL_F
 
-[SPAWN 0803e]
-DEFNAME=SPAWN_Millers
+[SPAWN SPAWN_Millers]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Millers
 ID=C_H_MILLER_F
 ID=C_H_MILLER
 
-[SPAWN 0803f]
-DEFNAME=SPAWN_RatMen
+[SPAWN SPAWN_RatMen]
 CATEGORY=Spawn Groups
 SUBSECTION=Monsters
 DESCRIPTION=RatMen
@@ -928,11 +872,10 @@ ID=c_ratman_w_mace
 ID=c_ratman
 ID=c_ratman_w_sword
 
-[SPAWN 08044]
+[SPAWN SPAWN_Rogues]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Rogues
-DEFNAME=SPAWN_Rogues
 ID=C_H_PIRATE_F 3
 ID=C_H_PIRATE 3
 ID=C_H_BRIGAND_F 2
@@ -940,16 +883,14 @@ ID=C_H_BRIGAND 2
 ID=C_H_THIEF_F 3
 ID=C_H_THIEF 3
 
-[SPAWN 08048]
-DEFNAME=SPAWN_Fishermen
+[SPAWN SPAWN_Fishermen]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Fishermen
 ID=C_H_FISHER
 ID=C_H_FISHER_F
 
-[SPAWN 08049]
-DEFNAME=SPAWN_CityAnimals
+[SPAWN SPAWN_CityAnimals]
 CATEGORY=Spawn Groups
 SUBSECTION=Animals
 DESCRIPTION=City Animals
@@ -959,8 +900,7 @@ ID=c_dog 3
 ID=c_rat 2
 ID=c_a_rat_sewer
 
-[SPAWN 0804a]
-DEFNAME=SPAWN_Miners
+[SPAWN SPAWN_Miners]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Miners
@@ -969,24 +909,21 @@ ID=C_H_MINER 5
 ID=C_H_GUILD_MINER_F 2
 ID=C_H_GUILD_MINER 2
 
-[SPAWN 0804b]
-DEFNAME=SPAWN_Herbalists
+[SPAWN SPAWN_Herbalists]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Herbalists
 ID=C_H_HERBALIST_F
 ID=C_H_HERBALIST
 
-[SPAWN 0804c]
-DEFNAME=SPAWN_Veterinarians
+[SPAWN SPAWN_Veterinarians]
 CATEGORY=Spawn Groups
 SUBSECTION=Shopkeepers
 DESCRIPTION=Veterinarians
 ID=C_H_VET_F
 ID=C_H_VET
 
-[SPAWN 08054]
-DEFNAME=SPAWN_Guards
+[SPAWN SPAWN_Guards]
 CATEGORY=Spawn Groups
 SUBSECTION=Humans
 DESCRIPTION=Guards
@@ -994,5 +931,5 @@ ID=c_h_GUARD_F
 ID=c_h_GUARD
 
 
-[eof]
+[EOF]
 
