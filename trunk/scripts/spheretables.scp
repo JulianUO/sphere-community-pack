@@ -21,8 +21,7 @@ scripts/sphere_backward_compatibility.scp
 scripts/sphere_events_human.scp
 scripts/sphere_events_npcs.scp
 scripts/npcs/
-scripts/npcs/monsters/
-scripts/npcs/champions/
+scripts/npcs/Animals/
 scripts/npcs/Civilized/Fighters/
 scripts/npcs/Civilized/Arts and Music/
 scripts/npcs/Civilized/Guards and Law/
@@ -39,6 +38,9 @@ scripts/npcs/Civilized/Frost Elves/
 scripts/npcs/Civilized/Sprite Elves/
 scripts/npcs/Civilized/Wood Elves/
 scripts/npcs/Civilized/Witches/
+scripts/npcs/Monsters/
+scripts/npcs/Mounts/
+scripts/npcs/Spells/
 scripts/sphere_admin.scp
 scripts/sphere_dialog.scp
 // -----------------------------------

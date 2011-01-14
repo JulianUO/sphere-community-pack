@@ -45,7 +45,7 @@ ON=@NPCRestock
 [CHARDEF 018]
 //FIXME: Summons skeletons and polymorphs into a skeleton.
 //FIXME: Can be redeemed using the sacrifice virtue.
-DEFNAME=c_liche
+DEFNAME=c_lich
 NAME=lich
 ICON=i_pet_liche
 SOUND=snd_monster_liche1
