@@ -50,74 +50,76 @@ Todo list:
    //      ENDIF
    //   ENDIF
 
-   //[ITEMDEF i_pool_acid]
-   //Localization:  1070820
-   //ID=021c
-   //NAME=acid pool
-   //TYPE=t_normal
-   //CATEGORY=Monster
-   //SUBSECTION=Attack
-   //DESCRIPTION=Acid Pool
-   //ON=@Create
-   //   ATTR=attr_decay|attr_move_never
-   //   TIMER={4 8}
-   //ON=@Step
-   //   IF (<SRC.ISPLAYER>)
-   //      SRC.DAMAGE <R10,15> <DEF.dam_acidic> <LINK>
-   //      SRC.SYSMESSAGELOC color_text,1077483//"The acid burns you!"
-   //   ENDIF
+4. Move the //[ITEMDEF i_pool_acid] from the end of this file to the right place.
 
-4. Implement these monster specific combat events:
+5. Move the //[EVENTS e_poisoned_spit] and [EVENTS e_solen_spit] events to the right place.
 
-   //[EVENTS e_poisoned_spit]
-   ////Poisoned Spit Defense
-   //ON=@GetHit
-   //   REF12=<SRC>
-   //   IF (<MANA> > 15) && (<DISTANCE> > 2) && !(<SRC.FLAGS> & statf_poisoned)
-   //      MANA -= 15
-   //      TRYSRC <UID> REF12.EFFECT 0,i_fx_fireball,10,16,0,044,4
-   //      TRYSRC <UID> REF12.SPELLEFFECT s_poison,<POISONING>,0//FIXME:resist
-   //      SRC.DAMAGE <R15,25> <DEF.dam_poison> <UID>
-   //      SRC.SYSMESSAGELOC color_text,1070821,<NAME>//"~ spits a poisonous substance at you!"
-   //      SRC.SOUND snd_spell_poison
-   //   ENDIF
-   //   REF12=
+6. Move the //[FUNCTION f_NPCRemovalTimer] to the right place.
 
-   //[EVENTS e_solen_spit]
-   ////Acidic Spit Defense
-   ////Localization:  1070821
-   //ON=@GetHit
-   //   REF12=<SRC>
-   //   IF (<MANA> > 15) && (<DISTANCE> > 2)
-   //      MANA -= 15
-   //      TRYSRC <UID> REF12.EFFECT 0,i_fx_fireball,10,16,0,044,4
-   //      SRC.DAMAGE <R15,25> <DEF.dam_acidic> <UID>
-   //      SRC.SYSMESSAGELOC color_text,1071966//"The solen's damaged acid sac squirts acid!"
-   //      SRC.SOUND snd_spell_poison
-   //      SERV.NEWITEM i_pool_acid
-   //      NEW.P=<SRC.P>
-   //      NEW.ATTR=attr_decay|attr_move_never
-   //      NEW.TIMER={4 8}
-   //   ENDIF
-   //   REF12=
+7. Review the Slayer system and see whether it supports comma separated values...
 
-5. Implement a removal timer for NPCs that spawn other NPCs:
+8. Move the loot templates back to their respective creature files...
 
-   //[FUNCTION f_NPCRemovalTimer]
-   //SERV.NEWITEM i_removetimer_mem
-   //EQUIP <NEW>
-   //NEW.TIMER=<ARGN1>
-   //
-   //[ITEMDEF i_removetimer_mem]
-   //ID=i_memory
-   //NAME=remove timer
-   //TYPE=t_eq_script
-   //ON=@Timer
-   //   CONT.REMOVE
-   //   RETURN 1
+[ITEMDEF i_pool_acid]
+Localization:  1070820
+ID=021c
+NAME=acid pool
+TYPE=t_normal
+CATEGORY=Monster
+SUBSECTION=Attack
+DESCRIPTION=Acid Pool
+ON=@Create
+   ATTR=attr_decay|attr_move_never
+   TIMER={4 8}
+ON=@Step
+   IF (<SRC.ISPLAYER>)
+      SRC.DAMAGE <R10,15> <DEF.dam_acidic> <LINK>
+      SRC.SYSMESSAGELOC color_text,1077483//"The acid burns you!"
+   ENDIF
 
-5. Review the Slayer system and see whether it supports comma separated values...
+[EVENTS e_poisoned_spit]
+//Poisoned Spit Defense
+ON=@GetHit
+   REF12=<SRC>
+   IF (<MANA> > 15) && (<DISTANCE> > 2) && !(<SRC.FLAGS> & statf_poisoned)
+      MANA -= 15
+      TRYSRC <UID> REF12.EFFECT 0,i_fx_fireball,10,16,0,044,4
+      TRYSRC <UID> REF12.SPELLEFFECT s_poison,<POISONING>,0//FIXME:resist
+      SRC.DAMAGE <R15,25> <DEF.dam_poison> <UID>
+      SRC.SYSMESSAGELOC color_text,1070821,<NAME>//"~ spits a poisonous substance at you!"
+      SRC.SOUND snd_spell_poison
+   ENDIF
+   REF12=
 
-6. Move the loot templates back to their repsective creature files...
+[EVENTS e_solen_spit]
+//Acidic Spit Defense
+ON=@GetHit
+   REF12=<SRC>
+   IF (<MANA> > 15) && (<DISTANCE> > 2)
+      MANA -= 15
+      TRYSRC <UID> REF12.EFFECT 0,i_fx_fireball,10,16,0,044,4
+      SRC.DAMAGE <R15,25> <DEF.dam_acidic> <UID>
+      SRC.SYSMESSAGELOC color_text,1071966//"The solen's damaged acid sac squirts acid!"
+      SRC.SOUND snd_spell_poison
+      SERV.NEWITEM i_pool_acid
+      NEW.P=<SRC.P>
+      NEW.ATTR=attr_decay|attr_move_never
+      NEW.TIMER={4 8}
+   ENDIF
+   REF12=
+
+[FUNCTION f_NPCRemovalTimer]
+SERV.NEWITEM i_removetimer_mem
+EQUIP <NEW>
+NEW.TIMER=<ARGN1>
+
+[ITEMDEF i_removetimer_mem]
+ID=i_memory
+NAME=remove timer
+TYPE=t_eq_script
+ON=@Timer
+   CONT.REMOVE
+   RETURN 1
+
 
 [EOF]
