@@ -1,0 +1,123 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: December 30, 2010
+VERSION=0.56b
+
+[COMMENT creature_definitions]
+Todo list:
+
+1. Review all creatures and make sure the following are correct:
+
+   RESDISPDNID=
+   RESLEVEL=
+   RESDISPDNHUE=
+
+2. Implement TAG.HitPoison on general monster event... like this:
+
+   //ON=@Hit
+   //   IF ( (<MANA> >= 10) && (RAND(5)==0) && !(<SRC.FLAGS>&statf_poisoned) )
+   //      IF (<TAG.HitPoison>)
+   //         MANA -= 10
+   //         DOSWITCH <EVAL <TAG.HitPoison>>
+   //            SRC.SPELLEFFECT s_poison,<R10,250>,1,<UID>//Lesser
+   //            SRC.SPELLEFFECT s_poison,<R250,500>,1,<UID>//Normal
+   //            SRC.SPELLEFFECT s_poison,<R500,750>,1,<UID>//Greater
+   //            SRC.SPELLEFFECT s_poison,<R750,1000>,1,<UID>//Deadly
+   //            SRC.SPELLEFFECT s_poison,<R1000,1250>,1,<UID>//Lethal
+   //         ENDDO
+   //         SRC.SYSMESSAGELOC color_text,1043322,<NAME>//"~ has just poisoned you!"
+   //      ENDIF
+   //   ENDIF
+
+3. Implement TAG.CorrosiveBlood on players and NPCs general combat system:
+
+   //ON=@Hit //Since GetHit trigger does not have ARGO
+   //   IF (<SRC.TAG0.CorrosiveBlood>)
+   //      IF (<ARGO>) && (RAND(100) < <SRC.TAG0.CorrosiveBlood>)
+   //         ARGO.DAMAGE <TAG.CorrosiveBlood> <DEF.dam_acidic> <SRC>
+   //         SYSMESSAGELOC color_text,500263//"Splashing acid blood scars your weapon!"
+   //      ENDIF
+   //      IF (RAND(100) < <SRC.TAG0.CorrosiveBlood>)
+   //         SYSMESSAGELOC color_text,1070820//"Splashing acid blood scars your weapon!"
+   //         SERV.NEWITEM i_pool_acid
+   //         NEW.ATTR=attr_move_never|attr_decay
+   //         NEW.LINK=<SRC>
+   //         NEW.P=<SRC.P>
+   //         NEW.TIMER=<R5,10>
+   //      ENDIF
+   //   ENDIF
+
+   //[ITEMDEF i_pool_acid]
+   //Localization:  1070820
+   //ID=021c
+   //NAME=acid pool
+   //TYPE=t_normal
+   //CATEGORY=Monster
+   //SUBSECTION=Attack
+   //DESCRIPTION=Acid Pool
+   //ON=@Create
+   //   ATTR=attr_decay|attr_move_never
+   //   TIMER={4 8}
+   //ON=@Step
+   //   IF (<SRC.ISPLAYER>)
+   //      SRC.DAMAGE <R10,15> <DEF.dam_acidic> <LINK>
+   //      SRC.SYSMESSAGELOC color_text,1077483//"The acid burns you!"
+   //   ENDIF
+
+4. Implement these monster specific combat events:
+
+   //[EVENTS e_poisoned_spit]
+   ////Poisoned Spit Defense
+   //ON=@GetHit
+   //   REF12=<SRC>
+   //   IF (<MANA> > 15) && (<DISTANCE> > 2) && !(<SRC.FLAGS> & statf_poisoned)
+   //      MANA -= 15
+   //      TRYSRC <UID> REF12.EFFECT 0,i_fx_fireball,10,16,0,044,4
+   //      TRYSRC <UID> REF12.SPELLEFFECT s_poison,<POISONING>,0//FIXME:resist
+   //      SRC.DAMAGE <R15,25> <DEF.dam_poison> <UID>
+   //      SRC.SYSMESSAGELOC color_text,1070821,<NAME>//"~ spits a poisonous substance at you!"
+   //      SRC.SOUND snd_spell_poison
+   //   ENDIF
+   //   REF12=
+
+   //[EVENTS e_solen_spit]
+   ////Acidic Spit Defense
+   ////Localization:  1070821
+   //ON=@GetHit
+   //   REF12=<SRC>
+   //   IF (<MANA> > 15) && (<DISTANCE> > 2)
+   //      MANA -= 15
+   //      TRYSRC <UID> REF12.EFFECT 0,i_fx_fireball,10,16,0,044,4
+   //      SRC.DAMAGE <R15,25> <DEF.dam_acidic> <UID>
+   //      SRC.SYSMESSAGELOC color_text,1071966//"The solen's damaged acid sac squirts acid!"
+   //      SRC.SOUND snd_spell_poison
+   //      SERV.NEWITEM i_pool_acid
+   //      NEW.P=<SRC.P>
+   //      NEW.ATTR=attr_decay|attr_move_never
+   //      NEW.TIMER={4 8}
+   //   ENDIF
+   //   REF12=
+
+5. Implement a removal timer for NPCs that spawn other NPCs:
+
+   //[FUNCTION f_NPCRemovalTimer]
+   //SERV.NEWITEM i_removetimer_mem
+   //EQUIP <NEW>
+   //NEW.TIMER=<ARGN1>
+   //
+   //[ITEMDEF i_removetimer_mem]
+   //ID=i_memory
+   //NAME=remove timer
+   //TYPE=t_eq_script
+   //ON=@Timer
+   //   CONT.REMOVE
+   //   RETURN 1
+
+5. Review the Slayer system and see whether it supports comma separated values...
+
+6. Move the loot templates back to their repsective creature files...
+
+[EOF]

@@ -1,0 +1,2384 @@
+[COMMENT monsters_champions]
+This file includes champions from the "altars", the doom system, and other
+peerless boss creatures...
+
+[CHARDEF 081]
+DEFNAME=c_harrower_tentacles
+NAME=tentacles of the Harrower
+ICON=i_pet_tentacles_swamp
+SOUND=snd_monster_corpsr1
+CAN=MT_NONMOVER|MT_NONHUM
+DAM=57,93
+RANGE=9
+ARMOR=55
+DESIRES=r_dungeon_khaldun,t_coin,t_gold,t_gem
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=35 t_meat_raw
+RESOURCES=2 i_ribs_raw
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=131.4
+TAG.DamCold=20
+TAG.DamEnergy=20
+TAG.DamFire=20
+TAG.DamPoison=20
+TAG.HitLifeLeech=50
+TAG.OVERRIDE.REGENVAL_1=25
+TAG.IsChampion=1
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Tentacles of the Harrower
+ON=@Create
+   NPC=brain_monster
+   FAME=15000
+   KARMA=-15000
+   STR={901 1000}
+   MAXHITS={541 600}
+   DEX={126 140}
+   MAXSTAM={126 140}
+   INT={1001 1200}
+   MAXMANA={1001 1200}
+   DETECTINGHIDDEN={90.0 100.0}
+   MAGICRESISTANCE={120.0 140.0}
+   //POISONING={100.0 110.0}
+   TACTICS={90.0 100.0}
+   WRESTLING={90.0 100.0}
+   MODAR={0 10}
+   RESCOLD={35 45}
+   RESENERGY={35 45}
+   RESFIRE={35 45}
+   RESPOISON={35 45}
+ON=@NPCRestock
+   ITEM=loot_harrower_tentacles
+   //900 - 1300 Gold. 3 Medium Level Scrolls, 2 High Level Scrolls, 50 Reagents, 15-75 Necromancy Reagents, Magic Items
+
+[CHARDEF 092]
+//"The Harrower is the first incarnation of the Super Champion of the
+// Felucca Dungeons. Not to be confused with the Tentacles of the Harrower
+// from Khaldun, which is apparently only a small part of The True Harrower."
+DEFNAME=c_harrower
+NAME=harrower
+ICON=i_pet_harrower
+SOUND=snd_monster_shadowlord
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DAM=135,181
+ARMOR=55
+DESIRES=r_dungeon,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+//FOODTYPE=
+//RESOURCES=
+BLOODCOLOR=colors_green
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamEnergy=50
+TAG.IsChampion=1
+TAG.IAMACHAMPION=1
+//TAG.Luck.Loot=FIXME
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Harrower
+ON=@Create
+TAG.LIFETIER=2
+   NPC=brain_monster
+   FAME=25000
+   KARMA=-25000
+   STR={900 1000}
+   MAXHITS={39000 41000}
+   DEX={125 140}
+   MAXSTAM={125 140}
+   INT={1000 1200}
+   MAXMANA={4900 5100}
+   ARCHERY={90.0 100.0}
+   EVALUATINGINTEL={120.0 125.0}
+   FENCING={90.0 100.0}
+   MACEFIGHTING={90.0 100.0}
+   MAGERY={120.0 125.0}
+   MAGICRESISTANCE={120.0 160.0}
+   MEDITATION={120.0 125.0}
+   PARRYING={90.0 100.0}
+   SWORDSMANSHIP={90.0 100.0}
+   TACTICS={90.0 110.0}
+   WRESTLING={90.0 100.0}
+   MODAR={0 10}
+   RESCOLD={60 80}
+   RESENERGY={60 80}
+   RESFIRE={60 80}
+   RESPOISON={60 80}
+ON=@NPCRestock
+   ITEM=loot_harrower
+ON=@Death
+   TAG0.LIFETIER -= 1
+   IF (<TAG0.LIFETIER>)
+      HITS=<MAXHITS>
+      ACTION -1
+      RETURN 1
+   ENDIF
+ON=@NPCLookAtChar
+   //Teleport players closer
+   IF (<SRC.ISPLAYER>) && !(<SRC.ISGM>)
+      IF !(<R20>)
+         SRC.GO <P>
+         SAY @,,2 1049503//"Come get some..."
+      ENDIF
+   ENDIF
+   //Explode corpses
+   IF (<ISNEARTYPE T_CORPSE 10>)
+      IF (<R20> == 1)
+      REF1=<UID>
+         FORITEMS 10
+            IF (<BASEID> == i_corpse) && (!(<LOCAL.JAEXPLODIU>))
+            F_EXPLODECORPSE <REF1.UID>
+            F_EXPLODECORPSE_DROPALL
+            LOCAL.JAEXPLODIU=1
+            ENDIF
+         ENDFOR
+      ENDIF
+   ENDIF
+ON=@DeathCorpse
+   LOCAL.NEW=<NEW>
+   SERV.NEWNPC c_true_harrower
+   NEW.GO <P>
+   NEW.SAY @,,2 1049499//"Behold my true form!"
+   REF1=<NEW>
+   FOR 12
+      SERV.NEWNPC c_harrower_tentacles
+      NEW.GO <P>
+      NEW.FACE <REF1.UID>
+      NEW.MOVE <HVAL {-6 6}> <HVAL {-6 6}>
+   ENDFOR
+   NEW=<LOCAL.NEW>
+   ARGO.REMOVE
+ON=@Hit
+   IF (!(<R20>))
+      DORAND 4
+      SAY @color_text,,2 1049500//"Feel the delicious pain!"
+      SAY @color_text,,2 1049501//"You fight like a mongbat!"
+      SAY @color_text,,2 1049505//"Your life will be mine!"
+      SAY @color_text,,2 1049507//"Now you shall die."
+      ENDDO
+   ENDIF
+ON=@SpellEffect
+   SAY @color_text,,2 1049502//"You call that a spell?"
+ON=@GetHit
+   IF (!(<R20>))
+      DORAND 2
+      SAY @,,2 1049508//"You will never steal my power!"
+      SAY @,,2 1049504//"Oooh, that tickles."
+      ENDDO
+   ENDIF
+   IF !(<R30>)
+      SRC.GO <P>
+      SAY @,,2 1049503//"Come get some..."
+   ENDIF
+   IF (<SRC.FLAGS>&statf_conjured)
+      IF (!(<R50>))
+         SRC.SPELLEFFECT S_DISPEL,1000,<UID>
+      ENDIF
+   ENDIF
+
+[CHARDEF 0ac]
+//FIXME: Earthquake Attack that damages all nearby characters.
+DEFNAME=c_champ_rikktor
+NAME=Rikktor
+ICON=i_pet_dragon
+SOUND=snd_monster_dragon1
+CAN=MT_WALK|MT_FLY|MT_NONHUM
+DAM=124,272
+RANGE=2
+ARMOR=80
+DESIRES=r_dungeon_destard,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=80 t_meat_raw
+RESOURCES=20 i_scale_black,20 i_scale_white,20 i_scale_blue,20 i_scale_red,20 i_scale_yellow
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamEnergy=25
+TAG.DamFire=50
+TAG.IsChampion=1
+//TAG.Luck.Loot=FIXME
+TAG.Slayer=SLAYER_DRAGON
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Wyrm (Rikktor)
+ON=@Create
+   NPC=brain_monster
+   FAME=22500
+   KARMA=-22500
+   STR={701 900}
+   MAXHITS={3000 3100}
+   DEX={201 350}
+   MAXSTAM={201 350}
+   INT={51 100}
+   MAXMANA={51 100}
+   ANATOMY={95.0 105.0}
+   MAGICRESISTANCE={140.0 160.0}
+   TACTICS={98.0 100.0}
+   MODAR={0 10}
+   RESCOLD={30 40}
+   RESENERGY={80 90}
+   RESFIRE={80 90}
+   RESPOISON={80 90}
+ON=@NpcRestock
+   ITEM=loot_champ_rikktor
+   //4000 - 5000 Gold. Magic Items
+   //Special: Level 5 Treasure Map
+
+[CHARDEF 0ad]
+//FIXME: "Shoots paralyzing webs and pulls players in."
+DEFNAME=c_champ_mephitis
+NAME=Mephitis
+ICON=i_pet_spider_lord
+SOUND=snd_monster_gispidr1
+CAN=MT_WALK|MT_RUN|MT_NONHUM
+DAM=68,154
+RANGE=2
+ARMOR=75
+DESIRES=r_dungeon_terathan_keep,t_coin,t_gold,t_gem
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=60 t_meat_raw
+RESOURCES=2 i_ribs_raw, 4 i_reag_spider_silk
+BLOODCOLOR=colors_blood
+MOVERATE=120
+TAG.Barding.Diff=160.0
+TAG.DamPoison=50
+TAG.HitPoison=5//Lethal
+TAG.IsChampion=1
+//TAG.Luck.Loot=FIXME
+TAG.Slayer=SLAYER_SPIDER
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Spider (Mephitis)
+RESLEVEL=2
+RESDISPDNID=c_spider_giant
+RESDISPDNHUE=0ad
+ON=@Create
+   NPC=brain_monster
+   FAME=22500
+   KARMA=-22500
+   STR={505 1000}
+   MAXHITS={3000 3100}
+   DEX={202 300}
+   MAXSTAM={305 600}
+   INT={202 300}
+   MAXMANA={202 300}
+   ANATOMY={90.0 105.0}
+   MAGICRESISTANCE={70.0 140.0}
+   //POISONING={100.0 120.0}
+   TACTICS={97.0 100.0}
+   WRESTLING={97.0 100.0}
+   MODAR={0 10}
+   RESCOLD={60 70}
+   RESENERGY={60 70}
+   RESFIRE={60 70}
+   RESPOISON=100
+ON=@NpcRestock
+   ITEM=loot_champ_mephitis
+   //2500 - 3000 Gold. Jewelry, Magic Items
+   //Special: Level 5 Treasure Map
+ON=@GetHit
+   //Spawn Creatures Attack (dread spiders)
+   IF (RAND(10)==1)
+      SERV.NEWNPC c_spider_dread
+      NEW.P=<P>
+      NEW.HOME=<NEW.P>
+      NEW.HOMEDIST=7
+      NEW.f_NPCRemovalTimer 1200
+   ENDIF
+
+[CHARDEF 0ae]
+//FIXME: Reflect magic damage back at male spellcasters
+DEFNAME=c_champ_semidar
+NAME=Semidar
+ICON=i_pet_demon_2//FIXME: no succubus icon?
+SOUND=snd_succubus1
+CAN=MT_WALK|MT_FLY|MT_USEHANDS|MT_EQUIP|MT_FEMALE
+DAM=92,123
+RANGE=2
+ARMOR=20
+DESIRES=r_dungeon_fire,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=35 t_meat_raw
+RESOURCES=1 i_ribs_raw,2 i_reag_daemon_bone
+BLOODCOLOR=colors_white
+MOVERATE=120
+TAG.Barding.Diff=160.0
+TAG.DamFire=25
+TAG.IsChampion=1
+TAG.Luck.Loot=loot_semidar_luck
+TAG.Override.RegenVal_1=30
+TAG.Slayer=SLAYER_DEMON
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Succubus (Semidar)
+ON=@Create
+   NPC=brain_monster
+   FAME=24000
+   KARMA=-24000
+   STR={502 600}
+   MAXHITS={1500 1600}
+   DEX={152 200}
+   MAXSTAM={103 250}
+   INT={175 210}
+   MAXMANA={601 750}
+   EVALUATINGINTEL={95.0 100.0}
+   MAGERY={90.0 105.0}
+   MAGICRESISTANCE={120.0 140.0}
+   MEDITATION={95.0 100.0}
+   TACTICS={90.0 105.0}
+   WRESTLING={90.0 105.0}
+   MODAR={0 10}
+   RESCOLD={20 30}
+   RESENERGY={10 20}
+   RESFIRE={50 60}
+   RESPOISON={20 30}
+ON=@NPCRestock
+   ITEM=loot_champ_semidar
+   //6000 - 6500 Gold. Magic Items
+   //Special: Level 5 Treasure Map
+ON=@GetHit
+   //Life Drain Aura Attack
+   IF (RAND(3)==0)
+      REF11=<UID>
+      FORCHARS 3
+         IF (<ISPLAYER>) || (<FLAGS>&statf_pet)
+            LOCAL.DAM=<R10,20>
+            DAMAGE <LOCAL.DAM> <DEF.dam_physical> <REF11>
+            REF11.HITS += <LOCAL.DAM>
+            IF (<REF11.HITS> > <REF11.MAXHITS>)
+               REF11.HITS=<REF11.MAXHITS>
+            ENDIF
+            SRC.SYSMESSAGE @color_text,,1 The evil aura of the succubus drains life from you
+         ENDIF
+      END
+   ENDIF
+
+[CHARDEF 0af]
+//FIXME: Cannot be area peaced.
+//FIXME: Is almost immune to any damage before his queen is killed.
+//FIXME: The first time Lord Oaks is hit he will summon his queen with the words "Come forth my Queen".
+//As long as his queen is alive, Lord Oaks will take very little damage from any attacks.
+DEFNAME=c_champ_lord_oaks
+NAME=Lord Oaks
+ICON=i_pet_forestlord
+SOUND=snd_monster_pixie
+CAN=MT_WALK|MT_FLY|MT_USEHANDS|MT_EQUIP
+DAM=71,157
+RANGE=2
+ARMOR=85
+DESIRES=r_forests,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=60 t_meat_raw
+RESOURCES=100 i_feather, 1 i_ribs_raw
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamFire=25
+TAG.HitLifeLeech=50
+TAG.HitManaLeech=50
+TAG.HitStaminaLeech=50
+TAG.IsChampion=1
+//TAG.Luck.Loot=FIXME
+TAG.Slayer=SLAYER_FEY
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Forest Lord (Lord Oaks)
+ON=@Create
+   NPC=brain_monster
+   FAME=22500
+   KARMA=22500
+   STR={403 850}
+   MAXHITS={3000 3100}
+   DEX={101 150}
+   MAXSTAM={202 400}
+   INT={180 220}
+   MAXMANA={503 800}
+   ANATOMY={75.0 100.0}
+   ARCHERY={95.0 105.0}
+   EVALUATINGINTEL={120.0 130.0}
+   FENCING={95.0 105.0}
+   MACEFIGHTING={95.0 105.0}
+   MAGERY={115.0 125.0}
+   MAGICRESISTANCE={100.0 150.0}
+   MEDITATION={120.0 130.0}
+   PARRYING={95.0 105.0}
+   SWORDSMANSHIP={95.0 105.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={95.0 105.0}
+   MODAR={0 5}
+   RESCOLD={60 70}
+   RESENERGY={80 90}
+   RESFIRE={60 70}
+   RESPOISON={80 90}
+ON=@NpcRestock
+   ITEM=loot_champ_lord_oaks
+   //3500 - 6000 Gold. Magic Items
+   //Special: Level 5 Treasure Map
+ON=@GetHit
+   IF (RAND(19)==1)
+      SRC.NEWNPC c_pixie
+      NEW.FLAGS |= (statf_war|statf_conjured)
+      NEW.P=<SRC.P>
+      NEW.ATTACK <SRC>
+      NEW.f_NPCRemovalTimer 1200
+      SRC.NEWNPC c_pixie
+      NEW.FLAGS |= (statf_war|statf_conjured)
+      NEW.P=<SRC.P>
+      NEW.ATTACK <SRC>
+      NEW.f_NPCRemovalTimer 1200
+      SRC.NEWNPC c_pixie
+      NEW.FLAGS |= (statf_war|statf_conjured)
+      NEW.P=<SRC.P>
+      NEW.ATTACK <SRC>
+      NEW.f_NPCRemovalTimer 1200
+      SRC.NEWNPC c_pixie
+      NEW.FLAGS |= (statf_war|statf_conjured)
+      NEW.P=<SRC.P>
+      NEW.ATTACK <SRC>
+      NEW.f_NPCRemovalTimer 1200
+      SRC.UPDATE
+   ENDIF
+
+[CHARDEF 0b0]
+DEFNAME=c_champ_silvani
+NAME=Silvani
+ICON=i_pet_pixie
+SOUND=snd_monster_pixie
+CAN=MT_WALK|MT_FLY|MT_USEHANDS|MT_EQUIP
+DAM=67,109
+RANGE=2
+ARMOR=45
+DESIRES=r_forests,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=60 t_food,t_drink
+RESOURCES=1 i_ribs_raw
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=128.1
+TAG.DamCold=25
+TAG.IsChampion=1
+//TAG.Luck.Loot=FIXME
+TAG.Slayer=SLAYER_FEY
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Pixie (Silvani)
+ON=@Create
+   NPC=brain_monster
+   FAME=20000
+   KARMA=20000
+   STR={253 400}
+   MAXHITS={595 605}
+   DEX={157 250}
+   MAXSTAM={650 850}
+   INT={203 300}
+   MAXMANA={600 800}
+   ANATOMY={75.0 100.0}
+   EVALUATINGINTEL={95.0 105.0}
+   MAGERY={97.0 107.0}
+   MAGICRESISTANCE={100.0 150.0}
+   MEDITATION={95.0 105.0}
+   PARRYING={97.0 100.0}
+   TACTICS={97.0 100.0}
+   WRESTLING={97.0 100.0}
+   MODAR={0 10}
+   RESCOLD={30 40}
+   RESENERGY={40 50}
+   RESFIRE={30 40}
+   RESPOISON={40 50}
+ON=@NpcRestock
+   ITEM=loot_champ_silvani
+   //2000 - 3000 Gold. Jewelry, Magic Items
+   //Special: Level 5 Treasure Map
+ON=@GetHit
+   IF (RAND(19)==1)
+      SRC.NEWNPC c_pixie
+      NEW.FLAGS |= (statf_war|statf_conjured)
+      NEW.P=<SRC.P>
+      NEW.ATTACK <SRC>
+      NEW.f_NPCRemovalTimer 1200
+      SRC.NEWNPC c_pixie
+      NEW.FLAGS |= (statf_war|statf_conjured)
+      NEW.P=<SRC.P>
+      NEW.ATTACK <SRC>
+      NEW.f_NPCRemovalTimer 1200
+      SRC.NEWNPC c_pixie
+      NEW.FLAGS |= (statf_war|statf_conjured)
+      NEW.P=<SRC.P>
+      NEW.ATTACK <SRC>
+      NEW.f_NPCRemovalTimer 1200
+      SRC.NEWNPC c_pixie
+      NEW.FLAGS |= (statf_war|statf_conjured)
+      NEW.P=<SRC.P>
+      NEW.ATTACK <SRC>
+      NEW.f_NPCRemovalTimer 1200
+      SRC.UPDATE
+   ENDIF
+
+[CHARDEF 0100]
+// Chief Paroxysmus is the peerless boss of the Palace of Paroxysmus.
+//FIXME: No Stratics data yet
+//FIXME: Eats Pets to quickly regain health
+//FIXME: Poison Aura (lethal)
+DEFNAME=c_chief_paroxysmus
+NAME=Chief Paroxysmus
+ICON=i_pet_paroxysmus
+SOUND=snd_monster_paroxysmus
+CAN=MT_WALK|MT_USEHANDS|MT_EQUIP
+DAM=15,18
+ARMOR=80
+DESIRES=r_dungeon_paroxysmus,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=100 t_meat_raw
+RESOURCES=25 i_ribs_raw
+BLOODCOLOR=colors_blood
+MOVERATE=300
+TAG.Barding.Diff=160.0
+TAG.DamPoison=20
+TAG.HitPoison=5//Lethal
+//TAG.Luck.Loot=FIXME
+TAG.Slayer=SLAYER_DEMON
+TEVENTS=e_carnivores3
+TEVENTS=e_poisoned_spit
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Chief Paroxysmus
+RESLEVEL=5
+RESDISPDNID=c_man
+RESDISPDNHUE=33
+ON=@Create
+   NPC=brain_monster
+   FAME=24000
+   KARMA=-24000
+   STR={1000 1200}
+   MAXHITS={90000 100000}
+   DEX={80 100}
+   MAXSTAM={200 300}
+   INT={80 100}
+   MAXMANA={80 100}
+   ANATOMY={115.0 125.0}
+   ARCHERY={115.0 125.0}
+   FENCING={115.0 125.0}
+   MACEFIGHTING={115.0 125.0}
+   MAGICRESISTANCE={115.0 125.0}
+   PARRYING={115.0 125.0}
+   //POISONING={115.0 125.0}
+   SWORDSMANSHIP={115.0 125.0}
+   TACTICS={115.0 125.0}
+   WRESTLING={115.0 125.0}
+   MODAR={0 10}
+   RESCOLD={50 60}
+   RESENERGY={50 60}
+   RESFIRE={45 65}
+   RESPOISON={60 70}
+ON=@NpcRestock
+   ITEM=loot_paroxysmus
+ON=@Hit
+   LOCAL.Counter=RAND(20)
+   //Critical hit
+   IF ( (<MANA> >= 10) && (RAND(5)==0) )
+      EMOTE critical hit <SRC.NAME>
+      SRC.DAMAGE <R25,35> <DEF.dam_physical>
+      MANA -= 10
+   ENDIF
+   //Cursed blow
+   IF ( (<MANA> >= 10) && (RAND(5)==0) && !(<SRC.f_IsCursed>) )
+      SRC.SPELLEFFECT s_curse,100.0,1,<UID>
+      SRC.EFFECT 3,i_fx_curse,1,16,0,044
+      SRC.SOUND snd_spell_curse
+      MANA -= 10
+   ENDIF
+ON=@GetHit
+   //Teleport ranged attackers closer
+   IF ( (<DISTANCE> > 2) && (RAND(5)==0) )
+      SRC.GO <P>
+   ENDIF
+
+[CHARDEF 0101]
+//Dread Horn is the peerless boss of the Twisted Weald.
+DEFNAME=c_dread_horn
+NAME=Dread Horn
+ICON=i_pet_dread_horn
+SOUND=snd_monster_yamandon
+CAN=MT_WALK|MT_RUN|MT_NONHUM
+DAM=21,28
+ARMOR=40
+DESIRES=r_dungeon_twisted_weald,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=45 t_meat_raw
+RESOURCES=15 i_ribs_raw
+BLOODCOLOR=colors_blood
+MOVERATE=200
+TAG.Barding.Diff=160.0
+TAG.DamPoison=60
+TAG.HitPoison=5//Lethal
+//TAG.Luck.Loot=FIXME
+TAG.Slayer=SLAYER_FEY
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Dread Horn
+RESLEVEL=5
+RESDISPDNID=c_man
+RESDISPDNHUE=33
+ON=@Create
+   NPC=brain_monster
+   FAME=24000
+   KARMA=-24000
+   STR={800 1000}
+   MAXHITS={45000 55000}
+   DEX={500 700}
+   MAXSTAM={500 700}
+   INT={1200 1300}
+   MAXMANA={1200 1300}
+   ANATOMY={25.0 55.0}
+   EVALUATINGINTEL={110.0 120.0}
+   MAGERY={110.0 120.0}
+   MAGICRESISTANCE={110.0 120.0}
+   MEDITATION={110.0 120.0}
+   //POISONING={110.0 120.0}
+   TACTICS={90.0 100.0}
+   WRESTLING={90.0 100.0}
+   MODAR={0 15}
+   RESCOLD={50 65}
+   RESENERGY={60 75}
+   RESFIRE={50 65}
+   RESPOISON={65 75}
+ON=@NpcRestock
+   ITEM=loot_dread_horn
+   //8000 - 10000 Gold. magic items
+   //Special: Peerless artifacts, various special decor items, rare resources
+ON=@Hit
+   LOCAL.Counter=RAND(20)
+   //Critical Hit Attack vs pets
+   IF (<SRC.FLAGS>&statf_pet) || (RAND(10)==1)
+      SRC.DAMAGE <R50,100> <DEF.dam_physical> <UID>
+      EMOTE critical hit <SRC.NAME>
+   ENDIF
+   //Stat Reduction Attack
+   IF (RAND(10)==1)
+      SRC.SPELLEFFECT s_curse,<MAGERY>,1,<UID>
+   ENDIF
+ON=@GetHit
+   //Teleport ranged attackers closer
+   IF (<DISTANCE> > 2)
+      SRC.GO <P>
+   ENDIF
+
+[CHARDEF 0102]
+//Lady Melisande is the peerless boss of the Blighted Grove
+//FIXME: No Stratics data
+//FIXME: Wither and Nausea attacks
+//FIXME: Summoning (revenant)
+DEFNAME=c_lady_melisande
+NAME=Lady Melisande
+ICON=i_pet_lady_melisande
+SOUND=snd_monster_demon1
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP|MT_FEMALE
+DAM=11,18
+RANGE=2
+ARMOR=70
+DESIRES=r_dungeon_blighted_grove,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=45 t_meat_raw
+RESOURCES=5 i_ribs_raw
+BLOODCOLOR=colors_blood
+MOVERATE=130
+TAG.Barding.Diff=160.0
+TAG.DamEnergy=50
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Lady Melisande
+RESLEVEL=5
+RESDISPDNID=c_man
+RESDISPDNHUE=33
+ON=@Create
+   NPC=brain_monster
+   FAME=24000
+   KARMA=-24000
+   STR={450 475}
+   MAXHITS={90000 110000}
+   DEX={150 200}
+   MAXSTAM={350 400}
+   INT={1200 1500}
+   MAXMANA={1200 1500}
+   ANATOMY={15.0 35.0}
+   ARCHERY={95.0 105.0}
+   EVALUATINGINTEL={115.0 125.0}
+   FENCING={95.0 105.0}
+   MACEFIGHTING={95.0 105.0}
+   MAGERY={115.0 125.0}
+   MAGICRESISTANCE={115.0 125.0}
+   MEDITATION={115.0 125.0}
+   NECROMANCY={115.0 125.0}
+   PARRYING={95.0 105.0}
+   SWORDSMANSHIP={95.0 105.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={95.0 105.0}
+   MODAR={0 5}
+   RESCOLD={50 70}
+   RESENERGY={50 70}
+   RESFIRE={50 70}
+   RESPOISON={50 70}
+ON=@NpcRestock
+   ITEM=loot_lady_melisande
+ON=@GetHit
+   //Putrid Nausea Aura Attack
+   IF (RAND(3)==0)
+      REF11=<UID>
+      FORCHARS 3
+         IF (<ISPLAYER>) || (<FLAGS>&statf_pet)
+            ACTION=-1//FIXME: Temporary solution, should slow down swing speed and casting time instead
+            SYSMESSAGELOC color_text,1072068//"Your enemies putrid prescence envelops you..."
+         ENDIF
+      END
+   ENDIF
+
+[CHARDEF 0103]
+//The Monstrous Interred Grizzle is the peerless boss of Bedlam.
+//FIXME: Spits goo that slows opponents and reduces their casting ability.
+//FIXME: They leave a path of blood and other acid pools as they walk.
+DEFNAME=c_monstrous_interred_grizzle
+NAME=Monstrous Interred Grizzle
+ICON=i_pet_monsterous_interred
+SOUND=snd_monster_intgrizzle1
+CAN=MT_WALK|MT_USEHANDS|MT_EQUIP
+DAM=16,19
+ARMOR=45
+DESIRES=r_dungeon_bedlam,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=55 t_meat_raw
+RESOURCES=11 i_ribs_raw,8 i_reag_bone
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.CorrosiveBlood=25
+TAG.DamEnergy=20
+TAG.DamFire=20
+//TAG.Luck.Loot=FIXME
+TAG.Slayer=SLAYER_BOVINE
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+RESLEVEL=5
+RESDISPDNID=c_man
+RESDISPDNHUE=33
+DESCRIPTION=Monstrous Interred Grizzle
+ON=@Create
+   NPC=brain_monster
+   FAME=24000
+   KARMA=-24000
+   STR={1100 1350}
+   MAXHITS={45000 55000}
+   DEX={80 160}
+   MAXSTAM={80 160}
+   INT={500 750}
+   MAXMANA={500 750}
+   ANATOMY={110.0 115.0}
+   ARCHERY={110.0 115.0}
+   EVALUATINGINTEL={95.0 105.0}
+   FENCING={110.0 115.0}
+   HIDING={110.0 120.0}
+   MACEFIGHTING={110.0 115.0}
+   MAGERY={95.0 105.0}
+   MAGICRESISTANCE={115.0 125.0}
+   MEDITATION={95.0 105.0}
+   PARRYING={110.0 115.0}
+   STEALTH={110.0 120.0}
+   SWORDSMANSHIP={110.0 115.0}
+   TACTICS={110.0 115.0}
+   WRESTLING={110.0 115.0}
+   MODAR={0 10}
+   RESCOLD={55 65}
+   RESENERGY={65 75}
+   RESFIRE={55 65}
+   RESPOISON={30 35}
+ON=@NpcRestock
+   ITEM=loot_dragon
+
+[CHARDEF 0105]
+//The Shimmering Effusion is the peerless boss of the Prism of Light.
+//FIXME: No Stratics data
+//FIXME: Bleeds crystal shards instead of blood
+DEFNAME=c_shimmering_effusion
+NAME=shimmering effusion
+ICON=i_pet_shimmering_effusion
+SOUND=snd_monster_shimmering1
+CAN=MT_WALK|MT_FLY|MT_NONHUM
+DAM=55,75
+RANGE=2
+ARMOR=75
+DESIRES=r_dungeon_prism_of_light,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+//FOODTYPE=
+RESOURCES=1 i_crystals_broken
+BLOODCOLOR=-1
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamCold=20
+TAG.DamEnergy=20
+TAG.DamFire=20
+TAG.DamPoison=20
+//TAG.Luck.Loot=FIXME
+TAG.Slayer=SLAYER_FEY
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Shimmering Effusion
+ON=@Create
+   NPC=brain_dragon
+   FAME=22000
+   KARMA=-22000
+   STR={1000 1200}
+   MAXHITS={20000 30000}
+   DEX={150 200}
+   MAXSTAM={150 200}
+   INT={1200 1300}
+   MAXMANA={1200 1300}
+   EVALUATINGINTEL={145.0 155.0}
+   MAGERY={145.0 155.0}
+   MAGICRESISTANCE={145.0 155.0}
+   MEDITATION={145.0 155.0}
+   MODAR={0 5}
+   RESCOLD={60 70}
+   RESENERGY={70 80}
+   RESFIRE={60 70}
+   RESPOISON={70 80}
+ON=@NpcRestock
+   ITEM=loot_shimmering_effusion
+ON=@GetHit
+   //Spawn Creatures Attack
+   IF (RAND(10)==0)
+      DORAND 4
+         SRC.NEWNPC c_fetid_essence
+         SRC.NEWNPC c_corporeal_blume
+         SRC.NEWNPC c_wisp_crystal
+         SRC.NEWNPC c_mantra_effervescent
+      ENDDO
+      NEW.FLAGS |= (statf_war|statf_conjured)
+      NEW.P=<SRC.P>
+      NEW.f_NPCRemovalTimer 1200
+      SRC.NEWITEM=random_crystal_broken
+      NEW.ATTR=attr_decay|attr_move_never
+      NEW.TIMER=<R600,900>
+      NEW.P=<SRC.P>
+      SRC.UPDATE
+   ENDIF
+   //Energy Aura Attack
+   IF (RAND(3)==0)
+      REF11=<UID>
+      FORCHARS 3
+         IF (<ISPLAYER>) || (<FLAGS>&statf_pet)
+            LOCAL.DAM=<R10,20>
+            DAMAGE <LOCAL.DAM> <DEF.dam_energy> <REF11>
+            SYSMESSAGE @color_text,,1 Intense energy radiating from the creature damages you
+         ENDIF
+      END
+   ENDIF
+
+[CHARDEF c_meraktus]
+//Champion of the Labyrinth
+//FIXME: Incomplete Stratics data
+//FIXME: "ground stomp" attack which deals area effect damage dependent on how close you are (also causes dismount)
+ID=c_tormented_minotaur
+NAME=Meraktus the Tormented
+SOUND=snd_monster_minotaur1
+ICON=i_pet_tormented_minotaur
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP|MT_FEMALE
+DAM=16,30
+ARMOR=65
+DESIRES=r_dungeon_labyrinth,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=35 t_meat_raw
+RESOURCES=3 i_ribs_raw,10 i_hide
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+//TAG.Luck.Loot=FIXME
+TAG.Slayer=SLAYER_BOVINE
+TEVENTS=e_carnivores2
+TEVENTS=e_minotaurs
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Meraktus
+RESLEVEL=5
+RESDISPDNID=c_man
+RESDISPDNHUE=33
+ON=@Create
+   NAME=Meraktus the Tormented
+   TITLE=tormented minotaur
+   NPC=brain_monster
+   FAME=14000
+   KARMA=-14000
+   STR={1400 1550}
+   MAXHITS={4000 4200}
+   DEX={300 420}
+   MAXSTAM={300 420}
+   INT={125 145}
+   MAXMANA={125 145}
+   ANATOMY={50.0 60.0}
+   ARCHERY={50.0 60.0}
+   DETECTINGHIDDEN={90.0 100.0}
+   FENCING={100.0 110.0}
+   MACEFIGHTING={100.0 110.0}
+   MAGICRESISTANCE={110.0 115.0}
+   PARRYING={100.0 110.0}
+   SWORDSMANSHIP={100.0 110.0}
+   TACTICS={100.0 110.0}
+   WRESTLING={100.0 110.0}
+   MODAR={0 20}
+   RESCOLD={45 55}
+   RESENERGY={50 60}
+   RESFIRE={70 80}
+   RESPOISON={50 60}
+ON=@NpcRestock
+   ITEM=loot_tormented_minotaur
+
+[CHARDEF 0132]
+//"The Impaler is the third of the five champions you have to defeat in
+//the Doom Gauntlet to summon the arch champion known as the Dark Father."
+//FIXME: Cannot be first target of a provoke attempt.
+//FIXME: Cannot be area peaced.
+DEFNAME=c_impaler
+NAME=Impaler
+ICON=i_pet_impaler
+SOUND=snd_monster_yamandon
+CAN=MT_WALK|MT_RUN
+DAM=72,79
+RANGE=2
+ARMOR=90
+DESIRES=r_dungeon_doom,t_coin,t_gold,t_gem
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=45 t_meat_raw
+RESOURCES=1 i_ribs_raw
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.HitPoison=4//Deadly
+TAG.IAMACHAMPION=1
+//TAG.Luck.Loot=FIXME
+//TAG.OVERRIDE.REGEN_0=4
+//TAG.OVERRIDE.REGEN_1=4
+//TAG.OVERRIDE.REGEN_2=4
+TAG.Slayer=SLAYER_DEMON
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Impaler
+ON=@Create
+   DORAND 20
+      NAME=Cassiel
+      NAME=Crarigor
+      NAME=Empalk
+      NAME=Flandrith
+      NAME=Gathfe
+      NAME=Ix
+      NAME=Magor
+      NAME=Manglar
+      NAME=Perfus
+      NAME=Po-Kor
+      NAME=Scrill
+      NAME=Selminus
+      NAME=Skred
+      NAME=Slix
+      NAME=Stavinfeks
+      NAME=Steelbane
+      NAME=Verolyn
+      NAME=Victux
+      NAME=Vladeer
+      NAME=Xtul
+   ENDDO
+   TITLE=the Impaler
+   NPC=brain_monster
+   FAME=24000
+   KARMA=-24000
+   STR={185 195}
+   MAXHITS={4995 5005}
+   DEX={40 55}
+   MAXSTAM={140 180}
+   INT={185 195}
+   MAXMANA={185 195}
+   MAGICRESISTANCE={95.0 105.0}
+   //POISONING={155.0 165.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={75.0 85.0}
+   MODAR={0 5}
+   RESCOLD={70 80}
+   RESENERGY=100
+   RESFIRE={55 65}
+   RESPOISON={55 65}
+ON=@NpcRestock
+   ITEM=loot_impaler
+   //1600 - 2000 Gold. Magic Items
+ON=@Hit
+   //Bleed Attack
+   IF (<MANA> >= 25) && !(<SRC.FINDID.i_bleed_timer>)
+      MANA -= 25
+      SRC.NEWITEM i_bleed_timer
+      NEW.LINK=<UID>
+      SRC.EQUIP <NEW>
+   ENDIF
+   //Mortal Strike Attack
+   IF (<MANA> >= 30) && !(<SRC.FINDID.i_blockheal_timer>)
+      MANA -= 30
+      SRC.SOUND snd_spell_paralyze
+      SRC.NEWITEM=i_blockheal_timer
+      SRC.EQUIP <NEW>
+   ENDIF
+
+[CHARDEF 0134]
+//The Bone Daemon is the creature you have to best to gain the golden
+//skull that will give you access to the Doom Gauntlet.
+//FIXME: Cannot be first target of a provoke attempt.
+//FIXME: Cannot be area peaced.
+DEFNAME=c_bone_demon
+NAME=bone demon
+ICON=i_pet_demon_bone
+SOUND=snd_monster_skeldragon
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DAM=164,177
+RANGE=2
+ARMOR=75
+DESIRES=r_dungeon_doom,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+//FOODTYPE=
+RESOURCES=8 i_reag_bone,2 i_reag_daemon_bone
+BLOODCOLOR=-1
+MOVERATE=110
+TAG.Barding.Diff=160.0
+TAG.DamCold=50
+TAG.Slayer=SLAYER_DEMON
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Bone Demon
+ON=@Create
+   NPC=brain_monster
+   FAME=20000
+   KARMA=-20000
+   STR={995 1005}
+   MAXHITS={3500 3700}
+   DEX={151 175}
+   MAXSTAM={151 175}
+   INT={171 220}
+   MAXMANA={221 265}
+   ANATOMY={60.0 70.0}
+   ARCHERY={95.0 105.0}
+   EVALUATINGINTEL={77.0 87.0}
+   FENCING={95.0 105.0}
+   MACEFIGHTING={95.0 105.0}
+   MAGERY={77.0 88.0}
+   MAGICRESISTANCE={50.0 75.0}
+   MEDITATION={95.0 105.0}
+   PARRYING={95.0 105.0}
+   SWORDSMANSHIP={95.0 105.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={95.0 105.0}
+   MODAR={0 5}
+   RESCOLD={85 95}
+   RESENERGY={55 65}
+   RESFIRE={55 65}
+   RESPOISON=100
+ON=@NpcRestock
+   ITEM=loot_bone_demon
+   //4000 - 5000 Gold. Magic Items
+ON=@GetHit
+   //Spawn Creatures Attack
+   IF (RAND(10)==1)
+      DORAND 12
+         SRC.NEWNPC c_liche
+         SRC.NEWNPC c_spectre
+         SRC.NEWNPC c_liche_ancient
+         SRC.NEWNPC c_liche_lord
+         SRC.NEWNPC c_skeleton_knight
+         SRC.NEWNPC c_skeleton_mage
+         SRC.NEWNPC c_mummy
+         SRC.NEWNPC c_rotting_corpse
+         SRC.NEWNPC c_revenant_lion
+         SRC.NEWNPC c_wailing_banshee
+         SRC.NEWNPC c_grim_reaper
+         SRC.NEWNPC c_patchwork_skeleton
+      ENDDO
+      NEW.FLAGS |= (statf_war|statf_conjured)
+      NEW.P=<SRC.P>
+      NEW.HOME=<NEW.P>
+      NEW.HOMEDIST=10
+      NEW.f_NPCRemovalTimer 1200
+//      NEW.ATTACK
+   ENDIF
+
+[CHARDEF 0137]
+//"The Shadow Knight is the fourth of the five champions you have to defeat
+//in the Doom Gauntlet to summon the arch champion known as the Dark Father."
+//FIXME: Cannot be first target of a provoke attempt.
+//FIXME: Cannot be area peaced.
+DEFNAME=c_shadow_knight
+NAME=shadow knight
+ICON=i_pet_knight_shadow
+SOUND=snd_monster_ghost1
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DAM=51,73
+RANGE=2
+ARMOR=90
+DESIRES=r_dungeon_doom,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=45 t_meat_raw
+RESOURCES=1 i_reag_brimstone
+BLOODCOLOR=colors_black
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamCold=40
+TAG.IAMACHAMPION=1
+//TAG.OVERRIDE.REGEN_0=4
+//TAG.OVERRIDE.REGEN_1=4
+//TAG.OVERRIDE.REGEN_2=4
+TAG.Slayer=SLAYER_UNDEAD
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Shadow Knight
+ON=@Create
+   DORAND 20
+      NAME=Arametheus
+      NAME=Archatrix
+      NAME=Doomor
+      NAME=Erdok
+      NAME=Helzigar
+      NAME=Jonar
+      NAME=Krakus
+      NAME=Lord Kaos
+      NAME=Malashim
+      NAME=Marcus Fel
+      NAME=Marth Fador
+      NAME=Montobulus
+      NAME=Nelokhiel
+      NAME=Oghmus
+      NAME=Samael
+      NAME=Terxor
+      NAME=Tyrnak
+      NAME=Uhn
+      NAME=Usuhl
+      NAME=Zul
+   ENDDO
+   TITLE=the Shadow Knight
+   NPC=brain_monster
+   FAME=25000
+   KARMA=-25000
+   STR={245 255}
+   MAXHITS={1995 2005}
+   DEX={95 105}
+   MAXSTAM={150 185}
+   INT={95 105}
+   MAXMANA={150 185}
+   ANATOMY={85.0 95.0}
+   ARCHERY={95.0 105.0}
+   DETECTINGHIDDEN={95.0 105.0}
+   EVALUATINGINTEL={95.0 105.0}
+   FENCING={95.0 105.0}
+   HIDING={95.0 105.0}
+   MACEFIGHTING={95.0 105.0}
+   MAGERY={95.0 105.0}
+   MAGICRESISTANCE={115.0 125.0}
+   MEDITATION={95.0 105.0}
+   PARRYING={95.0 105.0}
+   STEALTH={95.0 105.0}
+   SWORDSMANSHIP={95.0 105.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={95.0 105.0}
+   MODAR={0 5}
+   RESCOLD={70 80}
+   RESENERGY={50 60}
+   RESFIRE={60 70}
+   RESPOISON={70 80}
+   ITEMNEWBIE=i_spellbook
+   ADDSPELL=s_flamestrike
+   ADDSPELL=s_teleport
+   ADDSPELL=s_greater_heal
+   ADDSPELL=s_protection
+   ADDSPELL=s_harm
+   ADDSPELL=s_poison
+   ADDSPELL=s_curse
+   ADDSPELL=s_clumsy
+   ADDSPELL=s_weaken
+   ADDSPELL=s_chain_lightning
+   ADDSPELL=s_reveal
+   ADDSPELL=s_mana_vampire
+   ADDSPELL=s_dispel
+   ADDSPELL=s_mass_dispel
+   ADDSPELL=s_energy_vortex
+   ADDSPELL=s_fire_bolt
+   ADDSPELL=s_cure
+   ADDSPELL=s_bless
+   ADDSPELL=s_explosion
+   ADDSPELL=s_archprotection
+   ADDSPELL=s_archcure
+   ADDSPELL=s_lightning
+   ADDSPELL=s_magic_reflection
+   ADDSPELL=s_paralyze
+   ADDSPELL=s_energy_bolt
+   ADDSPELL=s_fire_field
+   ADDSPELL=s_fire_bolt
+   ADDSPELL=s_summon_elem_fire
+   ADDSPELL=s_summon_undead
+   ADDSPELL=s_summon_daemon
+ON=@NpcRestock
+   ITEM=loot_shadow_knight
+   //1600 - 2000 Gold. Magic Items
+
+[CHARDEF 0138]
+//"The Abyssmal Horror is the fifth and final champion you have to face
+// in the Doom Gauntlet, before the Dark Father is summoned."
+//FIXME: Cannot be first target of a provoke attempt.
+//FIXME: Cannot be area peaced.
+DEFNAME=c_abyssmal_horror
+NAME=abyssmal horror
+ICON=i_pet_abyssmal_horror
+SOUND=snd_monster_slime1
+CAN=MT_WALK|MT_RUN|MT_NONHUM
+DAM=39,49
+RANGE=2
+ARMOR=30
+DESIRES=r_dungeon_doom,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=65 t_meat_raw
+RESOURCES=4 i_reag_eye_of_newt
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamPoison=50
+TAG.IAMACHAMPION=1
+//TAG.OVERRIDE.REGEN_0=4
+//TAG.OVERRIDE.REGEN_1=4
+//TAG.OVERRIDE.REGEN_2=4
+TAG.Slayer=SLAYER_DEMON
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Abyssmal Horror
+RESLEVEL=3
+RESDISPDNID=c_sea_serpent
+RESDISPDNHUE=55
+ON=@Create
+   NPC=brain_monster
+   FAME=26000
+   KARMA=-26000
+   STR={401 421}
+   MAXHITS={5995 6005}
+   DEX={81 90}
+   MAXSTAM={122 145}
+   INT={401 421}
+   MAXMANA={401 421}
+   ANATOMY={85.0 95.0}
+   EVALUATINGINTEL={195.0 205.0}
+   MAGERY={110.0 120.0}
+   MAGICRESISTANCE={115.0 120.0}
+   MEDITATION={195.0 205.0}
+   //POISONING={81.0 96.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={84.0 88.0}
+   MODAR={0 5}
+   RESCOLD={50 55}
+   RESENERGY={75 80}
+   RESFIRE=100
+   RESPOISON={60 65}
+ON=@NpcRestock
+   ITEM=loot_abyssmal_horror
+   //1600 - 2000 Gold. Magic Items
+ON=@Hit
+   //Mortal Strike Attack
+   IF (<MANA> >= 30) && !(<SRC.FINDID.i_blockheal_timer>)
+      MANA -= 30
+      SRC.SOUND snd_spell_paralyze
+      SRC.NEWITEM=i_blockheal_timer
+      SRC.EQUIP <NEW>
+   ENDIF
+   //Whirlwind Attack
+   IF (<MANA> >= 15)
+      MANA -= 15
+      REF11=<UID>
+      FORCHARS 2
+         FORCHARMEMORYTYPE MEMORY_FIGHT
+            IF (<LINK>==<REF11>) && !(<SRC>==<CONT.UID>) && (<CONT.ISPLAYER>)
+               CONT.DAMAGE <ARGN1>/2 <ARGN2> <REF11>
+            ENDIF
+         ENDFOR
+      ENDFOR
+   ENDIF
+
+[CHARDEF 0139]
+//"The Darknight Creeper is the first of the five champions you have to
+// defeat in the Doom Gauntlet to summon the arch champion known as the
+// Dark Father."
+//FIXME: Cannot be first target of a provoke attempt.
+//FIXME: Cannot be area peaced.
+DEFNAME=c_darknight_creeper
+NAME=darknight creeper
+ICON=i_pet_darknight_creeper
+SOUND=snd_monster_demon1
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DAM=59,69
+RANGE=2
+ARMOR=60
+DESIRES=r_dungeon_doom,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=55 t_meat_raw
+RESOURCES=2 i_ribs_raw,4 i_reag_blood_moss
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamPoison=15
+TAG.HitPoison=5//Lethal
+TAG.IAMACHAMPION=1
+//TAG.OVERRIDE.REGEN_0=4
+//TAG.OVERRIDE.REGEN_1=4
+//TAG.OVERRIDE.REGEN_2=4
+TAG.Slayer=SLAYER_UNDEAD
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Darknight Creeper
+ON=@Create
+   DORAND 20
+      NAME=Blassarrabb
+      NAME=Centibis
+      NAME=Crenabil
+      NAME=Farthak
+      NAME=Flaggroth
+      NAME=Gragok
+      NAME=Gragragron
+      NAME=Grothelfiend
+      NAME=Krullus
+      NAME=Krygar
+      NAME=Laitesach
+      NAME=Legron
+      NAME=Lorbna
+      NAME=Noirkrach
+      NAME=Pariah
+      NAME=Thranger
+      NAME=Vendodroth
+      NAME=Vilithrar
+      NAME=Ydoc Llessue
+      NAME=Zhaan
+   ENDDO
+   TITLE=the darknight creeper
+   NPC=brain_monster
+   FAME=22000
+   KARMA=-22000
+   STR={301 330}
+   MAXHITS={3995 4005}
+   DEX={101 110}
+   MAXSTAM={101 110}
+   INT={301 330}
+   MAXMANA={301 330}
+   ANATOMY={65.0 75.0}
+   ARCHERY={90.0 91.0}
+   EVALUATINGINTEL={118.0 120.0}
+   FENCING={90.0 91.0}
+   MACEFIGHTING={90.0 91.0}
+   MAGERY={112.0 120.0}
+   MAGICRESISTANCE={90.0 91.0}
+   MEDITATION={145.0 150.0}
+   NECROMANCY={95.0 105.0}
+   PARRYING={95.0 105.0}
+   //POISONING={85.0 95.0}
+   SWORDSMANSHIP={90.0 91.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={90.0 91.0}
+   MODAR={0 5}
+   RESCOLD=100
+   RESENERGY={70 80}
+   RESFIRE={55 65}
+   RESPOISON={80 95}
+ON=@NpcRestock
+   ITEM=loot_darknight_creeper
+   //1600 - 2000 Gold. Magic Items
+ON=@Hit
+   //Bleed Attack
+   IF (<MANA> >= 25) && !(<SRC.FINDID.i_bleed_timer>)
+      MANA -= 25
+      SRC.NEWITEM i_bleed_timer
+      NEW.LINK=<UID>
+      SRC.EQUIP <NEW>
+   ENDIF
+
+[CHARDEF 013b]
+//"The Flesh Renderer is the second of the five champions you have to
+// defeat in the Doom Gauntlet to summon the arch champion known as the
+// Dark Father."
+//FIXME: Cannot be first target of a provoke attempt.
+//FIXME: Cannot be area peaced.
+DEFNAME=c_flesh_renderer
+NAME=flesh renderer
+ICON=i_pet_flesh_renderer
+SOUND=snd_monster_insect5
+CAN=MT_WALK|MT_RUN|MT_NONHUM
+DAM=48,61
+ARMOR=80
+DESIRES=r_dungeon_doom,t_coin,t_gold,t_gem
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=65 t_meat_raw
+RESOURCES=6 i_reag_obsidian
+BLOODCOLOR=colors_black
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamPoison=20
+TAG.IAMACHAMPION=1
+//TAG.OVERRIDE.REGEN_0=4
+//TAG.OVERRIDE.REGEN_1=4
+//TAG.OVERRIDE.REGEN_2=4
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Flesh Renderer
+ON=@Create
+   NPC=brain_monster
+   FAME=23000
+   KARMA=-23000
+   STR={401 460}
+   MAXHITS={4495 4505}
+   DEX={201 210}
+   MAXSTAM={201 210}
+   INT={221 260}
+   MAXMANA={221 260}
+   MAGICRESISTANCE={155.0 160.0}
+   //POISONING={95.0 105.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={90.0 100.0}
+   MODAR={0 10}
+   RESCOLD={50 60}
+   RESENERGY={70 80}
+   RESFIRE={50 60}
+   RESPOISON=100
+ON=@NpcRestock
+   ITEM=loot_flesh_renderer
+   //1600 - 2000 Gold. Magic Items
+ON=@Hit
+   //Dismount Attack
+   IF (<MANA> >= 20) && (<SRC.FLAGS> & statf_onhorse)
+      MANA -= 20
+      SRC.DISMOUNT
+      SRC.EMOTE knocked off mount!
+      SRC.DAMAGE <R15,25> <DEF.dam_physical> <UID>
+   ENDIF
+   //Paralyze Attack
+   IF !(<SRC.FLAGS>&statf_freeze)&&(RAND(100)==1)
+      SRC.SPELLEFFECT s_paralyze,100.0,1,<UID>
+      SRC.EFFECT 3,i_fx_field_paralyze,1,16,0,02
+      SRC.SOUND snd_spell_paralyze
+   ENDIF
+
+[CHARDEF 013e]
+//The Dark Father is a powerful Daemon Knight and is the arch champion
+//of the Doom Gauntlet.
+//FIXME: Increased Speed when hit by ranged attacks
+//FIXME: Cannot be first target of a provoke attempt.
+//FIXME: Cannot be area peaced.
+DEFNAME=c_dark_father
+NAME=demon knight
+ICON=i_pet_demon_knight
+SOUND=snd_monster_demon1
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DAM=56,67
+RANGE=2
+ARMOR=60
+DESIRES=r_dungeon_doom,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=55 t_meat_raw
+RESOURCES=6 i_reag_blood_vial
+BLOODCOLOR=colors_black
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamCold=20
+TAG.DamEnergy=20
+TAG.DamFire=20
+TAG.DamPoison=20
+TAG.IAMACHAMPION=1
+//TAG.OVERRIDE.REGEN_0=5
+//TAG.OVERRIDE.REGEN_1=5
+//TAG.OVERRIDE.REGEN_2=5
+//TAG.OVERRIDE.REGENVAL_0=8
+//TAG.OVERRIDE.REGENVAL_1=8
+//TAG.OVERRIDE.REGENVAL_2=8
+//TAG.Luck.Loot=FIXME
+TAG.Slayer=SLAYER_DEMON
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Dark Father
+ON=@Create
+   DORAND 19
+      NAME=Ankou
+      NAME=Arhaios Ophis
+      NAME=Armarus
+      NAME=Arsat
+      NAME=Azazel
+      NAME=Ga'ahp
+      NAME=Grigorus
+      NAME=Hrallath
+      NAME=Heksen
+      NAME=Karnax
+      NAME=Keelus
+      NAME=Kra'an
+      NAME=Peinsluth
+      NAME=Peirazo
+      NAME=Ponerus
+      NAME=Taet Nu'uhn
+      NAME=Therion
+      NAME=Turi'el
+      NAME=Vairocan
+   ENDDO
+   TITLE=the Dark Father
+   NPC=brain_monster
+   FAME=28000
+   KARMA=-28000
+   STR={495 505}
+   MAXHITS={29995 30005}
+   DEX={95 105}
+   MAXSTAM={95 105}
+   INT={995 1005}
+   MAXMANA={2995 3005}
+   ANATOMY={95.0 105.0}
+   ARCHERY={115.0 125.0}
+   EVALUATINGINTEL={95.0 105.0}
+   FENCING={115.0 125.0}
+   MACEFIGHTING={115.0 125.0}
+   MAGERY={95.0 105.0}
+   MAGICRESISTANCE={145.0 155.0}
+   MEDITATION={115.0 125.0}
+   PARRYING={95.0 105.0}
+   //POISONING={105.0 110.0}
+   SWORDSMANSHIP={115.0 125.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={115.0 125.0}
+   MODAR={0 10}
+   RESCOLD={25 35}
+   RESENERGY={25 35}
+   RESFIRE={25 35}
+   RESPOISON={25 35}
+ON=@NpcRestock
+   ITEM=loot_dark_father
+   //2200 - 3000 Gold. 20-40 High Level Scrolls, Magic Items
+ON=@Hit
+   DORAND 5
+   BEGIN
+      //Dismount Attack
+      IF (<MANA> >= 20) && (<SRC.FLAGS> & statf_onhorse)
+         MANA -= 20
+         SRC.DISMOUNT
+         SRC.EMOTE knocked off mount!
+         SRC.DAMAGE <R15,25> <DEF.dam_physical> <UID>
+      ENDIF
+   END
+   BEGIN
+      //Paralyze Attack
+      IF (<MANA> >= 20) && !(<SRC.FLAGS>&statf_freeze)
+         MANA -= 20
+         SRC.SPELLEFFECT s_paralyze,100.0,1,<UID>
+         SRC.EFFECT 3,i_fx_field_paralyze,1,16,0,02
+         SRC.SOUND snd_spell_paralyze
+      ENDIF
+   END
+   BEGIN
+      //Double Strike
+      IF (<MANA> >= 20)
+         MANA -= 20
+         ARGN1 = 1
+      ENDIF
+   END
+   BEGIN
+      //Whirlwind Attack
+      IF (<MANA> >= 15)
+         MANA -= 15
+         REF11=<UID>
+         FORCHARS 2
+            FORCHARMEMORYTYPE MEMORY_FIGHT
+               IF (<LINK>==<REF11>) && !(<SRC>==<CONT.UID>) && (<CONT.ISPLAYER>)
+                  CONT.DAMAGE <ARGN1>/2 <ARGN2> <REF11>
+               ENDIF
+            ENDFOR
+         ENDFOR
+      ENDIF
+   END
+   BEGIN
+      //Crushing Blow Attack
+      IF (<MANA> >= 25)
+         MANA -= 25
+         ARGN1 = <ARGN1> + <ARGN1> / 2  //adds 50% damage
+         ARGN2 = <DEF.dam_physical>
+      ENDIF
+   END
+ON=@GetHit
+   //Thrown Weapon Attack (unholy bones)
+   IF (<DISTANCE> > 2) && (RAND(5)==0)
+      SRC.TARG.EFFECT 0,i_bone_unholy,2,1
+      IF (RAND(5)==0)
+         SRC.DAMAGE <R15,25> <DEF.dam_physical> <UID>
+      ENDIF
+   ENDIF
+   //Spawn Creatures Attack
+   IF (RAND(20)==1)
+      SFX {1005 1010}
+      SAY From my blood let a hellspawn arise!
+      DORAND 12
+         SRC.NEWNPC c_demon_summoned
+         SRC.NEWNPC c_demon
+         SRC.NEWNPC c_demon_balron
+         SRC.NEWNPC c_demon_ice
+         SRC.NEWNPC c_succubus
+         SRC.NEWNPC c_devourer_souls
+         SRC.NEWNPC c_demon_bone
+         SRC.NEWNPC c_ravager
+         SRC.NEWNPC c_demon_arcane
+         SRC.NEWNPC c_demon_moloch
+         SRC.NEWNPC c_demon_chaos
+         SRC.NEWNPC c_multicolored_horde_minion
+      ENDDO
+      NEW.FLAGS |= (statf_war|statf_conjured)
+      NEW.P=<SRC.P>
+      NEW.HOME=<NEW.P>
+      NEW.HOMEDIST=10
+      NEW.f_NPCRemovalTimer 1200
+//      NEW.ATTACK
+   ENDIF
+ON=@Death
+   LOCAL.NEW=<NEW>
+   IF (<ATTACKER>)
+      FOR y 0 <EVAL <ATTACKER>-1>
+         IF (<ATTACKER.<dLOCAL.Y>>)
+            IF (<ATTACKER.<dLOCAL.Y>.DAM> >= <EVAL (<MAXHITS>/17)>)
+               REF402=<ATTACKER.<dLOCAL.Y>>
+               IF (<REF402.FLAGS>&STATF_PET)
+                  REF402=<REF402.MEMORYFINDTYPE.memory_ipet.LINK>
+               ENDIF
+               SERV.B @66 <REF402.NAME> killed the Dark Father in Doom! Congratulations!
+               REF402.NEWGOLD 5000
+               IF (<R<REF402.LUCK>> > <R550>)
+                  SERV.NEWITEM <HVAL <DEF.DOOMGAUNTLET_ARTIFACTS>>
+                  REF402.BOUNCE <NEW>
+                  REF402.sysmessage @,,2 1062317
+               ENDIF
+            ENDIF
+         ENDIF
+      ENDFOR
+   ENDIF
+   VAR0.DARKFATHER -= 1
+   IF (<VAR0.DARKFATHER> <= 0)
+      VAR.DARKFATHER=
+      F_RESETDOOMGAUNTLET
+   ENDIF
+   NEW=<LOCAL.NEW>
+
+[CHARDEF 02c9]
+//FIXME: No Stratics data
+//"Champion of the Abyssal Infernal Spawn deep in a cavern in the Abyss.
+// Also accessible through Hythloth where an entrance has appeared in a
+// small storage room on level 3.  Special attacks:
+// * Mark of One: Greatly reduces the targets HP
+// * Meteors: Calls down the fury of burning meteors to devastate the
+//   battlefield in a raw display of power
+// * Condemnation: Condemns players to the Pit by teleporting them to one
+//   of the 5 lava pits around in lair, temporarily stunning them and
+//   doing continuous damage
+// * Fiendish Calling: Summons weak versions of Elementals or fire steeds
+//   in small groups (5% chance)"
+DEFNAME=c_abyssal_infernal
+NAME=Abyssal Infernal
+ICON=i_pet_abyssal_infernal
+SOUND=snd_abyssal_infernal
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DAM=11,18
+RANGE=2
+ARMOR=50
+DESIRES=r_dungeon_abyss,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=55 t_meat_raw
+RESOURCES=12 i_ribs_raw,12 i_reag_daemon_bone
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamCold=25
+TAG.DamEnergy=25
+TAG.DamFire=25
+TAG.DamPoison=25
+TAG.IsChampion=1
+TAG.Luck.Loot=loot_abyssal_infernal
+TAG.Override.RegenVal_1=30
+TAG.Slayer=SLAYER_DEMON
+TAG.SlayerGroup=DEMON
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Abyssal Infernal
+ON=@Create
+   NPC=brain_monster
+   FAME=20000
+   KARMA=-20000
+   STR={502 600}
+   MAXHITS={1500 1600}
+   DEX={152 200}
+   MAXSTAM={103 250}
+   INT={175 210}
+   MAXMANA={601 750}
+   EVALUATINGINTEL={95.0 100.0}
+   MAGERY={90.0 105.0}
+   MAGICRESISTANCE={120.0 140.0}
+   MEDITATION={95.0 100.0}
+   TACTICS={90.0 105.0}
+   WRESTLING={90.0 105.0}
+   MODAR={0 10}
+   RESCOLD={50 60}
+   RESENERGY={50 60}
+   RESFIRE={50 60}
+   RESPOISON={50 60}
+ON=@NPCRestock
+   ITEM=loot_abyssal_infernal
+
+[CHARDEF 02d8]
+//FIXME: Incomplete Stratics data
+//"A peerless type monster, an encounter with Medusa requires keys (in the
+// form of special eggs) to be placed on an altar to gain entrance.
+// Special abilities:
+// * Mortal strike: The weapon skill for bows
+// * Petrifying Gaze: When struck by her stare the player is temporarily
+//   turned into stone
+// * Stone Statue: The stone statue left behind by a player or their
+//   pets/summoned minions has a chance to re-animate as an evil twin
+// * Venomous Bite: In melee, her poisonous hair snakes can poison opponents
+// * Lethal Arrow: Chance of lethal poison when shot by her arrows
+// Craftable Gorgon lenses help protect players from her petrifying gaze"
+DEFNAME=c_medusa
+NAME=Medusa
+ICON=i_pet_medusa
+SOUND=snd_monster_medusa
+CAN=MT_WALK|MT_RUN|MT_FLY|MT_USEHANDS|MT_EQUIP
+DAM=21,28
+ARMOR=55
+DESIRES=r_dungeon_abyss,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent,t_artifact
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=45 t_meat_raw
+RESOURCES=1 i_ribs_raw,1 i_blood_medusa,1 i_medusa_scale
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamEnergy=20
+TAG.DamFire=20
+TAG.Slayer=SLAYER_DEMON
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Medusa
+ON=@Create
+   NPC=brain_monster
+   FAME=22000
+   KARMA=-22000
+   STR={1235 1400}
+   MAXHITS={65000 75000}
+   DEX={124 140}
+   MAXSTAM={125 140}
+   INT={530 670}
+   MAXMANA={530 670}
+   ANATOMY={110.0 120.0}
+   ARCHERY={115.0 130.0}
+   BUSHIDO={75.0 100.0}
+   EVALUATINGINTEL={100.0 115.0}
+   FENCING={90.0 100.0}
+   MACEFIGHTING={90.0 100.0}
+   MAGERY={100.0 120.0}
+   MAGICRESISTANCE={115.0 125.0}
+   MEDITATION={95.0 105.0}
+   PARRYING={90.0 100.0}
+   POISONING={95.0 105.0}
+   SWORDSMANSHIP={90.0 100.0}
+   TACTICS={110.0 135.0}
+   WRESTLING={115.0 130.0}
+   MODAR={0 10}
+   RESCOLD={55 65}
+   RESENERGY={60 75}
+   RESFIRE={55 65}
+   RESPOISON={80 90}
+ON=@NPCRestock
+   ITEM=loot_medusa
+   //6000 - 6000 Gold. magic items
+   //Special: Medusa Blood, Medusa Scales.
+ON=Item_TargOn_Char
+   SERV.LOG Did this trigger something?
+ON=@Hit
+   IF !(<R10>)//mortal strike attempt
+      //FIXME: 1112386//"Your target is not affected by the mortal strike."
+      //FIXME: 1112388//"You feel less vulnerable to mortal and bleed attacks."
+      IF !(<SRC.FINDID.i_blockheal_timer>)
+         LOCAL.ManaUsed=<EVAL 30 - ((<PARRYING> / 200) + (<BUSHIDO> / 200))>
+         IF (<MANA> >= <LOCAL.ManaUsed>)
+            MANA -= <LOCAL.ManaUsed>
+            SRC.SYSMESSAGELOC color_text,1060087//"You have been mortally wounded!"
+            SRC.SOUND snd_spell_paralyze
+            SRC.NEWITEM=i_blockheal_timer
+            SRC.EQUIP <NEW>
+         ENDIF
+      ENDIF
+   ENDIF
+   IF !(<R5>)//Poison damage from "venomous bite" or "lethal arrow":
+      IF ( (<MANA> >= 10) && !(<SRC.FLAGS>&statf_poisoned) )
+         MANA -= 10
+         SRC.SPELLEFFECT s_poison,<POISONING>,1,<UID>
+         IF (<DISTANCE> > 1)
+            SRC.SYSMESSAGELOC color_text,1112369//"You have been poisoned by Medusa's lethal arrow!"
+         ELSE
+            SRC.SYSMESSAGELOC color_text,1112368//"You have been poisoned by Medusa's snake-like hair!"
+         ENDIF
+      ENDIF
+   ENDIF
+ON=@GetHit
+   IF !(<R20>)//Petrifying Gaze
+      IF (<MANA> > 20) && !(<SRC.FLAGS>&statf_freeze)
+         IF (<SRC.TAG0.GorgonLens>)
+            //FIXME: search the equipped layers to find an item with TAG.GorgonLens
+            //1112599//"Your gorgon lens deflect Medusa's petrifying gaze!"
+            //1112600//"Your lenses crumble. You are no longer protected..."
+            //1112621//"Your lenses fail to deflect Medusa's gaze!"
+         ENDIF
+         IF (<SRC.FLAGS>&statf_pet)
+            ///1113281//"Your pet has been petrified!"
+         ENDIF
+         SRC.SYSMESSAGE color_text,1112768//"You have been turned to stone!"
+         LOCAL.StoneColor=2955//2498 and 2500 look ok too
+         MANA -= 20
+         SRC.SPELLEFFECT s_paralyze,<MAGERY>,1,<UID>
+         SRC.EFFECT 3,i_fx_field_paralyze,1,16,0,02
+         SRC.SOUND snd_spell_paralyze
+         SRC.NEWNPC <SRC.BODY>
+         REF1=<NEW>
+         REF1.NAME=<SRC.NAME> statue
+         REF1.KARMA=-5000
+         REF1.FAME=5000
+         REF1.STR=<SRC.MAXHITS>
+         REF1.HITS=<REF1.STR>
+         REF1.DEX=<SRC.MAXSTAM>
+         REF1.STAM=<REF1.DEX>
+         REF1.INT=<SRC.MAXMANA>
+         REF1.MANA=<REF1.INT>
+         REF1.COLOR=<LOCAL.StoneColor>
+         REF1.FLAGS |= (statf_war|statf_conjured)
+         // FIXME: Future enhancement:
+         // - instead of just paralyzing the statue with the line below,
+         //   stone them and let Medusa animate them when necessary:
+         //   1112767//"Medusa releases one of the petrified creatures!!"
+         REF1.SPELLEFFECT s_paralyze,<MAGERY>,1,<SRC>
+         REF1.ATTACK <SRC>
+         REF1.P=<SRC.P>
+         SRC.NEWITEM=i_summon_mem,1,<REF1>
+         NEW.LINK=<UID>
+         NEW.TIMER=6000//100 minutes should be plenty
+
+         IF (<SRC.BODY>==c_man)||(<SRC.BODY>==c_woman)||(<SRC.BODY>==c_elf_male)||(<SRC.BODY>==c_elf_female)||(<SRC.BODY>==c_gargoyle_male)||(<SRC.BODY>==c_gargoyle_female)
+            REF1.FINDLAYER(layer_hair).REMOVE
+            REF1.FINDLAYER(layer_beard).REMOVE
+            IF (<SRC.FINDLAYER(layer_hand1)> )
+               NEWITEM=<SRC.FINDLAYER(layer_hand1).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_hand2)> )
+               NEWITEM=<SRC.FINDLAYER(layer_hand2).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_shoes)> )
+               NEWITEM=<SRC.FINDLAYER(layer_shoes).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_pants)> )
+               NEWITEM=<SRC.FINDLAYER(layer_pants).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_shirt)> )
+               NEWITEM=<SRC.FINDLAYER(layer_shirt).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_helm)> )
+               NEWITEM=<SRC.FINDLAYER(layer_helm).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_gloves)> )
+               NEWITEM=<SRC.FINDLAYER(layer_gloves).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_ring)> )
+               NEWITEM=<SRC.FINDLAYER(layer_ring).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_talisman)> )
+               NEWITEM=<SRC.FINDLAYER(layer_talisman).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_collar)> )
+               NEWITEM=<SRC.FINDLAYER(layer_collar).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_hair)> )
+               NEWITEM=<SRC.FINDLAYER(layer_hair).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_half_apron)> )
+               NEWITEM=<SRC.FINDLAYER(layer_half_apron).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_chest)> )
+               NEWITEM=<SRC.FINDLAYER(layer_chest).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_wrist)> )
+               NEWITEM=<SRC.FINDLAYER(layer_wrist).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_beard)> )
+               NEWITEM=<SRC.FINDLAYER(layer_beard).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_tunic)> )
+               NEWITEM=<SRC.FINDLAYER(layer_tunic).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_arms)> )
+               NEWITEM=<SRC.FINDLAYER(layer_arms).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_cape)> )
+               NEWITEM=<SRC.FINDLAYER(layer_cape).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_robe)> )
+               NEWITEM=<SRC.FINDLAYER(layer_robe).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_skirt)> )
+               NEWITEM=<SRC.FINDLAYER(layer_skirt).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+            IF (<SRC.FINDLAYER(layer_legs)> )
+               NEWITEM=<SRC.FINDLAYER(layer_legs).ID>,1,<REF1>
+               NEW.COLOR=<LOCAL.StoneColor>
+               NEW.ATTR=attr_newbie
+            ENDIF
+         ENDIF
+         SRC.UPDATE
+      ENDIF
+   ENDIF
+
+[CHARDEF 02df]
+//FIXME: Incomplete Stratics data
+//FIXME: "Shoots paralyzing webs and pulls players in."
+//FIXME: "Navreys Web: Surrounds the player in webbing that performs an
+//unbreakable stun-paralysis. Webbing can be removed through a special
+//quest item, or by waiting it out."
+//1113240//"The acid popper bursts and burns away the webbing."
+//1113247//"You are wrapped in spider webbing and cannot move!"
+//1113248//"You escape the spider's web!"
+DEFNAME=c_navrey_night_eyes
+NAME=Navrey Night-Eyes
+ICON=i_pet_navrey_night_eyes
+SOUND=snd_monster_navreynighteyes
+CAN=MT_WALK|MT_RUN|MT_NONHUM
+DAM=22,29
+RANGE=2
+ARMOR=50
+DESIRES=r_dungeon_abyss,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=80 t_meat_raw
+RESOURCES=30 i_ribs_raw, 4 i_reag_spider_silk
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamEnergy=25
+TAG.DamFire=25
+TAG.HitPoison=4//Deadly
+TAG.Slayer=SLAYER_SPIDER
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Navrey Night-Eyes
+ON=@Create
+   NPC=brain_monster
+   FAME=22000
+   KARMA=-22000
+   STR={1000 1500}
+   MAXHITS={30000 31000}
+   DEX={200 250}
+   MAXSTAM={200 250}
+   INT={150 200}
+   MAXMANA={150 200}
+   ANATOMY={50.0 80.0}
+   EVALUATINGINTEL={90.0 100.0}
+   MAGERY={90.0 100.0}
+   MAGICRESISTANCE={100.0 130.0}
+   MEDITATION={80.0 100.0}
+   //POISONING={100.0 105.0}
+   TACTICS={90.0 100.0}
+   WRESTLING={90.0 100.0}
+   MODAR={0 10}
+   RESCOLD={60 70}
+   RESENERGY={60 80}
+   RESFIRE={40 50}
+   RESPOISON=100
+ON=@NpcRestock
+   ITEM=loot_champ_navrey
+ON=@DeathCorpse
+   FORCHARS 15
+      IF (<ISPLAYER>)//FIXME: and has accepted the quest
+         SERV.NEWITEM i_eye_of_navrey,1,<UID>
+         SYSMESSAGELOC color_text,1095155//"As Navrey Night-Eyes dies, you find and claim one of her eyes as proof of her demise."
+      ENDIF
+   END
+
+[CHARDEF 02e5]
+//FIXME: Incomplete Stratics data
+// * Daemonic Targeting: The ability to discern the most effective enemies, and quickly dispatch damage to them
+// * Immortal Death: Can turn invulnerable mobs vulnerable before slaying them
+// * Spell Chain: Rapidly casts several spells in a row
+// * True Fear: Stun-para when a player enters view of the beast
+// * Special moves: Angry Fire, Mana Drain, Paralyze
+DEFNAME=c_slasher_of_veils
+NAME=Slasher of Veils
+ICON=i_pet_slasher_of_veils
+SOUND=snd_monster_slasherofveils
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DAM=10,15
+ARMOR=65
+DESIRES=r_dungeon_abyss,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent,t_artifact
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=65 t_meat_raw
+RESOURCES=4 i_ribs_raw
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamCold=20
+TAG.DamEnergy=20
+TAG.DamFire=20
+TAG.DamPoison=20
+//TAG.Luck.Loot=FIXME
+TAG.Slayer=SLAYER_DEMON
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Slasher of Veils
+ON=@Create
+   NPC=brain_monster
+   FAME=26000
+   KARMA=-26000
+   STR={950 1150}
+   MAXHITS={290000 310000}
+   DEX={125 140}
+   MAXSTAM={125 140}
+   INT={950 1150}
+   MAXMANA={9900 10100}
+   ANATOMY={115.0 125.0}
+   ARCHERY={115.0 130.0}
+   BUSHIDO={75.0 100.0}
+   EVALUATINGINTEL={110.0 125.0}
+   FENCING={90.0 100.0}
+   MACEFIGHTING={90.0 100.0}
+   MAGERY={110.0 125.0}
+   MAGICRESISTANCE={115.0 130.0}
+   MEDITATION={115.0 130.0}
+   PARRYING={90.0 100.0}
+   SWORDSMANSHIP={90.0 100.0}
+   TACTICS={110.0 125.0}
+   WRESTLING={115.0 130.0}
+   MODAR={0 10}
+   RESCOLD={70 80}
+   RESENERGY={70 80}
+   RESFIRE={70 80}
+   RESPOISON={70 80}
+ON=@NPCRestock
+   ITEM=loot_slasher_of_veils
+ON=@NPCSeeNewPlayer
+   //Paralyze Attack
+   IF !(<SRC.FLAGS>&statf_freeze) && (<MANA> > 20)
+      MANA -= 20
+      SRC.SPELLEFFECT s_paralyze,<MAGERY>,1,<UID>
+      SRC.EFFECT 3,i_fx_field_paralyze,1,16,0,02
+      SRC.SOUND snd_spell_paralyze
+   ENDIF
+ON=@Hit
+   //Paralyze Attack
+   IF (RAND(5)==1) && !(<SRC.FLAGS>&statf_freeze) && (<MANA> > 20)
+      MANA -= 20
+      SRC.SPELLEFFECT s_paralyze,<MAGERY>,1,<UID>
+      SRC.EFFECT 3,i_fx_field_paralyze,1,16,0,02
+      SRC.SOUND snd_spell_paralyze
+   ENDIF
+   //Angry Fire Attack
+   IF (RAND(5)==1) && (<MANA> > 20)
+      MANA -= 20
+      SRC.SYSMESSAGELOC color_text,1070823//"The creature hits you with its Angry Fire."
+      SRC.SPELLEFFECT s_explosion,<MAGERY>,0,<UID>
+      SRC.EFFECT 3,i_fx_explode,1,16,0
+      SRC.SOUND snd_spell_explosion
+   ENDIF
+   //Mana Drain Attack
+   IF (RAND(5)==1) && !(<SRC.FLAGS>&statf_freeze) && (<MANA> > 20)
+      MANA -= 20
+      SRC.SPELLEFFECT s_mana_drain,<MAGERY>,1,<UID>
+      SRC.EFFECT 3,i_fx_field_paralyze,1,16,0,02
+      SRC.SOUND snd_spell_paralyze
+   ENDIF
+   //Dismount Attack
+   IF (RAND(5)==1) && (<MANA> >= 20) && (<SRC.FLAGS> & statf_onhorse)
+      MANA -= 20
+      SRC.DISMOUNT
+      SRC.EMOTE knocked off mount!
+      SRC.DAMAGE <R15,25> <DEF.dam_physical> <UID>
+   ENDIF
+
+[CHARDEF 0306]
+//FIXME: No Stratics entry
+DEFNAME=c_dawn
+NAME=Dawn
+ICON=i_pet_dawn
+//SOUND=
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DAM=50,60
+ARMOR=50
+DESIRES=t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization,e_carnivores3
+FOODTYPE=35 t_meat_raw
+RESOURCES=1 i_ribs_raw
+BLOODCOLOR=colors_blood
+MOVERATE=150
+TAG.Barding.Diff=10000//Immune to barding
+TAG.DamCold=10
+TAG.DamEnergy=10
+TAG.DamFire=10
+TAG.DamPoison=10
+TEVENTS=e_carnivores2
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Dawn
+ON=@Create
+   NPC=brain_monster
+   FAME=18000
+   KARMA=18000
+   STR={750 900}
+   MAXHITS={4000 5000}
+   DEX={265 290}
+   MAXSTAM={265 290}
+   INT={995 1190}
+   MAXMANA={995 1190}
+   ANATOMY={90.0 100.0}
+   ARCHERY={60.0 80.0}
+   EVALUATINGINTEL={70.0 80.0}
+   FENCING={110.0 120.0}
+   MACEFIGHTING={110.0 120.0}
+   MAGERY={110.0 120.0}
+   MAGICRESISTANCE={100.0 125.0}
+   MEDITATION={75.0 100.0}
+   PARRYING={100.0 125.0}
+   //POISONING={100.0 125.0}
+   SWORDSMANSHIP={100.0 125.0}
+   TACTICS={100.0 125.0}
+   MODAR={0 10}
+   RESCOLD={50 60}
+   RESENERGY={40 50}
+   RESFIRE={30 40}
+   RESPOISON=100
+ON=@NPCRestock
+   ITEM=loot_dawn
+
+[CHARDEF 033a]
+//FIXME: Incomplete Stratics data
+//FIXME: Many missing skills and abilities
+// Peerless resident of the Abyss. Keys required: Draconian Orbs.
+// * Flight and Fury: The Stygian Dragon can freely fly around the
+//   arena, either to escape or track its victims without mercy
+// * Crimson Meteor: Rains fireballs down on the arena, creating
+//   AoE firefields
+// * Stygian Fireball: A combination of void energy that rushes as
+//   multiple streaks of crackling energy towards a target
+DEFNAME=c_dragon_stygian
+NAME=Stygian Dragon
+ICON=i_pet_dragon_stygian_red
+SOUND=snd_monster_stygian_dragon
+CAN=MT_WALK|MT_FLY|MT_NONHUM
+DAM=33,55
+ARMOR=85
+DESIRES=r_dungeon_abyss,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent,t_artifact
+AVERSIONS=t_trap,r_civilization,e_carnivores3
+FOODTYPE=100 t_meat_raw
+RESOURCES=25 i_ribs_raw,80 i_hide,20 i_reag_dragon_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamEnergy=25
+TAG.DamFire=50
+TAG.Slayer=SLAYER_DRAGON
+TEVENTS=e_carnivores2
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Stygian Dragon
+ON=@Create
+   NAME=#NAMES_DRAGON
+   TITLE=the stygian dragon lord
+   NPC=brain_dragon
+   FAME=25000
+   KARMA=-25000
+   STR={675 725}
+   MAXHITS={250000 300000}
+   DEX={225 250}
+   MAXSTAM={425 450}
+   INT={175 185}
+   MAXMANA={175 200}
+   ANATOMY={95.0 105.0}
+   MAGICRESISTANCE={145.0 155.0}
+   TACTICS={115.0 125.0}
+   WRESTLING={115.0 125.0}
+   MODAR={0 10}
+   RESCOLD={75 85}
+   RESENERGY={85 95}
+   RESFIRE={85 95}
+   RESPOISON={85 95}
+ON=@NPCRestock
+   ITEM=loot_dragon_stygian_lord
+   //8000 - 10000 Gold. Carved: 88 (80) plain hides, 19 ribs, 48 dragon blood
+   //Special: level 5 treasure map,
+
+[CHARDEF 033e]
+// The Primeval Lich is the champion of the Primeval Lich Champion Spawn.
+// It has the following skills:
+// FIXME: Howl of the Lich: A howl so powerful it creates a cold blast radius causing cold damage to all players and their pets.
+// FIXME: Creeping Death: Occasionally, the Primeval Lich will call creatures of the darkness to his aid.
+//        - Up to six lightning strikes will randomly assault players and pets within a 15 tile radius of the Lich
+//        - A shadow dweller will spawn at each point near the impact of those lightning strikes and attack players and pets within range
+// FIXME: Unholy Touch: The Lich touch will occasionally corrupt the players soul, temporarily draining some of his skills and attributes
+// FIXME: Teleport Taunt: The Lich should taunt players out of attack range when they attack the lich with ranged weapons or magic.
+DEFNAME=c_liche_primeval
+NAME=primeval liche
+ICON=i_pet_liche
+SOUND=snd_monster_primeval_liche
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DAM=17,21
+ARMOR=40
+DESIRES=r_dungeon_abyss,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+//FOODTYPE=
+RESOURCES=3 i_reag_blackmoor
+BLOODCOLOR=colors_green
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamCold=20
+TAG.DamEnergy=20
+TAG.DamFire=20
+TAG.DamPoison=20
+TAG.Slayer=SLAYER_UNDEAD
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Primeval Liche
+ON=@Create
+   NPC=brain_monster
+   FAME=22000
+   KARMA=-22000
+   STR={500 600}
+   MAXHITS={50000 55000}
+   DEX={130 140}
+   MAXSTAM={130 140}
+   INT={1000 1200}
+   MAXMANA={4500 5500}
+   ANATOMY={20.0 40.0}
+   ARCHERY={90.0 100.0}
+   EVALUATINGINTEL={90.0 120.0}
+   FENCING={90.0 100.0}
+   MACEFIGHTING={90.0 100.0}
+   MAGERY={90.0 120.0}
+   MAGICRESISTANCE={120.0 140.0}
+   MEDITATION={100.0 120.0}
+   NECROMANCY={100.0 120.0}
+   PARRYING={90.0 100.0}
+   SWORDSMANSHIP={90.0 100.0}
+   TACTICS={90.0 100.0}
+   WRESTLING={90.0 100.0}
+   MODAR={0 10}
+   RESCOLD={40 50}
+   RESENERGY={40 50}
+   RESFIRE={40 50}
+   RESPOISON={40 50}
+ON=@NPCRestock
+   ITEM=loot_lich_primeval
+
+[CHARDEF 042f]
+//FIXME: No Stratics entry
+DEFNAME=c_minotaur_lord
+NAME=minotaur lord
+ICON=i_pet_minotaur_armored
+SOUND=snd_monster_longhorn3
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DAM=25,40
+ARMOR=50
+DESIRES=r_dungeon_labyrinth,t_coin,t_gold,t_wand,t_potion,t_scroll,t_reagent,e_notoriety
+AVERSIONS=t_trap
+FOODTYPE=55 t_meat_raw
+RESOURCES=1 i_ribs_raw,10 i_hide
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.Slayer=SLAYER_BOVINE
+TEVENTS=e_minotaurs
+TEVENTS=e_carnivores2
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Minotaur (lord)
+RESLEVEL=5
+RESDISPDNID=c_orc
+RESDISPDNHUE=33
+ON=@Create
+   NPC=brain_monster
+   FAME=5000
+   KARMA=-5000
+   STR={200 250}
+   MAXHITS={300 350}
+   DEX={90 100}
+   MAXSTAM={90 100}
+   INT={100 130}
+   MAXMANA={100 130}
+   ANATOMY={90.0 100.0}
+   ARCHERY={90.0 100.0}
+   DETECTINGHIDDEN={90.0 100.0}
+//   EVALUATINGINTEL={70.0 80.0}
+   FENCING={90.0 100.0}
+   MACEFIGHTING={90.0 100.0}
+//   MAGERY={90.0 100.0}
+   MAGICRESISTANCE={90.0 100.0}
+//   MEDITATION={90.0 100.0}
+   PARRYING={90.0 100.0}
+   SWORDSMANSHIP={90.0 100.0}
+   TACTICS={90.0 100.0}
+   WRESTLING={90.0 100.0}
+   MODAR={0 10}
+   RESCOLD={50 60}
+   RESENERGY={10 20}
+   RESFIRE={20 30}
+   RESPOISON={40 50}
+ON=@NpcRestock
+   ITEM=random_jewel,{1 4}
+   ITEM=i_gold,{180 230}
+
+[EOF]
