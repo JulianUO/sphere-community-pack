@@ -1509,6 +1509,7 @@ SKF_RANGED              0200	// considered a ranged skill (combine with SKF_FIGH
 TAT_AS_ARGN	1		// Treat the arguments as ARGN1/2/3
 TAT_AS_ARGS	2		// Treat the arguments as ARGS (with ARGV[x] enabled)
 TAT_AS_ARGO	3		// Treat the arguments as ARGO
+TAT_AS_FULL	4
 
 [DEFNAME misc_own]
 empty_cliloc		1042971
