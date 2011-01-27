@@ -33,42 +33,6 @@ CATEGORY=New Items
 SUBSECTION=ML
 DESCRIPTION=Deco Vines
 
-[ITEMDEF 02d0e]
-NAME=Arcanist Statue
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Arcanist Statue
-
-[ITEMDEF 02d0f]
-NAME=Arcanist Statue
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Arcanist Statue
-
-[ITEMDEF 02d10]
-NAME=Squirrel Statue
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Squirrel Statue
-
-[ITEMDEF 02d11]
-NAME=Squirrel Statue
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Squirrel Statue
-
-[ITEMDEF 02d12]
-NAME=Warrior Statue
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Warrior Statue
-
-[ITEMDEF 02d13]
-NAME=Warrior Statue
-CATEGORY=New Items
-SUBSECTION=ML
-DESCRIPTION=Warrior Statue
-
 [ITEMDEF 02f58]
 DEFNAME=i_talisman1
 NAME=Talisman

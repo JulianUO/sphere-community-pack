@@ -191,6 +191,22 @@ src.SFX={0e,10,0f,10,022,1,023,1,024,1,0267,1}
 [REGIONTYPE r_ruins]
 // Creepy sounds day or night.
 
+[REGIONTYPE r_goblin_camp]
+
+[REGIONTYPE r_dungeon_abyss]
+[REGIONTYPE r_dungeon_bedlam]
+[REGIONTYPE r_dungeon_bedlam]
+[REGIONTYPE r_dungeon_blighted_grove]
+[REGIONTYPE r_dungeon_destard]
+[REGIONTYPE r_dungeon_doom]
+[REGIONTYPE r_dungeon_exodus]
+[REGIONTYPE r_dungeon_fire]
+[REGIONTYPE r_dungeon_khaldun]
+[REGIONTYPE r_dungeon_labyrinth]
+[REGIONTYPE r_dungeon_paroxysmus]
+[REGIONTYPE r_dungeon_prism_of_light]
+[REGIONTYPE r_dungeon_terathan_keep]
+[REGIONTYPE r_dungeon_twisted_weald]
 
 [EOF]
 
