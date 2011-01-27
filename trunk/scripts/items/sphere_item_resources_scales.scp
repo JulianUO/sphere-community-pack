@@ -29,7 +29,6 @@ DUPEITEM=026b4
 
 //For backwards compatability
 [ITEMDEF i_reag_dragon_scale]
-DEFNAME=i_reag_dragon_scale
 ID=i_scale
 NAME=Dragon Scale%s
 WEIGHT=0.1
@@ -41,7 +40,6 @@ DESCRIPTION=Dragon Scale
 
 
 [ITEMDEF i_scale_black]
-DEFNAME=i_scale_black
 ID=i_scale
 NAME=Dragon Scale%s
 WEIGHT=0.1
@@ -56,7 +54,6 @@ ON=@Create
 
 
 [ITEMDEF i_scale_blue]
-DEFNAME=i_scale_blue
 ID=i_scale
 NAME=Sea Serpent Scale%s
 WEIGHT=0.1
@@ -71,7 +68,6 @@ ON=@Create
 
 
 [ITEMDEF i_scale_green]
-DEFNAME=i_scale_green
 ID=i_scale
 NAME=Dragon Scale%s
 WEIGHT=0.1
@@ -86,7 +82,6 @@ ON=@Create
 
 
 [ITEMDEF i_scale_red]
-DEFNAME=i_scale_red
 ID=i_scale
 NAME=Dragon Scale%s
 WEIGHT=0.1
@@ -101,7 +96,6 @@ ON=@Create
 
 
 [ITEMDEF i_scale_white]
-DEFNAME=i_scale_white
 ID=i_scale
 NAME=Dragon Scale%s
 WEIGHT=0.1
@@ -116,7 +110,6 @@ ON=@Create
 
 
 [ITEMDEF i_scale_yellow]
-DEFNAME=i_scale_yellow
 ID=i_scale
 NAME=Dragon Scale%s
 WEIGHT=0.1

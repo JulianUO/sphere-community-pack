@@ -326,7 +326,6 @@ DESCRIPTION=Sea Sponge
 
 [ITEMDEF i_fish_full_moon]
 ID=i_sea_sponge
-DEFNAME=i_fish_full_moon
 NAME=Full Moon Fish
 TYPE=t_fish
 

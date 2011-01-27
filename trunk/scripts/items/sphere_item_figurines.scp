@@ -1066,7 +1066,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Kepetch
 
 [ITEMDEF 0213c]
-DEFNAME=i_pet_kepetch
+DEFNAME=i_pet_kepetch_shorn
 NAME=Kepetch
 TYPE=t_figurine
 TDATA3=c_kepetch
@@ -2986,15 +2986,6 @@ CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Darknight Creeper
 
-[ITEMDEF 03ffe]
-DEFNAME=i_pet_horse_big
-NAME=horse
-TYPE=t_figurine
-TDATA3=c_horse_brown_lt
-CATEGORY=Miscellaneous
-SUBSECTION=Character Icons
-DESCRIPTION=Horse (big)
-
 [ITEMDEF 0422d]
 DEFNAME=i_pet_gargoyle_male
 NAME=Gargoyle
@@ -3167,7 +3158,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Homunculus
 
 [ITEMDEF 04296]
-DEFNAME=i_pet_kepetch
+DEFNAME=i_pet_kepetch_2
 NAME=Kepetch
 TYPE=t_figurine
 TDATA3=c_kepetch
@@ -3176,7 +3167,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Kepetch
 
 [ITEMDEF 04297]
-DEFNAME=i_pet_kepetch_shorn
+DEFNAME=i_pet_kepetch_2_shorn
 NAME=Shorn Kepetch
 TYPE=t_figurine
 TDATA3=c_kepetch_shorn
