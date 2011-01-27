@@ -401,6 +401,15 @@ DESCRIPTION=Elven Armoire (Fancy)
 [ITEMDEF 02d08]
 DUPEITEM=02d07
 
+[ITEMDEF 02d09]
+DEFNAME=i_elven_dresser_we
+TYPE=t_container
+NAME=ELVEN DRESSER
+TDATA2=051
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Elven Dresser west-east
+
 [ITEMDEF 02d0a]
 DEFNAME=i_dresser_elven
 TYPE=t_container
