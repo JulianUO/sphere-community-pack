@@ -231,7 +231,7 @@ SUBSECTION=Tables
 DESCRIPTION=Long Table (East - 1 of 2)
 
 [ITEMDEF 04031]
-DEFNAME=i_long_table_s_1_2
+DEFNAME=i_long_table_s_2_2
 DUPEITEM=0402f
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables

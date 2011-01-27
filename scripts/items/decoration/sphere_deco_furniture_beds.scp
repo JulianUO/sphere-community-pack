@@ -55,18 +55,18 @@ SUBSECTION=Beds
 DESCRIPTION=Large Bed (East - 2 of 4)
 
 [ITEMDEF 0a7c]
-DEFNAME=i_bed_large_e_2_4
+DEFNAME=i_bed_large_e_3_4
 DUPEITEM=0a78
 CATEGORY=Decoration - Furniture
 SUBSECTION=Beds
-DESCRIPTION=Large Bed (East - 2 of 4)
+DESCRIPTION=Large Bed (East - 3 of 4)
 
 [ITEMDEF 0a7d]
-DEFNAME=i_bed_large_e_2_4
+DEFNAME=i_bed_large_e_4_4
 DUPEITEM=0a78
 CATEGORY=Decoration - Furniture
 SUBSECTION=Beds
-DESCRIPTION=Large Bed (East - 2 of 4)
+DESCRIPTION=Large Bed (East - 4 of 4)
 
 [ITEMDEF 0a7e]
 DEFNAME=i_bed_large_s_1_4

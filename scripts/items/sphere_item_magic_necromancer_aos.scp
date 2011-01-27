@@ -334,9 +334,8 @@ SUBSECTION=Scrolls - Necromancy
 DESCRIPTION=Wraith Form
 
 [ITEMDEF i_scroll_exorcism]
-DEFNAME=i_scroll_exorcism
-NAME=Exorcism Scroll
 ID=i_scroll_animate_dead
+NAME=Exorcism Scroll
 TYPE=t_scroll
 WEIGHT=1
 RESOURCES=i_scroll_blank, i_reag_volcanic_ash, i_reag_nox_crystal

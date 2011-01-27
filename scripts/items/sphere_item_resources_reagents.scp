@@ -66,7 +66,6 @@ DESCRIPTION=Daemon Blood
 
 [ITEMDEF i_reag_blood_vial]
 // Vial of Blood
-DEFNAME=i_reag_blood_vial
 ID=0F7D
 NAME=Vial%s of Blood
 TYPE=T_REAGENT
@@ -266,7 +265,6 @@ DESCRIPTION=Nox Crystal
 
 [ITEMDEF i_reag_serpent_scale]
 //Serpent's Scales
-DEFNAME=i_reag_serpent_scale
 ID=0F8E
 NAME=Serpent's Scale%s
 TYPE=T_REAGENT
@@ -290,8 +288,8 @@ DESCRIPTION=Grave Dust
 
 [ITEMDEF i_reag_volcanic_ash]
 //Volcanic Ash
-DEFNAME=i_reag_volcanic_ash
 ID=0F8F
+NAME=Volcanic Ash
 TYPE=T_REAGENT
 VALUE=3
 PILE=1

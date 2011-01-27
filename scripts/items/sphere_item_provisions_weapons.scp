@@ -172,7 +172,6 @@ DESCRIPTION=Arrow (Straight)
 
 
 [ITEMDEF i_bola_ball]
-DEFNAME=i_bola_ball
 ID=i_cannon_ball
 NAME=Bola ball%s
 WEIGHT=4.0

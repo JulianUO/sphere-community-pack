@@ -7,7 +7,7 @@ minorartis {i_Alchemists_Bauble 1 i_Arctic_Death_Dealer 1 i_Blaze_Death 1 i_Bow_
 //this makes it easier if you want to add random artifacts
 //Note: You should use the slayer_weapon scripts, although it's not necessary, but to have the weapons like they really are.
 
-[ITEMDEF i_Alchemists_Bauble]
+[ITEMDEF i_alchemists_bauble]
 ID=i_bracelet_gold
 NAME=Alchemist's Bauble
 WEIGHT=5
@@ -29,7 +29,7 @@ ON=@ClientToolTip
 	SRC.ADDCLILOC 1060451,Magery,10
 	SRC.ADDCLILOC 1060452,Alchemy,10
 
-[ITEMDEF i_Burglar_Bandana]
+[ITEMDEF i_burglar_bandana]
 ID=i_bandana
 NAME=Burglar's Bandana
 REQSTR=10
@@ -54,7 +54,7 @@ ON=@ClientToolTip
 	SRC.ADDCLILOC 1060453,Stealth,10
 	SRC.ADDCLILOC 1060409,5
 
-[ITEMDEF i_Candelabra_Souls]
+[ITEMDEF i_candelabra_souls]
 ID=i_candleabra2_lit
 NAME=Candelabra of Souls
 TYPE=T_NORMAL
@@ -62,14 +62,14 @@ TYPE=T_NORMAL
 ON=@Create
 	COLOR=colors_all
 
-[ITEMDEF i_Ghost_Ship_Anchor]
+[ITEMDEF i_ghost_ship_anchor]
 ID=i_anchor
 NAME=Ghost Ship Anchor
 
 ON=@Create
 	COLOR=color_rock
 
-[ITEMDEF i_Gloves_Pugilist]
+[ITEMDEF i_gloves_pugilist]
 ID=i_leather_gloves
 NAME=Gloves of the Pugilist
 REQSTR=20
@@ -90,7 +90,7 @@ ON=@ClientToolTip
 	SRC.ADDCLILOC 1060451,Wrestling,10
 	SRC.ADDCLILOC 1060409,8
 
-[ITEMDEF i_Orcish_Visage]
+[ITEMDEF i_orcish_visage]
 ID=i_mask_orc
 NAME=Orcish Visage
 REQSTR=30
@@ -116,7 +116,7 @@ ON=@ClientToolTip
 	SRC.ADDCLILOC 1060484,5
 	SRC.ADDCLILOC 1060485,10
 
-[ITEMDEF i_Polar_Bear_Mask]
+[ITEMDEF i_polar_bear_mask]
 ID=i_mask_bear
 NAME=Polar Bear Mask
 REQSTR=30
@@ -146,13 +146,12 @@ ON=@ClientToolTip
 	SRC.ADDCLILOC 1060485,10
 	SRC.ADDCLILOC 1015008
 
-[ITEMDEF Ship_Model_HMSCape]
+[ITEMDEF ship_model_hmscape]
 ID=i_model_ship
 NAME=Ship Model of the H.M.S. Cape
 
-[itemdef i_corredor_sword]
+[ITEMDEF i_corredor_sword]
 ID=i_paladin_sword
-DEFNAME=i_corredor_sword
 NAME=The Great Sword
 TYPE=t_weapon_sword
 SKILL=swordsmanship
@@ -209,7 +208,7 @@ ON=@Dclick
 	endif
 	RETURN 1
 
-[ITEMDEF i_fire_horn_TIMER]
+[ITEMDEF i_fire_horn_timer]
 ID=i_memory
 TYPE=T_EQ_SCRIPT
 NAME=Fire horn timer
@@ -219,10 +218,9 @@ ON=@Timer
 	RETURN 1
 
 [ITEMDEF i_sprinter_legs]
-DEFNAME=i_sprinter_legs
+ID=i_woodland_leggings
 NAME=Sprinter Legs
 TYPE=t_armor_leather
-ID=i_woodland_leggings
 ARMOR=80
 REQSTR=25
 TEVENTS=T_PROPRIEDADES
@@ -245,9 +243,8 @@ ON=@ClientToolTip
 	SRC.ADDCLILOC 1060409,15
 
 [ITEMDEF i_spiked_chest]
-DEFNAME=i_spiked_chest
-NAME=Spiked Chest
 ID=i_platemail_chest
+NAME=Spiked Chest
 TYPE=t_armor
 ARMOR=90
 REQSTR=65
@@ -270,10 +267,9 @@ ON=@UnEquip
 ON=@ClientToolTip
 	SRC.ADDCLILOC 1060485,10
 
-[ITEMDEF i_Heart_Lion]
-DEFNAME=i_Heart_Lion
-NAME=Heart of the Lion
+[ITEMDEF i_heart_lion]
 ID=i_platemail_chest
+NAME=Heart of the Lion
 TYPE=t_armor
 ARMOR=80
 REQSTR=65
@@ -296,10 +292,9 @@ ON=@UnEquip
 ON=@ClientToolTip
 	SRC.ADDCLILOC 1060485,5
 
-[ITEMDEF i_Art_Shield_Invul]
-DEFNAME=i_Art_Shield_Invul
-NAME=Shield of Invulnerability
+[ITEMDEF i_art_shield_invul]
 ID=i_shield_order
+NAME=Shield of Invulnerability
 TYPE=t_shield
 ARMOR=15
 REQSTR=65
@@ -313,10 +308,9 @@ ON=@CREATE
 	COLOR=0bc
 	HITPOINTS=255
 
-[ITEMDEF i_Aegis_Grace]
-DEFNAME=i_Aegis_Grace
-NAME=Aegis Of Grace
+[ITEMDEF i_aegis_grace]
 ID=i_dragon_helm
+NAME=Aegis Of Grace
 ARMOR=100
 REQSTR=65
 TEVENTS=T_PROPRIEDADES
@@ -337,9 +331,8 @@ ON=@UnEquip
 ON=@ClientToolTip
 	SRC.ADDCLILOC 1060451,MagicResistance,10
 
-[ITEMDEF i_Dreads_Revenge]
+[ITEMDEF i_dreads_revenge]
 ID=i_kryss
-DEFNAME=i_Dreads_Revenge
 NAME=Dread's Revenge
 
 ON=@CREATE
@@ -355,9 +348,8 @@ ON=@UnEquip
 ON=@ClientToolTip
 	SRC.ADDCLILOC 1060451,Fencing,20
 
-[ITEMDEF i_Robe_Equinox]
+[ITEMDEF i_robe_equinox]
 ID=i_robe
-DEFNAME=i_Robe_Equinox
 NAME=Robe of the Equinox
 TEVENTS=T_LUCK_ITEM
 TAG.LUCK=95
@@ -372,9 +364,8 @@ ON=@EquiTest
 		RETURN 1
 	endif
 
-[ITEMDEF i_Robe_Eclipse]
+[ITEMDEF i_robe_eclipse]
 ID=i_robe
-DEFNAME=i_Robe_Eclipse
 NAME=Robe of the Eclipse
 TEVENTS=T_LUCK_ITEM
 TAG.LUCK=95
@@ -383,9 +374,8 @@ ON=@CREATE
 	HITPOINTS=255
 	COLOR=0486
 
-[ITEMDEF i_Bloodwood_Spirit]
+[ITEMDEF i_bloodwood_spirit]
 ID=i_talisman3
-DEFNAME=i_Bloodwood_Spirit
 NAME=Bloodwood Spirit
 TEVENTS=T_LUCK_ITEM
 TAG.LUCK=50
@@ -402,9 +392,8 @@ ON=@UnEquip
 ON=@ClientToolTip
 	SRC.ADDCLILOC 1060451,Spirit Speak,10
 
-[ITEMDEF i_Brightsight_Lenses]
+[ITEMDEF i_brightsight_lenses]
 ID=i_elven_specs
-DEFNAME=i_Brightsight_Lenses
 NAME=Brightsight Lenses
 
 ON=@CREATE
@@ -436,9 +425,8 @@ ON=@Dropon_Ground
 		TIMER=<EVAL <SERV.DECAYTIMER>*60>
 	endif
 
-[ITEMDEF i_Crimson_Cinture]
+[ITEMDEF i_crimson_cinture]
 ID=i_talisman4
-DEFNAME=i_Crimson_Cinture
 NAME=Crimson Cinture
 
 ON=@CREATE
@@ -474,10 +462,9 @@ ON=@Dropon_Ground
 		TIMER=<EVAL <SERV.DECAYTIMER>*60>
 	endif
 
-[ITEMDEF i_Fey_Leggings]
-DEFNAME=i_Fey_Leggings
-NAME=Fey Leggings
+[ITEMDEF i_fey_leggings]
 ID=i_chainmail_leggings
+NAME=Fey Leggings
 ARMOR=130
 TEVENTS=T_PROPRIEDADES
 TAG.DAMAGERETURN=6
@@ -509,8 +496,7 @@ TYPE=T_NORMAL
 ON=@Create
 	COLOR=33
 
-[ITEMDEF 03FFE]
-DEFNAME=i_Phillip_Wooden_Steed
+[ITEMDEF 03ffe]
 NAME=Phillip's Wooden Steed
 TYPE=T_NORMAL
 
