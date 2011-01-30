@@ -6,6 +6,210 @@
 // FILE LAST UPDATED: 
 VERSION=0.56b
 
+[ITEMDEF 0283]
+DEFNAME=i_gargish_stone_arms_female
+NAME=Gargish female stone arms
+TYPE=t_armor
+FLIP=1
+ARMOR=25
+VALUE=120
+WEIGHT=18.0
+RESOURCES=17 i_rock_plain,1 i_ingot_iron
+SKILLMAKE=Blacksmithing 66.7,Armslore 25.0
+CATEGORY=Provisions - Armor
+SUBSECTION=Stone Gargoyle Armor
+DESCRIPTION=Gargish Stone Arms (female)
+TAG.REQSTR=40
+TAG.GargoyleOnly=1
+TAG.FemaleOnly=1
+TEVENTS=e_equipitem
+DUPELIST=04057
+ON=@Create
+   f_AddMagicTags 1 1
+   HITPOINTS={50 60}
+
+[ITEMDEF 04057]
+//Gargish female stone arms
+DUPEITEM=0283
+
+[ITEMDEF 0284]
+DEFNAME=i_gargish_stone_arms
+NAME=Gargish stone arms
+TYPE=t_armor
+FLIP=1
+ARMOR=25
+VALUE=120
+WEIGHT=18.0
+RESOURCES=17 i_rock_plain,1 i_ingot_iron
+SKILLMAKE=Blacksmithing 66.7,Armslore 25.0
+CATEGORY=Provisions - Armor
+SUBSECTION=Stone Gargoyle Armor
+DESCRIPTION=Gargish Stone Arms
+TAG.REQSTR=40
+TAG.GargoyleOnly=1
+TEVENTS=e_equipitem
+DUPELIST=04058
+ON=@Create
+   f_AddMagicTags 1 1
+   HITPOINTS={50 60}
+
+[ITEMDEF 04058]
+//Gargish stone arms
+DUPEITEM=0284
+
+[ITEMDEF 0285]
+DEFNAME=i_gargish_stone_chest_female
+NAME=Gargish female stone chest
+TYPE=t_armor
+FLIP=1
+ARMOR=25
+VALUE=175
+WEIGHT=25.0
+RESOURCES=24 i_rock_plain,1 i_ingot_iron
+SKILLMAKE=Blacksmithing 75.0,Armslore 25.0
+CATEGORY=Provisions - Armor
+SUBSECTION=Stone Gargoyle Armor
+DESCRIPTION=Gargish Stone Chest (female)
+TAG.REQSTR=60
+TAG.GargoyleOnly=1
+TAG.FemaleOnly=1
+TEVENTS=e_equipitem
+DUPELIST=04059
+ON=@Create
+   f_AddMagicTags 1 1
+   HITPOINTS={50 60}
+
+[ITEMDEF 04059]
+//Gargish female stone chest
+DUPEITEM=0285
+
+[ITEMDEF 0286]
+DEFNAME=i_gargish_stone_chest
+NAME=Gargish stone chest
+TYPE=t_armor
+FLIP=1
+ARMOR=25
+VALUE=175
+WEIGHT=25.0
+RESOURCES=24 i_rock_plain,1 i_ingot_iron
+SKILLMAKE=Blacksmithing 75.0,Armslore 25.0
+CATEGORY=Provisions - Armor
+SUBSECTION=Stone Gargoyle Armor
+DESCRIPTION=Gargish Stone Chest
+TAG.REQSTR=60
+TAG.GargoyleOnly=1
+TEVENTS=e_equipitem
+DUPELIST=0405a
+ON=@Create
+   f_AddMagicTags 1 1
+   HITPOINTS={50 60}
+
+[ITEMDEF 0405a]
+//Gargish stone chest
+DUPEITEM=0286
+
+[ITEMDEF 0287]
+DEFNAME=i_gargish_stone_kilt_female
+NAME=Gargish female stone kilt
+TYPE=t_armor
+FLIP=1
+ARMOR=25
+VALUE=135
+WEIGHT=20.0
+RESOURCES=19 i_rock_plain,1 i_ingot_iron
+SKILLMAKE=Blacksmithing 69.1,Armslore 25.0
+CATEGORY=Provisions - Armor
+SUBSECTION=Stone Gargoyle Armor
+DESCRIPTION=Gargish Stone Kilt (female)
+TAG.REQSTR=40
+TAG.GargoyleOnly=1
+TAG.FemaleOnly=1
+TEVENTS=e_equipitem
+DUPELIST=0405b
+ON=@Create
+   f_AddMagicTags 1 1
+   HITPOINTS={50 60}
+
+[ITEMDEF 0405b]
+//Gargish female stone kilt
+DUPEITEM=0287
+
+[ITEMDEF 0288]
+DEFNAME=i_gargish_stone_kilt
+NAME=Gargish stone kilt
+TYPE=t_armor
+FLIP=1
+ARMOR=25
+VALUE=135
+WEIGHT=20.0
+RESOURCES=19 i_rock_plain,1 i_ingot_iron
+SKILLMAKE=Blacksmithing 69.1,Armslore 25.0
+CATEGORY=Provisions - Armor
+SUBSECTION=Stone Gargoyle Armor
+DESCRIPTION=Gargish Stone Kilt
+TAG.REQSTR=40
+TAG.GargoyleOnly=1
+TEVENTS=e_equipitem
+DUPELIST=0405c
+ON=@Create
+   f_AddMagicTags 1 1
+   HITPOINTS={50 60}
+
+[ITEMDEF 0405c]
+//Gargish stone kilt
+DUPEITEM=0288
+
+[ITEMDEF 0289]
+DEFNAME=i_gargish_stone_leggings_female
+NAME=Gargish female stone leggings
+TYPE=t_armor
+FLIP=1
+ARMOR=25
+VALUE=135
+WEIGHT=20.0
+RESOURCES=19 i_rock_plain,1 i_ingot_iron
+SKILLMAKE=Blacksmithing 69.1,Armslore 25.0
+CATEGORY=Provisions - Armor
+SUBSECTION=Stone Gargoyle Armor
+DESCRIPTION=Gargish Stone Leggings (female)
+TAG.REQSTR=40
+TAG.GargoyleOnly=1
+TAG.FemaleOnly=1
+TEVENTS=e_equipitem
+DUPELIST=0405d
+ON=@Create
+   f_AddMagicTags 1 1
+   HITPOINTS={50 60}
+
+[ITEMDEF 0405d]
+//Gargish female stone leggings
+DUPEITEM=0289
+
+[ITEMDEF 028a]
+DEFNAME=i_gargish_stone_leggings
+NAME=Gargish stone leggings
+TYPE=t_armor
+FLIP=1
+ARMOR=25
+VALUE=135
+WEIGHT=20.0
+RESOURCES=19 i_rock_plain,1 i_ingot_iron
+SKILLMAKE=Blacksmithing 69.1,Armslore 25.0
+CATEGORY=Provisions - Armor
+SUBSECTION=Stone Gargoyle Armor
+DESCRIPTION=Gargish Stone Leggings
+TAG.REQSTR=40
+TAG.GargoyleOnly=1
+TEVENTS=e_equipitem
+DUPELIST=0405e
+ON=@Create
+   f_AddMagicTags 1 1
+   HITPOINTS={50 60}
+
+[ITEMDEF 0405e]
+//Gargish stone leggings
+DUPEITEM=028a
+
 // gargish wooden shield = 0x4200, 0x4207
 // gargish kite shield = 0x4201, 0x4206
 // small plate shield = 0x4202, 0x420a

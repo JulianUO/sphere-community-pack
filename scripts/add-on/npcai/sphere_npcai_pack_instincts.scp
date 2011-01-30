@@ -10,5 +10,6 @@ VERSION=0.56b
 [EVENTS e_Ostards]
 [EVENTS e_Equine]
 [EVENTS e_Daemon]
+[EVENTS e_Minotaurs]
 
 [eof]
