@@ -22,6 +22,7 @@ scripts/sphere_events_human.scp
 scripts/sphere_events_npcs.scp
 scripts/npcs/
 scripts/npcs/Animals/
+scripts/npcs/Civilized/
 scripts/npcs/Civilized/Fighters/
 scripts/npcs/Civilized/Arts and Music/
 scripts/npcs/Civilized/Guards and Law/
