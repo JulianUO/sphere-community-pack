@@ -188,10 +188,12 @@ healcliloc_fingersslip = 503251
 
 [function getbandageitem]
 if <def0.scp.healing_basedonform>
-serv.newnpc = <body>
-new.p = 1,1
-local.brain = <new.npc>
-new.remove
+//FIXME: I removed the following code, but the new line replacing it needs to be tested...
+//serv.newnpc = <body>
+//new.p = 1,1
+//local.brain = <new.npc>
+//new.remove
+local.brain=<SERV.CHARDEF.<BODY>.brain>//FIXME: Needs testing with base and derivitive creatures
 return <def0.healsys_brain_<dlocal.brain>>
 endif
 return <def0.healsys_brain_<npc>>

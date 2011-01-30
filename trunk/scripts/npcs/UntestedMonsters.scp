@@ -339,7 +339,6 @@ LIST.ChampionPowerScroll.CLEAR
 LIST.ReceivedPowerScroll.CLEAR
 NEW=<LOCAL.NEW>
 
-
 [CHARDEF c_plague_spawn]
 //FIXME: Cannot be provoked
 ID=c_slime
@@ -362,8 +361,7 @@ CATEGORY=Monsters
 SUBSECTION=Miscellaneous
 DESCRIPTION=Plague Spawn
 ON=@Create
-   //earth elementals, headless ones, people, gorillas, serpents and slimes
-   BODY={c_elem_earth 1 c_headless 1 c_man 1 c_gorilla 1 c_snake_giant 1 c_slime 1}
+   BODY={c_elemental_earth 1 c_headless 1 c_man 1 c_gorilla 1 c_snake_giant 1 c_slime 1}
    NAME=plague spawn
    COLOR=colors_green
    NPC=brain_monster

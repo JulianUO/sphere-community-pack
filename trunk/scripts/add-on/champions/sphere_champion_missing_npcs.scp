@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////
 [chardef c_pestilent_bandages]
 ID=c_zombie
-name=Pestilent Bandages
+NAME=pestilent bandages
 DAM=21,26
 ARMOR=58
 RESOURCES=15 i_ribs_raw 
@@ -11,35 +11,32 @@ CAN=MT_WALK
 CATEGORY=Novos Monstros
 SUBSECTION=ML
 DESCRIPTION=Pestilent Bandages
-
 ON=@Create
-COLOR=03aa
-NPC=brain_monster
-FAME=6000
-KARMA=-8000 
-STR=346
-MAXHITS=1400
-INT=155
-DEX=100
-PARRYING={60.0 75.0}
-MAGICRESISTANCE=103.0
-EVALUATINGINTEL=95.0
-TACTICS=101.0
-WRESTLING=95.0
-POISONING=100.0
-
+   COLOR=03aa
+   NPC=brain_monster
+   FAME=6000
+   KARMA=-8000 
+   STR=346
+   MAXHITS=1400
+   INT=155
+   DEX=100
+   PARRYING={60.0 75.0}
+   MAGICRESISTANCE=103.0
+   EVALUATINGINTEL=95.0
+   TACTICS=101.0
+   WRESTLING=95.0
+   POISONING=100.0
 ON=@Hit
-IF (!(<R4>))
-SRC.SPELLEFFECT S_POISON,100.0
-ENDIF
-
+   IF (!(<R4>))
+   SRC.SPELLEFFECT S_POISON,100.0
+   ENDIF
 ON=@NpcRestock
-ITEM=random_jewel,{1 4}
-ITEM=i_gold,{480 530}
+   ITEM=random_jewel,{1 4}
+   ITEM=i_gold,{480 530}
 
-[chardef c_m_lesser_hiryu] 
-ID=c_m_hiryu
-name=Lesser Hiryu 
+[chardef c_hiryu_lesser] 
+ID=c_hiryu
+NAME=lesser hiryu 
 SOUND=snd_hiryu
 ICON=i_pet_hiryu
 DAM=45,67
@@ -59,41 +56,39 @@ SUBSECTION=New Mounts
 DESCRIPTION=Lesser Hiryu
 TAG.FOLLOWERCONSUME=3
 TAG.STATDROPTAME=0
-
 ON=@Create 
-COLOR=COLORS_ALL
-NPC=brain_animal
-karma=-10000
-FAME=10000
-STR={300 410}
-MAXHITS={400 600}
-INT={300 325} 
-DEX={170 270}
-ANATOMY={75.0 80.0} 
-MAGICRESISTANCE={85.0 100.0} 
-TACTICS={100.0 120.0} 
-WRESTLING={100.0 120.0} 
-TAMING=98.5
+   COLOR=COLORS_ALL
+   NPC=brain_animal
+   karma=-10000
+   FAME=10000
+   STR={300 410}
+   MAXHITS={400 600}
+   INT={300 325} 
+   DEX={170 270}
+   ANATOMY={75.0 80.0} 
+   MAGICRESISTANCE={85.0 100.0} 
+   TACTICS={100.0 120.0} 
+   WRESTLING={100.0 120.0} 
+   TAMING=98.5
 
-[CHARDEF c_shadow_wisp]
+[CHARDEF c_wisp_shadow]
 ID=c_wisp
 NAME=shadow wisp
 DAM=5,13
 ARMOR=25
-
 ON=@Create
-STR={16 40}
-DEX={16 45}
-INT={11 25}
-MAXHITS={10 24}
-WRESTLING={25.1 40.0}
-TACTICS=15.0
-MAGICRESISTANCE=10.0
-MAGERY=50.0
-EVALUATINGINTEL=40.0
-MEDITATION=40.0
-KARMA=0
-FAME=800
-COLOR=0497
+   STR={16 40}
+   DEX={16 45}
+   INT={11 25}
+   MAXHITS={10 24}
+   WRESTLING={25.1 40.0}
+   TACTICS=15.0
+   MAGICRESISTANCE=10.0
+   MAGERY=50.0
+   EVALUATINGINTEL=40.0
+   MEDITATION=40.0
+   KARMA=0
+   FAME=800
+   COLOR=0497
 
 [EOF]
