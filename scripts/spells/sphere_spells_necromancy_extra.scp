@@ -82,9 +82,9 @@ return c_mummy
 elseif (<args> > 8000)
 return c_lich
 elseif (<args> > 6000)
-return c_skeletal_knight
+return c_skeleton_knight
 elseif (<args> > 4000)
-return c_skeletal_mage
+return c_skeleton_mage
 elseif (<args> > 2000)
 return c_patchwork_skeleton
 else
@@ -338,7 +338,7 @@ TYPE=t_eq_script
 LAYER=layer_special
 
 ON=@Equip
-  src.body=c_Moloch
+  src.body=c_demon_moloch
   src.color=0
   src.events +e_beast_form
 

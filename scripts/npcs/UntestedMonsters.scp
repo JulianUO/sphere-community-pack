@@ -199,7 +199,6 @@ ON=@Create
    RESFIRE={20 30}
    RESPOISON={45 55}
 
-
 [CHARDEF c_true_harrower]
 ID=c_bog_thing
 CAN=MT_NONMOVER|MT_USEHANDS
@@ -518,7 +517,7 @@ addspell=s_paralyze
 addspell=s_summon_daemon
 
 
-[CHARDEF c_m_skeletonarcher]
+[CHARDEF c_skeleton_archer]
 ID=c_skeleton_w_axe
 NAME=skeleton archer
 CAN=MT_WALK|MT_RUN|MT_EQUIP
@@ -549,7 +548,7 @@ ON=@NPCRestock
 	ITEM={ random_gold_pile 1 0 2 }
 	ITEM={ i_bone_chest 1 i_bone_leggings 1 i_bone_arms 1 i_bone_gloves 1 i_bone_helmet 1 0 5 }
 
-[CHARDEF c_m_dragon_ice]
+[CHARDEF c_dragon_ice]
 ID=c_dragon_red
 NAME=ice dragon
 SOUND=snd_MONSTER_DRAGON1
@@ -580,7 +579,7 @@ ON=@Create
 ON=@NPCRestock
 	ITEM=loot_ICE_DRAGON
 
-[CHARDEF c_ice_snake]
+[CHARDEF c_snake_ice]
 ID=c_snake
 NAME=ice snake
 SOUND=snd_ANIMALS_SNAKE1
@@ -605,7 +604,7 @@ ON=@Create
 ON=@NPCRestock
 	ITEM=loot_ICE_SNAKE
 
-[CHARDEF c_lava_snake]
+[CHARDEF c_snake_lava]
 ID=c_snake
 NAME=lava snake
 SOUND=snd_ANIMALS_SNAKE1
@@ -630,7 +629,7 @@ ON=@Create
 	FAME=40
 	KARMA={-300 -599}
 
-[CHARDEF c_m_mongbat_arboreal]
+[CHARDEF c_mongbat_arboreal]
 ID=c_mongbat
 NAME=arboreal mongbat
 SOUND=snd_MONSTER_MNGBAT1
@@ -687,7 +686,7 @@ ON=@Create
 	FAME=30
 	KARMA={-1 -99}
 
-[CHARDEF c_a_jackrabbit]
+[CHARDEF c_jackrabbit]
 ID=c_rabbit
 NAME=jackrabbit
 SOUND=snd_ANIMALS_RABBIT3
@@ -697,7 +696,7 @@ ARMOR=2
 RESOURCES=2 i_ribs_raw,1 i_fur_dark
 CAN=MT_WALK
 FOODTYPE=55 t_crops, 55 t_foliage, 64 t_grass
-DESIRES=t_crops,C_A_JACKRABBIT
+DESIRES=t_crops,c_jackrabbit
 AVERSIONS=e_carnivores2
 DESCRIPTION=Jackrabbit
 SUBSECTION=Land (Wild)
@@ -715,18 +714,18 @@ ON=@Create
 	FAME=10
 	KARMA={-1 -99}
 
-[CHARDEF c_a_rat_sewer]
+[CHARDEF c_rat_sewer]
 ID=c_rat
 NAME=sewer rat
 SOUND=snd_ANIMALS_RAT1
-ICON=i_pet_RAT
+ICON=i_pet_rat
 DAM=1,2
 ARMOR=3
 RESOURCES=2 i_ribs_raw
 CAN=MT_WALK
 FOODTYPE=5 t_food,t_food_raw
-DESIRES=c_rat,c_rat_giant,c_a_rat_sewer,r_darkness
-AVERSIONS=r_light,e_human_greet,e_carnivores
+DESIRES=c_rat,c_rat_giant,c_rat_sewer
+AVERSIONS=e_carnivores
 DESCRIPTION=Sewer Rat
 SUBSECTION=Land (Wild)
 CATEGORY=Animals
@@ -744,7 +743,7 @@ ON=@Create
 	FAME=15
 	KARMA={-1 -99}
 
-[CHARDEF c_m_hellcat_pred]
+[CHARDEF c_hellcat_pred]
 ID=c_panther
 NAME=predator hellcat
 SOUND=snd_animals_panther1
@@ -754,7 +753,7 @@ ARMOR=15
 RESOURCES=6 i_ribs_raw,4 i_fur_dark
 CAN=MT_WALK
 FOODTYPE=15 t_meat_raw
-DESIRES=c_m_hellcat_pred
+DESIRES=c_hellcat_pred
 AVERSIONS=r_civilization,r_water
 DESCRIPTION=Predator Hellcat
 SUBSECTION=Miscellaneous
@@ -772,7 +771,7 @@ ON=@Create
 	FAME={100 2000}
 	KARMA={-3000 -3999}
 
-[CHARDEF c_m_ophidian_archmage]
+[CHARDEF c_ophidian_archmage]
 ID=c_ophidian_shaman
 NAME=ophidian archmage
 DAM=3,12
@@ -798,7 +797,7 @@ ON=@Create
 ON=@NPCRestock
 	ITEM=loot_OPHIDIAN_ARCHMAGE
 
-[CHARDEF c_m_ophidian_knight]
+[CHARDEF c_ophidian_knight]
 ID=c_ophidian_warrior
 NAME=ophidian knight
 SOUND=snd_MONSTER_OPHIDIAN_WARRIOR1
@@ -880,7 +879,7 @@ ON=@Create
 	FAME=5
 	KARMA={-1 -99}
 
-[CHARDEF c_m_ghost]
+[CHARDEF c_ghost]
 ID=c_phantom
 NAME=ghost
 SOUND=snd_MONSTER_GHOST1
@@ -909,7 +908,7 @@ ON=@NPCRestock
 	ITEM={ average_undead_backpack 1 rich_undead_backpack 1 }
 	ITEM={ random_gold_pile 1 0 2 }
 
-[CHARDEF c_m_scorpion_prince]
+[CHARDEF c_scorpion_prince]
 ID=c_scorpion_giant
 NAME=scorpion prince
 SOUND=snd_MONSTER_GSCORP1
@@ -940,7 +939,7 @@ ON=@NPCRestock
 	ITEM={ random_jewel 1 0 1 }
 	ITEM=i_gold,{100 200}
 
-[CHARDEF c_m_scorpion_king]
+[CHARDEF c_scorpion_king]
 ID=c_scorpion_giant
 NAME=scorpion king
 SOUND=snd_MONSTER_GSCORP1
@@ -977,7 +976,7 @@ ON=@NPCRestock
 	ITEM=random_upper_scroll
 	ITEM=random_upper_scroll
 
-[CHARDEF c_m_scorpion_queen]
+[CHARDEF c_scorpion_queen]
 ID=c_scorpion_giant
 NAME=scorpion queen
 SOUND=snd_MONSTER_GSCORP1
@@ -1019,7 +1018,7 @@ ON=@NPCRestock
 	ITEM=random_upper_scroll
 	ITEM=random_upper_scroll
 
-[CHARDEF c_m_scorpion_thrall]
+[CHARDEF c_scorpion_thrall]
 ID=c_spider_giant
 NAME=scorpion thrall
 SOUND=snd_MONSTER_GISPIDR1
@@ -1049,7 +1048,7 @@ ON=@NPCRestock
 	ITEM={ random_jewel 1 0 1 }
 	ITEM=i_gold,{50 100}
 
-[CHARDEF c_m_dragon_greendrake]
+[CHARDEF c_dragon_greendrake]
 ID=c_drake
 NAME=#NAMES_DRAGON the Green Drake
 SOUND=snd_MONSTER_DRAGON1
@@ -1083,7 +1082,7 @@ ON=@NPCRestock
 	ITEM={ random_gold_pile 3 0 1 }
 	ITEM=TTM_LVL3,R99
 
-[CHARDEF c_m_dragon_copperdrake]
+[CHARDEF c_dragon_copperdrake]
 ID=c_drake
 NAME=#NAMES_DRAGON the Copper Drake
 DAM=4,24
@@ -1115,7 +1114,7 @@ ON=@NPCRestock
 	ITEM={ random_gold_pile 3 0 1 }
 	ITEM=TTM_LVL3,R99
 
-[CHARDEF c_m_dragon_bluedrake]
+[CHARDEF c_dragon_bluedrake]
 ID=c_drake
 NAME=#NAMES_DRAGON the Blue Drake
 SOUND=snd_MONSTER_DRAGON1
@@ -1149,7 +1148,7 @@ ON=@NPCRestock
 	ITEM={ random_gold_pile 3 0 1 }
 	ITEM=TTM_LVL3,R99
 
-[CHARDEF c_m_dragon_golddrake]
+[CHARDEF c_dragon_golddrake]
 ID=c_drake
 NAME=#NAMES_DRAGON the Gold Drake
 SOUND=snd_MONSTER_DRAGON1
@@ -1183,7 +1182,7 @@ ON=@NPCRestock
 	ITEM={ random_gold_pile 3 0 1 }
 	ITEM=TTM_LVL3,R99
 
-[CHARDEF c_m_dragon_blackdrake]
+[CHARDEF c_dragon_blackdrake]
 ID=c_drake
 NAME=#NAMES_DRAGON the Black Drake
 SOUND=snd_MONSTER_DRAGON1
@@ -1217,7 +1216,7 @@ ON=@NPCRestock
 	ITEM={ random_gold_pile 3 0 1 }
 	ITEM=TTM_LVL3,R99
 
-[CHARDEF c_m_dragon_silverdrake]
+[CHARDEF c_dragon_silverdrake]
 ID=c_drake_red
 NAME=#NAMES_DRAGON the Silver Drake
 SOUND=snd_MONSTER_DRAGON1
@@ -1251,7 +1250,7 @@ ON=@NPCRestock
 	ITEM={ random_gold_pile 3 0 1 }
 	ITEM=TTM_LVL3,R99
 
-[CHARDEF c_m_dragon_crystaldrake]
+[CHARDEF c_dragon_crystaldrake]
 ID=c_drake_red
 NAME=#NAMES_DRAGON the Crystal Drake
 SOUND=snd_MONSTER_DRAGON1
@@ -1285,7 +1284,7 @@ ON=@NPCRestock
 	ITEM={ random_gold_pile 3 0 1 }
 	ITEM=TTM_LVL3,R99
 
-[CHARDEF c_a_mustang_black]
+[CHARDEF c_mustang_black]
 ID=c_horse_brown_dk
 NAME=Mustang
 SOUND=snd_ANIMALS_HORSE1
@@ -1314,7 +1313,7 @@ ON=@Create
 	FAME=0
 	KARMA={-1 -99}
 
-[CHARDEF c_a_mustang_crimson]
+[CHARDEF c_mustang_crimson]
 ID=c_horse_brown_dk
 NAME=Mustang
 SOUND=snd_ANIMALS_HORSE1
@@ -1343,7 +1342,7 @@ ON=@Create
 	FAME=0
 	KARMA={-1 -99}
 
-[CHARDEF c_a_mustang_skygray]
+[CHARDEF c_mustang_skygray]
 ID=c_horse_brown_dk
 NAME=Mustang
 SOUND=snd_ANIMALS_HORSE1
@@ -1372,7 +1371,7 @@ ON=@Create
 	FAME=0
 	KARMA={-1 -99}
 
-[CHARDEF c_a_mustang_wimmimate]
+[CHARDEF c_mustang_wimmimate]
 ID=c_horse_gray
 NAME=Mustang
 SOUND=snd_ANIMALS_HORSE1
@@ -1401,7 +1400,7 @@ ON=@Create
 	FAME=0
 	KARMA={-1 -99}
 
-[CHARDEF c_a_mustang_palamino]
+[CHARDEF c_mustang_palamino]
 ID=c_horse_gray
 NAME=Mustang
 SOUND=snd_ANIMALS_HORSE1
@@ -1430,7 +1429,7 @@ ON=@Create
 	FAME=0
 	KARMA={-1 -99}
 
-[CHARDEF c_a_mustang_sky]
+[CHARDEF c_mustang_sky]
 ID=c_horse_brown_lt
 NAME=Mustang
 SOUND=snd_ANIMALS_HORSE1
@@ -1459,7 +1458,7 @@ ON=@Create
 	FAME=0
 	KARMA={-1 -99}
 
-[CHARDEF c_a_mustang_redroan]
+[CHARDEF c_mustang_redroan]
 ID=c_horse_gray
 NAME=Mustang
 SOUND=snd_ANIMALS_HORSE1
@@ -1488,7 +1487,7 @@ ON=@Create
 	FAME=0
 	KARMA={-1 -99}
 
-[CHARDEF c_a_mustang_chocolate]
+[CHARDEF c_mustang_chocolate]
 ID=c_horse_brown_dk
 NAME=Mustang
 SOUND=snd_ANIMALS_HORSE1
@@ -1517,7 +1516,7 @@ ON=@Create
 	FAME=0
 	KARMA={-1 -99}
 
-[CHARDEF c_a_mustang_roan]
+[CHARDEF c_mustang_roan]
 ID=c_horse_gray
 NAME=Mustang
 SOUND=snd_ANIMALS_HORSE1
@@ -1546,7 +1545,7 @@ ON=@Create
 	FAME=0
 	KARMA={-1 -99}
 
-[CHARDEF c_a_mustang_grey]
+[CHARDEF c_mustang_grey]
 ID=c_horse_gray
 NAME=Mustang
 SOUND=snd_ANIMALS_HORSE1
@@ -1575,9 +1574,9 @@ ON=@Create
 	FAME=0
 	KARMA={-1 -99}
 
-[CHARDEF c_m_frost_ettin]
+[CHARDEF c_ettin_frost]
 ID=c_ettin
-NAME=a Frost Ettin
+NAME=frost ettin
 SOUND=snd_MONSTER_ETTIN1
 ICON=i_pet_ETTIN
 CAN=MT_USEHANDS|MT_WALK
@@ -1611,9 +1610,9 @@ ON=@NPCRestock
 	ITEM=i_deed,R100000
 	ITEM=random_clothing
 
-[CHARDEF c_m_cyclops_king]
+[CHARDEF c_cyclops_king]
 ID=c_cyclops
-NAME=a Cyclop King
+NAME=cyclop king
 SOUND=snd_MONSTER_CYCLOPS1
 DAM=6,30
 ARMOR=28
@@ -1651,9 +1650,9 @@ ON=@NPCRestock
 	ITEM=random_chest_armor,R14
 	ITEM=i_gold,{500 1500}
 
-[CHARDEF c_m_ettin_lord]
+[CHARDEF c_ettin_lord]
 ID=c_ettin_w_hammer
-NAME=an Ettin Lord
+NAME=ettin lord
 SOUND=snd_MONSTER_ETTIN1
 DAM=15,20
 ARMOR={20 22}
@@ -1802,7 +1801,7 @@ ON=@NPCRestock
 	ITEM=loot_SEA_SERPENT
 
 [CHARDEF c_bird_jungle]
-ID=c_BIRD
+ID=c_bird
 NAME=Jungle Bird
 SOUND=snd_ANIMALS_JUNGBRD1
 ICON=i_pet_BIRD
@@ -1829,7 +1828,7 @@ ON=@Create
 	FAME=10
 	KARMA={-1 -99}
 
-[CHARDEF c_a_lion]
+[CHARDEF c_lion]
 ID=c_panther
 SOUND=snd_ANIMALS_LION1
 NAME=Mountain Lion
@@ -1839,7 +1838,7 @@ DAM=2,12
 ARMOR=8
 RESOURCES=6 i_ribs_raw,2 i_fur_dark
 FOODTYPE=15 t_meat_raw
-DESIRES=C_A_Lion,r_foliage
+DESIRES=c_lion,r_foliage
 AVERSIONS=r_civilization,r_water
 DESCRIPTION=Lion
 SUBSECTION=Land (Wild)
@@ -1995,7 +1994,6 @@ ON=@Create
 ON=@NPCRestock
    ITEM=loot_ophidian_apprentice_mage
 
-
 [CHARDEF c_ophidian_enforcer]
 ID=c_ophidian_warrior
 NAME=ophidian enforcer
@@ -2108,7 +2106,7 @@ DESCRIPTION=Abyss Lord
 MOVERATE=40
 ON=@Create
 	NPC=brain_monster
-	FAME={100 3000}
+	FAME={2000 3000}
 	KARMA={-5000 -6999}
 	STR={200 300}
 	MAXHITS=800
@@ -2123,6 +2121,45 @@ ON=@Create
 	ADDCIRCLE 8,1
 ON=@NpcRestock
 	ITEM=i_gold,{700 1100}
+	ITEM=random_weapon
+
+[CHARDEF c_forest_lord]
+ID=c_champ_lord_oaks
+NAME=Forest Lord
+SOUND=snd_pixie
+ICON=i_pet_pixie
+ARMOR=10
+DAM=10,25
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+FOODTYPE=1 t_meat_raw
+DESIRES=i_gold,e_notoriety,e_horses,c_man,c_woman
+RESDISPDNID=c_man
+RESLEVEL=2
+RESDISPDNHUE=33
+CATEGORY=New Monsters
+SUBSECTION=LBR
+DESCRIPTION=Forest Lord
+TAG.Barding.Diff=160.0
+TAG.DamFire=25
+TAG.HitLifeLeech=50
+TAG.HitManaLeech=50
+TAG.HitStaminaLeech=50
+ON=@Create
+	NPC=brain_monster
+	FAME={2000 3000}
+	KARMA={-5000 -6999}
+	STR={200 400}
+	MAXHITS=1100
+	INT={550 690}
+	DEX={100 120}
+	MAGICRESISTANCE=1250
+	TACTICS=1000
+	WRESTLING=1000
+	MAGERY=1250
+	ITEMNEWBIE=i_spellbook
+	ADDCIRCLE 8,1
+ON=@NpcRestock
+	ITEM=i_gold,{770 920}
 	ITEM=random_weapon
 
 [CHARDEF c_forest_queen]
@@ -2141,6 +2178,8 @@ RESDISPDNHUE=33
 CATEGORY=New Monsters
 SUBSECTION=LBR
 DESCRIPTION=Forest Queen
+TAG.Barding.Diff=128.1
+TAG.DamCold=25
 ON=@Create
 	NPC=brain_monster
 	FAME={100 3000}
@@ -2338,7 +2377,6 @@ ON=@Create
 	WRESTLING=90.0
 ON=@NPCRestock
 	ITEM=loot_red_solen_infiltrator_queen
-
 
 [CHARDEF c_hellsteed]
 //FIXME: Chaos breath attack

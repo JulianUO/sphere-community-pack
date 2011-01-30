@@ -294,7 +294,7 @@ endif
 return 5
 
 [function can_anger_on_tame]
-if (<baseid> == c_m_hiryu) || (<baseid> == c_nightmare) || (<baseid> == c_armored_swamp_dragon) || (<baseid> == c_swamp_dragon) || (<body> == c_dragon_red) || (<body> == c_dragon_grey) || (<body> == c_drake_grey) || (<body> == c_drake_red)
+if (<baseid> == c_hiryu) || (<baseid> == c_nightmare) || (<baseid> == c_armored_swamp_dragon) || (<baseid> == c_swamp_dragon) || (<body> == c_dragon_red) || (<body> == c_dragon) || (<body> == c_drake) || (<body> == c_drake_red)
 return 1
 else
 return 0

@@ -190,7 +190,7 @@ INTERRUPT=100.0,1.0
 
 ON=@Select
 if <restest 1 i_rune_polymorph>
-	if <body> == c_moloch
+	if <body> == c_demon_moloch
 	consume i_rune_polymorph
 	body = <obody>
 	update
@@ -208,7 +208,7 @@ new.layer = 40
 new.timer = -1
 new.link = <uid>
 new.cont = <uid>
-body = c_moloch
+body = c_demon_moloch
 update
 
 [SPELL 107]
