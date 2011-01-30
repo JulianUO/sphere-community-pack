@@ -3114,6 +3114,23 @@ CATEGORY=Vegetation
 SUBSECTION=Yew Tree
 DESCRIPTION=Leaves (Yew Tree) (10/10)
 
+[ITEMDEF 018d9]
+DEFNAME=i_fruit_rose
+NAME=rose
+TYPE=t_normal
+//TDATA1=i_crop_trinsic_rose
+//FIXME: Is there a plant to pick this from?
+FLIP=1
+VALUE=10
+CATEGORY=Items by Professions
+SUBSECTION=Alchemist
+DESCRIPTION=Rose (White)
+DUPELIST=018da
+
+[ITEMDEF 018da]
+//Rose
+DUPEITEM=018d9
+
 [ITEMDEF 01a99]
 DEFNAME=i_crop_flax1
 TYPE=T_CROPS

@@ -2388,6 +2388,28 @@ DUPEITEM=01894
 //ruined bed
 DUPEITEM=01894
 
+[ITEMDEF 018db]
+DEFNAME=i_display_minaxwand
+NAME=Display of Minax's Wand
+TYPE=t_normal
+VALUE=1059
+WEIGHT=25.0
+RESOURCES=10 i_log,1 i_nails,1 i_pillow_fancy,1 i_wand_minax
+CATEGORY=Quest
+SUBSECTION=Minax
+DESCRIPTION=Minax's Wand Display Case
+
+[ITEMDEF 018dc]
+DEFNAME=i_display_minaxwand
+NAME=Display of Minax's Wand (empty)
+TYPE=t_normal
+VALUE=59
+WEIGHT=25.0
+RESOURCES=10 i_log,1 i_nails,1 i_pillow_fancy
+CATEGORY=Quest
+SUBSECTION=Minax
+DESCRIPTION=Minax's Wand Display Case (empty)
+
 [ITEMDEF 0190e]
 // Not really a real door. (but ghosts should go thru it.)
 DEFNAME=i_bar_door_ne
@@ -2487,6 +2509,34 @@ DUPEITEM=01910
 [ITEMDEF 0191f]
 //bar
 DUPEITEM=01910
+
+[ITEMDEF 01944]
+DEFNAME=i_pillow_fancy
+NAME=fancy pillow
+DYE=1
+VALUE=34
+WEIGHT=4.3
+RESOURCES=4 i_cloth,2 i_wool,1 i_thread
+SKILLMAKE=Tailoring 79.0,t_sewing_kit
+CATEGORY=Decoration - Furniture
+SUBSECTION=Bedding
+DESCRIPTION=Fancy Pillow
+
+[ITEMDEF 01945]
+DEFNAME=i_screen_wooden_carved
+FLIP=1
+VALUE=76
+WEIGHT=24.4
+RESOURCES=24 i_log_cherry,4 i_hinge
+SKILLMAKE=Carpentry 81.4,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Screens
+DESCRIPTION=Carved Wooden Screen
+DUPELIST=01946
+
+[ITEMDEF 01946]
+//carved wooden screen
+DUPEITEM=01945
 
 [ITEMDEF 019f2]
 // bench - Woodworkers bench extention - n-s

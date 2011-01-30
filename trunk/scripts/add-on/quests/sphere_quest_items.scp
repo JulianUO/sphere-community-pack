@@ -161,6 +161,111 @@ CATEGORY=Quest
 SUBSECTION=Quest 65
 DESCRIPTION=Blighted Cotton
 
+[ITEMDEF 0193f]
+DEFNAME=i_seeker_token
+NAME=seeker token
+VALUE=100
+WEIGHT=1.0
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Seeker Token
+
+[ITEMDEF 01fff]
+DEFNAME=i_crate_sealed
+VALUE=22
+WEIGHT=8.1
+RESOURCES=8 i_board,1 i_nails
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Wooden Crate (sealed)
+
+[ITEMDEF 02000]
+DEFNAME=i_box_brass_corroded
+VALUE=39
+WEIGHT=10.1
+RESOURCES=5 i_ingot_iron,5 i_board,1 i_nails
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Brass Box (corroded)
+
+[ITEMDEF 02001]
+DEFNAME=i_silk_lissith
+NAME=Lissith's silk
+TYPE=t_normal
+VALUE=3
+PILE=0
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Quest 65
+DESCRIPTION=Lissith's Silk
+
+[ITEMDEF 02002]
+DEFNAME=i_key_quest
+TYPE=t_key
+WEIGHT=0.1
+RESOURCES=5 i_ingot_gold,5 i_ingot_silver,5 i_ingot_copper
+CATEGORY=Quest
+SUBSECTION=Keys
+DESCRIPTION=Quest Key
+ON=@Create
+   ATTR=attr_magic|attr_newbie
+
+[ITEMDEF 02003]
+DEFNAME=i_fishing_net_quest
+WEIGHT=14.0
+RESOURCES=10 i_rope,10 i_thread,4 i_shell
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Fishing Net
+
+[ITEMDEF 02004]
+DEFNAME=i_battered_bucket
+NAME=battered bucket
+TYPE=t_drink
+TDATA1=i_bucket
+WEIGHT=12.1
+RESOURCES=1 i_bucket,3 i_pitcher_water
+CATEGORY=Quest
+SUBSECTION=Lost and Found
+DESCRIPTION=Battered Bucket
+
+[ITEMDEF 021fc]
+DEFNAME=i_skull_spikes
+NAME=skull spikes
+TYPE=t_bone
+WEIGHT=130.0
+RESOURCES=10 i_bone,40 i_bone_skull
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Bones
+DESCRIPTION=Skull Spikes
+
+[ITEMDEF 021fe]
+DEFNAME=i_vial_of_stuff
+WEIGHT=1.0
+RESOURCES=5 i_glass_raw
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Vial of stuff?
+
+[ITEMDEF 02203]
+DEFNAME=i_skull_large
+NAME=large skull
+TYPE=t_bone
+VALUE=10
+WEIGHT=10.0
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Bones
+DESCRIPTION=Skull (large)
+
+[ITEMDEF 02376]
+DEFNAME=i_cactus_festive
+DEFNAME=i_quest48_prize
+TYPE=t_normal
+VALUE=1000
+WEIGHT=10
+ON=@Create
+   ATTR=attr_newbie
+
 
 [ITEMDEF i_prismoflight_gate]
 ID=i_moongate_blue
@@ -276,15 +381,6 @@ COLOR=55
 ID=i_ring_gold
 NAME=Regina's Ring
 TAG.NOVENDOR=1
-
-[ITEMDEF 02376]
-DEFNAME=i_quest48_prize
-TYPE=T_NORMAL
-VALUE=1000
-WEIGHT=10
-
-ON=@Create
-ATTR=ATTR_NEWBIE
 
 [ITEMDEF i_librarian_key]
 ID=i_key_copper
