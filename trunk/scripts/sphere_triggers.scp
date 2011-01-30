@@ -467,7 +467,7 @@ ON=@Create
 	MOREP=0,1,3
 	MORE2=0
 	ATTR=attr_move_never|attr_invis
-	MORE={ c_m_skeletonarcher 1 c_mummy 1 c_liche_lord }
+	MORE={ c_skeleton_archer 1 c_mummy 1 c_liche_lord }
 
 ON=@TIMER
 	IF !(<AMOUNT>)

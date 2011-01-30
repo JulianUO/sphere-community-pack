@@ -675,30 +675,30 @@ ADDITEM i_gem_tourmaline
 [MENU M_ADDN_NEW]
 New Creatures
 ON=0 Skeleton Archer
-ADDNPC C_M_SKELETONARCHER
+ADDNPC c_skeleton_archer
 ON=0 PREVIOUS MENU
 MENU M_ADDN
 
 [MENU M_ADDN_OPHID]
 T2A Creatures (Ophidian & Terathan)
 ON=0 Ophidian Arch Mage
-ADDNPC C_M_OPHIDIAN_ARCHMAGE
+ADDNPC c_ophidian_archmage
 ON=0 Ophidian Mage
 ADDNPC c_ophidian_apprentice_mage
 ON=0 Ophidian Knight
-ADDNPC C_M_OPHIDIAN_KNIGHT
+ADDNPC c_ophidian_knight
 ON=0 Ophidian Matriarch
 ADDNPC c_ophidian_matriarch
 ON=0 Ophidian Warrior
-ADDNPC c_OPHIDIAN_WARRIOR
+ADDNPC c_ophidian_warrior
 ON=0 Terathan Avenger
-ADDNPC C_M_TERATHAN_AVENGER
+ADDNPC c_terathan_avenger
 ON=0 Terathan Drone
-ADDNPC c_TERATHAN_DRONE
+ADDNPC c_terathan_drone
 ON=0 Terathan Matriarch
-ADDNPC c_TERATHAN_MATRIARCH
+ADDNPC c_terathan_matriarch
 ON=0 Terathan Warrior
-ADDNPC c_TERATHAN_WARRIOR
+ADDNPC c_terathan_warrior
 ON=0 PREVIOUS MENU
 MENU M_ADDN_T2A
 
@@ -781,11 +781,11 @@ ADDNPC c_horse_gray
 ON=0 Horse (tan)
 ADDNPC c_horse_tan
 ON=0 Pack Horse
-ADDNPC c_HORSE_PACK
+ADDNPC c_horse_pack
 ON=0 Llama
 ADDNPC c_llama
 ON=0 Pack Llama
-ADDNPC c_LLAMA_PACK
+ADDNPC c_llama_pack
 ON=0 Cow (light brown)
 ADDNPC c_cow_brown
 ON=0 Cow (black & white)
@@ -795,11 +795,11 @@ ADDNPC c_bull_brown_lt
 ON=0 Bull (dark brown, spotted)
 ADDNPC c_bull_brown_dk
 ON=0 Pig
-ADDNPC c_PIG
+ADDNPC c_pig
 ON=0 Sheep (wooly)
-ADDNPC c_SHEEP_WOOLLY
+ADDNPC c_sheep_woolly
 ON=0 Goat
-ADDNPC c_GOAT
+ADDNPC c_goat
 ON=0 Cat
 ADDNPC c_cat
 ON=0 Dog
@@ -816,11 +816,11 @@ ADDNPC c_harpy
 ON=0 Mongbat (subterranean)
 ADDNPC c_mongbat
 ON=0 Mongbat (arboreal)
-ADDNPC C_M_MONGBAT_ARBOREAL
+ADDNPC c_mongbat_arboreal
 ON=0 Ogre
-ADDNPC c_OGRE
+ADDNPC c_ogre
 ON=0 Ogre Lord
-ADDNPC c_m_ogre_lord
+ADDNPC c_ogre_lord
 ON=0 Ettin, Lizmen, Orc, Ratmen, Troll
 MENU M_ADDN_ETTIN
 ON=0 Reaper
@@ -841,62 +841,62 @@ MENU M_ADDN
 [MENU M_ADDN_UND]
 Undead Creatures
 ON=0 Spectre
-ADDNPC c_SPECTRE
+ADDNPC c_spectre
 ON=0 Headless
-ADDNPC c_Headless
+ADDNPC c_headless
 ON=0 Lich
 ADDNPC c_lich
 ON=0 Lich Lord
-ADDNPC c_lich_lord
+ADDNPC c_liche_lord
 ON=0 Skeleton
 ADDNPC c_skeleton
 ON=0 Skeleton (with axe)
 ADDNPC c_skeleton_w_axe
 ON=0 Skeleton (with sword)
-ADDNPC c_skeletal_knight
+ADDNPC c_skeleton_knight
 ON=0 Skeletal Knight
-ADDNPC c_skeletal_knight
+ADDNPC c_skeleton_knight
 ON=0 Skeletal Mage
-ADDNPC c_skeletal_mage
+ADDNPC c_skeleton_mage
 ON=0 Zombie
-ADDNPC c_ZOMBIE
+ADDNPC c_zombie
 ON=0 PREVIOUS MENU
 MENU M_ADDN
 
 [MENU M_ADDN_MYTH]
 Mythical Creatures
 ON=0 Air Elemental
-ADDNPC c_elem_AIR
+ADDNPC c_elemental_air
 ON=0 Earth Elemental
-ADDNPC c_elem_earth
+ADDNPC c_elemental_earth
 ON=0 Fire Elemental
-ADDNPC c_elem_fire
+ADDNPC c_elemental_fire
 ON=0 Water Elemental
-ADDNPC c_elem_water
+ADDNPC c_elemental_water
 ON=0 Wisp
-ADDNPC c_WISP
+ADDNPC c_wisp
 ON=0 Dragon (red)
-ADDNPC c_DRAGON_RED
+ADDNPC c_dragon_red
 ON=0 Dragon (green)
-ADDNPC c_dragon_grey
+ADDNPC c_dragon
 ON=0 Drake (red)
 ADDNPC c_drake_red
 ON=0 Drake (Black)
-ADDNPC c_drake_grey
+ADDNPC c_drake
 ON=0 Daemon
-ADDNPC c_DAEMON
+ADDNPC c_demon
 ON=0 Balron (Elder Daemon)
-ADDNPC c_m_balron
+ADDNPC c_balron
 ON=0 Daemon (with sword)
-ADDNPC c_DAEMON_W_SWORD
+ADDNPC c_demon_w_sword
 ON=0 Gargoyle
-ADDNPC c_GARGOYLE
+ADDNPC c_gargoyle
 ON=0 Gazer
 ADDNPC c_gazer
 ON=0 Elder Gazer
-ADDNPC c_m_gazer_elder
+ADDNPC c_gazer_elder
 ON=0 Sea Serpent
-ADDNPC c_SEA_SERPENT
+ADDNPC c_sea_serpent
 ON=0 PREVIOUS MENU
 MENU M_ADDN
 
@@ -905,31 +905,31 @@ T2A Creatures
 ON=0 Bullfrog
 ADDNPC c_bullfrog
 ON=0 Cyclops
-ADDNPC c_CYCLOPS
+ADDNPC c_cyclops
 ON=0 Frost Troll
-ADDNPC c_m_frost_troll
+ADDNPC c_frost_troll
 ON=0 Giant Ice Serpent
-ADDNPC C_M_ICE_SERPENT
+ADDNPC c_serpent_ice
 ON=0 Imp
-ADDNPC c_m_imp
+ADDNPC c_imp
 ON=0 Kraken
-ADDNPC C_M_KRAKEN
+ADDNPC c_kraken
 ON=0 Lava Lizard
-ADDNPC c_m_lava_lizard
+ADDNPC c_lava_lizard
 ON=0 Mummy
 ADDNPC c_mummy
 ON=0 Nightmare
-ADDNPC C_M_NIGHTMARE
+ADDNPC c_nightmare
 ON=0 Phoenix
-ADDNPC C_M_PHOENIX
+ADDNPC c_phoenix
 ON=0 Stone Gargoyle
-ADDNPC c_m_gargoyle_stone
+ADDNPC c_gargoyle_stone
 ON=0 Stone Harpy
-ADDNPC c_m_stoneharpy
+ADDNPC c_harpy_stone
 ON=0 Giant Toad
-ADDNPC c_TOAD_GIANT
+ADDNPC c_toad_giant
 ON=0 Titan
-ADDNPC c_TITAN
+ADDNPC c_titan
 ON=0 Wyrm & Wyvern
 MENU M_ADDN_WYRM
 ON=0 Ophidian's & Terathan's
@@ -943,8 +943,8 @@ MENU M_ADDN
 Ettin, Lizmen, Orc, Ratmen, Troll
 ON=0 Ettin
 ADDNPC c_ettin
-ON=0 Ettin (with axe)
-ADDNPC c_ETTIN_W_AXE
+ON=0 Ettin (with hammer)
+ADDNPC c_ettin_w_hammer
 ON=0 Lizardman
 ADDNPC c_lizardman
 ON=0 Lizardman (with spear)
@@ -952,13 +952,13 @@ ADDNPC c_lizardman_spear
 ON=0 Lizzardman (with mace)
 ADDNPC c_lizardman_mace
 ON=0 Orc
-ADDNPC c_ORC
+ADDNPC c_orc
 ON=0 Orc (with club)
 ADDNPC c_orc_w_club
 ON=0 Orcish Mage
-ADDNPC c_m_orc_mage
+ADDNPC c_orc_mage
 ON=0 Orc Captian
-ADDNPC c_m_orc_captain
+ADDNPC c_orc_captain
 ON=0 Orc Lord
 ADDNPC c_orc_lord
 ON=0 Ratman
@@ -1371,109 +1371,111 @@ Wild Animals (Forest & Jungle)
 ON=0 Brown Bear
 ADDNPC c_bear_brown
 ON=0 Black Bear
-ADDNPC c_a_black_bear
+ADDNPC c_bear_black
 ON=0 Grizzly Bear
-ADDNPC c_Bear_Grizzly
+ADDNPC c_bear_grizzly
 ON=0 Cougar
-ADDNPC c_a_cougar
+ADDNPC c_cougar
 ON=0 Panther
 ADDNPC c_panther
 ON=0 Deer (Hind)
-ADDNPC c_DOE
+ADDNPC c_doe
 ON=0 Deer (Hart)
 ADDNPC c_stag
 ON=0 Mountain Goat
-ADDNPC c_a_mountain_goat
+ADDNPC c_mountain_goat
 ON=0 Boar
 ADDNPC c_pig_big
 ON=0 Rabbit
 ADDNPC c_rabbit
 ON=0 Jackrabbit
-ADDNPC c_a_jackrabbit
+ADDNPC c_jackrabbit
 ON=0 Rat
 ADDNPC c_rat
 ON=0 Sewer Rat
-ADDNPC c_a_rat_sewer
+ADDNPC c_rat_sewer
 ON=0 Grey Wolf
-ADDNPC c_a_wolf_gray
+ADDNPC c_wolf_gray
 ON=0 Timber Wolf
 ADDNPC c_wolf
 ON=0 Gorilla
-ADDNPC c_GORILLA
+ADDNPC c_gorilla
 ON=0 PREVIOUS MENU
 MENU M_ADDN_WILD
 
 [MENU M_ADDN_WILD_SWAMP]
 Wild Animals (Swamp)
 ON=0 Alligator
-ADDNPC c_ALLIGATOR
+ADDNPC c_alligator
 ON=0 Snake
-ADDNPC c_SNAKE
+ADDNPC c_snake
 ON=0 PREVIOUS MENU
 MENU M_ADDN_WILD
 
 [MENU M_ADDN_WILD_NOR]
 Wild Animals (Northern)
 ON=0 Polar Bear
-ADDNPC c_BEAR_POLAR
+ADDNPC c_bear_polar
 ON=0 Snow Leopard
-ADDNPC C_A_SNOW_LEOPARD
+ADDNPC c_leopard_snow
 ON=0 White Wolf
-ADDNPC C_A_WOLF_WHITE
+ADDNPC c_wolf_white
 ON=0 PREVIOUS MENU
 MENU M_ADDN_WILD
 
 [MENU M_ADDN_WILD_SEA]
 Wild Animals (Sea)
 ON=i_pet_dolphin Dolphin
-ADDNPC c_DOLPHIN
+ADDNPC c_dolphin
 ON=i_pet_walrus Walrus
-ADDNPC c_WALRUS
+ADDNPC c_walrus
 ON=i_hand_7 PREVIOUS MENU
 MENU M_ADDN_WILD
 
 [MENU M_ADDN_WILD_FLY]
 Wild Animals (Flying)
 ON=0 Bird
-ADDNPC c_BIRD
+ADDNPC c_bird
 ON=0 Tropical Bird
-ADDNPC C_BIRD_TROPICAL
+ADDNPC c_bird_tropical
 ON=0 Crow
-ADDNPC C_BIRD_CROW
+ADDNPC c_bird_crow
 ON=0 Raven
-ADDNPC C_BIRD_RAVEN
+ADDNPC c_bird_raven
 ON=0 Magpie
-ADDNPC C_BIRD_MAGPIE
+ADDNPC c_bird_magpie
 ON=0 Eagle
-ADDNPC c_EAGLE
+ADDNPC c_eagle
 ON=0 Chicken
-ADDNPC c_CHICKEN
+ADDNPC c_chicken
+ON=0 Turkey
+ADDNPC c_turkey
 
 [MENU M_ADDN_T2A_ICE]
 T2A Ice Creatures & Ostards
 ON=0 Ice Elemental
-ADDNPC c_m_elem_ice
+ADDNPC c_elemental_ice
 ON=0 Snow Elemental
-ADDNPC c_m_elem_ice
+ADDNPC c_elemental_snow
 ON=0 Ice Fiend
-ADDNPC C_M_ICEFIEND
+ADDNPC c_demon_ice
 ON=0 Ice Snake
-ADDNPC c_ice_snake
+ADDNPC c_snake_ice
 ON=0 Oclock (Desert Ostard)
-ADDNPC c_OSTARD_DESERT
+ADDNPC c_ostard_desert
 ON=0 Zostrich (Frenzied Ostard)
-ADDNPC c_OSTARD_ZOSTRICH
+ADDNPC c_ostard_frenzied
 ON=0 Orn (Forest Ostard)
-ADDNPC c_OSTARD_Forest
+ADDNPC c_ostard_forest
 ON=0 PREVIOUS MENU
 MENU M_ADDN_T2A
 
 [MENU M_ADDN_WYRM]
 T2A Creatures (Wyrm & Wyvern)
 ON=0 White Wyrm
-ADDNPC c_m_dragon_ice
+ADDNPC c_dragon_ice
 ON=0 Wyvern
-ADDNPC c_m_wyvern
+ADDNPC c_wyvern
 ON=0 PREVIOUS MENU
 MENU M_ADDN_T2A
 
