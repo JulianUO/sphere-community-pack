@@ -1,52 +1,208 @@
+[ITEMDEF 020d]
+// An Acid Proof Rope is used to enter the Palace of Paroxysmus.  It can be
+// crafted by Carpenters who have access to the elven city of Heartwood and
+// have found the proper recipe.
+DEFNAME=i_rope_acid_proof
+TYPE=t_normal
+VALUE=12
+WEIGHT=2.0
+RESOURCES=1 i_cloth,10 i_flax_bundle
+SKILLMAKE=Carpentry,t_carpentry,i_recipe_rope_acid_proof
+CATEGORY=Quest
+SUBSECTION=Paroxysmus
+DESCRIPTION=Rope (acid proof)
+
+[ITEMDEF 020e]
+// A Bone Machete is used to enter the Blighted Grove. It can be crafted by
+// Blacksmiths who have access to the elven city of Heartwood and have
+// found the proper recipe.
+DEFNAME=i_bone_machete
+NAME=bone machete
+TYPE=t_weapon_sword
+DAM=13,15
+SKILL=Swordsmanship
+SPEED=47
+VALUE=142
+WEIGHT=7.0
+TWOHANDS=N
+RESOURCES=14 i_ingot_iron,1 i_bone
+SKILLMAKE=Blacksmithing 70.0,i_recipe_bone_machete
+CATEGORY=Quest
+SUBSECTION=Blighted Grove
+DESCRIPTION=Bone Machete
+TAG.REQSTR=20
+TAG.NotGargoyle=1
+TEVENTS=e_equipitem
+ON=@Create
+   HITPOINTS={50 60}
+
+[ITEMDEF 021b]
+DEFNAME=i_fruit_peach_sugared
+TYPE=t_food
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_fruit_peach,1 i_sugar
+CATEGORY=Items by Professions
+SUBSECTION=Cook
+DESCRIPTION=Sugared Peach
+ON=@Create
+   MOREM=1
+
+[ITEMDEF 021c]
+DEFNAME=i_dryads_blessing
+NAME=dryad's blessing
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+TAG.NoVendor=1
+CATEGORY=Quest
+SUBSECTION=Quest 4
+DESCRIPTION=Dryad's Blessing
+
+[ITEMDEF 023a]
+DEFNAME=i_poisoned_sacs
+NAME=speckled poisoned sacs
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Speckled Poisoned Sacs
+
+[ITEMDEF 023b]
+DEFNAME=i_bauble
+NAME=Arielle's bauble
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Arielle's bauble
+
+[ITEMDEF 023c]
+DEFNAME=i_badge_serpent_fang
+NAME=serpent fang badge
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Citadel
+DESCRIPTION=Serpent Fang Badge
+
+[ITEMDEF 023d]
+DEFNAME=i_badge_tiger_claw
+NAME=tiger claw badge
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Citadel
+DESCRIPTION=Tiger Claw Badge
+
+[ITEMDEF 023e]
+DEFNAME=i_badge_dragon_flame
+NAME=dragon flame badge
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Citadel
+DESCRIPTION=Dragon Flame Badge
+
+[ITEMDEF 023f]
+DEFNAME=i_protector_essence
+NAME=Protector's essence
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Protector's Essence
+
+[ITEMDEF 0240]
+DEFNAME=i_power_crystal
+NAME=power crystal
+TYPE=t_normal
+VALUE=500
+WEIGHT=0.1
+TAG.NoVendor=1
+CATEGORY=Quest
+SUBSECTION=Quest 11
+DESCRIPTION=Power Crystal
+
+[ITEMDEF 024b]
+DEFNAME=i_heart_icy
+//NAME=icy heart
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Heart of Ice
+DESCRIPTION=Icy Heart
+
+[ITEMDEF 02da]
+//A rare drop from the peerless monster, shimmering effusion
+//Resource required to make crystal granules
+DEFNAME=i_shimmering_crystal
+NAME=shimmering crystal
+TYPE=t_normal
+WEIGHT=1.0
+CATEGORY=Quest
+SUBSECTION=Quest 75
+DESCRIPTION=Shimmering Crystal
+
+[ITEMDEF 02db]
+//One of the keys to access Dreadhorn.
+//Found on the ground in Twisted Weald, this item has a timed life span.
+DEFNAME=i_blighted_cotton
+TYPE=t_normal
+WEIGHT=1.0
+CATEGORY=Quest
+SUBSECTION=Quest 65
+DESCRIPTION=Blighted Cotton
+
+
 [ITEMDEF i_prismoflight_gate]
 ID=i_moongate_blue
 NAME=Prism of Light
 TYPE=T_FLOOR
-
 ON=@Create
-ATTR=ATTR_MOVE_NEVER|ATTR_INVIS
-
+   ATTR=ATTR_MOVE_NEVER|ATTR_INVIS
 ON=@Step
-IF (<SRC.FINDID.i_prismoflight_admission_ticket>)
-SRC.GO 6472,189
-ELSE
-LINK.SAYLOC 946,3,1073993
-SRC.MOVEBACK
-ENDIF
+   IF (<SRC.FINDID.i_prismoflight_admission_ticket>)
+      SRC.GO 6472,189
+   ELSE
+      LINK.SAYLOC 946,3,1073993
+      SRC.MOVEBACK
+   ENDIF
 
 [ITEMDEF i_prismoflight_admission_ticket]
 ID=i_book_sm
 NAME=Prism of Light admission ticket
 TYPE=T_NORMAL
-
 ON=@Create
-ATTR=attr_newbie|attr_move_never|attr_decay|attr_can_decay
-TIMER=60*60*24
-COLOR=55
-
+   ATTR=attr_newbie|attr_move_never|attr_decay|attr_can_decay
+   TIMER=60*60*24
+   COLOR=55
 ON=@ClientToolTip
-SRC.ADDCLILOC 1060658,Expire time,24 hours
-
+   SRC.ADDCLILOC 1060658,Expire time,24 hours
 ON=@Timer
-REMOVE
-RETURN 1
+   REMOVE
+   RETURN 1
 
 [ITEMDEF i_mem_prismoflight_admission_ticket]
 ID=i_memory
 TYPE=T_EQ_SCRIPT
 NAME=prism of light mem item
-
 ON=@Create
-ATTR=attr_invis|attr_decay
-
+   ATTR=attr_invis|attr_decay
 ON=@Equip
-TIMER=60*60*24
-
+   TIMER=60*60*24
 ON=@Timer
-LINK.REMOVE
-TOPOBJ.MESSAGE @946,3,1 Your Prism of Light admission ticket has expired.
-REMOVE
-RETURN 1
+   LINK.REMOVE
+   TOPOBJ.MESSAGE @946,3,1 Your Prism of Light admission ticket has expired.
+   REMOVE
+   RETURN 1
 
 [FUNCTION startprismticketcountdown]
 LOCAL.OLDNEW=<NEW>
@@ -130,14 +286,6 @@ WEIGHT=10
 ON=@Create
 ATTR=ATTR_NEWBIE
 
-[ITEMDEF i_power_crystal]
-ID=i_crystal_1
-NAME=Power Crystal
-VALUE=1000
-
-ON=@Create
-COLOR=colors_gray
-
 [ITEMDEF i_librarian_key]
 ID=i_key_copper
 NAME=Librarian's Key
@@ -156,16 +304,6 @@ TAG.NOVENDOR=1
 
 ON=@Create
 COLOR=55
-
-[ITEMDEF 02D93]
-DEFNAME=i_dryads_blessing
-TYPE=T_NORMAL
-NAME=Dryad's Blessing
-VALUE=5000
-TAG.NOVENDOR=1
-
-ON=@Create
-ATTR=ATTR_NEWBIE
 
 [ITEMDEF i_spirit_bottle]
 ID=i_bottle_6
