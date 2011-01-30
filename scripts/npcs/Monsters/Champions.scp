@@ -1090,7 +1090,7 @@ ON=@GetHit
    //Spawn Creatures Attack
    IF (RAND(10)==1)
       DORAND 12
-         SRC.NEWNPC c_liche
+         SRC.NEWNPC c_lich
          SRC.NEWNPC c_spectre
          SRC.NEWNPC c_liche_ancient
          SRC.NEWNPC c_liche_lord
@@ -1630,7 +1630,7 @@ ON=@GetHit
          SRC.NEWNPC c_demon_ice
          SRC.NEWNPC c_succubus
          SRC.NEWNPC c_devourer_souls
-         SRC.NEWNPC c_demon_bone
+         SRC.NEWNPC c_bone_demon
          SRC.NEWNPC c_ravager
          SRC.NEWNPC c_demon_arcane
          SRC.NEWNPC c_demon_moloch

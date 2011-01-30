@@ -770,14 +770,14 @@ TDATA3=c_ostard_Forest
 DEFNAME=i_mt_llama
 TYPE=T_EQ_HORSE
 LAYER=layer_horse
-TDATA3=c_LLAMA
+TDATA3=c_llama
 
 [ITEMDEF 03e90]
 //ship (really used as horse equipped)
 DEFNAME=i_mt_reptalon
 TYPE=T_EQ_HORSE
 LAYER=layer_horse
-TDATA3=c_m_reptalon
+TDATA3=c_reptalon
 
 [ITEMDEF 03e91]
 //ship (really used as horse equipped)
@@ -791,14 +791,14 @@ TDATA3=c_cu_sidhe
 DEFNAME=i_mt_armor_steed
 TYPE=T_EQ_HORSE
 LAYER=layer_horse
-TDATA3=c_m_armor_steed
+TDATA3=c_armor_steed
 
 [ITEMDEF 03e94]
 //ship (really used as horse equipped)
 DEFNAME=i_mt_hiryu
 TYPE=T_EQ_HORSE
 LAYER=layer_horse
-TDATA3=c_m_hiryu
+TDATA3=c_hiryu
 
 [ITEMDEF 03ead]
 //deck (really used as horse equipped)

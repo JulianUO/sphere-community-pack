@@ -176,11 +176,11 @@ scp.Mining_TMapLevel_6=100.0
 // The default monsters that will spawn on every chest.
 // The map level is the number at the end of the setting (_1, _2, etc)
 scp.Monsters_TMapLevel_1 = {c_headless 1 c_mongbat 1 c_ratman 1 c_skeleton 1 c_zombie 1}
-scp.Monsters_TMapLevel_2 = {c_earth_elemental 1 c_gazer 1 c_gargoyle 1 c_m_hellhound 1 c_orc_mage 1}
-scp.Monsters_TMapLevel_3 = {c_air_elemental 1 c_dread_spider 1 c_fire_elemental 1 c_lich 1 c_ogre_lord 1}
-scp.Monsters_TMapLevel_4 = {c_m_gazer_elder 1 c_daemon 1 c_dread_spider 1 c_lich_lord 1 c_ogre_lord 1}
-scp.Monsters_TMapLevel_5 = {c_blood_elemental 1 c_m_gazer_elder 1 c_daemon 1 c_lich_lord 1 c_poison_elemental 1}
-scp.Monsters_TMapLevel_6 = {c_ancient_wyrm 1 c_balron 1 c_blood_elemental 1 c_poison_elemental 1 c_titan 1}
+scp.Monsters_TMapLevel_2 = {c_elemental_earth 1 c_gazer 1 c_gargoyle 1 c_hellhound 1 c_orc_mage 1}
+scp.Monsters_TMapLevel_3 = {c_elemental_air 1 c_spider_dread 1 c_elemental_fire 1 c_lich 1 c_ogre_lord 1}
+scp.Monsters_TMapLevel_4 = {c_gazer_elder 1 c_demon 1 c_spider_dread 1 c_liche_lord 1 c_ogre_lord 1}
+scp.Monsters_TMapLevel_5 = {c_elemental_blood 1 c_gazer_elder 1 c_demon 1 c_liche_lord 1 c_elemental_poison 1}
+scp.Monsters_TMapLevel_6 = {c_wyrm_ancient 1 c_balron 1 c_elemental_blood 1 c_elemental_poison 1 c_titan 1}
 
 ///////////////////////////////////////////////////////////////
 //////// Skills Settings - Poisoning/Healing/Veterinary
