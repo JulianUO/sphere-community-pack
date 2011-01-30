@@ -1,0 +1,415 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Jan 30, 2011
+VERSION=0.56b
+
+[ITEMDEF 02554]
+DEFNAME=i_sword_demon
+TYPE=t_normal
+VALUE=1000
+WEIGHT=24.0
+RESOURCES=24 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Demon Sword
+
+[ITEMDEF 02555]
+DEFNAME=i_hammer_ettin
+TYPE=t_normal
+VALUE=1000
+WEIGHT=34.0
+RESOURCES=14 i_ingot_iron,10 i_log
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Ettin Hammer
+
+[ITEMDEF 02556]
+DEFNAME=i_staff_liche
+TYPE=t_normal
+VALUE=1000
+WEIGHT=14.0
+RESOURCES=2 i_ingot_iron,6 i_log
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Liche Staff
+
+[ITEMDEF 02557]
+DEFNAME=i_mace_lizardman
+TYPE=t_normal
+VALUE=1000
+WEIGHT=16.0
+RESOURCES=14 i_ingot_iron,1 i_log
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Mace Lizardman
+
+[ITEMDEF 02558]
+DEFNAME=i_spear_lizardman
+TYPE=t_normal
+VALUE=1000
+WEIGHT=16.0
+RESOURCES=12 i_ingot_iron,2 i_log
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Spear Lizardman
+
+[ITEMDEF 02559]
+DEFNAME=i_club_ogre
+TYPE=t_normal
+VALUE=1000
+WEIGHT=24.0
+RESOURCES=12 i_log
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Ogre Club
+
+[ITEMDEF 0255a]
+DEFNAME=i_staff_ophidian
+TYPE=t_normal
+VALUE=1000
+WEIGHT=24.0
+RESOURCES=12 i_log
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Ophidian Staff
+
+[ITEMDEF 0255b]
+DEFNAME=i_bardiche_ophidian
+TYPE=t_normal
+VALUE=1000
+WEIGHT=28.0
+RESOURCES=12 i_log,4 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Ophidian Bardiche
+
+[ITEMDEF 0255c]
+DEFNAME=i_club_orc
+TYPE=t_normal
+VALUE=1000
+WEIGHT=10.0
+RESOURCES=5 i_log
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Orc Club
+
+[ITEMDEF 0255d]
+DEFNAME=i_axe_ratman
+TYPE=t_normal
+VALUE=1000
+WEIGHT=12.0
+RESOURCES=5 i_log,2 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Ratman Axe
+
+[ITEMDEF 0255e]
+DEFNAME=i_sword_ratman
+TYPE=t_normal
+VALUE=1000
+WEIGHT=9.0
+RESOURCES=1 i_log,7 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Ratman Sword
+
+[ITEMDEF 0255f]
+DEFNAME=i_axe_skeleton
+TYPE=t_normal
+VALUE=1000
+WEIGHT=7.0
+RESOURCES=1 i_log,5 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Skeleton Axe
+
+[ITEMDEF 02560]
+DEFNAME=i_scimitar_skeleton
+TYPE=t_normal
+VALUE=1000
+WEIGHT=8.0
+RESOURCES=1 i_log,6 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Skeleton Scimitar
+
+[ITEMDEF 02561]
+DEFNAME=i_staff_terathan
+TYPE=t_normal
+VALUE=1000
+WEIGHT=28.0
+RESOURCES=13 i_log,2 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Terathan Staff
+
+[ITEMDEF 02562]
+DEFNAME=i_spear_terathan
+TYPE=t_normal
+VALUE=1000
+WEIGHT=22.0
+RESOURCES=9 i_log,4 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Terathan Spear
+
+[ITEMDEF 02563]
+DEFNAME=i_mace_terathan
+TYPE=t_normal
+VALUE=1000
+WEIGHT=11.0
+RESOURCES=2 i_log,7 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Terathan Mace
+
+[ITEMDEF 02564]
+DEFNAME=i_axe_troll
+TYPE=t_normal
+VALUE=1000
+WEIGHT=21.0
+RESOURCES=4 i_log,13 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Troll Axe
+
+[ITEMDEF 02565]
+DEFNAME=i_maul_troll
+TYPE=t_normal
+VALUE=1000
+WEIGHT=45.0
+RESOURCES=19 i_log,7 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Troll Maul
+
+[ITEMDEF 02566]
+DEFNAME=i_club_frosttroll
+TYPE=t_normal
+VALUE=1000
+WEIGHT=34.0
+RESOURCES=17 i_log
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Frost Troll Club
+
+[ITEMDEF 02567]
+DEFNAME=i_battleaxe_orclord
+TYPE=t_normal
+VALUE=1000
+WEIGHT=26.0
+RESOURCES=7 i_log,12 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Orc Lord Battleaxe
+
+[ITEMDEF 02568]
+DEFNAME=i_staff_orcmage
+TYPE=t_normal
+VALUE=1000
+WEIGHT=19.0
+RESOURCES=7 i_log,5 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Orc Mage Staff
+
+[ITEMDEF 02569]
+DEFNAME=i_staff_bonemage
+TYPE=t_normal
+VALUE=1000
+WEIGHT=19.0
+RESOURCES=7 i_log,5 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Bone Mage Staff
+
+[ITEMDEF 0256a]
+CATEGORY=Miscellaneous
+SUBSECTION=Bad Tiles
+DESCRIPTION=Scale Shield 0256a
+
+[ITEMDEF 0256b]
+DEFNAME=i_staff_magic1
+TYPE=t_normal
+WEIGHT=19.0
+RESOURCES=7 i_log,5 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Mage Staff 1
+
+[ITEMDEF 0256c]
+DEFNAME=i_staff_magic2
+TYPE=t_normal
+WEIGHT=19.0
+RESOURCES=7 i_log,5 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Mage Staff 2
+
+[ITEMDEF 0256d]
+DEFNAME=i_staff_magic3
+TYPE=t_normal
+WEIGHT=19.0
+RESOURCES=7 i_log,5 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Mage Staff 3
+
+[ITEMDEF 0256e]
+DEFNAME=i_staff_magic4
+TYPE=t_normal
+WEIGHT=19.0
+RESOURCES=7 i_log,5 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Mage Staff 4
+
+[ITEMDEF 0256f]
+DEFNAME=i_hammer_smyth
+TYPE=t_normal
+WEIGHT=7.0
+RESOURCES=1 i_log,5 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Smyth Hammer
+
+[ITEMDEF 02571]
+DEFNAME=i_bow_horseman
+TYPE=t_normal
+WEIGHT=6.1
+RESOURCES=3 i_log,1 i_cat_gut
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Horseman Bow
+
+[ITEMDEF 02572]
+DEFNAME=i_javelin
+TYPE=t_normal
+WEIGHT=9.0
+RESOURCES=4 i_log,1 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Javelin
+
+[ITEMDEF 02573]
+DEFNAME=i_sword_magic1
+TYPE=t_normal
+WEIGHT=9.0
+RESOURCES=1 i_log,7 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Magic Sword 1
+
+[ITEMDEF 02574]
+DEFNAME=i_sword_magic2
+TYPE=t_normal
+WEIGHT=9.0
+RESOURCES=1 i_log,7 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Magic Sword 2
+
+[ITEMDEF 02575]
+DEFNAME=i_sword_magic3
+TYPE=t_normal
+WEIGHT=9.0
+RESOURCES=1 i_log,7 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Magic Sword 3
+
+[ITEMDEF 02576]
+DEFNAME=i_sword_magic4
+TYPE=t_normal
+WEIGHT=10.0
+RESOURCES=1 i_log,8 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Magic Sword 4
+
+[ITEMDEF 02577]
+DEFNAME=i_naginata
+TYPE=t_normal
+WEIGHT=21.0
+RESOURCES=8 i_log,5 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Naginata
+
+[ITEMDEF 02578]
+DEFNAME=i_nodachi_decorative
+TYPE=t_normal
+WEIGHT=14.0
+RESOURCES=1 i_log,12 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=No Dachi
+
+[ITEMDEF 02579]
+DEFNAME=i_pick
+TYPE=t_normal
+WEIGHT=5.0
+RESOURCES=1 i_log,3 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Pick
+
+[ITEMDEF 0257a]
+DEFNAME=i_spear_tribal
+TYPE=t_normal
+WEIGHT=11.0
+RESOURCES=5 i_log,1 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Spear (tribal)
+
+[ITEMDEF 0257b]
+DEFNAME=i_spear2
+TYPE=t_normal
+WEIGHT=11.0
+RESOURCES=5 i_log,1 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Spear 2
+
+[ITEMDEF 0257c]
+DEFNAME=i_sword1
+TYPE=t_normal
+WEIGHT=8.0
+RESOURCES=1 i_log,6 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Sword 1
+
+[ITEMDEF 0257d]
+DEFNAME=i_longsword_decorative
+TYPE=t_normal
+WEIGHT=8.0
+RESOURCES=1 i_log,6 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Longsword
+
+[ITEMDEF 0257e]
+DEFNAME=i_shortsword_decorative
+TYPE=t_normal
+WEIGHT=8.0
+RESOURCES=1 i_log,6 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=Shortsword
+
+[ITEMDEF 0257f]
+DEFNAME=i_warmace_decorative
+TYPE=t_normal
+WEIGHT=10.0
+RESOURCES=2 i_log,6 i_ingot_iron
+CATEGORY=Provisions - Weapons
+SUBSECTION=Decorative
+DESCRIPTION=War Mace
+
+
+[eof]

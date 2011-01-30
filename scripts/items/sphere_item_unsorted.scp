@@ -191,9 +191,8 @@ DEFNAME=i_eq_marker
 [ITEMDEF 02007]
 // used as a memory object
 DEFNAME=i_memory
-TYPE=T_EQ_MEMORY_OBJ
+TYPE=t_eq_memory_obj
 LAYER=layer_special
-
 CATEGORY=Miscellaneous
 SUBSECTION=Bad Tiles
 DESCRIPTION=NonGen (Memory) Object

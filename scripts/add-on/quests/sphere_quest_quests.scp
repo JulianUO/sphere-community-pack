@@ -953,7 +953,7 @@ QUEST_65_PRIZES 2
 QUEST_65_PRIZETYPE1 1 //item
 QUEST_65_PRIZEID1 tm_queststrongbox A Strongbox.
 QUEST_65_PRIZETYPE2 1 //item
-QUEST_65_PRIZEID2 i_quest48_prize A Festive Cactus.
+QUEST_65_PRIZEID2 i_cactus_festive A Festive Cactus.
 
 ////////////////////////////
 

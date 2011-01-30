@@ -11,6 +11,10 @@
 //
 VERSION=0.56b
 
+[ITEMDEF 0490]
+CATEGORY=Ground Tiles
+SUBSECTION=Black
+DESCRIPTION=Black Tile 0490
 
 [ITEMDEF 0491]
 DEFNAME=i_floor_blue
@@ -41,23 +45,23 @@ DESCRIPTION=@
 DUPELIST=0496,0497,0498
 
 [ITEMDEF 0496]
-//marble floor
+//marble floor 1
 DUPEITEM=0495
 
 [ITEMDEF 0497]
-//marble floor
+//marble floor 1
 DUPEITEM=0495
 
 [ITEMDEF 0498]
-//marble floor
+//marble floor 1
 DUPEITEM=0495
 
 [ITEMDEF 049b]
-//floor tile
+//blue floor
 DUPEITEM=0491
 
 [ITEMDEF 049c]
-DEFNAME=i_FLOOR_SLATE_GREY
+DEFNAME=i_floor_slate_grey
 RESOURCES=25 i_stone_slate
 CATEGORY=Buildings - Floors
 SUBSECTION=Gray Slate Floor
@@ -84,8 +88,8 @@ DUPEITEM=049d
 DUPEITEM=049d
 
 [ITEMDEF 04a1]
-DEFNAME=i_WOOD_PLANK
-RESOURCES=25 I_BOARD
+DEFNAME=i_wood_plank
+RESOURCES=25 i_board
 CATEGORY=Buildings - Floors
 SUBSECTION=Wooden Planks (light)
 DESCRIPTION=@
@@ -105,7 +109,7 @@ DUPEITEM=04a1
 
 [ITEMDEF 04a5]
 DEFNAME=i_floor_wood
-RESOURCES=25 I_BOARD
+RESOURCES=25 i_board
 CATEGORY=Buildings - Floors
 SUBSECTION=Wooden Boards
 DESCRIPTION=@
@@ -221,7 +225,7 @@ DUPEITEM=04a5
 
 [ITEMDEF 04c1]
 DEFNAME=i_floor_wood_primitive
-RESOURCES=25 I_LOG
+RESOURCES=25 i_log
 CATEGORY=Buildings - Floors
 SUBSECTION=Primitive Wooden Logs (green)
 DESCRIPTION=@
@@ -357,8 +361,7 @@ DUPEITEM=04a1
 
 [ITEMDEF 04e2]
 DEFNAME=i_floor_flagstone_red
-//DEFNAME2=i_RED_FLAGSTONE_FLOOR
-RESOURCES=25 I_flagstone_RED
+RESOURCES=25 i_flagstone_red
 CATEGORY=Buildings - Floors
 SUBSECTION=Flagstones (Dark Red)
 DESCRIPTION=@
@@ -429,8 +432,8 @@ DUPEITEM=0491
 DUPEITEM=0491
 
 [ITEMDEF 04f3]
-DEFNAME=i_FLOOR_STONE_RED
-RESOURCES=25 I_STONE_RED
+DEFNAME=i_floor_stone_red
+RESOURCES=25 i_stone_red
 CATEGORY=Buildings - Floors
 SUBSECTION=Red Floor
 DESCRIPTION=@
@@ -469,9 +472,8 @@ DUPEITEM=04f3
 DUPEITEM=04f3
 
 [ITEMDEF 04fc]
-DEFNAME=i_FLOOR_FLAGSTONE_GRAY
-//DEFNAME2=i_GRAY_FLAGSTONE_FLOOR
-RESOURCES=25 I_flagstone_GRAY
+DEFNAME=i_floor_flagstone_gray
+RESOURCES=25 i_flagstone_gray
 CATEGORY=Buildings - Floors
 SUBSECTION=Flagstones (gray)
 DESCRIPTION=@
@@ -490,7 +492,7 @@ DUPEITEM=04fc
 DUPEITEM=04fc
 
 [ITEMDEF 0500]
-DEFNAME=i_FLOOR_SANDSTONE
+DEFNAME=i_floor_sandstone
 RESOURCES=25 i_stone_sand
 CATEGORY=Buildings - Floors
 SUBSECTION=Flagstones (sandstone)
@@ -538,8 +540,8 @@ DUPEITEM=04c1
 DUPEITEM=04c1
 
 [ITEMDEF 050b]
-DEFNAME=i_FLOOR_WOOD_LOG
-RESOURCES=25 I_LOG
+DEFNAME=i_floor_wood_log
+RESOURCES=25 i_log
 CATEGORY=Buildings - Floors
 SUBSECTION=Primitive Logs (gray)
 DESCRIPTION=@
@@ -598,8 +600,8 @@ DUPELIST=0514
 DUPEITEM=0513
 
 [ITEMDEF 0515]
-DEFNAME=i_FLOOR_COBBLESTONE
-RESOURCES=25 I_STONE_COBBLE
+DEFNAME=i_floor_cobblestone
+RESOURCES=25 i_stone_cobble
 CATEGORY=Buildings - Floors
 SUBSECTION=Cobblestones
 DESCRIPTION=@
@@ -618,7 +620,7 @@ DUPEITEM=0515
 DUPEITEM=0515
 
 [ITEMDEF 0519]
-DEFNAME=i_PAVER_STONE
+DEFNAME=i_paver_stone
 RESOURCES=25 i_rock_plain
 CATEGORY=Buildings - Floors
 SUBSECTION=Stone Pavers
@@ -670,12 +672,12 @@ DUPEITEM=0519
 DUPEITEM=0519
 
 [ITEMDEF 0525]
-DEFNAME=i_FLOOR_SANDSTONE_2
+DEFNAME=i_floor_sandstone_2
 RESOURCES=25 i_stone_sand
 CATEGORY=Buildings - Floors
 SUBSECTION=Sandstone Floor (light)
 DESCRIPTION=@
-DUPELIST=0526,0527,0528,0529,052a,052b,052c
+DUPELIST=0526,0527,0528,0529,052a,052b,052c,081d
 
 [ITEMDEF 0526]
 //sandstone floor
@@ -706,7 +708,7 @@ DUPEITEM=0525
 DUPEITEM=0525
 
 [ITEMDEF 052f]
-DEFNAME=i_FLOOR_SANDSTONE_3
+DEFNAME=i_floor_sandstone_3
 RESOURCES=25 i_stone_sand
 CATEGORY=Buildings - Floors
 SUBSECTION=Sandstone Floor (dark)
@@ -758,11 +760,12 @@ DUPEITEM=04e2
 DUPEITEM=04e2
 
 [ITEMDEF 053b]
-//cave floor
+DEFNAME=i_floor_cave
+TYPE=t_rock
+RESOURCES=10 i_rock_plain
 CATEGORY=Buildings - Floors
 SUBSECTION=Cave Floor
 DESCRIPTION=Center
-TYPE=T_ROCK
 DUPELIST=053c,053d,053e,053f
 
 [ITEMDEF 053c]
@@ -782,8 +785,8 @@ DUPEITEM=053b
 DUPEITEM=053b
 
 [ITEMDEF 0540]
-//cave floor (edge)
-TYPE=T_ROCK
+DEFNAME=i_floor_cave_edge
+TYPE=t_rock
 CATEGORY=Buildings - Floors
 SUBSECTION=Cave Floor
 DESCRIPTION=Edge
@@ -851,7 +854,7 @@ DUPEITEM=0540
 
 [ITEMDEF 08e0]
 //stalagmites
-TYPE=T_ROCK
+TYPE=t_rock
 CATEGORY=Buildings - Floors
 SUBSECTION=Cave Floor
 DESCRIPTION=Stalagmites

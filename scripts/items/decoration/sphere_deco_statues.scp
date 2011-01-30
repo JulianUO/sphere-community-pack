@@ -6,6 +6,30 @@
 // FILE LAST UPDATED:
 VERSION=0.56b
 
+[ITEMDEF 01947]
+DEFNAME=i_statue_stone_blessed
+FLIP=1
+VALUE=68
+WEIGHT=120.0
+RESOURCES=12 i_rock_plain
+SKILLMAKE=Masonry 78.0
+CATEGORY=Decoration - Statues
+SUBSECTION=Statues
+DESCRIPTION=Blessed Statue
+DUPELIST=01948,01949,0194a
+
+[ITEMDEF 01948]
+//blessed statue
+DUPEITEM=01947
+
+[ITEMDEF 01949]
+//blessed statue
+DUPEITEM=01947
+
+[ITEMDEF 0194a]
+//blessed statue
+DUPEITEM=01947
+
 [ITEMDEF 02d0e]
 DEFNAME=i_statue_arcanist
 NAME=Arcanist Statue

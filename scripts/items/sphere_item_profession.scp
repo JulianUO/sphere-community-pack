@@ -1515,6 +1515,23 @@ CATEGORY=Items by Professions
 SUBSECTION=Tinker
 DESCRIPTION=Copper Wire
 
+[ITEMDEF 0194b]
+DEFNAME=i_scope_surveyor
+TYPE=t_sextant
+FLIP=1
+VALUE=51
+WEIGHT=0.6
+RESOURCES=1 i_sextant_parts,1 i_spyglass
+SKILLMAKE=Tinkering 30.7,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Tinker
+DESCRIPTION=Surveyor Scope
+DUPELIST=0194c
+
+[ITEMDEF 0194c]
+//surveyor scope
+DUPEITEM=0194b
+
 [ITEMDEF 0197a]
 DEFNAME=i_FORGE_BELLOWS_2_part_1_of_3_w
 RESOURCES=2 i_BOARD, 1 i_NAILS, 1 I_SPRINGS, 1 i_LOG, 8 i_rock_plain
