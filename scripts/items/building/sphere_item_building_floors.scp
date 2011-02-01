@@ -11,6 +11,90 @@
 //
 VERSION=0.56b
 
+[ITEMDEF 040b]
+DEFNAME=i_floor_cave
+NAME=cave floor
+CATEGORY=Ground Tiles
+SUBSECTION=Cave Floor
+DESCRIPTION=@
+DUPELIST=040c,040d,040e,040f,0410,0411,0412,0413,0414,0415,0416,0417,0418,0419,041a,041b,041c,041d,041e,053b,053c,053d,053e,053f
+
+[ITEMDEF 040c]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 040d]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 040e]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 040f]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 0410]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 0411]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 0412]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 0413]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 0414]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 0415]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 0416]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 0417]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 0418]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 0419]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 041a]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 041b]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 041c]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 041d]
+//cave floor
+DUPEITEM=040b
+
+[ITEMDEF 041e]
+//cave floor
+DUPEITEM=040b
+
 [ITEMDEF 0490]
 CATEGORY=Ground Tiles
 SUBSECTION=Black
@@ -621,6 +705,7 @@ DUPEITEM=0515
 
 [ITEMDEF 0519]
 DEFNAME=i_paver_stone
+NAME=stone paver
 RESOURCES=25 i_rock_plain
 CATEGORY=Buildings - Floors
 SUBSECTION=Stone Pavers
@@ -760,29 +845,24 @@ DUPEITEM=04e2
 DUPEITEM=04e2
 
 [ITEMDEF 053b]
-DEFNAME=i_floor_cave
-TYPE=t_rock
-RESOURCES=10 i_rock_plain
-CATEGORY=Buildings - Floors
-SUBSECTION=Cave Floor
-DESCRIPTION=Center
-DUPELIST=053c,053d,053e,053f
+//cave floor
+DUPEITEM=040b
 
 [ITEMDEF 053c]
 //cave floor
-DUPEITEM=053b
+DUPEITEM=040b
 
 [ITEMDEF 053d]
 //cave floor
-DUPEITEM=053b
+DUPEITEM=040b
 
 [ITEMDEF 053e]
 //cave floor
-DUPEITEM=053b
+DUPEITEM=040b
 
 [ITEMDEF 053f]
 //cave floor
-DUPEITEM=053b
+DUPEITEM=040b
 
 [ITEMDEF 0540]
 DEFNAME=i_floor_cave_edge
@@ -851,6 +931,26 @@ DUPEITEM=0540
 [ITEMDEF 054f]
 //cave floor
 DUPEITEM=0540
+
+[ITEMDEF 0551]
+//cave floor
+DUPEITEM=0540
+
+[ITEMDEF 0552]
+//cave floor
+DUPEITEM=0540
+
+[ITEMDEF 0553]
+//cave floor
+DUPEITEM=0540
+
+[ITEMDEF 056a]
+//cave floor
+DUPEITEM=0540
+
+[ITEMDEF 081d]
+//sandstone floor
+DUPEITEM=0525
 
 [ITEMDEF 08e0]
 //stalagmites

@@ -11,7 +11,6 @@
 //
 VERSION=0.56b
 
-
 [ITEMDEF 0]
 DEFNAME=i_unused
 CATEGORY=Miscellaneous
@@ -24,154 +23,56 @@ CATEGORY=Miscellaneous
 SUBSECTION=Bad Tiles
 DESCRIPTION=No Draw Tile
 
-[ITEMDEF 040b]
-DEFNAME=i_floor_cave
-NAME=cave floor
-CATEGORY=Ground Tiles
-SUBSECTION=Cave Floor
-DESCRIPTION=@
-DUPELIST=040c,040d,040e,040f,0410,0411,0412,0413,0414,0415,0416,0417,0418,0419,041a,041b,041c,041d,041e
-
-[ITEMDEF 040c]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 040d]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 040e]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 040f]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 0410]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 0411]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 0412]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 0413]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 0414]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 0415]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 0416]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 0417]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 0418]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 0419]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 041a]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 041b]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 041c]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 041d]
-//unused
-DUPEITEM=040b
-
-[ITEMDEF 041e]
-//unused
-DUPEITEM=040b
-
 [ITEMDEF 09b2]
 DEFNAME=i_bankbox
 NAME=Bank Box
 LAYER=layer_bankbox
-TYPE=T_EQ_BANK_BOX
+TYPE=t_eq_bank_box
 TDATA2=04a
 
 [ITEMDEF 0ea9]
-//unused
+CATEGORY=Miscellaneous
+SUBSECTION=Bad Tiles
+DESCRIPTION=Unused Portrait Tile 0ea9
 
 [ITEMDEF 0eb0]
-// Unused item is used for BBoard messages.
-TYPE=T_MESSAGE
-
-[ITEMDEF 010ef]
-//GARBAGE_2
-DUPEITEM=010ee
-
-[ITEMDEF 010f0]
-//garbage
-DUPEITEM=010ee
-
-[ITEMDEF 010f1]
-//garbage
-DUPEITEM=010ee
-
-[ITEMDEF 010f2]
-//pile of garbage
-DUPEITEM=010ee
-
-[ITEMDEF 010f3]
-//pile of garbage
-DUPEITEM=010ee
+//FIXME: used to be TYPE=T_MESSAGE used as BBoard messages.
+DEFNAME=i_vase_rose
+NAME=rose in a vase
+WEIGHT=1.1
+RESOURCES=1 i_vase_small_1, 1 i_fruit_rose
+CATEGORY=Decoration - Potted Plants & Vases
+SUBSECTION=Vases & Pots
+DESCRIPTION=Vase with Rose
 
 [ITEMDEF 01646]
 // does nothing as far as i can see.
 DEFNAME=i_dark_source
-//RESOURCES=BASE ITEMS THAT ARE RESOURCES DO NOT ALWAYS HAVE RESOURCES
 WEIGHT=0
-LAYER=9
-
+LAYER=layer_talisman//FIXME: test this
 ON=@Create
-ATTR=attr_magic|attr_newbie
-morez=024
+   ATTR=attr_magic|attr_newbie
+   MOREZ=024
 
 [ITEMDEF 01647]
 DEFNAME=i_light_source
-//RESOURCES=BASE ITEMS THAT ARE RESOURCES DO NOT ALWAYS HAVE RESOURCES
-TYPE=T_LIGHT_LIT
-TDATA4=i_light_source
+TYPE=t_light_lit
 WEIGHT=0
-LAYER=15
-
+LAYER=layer_light
+TDATA4=i_light_source
 ON=@Create
-ATTR=attr_magic|attr_newbie
+   ATTR=attr_magic|attr_newbie
 
 [ITEMDEF 01b70]
-//target tile
+DEFNAME=i_target_tile
+CATEGORY=Ground Tiles
+SUBSECTION=Target Tile
+DESCRIPTION=Target Tile
 
 [ITEMDEF 01ea7]
 //Worldgem bit plain and small (see fancy bit at 1f13)
 DEFNAME=i_worldgem_bit
-VALUE=1
-TYPE=T_SPAWN_CHAR
+TYPE=t_spawn_char
 CATEGORY=Provisions - GM Items
 SUBSECTION=Special Items
 DESCRIPTION=Worldgem Bit
@@ -179,7 +80,7 @@ DESCRIPTION=Worldgem Bit
 [ITEMDEF 01f13]
 //fancy medium sized worldgem bit (see plain at 01ea7)
 DEFNAME=i_worldgem_lg
-TYPE=T_SPAWN_CHAR
+TYPE=t_spawn_char
 CATEGORY=Provisions - GM Items
 SUBSECTION=Special Items
 DESCRIPTION=Large Worldgem Bit
@@ -199,136 +100,133 @@ DESCRIPTION=NonGen (Memory) Object
 
 [ITEMDEF 02042]
 // Lord British Armor
-//**Since players won't use these should they have type assigned?
+//**Since players wont use these should they have type assigned?
 DEFNAME=i_person_lord_british
-TYPE=T_ARMOR
-
+TYPE=t_armor
 CATEGORY=Provisions - GM Items
 SUBSECTION=Special Items
 DESCRIPTION=Lord British Armour
-
 ON=@Create
-HITPOINTS=150
-
-ON=@equip
-IF (0<SRC.FINDLAYER(11)>)
-SRC.TAG.HaarID=<SRC.FINDLAYER(11).ID>
-SRC.TAG.HaarFarbe=<SRC.FINDLAYER(11).color>
-SRC.FINDLAYER(11).REMOVE
-ELSE
-SRC.TAG.HaarID=0
-ENDIF
-
+   HITPOINTS=150
+ON=@Equip
+   IF (0<SRC.FINDLAYER(11)>)
+      SRC.TAG.HairID=<SRC.FINDLAYER(11).ID>
+      SRC.TAG.HairColor=<SRC.FINDLAYER(11).COLOR>
+      SRC.FINDLAYER(11).REMOVE
+   ELSE
+      SRC.TAG.HairID=0
+   ENDIF
 ON=@unequip
-IF !(<SRC.TAG0.HaarID> == 0)
-Serv.NEWITEM=<SRC.TAG0.HaarID>
-New.EQUIP
-SRC.FINDLAYER(11).color=<src.tag.HaarFarbe>
-SRC.TAG.HaarFarbe=
-src.tag.haarid=
-ENDIF
+   IF !(<SRC.TAG0.HairID> == 0)
+      SERV.NEWITEM=<SRC.TAG0.HairID>
+      NEW.EQUIP
+      SRC.FINDLAYER(11).COLOR=<SRC.TAG.HairColor>
+      SRC.TAG.HairColor=
+      SRC.TAG.HairID=
+   ENDIF
 
 [ITEMDEF 02043]
 // Blackthorne Robe
 DEFNAME=i_person_black_thorne
-TYPE=T_ARMOR
-
+TYPE=t_armor
 CATEGORY=Provisions - GM Items
 SUBSECTION=Special Items
 DESCRIPTION=Blackthorne Robe
-
 ON=@Create
-HITPOINTS=150
-
-ON=@equip
-IF (0<SRC.FINDLAYER(11)>)
-SRC.TAG.HaarID=<SRC.FINDLAYER(11).ID>
-SRC.TAG.HaarFarbe=<SRC.FINDLAYER(11).color>
-SRC.FINDLAYER(11).REMOVE
-ELSE
-SRC.TAG.HaarID=0
-ENDIF
-
+   HITPOINTS=150
+ON=@Equip
+   IF (0<SRC.FINDLAYER(11)>)
+      SRC.TAG.HairID=<SRC.FINDLAYER(11).ID>
+      SRC.TAG.HairColor=<SRC.FINDLAYER(11).COLOR>
+      SRC.FINDLAYER(11).REMOVE
+   ELSE
+      SRC.TAG.HairID=0
+   ENDIF
 ON=@unequip
-IF !(<SRC.TAG0.HaarID> == 0)
-Serv.NEWITEM=<SRC.TAG0.HaarID>
-New.EQUIP
-SRC.FINDLAYER(11).color=<src.tag.HaarFarbe>
-SRC.TAG.HaarFarbe=
-src.tag.haarid=
-ENDIF
+   IF !(<SRC.TAG0.HairID> == 0)
+      SERV.NEWITEM=<SRC.TAG0.HairID>
+      NEW.EQUIP
+      SRC.FINDLAYER(11).COLOR=<SRC.TAG.HairColor>
+      SRC.TAG.HairColor=
+      SRC.TAG.HairID=
+   ENDIF
 
-[ITEMDEF 0204E]
+[ITEMDEF 0204e]
 DEFNAME=i_deathshroud
 NAME=Death Shroud
-TYPE=T_CLOTHING
-
+TYPE=t_clothing
 CATEGORY=Provisions - GM Items
 SUBSECTION=Special Items
 DESCRIPTION=Death Shroud
-
-ON=@equip
-IF (0<SRC.FINDLAYER(11)>)
-SRC.TAG.HaarID=<SRC.FINDLAYER(11).ID>
-SRC.TAG.HaarFarbe=<SRC.FINDLAYER(11).color>
-SRC.FINDLAYER(11).REMOVE
-ELSE
-SRC.TAG.HaarID=0
-ENDIF
-
+ON=@Equip
+   IF (0<SRC.FINDLAYER(11)>)
+      SRC.TAG.HairID=<SRC.FINDLAYER(11).ID>
+      SRC.TAG.HairColor=<SRC.FINDLAYER(11).COLOR>
+      SRC.FINDLAYER(11).REMOVE
+   ELSE
+      SRC.TAG.HairID=0
+   ENDIF
 ON=@unequip
-IF !(<SRC.TAG0.HaarID> == 0)
-Serv.NEWITEM=<SRC.TAG0.HaarID>
-New.EQUIP
-SRC.FINDLAYER(11).color=<src.tag.HaarFarbe>
-SRC.TAG.HaarFarbe=
-src.tag.haarid=
-ENDIF
+   IF !(<SRC.TAG0.HairID> == 0)
+      SERV.NEWITEM=<SRC.TAG0.HairID>
+      NEW.EQUIP
+      SRC.FINDLAYER(11).COLOR=<SRC.TAG.HairColor>
+      SRC.TAG.HairColor=
+      SRC.TAG.HairID=
+   ENDIF
 
 [ITEMDEF 0204F]
-// GM Robe
 DEFNAME=i_robe_gm
-TYPE=T_CLOTHING
-//ATT=50
+TYPE=t_clothing
 ARMOR=500
 DYE=1
-DESCRIPTION=GM Robes
-SUBSECTION=GM Robes
 CATEGORY=Provisions - GM Items
-
+SUBSECTION=GM Robes
+DESCRIPTION=GM Robes
 ON=@Create
-HITPOINTS=150
-
-ON=@equip
-IF (0<SRC.FINDLAYER(11)>)
-SRC.TAG.HaarID=<SRC.FINDLAYER(11).ID>
-SRC.TAG.HaarFarbe=<SRC.FINDLAYER(11).color>
-SRC.FINDLAYER(11).REMOVE
-ELSE
-SRC.TAG.HaarID=0
-ENDIF
-
+   HITPOINTS=150
+ON=@Equip
+   IF (0<SRC.FINDLAYER(11)>)
+      SRC.TAG.HairID=<SRC.FINDLAYER(11).ID>
+      SRC.TAG.HairColor=<SRC.FINDLAYER(11).COLOR>
+      SRC.FINDLAYER(11).REMOVE
+   ELSE
+      SRC.TAG.HairID=0
+   ENDIF
 ON=@unequip
-IF !(<SRC.TAG0.HaarID> == 0)
-Serv.NEWITEM=<SRC.TAG0.HaarID>
-New.EQUIP
-SRC.FINDLAYER(11).color=<src.tag.HaarFarbe>
-SRC.TAG.HaarFarbe=
-src.tag.haarid=
-ENDIF
+   IF !(<SRC.TAG0.HairID> == 0)
+      SERV.NEWITEM=<SRC.TAG0.HairID>
+      NEW.EQUIP
+      SRC.FINDLAYER(11).COLOR=<SRC.TAG.HairColor>
+      SRC.TAG.HairColor=
+      SRC.TAG.HairID=
+   ENDIF
 
 [ITEMDEF 02050]
-// Dupre
 DEFNAME=i_dupre
-TYPE=T_ARMOR
-//ATT=50
+TYPE=t_armor
 ARMOR=30
-
 ON=@Create
-HITPOINTS=150
+   HITPOINTS=150
+ON=@Equip
+   IF (0<SRC.FINDLAYER(11)>)
+      SRC.TAG.HairID=<SRC.FINDLAYER(11).ID>
+      SRC.TAG.HairColor=<SRC.FINDLAYER(11).COLOR>
+      SRC.FINDLAYER(11).REMOVE
+   ELSE
+      SRC.TAG.HairID=0
+   ENDIF
+ON=@unequip
+   IF !(<SRC.TAG0.HairID> == 0)
+      SERV.NEWITEM=<SRC.TAG0.HairID>
+      NEW.EQUIP
+      SRC.FINDLAYER(11).COLOR=<SRC.TAG.HairColor>
+      SRC.TAG.HairColor=
+      SRC.TAG.HairID=
+   ENDIF
 
 [ITEMDEF 02053]
-// hand (gaunlet) point north
+// hand (gauntlet) point north
 DEFNAME=i_handr_1
 DUPELIST=02054,02055,02056,02057,02058,02059,0205a
 
@@ -401,103 +299,185 @@ DUPEITEM=0213f
 DUPEITEM=0213f
 
 [ITEMDEF 02198]
-//nodraw
-
 CATEGORY=Miscellaneous
 SUBSECTION=Bad Tiles
-DESCRIPTION=No Draw Tile
-DUPELIST=021a4,021bc
+DESCRIPTION=No Draw Tile 02198
 
 [ITEMDEF 021a4]
-//no draw
-DUPEITEM=02198
+CATEGORY=Miscellaneous
+SUBSECTION=Bad Tiles
+DESCRIPTION=No Draw Tile 021a4
 
 [ITEMDEF 021bc]
-//nodraw
-DUPEITEM=02198
+CATEGORY=Miscellaneous
+SUBSECTION=Bad Tiles
+DESCRIPTION=No Draw Tile 021bc
 
 [ITEMDEF 02ad8]
-//unused
+CATEGORY=Miscellaneous
+SUBSECTION=Bad Tiles
+DESCRIPTION=Missing Name Tile 02ad8
 
 [ITEMDEF 02ae3]
-//unused
+CATEGORY=Miscellaneous
+SUBSECTION=Bad Tiles
+DESCRIPTION=Missing Name 02ae3
 
 [ITEMDEF 02af8]
-//shopkeeper contain
+//shopkeeper container
 DEFNAME=i_vendorbox
 NAME=Vendor Box
 TYPE=T_EQ_VENDOR_BOX
 TDATA2=04a
 
 [ITEMDEF 03584]
-// These items should appear in a gump only !
-// White
-NAME=Checker
-TYPE=T_GAME_PIECE
+//Gumpid=091b
+DEFNAME=i_gamepiece_checker_w
+NAME=red checker
+TYPE=t_game_piece
 
 [ITEMDEF 03585]
-// White
-NAME=Bishop
-TYPE=T_GAME_PIECE
+//Gumpid=091c
+DEFNAME=i_gamepiece_bishop_w
+NAME=white bishop
+TYPE=t_game_piece
 
 [ITEMDEF 03586]
-// White
-NAME=Rook
-TYPE=T_GAME_PIECE
+//Gumpid=091d
+DEFNAME=i_gamepiece_rook_w
+NAME=white rook
+TYPE=t_game_piece
 
 [ITEMDEF 03587]
+//Gumpid=091e
+DEFNAME=i_gamepiece_queen_w
 NAME=Queen
-TYPE=T_GAME_PIECE
+TYPE=t_game_piece
 
 [ITEMDEF 03588]
-// White
+//Gumpid=091f
+DEFNAME=i_gamepiece_knight_w
 NAME=Knight
-TYPE=T_GAME_PIECE
+TYPE=t_game_piece
 
 [ITEMDEF 03589]
-// White
+//Gumpid=0920
+DEFNAME=i_gamepiece_pawn_w
 NAME=Pawn
-TYPE=T_GAME_PIECE
+TYPE=t_game_piece
 
 [ITEMDEF 0358a]
-// White
+//Gumpid=0921
+DEFNAME=i_gamepiece_king_w
 NAME=King
-TYPE=T_GAME_PIECE
+TYPE=t_game_piece
 
 [ITEMDEF 0358b]
-// Dark
+//Gumpid=0922
+DEFNAME=i_gamepiece_checker_b
 NAME=Checker
-TYPE=T_GAME_PIECE
+TYPE=t_game_piece
 
 [ITEMDEF 0358c]
-// Dark
+//Gumpid=0923
+DEFNAME=i_gamepiece_bishop_b
 NAME=Bishop
-TYPE=T_GAME_PIECE
+TYPE=t_game_piece
 
 [ITEMDEF 0358d]
-//Dark
+//Gumpid=0924
+DEFNAME=i_gamepiece_rook_b
 NAME=Rook
-TYPE=T_GAME_PIECE
+TYPE=t_game_piece
 
 [ITEMDEF 0358e]
-//Dark
+//Gumpid=0925
+DEFNAME=i_gamepiece_queen_b
 NAME=Queen
-TYPE=T_GAME_PIECE
+TYPE=t_game_piece
 
 [ITEMDEF 0358f]
-//Dark
+//Gumpid=0926
+DEFNAME=i_gamepiece_knight_b
 NAME=Knight
-TYPE=T_GAME_PIECE
+TYPE=t_game_piece
 
 [ITEMDEF 03590]
-//Dark
+//Gumpid=0927
+DEFNAME=i_gamepiece_pawn_b
 NAME=Pawn
-TYPE=T_GAME_PIECE
+TYPE=t_game_piece
 
 [ITEMDEF 03591]
-//Dark
+//Gumpid=0928
+DEFNAME=i_gamepiece_king_b
 NAME=King
-TYPE=T_GAME_PIECE
+TYPE=t_game_piece
+
+[ITEMDEF 03592]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 03593]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 03594]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 03595]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 03596]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 03597]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 03598]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 03599]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 0359a]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 0359b]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 0359c]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 0359d]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 0359e]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 0359f]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 035a0]
+//game piece
+TYPE=t_game_piece
+
+[ITEMDEF 035a1]
+//game piece
+TYPE=t_game_piece
+
 
 [ITEMDEF 03dc5]
 //unused
@@ -508,7 +488,14 @@ TYPE=T_GAME_PIECE
 // no idea what the rest of this stuff is....
 
 [ITEMDEF 03ed6]
-//NOINDEX
+CATEGORY=Miscellaneous
+SUBSECTION=Bad Tiles
+DESCRIPTION=Unused Tile 03ed6
+
+[ITEMDEF 03ed7]
+CATEGORY=Miscellaneous
+SUBSECTION=Bad Tiles
+DESCRIPTION=Unused Tile 03ed7
 
 [ITEMDEF 03eea]
 //
@@ -534,230 +521,207 @@ TYPE=T_GAME_PIECE
 [ITEMDEF 03ef1]
 //
 
-[ITEMDEF 03ef2]
-//
-
-[ITEMDEF 03ef3]
-//
-
-[ITEMDEF 03ef4]
-//
-
-[ITEMDEF 03ef5]
-//
-
-[ITEMDEF 03ef6]
-//
-
-[ITEMDEF 03ef7]
-//
-
-[ITEMDEF 03ef8]
-//
-
-[ITEMDEF 03ef9]
-//
-
-[ITEMDEF 03efa]
-//
-
-[ITEMDEF 03efb]
-//
-
-[ITEMDEF 03efc]
-//
-
-[ITEMDEF 03efd]
-//
-
-[ITEMDEF 03efe]
-//
-
-[ITEMDEF 03eff]
-//
-
-[ITEMDEF 03f00]
-//
-
-[ITEMDEF 03f01]
-//
-
-[ITEMDEF 03f02]
-//
-
-[ITEMDEF 03f03]
-//
-
-[ITEMDEF 03f04]
-//
-
-[ITEMDEF 03f05]
-//
-
-[ITEMDEF 03f06]
-//
-
 [ITEMDEF 03f07]
-//
+NAME=Apple Tree
+CATEGORY=Miniature
+SUBSECTION=Nature
+DESCRIPTION=Apple Tree
 
 [ITEMDEF 03f08]
-//
+NAME=Carpet
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Carpet 3
 
 [ITEMDEF 03f09]
-//
+NAME=Carpet
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Carpet 6
 
 [ITEMDEF 03f0a]
-//
+NAME=Carpet
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Carpet 1
 
 [ITEMDEF 03f0b]
-//
+NAME=Ruined Bed
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Ruined Bed
 
 [ITEMDEF 03f0c]
-//
+NAME=Cherry Tree
+CATEGORY=Miniature
+SUBSECTION=Nature
+DESCRIPTION=Cherry Tree
 
 [ITEMDEF 03f0d]
-//
+NAME=Carpet
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Carpet 5
 
 [ITEMDEF 03f0e]
-//
+NAME=Wooden Coffin
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Wooden Coffin
 
 [ITEMDEF 03f0f]
-//
+NAME=Curtains
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Curtains
 
 [ITEMDEF 03f10]
-//
+NAME=Fountain
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Fountain
 
 [ITEMDEF 03f11]
-//
+NAME=Carpet
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Carpet 4
 
 [ITEMDEF 03f12]
-//
+NAME=Weapon Rack
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Weapon Rack (polearms)
 
 [ITEMDEF 03f13]
-//
+NAME=Weapon Rack
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Weapon Rack (swords)
 
 [ITEMDEF 03f14]
-//
+NAME=Stone Fireplace
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Stone Fireplace
 
 [ITEMDEF 03f15]
-//
+NAME=Iron Maiden
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Iron Maiden
 
 [ITEMDEF 03f16]
-//
+NAME=Peach tree
+CATEGORY=Miniature
+SUBSECTION=Nature
+DESCRIPTION=Peach Tree
 
 [ITEMDEF 03f17]
-//
+NAME=Carpet
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Carpet 3 (pattern 2)
 
 [ITEMDEF 03f18]
-//
+NAME=Carpet
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Carpet 2
 
 [ITEMDEF 03f19]
-//
+NAME=Large Statue
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Large Statue (0129f-012a1)
 
 [ITEMDEF 03f1a]
-//
+NAME=Large Statue
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Large Statue (0139e-013a0)
 
 [ITEMDEF 03f1b]
-//
+NAME=Decorative Armor
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Decorative Armor (03d86)
 
 [ITEMDEF 03f1c]
-//
+NAME=Decorative Armor
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Decorative Armor (03d87)
 
 [ITEMDEF 03f1d]
-//
+NAME=Sosaria Tapestry
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Sosaria Tapestry (0234e)
 
 [ITEMDEF 03f1e]
-//
+NAME=Unmade Bed
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Unmade Bed
 
 [ITEMDEF 03f1f]
-//
+NAME=Vanity Dresser
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Vanity Dresser
 
 [ITEMDEF 03f20]
-//
+NAME=Vanity Dresser
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Vanity Dresser
 
 [ITEMDEF 03f21]
-//
+NAME=Broken Armoir
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Broken Armoir
 
 [ITEMDEF 03f22]
-//
+NAME=Ruined Bookcase
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Ruined Bookcase (0c14)
 
 [ITEMDEF 03f23]
-//
+NAME=Broken Furniture
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Broken Furniture
 
 [ITEMDEF 03f24]
-//
+NAME=Broken Chair
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Broken Chair (0c1b)
 
 [ITEMDEF 03f25]
-//
+NAME=Broken Armoir
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Broken Armoir (0c12)
 
 [ITEMDEF 03f26]
-//
+NAME=Covered Chair
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Covered Chair (0c17)
 
 [ITEMDEF 03f27]
-//
-
-[ITEMDEF 03f28]
-//
-
-[ITEMDEF 03f29]
-//
-
-[ITEMDEF 03f2a]
-//
-
-[ITEMDEF 03f2b]
-//
-
-[ITEMDEF 03f2c]
-//
-
-[ITEMDEF 03f2d]
-//
-
-[ITEMDEF 03f2e]
-//
-
-[ITEMDEF 03f2f]
-//
-
-[ITEMDEF 03f30]
-//
-
-[ITEMDEF 03f31]
-//
-
-[ITEMDEF 03f32]
-//
-
-[ITEMDEF 03f33]
-//
-
-[ITEMDEF 03f34]
-//
-
-[ITEMDEF 03f35]
-//
-
-[ITEMDEF 03f36]
-//
-
-[ITEMDEF 03f37]
-//
-
-[ITEMDEF 03f38]
-//
-
-[ITEMDEF 03f39]
-//
-
-[ITEMDEF 03f3a]
-//
-
-[ITEMDEF 03f3b]
-//
+NAME=Guillotine
+CATEGORY=Miniature
+SUBSECTION=Decoration
+DESCRIPTION=Guillotine (01230)
 
 [ITEMDEF 03f8f]
-//
-
+CATEGORY=Miscellaneous
+SUBSECTION=Bad Tiles
+DESCRIPTION=Missing Name 03f8f
 
 [EOF]

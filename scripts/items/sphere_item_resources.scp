@@ -1129,10 +1129,9 @@ CATEGORY=Items by Professions
 SUBSECTION=Archers/Bowyers
 DESCRIPTION=Feathers (White)
 DUPELIST=0dfa,0dfb,01bd2,01bd3
-
-ON=@dclick
+ON=@DClick
 	SRC.SKILLMENU=sm_bolts
-	return 1
+	RETURN 1
 
 [ITEMDEF 010b8]
 DEFNAME=i_spiderweb
@@ -1153,6 +1152,26 @@ CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Garbage
 DUPELIST=010ef,010f0,010f1,010f2,010f3
+
+[ITEMDEF 010ef]
+//pile of garbage
+DUPEITEM=010ee
+
+[ITEMDEF 010f0]
+//pile of garbage
+DUPEITEM=010ee
+
+[ITEMDEF 010f1]
+//pile of garbage
+DUPEITEM=010ee
+
+[ITEMDEF 010f2]
+//pile of garbage
+DUPEITEM=010ee
+
+[ITEMDEF 010f3]
+//pile of garbage
+DUPEITEM=010ee
 
 [ITEMDEF 0fc4]
 DEFNAME=i_shell
@@ -1183,8 +1202,9 @@ WEIGHT=10
 
 ON=@Create
 	COLOR=colors_yellow
-	//**************************************************
-	// Vegetable matter.
+
+//**************************************************
+// Vegetable matter.
 
 [ITEMDEF I_STRAW]
 ID=i_hay_sheaf
@@ -1193,7 +1213,6 @@ VALUE=1
 [ITEMDEF I_GRASS]
 ID=i_hay_sheaf
 VALUE=1
-
 ON=@Create
 	COLOR=colors_green
 

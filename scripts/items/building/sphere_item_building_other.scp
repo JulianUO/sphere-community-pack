@@ -13,7 +13,7 @@ VERSION=0.56b
 
 
 [ITEMDEF 03a5]
-DEFNAME=i_PIER_1
+DEFNAME=i_pier_1
 RESOURCES=50 i_log
 CATEGORY=Buildings - Docks
 SUBSECTION=Pier
@@ -21,8 +21,8 @@ DESCRIPTION=@
 DUPELIST=03aa,03ab,03ac,03ad,03ae,03af,03b0
 
 [ITEMDEF 03a6]
-DEFNAME=i_PIER_2
-RESOURCES=50 I_CLOTH
+DEFNAME=i_pier_2
+RESOURCES=50 i_cloth
 CATEGORY=Buildings - Docks
 SUBSECTION=Rope
 DESCRIPTION=@
@@ -68,9 +68,21 @@ DUPEITEM=03a5
 //pier
 DUPEITEM=03a5
 
+[ITEMDEF 07d7]
+DEFNAME=i_rail_stone_3
+RESOURCES=15 i_rock_plain
+CATEGORY=Buildings - Other
+SUBSECTION=Stone Rail 3
+DESCRIPTION=@
+DUPELIST=07d8,08f7,08f8,08f9,08fa
+
+[ITEMDEF 07d8]
+//stone rail 3
+DUPEITEM=07d6
+
 [ITEMDEF 07e1]
 DEFNAME=i_bridge
-RESOURCES=15 I_ROPE, 5 I_BOARD
+RESOURCES=15 i_rope, 5 i_board
 CATEGORY=Buildings - Other
 SUBSECTION=Suspension Bridge
 DESCRIPTION=@
@@ -299,7 +311,7 @@ DUPEITEM=07e1
 
 [ITEMDEF 087e]
 DEFNAME=i_railing_wood
-RESOURCES=15 I_BOARD
+RESOURCES=15 i_board
 CATEGORY=Buildings - Other
 SUBSECTION=Wooden Rail
 DESCRIPTION=@
@@ -351,7 +363,7 @@ DUPEITEM=087e
 
 [ITEMDEF 0899]
 DEFNAME=i_ladder_wood
-RESOURCES=15 I_BOARD
+RESOURCES=15 i_board
 CATEGORY=Buildings - Other
 SUBSECTION=Wooden Ladder 1
 DESCRIPTION=@
@@ -360,7 +372,7 @@ DUPELIST=089b
 [ITEMDEF 089a]
 //wooden ladder
 DUPELIST=089c
-RESOURCES=15 I_BOARD
+RESOURCES=15 i_board
 CATEGORY=Buildings - Other
 SUBSECTION=Wooden Ladder 2
 DESCRIPTION=@
@@ -377,7 +389,7 @@ DUPEITEM=089a
 //wooden ladder
 DUPELIST=089e
 // HEIGHT=14 // not 12 like it says.
-RESOURCES=15 I_BOARD
+RESOURCES=15 i_board
 CATEGORY=Buildings - Other
 SUBSECTION=Wooden Ladder 3
 DESCRIPTION=@
@@ -388,7 +400,7 @@ DUPEITEM=089d
 
 [ITEMDEF 089f]
 DEFNAME=i_ladder_wood_2
-RESOURCES=15 I_BOARD
+RESOURCES=15 i_board
 CATEGORY=Buildings - Other
 SUBSECTION=Wooden Ladder 2
 DESCRIPTION=@
@@ -416,7 +428,7 @@ DUPEITEM=089f
 
 [ITEMDEF 08a5]
 DEFNAME=i_ladder_rope
-RESOURCES=10 I_ROPE
+RESOURCES=10 i_rope
 CATEGORY=Buildings - Other
 SUBSECTION=Rope Ladder
 DESCRIPTION=@
@@ -428,7 +440,7 @@ DUPEITEM=08a5
 
 [ITEMDEF 08ae]
 DEFNAME=i_banister_wood
-RESOURCES=15 I_BOARD
+RESOURCES=15 i_board
 CATEGORY=Buildings - Other
 SUBSECTION=Wooden Bannister
 DESCRIPTION=@
@@ -548,7 +560,7 @@ DUPEITEM=08ae
 
 [ITEMDEF 08cb]
 DEFNAME=i_edging_wood
-RESOURCES=5 I_BOARD
+RESOURCES=5 i_board
 CATEGORY=Buildings - Other
 SUBSECTION=Edging
 DESCRIPTION=@
@@ -575,40 +587,40 @@ DESCRIPTION=@
 DUPELIST=08ec,08ed,08ee
 
 [ITEMDEF 08ec]
-//stone rail
+//stone rail 1
 DUPEITEM=08eb
 
 [ITEMDEF 08ed]
-//stone rail
+//stone rail 1
 DUPEITEM=08eb
 
 [ITEMDEF 08ee]
-//stone rail
+//stone rail 1
 DUPEITEM=08eb
 
 [ITEMDEF 08ef]
 DEFNAME=i_rail_stone_2
-RESOURCES=20 i_rock_plain, 10 I_BOARD
+RESOURCES=20 i_rock_plain, 10 i_board
 CATEGORY=Buildings - Other
 SUBSECTION=Stone Rail 2
 DESCRIPTION=@
 DUPELIST=08f0,08f1,08f2
 
 [ITEMDEF 08f0]
-//stone rail
+//stone rail 2
 DUPEITEM=08ef
 
 [ITEMDEF 08f1]
-//stone rail
+//stone rail 2
 DUPEITEM=08ef
 
 [ITEMDEF 08f2]
-//stone rail
+//stone rail 2
 DUPEITEM=08ef
 
 [ITEMDEF 08f3]
-DEFNAME=i_rail_stone_3
-RESOURCES=20 i_stone_sand, 10 I_BOARD
+DEFNAME=i_rail_sandstone
+RESOURCES=20 i_stone_sand, 10 i_board
 CATEGORY=Buildings - Other
 SUBSECTION=Sandstone Rail
 DESCRIPTION=@
@@ -627,32 +639,32 @@ DUPEITEM=08f3
 DUPEITEM=08f3
 
 [ITEMDEF 08f7]
-DEFNAME=i_rail_stone_4
-RESOURCES=20 i_rock_plain, 10 I_BOARD
-CATEGORY=Buildings - Other
-SUBSECTION=Stone Rail 3
-DESCRIPTION=@
-DUPELIST=08f8,08f9,08fa,08fb,08fc
+//stone rail 3
+DUPEITEM=07d6
 
 [ITEMDEF 08f8]
-//stone rail
-DUPEITEM=08f7
+//stone rail 3
+DUPEITEM=07d6
 
 [ITEMDEF 08f9]
-//stone rail
-DUPEITEM=08f7
+//stone rail 3
+DUPEITEM=07d6
 
 [ITEMDEF 08fa]
-//stone rail
-DUPEITEM=08f7
+//stone rail 3
+DUPEITEM=07d6
 
 [ITEMDEF 08fb]
-//stone rail
-DUPEITEM=08f7
+DEFNAME=i_rail_boards
+RESOURCES=5 i_board
+CATEGORY=Buildings - Other
+SUBSECTION=Rail Boards
+DESCRIPTION=@
+DUPELIST=08fc
 
 [ITEMDEF 08fc]
-//stone rail
-DUPEITEM=08f7
+//railing boards
+DUPEITEM=08fb
 
 [ITEMDEF 01e9a]
 DEFNAME=i_hook_and_pulley
@@ -684,7 +696,7 @@ DUPEITEM=01e9c
 
 [ITEMDEF 01ea0]
 DEFNAME=i_rope_bundle
-RESOURCES=1 i_ROPE
+RESOURCES=1 i_rope
 WEIGHT=1
 CATEGORY=Buildings - Other
 SUBSECTION=Hooks, Pulleys and Winches
@@ -699,7 +711,7 @@ DUPEITEM=01ea0
 
 [ITEMDEF 01ea3]
 DEFNAME=i_net
-RESOURCES=5 i_ROPE
+RESOURCES=5 i_rope
 WEIGHT=5
 CATEGORY=Buildings - Other
 SUBSECTION=Hooks, Pulleys and Winches
@@ -717,7 +729,7 @@ DUPEITEM=01ea3
 
 [ITEMDEF 01ea8]
 DEFNAME=i_winch
-RESOURCES=5 i_ROPE, 2 I_GEARS, 20 i_ingot_iron
+RESOURCES=5 i_rope, 2 i_gears, 20 i_ingot_iron
 WEIGHT=17
 CATEGORY=Buildings - Other
 SUBSECTION=Hooks, Pulleys and Winches
@@ -746,21 +758,21 @@ DUPEITEM=01ea8
 DUPEITEM=01ea8
 
 [ITEMDEF 01eca]
-DEFNAME=i_PYLON_STONE
+DEFNAME=i_pylon_stone
 RESOURCES=1 i_rock_plain
 CATEGORY=Buildings - Other
 SUBSECTION=Stone Pylon
 DESCRIPTION=Dark @
 
 [ITEMDEF 01ecb]
-DEFNAME=i_PYLON_STONE_LIGHT
+DEFNAME=i_pylon_stone_light
 RESOURCES=1 i_rock_plain
 CATEGORY=Buildings - Other
 SUBSECTION=Stone Pylon
 DESCRIPTION=Light @
 
 [ITEMDEF 01ecc]
-DEFNAME=i_PYLON_STONE_SAND
+DEFNAME=i_pylon_stone_sand
 RESOURCES=1 i_stone_sand
 CATEGORY=Buildings - Other
 SUBSECTION=Stone Pylon

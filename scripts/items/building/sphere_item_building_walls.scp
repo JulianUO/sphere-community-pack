@@ -425,7 +425,7 @@ RESOURCES=100 i_rock_plain
 CATEGORY=Buildings - Walls
 SUBSECTION=Stone Wall 2
 DESCRIPTION=Wall
-DUPELIST=058,059,05a,06d,06e,06f,070,071,072,073,074,075,076,077,07d9
+DUPELIST=058,059,05a,06d,06e,06f,070,071,072,073,074,075,076,077,07d6,07d9
 
 [ITEMDEF 058]
 //stone wall 2
@@ -4212,6 +4212,13 @@ DUPEITEM=0291
 //marble wall 2 (short)
 DUPEITEM=0291
 
+[ITEMDEF 07d6]
+//stone column
+DUPEITEM=057
+
+[ITEMDEF 07d9]
+//stone column
+DUPEITEM=057
 
 //FIXME: some missing walls here?
 
@@ -4248,5 +4255,95 @@ DUPEITEM=02166
 [ITEMDEF 02169]
 //cave wall entrance
 DUPEITEM=02166
+
+[ITEMDEF 03ef2]
+DEFNAME=i_wall_stone_circular_2
+TYPE=t_wall
+RESOURCES=100 i_ingot_iron
+CATEGORY=Buildings - Walls
+SUBSECTION=Wall Stone Circular 2
+DESCRIPTION=Wall Stone Circular
+DUPELIST=03ef3,03ef4,03ef5,03ef6,03ef7,03ef8,03ef9,03efa,03efb,03efc,03efd,03efe,03eff,03f00,03f01,03f02,03f03,03f04,03f05,03f06
+
+[ITEMDEF 03ef3]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03ef4]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03ef5]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03ef6]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03ef7]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03ef8]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03ef9]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03efa]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03efb]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03efc]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03efd]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03efe]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03eff]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03f00]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03f01]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03f02]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03f03]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03f04]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03f05]
+//wall stone circular
+DUPEITEM=03ef2
+
+[ITEMDEF 03f06]
+//wall stone circular
+DUPEITEM=03ef2
+
 
 [eof]

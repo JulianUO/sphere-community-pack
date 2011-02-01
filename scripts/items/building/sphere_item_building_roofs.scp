@@ -13,185 +13,169 @@ VERSION=0.56b
 
 
 [ITEMDEF 0550]
-DEFNAME=i_ROOF_STONE
+DEFNAME=i_roof_stone
 TYPE=t_roof
 RESOURCES=25 i_rock_plain
 CATEGORY=Buildings - Roofs
-SUBSECTION=Stone Roof 1
+SUBSECTION=Stone Roof 1 (flat)
 DESCRIPTION=@
 DUPELIST=0558,0559,055a,055b,056b,056c,056d,056e,056f,0570,0571,0572,0573,0574,0575,0576,0577,0578,05ef,062b,062c,062d,062e,0637,0638,0639,063a,0652,0653,065a,065b,065c,065d
 
-[ITEMDEF 0551]
-//cave floor
-DUPEITEM=0540
-
-[ITEMDEF 0552]
-//cave floor
-DUPEITEM=0540
-
-[ITEMDEF 0553]
-//cave floor
-DUPEITEM=0540
-
 [ITEMDEF 0554]
-DEFNAME=i_ROOF_STONE_2
+DEFNAME=i_roof_stone_2
 TYPE=t_roof
 RESOURCES=25 i_rock_plain
 CATEGORY=Buildings - Roofs
-SUBSECTION=Stone Roof 2
+SUBSECTION=Stone Roof 2 (flat)
 DESCRIPTION=@
 DUPELIST=0555,0556,0557,055c,055d,055e,055f,0560,0561,0562,0563,0564,0565,0566,0567,0568,0569,062f,0630,0631,0632,0656,0657
 
 [ITEMDEF 0555]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0556]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0557]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0558]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0559]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 055a]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 055b]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 055c]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 055d]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 055e]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 055f]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0560]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0561]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0562]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0563]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0564]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0565]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0566]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0567]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0568]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0569]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
-[ITEMDEF 056a]
-//cave floor
-DUPEITEM=0540
-
 [ITEMDEF 056b]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 056c]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 056d]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 056e]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 056f]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0570]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0571]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0572]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0573]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0574]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0575]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0576]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0577]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0578]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0579]
-DEFNAME=i_ROOF_STONE_3
+DEFNAME=i_roof_stone_3
 TYPE=t_roof
 RESOURCES=25 i_rock_plain
 CATEGORY=Buildings - Roofs
-SUBSECTION=Stone Roof 3
+SUBSECTION=Stone Roof 3 (flat)
 DESCRIPTION=@
 DUPELIST=057a,057b,057c,057d,057e,063b,063c,063d,063e,0654,0655
 
@@ -216,11 +200,11 @@ DUPEITEM=0579
 DUPEITEM=0579
 
 [ITEMDEF 057f]
-DEFNAME=i_ROOF_SLATE
+DEFNAME=i_roof_slate
 TYPE=t_roof
 RESOURCES=25 i_stone_slate
 CATEGORY=Buildings - Roofs
-SUBSECTION=Slate Roof 1
+SUBSECTION=Slate Roof 1 (flat)
 DESCRIPTION=@
 DUPELIST=0580,0581,0582,0583,0584,0585,0658,0659
 
@@ -249,10 +233,10 @@ DUPEITEM=057f
 DUPEITEM=057f
 
 [ITEMDEF 0586]
-DEFNAME=i_ROOF_PALMFROND
+DEFNAME=i_roof_palmfrond
 TYPE=t_roof
 CATEGORY=Buildings - Roofs
-SUBSECTION=Palm Frond Roof
+SUBSECTION=Palm Frond Roof (sloped)
 DESCRIPTION=@
 DUPELIST=0587,0588,0589,058a,058b,058c,058d,058e,058f,0590,0591,0592,0593,0594,05d1,05d2,05d3,05d4,05d6,05d7,05d8,05d9,05da,05db,05dc,05dd,05de,05df,05e0,05e1,05e2,05e3,05e4,05e5,05e6,05e7,05e8,05e9,05ea,05eb,05ec
 
@@ -313,11 +297,11 @@ DUPEITEM=0586
 DUPEITEM=0586
 
 [ITEMDEF 0595]
-DEFNAME=i_ROOF_SLATE_2
+DEFNAME=i_roof_slate_sloped
 TYPE=t_roof
 RESOURCES=25 i_stone_slate
 CATEGORY=Buildings - Roofs
-SUBSECTION=Slate Roof 2
+SUBSECTION=Slate Roof 1 (sloped)
 DESCRIPTION=@
 DUPELIST=0596,0597,0598,0599,059a,059b,059c,059d,059e,059f,05a0,05a1,05a2,05a3
 
@@ -378,11 +362,11 @@ DUPEITEM=0595
 DUPEITEM=0595
 
 [ITEMDEF 05a4]
-DEFNAME=i_ROOF_THATCH
+DEFNAME=i_roof_thatch
 TYPE=t_roof
-RESOURCES=25 I_HAY
+RESOURCES=25 i_hay
 CATEGORY=Buildings - Roofs
-SUBSECTION=Thatch Roof
+SUBSECTION=Thatch Roof (sloped)
 DESCRIPTION=@
 DUPELIST=05a5,05a6,05a7,05a8,05a9,05aa,05ab,05ac,05ad,05ae,05af,05b0,05b1,05b2
 
@@ -443,11 +427,11 @@ DUPEITEM=05a4
 DUPEITEM=05a4
 
 [ITEMDEF 05b3]
-DEFNAME=i_ROOF_TILE
+DEFNAME=i_roof_tile
 TYPE=t_roof
 RESOURCES=25 i_rock_plain
 CATEGORY=Buildings - Roofs
-SUBSECTION=Tile Roof
+SUBSECTION=Tile Roof (sloped)
 DESCRIPTION=@
 DUPELIST=05b4,05b5,05b6,05b7,05b8,05b9,05ba,05bb,05bc,05bd,05be,05bf,05c0,05c1,06fd,06fe,06ff,0700
 
@@ -508,10 +492,10 @@ DUPEITEM=05b3
 DUPEITEM=05b3
 
 [ITEMDEF 05c2]
-DEFNAME=i_SHINGLE_WOODEN
-RESOURCES=25 I_BOARD
+DEFNAME=i_shingle_wooden
+RESOURCES=25 i_board
 CATEGORY=Buildings - Roofs
-SUBSECTION=Wooden Shingles
+SUBSECTION=Wooden Shingles (sloped)
 DESCRIPTION=@
 DUPELIST=05c3,05c4,05c5,05c6,05c7,05c8,05c9,05ca,05cb,05cc,05cd,05ce,05cf,05d0
 
@@ -680,15 +664,15 @@ DUPEITEM=0586
 DUPEITEM=0586
 
 [ITEMDEF 05ef]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 05f0]
-DEFNAME=i_ROOF_LOG
+DEFNAME=i_roof_log
 TYPE=t_roof
-RESOURCES=25 I_LOG
+RESOURCES=25 i_log
 CATEGORY=Buildings - Roofs
-SUBSECTION=Log Roof
+SUBSECTION=Log Roof (sloped)
 DESCRIPTION=@
 DUPELIST=05f1,05f2,05f3,05f4,05f5,05f6,05f7,05f8,05f9,05fa,05fb,05fc,05fd,05fe
 
@@ -749,11 +733,11 @@ DUPEITEM=05f0
 DUPEITEM=05f0
 
 [ITEMDEF 05ff]
-DEFNAME=i_ROOF_TENT
+DEFNAME=i_roof_tent
 TYPE=t_roof
-RESOURCES=25 I_CANVAS
+RESOURCES=25 i_canvas
 CATEGORY=Buildings - Roofs
-SUBSECTION=Tent Roof
+SUBSECTION=Tent Roof (sloped)
 DESCRIPTION=@
 DUPELIST=0600,0601,0602,0603,0604,0605,0606,0607,0608,0609,060a,060b,060c,060d,060e,060f,0610,0611,0612,0613,0614,0615,0616,0617,0618,0619,061a,061b,061c,061d,061e,061f,0620,0621,0622,0623,0624,0625,0626,0627,0628,0629,062a,0633,0634,0635,0636,0648,0649,064a,064b,064c,064d,064e,064f,0650,0651,065e,065f,0660,0661,0662,0663,0664,0665,0666,0667,0668,0669,066a,066b,066c,066d,066e,066f,0670,0671,0672,0673,0674
 
@@ -930,35 +914,35 @@ DUPEITEM=05ff
 DUPEITEM=05ff
 
 [ITEMDEF 062b]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 062c]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 062d]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 062e]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 062f]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0630]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0631]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0632]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0633]
@@ -978,35 +962,35 @@ DUPEITEM=05ff
 DUPEITEM=05ff
 
 [ITEMDEF 0637]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0638]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0639]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 063a]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 063b]
-//marble roof
+//stone roof 3
 DUPEITEM=0579
 
 [ITEMDEF 063c]
-//marble roof
+//stone roof 3
 DUPEITEM=0579
 
 [ITEMDEF 063d]
-//marble roof
+//stone roof 3
 DUPEITEM=0579
 
 [ITEMDEF 063e]
-//marble roof
+//stone roof 3
 DUPEITEM=0579
 
 [ITEMDEF 0648]
@@ -1050,51 +1034,51 @@ DUPEITEM=05ff
 DUPEITEM=05ff
 
 [ITEMDEF 0652]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0653]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 0654]
-//stone roof
+//stone roof 3
 DUPEITEM=0579
 
 [ITEMDEF 0655]
-//stone roof
+//stone roof 3
 DUPEITEM=0579
 
 [ITEMDEF 0656]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0657]
-//stone roof
+//stone roof 2
 DUPEITEM=0554
 
 [ITEMDEF 0658]
-//slate roof
+//slate roof 1
 DUPEITEM=057f
 
 [ITEMDEF 0659]
-//slate roof
+//slate roof 1
 DUPEITEM=057f
 
 [ITEMDEF 065a]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 065b]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 065c]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 065d]
-//stone roof
+//stone roof 1
 DUPEITEM=0550
 
 [ITEMDEF 065e]
@@ -1206,10 +1190,9 @@ DUPEITEM=05b3
 DUPEITEM=05b3
 
 [ITEMDEF 01939]
-DEFNAME=i_ROOF_STONE_tile
+DEFNAME=i_roof_stone_tile
 TYPE=t_roof
 RESOURCES=5 i_rock_plain
-WEIGHT=5
 CATEGORY=Buildings - Roofs
 SUBSECTION=Stone Roof Tile
 DESCRIPTION=@
