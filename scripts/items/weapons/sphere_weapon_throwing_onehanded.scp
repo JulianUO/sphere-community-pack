@@ -12,25 +12,27 @@ VERSION=0.56b
 [ITEMDEF 08ff]
 DEFNAME=i_boomerang
 TYPE=t_weapon_bow
-DAM=8,12
-SKILL=Throwing
-REQSTR=25
-RANGE=1,4
-TWOHANDS=N
-SKILLMAKE=75.0 Blacksmithing
-RESOURCES=5 i_ingot_iron
-SPEED=2.0
-WEIGHT=4.0
-DUPELIST=04067
+TDATA3=//nothing is consumed... the weapon itself is thrown
 TDATA4=i_boomerang
-TDATA3=
+DAM=8,12
+FLIP=1
+SKILL=Throwing
+SPEED=2.0
+RANGE=1,4
+VALUE=20
+WEIGHT=4.0
+REQSTR=25
+TWOHANDS=N
+RESOURCES=5 i_ingot_iron
+SKILLMAKE=75.0 Blacksmithing
 CATEGORY=Provisions - Weapons - Throwing
 SUBSECTION=Stygian Abyss
 DESCRIPTION=Boomerang
+TEVENTS=t_iprop
 TAG.Item.Gargoyle=1
-
+DUPELIST=04067
 ON=@Create
-HITPOINTS={50 60}
+   HITPOINTS={50 60}
 
 [ITEMDEF 04067]
 DUPEITEM=08ff
@@ -40,60 +42,63 @@ DUPEITEM=08ff
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0901]
 DEFNAME=i_cyclone
-NAME=Cyclone
+NAME=cyclone
 TYPE=t_weapon_bow
+TDATA3=//nothing is consumed... the weapon itself is thrown
+TDATA4=i_cyclone
 DAM=13,17
 SKILL=Throwing
-REQSTR=40
-RANGE=1,6
-TWOHANDS=N
-SKILLMAKE=75.0 Blacksmithing
-RESOURCES=9 i_ingot_iron
 SPEED=3.0
+RANGE=1,6
+VALUE=36
 WEIGHT=6.0
-DUPELIST=0406C
-TDATA4=i_cyclone
-TDATA3=
+REQSTR=40
+TWOHANDS=N
+RESOURCES=9 i_ingot_iron
+SKILLMAKE=75.0 Blacksmithing
 CATEGORY=Provisions - Weapons - Throwing
 SUBSECTION=Cyclones
 DESCRIPTION=Cyclone
+TEVENTS=t_iprop
 TAG.Item.Gargoyle=1
-
+DUPELIST=0406c
 ON=@Create
-HITPOINTS={30 50}
+   HITPOINTS={30 50}
 
-[ITEMDEF 0406C]
+[ITEMDEF 0406c]
 DUPEITEM=0901
 
 
 ///////////////////////////////////////////////////////////////
 //////// SOUL GLAVIES
 ///////////////////////////////////////////////////////////////
-[ITEMDEF 090A]
+[ITEMDEF 090a]
 DEFNAME=i_soul_glaive
-NAME=Soul Glaive
+NAME=soul glaive
 TYPE=t_weapon_bow
-DAM=18,22
-SKILL=Throwing
-REQSTR=60
-RANGE=1,8
-TWOHANDS=N
-SKILLMAKE=75.0 Blacksmithing
-RESOURCES=9 i_ingot_iron
-SPEED=4.0
-WEIGHT=8.0
-DUPELIST=0406B
+TDATA3=//nothing is consumed... the weapon itself is thrown
 TDATA4=i_soul_glaive
-TDATA3=
+DAM=18,22
+FLIP=1
+SKILL=Throwing
+SPEED=4.0
+RANGE=1,8
+VALUE=36
+WEIGHT=8.0
+REQSTR=60
+TWOHANDS=N
+RESOURCES=9 i_ingot_iron
+SKILLMAKE=75.0 Blacksmithing
 CATEGORY=Provisions - Weapons - Throwing
 SUBSECTION=Stygian Abyss
 DESCRIPTION=Soul Glaive
+TEVENTS=t_iprop
 TAG.Item.Gargoyle=1
-
+DUPELIST=0406b
 ON=@Create
-HITPOINTS={30 50}
+   HITPOINTS={30 50}
 
-[ITEMDEF 0406B]
-DUPEITEM=090A
+[ITEMDEF 0406b]
+DUPEITEM=090a
 
 [eof]

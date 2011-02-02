@@ -1192,30 +1192,6 @@ ON=@DCLICK
 	TIMER=1
 	RETURN 1
 
-[ITEMDEF I_BARDICHE_SA]
-//Bardiche (this may not work!)
-//Using Sword type below
-NAME=Supremely Accurate Bardiche
-ID=i_bardiche
-TYPE=T_WEAPON_SWORD
-RESOURCES=i_bardiche,i_enchant_weapon,i_scroll_bless	// ,5 i_enchant_weapon
-
-ON=@Create
-	HITPOINTS={31 100}
-	COLOR=color_magic_weap
-	ATTR=attr_magic
-	//MOREY=100.0
-
-ON=@EQUIP
-	SRC.SWORDSMANSHIP=(<SRC.SWORDSMANSHIP> + 25.0)
-	SRC.TACTICS=(<SRC.TACTICS> + 25.0)
-	SRC.DEX=(<SRC.DEX> + 1)
-
-ON=@UNEQUIP
-	SRC.SWORDSMANSHIP=(<SRC.SWORDSMANSHIP> - 25.0)
-	SRC.TACTICS=(<SRC.TACTICS> - 25.0)
-	SRC.DEX=(<SRC.DEX> - 1)
-
 [ITEMDEF i_wizards_hat_plus_int]
 Name=Mage Hat
 ID=i_hat_wizards

@@ -19,13 +19,12 @@ SKILLMAKE=Blacksmithing 66.7,Armslore 25.0
 CATEGORY=Provisions - Armor
 SUBSECTION=Stone Gargoyle Armor
 DESCRIPTION=Gargish Stone Arms (female)
+TEVENTS=t_iprop
 TAG.REQSTR=40
 TAG.GargoyleOnly=1
 TAG.FemaleOnly=1
-TEVENTS=e_equipitem
 DUPELIST=04057
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 04057]
@@ -45,12 +44,11 @@ SKILLMAKE=Blacksmithing 66.7,Armslore 25.0
 CATEGORY=Provisions - Armor
 SUBSECTION=Stone Gargoyle Armor
 DESCRIPTION=Gargish Stone Arms
+TEVENTS=t_iprop
 TAG.REQSTR=40
 TAG.GargoyleOnly=1
-TEVENTS=e_equipitem
 DUPELIST=04058
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 04058]
@@ -70,13 +68,12 @@ SKILLMAKE=Blacksmithing 75.0,Armslore 25.0
 CATEGORY=Provisions - Armor
 SUBSECTION=Stone Gargoyle Armor
 DESCRIPTION=Gargish Stone Chest (female)
+TEVENTS=t_iprop
 TAG.REQSTR=60
 TAG.GargoyleOnly=1
 TAG.FemaleOnly=1
-TEVENTS=e_equipitem
 DUPELIST=04059
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 04059]
@@ -96,12 +93,11 @@ SKILLMAKE=Blacksmithing 75.0,Armslore 25.0
 CATEGORY=Provisions - Armor
 SUBSECTION=Stone Gargoyle Armor
 DESCRIPTION=Gargish Stone Chest
+TEVENTS=t_iprop
 TAG.REQSTR=60
 TAG.GargoyleOnly=1
-TEVENTS=e_equipitem
 DUPELIST=0405a
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 0405a]
@@ -121,13 +117,12 @@ SKILLMAKE=Blacksmithing 69.1,Armslore 25.0
 CATEGORY=Provisions - Armor
 SUBSECTION=Stone Gargoyle Armor
 DESCRIPTION=Gargish Stone Kilt (female)
+TEVENTS=t_iprop
 TAG.REQSTR=40
 TAG.GargoyleOnly=1
 TAG.FemaleOnly=1
-TEVENTS=e_equipitem
 DUPELIST=0405b
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 0405b]
@@ -147,12 +142,11 @@ SKILLMAKE=Blacksmithing 69.1,Armslore 25.0
 CATEGORY=Provisions - Armor
 SUBSECTION=Stone Gargoyle Armor
 DESCRIPTION=Gargish Stone Kilt
+TEVENTS=t_iprop
 TAG.REQSTR=40
 TAG.GargoyleOnly=1
-TEVENTS=e_equipitem
 DUPELIST=0405c
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 0405c]
@@ -172,13 +166,12 @@ SKILLMAKE=Blacksmithing 69.1,Armslore 25.0
 CATEGORY=Provisions - Armor
 SUBSECTION=Stone Gargoyle Armor
 DESCRIPTION=Gargish Stone Leggings (female)
+TEVENTS=t_iprop
 TAG.REQSTR=40
 TAG.GargoyleOnly=1
 TAG.FemaleOnly=1
-TEVENTS=e_equipitem
 DUPELIST=0405d
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 0405d]
@@ -198,12 +191,11 @@ SKILLMAKE=Blacksmithing 69.1,Armslore 25.0
 CATEGORY=Provisions - Armor
 SUBSECTION=Stone Gargoyle Armor
 DESCRIPTION=Gargish Stone Leggings
+TEVENTS=t_iprop
 TAG.REQSTR=40
 TAG.GargoyleOnly=1
-TEVENTS=e_equipitem
 DUPELIST=0405e
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 0405e]
@@ -232,9 +224,8 @@ SUBSECTION=Shields
 DESCRIPTION=Gargish Wooden Shield
 TAG.Item.Gargoyle=1
 TAG.ResEnergy=1
-
 ON=@Create
-HITPOINTS={50 60}
+   HITPOINTS={50 60}
 
 [ITEMDEF 04207]
 DUPEITEM=04200
@@ -253,9 +244,8 @@ SUBSECTION=Shields
 DESCRIPTION=Gargish Kite Shield
 TAG.Item.Gargoyle=1
 TAG.ResEnergy=1
-
 ON=@Create
-HITPOINTS={50 60}
+   HITPOINTS={50 60}
 
 [ITEMDEF 04206]
 DUPEITEM=04201
@@ -274,9 +264,8 @@ SUBSECTION=Shields
 DESCRIPTION=Small Plate Shield
 TAG.Item.Gargoyle=1
 TAG.ResCold=1
-
 ON=@Create
-HITPOINTS={50 60}
+   HITPOINTS={50 60}
 
 [ITEMDEF 0420a]
 DUPEITEM=04202
@@ -295,9 +284,8 @@ SUBSECTION=Shields
 DESCRIPTION=Medium Plate Shield
 TAG.Item.Gargoyle=1
 TAG.ResFire=1
-
 ON=@Create
-HITPOINTS={50 60}
+   HITPOINTS={50 60}
 
 [ITEMDEF 04209]
 DUPEITEM=04203
@@ -316,9 +304,8 @@ SUBSECTION=Shields
 DESCRIPTION=Large Plate Shield
 TAG.Item.Gargoyle=1
 TAG.ResFire=1
-
 ON=@Create
-HITPOINTS={50 60}
+   HITPOINTS={50 60}
 
 [ITEMDEF 04208]
 DUPEITEM=04204
@@ -337,9 +324,8 @@ SUBSECTION=Shields
 DESCRIPTION=Gargish Chaos Shield
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=1
-
 ON=@Create
-HITPOINTS={50 60}
+   HITPOINTS={50 60}
 
 [ITEMDEF 04229]
 DUPEITEM=04228
@@ -358,9 +344,8 @@ SUBSECTION=Shields
 DESCRIPTION=Gargish Order Shield
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=1
-
 ON=@Create
-HITPOINTS={50 60}
+   HITPOINTS={50 60}
 
 [ITEMDEF 0422b]
 DUPEITEM=0422a

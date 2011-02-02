@@ -3,6 +3,7 @@
 // crafted by Carpenters who have access to the elven city of Heartwood and
 // have found the proper recipe.
 DEFNAME=i_rope_acid_proof
+NAME=acid proof rope
 TYPE=t_normal
 VALUE=12
 WEIGHT=2.0
@@ -38,6 +39,7 @@ ON=@Create
 
 [ITEMDEF 021b]
 DEFNAME=i_fruit_peach_sugared
+NAME=sugared peach
 TYPE=t_food
 VALUE=5
 WEIGHT=0.1

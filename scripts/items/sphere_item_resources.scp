@@ -31,7 +31,7 @@ DUPELIST=09bc
 [ITEMDEF 09c9]
 DEFNAME=i_ham
 VALUE=4
-TYPE=T_FOOD
+TYPE=t_food
 WEIGHT=0.5
 CATEGORY=Items by Professions
 SUBSECTION=Cook
@@ -41,7 +41,7 @@ DUPELIST=09d3
 [ITEMDEF 09d1]
 DEFNAME=i_fruit_grapes
 VALUE=1
-TYPE=T_FRUIT
+TYPE=t_fruit
 TDATA1=i_crop_grapevine
 WEIGHT=0.1
 CATEGORY=Items by Professions
@@ -66,21 +66,21 @@ DESCRIPTION=Flowers
 [ITEMDEF 0df8]
 DEFNAME=i_wool
 VALUE=3
-TYPE=t_WOOL
+TYPE=t_wool
 WEIGHT=3
 CATEGORY=Items by Professions
 SUBSECTION=Tailor
-DESCRIPTION=WOOL (PILE)
+DESCRIPTION=Wool (pile)
 DUPELIST=0101f
 
 [ITEMDEF 0df9]
 DEFNAME=i_cotton
 VALUE=3
-//RESOURCES=16 i_crop_COTTON
+//RESOURCES=16 i_crop_cotton
 TYPE=t_cotton
 CATEGORY=Items by Professions
 SUBSECTION=Tailor
-DESCRIPTION=BAILS OF COTTON
+DESCRIPTION=Bales of Cotton
 DUPELIST=0def
 WEIGHT=4
 
@@ -89,7 +89,7 @@ DEFNAME=i_hair_cut
 VALUE=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
-DESCRIPTION=CUT HAIR
+DESCRIPTION=Cut Hair
 
 [ITEMDEF 0e57]
 DEFNAME=i_stump
@@ -177,15 +177,14 @@ DUPELIST=0eeb,0eec
 [ITEMDEF 0eed]
 //gold coin
 DEFNAME=i_gold
-TYPE=T_GOLD
+TYPE=t_gold
 VALUE=1
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Coins
 DESCRIPTION=Gold Coin
 DUPELIST=0eee,0eef
-
 ON=@Create
-	ATTR=attr_identified
+   ATTR=attr_identified
 
 [ITEMDEF 0ef0]
 //silver coin
@@ -200,7 +199,7 @@ DUPELIST=0ef1,0ef2
 [ITEMDEF 0f0f]
 //Star Sapphire
 DEFNAME=i_gem_star_sapphire
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=35
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -210,7 +209,7 @@ DESCRIPTION=Star Sapphire 1 (Dark Blue)
 [ITEMDEF 0f10]
 //emerald
 DEFNAME=i_gem_emerald
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=40
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -220,7 +219,7 @@ DESCRIPTION=Emerald 1
 [ITEMDEF 0f11]
 //Sapphire (gem)
 DEFNAME=i_gem_sapphire
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=30
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -230,7 +229,7 @@ DESCRIPTION=Sapphire 1 (Light Blue)
 [ITEMDEF 0f12]
 //sapphire
 DEFNAME=i_gem_sapphire_2
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=35
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -240,7 +239,7 @@ DESCRIPTION=Sapphire 2 (Dark Blue)
 [ITEMDEF 0f13]
 //ruby
 DEFNAME=i_gem_ruby
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=30
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -250,7 +249,7 @@ DESCRIPTION=Ruby 1
 [ITEMDEF 0f14]
 //ruby
 DEFNAME=i_gem_ruby_2
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=30
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -260,7 +259,7 @@ DESCRIPTION=Ruby 2
 [ITEMDEF 0f15]
 //citrine
 DEFNAME=i_gem_citrine
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=20
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -270,7 +269,7 @@ DESCRIPTION=Citrine 1
 [ITEMDEF 0f16]
 //Amethyst (gem)
 DEFNAME=i_gem_amethyst
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=20
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -280,7 +279,7 @@ DESCRIPTION=Amethyst 1
 [ITEMDEF 0f17]
 //amethyst
 DEFNAME=i_gem_amethyst_2
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=20
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -290,7 +289,7 @@ DESCRIPTION=Amethyst 2
 [ITEMDEF 0f18]
 //Tourmaline (gem)
 DEFNAME=i_gem_tourmaline
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=20
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -300,7 +299,7 @@ DESCRIPTION=Tourmaline 1
 [ITEMDEF 0f19]
 //sapphire
 DEFNAME=i_gem_sapphire_3
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=35
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -310,7 +309,7 @@ DESCRIPTION=Sapphire 3
 [ITEMDEF 0f1a]
 //Ruby (gem)
 DEFNAME=i_gem_ruby_3
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=40
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -319,7 +318,7 @@ DESCRIPTION=Ruby 3
 [ITEMDEF 0f1b]
 //star sapphire
 DEFNAME=i_gem_star_sapphire_2
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=35
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -328,7 +327,7 @@ DESCRIPTION=Star Sapphire 2 (Shining Blue)
 [ITEMDEF 0f1c]
 //ruby
 DEFNAME=i_gem_ruby_4
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=40
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -338,7 +337,7 @@ DESCRIPTION=Ruby 4 (Small)
 //ruby
 DEFNAME=i_gem_ruby_5
 VALUE=40
-TYPE=T_GEM
+TYPE=t_gem
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
 DESCRIPTION=Ruby 5 (Small) (Darkened)
@@ -346,7 +345,7 @@ DESCRIPTION=Ruby 5 (Small) (Darkened)
 [ITEMDEF 0f1e]
 //tourmaline
 DEFNAME=i_gem_tourmaline_2
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=30
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -355,7 +354,7 @@ DESCRIPTION=Tourmaline 2
 [ITEMDEF 0f1f]
 //sapphire
 DEFNAME=i_gem_sapphire_4
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=30
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -364,7 +363,7 @@ DESCRIPTION=Sapphire 4
 [ITEMDEF 0f20]
 //tourmaline
 DEFNAME=i_gem_tourmaline_3
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=20
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -373,7 +372,7 @@ DESCRIPTION=Tourmaline 3 (Shining Green)
 [ITEMDEF 0f21]
 //star sapphire
 DEFNAME=i_gem_star_sapphire_3
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=30
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -382,7 +381,7 @@ DESCRIPTION=Star Sapphire 3 (Big)
 [ITEMDEF 0f22]
 //Amethyst (gem) (large)
 DEFNAME=i_gem_amethyst_3
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=20
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -393,7 +392,7 @@ DESCRIPTION=Amethyst 1
 //Citrine (gem)
 DEFNAME=i_gem_citrine_2
 VALUE=10
-TYPE=T_GEM
+TYPE=t_gem
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
 DESCRIPTION=Citrine 2 (Big)
@@ -402,7 +401,7 @@ DESCRIPTION=Citrine 2 (Big)
 //citrine
 DEFNAME=i_gem_citrine_3
 VALUE=10
-TYPE=T_GEM
+TYPE=t_gem
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
 DESCRIPTION=Citrine 3 (Big)
@@ -410,7 +409,7 @@ DESCRIPTION=Citrine 3 (Big)
 [ITEMDEF 0f25]
 //Piece of Amber (gem)
 DEFNAME=i_gem_amber
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=10
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -420,7 +419,7 @@ DESCRIPTION=Piece of Amber
 [ITEMDEF 0f26]
 //Diamond (gem)
 DEFNAME=i_gem_diamond
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=45
 WEIGHT=1
 CATEGORY=Provisions - Jewels and Jewelry
@@ -430,7 +429,7 @@ DESCRIPTION=Diamond 1 (Dark) (Small)
 [ITEMDEF 0f27]
 //diamond
 DEFNAME=i_gem_diamond_2
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=45
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -439,7 +438,7 @@ DESCRIPTION=Diamond 2 (Dark) (Big)
 [ITEMDEF 0f28]
 //diamond
 DEFNAME=i_gem_diamond_3
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=45
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -448,7 +447,7 @@ DESCRIPTION=Diamond 3 (Light) (Small)
 [ITEMDEF 0f29]
 //diamond
 DEFNAME=i_gem_diamond_4
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=45
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -457,7 +456,7 @@ DESCRIPTION=Diamond 4 (Light) (Big)
 [ITEMDEF 0f2a]
 //ruby
 DEFNAME=i_gem_ruby_6
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=30
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -467,7 +466,7 @@ DESCRIPTION=Ruby 6 (Big)
 //ruby
 // DEFNAME2=GEM25
 DEFNAME=i_gem_ruby_7
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=30
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -477,7 +476,7 @@ DESCRIPTION=Ruby 7 (Big)
 //citrine
 // DEFNAME2=GEM26
 DEFNAME=i_gem_citrine_4
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=30
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -487,7 +486,7 @@ DESCRIPTION=Citrine 4
 //tourmaline
 // DEFNAME2=GEM27
 DEFNAME=i_gem_tourmaline_4
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=30
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -497,7 +496,7 @@ DESCRIPTION=Tourmaline 4 (Big)
 //amethyst (large)
 // DEFNAME2=GEM28
 DEFNAME=i_gem_amethyst_4
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=30
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -507,7 +506,7 @@ DESCRIPTION=Amethyst 4
 //Emerald (gem)
 // DEFNAME2=GEM29
 DEFNAME=i_gem_emerald_2
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=40
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -517,7 +516,7 @@ DESCRIPTION=Emerald (Big)
 //diamond
 // DEFNAME2=GEM30
 DEFNAME=i_gem_diamond_5
-TYPE=T_GEM
+TYPE=t_gem
 VALUE=50
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
@@ -548,7 +547,7 @@ DUPELIST=0f3c
 
 [ITEMDEF 01cc7]
 DEFNAME=i_blood_tile
-TYPE=T_BLOOD
+TYPE=t_blood
 //WEIGHT=.1
 VALUE=3
 CATEGORY=Decoration - Dungeons and The Dead
@@ -558,7 +557,7 @@ DUPELIST=01cc8,01cc9,01cca,01ccb,01ccc,01ccd,01cce,01ccf,01cd0,01cd1,01cd2,01cd3
 
 [ITEMDEF 01cdd]
 DEFNAME=i_flesh_arm_right
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 VALUE=3
 WEIGHT=5
@@ -569,7 +568,7 @@ DUPELIST=01ce5
 
 [ITEMDEF 01cde]
 DEFNAME=i_flesh_upper_body
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 WEIGHT=22
 CATEGORY=Decoration - Dungeons and The Dead
@@ -579,7 +578,7 @@ DUPELIST=01ce6
 
 [ITEMDEF 01cdf]
 DEFNAME=i_flesh_leggings
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 WEIGHT=18
 CATEGORY=Decoration - Dungeons and The Dead
@@ -589,7 +588,7 @@ DUPELIST=01ce7
 
 [ITEMDEF 01ce0]
 DEFNAME=i_flesh_torso_2
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 WEIGHT=20
 CATEGORY=Decoration - Dungeons and The Dead
@@ -608,7 +607,7 @@ DUPELIST=01ce9
 
 [ITEMDEF 01ce2]
 DEFNAME=i_flesh_leg
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 WEIGHT=18
 CATEGORY=Decoration - Dungeons and The Dead
@@ -666,7 +665,7 @@ DUPEITEM=01ce2
 
 [ITEMDEF 01ced]
 DEFNAME=i_flesh_heart
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 VALUE=1
 WEIGHT=5
@@ -677,7 +676,7 @@ DESCRIPTION=Heart
 [ITEMDEF 01cee]
 DEFNAME=i_flesh_liver
 VALUE=1
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 WEIGHT=5
 CATEGORY=Decoration - Dungeons and The Dead
@@ -687,7 +686,7 @@ DESCRIPTION=Liver
 [ITEMDEF 01cef]
 DEFNAME=i_flesh_entrails
 VALUE=1
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 WEIGHT=6
 CATEGORY=Decoration - Dungeons and The Dead
@@ -697,7 +696,7 @@ DESCRIPTION=Entrails
 [ITEMDEF 01cf0]
 DEFNAME=i_flesh_brain
 VALUE=1
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 WEIGHT=8
 CATEGORY=Decoration - Dungeons and The Dead
@@ -707,7 +706,7 @@ DESCRIPTION=Brain
 [ITEMDEF 01cf1]
 DEFNAME=i_blood_2
 VALUE=1
-TYPE=T_BLOOD
+TYPE=t_blood
 weight=.1
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Blood
@@ -717,7 +716,7 @@ DUPELIST=01cf2,01cf3,01cf4,01cf5,01cf6,01cf7,01cf8,01cf9,01cfa,01cfb,01cfc,01cfd
 [ITEMDEF 01d9f]
 DEFNAME=i_flesh_torso
 VALUE=1
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 RESOURCES=i_flesh_heart, 2 i_ribs_raw, i_flesh_liver, i_flesh_entrails, i_blood_2
 WEIGHT=20
@@ -740,7 +739,7 @@ DUPELIST=01dae
 [ITEMDEF 01da1]
 DEFNAME=i_flesh_left_arm
 VALUE=1
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 WEIGHT=7
 CATEGORY=Decoration - Dungeons and The Dead
@@ -751,7 +750,7 @@ DUPELIST=01daf
 [ITEMDEF 01da2]
 DEFNAME=i_flesh_right_arm
 VALUE=1
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 WEIGHT=7
 CATEGORY=Decoration - Dungeons and The Dead
@@ -762,7 +761,7 @@ DUPELIST=01db0
 [ITEMDEF 01da3]
 DEFNAME=i_flesh_left_leg
 VALUE=1
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 WEIGHT=11
 CATEGORY=Decoration - Dungeons and The Dead
@@ -773,7 +772,7 @@ DUPELIST=01db1
 [ITEMDEF 01da4]
 DEFNAME=i_flesh_right_leg
 VALUE=1
-TYPE=t_MEAT_RAW
+TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
 WEIGHT=11
 CATEGORY=Decoration - Dungeons and The Dead
@@ -795,7 +794,7 @@ DUPELIST=01dfe,01dff,01e00
 DEFNAME=i_fish_raw_whole
 VALUE=1
 WEIGHT=1
-TYPE=T_FOOD_RAW
+TYPE=t_food_raw
 TDATA1=i_fish_cooked
 CATEGORY=Items by Professions
 SUBSECTION=Cook
@@ -806,7 +805,7 @@ DUPELIST=01e16
 //raw fish, cut open, minus head, facing NW
 DEFNAME=i_fish_raw
 VALUE=1
-TYPE=T_FOOD_RAW
+TYPE=t_food_raw
 TDATA1=i_fish_cooked
 CATEGORY=Items by Professions
 SUBSECTION=Cook
@@ -828,7 +827,7 @@ DUPELIST=01e1a
 DEFNAME=i_fish_raw_head_pile
 VALUE=1
 WEIGHT=3
-TYPE=T_FOOD
+TYPE=t_food
 CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Fish Heads
@@ -956,7 +955,7 @@ DESCRIPTION=Skinned Rabbit
 DEFNAME=i_fruit_banana
 VALUE=2
 WEIGHT=1
-TYPE=T_FOOD
+TYPE=t_food
 CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Banana (Unpeeled)
@@ -965,7 +964,7 @@ DUPELIST=01720
 [ITEMDEF 01726]
 DEFNAME=i_fruit_coconut
 VALUE=2
-TYPE=T_FOOD
+TYPE=t_food
 WEIGHT=2
 CATEGORY=Items by Professions
 SUBSECTION=Cook
@@ -973,26 +972,23 @@ DESCRIPTION=Coconut
 
 [ITEMDEF 01728]
 DEFNAME=i_fruit_lemon
-DEFNAME2=i_LEMON
 WEIGHT=.1
 VALUE=1
-TYPE=T_FOOD
+TYPE=t_food
 CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Lemon
-DEFNAME2=LEMON
 
 [ITEMDEF 0172a]
 DEFNAME=i_fruit_lime
 WEIGHT=.1
-TYPE=T_FOOD
+TYPE=t_food
 VALUE=1
 CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Lime
 
 [ITEMDEF 0175d]
-// DEFNAME2=FOLDED_CLOTH_1
 DEFNAME=i_cloth
 WEIGHT=2
 VALUE=3
@@ -1013,7 +1009,6 @@ DESCRIPTION=@
 DUPELIST=01798,01799,0179a,0179b,0179c,0179d,0179e,0179f,017a0,017a1,017a2,017a3,017a4,017a5,017a6,017a7,017a8,017a9,017aa,017ab,017ac,017ad,017ae,017af,017b0,017b1,017b2
 
 [ITEMDEF 019ab]
-//fire
 DEFNAME=i_fire
 TYPE=t_fire
 VALUE=1
@@ -1025,7 +1020,7 @@ DUPELIST=019ac,019ad,019ae,019af,019b0,019b1,019b2,019b3,019b4,019b5,019b6
 
 [ITEMDEF 01ae0]
 DEFNAME=i_bone_skull
-TYPE=T_BONE
+TYPE=t_bone
 VALUE=1
 WEIGHT=3
 CATEGORY=Decoration - Dungeons and The Dead
@@ -1035,7 +1030,7 @@ DUPELIST=01ae1,01ae2,01ae3,01ae4
 
 [ITEMDEF 01b11]
 DEFNAME=i_bone
-TYPE=T_BONE
+TYPE=t_bone
 VALUE=1
 WEIGHT=1
 CATEGORY=Decoration - Dungeons and The Dead
@@ -1045,7 +1040,7 @@ DUPELIST=01b12
 
 [ITEMDEF 01b13]
 DEFNAME=i_bone_jaw
-TYPE=T_BONE
+TYPE=t_bone
 VALUE=1
 WEIGHT=1
 CATEGORY=Decoration - Dungeons and The Dead
@@ -1055,7 +1050,7 @@ DUPELIST=01b14
 
 [ITEMDEF 01b15]
 DEFNAME=i_bone_pelvis
-TYPE=T_BONE
+TYPE=t_bone
 VALUE=1
 WEIGHT=4
 CATEGORY=Decoration - Dungeons and The Dead
@@ -1065,7 +1060,7 @@ DUPELIST=01b16
 
 [ITEMDEF 01b17]
 DEFNAME=i_bone_ribcage
-TYPE=T_BONE
+TYPE=t_bone
 VALUE=1
 WEIGHT=4
 CATEGORY=Decoration - Dungeons and The Dead
@@ -1075,7 +1070,7 @@ DUPELIST=01b18
 
 [ITEMDEF 01b19]
 DEFNAME=i_bone_shards
-TYPE=T_BONE
+TYPE=t_bone
 VALUE=1
 WEIGHT=2
 CATEGORY=Decoration - Dungeons and The Dead
@@ -1085,7 +1080,7 @@ DUPELIST=01b1a
 
 [ITEMDEF 01b1b]
 DEFNAME=i_bone_spine
-TYPE=T_BONE
+TYPE=t_bone
 VALUE=2
 WEIGHT=4
 CATEGORY=Decoration - Dungeons and The Dead
@@ -1122,7 +1117,7 @@ DUPELIST=01b9c,01b9d,01b9e
 
 [ITEMDEF 01bd1]
 DEFNAME=i_feather
-TYPE=t_FEATHER
+TYPE=t_feather
 VALUE=2
 WEIGHT=.1
 CATEGORY=Items by Professions
@@ -1130,8 +1125,8 @@ SUBSECTION=Archers/Bowyers
 DESCRIPTION=Feathers (White)
 DUPELIST=0dfa,0dfb,01bd2,01bd3
 ON=@DClick
-	SRC.SKILLMENU=sm_bolts
-	RETURN 1
+   SRC.SKILLMENU=sm_bolts
+   RETURN 1
 
 [ITEMDEF 010b8]
 DEFNAME=i_spiderweb
@@ -1177,47 +1172,87 @@ DUPEITEM=010ee
 DEFNAME=i_shell
 VALUE=1
 WEIGHT=.1
-//conch shell
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Shells
-DESCRIPTION=Conch Shells
-//**************************************************
-// Mineral matter.
+DESCRIPTION=Conch Shell
 DUPELIST=0fc5,0fc6,0fc7,0fc8,0fc9,0fca,0fcb,0fcc
 
-[ITEMDEF I_CLAY]
-ID=I_ROCK_2
+[ITEMDEF 0fc5]
+DUPEITEM=0fc4
+DESCRIPTION=Shells 1
+
+[ITEMDEF 0fc6]
+DUPEITEM=0fc4
+DESCRIPTION=Shells 2
+
+[ITEMDEF 0fc7]
+DUPEITEM=0fc4
+DESCRIPTION=Nautilus
+
+[ITEMDEF 0fc8]
+DUPEITEM=0fc4
+DESCRIPTION=Shell 1
+
+[ITEMDEF 0fc9]
+DUPEITEM=0fc4
+DESCRIPTION=Shell 2
+
+[ITEMDEF 0fca]
+DUPEITEM=0fc4
+DESCRIPTION=Shells 3
+
+[ITEMDEF 0fcb]
+DUPEITEM=0fc4
+DESCRIPTION=Shell 3
+
+[ITEMDEF 0fcc]
+DUPEITEM=0fc4
+DESCRIPTION=Shell 4
+
+
+//**************************************************
+// Mineral matter.
+
+[ITEMDEF i_clay]
+ID=i_rock_2
+NAME=clay
 VALUE=10
 WEIGHT=1
 
-[ITEMDEF I_STONE_MARBLE]
-ID=I_PILLOW
+[ITEMDEF i_stone_marble]
+//FIXME: Should use an ID that stacks...
+ID=i_pillow
+NAME=marble
 VALUE=5
 WEIGHT=10
 
-[ITEMDEF I_STONE_SAND]
-ID=I_PILLOW
+[ITEMDEF i_stone_sand]
+//FIXME: Should use an ID that stacks...
+ID=i_pillow
+NAME=sand
 VALUE=5
 WEIGHT=10
-
 ON=@Create
-	COLOR=colors_yellow
+   COLOR=colors_yellow
 
 //**************************************************
 // Vegetable matter.
 
-[ITEMDEF I_STRAW]
+[ITEMDEF i_straw]
 ID=i_hay_sheaf
+NAME=straw
 VALUE=1
 
-[ITEMDEF I_GRASS]
+[ITEMDEF i_grass]
 ID=i_hay_sheaf
+NAME=grass
 VALUE=1
 ON=@Create
-	COLOR=colors_green
+   COLOR=colors_green
 
-[ITEMDEF I_CANVAS]
+[ITEMDEF i_canvas]
 ID=i_hay_sheaf
+NAME=canvas
 VALUE=1
 
 [EOF]

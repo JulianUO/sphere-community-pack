@@ -78,7 +78,7 @@ DUPELIST=07d8,08f7,08f8,08f9,08fa
 
 [ITEMDEF 07d8]
 //stone rail 3
-DUPEITEM=07d6
+DUPEITEM=07d7
 
 [ITEMDEF 07e1]
 DEFNAME=i_bridge
@@ -640,19 +640,19 @@ DUPEITEM=08f3
 
 [ITEMDEF 08f7]
 //stone rail 3
-DUPEITEM=07d6
+DUPEITEM=07d7
 
 [ITEMDEF 08f8]
 //stone rail 3
-DUPEITEM=07d6
+DUPEITEM=07d7
 
 [ITEMDEF 08f9]
 //stone rail 3
-DUPEITEM=07d6
+DUPEITEM=07d7
 
 [ITEMDEF 08fa]
 //stone rail 3
-DUPEITEM=07d6
+DUPEITEM=07d7
 
 [ITEMDEF 08fb]
 DEFNAME=i_rail_boards
@@ -668,7 +668,7 @@ DUPEITEM=08fb
 
 [ITEMDEF 01e9a]
 DEFNAME=i_hook_and_pulley
-//RESOURCES3=1 i_PULLEY, i_ROPE, i_HOOK
+RESOURCES=1 i_pulley, i_rope, i_hook
 CATEGORY=Buildings - Other
 SUBSECTION=Hooks, Pulleys and Winches
 DESCRIPTION=Hook

@@ -33,28 +33,30 @@ DUPEITEM=02
 DESCRIPTION=Ankh (n) 2/2
 
 [ITEMDEF 041f]
-DEFNAME=i_GRUESOMESTANDARD
-RESOURCES=10 i_log, 10 I_BONE
+DEFNAME=i_gruesomestandard
+FLIP=1
+RESOURCES=10 i_log, 10 i_bone
 CATEGORY=Miscellaneous
 SUBSECTION=Orc Camp Decor
 DESCRIPTION=Gruesome Standard
 DUPELIST=0428
 
 [ITEMDEF 0420]
-//gruesome standard
-DEFNAME=i_GRUESOMESTANDARD_2
-RESOURCES=10 i_log, 10 I_BONE
+DEFNAME=i_gruesomestandard_2
+FLIP=1
+RESOURCES=10 i_log, 10 i_bone
 CATEGORY=Miscellaneous
 SUBSECTION=Orc Camp Decor
 DESCRIPTION=Gruesome Standard 2
+DUPELIST=0429
 
 [ITEMDEF 0426]
-DEFNAME=i_BANNER_TATTERED
-RESOURCES=1 I_LOG, 5 I_CLOTH
+DEFNAME=i_banner_tattered
+RESOURCES=1 i_log, 5 i_cloth
 CATEGORY=Miscellaneous
 SUBSECTION=Orc Camp Decor
 DESCRIPTION=Tattered Banner
-DUPELIST=0427,0429,042a,042b,042c,042d,042e,042f
+DUPELIST=0427,042a,042b,042c,042d,042e,042f
 
 [ITEMDEF 0427]
 //tattered banner
@@ -65,8 +67,8 @@ DUPEITEM=0426
 DUPEITEM=041f
 
 [ITEMDEF 0429]
-//gruesome standard
-DUPEITEM=0426
+//gruesome standard 2
+DUPEITEM=0420
 
 [ITEMDEF 042a]
 //tattered banner
@@ -104,65 +106,9 @@ DUPELIST=0434
 //curtain rod
 DUPEITEM=0433
 
-[ITEMDEF 0fc5]
-//shells
-DUPEITEM=0FC4
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Shells
-DESCRIPTION=@
-
-[ITEMDEF 0fc6]
-//shells
-DUPEITEM=0FC4
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Shells
-DESCRIPTION=@
-
-[ITEMDEF 0fc7]
-//nautilus
-DUPEITEM=0FC4
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Shells
-DESCRIPTION=Nautilus
-
-[ITEMDEF 0fc8]
-//shell
-DUPEITEM=0FC4
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Shells
-DESCRIPTION=Shell
-
-[ITEMDEF 0fc9]
-//shells
-DUPEITEM=0FC4
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Shells
-DESCRIPTION=@
-
-[ITEMDEF 0fca]
-//shells
-DUPEITEM=0FC4
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Shells
-DESCRIPTION=@
-
-[ITEMDEF 0fcb]
-//shell
-DUPEITEM=0FC4
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Shells
-DESCRIPTION=Shell
-
-[ITEMDEF 0fcc]
-//shell
-DUPEITEM=0FC4
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Shells
-DESCRIPTION=Shell
-
 [ITEMDEF 0fcd]
 DEFNAME=i_string_of_shells
-RESOURCES=5 I_SHELL, 1 I_STRING
+RESOURCES=5 i_shell, 1 i_string
 WEIGHT=.5
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Shells
@@ -175,7 +121,6 @@ DUPEITEM=0fcd
 
 [ITEMDEF 0fcf]
 //string of shells
-
 DUPEITEM=0fcd
 
 [ITEMDEF 0fd0]
@@ -279,22 +224,22 @@ DUPEITEM=01580
 
 [ITEMDEF 01582]
 DEFNAME=i_decorative_shield_12_sword_under_ne
-RESOURCES=10 i_ingot_iron, 1 i_BOARD
+RESOURCES=10 i_ingot_iron, 1 i_board
 WEIGHT=17
 
 [ITEMDEF 01583]
 DEFNAME=i_decorative_shield_12_sword_over_ne
-RESOURCES=10 i_ingot_iron, 1 i_BOARD
+RESOURCES=10 i_ingot_iron, 1 i_board
 WEIGHT=17
 
 [ITEMDEF 01584]
 DEFNAME=i_decorative_shield_13_sword_under_ne
-RESOURCES=6 i_ingot_gold, 4 i_ingot_iron, 1 i_BOARD
+RESOURCES=6 i_ingot_gold, 4 i_ingot_iron, 1 i_board
 WEIGHT=16
 
 [ITEMDEF 0149f]
 DEFNAME=i_shrine_honesty_1
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honesty
@@ -303,28 +248,28 @@ DUPELIST=014a0,014a1,014a2
 
 [ITEMDEF 014a0]
 //SHRINE_HONESTY_1 PART 2
-DUPEITEM=0149F
+DUPEITEM=0149f
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honesty
 DESCRIPTION=Honesty (02/04) (W)
 
 [ITEMDEF 014a1]
 //SHRINE_HONESTY_1 PART 3
-DUPEITEM=0149F
+DUPEITEM=0149f
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honesty
 DESCRIPTION=Honesty (03/04) (W)
 
 [ITEMDEF 014a2]
 //SHRINE_HONESTY_1 PART 4
-DUPEITEM=0149F
+DUPEITEM=0149f
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honesty
 DESCRIPTION=Honesty (04/04) (W)
 
 [ITEMDEF 014a3]
 DEFNAME=i_shrine_honesty_2
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honesty
@@ -333,28 +278,28 @@ DUPELIST=014a4,014a5,014a6
 
 [ITEMDEF 014a4]
 //SHRINE_HONESTY_2 PART 2
-DUPEITEM=014A3
+DUPEITEM=014a3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honesty
 DESCRIPTION=Honesty (02/04) (N)
 
 [ITEMDEF 014a5]
 //SHRINE_HONESTY_2 PART 3
-DUPEITEM=014A3
+DUPEITEM=014a3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honesty
 DESCRIPTION=Honesty (03/04) (N)
 
 [ITEMDEF 014a6]
 //SHRINE_HONESTY_2 PART 4
-DUPEITEM=014A3
+DUPEITEM=014a3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honesty
 DESCRIPTION=Honesty (04/04) (N)
 
 [ITEMDEF 014a7]
 DEFNAME=i_shrine_compassion_1
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Compassion
@@ -363,28 +308,28 @@ DUPELIST=014a8,014a9,014aa
 
 [ITEMDEF 014a8]
 //SHRINE_COMPASSION_1 PART 2
-DUPEITEM=014A7
+DUPEITEM=014a7
 CATEGORY=Decoration - Shrines
 SUBSECTION=Compassion
 DESCRIPTION=Compassion (02/04) (W)
 
 [ITEMDEF 014a9]
 //SHRINE_COMPASSION_1 PART 3
-DUPEITEM=014A7
+DUPEITEM=014a7
 CATEGORY=Decoration - Shrines
 SUBSECTION=Compassion
 DESCRIPTION=Compassion (03/04) (W)
 
 [ITEMDEF 014aa]
 //SHRINE_COMPASSION_1 PART 4
-DUPEITEM=014A7
+DUPEITEM=014a7
 CATEGORY=Decoration - Shrines
 SUBSECTION=Compassion
 DESCRIPTION=Compassion (04/04) (W)
 
 [ITEMDEF 014ab]
 DEFNAME=i_shrine_compassion_2
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Compassion
@@ -393,28 +338,28 @@ DUPELIST=014ac,014ad,014ae
 
 [ITEMDEF 014ac]
 //SHRINE_COMPASSION_2 PART 2
-DUPEITEM=014AB
+DUPEITEM=014ab
 CATEGORY=Decoration - Shrines
 SUBSECTION=Compassion
 DESCRIPTION=Compassion (02/04) (N)
 
 [ITEMDEF 014ad]
 //SHRINE_COMPASSION_2 PART 3
-DUPEITEM=014AB
+DUPEITEM=014ab
 CATEGORY=Decoration - Shrines
 SUBSECTION=Compassion
 DESCRIPTION=Compassion (03/04) (N)
 
 [ITEMDEF 014ae]
 //SHRINE_COMPASSION_2 PART 4
-DUPEITEM=014AB
+DUPEITEM=014ab
 CATEGORY=Decoration - Shrines
 SUBSECTION=Compassion
 DESCRIPTION=Compassion (04/04) (N)
 
 [ITEMDEF 014af]
 DEFNAME=i_shrine_justice_1
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Justice
@@ -423,28 +368,28 @@ DUPELIST=014b0,014b1,014b2
 
 [ITEMDEF 014b0]
 //SHRINE_JUSTICE_1 PART 2
-DUPEITEM=014AF
+DUPEITEM=014af
 CATEGORY=Decoration - Shrines
 SUBSECTION=Justice
 DESCRIPTION=Justice (02/04) (W)
 
 [ITEMDEF 014b1]
 //SHRINE_JUSTICE_1 PART 3
-DUPEITEM=014AF
+DUPEITEM=014af
 CATEGORY=Decoration - Shrines
 SUBSECTION=Justice
 DESCRIPTION=Justice (03/04) (W)
 
 [ITEMDEF 014b2]
 //SHRINE_JUSTICE_1 PART 4
-DUPEITEM=014AF
+DUPEITEM=014af
 CATEGORY=Decoration - Shrines
 SUBSECTION=Justice
 DESCRIPTION=Justice (04/04) (W)
 
 [ITEMDEF 014b3]
 DEFNAME=i_shrine_justice_2
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Justice
@@ -453,28 +398,28 @@ DUPELIST=014b4,014b5,014b6
 
 [ITEMDEF 014b4]
 //SHRINE_JUSTICE_2 PART 2
-DUPEITEM=014B3
+DUPEITEM=014b3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Justice
 DESCRIPTION=Justice (02/04) (N)
 
 [ITEMDEF 014b5]
 //SHRINE_JUSTICE_2 PART 3
-DUPEITEM=014B3
+DUPEITEM=014b3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Justice
 DESCRIPTION=Justice (03/04) (N)
 
 [ITEMDEF 014b6]
 //SHRINE_JUSTICE_2 PART 4
-DUPEITEM=014B3
+DUPEITEM=014b3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Justice
 DESCRIPTION=Justice (04/04) (N)
 
 [ITEMDEF 014b7]
 DEFNAME=i_shrine_valor_1
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Valor
@@ -483,28 +428,28 @@ DUPELIST=014b8,014b9,014ba
 
 [ITEMDEF 014b8]
 //SHRINE_VALOR_1 PART 2
-DUPEITEM=014B7
+DUPEITEM=014b7
 CATEGORY=Decoration - Shrines
 SUBSECTION=Valor
 DESCRIPTION=Valor (02/04) (W)
 
 [ITEMDEF 014b9]
 //SHRINE_VALOR_1 PART 3
-DUPEITEM=014B7
+DUPEITEM=014b7
 CATEGORY=Decoration - Shrines
 SUBSECTION=Valor
 DESCRIPTION=Valor (03/04) (W)
 
 [ITEMDEF 014ba]
 //SHRINE_VALOR_1 PART 4
-DUPEITEM=014B7
+DUPEITEM=014b7
 CATEGORY=Decoration - Shrines
 SUBSECTION=Valor
 DESCRIPTION=Valor (04/04) (W)
 
 [ITEMDEF 014bb]
 DEFNAME=i_shrine_valor_2
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Valor
@@ -513,28 +458,28 @@ DUPELIST=014bc,014bd,014be
 
 [ITEMDEF 014bc]
 //SHRINE_VALOR_2 PART 2
-DUPEITEM=014BB
+DUPEITEM=014bb
 CATEGORY=Decoration - Shrines
 SUBSECTION=Valor
 DESCRIPTION=Valor (02/04) (N)
 
 [ITEMDEF 014bd]
 //SHRINE_VALOR_2 PART 3
-DUPEITEM=014BB
+DUPEITEM=014bb
 CATEGORY=Decoration - Shrines
 SUBSECTION=Valor
 DESCRIPTION=Valor (03/04) (N)
 
 [ITEMDEF 014be]
 //SHRINE_VALOR_2 PART 4
-DUPEITEM=014BB
+DUPEITEM=014bb
 CATEGORY=Decoration - Shrines
 SUBSECTION=Valor
 DESCRIPTION=Valor (04/04) (N)
 
 [ITEMDEF 014bf]
 DEFNAME=i_shrine_spirituality_1
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Spirituality
@@ -543,28 +488,28 @@ DUPELIST=014c0,014c1,014c2
 
 [ITEMDEF 014c0]
 //SHRINE_SPIRITUALITY_1 PART 2
-DUPEITEM=014BF
+DUPEITEM=014bf
 CATEGORY=Decoration - Shrines
 SUBSECTION=Spirituality
 DESCRIPTION=Spirituality (02/04) (W)
 
 [ITEMDEF 014c1]
 //SHRINE_SPIRITUALITY_1 PART 3
-DUPEITEM=014BF
+DUPEITEM=014bf
 CATEGORY=Decoration - Shrines
 SUBSECTION=Spirituality
 DESCRIPTION=Spirituality (03/04) (W)
 
 [ITEMDEF 014c2]
 //SHRINE_SPIRITUALITY_1 PART 4
-DUPEITEM=014BF
+DUPEITEM=014bf
 CATEGORY=Decoration - Shrines
 SUBSECTION=Spirituality
 DESCRIPTION=Spirituality (04/04) (W)
 
 [ITEMDEF 014c3]
 DEFNAME=i_shrine_spirituality_2
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Spirituality
@@ -573,28 +518,28 @@ DUPELIST=014c4,014c5,014c6
 
 [ITEMDEF 014c4]
 //SHRINE_SPIRITUALITY_2 PART 2
-DUPEITEM=014C3
+DUPEITEM=014c3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Spirituality
 DESCRIPTION=Spirituality (02/04) (N)
 
 [ITEMDEF 014c5]
 //SHRINE_SPIRITUALITY_2 PART 3
-DUPEITEM=014C3
+DUPEITEM=014c3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Spirituality
 DESCRIPTION=Spirituality (03/04) (N)
 
 [ITEMDEF 014c6]
 //SHRINE_SPIRITUALITY_2 PART 4
-DUPEITEM=014C3
+DUPEITEM=014c3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Spirituality
 DESCRIPTION=Spirituality (04/04) (N)
 
 [ITEMDEF 014c7]
 DEFNAME=i_shrine_honor_1
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honor
@@ -603,28 +548,28 @@ DUPELIST=014c8,014c9,014ca
 
 [ITEMDEF 014c8]
 //SHRINE_HONOR_1 PART 2
-DUPEITEM=014C7
+DUPEITEM=014c7
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honor
 DESCRIPTION=Honor (02/04) (W)
 
 [ITEMDEF 014c9]
 //SHRINE_HONOR_1 PART 3
-DUPEITEM=014C7
+DUPEITEM=014c7
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honor
 DESCRIPTION=Honor (03/04) (W)
 
 [ITEMDEF 014ca]
 //SHRINE_HONOR_1 PART 4
-DUPEITEM=014C7
+DUPEITEM=014c7
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honor
 DESCRIPTION=Honor (04/04) (W)
 
 [ITEMDEF 014cb]
 DEFNAME=i_shrine_honor_2
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honor
@@ -633,28 +578,28 @@ DUPELIST=014cc,014cd,014ce
 
 [ITEMDEF 014cc]
 //SHRINE_HONOR_2 PART 2
-DUPEITEM=014CB
+DUPEITEM=014cb
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honor
 DESCRIPTION=Honor (02/04) (N)
 
 [ITEMDEF 014cd]
 //SHRINE_HONOR_2 PART 3
-DUPEITEM=014CB
+DUPEITEM=014cb
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honor
 DESCRIPTION=Honor (03/04) (N)
 
 [ITEMDEF 014ce]
 //SHRINE_HONOR_2 PART 4
-DUPEITEM=014CB
+DUPEITEM=014cb
 CATEGORY=Decoration - Shrines
 SUBSECTION=Honor
 DESCRIPTION=Honor (04/04) (N)
 
 [ITEMDEF 014cf]
 DEFNAME=i_shrine_humility_1
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Humility
@@ -663,28 +608,28 @@ DUPELIST=014d0,014d1,014d2
 
 [ITEMDEF 014d0]
 //SHRINE_HONOR_1 PART 2
-DUPEITEM=014CF
+DUPEITEM=014cf
 CATEGORY=Decoration - Shrines
 SUBSECTION=Humility
 DESCRIPTION=Humility (02/04) (W)
 
 [ITEMDEF 014d1]
 //SHRINE_HONOR_1 PART 3
-DUPEITEM=014CF
+DUPEITEM=014cf
 CATEGORY=Decoration - Shrines
 SUBSECTION=Humility
 DESCRIPTION=Humility (03/04) (W)
 
 [ITEMDEF 014d2]
 //SHRINE_HONOR_1 PART 4
-DUPEITEM=014CF
+DUPEITEM=014cf
 CATEGORY=Decoration - Shrines
 SUBSECTION=Humility
 DESCRIPTION=Humility (04/04) (W)
 
 [ITEMDEF 014d3]
 DEFNAME=i_shrine_humility_2
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Humility
@@ -693,28 +638,28 @@ DUPELIST=014d4,014d5,014d6
 
 [ITEMDEF 014d4]
 //SHRINE_HONOR_2 PART 2
-DUPEITEM=014D3
+DUPEITEM=014d3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Humility
 DESCRIPTION=Humility (02/04) (N)
 
 [ITEMDEF 014d5]
 //SHRINE_HONOR_2 PART 3
-DUPEITEM=014D3
+DUPEITEM=014d3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Humility
 DESCRIPTION=Humility (03/04) (N)
 
 [ITEMDEF 014d6]
 //SHRINE_HONOR_2 PART 4
-DUPEITEM=014D3
+DUPEITEM=014d3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Humility
 DESCRIPTION=Humility (04/04) (N)
 
 [ITEMDEF 014e3]
 DEFNAME=i_shrine_chaos_1
-RESOURCES=20 i_MARBLE, 2 i_rock_plain
+RESOURCES=20 i_marble, 2 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Chaos
@@ -723,28 +668,28 @@ DUPELIST=014e4,014e5,014e6
 
 [ITEMDEF 014e4]
 //SHRINE_CHAOS_1 PART 2
-DUPEITEM=014E3
+DUPEITEM=014e3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Chaos
 DESCRIPTION=Chaos (02/04) (W)
 
 [ITEMDEF 014e5]
 //SHRINE_CHAOS_1 PART 3
-DUPEITEM=014E3
+DUPEITEM=014e3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Chaos
 DESCRIPTION=Chaos (03/04) (W)
 
 [ITEMDEF 014e6]
 //SHRINE_CHAOS_1 PART 4
-DUPEITEM=014E3
+DUPEITEM=014e3
 CATEGORY=Decoration - Shrines
 SUBSECTION=Chaos
 DESCRIPTION=Chaos (04/04) (W)
 
 [ITEMDEF 0150a]
 DEFNAME=i_shrine_sacrifice_1
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Sacrifice
@@ -753,28 +698,28 @@ DUPELIST=0150b,0150c,0150d
 
 [ITEMDEF 0150b]
 //SHRINE_SACRIFICE_1 PART 2
-DUPEITEM=0150A
+DUPEITEM=0150a
 CATEGORY=Decoration - Shrines
 SUBSECTION=Sacrifice
 DESCRIPTION=Sacrifice (02/04) (W)
 
 [ITEMDEF 0150c]
 //SHRINE_SACRIFICE_1 PART 3
-DUPEITEM=0150A
+DUPEITEM=0150a
 CATEGORY=Decoration - Shrines
 SUBSECTION=Sacrifice
 DESCRIPTION=Sacrifice (03/04) (W)
 
 [ITEMDEF 0150d]
 //SHRINE_SACRIFICE_1 PART 4
-DUPEITEM=0150A
+DUPEITEM=0150a
 CATEGORY=Decoration - Shrines
 SUBSECTION=Sacrifice
 DESCRIPTION=Sacrifice (04/04) (W)
 
 [ITEMDEF 0150e]
 DEFNAME=i_shrine_sacrifice_2
-RESOURCES=20 i_MARBLE, 4 i_ingot_gold, 6 i_rock_plain
+RESOURCES=20 i_marble, 4 i_ingot_gold, 6 i_rock_plain
 WEIGHT=32
 CATEGORY=Decoration - Shrines
 SUBSECTION=Sacrifice
@@ -783,33 +728,31 @@ DUPELIST=0150f,01510,01511
 
 [ITEMDEF 0150f]
 //SHRINE_SACRIFICE_2 PART 2
-DUPEITEM=0150E
+DUPEITEM=0150e
 CATEGORY=Decoration - Shrines
 SUBSECTION=Sacrifice
 DESCRIPTION=Sacrifice (02/04) (N)
 
 [ITEMDEF 01510]
 //SHRINE_SACRIFICE_2 PART 3
-DUPEITEM=0150E
+DUPEITEM=0150e
 CATEGORY=Decoration - Shrines
 SUBSECTION=Sacrifice
 DESCRIPTION=Sacrifice (03/04) (N)
 
 [ITEMDEF 01511]
 //SHRINE_SACRIFICE_2 PART 4
-DUPEITEM=0150E
+DUPEITEM=0150e
 CATEGORY=Decoration - Shrines
 SUBSECTION=Sacrifice
 DESCRIPTION=Sacrifice (04/04) (N)
 
 [ITEMDEF 01153]
-DEFNAME=i_magical_sparkles
-TYPE=T_SPELL
-RESOURCES=2 T_REAGENT
-CATEGORY=Decoration - Miscellaneous
+DEFNAME=i_fx_magical_sparkles
+CATEGORY=Animations
 SUBSECTION=Magical Sparkles
-DESCRIPTION=@
-DUPELIST=01154,01155,01156,01157,01159,0115a,0115b,0115c,0115d,0115e
+DESCRIPTION=Sparkles 1
+DUPELIST=01154,01155,01156,01157,01158
 
 [ITEMDEF 01154]
 //magical sparkles
@@ -828,83 +771,87 @@ DUPEITEM=01153
 DUPEITEM=01153
 
 [ITEMDEF 01158]
-//
+//magical sparkles
+DUPEITEM=01153
 
 [ITEMDEF 01159]
-//magical sparkles
-DUPEITEM=01153
+DEFNAME=i_fx_magical_sparkles_2
+CATEGORY=Animations
+SUBSECTION=Magical Sparkles
+DESCRIPTION=Sparkles 2
+DUPELIST=0115a,0115b,0115c,0115d,0115e
 
 [ITEMDEF 0115a]
-//magical sparkles
-DUPEITEM=01153
+//magical sparkles 2
+DUPEITEM=01159
 
 [ITEMDEF 0115b]
-//magical sparkles
-DUPEITEM=01153
+//magical sparkles 2
+DUPEITEM=01159
 
 [ITEMDEF 0115c]
-//magical sparkles
-DUPEITEM=01153
+//magical sparkles 2
+DUPEITEM=01159
 
 [ITEMDEF 0115d]
-//magical sparkles
-DUPEITEM=01153
+//magical sparkles 2
+DUPEITEM=01159
 
 [ITEMDEF 0115e]
-//magical sparkles
-DUPEITEM=01153
+//magical sparkles 2
+DUPEITEM=01159
 
 [ITEMDEF 011c6]
-DEFNAME=i_POT_SMALL_FLOWER
-RESOURCES=1 i_CLAY
+DEFNAME=i_pot_small_flower
+RESOURCES=1 i_clay
 WEIGHT=2
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Small Empty Pot
 
 [ITEMDEF 011c7]
-DEFNAME=i_POT_FLOWER_LARGE
-RESOURCES=3 i_CLAY
+DEFNAME=i_pot_flower_large
+RESOURCES=3 i_clay
 WEIGHT=6
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Large Empty Pot
 
 [ITEMDEF 011c8]
-DEFNAME=i_TREE_SMALL_POTTED
-RESOURCES=1 i_POT_SMALL_FLOWER, 1 i_TREE_SAPLING_PLANTED, 1 i_DIRT
+DEFNAME=i_tree_small_potted
+RESOURCES=1 i_pot_small_flower, 1 i_tree_sapling_planted, 1 i_dirt
 WEIGHT=4
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Potted Trees
 DESCRIPTION=Small Planted Tree
 
 [ITEMDEF 011c9]
-DEFNAME=i_TREE_LARGE_POTTED
-RESOURCES=1 i_POT_FLOWER_LARGE, 1 i_PLANT_SPIDER, 2 i_DIRT
+DEFNAME=i_tree_large_potted
+RESOURCES=1 i_pot_flower_large, 1 i_plant_spider, 2 i_dirt
 WEIGHT=8
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Potted Trees
 DESCRIPTION=Large Planted Tree
 
 [ITEMDEF 011ca]
-DEFNAME=i_PLANT_POTTED_SMALL
-RESOURCES=1 i_POT_SMALL_FLOWER, 1 i_FLOWER_FOXGLOVE, 1 i_DIRT
+DEFNAME=i_plant_potted_small
+RESOURCES=1 i_pot_small_flower, 1 i_flower_foxglove, 1 i_dirt
 WEIGHT=4
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Potted Plants
 DESCRIPTION=Plant 1
 
 [ITEMDEF 011cb]
-DEFNAME=i_FLOWER_POTTED_SMALL
-RESOURCES=1 i_POT_SMALL_FLOWER, 1 i_FLOWER_ORFLUER, 1 i_DIRT
+DEFNAME=i_flower_potted_small
+RESOURCES=1 i_pot_small_flower, 1 i_flower_orfluer, 1 i_dirt
 WEIGHT=3
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Potted Plants
 DESCRIPTION=Plant 2
 
 [ITEMDEF 011cc]
-DEFNAME=i_TREE_SMALL_POTTED_2
-RESOURCES=1 i_POT_SMALL_FLOWER, 1 i_TREE_SAPLING_PLANTED, 1 i_DIRT
+DEFNAME=i_tree_small_potted_2
+RESOURCES=1 i_pot_small_flower, 1 i_tree_sapling_planted, 1 i_dirt
 WEIGHT=4
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Potted Plants
@@ -912,7 +859,7 @@ DESCRIPTION=Plant 3
 
 [ITEMDEF 012b1]
 DEFNAME=i_scaffold
-RESOURCES=30 i_LOG, 4 i_ROPE
+RESOURCES=30 i_log, 4 i_rope
 WEIGHT=30
 CATEGORY=Miscellaneous
 SUBSECTION=Scaffold
@@ -925,7 +872,7 @@ DUPEITEM=012b1
 
 [ITEMDEF 012c8]
 DEFNAME=i_scaffold_2
-RESOURCES=30 i_LOG, 4 i_ROPE
+RESOURCES=30 i_log, 4 i_rope
 WEIGHT=30
 CATEGORY=Miscellaneous
 SUBSECTION=Scaffold
@@ -933,7 +880,7 @@ DESCRIPTION=@
 
 [ITEMDEF 012c9]
 DEFNAME=i_scaffold_3
-RESOURCES=30 i_LOG, 4 i_ROPE
+RESOURCES=30 i_log, 4 i_rope
 WEIGHT=30
 CATEGORY=Miscellaneous
 SUBSECTION=Scaffold
@@ -941,7 +888,7 @@ DESCRIPTION=@
 
 [ITEMDEF 01459]
 DEFNAME=i_telescope
-RESOURCES=100 i_rock_plain, 20 i_ingot_gold, 50 i_ingot_iron, 4 i_GLASS, 2 i_MARBLE
+RESOURCES=100 i_rock_plain, 20 i_ingot_gold, 50 i_ingot_iron, 4 i_glass, 2 i_marble
 WEIGHT=1400
 TYPE=T_TELESCOPE
 CATEGORY=Miscellaneous
@@ -1211,7 +1158,7 @@ DUPEITEM=01459
 
 [ITEMDEF 014d7]
 DEFNAME=i_vat
-RESOURCES=34 i_BOARD, 8 i_ingot_iron, 1 i_BARREL_TAP, 1 i_NAILS
+RESOURCES=34 i_board, 8 i_ingot_iron, 1 i_barrel_tap, 1 i_nails
 WEIGHT=40
 CATEGORY=Miscellaneous
 SUBSECTION=Vat
@@ -1254,7 +1201,7 @@ DUPEITEM=014d7
 DEFNAME=i_bucket
 TYPE=T_CONTAINER
 TDATA2=03e
-RESOURCES=2 i_BOARD, 1 i_ingot_iron, 1 i_NAILS
+RESOURCES=2 i_board, 1 i_ingot_iron, 1 i_nails
 WEIGHT=2
 CATEGORY=Miscellaneous
 SUBSECTION=Vat
@@ -1262,7 +1209,7 @@ DESCRIPTION=Bucket
 
 [ITEMDEF 014e1]
 DEFNAME=i_vat_ladder
-RESOURCES=10 i_BOARD, 1 i_NAILS
+RESOURCES=10 i_board, 1 i_nails
 WEIGHT=10
 CATEGORY=Miscellaneous
 SUBSECTION=Vat
@@ -1271,13 +1218,13 @@ DUPELIST=014e2
 
 [ITEMDEF 014e2]
 //vat ladder
-DUPEITEM=014E1
+DUPEITEM=014e1
 CATEGORY=Miscellaneous
 SUBSECTION=Vat
 DESCRIPTION=Vat (Ladder)
 
 [ITEMDEF 014f3]
-DEFNAME=i_MODEL_SHIP
+DEFNAME=i_model_ship
 FLIP=1
 WEIGHT=1
 CATEGORY=Decoration - Miscellaneous
@@ -1296,7 +1243,7 @@ DUPEITEM=014f3
 DEFNAME=i_spyglass
 TYPE=T_SPY_GLASS
 FLIP=1
-RESOURCES=2 i_ingot_iron, 1 i_GLASS
+RESOURCES=2 i_ingot_iron, 1 i_glass
 WEIGHT=3
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Nautical
@@ -1310,7 +1257,7 @@ DUPEITEM=014f5
 [ITEMDEF 014f7]
 DEFNAME=i_anchor
 FLIP=1
-RESOURCES=40 i_ingot_iron, 1 i_ROPE
+RESOURCES=40 i_ingot_iron, 1 i_rope
 WEIGHT=40
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Nautical
@@ -1328,16 +1275,16 @@ DUPELIST=014fa
 
 [ITEMDEF 014f9]
 //anchor
-DUPEITEM=014F7
+DUPEITEM=014f7
 
 [ITEMDEF 014fa]
 //rope
-DUPEITEM=014F8
+DUPEITEM=014f8
 
 [ITEMDEF 01508]
 DEFNAME=i_decorative_armor
 FLIP=1
-RESOURCES=20 i_ingot_iron, 5 i_ingot_gold, 2 i_LOG, 1 i_BOARD, 70 i_FEATHER
+RESOURCES=20 i_ingot_iron, 5 i_ingot_gold, 2 i_log, 1 i_board, 70 i_feather
 WEIGHT=34
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Decorative Armor
@@ -1375,7 +1322,7 @@ return 1
 [ITEMDEF 01512]
 DEFNAME=i_decorative_armor2
 FLIP=1
-RESOURCES=10 i_ingot_bronze, 13 i_ingot_dull_copper, 2 i_ingot_iron, 2 i_LOG, 1 i_BOARD
+RESOURCES=10 i_ingot_bronze, 13 i_ingot_dull_copper, 2 i_ingot_iron, 2 i_log, 1 i_board
 WEIGHT=34
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Decorative Armor
@@ -1436,7 +1383,7 @@ DUPEITEM=01509
 
 [ITEMDEF 0151e]
 DEFNAME=i_vat_2
-RESOURCES=34 i_BOARD, 8 i_ingot_iron, 1 i_BARREL_TAP, 1 i_NAILS, 100 i_fruit_grapes
+RESOURCES=34 i_board, 8 i_ingot_iron, 1 i_barrel_tap, 1 i_nails, 100 i_fruit_grapes
 WEIGHT=50
 CATEGORY=Miscellaneous
 SUBSECTION=Vat
@@ -1474,7 +1421,7 @@ DUPEITEM=0151e
 
 [ITEMDEF 01550]
 DEFNAME=i_vat_3
-RESOURCES=34 i_BOARD, 8 i_ingot_iron, 1 i_BARREL_TAP, 1 i_NAILS, 20 i_WATER
+RESOURCES=34 i_board, 8 i_ingot_iron, 1 i_barrel_tap, 1 i_nails, 20 i_water
 WEIGHT=50
 CATEGORY=Miscellaneous
 SUBSECTION=Vat
@@ -1515,7 +1462,7 @@ DUPEITEM=01550
 
 [ITEMDEF 0155c]
 DEFNAME=i_decorative_weapons_1
-RESOURCES=2 i_LOG, 1 i_BOARD, 1 i_CAT_GUT, 4 i_FEATHER, 1 i_NAILS
+RESOURCES=2 i_log, 1 i_board, 1 i_cat_gut, 4 i_feather, 1 i_nails
 WEIGHT=6
 CATEGORY=Decoration - Weapons & Shields
 SUBSECTION=Bow
@@ -1536,7 +1483,7 @@ DUPEITEM=0155c
 
 [ITEMDEF 01560]
 DEFNAME=i_decorative_weapons_2
-RESOURCES=1 i_LOG, 1 i_BOARD, 2 i_ingot_iron, 1 i_NAILS
+RESOURCES=1 i_log, 1 i_board, 2 i_ingot_iron, 1 i_nails
 WEIGHT=5
 CATEGORY=Decoration - Weapons & Shields
 SUBSECTION=Axe
@@ -1562,7 +1509,7 @@ DESCRIPTION=@
 
 [ITEMDEF 01564]
 DEFNAME=i_decorative_weapons_3
-RESOURCES=2 i_LOG, 1 i_ingot_bronze, 4 i_ingot_iron, 1 i_NAILS
+RESOURCES=2 i_log, 1 i_ingot_bronze, 4 i_ingot_iron, 1 i_nails
 WEIGHT=8
 CATEGORY=Decoration - Weapons & Shields
 SUBSECTION=Swords
@@ -1588,7 +1535,7 @@ DESCRIPTION=@
 
 [ITEMDEF 01568]
 DEFNAME=i_decorative_weapons_4
-RESOURCES=2 i_LOG, 1 i_BOARD, 4 i_ingot_iron, 1 i_NAILS
+RESOURCES=2 i_log, 1 i_board, 4 i_ingot_iron, 1 i_nails
 WEIGHT=8
 CATEGORY=Decoration - Weapons & Shields
 SUBSECTION=Axe & Spear
@@ -1627,7 +1574,7 @@ DUPEITEM=0156c
 
 [ITEMDEF 01634]
 DEFNAME=i_decorative_shield_12_sword_over_nw
-RESOURCES=10 i_ingot_iron, 1 i_BOARD
+RESOURCES=10 i_ingot_iron, 1 i_board
 WEIGHT=17
 CATEGORY=Decoration - Weapons & Shields
 SUBSECTION=Shields
@@ -1635,7 +1582,7 @@ DESCRIPTION=Shield
 
 [ITEMDEF 01635]
 DEFNAME=i_decorative_shield_12_sword_under_nw
-RESOURCES=10 i_ingot_iron, 1 i_BOARD
+RESOURCES=10 i_ingot_iron, 1 i_board
 WEIGHT=17
 CATEGORY=Decoration - Weapons & Shields
 SUBSECTION=Shields
@@ -1643,7 +1590,7 @@ DESCRIPTION=Shield
 
 [ITEMDEF 01636]
 DEFNAME=i_decorative_shield_13_sword_over_nw
-RESOURCES=6 i_ingot_gold, 4 i_ingot_iron, 1 i_BOARD
+RESOURCES=6 i_ingot_gold, 4 i_ingot_iron, 1 i_board
 WEIGHT=16
 CATEGORY=Decoration - Weapons & Shields
 SUBSECTION=Shields
@@ -1651,7 +1598,7 @@ DESCRIPTION=Shield
 
 [ITEMDEF 01637]
 DEFNAME=i_decorative_shield_13_sword_under_nw
-RESOURCES=6 i_ingot_gold, 4 i_ingot_iron, 1 i_BOARD
+RESOURCES=6 i_ingot_gold, 4 i_ingot_iron, 1 i_board
 WEIGHT=16
 CATEGORY=Decoration - Weapons & Shields
 SUBSECTION=Shields
@@ -1786,7 +1733,7 @@ DUPEITEM=016d6
 
 [ITEMDEF 01648]
 DEFNAME=i_catapult_1
-RESOURCES=28 i_BOARD, 5 i_LOG, 2 i_NAILS, 1 i_ingot_iron, 2 i_ROPE
+RESOURCES=28 i_board, 5 i_log, 2 i_nails, 1 i_ingot_iron, 2 i_rope
 WEIGHT=40
 CATEGORY=Miscellaneous
 SUBSECTION=Catapults
@@ -1899,7 +1846,7 @@ DUPEITEM=01648
 
 [ITEMDEF 01672]
 DEFNAME=i_catapult_2
-RESOURCES=28 i_BOARD, 5 i_LOG, 2 i_NAILS, 1 i_ingot_iron, 2 i_ROPE
+RESOURCES=28 i_board, 5 i_log, 2 i_nails, 1 i_ingot_iron, 2 i_rope
 WEIGHT=40
 CATEGORY=Miscellaneous
 SUBSECTION=Catapults
@@ -2012,7 +1959,7 @@ DUPEITEM=01672
 
 [ITEMDEF 01694]
 DEFNAME=i_catapult_3
-RESOURCES=28 i_BOARD, 5 i_LOG, 2 i_NAILS, 1 i_ingot_iron, 2 i_ROPE
+RESOURCES=28 i_board, 5 i_log, 2 i_nails, 1 i_ingot_iron, 2 i_rope
 WEIGHT=40
 CATEGORY=Miscellaneous
 SUBSECTION=Catapults
@@ -2137,7 +2084,7 @@ DUPEITEM=01694
 
 [ITEMDEF 016b9]
 DEFNAME=i_catapult_4
-RESOURCES=28 i_BOARD, 5 i_LOG, 2 i_NAILS, 1 i_ingot_iron, 2 i_ROPE
+RESOURCES=28 i_board, 5 i_log, 2 i_nails, 1 i_ingot_iron, 2 i_rope
 WEIGHT=40
 CATEGORY=Miscellaneous
 SUBSECTION=Catapults
@@ -2262,7 +2209,7 @@ DUPEITEM=016b9
 
 [ITEMDEF 016f8]
 DEFNAME=i_ballista_1
-RESOURCES=18 i_BOARD, 5 i_LOG, 2 i_NAILS, 1 i_ingot_iron, 8 i_ROPE
+RESOURCES=18 i_board, 5 i_log, 2 i_nails, 1 i_ingot_iron, 8 i_rope
 WEIGHT=40
 CATEGORY=Miscellaneous
 SUBSECTION=Ballista
@@ -2339,7 +2286,7 @@ DUPEITEM=0171f
 
 [ITEMDEF 01731]
 DEFNAME=i_fountain_1
-RESOURCES=100 i_rock_plain, 40 i_WATER, 1 i_SPRINGS
+RESOURCES=100 i_rock_plain, 40 i_water, 1 i_springs
 WEIGHT=140
 CATEGORY=Miscellaneous
 SUBSECTION=Fountains
@@ -2512,7 +2459,7 @@ DUPEITEM=01731
 
 [ITEMDEF 019c3]
 DEFNAME=i_fountain_2
-RESOURCES=100 i_stone_sand, 40 i_WATER, 1 i_SPRINGS
+RESOURCES=100 i_stone_sand, 40 i_water, 1 i_springs
 WEIGHT=140
 CATEGORY=Miscellaneous
 SUBSECTION=Fountains
@@ -2711,7 +2658,7 @@ DUPEITEM=01b6c
 DEFNAME=i_ankh_sacrifice
 TYPE=t_light_lit
 TDATA4=i_ankh_sacrifice
-RESOURCES=10 i_rock_plain, 3 i_BLOOD
+RESOURCES=10 i_rock_plain, 3 i_blood
 WEIGHT=30
 CATEGORY=Miscellaneous
 SUBSECTION=Ankhs
@@ -2723,48 +2670,48 @@ DUPELIST=01d98,01e5c,01e5d
 DUPEITEM=01d97
 
 [ITEMDEF 01e0f]
-DEFNAME=i_PLANT_CACTUS_POTTED
-RESOURCES=i_POT, i_PLANT_CACTUS
+DEFNAME=i_plant_cactus_potted
+RESOURCES=i_pot, i_plant_cactus
 WEIGHT=8
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Potted Cactuses
 DESCRIPTION=Cactus 1
 
 [ITEMDEF 01e10]
-DEFNAME=i_PLANT_CACTUS_POTTED_2
-RESOURCES=i_POT, i_PLANT_CACTUS
+DEFNAME=i_plant_cactus_potted_2
+RESOURCES=i_pot, i_plant_cactus
 WEIGHT=8
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Potted Cactuses
 DESCRIPTION=Cactus 2
 
 [ITEMDEF 01e11]
-DEFNAME=i_PLANT_CACTUS_POTTED_3
-RESOURCES=i_POT, i_PLANT_CACTUS
+DEFNAME=i_plant_cactus_potted_3
+RESOURCES=i_pot, i_plant_cactus
 WEIGHT=8
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Potted Cactuses
 DESCRIPTION=Cactus 3
 
 [ITEMDEF 01e12]
-DEFNAME=i_PLANT_CACTUS_POTTED_4
-RESOURCES=i_POT, i_PLANT_CACTUS
+DEFNAME=i_plant_cactus_potted_4
+RESOURCES=i_pot, i_plant_cactus
 WEIGHT=8
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Potted Cactuses
 DESCRIPTION=Cactus 4
 
 [ITEMDEF 01e13]
-DEFNAME=i_PLANT_CACTUS_POTTED_5
-RESOURCES=i_POT, i_PLANT_CACTUS
+DEFNAME=i_plant_cactus_potted_5
+RESOURCES=i_pot, i_plant_cactus
 WEIGHT=8
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Potted Cactuses
 DESCRIPTION=Cactus 5
 
 [ITEMDEF 01e14]
-DEFNAME=i_PLANT_CACTUS_POTTED_6
-RESOURCES=i_POT, i_PLANT_CACTUS
+DEFNAME=i_plant_cactus_potted_6
+RESOURCES=i_pot, i_plant_cactus
 WEIGHT=8
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Potted Cactuses
@@ -2870,7 +2817,7 @@ DUPEITEM=01e66
 
 [ITEMDEF 01ed3]
 DEFNAME=i_target
-RESOURCES=1 i_BOARD, i_CLOTH
+RESOURCES=1 i_board, i_cloth
 WEIGHT=2
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Target
