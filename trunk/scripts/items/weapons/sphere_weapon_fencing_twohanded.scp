@@ -11,25 +11,26 @@ VERSION=0.56b
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 026bf]
 DEFNAME=i_double_bladed_staff
-NAME=Double Bladed Staff
+NAME=double bladed staff
 TYPE=t_weapon_fence
 DAM=12,13
+FLIP=1
 SKILL=Fencing
-REQSTR=50
-TWOHANDS=Y
-WEIGHT=2
 SPEED=2.2
-SKILLMAKE=BLACKSMITHING 45.0
-RESOURCES=16 i_ingot_iron
 RANGE=2
 VALUE=110
-DUPELIST=026c9
+WEIGHT=2
+REQSTR=50
+TWOHANDS=Y
+RESOURCES=16 i_ingot_iron
+SKILLMAKE=Blacksmithing 45.0
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Double Bladed Staves
 DESCRIPTION=Double Bladed Staff
-
-ON=@CREATE
-HITPOINTS={36 48}
+TEVENTS=t_iprop
+DUPELIST=026c9
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 026c9]
 DUPEITEM=026bf
@@ -40,23 +41,25 @@ DUPEITEM=026bf
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 02d20]
 DEFNAME=i_elven_spellblade
-Name=Elven Spellblade
-TYPE=T_WEAPON_FENCE
+NAME=elven spellblade
+TYPE=t_weapon_fence
 DAM=12,14
+FLIP=1
 SKILL=Fencing
+SPEED=2.5
+//VALUE=FIXME
+WEIGHT=5
 REQSTR=35
 TWOHANDS=Y
-SPEED=2.5
-WEIGHT=5
-SKILLMAKE=BLACKSMITHING 70.0
 RESOURCES=14 i_ingot_iron
-DUPELIST=02d2c
+SKILLMAKE=Blacksmithing 70.0
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Elven Spellblades
 DESCRIPTION=Elven SpellBlade
-
+TEVENTS=t_iprop
+DUPELIST=02d2c
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 02d2c]
 DUPEITEM=02d20
@@ -64,8 +67,8 @@ DUPEITEM=02d20
 [ITEMDEF i_cold_forged_blade]
 ID=i_elven_spellblade
 NAME=Cold Forged Blade
-SKILLMAKE=Blacksmithing 70.0
 RESOURCES=18 i_ingot_iron, 10 i_ingredient_blight, 10 i_ingredient_taint, 1 i_ingredient_grizzled_bones
+SKILLMAKE=Blacksmithing 70.0
 TEVENTS=t_iprop
 TAG.SpellChanneling=1
 TAG.HitHarm=40
@@ -76,90 +79,93 @@ TAG.DamCold=100
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Elven Spellblades
 DESCRIPTION=Cold Forged Blade
-
 ON=@Create
-HITPOINTS={255 255}
-COLOR=<ColorElementalType>
+   COLOR=<ColorElementalType>
+   HITPOINTS=255
 
 [ITEMDEF i_fiery_spellblade]
 ID=i_elven_spellblade
 NAME=Fiery Spellblade
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=14 i_ingot_iron, 1 i_gem_fire_ruby
+SKILLMAKE=Blacksmithing 75.0
+TEVENTS=t_iprop
 TAG.ResFire=5
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Elven Spellblades
 DESCRIPTION=Fiery Spellblade
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_icy_spellblade]
 ID=i_elven_spellblade
 NAME=Icy Spellblade
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=14 i_ingot_iron, 1 i_gem_turquoise
+SKILLMAKE=Blacksmithing 75.0
+TEVENTS=t_iprop
 TAG.ResCold=5
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Elven Spellblades
 DESCRIPTION=Icy Spellblade
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_spellblade_defense]
 ID=i_elven_spellblade
 NAME=Spellblade of Defense
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=14 i_ingot_iron, 1 i_gem_white_pearl
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.DefenseChanceIncrease=5
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Elven Spellblades
 DESCRIPTION=Spellblade of Defense
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_true_spellblade]
 ID=i_elven_spellblade
 NAME=True Spellblade
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=14 i_ingot_iron, 1 i_gem_blue_diamond
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.SpellChanneling=1
 TAG.FasterCasting=-1
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Elven Spellblades
 DESCRIPTION=True Spellblade
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
+
 
 ///////////////////////////////////////////////////////////////
 //////// KAMAS
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 027ad]
 DEFNAME=i_kama
-NAME=Kama
+NAME=kama
 TYPE=t_weapon_fence
-RESOURCES=14 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 40.0
-WEIGHT=7
-TWOHANDS=Y
-LAYER=2
-REQSTR=15
-VALUE=182
 DAM=9,11
+FLIP=1
+SKILL=Fencing
 SPEED=2.0
-DUPELIST=027f8
 VALUE=182
+LAYER=layer_hand2
+WEIGHT=7
+REQSTR=15
+TWOHANDS=Y
+RESOURCES=14 i_ingot_iron
+SKILLMAKE=Blacksmithing 40.0
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Kamas
 DESCRIPTION=Kama
-
-ON=@CREATE
-HITPOINTS={36 48}
+TEVENTS=t_iprop
+DUPELIST=027f8
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 027f8]
 DUPEITEM=027ad
@@ -176,58 +182,63 @@ TAG.DamEnergy=50
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Kamas
 DESCRIPTION=Darkened Sky
-
 ON=@Create
-HITPOINTS=255
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS=255
+
 
 ///////////////////////////////////////////////////////////////
 //////// LAJATANGS
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 027a7]
 DEFNAME=i_lajatang
-NAME=Lajatang
+NAME=lajatang
 TYPE=t_weapon_fence
-RESOURCES=25 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 80.0
-WEIGHT=12
-TWOHANDS=Y
-REQSTR=65
 DAM=16,18
+SKILL=Fencing
 SPEED=3.5
-DUPELIST=027f2
+//VALUE=FIXME
+WEIGHT=12
+REQSTR=65
+TWOHANDS=Y
+RESOURCES=25 i_ingot_iron
+SKILLMAKE=Blacksmithing 80.0
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Lajatangs
 DESCRIPTION=Lajatang
-
-ON=@CREATE
-HITPOINTS={36 48}
+TEVENTS=t_iprop
+DUPELIST=027f2
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 027f2]
 DUPEITEM=027a7
+
 
 ///////////////////////////////////////////////////////////////
 //////// PIKES
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 026be]
 DEFNAME=i_pike
-NAME=Pike
+NAME=pike
 TYPE=t_weapon_fence
 DAM=14,16
+FLIP=1
 SKILL=Fencing
+SPEED=3.0
+VALUE=200
+WEIGHT=8.0
 REQSTR=50
 TWOHANDS=Y
-WEIGHT=8.0
-SPEED=3.0
-SKILLMAKE=BLACKSMITHING 47.0
 RESOURCES=12 i_ingot_iron
-VALUE=200
-DUPELIST=026c8
+SKILLMAKE=Blacksmithing 47.0
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Pikes
 DESCRIPTION=Pike
-
-ON=@CREATE
-HITPOINTS={36 48}
+TEVENTS=t_iprop
+DUPELIST=026c8
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 026c8]
 DUPEITEM=026be
@@ -238,23 +249,25 @@ DUPEITEM=026be
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0e87]
 DEFNAME=i_pitchfork
-TYPE=T_WEAPON_FENCE
-FLIP=1
-RESOURCES=5 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 20.0
+NAME=pitchfork
+TYPE=t_weapon_fence
 DAM=13,14
-SPEED=2.5
+FLIP=1
 SKILL=Fencing
+SPEED=2.5
+//VALUE=FIXME
+WEIGHT=11.0
 REQSTR=50
 TWOHANDS=Y
-WEIGHT=11.0
-DUPELIST=0e88
+RESOURCES=5 i_ingot_iron
+SKILLMAKE=Blacksmithing 20.0
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Pitchforks
 DESCRIPTION=Pitchfork
-
+TEVENTS=t_iprop
+DUPELIST=0e88
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 0e88]
 DUPEITEM=0e87
@@ -265,23 +278,25 @@ DUPEITEM=0e87
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 027af]
 DEFNAME=i_sai
-NAME=Sai
-TYPE=T_WEAPON_FENCE
+NAME=sai
+TYPE=t_weapon_fence
 DAM=9,11
-SPEED=2.0
+FLIP=1
 SKILL=Fencing
+SPEED=2.0
+//VALUE=FIXME
+WEIGHT=7
 REQSTR=15
 TWOHANDS=Y
-WEIGHT=7
-SKILLMAKE=BLACKSMITHING 50.0
 RESOURCES=12 i_ingot_iron
-DUPELIST=027fa
+SKILLMAKE=Blacksmithing 50.0
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Sai
 DESCRIPTION=Sai
-
-ON=@CREATE
-HITPOINTS={36 48}
+TEVENTS=t_iprop
+DUPELIST=027fa
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 027fa]
 DUPEITEM=027af
@@ -298,9 +313,9 @@ TAG.ResPoison=10
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Sai
 DESCRIPTION=Demon Forks
-
 ON=@Create
-HITPOINTS=255
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS=255
 
 
 ///////////////////////////////////////////////////////////////
@@ -308,23 +323,25 @@ HITPOINTS=255
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 01402]
 DEFNAME=i_spear_short
-RESOURCES=6 i_ingot_iron
-WEIGHT=4
-TYPE=T_WEAPON_FENCE
-FLIP=1
+NAME=short spear
+TYPE=t_weapon_fence
 DAM=10,13
-SPEED=2.0
+FLIP=1
 SKILL=Fencing
+SPEED=2.0
+//VALUE=FIXME
+WEIGHT=4
 REQSTR=40
 TWOHANDS=N
-DUPELIST=01403
-SKILLMAKE=BLACKSMITHING 45.3
+RESOURCES=6 i_ingot_iron
+SKILLMAKE=Blacksmithing 45.3
 CATEGORY=Provisions - Weapons
 SUBSECTION=Short Spears
 DESCRIPTION=Short Spear
-
+TEVENTS=t_iprop
+DUPELIST=01403
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 01403]
 DUPEITEM=01402
@@ -341,10 +358,9 @@ TAG.PhysicalResist=10
 CATEGORY=Provisions - Weapons
 SUBSECTION=Short Spears
 DESCRIPTION=Enchanted Titan Leg Bone
-
 ON=@Create
-HITPOINTS=255
-COLOR=59
+   COLOR=59
+   HITPOINTS=255
 
 
 ///////////////////////////////////////////////////////////////
@@ -352,23 +368,25 @@ COLOR=59
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0f62]
 DEFNAME=i_spear
-RESOURCES=12 i_ingot_iron
-TYPE=T_WEAPON_FENCE
-FLIP=1
+NAME=spear
+TYPE=t_weapon_fence
 DAM=13,15
-SPEED=2.2
+FLIP=1
 SKILL=Fencing
+SPEED=2.2
+//VALUE=FIXME
+WEIGHT=7
 REQSTR=50
 TWOHANDS=Y
-WEIGHT=7
-SKILLMAKE=BLACKSMITHING 49.0
-DUPELIST=0f63
+RESOURCES=12 i_ingot_iron
+SKILLMAKE=Blacksmithing 49.0
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Spears
 DESCRIPTION=Spear
-
+TEVENTS=t_iprop
+DUPELIST=0f63
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 0f63]
 DUPEITEM=0f62
@@ -381,9 +399,9 @@ TAG.DamageIncrease=80
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Spears
 DESCRIPTION=Tribal Spear
-
 ON=@Create
-HITPOINTS=80
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS=80
 
 
 ///////////////////////////////////////////////////////////////
@@ -391,22 +409,24 @@ HITPOINTS=80
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 027ab]
 DEFNAME=i_tekagi
-NAME=Tekagi
-TYPE=T_WEAPON_FENCE
+NAME=tekagi
+TYPE=t_weapon_fence
 DAM=10,12
-SPEED=2.0
+FLIP=1
 SKILL=Fencing
+SPEED=2.0
+//VALUE=FIXME
+WEIGHT=5
 REQSTR=10
 TWOHANDS=Y
-WEIGHT=5
-SKILLMAKE=BLACKSMITHING 55.0
 RESOURCES=12 i_ingot_iron
-DUPELIST=027f6
+SKILLMAKE=Blacksmithing 55.0
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Tekagi
 DESCRIPTION=Tekagi
-
-ON=@CREATE
+TEVENTS=t_iprop
+DUPELIST=027f6
+ON=@Create
 HITPOINTS={36 48}
 
 [ITEMDEF 027f6]
@@ -418,23 +438,25 @@ DUPEITEM=027ab
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 02d23]
 DEFNAME=i_war_cleaver
-Name=War Cleaver
-SKILLMAKE=BLACKSMITHING 70.0
-RESOURCES=18 i_ingot_iron
-TYPE=T_WEAPON_FENCE
+NAME=war cleaver
+TYPE=t_weapon_fence
 DAM=10,12
+FLIP=1
 SKILL=Fencing
+SPEED=2.0
+//VALUE=FIXME
+WEIGHT=5
 REQSTR=15
 TWOHANDS=N
-SPEED=2.0
-WEIGHT=5
-DUPELIST=02d2f
+RESOURCES=18 i_ingot_iron
+SKILLMAKE=Blacksmithing 70.0
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=War Cleavers
 DESCRIPTION=War Cleaver
-
+TEVENTS=t_iprop
+DUPELIST=02d2f
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 02d2f]
 DUPEITEM=02d23
@@ -442,30 +464,30 @@ DUPEITEM=02d23
 [ITEMDEF i_butcher_war_cleaver]
 ID=i_war_cleaver
 NAME=Butcher's War Cleaver
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=18 i_ingot_iron, 1 i_gem_turquoise
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.Slayer.Super=SSLAYER_BOVINE
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=War Cleavers
 DESCRIPTION=Butcher's War Cleaver
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_knight_war_cleaver]
 ID=i_war_cleaver
 NAME=Knight's War Cleaver
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=18 i_ingot_iron, 1 i_gem_perfect_emerald
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.HitPointRegeneration=3
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=War Cleavers
 DESCRIPTION=Knight's War Cleaver
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_raed_glory]
 ID=i_war_cleaver
@@ -480,38 +502,37 @@ TAG.SwingSpeedIncrease=20
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=War Cleavers
 DESCRIPTION=Raed's Glory
-
 ON=@Create
-HITPOINTS=255
-COLOR=024f
+   COLOR=024f
+   HITPOINTS=255
 
 [ITEMDEF i_serrated_war_cleaver]
 ID=i_war_cleaver
 NAME=Serrated War Cleaver
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=18 i_ingot_iron, 1 i_gem_ecru_citrine
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.DamageIncrease=7
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=War Cleavers
 DESCRIPTION=Serrated War Cleaver
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_true_war_cleaver]
 ID=i_war_cleaver
 NAME=True War Cleaver
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=18 i_ingot_iron, 1 i_gem_brilliant_amber
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.HitPointRegeneration=2
 TAG.DamageIncrease=4
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=War Cleavers
 DESCRIPTION=True War Cleaver
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [eof]

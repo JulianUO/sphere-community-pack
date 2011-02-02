@@ -11,23 +11,24 @@ VERSION=0.56b
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0f49]
 DEFNAME=i_axe
-RESOURCES=14 i_ingot_iron
 TYPE=t_weapon_axe
-FLIP=1
 DAM=14,16
-SPEED=3.0
+FLIP=1
 SKILL=Swordsmanship
+SPEED=3.0
+VALUE=62
+WEIGHT=4
 REQSTR=35
 TWOHANDS=Y
-WEIGHT=4
-SKILLMAKE=BLACKSMITHING 34.2
-DUPELIST=0f4a
+RESOURCES=14 i_ingot_iron
+SKILLMAKE=Blacksmithing 34.2
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Axes
 DESCRIPTION=Axe
-
+TEVENTS=t_iprop
+DUPELIST=0f4a
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 0f4a]
 DUPEITEM=0f49
@@ -38,23 +39,24 @@ DUPEITEM=0f49
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0f4d]
 DEFNAME=i_bardiche
-RESOURCES=18 i_ingot_iron
 TYPE=t_weapon_axe
-FLIP=1
 DAM=17,18
-SPEED=3.2
+FLIP=1
 SKILL=Swordsmanship
+SPEED=3.2
+VALUE=111
+WEIGHT=7
 REQSTR=45
 TWOHANDS=Y
-WEIGHT=7
-SKILLMAKE=BLACKSMITHING 31.7
-DUPELIST=0f4e
+RESOURCES=18 i_ingot_iron
+SKILLMAKE=Blacksmithing 31.7
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Bardiches
 DESCRIPTION=Bardiche
-
+TEVENTS=t_iprop
+DUPELIST=0f4e
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 0f4e]
 DUPEITEM=0f4d
@@ -71,10 +73,9 @@ TAG.DamageIncrease=50
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Bardiches
 DESCRIPTION=Legacy of the Dread Lord
-
 ON=@Create
-HITPOINTS=255
-COLOR=39
+   COLOR=39
+   HITPOINTS=255
 
 
 ///////////////////////////////////////////////////////////////
@@ -82,23 +83,24 @@ COLOR=39
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0f47]
 DEFNAME=i_axe_battle
-RESOURCES=14 i_ingot_iron
 TYPE=t_weapon_axe
-FLIP=1
 DAM=15,17
-SPEED=3.5
+FLIP=1
 SKILL=Swordsmanship
+SPEED=3.5
+VALUE=59
+WEIGHT=4
 REQSTR=35
 TWOHANDS=Y
-WEIGHT=4
-SKILLMAKE=BLACKSMITHING 30.5
-DUPELIST=0f48
+RESOURCES=14 i_ingot_iron
+SKILLMAKE=Blacksmithing 30.5
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Axes
 DESCRIPTION=Battle Axe
-
+TEVENTS=t_iprop
+DUPELIST=0f48
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 0f48]
 DUPEITEM=0f47
@@ -109,23 +111,25 @@ DUPEITEM=0f47
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 026bd]
 DEFNAME=i_bladed_staff
-NAME=Bladed Staff
-TYPE=t_weapon_sword
+NAME=bladed staff
+TYPE=t_weapon_mace_sharp
 DAM=14,16
+FLIP=1
 SKILL=Swordsmanship
+SPEED=3.0
+VALUE=69
+WEIGHT=4
 REQSTR=40
 TWOHANDS=Y
-WEIGHT=4
-SPEED=3.0
-SKILLMAKE=BLACKSMITHING 40.0
 RESOURCES=12 i_ingot_iron
-DUPELIST=026c7
+SKILLMAKE=Blacksmithing 40.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Bladed Staves
 DESCRIPTION=Bladed Staff
-
-ON=@CREATE
-HITPOINTS={36 48}
+TEVENTS=t_iprop
+DUPELIST=026c7
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 026c7]
 DUPEITEM=026bd
@@ -136,21 +140,25 @@ DUPEITEM=026bd
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 026c1]
 DEFNAME=i_crescent_blade
-NAME=Crescent Blade
+NAME=crescent blade
 TYPE=t_weapon_sword
 DAM=11,14
-RESOURCES=14 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 45.0
-WEIGHT=4.0
+FLIP=1
+SKILL=Swordsmanship
 SPEED=2.5
+VALUE=110
+WEIGHT=4.0
 REQSTR=55
-DUPELIST=026cb
+TWOHANDS=Y
+RESOURCES=14 i_ingot_iron
+SKILLMAKE=Blacksmithing 45.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Crescent Blades
 DESCRIPTION=Crescent Blade
-
-ON=@CREATE
-HITPOINTS={36 48}
+TEVENTS=t_iprop
+DUPELIST=026cb
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 026cb]
 DUPEITEM=026c1
@@ -161,23 +169,25 @@ DUPEITEM=026c1
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 027a9]
 DEFNAME=i_daisho
-NAME=Daisho
+NAME=daisho
 TYPE=t_weapon_sword
 DAM=13,15
-SPEED=2.2
+FLIP=1
 SKILL=Swordsmanship
+SPEED=2.2
+VALUE=166
+WEIGHT=8.0
 REQSTR=40
 TWOHANDS=Y
-WEIGHT=8.0
-SKILLMAKE=BLACKSMITHING 60.0
 RESOURCES=15 i_ingot_iron
-DUPELIST=027f4
+SKILLMAKE=Blacksmithing 60.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Daishos
 DESCRIPTION=Daisho
-
-ON=@CREATE
-HITPOINTS={36 48}
+TEVENTS=t_iprop
+DUPELIST=027f4
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 027f4]
 DUPEITEM=027a9
@@ -193,9 +203,9 @@ TAG.DamFire=100
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Daishos
 DESCRIPTION=Swords of Prosperity
-
 ON=@Create
-HITPOINTS=255
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS=255
 
 
 ///////////////////////////////////////////////////////////////
@@ -203,23 +213,24 @@ HITPOINTS=255
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0f4b]
 DEFNAME=i_axe_double
-RESOURCES=12 i_ingot_iron
 TYPE=t_weapon_axe
-FLIP=1
 DAM=15,17
-SPEED=3.2
+FLIP=1
 SKILL=Swordsmanship
+SPEED=3.2
+VALUE=103
+WEIGHT=8
 REQSTR=45
 TWOHANDS=Y
-WEIGHT=8
-SKILLMAKE=BLACKSMITHING 29.3
-DUPELIST=0f4c
+RESOURCES=12 i_ingot_iron
+SKILLMAKE=Blacksmithing 29.3
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Double Axes
 DESCRIPTION=Double Axe
-
+TEVENTS=t_iprop
+DUPELIST=0f4c
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 0f4c]
 DUPEITEM=0f4b
@@ -236,10 +247,9 @@ TAG.DamageIncrease=50
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Double Axes
 DESCRIPTION=Axe of the Heavens
-
 ON=@Create
-HITPOINTS=255
-COLOR=03c8
+   COLOR=03c8
+   HITPOINTS=255
 
 
 ///////////////////////////////////////////////////////////////
@@ -247,23 +257,24 @@ COLOR=03c8
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0f45]
 DEFNAME=i_axe_exec
-RESOURCES=14 i_ingot_iron
 TYPE=t_weapon_axe
-FLIP=1
 DAM=15,17
-SPEED=3.2
+FLIP=1
 SKILL=Swordsmanship
+SPEED=3.2
+VALUE=74
+WEIGHT=8
 REQSTR=40
 TWOHANDS=Y
-WEIGHT=8
-SKILLMAKE=BLACKSMITHING 34.2
-DUPELIST=0f46
+RESOURCES=14 i_ingot_iron
+SKILLMAKE=Blacksmithing 34.2
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Executioner's Axes
 DESCRIPTION=Executioner's Axe
-
+TEVENTS=t_iprop
+DUPELIST=0f46
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 0f46]
 DUPEITEM=0f45
@@ -280,10 +291,9 @@ TAG.ResFire=10
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Executioner's Axes
 DESCRIPTION=Geoffrey's Axe - Museum of Vesper Replica
-
 ON=@Create
-HITPOINTS=80
-COLOR=colors_red
+   COLOR=colors_red
+   HITPOINTS=80
 
 [ITEMDEF i_zyronic_claw]
 DEFNAME=i_doom_zyronic_claw
@@ -303,33 +313,33 @@ TAG.DamEnergy=20
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Executioner's Axes
 DESCRIPTION=Zyronic Claw
-
 ON=@Create
-COLOR=color_o_bloodrock
-HITPOINTS=255
+   COLOR=color_o_bloodrock
+   HITPOINTS=255
 
 ///////////////////////////////////////////////////////////////
 //////// HALBERDS
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0143e]
 DEFNAME=i_halberd
-RESOURCES=20 i_ingot_iron
-WEIGHT=16
 TYPE=t_weapon_axe
-FLIP=1
 DAM=18,19
-SPEED=4.2
+FLIP=1
 SKILL=Swordsmanship
+SPEED=4.2
+VALUE=134
+WEIGHT=16
 REQSTR=95
 TWOHANDS=Y
-DUPELIST=0143f
-SKILLMAKE=BLACKSMITHING 39.1
+RESOURCES=20 i_ingot_iron
+SKILLMAKE=Blacksmithing 39.1
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Halberds
 DESCRIPTION=Halberd
-
+TEVENTS=t_iprop
+DUPELIST=0143f
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 0143f]
 DUPEITEM=0143e
@@ -348,35 +358,34 @@ TAG.DamFire=50
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Halberds
 DESCRIPTION=Blaze of Death
-
 ON=@Create
-HITPOINTS=255
-COLOR=51
+   COLOR=51
+   HITPOINTS=255
 
 
 ///////////////////////////////////////////////////////////////
 //////// HATCHETS
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0f43]
-//Hatchet
 DEFNAME=i_hatchet
-RESOURCES=4 i_ingot_iron
 TYPE=t_weapon_axe
-FLIP=1
 DAM=13,15
-SPEED=2.2
+FLIP=1
 SKILL=Swordsmanship
+SPEED=2.2
+VALUE=33
+WEIGHT=4
 REQSTR=20
 TWOHANDS=N
-WEIGHT=4
+RESOURCES=4 i_ingot_iron
 SKILLMAKE=TINKERING 30.0, t_tinker_tools
-DUPELIST=0f44
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Hatchets
 DESCRIPTION=Hatchet
-
+TEVENTS=t_iprop
+DUPELIST=0f44
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 0f44]
 DUPEITEM=0f43
@@ -393,9 +402,9 @@ TAG.DamageIncrease=-50
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Hatchets
 DESCRIPTION=Melisande's Corroded Hatchet
-
 ON=@Create
-HITPOINTS=56
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS=56
 
 
 ///////////////////////////////////////////////////////////////
@@ -403,23 +412,24 @@ HITPOINTS=56
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 013fa]
 DEFNAME=i_axe_battle_large
-RESOURCES=12 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 28.0
-WEIGHT=6
 TYPE=t_weapon_axe
-FLIP=1
 DAM=16,17
-SPEED=3.2
+FLIP=1
 SKILL=Swordsmanship
+SPEED=3.2
+VALUE=117
+WEIGHT=6
 REQSTR=80
 TWOHANDS=Y
-DUPELIST=013fb
+RESOURCES=12 i_ingot_iron
+SKILLMAKE=Blacksmithing 28.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Large Battle Axes
 DESCRIPTION=Large Battle Axe
-
+TEVENTS=t_iprop
+DUPELIST=013fb
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 013fb]
 DUPEITEM=013fa
@@ -430,23 +440,25 @@ DUPEITEM=013fa
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 027a2]
 DEFNAME=i_no_dachi
-NAME=No-Dachi
+NAME=no-dachi
 TYPE=t_weapon_sword
 DAM=16,18
-SPEED=3.5
+FLIP=1
 SKILL=Swordsmanship
+SPEED=3.5
+VALUE=137
+WEIGHT=10
 REQSTR=40
 TWOHANDS=Y
-WEIGHT=10
-SKILLMAKE=BLACKSMITHING 75.0
 RESOURCES=18 i_ingot_iron
-DUPELIST=027ed
+SKILLMAKE=Blacksmithing 75.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=No-Dachi
 DESCRIPTION=No-Dachi
-
+TEVENTS=t_iprop
+DUPELIST=027ed
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF i_sword_stampede]
 ID=i_no_dachi
@@ -458,17 +470,17 @@ TAG.DamCold=100
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=No-Dachi
 DESCRIPTION=Sword of the Stampede
-
 ON=@Create
-HITPOINTS=255
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS=255
 
 [ITEMDEF i_destroyer]
 ID=i_no_dachi
 NAME=The Destroyer
-SPEED=2.0
-REQSTR=15
-WEIGHT=7
 DAM=9,11
+SPEED=2.0
+WEIGHT=7
+REQSTR=15
 TEVENTS=t_iprop
 TAG.ReflectPhysicalDamage=10
 TAG.DefenseChanceIncrease=10
@@ -478,9 +490,9 @@ TAG.ResPoison=10
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=No-Dachi
 DESCRIPTION=The Destroyer
-
 ON=@Create
-HITPOINTS=255
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS=255
 
 
 ///////////////////////////////////////////////////////////////
@@ -488,23 +500,25 @@ HITPOINTS=255
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 02d28]
 DEFNAME=i_ornate_axe
-NAME=Ornate Axe
+NAME=ornate axe
 TYPE=t_weapon_axe
 DAM=18,20
+FLIP=1
 SKILL=Swordsmanship
+SPEED=3.5
+VALUE=124
+WEIGHT=12
 REQSTR=45
 TWOHANDS=Y
-SPEED=3.5
-WEIGHT=12
 RESOURCES=18 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 70.0
-DUPELIST=02d34
+SKILLMAKE=Blacksmithing 70.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Ornate Axes
 DESCRIPTION=Ornate Axe
-
+TEVENTS=t_iprop
+DUPELIST=02d34
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 02d34]
 DUPEITEM=02d28
@@ -512,45 +526,45 @@ DUPEITEM=02d28
 [ITEMDEF i_guardian_axe]
 ID=i_ornate_axe
 NAME=Guardian Axe
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=18 i_ingot_iron, 1 i_gem_blue_diamond
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.HitPointIncrease=4
 TAG.HitPointRegeneration=1
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Ornate Axes
 DESCRIPTION=Guardian Axe
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_heavy_ornate_axe]
 ID=i_ornate_axe
 NAME=Heavy Ornate Axe
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=18 i_ingot_iron, 1 i_gem_turquoise
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.DamageIncrease=8
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Ornate Axes
 DESCRIPTION=Heavy Ornate Axe
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_singing_axe]
 ID=i_ornate_axe
 NAME=Singing Axe
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=18 i_ingot_iron, 1 i_gem_brilliant_amber
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.Skill.Bonus.1=Musicianship,5.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Ornate Axes
 DESCRIPTION=Singing Axe
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_talon_bite]
 ID=i_ornate_axe
@@ -565,46 +579,49 @@ TAG.BestWeaponSkill=1
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Ornate Axes
 DESCRIPTION=Talon Bite
-
 ON=@Create
-HITPOINTS=255
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS=255
 
 [ITEMDEF i_thundering_axe]
 ID=i_ornate_axe
 NAME=Thundering Axe
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=18 i_ingot_iron, 1 i_gem_ecru_citrine
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.HitLightning=10
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Ornate Axes
 DESCRIPTION=Thundering Axe
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 
 ///////////////////////////////////////////////////////////////
 //////// PALADIN SWORDS
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 026ce]
+//FIXME: this is not on stratics?
 DEFNAME=i_paladin_sword
-NAME=Paladin Sword
+NAME=paladin sword
 TYPE=t_weapon_sword
-SKILL=swordsmanship
 DAM=20,24
-REQSTR=85
+FLIP=1
+SKILL=swordsmanship
 SPEED=5.0
-SKILLMAKE=BLACKSMITHING 46.0
-RESOURCES=16 i_ingot_iron
+VALUE=142
 WEIGHT=6.0
-DUPELIST=026cf
+REQSTR=85
+RESOURCES=16 i_ingot_iron
+SKILLMAKE=Blacksmithing 46.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Paladin Swords
 DESCRIPTION=Paladin Sword
-
+TEVENTS=t_iprop
+DUPELIST=026cf
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 026cf]
 DUPEITEM=026ce
@@ -620,9 +637,9 @@ TAG.DamageIncrease=55
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Paladin Swords
 DESCRIPTION=The Redeemer
-
 ON=@Create
-HITPOINTS=100
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS=100
 
 
 ///////////////////////////////////////////////////////////////
@@ -630,23 +647,25 @@ HITPOINTS=100
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 02d26]
 DEFNAME=i_rune_blade
-Name=Rune Blade
-TYPE=T_WEAPON_SWORD
+NAME=rune blade
+TYPE=t_weapon_sword
 DAM=15,17
+FLIP=1
 SKILL=Swordsmanship
+SPEED=3.0
+VALUE=104
+WEIGHT=7
 REQSTR=30
 TWOHANDS=Y
-SPEED=3.0
-WEIGHT=7
 RESOURCES=15 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 70.0
-DUPELIST=02d32
+SKILLMAKE=Blacksmithing 70.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Rune Blades
 DESCRIPTION=Rune Blade
-
+TEVENTS=t_iprop
+DUPELIST=02d32
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 02d32]
 DUPEITEM=02d26
@@ -663,31 +682,30 @@ TAG.BestWeaponSkill=1
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Rune Blades
 DESCRIPTION=Blade Dance
-
 ON=@Create
-HITPOINTS=255
-COLOR=color_o_bloodrock
+   COLOR=color_o_bloodrock
+   HITPOINTS=255
 
 [ITEMDEF i_corrupted_rune_blade]
 ID=i_rune_blade
 NAME=Corruped Rune Blade
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=15 i_ingot_iron, 1 i_ingredient_corruption
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.ResPhysical=-5
 TAG.ResPoison=12
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Rune Blades
 DESCRIPTION=Corrupted Rune Blade
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_luminous_rune_blade]
 ID=i_rune_blade
 NAME=Luminous Rune Blade
-SKILLMAKE=Blacksmithing 70.0
 RESOURCES=15 i_ingot_iron, 10 i_ingredient_corruption, 10 i_ingredient_putrefaction, 10 i_ingredient_grizzled_bones
+SKILLMAKE=Blacksmithing 70.0
 TEVENTS=t_iprop
 TAG.HitLightning=40
 TAG.SelfRepair=5
@@ -698,53 +716,52 @@ TAG.DamEnergy=100
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Rune Blades
 DESCRIPTION=Luminous Rune Blade
-
 ON=@Create
-HITPOINTS=255
-COLOR=<ColorElementalType>
+   COLOR=<ColorElementalType>
+   HITPOINTS=255
 
 [ITEMDEF i_mage_rune_blade]
 ID=i_rune_blade
 NAME=Mage's Rune Blade
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=15 i_ingot_iron, 1 i_gem_blue_diamond
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.FasterCasting=1
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Rune Blades
 DESCRIPTION=Mage's Rune Blade
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_rune_blade_knowledge]
 ID=i_rune_blade
 NAME=Rune Blade of Knowledge
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=15 i_ingot_iron, 1 i_gem_ecru_citrine
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.SpellDamageIncrease=5
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Rune Blades
 DESCRIPTION=Rune Blade of Knowledge
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 [ITEMDEF i_runesabre]
 ID=i_rune_blade
 NAME=Runesabre
-SKILLMAKE=Blacksmithing 75.0
 RESOURCES=15 i_ingot_iron, 1 i_gem_turquoise
+SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.Skill.Bonus.1=MagicResistance,5.0
 TAG.MageWeapon=-29
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Rune Blades
 DESCRIPTION=Runesabre
-
 ON=@Create
-HITPOINTS={36 48}
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
 
 
 ///////////////////////////////////////////////////////////////
@@ -752,21 +769,25 @@ HITPOINTS={36 48}
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 026ba]
 DEFNAME=i_scythe
-NAME=Scythe
-TYPE=t_weapon_fence
+NAME=scythe
+TYPE=t_weapon_sword
 DAM=15,18
-RESOURCES=14 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 39.0
-WEIGHT=5
+FLIP=1
+SKILL=Swordsmanship
 SPEED=3.5
+VALUE=81
+WEIGHT=5
 REQSTR=45
-DUPELIST=026c4
+TWOHANDS=Y
+RESOURCES=14 i_ingot_iron
+SKILLMAKE=Blacksmithing 39.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Scythes
 DESCRIPTION=Scythe
-
-ON=@CREATE
-HITPOINTS={36 48}
+TEVENTS=t_iprop
+DUPELIST=026c4
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 026ca]
 DUPEITEM=026c0
@@ -777,23 +798,24 @@ DUPEITEM=026c0
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 01442]
 DEFNAME=i_axe_two_hand
-RESOURCES=16 i_ingot_iron
-WEIGHT=8
 TYPE=t_weapon_axe
-FLIP=1
 DAM=16,17
-SPEED=3.5
+FLIP=1
 SKILL=Swordsmanship
+SPEED=3.5
+VALUE=99
+WEIGHT=8
 REQSTR=40
 TWOHANDS=Y
-DUPELIST=01443
-SKILLMAKE=BLACKSMITHING 33.0
+RESOURCES=16 i_ingot_iron
+SKILLMAKE=Blacksmithing 33.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Two Handed Axes
 DESCRIPTION=Two Handed Axe
-
+TEVENTS=t_iprop
+DUPELIST=01443
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 01443]
 DUPEITEM=01442
