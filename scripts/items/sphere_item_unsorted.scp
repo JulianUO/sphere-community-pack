@@ -23,6 +23,28 @@ CATEGORY=Miscellaneous
 SUBSECTION=Bad Tiles
 DESCRIPTION=No Draw Tile
 
+[ITEMDEF 090d]
+DEFNAME=i_fountain_splash
+//NAME=fountain
+TYPE=t_water
+RESOURCES=20 i_rock_plain
+CATEGORY=Animations
+SUBSECTION=Fountain Splash
+DESCRIPTION=Fountain Splash
+DUPELIST=090e,090f,910
+
+[ITEMDEF 090e]
+//fountain splash
+DUPEITEM=090d
+
+[ITEMDEF 090f]
+//fountain splash
+DUPEITEM=090d
+
+[ITEMDEF 0910]
+//fountain splash
+DUPEITEM=090d
+
 [ITEMDEF 09b2]
 DEFNAME=i_bankbox
 NAME=Bank Box
@@ -40,13 +62,47 @@ DESCRIPTION=Unused Portrait Tile 0ea9
 DEFNAME=i_vase_rose
 NAME=rose in a vase
 WEIGHT=1.1
-RESOURCES=1 i_vase_small_1, 1 i_fruit_rose
+RESOURCES=1 i_vase_small_1, 1 i_flower_rose_white
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Vase with Rose
 
+[ITEMDEF 0ec1]
+DEFNAME=i_knife_broken
+WEIGHT=0.1
+RESOURCES=1 i_ingot_iron
+CATEGORY=Items by Professions
+SUBSECTION=Cook
+DESCRIPTION=Knife (broken)
+
+[ITEMDEF 0f31]
+DEFNAME=i_twig
+WEIGHT=0.1
+CATEGORY=Vegetation
+SUBSECTION=Sticks and Wood
+DESCRIPTION=Twig
+DUPELIST=0f32
+
+[ITEMDEF 0f32]
+//twig
+DUPEITEM=0f31
+
+[ITEMDEF 0f5b]
+//FIXME: Is this right? should it be a fireball anim?
+//DUPEITEM=0f53
+
+[ITEMDEF 0faa]
+DEFNAME=i_game_mahjong
+//NAME=mahjong
+//TYPE=t_game_board
+//TDATA2=02c00
+WEIGHT=5.0
+//RESOURCES=10 i_ivory,10 i_ebony
+CATEGORY=Items by Professions
+SUBSECTION=BarKeep
+DESCRIPTION=MahJong
+
 [ITEMDEF 01646]
-// does nothing as far as i can see.
 DEFNAME=i_dark_source
 WEIGHT=0
 LAYER=layer_talisman//FIXME: test this

@@ -33,7 +33,7 @@ SUBSECTION=Blighted Grove
 DESCRIPTION=Bone Machete
 TAG.REQSTR=20
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 ON=@Create
    HITPOINTS={50 60}
 
@@ -604,18 +604,17 @@ NEW.TIMER=60*10
 [FUNCTION DOOMSAYTIMING]
 SAY @33,3,1 Go forth and vanquish the devourer that has been summoned!
 
-[ITEMDEF i_salivas_feather]
-ID=i_feather
-TYPE=t_FEATHER
+[ITEMDEF 0fc2]
+DEFNAME=i_salivas_feather
 NAME=Saliva's Feather
+TYPE=t_normal
 VALUE=2
 WEIGHT=.1
-CATEGORY=Do Not Use
+CATEGORY=Quest
 SUBSECTION=Quest Items
 DESCRIPTION=Saliva's Feather
-
-ON=@CREATE
-COLOR=COLORS_YELLOW
+ON=@Create
+   COLOR=colors_yellow
 
 [ITEMDEF i_hydra_scale]
 ID=i_scale

@@ -38,31 +38,6 @@ SUBSECTION=Cook
 DESCRIPTION=Ham
 DUPELIST=09d3
 
-[ITEMDEF 09d1]
-DEFNAME=i_fruit_grapes
-VALUE=1
-TYPE=t_fruit
-TDATA1=i_crop_grapevine
-WEIGHT=0.1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Grape Bunch
-DUPELIST=0d1a
-
-[ITEMDEF 0c37]
-DEFNAME=i_crop_flower
-VALUE=2
-CATEGORY=Vegetation
-SUBSECTION=Plants and Flowers
-DESCRIPTION=Flowers
-
-[ITEMDEF 0c38]
-DEFNAME=i_crop_flower_2
-VALUE=2
-CATEGORY=Vegetation
-SUBSECTION=Plants and Flowers
-DESCRIPTION=Flowers
-
 [ITEMDEF 0df8]
 DEFNAME=i_wool
 VALUE=3
@@ -75,14 +50,34 @@ DUPELIST=0101f
 
 [ITEMDEF 0df9]
 DEFNAME=i_cotton
-VALUE=3
-//RESOURCES=16 i_crop_cotton
 TYPE=t_cotton
+FLIP=1
+VALUE=3
+WEIGHT=0.4
 CATEGORY=Items by Professions
-SUBSECTION=Tailor
+SUBSECTION=Weaver
 DESCRIPTION=Bales of Cotton
 DUPELIST=0def
-WEIGHT=4
+
+[ITEMDEF 0def]
+//pile of raw cotton
+DUPEITEM=0df9
+
+[ITEMDEF 01a9c]
+DEFNAME=i_flax_bundle
+TYPE=t_cotton
+FLIP=1
+VALUE=2
+WEIGHT=0.2
+CATEGORY=Items by Professions
+SUBSECTION=Weaver
+DESCRIPTION=Bundle of Flax
+DUPELIST=01a9d
+
+[ITEMDEF 01a9d]
+//flax bundle
+DUPEITEM=01a9c
+
 
 [ITEMDEF 0dfe]
 DEFNAME=i_hair_cut
@@ -90,14 +85,6 @@ VALUE=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
 DESCRIPTION=Cut Hair
-
-[ITEMDEF 0e57]
-DEFNAME=i_stump
-VALUE=1
-CATEGORY=Vegetation
-SUBSECTION=Trees
-DESCRIPTION=Stump
-DUPELIST=0e59
 
 [ITEMDEF 0e5c]
 //glowing rune
@@ -951,43 +938,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Butcher
 DESCRIPTION=Skinned Rabbit
 
-[ITEMDEF 0171f]
-DEFNAME=i_fruit_banana
-VALUE=2
-WEIGHT=1
-TYPE=t_food
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Banana (Unpeeled)
-DUPELIST=01720
-
-[ITEMDEF 01726]
-DEFNAME=i_fruit_coconut
-VALUE=2
-TYPE=t_food
-WEIGHT=2
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Coconut
-
-[ITEMDEF 01728]
-DEFNAME=i_fruit_lemon
-WEIGHT=.1
-VALUE=1
-TYPE=t_food
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Lemon
-
-[ITEMDEF 0172a]
-DEFNAME=i_fruit_lime
-WEIGHT=.1
-TYPE=t_food
-VALUE=1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Lime
-
 [ITEMDEF 0175d]
 DEFNAME=i_cloth
 WEIGHT=2
@@ -1088,15 +1038,6 @@ SUBSECTION=Bones
 DESCRIPTION=Spine
 DUPELIST=01b1c
 
-[ITEMDEF 01b1f]
-DEFNAME=i_leaves
-VALUE=2
-WEIGHT=.1
-CATEGORY=Vegetation
-SUBSECTION=Trees
-DESCRIPTION=Leaves
-DUPELIST=01b20,01b21,01b22,01b23,01b24,01b25,01b26
-
 [ITEMDEF 01b27]
 DEFNAME=i_dirt_tile
 VALUE=2
@@ -1105,15 +1046,6 @@ CATEGORY=Ground Tiles
 SUBSECTION=Dirt
 DESCRIPTION=@
 DUPELIST=01b28,01b29,01b2a,01b2b,01b2c,01b2d,01b2e,01b2f,01b30,01b31,01b32,01b33,01b34,01b35,01b36,01b37,01b38,01b39,01b3a,01b3b,01b3c,01b3d,01b3e
-
-[ITEMDEF 01b9b]
-DEFNAME=i_sticks
-VALUE=2
-WEIGHT=3
-CATEGORY=Vegetation
-SUBSECTION=Sticks and Wood
-DESCRIPTION=Sticks
-DUPELIST=01b9c,01b9d,01b9e
 
 [ITEMDEF 01bd1]
 DEFNAME=i_feather
@@ -1254,5 +1186,20 @@ ON=@Create
 ID=i_hay_sheaf
 NAME=canvas
 VALUE=1
+
+[ITEMDEF i_sugar]
+ID=i_reag_volcanic_ash
+NAME=sugar
+TYPE=t_food
+PILE=1
+VALUE=1
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Cook
+DESCRIPTION=Sugar
+ON=@Create
+   COLOR=0481
+   MOREM=1
+
 
 [EOF]

@@ -1,0 +1,362 @@
+//****************************************************************************
+// SPHERE by : Menasoft ©1997-2007
+// www.sphereserver.net
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// FILE LAST UPDATED: January 4, 2011
+//
+VERSION=0.56b
+
+[ITEMDEF 0e6b]
+DEFNAME=i_cannon_twopart
+FLIP=1
+WEIGHT=120.1
+RESOURCES=100 i_ingot_iron,20 i_board,1 i_axel
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon (2 part)
+DUPELIST=0e6c,0e6d,0e6e,0e6f,0e70,0e71,0e72
+
+[ITEMDEF 0e6c]
+//cannon (2 part)
+DUPEITEM=0e6b
+
+[ITEMDEF 0e6d]
+//cannon (2 part)
+DUPEITEM=0e6b
+
+[ITEMDEF 0e6e]
+//cannon (2 part)
+DUPEITEM=0e6b
+
+[ITEMDEF 0e6f]
+//cannon (2 part)
+DUPEITEM=0e6b
+
+[ITEMDEF 0e70]
+//cannon (2 part)
+DUPEITEM=0e6b
+
+[ITEMDEF 0e71]
+//cannon (2 part)
+DUPEITEM=0e6b
+
+[ITEMDEF 0e72]
+//cannon (2 part)
+DUPEITEM=0e6b
+
+[ITEMDEF 0e73]
+DEFNAME=i_cannon_ball
+WEIGHT=5.0
+RESOURCES=5 i_ingot_iron
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Ball
+
+[ITEMDEF 0e74]
+DEFNAME=i_cannon_balls
+WEIGHT=20.0
+RESOURCES=4 i_cannon_ball
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Balls
+
+[ITEMDEF 0e8b]
+DEFNAME=i_cannon_full
+FLIP=1
+WEIGHT=120.1
+RESOURCES=100 i_ingot_iron,20 i_board,1 i_axel
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon (01/03)(S)
+DUPELIST=0e8c,0e8d,0e8e,0e8f,0e90,0e91,0e92,0e93,0e94,0e95,0e96
+
+[ITEMDEF 0e8c]
+//cannon
+DUPEITEM=0e8b
+
+[ITEMDEF 0e8d]
+//cannon
+DUPEITEM=0e8b
+
+[ITEMDEF 0e8e]
+//cannon
+DUPEITEM=0e8b
+
+[ITEMDEF 0e8f]
+//cannon
+DUPEITEM=0e8b
+
+[ITEMDEF 0e90]
+//cannon
+DUPEITEM=0e8b
+
+[ITEMDEF 0e91]
+//cannon
+DUPEITEM=0e8b
+
+[ITEMDEF 0e92]
+//cannon
+DUPEITEM=0e8b
+
+[ITEMDEF 0e93]
+//cannon
+DUPEITEM=0e8b
+
+[ITEMDEF 0e94]
+//cannon
+DUPEITEM=0e8b
+
+[ITEMDEF 0e95]
+//cannon
+DUPEITEM=0e8b
+
+[ITEMDEF 0e96]
+//cannon
+DUPEITEM=0e8b
+
+[ITEMDEF 0418f]
+//Ship Cannon (48 pound)
+DUPEITEM=04220
+
+[ITEMDEF 041a2]
+DEFNAME=i_cannon_chainshot
+WEIGHT=15.0
+RESOURCES=2 i_cannonball_normal,5 i_ingot_iron
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Chain Shot
+
+[ITEMDEF 041e5]
+DEFNAME=i_cannon_grapeshot
+WEIGHT=11.0
+RESOURCES=20 i_ingot_iron
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Grape Shot
+
+[ITEMDEF 04216]
+DEFNAME=i_shipcannon_small
+NAME=4 pound ship cannon
+FLIP=1
+WEIGHT=140.2
+RESOURCES=100 i_ingot_iron,40 i_board,2 i_axel
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Ship Cannon (4 pound)
+DUPELIST=04217,04218,04219
+
+[ITEMDEF 04217]
+//Ship Cannon (4 pound)
+DUPEITEM=04216
+
+[ITEMDEF 04218]
+//Ship Cannon (4 pound)
+DUPEITEM=04216
+
+[ITEMDEF 04219]
+//Ship Cannon (4 pound)
+DUPEITEM=04216
+
+[ITEMDEF 0421a]
+DEFNAME=i_shipcannon_med
+NAME=8 pound ship cannon
+FLIP=1
+WEIGHT=160.2
+RESOURCES=120 i_ingot_iron,40 i_board,2 i_axel
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Ship Cannon (8 pound)
+DUPELIST=0421b,0421c,0421d
+
+[ITEMDEF 0421b]
+//Ship Cannon (8 pound)
+DUPEITEM=0421a
+
+[ITEMDEF 0421c]
+//Ship Cannon (8 pound)
+DUPEITEM=0421a
+
+[ITEMDEF 0421d]
+//Ship Cannon (8 pound)
+DUPEITEM=0421a
+
+[ITEMDEF 04220]
+//            N     S     W     E
+//Primed:   044f3 04220 04223 044f8
+//Unprimed: 04221 044f4 044f7 0424a
+//Barrel:   044f5 04222 0418f 044f6
+DEFNAME=i_shipcannon_large
+NAME=48 pound ship cannon
+FLIP=1
+WEIGHT=160.2
+RESOURCES=120 i_ingot_iron,40 i_board,2 i_axel
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Ship Cannon (48 pound)
+DUPELIST=04221,0418f,0424a,04222,04223,044f3,044f4,044f5,044f6,044f7,044f8
+
+[ITEMDEF 04221]
+//Ship Cannon (48 pound)
+DUPEITEM=04220
+
+[ITEMDEF 04222]
+//Ship Cannon (48 pound)
+DUPEITEM=04220
+
+[ITEMDEF 04223]
+//Ship Cannon (48 pound)
+DUPEITEM=04220
+
+[ITEMDEF 04224]
+DEFNAME=i_cannonball_normal
+NAME=regular cannonball
+WEIGHT=5.0
+RESOURCES=5 i_ingot_iron
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Ball (regular shot)
+
+[ITEMDEF 04225]
+DEFNAME=i_pile_cannonball_normal
+NAME=regular cannonball pile
+WEIGHT=20.0
+RESOURCES=4 i_cannonball_normal
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Ball Pile (regular shot)
+
+[ITEMDEF 0422b]
+DEFNAME=i_cannonball_ice
+NAME=ice cannonball
+WEIGHT=5.0
+RESOURCES=50 i_water
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Ball (ice shot)
+
+[ITEMDEF 04231]
+DEFNAME=i_pile_cannonball_ice
+NAME=ice cannonball pile
+WEIGHT=5.0
+RESOURCES=50 i_water
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Ball Pile (ice shot)
+
+[ITEMDEF 0423a]
+DEFNAME=i_cannon_powder
+NAME=cannon powder
+WEIGHT=5.0
+RESOURCES=5 i_saltpeter,5 i_reag_sulfur_ash
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Powder
+
+[ITEMDEF 04246]
+DEFNAME=i_cannon_ramrod
+NAME=cannon ramrod
+FLIP=1
+WEIGHT=2.0
+RESOURCES=2 i_log
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Ramrod
+DUPELIST=04247
+
+[ITEMDEF 04247]
+//Cannon Ramrod
+DUPEITEM=04246
+
+[ITEMDEF 04248]
+DEFNAME=i_cannon_swab
+NAME=cannon swab
+FLIP=1
+WEIGHT=2.0
+RESOURCES=2 i_log
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Swab
+DUPELIST=04247
+
+[ITEMDEF 04249]
+//Cannon Swab
+DUPEITEM=04248
+
+[ITEMDEF 0424a]
+//Ship Cannon (48 pound)
+DUPEITEM=04220
+
+[ITEMDEF 044c1]
+DEFNAME=i_cannonball_fire
+NAME=fire cannonball
+WEIGHT=5.0
+RESOURCES=5 i_ingot_iron
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Ball (fire shot)
+
+[ITEMDEF 044c2]
+DEFNAME=i_pile_cannonball_fire
+NAME=fire cannonball pile
+WEIGHT=20.0
+RESOURCES=4 i_cannonball_fire
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Ball Pile (fire shot)
+
+[ITEMDEF 044f3]
+//Ship Cannon (48 pound)
+DUPEITEM=04220
+
+[ITEMDEF 044f4]
+//Ship Cannon (48 pound)
+DUPEITEM=04220
+
+[ITEMDEF 044f5]
+//Ship Cannon (48 pound)
+DUPEITEM=04220
+
+[ITEMDEF 044f6]
+//Ship Cannon (48 pound)
+DUPEITEM=04220
+
+[ITEMDEF 044f7]
+//Ship Cannon (48 pound)
+DUPEITEM=04220
+
+[ITEMDEF 044f8]
+//Ship Cannon (48 pound)
+DUPEITEM=04220
+
+[ITEMDEF 04570]
+DEFNAME=i_cannon_match
+NAME=cannon match
+FLIP=1
+WEIGHT=2.0
+RESOURCES=2 i_log
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Match
+DUPELIST=04571
+
+[ITEMDEF 04571]
+//Cannon Match
+DUPEITEM=04570
+
+[ITEMDEF 04628]
+DEFNAME=i_cannon_fuse
+NAME=cannon fuse
+TYPE=t_normal
+WEIGHT=1.0
+RESOURCES=1 i_string,1 i_cannon_powder
+CATEGORY=Miscellaneous
+SUBSECTION=Cannons
+DESCRIPTION=Cannon Fuse
+
+
+[EOF]

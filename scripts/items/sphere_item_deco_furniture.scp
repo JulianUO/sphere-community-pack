@@ -707,7 +707,6 @@ DUPEITEM=0a97
 
 [ITEMDEF 0a9f]
 DEFNAME=i_displaycase_rail_custom_edge
-//display case rail edge E
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
@@ -715,20 +714,20 @@ DESCRIPTION=@
 DUPELIST=0aa0,0aa1,0aa2
 
 [ITEMDEF 0aa0]
-//custom display case rail edge S
+//custom displaycase rail edge S
 DUPEITEM=0a9f
 
 [ITEMDEF 0aa1]
-//custom display case rail edge W
+//custom displaycase rail edge W
 DUPEITEM=0a9f
 
 [ITEMDEF 0aa2]
-//custom display case rail edge N
+//custom displaycase rail edge N
 DUPEITEM=0a9f
 
 [ITEMDEF 0aa3]
 DEFNAME=i_displaycase_rail_custom_corner
-//custom display case base nw corner
+//custom displaycase base nw corner
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
@@ -736,16 +735,16 @@ DESCRIPTION=@
 DUPELIST=0aa4,0aa5,0b18
 
 [ITEMDEF 0aa4]
-//custom display case base ne corner
+//custom displaycase base ne corner
 DUPEITEM=0aa3
 
 [ITEMDEF 0aa5]
-//custom display case base sw corner
+//custom displaycase base sw corner
 DUPEITEM=0aa3
 
 [ITEMDEF 0afd]
 DEFNAME=i_displaycase_rail_long_end
-//long display case rail end e
+//long displaycase rail end e
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
@@ -754,7 +753,7 @@ DUPELIST=0aff,0b03,0b05
 
 [ITEMDEF 0afe]
 DEFNAME=i_displaycase_rail_long_center
-//long display case rail center e-w
+//long displaycase rail center e-w
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
@@ -762,21 +761,21 @@ DESCRIPTION=@
 DUPELIST=0b04
 
 [ITEMDEF 0aff]
-//long display case rail end w
+//long displaycase rail end w
 DUPEITEM=0afd
 
 [ITEMDEF 0b00]
 DEFNAME=i_displaycase_base_long_end
-//long display case base e
+//long displaycase base e
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
-DUPELIST=0b02,0b06,0b08,0b19
+DUPELIST=0b02,0b06,0b08
 
 [ITEMDEF 0b01]
 DEFNAME=i_displaycase_base_long_center
-//long display case base center e-w
+//long displaycase base center e-w
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
@@ -784,36 +783,36 @@ DESCRIPTION=@
 DUPELIST=0b07
 
 [ITEMDEF 0b02]
-//long display case base w
+//long displaycase base w
 DUPEITEM=0b00
 
 [ITEMDEF 0b03]
-//long display case rail end s
+//long displaycase rail end s
 DUPEITEM=0afd
 
 [ITEMDEF 0b04]
-//long display case rail center n-s
+//long displaycase rail center n-s
 DUPEITEM=0afe
 
 [ITEMDEF 0b05]
-//long display case rail end n
+//long displaycase rail end n
 DUPEITEM=0afd
 
 [ITEMDEF 0b06]
-//long display case base s
+//long displaycase base s
 DUPEITEM=0b00
 
 [ITEMDEF 0b07]
-//long display case base center n-s
+//long displaycase base center n-s
 DUPEITEM=0b01
 
 [ITEMDEF 0b08]
-//long display case base n
+//long displaycase base n
 DUPEITEM=0b00
 
 [ITEMDEF 0b09]
 DEFNAME=i_displaycase_1_base
-//display case base n-s
+//displaycase base n-s
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
@@ -821,12 +820,12 @@ DESCRIPTION=@
 DUPELIST=0b0a
 
 [ITEMDEF 0b0a]
-//display case base e-w
+//displaycase base e-w
 DUPEITEM=0b09
 
 [ITEMDEF 0b0b]
 DEFNAME=i_displaycase_1_rail
-//display case base n-s
+//displaycase base n-s
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
@@ -834,12 +833,12 @@ DESCRIPTION=@
 DUPELIST=0b0c
 
 [ITEMDEF 0b0c]
-//display case base e-w
+//displaycase base e-w
 DUPEITEM=0b0b
 
 [ITEMDEF 0b0d]
 DEFNAME=i_displaycase_2_base
-//display case base n-s
+//displaycase base n-s
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
@@ -847,12 +846,12 @@ DESCRIPTION=@
 DUPELIST=0b0e
 
 [ITEMDEF 0b0e]
-//display case
+//displaycase
 DUPEITEM=0b0d
 
 [ITEMDEF 0b0f]
 DEFNAME=i_displaycase_base_custom_block
-//Custom display case center block
+//Custom displaycase center block
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
@@ -860,7 +859,7 @@ DESCRIPTION=@
 
 [ITEMDEF 0b10]
 DEFNAME=i_displaycase_base_custom_corner
-//Custom display case corner nw
+//Custom displaycase corner nw
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
@@ -868,20 +867,20 @@ DESCRIPTION=@
 DUPELIST=0b11,0b12,0b13
 
 [ITEMDEF 0b11]
-//Custom display case corner se
+//Custom displaycase corner se
 DUPEITEM=0b10
 
 [ITEMDEF 0b12]
-//Custom display case corner sw
+//Custom displaycase corner sw
 DUPEITEM=0b10
 
 [ITEMDEF 0b13]
-//Custom display case corner ne
+//Custom displaycase corner ne
 DUPEITEM=0b10
 
 [ITEMDEF 0b14]
 DEFNAME=i_displaycase_base_custom_edge
-//Custom display case edge e
+//Custom displaycase edge e
 RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
@@ -889,177 +888,20 @@ DESCRIPTION=@
 DUPELIST=0b15,0b16,0b17
 
 [ITEMDEF 0b15]
-//Custom display case edge s
+//Custom displaycase edge s
 DUPEITEM=0b14
 
 [ITEMDEF 0b16]
-//Custom display case edge w
+//Custom displaycase edge w
 DUPEITEM=0b14
 
 [ITEMDEF 0b17]
-//Custom display case edge n
+//Custom displaycase edge n
 DUPEITEM=0b14
 
 [ITEMDEF 0b18]
-//custom display case base se corner
+//custom displaycase base se corner
 DUPEITEM=0aa3
-
-[ITEMDEF 0b19]
-//unused
-DUPEITEM=0b00
-
-[ITEMDEF 0b1a]
-//candle
-DEFNAME=i_candle2_lit
-TYPE=T_LIGHT_LIT
-TDATA3=i_candle2
-TDATA4=0
-RESOURCES=i_candle2
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Candles
-DESCRIPTION=Candle
-DUPELIST=0b1b,0b1c
-
-ON=@Create
-MOREZ=1
-
-[ITEMDEF 0b1b]
-//candle
-DUPEITEM=0b1a
-
-[ITEMDEF 0b1c]
-//candle
-DUPEITEM=0b1a
-
-[ITEMDEF 0b1d]
-//candelabra
-DEFNAME=i_candelabra_lit
-TYPE=T_LIGHT_LIT
-TDATA3=i_candelabra
-TDATA4=i_candelabra
-RESOURCES=i_candelabra
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Candles
-DESCRIPTION=Candelabra
-DUPELIST=0b1e,0b1f
-
-ON=@Create
-MOREZ=1
-
-[ITEMDEF 0b1e]
-//candelabra
-DUPEITEM=0b1d
-
-[ITEMDEF 0b1f]
-//candelabra
-DUPEITEM=0b1d
-
-[ITEMDEF 0b20]
-//lamp post
-DEFNAME=i_lamppost1_lit
-TYPE=T_LIGHT_LIT
-TDATA3=i_lamppost1
-TDATA4=i_lamppost1_lit
-RESOURCES=i_lamppost1
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Lamps
-DESCRIPTION=Lamp Post
-
-ON=@Create
-MOREZ=1
-
-[ITEMDEF 0b21]
-//lamp post empty
-DEFNAME=i_lamppost1
-TYPE=T_LIGHT_OUT
-TDATA3=i_lamppost1_lit
-RESOURCES=1 I_CANDLE, 20 i_ingot_iron, 2 I_SAND
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Lamps
-DESCRIPTION=Lamp Post (unlit)
-
-ON=@Create
-MOREZ=1
-
-[ITEMDEF 0b22]
-//lamp post
-DEFNAME=i_lamppost2_lit
-TYPE=T_LIGHT_LIT
-TDATA3=i_lamppost2
-TDATA4=i_lamppost2_lit
-RESOURCES=i_lamppost2
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Lamps
-DESCRIPTION=Lamp Post (lit)
-
-ON=@Create
-MOREZ=1
-
-[ITEMDEF 0b23]
-//lamp post unlit
-DEFNAME=i_lamppost2
-TYPE=T_LIGHT_OUT
-TDATA3=i_lamppost2_lit
-RESOURCES=1 I_CANDLE, 20 i_ingot_iron, 2 I_SAND
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Lamps
-DESCRIPTION=Lamp Post (Unlit)
-
-ON=@Create
-MOREZ=1
-
-[ITEMDEF 0b24]
-//lamp post fancy lit
-DEFNAME=i_lamppost3_lit
-TYPE=T_LIGHT_LIT
-TDATA3=i_lamppost3
-TDATA4=i_lamppost3_lit
-RESOURCES=i_lamppost3
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Lamps
-DESCRIPTION=Lamp Post (Fancy Lit)
-
-ON=@Create
-MOREZ=1
-
-[ITEMDEF 0b25]
-//fancy lamp post unlit
-DEFNAME=i_lamppost3
-TYPE=T_LIGHT_OUT
-TDATA3=i_lamppost3_lit
-RESOURCES=1 I_CANDLE, 25 i_ingot_iron, 4 I_SAND
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Lamps
-DESCRIPTION=Lamp Post (Fancy Unlit)
-
-ON=@Create
-MOREZ=1
-
-[ITEMDEF 0b26]
-//candelabra lit
-DEFNAME=i_candelabra2_lit
-TYPE=T_LIGHT_LIT
-TDATA3=i_candelabra2
-TDATA4=i_candelabra2
-RESOURCES=i_candelabra2
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Candles
-DESCRIPTION=Candelabra Lit
-DUPELIST=0b27,0b28
-
-ON=@Create
-MOREZ=1
-
-[ITEMDEF 0b27]
-//candelabra lit
-DUPEITEM=0b26
-
-[ITEMDEF 0b28]
-//candelabra
-DUPEITEM=0b26
-
-ON=@Create
-MOREZ=1
 
 [ITEMDEF 0b37]
 DEFNAME=i_table_nightstand_ext
@@ -1138,33 +980,39 @@ DUPEITEM=0b41
 //water trough
 DUPEITEM=0b41
 
+
 [ITEMDEF 0b45]
-//large vase
-RESOURCES=5 I_CLAY
+DEFNAME=i_vase_large_1
+WEIGHT=15.0
+RESOURCES=15 i_clay
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Large Vase 1
 
 [ITEMDEF 0b46]
-//vase
-RESOURCES=2 I_CLAY
+DEFNAME=i_vase_small_1
+WEIGHT=3.0
+RESOURCES=3 i_clay
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Small Vase 1
 
 [ITEMDEF 0b47]
-//large vase
-RESOURCES=5 I_CLAY
+DEFNAME=i_vase_large_2
+WEIGHT=15.0
+RESOURCES=15 i_clay
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Large Vase 2
 
 [ITEMDEF 0b48]
-//vase
-RESOURCES=2 I_CLAY
+DEFNAME=i_vase_small_2
+WEIGHT=3.0
+RESOURCES=3 i_clay
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Small Vase 2
+
 
 [ITEMDEF 0b5f]
 // bench - rough board bench end - S

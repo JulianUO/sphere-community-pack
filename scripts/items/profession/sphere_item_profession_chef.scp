@@ -166,55 +166,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Chef
 DESCRIPTION=Wheel of Cheese
 
-[ITEMDEF 0994]
-DEFNAME=i_fruit_pear
-VALUE=1
-TYPE=t_fruit
-WEIGHT=0.1
-DUPELIST=0172d
-CATEGORY=Items by Professions
-SUBSECTION=Chef
-DESCRIPTION=Pear
-
-[ITEMDEF 0172d]
-DUPEITEM=0994
-
-[ITEMDEF 09d2]
-DEFNAME=i_fruit_peach
-VALUE=1
-TYPE=T_FRUIT
-WEIGHT=0.1
-DUPELIST=0172c
-CATEGORY=Items by Professions
-SUBSECTION=Chef
-DESCRIPTION=Peach
-
-[ITEMDEF 0172c]
-DUPEITEM=09d2
-
-[ITEMDEF 09D0]
-DEFNAME=i_fruit_apple
-VALUE=1
-TYPE=T_FRUIT
-WEIGHT=0.1
-CATEGORY=Items by Professions
-SUBSECTION=Chef
-DESCRIPTION=Apple
-
-[ITEMDEF 0c6a]
-DEFNAME=i_fruit_pumpkin
-VALUE=2
-TYPE=T_FRUIT
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Chef
-DESCRIPTION=Pumpkin
-DUPELIST=0c6b
-
-[ITEMDEF 0c6b]
-DUPEITEM=0c6a
-
-
 ///////////////////////////////////////////////////////////////
 //////// INGREDIENTS
 ///////////////////////////////////////////////////////////////
