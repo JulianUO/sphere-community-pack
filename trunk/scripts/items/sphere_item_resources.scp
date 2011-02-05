@@ -1167,6 +1167,36 @@ WEIGHT=10
 ON=@Create
    COLOR=colors_yellow
 
+[ITEMDEF i_glass_raw]
+ID=0f8e
+NAME=raw glass
+TYPE=t_ingot
+TDATA1=55.0
+TDATA2=80.0
+VALUE=2
+WEIGHT=2.0
+RESOURCES=i_sand
+SKILLMAKE=MINING 60.0
+CATEGORY=Resources
+SUBSECTION=Mineral
+DESCRIPTION=Raw Glass
+ON=@Create
+   COLOR=05b
+
+[ITEMDEF i_sand]
+ID=i_ore_iron
+NAME=sand
+TYPE=t_ore //t_sand
+TDATA1=i_glass_raw
+VALUE=1
+WEIGHT=3.0
+SKILLMAKE=MINING 60.0
+CATEGORY=Resources
+SUBSECTION=Mineral
+DESCRIPTION=Sand
+ON=@Create
+   COLOR=035
+
 //**************************************************
 // Vegetable matter.
 

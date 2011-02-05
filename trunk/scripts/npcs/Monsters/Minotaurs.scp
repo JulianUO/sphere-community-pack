@@ -109,7 +109,7 @@ ON=@NpcRestock
 [CHARDEF 0118]
 DEFNAME=c_minotaur_captain
 NAME=minotaur captain
-ICON=i_pet_minotaur_armored
+ICON=i_pet_minotaur_captain
 SOUND=snd_monster_longhorn3
 CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
 DAM=11,20
@@ -126,7 +126,7 @@ TEVENTS=e_carnivores2
 TEVENTS=e_minotaurs
 CATEGORY=Monsters
 SUBSECTION=Minotaurs
-DESCRIPTION=Minotaur (armored)
+DESCRIPTION=Minotaur Captain
 RESLEVEL=5
 RESDISPDNID=c_orc
 RESDISPDNHUE=33
