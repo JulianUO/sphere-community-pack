@@ -313,7 +313,7 @@ ON=@Create
 [ITEMDEF 027a3]
 DEFNAME=i_tessen
 NAME=tessen
-TYPE=t_weapon_fencing
+TYPE=t_weapon_mace_sharp
 DAM=10,12
 FLIP=1
 LAYER=layer_hand2

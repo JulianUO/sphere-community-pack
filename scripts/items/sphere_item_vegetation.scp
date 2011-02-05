@@ -1077,6 +1077,77 @@ ON=@Create
 //trinsic rose bush
 DUPEITEM=0234c
 
+[ITEMDEF i_crop_lettuce]
+ID=0c70
+TYPE=t_crops
+TDATA1=i_crop_lettuce
+TDATA2=0
+TDATA3=i_fruit_lettuce
+VALUE=2
+CATEGORY=Vegetation
+SUBSECTION=Plants and Flowers
+DESCRIPTION=Lettuce Crop
+
+[ITEMDEF i_crop_cabbage]
+ID=0c7b
+NAME=head of cabbage
+TYPE=t_crops
+TDATA1=i_crop_cabbage
+TDATA2=0
+TDATA3=i_fruit_cabbage
+VALUE=2
+CATEGORY=Vegetation
+SUBSECTION=Plants and Flowers
+DESCRIPTION=Cabbage Crop
+
+[ITEMDEF i_crop_potato1]
+ID=0c61
+NAME=potato plant
+TYPE=t_crops
+TDATA1=i_crop_potato1
+TDATA2=i_crop_potato
+TDATA3=0
+VALUE=2
+CATEGORY=Vegetation
+SUBSECTION=Fruits and Vegetables
+DESCRIPTION=Potato Crop
+
+[ITEMDEF i_crop_potato]
+ID=0c62
+NAME=potato plant
+TYPE=t_crops
+TDATA1=i_crop_potato1
+TDATA2=0
+TDATA3=i_fruit_potato
+VALUE=2
+CATEGORY=Vegetation
+SUBSECTION=Fruits and Vegetables
+DESCRIPTION=Potato Crop (mature)
+
+[ITEMDEF i_crop_tomato1]
+ID=0cb5
+NAME=tomato plant
+TYPE=t_crops
+TDATA1=i_crop_tomato1
+TDATA2=i_crop_tomato
+TDATA3=0
+VALUE=2
+CATEGORY=Vegetation
+SUBSECTION=Fruits and Vegetables
+DESCRIPTION=Tomato Crop
+
+[ITEMDEF i_crop_tomato]
+ID=0cb0
+NAME=tomato plant
+TYPE=t_crops
+TDATA1=i_crop_tomato1
+TDATA2=0
+TDATA3=i_fruit_tomato
+VALUE=2
+CATEGORY=Vegetation
+SUBSECTION=Fruits and Vegetables
+DESCRIPTION=Tomato Crop (mature)
+
 
 //////////////////////////////////
 // PLANTS, FLOWERS, and GRASSES //
@@ -1144,7 +1215,7 @@ DEFNAME=i_dried_herbs
 FLIP=1
 VALUE=5
 WEIGHT=0.1
-RESOURCES=5 i_fruit_herb//FIXME: This doesnt exist
+//RESOURCES=5 i_fruit_herb//FIXME: This doesnt exist
 CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Dried Herbs
@@ -3276,25 +3347,22 @@ DESCRIPTION=Silver Sapling (foliage)
 [ITEMDEF 0e56]
 DEFNAME=i_tree_stump_axe
 FLIP=1
-VALUE=1
-RESOURCES=1 i_stump,1 i_axe
+RESOURCES=1 i_tree_stump,1 i_axe
 CATEGORY=Vegetation
 SUBSECTION=Trees
 DESCRIPTION=Stump (with axe)
 DUPELIST=0e58
 
 [ITEMDEF 0e57]
-DEFNAME=i_tree_stump_axe_2
+DEFNAME=i_tree_stump
 FLIP=1
-VALUE=1
-RESOURCES=1 i_tree_stump
 CATEGORY=Vegetation
 SUBSECTION=Trees
 DESCRIPTION=Stump
 DUPELIST=0e59
 
 [ITEMDEF 0e58]
-//stump with axe
+//stump (with axe)
 DUPEITEM=0e56
 
 [ITEMDEF 0e59]

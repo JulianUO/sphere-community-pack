@@ -30,8 +30,8 @@ REGEN=60*60
 // These are generally used in t_sand. Normally, sand.
 [REGIONRESOURCE mr_sand]
 // t_sand
-skill=85.0,120.0
-amount=9,30
+SKILL=85.0,120.0
+AMOUNT=9,30
 reapamount=4,6
 reap=i_sand
 regen=60*60*2
@@ -44,32 +44,32 @@ regen=60*60*2
 [REGIONRESOURCE mr_fish1]
 // fishing default
 // t_water
-skill=1.0,100.0
-amount=9,30
+SKILL=1.0,100.0
+AMOUNT=9,30
 REAP=i_fish_big_1
 REGEN=60*60
 
 [REGIONRESOURCE mr_fish2]
 // fishing default
 // t_water
-skill=1.0,100.0
+SKILL=1.0,100.0
 REAP=i_fish_big_2
-amount=9,30
+AMOUNT=9,30
 REGEN=60*60
 
 [REGIONRESOURCE mr_fish3]
 // fishing default
 // t_water
-skill=1.0,100.0
-amount=9,30
+SKILL=1.0,100.0
+AMOUNT=9,30
 REAP=i_fish_big_3
 REGEN=60*60
 
 [REGIONRESOURCE mr_fish4]
 // fishing default
 // t_water
-skill=1.0,100.0
-amount=9,30
+SKILL=1.0,100.0
+AMOUNT=9,30
 REAP=i_fish_big_4
 REGEN=60*60
 
@@ -121,57 +121,57 @@ endif
 // These are generally used in t_tree. Normally, logs.
 [REGIONRESOURCE mr_tree]
 // t_tree
-skill=1.0,80.0
-amount=10,30
+SKILL=1.0,80.0
+AMOUNT=10,30
 REAP=i_log
 REGEN=60*60
 
 [REGIONRESOURCE mr_oak]
 // t_tree
-skill=65.0,90.0
-amount=9,20
+SKILL=65.0,90.0
+AMOUNT=9,20
 REAP=i_log_oak
 REGEN=60*60
 
 [REGIONRESOURCE mr_ash]
 // t_tree
-skill=80.0,105.0
-amount=9,20
+SKILL=80.0,105.0
+AMOUNT=9,20
 REAP=i_log_ash
 REGEN=60*60
 
 [REGIONRESOURCE mr_yew]
 // t_tree
-skill=95.0,120.0
-amount=9,20
+SKILL=95.0,120.0
+AMOUNT=9,20
 REAP=i_log_yew
 REGEN=60*60
 
 [REGIONRESOURCE mr_heartwood]
 // t_tree
-skill=100.0,120.0
-amount=9,15
+SKILL=100.0,120.0
+AMOUNT=9,15
 REAP=i_log_heartwood
 REGEN=60*60
 
 [REGIONRESOURCE mr_bloodwood]
 // t_tree
-skill=100.0,120.0
-amount=9,15
+SKILL=100.0,120.0
+AMOUNT=9,15
 REAP=i_log_bloodwood
 REGEN=60*60
 
 [REGIONRESOURCE mr_frostwood]
 // t_tree
-skill=100.0,120.0
-amount=9,15
+SKILL=100.0,120.0
+AMOUNT=9,15
 REAP=i_log_frostwood
 REGEN=60*60
 
 [REGIONRESOURCE mr_bark_fragment]
 // t_tree
-skill=100.0,120.0
-amount=1,2
+SKILL=100.0,120.0
+AMOUNT=1,2
 REAP=i_ingredient_diseased_bark
 REGEN=60*60
 
@@ -194,8 +194,8 @@ REAP=i_hay_sheaf
 // These are generally used in t_rock. OSI-Like.
 [REGIONRESOURCE mr_iron]
 // t_rock
-skill=0.1,50.0
-amount=5,15
+SKILL=0.1,50.0
+AMOUNT=5,15
 REAP=i_ore_iron
 REGEN=60*60
 
@@ -211,8 +211,8 @@ endif
 
 [REGIONRESOURCE mr_dull_copper]
 // t_rock
-skill=65.0,90.0
-amount=5,15
+SKILL=65.0,90.0
+AMOUNT=5,15
 REAP=i_ore_dull_copper
 REGEN=60*60
 
@@ -228,8 +228,8 @@ endif
 
 [REGIONRESOURCE mr_shadow]
 // t_rock
-skill=70.0,95.0
-amount=5,15
+SKILL=70.0,95.0
+AMOUNT=5,15
 REAP=i_ore_shadow
 REGEN=60*60
 
@@ -245,8 +245,8 @@ endif
 
 [REGIONRESOURCE mr_copper]
 // t_rock
-skill=75.0,100.0
-amount=5,15
+SKILL=75.0,100.0
+AMOUNT=5,15
 REAP=i_ore_copper
 REGEN=60*60
 
@@ -262,8 +262,8 @@ endif
 
 [REGIONRESOURCE mr_bronze]
 // t_rock
-skill=80.0,105.0
-amount=5,15
+SKILL=80.0,105.0
+AMOUNT=5,15
 REAP=i_ore_bronze
 REGEN=60*60
 
@@ -279,8 +279,8 @@ endif
 
 [REGIONRESOURCE mr_gold]
 // t_rock
-skill=85.0,110.0
-amount=5,15
+SKILL=85.0,110.0
+AMOUNT=5,15
 REAP=i_ore_gold
 REGEN=60*60*10
 
@@ -296,8 +296,8 @@ endif
 
 [REGIONRESOURCE mr_agapite]
 // t_rock
-skill=90.0,115.0
-amount=5,15
+SKILL=90.0,115.0
+AMOUNT=5,15
 REAP=i_ore_agapite
 REGEN=60*60
 
@@ -313,8 +313,8 @@ endif
 
 [REGIONRESOURCE mr_verite]
 // t_rock
-skill=95.0,120.0
-amount=5,15
+SKILL=95.0,120.0
+AMOUNT=5,15
 REAP=i_ore_verite
 REGEN=60*60
 
@@ -330,8 +330,8 @@ endif
 
 [REGIONRESOURCE mr_valorite]
 // t_rock
-skill=99.0,120.0
-amount=5,15
+SKILL=99.0,120.0
+AMOUNT=5,15
 REAP=i_ore_valorite
 REGEN=60*60
 
@@ -353,50 +353,50 @@ endif
 [REGIONRESOURCE mr_old_copper]
 // this is really just a variety of copper. copper makes terrible armor
 // t_rock
-skill=1.0,30.0
-amount=7,18
+SKILL=1.0,30.0
+AMOUNT=7,18
 REAP=i_ore_old_copper
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_rusty]
 // t_rock - Iron gets rusty. It's not smeltable !
-skill=1.0,30.0
-amount=8,21
+SKILL=1.0,30.0
+AMOUNT=8,21
 REAP=i_ore_rusty
 REGEN=60*60
 
 [REGIONRESOURCE mr_rose]
 // t_rock
-skill=30.0,60.0
-amount=3,9
+SKILL=30.0,60.0
+AMOUNT=3,9
 REAP=i_ore_rose
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_bloodrock]
 // t_rock
-skill=30.0,60.0
-amount=3,6
+SKILL=30.0,60.0
+AMOUNT=3,6
 REAP=i_ore_bloodrock
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_silver]
 // t_rock
-skill=30.0,60.0
-amount=1,2
+SKILL=30.0,60.0
+AMOUNT=1,2
 REAP=i_ore_silver
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_mytheril]
 // t_rock
-skill=60.0,110.0
-amount=2,3
+SKILL=60.0,110.0
+AMOUNT=2,3
 REAP=i_ore_mytheril
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_blackrock]
 // t_rock
-skill=60.0,110.0
-amount=1,3
+SKILL=60.0,110.0
+AMOUNT=1,3
 REAP=i_ore_blackrock
 REGEN=60*60*10
 
@@ -407,57 +407,57 @@ REGEN=60*60*10
 // These are generally used in t_rock. Gems and that stuff.
 [REGIONRESOURCE mr_diamond]
 // t_rock
-skill=60.0,110.0
-amount=1,4
+SKILL=60.0,110.0
+AMOUNT=1,4
 REAP=i_gem_diamond
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_ruby]
 // t_rock
-skill=60.0,110.0
-amount=1,4
+SKILL=60.0,110.0
+AMOUNT=1,4
 REAP=i_gem_ruby
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_citrine]
 // t_rock
-skill=60.0,110.0
-amount=1,4
+SKILL=60.0,110.0
+AMOUNT=1,4
 REAP=i_gem_citrine
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_Emerald]
 // t_rock
-skill=60.0,110.0
-amount=1,4
+SKILL=60.0,110.0
+AMOUNT=1,4
 REAP=i_gem_Emerald
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_Star_Sapphire]
 // t_rock
-skill=60.0,110.0
-amount=1,4
+SKILL=60.0,110.0
+AMOUNT=1,4
 REAP=i_gem_Star_Sapphire
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_Sapphire]
 // t_rock
-skill=60.0,110.0
-amount=1,4
+SKILL=60.0,110.0
+AMOUNT=1,4
 REAP=i_gem_Sapphire
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_Amethyst]
 // t_rock
-skill=60.0,110.0
-amount=1,4
+SKILL=60.0,110.0
+AMOUNT=1,4
 REAP=i_gem_Amethyst
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_Tourmaline]
 // t_rock
-skill=60.0,110.0
-amount=1,4
+SKILL=60.0,110.0
+AMOUNT=1,4
 REAP=i_gem_Tourmaline
 REGEN=60*60*10
 
@@ -467,64 +467,64 @@ REGEN=60*60*10
 // These are generally used in t_rock. OSI-Like.
 [REGIONRESOURCE mr_iron_granit]
 // t_rock
-skill=0.1,50.0
-amount=1,5
+SKILL=0.1,50.0
+AMOUNT=1,5
 REAP=i_granite
 REGEN=60*60
 
 [REGIONRESOURCE mr_dull_copper_granit]
 // t_rock
-skill=65.0,90.0
-amount=1,5
+SKILL=65.0,90.0
+AMOUNT=1,5
 REAP=i_granite_dull_copper
 REGEN=60*60
 
 [REGIONRESOURCE mr_shadow_granit]
 // t_rock
-skill=70.0,95.0
-amount=1,5
+SKILL=70.0,95.0
+AMOUNT=1,5
 REAP=i_granite_shadow
 REGEN=60*60
 
 [REGIONRESOURCE mr_copper_granit]
 // t_rock
-skill=75.0,100.0
-amount=1,5
+SKILL=75.0,100.0
+AMOUNT=1,5
 REAP=i_granite_copper
 REGEN=60*60
 
 [REGIONRESOURCE mr_bronze_granit]
 // t_rock
-skill=80.0,105.0
-amount=1,5
+SKILL=80.0,105.0
+AMOUNT=1,5
 REAP=i_granite_bronze
 REGEN=60*60
 
 [REGIONRESOURCE mr_gold_granit]
 // t_rock
-skill=85.0,110.0
-amount=1,5
+SKILL=85.0,110.0
+AMOUNT=1,5
 REAP=i_granite_gold
 REGEN=60*60*10
 
 [REGIONRESOURCE mr_agapite_granit]
 // t_rock
-skill=90.0,115.0
-amount=1,5
+SKILL=90.0,115.0
+AMOUNT=1,5
 REAP=i_granite_agapite
 REGEN=60*60
 
 [REGIONRESOURCE mr_verite_granit]
 // t_rock
-skill=95.0,120.0
-amount=1,5
+SKILL=95.0,120.0
+AMOUNT=1,5
 REAP=i_granite_verite
 REGEN=60*60
 
 [REGIONRESOURCE mr_valorite_granit]
 // t_rock
-skill=99.0,120.0
-amount=1,5
+SKILL=99.0,120.0
+AMOUNT=1,5
 REAP=i_granite_valorite
 REGEN=60*60
 

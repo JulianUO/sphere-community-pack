@@ -1225,7 +1225,7 @@ DESCRIPTION=Black Gate Demon
 DEFNAME=i_pet_demon_elder
 NAME=elder demon
 TYPE=t_figurine
-TDATA3=c_demon_elder
+TDATA3=c_demon
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Demon (elder)
@@ -2959,13 +2959,13 @@ SUBSECTION=Character Icons
 DESCRIPTION=Minotaur Scout
 
 [ITEMDEF 02d9a]
-DEFNAME=i_pet_minotaur_armored
-NAME=Armored Minotaur
+DEFNAME=i_pet_minotaur_captain
+NAME=Minotaur Captain
 TYPE=t_figurine
-TDATA3=c_minotaur_armored
+TDATA3=c_minotaur_captain
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
-DESCRIPTION=Armored Minotaur
+DESCRIPTION=Minotaur Captain
 
 [ITEMDEF 02d9b]
 DEFNAME=i_pet_parrot

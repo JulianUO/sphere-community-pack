@@ -668,93 +668,117 @@ DUPEITEM=08fb
 
 [ITEMDEF 01e9a]
 DEFNAME=i_hook_and_pulley
-RESOURCES=1 i_pulley, i_rope, i_hook
+FLIP=1
+WEIGHT=5.1
+RESOURCES=1 i_log,1 i_axel,2 i_rope,1 i_ingot_iron
 CATEGORY=Buildings - Other
 SUBSECTION=Hooks, Pulleys and Winches
 DESCRIPTION=Hook
 DUPELIST=01e9b
 
 [ITEMDEF 01e9b]
+//hook and pully
 DUPEITEM=01e9a
 
 [ITEMDEF 01e9c]
 DEFNAME=i_pullies
-//RESOURCES3=2 i_PULLEY, i_ROPE
+FLIP=1
+WEIGHT=5.1
+RESOURCES=1 i_log,1 i_axel,2 i_rope,1 i_ingot_iron
 CATEGORY=Buildings - Other
 SUBSECTION=Hooks, Pulleys and Winches
 DESCRIPTION=Pulley
 DUPELIST=01e9d,01e9e,01e9f
 
 [ITEMDEF 01e9d]
+//hook and pully
 DUPEITEM=01e9c
 
 [ITEMDEF 01e9e]
+//hook and pully
 DUPEITEM=01e9c
 
 [ITEMDEF 01e9f]
+//hook and pully
 DUPEITEM=01e9c
 
 [ITEMDEF 01ea0]
 DEFNAME=i_rope_bundle
-RESOURCES=1 i_rope
+FLIP=1
 WEIGHT=1
+RESOURCES=1 i_rope
 CATEGORY=Buildings - Other
 SUBSECTION=Hooks, Pulleys and Winches
 DESCRIPTION=Rope
 DUPELIST=01ea1,01ea2
 
 [ITEMDEF 01ea1]
+//rope
 DUPEITEM=01ea0
 
 [ITEMDEF 01ea2]
+//rope
 DUPEITEM=01ea0
 
 [ITEMDEF 01ea3]
 DEFNAME=i_net
-RESOURCES=5 i_rope
-WEIGHT=5
-CATEGORY=Buildings - Other
-SUBSECTION=Hooks, Pulleys and Winches
-DESCRIPTION=Net
-DUPELIST=01ea4,01ea5,01ea6
+NAME=fishing net
+FLIP=1
+WEIGHT=50.0
+RESOURCES=25 i_rope,25 i_thread,8 i_fishing_weight
+SKILLMAKE=Carpentry 68.4,Fishing 55.0
+CATEGORY=Items by Professions
+SUBSECTION=Fisherman
+DESCRIPTION=Weighted Fishing Net
+DUPELIST=01ea4,01ea5,01ea6,03d8e,03d8f
 
 [ITEMDEF 01ea4]
+//Weighted Fishing Net
 DUPEITEM=01ea3
 
 [ITEMDEF 01ea5]
+//Weighted Fishing Net
 DUPEITEM=01ea3
 
 [ITEMDEF 01ea6]
+//Weighted Fishing Net
 DUPEITEM=01ea3
 
 [ITEMDEF 01ea8]
 DEFNAME=i_winch
-RESOURCES=5 i_rope, 2 i_gears, 20 i_ingot_iron
-WEIGHT=17
+WEIGHT=30.3
+RESOURCES=5 i_rope,1 i_axel,2 i_gears,20 i_ingot_iron
 CATEGORY=Buildings - Other
 SUBSECTION=Hooks, Pulleys and Winches
 DESCRIPTION=Winch
 DUPELIST=01ea9,01eaa,01eab,01eac,01ead,01eae,01eaf
 
 [ITEMDEF 01ea9]
+//winch
 DUPEITEM=01ea8
 
 [ITEMDEF 01eaa]
+//winch
 DUPEITEM=01ea8
 
 [ITEMDEF 01eab]
+//winch
 DUPEITEM=01ea8
 
 [ITEMDEF 01eac]
+//winch
 DUPEITEM=01ea8
 
 [ITEMDEF 01ead]
+//winch
 DUPEITEM=01ea8
 
 [ITEMDEF 01eae]
+//winch
 DUPEITEM=01ea8
 
 [ITEMDEF 01eaf]
+//winch
 DUPEITEM=01ea8
 
 [ITEMDEF 01eca]
@@ -779,63 +803,65 @@ SUBSECTION=Stone Pylon
 DESCRIPTION=Sandstone Pylon
 
 [ITEMDEF 0233c]
-// serpant pillar
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Serpant Pillar
+DESCRIPTION=Serpant Pillar
 DUPELIST=0233d,0233e,0233f,02340,02341,02342,02343,02344,02345,02346,02347,02348,02349,0234a
 
 [ITEMDEF 0233d]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 0233e]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 0233f]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 02340]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 02341]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 02342]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 02343]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 02344]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 02345]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 02346]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 02347]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 02348]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 02349]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 0234a]
-// serpant pillar
+//serpant pillar
 DUPEITEM=0233c
 
 [ITEMDEF 02710]
