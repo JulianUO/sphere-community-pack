@@ -41,7 +41,7 @@ i_armoir_dk         i_armoire_dk
 i_tambourine_tas    i_tambourine_tassel
 i_lyre              i_harp_lap
 i_harp_large        i_harp_standing
-
+i_door_magical      i_fx_magicstoneface_s
 
 [FUNCTION addnpc]
 IF (<ISNUM <ARGS>>)

@@ -674,7 +674,7 @@ findid.i_new_resurrection.morez = 1
 resurrect
 consume i_new_resurrection
 sound snd_spell_resurrection
-effect 3,i_fx_heal_effect,20,25,0
+effect 3,i_fx_heal,20,25,0
 endif
 
 [ITEMDEF i_new_resurrection]
@@ -684,7 +684,7 @@ NAME=resurrection memory
 
 on=@equip
 src.sound snd_spell_resurrection
-src.effect 3,i_fx_heal_effect,20,25,0
+src.effect 3,i_fx_heal,20,25,0
 src.dialogclose d_newresurrect_dialog
 src.dialog d_newresurrect_dialog
 more = 30

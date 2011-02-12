@@ -12,13 +12,16 @@
 VERSION=0.56b
 
 
-
 [ITEMDEF 0aa9]
-//rug
-RESOURCES=5 I_WOOL, 1 I_THREAD
+DEFNAME=i_rug_1
+TYPE=t_floor
+FLIP=1
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_wool,100 i_thread
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Rug 1
-DESCRIPTION=@
+DESCRIPTION=Rug
 DUPELIST=0aaa,0aab,0aac,0aad,0aae,0aaf,0ab0,0ab1,0ab2
 
 [ITEMDEF 0aaa]
@@ -58,11 +61,17 @@ DUPEITEM=0aa9
 DUPEITEM=0aa9
 
 [ITEMDEF 0ab3]
-//rug
-RESOURCES=5 I_WOOL, 1 I_THREAD
+DEFNAME=i_rug_2
+TYPE=t_floor
+FLIP=1
+VALUE=225
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_wool,100 i_thread
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Rug 2
-DESCRIPTION=@
+DESCRIPTION=Rug
 DUPELIST=0ab4,0ab5,0ab6,0ab7,0ab8,0ab9,0aba,0abb,0abc
 
 [ITEMDEF 0ab4]
@@ -102,11 +111,17 @@ DUPEITEM=0ab3
 DUPEITEM=0ab3
 
 [ITEMDEF 0abd]
-//carpet
-RESOURCES=5 I_WOOL, 1 I_THREAD
+DEFNAME=i_carpet_1
+TYPE=t_floor
+FLIP=1
+VALUE=225
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_wool,100 i_thread
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Carpet 1
-DESCRIPTION=@
+DESCRIPTION=Carpet
 DUPELIST=0abe,0abf,0ac0,0ac1,0ac2,0ac3,0ac4,0ac5,0af6,0af7,0af8,0af9,0afa
 
 [ITEMDEF 0abe]
@@ -142,11 +157,17 @@ DUPEITEM=0abd
 DUPEITEM=0abd
 
 [ITEMDEF 0ac6]
-//carpet
-RESOURCES=5 I_WOOL, 1 I_THREAD
+DEFNAME=i_carpet_2
+TYPE=t_floor
+FLIP=1
+VALUE=225
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_wool,100 i_thread
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Carpet 2
-DESCRIPTION=@
+DESCRIPTION=Carpet 2
 DUPELIST=0ac7,0ac8,0ac9,0aca,0acb,0acc,0acd,0ace,0acf,0ad0
 
 [ITEMDEF 0ac7]
@@ -190,11 +211,17 @@ DUPEITEM=0ac6
 DUPEITEM=0ac6
 
 [ITEMDEF 0ad1]
-//carpet
-RESOURCES=5 I_WOOL, 1 I_THREAD
+DEFNAME=i_carpet_3
+TYPE=t_floor
+FLIP=1
+VALUE=225
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_wool,100 i_thread
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Carpet 3
-DESCRIPTION=@
+DESCRIPTION=Carpet
 DUPELIST=0ad2,0ad3,0ad4,0ad5,0ad6,0ad7,0ad8,0ad9
 
 [ITEMDEF 0ad2]
@@ -230,11 +257,18 @@ DUPEITEM=0ad1
 DUPEITEM=0ad1
 
 [ITEMDEF 0ada]
-//carpet
-RESOURCES=5 I_WOOL, 1 I_THREAD
+DEFNAME=i_carpet_4
+NAME=carpet
+TYPE=t_floor
+FLIP=1
+VALUE=225
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_wool,100 i_thread
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Carpet 4
-DESCRIPTION=@
+DESCRIPTION=Carpet
 DUPELIST=0adb,0adc,0add,0ade,0adf,0ae0,0ae1,0ae2
 
 [ITEMDEF 0adb]
@@ -270,11 +304,17 @@ DUPEITEM=0ada
 DUPEITEM=0ada
 
 [ITEMDEF 0ae3]
-//carpet
-RESOURCES=5 I_WOOL, 1 I_THREAD
+DEFNAME=i_carpet_5
+TYPE=t_floor
+FLIP=1
+VALUE=225
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_wool,100 i_thread
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Carpet 5
-DESCRIPTION=@
+DESCRIPTION=Carpet
 DUPELIST=0ae4,0ae5,0ae6,0ae7,0ae8,0ae9,0aea,0aeb
 
 [ITEMDEF 0ae4]
@@ -310,11 +350,17 @@ DUPEITEM=0ae3
 DUPEITEM=0ae3
 
 [ITEMDEF 0aec]
-//carpet
-RESOURCES=5 I_WOOL, 1 I_THREAD
+DEFNAME=i_carpet_6
+TYPE=t_floor
+FLIP=1
+VALUE=225
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_wool,100 i_thread
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Carpet 6
-DESCRIPTION=@
+DESCRIPTION=Carpet
 DUPELIST=0aed,0aee,0aef,0af0,0af1,0af2,0af3,0af4,0af5
 
 [ITEMDEF 0aed]
@@ -375,10 +421,15 @@ DUPEITEM=0abd
 
 [ITEMDEF 01098]
 DEFNAME=i_carpet_7
-RESOURCES=5 i_WOOL, 1 i_THREAD
+TYPE=t_floor
+FLIP=1
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_wool,100 i_thread
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
 CATEGORY=Decoration - Carpets & Rugs
-SUBSECTION=Carpet 7
-DESCRIPTION=Carpet
+SUBSECTION=Rug 4
+DESCRIPTION=Rug
 DUPELIST=01099,0109a,0109b,0109c,0109d,0109e,0109f,010a0,010a1,010a2,010a3
 
 [ITEMDEF 01099]
@@ -427,12 +478,16 @@ DUPEITEM=01098
 
 [ITEMDEF 01dd3]
 DEFNAME=i_rug_worn
-RESOURCES=2 i_CLOTH
-WEIGHT=2
+TYPE=t_floor
+FLIP=1
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_cloth,100 i_thread
+SKILLMAKE=Tailoring 58.9,t_sewing_kit
 CATEGORY=Decoration - Carpets & Rugs
-SUBSECTION=Rug 3
-DESCRIPTION=@
-DUPELIST=01dd4,01dd5,01dd6,01dd7,01dd8,01dd9,01dda,01ddb,01ddc,01ddd,01dde,01ddf,01de0,01de1,01de2,01de3,01de4,01de5,01de6,01de7,01de8,01de9,01dea,01deb,01dec,01ded,01dee
+SUBSECTION=Rug 1
+DESCRIPTION=Worn Rug
+DUPELIST=01dd4,01dd5,01dd6,01dd7,01dd8,01dd9,01dda,01ddb,01ddc,01ddd,01dde,01ddf,01de0
 
 [ITEMDEF 01dd4]
 //rug
@@ -487,66 +542,81 @@ DUPEITEM=01dd3
 DUPEITEM=01dd3
 
 [ITEMDEF 01de1]
-//rug
-DUPEITEM=01dd3
+DEFNAME=i_rug_worn_2
+TYPE=t_floor
+FLIP=1
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_cloth,100 i_thread
+SKILLMAKE=Tailoring 58.9,t_sewing_kit
+CATEGORY=Decoration - Carpets & Rugs
+SUBSECTION=Rug 2
+DESCRIPTION=Worn Rug
+DUPEITEM=01de2,01de3,01de4,01de5,01de6,01de7,01de8,01de9,01dea,01deb,01dec,01ded,01dee
 
 [ITEMDEF 01de2]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01de3]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01de4]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01de5]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01de6]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01de7]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01de8]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01de9]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01dea]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01deb]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01dec]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01ded]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01dee]
 //rug
-DUPEITEM=01dd3
+DUPEITEM=01de1
 
 [ITEMDEF 01def]
-//rug
+DEFNAME=i_rug_4
+TYPE=t_floor
+FLIP=1
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_wool,100 i_thread
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Rug 4
-DESCRIPTION=@
+DESCRIPTION=Worn Rug
 DUPELIST=01df0,01df1,01df2,01df3,01df4,01df5,01df6,01df7,01df8,01df9,01dfa,01dfb,01dfc
 
 [ITEMDEF 01df0]
@@ -602,10 +672,17 @@ DUPEITEM=01def
 DUPEITEM=01def
 
 [ITEMDEF 01e36]
-DEFNAME=i_RUG_BEARSKIN_1
+DEFNAME=i_rug_bearskin_1
+TYPE=t_floor
+FLIP=1
+VALUE=74
+WEIGHT=30.5
+CAN=can_i_platform
+RESOURCES=1 i_cloth,5 i_fur_dark,5 i_thread,4 i_canvas
+SKILLMAKE=Tailoring 78.9,t_sewing_kit,Anatomy 43.1
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Bearskin Carpet
-DESCRIPTION=@
+DESCRIPTION=Bearskin
 DUPELIST=01e37,01e38,01e39,01e3a,01e3b,01e3c,01e3d,01e3e,01e40,01e41,01e42,01e43,01e44,01e45,01e46,01e47,01e48
 
 [ITEMDEF 01e37]
@@ -677,12 +754,17 @@ DUPEITEM=01e36
 DUPEITEM=01e36
 
 [ITEMDEF 01e49]
-DEFNAME=i_RUG_BEARSKIN_2
-WEIGHT=20
-//bearskin rug white
+DEFNAME=i_rug_bearskin_2
+TYPE=t_floor
+FLIP=1
+VALUE=74
+WEIGHT=30.5
+CAN=can_i_platform
+RESOURCES=1 i_cloth,5 i_fur_dark,5 i_thread,4 i_canvas
+SKILLMAKE=Tailoring 78.9,t_sewing_kit,Anatomy 43.1
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Polar Bear Rug
-DESCRIPTION=@
+DESCRIPTION=Polar Bear Rug
 DUPELIST=01e4a,01e4b,01e4c,01e4d,01e4e,01e4f,01e50,01e51,01e53,01e54,01e55,01e56,01e57,01e58,01e59,01e5a,01e5b
 
 [ITEMDEF 01e4a]
@@ -752,6 +834,299 @@ DUPEITEM=01e49
 [ITEMDEF 01e5b]
 //bearskin
 DUPEITEM=01e49
+
+[ITEMDEF i_multi_rug_polarbear_ew]
+NAME=polarbear rug
+TYPE=t_multi
+CATEGORY=Multis
+SUBSECTION=Decoration
+DESCRIPTION=Polar Bear Rug (e/w)
+MULTIREGION=0,0,0,0
+COMPONENT=01e57,0,0,0
+COMPONENT=01e53,1,1,0
+COMPONENT=01e54,1,0,0
+COMPONENT=01e55,1,-1,0
+COMPONENT=01e56,0,-1,0
+COMPONENT=01e58,0,1,0
+COMPONENT=01e59,-1,1,0
+COMPONENT=01e5a,-1,0,0
+COMPONENT=01e5b,-1,-1,0
+
+[ITEMDEF 028a4]
+DEFNAME=i_mat_goza
+TYPE=t_floor
+RESOURCES=50 i_log_bamboo,1 i_string
+CATEGORY=Decoration - Carpets & Rugs
+SUBSECTION=Goza Mat
+DESCRIPTION=Goza Mat
+DUPELIST=028a5,028a6,028a7,028a8,028a9,028aa,028ab,028ac,028ad,028ae,028af,029c0,029c1,029c2,029c3,029c4,029c5,029c6,029c7,029c8,029c9,029ca,029cb,029cc,029cd,029ce,029cf,029d0,029d1,029d2,029d3,029d4,029d5,029d6,029d7,029d8,029d9,029da,029db,02a1d,02a1e,02a1f,02a20,02a21,02a22,02a23,02a24,02a25,02a26,02a27,02a28,02a29,02a3c,02a3d,02a3e,02a3f,02a40,02a41,02a42,02a43,02a44
+
+[ITEMDEF 028a5]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 028a6]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 028a7]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 028a8]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 028a9]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 028aa]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 028ab]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 028ac]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 028ad]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 028ae]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 028af]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029c0]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029c1]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029c2]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029c3]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029c4]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029c5]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029c6]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029c7]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029c8]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029c9]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029ca]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029cb]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029cc]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029cd]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029ce]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029cf]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029d0]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029d1]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029d2]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029d3]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029d4]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029d5]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029d6]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029d7]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029d8]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029d9]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029da]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 029db]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a1d]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a1e]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a1f]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a20]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a21]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a22]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a23]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a24]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a25]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a26]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a27]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a28]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a29]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a3c]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a3d]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a3e]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a3f]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a40]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a41]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a42]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a43]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02a44]
+//goza mat
+DUPEITEM=028a4
+
+[ITEMDEF 02ac8]
+DEFNAME=i_rug_bearskin_misc
+TYPE=t_floor
+FLIP=1
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=5 i_wool,100 i_thread
+CATEGORY=Decoration - Carpets & Rugs
+SUBSECTION=Bearskin Carpet Bits
+DESCRIPTION=02ac9,02acd,02ace
+
+[ITEMDEF 02ac9]
+//bearskin rug bits (unused)
+DUPEITEM=02ac8
+
+[ITEMDEF 02acd]
+//bearskin rug bits (unused)
+DUPEITEM=02ac8
+
+[ITEMDEF 02ace]
+//bearskin rug bits (unused)
+DUPEITEM=02ac8
 
 
 [eof]

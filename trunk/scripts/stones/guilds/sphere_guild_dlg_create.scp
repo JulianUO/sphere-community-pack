@@ -31,11 +31,11 @@ IF (<isempty <ARGTXT[1]>>)
 ELIF (<isempty <ARGTXT[2]>>)
  SRC.SYSMESSAGE @,,1 You must provide a guild abbreviation.
  return 1
-ELIF (<eval STRLEN(<ARGTXT[1]>)> > <DEF0.Guild.NameMaxLenght>)
- SRC.SYSMESSAGE @,,1 A guild name cannot be more than <dDEF0.Guild.NameMaxLenght> characters in length.
+ELIF (<eval STRLEN(<ARGTXT[1]>)> > <DEF0.Guild.NameMaxLength>)
+ SRC.SYSMESSAGE @,,1 A guild name cannot be more than <dDEF0.Guild.NameMaxLength> characters in length.
  return 1
-ELIF (<eval STRLEN(<ARGTXT[2]>)> > <DEF0.Guild.AbbrevMaxLenght>)
- SRC.SYSMESSAGE @,,1 An abbreviation cannot exceed <dDEF0.Guild.AbbrevMaxLenght> characters in length.
+ELIF (<eval STRLEN(<ARGTXT[2]>)> > <DEF0.Guild.AbbrevMaxLength>)
+ SRC.SYSMESSAGE @,,1 An abbreviation cannot exceed <dDEF0.Guild.AbbrevMaxLength> characters in length.
  return 1
 ELIF !(<Guild_IsNameAvaible <ARGTXT[1]>>) || (<Guild_CheckProfanity <ARGTXT[1]>>)
  SRC.SYSMESSAGE @,,1 That guild name is not available.

@@ -109,24 +109,24 @@ IF !(<MemberFromUID.<SRC>.IsMaster>)
   SRC.SYSMESSAGE @,,1 You don't have permission to do this.
   return 1
 ELIF (<ARGN>==3)
-  SRC.SYSMESSAGE @,,1 Enter the new guild charter (<dDEF.Guild.CharterMaxLenght> characters max):
+  SRC.SYSMESSAGE @,,1 Enter the new guild charter (<dDEF.Guild.CharterMaxLength> characters max):
   SRC.PROMPTCONSOLE Guild_SetCharter_CallBack
 ELIF (<ARGN>==4)
-  SRC.SYSMESSAGE @,,1 Enter the new website for the guild (<dDEF.Guild.WebsiteMaxLenght> characters max):
+  SRC.SYSMESSAGE @,,1 Enter the new website for the guild (<dDEF.Guild.WebsiteMaxLength> characters max):
   SRC.PROMPTCONSOLE Guild_SetWebsite_CallBack
 ELIF (<ARGN>==5)
   IF (<TAG0.Delay.ChangeName> > <SERV.TIME>)
    SRC.SYSMESSAGE @,,1 You must wait to change the guild name.
    return 1
   ENDIF
-  SRC.SYSMESSAGE @,,1 Enter the new guild name (<dDEF.Guild.NameMaxLenght> characters max):
+  SRC.SYSMESSAGE @,,1 Enter the new guild name (<dDEF.Guild.NameMaxLength> characters max):
   SRC.PROMPTCONSOLE Guild_SetName_CallBack
 ELIF (<ARGN>==6)
   IF (<TAG0.Delay.ChangeAbbrev> > <SERV.TIME>)
    SRC.SYSMESSAGE @,,1 You must wait to change the guild abbrev.
    return 1
   ENDIF
-  SRC.SYSMESSAGE @,,1 Enter the new guild abbreviation (<dDEF.Guild.AbbrevMaxLenght> characters max):
+  SRC.SYSMESSAGE @,,1 Enter the new guild abbreviation (<dDEF.Guild.AbbrevMaxLength> characters max):
   SRC.PROMPTCONSOLE Guild_SetAbbrev_CallBack
 ELIF (<ARGN>==7)
   IF (<Guild_WarCount>)

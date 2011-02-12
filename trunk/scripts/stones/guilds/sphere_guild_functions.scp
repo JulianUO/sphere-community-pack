@@ -83,16 +83,16 @@ return 0
 
 
 [FUNCTION Guild_SetCharter_CallBack]
-IF (<eval STRLEN(<ARGS>)> > <DEF.Guild.CharterMaxLenght>)
- SRC.SYSMESSAGE @,,1 Your guild charter cannot exceed <dDEF.Guild.CharterMaxLenght> characters.
+IF (<eval STRLEN(<ARGS>)> > <DEF.Guild.CharterMaxLength>)
+ SRC.SYSMESSAGE @,,1 Your guild charter cannot exceed <dDEF.Guild.CharterMaxLength> characters.
 ELSE
  UID.<GUILD>.CHARTER=<ARGS>
  SRC.SYSMESSAGE @,,1 You submit a new guild charter.
 ENDIF
 
 [FUNCTION Guild_SetWebsite_CallBack]
-IF (<eval STRLEN(<ARGS>)> > <DEF.Guild.WebsiteMaxLenght>)
- SRC.SYSMESSAGE @,,1 Your guild website cannot exceed <dDEF.Guild.WebsiteMaxLenght> characters.
+IF (<eval STRLEN(<ARGS>)> > <DEF.Guild.WebsiteMaxLength>)
+ SRC.SYSMESSAGE @,,1 Your guild website cannot exceed <dDEF.Guild.WebsiteMaxLength> characters.
 ELSE
  UID.<GUILD>.WEBPAGE=<ARGS>
  SRC.SYSMESSAGE @,,1 You submit a new guild website.
@@ -105,8 +105,8 @@ IF (<UID.<GUILD>.TAG0.Delay.ChangeName> > <SERV.TIME>)
 ELIF (<isempty <ARGS>>)
  SRC.SYSMESSAGE @,,1 Guild name cannot be blank.
  return 1
-ELIF (<eval STRLEN(<ARGS>)> > <DEF0.Guild.NameMaxLenght>)
- SRC.SYSMESSAGE @,,1 A guild name cannot be more than <dDEF0.Guild.NameMaxLenght> characters in length.
+ELIF (<eval STRLEN(<ARGS>)> > <DEF0.Guild.NameMaxLength>)
+ SRC.SYSMESSAGE @,,1 A guild name cannot be more than <dDEF0.Guild.NameMaxLength> characters in length.
  return 1
 ELIF !(<Guild_IsNameAvaible <ARGS>>) || (<Guild_CheckProfanity <ARGS>>)
  SRC.SYSMESSAGE @,,1 That guild name is not available.
@@ -123,8 +123,8 @@ IF (<UID.<GUILD>.TAG0.Delay.ChangeAbbrev> > <SERV.TIME>)
 ELIF (<isempty <ARGS>>)
  SRC.SYSMESSAGE @,,1 You must provide a guild abbreviation.
  return 1
-ELIF (<eval STRLEN(<ARGS>)> > <DEF0.Guild.AbbrevMaxLenght>)
- SRC.SYSMESSAGE @,,1 An abbreviation cannot exceed <dDEF0.Guild.AbbrevMaxLenght> characters in length.
+ELIF (<eval STRLEN(<ARGS>)> > <DEF0.Guild.AbbrevMaxLength>)
+ SRC.SYSMESSAGE @,,1 An abbreviation cannot exceed <dDEF0.Guild.AbbrevMaxLength> characters in length.
  return 1
 ELIF !(<Guild_IsAbbrevAvaible <ARGS>>) || (<Guild_CheckProfanity <ARGS>>)
  SRC.SYSMESSAGE @,,1 That abbreviation is not available.
@@ -139,7 +139,7 @@ REF1=<SRC.CTAG.Guild.Temp.SetTitle>
 SRC.CTAG.Guild.Temp.SetTitle=
 IF (<GUILD.MemberFromUID.<SRC>.PRIV> < <DEF0.Guild.Priv.CanSetMemberTitle>) || ((<GUILD.MemberFromUID.<REF1>.PRIV> >= <GUILD.MemberFromUID.<SRC>.PRIV>) && (<SRC> != <REF1>))
  SRC.SYSMESSAGE @,,1 You don't have <QVAL (<isempty <GUILD.MemberFromUID.<REF1>.GuildTitle>>)? the permission to set that:permission to change this> member's guild title.
-ELIF (<eval STRLEN(<ARGS>)> > <DEF.Guild.PlayerTitleMaxLenght>)
+ELIF (<eval STRLEN(<ARGS>)> > <DEF.Guild.PlayerTitleMaxLength>)
  SRC.SYSMESSAGE @,,1 That title is too long.
 ELIF (<Guild_CheckProfanity <ARGS>>)
  SRC.SYSMESSAGE @,,1 That title is disallowed.

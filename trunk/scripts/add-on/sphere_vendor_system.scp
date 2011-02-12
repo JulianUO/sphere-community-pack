@@ -569,7 +569,7 @@ ELIF (<TAG0.Rent.End> < <SERV.TIME>)
     IF (<REF2.BANKBALANCE> >= <TAG0.Rent.Renew.Price>)
      REF2.GOLD -= <dTAG0.Rent.Renew.Price>
      REF1.GOLD += <dTAG0.Rent.Renew.Price>
-     TAG.Rent.End=<eval <SERV.TIME>+(<TAG.Rent.Lenght>*864000)>
+     TAG.Rent.End=<eval <SERV.TIME>+(<TAG.Rent.Length>*864000)>
      return 1
     ENDIF
   ENDIF
@@ -919,7 +919,7 @@ VALUE=1200
 
 ON=@Create
 COLOR=1650
-TAG.Rent.Lenght=7
+TAG.Rent.Length=7
 TAG.Rent.Price=<VALUE>
 
 ON=@DClick
@@ -1007,7 +1007,7 @@ IF (<TAG0.Rent.Landlord> != 0)
 ENDIF
 
 dhtmlgump 50 95 150 20 0 0 Contract Length
-dhtmlgump 230 95 100 20 0 0 <VendorReturnContractLenght <TAG0.Rent.Lenght>>
+dhtmlgump 230 95 100 20 0 0 <VendorReturnContractLength <TAG0.Rent.Length>>
 dhtmlgump 50 115 150 20 0 0 Price Per Rental
 dtext 230 115 064 <QVAL (<TAG0.Rent.Price>)? <dTAG0.Rent.Price> : FREE>
 gumppictiled 50 160 250 2 023BF
@@ -1064,7 +1064,7 @@ ENDIF
 page 2
 FOR 4
  button 30 <eval 56+(<LOCAL._FOR>*20)> 015E1 015E5 1 0 <eval 9+<LOCAL._FOR>>
- dhtmlgump 50 <eval 55+(<LOCAL._FOR>*20)> 150 20 0 0 <VendorReturnContractLenght <eval <LOCAL._FOR>*7>>
+ dhtmlgump 50 <eval 55+(<LOCAL._FOR>*20)> 150 20 0 0 <VendorReturnContractLength <eval <LOCAL._FOR>*7>>
 ENDFOR
 
 
@@ -1123,8 +1123,8 @@ IF (<ARGN>==6)
   NEW.TAG.Rent.Landlord=<REF1>
   NEW.TAG.Rent.Renter=<SRC>
   NEW.TAG.Rent.Price=<TAG.Rent.Price>
-  NEW.TAG.Rent.Lenght=<TAG.Rent.Lenght>
-  NEW.TAG.Rent.End=<eval <SERV.TIME>+(<TAG.Rent.Lenght>*864000)+36000>
+  NEW.TAG.Rent.Length=<TAG.Rent.Length>
+  NEW.TAG.Rent.End=<eval <SERV.TIME>+(<TAG.Rent.Length>*864000)+36000>
   NEW.TAG.Rent.Renew.Price=<TAG.Rent.Price>
   NEW.TAG.Rent.Renew.Landlord=<TAG.Rent.Renew.Landlord>
   NEW.TAG.Rent.Renew.Renter=
@@ -1137,8 +1137,8 @@ ELIF (<ARGN>==7)
   return 1
 ENDIF
 
-ON=10 14	// Rental Lenght
-TAG.Rent.Lenght=<eval (<ARGN>-9)*7>
+ON=10 14	// Rental Length
+TAG.Rent.Length=<eval (<ARGN>-9)*7>
 SDIALOG d_vendor_rental_contract
 
 
@@ -1231,13 +1231,13 @@ ELSE
 ENDIF
 
 
-[FUNCTION VendorReturnContractLenght]
+[FUNCTION VendorReturnContractLength]
 IF (<ARGS> != 30)
- LOCAL.Lenght=<eval <ARGS>/7>
- IF (<LOCAL.Lenght>==1)
-  return <dLOCAL.Lenght> Week
+ LOCAL.Length=<eval <ARGS>/7>
+ IF (<LOCAL.Length>==1)
+  return <dLOCAL.Length> Week
  ELSE
-  return <dLOCAL.Lenght> Weeks
+  return <dLOCAL.Length> Weeks
  ENDIF
 ENDIF
 

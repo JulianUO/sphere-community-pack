@@ -13,7 +13,7 @@ VERSION=0.56b
 [ITEMDEF 02006]
 //corpse (all corpses normally are here)
 DEFNAME=i_corpse
-TYPE=T_CORPSE
+TYPE=t_corpse
 TDATA2=09
 CATEGORY=Miscellaneous
 SUBSECTION=Corpses
@@ -160,7 +160,7 @@ DESCRIPTION=All Corpses (Ogre default)
 [ITEMDEF 03d64]
 //dead orc captain
 DEFNAME=i_corpse_orc_cap
-TYPE=T_CORPSE
+TYPE=t_corpse
 TDATA2=09
 CATEGORY=Miscellaneous
 SUBSECTION=Alpha Corpses
@@ -169,7 +169,7 @@ DESCRIPTION=Orc Captain
 [ITEMDEF 03d65]
 //corpse of orc
 DEFNAME=i_corpse_orc
-TYPE=T_CORPSE
+TYPE=t_corpse
 TDATA2=09
 CATEGORY=Miscellaneous
 SUBSECTION=Alpha Corpses
@@ -178,7 +178,7 @@ DESCRIPTION=Orc
 [ITEMDEF 03d66]
 //corpse of skeleton
 DEFNAME=i_corpse_skel
-TYPE=T_CORPSE
+TYPE=t_corpse
 TDATA2=09
 CATEGORY=Miscellaneous
 SUBSECTION=Alpha Corpses
@@ -187,7 +187,7 @@ DESCRIPTION=Skeleton
 [ITEMDEF 03d67]
 //corpse
 DEFNAME=i_corpse_blank
-TYPE=T_CORPSE
+TYPE=t_corpse
 TDATA2=09
 CATEGORY=Miscellaneous
 SUBSECTION=Alpha Corpses
@@ -195,7 +195,7 @@ DESCRIPTION=Human
 
 [ITEMDEF 03d68]
 //corpse
-TYPE=T_CORPSE
+TYPE=t_corpse
 TDATA2=09
 CATEGORY=Miscellaneous
 SUBSECTION=Alpha Corpses
@@ -204,7 +204,7 @@ DESCRIPTION=Human
 [ITEMDEF 03d69]
 //deer corpse
 DEFNAME=i_corpse_deer
-TYPE=T_CORPSE
+TYPE=t_corpse
 TDATA2=09
 CATEGORY=Miscellaneous
 SUBSECTION=Alpha Corpses
@@ -212,7 +212,7 @@ DESCRIPTION=Deer
 
 [ITEMDEF 03d6a]
 //wolf corpse
-TYPE=T_CORPSE
+TYPE=t_corpse
 TDATA2=09
 CATEGORY=Miscellaneous
 SUBSECTION=Alpha Corpses
@@ -220,7 +220,7 @@ DESCRIPTION=Wolf
 
 [ITEMDEF 03d6b]
 //corpse of rabbit
-TYPE=T_CORPSE
+TYPE=t_corpse
 TDATA2=09
 CATEGORY=Miscellaneous
 SUBSECTION=Alpha Corpses

@@ -10,15 +10,15 @@
 //
 VERSION=0.56b
 
-
 [ITEMDEF 0121d]
 DEFNAME=i_wall_carving_stone
-TYPE=T_WALL
-RESOURCES=10 i_rock_plain
-WEIGHT=10
+TYPE=t_wall
+FLIP=1
+WEIGHT=500.0
+RESOURCES=50 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Wall Carving
-DESCRIPTION=@
+DESCRIPTION=Wall Carving
 DUPELIST=0121e,0121f,01220,01221,01222
 
 [ITEMDEF 0121e]
@@ -42,47 +42,78 @@ DUPEITEM=0121d
 DUPEITEM=0121d
 
 [ITEMDEF 01223]
-DEFNAME=i_PEDESTAL_MARBLE
-RESOURCES=12 i_MARBLE
-WEIGHT=12
+DEFNAME=i_pedestal_marble
+VALUE=75
+WEIGHT=150.0
+RESOURCES=15 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Statues
-DESCRIPTION=Pedestal
+SUBSECTION=Pedestals
+DESCRIPTION=Large Pedestal
 
 [ITEMDEF 01224]
 DEFNAME=i_statue_stone_sm
+FLIP=1
+VALUE=15
+WEIGHT=20.0
 RESOURCES=2 i_rock_plain
-WEIGHT=5
+SKILLMAKE=Masonry 20.0
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Statue
-DUPELIST=01225,01226,01227,01228
+DUPELIST=0139a
 
 [ITEMDEF 01225]
-//statue
-DUPEITEM=01224
+DEFNAME=i_statue_stone_sm_10
+VALUE=15
+WEIGHT=20.0
+RESOURCES=2 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Statue
 
 [ITEMDEF 01226]
-//statue
-DUPEITEM=01224
+DEFNAME=i_statue_stone_sm_7
+FLIP=1
+VALUE=15
+WEIGHT=20.0
+RESOURCES=2 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Statue
+DUPELIST=0139b
 
 [ITEMDEF 01227]
-//statue
-DUPEITEM=01224
+DEFNAME=i_statue_stone_sm_8
+FLIP=1
+VALUE=15
+WEIGHT=20.0
+RESOURCES=2 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Statue
+DUPELIST=0139c
 
 [ITEMDEF 01228]
-//statue
-DUPEITEM=01224
+DEFNAME=i_statue_stone_sm_9
+FLIP=1
+VALUE=15
+WEIGHT=20.0
+RESOURCES=2 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Statue
+DUPELIST=0139d
 
 [ITEMDEF 01231]
+//FIXME: this should be split into both types
 DEFNAME=i_wall_carving_stone_2
-TYPE=T_WALL
-RESOURCES=10 i_rock_plain
-WEIGHT=10
+TYPE=t_wall
+WEIGHT=500.0
+RESOURCES=50 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Wall Carving
 DESCRIPTION=Wall Carving 02
-DUPELIST=01232,01233,01234,01235,01236,01237,01238,01239,0123a,0123b,0123c,0123d,0123e,01240,01241,01242,01243,01244
+DUPELIST=01232,01233,01234,01235,01237,01238,01239,0123a,0123b,0123c,0123d,0123e,01240,01241,01242,01243,01244
 
 [ITEMDEF 01232]
 //wall carving
@@ -97,10 +128,6 @@ DUPEITEM=01231
 DUPEITEM=01231
 
 [ITEMDEF 01235]
-//wall carving
-DUPEITEM=01231
-
-[ITEMDEF 01236]
 //wall carving
 DUPEITEM=01231
 
@@ -158,12 +185,12 @@ DUPEITEM=01231
 
 [ITEMDEF 01265]
 DEFNAME=i_wall_carving_stone_3
-TYPE=T_WALL
-RESOURCES=10 i_rock_plain
-WEIGHT=10
+TYPE=t_wall
+WEIGHT=500.0
+RESOURCES=50 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Wall Carving
-DESCRIPTION=@
+DESCRIPTION=Wall Carving
 DUPELIST=01266,01267
 
 [ITEMDEF 01266]
@@ -176,12 +203,13 @@ DUPEITEM=01265
 
 [ITEMDEF 0129f]
 DEFNAME=i_statue_stone_lg
-RESOURCES=300 i_rock_plain
-WEIGHT=500
+VALUE=172
+WEIGHT=800.0
+RESOURCES=80 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Statue
-DUPELIST=012a0,012a1,012a2,012a3,012a4
+DUPELIST=012a0,012a1,012a2,012a3,012a4,02a9e,02a9f,02aa0
 
 [ITEMDEF 012a0]
 //statue
@@ -205,31 +233,28 @@ DUPEITEM=0129f
 
 [ITEMDEF 012ae]
 DEFNAME=i_statue_stone_lg_2
-RESOURCES=300 i_rock_plain
-WEIGHT=500
+VALUE=172
+WEIGHT=800.0
+RESOURCES=80 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Statue
 DUPELIST=012af,012b0
 
 [ITEMDEF 012af]
-//LARGE_STONE_STATUE_2 PART 2
-DUPEITEM=012AE
-CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Statues
-DESCRIPTION=Statue
+//statue
+DUPEITEM=012ae
 
 [ITEMDEF 012b0]
-//LARGE_STONE_STATUE_2 PART 3
-DUPEITEM=012AE
-CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Statues
-DESCRIPTION=Statue
+//statue
+DUPEITEM=012ae
 
 [ITEMDEF 012ca]
-DEFNAME=i_BUST_STONE_SMALL
+DEFNAME=i_bust_stone_small
+FLIP=1
+VALUE=15
+WEIGHT=20.0
 RESOURCES=2 i_rock_plain
-WEIGHT=5
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Statue (Bust)
@@ -241,13 +266,14 @@ DUPEITEM=012ca
 
 [ITEMDEF 012cc]
 DEFNAME=i_wall_carving_stone_4
-TYPE=T_WALL
-RESOURCES=10 i_rock_plain
-WEIGHT=10
+TYPE=t_wall
+FLIP=1
+WEIGHT=500.0
+RESOURCES=50 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Wall Coverings
+SUBSECTION=Wall Carving
 DESCRIPTION=Wall Carving
-DUPELIST=012cd,012ce,012cf,012d0,012d3,012d4
+DUPELIST=012cd,012ce,012cf,012d0,012d1,012d2,012d3,012d4
 
 [ITEMDEF 012cd]
 //wall carving
@@ -265,6 +291,14 @@ DUPEITEM=012cc
 //wall carving
 DUPEITEM=012cc
 
+[ITEMDEF 012d1]
+//wall carving
+DUPEITEM=012cc
+
+[ITEMDEF 012d2]
+//wall carving
+DUPEITEM=012cc
+
 [ITEMDEF 012d3]
 //wall carving
 DUPEITEM=012cc
@@ -274,33 +308,30 @@ DUPEITEM=012cc
 DUPEITEM=012cc
 
 [ITEMDEF 012d5]
-DEFNAME=i_statue_stone_sm_2
-RESOURCES=2 i_rock_plain
-WEIGHT=5
+DEFNAME=i_statue_stone_lg_3
+FLIP=1
+VALUE=172
+WEIGHT=800.0
+RESOURCES=80 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Statue
+DUPELIST=012d6,012d7
 
 [ITEMDEF 012d6]
-DEFNAME=i_statue_stone_lg_3
-RESOURCES=300 i_rock_plain
-WEIGHT=500
-CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Statues
-DESCRIPTION=Statue
-DUPELIST=012d7
+//statue
+DUPEITEM=012d5
 
 [ITEMDEF 012d7]
-//LARGE_STONE_STATUE_3 PART 2
-DUPEITEM=012D6
-CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Statues
-DESCRIPTION=Statue
+//statue
+DUPEITEM=012d5
 
 [ITEMDEF 012d8]
 DEFNAME=i_statue_stone_lg_4
-RESOURCES=300 i_rock_plain
-WEIGHT=500
+FLIP=1
+VALUE=172
+WEIGHT=800.0
+RESOURCES=80 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Statue
@@ -311,33 +342,34 @@ DUPELIST=012d9
 DUPEITEM=012d8
 
 [ITEMDEF 0139a]
+//statue 1
 DEFNAME=i_statue_stone_sm_3
-RESOURCES=2 i_rock_plain
-WEIGHT=5
-CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Statue
-DESCRIPTION=@
-DUPELIST=0139b,0139c,0139d
+DUPEITEM=01224
 
 [ITEMDEF 0139b]
-//statue
-DUPEITEM=0139a
+//statue 7
+DEFNAME=i_statue_stone_sm_4
+DUPEITEM=01226
 
 [ITEMDEF 0139c]
-//statue
-DUPEITEM=0139a
+//statue 8
+DEFNAME=i_statue_stone_sm_5
+DUPEITEM=01227
 
 [ITEMDEF 0139d]
-//statue
-DUPEITEM=0139a
+//statue 9
+DEFNAME=i_statue_stone_sm_6
+DUPEITEM=01228
 
 [ITEMDEF 0139e]
 DEFNAME=i_statue_stone_lg_5
-RESOURCES=300 i_rock_plain
-WEIGHT=500
+FLIP=1
+VALUE=172
+WEIGHT=800.0
+RESOURCES=80 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Statue
-DESCRIPTION=@
+SUBSECTION=Statues
+DESCRIPTION=Statue
 DUPELIST=0139f,013a0,013a1,013a2,013a3
 
 [ITEMDEF 0139f]
@@ -360,20 +392,507 @@ DUPEITEM=0139e
 //statue
 DUPEITEM=0139e
 
+[ITEMDEF 01947]
+DEFNAME=i_statue_stone_blessed
+FLIP=1
+VALUE=68
+WEIGHT=120.0
+RESOURCES=12 i_rock_plain
+SKILLMAKE=Masonry 78.0
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Blessed Statue
+DUPELIST=01948,01949,0194a
+
+[ITEMDEF 01948]
+//blessed statue
+DUPEITEM=01947
+
+[ITEMDEF 01949]
+//blessed statue
+DUPEITEM=01947
+
+[ITEMDEF 0194a]
+//blessed statue
+DUPEITEM=01947
+
 [ITEMDEF 01f18]
-//statue
+DEFNAME=i_bust_multiface
+VALUE=15
+WEIGHT=20.0
+RESOURCES=2 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Multifaced Bust
 
 [ITEMDEF 01f2a]
 DEFNAME=i_pedestal
-RESOURCES=6 i_rock_plain
-WEIGHT=12
+VALUE=55
+WEIGHT=100.0
+RESOURCES=10 i_rock_plain
 CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Pedestal
-DESCRIPTION=@
+SUBSECTION=Pedestals
+DESCRIPTION=Small Pedestal
 
+[ITEMDEF 0207c]
+DEFNAME=i_statue_farie
+NAME=Statue of the farie
+WEIGHT=50.0
+RESOURCES=5 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Statue of the Farie
+
+[ITEMDEF 02419]
+DEFNAME=i_sculpture_stone_sm
+TYPE=t_normal
+VALUE=30
+WEIGHT=50.0
+RESOURCES=5 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Sculptures
+DESCRIPTION=Small Sculpture 1
+
+[ITEMDEF 0241a]
+DEFNAME=i_sculpture_stone_sm_2
+TYPE=t_normal
+VALUE=30
+WEIGHT=50.0
+RESOURCES=5 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Sculptures
+DESCRIPTION=Small Sculpture 2
+
+[ITEMDEF 0241b]
+DEFNAME=i_sculpture_stone_sm_3
+TYPE=t_normal
+VALUE=40
+WEIGHT=70.0
+RESOURCES=7 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Sculptures
+DESCRIPTION=Small Sculpture 3
+
+[ITEMDEF 02846]
+DEFNAME=i_sculpture_fish
+TYPE=t_normal
+FLIP=1
+WEIGHT=20.0
+RESOURCES=2 i_rock_jade
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Sculptures
+DESCRIPTION=Fish
+DUPELIST=02847
+
+[ITEMDEF 02847]
+//fish sculpture
+DUPEITEM=02846
+
+[ITEMDEF 02848]
+DEFNAME=i_sculpture_samurai
+TYPE=t_normal
+WEIGHT=80.0
+RESOURCES=8 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Sculptures
+DESCRIPTION=Samurai 1
+
+[ITEMDEF 02849]
+DEFNAME=i_sculpture_samurai_2
+TYPE=t_normal
+WEIGHT=80.0
+RESOURCES=8 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Sculptures
+DESCRIPTION=Samurai 2
+
+[ITEMDEF 02a9e]
+//large statue
+DUPEITEM=0129f
+
+[ITEMDEF 02a9f]
+//large statue
+DUPEITEM=0129f
+
+[ITEMDEF 02aa0]
+//large statue
+DUPEITEM=0129f
+
+[ITEMDEF 02d0e]
+DEFNAME=i_statue_arcanist
+NAME=arcanist statue
+FLIP=1
+VALUE=100
+WEIGHT=200.0
+RESOURCES=20 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Arcanist Statue
+DUPELIST=02d0f
+
+[ITEMDEF 02d0f]
+//arcanist statue
+DUPEITEM=02d0e
+
+[ITEMDEF 02d10]
+DEFNAME=i_statue_squirrel
+NAME=squirrel statue
+FLIP=1
+VALUE=75
+WEIGHT=150.0
+RESOURCES=15 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Squirrel Statue
+DUPELIST=02d11
+
+[ITEMDEF 02d11]
+//squirrel statue
+DUPEITEM=02d10
+
+[ITEMDEF 02d12]
+DEFNAME=i_statue_warrior
+NAME=warrior statue
+FLIP=1
+VALUE=125
+WEIGHT=250.0
+RESOURCES=25 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Warrior Statue
+DUPELIST=02d13
+
+[ITEMDEF 02d13]
+//warrior statue
+DUPEITEM=02d12
+
+[ITEMDEF 02d4a]
+DEFNAME=i_acorn_decor
+TYPE=t_normal
+WEIGHT=10.0
+RESOURCES=10 i_board
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Decorative Acorn
+
+[ITEMDEF 02fd4]
+DEFNAME=i_pedestal_crystal
+WEIGHT=130.0
+RESOURCES=12 i_rock_plain //,1 t_crystal
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Pedestal with Crystal
+
+[ITEMDEF 02fd5]
+DEFNAME=i_pedestal_crystal_empty
+WEIGHT=120.0
+RESOURCES=12 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Pedestal 2
+
+[ITEMDEF 02fec]
+DEFNAME=i_column_gothic
+TYPE=t_wall
+FLIP=1
+RESOURCES=100 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Column
+DESCRIPTION=Gothic Column
+DUPELIST=02fed
+
+[ITEMDEF 02fed]
+//gothic column
+DUPEITEM=02fec
+
+[ITEMDEF 02ff6]
+DEFNAME=i_statue_stone_contribution
+WEIGHT=80.0
+VALUE=56
+RESOURCES=8 i_rock_plain
+SKILLMAKE=Masonry 80.0
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Contribution Statue
+
+[ITEMDEF 03001]
+DEFNAME=i_statue_tall
+TYPE=t_wall
+VALUE=500
+WEIGHT=1000.0
+RESOURCES=100 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Column
+DESCRIPTION=Tall Statue
+
+[ITEMDEF 0305a]
+DEFNAME=i_statue_stone_horserider
+NAME=horserider statue
+FLIP=1
+VALUE=200
+WEIGHT=400.0
+RESOURCES=40 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Large Statues
+DESCRIPTION=Horse Rider Statue
+DUPELIST=0305b,0305c,0305d,0305e,0305f
+
+[ITEMDEF 0305b]
+//horserider statue
+DUPEITEM=0305a
+
+[ITEMDEF 0305c]
+//horserider statue
+DUPEITEM=0305a
+
+[ITEMDEF 0305d]
+//horserider statue
+DUPEITEM=0305a
+
+[ITEMDEF 0305e]
+//horserider statue
+DUPEITEM=0305a
+
+[ITEMDEF 0305f]
+//horserider statue
+DUPEITEM=0305a
+
+[ITEMDEF 0306c]
+DEFNAME=i_statue_stone_minotaur
+NAME=minotaur statue
+FLIP=1
+VALUE=400
+WEIGHT=800.0
+RESOURCES=80 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Large Statues
+DESCRIPTION=Minotaur Statue
+DUPELIST=0306d,0306e,0306f,03070,03071,03072,03073,03074,03075,03076
+
+[ITEMDEF 0306d]
+//minotaur statue
+DUPEITEM=0306c
+
+[ITEMDEF 0306e]
+//minotaur statue
+DUPEITEM=0306c
+
+[ITEMDEF 0306f]
+//minotaur statue
+DUPEITEM=0306c
+
+[ITEMDEF 03070]
+//minotaur statue
+DUPEITEM=0306c
+
+[ITEMDEF 03071]
+//minotaur statue
+DUPEITEM=0306c
+
+[ITEMDEF 03072]
+//minotaur statue
+DUPEITEM=0306c
+
+[ITEMDEF 03073]
+//minotaur statue
+DUPEITEM=0306c
+
+[ITEMDEF 03074]
+//minotaur statue
+DUPEITEM=0306c
+
+[ITEMDEF 03075]
+//minotaur statue
+DUPEITEM=0306c
+
+[ITEMDEF 03076]
+//minotaur statue
+DUPEITEM=0306c
+
+[ITEMDEF 032f0]
+DEFNAME=i_statue_block
+NAME=statue block
+VALUE=125
+WEIGHT=250.0
+RESOURCES=25 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Unfinished
+DESCRIPTION=Statue Block
+
+[ITEMDEF 032f2]
+DEFNAME=i_statue_plinth
+NAME=statue plinth
+VALUE=75
+WEIGHT=150.0
+RESOURCES=15 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Pedestals
+DESCRIPTION=Statue Plinth
+
+[ITEMDEF 035e9]
+WEIGHT=150.0
+RESOURCES=150 i_crystal5
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Sculpture
+DESCRIPTION=Crystal Altar
+DUPELIST=03602,03603,03604
+
+[ITEMDEF 035ea]
+//Crystal sculpture
+WEIGHT=150.0
+RESOURCES=150 i_crystal5
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Sculpture
+DESCRIPTION=Crystal Sculpture
+DUPELIST=035eb,035ec
+
+[ITEMDEF 035eb]
+//Crystal sculpture
+DUPEITEM=035ea
+
+[ITEMDEF 035ec]
+//Crystal sculpture
+DUPEITEM=035ea
+
+[ITEMDEF 035f6]
+TYPE=t_normal
+FLIP=1
+VALUE=194
+WEIGHT=15.0
+RESOURCES=15 i_water
+SKILLMAKE=Tinkering 95.7,ALCHEMY 50.0,Magery 85.1,t_tinker_tools
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Ice Statue (unfinished)
+DUPELIST=035f7
+
+[ITEMDEF 035f7]
+//Ice statue (unfinished)
+DUPEITEM=035f6
+
+[ITEMDEF 035f8]
+TYPE=t_normal
+FLIP=1
+VALUE=174
+WEIGHT=13.0
+RESOURCES=13 i_water
+SKILLMAKE=Tinkering 95.7,ALCHEMY 50.0,Magery 85.1,t_tinker_tools
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Ice Statue
+DUPELIST=035f9
+
+[ITEMDEF 035f9]
+//Ice statue
+DUPEITEM=035f8
+
+[ITEMDEF 035fa]
+TYPE=t_normal
+FLIP=1
+VALUE=184
+WEIGHT=14.0
+RESOURCES=14 i_water
+SKILLMAKE=Tinkering 95.7,Alchemy 50.0,Magery 85.1,t_tinker_tools
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Ice Statue (half finished)
+DUPELIST=035fb
+
+[ITEMDEF 035fb]
+//Ice statue (half finished)
+DUPEITEM=035fa
+
+[ITEMDEF 035fc]
+TYPE=t_normal
+FLIP=1
+VALUE=174
+WEIGHT=13.0
+RESOURCES=13 i_water
+SKILLMAKE=Tinkering 95.7,Alchemy 50.0,Magery 85.1,t_tinker_tools
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Ice Statue 2
+DUPELIST=035fd
+
+[ITEMDEF 035fd]
+//Ice statue 2
+DUPEITEM=035fc
+
+[ITEMDEF 035fe]
+NAME=bull statue
+TYPE=t_normal
+FLIP=1
+VALUE=174
+WEIGHT=13.0
+RESOURCES=13 i_water
+SKILLMAKE=Tinkering 95.7,Alchemy 50.0,Magery 85.1,t_tinker_tools
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Ice Statue (bull)
+DUPELIST=035ff,03600,03601
+
+[ITEMDEF 035ff]
+//Ice statue (bull)
+DUPEITEM=035fe
+
+[ITEMDEF 03600]
+//Ice statue (bull)
+DUPEITEM=035fe
+
+[ITEMDEF 03601]
+//Ice statue (bull)
+DUPEITEM=035fe
+
+[ITEMDEF 03602]
+//ice altar
+DUPEITEM=035e9
+
+[ITEMDEF 03603]
+//ice altar
+DUPEITEM=035e9
+
+[ITEMDEF 03604]
+//ice altar
+DUPEITEM=035e9
+
+[ITEMDEF 0364b]
+DEFNAME=i_statue_gargoyle
+VALUE=172
+WEIGHT=800.0
+RESOURCES=80 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Gargoyle Statue
+DUPELIST=0369b
+
+[ITEMDEF 0369b]
+//Gargoyle statue
+DUPEITEM=0364b
+
+[ITEMDEF 03bb3]
+DEFNAME=i_statue_ou
+NAME=Ultima Statue
+WEIGHT=130.0
+FLIP=1
+RESOURCES=12 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Ultima Statue
+DUPELIST=033b4
+
+[ITEMDEF 03bb4]
+//Ultima statue
+DUPEITEM=03bb3
+
+[ITEMDEF 040bc]
+DEFNAME=i_statue_medusa
+VALUE=68
+WEIGHT=120.0
+RESOURCES=12 i_rock_plain
+SKILLMAKE=Masonry 88.0
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Medusa
 
 
 [eof]
