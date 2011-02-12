@@ -3330,42 +3330,6 @@ DUPEITEM=03547
 //lava
 DUPEITEM=03547
 
-[ITEMDEF 035f6]
-//sand
-
-[ITEMDEF 035f7]
-//sand
-
-[ITEMDEF 035f8]
-//sand
-
-[ITEMDEF 035f9]
-//sand
-
-[ITEMDEF 035fa]
-//sand
-
-[ITEMDEF 035fb]
-//sand
-
-[ITEMDEF 035fc]
-//sand
-
-[ITEMDEF 035fd]
-//sand
-
-[ITEMDEF 035fe]
-//sand
-
-[ITEMDEF 035ff]
-//sand
-
-[ITEMDEF 03600]
-//sand
-
-[ITEMDEF 03601]
-//sand
-
 
 
 [eof]

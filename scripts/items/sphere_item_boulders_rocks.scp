@@ -15,7 +15,7 @@ VERSION=0.56b
 
 [ITEMDEF 0134f]
 DEFNAME=i_boulder
-TYPE=T_AROCK
+TYPE=t_arock
 WEIGHT=100
 CATEGORY=Boulders and Rocks
 SUBSECTION=Boulders
@@ -154,8 +154,7 @@ DEFNAME=i_rock_plain_x
 DUPEITEM=01363
 
 [ITEMDEF 01771]
-//rock
-TYPE=T_AROCK
+TYPE=t_arock
 WEIGHT=350
 CATEGORY=Boulders and Rocks
 SUBSECTION=Rocks
@@ -191,10 +190,9 @@ DUPEITEM=01771
 DUPEITEM=01771
 
 [ITEMDEF 01779]
-//rock
-TYPE=T_AROCK
+TYPE=t_arock
 WEIGHT=350
-CATEGORY=Boulders and Rocks (granit)
+CATEGORY=Boulders and Rocks (granite)
 SUBSECTION=Rocks
 DESCRIPTION=@
 

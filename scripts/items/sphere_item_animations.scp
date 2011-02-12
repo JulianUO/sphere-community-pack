@@ -11,46 +11,117 @@
 //
 VERSION=0.56b
 
+[ITEMDEF 091b]
+DEFNAME=i_fx_bee_swarm
+TYPE=t_trap_active
+CATEGORY=Animations
+SUBSECTION=Bee Swarms
+DESCRIPTION=Bee Swarm 1
+DUPELIST=091c,091d,091e,091f,0920,0921,0922
+
+[ITEMDEF 091c]
+//bee swarm 1
+DUPEITEM=091b
+
+[ITEMDEF 091d]
+//bee swarm 1
+DUPEITEM=091b
+
+[ITEMDEF 091e]
+//bee swarm 1
+DUPEITEM=091b
+
+[ITEMDEF 091f]
+//bee swarm 1
+DUPEITEM=091b
+
+[ITEMDEF 0920]
+//bee swarm 1
+DUPEITEM=091b
+
+[ITEMDEF 0921]
+//bee swarm 1
+DUPEITEM=091b
+
+[ITEMDEF 0922]
+//bee swarm 1
+DUPEITEM=091b
+
+[ITEMDEF 0923]
+DEFNAME=i_fx_bee_swarm2
+TYPE=t_trap_active
+CATEGORY=Animations
+SUBSECTION=Bee Swarms
+DESCRIPTION=Bee Swarm 2
+DUPELIST=0924,0925,0926,0927,0928,0929,092a
+
+[ITEMDEF 0924]
+//bee swarm  2
+DUPEITEM=0923
+
+[ITEMDEF 0925]
+//bee swarm  2
+DUPEITEM=0923
+
+[ITEMDEF 0926]
+//bee swarm  2
+DUPEITEM=0923
+
+[ITEMDEF 0927]
+//bee swarm  2
+DUPEITEM=0923
+
+[ITEMDEF 0928]
+//bee swarm  2
+DUPEITEM=0923
+
+[ITEMDEF 0929]
+//bee swarm  2
+DUPEITEM=0923
+
+[ITEMDEF 092a]
+//bee swarm  2
+DUPEITEM=0923
 
 [ITEMDEF 01ae5]
-DEFNAME=i_moongate_red_fx
+DEFNAME=i_fx_moongate_red
 TYPE=t_light_lit
-TDATA4=i_moongate_red_fx
+TDATA4=0
 CATEGORY=Animations
-SUBSECTION=Moongate Summoning (Red)
-DESCRIPTION=@
+SUBSECTION=Moongates
+DESCRIPTION=Red Moongate (summoning)
 DUPELIST=01ae6,01ae7,01ae8,01ae9,01aea,01aeb,01aec,01aed
 
 [ITEMDEF 01ae6]
-//summon moongate
+//summon red moongate
 DUPEITEM=01ae5
 
 [ITEMDEF 01ae7]
-//summon moongate
+//summon red moongate
 DUPEITEM=01ae5
 
 [ITEMDEF 01ae8]
-//summon moongate
+//summon red moongate
 DUPEITEM=01ae5
 
 [ITEMDEF 01ae9]
-//summon moongate
+//summon red moongate
 DUPEITEM=01ae5
 
 [ITEMDEF 01aea]
-//summon moongate
+//summon red moongate
 DUPEITEM=01ae5
 
 [ITEMDEF 01aeb]
-//summon moongate
+//summon red moongate
 DUPEITEM=01ae5
 
 [ITEMDEF 01aec]
-//summon moongate
+//summon red moongate
 DUPEITEM=01ae5
 
 [ITEMDEF 01aed]
-//summon moongate
+//summon red moongate
 DUPEITEM=01ae5
 
 [ITEMDEF 01af3]
@@ -58,525 +129,539 @@ DEFNAME=i_moongate_blue_fx
 TYPE=t_light_lit
 TDATA4=0
 CATEGORY=Animations
-SUBSECTION=Moongate Summoning (Blue)
-DESCRIPTION=@
+SUBSECTION=Moongates
+DESCRIPTION=Blue Moongate (summoning)
 DUPELIST=01af4,01af5,01af6,01af7,01af8,01af9,01afa,01afb
 
 [ITEMDEF 01af4]
-//summon moongate
+//summon blue moongate
 DUPEITEM=01af3
 
 [ITEMDEF 01af5]
-//summon moongate
+//summon blue moongate
 DUPEITEM=01af3
 
 [ITEMDEF 01af6]
-//summon moongate
+//summon blue moongate
 DUPEITEM=01af3
 
 [ITEMDEF 01af7]
-//summon moongate
+//summon blue moongate
 DUPEITEM=01af3
 
 [ITEMDEF 01af8]
-//summon moongate
+//summon blue moongate
 DUPEITEM=01af3
 
 [ITEMDEF 01af9]
-//summon moongate
+//summon blue moongate
 DUPEITEM=01af3
 
 [ITEMDEF 01afa]
-//summon moongate
+//summon blue moongate
 DUPEITEM=01af3
 
 [ITEMDEF 01afb]
-//summon moongate
+//summon blue moongate
 DUPEITEM=01af3
 
 [ITEMDEF 01ec6]
+DEFNAME=i_fx_falling_coins
 CATEGORY=Animations
 SUBSECTION=Falling Coins
 DESCRIPTION=@
 DUPELIST=01ec7,01ec8,01ec9
 
 [ITEMDEF 01ec7]
+//falling coins
 DUPEITEM=01ec6
 
 [ITEMDEF 01ec8]
+//falling coins
 DUPEITEM=01ec6
 
 [ITEMDEF 01ec9]
+//falling coins
 DUPEITEM=01ec6
 
 [ITEMDEF 01ed9]
-//magical door (looks like animated stone mask with blue sparklies)
+DEFNAME=i_fx_magicblueface_s
 CATEGORY=Animations
-SUBSECTION=Magic Door
-DESCRIPTION=@
+SUBSECTION=Magic Door Faces
+DESCRIPTION=Blue Face (south facing)
 DUPELIST=01eda,01edb,01edc,01edd,01ede,01edf,01ee0,01ee1
 
 [ITEMDEF 01eda]
-//magical door
+//blue face (south facing)
 DUPEITEM=01ed9
 
 [ITEMDEF 01edb]
-//magical door
+//blue face (south facing)
 DUPEITEM=01ed9
 
 [ITEMDEF 01edc]
-//magical door
+//blue face (south facing)
 DUPEITEM=01ed9
 
 [ITEMDEF 01edd]
-//magical door
+//blue face (south facing)
 DUPEITEM=01ed9
 
 [ITEMDEF 01ede]
-//magical door
+//blue face (south facing)
 DUPEITEM=01ed9
 
 [ITEMDEF 01edf]
-//magical door
+//blue face (south facing)
 DUPEITEM=01ed9
 
 [ITEMDEF 01ee0]
-//magical door
+//blue face (south facing)
 DUPEITEM=01ed9
 
 [ITEMDEF 01ee1]
-//magical door
+//blue face (south facing)
 DUPEITEM=01ed9
 
 [ITEMDEF 01ee2]
-//magical door
-DEFNAME=i_DOOR_MAGICAL
+DEFNAME=i_fx_magicstoneface_s
 CATEGORY=Animations
-SUBSECTION=Magical Door 2
-DESCRIPTION=@
-DUPELIST=01ee3,01ee4,01ee5,01ee6,01ee7,01ee8,01ee9,01eea,01eeb,01eec,01eed,01eee,01eef,01ef0,01ef1,01ef2,01ef3
+SUBSECTION=Magic Door Faces
+DESCRIPTION=Stone Face (south facing)
+DUPELIST=01ee3,01ee4,01ee5,01ee6,01ee7,01ee8,01ee9,01eea
 
 [ITEMDEF 01ee3]
-//magical door
+//stone face (south facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01ee4]
-//magical door
+//stone face (south facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01ee5]
-//magical door
+//stone face (south facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01ee6]
-//magical door
+//stone face (south facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01ee7]
-//magical door
+//stone face (south facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01ee8]
-//magical door
+//stone face (south facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01ee9]
-//magical door
+//stone face (south facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01eea]
-//magical door
+//stone face (south facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01eeb]
-//magical door
-DUPEITEM=01ee2
+DEFNAME=i_fx_magicblueface_e
 CATEGORY=Animations
-SUBSECTION=Magical Door 3
-DESCRIPTION=@
+SUBSECTION=Magic Door Faces
+DESCRIPTION=Blue Face (east facing)
+DUPELIST=01eec,01eed,01eee,01eef,01ef0,01ef1,01ef2,01ef3
 
 [ITEMDEF 01eec]
-//magical door
+//blue face (east facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01eed]
-//magical door
+//blue face (east facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01eee]
-//magical door
+//blue face (east facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01eef]
-//magical door
+//blue face (east facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01ef0]
-//magical door
+//blue face (east facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01ef1]
-//magical door
+//blue face (east facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01ef2]
-//magical door
+//blue face (east facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01ef3]
-//magical door
+//blue face (east facing)
 DUPEITEM=01ee2
 
 [ITEMDEF 01ef4]
-//magical door
-
+DEFNAME=i_fx_magicstoneface_e
 CATEGORY=Animations
-SUBSECTION=Magical Door 4
-DESCRIPTION=@
+SUBSECTION=Magic Door Faces
+DESCRIPTION=Stone Face (east facing)
 DUPELIST=01ef5,01ef6,01ef7,01ef8,01ef9,01efa,01efb,01efc
 
 [ITEMDEF 01ef5]
-//magical door
+//stone face (east facing)
 DUPEITEM=01ef4
 
 [ITEMDEF 01ef6]
-//magical door
+//stone face (east facing)
 DUPEITEM=01ef4
 
 [ITEMDEF 01ef7]
-//magical door
+//stone face (east facing)
 DUPEITEM=01ef4
 
 [ITEMDEF 01ef8]
-//magical door
+//stone face (east facing)
 DUPEITEM=01ef4
 
 [ITEMDEF 01ef9]
-//magical door
+//stone face (east facing)
 DUPEITEM=01ef4
 
 [ITEMDEF 01efa]
-//magical door
+//stone face (east facing)
 DUPEITEM=01ef4
 
 [ITEMDEF 01efb]
-//magical door
+//stone face (east facing)
 DUPEITEM=01ef4
 
 [ITEMDEF 01efc]
-//magical door
+//stone face (east facing)
 DUPEITEM=01ef4
 
 [ITEMDEF 01f1f]
-//spinning double head - magic?
 DEFNAME=i_fx_spin_head
 CATEGORY=Animations
-SUBSECTION=Spinning Double Head
-DESCRIPTION=@
+SUBSECTION=Magic Door Faces
+DESCRIPTION=Spinning Head
 DUPELIST=01f20,01f21,01f22
 
 [ITEMDEF 01f20]
-//head
+//spinning head
 DUPEITEM=01f1f
 
 [ITEMDEF 01f21]
-//head
+//spinning head
 DUPEITEM=01f1f
 
 [ITEMDEF 01f22]
-//head
+//spinning head
 DUPEITEM=01f1f
 
 [ITEMDEF 01fcb]
-//summon moongate
-DEFNAME=i_moongate_black_fx
+DEFNAME=i_fx_moongate_black
 TYPE=t_light_lit
 TDATA4=0
 CATEGORY=Animations
-SUBSECTION=Black Moongate
-DESCRIPTION=@
+SUBSECTION=Moongates
+DESCRIPTION=Black Moongate (summoning)
 DUPELIST=01fcc,01fcd,01fce,01fcf,01fd0,01fd1,01fd2,01fd3
 
 [ITEMDEF 01fcc]
-//summon moongate
+//summon black moongate
 DUPEITEM=01fcb
 
 [ITEMDEF 01fcd]
-//summon moongate
+//summon black moongate
 DUPEITEM=01fcb
 
 [ITEMDEF 01fce]
-//summon moongate
+//summon black moongate
 DUPEITEM=01fcb
 
 [ITEMDEF 01fcf]
-//summon moongate
+//summon black moongate
 DUPEITEM=01fcb
 
 [ITEMDEF 01fd0]
-//summon moongate
+//summon black moongate
 DUPEITEM=01fcb
 
 [ITEMDEF 01fd1]
-//summon moongate
+//summon black moongate
 DUPEITEM=01fcb
 
 [ITEMDEF 01fd2]
-//summon moongate
+//summon black moongate
 DUPEITEM=01fcb
 
 [ITEMDEF 01fd3]
-//summon moongate
+//summon black moongate
 DUPEITEM=01fcb
 
 [ITEMDEF 01fd4]
-//moongate
 DEFNAME=i_moongate_black
 TYPE=t_telepad
+CATEGORY=Animations
+SUBSECTION=Moongates
+DESCRIPTION=Black Moongate
 DUPELIST=01fd5,01fd6,01fd7,01fd8
 
 [ITEMDEF 01fd5]
-//moongate
+//moongate (black)
 DUPEITEM=01fd4
 
 [ITEMDEF 01fd6]
-//moongate
+//moongate (black)
 DUPEITEM=01fd4
 
 [ITEMDEF 01fd7]
-//moongate
+//moongate (black)
 DUPEITEM=01fd4
 
 [ITEMDEF 01fd8]
-//moongate
+//moongate (black)
 DUPEITEM=01fd4
 
 [ITEMDEF 01fde]
-//summon moongate
-DEFNAME=i_moongate_gray_fx
+DEFNAME=i_fx_moongate_gray
 TYPE=t_light_lit
 TDATA4=0
 CATEGORY=Animations
-SUBSECTION=Gray Moongate
-DESCRIPTION=@
+SUBSECTION=Moongates
+DESCRIPTION=Gray Moongate (summoning)
 DUPELIST=01fdf,01fe0,01fe1,01fe2,01fe3,01fe4,01fe5,01fe6
 
 [ITEMDEF 01fdf]
-//summon moongate
+//summon gray moongate
 DUPEITEM=01fde
 
 [ITEMDEF 01fe0]
-//summon moongate
+//summon gray moongate
 DUPEITEM=01fde
 
 [ITEMDEF 01fe1]
-//summon moongate
+//summon gray moongate
 DUPEITEM=01fde
 
 [ITEMDEF 01fe2]
-//summon moongate
+//summon gray moongate
 DUPEITEM=01fde
 
 [ITEMDEF 01fe3]
-//summon moongate
+//summon gray moongate
 DUPEITEM=01fde
 
 [ITEMDEF 01fe4]
-//summon moongate
+//summon gray moongate
 DUPEITEM=01fde
 
 [ITEMDEF 01fe5]
-//summon moongate
+//summon gray moongate
 DUPEITEM=01fde
 
 [ITEMDEF 01fe6]
-//summon moongate
+//summon gray moongate
 DUPEITEM=01fde
 
 [ITEMDEF 01fe7]
-//summon moongate
 DEFNAME=i_moongate_gray
 TYPE=t_telepad
+CATEGORY=Animations
+SUBSECTION=Moongates
+DESCRIPTION=Gray Moongate
 DUPELIST=01fe8,01fe9,01fea,01feb
 
 [ITEMDEF 01fe8]
-//summon moongate
+//moongate (gray)
 DUPEITEM=01fe7
 
 [ITEMDEF 01fe9]
-//summon moongate
+//moongate (gray)
 DUPEITEM=01fe7
 
 [ITEMDEF 01fea]
-//summon moongate
+//moongate (gray)
 DUPEITEM=01fe7
 
 [ITEMDEF 01feb]
-//summon moongate
+//moongate (gray)
 DUPEITEM=01fe7
 
+[ITEMDEF 022c6]
+DEFNAME=i_fx_reflect
+TYPE=t_spell
+CATEGORY=Miscellaneous
+SUBSECTION=Weirdness
+DESCRIPTION=Physical Reflect
+DUPELIST=022c7,022c8
+
+[ITEMDEF 022c7]
+//physical reflect
+DUPEITEM=022c6
+
+[ITEMDEF 022c8]
+//physical reflect
+DUPEITEM=022c6
+
 [ITEMDEF 036b0]
-//explosion
 DEFNAME=i_fx_explode
 TYPE=t_fire
 CATEGORY=Animations
-SUBSECTION=Explosion 1
-DESCRIPTION=@
+SUBSECTION=Explosions
+DESCRIPTION=@ 1
 DUPELIST=036b1,036b2,036b3,036b4,036b5,036b6,036b7,036b8,036b9,036ba,036bb,036bc
 
 [ITEMDEF 036b1]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036b2]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036b3]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036b4]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036b5]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036b6]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036b7]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036b8]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036b9]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036ba]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036bb]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036bc]
-//explosion
+//explosion 1
 DUPEITEM=036b0
 
 [ITEMDEF 036bd]
-//explosion
 DEFNAME=i_fx_explosion_2
 TYPE=t_fire
 CATEGORY=Animations
-SUBSECTION=Explosion 2
-DESCRIPTION=@
+SUBSECTION=Explosions
+DESCRIPTION=@ 2
 DUPELIST=036be,036bf,036c0,036c1,036c2,036c3,036c4,036c5,036c6,036c7,036c8,036c9
 
 [ITEMDEF 036be]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036bf]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036c0]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036c1]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036c2]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036c3]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036c4]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036c5]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036c6]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036c7]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036c8]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036c9]
-//explosion
+//explosion 2
 DUPEITEM=036bd
 
 [ITEMDEF 036ca]
-//explosion
 DEFNAME=i_fx_explosion_3
 TYPE=t_fire
 CATEGORY=Animations
-SUBSECTION=Explosion 3
-DESCRIPTION=@
+SUBSECTION=Explosions
+DESCRIPTION=@ 3
 DUPELIST=036cb,036cc,036cd,036ce,036cf,036d0,036d1,036d2,036d3
 
 [ITEMDEF 036cb]
-//explosion
+//explosion 3
 DUPEITEM=036ca
 
 [ITEMDEF 036cc]
-//explosion
+//explosion 3
 DUPEITEM=036ca
 
 [ITEMDEF 036cd]
-//explosion
+//explosion 3
 DUPEITEM=036ca
 
 [ITEMDEF 036ce]
-//explosion
+//explosion 3
 DUPEITEM=036ca
 
 [ITEMDEF 036cf]
-//explosion
+//explosion 3
 DUPEITEM=036ca
 
 [ITEMDEF 036d0]
-//explosion
+//explosion 3
 DUPEITEM=036ca
 
 [ITEMDEF 036d1]
-//explosion
+//explosion 3
 DUPEITEM=036ca
 
 [ITEMDEF 036d2]
-//explosion
+//explosion 3
 DUPEITEM=036ca
 
 [ITEMDEF 036d3]
-//explosion
-
+//explosion 3
 DUPEITEM=036ca
 
 [ITEMDEF 036d4]
-//large fireball
 DEFNAME=i_fx_fireball
 TYPE=t_fire
 CATEGORY=Animations
@@ -645,7 +730,6 @@ DUPEITEM=036d4
 DUPEITEM=036d4
 
 [ITEMDEF 036e4]
-//small fireball
 DEFNAME=i_fx_fireball_small
 TYPE=t_fire
 CATEGORY=Animations
@@ -714,7 +798,6 @@ DUPEITEM=036e4
 DUPEITEM=036e4
 
 [ITEMDEF 036f4]
-//fire snake
 DEFNAME=i_fx_firesnake
 TYPE=t_fire
 CATEGORY=Animations
@@ -759,12 +842,11 @@ DUPEITEM=036f4
 DUPEITEM=036f4
 
 [ITEMDEF 036fe]
-//explosion ball
 DEFNAME=i_fx_explode_ball
 TYPE=t_fire
 CATEGORY=Animations
-SUBSECTION=Explosion Ball
-DESCRIPTION=@
+SUBSECTION=Explosions
+DESCRIPTION=Ball Explosion
 DUPELIST=036ff,03700,03701,03702,03703,03704,03705,03706,03707,03708
 
 [ITEMDEF 036ff]
@@ -808,7 +890,6 @@ DUPEITEM=036fe
 DUPEITEM=036fe
 
 [ITEMDEF 03709]
-//fire column
 DEFNAME=i_fire_column
 TYPE=t_fire
 CATEGORY=Animations
@@ -937,7 +1018,6 @@ DUPEITEM=03709
 DUPEITEM=03709
 
 [ITEMDEF 03728]
-//smoke
 DEFNAME=i_fx_smoke
 TYPE=t_spell
 CATEGORY=Animations
@@ -994,7 +1074,6 @@ DUPEITEM=03728
 DUPEITEM=03728
 
 [ITEMDEF 03735]
-//animated smoke
 DEFNAME=i_fx_smoke_small
 TYPE=t_spell
 CATEGORY=Animations
@@ -1003,11 +1082,10 @@ DESCRIPTION=@
 DUPELIST=03736
 
 [ITEMDEF 03736]
-//animated smoke
+//smoke (small)
 DUPEITEM=03735
 
 [ITEMDEF 0373a]
-//sparkle
 DEFNAME=i_fx_bless_effect
 TYPE=t_spell
 CATEGORY=Animations
@@ -1016,77 +1094,66 @@ DESCRIPTION=@
 DUPELIST=0373b,0373c,0373d,0373e,0373f,03740,03741,03742,03743,03744,03745,03746,03747,03748,03749
 
 [ITEMDEF 0373b]
-//sparkle
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 0373c]
-//sparkle
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 0373d]
-//sparkle
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 0373e]
-//sparkle
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 0373f]
-//sparkle
-
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 03740]
-//sparkle
-
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 03741]
-//sparkle
-
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 03742]
-//sparkle
-
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 03743]
-//sparkle
-
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 03744]
-//sparkle
-
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 03745]
-//sparkle
-
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 03746]
-//sparkle
-
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 03747]
-//sparkle
-
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 03748]
-//sparkle
-
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 03749]
-//sparkle
+//blue sparkle
 DUPEITEM=0373a
 
 [ITEMDEF 0374a]
-//sparkle
 DEFNAME=i_fx_curse
 TYPE=t_spell
 CATEGORY=Animations
@@ -1095,82 +1162,66 @@ DESCRIPTION=@
 DUPELIST=0374b,0374c,0374d,0374e,0374f,03750,03751,03752,03753,03754,03755,03756,03757,03758,03759
 
 [ITEMDEF 0374b]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 0374c]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 0374d]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 0374e]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 0374f]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 03750]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 03751]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 03752]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 03753]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 03754]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 03755]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 03756]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 03757]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 03758]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 03759]
-//sparkle
-
+//red sparkle
 DUPEITEM=0374a
 
 [ITEMDEF 0375a]
-//sparkle
 DEFNAME=i_fx_sparkle
 TYPE=t_spell
 CATEGORY=Animations
@@ -1179,76 +1230,67 @@ DESCRIPTION=@
 DUPELIST=0375b,0375c,0375d,0375e,0375f,03760,03761,03762,03763,03764,03765,03766,03767,03768,03769
 
 [ITEMDEF 0375b]
-//sparkle
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 0375c]
-//sparkle
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 0375d]
-//sparkle
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 0375e]
-//sparkle
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 0375f]
-//sparkle
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 03760]
-//sparkle
-
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 03761]
-//sparkle
-
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 03762]
-//sparkle
-
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 03763]
-//sparkle
-
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 03764]
-//sparkle
-
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 03765]
-//sparkle
-
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 03766]
-//sparkle
-
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 03767]
-//sparkle
-
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 03768]
-//sparkle
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 03769]
-//sparkle
+//blue and gold sparkle 1
 DUPEITEM=0375a
 
 [ITEMDEF 0376a]
-//sparkle
-DEFNAME=i_fx_heal_effect
+DEFNAME=i_fx_heal
 TYPE=t_spell
 CATEGORY=Animations
 SUBSECTION=Blue/Gold Sparkle 2
@@ -1256,76 +1298,62 @@ DESCRIPTION=@
 DUPELIST=0376b,0376c,0376d,0376e,0376f,03770,03771,03772,03773,03774,03775,03776,03777,03778
 
 [ITEMDEF 0376b]
-//sparkle
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 0376c]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 0376d]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 0376e]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 0376f]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 03770]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 03771]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 03772]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 03773]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 03774]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 03775]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 03776]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 03777]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 03778]
-//sparkle
-
+//blue and gold sparkle 2
 DUPEITEM=0376a
 
 [ITEMDEF 03779]
-//sparkle
 DEFNAME=i_fx_sparkle_2
 TYPE=t_spell
 CATEGORY=Animations
@@ -1334,82 +1362,66 @@ DESCRIPTION=@
 DUPELIST=0377a,0377b,0377c,0377d,0377e,0377f,03780,03781,03782,03783,03784,03785,03786,03787,03788
 
 [ITEMDEF 0377a]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 0377b]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 0377c]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 0377d]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 0377e]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 0377f]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 03780]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 03781]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 03782]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 03783]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 03784]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 03785]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 03786]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 03787]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 03788]
-//sparkle
-
+//blue and purple sparkle
 DUPEITEM=03779
 
 [ITEMDEF 03789]
-//death vortex
 DEFNAME=i_fx_vortex
 TYPE=t_spell
 CATEGORY=Animations
@@ -1419,106 +1431,99 @@ DUPELIST=0378a,0378b,0378c,0378d,0378e,0378f,03790,03791,03792,03793,03794,03795
 
 [ITEMDEF 0378a]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 0378b]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 0378c]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 0378d]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 0378e]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 0378f]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 03790]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 03791]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 03792]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 03793]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 03794]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 03795]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 03796]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 03797]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 03798]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 03799]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 0379a]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 0379b]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 0379c]
 //death vortex
-
 DUPEITEM=03789
 
 [ITEMDEF 0379d]
 //death vortex
-
 DUPEITEM=03789
 
+[ITEMDEF 0379e]
+DEFNAME=i_fx_glow_arrow
+TYPE=t_spell
+CATEGORY=Animations
+SUBSECTION=Weirdness
+DESCRIPTION=Glowing Arrow
+
+[ITEMDEF 0379f]
+DEFNAME=i_fx_ebolt
+TYPE=t_spell
+CATEGORY=Animations
+SUBSECTION=Weirdness
+DESCRIPTION=Small Bolt
+
 [ITEMDEF 037a0]
-//field of blades
 DEFNAME=i_fx_blade_field
 TYPE=t_trap_Active
 CATEGORY=Animations
@@ -1536,116 +1541,93 @@ DUPEITEM=037a0
 
 [ITEMDEF 037a3]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037a4]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037a5]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037a6]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037a7]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037a8]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037a9]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037aa]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037ab]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037ac]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037ad]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037ae]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037af]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037b0]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037b1]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037b2]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037b3]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037b4]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037b5]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037b6]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037b7]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037b8]
 //field of blades
-
 DUPEITEM=037a0
 
 [ITEMDEF 037b9]
-//glow
 DEFNAME=i_fx_glow
 TYPE=t_spell
 CATEGORY=Animations
@@ -1654,27 +1636,22 @@ DESCRIPTION=@
 DUPELIST=037ba,037bb,037bc,037bd
 
 [ITEMDEF 037ba]
-//glow
-
+//glow 1
 DUPEITEM=037b9
 
 [ITEMDEF 037bb]
-//glow
-
+//glow 1
 DUPEITEM=037b9
 
 [ITEMDEF 037bc]
-//glow
-
+//glow 1
 DUPEITEM=037b9
 
 [ITEMDEF 037bd]
-//glow
-
+//glow 1
 DUPEITEM=037b9
 
 [ITEMDEF 037be]
-//glow
 DEFNAME=i_fx_glow2
 TYPE=t_spell
 CATEGORY=Animations
@@ -1683,32 +1660,26 @@ DESCRIPTION=@
 DUPELIST=037bf,037c0,037c1,037c2,037c3
 
 [ITEMDEF 037bf]
-//glow
-
+//glow 2
 DUPEITEM=037be
 
 [ITEMDEF 037c0]
-//glow
-
+//glow 2
 DUPEITEM=037be
 
 [ITEMDEF 037c1]
-//glow
-
+//glow 2
 DUPEITEM=037be
 
 [ITEMDEF 037c2]
-//glow
-
+//glow 2
 DUPEITEM=037be
 
 [ITEMDEF 037c3]
-//glow
-
+//glow 2
 DUPEITEM=037be
 
 [ITEMDEF 037c4]
-//glow
 DEFNAME=i_fx_glow_spike
 TYPE=t_spell
 CATEGORY=Animations
@@ -1717,42 +1688,34 @@ DESCRIPTION=@
 DUPELIST=037c5,037c6,037c7,037c8,037c9,037ca,037cb
 
 [ITEMDEF 037c5]
-//glow
-
+//glow 3
 DUPEITEM=037c4
 
 [ITEMDEF 037c6]
-//glow
-
+//glow 3
 DUPEITEM=037c4
 
 [ITEMDEF 037c7]
-//glow
-
+//glow 3
 DUPEITEM=037c4
 
 [ITEMDEF 037c8]
-//glow
-
+//glow 3
 DUPEITEM=037c4
 
 [ITEMDEF 037c9]
-//glow
-
+//glow 3
 DUPEITEM=037c4
 
 [ITEMDEF 037ca]
-//glow
-
+//glow 3
 DUPEITEM=037c4
 
 [ITEMDEF 037cb]
-//glow
-
+//glow 3
 DUPEITEM=037c4
 
 [ITEMDEF 037cc]
-//death vortex
 DEFNAME=i_fx_vortex_full
 TYPE=t_spell
 CATEGORY=Animations
@@ -1761,315 +1724,299 @@ DESCRIPTION=@
 DUPELIST=037cd,037ce,037cf,037d0,037d1,037d2,037d3,037d4,037d5,037d6,037d7,037d8,037d9,037da,037db,037dc,037dd,037de,037df,037e0,037e1,037e2,037e3,037e4
 
 [ITEMDEF 037cd]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037ce]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037cf]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037d0]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037d1]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037d2]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037d3]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037d4]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037d5]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037d6]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037d7]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037d8]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037d9]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037da]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037db]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037dc]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037dd]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037de]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037df]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037e0]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037e1]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037e2]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037e3]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037e4]
-//death vortex
-
+//energy vortex
 DUPEITEM=037cc
 
 [ITEMDEF 037eb]
-//field of blades
 DEFNAME=i_fx_blade_spirit_1
 TYPE=t_trap_active
 CATEGORY=Animations
-SUBSECTION=Blade Spirits
+SUBSECTION=Blade Spirit
 DESCRIPTION=@
 DUPELIST=037ec,037ed,037ee,037ef,037f0,037f1,037f2,037f3,037f4,037f5,037f6,037f7,037f8,037f9,037fa,037fb,037fc,037fd,037fe,037ff,03800,03801,03802,03803,03804,03805,03806,03807,03808,03809,0380a,0380b,0380c,0380d,0380e,0380f
 
 [ITEMDEF 037ec]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037ed]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037ee]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037ef]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037f0]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037f1]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037f2]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037f3]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037f4]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037f5]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037f6]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037f7]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037f8]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037f9]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037fa]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037fb]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037fc]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037fd]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037fe]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 037ff]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 03800]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 03801]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 03802]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 03803]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 03804]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 03805]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 03806]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 03807]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 03808]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 03809]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 0380a]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 0380b]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 0380c]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 0380d]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 0380e]
-//field of blades
-
+//blade spirit
 DUPEITEM=037eb
 
 [ITEMDEF 0380f]
-//field of blades
+//blade spirit
 DUPEITEM=037eb
 
+[ITEMDEF 03818]
+DEFNAME=i_fx_energy_ray
+TYPE=t_spell
+CATEGORY=Animations
+SUBSECTION=Weirdness
+DESCRIPTION=Strange White Squiggle
+DUPELIST=03819,0381a,0381b,0381c,0381d,0381e,0381f,03820,03821
+
+[ITEMDEF 03819]
+//white squiggle
+DUPEITEM=03818
+
+[ITEMDEF 0381a]
+//white squiggle
+DUPEITEM=03818
+
+[ITEMDEF 0381b]
+//white squiggle
+DUPEITEM=03818
+
+[ITEMDEF 0381c]
+//white squiggle
+DUPEITEM=03818
+
+[ITEMDEF 0381d]
+//white squiggle
+DUPEITEM=03818
+
+[ITEMDEF 0381e]
+//white squiggle
+DUPEITEM=03818
+
+[ITEMDEF 0381f]
+//white squiggle
+DUPEITEM=03818
+
+[ITEMDEF 03820]
+//white squiggle
+DUPEITEM=03818
+
+[ITEMDEF 03821]
+//white squiggle
+DUPEITEM=03818
+
+
 [ITEMDEF 03914]
-//Field of Poison
 DEFNAME=i_fx_poison_field
 TYPE=t_spell
 CATEGORY=Animations
@@ -2078,57 +2025,50 @@ DESCRIPTION=@ East/West
 DUPELIST=03915,03916,03917,03918,03919,0391a,0391b,0391c,0391d,0391e,0391f,03920,03921,03922,03923,03924,03925,03926,03927,03928,03929
 
 [ITEMDEF 03915]
-//Field of Poison
-
+//poison field (e/w)
 DUPEITEM=03914
 
 [ITEMDEF 03916]
-//Field of Poison
-
+//poison field (e/w)
 DUPEITEM=03914
 
 [ITEMDEF 03917]
-//Field of Poison
-
+//poison field (e/w)
 DUPEITEM=03914
 
 [ITEMDEF 03918]
-//Field of Poison
-
+//poison field (e/w)
 DUPEITEM=03914
 
 [ITEMDEF 03919]
-//Field of Poison
-
+//poison field (e/w)
 DUPEITEM=03914
 
 [ITEMDEF 0391a]
-//Field of Poison
-
+//poison field (e/w)
 DUPEITEM=03914
 
 [ITEMDEF 0391b]
-//Field of Poison
+//poison field (e/w)
 DUPEITEM=03914
 
 [ITEMDEF 0391c]
-//Field of Poison
+//poison field (e/w)
 DUPEITEM=03914
 
 [ITEMDEF 0391d]
-//Field of Poison
+//poison field (e/w)
 DUPEITEM=03914
 
 [ITEMDEF 0391e]
-//Field of Poison
+//poison field (e/w)
 DUPEITEM=03914
 
 [ITEMDEF 0391f]
-//Field of Poison
+//poison field (e/w)
 DUPEITEM=03914
 
 [ITEMDEF 03920]
-//Field of Poison
 DEFNAME=i_fx_poison_field_ns
 DUPEITEM=03914
 CATEGORY=Animations
@@ -2136,43 +2076,42 @@ SUBSECTION=Poison Field
 DESCRIPTION=@ North/South
 
 [ITEMDEF 03921]
-//Field of Poison
+//poison field (n/s)
 DUPEITEM=03914
 
 [ITEMDEF 03922]
-//Field of Poison
+//poison field (n/s)
 DUPEITEM=03914
 
 [ITEMDEF 03923]
-//Field of Poison
+//poison field (n/s)
 DUPEITEM=03914
 
 [ITEMDEF 03924]
-//Field of Poison
+//poison field (n/s)
 DUPEITEM=03914
 
 [ITEMDEF 03925]
-//Field of Poison
+//poison field (n/s)
 DUPEITEM=03914
 
 [ITEMDEF 03926]
-//Field of Poison
+//poison field (n/s)
 DUPEITEM=03914
 
 [ITEMDEF 03927]
-//Field of Poison
+//poison field (n/s)
 DUPEITEM=03914
 
 [ITEMDEF 03928]
-//Field of Poison
+//poison field (n/s)
 DUPEITEM=03914
 
 [ITEMDEF 03929]
-//Field of Poison
+//poison field (n/s)
 DUPEITEM=03914
 
 [ITEMDEF 03946]
-//field of energy
 DEFNAME=i_fx_energy_field
 TYPE=t_spell
 CATEGORY=Animations
@@ -2182,156 +2121,125 @@ DUPELIST=03947,03948,03949,0394a,0394b,0394c,0394d,0394e,0394f,03950,03951,03952
 
 [ITEMDEF 03947]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03948]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03949]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0394a]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0394b]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0394c]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0394d]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0394e]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0394f]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03950]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03951]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03952]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03953]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03954]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03955]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03956]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03957]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03958]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03959]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0395a]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0395b]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0395c]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0395d]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0395e]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 0395f]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03960]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03961]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03962]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03963]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03964]
 //field of energy
-
 DUPEITEM=03946
 
 [ITEMDEF 03967]
-//field of paralysis
 DEFNAME=i_fx_field_paralyze
 TYPE=t_spell
 CATEGORY=Animations
@@ -2357,306 +2265,318 @@ DUPEITEM=03967
 
 [ITEMDEF 0396c]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 0396d]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 0396e]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 0396f]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03970]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03971]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03972]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03973]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03974]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03975]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03976]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03977]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03978]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03979]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 0397a]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 0397b]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 0397c]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 0397d]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 0397e]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 0397f]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03980]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03981]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03982]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03983]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03984]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03985]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03986]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03987]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03988]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 03989]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 0398a]
 //field of paralysis
-
 DUPEITEM=03967
 
 [ITEMDEF 0398c]
-//Field of fire
 DEFNAME=i_fx_field_fire
 TYPE=t_fire
 CATEGORY=Animations
 SUBSECTION=Fire Field 1
 DESCRIPTION=@
-DUPELIST=0398d,0398e,0398f,03990,03991,03992,03993,03994,03995,03e27
-
+DUPELIST=0398d,0398e,0398f,03990,03991,03992,03993,03994,03995
 ON=@Create
-MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 0398d]
-//Field of fire
-
+//fire field 1 (e/w)
 DUPEITEM=0398c
 
 [ITEMDEF 0398e]
-//Field of fire
-
+//fire field 1 (e/w)
 DUPEITEM=0398c
 
 [ITEMDEF 0398f]
-//Field of fire
-
+//fire field 1 (e/w)
 DUPEITEM=0398c
 
 [ITEMDEF 03990]
-//Field of fire
-
+//fire field 1 (e/w)
 DUPEITEM=0398c
 
 [ITEMDEF 03991]
-//Field of fire
-
+//fire field 1 (e/w)
 DUPEITEM=0398c
 
 [ITEMDEF 03992]
-//Field of fire
-
+//fire field 1 (e/w)
 DUPEITEM=0398c
 
 [ITEMDEF 03993]
-//Field of fire
-
+//fire field 1 (e/w)
 DUPEITEM=0398c
 
 [ITEMDEF 03994]
-//Field of fire
-
+//fire field 1 (e/w)
 DUPEITEM=0398c
 
 [ITEMDEF 03995]
-//Field of fire
+//fire field 1 (e/w)
 DUPEITEM=0398c
 
 [ITEMDEF 03996]
-//Field of fire
 DEFNAME=i_fx_field_fire_ns
 TYPE=t_fire
 CATEGORY=Animations
 SUBSECTION=Fire Field 2
 DESCRIPTION=@
-DUPELIST=03997,03998,03999,0399a,0399b,0399c,0399d,0399e,0399f,03e31
-
+DUPELIST=03997,03998,03999,0399a,0399b,0399c,0399d,0399e,0399f
 ON=@Create
-MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 03997]
-//Field of fire
-
+//fire field 2 (n/s)
 DUPEITEM=03996
 
 [ITEMDEF 03998]
-//Field of Fire
-
+//fire field 2 (n/s)
 DUPEITEM=03996
 
 [ITEMDEF 03999]
-//Field of fire
-
+//fire field 2 (n/s)
 DUPEITEM=03996
 
 [ITEMDEF 0399a]
-//Field of fire
-
+//fire field 2 (n/s)
 DUPEITEM=03996
 
 [ITEMDEF 0399b]
-//Field of fire
-
+//fire field 2 (n/s)
 DUPEITEM=03996
 
 [ITEMDEF 0399c]
-//Field of fire
-
+//fire field 2 (n/s)
 DUPEITEM=03996
 
 [ITEMDEF 0399d]
-//Field of fire
-
+//fire field 2 (n/s)
 DUPEITEM=03996
 
 [ITEMDEF 0399e]
-//Field of fire
-
+//fire field 2 (n/s)
 DUPEITEM=03996
 
 [ITEMDEF 0399f]
-//Field of Fire
+//fire field 2 (n/s)
 DUPEITEM=03996
 
 [ITEMDEF 03e27]
-//animated wall of flames
-DUPEITEM=0398c
+DEFNAME=i_fx_field_fire_3
+TYPE=t_fire
+VALUE=1
+CATEGORY=Animations
+SUBSECTION=Fire Field
+DESCRIPTION=Fire Field 3
+DUPELIST=03e28,03e29,03e2a,03e2b,03e2c,03e2d,03e2e,03e2f,03e30
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 03e28]
+//wall of flames
+DUPEITEM=03e27
+
+[ITEMDEF 03e29]
+//wall of flames
+DUPEITEM=03e27
+
+[ITEMDEF 03e2a]
+//wall of flames
+DUPEITEM=03e27
+
+[ITEMDEF 03e2b]
+//wall of flames
+DUPEITEM=03e27
+
+[ITEMDEF 03e2c]
+//wall of flames
+DUPEITEM=03e27
+
+[ITEMDEF 03e2d]
+//wall of flames
+DUPEITEM=03e27
+
+[ITEMDEF 03e2e]
+//wall of flames
+DUPEITEM=03e27
+
+[ITEMDEF 03e2f]
+//wall of flames
+DUPEITEM=03e27
+
+[ITEMDEF 03e30]
+//wall of flames
+DUPEITEM=03e27
 
 [ITEMDEF 03e31]
+DEFNAME=i_fx_field_fire_4
+TYPE=t_fire
+VALUE=1
+CATEGORY=Animations
+SUBSECTION=Fire Field
+DESCRIPTION=Fire Field 4
+DUPELIST=03e32,03e33,03e34,03e35,03e36,03e37,03e38,03e39,03e3a
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 03e32]
 //wall of flames
-DUPEITEM=03996
+DUPEITEM=03e31
 
-[ITEMDEF 0379e]
-//glowing arrow
-DEFNAME=i_fx_glow_arrow
-TYPE=t_spell
-CATEGORY=Miscellaneous
-SUBSECTION=Weirdness
-DESCRIPTION=Glowing Arrow
+[ITEMDEF 03e33]
+//wall of flames
+DUPEITEM=03e31
 
-[ITEMDEF 0379f]
-//small bolt
-DEFNAME=i_fx_ebolt
-TYPE=t_spell
-CATEGORY=Miscellaneous
-SUBSECTION=Weirdness
-DESCRIPTION=Small Bolt
+[ITEMDEF 03e34]
+//wall of flames
+DUPEITEM=03e31
 
-[ITEMDEF 03818]
-DEFNAME=i_fx_energy_ray
-TYPE=t_spell
-CATEGORY=Miscellaneous
-SUBSECTION=Weirdness
-DESCRIPTION=Strange White Squiggle
+[ITEMDEF 03e35]
+//wall of flames
+DUPEITEM=03e31
+
+[ITEMDEF 03e36]
+//wall of flames
+DUPEITEM=03e31
+
+[ITEMDEF 03e37]
+//wall of flames
+DUPEITEM=03e31
+
+[ITEMDEF 03e38]
+//wall of flames
+DUPEITEM=03e31
+
+[ITEMDEF 03e39]
+//wall of flames
+DUPEITEM=03e31
+
+[ITEMDEF 03e3a]
+//wall of flames
+DUPEITEM=03e31
 
 [ITEMDEF 03ee8]
-//strange yellow dot
 DEFNAME=i_fx_yellow_dot
-CATEGORY=Miscellaneous
+TYPE=t_spell
+CATEGORY=Animations
 SUBSECTION=Weirdness
 DESCRIPTION=Strange Yellow Dot
 

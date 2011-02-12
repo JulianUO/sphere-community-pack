@@ -13,105 +13,6 @@
 //
 VERSION=0.56b
 
-[itemdef 02409]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Banners and Tapestries
-SUBSECTION=Japanese
-DESCRIPTION=@
-DUPELIST=0240a
-
-[itemdef 0240a]
-DUPEITEM=02409
-
-[itemdef 0240b]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Banners and Tapestries
-SUBSECTION=Japanese
-DESCRIPTION=@
-DUPELIST=0240c
-
-[itemdef 0240c]
-DUPEITEM=0240b
-
-[itemdef 0240d]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Banners and Tapestries
-SUBSECTION=Japanese
-DESCRIPTION=@
-DUPELIST=0240e
-
-[itemdef 0240e]
-DUPEITEM=0240d
-
-[itemdef 0240f]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Banners and Tapestries
-SUBSECTION=Japanese
-DESCRIPTION=@
-DUPELIST=02410
-
-[itemdef 02410]
-DUPEITEM=0240f
-
-[itemdef 02411]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Banners and Tapestries
-SUBSECTION=Japanese
-DESCRIPTION=@
-DUPELIST=02412
-
-[itemdef 02412]
-DUPEITEM=02411
-
-[itemdef 02413]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Banners and Tapestries
-SUBSECTION=Japanese
-DESCRIPTION=@
-DUPELIST=02414
-
-[itemdef 02414]
-DUPEITEM=02413
-
-[itemdef 02415]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Banners and Tapestries
-SUBSECTION=Japanese
-DESCRIPTION=@
-DUPELIST=02416
-
-[itemdef 02416]
-DUPEITEM=02415
-
-[itemdef 02417]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Banners and Tapestries
-SUBSECTION=Japanese
-DESCRIPTION=@
-DUPELIST=02418
-
-[itemdef 02418]
-DUPEITEM=02417
-
-[itemdef 02886]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Banners and Tapestries
-SUBSECTION=Japanese
-DESCRIPTION=@
-DUPELIST=02887
-
-[itemdef 02887]
-DUPEITEM=02886
-
 [itemdef 0295c]
 TYPE=t_normal
 RESOURCES=100 i_log
@@ -460,49 +361,6 @@ DUPELIST=024ca
 TYPE=t_light_out
 DUPEITEM=024c9
 
-[itemdef 02846]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Sculptures
-DESCRIPTION=@
-DUPELIST=02847
-
-[itemdef 02847]
-DUPEITEM=02846
-
-[itemdef 02848]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Sculptures
-DESCRIPTION=@
-DUPELIST=02849
-
-[itemdef 02849]
-DUPEITEM=02848
-
-[itemdef 02419]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Sculptures
-DESCRIPTION=@
-
-[itemdef 0241a]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Sculptures
-DESCRIPTION=@
-
-[itemdef 0241b]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Wall Carvings & Statues
-SUBSECTION=Sculptures
-DESCRIPTION=@
-
 [itemdef 024ad]
 TYPE=t_normal
 RESOURCES=100 i_log
@@ -661,17 +519,6 @@ RESOURCES=100 i_log
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=@
-
-[itemdef 0234e]
-TYPE=t_normal
-RESOURCES=100 i_log
-CATEGORY=Decoration - Banners and Tapestries
-SUBSECTION=Tapestries
-DESCRIPTION=@
-DUPELIST=0234f
-
-[itemdef 0234f]
-DUPEITEM=0234e
 
 [itemdef 02842]
 TYPE=t_normal
