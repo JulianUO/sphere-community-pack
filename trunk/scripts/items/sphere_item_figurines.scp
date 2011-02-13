@@ -1792,10 +1792,10 @@ DESCRIPTION=Snake (silver serpent)
 DEFNAME=i_pet_spider_lord
 NAME=spider lord
 TYPE=t_figurine
-TDATA3=c_spider_lord
+TDATA3=c_champ_mephitis
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
-DESCRIPTION=Spider Lord
+DESCRIPTION=Spider Lord (Mephitis)
 
 [ITEMDEF 025c4]
 DEFNAME=i_pet_spider_dread
