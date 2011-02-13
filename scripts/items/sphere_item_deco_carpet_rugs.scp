@@ -552,58 +552,58 @@ SKILLMAKE=Tailoring 58.9,t_sewing_kit
 CATEGORY=Decoration - Carpets & Rugs
 SUBSECTION=Rug 2
 DESCRIPTION=Worn Rug
-DUPEITEM=01de2,01de3,01de4,01de5,01de6,01de7,01de8,01de9,01dea,01deb,01dec,01ded,01dee
+DUPELIST=01de2,01de3,01de4,01de5,01de6,01de7,01de8,01de9,01dea,01deb,01dec,01ded,01dee
 
 [ITEMDEF 01de2]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01de3]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01de4]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01de5]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01de6]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01de7]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01de8]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01de9]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01dea]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01deb]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01dec]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01ded]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01dee]
-//rug
+//rug worn 2
 DUPEITEM=01de1
 
 [ITEMDEF 01def]

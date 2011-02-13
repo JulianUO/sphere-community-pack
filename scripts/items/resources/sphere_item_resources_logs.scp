@@ -18,11 +18,12 @@ VERSION=0.56b
 //////// OSI LOGS
 ///////////////////////////////////////////////////////////////
 // This are the logs used in OSI.
+
 [ITEMDEF 01bdd]
 DEFNAME=i_log
 NAME=log%s
 VALUE=1
-TYPE=T_LOG
+TYPE=t_log
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
@@ -30,10 +31,10 @@ DESCRIPTION=Log
 DUPELIST=01bde,01bdf,01be0,01be1,01be2
 
 [ITEMDEF i_log_oak]
-NAME=oak log%s
 ID=i_log
+NAME=oak log%s
 VALUE=5
-TYPE=T_LOG
+TYPE=t_log
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
@@ -43,10 +44,10 @@ ON=@Create
 COLOR=color_o_oak
 
 [ITEMDEF i_log_ash]
-NAME=ash log%s
 ID=i_log
+NAME=ash log%s
 VALUE=5
-TYPE=T_LOG
+TYPE=t_log
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
@@ -56,10 +57,10 @@ ON=@Create
 COLOR=color_o_ash
 
 [ITEMDEF i_log_yew]
-NAME=yew log%s
 ID=i_log
+NAME=yew log%s
 VALUE=5
-TYPE=T_LOG
+TYPE=t_log
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
@@ -69,10 +70,10 @@ ON=@Create
 COLOR=color_o_yew
 
 [ITEMDEF i_log_heartwood]
-NAME=heartwood log%s
 ID=i_log
+NAME=heartwood log%s
 VALUE=5
-TYPE=T_LOG
+TYPE=t_log
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
@@ -82,10 +83,10 @@ ON=@Create
 COLOR=color_o_heartwood
 
 [ITEMDEF i_log_bloodwood]
-NAME=bloodwood log%s
 ID=i_log
+NAME=bloodwood log%s
 VALUE=5
-TYPE=T_LOG
+TYPE=t_log
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
@@ -95,10 +96,10 @@ ON=@Create
 COLOR=color_o_bloodwood
 
 [ITEMDEF i_log_frostwood]
-NAME=frostwood log%s
 ID=i_log
+NAME=frostwood log%s
 VALUE=5
-TYPE=T_LOG
+TYPE=t_log
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
@@ -106,5 +107,18 @@ DESCRIPTION=Frostwood Log
 
 ON=@Create
 COLOR=color_o_frostwood
+
+[ITEMDEF i_log_bamboo]
+ID=i_log
+NAME=bamboo
+TYPE=t_log
+VALUE=2
+WEIGHT=1.0
+CATEGORY=Resources - Lumberjacking
+SUBSECTION=Logs
+DESCRIPTION=Bamboo Log
+ON=@Create
+   COLOR=098
+
 
 [eof]

@@ -1,0 +1,2037 @@
+//****************************************************************************
+// SPHERE by : Menasoft ©1997-2007
+// www.sphereserver.net
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// FILE LAST UPDATED: Saturday, Feb 12, 2011
+//
+VERSION=0.56b
+
+[ITEMDEF 0e34]
+DEFNAME=i_scroll_blank
+TYPE=t_scroll_blank
+FLIP=1
+VALUE=9
+WEIGHT=0.2
+RESOURCES=1 i_parchment
+SKILLMAKE=Carpentry 25.7,t_carpentry
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls
+DESCRIPTION=Blank Scroll
+DUPELIST=0ef3
+
+[ITEMDEF 0e35]
+DEFNAME=i_scroll_x_red
+TYPE=t_scroll
+FLIP=1
+WEIGHT=0.2
+RESOURCES=1 i_scroll_blank,1 i_ribbon
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls
+DESCRIPTION=Blank Scroll (with red ribbon)
+DUPELIST=0ef4
+
+[ITEMDEF 0e36]
+DEFNAME=i_scroll_x_blue
+TYPE=t_scroll
+FLIP=1
+WEIGHT=0.2
+RESOURCES=1 i_scroll_blank,1 i_ribbon
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls
+DESCRIPTION=Blank scroll (with blue ribbon)
+DUPELIST=0ef5
+
+[ITEMDEF 0e37]
+DEFNAME=i_scroll_x_green
+TYPE=t_scroll
+FLIP=1
+WEIGHT=0.2
+RESOURCES=1 i_scroll_blank,1 i_ribbon
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls
+DESCRIPTION=Blank Scroll (with green ribbon)
+DUPELIST=0ef6
+
+[ITEMDEF 0e38]
+DEFNAME=i_scroll_x_teal
+TYPE=t_scroll
+FLIP=1
+WEIGHT=0.2
+RESOURCES=1 i_scroll_blank,1 i_ribbon
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls
+DESCRIPTION=Blank Scroll (with teal ribbon)
+DUPELIST=0ef7
+
+[ITEMDEF 0e39]
+DEFNAME=i_scroll_x_brown
+TYPE=t_scroll
+FLIP=1
+WEIGHT=0.2
+RESOURCES=1 i_scroll_blank,1 i_ribbon
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls
+DESCRIPTION=Blank Scroll (with brown ribbon)
+DUPELIST=0ef8
+
+[ITEMDEF 0e3a]
+DEFNAME=i_scroll_x_purp
+TYPE=t_scroll
+FLIP=1
+WEIGHT=0.2
+RESOURCES=1 i_scroll_blank,1 i_ribbon
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls
+DESCRIPTION=Blank Scroll (with purple ribbon)
+DUPELIST=0ef9
+
+[ITEMDEF 0ef3]
+//blank scroll (with red ribbon)
+DUPEITEM=0e34
+
+[ITEMDEF 0ef4]
+//blank scroll (with blue ribbon)
+DUPEITEM=0e35
+
+[ITEMDEF 0ef5]
+//blank scroll (with green ribbon)
+DUPEITEM=0e36
+
+[ITEMDEF 0ef6]
+//blank scroll (with teal ribbon)
+DUPEITEM=0e37
+
+[ITEMDEF 0ef7]
+//blank scroll (with brown ribbon)
+DUPEITEM=0e38
+
+[ITEMDEF 0ef8]
+//blank scroll (with brown ribbon)
+DUPEITEM=0e39
+
+[ITEMDEF 0ef9]
+//blank scroll (with purple ribbon)
+DUPEITEM=0e3a
+
+[ITEMDEF 01f2d]
+DEFNAME=i_scroll_reactive_armor
+TYPE=t_scroll
+VALUE=20
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_spider_silk,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 10.0,Magery 5.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 1st Circle
+DESCRIPTION=Reactive Armor
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_reactive_armor
+   MOREY={10 60}
+
+[ITEMDEF 01f2e]
+DEFNAME=i_scroll_clumsy
+TYPE=t_scroll
+VALUE=17
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_nightshade
+SKILLMAKE=Inscription 10.0,Magery 5.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 1st Circle
+DESCRIPTION=Clumsy Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_clumsy
+   MOREY={10 60}
+
+[ITEMDEF 01f2f]
+DEFNAME=i_scroll_create_food
+TYPE=t_scroll
+VALUE=20
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_ginseng,1 i_reag_mandrake_root
+SKILLMAKE=Inscription 10.0,Magery 5.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 1st Circle
+DESCRIPTION=Create Food Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_create_food
+   MOREY={10 60}
+
+[ITEMDEF 01f30]
+DEFNAME=i_scroll_feeblemind
+TYPE=t_scroll
+VALUE=17
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_nightshade,1 i_reag_ginseng
+SKILLMAKE=Inscription 10.0,Magery 5.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 1st Circle
+DESCRIPTION=Feeblemind Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_feeblemind
+   MOREY={10 60}
+
+[ITEMDEF 01f31]
+DEFNAME=i_scroll_heal
+TYPE=t_scroll
+VALUE=20
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_ginseng,1 i_reag_spider_silk
+SKILLMAKE=Inscription 10.0,Magery 5.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 1st Circle
+DESCRIPTION=Heal Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_heal
+   MOREY={10 60}
+
+[ITEMDEF 01f32]
+DEFNAME=i_scroll_magic_arrow
+TYPE=t_scroll
+VALUE=17
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_nightshade
+SKILLMAKE=Inscription 10.0,Magery 5.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 1st Circle
+DESCRIPTION=Magic Arrow Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_magic_arrow
+   MOREY={10 60}
+
+[ITEMDEF 01f33]
+DEFNAME=i_scroll_night_sight
+TYPE=t_scroll
+VALUE=17
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_spider_silk,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 10.0,Magery 5.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 1st Circle
+DESCRIPTION=Night Sight Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_night_sight
+   MOREY={10 60}
+
+[ITEMDEF 01f34]
+DEFNAME=i_scroll_weaken
+TYPE=t_scroll
+VALUE=17
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_nightshade
+SKILLMAKE=Inscription 10.0,Magery 5.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 1st Circle
+DESCRIPTION=Weaken Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_weaken
+   MOREY={10 60}
+
+[ITEMDEF 01f35]
+DEFNAME=i_scroll_agility
+TYPE=t_scroll
+VALUE=18
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root
+SKILLMAKE=Inscription 20.0,Magery 10.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 2nd Circle
+DESCRIPTION=Agility Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_agility
+   MOREY={20 60}
+
+[ITEMDEF 01f36]
+DEFNAME=i_scroll_cunning
+TYPE=t_scroll
+VALUE=18
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_mandrake_root,1 i_reag_nightshade
+SKILLMAKE=Inscription 20.0,Magery 10.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 2nd Circle
+DESCRIPTION=Cunning Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_cunning
+   MOREY={20 60}
+
+[ITEMDEF 01f37]
+DEFNAME=i_scroll_cure
+TYPE=t_scroll
+VALUE=18
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_ginseng
+SKILLMAKE=Inscription 20.0,Magery 10.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 2nd Circle
+DESCRIPTION=Cure Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_cure
+   MOREY={20 60}
+
+[ITEMDEF 01f38]
+DEFNAME=i_scroll_harm
+TYPE=t_scroll
+VALUE=18
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_nightshade,1 i_reag_spider_silk
+SKILLMAKE=Inscription 20.0,Magery 10.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 2nd Circle
+DESCRIPTION=Harm Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_harm
+   MOREY={20 60}
+
+[ITEMDEF 01f39]
+DEFNAME=i_scroll_magic_trap
+TYPE=t_scroll
+VALUE=21
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_spider_silk,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 20.0,Magery 10.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 2nd Circle
+DESCRIPTION=Magic Trap Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_magic_trap
+   MOREY={20 60}
+
+[ITEMDEF 01f3a]
+DEFNAME=i_scroll_magic_untrap
+TYPE=t_scroll
+VALUE=18
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 20.0,Magery 10.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 2nd Circle
+DESCRIPTION=Magic Remove Trap Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_magic_untrap
+   MOREY={20 60}
+
+[ITEMDEF 01f3b]
+DEFNAME=i_scroll_protection
+TYPE=t_scroll
+VALUE=21
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_ginseng,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 20.0,Magery 10.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 2nd Circle
+DESCRIPTION=Protection Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_protection
+   MOREY={20 60}
+
+[ITEMDEF 01f3c]
+DEFNAME=i_scroll_strength
+TYPE=t_scroll
+VALUE=18
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_mandrake_root,1 i_reag_nightshade
+SKILLMAKE=Inscription 20.0,Magery 10.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 2nd Circle
+DESCRIPTION=Strength Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_strength
+   MOREY={20 60}
+
+[ITEMDEF 01f3d]
+DEFNAME=i_scroll_bless
+TYPE=t_scroll
+VALUE=20
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_mandrake_root
+SKILLMAKE=Inscription 30.0,Magery 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 3rd Circle
+DESCRIPTION=Bless Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_bless
+   MOREY={30 70}
+
+[ITEMDEF 01f3e]
+DEFNAME=i_scroll_fireball
+TYPE=t_scroll
+VALUE=20
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 30.0,Magery 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 3rd Circle
+DESCRIPTION=Fireball Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_fireball
+   MOREY={30 70}
+
+[ITEMDEF 01f3f]
+DEFNAME=i_scroll_magic_lock
+TYPE=t_scroll
+VALUE=33
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_garlic,1 i_reag_ginseng,1 i_reag_mandrake_root,1 i_reag_nightshade,1 i_reag_spider_silk,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 30.0,Magery 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 3rd Circle
+DESCRIPTION=Magic Lock Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_magic_lock
+   MOREY={30 70}
+
+[ITEMDEF 01f40]
+DEFNAME=i_scroll_poison
+TYPE=t_scroll
+VALUE=17
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_nightshade
+SKILLMAKE=Inscription 30.0,Magery 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 3rd Circle
+DESCRIPTION=Poison Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_poison
+   MOREY={30 70}
+
+[ITEMDEF 01f41]
+DEFNAME=i_scroll_telekinesis
+TYPE=t_scroll
+VALUE=20
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root
+SKILLMAKE=Inscription 30.0,Magery 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 3rd Circle
+DESCRIPTION=telekinesis Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_telekinesis
+   MOREY={30 70}
+
+[ITEMDEF 01f42]
+DEFNAME=i_scroll_teleport
+TYPE=t_scroll
+VALUE=20
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root
+SKILLMAKE=Inscription 30.0,Magery 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 3rd Circle
+DESCRIPTION=Teleport Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_teleport
+   MOREY={30 70}
+
+[ITEMDEF 01f43]
+DEFNAME=i_scroll_unlock
+TYPE=t_scroll
+VALUE=20
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 30.0,Magery 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 3rd Circle
+DESCRIPTION=Unlock Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_unlock
+   MOREY={30 70}
+
+[ITEMDEF 01f44]
+DEFNAME=i_scroll_wall_of_stone
+TYPE=t_scroll
+VALUE=20
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_garlic
+SKILLMAKE=Inscription 30.0,Magery 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 3rd Circle
+DESCRIPTION=Wall of Stone Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_wall_of_stone
+   MOREY={30 70}
+
+[ITEMDEF 01f45]
+DEFNAME=i_scroll_archcure
+TYPE=t_scroll
+VALUE=25
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_ginseng,1 i_reag_mandrake_root
+SKILLMAKE=Inscription 40.0,Magery 30.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 4th Circle
+DESCRIPTION=Archcure Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_archcure
+   MOREY={40 75}
+
+[ITEMDEF 01f46]
+DEFNAME=i_scroll_archprotection
+TYPE=t_scroll
+VALUE=28
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_ginseng,1 i_reag_mandrake_root,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 40.0,Magery 30.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 4th Circle
+DESCRIPTION=Arch Protection Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_archprotection
+   MOREY={40 75}
+
+[ITEMDEF 01f47]
+DEFNAME=i_scroll_curse
+TYPE=t_scroll
+VALUE=25
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_nightshade,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 40.0,Magery 30.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 4th Circle
+DESCRIPTION=Curse Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_curse
+   MOREY={40 75}
+
+[ITEMDEF 01f48]
+DEFNAME=i_scroll_fire_field
+NAME=fire field scroll
+TYPE=t_scroll
+VALUE=25
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_spider_silk,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 40.0,Magery 30.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 4th Circle
+DESCRIPTION=Fire Field Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_fire_field
+   MOREY={40 75}
+
+[ITEMDEF 01f49]
+DEFNAME=i_scroll_greater_heal
+TYPE=t_scroll
+VALUE=28
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_ginseng,1 i_reag_mandrake_root,1 i_reag_spider_silk
+SKILLMAKE=Inscription 40.0,Magery 30.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 4th Circle
+DESCRIPTION=Greater Heal Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_greater_heal
+   MOREY={40 75}
+
+[ITEMDEF 01f4a]
+DEFNAME=i_scroll_lightning
+TYPE=t_scroll
+VALUE=25
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_mandrake_root,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 40.0,Magery 30.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 4th Circle
+DESCRIPTION=Lightning Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_lightning
+   MOREY={40 75}
+
+[ITEMDEF 01f4b]
+DEFNAME=i_scroll_mana_drain
+TYPE=t_scroll
+VALUE=25
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_mandrake_root,1 i_reag_spider_silk
+SKILLMAKE=Inscription 40.0,Magery 30.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 4th Circle
+DESCRIPTION=Mana Drain Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_mana_drain
+   MOREY={40 75}
+
+[ITEMDEF 01f4c]
+DEFNAME=i_scroll_recall
+TYPE=t_scroll
+VALUE=25
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_blood_moss,1 i_reag_mandrake_root
+SKILLMAKE=Inscription 40.0,Magery 30.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 4th Circle
+DESCRIPTION=Recall Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_recall
+   MOREY={40 75}
+
+[ITEMDEF 01f4d]
+DEFNAME=i_scroll_blade_spirits
+TYPE=t_scroll
+VALUE=27
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_mandrake_root,1 i_reag_nightshade
+SKILLMAKE=Inscription 50.0,Magery 40.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 5th Circle
+DESCRIPTION=Blade Spirits Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_blade_spirits
+   MOREY={50 80}
+
+[ITEMDEF 01f4e]
+DEFNAME=i_scroll_dispel_field
+TYPE=t_scroll
+VALUE=30
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_garlic,1 i_reag_spider_silk,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 50.0,Magery 40.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 5th Circle
+DESCRIPTION=Dispel Field Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_dispel_field
+   MOREY={50 80}
+
+[ITEMDEF 01f4f]
+DEFNAME=i_scroll_incognito
+TYPE=t_scroll
+VALUE=27
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_garlic,1 i_reag_nightshade
+SKILLMAKE=Inscription 50.0,Magery 40.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 5th Circle
+DESCRIPTION=Incognito Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_incognito
+   MOREY={50 80}
+
+[ITEMDEF 01f50]
+DEFNAME=i_scroll_magic_reflection
+NAME=magic reflection scroll
+TYPE=t_scroll
+VALUE=27
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_mandrake_root,1 i_reag_spider_silk
+SKILLMAKE=Inscription 50.0,Magery 40.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 5th Circle
+DESCRIPTION=Magic Reflection Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_magic_reflection
+   MOREY={50 80}
+
+[ITEMDEF 01f51]
+DEFNAME=i_scroll_mind_blast
+TYPE=t_scroll
+VALUE=30
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_mandrake_root,1 i_reag_nightshade,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 50.0,Magery 40.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 5th Circle
+DESCRIPTION=Mind Blast Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_mind_blast
+   MOREY={50 80}
+
+[ITEMDEF 01f52]
+DEFNAME=i_scroll_paralyze
+TYPE=t_scroll
+VALUE=27
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_mandrake_root,1 i_reag_spider_silk
+SKILLMAKE=Inscription 50.0,Magery 40.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 5th Circle
+DESCRIPTION=Paralyze Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_paralyze
+   MOREY={50 80}
+
+[ITEMDEF 01f53]
+DEFNAME=i_scroll_poison_field
+TYPE=t_scroll
+VALUE=27
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_nightshade,1 i_reag_spider_silk
+SKILLMAKE=Inscription 50.0,Magery 40.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 5th Circle
+DESCRIPTION=Poison Field Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_poison_field
+   MOREY={50 80}
+
+[ITEMDEF 01f54]
+DEFNAME=i_scroll_summon_creature
+TYPE=t_scroll
+VALUE=27
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_spider_silk
+SKILLMAKE=Inscription 50.0,Magery 40.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 5th Circle
+DESCRIPTION=Summon Creature Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_summon_creature
+   MOREY={50 80}
+
+[ITEMDEF 01f55]
+DEFNAME=i_scroll_dispel
+TYPE=t_scroll
+VALUE=29
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_mandrake_root,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 60.0,Magery 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 6th Circle
+DESCRIPTION=Dispel Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_dispel
+   MOREY={60 85}
+
+[ITEMDEF 01f56]
+DEFNAME=i_scroll_energy_bolt
+TYPE=t_scroll
+VALUE=26
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_nightshade
+SKILLMAKE=Inscription 60.0,Magery 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 6th Circle
+DESCRIPTION=Energy Bolt Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_energy_bolt
+   MOREY={60 85}
+
+[ITEMDEF 01f57]
+DEFNAME=i_scroll_explosion
+TYPE=t_scroll
+VALUE=29
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_mandrake_root,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 60.0,Magery 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 6th Circle
+DESCRIPTION=Explosion Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_explosion
+   MOREY={60 85}
+
+[ITEMDEF 01f58]
+DEFNAME=i_scroll_invisibility
+TYPE=t_scroll
+VALUE=26
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_nightshade
+SKILLMAKE=Inscription 60.0,Magery 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 6th Circle
+DESCRIPTION=Invisibility Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_invisibility
+   MOREY={60 85}
+
+[ITEMDEF 01f59]
+DEFNAME=i_scroll_mark
+TYPE=t_scroll
+VALUE=29
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_blood_moss,1 i_reag_mandrake_root
+SKILLMAKE=Inscription 60.0,Magery 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 6th Circle
+DESCRIPTION=Mark Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_mark
+   MOREY={60 85}
+
+[ITEMDEF 01f5a]
+DEFNAME=i_scroll_mass_curse
+TYPE=t_scroll
+VALUE=32
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_garlic,1 i_reag_mandrake_root,1 i_reag_nightshade,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 60.0,Magery 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 6th Circle
+DESCRIPTION=Mass Curse Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_mass_curse
+   MOREY={60 85}
+
+[ITEMDEF 01f5b]
+DEFNAME=i_scroll_paralyze_field
+TYPE=t_scroll
+VALUE=29
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_ginseng,1 i_reag_spider_silk
+SKILLMAKE=Inscription 60.0,Magery 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 6th Circle
+DESCRIPTION=Paralyze Field Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_paralyzation_field
+   MOREY={60 85}
+
+[ITEMDEF 01f5c]
+DEFNAME=i_scroll_reveal
+TYPE=t_scroll
+VALUE=26
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 60.0,Magery 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 6th Circle
+DESCRIPTION=Reveal Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_reveal
+   MOREY={60 85}
+
+[ITEMDEF 01f5d]
+DEFNAME=i_scroll_chain_lightning
+TYPE=t_scroll
+VALUE=34
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 70.0,Magery 60.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 7th Circle
+DESCRIPTION=Chain Lightning Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_chain_lightning
+   MOREY={70 90}
+
+[ITEMDEF 01f5e]
+DEFNAME=i_scroll_energy_field
+NAME=energy field scroll
+TYPE=t_scroll
+VALUE=34
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_mandrake_root,1 i_reag_spider_silk,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 70.0,Magery 60.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 7th Circle
+DESCRIPTION=Energy Field Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_energy_field
+   MOREY={70 90}
+
+[ITEMDEF 01f5f]
+DEFNAME=i_scroll_flamestrike
+TYPE=t_scroll
+VALUE=28
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_spider_silk,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 70.0,Magery 60.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 7th Circle
+DESCRIPTION=Flame Strike Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_flamestrike
+   MOREY={70 90}
+
+[ITEMDEF 01f60]
+DEFNAME=i_scroll_gate_travel
+TYPE=t_scroll
+VALUE=31
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_mandrake_root,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 70.0,Magery 60.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 7th Circle
+DESCRIPTION=Gate Travel Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_gate_travel
+   MOREY={70 90}
+
+[ITEMDEF 01f61]
+DEFNAME=i_scroll_mana_vampire
+TYPE=t_scroll
+VALUE=34
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_spider_silk
+SKILLMAKE=Inscription 70.0,Magery 60.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 7th Circle
+DESCRIPTION=Mana Vampire Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_mana_vampire
+   MOREY={70 90}
+
+[ITEMDEF 01f62]
+DEFNAME=i_scroll_mass_dispel
+TYPE=t_scroll
+VALUE=34
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_garlic,1 i_reag_mandrake_root,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 70.0,Magery 60.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 7th Circle
+DESCRIPTION=Mass Dispel Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_mass_dispel
+   MOREY={70 90}
+
+[ITEMDEF 01f63]
+DEFNAME=i_scroll_meteor_swarm
+TYPE=t_scroll
+VALUE=34
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_spider_silk,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 70.0,Magery 60.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 7th Circle
+DESCRIPTION=Meteor Storm Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_meteor_swarm
+   MOREY={70 90}
+
+[ITEMDEF 01f64]
+DEFNAME=i_scroll_polymorph
+TYPE=t_scroll
+VALUE=31
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_spider_silk
+SKILLMAKE=Inscription 70.0,Magery 60.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 7th Circle
+DESCRIPTION=Polymorph Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_polymorph
+   MOREY={70 90}
+
+[ITEMDEF 01f65]
+DEFNAME=i_scroll_earthquake
+TYPE=t_scroll
+VALUE=36
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_ginseng,1 i_reag_mandrake_root,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 80.0,Magery 70.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 8th Circle
+DESCRIPTION=Earthquake Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_earthquake
+   MOREY={80 100}
+
+[ITEMDEF 01f66]
+DEFNAME=i_scroll_energy_vortex
+TYPE=t_scroll
+VALUE=36
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_nightshade
+SKILLMAKE=Inscription 80.0,Magery 70.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 8th Circle
+DESCRIPTION=Energy Vortex Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_energy_vortex
+   MOREY={80 100}
+
+[ITEMDEF 01f67]
+DEFNAME=i_scroll_resurrection
+NAME=resurrection scroll
+TYPE=t_scroll
+VALUE=33
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_garlic,1 i_reag_ginseng
+SKILLMAKE=Inscription 80.0,Magery 70.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 8th Circle
+DESCRIPTION=Resurrection Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_resurrection
+   MOREY={80 100}
+
+[ITEMDEF 01f68]
+DEFNAME=i_scroll_summon_elem_air
+TYPE=t_scroll
+VALUE=33
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_spider_silk
+SKILLMAKE=Inscription 80.0,Magery 70.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 8th Circle
+DESCRIPTION=Summon Elemental Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_summon_elem_air
+   MOREY={80 100}
+
+[ITEMDEF 01f69]
+DEFNAME=i_scroll_summon_demon
+TYPE=t_scroll
+VALUE=36
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_spider_silk,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 80.0,Magery 70.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 8th Circle
+DESCRIPTION=Summon Demon Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_summon_demon
+   MOREY={80 100}
+
+[ITEMDEF 01f6a]
+DEFNAME=i_scroll_summon_elem_earth
+TYPE=t_scroll
+VALUE=33
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_spider_silk
+SKILLMAKE=Inscription 80.0,Magery 70.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 8th Circle
+DESCRIPTION=Summon Earth Elemental Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_summon_elem_earth
+   MOREY={80 100}
+
+[ITEMDEF 01f6b]
+DEFNAME=i_scroll_summon_elem_fire
+TYPE=t_scroll
+VALUE=36
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_spider_silk,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 80.0,Magery 70.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 8th Circle
+DESCRIPTION=Summon Fire Elemental Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_summon_elem_fire
+   MOREY={80 100}
+
+[ITEMDEF 01f6c]
+DEFNAME=i_scroll_summon_elem_water
+TYPE=t_scroll
+VALUE=33
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_spider_silk
+SKILLMAKE=Inscription 80.0,Magery 70.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - 8th Circle
+DESCRIPTION=Summon Water Elemental Scroll
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_summon_elem_water
+   MOREY={80 100}
+
+[ITEMDEF 01f6d]
+DEFNAME=i_scroll_x_green2
+TYPE=t_scroll
+WEIGHT=0.1
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Unnamed
+DESCRIPTION=Unnamed scroll
+DUPELIST=01f6e
+
+[ITEMDEF 01f6e]
+//unnamed scroll dark green border
+DUPEITEM=01f6d
+
+[ITEMDEF 01f6f]
+DEFNAME=i_scroll_x_teal2
+TYPE=t_scroll
+WEIGHT=0.1
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Unnamed
+DESCRIPTION=Unnamed scroll
+DUPELIST=01f70
+
+[ITEMDEF 01f70]
+//unnamed scroll teal border
+DUPEITEM=01f6f
+
+[ITEMDEF 01f71]
+DEFNAME=i_scroll_x_brown2
+TYPE=t_scroll
+WEIGHT=0.1
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Unnamed
+DESCRIPTION=Unnamed scroll
+DUPELIST=01f72
+
+[ITEMDEF 01f72]
+//unnamed scroll brown border
+DUPEITEM=01f71
+
+[ITEMDEF 02260]
+DEFNAME=i_scroll_animate_dead
+TYPE=t_scroll
+VALUE=78
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_daemon_blood,1 i_reag_grave_dust
+SKILLMAKE=Inscription 39.6,Necromancy 40.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Necromancy
+DESCRIPTION=Animate Dead
+ON=@Create
+   ATTR=attr_magic
+   MORE1=01
+   MOREX=s_animate_dead
+   MOREY={50 80}
+
+[ITEMDEF 02261]
+DEFNAME=i_scroll_blood_oath
+TYPE=t_scroll
+VALUE=44
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_daemon_blood
+SKILLMAKE=Inscription 19.6,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Blood Oath
+ON=@Create
+   ATTR=attr_magic
+   MORE1=02
+   MOREX=s_blood_oath
+   MOREY={50 80}
+
+[ITEMDEF 02262]
+DEFNAME=i_scroll_corpse_skin
+TYPE=t_scroll
+VALUE=74
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_batwing,1 i_reag_grave_dust
+SKILLMAKE=Inscription 19.6,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Corpse Skin
+ON=@Create
+   ATTR=attr_magic
+   MORE1=04
+   MOREX=s_corpse_skin
+   MOREY={50 80}
+
+[ITEMDEF 02263]
+DEFNAME=i_scroll_curse_weapon
+TYPE=t_scroll
+VALUE=44
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_pig_iron
+SKILLMAKE=Inscription 19.6,Necromancy 0.1
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Curse Weapon
+ON=@Create
+   ATTR=attr_magic
+   MORE1=08
+   MOREX=s_curse_weapon
+   MOREY={30 80}
+
+[ITEMDEF 02264]
+DEFNAME=i_scroll_evil_omen
+TYPE=t_scroll
+VALUE=74
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_batwing,1 i_reag_serpent_scale
+SKILLMAKE=Inscription 19.6,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Evil Omen
+ON=@Create
+   ATTR=attr_magic
+   MORE1=010
+   MOREX=s_evil_omen
+   MOREY={30 80}
+
+[ITEMDEF 02265]
+DEFNAME=i_scroll_horrific_beast
+TYPE=t_scroll
+VALUE=78
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_batwing,1 i_reag_daemon_blood
+SKILLMAKE=Inscription 39.6,Necromancy 40.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Horrific Beast
+ON=@Create
+   ATTR=attr_magic
+   MORE1=020
+   MOREX=s_horrific_beast
+   MOREY={30 80}
+
+[ITEMDEF 02266]
+DEFNAME=i_scroll_liche_form
+TYPE=t_scroll
+VALUE=114
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_nox_crystal,1 i_reag_daemon_blood,1 i_reag_grave_dust
+SKILLMAKE=Inscription 69.6,Necromancy 70.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Liche Form
+ON=@Create
+   ATTR=attr_magic
+   MORE1=040
+   MOREX=s_liche_form
+   MOREY={30 80}
+
+[ITEMDEF 02267]
+DEFNAME=i_scroll_mind_rot
+TYPE=t_scroll
+VALUE=106
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_batwing,1 i_reag_daemon_blood,1 i_reag_pig_iron
+SKILLMAKE=Inscription 29.6,Necromancy 30.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Mind Rot
+ON=@Create
+   ATTR=attr_magic
+   MORE1=080
+   MOREX=s_mind_rot
+   MOREY={30 80}
+
+[ITEMDEF 02268]
+DEFNAME=i_scroll_pain_spike
+TYPE=t_scroll
+VALUE=74
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_grave_dust,1 i_reag_pig_iron
+SKILLMAKE=Inscription 19.6,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Pain Spike
+ON=@Create
+   ATTR=attr_magic
+   MORE1=0100
+   MOREX=s_pain_spike
+   MOREY={30 80}
+
+[ITEMDEF 02269]
+DEFNAME=i_scroll_poison_strike
+TYPE=t_scroll
+VALUE=50
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_nox_crystal
+SKILLMAKE=Inscription 49.6,Necromancy 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Poison Strike
+ON=@Create
+   ATTR=attr_magic
+   MORE1=0200
+   MOREX=s_poison_strike
+   MOREY={50.0 100.0}
+
+[ITEMDEF 0226a]
+DEFNAME=i_scroll_strangle
+TYPE=t_scroll
+VALUE=83
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_daemon_blood,1 i_reag_nox_crystal
+SKILLMAKE=Inscription 64.6,Necromancy 65.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Strangle
+ON=@Create
+   ATTR=attr_magic
+   MORE1=0400
+   MOREX=s_strangle
+   MOREY={20.0 20.0}
+
+[ITEMDEF 0226b]
+DEFNAME=i_scroll_summon_familiar
+TYPE=t_scroll
+VALUE=106
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_batwing,1 i_reag_grave_dust,1 i_reag_daemon_blood
+SKILLMAKE=Inscription 29.6,Necromancy 30.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Summon Familiar
+ON=@Create
+   ATTR=attr_magic
+   MORE1=0800
+   MOREX=s_summon_familiar
+   MOREY={20 60}
+
+[ITEMDEF 0226c]
+DEFNAME=i_scroll_vampiric_embrace
+TYPE=t_scroll
+VALUE=119
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_batwing,1 i_reag_pig_iron,1 i_reag_nox_crystal
+SKILLMAKE=Inscription 98.6,Necromancy 99.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Vampiric Embrace
+ON=@Create
+   ATTR=attr_magic
+   MORE1=01000
+   MOREX=s_vampiric_embrace
+   MOREY={20 20}
+
+[ITEMDEF 0226d]
+DEFNAME=i_scroll_vengeful_spirit
+TYPE=t_scroll
+VALUE=116
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank,1 i_reag_batwing,1 i_reag_volcanic_ash,1 i_reag_pig_iron
+SKILLMAKE=Inscription 79.6,Necromancy 80.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Vengeful Spirit
+ON=@Create
+   ATTR=attr_magic
+   MORE1=02000
+   MOREX=s_vengeful_spirit
+   MOREY={20 20}
+
+[ITEMDEF 0226e]
+DEFNAME=i_scroll_wither
+TYPE=t_scroll
+VALUE=112
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_grave_dust,1 i_reag_nox_crystal,1 i_reag_pig_iron
+SKILLMAKE=Inscription 59.6,Necromancy 60.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Wither
+ON=@Create
+   ATTR=attr_magic
+   MORE1=04000
+   MOREX=s_wither
+   MOREY={20 20}
+
+[ITEMDEF 0226f]
+DEFNAME=i_scroll_wraith_form
+TYPE=t_scroll
+VALUE=74
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_vial,1 i_reag_pig_iron
+SKILLMAKE=Inscription 79.6,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Wraith Form
+ON=@Create
+   ATTR=attr_magic
+   MORE1=08000
+   MOREX=s_wraith_form
+   MOREY={20 60}
+
+[ITEMDEF 02270]
+DEFNAME=i_scroll_exorcism
+NAME=Exorcism Scroll
+TYPE=t_scroll
+//VALUE=FIXME
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_grave_dust,1 i_reag_nox_crystal
+SKILLMAKE=Inscription 79.6,Necromancy 80.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Exorcism
+ON=@Create
+   ATTR=attr_magic
+   MORE1=010000
+   MOREX=s_exorcism
+   MOREY={50 80}
+
+[ITEMDEF 02271]
+DEFNAME=i_scroll_necro_blank2
+TYPE=t_normal //t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 30.0,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls
+DESCRIPTION=Blank Necromancy Scroll
+ON=@Create
+   ATTR=attr_magic
+   //MOREX=
+   //MOREY={}
+
+[ITEMDEF 02272]
+DEFNAME=i_scroll_necro_blank3
+TYPE=t_normal //t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 30.0,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Blank Necromancy Scroll
+ON=@Create
+   ATTR=attr_magic
+   //MOREX=
+   //MOREY={}
+
+[ITEMDEF 02273]
+DEFNAME=i_scroll_necro_blank4
+TYPE=t_normal //t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 30.0,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Blank Necromancy Scroll
+ON=@Create
+   ATTR=attr_magic
+   //MOREX=
+   //MOREY={}
+
+[ITEMDEF 02274]
+DEFNAME=i_scroll_necro_blank5
+TYPE=t_normal //t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 30.0,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Blank Necromancy Scroll
+ON=@Create
+   ATTR=attr_magic
+   //MOREX=
+   //MOREY={}
+
+[ITEMDEF 02275]
+DEFNAME=i_scroll_necro_blank6
+TYPE=t_normal //t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 30.0,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Blank Necromancy Scroll
+ON=@Create
+   ATTR=attr_magic
+   //MOREX=
+   //MOREY={}
+
+[ITEMDEF 02276]
+DEFNAME=i_scroll_necro_blank7
+TYPE=t_normal //t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 30.0,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Blank Necromancy Scroll
+ON=@Create
+   ATTR=attr_magic
+   //MOREX=
+   //MOREY={}
+
+[ITEMDEF 02277]
+DEFNAME=i_scroll_necro_blank8
+TYPE=t_normal //t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 30.0,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Blank Necromancy Scroll
+ON=@Create
+   ATTR=attr_magic
+   //MOREX=
+   //MOREY={}
+
+[ITEMDEF 02278]
+DEFNAME=i_scroll_necro_blank9
+TYPE=t_normal //t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 30.0,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Blank Necromancy Scroll
+ON=@Create
+   ATTR=attr_magic
+   //MOREX=
+   //MOREY={}
+
+[ITEMDEF 02279]
+DEFNAME=i_scroll_necro_blank10
+TYPE=t_normal //t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 30.0,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Necromancy
+DESCRIPTION=Blank Necromancy Scroll
+ON=@Create
+   ATTR=attr_magic
+   //MOREX=
+   //MOREY={}
+
+[ITEMDEF 0227a]
+DEFNAME=i_scroll_calling
+TYPE=t_normal //t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 30.0,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Misc
+DESCRIPTION=Scroll of Calling
+ON=@Create
+   ATTR=attr_magic
+   //MOREX=s_calling
+   //MOREY={}
+
+[ITEMDEF 0227b]
+DEFNAME=i_scroll_abraxus
+TYPE=t_normal //t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 30.0,Necromancy 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Misc
+DESCRIPTION=Scroll of Abraxus
+ON=@Create
+   ATTR=attr_magic
+   //MOREX=s_abraxus
+   //MOREY={}
+
+[ITEMDEF 0227c]
+DEFNAME=i_scroll_cleanse_by_fire
+TYPE=t_scroll
+VALUE=25
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+SKILLMAKE=Inscription 30.0,Chivalry 5.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Scrolls - Chivalry
+DESCRIPTION=Cleanse by Fire
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_cleanse_by_fire
+   MOREY={10 20}
+
+[ITEMDEF 02d51]
+DEFNAME=i_scroll_arcane_circle
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 0.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Arcane Circle
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_arcane_circle
+   //MOREY={50 80}
+
+[ITEMDEF 02d52]
+DEFNAME=i_scroll_gift_of_renewal
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 0.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Gift of Renewal
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_gift_of_renewal
+   //MOREY={50 80}
+
+[ITEMDEF 02d53]
+DEFNAME=i_scroll_immolating_weapon
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 10.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Immolating Weapon
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_immolating_weapon
+   //MOREY={50 80}
+
+[ITEMDEF 02d54]
+DEFNAME=i_scroll_attunement
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 0.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Attunement
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_attunement
+   //MOREY={50 80}
+
+[ITEMDEF 02d55]
+DEFNAME=i_scroll_thunderstorm
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 10.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Thunderstorm
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_thunderstorm
+   //MOREY={50 80}
+
+[ITEMDEF 02d56]
+DEFNAME=i_scroll_nature_fury
+NAME=nature's fury
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 0.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Nature's Fury
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_nature_fury
+   //MOREY={50 80}
+
+[ITEMDEF 02d57]
+DEFNAME=i_scroll_summon_fey
+NAME=summon fey
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 38.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Summon Fey
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_summon_fey
+   //MOREY={50 80}
+
+[ITEMDEF 02d58]
+DEFNAME=i_scroll_summon_fiend
+NAME=summon fiend
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 38.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Summon Fiend
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_summon_fiend
+   //MOREY={50 80}
+
+[ITEMDEF 02d59]
+DEFNAME=i_scroll_reaper_form
+NAME=reaper form
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 24.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Reaper Form
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_reaper_form
+   //MOREY={50 80}
+
+[ITEMDEF 02d5a]
+DEFNAME=i_scroll_wildfire
+NAME=wildfire
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 66.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Wildfire
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_wildfire
+   //MOREY={50 80}
+
+[ITEMDEF 02d5b]
+DEFNAME=i_scroll_essence_of_wind
+NAME=essence of wind
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 52.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Essence of Wind
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_essence_of_wind
+   //MOREY={50 80}
+
+[ITEMDEF 02d5c]
+DEFNAME=i_scroll_dryad_allure
+NAME=dryad allure
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 52.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Dryad Allure
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_dryad_allure
+   //MOREY={50 80}
+
+[ITEMDEF 02d5d]
+DEFNAME=i_scroll_ethereal_voyage
+NAME=ethereal voyage
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 24.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Ethereal Voyage
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_ethereal_voyage
+   //MOREY={50 80}
+
+[ITEMDEF 02d5e]
+DEFNAME=i_scroll_word_of_death
+NAME=word of death
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 80.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Word of Death
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_word_of_death
+   //MOREY={50 80}
+
+[ITEMDEF 02d5f]
+DEFNAME=i_scroll_gift_of_life
+NAME=gift of life
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 38.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Gift of Life
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_gift_of_life
+   //MOREY={50 80}
+
+[ITEMDEF 02d60]
+DEFNAME=i_scroll_arcane_empowerment
+NAME=arcane empowerment
+TYPE=t_scroll
+WEIGHT=0.1
+RESOURCES=1 i_scroll_blank
+//SKILLMAKE=Inscription 50.0,Spellweaving 24.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Srolls - Spell Weaving
+DESCRIPTION=Arcane Empowerment
+ON=@Create
+   ATTR=attr_magic
+   MOREX=s_arcane_empowerment
+   //MOREY={50 80}
+
+[ITEMDEF 02d9e]
+DEFNAME=i_scroll_nether_bolt
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_black_pearl,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 0.0,Mysticism 0.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Nether Bolt
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_nether_bolt
+	MOREY={10 50}
+
+[ITEMDEF 02d9f]
+DEFNAME=i_scroll_healing_stone
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_bone,1 i_reag_garlic,1 i_reag_ginseng,1 i_reag_spider_silk
+SKILLMAKE=Inscription 0.0,Mysticism 0.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Healing Stone
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_healing_stone
+	MOREY={10 50}
+
+[ITEMDEF 02da0]
+DEFNAME=i_scroll_purge_magic
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_fertile_dirt,1 i_reag_garlic,1 i_reag_mandrake_root,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 0.0,Mysticism 8.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Purge Magic
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_purge_magic
+	MOREY={20 60}
+
+[ITEMDEF 02da1]
+DEFNAME=i_scroll_enchant
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_spider_silk,1 i_reag_mandrake_root,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 0.0,Mysticism 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Enchant
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_enchant
+	MOREY={20 60}
+
+[ITEMDEF 02da2]
+DEFNAME=i_scroll_sleep
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_nightshade,1 i_reag_spider_silk,1 i_reag_black_pearl
+SKILLMAKE=Inscription 3.5,Mysticism 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Sleep
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_sleep
+	MOREY={30 70}
+
+[ITEMDEF 02da3]
+DEFNAME=i_scroll_eagle_strike
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_bone,1 i_reag_spider_silk,1 i_reag_mandrake_root
+SKILLMAKE=Inscription 3.5,Mysticism 20.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Eagle Strike
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_eagle_strike
+	MOREY={30 70}
+
+[ITEMDEF 02da4]
+DEFNAME=i_scroll_animated_weapon
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_bone,1 i_reag_black_pearl,1 i_reag_mandrake_root,1 i_reag_nightshade
+SKILLMAKE=Inscription 17.8,Mysticism 33.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Animated Weapon
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_animated_weapon
+	MOREY={40 75}
+
+[ITEMDEF 02da5]
+DEFNAME=i_scroll_stone_form
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_fertile_dirt,1 i_reag_garlic
+SKILLMAKE=Inscription 17.8,Mysticism 33.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Stone Form
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_stone_form
+	MOREY={40 75}
+
+[ITEMDEF 02da6]
+DEFNAME=i_scroll_spell_trigger
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_dragon_blood,1 i_reag_garlic,1 i_reag_mandrake_root,1 i_reag_spider_silk
+SKILLMAKE=Inscription 32.1,Mysticism 45.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Spell Trigger
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_spell_trigger
+	MOREY={50 80}
+
+[ITEMDEF 02da7]
+DEFNAME=i_scroll_mass_sleep
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_ginseng,1 i_reag_nightshade,1 i_reag_spider_silk
+SKILLMAKE=Inscription 32.1,Mysticism 45.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Mass Sleep
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_mass_sleep
+	MOREY={50 80}
+
+[ITEMDEF 02da8]
+DEFNAME=i_scroll_cleansing_winds
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_dragon_blood,1 i_reag_garlic,1 i_reag_ginseng,1 i_reag_mandrake_root
+SKILLMAKE=Inscription 46.4,Mysticism 58.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Cleansing Winds
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_cleansing_winds
+	MOREY={60 85}
+
+[ITEMDEF 02da9]
+DEFNAME=i_scroll_bombard
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_dragon_blood,1 i_reag_garlic,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 46.4,Mysticism 58.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Bombard
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_bombard
+	MOREY={60 85}
+
+[ITEMDEF 02daa]
+DEFNAME=i_scroll_spell_plague
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_daemon_bone,1 i_reag_dragon_blood,1 i_reag_nightshade,1 i_reag_sulfur_ash
+SKILLMAKE=Inscription 60.7,Mysticism 70.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Spell Plague
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_spell_plague
+	MOREY={70 90}
+
+[ITEMDEF 02dab]
+DEFNAME=i_scroll_hail_storm
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_dragon_blood,1 i_reag_blood_moss,1 i_reag_black_pearl,1 i_reag_mandrake_root
+SKILLMAKE=Inscription 60.7,Mysticism 70.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Hail Storm
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_hail_storm
+	MOREY={70 90}
+
+[ITEMDEF 02dac]
+DEFNAME=i_scroll_nether_cyclone
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_mandrake_root,1 i_reag_nightshade,1 i_reag_sulfur_ash,1 i_reag_blood_moss
+SKILLMAKE=Inscription 75.0,MYSTICISM 83.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Nether Cyclone
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_nether_cyclone
+	MOREY={80 100}
+
+[ITEMDEF 02dad]
+DEFNAME=i_scroll_rising_colossus
+TYPE=t_scroll
+WEIGHT=1
+RESOURCES=1 i_scroll_blank,1 i_reag_daemon_bone,1 i_reag_dragon_blood,1 i_reag_fertile_dirt,1 i_reag_nightshade
+SKILLMAKE=Inscription 75.0,Mysticism 83.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Mysticism Scrolls
+DESCRIPTION=Rising Colossus
+ON=@Create
+	ATTR=attr_magic
+	MOREX=s_rising_colossus
+	MOREY={80 100}
+
+[ITEMDEF 046ae]
+//gardening scroll
+[ITEMDEF 046af]
+//gardening scroll
+
+
+[ITEMDEF 046b2]
+//gardening scroll 2
+[ITEMDEF 046b3]
+//gardening scroll 2
+
+
+[EOF]

@@ -114,123 +114,120 @@ UID.<ARGS>.HITS=0
 // Blood Oath //
 ////////////////
 
-[FUNCTION f_BloodOathDispel]
-IF (<TAG0.BloodOathCaster>)
-   UID.<tag0.BloodOathCaster.tag.BloodOath
-   UID.<tag0.BloodOathCaster>.events -e_BloodOathCurse
-   TAG.BloodOathCaster
-ENDIF
+//[FUNCTION f_BloodOathDispel]
+//IF (<TAG0.BloodOathCaster>)
+//   UID.<tag0.BloodOathCaster.tag.BloodOath
+//   UID.<tag0.BloodOathCaster>.events -e_BloodOathCurse
+//   TAG.BloodOathCaster
+//ENDIF
+//
+//[EVENTS e_BloodOath]
+//ON=@Hit
+//   UID.<TAG0.BloodOath>.DAMAGE <EVAL (<ARGN1>*20)/100> <ARGN2> <UID>
+//ON=@SpellCast
+//   UID.<TAG0.BloodOath>.SPELLEFFECT <ARGN> <ARGN2>
+//ON=@SpellEffect
+//   IF (<ARGN> == 34) || (<ARGN> == 41)
+//      f_BloodOathDispel
+//   ENDIF
 
-[EVENTS e_BloodOath]
+[ITEMDEF memory_blood_oath]
+ID=i_rune_curse
+NAME=blood oath memory
+TYPE=t_eq_script
+LAYER=layer_special
+WEIGHT=0
+ON=@Create
+   ATTR=attr_decay|attr_can_decay
+   COLOR=04d
+ON=@Timer
+   TRYSRC <TOPOBJ> SRC.EVENTS=-e_spell_effect_blood_oath
+   TRYSRC <TOPOBJ> SRC.SYSMESSAGELOC color_text,1061620//"Your Blood Oath has been broken."
+
+[EVENTS e_spell_effect_blood_oath]
+// FIXME: "Reflected damage can be Evaded by Samurai."
+// FIXME: "Does not stack with the Reflect Physical Damage item property."
+// 1075660 "+20% damage from ~1target. Base damage reflected back on them"
+// 1075662 "damage inflicted on ~1caster is reflected on you"
 ON=@Hit
-   UID.<TAG0.BloodOath>.DAMAGE <EVAL (<ARGN1>*20)/100> <ARGN2> <UID>
-ON=@SpellCast
-   UID.<TAG0.BloodOath>.SPELLEFFECT <ARGN> <ARGN2>
-ON=@SpellEffect
-   IF (<ARGN> == 34) || (<ARGN> == 41)
-      f_BloodOathDispel
+   IF (<SRC.FINDID.memory_blood_oath.LINK.TOPOBJ>==<UID>)
+      //"The defender (<SRC.NAME>) (<SRC.UID>) has a blood oath (<SRC.FINDID.memory_blood_oath.UID>) linked to (<SRC.FINDID.memory_blood_oath.LINK.TOPOBJ>)"
+      IF (<FINDID.memory_blood_oath.LINK.TOPOBJ>==<SRC.UID>)
+         //"The attacker (<NAME>) (<UID>) has a blood oath (<FINDID.memory_blood_oath.UID>) linked to (<FINDID.memory_blood_oath.LINK.TOPOBJ>)"
+         //"The defender would take <EVAL <ARGN1>+(<ARGN1>/5)> hits (<ARGN1> plus <EVAL <ARGN1>/5>)"
+         LOCAL.PercentResisted=<EVAL (<SRC.MagicResistance> / 20) + 10>
+         IF (<LOCAL.PercentResisted> < 10)
+            LOCAL.PercentResisted=10
+         ENDIF
+         IF (<LOCAL.PercentResisted> > 90)
+            LOCAL.PercentResisted=90
+         ENDIF
+         LOCAL.ExtraDamage=<EVAL ((<ARGN1> / 5) * ((100 - <LOCAL.PercentResisted>) / 10)) / 10>
+         //"but their resistance (<SRC.MagicResistance>) reduces the extra damage by <EVAL <LOCAL.PercentResisted>> percent leaving <EVAL <LOCAL.ExtraDamage>>."
+         ARGN1 += <LOCAL.ExtraDamage>
+         //"Reflect that damage (<EVAL <ARGN1>>) back to attacker (can be evaded by samurai)"
+         DAMAGE <ARGN1> <DEF.dam_magic> <SRC>
+      ENDIF
    ENDIF
-
 
 /////////////////
 // Corpse Skin //
 /////////////////
 
-[ITEMDEF i_rune_corpse_skin]
-ID=i_memory
-NAME=Corpse Skin Effect
+[ITEMDEF i_mem_corpse_skin]
+ID=i_pet_zombie_2
+NAME=corpse skin memory
 TYPE=t_eq_script
-LAYER=layer_special
-TEVENTS=t_armor
-TAG.ResPhysical=10
-TAG.ResCold=10
-TAG.ResFire=-10
-TAG.ResPoison=-10
+LAYER=layer_spell_protection
+WEIGHT=0
+ON=@Create
+   ATTR=attr_decay|attr_can_decay
+   COLOR=04d
 ON=@Equip
-   SRC.COLOR=059f
-   SRC.EVENTS +e_CorpseSkin
-ON=@UnEquip
-   CONT.COLOR=<CONT.OSKIN>
-   CONT.EVENTS -e_CorpseSkin
+   ATTR=attr_decay|attr_can_decay
 ON=@Timer
-   REMOVE
-   RETURN 1
-
-[EVENTS e_CorpseSkin]
-ON=@SpellEffect
-   IF (<ARGN> == 34) || (<ARGN> == 41)
-      CONSUME i_rune_corpse_skin
-   ENDIF
+   CONT.ResFire += 15
+   CONT.ResPoison += 15
+   CONT.ResCold -= 10
+   CONT.TAG.ResPhysical=<EVAL <CONT.TAG0.ResPhysical> - 10>
+   CONT.SYSMESSAGELOC color_text,1061688//"Your skin returns to normal."
 
 
 //////////////////
 // Curse Weapon //
 //////////////////
+// This memory item is used to ensure the weapon tags are removed even
+// should the weapon be somehow unequiped, dropped, or given to another
+// player, etc...
 
-[EVENTS e_CurseWeapon]
-ON=@Equip
-   IF !<SRC.ISEVENT.e_CurseWeaponEffect>
-      SRC.EVENTS +e_CurseWeaponEffect
-   ENDIF
-ON=@Unequip
-   SRC.EVENTS -e_CurseWeaponEffect
-
-[EVENTS e_CurseWeaponEffect]
-ON=@Hit
-   SOUND 1317
-   HITS += <EVAL <ARGN1> / 2>
-   IF (<HITS> > <MAXHITS>)
-      HITS=<MAXHITS>
-   ENDIF
-
-[FUNCTION f_CurseWeaponDispel]
-IF (<CONT.ISPLAYER>)
-   CONT.EVENTS -e_CurseWeaponEffect
-   EVENTS -e_CurseWeapon
-ENDIF
-
-
-////////////////
-// Pain Spike //
-////////////////
-
-[FUNCTION f_PainSpikeDispel]
-//SERV.LOG called this
-TAG0.spell.painspike
-IF !(<FLAGS>&statf_dead)
-   HITS += <ARGS>
-ENDIF
-
-
-//////////////////
-// Curse Weapon //
-//////////////////
-
-[ITEMDEF i_curse_weapon]
-ID=i_memory
-NAME=Curse Weapon
+[ITEMDEF i_mem_curse_weapon]
+ID=i_dual_shortaxes
+NAME=curse weapon memory
 TYPE=t_eq_script
 LAYER=layer_special
+WEIGHT=0
+ON=@Create
+   ATTR=attr_decay|attr_can_decay
+   COLOR=04d
 ON=@Equip
-   SRC.EVENTS +e_curse_weapon
-   LINK=<SRC.TAG.cursed_weapon>
-ON=@UnEquip
-   CONT.EVENTS -e_curse_weapon
-   CONT.TAG.cursed_weapon=
-   CONT.SOUND snd_spell_magic_arrow
+   ATTR=attr_decay|attr_can_decay
 ON=@Timer
-   REMOVE
-   RETURN 1
-
-[EVENTS e_curse_weapon]
-ON=@Hit
-   IF (<ARGO.UID>==<TAG0.cursed_weapon>)
-     SOUND 1317
-     HITS += <ARGN1>/2
-     IF (<HITS> > <MAXHITS>)
-        HITS=<MAXHITS>
-     ENDIF
+   REF1=<LINK.CONT>
+   IF (<REF1>)
+      REF1.UNEQUIP <LINK>
+      LINK.TAG.HitLifeLeech=<EVAL <LINK.TAG0.HitLifeLeech> - 50>
+      IF (<LINK.TAG0.HitLifeLeech>==0)
+         LINK.TAG.HitLifeLeech=
+      ENDIF
+      REF1.TAG.Cursed=
+      REF1.EQUIP <LINK>
+   ELSE
+      LINK.TAG.HitLifeLeech=<EVAL <LINK.TAG0.HitLifeLeech> - 50>
+      IF (<LINK.TAG0.HitLifeLeech>==0)
+         LINK.TAG.HitLifeLeech=
+      ENDIF
    ENDIF
+   CONT.SYSMESSAGELOC color_text,1115273//"The enchantment on your weapon has expired."
 
 
 ///////////////
@@ -238,12 +235,23 @@ ON=@Hit
 ///////////////
 
 [EVENTS e_evil_omen]
+//Cannot be dispelled, only removed with remove curse spell
 ON=@GetHit
    ARGN1 += <ARGN1>/4
    EVENTS -e_evil_omen
-ON=@SpellEffect
-   IF (<ARGN> == 34) || (<ARGN> == 41)
-      EVENTS -e_evil_omen
+   IF (<ARGN2>==<DEF.dam_poison>)
+      //"Evil Omen: <NAME> poison level increased."
+      //FIXME: "How do I increase poison level?"
+   ENDIF
+ON=@SkillUseQuick
+   //ARGN1 = skill being used
+   //ARGN2 = difficulty requested
+   //ARGN3 = result of difficulty calculation
+   IF (<ARGN1>==26)//MagicResistance
+      //"<SRC.NAME> attempting to resist magic."
+      //FIXME: Force failure by setting ARGN3=1 or alter difficulty?
+      ARGN3=1
+      SRC.EVENTS -e_spell_effect_evil_omen
    ENDIF
 
 
@@ -251,7 +259,7 @@ ON=@SpellEffect
 // Mind Rot //
 //////////////
 
-[ITEMDEF i_mind_rot]
+[ITEMDEF i_mem_mind_rot]
 ID=i_memory
 NAME=mind rot
 TYPE=t_eq_script
@@ -264,15 +272,41 @@ ON=@Timer
    RETURN 1
 
 [EVENTS e_mind_rot]
+//Cannot be dispelled, only removed with remove curse spell
 ON=@SpellSelect
-   MANA -= {5 15}
-   IF (<SRC.MANA> < 0)
-      SRC.MANA=0
+   IF (<ARGN3>==2)//The cast was successful
+      ARGN2 += <EVAL <ARGN2>/4>//Increase mana used by 25%
    ENDIF
-ON=@SpellEffect
-   IF (<ARGN> == 34) || (<ARGN> == 41)
-      CONSUME i_mind_rot
-   ENDIF
+
+
+////////////////
+// Pain Spike //
+////////////////
+
+[ITEMDEF i_mem_pain_spike]
+ID=011a5
+NAME=pain spike memory
+TYPE=t_eq_script
+LAYER=layer_special
+WEIGHT=0
+TAG.StaminaRegeneration=-1
+TAG.StaminaIncrease=-10
+TEVENTS=t_iprop
+ON=@Create
+   ATTR=attr_decay|attr_can_decay
+   COLOR=04d
+ON=@Equip
+   ATTR=attr_decay|attr_can_decay
+   //"Pain Spike: <LINK.NAME> caused <EVAL <MORE1>> damage to <CONT.NAME>."
+   SRC.SYSMESSAGELOC color_text,1062092//"Your body reacts violently from the pain."
+   SRC.DAMAGE <MORE1> <DEF.dam_god> <LINK>
+ON=@Timer
+   //"Pain Spike: Spell ends and <EVAL <MORE1>> damage is restored to <CONT.NAME>."
+   CONT.SYSMESSAGELOC color_text,1060872//"Your mind feels normal again."
+   CONT.HITS += <MORE1>
+   DROP//FIXME: "test that a Drop from timer triggers unequip... maybe consume is better"
+   REMOVE
+   RETURN 1
 
 
 /////////////////////
@@ -281,27 +315,263 @@ ON=@SpellEffect
 
 [SKILLMENU sm_summon_familiar]
 Which familiar do you wish to summon?
-
-ON=i_pet_hordedaemon Horde Minion
-TEST=necromancy 30.0 spiritspeak 30.0
-SUMMON=c_familiar_horde_minion
-
+ON=i_pet_demon_horde Horde Minion
+   TEST=necromancy 30.0 spiritspeak 30.0
+   SUMMON=c_familiar_horde_minion
 ON=i_pet_wisp Shadow Wisp
-TEST=necromancy 50.0 spiritspeak 50.0
-SUMMON=c_familiar_wisp_shadow
-
-ON=i_pet_wolf Dark Wolf
-TEST=necromancy 60.0 spiritspeak 60.0
-SUMMON=c_familiar_dark_wolf
-
-ON=i_pet_snake_giant Death Adder
-TEST=necromancy 80.0 spiritspeak 80.0
-SUMMON=c_familiar_death_adder
-
+   TEST=necromancy 50.0 spiritspeak 50.0
+   SUMMON=c_familiar_shadow_wisp
+ON=i_pet_wolf_grey Dark Wolf
+   TEST=necromancy 60.0 spiritspeak 60.0
+   SUMMON=c_familiar_dark_wolf
+ON=i_pet_snake Death Adder
+   TEST=necromancy 80.0 spiritspeak 80.0
+   SUMMON=c_familiar_death_adder
 ON=i_pet_vampirebat Vampire Bat
-TEST=necromancy 100.0 spiritspeak 100.0
-SUMMON=c_familiar_vampire_bat
+   TEST=necromancy 100.0 spiritspeak 100.0
+   SUMMON=c_familiar_vampire_bat
+ON=@Cancel
+   SRC.SYSMESSAGELOC color_text,1061825//"You decide not to summon a familiar."
 
+[CHARDEF c_familiar_horde_minion]
+//"The Horde Minion Familiar will attack the foes that its master attacks,
+// and as an extra bonus it will pick up any items it comes across on the
+// ground and put them in its little backpack."
+//FIXME: Limited verbal commands
+ID=c_horde_minion
+NAME=horde minion familiar
+ICON=i_pet_demon_horde
+SOUND=snd_monster_headls1
+CAN=MT_WALK|MT_RUN|MT_USEHANDS
+DAM=14,20
+ARMOR=50
+//DESIRES=
+//AVERSIONS=
+//FOODTYPE=
+//RESOURCES=
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Slayer=SLAYER_DEMON
+TAG.Control.Slots=1
+CATEGORY=Animals
+SUBSECTION=Familiars
+DESCRIPTION=Horde Minion
+ON=@Create
+   NPC=brain_monster
+//   TAG.Level=
+//   EVENTS=+e_monster_level_system
+   EVENTS=+e_looter
+   FAME={1000 1499}
+   KARMA={-1000 -1499}
+   STR={95 105}
+   MAXHITS={65 75}
+   DEX={100 110}
+   MAXSTAM={105 115}
+   INT={95 105}
+   MAXMANA={25 35}
+   TACTICS={70.0 80.0}
+   WRESTLING={70.0 80.0}
+   MODAR={0 10}
+   RESCOLD=0
+   RESENERGY={25 30}
+   RESFIRE={50 60}
+   RESPOISON={25 30}
+ON=@ItemStep
+   IF !(<ARGN1>)
+      IF !(<ACT.ATTR>&attr_move_never) && !(<ACT.ATTR>&attr_owned) && !(<ACT.ATTR>&attr_invis) && !(<ACT.ATTR>&attr_static)
+         ACT.BOUNCE
+      ENDIF
+   ENDIF
+ON=@ContextMenuRequest
+   IF (<IsMyPet>)
+      SRC.AddContextEntry 101,6194//"Get scavenged loot"
+      RETURN 1
+   ENDIF
+ON=@ContextMenuSelect
+   IF (<IsMyPet>)
+      IF (<ARGN>==101)
+         FORCONT <FINDLAYER(layer_pack).UID> 0
+            BOUNCE
+         ENDFOR
+      ENDIF
+   ENDIF
+
+[CHARDEF c_familiar_shadow_wisp]
+//"The Shadow Wisp Familiar will attack the foes that its master attacks,
+// and as an extra bonus it will periodically heal the mana of the caster
+// (and the casters friends) IF they have negative Karma...
+//   at -500 karma: 1-5 mana
+//   at -10,000 karma: 1-10 mana"
+//FIXME: Heals based on Karma
+ID=c_wisp
+NAME=shadow wisp familiar
+ICON=i_pet_wisp
+SOUND=snd_monster_wisp1
+CAN=MT_WALK|MT_FLY|MT_USEHANDS
+DAM=2,8
+ARMOR=10
+//DESIRES=
+//AVERSIONS=
+//RESOURCES=
+//FOODTYPE=
+BLOODCOLOR=-1
+MOVERATE=100
+TAG.Control.Slots=1
+TAG.DamEnergy=100
+TAG.Slayer=SLAYER_FEY
+CATEGORY=Animals
+SUBSECTION=Familiars
+DESCRIPTION=Shadow Wisp
+ON=@Create
+   NPC=brain_animal
+   FAME={1000 1499}
+   KARMA={-1000 -1499}
+   STR={45 55}
+   MAXHITS={45 55}
+   DEX={55 65}
+   MAXSTAM={55 65}
+   INT={95 105}
+   MAXMANA={25 35}
+   TACTICS={35.0 45.0}
+   WRESTLING={35.0 45.0}
+   MODAR={0 5}
+   RESCOLD={10 15}
+   RESENERGY={95 100}
+   RESFIRE={10 15}
+   RESPOISON={10 15}
+   ITEMNEWBIE=i_light_source
+   ATTR=attr_magic|attr_newbie
+ON=@NPCAction
+   SERV.LOG <NAME> is about to take action
+
+[CHARDEF 01b]
+//"The Dark Wolf Familiar will attack the foes that its master attacks,
+// and as an extra bonus it will allow its master to tame any wolf he meets
+// in his travels."
+//FIXME: "Gives wolf training skill to summoner."
+//FIXME: "Abilities: +1 stamina every 2 seconds."
+DEFNAME=c_familiar_dark_wolf
+NAME=dark wolf familiar
+ICON=i_pet_wolf_grey
+SOUND=snd_animals_wolf1
+CAN=MT_WALK|MT_RUN
+DAM=15,33
+ARMOR=40
+//DESIRES=
+//AVERSIONS=
+//FOODTYPE=
+//RESOURCES=
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Control.Slots=1
+TAG.Slayer=SLAYER_WOLF
+CATEGORY=Animals
+SUBSECTION=Familiars
+DESCRIPTION=Dark Wolf
+ON=@Create
+   NPC=brain_animal
+   FAME={500 999}
+   KARMA={-800 -999}
+   STR={95 105}
+   MAXHITS={55 65}
+   DEX={85 95}
+   MAXSTAM={85 95}
+   INT={85 95}
+   MAXMANA={25 35}
+   TACTICS={45.0 55.0}
+   WRESTLING={85.0 90.0}
+   MODAR={0 10}
+   RESCOLD={25 40}
+   RESENERGY={25 40}
+   RESFIRE={25 40}
+   RESPOISON={25 40}
+
+[CHARDEF c_familiar_death_adder]
+//"The Death Adder Familiar will attack the foes that its master attacks,
+// and as an extra bonus it will allow its master to command any snakes in
+// the area by doubleclicking them."
+//"FIXME: Snake Charming. Allows caster to double click snakes and serpents
+// in the area and target what they want them to kill."
+ID=c_snake
+NAME=death adder familiar
+ICON=i_pet_snake
+SOUND=snd_animals_snake1
+CAN=MT_WALK|MT_RUN
+DAM=1,4
+ARMOR=10
+//DESIRES=
+//AVERSIONS=
+//FOODTYPE=
+//RESOURCES=
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Control.Slots=1
+TAG.HitPoison=3
+TAG.Slayer=SLAYER_SNAKE
+CATEGORY=Animals
+SUBSECTION=Familiars
+DESCRIPTION=Death Adder
+ON=@Create
+   COLOR=colors_snake
+   NPC=brain_monster
+   FAME={1000 1499}
+   KARMA={-1000 -1499}
+   STR={65 80}
+   MAXHITS={45 55}
+   DEX={145 155}
+   MAXSTAM={145 155}
+   INT={95 105}
+   MAXMANA={25 35}
+   POISONING={145.0 155.0}
+   TACTICS={45.0 55.0}
+   WRESTLING={85.0 95.0}
+   MODAR=0
+   RESCOLD=0
+   RESENERGY=0
+   RESFIRE=0
+   RESPOISON=100
+ON=@NPCRestock
+   ITEM=loot_snake_giant
+
+[CHARDEF c_familiar_vampire_bat]
+//"The Vampire Bat Familiar will attack the foes that its master attacks,
+// and as an extra bonus it will heal its master for as much as it damages
+// his foe."
+//FIXME: Leech life to owner
+ID=c_vampire_bat
+NAME=vampire bat familiar
+ICON=i_pet_vampirebat
+SOUND=snd_monster_mngbat1
+CAN=MT_WALK|MT_FLY
+DAM=7,21
+ARMOR=10
+//DESIRES=
+//AVERSIONS=
+//FOODTYPE=
+//RESOURCES=
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Control.Slots=1
+CATEGORY=Animals
+SUBSECTION=Familiars
+DESCRIPTION=Vampire Bat
+ON=@Create
+   NPC=brain_animal
+   FAME={1000 1499}
+   KARMA={-1000 -1499}
+   STR={115 125}
+   MAXHITS={85 95}
+   DEX={115 125}
+   MAXSTAM={115 125}
+   INT={95 105}
+   MAXMANA={25 35}
+   TACTICS={45.0 55.0}
+   WRESTLING={90.0 100.0}
+   MODAR={0 10}
+   RESCOLD={10 20}
+   RESENERGY={10 20}
+   RESFIRE={10 20}
+   RESPOISON={10 20}
 
 
 ///////////////////
@@ -332,7 +602,7 @@ LAYER=layer_special
 ON=@Timer
    local.multiplier=<EVAL (3 - (<CONT.STAM> / <CONT.MAXSTAM>) * 2)>
    local.damage=<EVAL <MORE2> * <LOCAL.MULTIPLIER>>
-   CONT.EFFECT 3,i_fx_heal_effect,16,20,0,01,1
+   CONT.EFFECT 3,i_fx_heal,16,20,0,01,1
    CONT.DAMAGE <local.damage> dam_poison <CONT.UID>
    MORE1 -= 1
    IF (<MORE1> < 1)
