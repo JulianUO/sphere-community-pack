@@ -780,7 +780,7 @@ ON=@Death
          END
          BEGIN
             LINK.SPELLEFFECT s_greater_heal,100.0,0,<UID>
-            LINK.EFFECT 3,i_fx_heal_effect,1,16,0
+            LINK.EFFECT 3,i_fx_heal,1,16,0
             LINK.SOUND snd_spell_greater_heal
             SERV.LOG <LINK.NAME> was healed by the pixie
          END

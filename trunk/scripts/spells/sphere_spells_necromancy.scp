@@ -53,18 +53,15 @@ CAST_TIME=1.5
 RESOURCES=i_reag_grave_dust, i_reag_daemon_blood
 RUNE_ITEM=i_rune_resurrection
 SCROLL_ITEM=i_scroll_animate_dead
-FLAGS=spellflag_scripted
-EFFECT_ID=0
+//FLAGS=spellflag_scripted
+FLAGS=spellflag_targ_item|spellflag_good|spellflag_summon|spellflag_fx_targ|spellflag_playeronly|spellflag_targ_no_player|spellflag_targ_no_npc
+EFFECT_ID=i_fx_smoke
 EFFECT=0
 DURATION=0
 MANAUSE=23
 SKILLREQ=Necromancy 40.0
 INTERRUPT=100.0,1.0
 ON=@Start
-   IF (<SRC.REGION.FLAGS>&region_flag_guarded) && !(<SRC.ISGM>)
-      SRC.SYSMESSAGELOC color_text,1062041//"You cannot animate a corpse at this location."
-      RETURN 1
-   ENDIF
    IF (<ACT.TYPE> != t_corpse)
       SRC.SYSMESSAGELOC color_text,1061084//"You cannot animate that."
       RETURN 1
@@ -93,12 +90,13 @@ RESOURCES=i_reag_daemon_blood
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_blood_oath
 FLAGS=spellflag_dir_anim|spellflag_targ_char|spellflag_harm|spellflag_fx_targ|spellflag_resist|spellflag_targ_noself|spellflag_nounparalyze
-EFFECT_ID=0
+EFFECT_ID=i_fx_curse
 EFFECT=0
 DURATION=0
 MANAUSE=13
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
+PROMPT_MSG=Target a creature to put this curse on.
 ON=@Start
    IF (<SRC.FINDID.memory_blood_oath>)
       SRC.SYSMESSAGELOC color_text,1061607//"You are already bonded in a Blood Oath."
@@ -116,20 +114,41 @@ ON=@Start
       SRC.SYSMESSAGELOC color_text,1061621//"You can not perform this operation on an invulnerable target."
       RETURN 1
    ENDIF
-ON=@Select
-   IF (<TAG0.BloodOathCaster>)
-      UID.<TAG0.BloodOathCaster>.TAG.BloodOath
-      UID.<TAG0.BloodOathCaster>.EVENTS -e_BloodOath
-      TAG.BloodOathCaster
-   ENDIF
 ON=@Success
-   LOCAL.Delay=<EVAL ((<SPIRITSPEAK> - <ACT.Magicresistance>) / 80) + 8>
-   TAG0.BloodOathCaster=<ACT.UID>
-   ACT.TAG0.BloodOath=<UID>
-   ACT.EVENTS +e_BloodOath
-   ACT.TIMERF <dLOCAL.Delay>,f_BloodOathDispel
-   f_AddBuff BloodOathCaster,<dLOCAL.Delay>,<ACT.NAME>
-   ACT.f_AddBuff BloodOathCurse,<dLOCAL.Delay>,<NAME>
+   LOCAL.TargetNAME=<ACT.NAME>
+   LOCAL.SkillDiff=<EVAL <SRC.SpiritSpeak> - <ACT.MagicResistance>>
+   IF (<LOCAL.SkillDiff> > 0)
+      LOCAL.Duration=<EVAL (<LOCAL.SkillDiff> / 8) + 8>
+   ELSE
+      LOCAL.Duration=8
+   ENDIF
+   REF1=<ACT>
+
+   SRC.NEWITEM=memory_blood_oath
+   LOCAL.BloodOathCasterMemory=<NEW>
+   REF2=<NEW>
+   NEW.MORE1=1
+   NEW.NAME=Blood Oath (<LOCAL.TargetName>)
+   NEW.CONT=<SRC>
+   NEW.TIMER=<LOCAL.Duration>
+   //SRC.SYSMESSAGELOG 032,1113717//"You have hit your target with a curse effect."
+   SRC.SYSMESSAGE @color_text,,1 Damage inflicted by <REF1.NAME> is reflected back at them.
+
+   REF1.NEWITEM=memory_blood_oath
+   REF1.EVENTS=+e_spell_effect_blood_oath
+   LOCAL.BloodOathVictimMemory=<NEW>
+   NEW.MORE1=2
+   NEW.NAME=Blood Oath (<SRC.NAME>)
+   NEW.CONT=<REF1>
+   NEW.TIMER=<LOCAL.Duration>
+   //SRC.SYSMESSAGELOG 032,1113718//"You have been hit with a curse effect."
+   REF1.SYSMESSAGE @color_text,,1 Damage dealt to <SRC.NAME> is reflected back to you.
+
+   REF2.LINK=<LOCAL.BloodOathVictimMemory>
+   NEW.LINK=<LOCAL.BloodOathCasterMemory>
+   REF1=
+//   f_AddBuff BloodOathCaster,<dLOCAL.Delay>,<ACT.NAME>
+//   ACT.f_AddBuff BloodOathCurse,<dLOCAL.Delay>,<NAME>
 
 [SPELL 103]
 DEFNAME=s_corpse_skin
@@ -141,35 +160,44 @@ RESOURCES=i_reag_grave_dust, i_reag_batwing
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_corpse_skin
 FLAGS=spellflag_dir_anim|spellflag_targ_char|spellflag_harm|spellflag_fx_targ|spellflag_resist|spellflag_nounparalyze
-EFFECT_ID=0
+EFFECT_ID=i_fx_sparkle
 EFFECT=0
 DURATION=0
 MANAUSE=11
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
+PROMPT_MSG=Target a creature to put this curse on.
 ON=@Success
-   IF (<ACT.RESTEST i_rune_corpse_skin>)
-      ACT.CONSUME i_rune_corpse_skin
-      RETURN 1
+   REF1=<ACT>
+   LOCAL.SpellDuration=<EVAL ((<SRC.Spiritspeak> - <REF1.MagicResistance>) / 25) + 40>
+   //"<SRC.NAME> casts corpse skin on <REF1.NAME>, duration is <EVAL <LOCAL.SpellDuration>>"
+   IF (<REF1.FINDID.i_mem_corpse_skin>)
+      //"Found a <REF1.FINDID.i_mem_corpse_skin.NAME> (<REF1.FINDID.i_mem_corpse_skin.UID>) on <REF1.NAME> with time=<EVAL <REF1.FINDID.i_mem_corpse_skin.TIMER>>"
+      REF1.FINDID.i_mem_corpse_skin.TIMER=<LOCAL.SpellDuration>
+      //"Timer now <EVAL <REF1.FINDID.i_mem_corpse_skin.TIMER>>"
+   ELSE
+      REF1.SYSMESSAGELOC color_text,1061689//"Your skin turns dry and corpselike."
+      SRC.NEWITEM=i_mem_corpse_skin
+      NEW.LINK=<SRC.UID>
+      NEW.CONT=<REF1>
+      NEW.TIMER=<LOCAL.SpellDuration>
+      REF1.ResFire -= 15
+      REF1.ResPoison -= 15
+      REF1.ResCold += 10
+      REF1.TAG.ResPhysical=<EVAL <REF1.TAG0.ResPhysical> + 10>
    ENDIF
-   SERV.NEWITEM i_fx_lich_form
-   NEW.ATTR=attr_static|attr_decay
-   NEW.TIMER=2
-   NEW.P=<ACT.P>
-   SERV.NEWITEM i_rune_corpse_skin,1,<ACT.UID>,1
-   NEW.TIMER=<EVAL ((<SPIRITSPEAK> - <ACT.Magicresistance>) / 25) + 40>
 
 [SPELL 104]
 DEFNAME=s_curse_weapon
 NAME=Curse Weapon
 SOUND=snd_spell_curse
 RUNES=.An Sanct Gra Char
-CAST_TIME=1
+CAST_TIME=1.0
 RESOURCES=i_reag_pig_iron
-RUNE_ITEM=i_rune_curse
+//RUNE_ITEM=
 SCROLL_ITEM=i_scroll_curse_weapon
-FLAGS=spellflag_scripted
-EFFECT_ID=0
+FLAGS=spellflag_good
+EFFECT_ID=i_fx_sparkle
 EFFECT=0
 DURATION=0
 MANAUSE=7
@@ -177,36 +205,45 @@ SKILLREQ=Necromancy 0.0
 INTERRUPT=100.0,1.0
 ON=@Start
    IF (<SRC.FINDLAYER(1).ISWEAPON>)
-      f_castinglog 1 "Curse Weapon: <SRC.FINDLAYER(1).NAME> is a weapon."
+      //"<SRC.FINDLAYER(1).NAME> is a weapon."
       RETURN 0
    ELSEIF (<SRC.FINDLAYER(2).ISWEAPON>)
-      f_castinglog 1 "Curse Weapon: <SRC.FINDLAYER(2).NAME> is a weapon."
+      //"<SRC.FINDLAYER(2).NAME> is a weapon."
       RETURN 0
    ELSE
       SRC.SYSMESSAGELOC color_text,501078//"You must be holding a weapon."
       RETURN 1
    ENDIF
-ON=@Select
-   IF !<WEAPON>
-      SYSMESSAGE <DEF.scp.spell_curseweapon_noweap>
-      RETURN 1
-   ENDIF
-   IF <RESTEST i_rune_curse_weapon>
-      CONSUME i_rune_curse_weapon
-      RETURN 1
-   ENDIF
 ON=@Success
-   weapon.events +e_CurseWeapon
-   weapon.timerf <eval <spiritspeak> / 75>,f_CurseWeaponDispel
+   IF (<SRC.FINDLAYER(1).ISWEAPON>)
+      REF1=<SRC.FINDLAYER(1)>
+   ELSEIF (<SRC.FINDLAYER(2).ISWEAPON>)
+      REF1=<SRC.FINDLAYER(2)>
+   ELSE
+      //"Error: <REF1.NAME> does not have a weapon equiped."
+      RETURN 1
+   ENDIF
+   SRC.UNEQUIP <REF1>
+   REF1.TAG.HitLifeLeech=<EVAL <REF1.TAG0.HitLifeLeech> + 50>
+   REF1.TAG.Cursed=1
+   SRC.EQUIP <REF1>
+
+   LOCAL.SpellDuration=<EVAL (<SRC.Spiritspeak> / 34) + 1>
+   //"<SRC.NAME> casts on <REF1.NAME>, duration is <EVAL <LOCAL.SpellDuration>>."
+
+   SRC.NEWITEM i_mem_curse_weapon
+   NEW.LINK=<REF1>
+   NEW.CONT=<SRC>
+   NEW.TIMER=<LOCAL.SpellDuration>
 
 [SPELL 105]
 DEFNAME=s_evil_omen
 NAME=Evil Omen
 SOUND=0245
 RUNES=.Pas Tym An Sanct
-CAST_TIME=1
+CAST_TIME=1.0
 RESOURCES=i_reag_batwing, i_reag_nox_crystal
-RUNE_ITEM=
+//RUNE_ITEM=
 SCROLL_ITEM=i_scroll_evil_omen
 FLAGS=spellflag_dir_anim|spellflag_targ_char|spellflag_harm|spellflag_fx_targ|spellflag_resist|spellflag_targ_noself|spellflag_nounparalyze
 EFFECT_ID=i_fx_curse
@@ -215,8 +252,9 @@ DURATION=0
 MANAUSE=11
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
+PROMPT_MSG=Target a creature to put this curse on.
 ON=@Success
-   IF <ACT.ISEVENT.e_evil_omen>
+   IF (<ACT.ISEVENT.e_evil_omen>)
       ACT.EVENTS -e_evil_omen
       RETURN 1
    ENDIF
@@ -227,7 +265,7 @@ DEFNAME=s_horrific_beast
 NAME=Horrific Beast
 SOUND=snd_spell_summon_daemon
 RUNES=.Rel Xen Vas Bal
-CAST_TIME=4
+CAST_TIME=4.0
 RESOURCES=i_reag_daemon_blood, i_reag_batwing
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_horrific_beast
@@ -255,7 +293,7 @@ ON=@Start
 ON=@Success
    REF1=<FINDID.i_mem_transform>
    IF (<REF1>)
-      SRC.DROP <REF1>//Drop will trigger unequip without the annoying message
+      SRC.DROP <REF1>//Drop will trigger unequip without the annoying message... but it does have an annoying sound.
       REF1.REMOVE
    ELSE
       SRC.NEWITEM=i_mem_transform
@@ -275,7 +313,7 @@ DEFNAME=s_lich_form
 NAME=Lich Form
 SOUND=0fb
 RUNES=.Rel Xen Corp Ort
-CAST_TIME=4
+CAST_TIME=4.0
 RESOURCES=i_reag_grave_dust,i_reag_nox_crystal,i_reag_daemon_blood
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_lich_form
@@ -293,7 +331,7 @@ ON=@Start
    ENDIF
    IF (<FINDID.i_mem_transform>)
       IF (<FINDID.i_mem_transform.TAG0.TransformCreature>==c_liche_form)
-         f_castinglog 1 "Liche Form: Second casting so remove the effect."
+         //"Second casting so remove the effect."
          RETURN 0
       ENDIF
    ENDIF
@@ -304,7 +342,7 @@ ON=@Start
 ON=@Success
    REF1=<FINDID.i_mem_transform>
    IF (<REF1>)
-      SRC.DROP <REF1>//Drop will trigger unequip without the annoying message
+      SRC.DROP <REF1>//Drop will trigger unequip without the annoying message... but it does have an annoying sound.
       REF1.REMOVE
    ELSE
       SRC.NEWITEM=i_mem_transform
@@ -329,7 +367,7 @@ SOUND=0213
 RUNES=.Wis An Ben
 CAST_TIME=1.5
 RESOURCES=i_reag_batwing, i_reag_daemon_blood, i_reag_pig_iron
-RUNE_ITEM=i_rune_poison
+//RUNE_ITEM=
 SCROLL_ITEM=i_scroll_mind_rot
 FLAGS=spellflag_dir_anim|spellflag_targ_char|spellflag_harm|spellflag_fx_targ|spellflag_resist|spellflag_targ_noself|spellflag_nounparalyze
 EFFECT_ID=i_fx_curse
@@ -338,57 +376,62 @@ DURATION=0
 MANAUSE=17
 SKILLREQ=Necromancy 30.0
 INTERRUPT=100.0,1.0
+PROMPT_MSG=Target a creature to put this curse on.
 ON=@Success
-   IF (<ACT.RESTEST i_mind_rot>)
-      ACT.CONSUME i_mind_rot
-      RETURN 1
+   IF (<ACT.RESTEST i_mem_mind_rot>)
+      ACT.CONSUME i_mem_mind_rot
    ENDIF
-   SERV.NEWITEM=i_fx_curse
-   NEW.ATTR=attr_static|attr_decay
-   NEW.TIMER=1
-   NEW.P=<ACT.P>
-   SERV.NEWITEM i_mind_rot
-   NEW.TIMER=<EVAL ((<SRC.SPIRITSPEAK>-<ACT.MAGICRESISTANCE>) / 50) + 20>
+   SERV.NEWITEM i_mem_mind_rot
    ACT.EQUIP <NEW>
+   NEW.TIMER=<EVAL ((<SRC.SPIRITSPEAK>-<ACT.MAGICRESISTANCE>) / 50) + 20>
 
 [SPELL 109]
 DEFNAME=s_pain_spike
 NAME=Pain Spike
 SOUND=snd_spell_dispel_field
 RUNES=.In Sar
-CAST_TIME=1
+CAST_TIME=1.0
 RESOURCES=i_reag_grave_dust, i_reag_pig_iron
 RUNE_ITEM=i_rune_poison
 SCROLL_ITEM=i_scroll_pain_spike
 FLAGS=spellflag_dir_anim|spellflag_targ_char|spellflag_harm|spellflag_fx_targ|spellflag_resist|spellflag_targ_noself
-EFFECT_ID=0
+EFFECT_ID=i_fx_curse
 EFFECT=0
 DURATION=0
 MANAUSE=5
 SKILLREQ=Necromancy 20.0
 INTERRUPT=100.0,1.0
 ON=@Success
-   LOCAL.DAMAGE=<EVAL ((<SRC.NECROMANCY> - <ACT.MAGICRESISTANCE>) / 100) + 30>
-   IF (<ACT.TAG0.spell.painspike>)
-      LOCAL.Damage /= 2
+   REF1=<ACT.FINDID.i_mem_pain_spike>
+   IF (<REF1>)
+      LOCAL.ExtraDamage=<R3,7>
+      REF1.MORE1 += <LOCAL.ExtraDamage>
+      REF1.TIMER += 2
+      ACT.DAMAGE <LOCAL.ExtraDamage> <DEF.dam_god> <SRC>
+      //"<EVAL <LOCAL.ExtraDamage>> EXTRA damage applied to <ACT.NAME>."
+      //FIXME: How to increase the existing buff icon timer?
+   ELSE
+      IF (<ACT.ISPLAYER>)
+         LOCAL.Duration=<EVAL ((<SRC.SPIRITSPEAK> - <ACT.MAGICRESISTANCE>) / 10) + 30>
+      ELSE
+         LOCAL.Duration=<EVAL ((<SRC.SPIRITSPEAK> - <ACT.MAGICRESISTANCE>) / 100) + 18>
+      ENDIF
+      LOCAL.ExtraDamage=<R20,30>
+      ACT.NEWITEM i_mem_pain_spike
+      NEW.MORE1=<LOCAL.ExtraDamage>
+      NEW.LINK=<SRC>
+      ACT.EQUIP <NEW>
+      NEW.TIMER=<LOCAL.Duration>
+      ACT.f_AddBuff PainSpike,<dLOCAL.Duration>,<dLOCAL.ExtraDamage>
    ENDIF
-   IF (<LOCAL.Damage> < 1)
-      LOCAL.Damage=1
-   ENDIF
-   LOCAL.Dmgret=<EVAL <LOCAL.Damage> / 10>
-   LOCAL.Delay=<r7,10>
-   TAG.spell.painspike=1
-   TIMERF <LOCAL.Delay>,f_PainSpikeDispel <LOCAL.Dmgret>
-   ACT.DAMAGE <LOCAL.Damage> dam_god <UID>
    ACT.EFFECT 3,i_fx_glow_spike,1,18,0,39,3
-   ACT.f_AddBuff PainSpike,<dlocal.delay>,<dLOCAL.Dmgret>
 
 [SPELL 110]
 DEFNAME=s_poison_strike
 NAME=Poison Strike
 SOUND=snd_spell_poison_field
 RUNES=.In Vas Nox
-CAST_TIME=2
+CAST_TIME=2.0
 RESOURCES=i_reag_nox_crystal
 RUNE_ITEM=i_rune_poison
 SCROLL_ITEM=i_scroll_poison_strike
@@ -524,7 +567,7 @@ MANAUSE=29
 SKILLREQ=Necromancy 65.0
 INTERRUPT=100.0,1.0
 ON=@Success
-   ACT.EFFECT 3,i_fx_heal_effect,16,20,0,01,1
+   ACT.EFFECT 3,i_fx_heal,16,20,0,01,1
    SERV.NEWITEM i_strangle
    NEW.MORE1=<EVAL <SRC.SPIRITSPEAK> / 100>
    NEW.MORE2=<EVAL <SRC.SPIRITSPEAK> / 100>
@@ -538,12 +581,12 @@ SOUND=0214
 RUNES=.Kal Xen Bal
 CAST_TIME=4.0
 RESOURCES=i_reag_batwing, i_reag_grave_dust, i_reag_daemon_blood
-RUNE_ITEM=
+//RUNE_ITEM=
 SCROLL_ITEM=i_scroll_summon_familiar
 FLAGS=spellflag_dir_anim|spellflag_targ_xyz|spellflag_summon|spellflag_playeronly
-EFFECT_ID=0
+//EFFECT_ID=0
 EFFECT=0
-DURATION=0
+DURATION=120.0,240.0
 MANAUSE=17
 SKILLREQ=Necromancy 30.0
 INTERRUPT=100.0,1.0
@@ -575,7 +618,7 @@ ON=@Start
    ENDIF
    IF (<FINDID.i_mem_transform>)
       IF (<FINDID.i_mem_transform.TAG0.TransformCreature>==c_vampire_form)
-         f_castinglog 1 "Vampiric Embrace: Second casting so remove the effect."
+         //"Second casting so remove the effect."
          RETURN 0
       ENDIF
    ENDIF
@@ -586,7 +629,7 @@ ON=@Start
 ON=@Success
    REF1=<FINDID.i_mem_transform>
    IF (<REF1>)
-      SRC.DROP <REF1>//Drop will trigger unequip without the annoying message
+      SRC.DROP <REF1>//Drop will trigger unequip without the annoying message... but it does have an annoying sound.
       REF1.REMOVE
    ELSE
       SRC.NEWITEM=i_mem_transform
@@ -611,9 +654,9 @@ DEFNAME=s_vengeful_spirit
 NAME=Vengeful Spirit
 SOUND=019c
 RUNES=.Kal Xen Bal Beh
-CAST_TIME=8
+CAST_TIME=8.0
 RESOURCES=i_reag_batwing, i_reag_grave_dust, i_reag_pig_iron
-RUNE_ITEM=
+//RUNE_ITEM=
 SCROLL_ITEM=i_scroll_vengeful_spirit
 FLAGS=spellflag_dir_anim|spellflag_targ_char|spellflag_fx_targ|spellflag_targ_noself
 EFFECT_ID=i_fx_smoke
@@ -630,12 +673,12 @@ ON=@Select
 ON=@Success
    SERV.NEWITEM i_revenant_tracker
    NEW.EQUIP <SRC>
-   SERV.NEWNPC c_revenant
-   NEW.FLAGS |= statf_conjured
+   TRYSRV SERV.NEWNPC c_revenant
+   NEW.FLAGS |= (statf_war|statf_conjured)
    NEW.TAG.OWNER=<SRC.UID>
    NEW.TAG.VICTIM=<ACT.UID>
    NEW.P=<ACT.P>
-   NEW.MOVE <EVAL (RAND(6)) - (RAND(6))>
+//   NEW.MOVE <EVAL (RAND(6)) - (RAND(6))>
    LOCAL.NPC=<NEW.UID>
    SERV.NEWITEM i_vengeful_spirit
    NEW.MORE1=<EVAL ((<SRC.SPIRITSPEAK> * 80) / 12) + 10>
@@ -650,7 +693,7 @@ SOUND=0108
 RUNES=.Kal Vas An Flam
 CAST_TIME=1.5
 RESOURCES=i_reag_grave_dust, i_reag_nox_crystal, i_reag_pig_iron
-RUNE_ITEM=i_rune_weaken
+//RUNE_ITEM=
 SCROLL_ITEM=i_scroll_wither
 FLAGS=spellflag_dir_anim|spellflag_harm|spellflag_fx_targ
 EFFECT_ID=i_fx_curse
@@ -660,26 +703,37 @@ MANAUSE=23
 SKILLREQ=Necromancy 60.0
 INTERRUPT=100.0,1.0
 ON=@Success
+   OBJ=<SRC>//OBJ is the attacker, SRC is the primary target
    FORCHARS 5
-      IF (<SRC.UID> != <UID>)
-         LOCAL.DAMAGE=<R30,35>
-         LOCAL.DAMAGE *= <EVAL 30 + (<KARMA> / 100) + (<SRC.NECROMANCY> * 10)>
-         LOCAL.DAMAGE /= 10000
-         IF (<LOCAL.DAMAGE> > 40)
-            LOCAL.DAMAGE=40
+      //FIXME: Test line of sight
+      FORCHARMEMORYTYPE MEMORY_FIGHT
+         //"<CONT.NAME> is fighting <LINK.NAME>"
+         IF (<LINK>==<OBJ>) && !(<SRC>==<CONT.UID>)
+            //"since <LINK.NAME> is the caster, <CONT.NAME> should take damage"
+            CONT.SYSMESSAGELOC color_text,1070832//"An icy wind surrounds you, freezing your lungs as you try to breath!"
+            CONT.EFFECT 2,i_fx_sparkle,6,15,1,2
+            LOCAL.BaseDamage=<EVAL 10 + ((<OBJ.Necromancy> + <OBJ.SpiritSpeak>) / 100)>
+            IF (<CONT.KARMA> > 0)
+               //* Against a Neutral karma opponent:
+               //  42-50 damage at 100 Necro/SS
+               //  48-56 damage at 120 Necro/SS
+               //* Approx +13 to +17 damage against Level 5 Karma
+               LOCAL.ExtraDamage=<EVAL <CONT.KARMA> / 500>
+            ELSE
+               LOCAL.ExtraDamage=0
+            ENDIF
+            CONT.DAMAGE <EVAL <LOCAL.BaseDamage> + <LOCAL.ExtraDamage>> <DEF.dam_cold> <OBJ>
          ENDIF
-         LOCAL.DAMAGE /= <SRC.DISTANCE <UID>>
-         DAMAGE <LOCAL.DAMAGE> dam_cold <SRC.UID>
-         EFFECT 3,i_fx_vortex_full,5,20,0,0,3
-      ENDIF
+      ENDFOR
    ENDFOR
+   OBJ=
 
 [SPELL 116]
 DEFNAME=s_wraith_form
 NAME=Wraith Form
 SOUND=01d2
 RUNES=.Rel Xen Um
-CAST_TIME=4
+CAST_TIME=4.0
 RESOURCES=i_reag_nox_crystal, i_reag_pig_iron
 RUNE_ITEM=i_rune_weaken
 SCROLL_ITEM=i_scroll_wraith_form
@@ -697,7 +751,7 @@ ON=@Start
    ENDIF
    IF (<FINDID.i_mem_transform>)
       IF (<FINDID.i_mem_transform.TAG0.TransformCreature>==c_wraith_form)
-         f_castinglog 1 "Wraith Form: Second casting so remove the effect."
+         //"Wraith Form: Second casting so remove the effect."
          RETURN 0
       ENDIF
    ENDIF
@@ -708,7 +762,7 @@ ON=@Start
 ON=@Success
    REF1=<FINDID.i_mem_transform>
    IF (<REF1>)
-      SRC.DROP <REF1>//Drop will trigger unequip without the annoying message
+      SRC.DROP <REF1>//Drop will trigger unequip without the annoying message... but it does have an annoying sound.
       REF1.REMOVE
    ELSE
       SRC.NEWITEM=i_mem_transform

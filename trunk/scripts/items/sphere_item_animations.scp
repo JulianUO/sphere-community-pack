@@ -125,7 +125,7 @@ DUPEITEM=01ae5
 DUPEITEM=01ae5
 
 [ITEMDEF 01af3]
-DEFNAME=i_moongate_blue_fx
+DEFNAME=i_fx_moongate_blue
 TYPE=t_light_lit
 TDATA4=0
 CATEGORY=Animations

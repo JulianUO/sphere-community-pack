@@ -2328,7 +2328,7 @@ ON=@NPCRestock
 //FIXME: No Stratics entry
 DEFNAME=c_minotaur_lord
 NAME=minotaur lord
-ICON=i_pet_minotaur_armored
+ICON=i_pet_minotaur_captain
 SOUND=snd_monster_longhorn3
 CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
 DAM=25,40

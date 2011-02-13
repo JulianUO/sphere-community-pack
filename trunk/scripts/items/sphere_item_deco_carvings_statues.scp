@@ -56,7 +56,7 @@ FLIP=1
 VALUE=15
 WEIGHT=20.0
 RESOURCES=2 i_rock_plain
-SKILLMAKE=Masonry 20.0
+SKILLMAKE=Mining 20.0
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Statue
@@ -398,7 +398,7 @@ FLIP=1
 VALUE=68
 WEIGHT=120.0
 RESOURCES=12 i_rock_plain
-SKILLMAKE=Masonry 78.0
+SKILLMAKE=Mining 78.0
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Blessed Statue
@@ -610,7 +610,7 @@ DEFNAME=i_statue_stone_contribution
 WEIGHT=80.0
 VALUE=56
 RESOURCES=8 i_rock_plain
-SKILLMAKE=Masonry 80.0
+SKILLMAKE=Mining 80.0
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Contribution Statue
@@ -731,7 +731,7 @@ DESCRIPTION=Statue Plinth
 
 [ITEMDEF 035e9]
 WEIGHT=150.0
-RESOURCES=150 i_crystal5
+RESOURCES=150 i_crystal
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Sculpture
 DESCRIPTION=Crystal Altar
@@ -740,7 +740,7 @@ DUPELIST=03602,03603,03604
 [ITEMDEF 035ea]
 //Crystal sculpture
 WEIGHT=150.0
-RESOURCES=150 i_crystal5
+RESOURCES=150 i_crystal
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Sculpture
 DESCRIPTION=Crystal Sculpture
@@ -889,10 +889,10 @@ DEFNAME=i_statue_medusa
 VALUE=68
 WEIGHT=120.0
 RESOURCES=12 i_rock_plain
-SKILLMAKE=Masonry 88.0
+SKILLMAKE=Mining 88.0
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Medusa
 
 
-[eof]
+[EOF]
