@@ -10,68 +10,6 @@
 //
 VERSION=0.56b
 
-[ITEMDEF 02252]
-DEFNAME=i_spellbook_paladin
-NAME=paladin spellbook
-TYPE=t_spellbook_pala
-LAYER=1
-WEIGHT=1
-RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
-CATEGORY=Provisions - Alchemy & Magic
-SUBSECTION=Paladin
-DESCRIPTION=Paladin Spellbook
-ON=@Create
-   ATTR=attr_magic|attr_newbie
-   MOREZ=200
-
-[ITEMDEF 0238c]
-DEFNAME=i_spellbook_bushido
-TYPE=t_spellbook_bushido
-NAME=book of bushido
-LAYER=1
-WEIGHT=1
-RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
-CATEGORY=Provisions - Alchemy & Magic
-SUBSECTION=Bushido
-DESCRIPTION=Bushido Spellbook
-ON=@Create
-   ATTR=attr_magic|attr_newbie
-   MOREZ=400
-   
-[ITEMDEF 023a0]
-DEFNAME=i_spellbook_ninjitsu
-TYPE=t_spellbook_ninjitsu
-NAME=book of ninjitsu
-LAYER=1
-WEIGHT=1
-RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
-CATEGORY=Provisions - Alchemy & Magic
-SUBSECTION=Ninjitsu
-DESCRIPTION=Ninjitsu Spellbook
-ON=@Create
-   ATTR=attr_magic|attr_newbie
-   MOREZ=500
-   
-[ITEMDEF 02d50]
-DEFNAME=i_spellbook_arcanist
-TYPE=t_spellbook_arcanist
-NAME=book of arcanist
-LAYER=1
-WEIGHT=1
-RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
-CATEGORY=Provisions - Alchemy & Magic
-SUBSECTION=Arcanist
-DESCRIPTION=Arcanist Spellbook
-ON=@Create
-   ATTR=attr_magic|attr_newbie
-   MOREZ=600
-   
-[ITEMDEF 02251]
-DEFNAME=i_daemon_skull
-NAME=daemon skull
-TYPE=t_normal
-VALUE=5000
-
 [ITEMDEF 02231]
 DEFNAME=i_giant_mush
 NAME=giant mushroom

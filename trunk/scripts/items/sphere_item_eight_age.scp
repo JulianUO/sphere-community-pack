@@ -26,9 +26,8 @@ CATEGORY=Provisions - Armor
 SUBSECTION=Shields
 DESCRIPTION=Dupre's Shield
 SKILLMAKE=BLACKSMITHING 75.0
-
 ON=@Create
-HITPOINTS={26 30}
+   HITPOINTS={26 30}
 
 [ITEMDEF 02b02]
 DEFNAME=i_quiver_infinity
@@ -52,14 +51,13 @@ DUPELIST=02b03
 //quiver of infinity
 DUPEITEM=02b02
 
-// Misc
 [ITEMDEF 02af9]
 DEFNAME=i_dawns_music_box
 NAME=Dawn's Music Box
 TYPE=t_normal
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=8th Age Items
-DESCRIPTION=Dawn's Music Box
+DESCRIPTION=Dawn's Music Box (N)
 DUPELIST=02afa,02afb,02afc,02afd,02afe,02aff,02b00
 
 [ITEMDEF 02afa]
@@ -75,10 +73,9 @@ DUPEITEM=02af9
 DUPEITEM=02af9
 
 [ITEMDEF 02afd]
-//dawns music box
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=8th Age Items
-DESCRIPTION=Dawn's Music Box
+DESCRIPTION=Dawn's Music Box (W)
 DUPEITEM=02af9
 
 [ITEMDEF 02afe]

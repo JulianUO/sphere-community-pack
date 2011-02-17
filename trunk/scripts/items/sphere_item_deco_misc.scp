@@ -747,60 +747,6 @@ CATEGORY=Decoration - Shrines
 SUBSECTION=Sacrifice
 DESCRIPTION=Sacrifice (04/04) (N)
 
-[ITEMDEF 01153]
-DEFNAME=i_fx_magical_sparkles
-CATEGORY=Animations
-SUBSECTION=Magical Sparkles
-DESCRIPTION=Sparkles 1
-DUPELIST=01154,01155,01156,01157,01158
-
-[ITEMDEF 01154]
-//magical sparkles
-DUPEITEM=01153
-
-[ITEMDEF 01155]
-//magical sparkles
-DUPEITEM=01153
-
-[ITEMDEF 01156]
-//magical sparkles
-DUPEITEM=01153
-
-[ITEMDEF 01157]
-//magical sparkles
-DUPEITEM=01153
-
-[ITEMDEF 01158]
-//magical sparkles
-DUPEITEM=01153
-
-[ITEMDEF 01159]
-DEFNAME=i_fx_magical_sparkles_2
-CATEGORY=Animations
-SUBSECTION=Magical Sparkles
-DESCRIPTION=Sparkles 2
-DUPELIST=0115a,0115b,0115c,0115d,0115e
-
-[ITEMDEF 0115a]
-//magical sparkles 2
-DUPEITEM=01159
-
-[ITEMDEF 0115b]
-//magical sparkles 2
-DUPEITEM=01159
-
-[ITEMDEF 0115c]
-//magical sparkles 2
-DUPEITEM=01159
-
-[ITEMDEF 0115d]
-//magical sparkles 2
-DUPEITEM=01159
-
-[ITEMDEF 0115e]
-//magical sparkles 2
-DUPEITEM=01159
-
 [ITEMDEF 011c6]
 DEFNAME=i_pot_small_flower
 RESOURCES=1 i_clay
@@ -890,7 +836,7 @@ DESCRIPTION=@
 DEFNAME=i_telescope
 RESOURCES=100 i_rock_plain, 20 i_ingot_gold, 50 i_ingot_iron, 4 i_glass, 2 i_marble
 WEIGHT=1400
-TYPE=T_TELESCOPE
+TYPE=t_telescope
 CATEGORY=Miscellaneous
 SUBSECTION=Telescope
 DESCRIPTION=@
@@ -1199,7 +1145,7 @@ DUPEITEM=014d7
 
 [ITEMDEF 014e0]
 DEFNAME=i_bucket
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=03e
 RESOURCES=2 i_board, 1 i_ingot_iron, 1 i_nails
 WEIGHT=2
@@ -1209,8 +1155,8 @@ DESCRIPTION=Bucket
 
 [ITEMDEF 014e1]
 DEFNAME=i_vat_ladder
-RESOURCES=10 i_board, 1 i_nails
 WEIGHT=10
+RESOURCES=10 i_board, 1 i_nails
 CATEGORY=Miscellaneous
 SUBSECTION=Vat
 DESCRIPTION=Vat (Ladder)
@@ -1219,21 +1165,17 @@ DUPELIST=014e2
 [ITEMDEF 014e2]
 //vat ladder
 DUPEITEM=014e1
-CATEGORY=Miscellaneous
-SUBSECTION=Vat
-DESCRIPTION=Vat (Ladder)
 
 [ITEMDEF 014f3]
 DEFNAME=i_model_ship
 FLIP=1
 WEIGHT=1
+RESOURCES=10 i_board
+SKILLMAKE=carpentry 95.0, t_carpentry
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Nautical
 DESCRIPTION=Ship Model (N)
 DUPELIST=014f4
-
-RESOURCES=10 i_board
-SKILLMAKE=CARPENTRY 95.0, t_carpentry
 
 [ITEMDEF 014f4]
 //ship model
@@ -1241,7 +1183,7 @@ DUPEITEM=014f3
 
 [ITEMDEF 014f5]
 DEFNAME=i_spyglass
-TYPE=T_SPY_GLASS
+TYPE=t_spy_glass
 FLIP=1
 RESOURCES=2 i_ingot_iron, 1 i_glass
 WEIGHT=3
@@ -2636,7 +2578,7 @@ DUPEITEM=01b3f
 
 [ITEMDEF 01b6c]
 DEFNAME=i_wall_cracks
-TYPE=T_WALL
+TYPE=t_wall
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Wall Cracks
 DESCRIPTION=@
@@ -2666,7 +2608,7 @@ DESCRIPTION=Ankh of Sacrifice
 DUPELIST=01d98,01e5c,01e5d
 
 [ITEMDEF 01d98]
-//ank of sacrifice
+//ankh of sacrifice
 DUPEITEM=01d97
 
 [ITEMDEF 01e0f]
@@ -2732,7 +2674,7 @@ SUBSECTION=Trophies
 DESCRIPTION=Bear
 DUPELIST=01e67
 RESOURCES=15 i_log,10 i_hides_cut
-SKILLMAKE=CARPENTRY 72.0, TAILORING 60.0, t_carpentry, t_sewing_kit
+SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
 
 [ITEMDEF 01e61]
 DEFNAME=i_trophy_deerhead
@@ -2742,7 +2684,7 @@ CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Trophies
 DESCRIPTION=Deer
 DUPELIST=01e68
-SKILLMAKE=CARPENTRY 72.0, TAILORING 60.0, t_carpentry, t_sewing_kit
+SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
 
 [ITEMDEF 01e62]
 DEFNAME=i_trophy_fish
@@ -2752,7 +2694,7 @@ CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Trophies
 DESCRIPTION=Fish
 DUPELIST=01e69
-SKILLMAKE=CARPENTRY 72.0, TAILORING 60.0, t_carpentry, t_sewing_kit
+SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
 
 [ITEMDEF 01e63]
 DEFNAME=i_trophy_gorillahead
@@ -2762,7 +2704,7 @@ CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Trophies
 DESCRIPTION=Gorilla
 DUPELIST=01e6a
-SKILLMAKE=CARPENTRY 72.0, TAILORING 60.0, t_carpentry, t_sewing_kit
+SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
 
 [ITEMDEF 01e64]
 DEFNAME=i_trophy_orchead
@@ -2772,7 +2714,7 @@ CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Trophies
 DESCRIPTION=Orc
 DUPELIST=01e6b
-SKILLMAKE=CARPENTRY 72.0, TAILORING 60.0, t_carpentry, t_sewing_kit
+SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
 
 [ITEMDEF 01e65]
 DEFNAME=i_trophy_polarbearhead
@@ -2782,7 +2724,7 @@ CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Trophies
 DESCRIPTION=Polar Bear
 DUPELIST=01e6c
-SKILLMAKE=CARPENTRY 72.0, TAILORING 60.0, t_carpentry, t_sewing_kit
+SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
 
 [ITEMDEF 01e66]
 DEFNAME=i_trophy_trollhead
@@ -2792,7 +2734,7 @@ CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Trophies
 DESCRIPTION=Troll
 DUPELIST=01e6d
-SKILLMAKE=CARPENTRY 72.0, TAILORING 60.0, t_carpentry, t_sewing_kit
+SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
 
 [ITEMDEF 01e67]
 DUPEITEM=01e60
@@ -2857,797 +2799,638 @@ DUPELIST=03f40,03f41,03f42,03f43,03f44,03f45,03f46,03f47,03f48,03f49,03f4a,03f4b
 
 [ITEMDEF 03f40]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f41]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f42]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f43]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f44]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f45]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f46]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f47]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f48]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f49]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f4a]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f4b]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f4c]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f4d]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f4e]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f4f]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f50]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f51]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f52]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f53]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f54]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f55]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f56]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f57]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f58]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f59]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f5a]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f5b]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f5c]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f5d]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f5e]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f5f]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f60]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f61]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f62]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f63]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f64]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f65]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f66]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f67]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f68]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f69]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f6a]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f6b]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f6c]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f6d]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f6e]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f6f]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f70]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f71]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f72]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f73]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f74]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f75]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f76]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f77]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f78]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f79]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f7a]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f7b]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f7c]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f7d]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f7e]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f7f]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f80]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f81]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f82]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f83]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f84]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f85]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f86]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f87]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f88]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f89]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f8a]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f8b]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f8c]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f8d]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f8e]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f90]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f91]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f92]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f93]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f94]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f95]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f96]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f97]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f98]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f99]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f9a]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f9b]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f9c]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f9d]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f9e]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03f9f]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fa0]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fa1]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fa2]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fa3]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fa4]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fa5]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fa6]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fa7]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fa8]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fa9]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03faa]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fab]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fac]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fad]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fae]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03faf]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fb0]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fb1]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fb2]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fb3]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fb4]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fb5]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fb6]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fb7]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fb8]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fb9]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fba]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fbb]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fbc]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fbd]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fbe]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fbf]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fc0]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fc1]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fc2]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fc3]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fc4]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fc5]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fc6]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fc7]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fc8]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fc9]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fca]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fcb]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fcc]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fcd]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fce]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fcf]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fd0]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fd1]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fd2]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fd3]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fd4]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fd5]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fd6]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fd7]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fd8]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fd9]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fda]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fdb]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fdc]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fdd]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fde]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fdf]
 //ballista
-
 DUPEITEM=03f3f
 
 [ITEMDEF 03fe0]

@@ -4061,7 +4061,7 @@ INT={86 100}
 //NEED=i_reag_serpent_scale
 //NEED=i_reag_volcanic_ash
 //NEED=i_reag_dead_wood
-//NEED=i_reag_worm_heart
+//NEED=i_reag_wyrm_heart
 
 MEDITATION={75.0 100.0}
 INSCRIPTION={50.0 65.0}
@@ -4147,7 +4147,7 @@ INT={86 100}
 //NEED=i_reag_serpent_scale
 //NEED=i_reag_volcanic_ash
 //NEED=i_reag_dead_wood
-//NEED=i_reag_worm_heart
+//NEED=i_reag_wyrm_heart
 
 MEDITATION={75.0 100.0}
 INSCRIPTION={50.0 65.0}

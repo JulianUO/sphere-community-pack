@@ -37,6 +37,7 @@ ON=@Create
 [ITEMDEF 04067]
 DUPEITEM=08ff
 
+
 ///////////////////////////////////////////////////////////////
 //////// CYCLONES
 ///////////////////////////////////////////////////////////////
@@ -70,14 +71,14 @@ DUPEITEM=0901
 
 
 ///////////////////////////////////////////////////////////////
-//////// SOUL GLAVIES
+//////// SOUL GLAIVES
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 090a]
 DEFNAME=i_soul_glaive
 NAME=soul glaive
 TYPE=t_weapon_bow
 TDATA3=//nothing is consumed... the weapon itself is thrown
-TDATA4=i_soul_glaive
+TDATA4=i_glaive_anim_x
 DAM=18,22
 FLIP=1
 SKILL=Throwing
@@ -101,4 +102,60 @@ ON=@Create
 [ITEMDEF 0406b]
 DUPEITEM=090a
 
-[eof]
+[ITEMDEF 0909]
+DEFNAME=i_glaive_anim_x
+NAME=soul glaive
+DUPELIST=04069
+
+[ITEMDEF 04069]
+DUPEITEM=0909
+
+
+///////////////////////////////////////////////////////////////
+//////// BOLAS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 06ac]
+DEFNAME=i_bola
+NAME=bola
+TYPE=t_bola
+WEIGHT=4.0
+SKILLMAKE=Tinkering 60.0, t_tinker_tools
+RESOURCES=4 i_bola_ball, 3 i_hides_cut
+CATEGORY=Provisions - Weapons - Miscellaneous
+SUBSECTION=Bolas
+DESCRIPTION=Bola
+
+[ITEMDEF i_bola_ball]
+//The bola ball is used to craft a bola, is is not actually ammunition
+ID=i_cannon_ball
+NAME=bola ball%s
+TYPE=t_normal
+WEIGHT=4.0
+SKILLMAKE=Tinkering 45.0, t_tinker_tools
+RESOURCES=10 i_ingot_iron
+CATEGORY=Provisions - Weapons - Miscellaneous
+SUBSECTION=Bolas
+DESCRIPTION=Bola Ball
+ON=@Create
+   COLOR=08ac
+
+
+///////////////////////////////////////////////////////////////
+//////// SHURIKENS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 027ac]
+DEFNAME=i_shuriken
+NAME=Shuriken%s
+TYPE=t_weapon_arrow
+DUPELIST=027f7
+SKILLMAKE=Blacksmithing 45.0
+RESOURCES=5 i_ingot_iron
+
+[ITEMDEF 027ed]
+DUPEITEM=027a2
+
+[ITEMDEF 027f7]
+DUPEITEM=027ac
+
+
+[EOF]

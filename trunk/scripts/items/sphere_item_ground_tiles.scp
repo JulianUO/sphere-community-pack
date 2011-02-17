@@ -1,19 +1,12 @@
 //****************************************************************************
-//SPHERE by : Menasoft ©1997-2007
-//www.sphereserver.com
-//All SPHERE script files and formats are copyright Menasoft & Partners.
-//This file may be freely edited for personal use, but may not be distributed
-//in whole or in part, in any format without express written permission from
-//Menasoft & Partners.  All donations and contributions
-//become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-//FILE LAST UPDATED: Wednesday, July 12, 2007
-//
+// FILE LAST UPDATED: Monday, Febuary 14, 2011
 VERSION=0.56b
 
-
 [ITEMDEF 0911]
-//dirt patch
 CATEGORY=Ground Tiles
 SUBSECTION=Dirt Patch
 DESCRIPTION=@
@@ -422,36 +415,26 @@ DUPEITEM=0131e
 DUPEITEM=0131e
 
 [ITEMDEF 01383]
-DEFNAME=i_tile_stone_sand
-RESOURCES=2 i_stone_sand
+DEFNAME=i_tile_sandstone
+FLIP=1
 WEIGHT=4
+RESOURCES=2 i_stone_sand
 CATEGORY=Ground Tiles
 SUBSECTION=Sandstone
 DESCRIPTION=@
+DUPELIST=01384,01385,01386
 
 [ITEMDEF 01384]
-DEFNAME=i_tile_stone_sand_2
-RESOURCES=2 i_stone_sand
-WEIGHT=4
-CATEGORY=Ground Tiles
-SUBSECTION=Sandstone
-DESCRIPTION=@
+//sandstone tile
+DUPEITEM=01383
 
 [ITEMDEF 01385]
-DEFNAME=i_tile_stone_sand_3
-RESOURCES=2 i_stone_sand
-WEIGHT=4
-CATEGORY=Ground Tiles
-SUBSECTION=Sandstone
-DESCRIPTION=@
+//sandstone tile
+DUPEITEM=01383
 
 [ITEMDEF 01386]
-DEFNAME=i_tile_stone_sand_4
-RESOURCES=2 i_stone_sand
-WEIGHT=4
-CATEGORY=Ground Tiles
-SUBSECTION=Sandstone
-DESCRIPTION=@
+//sandstone tile
+DUPEITEM=01383
 
 [ITEMDEF 0177d]
 TYPE=t_grass
@@ -997,6 +980,15 @@ DUPEITEM=01b01
 //floor cracks
 DUPEITEM=01b01
 
+[ITEMDEF 01b27]
+DEFNAME=i_dirt_tile
+VALUE=2
+WEIGHT=1
+CATEGORY=Ground Tiles
+SUBSECTION=Dirt
+DESCRIPTION=@
+DUPELIST=01b28,01b29,01b2a,01b2b,01b2c,01b2d,01b2e,01b2f,01b30,01b31,01b32,01b33,01b34,01b35,01b36,01b37,01b38,01b39,01b3a,01b3b,01b3c,01b3d,01b3e
+
 [ITEMDEF 01b28]
 //dirt
 DUPEITEM=01b27
@@ -1221,7 +1213,16 @@ DUPEITEM=01b9f
 
 [ITEMDEF 01796]
 //water
+DUPEITEM=01797
+
+[ITEMDEF 01797]
+DEFNAME=i_water
+VALUE=2
 TYPE=t_water
+CATEGORY=Ground Tiles
+SUBSECTION=Water
+DESCRIPTION=@
+DUPELIST=01798,01799,0179a,0179b,0179c,0179d,0179e,0179f,017a0,017a1,017a2,017a3,017a4,017a5,017a6,017a7,017a8,017a9,017aa,017ab,017ac,017ad,017ae,017af,017b0,017b1,017b2,01796
 
 [ITEMDEF 01798]
 //water
@@ -1345,44 +1346,40 @@ DUPEITEM=01dfd
 
 [ITEMDEF 01e01]
 DEFNAME=i_mud
-RESOURCES=1 i_dirt, i_water
+FLIP=1
 WEIGHT=1
+RESOURCES=1 i_dirt, i_water
 CATEGORY=Ground Tiles
 SUBSECTION=Mud and Footprints
 DESCRIPTION=Mud
+DUPELIST=01e02
 
 [ITEMDEF 01e02]
 //mud
-CATEGORY=Ground Tiles
-SUBSECTION=Mud and Footprints
-DESCRIPTION=Mud
+DUPEITEM=01e01
 
 [ITEMDEF 01e03]
-//footprints
+DEFNAME=i_footprints
+FLIP=1
+RESOURCES=1 i_mud
 CATEGORY=Ground Tiles
 SUBSECTION=Mud and Footprints
 DESCRIPTION=Footprints
+DUPELIST=01e04,01e05,01e06
 
 [ITEMDEF 01e04]
 //footprints
-CATEGORY=Ground Tiles
-SUBSECTION=Mud and Footprints
-DESCRIPTION=Footprints
+DUPEITEM=01e03
 
 [ITEMDEF 01e05]
 //footprints
-CATEGORY=Ground Tiles
-SUBSECTION=Mud and Footprints
-DESCRIPTION=Footprints
+DUPEITEM=01e03
 
 [ITEMDEF 01e06]
 //footprints
-CATEGORY=Ground Tiles
-SUBSECTION=Mud and Footprints
-DESCRIPTION=Footprints
+DUPEITEM=01e03
 
 [ITEMDEF 01e07]
-//stain
 CATEGORY=Ground Tiles
 SUBSECTION=Stain
 DESCRIPTION=@
@@ -1416,171 +1413,7 @@ DUPEITEM=01e07
 //stain
 DUPEITEM=01e07
 
-[ITEMDEF 01fa3]
-//wave
-CATEGORY=Ground Tiles (animated)
-SUBSECTION=Wave
-DESCRIPTION=@
-DUPELIST=01fa4,01fa5,01fa6,01fa7,01fa8,01fa9,01faa,01fab,01fac,01fad,01fae,01faf,01fb0,01fb1,01fb2,01fb3,01fb4,01fb5,01fb6,01fb7,01fb8,01fb9,01fba,01fbb,01fbc,01fbd,01fbe,01fbf,01fc0,01fc1,01fc2,01fc3,01fc4,01fc5,01fc6,01fc7,01fc8,01fc9,01fca
-
-[ITEMDEF 01fa4]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fa5]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fa6]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fa7]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fa8]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fa9]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01faa]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fab]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fac]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fad]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fae]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01faf]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fb0]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fb1]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fb2]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fb3]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fb4]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fb5]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fb6]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fb7]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fb8]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fb9]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fba]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fbb]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fbc]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fbd]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fbe]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fbf]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fc0]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fc1]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fc2]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fc3]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fc4]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fc5]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fc6]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fc7]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fc8]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fc9]
-//wave
-DUPEITEM=01fa3
-
-[ITEMDEF 01fca]
-//wave
-DUPEITEM=01fa3
-
 [ITEMDEF 031f4]
-//dirt
 CATEGORY=Ground Tiles
 SUBSECTION=Dirt
 DESCRIPTION=@
@@ -1627,7 +1460,7 @@ DUPEITEM=03209
 [ITEMDEF 0320d]
 CATEGORY=Ground Tiles (animated)
 SUBSECTION=Swamp
-DESCRIPTION=@
+DESCRIPTION=@ (animated)
 DUPELIST=0320e,0320f,03210,03211,03213,03214,03215,03216,03217,03218,0321a,0321b,0321c,0321d,0321e,03220,03221,03222,03223,03224,03226,03227,03228,03229,0322a,0322c,0322d,0322e,0322f,03230,03231,03232,03233,03234,03236,03237,03238,03239,0323a,0323b,0323c,0323d,0323e,0323f,03241,03242,03243,03244,03245,03246,03247,03248,03249,0324a
 
 [ITEMDEF 0320e]
@@ -2271,88 +2104,6 @@ DUPEITEM=03286
 
 [ITEMDEF 032d5]
 //dirt
-
-[ITEMDEF 03421]
-TYPE=t_rock
-CATEGORY=Ground Tiles (animated)
-SUBSECTION=Boulder in water
-DESCRIPTION=@
-DUPELIST=03422,03423,03424,03425,03426,03427,03428,03429
-
-[ITEMDEF 03422]
-//rock
-DUPEITEM=03421
-
-[ITEMDEF 03423]
-//rock
-DUPEITEM=03421
-
-[ITEMDEF 03424]
-//rock
-DUPEITEM=03421
-
-[ITEMDEF 03425]
-//rock
-DUPEITEM=03421
-
-[ITEMDEF 03426]
-//rock
-DUPEITEM=03421
-
-[ITEMDEF 03427]
-//rock
-DUPEITEM=03421
-
-[ITEMDEF 03428]
-//rock
-DUPEITEM=03421
-
-[ITEMDEF 03429]
-//rock
-DUPEITEM=03421
-
-[ITEMDEF 0342c]
-TYPE=t_rock
-CATEGORY=Ground Tiles (animated)
-SUBSECTION=Boulder in water
-DESCRIPTION=@
-DUPELIST=0342d,0342e,0342f,03430,03431,03432,03433,03434,03435
-
-[ITEMDEF 0342d]
-//rock
-DUPEITEM=0342c
-
-[ITEMDEF 0342e]
-//rock
-DUPEITEM=0342c
-
-[ITEMDEF 0342f]
-//rock
-DUPEITEM=0342c
-
-[ITEMDEF 03430]
-//rock
-DUPEITEM=0342c
-
-[ITEMDEF 03431]
-//rock
-DUPEITEM=0342c
-
-[ITEMDEF 03432]
-//rock
-DUPEITEM=0342c
-
-[ITEMDEF 03433]
-//rock
-DUPEITEM=0342c
-
-[ITEMDEF 03434]
-//rock
-DUPEITEM=0342c
-
-[ITEMDEF 03435]
-//rock
-DUPEITEM=0342c
 
 [ITEMDEF 0343b]
 DEFNAME=i_lava_bubble
@@ -3331,5 +3082,30 @@ DUPEITEM=03547
 DUPEITEM=03547
 
 
+[ITEMDEF 0219f]
+//hover over (hidden)
+TYPE=t_hoverover
 
-[eof]
+[ITEMDEF 05683]
+//hover over (sparkle)
+TYPE=t_hoverover
+DUPELIST=05684,05685,05686
+
+[ITEMDEF 05684]
+//hover over (sparkle)
+DUPEITEM=05683
+
+[ITEMDEF 05685]
+//hover over (sparkle)
+DUPEITEM=05683
+
+[ITEMDEF 05686]
+//hover over (sparkle)
+DUPEITEM=05683
+
+[ITEMDEF 05690]
+// hover over (hidden)
+TYPE=t_hoverover
+
+
+[EOF]

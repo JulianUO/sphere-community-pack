@@ -150,26 +150,6 @@ ON=@ClientToolTip
 ID=i_model_ship
 NAME=Ship Model of the H.M.S. Cape
 
-[ITEMDEF i_corredor_sword]
-ID=i_paladin_sword
-NAME=The Great Sword
-TYPE=t_weapon_sword
-SKILL=swordsmanship
-SPEED=30
-WEIGHT=3.1
-DAM=15,35
-//TEVENTS=t_aos_weapon
-TEVENTS=T_PROPRIEDADES
-TAG.DAMINCREASE=30
-TAG.HITCHANCEINCREASE=60
-TEVENTS=t_luck_item
-TAG.LUCK=70
-
-ON=@create
-	hitpoints=252
-	morem=2
-	COLOR=35
-
 [ITEMDEF i_fire_horn]
 ID=0fc7
 NAME=Fire Horn

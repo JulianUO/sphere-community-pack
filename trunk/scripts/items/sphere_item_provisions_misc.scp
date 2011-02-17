@@ -13,10 +13,10 @@ VERSION=0.56b
 
 [ITEMDEF 09a7]
 DEFNAME=i_pitcher_glass
-TYPE=T_PITCHER_EMPTY
+TYPE=t_pitcher_empty
 TDATA1=i_pitcher_glass
 FLIP=1
-RESOURCES=6 i_GLASS
+RESOURCES=6 i_glass
 VALUE=50
 WEIGHT=2
 CATEGORY=Provisions - Miscellaneous
@@ -26,9 +26,9 @@ DUPELIST=0ff6,0ff7
 
 [ITEMDEF 09a8]
 DEFNAME=i_box_brass
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=04b
-//TDATA2=043	// no lock?
+//TDATA2=043   // no lock?
 FLIP=1
 WEIGHT=5
 CATEGORY=Provisions - Miscellaneous
@@ -41,7 +41,7 @@ RESOURCES=5 i_ingot_iron, 5 i_log
 [ITEMDEF 09ab]
 //DEFNAME2=METAL_CHEST_4
 DEFNAME=i_chest_metal
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=04a
 FLIP=1
 WEIGHT=20
@@ -54,9 +54,9 @@ RESOURCES=20 i_ingot_iron, 2 i_board
 
 [ITEMDEF 09ac]
 DEFNAME=i_basket_bushel
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=041
-RESOURCES=3 I_STRAW
+RESOURCES=3 i_straw
 WEIGHT=5
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
@@ -64,7 +64,7 @@ DESCRIPTION=Large Basket
 
 [ITEMDEF 09b0]
 DEFNAME=i_pouch
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=03c
 FLIP=1
 DYE=1
@@ -78,9 +78,9 @@ RESOURCES=2 i_hides_cut
 
 [ITEMDEF 09b1]
 DEFNAME=i_basket_2
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=03F
-RESOURCES=3 I_STRAW
+RESOURCES=3 i_straw
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
 DESCRIPTION=Small Basket
@@ -88,8 +88,8 @@ DESCRIPTION=Small Basket
 [ITEMDEF 0de1]
 //Kindling
 DEFNAME=i_kindling
-TYPE=T_KINDLING
-RESOURCES=1 I_LOG
+TYPE=t_kindling
+RESOURCES=1 i_log
 SKILLMAKE=BOWCRAFT 0.0
 REPLICATE=1
 WEIGHT=1
@@ -105,7 +105,7 @@ DUPEITEM=0de1
 [ITEMDEF 0de3]
 //campfire
 DEFNAME=i_campfire
-TYPE=T_CAMPFIRE
+TYPE=t_campfire
 RESOURCES=i_kindling
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Campfires
@@ -135,7 +135,7 @@ DUPEITEM=0de3
 [ITEMDEF 0de9]
 //embers
 DEFNAME=i_ember_lit
-TYPE=t_CAMPFIRE
+TYPE=t_campfire
 VALUE=2
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Campfires
@@ -145,7 +145,7 @@ DESCRIPTION=Embers
 //burned wood
 DEFNAME=i_ember
 TYPE=t_garbage
-RESOURCES=1 I_KINDLING
+RESOURCES=1 i_kindling
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Campfires
 DESCRIPTION=Burned Wood
@@ -153,7 +153,7 @@ DESCRIPTION=Burned Wood
 [ITEMDEF 0e40]
 // DEFNAME2=METAL_CHEST_1
 DEFNAME=i_chest_metal_brass
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=042
 FLIP=1
 WEIGHT=20
@@ -171,7 +171,7 @@ DUPEITEM=0e40
 [ITEMDEF 0e75]
 DEFNAME=i_backpack
 RESOURCES=4 i_hides_cut
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=03c
 FLIP=1
 DYE=1
@@ -183,7 +183,7 @@ SKILLMAKE=TAILORING 15.0, t_sewing_kit
 
 [ITEMDEF 0e76]
 DEFNAME=i_bag
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=03D
 FLIP=1
 DYE=1
@@ -197,7 +197,7 @@ RESOURCES=4 i_hides_cut
 [ITEMDEF 0e77]
 // DEFNAME2=big_barrel
 DEFNAME=i_barrel_open
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=03E
 FLIP=1
 WEIGHT=10
@@ -211,7 +211,7 @@ RESOURCES=10 i_log
 //Round Basket (AKA basin)
 DEFNAME=i_basket_round
 RESOURCES=3 i_ingot_iron
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=041
 FLIP=1
 WEIGHT=1
@@ -226,9 +226,9 @@ DUPEITEM=09b0
 [ITEMDEF 0e7a]
 //picnic basket
 DEFNAME=i_basket_square
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=03f
-RESOURCES=5 I_STRAW
+RESOURCES=5 i_straw
 FLIP=1
 WEIGHT=1
 CATEGORY=Provisions - Miscellaneous
@@ -257,8 +257,8 @@ DUPEITEM=09a8
 [ITEMDEF 0e83]
 //empty tub
 DEFNAME=i_tub_empty
-RESOURCES=10 I_BOARD, 5 i_ingot_iron
-TYPE=T_CONTAINER
+RESOURCES=10 i_board, 5 i_ingot_iron
+TYPE=t_container
 TDATA2=041
 FLIP=1
 WEIGHT=5
@@ -312,18 +312,17 @@ DESCRIPTION=Silver Coins
 //fire pit
 DEFNAME=i_fire_pit
 TYPE=t_fire
-RESOURCES=1 i_KINDLING
+RESOURCES=1 i_kindling
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Campfires
 DESCRIPTION=Fire Pit
-
 ON=@Create
-	MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 0fae]
 //barrel (covered)
 DEFNAME=i_barrel
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=03E
 FLIP=1
 WEIGHT=10
@@ -336,7 +335,7 @@ RESOURCES=12 i_log
 [ITEMDEF 01008]
 //wash basin
 DEFNAME=i_wash_basin
-RESOURCES=1 i_ingot_iron, 1 i_SAND
+RESOURCES=1 i_ingot_iron, 1 i_sand
 WEIGHT=1
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
@@ -344,7 +343,7 @@ DESCRIPTION=Wash Basin
 
 [ITEMDEF 01009]
 DEFNAME=i_basin
-RESOURCES=1 i_ingot_iron, 1 i_SAND
+RESOURCES=1 i_ingot_iron, 1 i_sand
 WEIGHT=1
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
@@ -354,7 +353,7 @@ DESCRIPTION=Basin
 DEFNAME=i_key_copper
 RESOURCES=3 i_ingot_iron
 WEIGHT=1
-TYPE=T_KEY
+TYPE=t_key
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Keys
 DESCRIPTION=Copper Key
@@ -364,7 +363,7 @@ SKILLMAKE=TINKERING 43.0,t_tinker_tools
 DEFNAME=i_key_gold
 RESOURCES=2 i_ingot_iron, 1 i_ingot_gold
 WEIGHT=1
-TYPE=T_KEY
+TYPE=t_key
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Keys
 DESCRIPTION=Gold Key
@@ -375,7 +374,7 @@ SKILLMAKE=TINKERING 60.0,t_tinker_tools
 DEFNAME=i_key_iron
 RESOURCES=3 i_ingot_iron
 WEIGHT=1
-TYPE=T_KEY
+TYPE=t_key
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Keys
 DESCRIPTION=Iron Key
@@ -383,7 +382,7 @@ SKILLMAKE=TINKERING 30.0,t_tinker_tools
 
 [ITEMDEF 01011]
 DEFNAME=i_key_ring
-TYPE=T_KEYRING
+TYPE=t_keyring
 TDATA2=1
 WEIGHT=1
 CATEGORY=Provisions - Miscellaneous
@@ -391,30 +390,28 @@ SUBSECTION=Keys
 DESCRIPTION=Key Ring
 RESOURCES=1 i_ingot_iron
 SKILLMAKE=TINKERING 30.0,t_tinker_tools
-
-ON=@DCLICK
-	SRC.MESSAGE Drop keys on an empty key ring
+ON=@DClick
+   SRC.MESSAGE Drop keys on an empty key ring
 
 [ITEMDEF 01012]
 // DEFNAME2=MAGIC_Key
 DEFNAME=i_key_magic
 WEIGHT=1
-TYPE=T_KEY
+TYPE=t_key
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Keys
 DESCRIPTION=Magic Key
 SKILLMAKE=TINKERING 80.0, MAGERY 50.0,t_tinker_tools
 RESOURCES=5 i_ingot_gold, 5 i_ingot_iron, 5 i_ingot_copper
-
 ON=@Create
-	ATTR=attr_magic|attr_newbie
+   ATTR=attr_magic|attr_newbie
 
 [ITEMDEF 01013]
 // DEFNAME2=RUSTY_KEY
 DEFNAME=i_key_rusty
 RESOURCES=1 i_ingot_iron
 WEIGHT=1
-TYPE=T_KEY
+TYPE=t_key
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Keys
 DESCRIPTION=Rusty Iron Key
@@ -431,7 +428,7 @@ RESOURCES=i_barrel_open
 [ITEMDEF 01769]
 // Key ring with keys on it
 DEFNAME=i_key_ring_1
-TYPE=T_KEYRING
+TYPE=t_keyring
 TDATA2=1
 RESOURCES=1 i_ingot_iron
 WEIGHT=1
@@ -510,9 +507,9 @@ DUPEITEM=01e80
 [ITEMDEF 01ecd]
 //blinking green communications crystal casting light
 DEFNAME=i_crystal_green
-RESOURCES=10 i_GEM_EMERALD
+RESOURCES=10 i_gem_emerald
 NAME=Communication Crystal
-TYPE=T_COMM_CRYSTAL
+TYPE=t_comm_crystal
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Communication Crystals
 DESCRIPTION=Communication Crystal (green)
@@ -529,9 +526,9 @@ DUPEITEM=01ecd
 [ITEMDEF 01ed0]
 //blinking red communications crystal casting light
 DEFNAME=i_crystal_red
-RESOURCES=10 i_GEM_RUBY
+RESOURCES=10 i_gem_ruby
 NAME=Communication Crystal
-TYPE=T_COMM_CRYSTAL
+TYPE=t_comm_crystal
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Communication Crystals
 DESCRIPTION=Communication Crystal (red)
@@ -548,7 +545,7 @@ DUPEITEM=01ed0
 [ITEMDEF 01f24]
 //bedroll square
 DEFNAME=i_bedroll_open
-TYPE=T_BEDROLL
+TYPE=t_bedroll
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Bedroll Tile
 DESCRIPTION=@

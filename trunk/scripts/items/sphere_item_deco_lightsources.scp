@@ -730,50 +730,6 @@ CATEGORY=Decoration - Lightsources
 SUBSECTION=Brazier
 DESCRIPTION=Brazier
 
-[ITEMDEF 019ac]
-//fire
-DUPEITEM=019ab
-
-[ITEMDEF 019ad]
-//fire
-DUPEITEM=019ab
-
-[ITEMDEF 019ae]
-//fire
-DUPEITEM=019ab
-
-[ITEMDEF 019af]
-//fire
-DUPEITEM=019ab
-
-[ITEMDEF 019b0]
-//fire
-DUPEITEM=019ab
-
-[ITEMDEF 019b1]
-//fire
-DUPEITEM=019ab
-
-[ITEMDEF 019b2]
-//fire
-DUPEITEM=019ab
-
-[ITEMDEF 019b3]
-//fire
-DUPEITEM=019ab
-
-[ITEMDEF 019b4]
-//fire
-DUPEITEM=019ab
-
-[ITEMDEF 019b5]
-//fire
-DUPEITEM=019ab
-
-[ITEMDEF 019b6]
-//fire
-DUPEITEM=019ab
-
 [ITEMDEF 01f2b]
 DEFNAME=i_brazier
 TYPE=t_fire
@@ -784,4 +740,4 @@ SUBSECTION=Brazier
 DESCRIPTION=Brazier
 
 
-[eof]
+[EOF]

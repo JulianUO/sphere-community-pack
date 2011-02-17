@@ -481,8 +481,8 @@ MAKEITEM=i_ARROW_SHAFT
 ON=i_bow <name> (<resmake>)
 MAKEITEM=i_bow
 
-ON=i_CROSSBOW <name> (<resmake>)
-MAKEITEM=i_CROSSBOW
+ON=i_crossbow <name> (<resmake>)
+MAKEITEM=i_crossbow
 
 ON=i_crossbow_heavy <name> (<resmake>)
 MAKEITEM=i_crossbow_heavy
@@ -503,26 +503,23 @@ MAKEITEM=i_arrow
 [SKILLMENU sm_bows_excep] // Exceptional Bows
 Exceptional Bows
 
-ON=i_BOW_SUP <name> (<resmake>)
-MAKEITEM=i_BOW_SUP
+ON=i_bow_superior <name> (<resmake>)
+MAKEITEM=i_bow_superior
 
-ON=i_XBOW_SUP <name> (<resmake>)
-MAKEITEM=i_XBOW_SUP
+ON=i_crossbow_superior <name> (<resmake>)
+MAKEITEM=i_crossbow_superior
 
-ON=i_HXBOW_SUP <name> (<resmake>)
-MAKEITEM=i_HXBOW_SUP
+ON=i_crossbow_heavy_superior <name> (<resmake>)
+MAKEITEM=i_crossbow_heavy_superior
 
-ON=i_BOW_EXCEP <name> (<resmake>)
-MAKEITEM=i_BOW_EXCEP
+ON=i_bow_exceptional <name> (<resmake>)
+MAKEITEM=i_bow_exceptional
 
-ON=i_XBOW_EXCEP <name> (<resmake>)
-MAKEITEM=i_XBOW_EXCEP
+ON=i_crossbow_exceptional <name> (<resmake>)
+MAKEITEM=i_crossbow_exceptional
 
-ON=i_HXBOW_EXCEP <name> (<resmake>)
-MAKEITEM=i_HXBOW_EXCEP
-
-ON=i_bow_elven <name> (<resmake>)
-MAKEITEM=i_bow_elven
+ON=i_crossbow_heavy_exceptional <name> (<resmake>)
+MAKEITEM=i_crossbow_heavy_exceptional
 
 // Blacksmithing section
 
