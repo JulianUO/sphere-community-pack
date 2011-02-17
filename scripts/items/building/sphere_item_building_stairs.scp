@@ -1008,5 +1008,26 @@ DUPEITEM=0915
 //stone step
 DUPEITEM=0915
 
+[ITEMDEF 011bc]
+DEFNAME=i_dungeon_ramp
+RESOURCES=10 i_rock_plain
+WEIGHT=10
+CATEGORY=Buildings - Stairs
+SUBSECTION=Dungeon Ramp
+DESCRIPTION=Dungeon Ramp
+DUPELIST=011bd,011be,011bf
 
-[eof]
+[ITEMDEF 011bd]
+//dungeon ramp
+DUPEITEM=011bc
+
+[ITEMDEF 011be]
+//dungeon ramp
+DUPEITEM=011bc
+
+[ITEMDEF 011bf]
+//dungeon ramp
+DUPEITEM=011bc
+
+
+[EOF]

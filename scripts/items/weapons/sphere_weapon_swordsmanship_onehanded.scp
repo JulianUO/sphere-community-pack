@@ -283,6 +283,30 @@ ON=@Create
 [ITEMDEF 02d35]
 DUPEITEM=02d29
 
+[ITEMDEF 020e]
+// The Bone Machete is used to enter the Blighted Grove. It can be crafted
+// by Blacksmiths who have access to the elven city of Heartwood and have
+// found the proper recipe.
+DEFNAME=i_bone_machete
+NAME=bone machete
+TYPE=t_weapon_sword
+DAM=13,15
+SKILL=Swordsmanship
+SPEED=2.2
+VALUE=142
+WEIGHT=7.0
+TWOHANDS=N
+RESOURCES=14 i_ingot_iron,1 i_bone
+SKILLMAKE=Blacksmithing 70.0,i_recipe_bone_machete
+CATEGORY=Provisions - Weapons - Swordsmanship
+SUBSECTION=Elven Machetes
+DESCRIPTION=Bone Machete
+TAG.REQSTR=20
+TAG.NotGargoyle=1
+TEVENTS=t_iprop
+ON=@Create
+   HITPOINTS={50 60}
+
 [ITEMDEF i_adventurer_machete]
 ID=i_elven_machete
 NAME=Adventurer's Machete
@@ -817,13 +841,13 @@ NAME=wakizashi
 TYPE=t_weapon_sword
 DAM=11,13
 FLIP=1
-LAYER=layer_hand2
+//LAYER=layer_hand2
 SKILL=Swordsmanship
 SPEED=2.5
 VALUE=48
 WEIGHT=5
 REQSTR=20
-TWOHANDS=Y
+TWOHANDS=N
 RESOURCES=8 i_ingot_iron
 SKILLMAKE=Blacksmithing 50.0
 CATEGORY=Provisions - Weapons - Swordsmanship
@@ -837,4 +861,93 @@ ON=@Create
 [ITEMDEF 027ef]
 DUPEITEM=027a4
 
-[eof]
+
+///////////////////////////////////////////////////////////////
+//////// STONE WAR SWORDS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 0900]
+DEFNAME=i_stone_war_sword
+NAME=stone war sword
+TYPE=t_weapon_sword
+DAM=15,17
+FLIP=1
+SKILL=swordsmanship
+SPEED=3.7
+//VALUE=FIXME
+WEIGHT=6.0
+REQSTR=40
+TWOHANDS=N
+RESOURCES=18 i_granite
+SKILLMAKE=55.0 Carpentry
+CATEGORY=Provisions - Weapons - Swordsmanship
+SUBSECTION=Stone War Swords
+DESCRIPTION=Stone War Sword
+TEVENTS=t_iprop
+DUPELIST=04071
+ON=@Create
+   HITPOINTS={30 50}
+
+[ITEMDEF 04071]
+DUPEITEM=0900
+
+
+///////////////////////////////////////////////////////////////
+//////// DREAD SWORDS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 090b]
+DEFNAME=i_dread_sword
+NAME=dread sword
+TYPE=t_weapon_sword
+DAM=15,16
+FLIP=1
+SKILL=Swordsmanship
+SPEED=3.5
+//VALUE=FIXME
+WEIGHT=7.0
+REQSTR=35
+TWOHANDS=N
+RESOURCES=14 i_ingot_iron
+SKILLMAKE=Swordsmanship
+CATEGORY=Provisions - Weapons - Swordsmanship
+SUBSECTION=Dread Swords
+DESCRIPTION=Dread Sword
+TEVENTS=t_iprop
+DUPELIST=04074
+ON=@Create
+   HITPOINTS={30 50}
+
+[ITEMDEF 04074]
+DUPEITEM=090b
+
+
+///////////////////////////////////////////////////////////////
+//////// GLASS SWORDS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 090c]
+DEFNAME=i_glass_sword
+NAME=glass sword
+TYPE=t_weapon_sword
+DAM=13,15
+FLIP=1
+SKILL=Swordsmanship
+SPEED=2.7
+//VALUE=FIXME
+WEIGHT=6.0
+REQSTR=20
+TWOHANDS=N
+RESOURCES=14 i_sand
+SKILLMAKE=55.0 Alchemy
+CATEGORY=Provisions - Weapons - Swordsmanship
+SUBSECTION=Glass Swords
+DESCRIPTION=Glass Sword
+TEVENTS=t_iprop
+DUPELIST=04073
+ON=@Create
+ HITPOINTS={30 50}
+
+[ITEMDEF 04073]
+DUPEITEM=090c
+
+
+[EOF]
+

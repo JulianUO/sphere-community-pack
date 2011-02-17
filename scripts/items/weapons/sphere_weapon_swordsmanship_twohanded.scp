@@ -641,6 +641,22 @@ ON=@Create
    COLOR=0 //FIXME: unknown color
    HITPOINTS=100
 
+[ITEMDEF i_corredor_sword]
+ID=i_paladin_sword
+NAME=The Great Sword
+DAM=15,35
+//TEVENTS=t_aos_weapon
+//TEVENTS=T_PROPRIEDADES
+//TEVENTS=t_luck_item
+TEVENTS=t_iprop
+TAG.DamageIncrease=30
+TAG.HitChanceIncrease=60
+TAG.Luck=70
+ON=@Create
+	COLOR=35
+	HITPOINTS=252
+	MOREM=2
+
 
 ///////////////////////////////////////////////////////////////
 //////// RUNE BLADES
@@ -819,5 +835,60 @@ ON=@Create
 
 [ITEMDEF 01443]
 DUPEITEM=01442
+
+///////////////////////////////////////////////////////////////
+//////// DUAL SHORT AXES
+///////////////////////////////////////////////////////////////
+[ITEMDEF 08fd]
+DEFNAME=i_dual_short_axes
+NAME=dual short axes
+TYPE=t_weapon_axe
+DAM=14,16
+SKILL=Swordsmanship
+SPEED=3.0
+//VALUE=FIXME
+WEIGHT=4.0
+REQSTR=35
+TWOHANDS=Y
+RESOURCES=24 i_ingot_iron
+SKILLMAKE=75.0 Blacksmithing
+CATEGORY=Provisions - Weapons - Swordsmanship
+SUBSECTION=Dual Short Axes
+DESCRIPTION=Dual Short Axes
+TEVENTS=t_iprop
+DUPELIST=04068
+ON=@Create
+   HITPOINTS={30 50}
+
+[ITEMDEF 04068]
+DUPEITEM=08fd
+
+
+///////////////////////////////////////////////////////////////
+//////// GARGISH TALWARS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 0908]
+DEFNAME=i_gargish_talwar
+NAME=gargish talwar
+TYPE=t_weapon_sword
+DAM=16,18
+SKILL=Swordsmanship
+SPEED=3.5
+//VALUE=FIXME
+WEIGHT=4.0
+REQSTR=40
+TWOHANDS=Y
+RESOURCES=18 i_ingot_iron
+SKILLMAKE=75.0 Blacksmithing
+CATEGORY=Provisions - Weapons - Swordsmanship
+SUBSECTION=Gargish Talwars
+DESCRIPTION=Gargish Talwar
+DUPELIST=04075
+ON=@Create
+   HITPOINTS={30 50}
+
+[ITEMDEF 04075]
+DUPEITEM=0908
+
 
 [EOF]

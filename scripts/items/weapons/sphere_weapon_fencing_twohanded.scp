@@ -332,10 +332,10 @@ SPEED=2.0
 //VALUE=FIXME
 WEIGHT=4
 REQSTR=40
-TWOHANDS=N
+TWOHANDS=Y
 RESOURCES=6 i_ingot_iron
 SKILLMAKE=Blacksmithing 45.3
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Short Spears
 DESCRIPTION=Short Spear
 TEVENTS=t_iprop
@@ -355,7 +355,7 @@ TAG.HitLowerDefense=40
 TAG.HitChanceIncrese=10
 TAG.DamageIncrease=20
 TAG.PhysicalResist=10
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Short Spears
 DESCRIPTION=Enchanted Titan Leg Bone
 ON=@Create
@@ -427,112 +427,41 @@ DESCRIPTION=Tekagi
 TEVENTS=t_iprop
 DUPELIST=027f6
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 027f6]
 DUPEITEM=027ab
 
 
 ///////////////////////////////////////////////////////////////
-//////// WAR CLEAVERS
+//////// DUAL POINTED SPEARS
 ///////////////////////////////////////////////////////////////
-[ITEMDEF 02d23]
-DEFNAME=i_war_cleaver
-NAME=war cleaver
+[ITEMDEF 0904]
+DEFNAME=i_dual_pointed_spear
+NAME=dual pointed spear
 TYPE=t_weapon_fence
-DAM=10,12
+DAM=12,13
 FLIP=1
 SKILL=Fencing
-SPEED=2.0
-//VALUE=FIXME
-WEIGHT=5
-REQSTR=15
-TWOHANDS=N
-RESOURCES=18 i_ingot_iron
-SKILLMAKE=Blacksmithing 70.0
-CATEGORY=Provisions - Weapons - Fencing
-SUBSECTION=War Cleavers
-DESCRIPTION=War Cleaver
-TEVENTS=t_iprop
-DUPELIST=02d2f
-ON=@Create
-   HITPOINTS={36 48}
-
-[ITEMDEF 02d2f]
-DUPEITEM=02d23
-
-[ITEMDEF i_butcher_war_cleaver]
-ID=i_war_cleaver
-NAME=Butcher's War Cleaver
-RESOURCES=18 i_ingot_iron, 1 i_gem_turquoise
-SKILLMAKE=Blacksmithing 75.0
-TEVENTS=t_iprop
-TAG.Slayer.Super=SSLAYER_BOVINE
-CATEGORY=Provisions - Weapons - Fencing
-SUBSECTION=War Cleavers
-DESCRIPTION=Butcher's War Cleaver
-ON=@Create
-   COLOR=0 //FIXME: unknown color
-   HITPOINTS={36 48}
-
-[ITEMDEF i_knight_war_cleaver]
-ID=i_war_cleaver
-NAME=Knight's War Cleaver
-RESOURCES=18 i_ingot_iron, 1 i_gem_perfect_emerald
-SKILLMAKE=Blacksmithing 75.0
-TEVENTS=t_iprop
-TAG.HitPointRegeneration=3
-CATEGORY=Provisions - Weapons - Fencing
-SUBSECTION=War Cleavers
-DESCRIPTION=Knight's War Cleaver
-ON=@Create
-   COLOR=0 //FIXME: unknown color
-   HITPOINTS={36 48}
-
-[ITEMDEF i_raed_glory]
-ID=i_war_cleaver
-NAME=Raed's Glory
 SPEED=2.2
-DAM=9,11
-TEVENTS=t_iprop
-TAG.SpellChanneling=1
-TAG.HitLifeLeech=35
-TAG.ManaIncrease=8
-TAG.SwingSpeedIncrease=20
+//VALUE=FIXME
+WEIGHT=2.0
+REQSTR=40
+TWOHANDS=Y
+RESOURCES=12 i_ingot_iron
+SKILLMAKE=47.0 Blacksmithing
 CATEGORY=Provisions - Weapons - Fencing
-SUBSECTION=War Cleavers
-DESCRIPTION=Raed's Glory
-ON=@Create
-   COLOR=024f
-   HITPOINTS=255
-
-[ITEMDEF i_serrated_war_cleaver]
-ID=i_war_cleaver
-NAME=Serrated War Cleaver
-RESOURCES=18 i_ingot_iron, 1 i_gem_ecru_citrine
-SKILLMAKE=Blacksmithing 75.0
+SUBSECTION=Dual Pointed Spears
+DESCRIPTION=Dual Pointed Spear
 TEVENTS=t_iprop
-TAG.DamageIncrease=7
-CATEGORY=Provisions - Weapons - Fencing
-SUBSECTION=War Cleavers
-DESCRIPTION=Serrated War Cleaver
+TAG.Item.Gargoyle=1
+DUPELIST=0406d
 ON=@Create
-   COLOR=0 //FIXME: unknown color
-   HITPOINTS={36 48}
+   HITPOINTS={30 50}
 
-[ITEMDEF i_true_war_cleaver]
-ID=i_war_cleaver
-NAME=True War Cleaver
-RESOURCES=18 i_ingot_iron, 1 i_gem_brilliant_amber
-SKILLMAKE=Blacksmithing 75.0
-TEVENTS=t_iprop
-TAG.HitPointRegeneration=2
-TAG.DamageIncrease=4
-CATEGORY=Provisions - Weapons - Fencing
-SUBSECTION=War Cleavers
-DESCRIPTION=True War Cleaver
-ON=@Create
-   COLOR=0 //FIXME: unknown color
-   HITPOINTS={36 48}
+[ITEMDEF 0406d]
+DUPEITEM=0904
 
-[eof]
+
+[EOF]
+

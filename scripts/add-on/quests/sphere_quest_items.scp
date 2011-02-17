@@ -13,30 +13,6 @@ CATEGORY=Quest
 SUBSECTION=Paroxysmus
 DESCRIPTION=Rope (acid proof)
 
-[ITEMDEF 020e]
-// A Bone Machete is used to enter the Blighted Grove. It can be crafted by
-// Blacksmiths who have access to the elven city of Heartwood and have
-// found the proper recipe.
-DEFNAME=i_bone_machete
-NAME=bone machete
-TYPE=t_weapon_sword
-DAM=13,15
-SKILL=Swordsmanship
-SPEED=47
-VALUE=142
-WEIGHT=7.0
-TWOHANDS=N
-RESOURCES=14 i_ingot_iron,1 i_bone
-SKILLMAKE=Blacksmithing 70.0,i_recipe_bone_machete
-CATEGORY=Quest
-SUBSECTION=Blighted Grove
-DESCRIPTION=Bone Machete
-TAG.REQSTR=20
-TAG.NotGargoyle=1
-TEVENTS=t_iprop
-ON=@Create
-   HITPOINTS={50 60}
-
 [ITEMDEF 021b]
 DEFNAME=i_fruit_peach_sugared
 NAME=sugared peach
@@ -231,16 +207,6 @@ CATEGORY=Quest
 SUBSECTION=Lost and Found
 DESCRIPTION=Battered Bucket
 
-[ITEMDEF 021fc]
-DEFNAME=i_skull_spikes
-NAME=skull spikes
-TYPE=t_bone
-WEIGHT=130.0
-RESOURCES=10 i_bone,40 i_bone_skull
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Bones
-DESCRIPTION=Skull Spikes
-
 [ITEMDEF 021fe]
 DEFNAME=i_vial_of_stuff
 WEIGHT=1.0
@@ -248,16 +214,6 @@ RESOURCES=5 i_glass_raw
 CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Vial of stuff?
-
-[ITEMDEF 02203]
-DEFNAME=i_skull_large
-NAME=large skull
-TYPE=t_bone
-VALUE=10
-WEIGHT=10.0
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Bones
-DESCRIPTION=Skull (large)
 
 [ITEMDEF 02376]
 DEFNAME=i_cactus_festive
@@ -505,13 +461,18 @@ ON=@NPCRestock
 ITEM=tm_questbagtrinkets
 ITEM=i_gold,{300 400}
 
-[ITEMDEF i_wolf_slayer_dagger]
+[ITEMDEF i_dagger_wolfslayer]
 ID=i_dagger
 NAME=dagger
-TEVENTS=T_PROPRIEDADES
-
+TEVENTS=t_iprop
 ON=@Create
-HITPOINTS={50 80}
+   HITPOINTS={50 80}
+
+[FUNCTION quest125setwolfslayerdagger]
+FINDID.i_dagger_wolfslayer.CONSUME
+SERV.NEWITEM=i_misericord
+TRYSRC <UID> NEW.BOUNCE
+OBJ.MESSAGE @946,3,1 Your dagger now has some magical properties.
 
 [ITEMDEF head_of_garrison]
 ID=i_flesh_head
@@ -572,19 +533,6 @@ SAY The man was a fraud!
 SAY I'd have killed him myself if someone hadn't beaten me to it
 ENDDO
 ENDIF
-
-[FUNCTION quest125setwolfslayerdagger]
-LOCAL.OLDOBJ=<OBJ>
-OBJ=<FINDID.i_wolf_slayer_dagger>
-OBJ.COLOR=04ac
-OBJ.TAG.DAMINCREASE=10
-OBJ.TAG.HITCHANCEINCREASE=10
-OBJ.SETSLAYER
-OBJ.TAG.SLAYERGROUP=WOLF
-OBJ.NAME=Wolf Slayer Dagger
-TRYSRC <UID> SRC.OBJ.RESENDTOOLTIP 1
-OBJ.MESSAGE @946,3,1 Your dagger now has some magical properties.
-OBJ=<LOCAL.OLDOBJ>
 
 [FUNCTION DOOMSUMMONBONEDAEMON]
 OBJ.ANIM 16

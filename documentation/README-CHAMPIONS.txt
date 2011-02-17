@@ -1,36 +1,49 @@
-To activate the champions (in the exact places like on OSI) type .GENERATECHAMPS.
-Notice that Ilhenir Spawn and other new ML champions won't be auto-created since some might not have ML activated.
-Make sure that the Star Chamber is empty (it's the place for the Harrower altar).
-After that, just enjoy =)
+To activate the champions (in the exact places like on OSI) type:
 
-Notes & Instructions: The system will work with any ini setting, but I suggest (just to make it more beautifull) to activate
-tooltips and the new triggers (with the new triggers you'll activate the champions habilities).
+  .GENERATECHAMPS
 
-You'll probably have to increase MaxComplexety in sphere.ini to allow more npcs on a sector.
-And also, remember to activate at least Felucca and Ilshenar, or you might have some errors.
+Notice that the Ilhenir Spawn and other new ML champions won't be
+auto-created since some people might not want ML activated...
+
+Make sure that the Star Chamber is empty (it's the place for the Harrower
+altar).  After that, just enjoy =)
+
+Notes & Instructions: The system will work with any ini setting, but I
+suggest (just to make it more beautifull) to activate tooltips and the
+new triggers (with the new triggers you'll activate the champion special
+abilities).
+
+You'll probably have to increase MaxComplexety in sphere.ini to allow more
+npcs on a sector.  And also, remember to activate at least Felucca and
+Ilshenar, or you might have some errors.
 
 Check the defs in the script for customization.
 
-You can acess a customization menu by double clicking the idol with .gm on, and you can create blank champ altars by using
-.CREATEALTAR
+You can acess a customization menu by double clicking the idol with .gm on,
+and you can create blank champ altars by typing:
+
+  .CREATEALTAR
 
 v2.0
 -Added transcendence scrolls
--After the time limit the champion won't fully restart, it'll restart the current level or go back 1 if the players
-haven't killed enough in time
+-After the time limit the champion won't fully restart, it'll restart the
+current level or go back 1 if the players haven't killed enough in time.
 -Power scrolls now use the new TAG.OVERRIDE tags
 -Better engine, with new sphere syntaxes
 -Lots of stuff added with time which I don't remember!
 
 v2.1
--Using new LIST.xxx feature to give Power Scrolls (thus fixing a possible crash with the old method)
+-Using new LIST.xxx feature to give Power Scrolls (thus fixing a possible
+crash with the old method)
 
-Note that the artifacts won't give anything special unless you make a separate system for them.
-Unfortunatly mine is so distributed throughout other scripts and use so many custom, not default by sphere,
-calculations and scripts that it's not easily releasable.
-Also, this system does not have the Valor Virtue, since it's not available by default on Sphere, so I removed that
-part of the code. It also doesn't have the Justice Virtue for the same reasons, although you can make your own 
-script using 3 triggers I added:
+Note that the artifacts won't give anything special unless you make a
+separate system for them. Unfortunatly mine is so distributed throughout
+other scripts and use so many custom, not default by sphere, calculations
+and scripts that it's not easily releasable. Also, this system does not
+have the Valor Virtue, since it's not available by default on Sphere,
+so I removed that part of the code. It also doesn't have the Justice
+Virtue for the same reasons, although you can make your own  script
+using 3 triggers I added:
 @ReceivePowerScroll
 @ReceiveTranscendenceScroll
 @ReceiveStatPowerScroll

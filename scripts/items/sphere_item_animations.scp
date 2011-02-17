@@ -1,14 +1,9 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, November 24, 2003
-//
+// FILE LAST UPDATED: Monday, Febuary 14, 2011
 VERSION=0.56b
 
 [ITEMDEF 091b]
@@ -82,6 +77,197 @@ DUPEITEM=0923
 [ITEMDEF 092a]
 //bee swarm  2
 DUPEITEM=0923
+
+[ITEMDEF 0dda]
+DEFNAME=i_moongate_red
+TYPE=t_telepad
+CATEGORY=Animations
+SUBSECTION=Moongates
+DESCRIPTION=Red Moongate
+DUPELIST=0ddb,0ddc,0ddd,0dde
+
+[ITEMDEF 0ddb]
+//red moongate
+DUPEITEM=0dda
+
+[ITEMDEF 0ddc]
+//red moongate fast animated
+DUPEITEM=0dda
+
+[ITEMDEF 0ddd]
+//red moongate
+DUPEITEM=0dda
+
+[ITEMDEF 0dde]
+//red moongate
+DUPEITEM=0dda
+
+[ITEMDEF 0f53]
+TYPE=t_fire
+CATEGORY=Animations
+SUBSECTION=Fireball
+DESCRIPTION=Fireball
+DUPELIST=0f54,0f55,0f56,0f57,0f58,0f59,0f5a
+
+[ITEMDEF 0f54]
+//fireball
+DUPEITEM=0f53
+
+[ITEMDEF 0f55]
+//fireball
+DUPEITEM=0f53
+
+[ITEMDEF 0f56]
+//fireball
+DUPEITEM=0f53
+
+[ITEMDEF 0f57]
+//fireball
+DUPEITEM=0f53
+
+[ITEMDEF 0f58]
+//fireball
+DUPEITEM=0f53
+
+[ITEMDEF 0f59]
+//fireball
+DUPEITEM=0f53
+
+[ITEMDEF 0f5a]
+//fireball
+DUPEITEM=0f53
+
+[ITEMDEF 0f6c]
+DEFNAME=i_moongate_blue
+TYPE=t_telepad
+CATEGORY=Animations
+SUBSECTION=Moongates
+DESCRIPTION=Blue Moongate
+DUPELIST=0f6d,0f6e,0f6f,0f70
+
+[ITEMDEF 0f6d]
+//blue moongate
+DUPEITEM=0f6c
+
+[ITEMDEF 0f6e]
+//blue moongate
+DUPEITEM=0f6c
+
+[ITEMDEF 0f6f]
+//blue moongate
+DUPEITEM=0f6c
+
+[ITEMDEF 0f70]
+//blue moongate
+DUPEITEM=0f6c
+
+[ITEMDEF 01153]
+DEFNAME=i_fx_magical_sparkles
+CATEGORY=Animations
+SUBSECTION=Magical Sparkles
+DESCRIPTION=Sparkles 1
+DUPELIST=01154,01155,01156,01157,01158
+
+[ITEMDEF 01154]
+//magical sparkles
+DUPEITEM=01153
+
+[ITEMDEF 01155]
+//magical sparkles
+DUPEITEM=01153
+
+[ITEMDEF 01156]
+//magical sparkles
+DUPEITEM=01153
+
+[ITEMDEF 01157]
+//magical sparkles
+DUPEITEM=01153
+
+[ITEMDEF 01158]
+//magical sparkles
+DUPEITEM=01153
+
+[ITEMDEF 01159]
+DEFNAME=i_fx_magical_sparkles_2
+CATEGORY=Animations
+SUBSECTION=Magical Sparkles
+DESCRIPTION=Sparkles 2
+DUPELIST=0115a,0115b,0115c,0115d,0115e
+
+[ITEMDEF 0115a]
+//magical sparkles 2
+DUPEITEM=01159
+
+[ITEMDEF 0115b]
+//magical sparkles 2
+DUPEITEM=01159
+
+[ITEMDEF 0115c]
+//magical sparkles 2
+DUPEITEM=01159
+
+[ITEMDEF 0115d]
+//magical sparkles 2
+DUPEITEM=01159
+
+[ITEMDEF 0115e]
+//magical sparkles 2
+DUPEITEM=01159
+
+[ITEMDEF 019ab]
+DEFNAME=i_fire
+TYPE=t_fire
+VALUE=1
+WEIGHT=1
+CATEGORY=Animations
+SUBSECTION=Fire
+DESCRIPTION=Fire
+DUPELIST=019ac,019ad,019ae,019af,019b0,019b1,019b2,019b3,019b4,019b5,019b6
+
+[ITEMDEF 019ac]
+//fire
+DUPEITEM=019ab
+
+[ITEMDEF 019ad]
+//fire
+DUPEITEM=019ab
+
+[ITEMDEF 019ae]
+//fire
+DUPEITEM=019ab
+
+[ITEMDEF 019af]
+//fire
+DUPEITEM=019ab
+
+[ITEMDEF 019b0]
+//fire
+DUPEITEM=019ab
+
+[ITEMDEF 019b1]
+//fire
+DUPEITEM=019ab
+
+[ITEMDEF 019b2]
+//fire
+DUPEITEM=019ab
+
+[ITEMDEF 019b3]
+//fire
+DUPEITEM=019ab
+
+[ITEMDEF 019b4]
+//fire
+DUPEITEM=019ab
+
+[ITEMDEF 019b5]
+//fire
+DUPEITEM=019ab
+
+[ITEMDEF 019b6]
+//fire
+DUPEITEM=019ab
 
 [ITEMDEF 01ae5]
 DEFNAME=i_fx_moongate_red
@@ -359,6 +545,168 @@ DUPEITEM=01f1f
 //spinning head
 DUPEITEM=01f1f
 
+[ITEMDEF 01fa3]
+CATEGORY=Animations
+SUBSECTION=Water
+DESCRIPTION=Wave
+DUPELIST=01fa4,01fa5,01fa6,01fa7,01fa8,01fa9,01faa,01fab,01fac,01fad,01fae,01faf,01fb0,01fb1,01fb2,01fb3,01fb4,01fb5,01fb6,01fb7,01fb8,01fb9,01fba,01fbb,01fbc,01fbd,01fbe,01fbf,01fc0,01fc1,01fc2,01fc3,01fc4,01fc5,01fc6,01fc7,01fc8,01fc9,01fca
+
+[ITEMDEF 01fa4]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fa5]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fa6]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fa7]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fa8]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fa9]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01faa]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fab]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fac]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fad]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fae]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01faf]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fb0]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fb1]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fb2]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fb3]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fb4]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fb5]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fb6]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fb7]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fb8]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fb9]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fba]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fbb]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fbc]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fbd]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fbe]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fbf]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fc0]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fc1]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fc2]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fc3]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fc4]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fc5]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fc6]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fc7]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fc8]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fc9]
+//wave
+DUPEITEM=01fa3
+
+[ITEMDEF 01fca]
+//wave
+DUPEITEM=01fa3
+
 [ITEMDEF 01fcb]
 DEFNAME=i_fx_moongate_black
 TYPE=t_light_lit
@@ -504,6 +852,88 @@ DUPEITEM=022c6
 [ITEMDEF 022c8]
 //physical reflect
 DUPEITEM=022c6
+
+[ITEMDEF 03421]
+TYPE=t_rock
+CATEGORY=Animations
+SUBSECTION=Water
+DESCRIPTION=Boulder in Water
+DUPELIST=03422,03423,03424,03425,03426,03427,03428,03429
+
+[ITEMDEF 03422]
+boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03423]
+boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03424]
+boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03425]
+boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03426]
+boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03427]
+boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03428]
+boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03429]
+boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 0342c]
+TYPE=t_rock
+CATEGORY=Ground Tiles (animated)
+SUBSECTION=Boulder in water
+DESCRIPTION=@
+DUPELIST=0342d,0342e,0342f,03430,03431,03432,03433,03434,03435
+
+[ITEMDEF 0342d]
+boulder in water
+DUPEITEM=0342c
+
+[ITEMDEF 0342e]
+boulder in water
+DUPEITEM=0342c
+
+[ITEMDEF 0342f]
+boulder in water
+DUPEITEM=0342c
+
+[ITEMDEF 03430]
+boulder in water
+DUPEITEM=0342c
+
+[ITEMDEF 03431]
+boulder in water
+DUPEITEM=0342c
+
+[ITEMDEF 03432]
+boulder in water
+DUPEITEM=0342c
+
+[ITEMDEF 03433]
+boulder in water
+DUPEITEM=0342c
+
+[ITEMDEF 03434]
+boulder in water
+DUPEITEM=0342c
+
+[ITEMDEF 03435]
+boulder in water
+DUPEITEM=0342c
 
 [ITEMDEF 036b0]
 DEFNAME=i_fx_explode
@@ -2391,54 +2821,54 @@ DUPEITEM=03967
 DEFNAME=i_fx_field_fire
 TYPE=t_fire
 CATEGORY=Animations
-SUBSECTION=Fire Field 1
-DESCRIPTION=@
+SUBSECTION=Fire Field
+DESCRIPTION=Fire Field (E/W)
 DUPELIST=0398d,0398e,0398f,03990,03991,03992,03993,03994,03995
 ON=@Create
    MOREZ=1
 
 [ITEMDEF 0398d]
-//fire field 1 (e/w)
+//fire field (E/W)
 DUPEITEM=0398c
 
 [ITEMDEF 0398e]
-//fire field 1 (e/w)
+//fire field (E/W)
 DUPEITEM=0398c
 
 [ITEMDEF 0398f]
-//fire field 1 (e/w)
+//fire field (E/W)
 DUPEITEM=0398c
 
 [ITEMDEF 03990]
-//fire field 1 (e/w)
+//fire field (E/W)
 DUPEITEM=0398c
 
 [ITEMDEF 03991]
-//fire field 1 (e/w)
+//fire field (E/W)
 DUPEITEM=0398c
 
 [ITEMDEF 03992]
-//fire field 1 (e/w)
+//fire field (E/W)
 DUPEITEM=0398c
 
 [ITEMDEF 03993]
-//fire field 1 (e/w)
+//fire field (E/W)
 DUPEITEM=0398c
 
 [ITEMDEF 03994]
-//fire field 1 (e/w)
+//fire field (E/W)
 DUPEITEM=0398c
 
 [ITEMDEF 03995]
-//fire field 1 (e/w)
+//fire field (E/W)
 DUPEITEM=0398c
 
 [ITEMDEF 03996]
 DEFNAME=i_fx_field_fire_ns
 TYPE=t_fire
 CATEGORY=Animations
-SUBSECTION=Fire Field 2
-DESCRIPTION=@
+SUBSECTION=Fire Field
+DESCRIPTION=Fire Field (N/S)
 DUPELIST=03997,03998,03999,0399a,0399b,0399c,0399d,0399e,0399f
 ON=@Create
    MOREZ=1

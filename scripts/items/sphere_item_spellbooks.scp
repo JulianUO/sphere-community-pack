@@ -1,0 +1,125 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Monday, Febuary 14, 2011
+VERSION=0.56b
+
+[ITEMDEF 0e3b]
+DEFNAME=i_spellbook_bad
+
+[ITEMDEF 0efa]
+DEFNAME=i_spellbook
+TYPE=t_spellbook
+WEIGHT=1
+LAYER=1	//This is wrong in TILEDATA?
+RESOURCES=10 i_parchment, 1 i_hide, 1 i_cloth
+SKILLMAKE=Inscription 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Spellbooks
+DESCRIPTION=Magery Spellbook
+ON=@Create
+	ATTR=attr_magic|attr_newbie
+
+[ITEMDEF 02252]
+DEFNAME=i_spellbook_paladin
+NAME=paladin spellbook
+TYPE=t_spellbook_pala
+LAYER=1
+WEIGHT=1
+RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Spellbooks
+DESCRIPTION=Paladin Spellbook
+ON=@Create
+   ATTR=attr_magic|attr_newbie
+   MOREZ=200
+
+[ITEMDEF 02253]
+DEFNAME=i_spellbook_necromancy
+NAME=necromancy book
+TYPE=t_spellbook_necro
+WEIGHT=1
+RESOURCES=10 i_parchment, 1 i_hide, 1 i_cloth
+SKILLMAKE=Inscription 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Spellbooks
+DESCRIPTION=Necromancy Spellbook
+ON=@Create
+   ATTR=attr_magic|attr_newbie
+   MOREZ=100
+//I think the code below is no longer necessary...
+//ON=@DropOn_Self
+//if <argo.type> == t_scroll
+//  if (<argo.morex> > <morez>) && (<argo.morex> < <eval <morez>+100>)
+//    if <more1> != (<more1> | <argo.more1>)
+//      sfx 058
+//      more1 |= <argo.more1>
+//      if <argo.amount> == 1
+//        argo.remove
+//      else
+//        argo.amount -= 1
+//      endif
+//      argo.update
+//      return 1
+//    endif
+//  endif
+//endif
+
+[ITEMDEF 0238c]
+DEFNAME=i_spellbook_bushido
+TYPE=t_spellbook_bushido
+NAME=book of bushido
+LAYER=1
+WEIGHT=1
+RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Spellbooks
+DESCRIPTION=Bushido Spellbook
+ON=@Create
+   ATTR=attr_magic|attr_newbie
+   MOREZ=400
+   
+[ITEMDEF 023a0]
+DEFNAME=i_spellbook_ninjitsu
+TYPE=t_spellbook_ninjitsu
+NAME=book of ninjitsu
+LAYER=1
+WEIGHT=1
+RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Spellbooks
+DESCRIPTION=Ninjitsu Spellbook
+ON=@Create
+   ATTR=attr_magic|attr_newbie
+   MOREZ=500
+   
+[ITEMDEF 02d50]
+DEFNAME=i_spellbook_arcanist
+TYPE=t_spellbook_arcanist
+NAME=book of arcanist
+LAYER=1
+WEIGHT=1
+RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Spellbooks
+DESCRIPTION=Arcanist Spellbook
+ON=@Create
+   ATTR=attr_magic|attr_newbie
+   MOREZ=600
+
+[ITEMDEF 02d9d]
+DEFNAME=i_spellbook_mystic
+TYPE=t_spellbook_mystic
+NAME=mystic spellbook
+RESOURCES=10 i_parchment, 1 i_hide, 1 i_cloth
+SKILLMAKE=Inscription 50.0
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Spellbooks
+DESCRIPTION=Mystic Spellbook
+ON=@Create
+	ATTR=attr_magic|attr_newbie
+	MOREZ=677
+
+[EOF]

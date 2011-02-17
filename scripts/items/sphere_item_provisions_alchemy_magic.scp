@@ -1,52 +1,10 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+// FILE LAST UPDATED: Monday, Febuary 14, 2011
 VERSION=0.56b
-
-[ITEMDEF 0dda]
-//red moongate animated (full)
-DEFNAME=i_moongate_red
-RESOURCES=i_scroll_gate_travel
-TYPE=t_telepad
-CATEGORY=Provisions - Alchemy & Magic
-SUBSECTION=Moongates
-DESCRIPTION=Red Moongate (Animated)
-DUPELIST=0ddb,0ddc,0ddd,0dde
-
-[ITEMDEF 0ddb]
-//red moongate frame of animation
-DUPEITEM=0dda
-
-[ITEMDEF 0ddc]
-//red moongate fast animated
-DUPEITEM=0dda
-
-[ITEMDEF 0ddd]
-//red moongate
-DUPEITEM=0dda
-
-[ITEMDEF 0dde]
-//red moongate
-DUPEITEM=0dda
-
-[ITEMDEF 0e3b]
-DEFNAME=i_spellbook_bad
-LAYER=1	// this is wrong in TILEDATA ?
-RESOURCES=80 I_PARCHMENT, 1 I_HIDE, 1 I_CLOTH
-//Spellbook, Empty
-//Client Anomaly requires this out of order dupeitem with 0e3b
-// DUPEITEM=0efa // don't use this at all !
-
-ON=@Create
-	ATTR=attr_magic|attr_newbie
 
 [ITEMDEF 0e9b]
 //Mortar & Pestle
@@ -58,22 +16,6 @@ CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Magical Items
 DESCRIPTION=Mortar and Pestle
 SKILLMAKE=TINKERING 23.3,t_tinker_tools
-
-[ITEMDEF 0efa]
-//Spellbook, Empty
-//Client Anomaly requires this out of order dupeitem with 0e3b
-DEFNAME=i_spellbook
-RESOURCES=10 i_scroll_blank, 1 i_hide, 1 i_cloth
-SKILLMAKE=INSCRIPTION 50.0
-TYPE=T_SPELLBOOK
-WEIGHT=1
-LAYER=1	// this is wrong in TILEDATA ?
-CATEGORY=Provisions - Alchemy & Magic
-SUBSECTION=Magical Items
-DESCRIPTION=Spellbook
-
-ON=@Create
-	ATTR=attr_magic|attr_newbie
 
 [ITEMDEF 0f06]
 //Potion (Black)
@@ -205,31 +147,6 @@ WEIGHT=1
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Magical Items
 DESCRIPTION=Empty Alchemist Bottle
-
-[ITEMDEF 0f6c]
-//blue moongate
-DEFNAME=i_moongate_blue
-TYPE=t_telepad
-CATEGORY=Provisions - Alchemy & Magic
-SUBSECTION=Moongates
-DESCRIPTION=Blue Moongate
-DUPELIST=0f6d,0f6e,0f6f,0f70
-
-[ITEMDEF 0f6d]
-//blue moongate
-DUPEITEM=0f6c
-
-[ITEMDEF 0f6e]
-//blue moongate
-DUPEITEM=0f6c
-
-[ITEMDEF 0f6f]
-//blue moongate
-DUPEITEM=0f6c
-
-[ITEMDEF 0f70]
-//blue moongate
-DUPEITEM=0f6c
 
 [ITEMDEF 01f14]
 //recall rune

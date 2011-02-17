@@ -22,7 +22,7 @@ WEIGHT=9
 REQSTR=40
 TWOHANDS=N
 RESOURCES=4 i_log
-SKILLMAKE=CARPENTRY 65.0, t_carpentry
+SKILLMAKE=Carpentry 65.0, t_carpentry
 CATEGORY=Provisions - Weapons - MaceFighting
 SUBSECTION=Clubs
 DESCRIPTION=Club
@@ -184,7 +184,7 @@ SPEED=3.2
 //VALUE=FIXME
 WEIGHT=9
 REQSTR=45
-TWOHANDS=Y
+TWOHANDS=N
 RESOURCES=16 i_ingot_iron
 SKILLMAKE=Blacksmithing 34.2
 CATEGORY=Provisions - Weapons - MaceFighting
@@ -336,6 +336,7 @@ ON=@Create
    COLOR=<ColorElementalType>
    HITPOINTS=255
 
+
 ///////////////////////////////////////////////////////////////
 //////// SLEDGE HAMMERS
 ///////////////////////////////////////////////////////////////
@@ -375,6 +376,7 @@ DESCRIPTION=Prospector's Tool
 ON=@Create
    COLOR=0 //FIXME: unknown color
    HITPOINTS=43
+
 
 ///////////////////////////////////////////////////////////////
 //////// SMITH HAMMERS
@@ -515,7 +517,7 @@ TWOHANDS=N
 RESOURCES=16 i_ingot_iron
 SKILLMAKE=Blacksmithing 39.1
 CATEGORY=Provisions - Weapons - MaceFighting
-SUBSECTION=Axes
+SUBSECTION=War Axes
 DESCRIPTION=War Axe
 TEVENTS=t_iprop
 DUPELIST=013b0
@@ -727,4 +729,36 @@ ON=@Create
    COLOR=0 //FIXME: unknown color
    HITPOINTS={36 48}
 
-[eof]
+
+///////////////////////////////////////////////////////////////
+//////// DISC MACES
+///////////////////////////////////////////////////////////////
+[ITEMDEF 0903]
+DEFNAME=i_disc_mace
+NAME=disc mace
+TYPE=t_weapon_mace_smith
+DAM=12,14
+FLIP=1
+SKILL=Macefighting
+SPEED=2.7
+//VALUE=FIXME
+WEIGHT=14.0
+REQSTR=45
+TWOHANDS=N
+RESOURCES=20 i_ingot_iron
+SKILLMAKE=70.0 Blacksmithing
+CATEGORY=Provisions - Weapons - MaceFighting
+SUBSECTION=Disc Maces
+DESCRIPTION=Disc Mace
+TEVENTS=t_iprop
+TAG.Item.Gargoyle=1
+DUPELIST=0406e
+ON=@Create
+   HITPOINTS={30 50}
+
+[ITEMDEF 0406e]
+DUPEITEM=0903
+
+
+[EOF]
+

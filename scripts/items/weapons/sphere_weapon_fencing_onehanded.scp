@@ -23,7 +23,7 @@ REQSTR=15
 TWOHANDS=N
 RESOURCES=9 i_ingot_iron
 SKILLMAKE=Blacksmithing 70.0
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Assassin Spikes
 DESCRIPTION=Assassin Spike
 TEVENTS=t_iprop
@@ -41,7 +41,7 @@ RESOURCES=9 i_ingot_iron, 1 i_gem_ecru_citrine
 SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.HitLightning=10
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Assassin Spikes
 DESCRIPTION=Charged Assassin Spike
 ON=@Create
@@ -58,7 +58,7 @@ TAG.StrengthBonus=5
 TAG.HitChanceIncrease=15
 TAG.SwingSpeedIncrease=40
 TAG.BestWeaponSkill=1
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Assassin Spikes
 DESCRIPTION=Flesh Ripper
 ON=@Create
@@ -72,7 +72,7 @@ RESOURCES=9 i_ingot_iron, 1 i_gem_brilliant_amber
 SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.HitManaLeech=15
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Assassin Spikes
 DESCRIPTION=Magekiller Assassin Spike
 ON=@Create
@@ -89,7 +89,7 @@ TAG.HitManaLeech=40
 TAG.StaminaRegeneration=2
 TAG.DamageIncrease=30
 TAG.LowerManaCost=10
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Assassin Spikes
 DESCRIPTION=Rune Carving Knife
 ON=@Create
@@ -104,7 +104,7 @@ SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.HitChanceIncrease=4
 TAG.DamageIncrease=4
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Assassin Spikes
 DESCRIPTION=True Assassin Spike
 ON=@Create
@@ -118,7 +118,7 @@ RESOURCES=9 i_ingot_iron, 1 i_gem_perfect_emerald
 SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.HitHarm=15
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Assassin Spikes
 DESCRIPTION=Wounding Assassin Spike
 ON=@Create
@@ -143,7 +143,7 @@ REQSTR=10
 TWOHANDS=N
 RESOURCES=3 i_ingot_iron
 SKILLMAKE=Blacksmithing 0.0
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Daggers
 DESCRIPTION=Dagger
 TEVENTS=t_iprop
@@ -159,7 +159,7 @@ ID=i_dagger
 NAME=Misericord
 TEVENTS=t_iprop
 TAG.Slayer.Super=SSLAYER_WOLF
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Daggers
 DESCRIPTION=Misericord
 ON=@Create
@@ -174,7 +174,7 @@ TAG.Slayer.Super=SSLAYER_REPOND
 TAG.HitLifeLeech=40
 TAG.SwingSpeedIncrease=30
 TAG.DamageIncrease=35
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Daggers
 DESCRIPTION=Night's Kiss
 ON=@Create
@@ -199,7 +199,7 @@ REQSTR=10
 TWOHANDS=N
 RESOURCES=8 i_ingot_iron
 SKILLMAKE=Blacksmithing 36.7
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Krysses
 DESCRIPTION=Kryss
 TEVENTS=t_iprop
@@ -218,7 +218,7 @@ TAG.HitLifeLeech=22
 TAG.SwingSpeedIncrease=25
 TAG.DamageIncrease=50
 TAG.BestWeaponSkill=1
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Krysses
 DESCRIPTION=Blackthorn's Kryss - Museum of Vesper Replica
 ON=@Create
@@ -236,7 +236,7 @@ TAG.DamageIncrease=50
 TAG.ResPoison=16
 TAG.DamPhysical=25
 TAG.DamPoison=75
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Krysses
 DESCRIPTION=Serpent's Fang
 ON=@Create
@@ -250,7 +250,7 @@ TEVENTS=t_iprop
 TAG.HitChanceIncrease=5
 TAG.SwingSpeedIncrease=10
 TAG.DamageIncrease=25
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Krysses
 DESCRIPTION=Silver Serpent Blade
 ON=@Create
@@ -274,7 +274,7 @@ REQSTR=95
 TWOHANDS=N
 RESOURCES=20 i_ingot_iron
 SKILLMAKE=Blacksmithing 48.0
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Lances
 DESCRIPTION=Lance
 TEVENTS=t_iprop
@@ -294,7 +294,7 @@ TAG.StrengthBonus=5
 TAG.SwingSpeedIncrease=20
 TAG.DamageIncrease=35
 TAG.BestWeaponSkill=1
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Lances
 DESCRIPTION=Luna Lance
 ON=@Create
@@ -312,7 +312,7 @@ TAG.DamageIncrease=50
 TAG.ResFire=20
 TAG.BestWeaponSkill=1
 TAG.DamEnergy=100
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Lances
 DESCRIPTION=The Dragon Slayer
 ON=@Create
@@ -337,7 +337,7 @@ REQSTR=20
 TWOHANDS=N
 RESOURCES=12 i_ingot_iron
 SKILLMAKE=Blacksmithing 70.0
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Leafblades
 DESCRIPTION=Leafblade
 TEVENTS=t_iprop
@@ -355,7 +355,7 @@ RESOURCES=12 i_ingot_iron, 1 i_gem_perfect_emerald
 SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.BestWeaponSkill=1
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Leafblades
 DESCRIPTION=Leafblade of Ease
 ON=@Create
@@ -369,7 +369,7 @@ RESOURCES=12 i_ingot_iron, 1 i_gem_white_pearl
 SKILLMAKE=Blacksmithing 70.0
 TEVENTS=t_iprop
 TAG.Luck=20
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Leafblades
 DESCRIPTION=Luckblade
 ON=@Create
@@ -383,7 +383,7 @@ RESOURCES=12 i_ingot_iron, 1 i_gem_fire_ruby
 SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.HitManaLeech=16
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Leafblades
 DESCRIPTION=Magekiller Leafblade
 ON=@Create
@@ -397,7 +397,7 @@ RESOURCES=12 i_ingot_iron, 1 i_gem_blue_diamond
 SKILLMAKE=Blacksmithing 75.0
 TEVENTS=t_iprop
 TAG.ResPoison=5
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Leafblades
 DESCRIPTION=True Leftblade
 ON=@Create
@@ -422,7 +422,7 @@ REQSTR=45
 TWOHANDS=N
 RESOURCES=12 i_ingot_iron
 SKILLMAKE=Blacksmithing 42.9
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=War Forks
 DESCRIPTION=War Fork
 TEVENTS=t_iprop
@@ -439,7 +439,7 @@ NAME=Recaro's Riposte
 TEVENTS=t_iprop
 TAG.SwingSpeedIncrease=10
 TAG.DamageIncrease=25
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=War Forks
 DESCRIPTION=Recaro's Riposte
 ON=@Create
@@ -456,11 +456,202 @@ TAG.DexterityBonus=5
 TAG.HitChanceIncrease=15
 TAG.DamageIncrease=50
 TAG.DamPoison=100
-CATEGORY=Provisions - Weapons
+CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=War Forks
 DESCRIPTION=The Taskmaster
 ON=@Create
    COLOR=<ColorElementalType>
    HITPOINTS=255
 
-[eof]
+
+///////////////////////////////////////////////////////////////
+//////// WAR FORKS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 08fe]
+DEFNAME=i_bloodblade
+NAME=bloodblade
+TYPE=t_weapon_fence
+DAM=10,12
+FLIP=1
+SKILL=Fencing
+SPEED=2.0
+//VALUE=FIXME
+WEIGHT=4.0
+REQSTR=10
+TWOHANDS=N
+RESOURCES=8 i_ingot_iron
+SKILLMAKE=44.1 Blacksmithing
+CATEGORY=Provisions - Weapons - Fencing
+SUBSECTION=Bloodblades
+DESCRIPTION=Bloodblade
+TEVENTS=t_iprop
+DUPELIST=04072
+ON=@Create
+   HITPOINTS={30 50}
+
+[ITEMDEF 04072]
+DUPEITEM=08fe
+
+
+///////////////////////////////////////////////////////////////
+//////// GARGISH DAGGERS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 0902]
+DEFNAME=i_gargish_dagger
+NAME=gargish dagger
+TYPE=t_weapon_fence
+DAM=10,11
+FLIP=1
+SKILL=Fencing
+SPEED=2.0
+//VALUE=FIXME
+WEIGHT=1.0
+REQSTR=10
+TWOHANDS=N
+RESOURCES=3 i_ingot_iron
+SKILLMAKE=0.0 Blacksmithing
+CATEGORY=Provisions - Weapons - Fencing
+SUBSECTION=Gargish Daggers
+DESCRIPTION=Gargish Dagger
+TEVENTS=t_iprop
+DUPELIST=0406a
+ON=@Create
+   HITPOINTS={30 50}
+
+[ITEMDEF 0406a]
+DUPEITEM=0902
+
+
+///////////////////////////////////////////////////////////////
+//////// GARGISH DAGGERS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 0907]
+DEFNAME=i_shortblade
+NAME=shortblade
+TYPE=t_weapon_fence
+DAM=9,13
+FLIP=1
+SKILL=Fencing
+SPEED=75
+//VALUE=FIXME
+WEIGHT=4.0
+REQSTR=10
+TWOHANDS=N
+RESOURCES=12 i_ingot_iron
+SKILLMAKE=28.0 Blacksmithing
+CATEGORY=Provisions - Weapons - Fencing
+SUBSECTION=Shortblades
+DESCRIPTION=Shortblade
+TEVENTS=t_iprop
+DUPELIST=04076
+ON=@Create
+ HITPOINTS={30 50}
+
+[ITEMDEF 04076]
+DUPEITEM=0907
+
+
+///////////////////////////////////////////////////////////////
+//////// WAR CLEAVERS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 02d23]
+DEFNAME=i_war_cleaver
+NAME=war cleaver
+TYPE=t_weapon_fence
+DAM=10,12
+FLIP=1
+SKILL=Fencing
+SPEED=2.0
+//VALUE=FIXME
+WEIGHT=5
+REQSTR=15
+TWOHANDS=N
+RESOURCES=18 i_ingot_iron
+SKILLMAKE=Blacksmithing 70.0
+CATEGORY=Provisions - Weapons - Fencing
+SUBSECTION=War Cleavers
+DESCRIPTION=War Cleaver
+TEVENTS=t_iprop
+DUPELIST=02d2f
+ON=@Create
+   HITPOINTS={36 48}
+
+[ITEMDEF 02d2f]
+DUPEITEM=02d23
+
+[ITEMDEF i_butcher_war_cleaver]
+ID=i_war_cleaver
+NAME=Butcher's War Cleaver
+RESOURCES=18 i_ingot_iron, 1 i_gem_turquoise
+SKILLMAKE=Blacksmithing 75.0
+TEVENTS=t_iprop
+TAG.Slayer.Super=SSLAYER_BOVINE
+CATEGORY=Provisions - Weapons - Fencing
+SUBSECTION=War Cleavers
+DESCRIPTION=Butcher's War Cleaver
+ON=@Create
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
+
+[ITEMDEF i_knight_war_cleaver]
+ID=i_war_cleaver
+NAME=Knight's War Cleaver
+RESOURCES=18 i_ingot_iron, 1 i_gem_perfect_emerald
+SKILLMAKE=Blacksmithing 75.0
+TEVENTS=t_iprop
+TAG.HitPointRegeneration=3
+CATEGORY=Provisions - Weapons - Fencing
+SUBSECTION=War Cleavers
+DESCRIPTION=Knight's War Cleaver
+ON=@Create
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
+
+[ITEMDEF i_raed_glory]
+ID=i_war_cleaver
+NAME=Raed's Glory
+SPEED=2.2
+DAM=9,11
+TEVENTS=t_iprop
+TAG.SpellChanneling=1
+TAG.HitLifeLeech=35
+TAG.ManaIncrease=8
+TAG.SwingSpeedIncrease=20
+CATEGORY=Provisions - Weapons - Fencing
+SUBSECTION=War Cleavers
+DESCRIPTION=Raed's Glory
+ON=@Create
+   COLOR=024f
+   HITPOINTS=255
+
+[ITEMDEF i_serrated_war_cleaver]
+ID=i_war_cleaver
+NAME=Serrated War Cleaver
+RESOURCES=18 i_ingot_iron, 1 i_gem_ecru_citrine
+SKILLMAKE=Blacksmithing 75.0
+TEVENTS=t_iprop
+TAG.DamageIncrease=7
+CATEGORY=Provisions - Weapons - Fencing
+SUBSECTION=War Cleavers
+DESCRIPTION=Serrated War Cleaver
+ON=@Create
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
+
+[ITEMDEF i_true_war_cleaver]
+ID=i_war_cleaver
+NAME=True War Cleaver
+RESOURCES=18 i_ingot_iron, 1 i_gem_brilliant_amber
+SKILLMAKE=Blacksmithing 75.0
+TEVENTS=t_iprop
+TAG.HitPointRegeneration=2
+TAG.DamageIncrease=4
+CATEGORY=Provisions - Weapons - Fencing
+SUBSECTION=War Cleavers
+DESCRIPTION=True War Cleaver
+ON=@Create
+   COLOR=0 //FIXME: unknown color
+   HITPOINTS={36 48}
+
+
+[EOF]

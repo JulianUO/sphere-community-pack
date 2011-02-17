@@ -503,4 +503,36 @@ ON=@Create
 [ITEMDEF 0406f]
 DUPEITEM=0906
 
-[eof]
+
+///////////////////////////////////////////////////////////////
+//////// GLASS STAVES
+///////////////////////////////////////////////////////////////
+[ITEMDEF 0905]
+DEFNAME=i_glass_staff
+NAME=glass staff
+TYPE=t_weapon_mace_smith
+DAM=11,14
+FLIP=1
+SKILL=macefighting
+SPEED=2.2
+//VALUE=FIXME
+WEIGHT=4.0
+REQSTR=20
+TWOHANDS=Y
+RESOURCES=10 i_sand
+SKILLMAKE=53.6 Alchemy
+CATEGORY=Provisions - Weapons - MaceFighting
+SUBSECTION=Glass Staves
+DESCRIPTION=Glass Staff
+TEVENTS=t_iprop
+TAG.Item.Gargoyle=1
+DUPELIST=04070
+ON=@Create
+   HITPOINTS={30 50}
+
+[ITEMDEF 04070]
+DUPEITEM=0905
+
+
+[EOF]
+

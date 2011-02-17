@@ -10,6 +10,7 @@
 // Updated By: Blizzard
 VERSION=0.56b
 
+
 [ITEMDEF 0141b]
 DEFNAME=i_mask_orc
 TYPE=t_armor_leather
@@ -319,5 +320,63 @@ HITPOINTS={31 70}
 [ITEMDEF 01f0c]
 //Orc Helm
 DUPEITEM=01f0b
+
+[ITEMDEF 025e4]
+DEFNAME=i_armor_female_shorts_spiked
+NAME=Spiked Shorts
+TYPE=t_armor
+ARMOR=
+REQSTR=
+SKILLMAKE=
+RESOURCES=
+DUPELIST=025e5
+CATEGORY=Provisions - Armor
+SUBSECTION=Female Armor
+DESCRIPTION=Spiked Shorts
+
+ON=@CREATE
+	HITPOINTS={50 60}
+
+[ITEMDEF 025e5]
+DUPEITEM=025e4
+
+[ITEMDEF 025e6]
+DEFNAME=i_armor_female_harness_amazon
+NAME=Amazon Harness
+TYPE=t_armor
+ARMOR=
+REQSTR=
+RESOURCES=
+SKILLMAKE=
+DUPELIST=025e7
+CATEGORY=Provisions - Armor
+SUBSECTION=Female Armor
+DESCRIPTION=Amazon Harness
+
+ON=@CREATE
+	HITPOINTS={50 60}
+
+[ITEMDEF 025e7]
+DUPEITEM=025e6
+
+[ITEMDEF 025e8]
+DEFNAME=i_armor_female_harness_elite
+NAME=Elite Harness
+TYPE=t_armor
+ARMOR=
+REQSTR
+RESOURCES=
+SKILLMAKE=
+DUPELIST=025e9
+CATEGORY=Provisions - Armor
+SUBSECTION=Female Armor
+DESCRIPTION=Elite Harness
+
+ON=@CREATE
+	HITPOINTS={50 60}
+
+[ITEMDEF 025e9]
+DUPEITEM=025e8
+
 
 [eof]

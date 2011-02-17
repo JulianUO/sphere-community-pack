@@ -14,7 +14,7 @@ VERSION=0.56b
 [ITEMDEF 017cf]
 //teleporter
 DEFNAME=i_teleporter
-RESOURCES=60 I_BOARD, 1 I_NAILS
+RESOURCES=60 i_board, 1 i_nails
 WEIGHT=60
 TYPE=T_TELEPAD
 CATEGORY=Miscellaneous
@@ -422,7 +422,7 @@ DEFNAME=i_quest
 
 [ITEMDEF 01aa4]
 DEFNAME=i_lighthouse
-RESOURCES=66 i_stone_sand, 24 i_GLASS
+RESOURCES=66 i_stone_sand, 24 i_glass
 WEIGHT=156
 CATEGORY=Miscellaneous
 SUBSECTION=Lighthouse
@@ -615,7 +615,7 @@ DUPEITEM=01aa4
 
 [ITEMDEF 01ad4]
 DEFNAME=i_nest_with_eggs
-RESOURCES=8 i_STRAW
+RESOURCES=8 i_straw
 WEIGHT=3
 CATEGORY=Miscellaneous
 SUBSECTION=Birds Nest
@@ -628,7 +628,7 @@ DUPEITEM=01ad4
 
 [ITEMDEF 01b3f]
 DEFNAME=i_treasure
-RESOURCES=15000 i_GOLD, 50 T_GEM
+RESOURCES=15000 i_gold, 50 t_gem
 WEIGHT=200
 CATEGORY=Miscellaneous
 SUBSECTION=Treasure
@@ -797,7 +797,7 @@ DUPEITEM=01b3f
 
 [ITEMDEF 01c12]
 DEFNAME=i_bell_of_courage
-RESOURCES=2 i_ingot_gold, 1 i_wire_gold, 1 i_gem_DIAMOND
+RESOURCES=2 i_ingot_gold, 1 i_wire_gold, 1 i_gem_diamond
 WEIGHT=5
 CATEGORY=Miscellaneous
 SUBSECTION=Virtue Items
@@ -814,14 +814,14 @@ SUBSECTION=Virtue Items
 DESCRIPTION=Book of Truth
 
 ON=@Create
-	MORE1=b_sphere
+   MORE1=b_sphere
 
 [ITEMDEF 01c14]
 // cannot be unlit.
 DEFNAME=i_candle_of_love
 TYPE=t_light_lit
 TDATA4=i_candle_of_love
-RESOURCES=i_CANDLE, I_INGOT_AGAPITE
+RESOURCES=i_candle, i_ingot_agapite
 WEIGHT=5
 CATEGORY=Miscellaneous
 SUBSECTION=Virtue Items
@@ -838,55 +838,52 @@ DUPEITEM=01c14
 
 [ITEMDEF I_WINDOW]
 ID=I_TARGET
-RESOURCES=2 I_SAND, 2 I_BOARD
+RESOURCES=2 i_sand, 2 i_board
 
 ON=@Create
-	COLOR=colors_white
+   COLOR=colors_white
 
 [ITEMDEF I_flagstone_RED]
 ID=i_rock_plain
 
 ON=@Create
-	COLOR=colors_red
+   COLOR=colors_red
 
 [ITEMDEF I_flagstone_GRAY]
 ID=i_rock_plain
 
 ON=@Create
-	COLOR=colors_gray
+   COLOR=colors_gray
 
 [ITEMDEF i_stone_slate]
 ID=i_rock_plain
 
 ON=@Create
-	COLOR=colors_gray
+   COLOR=colors_gray
 
 [ITEMDEF I_STONE_RED]
 ID=i_rock_plain
 
 ON=@Create
-	COLOR=colors_red
+   COLOR=colors_red
 
 [ITEMDEF I_STONE_COBBLE]
 ID=i_rock_plain
 
 ON=@Create
-	COLOR=colors_brown
-
-[ITEMDEF i_PALM]
-ID=i_TREE_COCONUTPALM
+   COLOR=colors_brown
 
 [ITEMDEF I_FROSTINGBOWL]
 ID=i_bowl_dough
 
 ON=@Create
-	COLOR=colors_yellow
+   COLOR=colors_yellow
 
 [ITEMDEF i_CAKEPAN]
 ID=I_BASKET
 
 ON=@Create
-	COLOR=colors_gray
+   COLOR=colors_gray
 
 [ITEMDEF i_JAR]
 ID=i_JAR_HONEY
@@ -900,22 +897,22 @@ RESOURCES=6 i_flax_bundle
 WEIGHT=1
 
 ON=@Create
-	COLOR=colors_yellow
+   COLOR=colors_yellow
 
 [ITEMDEF i_PAPER]
 ID=i_bedroll_open
 NAME=Paper
 VALUE=2
-RESOURCES=1 I_BOARD, 1 T_WATER
-SKILLMAKE=CARPENTRY 15.7, t_carpentry
+RESOURCES=1 i_board, 1 t_water
+SKILLMAKE=carpentry 15.7, t_carpentry
 WEIGHT=.1
 
 [ITEMDEF i_PARCHMENT]
 ID=i_bedroll_open
 VALUE=2
 NAME=Parchment
-RESOURCES=1 i_PAPER, 1 i_CLOTH
-SKILLMAKE=CARPENTRY 20.7, t_carpentry
+RESOURCES=1 i_paper, 1 i_cloth
+SKILLMAKE=carpentry 20.7, t_carpentry
 WEIGHT=1
 
 [ITEMDEF i_CROP_HERB]
@@ -959,7 +956,7 @@ SUBSECTION=Jewels
 DESCRIPTION=Ivory
 
 ON=@Create
-	COLOR=colors_white
+   COLOR=colors_white
 
 [ITEMDEF i_HAIR_DYEs]
 ID=i_TESTTUBE_RACK_FULL
@@ -971,7 +968,7 @@ SUBSECTION=Barber
 DESCRIPTION=Hair Dyes
 
 ON=@Create
-	COLOR=colors_hair
+   COLOR=colors_hair
 
 [ITEMDEF I_RIBBON]
 ID=i_yarn_ball
@@ -979,7 +976,7 @@ NAME=Ribbon
 WEIGHT=1
 
 ON=@Create
-	COLOR=colors_all
+   COLOR=colors_all
 
 [ITEMDEF I_HINGES_BRASS]
 ID=i_hinge
@@ -991,7 +988,7 @@ SUBSECTION=Tinker
 DESCRIPTION=Brass Hinges
 
 ON=@Create
-	COLOR=color_o_gold
+   COLOR=color_o_gold
 
 [ITEMDEF I_SEWING_NEEDLE]
 ID=I_SCORP
@@ -1004,7 +1001,7 @@ SUBSECTION=Tailor
 DESCRIPTION=Sewing Needle
 
 ON=@Create
-	COLOR=color_metal
+   COLOR=color_metal
 
 [ITEMDEF I_DIE]
 ID=I_GEM_SAPPHIRE
@@ -1013,7 +1010,7 @@ WEIGHT=.2
 //RESOURCES3=1 i_bone, 1 i_ink
 
 ON=@Create
-	COLOR=colors_white
+   COLOR=colors_white
 
 [ITEMDEF I_INK_POT]
 ID=I_SPITTOON
@@ -1024,7 +1021,7 @@ SUBSECTION=Artists
 DESCRIPTION=Inkpot
 
 ON=@Create
-	COLOR=color_gray_dk
+   COLOR=color_gray_dk
 
 [ITEMDEF I_BRUSH]
 ID=I_REAG_DAEMON_BONE
@@ -1036,7 +1033,7 @@ SUBSECTION=Artists
 DESCRIPTION=Paint Brush
 
 ON=@Create
-	COLOR=colors_brown
+   COLOR=colors_brown
 
 [ITEMDEF I_BLOODSTONE]
 ID=i_rock_7
@@ -1048,7 +1045,7 @@ SUBSECTION=Necromancer
 DESCRIPTION=Bloodstone
 
 ON=@Create
-	COLOR=colors_blood
+   COLOR=colors_blood
 
 [ITEMDEF I_MARBLE]
 ID=i_rock_3   //ROCK
@@ -1060,7 +1057,7 @@ SUBSECTION=Jeweler
 DESCRIPTION=Marble
 
 ON=@Create
-	COLOR=color_snow
+   COLOR=color_snow
 
 [ITEMDEF I_TOMATO_SAUCE]
 ID=i_bottle_red    //RED BOTTLE
@@ -1080,13 +1077,13 @@ DESCRIPTION=Planted Tree Sapling
 
 [ITEMDEF I_BAMBOO]
 ID=i_staff_quarter
-RESOURCES=2 i_PLANT_CATTAILS
+RESOURCES=2 i_plant_cattails
 CATEGORY=Vegetation
 SUBSECTION=Sticks and Wood
 DESCRIPTION=Bamboo
 
 ON=@Create
-	COLOR=09a
+   COLOR=09a
 
 [ITEMDEF I_CAT_GUT]
 ID=i_FLESH_ENTRAILS
@@ -1113,7 +1110,7 @@ DESCRIPTION=Orc Skull
 [ITEMDEF I_WAX_SEAL]
 ID=I_GEM_TOURMALINE
 NAME=Wax Seal
-RESOURCES=1 I_BEESWAX
+RESOURCES=1 i_beeswax
 CATEGORY=Items by Professions
 SUBSECTION=Beekeepers/Candlers
 DESCRIPTION=Wax Seal
@@ -1134,17 +1131,17 @@ SUBSECTION=Magic Items
 DESCRIPTION=Book of Hell
 
 ON=@Create
-	MORE=b_hitchhiker // some book number
+   MORE=b_hitchhiker // some book number
 
 ON=@DCLICK
-	SRC.EFFECT=3,i_FIRE_COLUMN,6,15,1	// flamestrike
-	SRC.SOUND=snd_SPELL_FLAMESTRIKE
-	SRC.DAMAGE={5 20}	// damage the person who did this
-	TIMER=4
+   SRC.EFFECT=3,i_FIRE_COLUMN,6,15,1   // flamestrike
+   SRC.SOUND=snd_SPELL_FLAMESTRIKE
+   SRC.DAMAGE={5 20}   // damage the person who did this
+   TIMER=4
 
 ON=@TIMER
-	SPEAK Run away !
-	RETURN 1
+   SPEAK Run away !
+   RETURN 1
 
 [ITEMDEF I_FIRE_STORM]
 // Fire Storm
@@ -1156,47 +1153,47 @@ SUBSECTION=Animations
 DESCRIPTION=Fire Storm Piece
 
 ON=@Create
-	ATTR=attr_magic|attr_move_never
-	MORE=0
-	MOREP=42,55,99
-	TIMER=1
+   ATTR=attr_magic|attr_move_never
+   MORE=0
+   MOREP=42,55,99
+   TIMER=1
 
 ON=@DCLICK
-	MORE = <MORE> + 1
-	IF (<MORE> > 15)
-		REMOVE
-		RETURN 1
-	endif
-	MOREP=<LINK.P>
-	TAG.NEG=RAND(2)
-	TAG.TX=RAND(6)
-	IF (<TAG0.NEG> == 1)
-		MOREX= <MOREX> - <TAG0.TX>
-	ELSE
-		MOREX= <MOREX> + <TAG0.TX>
-	endif
-	TAG.NEG=RAND(2)
-	TAG.TY=RAND(6)
-	IF (<TAG0.NEG> == 1)
-		MOREY= <MOREY> - <TAG0.TY>
-	ELSE
-		MOREY= <MOREY> + <TAG0.TY>
-	endif
-	TAG.NEG =
-	TAG.TX =
-	TAG.TY =
-	ATTR=attr_move_never|attr_invis|attr_magic  //set invs
-	P=<MOREP>
-	ATTR=attr_magic|attr_move_never  //unhide object, shos it at new location
-	MOREP=42,55,99
-	TIMER=1
-	RETURN 1
+   MORE = <MORE> + 1
+   IF (<MORE> > 15)
+      REMOVE
+      RETURN 1
+   endif
+   MOREP=<LINK.P>
+   TAG.NEG=RAND(2)
+   TAG.TX=RAND(6)
+   IF (<TAG0.NEG> == 1)
+      MOREX= <MOREX> - <TAG0.TX>
+   ELSE
+      MOREX= <MOREX> + <TAG0.TX>
+   endif
+   TAG.NEG=RAND(2)
+   TAG.TY=RAND(6)
+   IF (<TAG0.NEG> == 1)
+      MOREY= <MOREY> - <TAG0.TY>
+   ELSE
+      MOREY= <MOREY> + <TAG0.TY>
+   endif
+   TAG.NEG =
+   TAG.TX =
+   TAG.TY =
+   ATTR=attr_move_never|attr_invis|attr_magic  //set invs
+   P=<MOREP>
+   ATTR=attr_magic|attr_move_never  //unhide object, shos it at new location
+   MOREP=42,55,99
+   TIMER=1
+   RETURN 1
 
 [ITEMDEF i_wizards_hat_plus_int]
 Name=Mage Hat
 ID=i_hat_wizards
-RESOURCES=i_hat_wizards, i_scroll_CUNNING
-SKILLMAKE=60.0 TAILORING, 60.0 MAGERY, t_sewing_kit
+RESOURCES=i_hat_wizards, i_scroll_cunning
+SKILLMAKE=60.0 tailoring, 60.0 magery, t_sewing_kit
 
 [ITEMDEF i_crystal_of_com_t1]
 //Comm. Crystal (500) RED
@@ -1210,7 +1207,7 @@ SUBSECTION=Communication Crystals
 DESCRIPTION=Communication Crystal (red)
 
 ON=@Create
-	MORE=500
+   MORE=500
 
 [ITEMDEF i_CRYSTAL_OF_COM_T2]
 // Comm. Crystal (1000) GREEN
@@ -1224,7 +1221,7 @@ SUBSECTION=Communication Crystals
 DESCRIPTION=Communication Crystal (green)
 
 ON=@Create
-	MORE=1000
+   MORE=1000
 
 [ITEMDEF i_CRYSTAL_OF_COM_T3]
 // Comm. Crystal (2000) GREEN
@@ -1238,7 +1235,7 @@ SUBSECTION=Communication Crystals
 DESCRIPTION=Communication Crystal (green)
 
 ON=@Create
-	MORE=2000
+   MORE=2000
 
 [ITEMDEF i_beard_NONE]
 ID=I_EQ_MARKER
@@ -1248,20 +1245,20 @@ LAYER=layer_beard
 VALUE=10
 
 ON=@Create
-	ATTR=attr_newbie
-	TIMER=550000
+   ATTR=attr_newbie
+   TIMER=550000
 
 ON=@TIMER
-	if !<cont>	// on ground?
-		return 0
-	endif
-	if <cont.npc>	// players only
-		return 1
-	endif
-	serv.newitem=i_beard_mustache
-	new.color=<cont.findlayer(layer_beard).color>
-	cont.equip <new.uid>
-	return 1
+   if !<cont>   // on ground?
+      return 0
+   endif
+   if <cont.npc>   // players only
+      return 1
+   endif
+   serv.newitem=i_beard_mustache
+   new.color=<cont.findlayer(layer_beard).color>
+   cont.equip <new.uid>
+   return 1
 
 [ITEMDEF i_hair_NONE]
 ID=I_EQ_MARKER
@@ -1271,20 +1268,20 @@ LAYER=layer_hair
 VALUE=10
 
 ON=@Create
-	ATTR=attr_newbie
-	TIMER=550000
+   ATTR=attr_newbie
+   TIMER=550000
 
 ON=@TIMER
-	if !<cont>	// on ground?
-		return 0
-	endif
-	if <cont.npc>	// players only
-		return 1
-	endif
-	serv.newitem=i_hair_krisna
-	new.color=<cont.findlayer(layer_hair).color>
-	cont.equip <new.uid>
-	return 1
+   if !<cont>   // on ground?
+      return 0
+   endif
+   if <cont.npc>   // players only
+      return 1
+   endif
+   serv.newitem=i_hair_krisna
+   new.color=<cont.findlayer(layer_hair).color>
+   cont.equip <new.uid>
+   return 1
 
 [ITEMDEF i_gm_robe]
 NAME=GM Robe
@@ -1295,7 +1292,7 @@ SUBSECTION=GM Robes
 DESCRIPTION=GM Robe
 
 ON=@Create
-	COLOR=021
+   COLOR=021
 
 [ITEMDEF i_seer_robe]
 NAME=Seer Robe
@@ -1306,7 +1303,7 @@ SUBSECTION=GM Robes
 DESCRIPTION=Seer Robe
 
 ON=@Create
-	COLOR=01D3
+   COLOR=01D3
 
 [ITEMDEF i_counselor_robe]
 NAME=Counselor Robe
@@ -1317,7 +1314,7 @@ SUBSECTION=GM Robes
 DESCRIPTION=Counselor Robe
 
 ON=@Create
-	COLOR=003
+   COLOR=003
 
 [ITEMDEF i_CHECKERBOARD]
 //DEFNAME=CHECKERBOARD
@@ -1331,7 +1328,7 @@ SUBSECTION=BarKeep
 DESCRIPTION=Checkerboard
 
 ON=@Create
-	MORE=1	// make this checkers.
+   MORE=1   // make this checkers.
 
 [ITEMDEF i_CHESSBOARD]
 ID=i_game_board
@@ -1360,148 +1357,6 @@ TYPE=T_STONE_TOWN
 CATEGORY=Provisions - Deeds
 SUBSECTION=Guild and Town Stones
 DESCRIPTION=Town Stone
-
-[ITEMDEF I_BOW_SUP]
-//Superior Bow
-ID=i_bow
-NAME=Superior Bow
-SKILLMAKE=45.0 BOWCRAFT
-RESOURCES=8 i_log
-DAM=10,26
-//SPEED=20
-SKILL=Archery
-REQSTR=30
-TWOHANDS=Y
-WEIGHT=6
-CATEGORY=Provisions - Weapons
-SUBSECTION=Bows - Exceptional
-DESCRIPTION=Superior Bow
-
-ON=@Create
-	HITPOINTS={41 80}
-
-[ITEMDEF I_XBOW_SUP]
-//Superior Crossbow
-NAME=Superior Crossbow
-ID=i_crossbow
-RESOURCES=8 i_log
-SKILLMAKE=55.0 BOWCRAFT
-DAM=7,28
-//SPEED=20
-SKILL=Archery
-REQSTR=30
-TWOHANDS=Y
-WEIGHT=7
-CATEGORY=Provisions - Weapons
-SUBSECTION=Bows - Exceptional
-DESCRIPTION=Superior Crossbow
-
-ON=@Create
-	HITPOINTS={41 100}
-
-[ITEMDEF I_HXBOW_SUP]
-//Superior Heavy Crossbow
-ID=i_crossbow_heavy
-NAME=Superior Heavy Crossbow
-SKILLMAKE=65.0 BOWCRAFT
-RESOURCES=11 i_log
-DAM=7,36
-SKILL=Archery
-REQSTR=30
-TWOHANDS=Y
-WEIGHT=7
-CATEGORY=Provisions - Weapons
-SUBSECTION=Bows - Exceptional
-DESCRIPTION=Superior Heavy Crossbow
-
-ON=@Create
-	HITPOINTS={41 120}
-
-[ITEMDEF I_BOW_EXCEP]
-//Exceptional Bow
-ID=i_bow
-NAME=Exceptional Bow
-RESOURCES=9 i_log
-SKILLMAKE=75.5 BOWCRAFT
-DAM=11,28
-//SPEED=20
-SKILL=Archery
-REQSTR=30
-TWOHANDS=Y
-WEIGHT=6
-CATEGORY=Provisions - Weapons
-SUBSECTION=Bows - Exceptional
-DESCRIPTION=Exceptional Bow
-
-ON=@Create
-	HITPOINTS={51 120}
-
-[ITEMDEF I_XBOW_EXCEP]
-//Exceptional Crossbow
-ID=i_crossbow
-NAME=Exceptional Crossbow
-RESOURCES=10 i_log
-SKILLMAKE=85.5 BOWCRAFT
-DAM=7,30
-//SPEED=20
-SKILL=Archery
-REQSTR=30
-TWOHANDS=Y
-WEIGHT=7
-CATEGORY=Provisions - Weapons
-SUBSECTION=Bows - Exceptional
-DESCRIPTION=Exceptional Crossbow
-
-ON=@Create
-	HITPOINTS={51 140}
-
-[ITEMDEF I_HXBOW_EXCEP]
-//Exceptional Heavy Crossbow
-ID=i_crossbow_heavy
-NAME=Exceptional Heavy Crossbow
-DAM=8,38
-//SPEED=20
-SKILL=Archery
-REQSTR=30
-TWOHANDS=Y
-WEIGHT=7
-SKILLMAKE=95.5 BOWCRAFT
-RESOURCES=13 i_log
-CATEGORY=Provisions - Weapons
-SUBSECTION=Bows - Exceptional
-DESCRIPTION=Exceptional Heavy Crossbow
-
-ON=@Create
-	HITPOINTS={41 100}
-
-[ITEMDEF i_Bow_Elven]
-NAME=Elven Bow
-ID=i_bow
-DAM=11,28
-//SPEED=20
-SKILL=Archery
-REQSTR=30
-TWOHANDS=Y
-WEIGHT=3
-RESOURCES=8 i_log
-SKILLMAKE=99.5 BOWCRAFT, 50.0 MAGERY
-CATEGORY=Provisions - Weapons
-SUBSECTION=Bows - Exceptional
-DESCRIPTION=Elven Bow
-
-ON=@Create
-	HITPOINTS={100 200}
-	COLOR=237
-
-ON=@EQUIP
-	SRC.TACTICS= (<SRC.TACTICS>+15.0)
-	SRC.ARCHERY= (<SRC.ARCHERY>+10.0)
-	RETURN 0
-
-ON=@UNEQUIP
-	SRC.TACTICS= (<SRC.TACTICS>-(15.0))
-	SRC.ARCHERY= (<SRC.ARCHERY>-(10.0))
-	RETURN 0
 
 [ITEMDEF i_stone_humility]
 NAME=Stone of Humility
@@ -1579,68 +1434,89 @@ ID=i_candle_of_love
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Quest Items
 DESCRIPTION=Candle of Love
-//grave triggers
 
-[ITEMDEF I_GRAVE_DIG]
-ID=0edf
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Graves & Gravestones
-DESCRIPTION=Grave Digging Grave
-//grave for grave digging.
+[TYPEDEF t_digable_grave]
+ON=@DClick
+   IF (<SRC.RESTEST 1 i_grave_delay>)
+      SRC.SYSMESSAGE You must wait to dig again.
+      RETURN 1
+   ELSEIF (<DISTANCE> > 1)
+      SRC.MESSAGE You have to be closer to dig there.
+      RETURN 1
+   ELSEIF (<SRC.RESTEST 1 i_pickaxe>) || (<SRC.RESTEST 1 i_shovel>)
+      SRC.ANIM=0b
+      SOUND=0126
+      LOCAL.RandomNumber=RAND(5)
+      IF (<LOCAL.RandomNumber>==0)
+            SERV.NEWITEM i_grave_delay
+            NEW.EQUIP
+            NEW.TIMER 120
+            SRC.NEWNPC {c_skeleton 1 c_zombie 1}
+            NEW.FLAGS |= (statf_war|statf_conjured)
+            NEW.P=<SRC.P>
+            SRC.KARMA=<SRC.KARMA> - 50
+            SRC.SYSMESSAGE You lost a little Karma.
+            SRC.MESSAGE You disturbed the dead!
+      ELSEIF (<LOCAL.RandomNumber>==1)
+            SERV.NEWITEM i_grave_delay
+            NEW.EQUIP
+            NEW.TIMER 120
+            SERV.NEWITEM backpack_meager
+            NEW.BOUNCE
+            SRC.KARMA=<SRC.KARMA> - 50
+            SRC.SYSMESSAGE You lost a little Karma.
+            SRC.MESSAGE You found some treasure!
+      ELSEIF (<LOCAL.RandomNumber>==2)
+            SERV.NEWITEM i_grave_delay
+            NEW.EQUIP
+            NEW.TIMER 120
+            SRC.NEWNPC {c_lich 1 c_mummy 1}
+            NEW.FLAGS |= (statf_war|statf_conjured)
+            NEW.P=<SRC.P>
+            SRC.KARMA=<SRC.KARMA> - 50
+            SRC.SYSMESSAGE You lost a little Karma.
+            SRC.MESSAGE You disturbed the dead greatly!
+      ELSEIF (<LOCAL.RandomNumber>==3)
+            SERV.NEWITEM i_grave_delay
+            NEW.EQUIP
+            NEW.TIMER 120
+            SRC.DAMAGE={5 10} <DEF.dam_physical>
+            SRC.KARMA=<SRC.KARMA> - 50
+            SRC.SYSMESSAGE You lost a little Karma.
+            SRC.MESSAGE You almost got drug into the grave by the dead!
+      ELSEIF (<LOCAL.RandomNumber>==4)
+            SERV.NEWITEM i_grave_delay
+            NEW.EQUIP
+            NEW.TIMER 120
+            SRC.DAMAGE={15 20} <DEF.dam_physical>
+            SRC.KARMA=<SRC.KARMA> - 50
+            SRC.SYSMESSAGE You lost a little Karma.
+            SRC.MESSAGE You got drug into the grave by the dead!
+      ELSEIF (<LOCAL.RandomNumber>==5)
+            SERV.NEWITEM i_grave_delay
+            NEW.EQUIP
+            NEW.TIMER 120
+            SERV.NEWITEM i_map_treasure
+            NEW.BOUNCE
+            SRC.DAMAGE={15 20} <DEF.dam_physical>
+            SRC.KARMA=<SRC.KARMA> - 50
+            SRC.SYSMESSAGE You lost a little Karma.
+            SRC.MESSAGE You got drug into the grave by the dead!
+      ENDIF
+   ENDIF
+   RETURN 0
 
-ON=@DCLICK
-	IF <DISTANCE>>1
-		RETURN 1
-	endif
-	IF (<SRC.FINDLAYER(1).ID>==i_pickaxe)
-		SRC.ANIM=0B
-		SOUND=0126
-		IF RAND(3)
-			SRC.NEWITEM I_GRAVE_SPAWN_A
-			SRC.KARMA=<SRC.KARMA> - 50
-			SRC.SYSMESSAGE Thou hath lost a little Karma.
-			SRC.MESSAGE Thou hath disturbed the dead!
-		elif RAND(2)
-			SRC.NEWITEM backpack_meager
-			SRC.KARMA=<SRC.KARMA> - 50
-			SRC.SYSMESSAGE Thou hath lost a little Karma.
-			SRC.MESSAGE Thou hath found some treasure!
-		elif RAND(5)
-			SRC.NEWITEM I_GRAVE_SPAWN_A
-			SRC.KARMA=<SRC.KARMA> - 50
-			SRC.SYSMESSAGE Thou hath lost a little Karma.
-			SRC.MESSAGE Thou hath disturbed the dead greatly!
-		elif RAND(4)
-			SRC.DAMAGE={5 10}
-			SRC.KARMA=<SRC.KARMA> - 50
-			SRC.SYSMESSAGE Thou hath lost a little Karma.
-			SRC.MESSAGE Thou hath been almost drug into the grave //by the dead!
-		endif
-	endif
-	RETURN 1
-
-[ITEMDEF I_GRAVE_SPAWN_A]
-//Average Grave Digging Random Monster Spawn
-ID=I_HOLE
-TYPE=T_SPAWN_CHAR
-
+[ITEMDEF i_grave_delay]
+NAME=Gravedigging Delay Timer
+ID=i_handr_1
+TYPE=t_eq_script
+WEIGHT=0
+LAYER=layer_special
 ON=@Create
-	ATTR=attr_move_never|attr_invis
-	MORE1={ c_skeleton 1 c_zombie 1 c_spectre 1 }
-	MORE2=0
-	MOREP=0,1,3
-	TIMER=0
-
-ON=@TIMER
-	IF <AMOUNT>==0
-		REMOVE
-		RETURN 1
-	endif
-	IF <MORE2>==1
-		MOREP=1,1,3
-		AMOUNT=0
-		RETURN 1
-	endif
+   ATTR=attr_decay
+   COLOR=0480
+ON=@Timer
+   REMOVE
 
 [ITEMDEF i_egg_dragon]
 //Dragon Egg
@@ -1652,57 +1528,57 @@ SUBSECTION=Dragons Egg
 DESCRIPTION=Dragons Egg
 
 ON=@Create
-	COLOR={ 0000 1 0033 1 0038 1 005d 1 0091 1 0175 1 0371 1 0455 1 07fff 1 }
-	ATTR=attr_identified
-	MORE=0
+   COLOR={ 0000 1 0033 1 0038 1 005d 1 0091 1 0175 1 0371 1 0455 1 07fff 1 }
+   ATTR=attr_identified
+   MORE=0
 
 ON=@TIMER
-	IF (<MORE>==1)
-		MORE2=2
-		LINK.NEWITEM i_dragon_spawn
-		LINK.ACT.P=<LINK.P>
-		REMOVE
-	endif
-	RETURN 1
+   IF (<MORE>==1)
+      MORE2=2
+      LINK.NEWITEM i_dragon_spawn
+      LINK.ACT.P=<LINK.P>
+      REMOVE
+   endif
+   RETURN 1
 
 ON=@DCLICK    //on timer not executing in packs or containers, so do this for now if in someones pack
-	IF (<MORE>==1)
-		IF (<TIMER>>5800)
-			SRC.MESSAGE The egg seems soft and somewhat velvety to thine touch.
-		elif (<TIMER>>3600)
-			SRC.MESSAGE The egg seems to be getting hard and the velvet has fallen off.
-		elif (<TIMER>>1800)
-			SRC.MESSAGE The egg is very hard, it may hatch soon if you don't sell it quickly.
-		elif (<TIMER>>20)
-			SRC.MESSAGE You swear you can feel movement inside the egg...
-		ELSE
-			SRC.MESSAGE OH NO! as you pick up the egg it cracks and begings hatching!!!
-			LINK.NEWITEM i_dragon_spawn
-			LINK.ACT.P=<LINK.P>
-			REMOVE
-		endif
-	endif
-	RETURN 1
+   IF (<MORE>==1)
+      IF (<TIMER>>5800)
+         SRC.MESSAGE The egg seems soft and somewhat velvety to thine touch.
+      elif (<TIMER>>3600)
+         SRC.MESSAGE The egg seems to be getting hard and the velvet has fallen off.
+      elif (<TIMER>>1800)
+         SRC.MESSAGE The egg is very hard, it may hatch soon if you don't sell it quickly.
+      elif (<TIMER>>20)
+         SRC.MESSAGE You swear you can feel movement inside the egg...
+      ELSE
+         SRC.MESSAGE OH NO! as you pick up the egg it cracks and begings hatching!!!
+         LINK.NEWITEM i_dragon_spawn
+         LINK.ACT.P=<LINK.P>
+         REMOVE
+      endif
+   endif
+   RETURN 1
 
 ON=@PICKUP_GROUND
-	MORE=1
-	IF (<TIMER><1)
-		TIMER=7200
-	endif
-	LINK=<SRC.UID>
-	RETURN 0
+   MORE=1
+   IF (<TIMER><1)
+      TIMER=7200
+   endif
+   LINK=<SRC.UID>
+   RETURN 0
 
 ON=@PICKUP_PACK
-	IF (<MORE>==1)
-		TRIGGER=@DCLICK
-		RETURN 0
-	endif
-	MORE=1
-	IF (<TIMER><1)
-		TIMER=7200
-	endif
-	LINK=<SRC.UID>
-	RETURN 0
+   IF (<MORE>==1)
+      TRIGGER=@DCLICK
+      RETURN 0
+   endif
+   MORE=1
+   IF (<TIMER><1)
+      TIMER=7200
+   endif
+   LINK=<SRC.UID>
+   RETURN 0
 
 [ITEMDEF i_dragon_spawn]
 //drake egg spawn
@@ -1713,23 +1589,23 @@ SUBSECTION=Dragons Egg
 CATEGORY=Custom Items
 
 ON=@Create
-	ATTR=attr_move_never|attr_invis
-	MORE1={ c_drake_red 1 c_drake 1 c_dragon_greendrake 1 c_dragon_copperdrake 1 c_dragon_bluedrake 1 c_dragon_golddrake 1 c_dragon_blackdrake 1 c_dragon_silverdrake 1 c_dragon_crystaldrake 1 }
-	MORE2=0
-	MOREP=0,1,3
-	TIMER=2
+   ATTR=attr_move_never|attr_invis
+   MORE1={ c_drake_red 1 c_drake 1 c_dragon_greendrake 1 c_dragon_copperdrake 1 c_dragon_bluedrake 1 c_dragon_golddrake 1 c_dragon_blackdrake 1 c_dragon_silverdrake 1 c_dragon_crystaldrake 1 }
+   MORE2=0
+   MOREP=0,1,3
+   TIMER=2
 
 ON=@TIMER
-	IF <AMOUNT>==0
-		REMOVE
-		RETURN 1
-	endif
-	IF <MORE2>==1
-		MOREP=30,30,3
-		AMOUNT=0
-		RETURN 0
-	endif
-	RETURN 0
+   IF <AMOUNT>==0
+      REMOVE
+      RETURN 1
+   endif
+   IF <MORE2>==1
+      MOREP=30,30,3
+      AMOUNT=0
+      RETURN 0
+   endif
+   RETURN 0
 
 [ITEMDEF i_Book_Tennysons]
 //Tennyson's Charge of the Light Brigade
@@ -1741,6 +1617,6 @@ SUBSECTION=Quest Items
 DESCRIPTION=Charge of the Light Brigade
 
 ON=@Create
-	MORE1=b_tennyson
+   MORE1=b_tennyson
 
 [EOF]

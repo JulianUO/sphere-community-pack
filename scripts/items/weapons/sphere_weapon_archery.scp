@@ -24,7 +24,7 @@ WEIGHT=6
 REQSTR=30
 TWOHANDS=Y
 RESOURCES=7 i_log
-SKILLMAKE=30.0 BOWCRAFT
+SKILLMAKE=30.0 Bowcraft
 CATEGORY=Provisions - Weapons - Archery
 SUBSECTION=Bows
 DESCRIPTION=Bow
@@ -35,6 +35,36 @@ ON=@Create
 
 [ITEMDEF 013b2]
 DUPEITEM=013b1
+
+[ITEMDEF i_bow_superior]
+//FIXME: the superior and exceptional concept should be implemented as part
+// of the crafting system as oposed to adding a new itemdefs...
+ID=i_bow
+NAME=superior bow
+DAM=16,20
+SPEED=4.1
+REQSTR=35
+RESOURCES=8 i_log
+SKILLMAKE=40.0 bowcraft
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Bows
+DESCRIPTION=Superior Bow
+ON=@Create
+   HITPOINTS={48 60}
+
+[ITEMDEF i_bow_exceptional]
+ID=i_bow
+NAME=exceptional bow
+DAM=17,21
+SPEED=4.0
+REQSTR=40
+RESOURCES=9 i_log
+SKILLMAKE=50.0 bowcraft
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Bows
+DESCRIPTION=Exceptional Bow
+ON=@Create
+   HITPOINTS={60 72}
 
 [ITEMDEF i_bow_juka_king]
 ID=i_bow
@@ -115,7 +145,7 @@ WEIGHT=5
 TWOHANDS=Y
 REQSTR=45
 RESOURCES=7 i_log
-SKILLMAKE=BOWCRAFT 70.0
+SKILLMAKE=Bowcraft 70.0
 CATEGORY=Provisions - Weapons - Archery
 SUBSECTION=Composite Bows
 DESCRIPTION=Composite Bow
@@ -163,7 +193,7 @@ WEIGHT=8
 REQSTR=45
 TWOHANDS=Y
 RESOURCES=20 i_log
-SKILLMAKE=BOWCRAFT 95.0,1 i_elven_bowstringer
+SKILLMAKE=Bowcraft 95.0,1 i_elven_bowstringer
 CATEGORY=Provisions - Weapons - Archery
 SUBSECTION=Elven Composite Longbows
 DESCRIPTION=Elven Composite Longbow
@@ -179,7 +209,7 @@ DUPEITEM=02d1e
 ID=i_elven_composite_longbow
 NAME=Barbed Longbow
 RESOURCES=20 i_log, 1 i_gem_fire_ruby
-SKILLMAKE=BOWCRAFT 95.0,1 i_elven_bowstringer
+SKILLMAKE=Bowcraft 95.0,1 i_elven_bowstringer
 TEVENTS=t_iprop
 TAG.ReflectPhysicalDamage=12
 CATEGORY=Provisions - Weapons - Archery
@@ -231,7 +261,7 @@ ON=@Create
 ID=i_elven_composite_longbow
 NAME=Frozen Longbow
 RESOURCES=20 i_log, 1 i_gem_turquoise
-SKILLMAKE=BOWCRAFT 70.0,1 i_elven_bowstringer
+SKILLMAKE=Bowcraft 70.0,1 i_elven_bowstringer
 TEVENTS=t_iprop
 TAG.SwingSpeedIncrease=-5
 TAG.DamageIncrease=10
@@ -323,7 +353,7 @@ WEIGHT=6
 REQSTR=45
 TWOHANDS=Y
 RESOURCES=15 i_log
-SKILLMAKE=BOWCRAFT 85.0
+SKILLMAKE=Bowcraft 85.0
 CATEGORY=Provisions - Weapons - Archery
 SUBSECTION=Magical Shortbows
 DESCRIPTION=Magical Shortbow
@@ -445,7 +475,7 @@ WEIGHT=8
 REQSTR=35
 TWOHANDS=Y
 RESOURCES=10 i_log
-SKILLMAKE=BOWCRAFT 90.0
+SKILLMAKE=Bowcraft 90.0
 CATEGORY=Provisions - Weapons - Archery
 SUBSECTION=Yumis
 DESCRIPTION=Yumi
@@ -507,7 +537,7 @@ WEIGHT=7
 REQSTR=35
 TWOHANDS=Y
 RESOURCES=7 i_log
-SKILLMAKE=60.0 BOWCRAFT
+SKILLMAKE=60.0 Bowcraft
 CATEGORY=Provisions - Weapons - Archery
 SUBSECTION=Crossbows
 DESCRIPTION=Crossbow
@@ -518,6 +548,33 @@ ON=@Create
 
 [ITEMDEF 0f50]
 DUPEITEM=0f4f
+
+[ITEMDEF i_crossbow_superior]
+ID=i_crossbow
+NAME=superior crossbow
+DAM=19,23
+SPEED=4.4
+RESOURCES=8 i_log
+SKILLMAKE=70.0 bowcraft
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Crossbows
+DESCRIPTION=Superior Crossbow
+ON=@Create
+   HITPOINTS={48 60}
+
+[ITEMDEF i_crossbow_exceptional]
+ID=i_crossbow
+NAME=exceptional crossbow
+DAM=20,24
+SPEED=4.3
+RESOURCES=9 i_log
+SKILLMAKE=80.0 bowcraft
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Crossbows
+DESCRIPTION=Exceptional Crossbow
+ON=@Create
+   HITPOINTS={60 72}
+
 
 ///////////////////////////////////////////////////////////////
 //////// HEAVY CROSSBOWS
@@ -537,7 +594,7 @@ WEIGHT=9
 REQSTR=80
 TWOHANDS=Y
 RESOURCES=10 i_log
-SKILLMAKE=80.0 BOWCRAFT
+SKILLMAKE=80.0 Bowcraft
 CATEGORY=Provisions - Weapons - Archery
 SUBSECTION=Crossbows
 DESCRIPTION=Heavy Crossbow
@@ -548,6 +605,32 @@ ON=@Create
 
 [ITEMDEF 013fd]
 DUPEITEM=013fc
+
+[ITEMDEF i_crossbow_heavy_superior]
+ID=i_crossbow_heavy
+NAME=superior heavy crossbow
+DAM=21,25
+SPEED=4.9
+RESOURCES=11 i_log
+SKILLMAKE=90.0 bowcraft
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Bows
+DESCRIPTION=Superior Heavy Crossbow
+ON=@Create
+   HITPOINTS={48 60}
+
+[ITEMDEF i_crossbow_heavy_exceptional]
+ID=i_crossbow_heavy
+NAME=exceptional heavy crossbow
+DAM=22,26
+SPEED=4.8
+RESOURCES=12 i_log
+SKILLMAKE=100.0 bowcraft
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Bows
+DESCRIPTION=Exceptional Heavy Crossbow
+ON=@Create
+   HITPOINTS={60 72}
 
 [ITEMDEF i_nox_ranger_heavy_crossbow]
 ID=i_crossbow_heavy
@@ -587,9 +670,9 @@ WEIGHT=6
 REQSTR=30
 TWOHANDS=Y
 RESOURCES=10 i_log
-SKILLMAKE=BOWCRAFT 90.0
+SKILLMAKE=Bowcraft 90.0
 CATEGORY=Provisions - Weapons - Archery
-SUBSECTION=Crossbows
+SUBSECTION=Repeating Crossbows
 DESCRIPTION=Repeating Crossbow
 TEVENTS=t_iprop
 DUPELIST=026cd
@@ -608,7 +691,7 @@ TAG.SelfRepair=10
 TAG.HitChanceIncrease=15
 TAG.LowerRequeriments=100
 CATEGORY=Provisions - Weapons - Archery
-SUBSECTION=Crossbows
+SUBSECTION=Repeating Crossbows
 DESCRIPTION=Shamino's Best Crossbow
 ON=@Create
    COLOR=0504
@@ -625,10 +708,138 @@ TAG.NightSight=1
 TAG.SwingSpeedIncrease=25
 TAG.DamageIncrease=55
 CATEGORY=Provisions - Weapons - Archery
-SUBSECTION=Crossbows
+SUBSECTION=Repeating Crossbows
 DESCRIPTION=The Night Reaper
 ON=@Create
    COLOR=041c
    HITPOINTS=255
 
-[eof]
+
+///////////////////////////////////////////////////////////////
+//////// FUKIYA
+///////////////////////////////////////////////////////////////
+
+[COMMENT comment_fukiya]
+The Fukiya is a Japanese blowgun. In UO, it is a ranged the weapon that
+can be used by the Ninja with the proper amount of skill. A minimum of 50
+is required. Hit chance success is related to Ninjitsu skill level. It
+is a One-Handed Weapon for anyone with the requisite skill, however,
+Grandmaster Ninjas can use them while equipped with a two-handed weapon. A
+carpenter can find it in the Weapons category of the crafting menu. 
+
+[ITEMDEF 027aa]
+DEFNAME=i_fukiya
+NAME=fukiya
+TYPE=t_weapon_bow
+TDATA3=i_fukiya_dart
+TDATA4=i_fukiya_dartx
+DAM=14,15 //FIXME: unknown
+FLIP=1
+SKILL=Ninjitsu
+SPEED=2.0 //FIXME: unknown
+RANGE=2,5 //FIXME: unknown
+VALUE=185
+WEIGHT=2.0
+REQSTR=30 //FIXME: unknown
+TWOHANDS=Y
+RESOURCES=8 i_log
+SKILLMAKE=Carpentry 60.0
+CATEGORY=Provisions - Weapons - Special
+SUBSECTION=Fukiyas
+DESCRIPTION=Fukiya
+TEVENTS=t_iprop
+DUPELIST=027f5
+ON=@Create
+   HITPOINTS={50 60}
+
+[ITEMDEF 027f5]
+DUPEITEM=027aa
+
+
+///////////////////////////////////////////////////////////////
+//////// AMMUNITION
+///////////////////////////////////////////////////////////////
+[ITEMDEF 0f3f]
+DEFNAME=i_arrow
+NAME=arrow%s
+TYPE=t_weapon_arrow
+FLIP=1
+WEIGHT=0.1
+REPLICATE=1
+RESOURCES=1 i_arrow_shaft, 1 i_feather
+SKILLMAKE=1.0 Bowcraft
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Ammunition
+DESCRIPTION=Arrow
+DUPELIST=0f40,0f41,0f42
+
+[ITEMDEF 0f40]
+//Medium pile of arrows
+DUPEITEM=0f3f
+DESCRIPTION=Arrows (5)
+
+[ITEMDEF 0f41]
+//Large Pile of arrows
+DUPEITEM=0f3f
+DESCRIPTION=Arrows (Many)
+
+[ITEMDEF 0f42]
+//single arrow
+DEFNAME=i_arrow_x
+DUPEITEM=0f3f
+DESCRIPTION=Arrow (Straight)
+
+[ITEMDEF 01bfb]
+// Crossbow Bolt
+DEFNAME=i_xbolt
+TYPE=t_weapon_bolt
+FLIP=1
+WEIGHT=0.1
+REPLICATE=1
+RESOURCES=1 i_arrow_shaft, 1 i_feather
+SKILLMAKE=17.8 Bowcraft
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Ammunition
+DESCRIPTION=Crossbow Bolt
+DUPELIST=01bfc,01bfd,01bfe
+
+[ITEMDEF 01bfc]
+//Medium pile of crossbow bolts
+DUPEITEM=01bfb
+DESCRIPTION=Crossbow Bolts (5)
+
+[ITEMDEF 01bfd]
+//Large Pile of crossbow bolts
+DUPEITEM=01bfb
+DESCRIPTION=Crossbow Bolts (Many)
+
+[ITEMDEF 01bfe]
+//single crossbow bolt
+DEFNAME=i_xbolt_x
+DUPEITEM=01bfb
+DESCRIPTION=Crossbow bolt (Straight)
+
+
+[ITEMDEF 02804]
+DEFNAME=i_fukiya_dartx
+NAME=fukiya dart%s
+TYPE=t_weapon_arrow
+VALUE=2
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Ammunition
+DESCRIPTION=Fukiya Dart (Straight)
+
+[ITEMDEF 02806]
+DEFNAME=i_fukiya_dart
+NAME=fukiya dart%s
+TYPE=t_weapon_arrow
+VALUE=2
+RESOURCES=1 i_log
+SKILLMAKE=Carpentry 5.0
+REPLICATE=1
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Ammunition
+DESCRIPTION=Fukiya Dart
+
+
+[EOF]

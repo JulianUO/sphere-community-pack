@@ -13,7 +13,7 @@ VERSION=0.56b
 
 [ITEMDEF 0dfc]
 DEFNAME=i_scissors_barber
-RESOURCES=2 i_ingot_iron, 1 I_SCREW
+RESOURCES=2 i_ingot_iron, 1 i_screw
 WEIGHT=.4
 TYPE=T_SCISSORS
 CATEGORY=Items by Professions
@@ -27,7 +27,7 @@ DUPEITEM=0dfc
 
 [ITEMDEF 0dff]
 DEFNAME=i_wig
-RESOURCES=1 I_CLOTH, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -35,7 +35,7 @@ DESCRIPTION=WIG
 
 [ITEMDEF 0e00]
 DEFNAME=i_wig_1
-RESOURCES=1 i_cloth, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -43,7 +43,7 @@ DESCRIPTION=WIG 1
 
 [ITEMDEF 0e01]
 DEFNAME=i_wig_2
-RESOURCES=1 i_cloth, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -51,7 +51,7 @@ DESCRIPTION=WIG 2
 
 [ITEMDEF 0e02]
 DEFNAME=i_wig_3
-RESOURCES=1 i_cloth, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -59,7 +59,7 @@ DESCRIPTION=WIG 3
 
 [ITEMDEF 0e03]
 DEFNAME=i_wig_4
-RESOURCES=1 i_cloth, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -67,7 +67,7 @@ DESCRIPTION=WIG 4
 
 [ITEMDEF 0e04]
 DEFNAME=i_wig_5
-RESOURCES=1 i_cloth, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -75,7 +75,7 @@ DESCRIPTION=WIG 5
 
 [ITEMDEF 0e05]
 DEFNAME=i_wig_stand
-RESOURCES=1 i_cloth, 5 I_BOARD
+RESOURCES=1 i_cloth, 5 i_board
 WEIGHT=2
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -83,7 +83,7 @@ DESCRIPTION=WIG STAND
 
 [ITEMDEF 0e06]
 DEFNAME=i_wig_stand_2
-RESOURCES=1 i_cloth, 5 I_BOARD
+RESOURCES=1 i_cloth, 5 i_board
 WEIGHT=2
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -91,7 +91,7 @@ DESCRIPTION=WIG STAND 2
 
 [ITEMDEF 0e07]
 DEFNAME=i_wig_stand_3
-RESOURCES=1 i_cloth, 5 I_BOARD
+RESOURCES=1 i_cloth, 5 i_board
 WEIGHT=2
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -99,7 +99,7 @@ DESCRIPTION=WIG STAND 3
 
 [ITEMDEF 0e08]
 DEFNAME=i_wig_stand_4
-RESOURCES=1 i_cloth, 5 I_BOARD
+RESOURCES=1 i_cloth, 5 i_board
 WEIGHT=2
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -107,7 +107,7 @@ DESCRIPTION=WIG STAND 4
 
 [ITEMDEF 0e09]
 DEFNAME=i_wig_6
-RESOURCES=1 i_cloth, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -115,7 +115,7 @@ DESCRIPTION=WIG 6
 
 [ITEMDEF 0e0a]
 DEFNAME=i_wig_7
-RESOURCES=1 i_cloth, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -123,7 +123,7 @@ DESCRIPTION=WIG 7
 
 [ITEMDEF 0e0b]
 DEFNAME=i_wig_8
-RESOURCES=1 i_cloth, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -131,7 +131,7 @@ DESCRIPTION=WIG 8
 
 [ITEMDEF 0e0c]
 DEFNAME=i_wig_9
-RESOURCES=1 i_cloth, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -139,7 +139,7 @@ DESCRIPTION=WIG 9
 
 [ITEMDEF 0e0d]
 DEFNAME=i_wig_10
-RESOURCES=1 i_cloth, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -147,7 +147,7 @@ DESCRIPTION=WIG 10
 
 [ITEMDEF 0e0e]
 DEFNAME=i_wig_11
-RESOURCES=1 i_cloth, 5 I_THREAD, 20 i_hair_cut
+RESOURCES=1 i_cloth, 5 i_thread, 20 i_hair_cut
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -157,7 +157,7 @@ DESCRIPTION=WIG 11
 // DEFNAME2=hair_dye
 DEFNAME=i_bottle_hair_dye
 TYPE=T_HAIR_DYE
-RESOURCES=1 I_BOTTLE, 1 i_dyes
+RESOURCES=1 i_bottle, 1 i_dyes
 NAME=Bottle of Hair Dye
 WEIGHT=2
 CATEGORY=Items by Professions
@@ -573,5 +573,230 @@ ON=@TIMER
 	new.color=<cont.findlayer(layer_beard).color>
 	cont.equip <new.uid>
 	return 1
+
+[ITEMDEF 04258]
+DEFNAME=i_horn_gargoyle_male_1
+NAME=male gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 04259]
+DEFNAME=i_horn_gargoyle_male_2
+NAME=male gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 0425a]
+DEFNAME=i_horn_gargoyle_male_3
+NAME=male gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 0425b]
+DEFNAME=i_horn_gargoyle_male_4
+NAME=male gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 0425c]
+DEFNAME=i_horn_gargoyle_male_5
+NAME=male gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 0425d]
+DEFNAME=i_horn_gargoyle_male_6
+NAME=male gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 0425e]
+DEFNAME=i_horn_gargoyle_male_7
+NAME=male gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 0425f]
+DEFNAME=i_horn_gargoyle_male_8
+NAME=male gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 04261]
+DEFNAME=i_horn_gargoyle_female_1
+NAME=female gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 04262]
+DEFNAME=i_horn_gargoyle_female_2
+NAME=female gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 04273]
+DEFNAME=i_horn_gargoyle_female_3
+NAME=female gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 04274]
+DEFNAME=i_horn_gargoyle_female_4
+NAME=female gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 04275]
+DEFNAME=i_horn_gargoyle_female_5
+NAME=female gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 042aa]
+DEFNAME=i_horn_gargoyle_female_6
+NAME=female gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 042ab]
+DEFNAME=i_horn_gargoyle_female_7
+NAME=female gargoyle horns
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 042ad]
+DEFNAME=i_horn_gargoyle_facial_1
+NAME=facial gargoyle horns
+TYPE=T_BEARD
+LAYER=layer_beard
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 042ae]
+DEFNAME=i_horn_gargoyle_facial_2
+NAME=facial gargoyle horns
+TYPE=T_BEARD
+LAYER=layer_beard
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 042af]
+DEFNAME=i_horn_gargoyle_facial_3
+NAME=facial gargoyle horns
+TYPE=T_BEARD
+LAYER=layer_beard
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 042b0]
+DEFNAME=i_horn_gargoyle_facial_4
+NAME=facial gargoyle horns
+TYPE=T_BEARD
+LAYER=layer_beard
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 042b1]
+DEFNAME=i_horn_gargoyle_female_8
+NAME=female gargoyle horn
+TYPE=T_HAIR
+
+ON=@Create
+	ATTR = attr_newbie
+
+ON=@Timer
+	RETURN 1
+
 
 [EOF]
