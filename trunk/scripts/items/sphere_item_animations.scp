@@ -269,6 +269,54 @@ DUPEITEM=019ab
 //fire
 DUPEITEM=019ab
 
+[ITEMDEF 01a75]
+DEFNAME=i_fx_lavafire
+TYPE=t_fire
+CATEGORY=Animations
+SUBSECTION=Lava
+DESCRIPTION=Lava Fire
+DUPELIST=01a76,01a77,01a78,01a79,01a7a,01a7b
+
+[ITEMDEF 01a76]
+//lava fire
+DUPEITEM=01a75
+
+[ITEMDEF 01a77]
+//lava fire
+DUPEITEM=01a75
+
+[ITEMDEF 01a78]
+//lava fire
+DUPEITEM=01a75
+
+[ITEMDEF 01a79]
+//lava fire
+DUPEITEM=01a75
+
+[ITEMDEF 01a7a]
+//lava fire
+DUPEITEM=01a75
+
+[ITEMDEF 01a7b]
+//lava fire
+DUPEITEM=01a75
+
+[ITEMDEF 01a7c]
+DEFNAME=i_lavafire_2
+TYPE=t_fire
+CATEGORY=Animations
+SUBSECTION=Lava
+DESCRIPTION=Lava Fire 2
+DUPELIST=01a7d,01a7e
+
+[ITEMDEF 01a7d]
+//lava fire 2
+DUPEITEM=01a7c
+
+[ITEMDEF 01a7e]
+//lava fire 2
+DUPEITEM=01a7c
+
 [ITEMDEF 01ae5]
 DEFNAME=i_fx_moongate_red
 TYPE=t_light_lit

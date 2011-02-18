@@ -1176,6 +1176,18 @@ DUPEITEM=01883
 //millstones
 DUPEITEM=01883
 
+[ITEMDEF 0188b]
+WEIGHT=435.2
+RESOURCES=1 i_millstone,4 i_log,2 i_nails,20 i_board,20 i_grain_loose,1 i_flour_mill_crank
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=Flour Mill (unused?)
+DUPELIST=01893
+
+[ITEMDEF 01893]
+//flower mill
+DUPEITEM=0188b
+
 [ITEMDEF 01920]
 DEFNAME=i_flour_mill
 RESOURCES=1 i_millstone, 4 i_log, 2 i_nails, 20 i_board, 20 i_grain_loose, 1 i_flour_mill_crank
@@ -1324,6 +1336,14 @@ WEIGHT=13
 CATEGORY=Items by Professions
 SUBSECTION=BarKeep
 DESCRIPTION=Tankards
+
+[ITEMDEF 0194f]
+DEFNAME=i_basket_herbs
+WEIGHT=10.0
+RESOURCES=5 i_straw,5 i_dried_herbs
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=Basket of Herbs
 
 [ITEMDEF 01ad3]
 DEFNAME=i_donuts

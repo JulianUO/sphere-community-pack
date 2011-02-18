@@ -10,11 +10,17 @@ VERSION=0.56b
 DEFNAME=i_hide
 TYPE=t_hide
 TDATA1=i_hides_cut
-WEIGHT=5
+FLIP=1
 VALUE=5
+WEIGHT=5
 CATEGORY=Resources - Tailoring
 SUBSECTION=Hides
 DESCRIPTION=Hide
+DUPELIST=01079
+
+[ITEMDEF 01079]
+//pile of hides
+DUPEITEM=01078
 
 [ITEMDEF i_hide_spined]
 ID=i_hide
@@ -23,9 +29,8 @@ TDATA1=i_leather_spined
 CATEGORY=Resources - Tailoring
 SUBSECTION=Hides
 DESCRIPTION=Spined Hide
-
 ON=@Create
-COLOR=color_o_spined
+   COLOR=color_o_spined
 
 [ITEMDEF i_hide_horned]
 ID=i_hide
@@ -34,9 +39,8 @@ TDATA1=i_leather_horned
 CATEGORY=Resources - Tailoring
 SUBSECTION=Hides
 DESCRIPTION=Horned Hide
-
 ON=@Create
-COLOR=color_o_horned
+   COLOR=color_o_horned
 
 [ITEMDEF i_hide_barbed]
 ID=i_hide
@@ -45,9 +49,8 @@ TDATA1=i_leather_barbed
 CATEGORY=Resources - Tailoring
 SUBSECTION=Hides
 DESCRIPTION=Barbed Hide
-
 ON=@Create
-COLOR=color_o_barbed
+   COLOR=color_o_barbed
 
 
 [ITEMDEF 01067]
