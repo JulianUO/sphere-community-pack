@@ -139,6 +139,30 @@ CATEGORY=Quest
 SUBSECTION=Quest 65
 DESCRIPTION=Blighted Cotton
 
+[ITEMDEF 01084]
+DEFNAME=i_horn_bull
+NAME=gaman horn
+TYPE=t_bone
+WEIGHT=1.0
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Gaman Horn
+
+[ITEMDEF 01096]
+DEFNAME=i_talisman_quest
+TYPE=t_jewelry
+ARMOR=20
+LAYER=layer_talisman
+WEIGHT=0.1
+RESOURCES=1 i_ingot_iron,1 i_wire_iron,1 i_scroll_protection
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Unknown Talisman
+TEVENTS=e_equipitem
+ON=@Equip
+   SRC.SOUND=0fd
+   SRC.EFFECT=3,i_fx_bless_effect,6,16,0
+
 [ITEMDEF 0193f]
 DEFNAME=i_seeker_token
 NAME=seeker token

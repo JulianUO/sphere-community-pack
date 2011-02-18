@@ -895,7 +895,7 @@ RESOURCES=1 i_ingot_iron, 1 i_springs, 1 t_reagent
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Traps
 DESCRIPTION=Gas Trap 02
-DUPELIST=01146,01147,01148,01149
+DUPELIST=01146,01147,01148,01149,0114a
 
 [ITEMDEF 01146]
 //gas trap 02
@@ -910,6 +910,10 @@ DUPEITEM=01145
 DUPEITEM=01145
 
 [ITEMDEF 01149]
+//gas trap 02
+DUPEITEM=01145
+
+[ITEMDEF 0114a]
 //gas trap 02
 DUPEITEM=01145
 
@@ -1205,6 +1209,35 @@ CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Graves & Gravestones
 DESCRIPTION=Gravestone 22
 
+[ITEMDEF 01185]
+DEFNAME=i_memorial
+NAME=memorial to Gwenno
+//TYPE=t_sign_gump
+//TDATA2=066
+FLIP=1
+WEIGHT=800
+RESOURCES=80 i_rock_plain
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Graves & Gravestones
+DESCRIPTION=Memorial to Gwenno
+DUPELIST=01186,01187,01188,01189
+
+[ITEMDEF 01186]
+//memorial to Gwenno
+DUPEITEM=01185
+
+[ITEMDEF 01187]
+//memorial to Gwenno
+DUPEITEM=01185
+
+[ITEMDEF 01188]
+//memorial to Gwenno
+DUPEITEM=01185
+
+[ITEMDEF 01189]
+//memorial to Gwenno
+DUPEITEM=01185
+
 [ITEMDEF 01193]
 DEFNAME=i_trap_axe_4
 TYPE=t_trap
@@ -1488,29 +1521,50 @@ SUBSECTION=Blood
 DESCRIPTION=Blood Smear
 
 [ITEMDEF 01230]
-DEFNAME=i_guillotine
-RESOURCES=30 i_board, 1 i_log, 1 i_basket, 2 i_ingot_iron
-WEIGHT=30
+DEFNAME=i_guillotine_n
+VALUE=223
+WEIGHT=130.2
+RESOURCES=100 i_log_oak,1 i_basket,20 i_ingot_iron,2 i_nails
+SKILLMAKE=Carpentry 98.5,ANATOMY 50.0,t_carpentry
 CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Guillotine
-DESCRIPTION=Guillotine
+SUBSECTION=Torture
+DESCRIPTION=Guillotine (N)
+DUPELIST=01245,01246,01247
 
 [ITEMDEF 01245]
-DEFNAME=i_guillotine_bloody
-RESOURCES=30 i_board, 1 i_log, 1 i_basket, 2 i_ingot_iron, 1 i_blood_smear
-WEIGHT=30
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Guillotine
-DESCRIPTION=Guillotine
-DUPELIST=01246,01247,0125e,0125f,01260,01261
+//guillotine (N)
+DUPEITEM=01230
 
 [ITEMDEF 01246]
-//guillotine
-DUPEITEM=01245
+//guillotine (N)
+DUPEITEM=01230
 
 [ITEMDEF 01247]
-//guillotine
-DUPEITEM=01245
+//guillotine (N)
+DUPEITEM=01230
+
+[ITEMDEF 0125e]
+DEFNAME=i_guillotine_w
+VALUE=223
+WEIGHT=130.2
+RESOURCES=100 i_log_oak,1 i_basket,20 i_ingot_iron,2 i_nails
+SKILLMAKE=Carpentry 98.5,ANATOMY 50.0,t_carpentry
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Torture
+DESCRIPTION=Guillotine (W)
+DUPELIST=01260,01268,01269
+
+[ITEMDEF 01260]
+//guillotine (W)
+DUPEITEM=0125e
+
+[ITEMDEF 01268]
+//guillotine (W)
+DUPEITEM=0125e
+
+[ITEMDEF 01269]
+//guillotine (W)
+DUPEITEM=0125e
 
 [ITEMDEF 01249]
 DEFNAME=i_iron_maiden
@@ -1544,7 +1598,7 @@ WEIGHT=30
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Torture
 DESCRIPTION=Rack
-DUPELIST=0124f,01250,01251,01252,01253,01254,01255,01256,01257,01258,01259,0125a,0125b,0125c,0125d
+DUPELIST=0124f,01250,01251,01252,01253,01254,01255,01256,01257,01258,01259,0125a,0125b,0125c,0125d,0125f,01261
 
 [ITEMDEF 0124f]
 //rack
@@ -1606,20 +1660,12 @@ DUPEITEM=0124e
 //rack
 DUPEITEM=0124e
 
-[ITEMDEF 0125e]
-//guillotine
-DUPEITEM=01245
-
 [ITEMDEF 0125f]
-//guillotine
-DUPEITEM=01245
-
-[ITEMDEF 01260]
-//guillotine
+//rack
 DUPEITEM=01245
 
 [ITEMDEF 01261]
-//guillotine
+//rack
 DUPEITEM=01245
 
 [ITEMDEF 01262]
@@ -1629,7 +1675,7 @@ WEIGHT=3
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Torture
 DESCRIPTION=Shackles
-DUPELIST=01a07,01a08,01263
+DUPELIST=01263
 
 [ITEMDEF 01263]
 DEFNAME=i_shackles_hanging_ne
@@ -1988,35 +2034,142 @@ DESCRIPTION=Cat o' Ninetails
 [ITEMDEF 01a01]
 DEFNAME=i_skeleton_boots
 TDATA1=i_skeleton_hang
-WEIGHT=42
-RESOURCES=i_skeleton_hang, i_boots_calf
-DUPELIST=01a02,01b7c,01b7d,01b7f,01b80
+RESOURCES=1 i_skeleton_hang,1 i_boots_calf
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Skeletons
-DESCRIPTION=Skeleton (Boots)
+DESCRIPTION=Skeleton (Boots) West
 ON=@Timer
    ID=i_skeleton_hang
+   TIMER=5000
    UPDATE
    RETURN 1
 
 [ITEMDEF 01a02]
-DUPEITEM=01a01
-
-[ITEMDEF 01a03]
-DEFNAME=i_skeleton_hang
-RESOURCES=i_shackles_hanging, i_skeleton
-DUPELIST=01a04
+DEFNAME=i_skeleton_boots_2
+TDATA1=i_skeleton_hang_2
+RESOURCES=1 i_skeleton_hang_2,1 i_boots_calf
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Skeletons
-DESCRIPTION=Skeleton
-ON=@TIMER
-   ID=i_skeleton_hang2
+DESCRIPTION=Skeleton (Boots) North
+ON=@Timer
+   ID=i_skeleton_hang_2
+   TIMER=5000
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 01a03]
+DEFNAME=i_skeleton_hang_2
+TDATA1=i_skeleton_broken_2
+RESOURCES=1 i_shackles_hanging_2,1 i_skeleton
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Skeletons
+DESCRIPTION=Skeleton (Hang) North
+ON=@Timer
+   ID=i_skeleton_broken_2
+   TIMER=5000
    UPDATE
    RETURN 1
 
 [ITEMDEF 01a04]
-//skeleton
-DUPEITEM=01a03
+DEFNAME=i_skeleton_hang
+TDATA1=i_skeleton_broken
+RESOURCES=1 i_shackles_hanging,1 i_skeleton
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Skeletons
+DESCRIPTION=Skeleton (Hang) West
+ON=@Timer
+   ID=i_skeleton_broken
+   TIMER=5000
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 01a05]
+DEFNAME=i_skeleton_broken
+TDATA1=i_skeleton_morebroken
+RESOURCES=i_shackles_hanging
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Skeletons
+DESCRIPTION=Skeleton (broken) West
+ON=@Timer
+   ID=i_skeleton_morebroken
+   TIMER=5000
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 01a06]
+DEFNAME=i_skeleton_broken_2
+TDATA1=i_skeleton_morebroken_2
+RESOURCES=i_shackles_hanging_2
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Skeletons
+DESCRIPTION=Skeleton (Broken) North
+ON=@Timer
+   ID=i_skeleton_morebroken_2
+   TIMER=5000
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 01a07]
+DEFNAME=i_shackles_hanging
+RESOURCES=2 i_ingot_iron
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Skeletons
+DESCRIPTION=Hanging Shackles West
+ON=@Timer
+   ID=i_skeleton_flesh
+   TIMER=5000
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 01a08]
+DEFNAME=i_shackles_hanging_2
+RESOURCES=2 i_ingot_iron
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Skeletons
+DESCRIPTION=Hanging Shackles North
+ON=@Timer
+   ID=i_skeleton_flesh_2
+   TIMER=5000
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 01a09]
+DEFNAME=i_skeleton_morebroken
+TDATA1=i_shackles_hanging
+RESOURCES=i_shackles_hanging
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Skeletons
+DESCRIPTION=Skeleton (morebroken) West
+ON=@Timer
+   ID=i_shackles_hanging
+   TIMER=5000
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 01a0a]
+DEFNAME=i_skeleton_morebroken_2
+TDATA1=i_shackles_hanging_2
+RESOURCES=i_shackles_hanging_2
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Skeletons
+DESCRIPTION=Skeleton (morebroken) North
+ON=@Timer
+   ID=i_shackles_hanging_2
+   TIMER=5000
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 01a0b]
+//chained skeleton
+
+[ITEMDEF 01a0c]
+//chained skeleton
+
+[ITEMDEF 01a0d]
+//chained skeleton
+
+[ITEMDEF 01a0e]
+//chained skeleton
 
 [ITEMDEF 01ad8]
 DEFNAME=i_skull_pile
@@ -2192,27 +2345,46 @@ RESOURCES=i_skeleton_boots, i_flesh_torso, i_flesh_right_leg, i_flesh_left_leg
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Skeletons
 DESCRIPTION=Skeleton (Meat)
-DUPELIST=01b1e
 ON=@TIMER
    ID=i_skeleton_boots
+   TIMER=5000
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 01b1e]
+DEFNAME=i_skeleton_flesh_2
+RESOURCES=1 i_skeleton_boots_2,1 i_flesh_torso,1 i_flesh_right_leg,1 i_flesh_left_leg
+TDATA1=i_skeleton_boots_2
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Skeletons
+DESCRIPTION=Skeleton (Meat) North
+ON=@Timer
+   ID=i_skeleton_boots_2
+   TIMER=5000
    UPDATE
    RETURN 1
 
 [ITEMDEF 01b7c]
-//skeleton
-DUPEITEM=01a01
+RESOURCES=1 i_skeleton_hang,1 i_boots_calf
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Skeletons
+DESCRIPTION=Skeleton (Boots) West
+DUPELIST=01b7d
 
 [ITEMDEF 01b7d]
 //skeleton
-DUPEITEM=01a01
+DUPEITEM=01b7c
 
 [ITEMDEF 01b7f]
-//skeleton
-DUPEITEM=01a01
+RESOURCES=1 i_skeleton_hang_2,1 i_boots_calf
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Skeletons
+DESCRIPTION=Skeleton (Boots) North
+DUPELIST=01b80
 
 [ITEMDEF 01b80]
 //skeleton
-DUPEITEM=01a01
+DUPEITEM=01b7f
 
 [ITEMDEF 01bbf]
 DEFNAME=i_floorswitch_stone
@@ -2244,6 +2416,20 @@ DESCRIPTION=Stone Floor Switch (position 3)
 ON=@Create
    MORE1=01bbf
    MOREX=1
+
+[ITEMDEF 01c20]
+DEFNAME=i_body_shrouded
+FLIP=1
+WEIGHT=157.0
+RESOURCES=100 i_bandage,1 i_corpse_blank
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Wrapped Body
+DESCRIPTION=Wrapped Body
+DUPELIST=01c21
+
+[ITEMDEF 01c21]
+//Wrapped Body
+DUPEITEM=01c20
 
 [ITEMDEF 01c22]
 DEFNAME=i_casket_wood
@@ -2352,30 +2538,6 @@ DUPEITEM=01c22
 
 [ITEMDEF 01c3b]
 DUPEITEM=01c22
-
-[ITEMDEF 01a05]
-DEFNAME=i_skeleton_hang2
-RESOURCES=i_shackles_hanging
-DUPELIST=01a06
-ON=@TIMER
-   ID=i_skeleton_hang3
-   UPDATE
-   RETURN 1
-
-[ITEMDEF 01a06]
-DUPEITEM=01a05
-
-[ITEMDEF 01a09]
-DEFNAME=i_skeleton_hang3
-RESOURCES=i_shackles_hanging
-DUPELIST=01a0a
-ON=@TIMER
-   ID=i_shackles_hanging
-   UPDATE
-   RETURN 1
-
-[ITEMDEF 01a0a]
-DUPEITEM=01a09
 
 [ITEMDEF 01ae0]
 DEFNAME=i_bone_skull
@@ -3941,7 +4103,7 @@ DEFNAME=i_flesh_torso
 VALUE=1
 TYPE=t_meat_raw
 TDATA1=i_ribs_cooked
-RESOURCES=i_flesh_heart, 2 i_ribs_raw, i_flesh_liver, i_flesh_entrails, i_blood_2
+RESOURCES=i_flesh_heart, 2 i_ribs_raw, i_flesh_liver, i_flesh_entrails, i_blood
 WEIGHT=20
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Body Parts
@@ -3952,7 +4114,7 @@ DUPELIST=01dad
 // smaller head.
 DEFNAME=i_flesh_head_2
 VALUE=1
-RESOURCES=i_bone_skull, i_bone_jaw, i_flesh_brain, i_blood_2
+RESOURCES=i_bone_skull, i_bone_jaw, i_flesh_brain, i_blood
 WEIGHT=20
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Body Parts

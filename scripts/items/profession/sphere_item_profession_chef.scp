@@ -39,6 +39,16 @@ CATEGORY=Items by Professions
 SUBSECTION=Chef
 DESCRIPTION=Skillet
 
+[ITEMDEF 014ff]
+DEFNAME=i_seive
+WEIGHT=1.0
+VALUE=8
+RESOURCES=1 i_ingot_iron
+SKILLMAKE=Tinkering 40.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=Seive
+
 
 ///////////////////////////////////////////////////////////////
 //////// RESOURCES

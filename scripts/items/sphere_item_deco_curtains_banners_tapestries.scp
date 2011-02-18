@@ -471,6 +471,15 @@ CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 06
 
+[ITEMDEF 01597]
+DEFNAME=i_banner_6_part_4
+WEIGHT=4.2
+RESOURCES=1 i_log,1 i_board,1 i_cloth,1 i_thread,1 i_nails
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Banners
+DESCRIPTION=Banner 06
+
+
 [ITEMDEF 01598]
 DEFNAME=i_banner_7_part_1
 RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails

@@ -102,6 +102,19 @@ CATEGORY=Items by Professions
 SUBSECTION=BarKeep
 DESCRIPTION=MahJong
 
+[ITEMDEF 0152c]
+DEFNAME=i_mousehole
+NAME=mousehole
+FLIP=1
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Wall Mousehole
+DESCRIPTION=Mousehole
+DUPELIST=0152d
+
+[ITEMDEF 0152d]
+// mousehole
+DUPEITEM=0152c
+
 [ITEMDEF 01646]
 DEFNAME=i_dark_source
 WEIGHT=0
@@ -119,11 +132,106 @@ TDATA4=i_light_source
 ON=@Create
    ATTR=attr_magic|attr_newbie
 
+[ITEMDEF 01950]
+DEFNAME=i_dartboard_mongbat
+//FLIP=1
+TYPE=t_archery_butte
+VALUE=75
+WEIGHT=15.0
+RESOURCES=15 i_log,1 i_cloth,1 i_nails,10 i_fur_dark
+SKILLMAKE=Carpentry 15.7,t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=BarKeep
+DESCRIPTION=Mongbat Dartboard
+DUPELIST=01951,01952,01953,01954,01955
+
+[ITEMDEF 01951]
+//mongbat dartboard
+DUPEITEM=01950
+
+[ITEMDEF 01952]
+//mongbat dartboard
+DUPEITEM=01950
+
+[ITEMDEF 01953]
+//mongbat dartboard
+DUPEITEM=01950
+
+[ITEMDEF 01954]
+//mongbat dartboard
+DUPEITEM=01950
+
+[ITEMDEF 01955]
+//mongbat dartboard
+DUPEITEM=01950
+
+[ITEMDEF 01956]
+DEFNAME=i_bottle_shochu
+TYPE=t_booze
+WEIGHT=1.0
+RESOURCES=1 i_bottle_shochu_empty,1 i_fruit_grapes,1 i_reag_fertile_dirt
+CATEGORY=Items by Professions
+SUBSECTION=BarKeep
+DESCRIPTION=Bottle of Shochu
+
+[ITEMDEF 01957]
+DEFNAME=i_bottle_shochu_empty
+NAME=empty wine bottle
+WEIGHT=0.1
+RESOURCES=1 i_clay
+CATEGORY=Items by Professions
+SUBSECTION=BarKeep
+DESCRIPTION=Bottle of Shochu (empty)
+
+[ITEMDEF 019bc]
+//FIXME: When held, the bearer gets the appearance of a monster.
+DEFNAME=i_costume
+NAME=costume
+TYPE=t_clothing
+FLIP=1
+DYE=1
+//LAYER=layer_hand1
+ARMOR=3
+VALUE=18
+WEIGHT=0.2
+RESOURCES=1 i_log_bamboo,1 i_thread,1 i_hides_cut,1 i_ribbon
+SKILLMAKE=Tailoring 100.0,t_sewing_kit
+CATEGORY=Provisions - Clothes
+SUBSECTION=Masks
+DESCRIPTION=Costume
+TAG.REQSTR=0
+TAG.SpellChanneling=1
+TEVENTS=e_equipitem
+DUPELIST=019bd
+ON=@Create
+   HITPOINTS={11 23}
+
+[ITEMDEF 019bd]
+//Costume
+DUPEITEM=019bc
+
 [ITEMDEF 01b70]
 DEFNAME=i_target_tile
 CATEGORY=Ground Tiles
 SUBSECTION=Target Tile
 DESCRIPTION=Target Tile
+
+[ITEMDEF 01bc6]
+DEFNAME=i_shield_scale
+//TYPE=t_shield
+//ARMOR=16
+FLIP=1
+VALUE=158
+WEIGHT=20.0
+RESOURCES=10 i_ingot_silver,4 i_ingot_blackrock,2 i_ingot_gold
+CATEGORY=Provisions - Armor
+SUBSECTION=Shields
+DESCRIPTION=Scale Shield (unwearable)
+DUPELIST=01bc7
+
+[ITEMDEF 01bc7]
+//scale shield
+DUPEITEM=01bc6
 
 [ITEMDEF 01ea7]
 //Worldgem bit plain and small (see fancy bit at 1f13)
@@ -140,6 +248,15 @@ TYPE=t_spawn_char
 CATEGORY=Provisions - GM Items
 SUBSECTION=Special Items
 DESCRIPTION=Large Worldgem Bit
+
+[ITEMDEF 01f23]
+DEFNAME=i_deed2
+TYPE=t_deed
+WEIGHT=0.2
+RESOURCES=1 i_paper,1 i_wax_seal
+CATEGORY=Provisions - Deeds
+SUBSECTION=House Deeds
+DESCRIPTION=Deed 2 (Blank)
 
 [ITEMDEF 02005]
 // Invis marker

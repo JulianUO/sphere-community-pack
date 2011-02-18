@@ -3369,6 +3369,10 @@ DUPEITEM=0e56
 //stump
 DUPEITEM=0e57
 
+[ITEMDEF 012b5]
+//Yew Tree - not used
+//Duplicate of 012b6
+
 [ITEMDEF 012b6]
 DEFNAME=i_tree_yew1
 TYPE=t_tree

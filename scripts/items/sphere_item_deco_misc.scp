@@ -223,19 +223,44 @@ DUPELIST=01581
 DUPEITEM=01580
 
 [ITEMDEF 01582]
-DEFNAME=i_decorative_shield_12_sword_under_ne
-RESOURCES=10 i_ingot_iron, 1 i_board
+DEFNAME=i_decorative_shield_12
+FLIP=1
 WEIGHT=17
+RESOURCES=10 i_ingot_iron, 1 i_board
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Swords & Shields
+DESCRIPTION=Sword & Shield 1
+DUPELIST=01635
 
 [ITEMDEF 01583]
-DEFNAME=i_decorative_shield_12_sword_over_ne
-RESOURCES=10 i_ingot_iron, 1 i_board
+DEFNAME=i_decorative_shield_13
+FLIP=1
 WEIGHT=17
+RESOURCES=10 i_ingot_iron, 1 i_board
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Swords & Shields
+DESCRIPTION=Sword & Shield 2
+DUPELIST=01634
 
 [ITEMDEF 01584]
-DEFNAME=i_decorative_shield_13_sword_under_ne
-RESOURCES=6 i_ingot_gold, 4 i_ingot_iron, 1 i_board
+DEFNAME=i_decorative_shield_14
+FLIP=1
 WEIGHT=16
+RESOURCES=6 i_ingot_gold, 4 i_ingot_iron, 1 i_board
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Swords & Shields
+DESCRIPTION=Sword & Shield 3
+DUPELIST=01637
+
+[ITEMDEF 01585]
+DEFNAME=i_decorative_shield_15
+FLIP=1
+WEIGHT=16
+RESOURCES=6 i_ingot_gold, 4 i_ingot_iron, 1 i_board
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Swords & Shields
+DESCRIPTION=Sword & Shield 4
+DUPELIST=01636
 
 [ITEMDEF 0149f]
 DEFNAME=i_shrine_honesty_1
@@ -1515,36 +1540,20 @@ DUPELIST=0156d
 DUPEITEM=0156c
 
 [ITEMDEF 01634]
-DEFNAME=i_decorative_shield_12_sword_over_nw
-RESOURCES=10 i_ingot_iron, 1 i_board
-WEIGHT=17
-CATEGORY=Decoration - Weapons & Shields
-SUBSECTION=Shields
-DESCRIPTION=Shield
+//decorative sword and shield
+DUPEITEM=01583
 
 [ITEMDEF 01635]
-DEFNAME=i_decorative_shield_12_sword_under_nw
-RESOURCES=10 i_ingot_iron, 1 i_board
-WEIGHT=17
-CATEGORY=Decoration - Weapons & Shields
-SUBSECTION=Shields
-DESCRIPTION=Shield
+//decorative sword and shield
+DUPEITEM=01582
 
 [ITEMDEF 01636]
-DEFNAME=i_decorative_shield_13_sword_over_nw
-RESOURCES=6 i_ingot_gold, 4 i_ingot_iron, 1 i_board
-WEIGHT=16
-CATEGORY=Decoration - Weapons & Shields
-SUBSECTION=Shields
-DESCRIPTION=Shield
+//decorative sword and shield
+DUPEITEM=01585
 
 [ITEMDEF 01637]
-DEFNAME=i_decorative_shield_13_sword_under_nw
-RESOURCES=6 i_ingot_gold, 4 i_ingot_iron, 1 i_board
-WEIGHT=16
-CATEGORY=Decoration - Weapons & Shields
-SUBSECTION=Shields
-DESCRIPTION=Shield
+//decorative sword and shield
+DUPEITEM=01584
 
 [ITEMDEF 01a07]
 //shackles, chains

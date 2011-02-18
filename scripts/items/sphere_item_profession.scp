@@ -1338,6 +1338,16 @@ CATEGORY=Items by Professions
 SUBSECTION=Scribe
 DESCRIPTION=Large Open Book
 
+[ITEMDEF 01c11]
+DEFNAME=i_book_giant
+NAME=blue book
+TYPE=t_book
+WEIGHT=2.0
+RESOURCES=2 i_canvas,20 i_parchment,2 i_thread,1 i_hides_cut
+CATEGORY=Items by Professions
+SUBSECTION=Scribe
+DESCRIPTION=Huge Book
+
 [ITEMDEF 01e20]
 DEFNAME=i_book_open_red
 RESOURCES=20 i_paper, i_thread, i_hide

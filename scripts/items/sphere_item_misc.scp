@@ -11,6 +11,18 @@
 //
 VERSION=0.56b
 
+[ITEMDEF 01014]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 01014
+
+[ITEMDEF 01018]
+DEFNAME=i_empty_tile
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 01018
+
+
 [ITEMDEF 017cf]
 //teleporter
 DEFNAME=i_teleporter
