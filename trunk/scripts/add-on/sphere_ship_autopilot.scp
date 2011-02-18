@@ -37,7 +37,7 @@ if <tag0.ship_dest_total>
 	endif
 	moveship <tag.ship_dest_0>
 	tag.autopilot = 1
-endfor
+endif
 
 [function pausemovement]
 if <tag0.autopilot>
