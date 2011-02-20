@@ -509,10 +509,9 @@ SKILLMAKE=Tailoring 37.2,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Checkered Shirt
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=025eb
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 23}
 
 [ITEMDEF 025eb]
@@ -533,10 +532,9 @@ SKILLMAKE=Tailoring 59.0,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Robe 2
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=025ed
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={11 40}
 
 [ITEMDEF 025ed]
@@ -581,10 +579,9 @@ SKILLMAKE=Tailoring 31.8,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Pants & Skirts
 DESCRIPTION=knee Skirt (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=025f3
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={11 40}
 
 [ITEMDEF 025f3]
@@ -605,10 +602,9 @@ SKILLMAKE=Tailoring 27.2,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Pants & Skirts
 DESCRIPTION=Jester Pants (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0264a
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 24}
 
 [ITEMDEF 0264a]
@@ -629,10 +625,9 @@ DESCRIPTION=Platemail Gorget2
 SKILLMAKE=Blacksmithing 57.3
 TAG.REQSTR=30
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0264c
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 0264c]
@@ -653,10 +648,9 @@ SKILLMAKE=Tailoring 27.2,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Pants & Skirts
 DESCRIPTION=Haidate (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0264e
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 24}
 
 [ITEMDEF 0264e]
@@ -677,10 +671,9 @@ SKILLMAKE=Tailoring 27.2,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Pants & Skirts
 DESCRIPTION=Kobakama (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02650
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 24}
 
 [ITEMDEF 02650]
@@ -701,10 +694,9 @@ SKILLMAKE=Tailoring 27.2,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Pants & Skirts
 DESCRIPTION=Ninja Pants (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02652
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 24}
 
 [ITEMDEF 02652]
@@ -726,10 +718,9 @@ SUBSECTION=Platemail Armor
 DESCRIPTION=Waraji (3d client only)
 TAG.REQSTR=20
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02654
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 02654]
@@ -750,10 +741,9 @@ SKILLMAKE=Tailoring 18.1,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Footwear
 DESCRIPTION=Jester Shoes (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02656
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 25}
 
 [ITEMDEF 02656]
@@ -775,10 +765,9 @@ DESCRIPTION=Heavy (broken)
 TAG.REQSTR=60
 TAG.FemaleOnly=1
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0265a
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={51 65}
 
 [ITEMDEF 0265a]
@@ -801,10 +790,9 @@ DESCRIPTION=Medium (broken)
 TAG.REQSTR=60
 TAG.FemaleOnly=1
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0265c
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={51 65}
 
 [ITEMDEF 0265c]
@@ -827,10 +815,9 @@ DESCRIPTION=Light (broken)
 TAG.REQSTR=60
 TAG.FemaleOnly=1
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0265e
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={51 65}
 
 [ITEMDEF 0265e]
@@ -851,10 +838,9 @@ SKILLMAKE=Tailoring 22.7,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Plain Shirt 2 (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02660
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 23}
 
 [ITEMDEF 02660]
@@ -875,10 +861,9 @@ SKILLMAKE=Tailoring 22.7,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Plain Shirt 3 (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02662
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 23}
 
 [ITEMDEF 02662]
@@ -899,10 +884,9 @@ SKILLMAKE=Tailoring 22.7,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Plain Shirt 4 (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02664
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 23}
 
 [ITEMDEF 02664]
@@ -923,10 +907,9 @@ SKILLMAKE=Tailoring 22.7,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Plain Shirt 5 (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02666
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 23}
 
 [ITEMDEF 02666]
@@ -947,10 +930,9 @@ SKILLMAKE=Tailoring 22.7,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Ninja (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02668
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 23}
 
 [ITEMDEF 02668]
@@ -981,10 +963,9 @@ SKILLMAKE=Tailoring 22.7,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Kote Sleeves 1 (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0266c
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 23}
 
 [ITEMDEF 0266c]
@@ -1005,10 +986,9 @@ SKILLMAKE=Tailoring 22.7,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Kote Sleeves 2 (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0266e
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 23}
 
 [ITEMDEF 0266e]
@@ -1039,10 +1019,9 @@ SKILLMAKE=Tailoring 22.7,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Do-maru (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02672
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 23}
 
 [ITEMDEF 02672]
@@ -1063,10 +1042,9 @@ SKILLMAKE=Tailoring 22.7,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Haramaki-do (3d client only)
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02674
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 23}
 
 [ITEMDEF 02674]
@@ -1098,10 +1076,9 @@ SUBSECTION=Leather Armor
 DESCRIPTION=Kote Gloves (broken)
 TAG.REQSTR=10
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02678
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={31 37}
 
 [ITEMDEF 02678]
@@ -1123,10 +1100,9 @@ SUBSECTION=Leather Armor
 DESCRIPTION=Kote Gloves 2 (can not equip)
 TAG.REQSTR=10
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0267a
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={31 37}
 
 [ITEMDEF 0267a]
@@ -1147,10 +1123,9 @@ SKILLMAKE=Tailoring 13.6,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Fancy Dress 2
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0267c
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 30}
 
 [ITEMDEF 0267c]
@@ -1171,10 +1146,9 @@ SKILLMAKE=Tailoring 13.6,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Fancy Dress 3
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0267e
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 30}
 
 [ITEMDEF 0267e]
@@ -1195,10 +1169,9 @@ SKILLMAKE=Tailoring 13.6,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Long Dress
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02680
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 30}
 
 [ITEMDEF 02680]
@@ -1220,10 +1193,9 @@ CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Female Kimono 1 (unwearable)
 TAG.FemaleOnly=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02682
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 30}
 
 [ITEMDEF 02682]
@@ -1257,9 +1229,8 @@ CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Death Shroud (works)
 TAG.REQSTR=30
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={20 30}
 
 [ITEMDEF 02688]
@@ -1282,10 +1253,9 @@ SUBSECTION=Helmets
 DESCRIPTION=Winged Helm
 TAG.REQSTR=40
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0268a
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 0268a]
@@ -1307,10 +1277,9 @@ SUBSECTION=Helmets
 DESCRIPTION=Hachimaki (not visible when worn)
 TAG.REQSTR=40
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0268c
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 0268c]
@@ -1332,10 +1301,9 @@ SUBSECTION=Helmets
 DESCRIPTION=Kabuto (unwearable)
 TAG.REQSTR=40
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0268e
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 0268e]
@@ -1357,10 +1325,9 @@ SUBSECTION=Helmets
 DESCRIPTION=Kabuto Mempo (unwearable)
 TAG.REQSTR=40
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02690
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 02690]
@@ -1381,10 +1348,9 @@ SUBSECTION=Leather Armor
 DESCRIPTION=Leather Cap 2
 TAG.REQSTR=10
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=02692
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 02692]
@@ -1406,10 +1372,9 @@ SUBSECTION=Leather Armor
 DESCRIPTION=Robin Hood Cap (unwearable)
 TAG.REQSTR=25
 TAG.NotGargoyle=1
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0269e
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 0269e]
@@ -1430,10 +1395,9 @@ CATEGORY=Provisions - Clothes
 SUBSECTION=Masks
 DESCRIPTION=Feathered Mask (unwearable)
 TAG.REQSTR=25
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=026a2
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={21 23}
 
 [ITEMDEF 026a2]
@@ -1455,10 +1419,9 @@ CATEGORY=Provisions - Clothes
 SUBSECTION=Masks
 DESCRIPTION=Ninja Hood (3d client only)
 TAG.REQSTR=10
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=026a4
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={50 60}
 
 [ITEMDEF 026a4]
