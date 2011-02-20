@@ -238,7 +238,7 @@ TYPE=t_roof
 CATEGORY=Buildings - Roofs
 SUBSECTION=Palm Frond Roof (sloped)
 DESCRIPTION=@
-DUPELIST=0587,0588,0589,058a,058b,058c,058d,058e,058f,0590,0591,0592,0593,0594,05d1,05d2,05d3,05d4,05d6,05d7,05d8,05d9,05da,05db,05dc,05dd,05de,05df,05e0,05e1,05e2,05e3,05e4,05e5,05e6,05e7,05e8,05e9,05ea,05eb,05ec
+DUPELIST=0587,0588,0589,058a,058b,058c,058d,058e,058f,0590,0591,0592,0593,0594,05d1,05d2,05d3,05d4,05d6,05d7,05d8,05d9,05da,05db,05dc,05dd,05de,05df,05e0,05e1,05e2,05e3,05e4,05e5,05e6,05e7,05e8,05e9,05ea,05eb,05ec,02180,02181,02182,02183,02184,02185,02186,02187,02c60,02c61,02c62,02c63,02c64,02c65,02c66,02c67,02c68,02c69,02c6a,02c6b,02c6c,02c6d,02c6e
 
 [ITEMDEF 0587]
 //palm fronds
@@ -303,7 +303,7 @@ RESOURCES=25 i_stone_slate
 CATEGORY=Buildings - Roofs
 SUBSECTION=Slate Roof 1 (sloped)
 DESCRIPTION=@
-DUPELIST=0596,0597,0598,0599,059a,059b,059c,059d,059e,059f,05a0,05a1,05a2,05a3
+DUPELIST=0596,0597,0598,0599,059a,059b,059c,059d,059e,059f,05a0,05a1,05a2,05a3,02178,02179,0217a,0217b,0217c,0217d,0217e,0217f,02c6f,02c70,02c71,02c72,02c73,02c74,02c75,02c76,02c77,02c78,02c79,02c7a,02c7b,02c7c,02c7d
 
 [ITEMDEF 0596]
 //slate roof
@@ -368,7 +368,7 @@ RESOURCES=25 i_hay
 CATEGORY=Buildings - Roofs
 SUBSECTION=Thatch Roof (sloped)
 DESCRIPTION=@
-DUPELIST=05a5,05a6,05a7,05a8,05a9,05aa,05ab,05ac,05ad,05ae,05af,05b0,05b1,05b2
+DUPELIST=05a5,05a6,05a7,05a8,05a9,05aa,05ab,05ac,05ad,05ae,05af,05b0,05b1,05b2,02148,02149,0214a,0214b,0214c,0214d,0214e,0214f,02c51,02c52,02c53,02c54,02c55,02c56,02c57,02c58,02c59,02c5a,02c5b,02c5c,02c5d,02c5e,02c5f
 
 [ITEMDEF 05a5]
 //thatch roof
@@ -433,7 +433,7 @@ RESOURCES=25 i_rock_plain
 CATEGORY=Buildings - Roofs
 SUBSECTION=Tile Roof (sloped)
 DESCRIPTION=@
-DUPELIST=05b4,05b5,05b6,05b7,05b8,05b9,05ba,05bb,05bc,05bd,05be,05bf,05c0,05c1,06fd,06fe,06ff,0700
+DUPELIST=05b4,05b5,05b6,05b7,05b8,05b9,05ba,05bb,05bc,05bd,05be,05bf,05c0,05c1,06fd,06fe,06ff,0700,021e9,021ea,021eb021ec,021ed,021ef,021f0,02c24,02c25,02c26,02c27,02c28,02c29,02c2a,02c2b,02c2c,02c2d,02c2e,02c2f,02c30,02c31,02c32
 
 [ITEMDEF 05b4]
 //tile roof
@@ -497,7 +497,7 @@ RESOURCES=25 i_board
 CATEGORY=Buildings - Roofs
 SUBSECTION=Wooden Shingles (sloped)
 DESCRIPTION=@
-DUPELIST=05c3,05c4,05c5,05c6,05c7,05c8,05c9,05ca,05cb,05cc,05cd,05ce,05cf,05d0
+DUPELIST=05c3,05c4,05c5,05c6,05c7,05c8,05c9,05ca,05cb,05cc,05cd,05ce,05cf,05d0,02170,02171,02172,02173,02174,02175,02176,02177,02c33,02c34,02c35,02c36,02c37,02c38,02c39,02c3a,02c3b,02c3c,02c3d,02c3e,02c3f,02c40,02c41
 
 [ITEMDEF 05c3]
 //wooden shingles
@@ -1218,4 +1218,229 @@ DUPEITEM=01939
 //roof tile
 DUPEITEM=01939
 
-[eof]
+[ITEMDEF 02148]
+//thatch roof
+DUPEITEM=05a4
+
+[ITEMDEF 02149]
+//thatch roof
+DUPEITEM=05a4
+
+[ITEMDEF 0214a]
+//thatch roof
+DUPEITEM=05a4
+
+[ITEMDEF 0214b]
+//thatch roof
+DUPEITEM=05a4
+
+[ITEMDEF 0214c]
+//thatch roof
+DUPEITEM=05a4
+
+[ITEMDEF 0214d]
+//thatch roof
+DUPEITEM=05a4
+
+[ITEMDEF 0214e]
+//thatch roof
+DUPEITEM=05a4
+
+[ITEMDEF 0214f]
+//thatch roof
+DUPEITEM=05a4
+
+[ITEMDEF 02170]
+//wooden shingles
+DUPEITEM=05c2
+
+[ITEMDEF 02171]
+//wooden shingles
+DUPEITEM=05c2
+
+[ITEMDEF 02172]
+//wooden shingles
+DUPEITEM=05c2
+
+[ITEMDEF 02173]
+//wooden shingles
+DUPEITEM=05c2
+
+[ITEMDEF 02174]
+//wooden shingles
+DUPEITEM=05c2
+
+[ITEMDEF 02175]
+//wooden shingles
+DUPEITEM=05c2
+
+[ITEMDEF 02176]
+//wooden shingles
+DUPEITEM=05c2
+
+[ITEMDEF 02177]
+//wooden shingles
+DUPEITEM=05c2
+
+[ITEMDEF 02178]
+//slate roof
+DUPEITEM=0595
+
+[ITEMDEF 02179]
+//slate roof
+DUPEITEM=0595
+
+[ITEMDEF 0217a]
+//slate roof
+DUPEITEM=0595
+
+[ITEMDEF 0217b]
+//slate roof
+DUPEITEM=0595
+
+[ITEMDEF 0217c]
+//slate roof
+DUPEITEM=0595
+
+[ITEMDEF 0217d]
+//slate roof
+DUPEITEM=0595
+
+[ITEMDEF 0217e]
+//slate roof
+DUPEITEM=0595
+
+[ITEMDEF 0217f]
+//slate roof
+DUPEITEM=0595
+
+[ITEMDEF 02180]
+//palm frond roof
+DUPEITEM=0586
+
+[ITEMDEF 02181]
+//palm frond roof
+DUPEITEM=0586
+
+[ITEMDEF 02182]
+//palm frond roof
+DUPEITEM=0586
+
+[ITEMDEF 02183]
+//palm frond roof
+DUPEITEM=0586
+
+[ITEMDEF 02184]
+//palm frond roof
+DUPEITEM=0586
+
+[ITEMDEF 02185]
+//palm frond roof
+DUPEITEM=0586
+
+[ITEMDEF 02186]
+//palm frond roof
+DUPEITEM=0586
+
+[ITEMDEF 02187]
+//palm frond roof
+DUPEITEM=0586
+
+[ITEMDEF 02188]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 02189]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 0218a]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 0218b]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 0218c]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 0218d]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 0218e]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 0218f]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 02190]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 02191]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 02192]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 02193]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 02194]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 02195]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 02196]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 02197]
+//pallisade gate?
+DUPEITEM=0586
+
+[ITEMDEF 021e9]
+//tile roof
+DUPEITEM=05b3
+
+[ITEMDEF 021ea]
+//tile roof
+DUPEITEM=05b3
+
+[ITEMDEF 021eb]
+//tile roof
+DUPEITEM=05b3
+
+[ITEMDEF 021ec]
+//tile roof
+DUPEITEM=05b3
+
+[ITEMDEF 021ed]
+//tile roof
+DUPEITEM=05b3
+
+[ITEMDEF 021ee]
+//tile roof
+DUPEITEM=05b3
+
+[ITEMDEF 021ef]
+//tile roof
+DUPEITEM=05b3
+
+[ITEMDEF 021f0]
+//tile roof
+DUPEITEM=05b3
+
+
+[EOF]

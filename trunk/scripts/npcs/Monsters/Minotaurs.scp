@@ -211,4 +211,33 @@ ON=@NpcRestock
    ITEM=loot_minotaur_scout
    //455 - 455 Gold. magic items
 
+
+/////////////////////////////
+// Minotaur Loot Templates //
+/////////////////////////////
+
+[TEMPLATE loot_tormented_minotaur]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Tormented Minotaur
+ITEM=i_gold,{250 300}
+
+[TEMPLATE loot_minotaur]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Minotaur
+ITEM=i_gold,{425 450}
+
+[TEMPLATE loot_minotaur_captain]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Minotaur Captain
+ITEM=i_gold,{625 650}
+
+[TEMPLATE loot_minotaur_scout]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Minotaur Scout
+ITEM=i_gold,{425 450}
+
 [EOF]

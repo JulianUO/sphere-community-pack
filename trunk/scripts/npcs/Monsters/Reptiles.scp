@@ -41,7 +41,7 @@ ON=@Create
    RESFIRE={5 10}
    RESPOISON={70 90}
 ON=@NPCRestock
-   ITEM=loot_snake_giant
+   ITEM=loot_giant_serpent
    //125 - 175 Gold. Body Parts, Bones
 
 [CHARDEF 059]
@@ -86,7 +86,7 @@ ON=@Create
    RESFIRE=0
    RESPOISON={15 25}
 ON=@NPCRestock
-   ITEM=loot_serpent_ice
+   ITEM=loot_giant_ice_serpent
    //50 - 100 Gold. Weapon or Armor, Body Parts, Bones
    //Special: Glacial Staff
 
@@ -189,7 +189,7 @@ ON=@Create
    RESFIRE={5 10}
    RESPOISON=100
 ON=@NPCRestock
-   ITEM=loot_serpent_silver
+   ITEM=loot_silver_serpent
    //250 - 300 Gold. 2 Gems, 2 - 5 magic items
    //Special: silver serpent venom, Silver Snake Skin (tomb of kings & Stygian Abyss only)
 
@@ -591,15 +591,7 @@ ON=@Create
 ON=@NPCRestock
    //400 - 500 Gold. 1 - 4 Magic Items
    //Special: Raptor Teeth, Pottery Fragments, Raptor Claw (Rare), level 3 map
-   ITEM=i_gold,{400 500}
-   ITEM=random_jewel,{1 4},R2
-   ITEM=random_magic_loot
-   ITEM=random_magic_loot,1,R4
-   ITEM=random_magic_loot,1,R8
-   ITEM=i_raptor_teeth,{1 3},R12
-   ITEM=random_magic_loot,1,R16
-   ITEM=i_map_treasure,1,R32
-   ITEM=i_raptor_claw,1,R99
+   ITEM=loot_raptor
 ON=@NPCSeeNewPlayer
    //Summon pack
    IF (<FLAGS> & statf_conjured) || (<FLAGS> & statf_pet)
@@ -669,12 +661,8 @@ ON=@Create
    RESFIRE={45 55}
    RESPOISON={55 65}
 ON=@NPCRestock
+   ITEM=loot_skree
    //50 - 100 Gold. Mysticism Reagents, Mysticism Scroll.
-   ITEM=i_gold,{50 100}
-   ITEM=random_mysticism_reagent,{5 9}
-   ITEM=random_mysticism_reagent,{5 9},R3
-   ITEM=random_mysticism_scroll,{1 2}
-   ITEM=random_mysticism_scroll,{1 2},R3
 
 [CHARDEF 02de]
 DEFNAME=c_slith
@@ -720,5 +708,122 @@ ON=@NPCRestock
    ITEM=i_gold,{100 200}
    //100 - 200 Gold. 0 - 2 magic items
    //Special: slith tongue, slith eye, pottery fragments
+
+
+////////////////////////////
+// Reptile Loot Templates //
+////////////////////////////
+
+[TEMPLATE loot_giant_serpent]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Giant Serpent
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+// Body Parts
+// Bones
+
+[TEMPLATE loot_giant_ice_serpent]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Giant Ice Serpent
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+//Weapon or Armor
+//Body Parts
+//Bones
+
+[TEMPLATE loot_giant_ice_serpent_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Giant Ice Serpent
+// Glacial Staff
+
+[TEMPLATE loot_serpent_lava]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Giant Lava Serpent
+ITEM=i_gold,{200 250}
+ITEM=i_reag_sulfur_ash,{3 5}
+//Armor
+//Body Parts
+//Bones
+
+[TEMPLATE loot_silver_serpent]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Silver Serpent
+CONTAINER=i_backpack
+ITEM=i_gold,{250 300}
+ITEM=random_jewelry,{1 2}
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+
+[TEMPLATE loot_silver_serpent_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Silver Serpent
+// silver serpent venom
+// Silver Snake Skin (tomb of kings & Stygian Abyss only)
+
+[TEMPLATE loot_serpent_coil]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Giant Silver Serpent (Coil)
+ITEM=i_gold,{250 300}
+ITEM=random_jewel,{2 3}
+ITEM={ random_body_parts_1 1 random_body_parts_2 1 random_item_bone 1 }
+
+[TEMPLATE loot_lava_lizard]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Lava Lizard
+ITEM=i_gold,{50 100}
+ITEM=i_reag_sulfur_ash,{5 15}
+
+[TEMPLATE loot_yamandon]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Yamandon
+CONTAINER=i_backpack
+ITEM=i_gold,{2000 2500}
+ITEM=random_jewelry,6
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=i_eggs_fresh,2
+
+[TEMPLATE loot_yamandon_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Yamandon
+ITEM=i_treasure_map_lvl_5
+// Bonsai Seed
+
+[TEMPLATE loot_raptor]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Raptor
+CONTAINER=i_backpack
+ITEM=i_gold,{400 500}
+ITEM=random_jewel,{1 4},R2
+ITEM=random_magic_loot
+ITEM=random_magic_loot,1,R4
+ITEM=random_magic_loot,1,R8
+ITEM=random_magic_loot,1,R16
+ITEM=i_raptor_teeth,{1 3},R12
+ITEM=i_map_treasure,1,R32
+ITEM=i_raptor_claw,1,R99
+
+[TEMPLATE loot_skree]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Skree
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=random_mysticism_reagent,{5 9}
+ITEM=random_mysticism_reagent,{5 9},R3
+ITEM=random_mysticism_scroll,{1 2}
+ITEM=random_mysticism_scroll,{1 2},R3
+
 
 [EOF]

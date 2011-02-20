@@ -1,14 +1,9 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
 VERSION=0.56b
 
 
@@ -763,6 +758,435 @@ DESCRIPTION=@ (w / nw)
 DUPEITEM=01fee
 DESCRIPTION=@
 
+[ITEMDEF 0241f]
+TYPE=t_door_open
+RESOURCES=40 i_log
+CATEGORY=Buildings - Doors
+SUBSECTION=Dark Wooden Door
+DESCRIPTION=Dark Wooden Door
+DUPELIST=02421,02423
+
+[ITEMDEF 02420]
+DEFNAME=i_door_wooden_dark
+TYPE=t_door
+RESOURCES=40 i_log
+CATEGORY=Buildings - Doors
+SUBSECTION=Dark Wooden Door
+DESCRIPTION=@ (w / nw)
+DUPELIST=02422,02424
+
+[ITEMDEF 02421]
+//dark wooden door
+DUPEITEM=0241f
+DESCRIPTION=@
+
+[ITEMDEF 02422]
+DUPEITEM=02420
+DESCRIPTION=@ (n / se)
+
+[ITEMDEF 02423]
+DUPEITEM=0241f
+DESCRIPTION=@
+
+[ITEMDEF 02424]
+DUPEITEM=02420
+DESCRIPTION=@ (n / ne)
+
+[ITEMDEF 041cf]
+DEFNAME=i_sa_door_ws1
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Wall Set 1)
+DUPELIST=041d1,041d3,041d5
+
+[ITEMDEF 041d1]
+DUPEITEM=041cf
+
+[ITEMDEF 041d3]
+DUPEITEM=041cf
+
+[ITEMDEF 041d5]
+DUPEITEM=041cf
+
+[ITEMDEF 041d0]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Wall Set 1)
+DUPELIST=041d2,041d4,041d6
+
+[ITEMDEF 041d2]
+DUPEITEM=041d0
+
+[ITEMDEF 041d4]
+DUPEITEM=041d0
+
+[ITEMDEF 041d6]
+DUPEITEM=041d0
+
+[ITEMDEF 041c2]
+DEFNAME=i_sa_door_ws2
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Wall Set 2)
+DUPELIST=041c4,041c6,041c8
+
+[ITEMDEF 041c4]
+DUPEITEM=041c2
+
+[ITEMDEF 041c6]
+DUPEITEM=041c2
+
+[ITEMDEF 041c8]
+DUPEITEM=041c2
+
+[ITEMDEF 041c3]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Wall Set 2)
+DUPELIST=041c5,041c7,041c9
+
+[ITEMDEF 041c5]
+DUPEITEM=041c3
+
+[ITEMDEF 041c7]
+DUPEITEM=041c3
+
+[ITEMDEF 041c9]
+DUPEITEM=041c3
+
+[ITEMDEF 0409b]
+DEFNAME=i_sa_door_ws3
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Wall Set 3)
+DUPELIST=0409d,0409f,040a1
+
+[ITEMDEF 0409d]
+DUPEITEM=0409b
+
+[ITEMDEF 0409f]
+DUPEITEM=0409b
+
+[ITEMDEF 040a1]
+DUPEITEM=0409b
+
+[ITEMDEF 0409c]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Wall Set 3)
+DUPELIST=0409e,040a0,040a2
+
+[ITEMDEF 0409e]
+DUPEITEM=0409c
+
+[ITEMDEF 040a0]
+DUPEITEM=0409c
+
+[ITEMDEF 040a2]
+DUPEITEM=0409c
+
+[ITEMDEF 0410c]
+DEFNAME=i_sa_door_gd
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Gargoyle)
+DUPELIST=0410e,04110,04112
+
+[ITEMDEF 0410e]
+DUPEITEM=0410c
+
+[ITEMDEF 04110]
+DUPEITEM=0410c
+
+[ITEMDEF 04112]
+DUPEITEM=0410c
+
+[ITEMDEF 0410d]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Gargoyle)
+DUPELIST=0410f,04111,04113
+
+[ITEMDEF 0410f]
+DUPEITEM=0410d
+
+[ITEMDEF 04111]
+DUPEITEM=0410d
+
+[ITEMDEF 04113]
+DUPEITEM=0410d
+
+[ITEMDEF 05142]
+DEFNAME=i_sa_door_barred
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Barred)
+DUPELIST=05144,05146,05148
+
+[ITEMDEF 05144]
+DUPEITEM=05142
+
+[ITEMDEF 05146]
+DUPEITEM=05142
+
+[ITEMDEF 05148]
+DUPEITEM=05142
+
+[ITEMDEF 05143]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Barred)
+DUPELIST=05145,05147,05149
+
+[ITEMDEF 05145]
+DUPEITEM=05143
+
+[ITEMDEF 05147]
+DUPEITEM=05143
+
+[ITEMDEF 05149]
+DUPEITEM=05143
+
+[ITEMDEF 04d1a]
+DEFNAME=i_sa_door_qdh
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Queen Doors, Huge)
+DUPELIST=04d1c,04d1e,04d20
+
+[ITEMDEF 04d1c]
+DUPEITEM=04d1a
+
+[ITEMDEF 04d1e]
+DUPEITEM=04d1a
+
+[ITEMDEF 04d20]
+DUPEITEM=04d1a
+
+[ITEMDEF 04d1b]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Queen Doors, Huge)
+DUPELIST=04d1d,04d1f,04d21
+
+[ITEMDEF 04d1d]
+DUPEITEM=04d1b
+
+[ITEMDEF 04d1f]
+DUPEITEM=04d1b
+
+[ITEMDEF 04d21]
+DUPEITEM=04d1b
+
+[ITEMDEF 04d22]
+DEFNAME=i_sa_door_qd
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Queen Doors)
+DUPELIST=04d24,04d26,04d28
+
+[ITEMDEF 04d24]
+DUPEITEM=04d22
+
+[ITEMDEF 04d26]
+DUPEITEM=04d22
+
+[ITEMDEF 04d28]
+DUPEITEM=04d22
+
+[ITEMDEF 04d23]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Queen Doors)
+DUPELIST=04d25,04d27,04d29
+
+[ITEMDEF 04d25]
+DUPEITEM=04d23
+
+[ITEMDEF 04d27]
+DUPEITEM=04d23
+
+[ITEMDEF 04d29]
+DUPEITEM=04d23
+
+[ITEMDEF 0436e]
+DEFNAME=i_sa_door_m1
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Miscellaneous 1)
+DUPELIST=04370,04376,04378
+
+[ITEMDEF 04370]
+DUPEITEM=0436e
+
+[ITEMDEF 04376]
+DUPEITEM=0436e
+
+[ITEMDEF 04378]
+DUPEITEM=0436e
+
+[ITEMDEF 0436f]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Miscellaneous 1)
+DUPELIST=04371,04377,04379
+
+[ITEMDEF 04371]
+DUPEITEM=0436f
+
+[ITEMDEF 04377]
+DUPEITEM=0436f
+
+[ITEMDEF 04379]
+DUPEITEM=0436f
+
+[ITEMDEF 04372]
+DEFNAME=i_sa_door_m2
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Miscellaneous 2)
+DUPELIST=04374,0437a,0437c
+
+[ITEMDEF 04374]
+DUPEITEM=04372
+
+[ITEMDEF 0437a]
+DUPEITEM=04372
+
+[ITEMDEF 0437c]
+DUPEITEM=04372
+
+[ITEMDEF 04373]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Miscellaneous 2)
+DUPELIST=04375,0437b,0437d
+
+[ITEMDEF 04375]
+DUPEITEM=04373
+
+[ITEMDEF 0437b]
+DUPEITEM=04373
+
+[ITEMDEF 0437d]
+DUPEITEM=04373
+
+[ITEMDEF 050c8]
+DEFNAME=i_sa_door_m3
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Miscellaneous 3)
+DUPELIST=050ca,050cc,050ce
+
+[ITEMDEF 050ca]
+DUPEITEM=050c8
+
+[ITEMDEF 050cc]
+DUPEITEM=050c8
+
+[ITEMDEF 050ce]
+DUPEITEM=050c8
+
+[ITEMDEF 050c9]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Miscellaneous 3)
+DUPELIST=050cb,050cd,050cf
+
+[ITEMDEF 050cb]
+DUPEITEM=050c9
+
+[ITEMDEF 050cd]
+DUPEITEM=050c9
+
+[ITEMDEF 050cf]
+DUPEITEM=050c9
+
+[ITEMDEF 050d0]
+DEFNAME=i_sa_door_m4
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Miscellaneous 4)
+DUPELIST=050d2,050d4,050d6
+
+[ITEMDEF 050d2]
+DUPEITEM=050d0
+
+[ITEMDEF 050d4]
+DUPEITEM=050d0
+
+[ITEMDEF 050d6]
+DUPEITEM=050d0
+
+[ITEMDEF 050d1]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Miscellaneous 4)
+DUPELIST=050d3,050d5,050d7
+
+[ITEMDEF 050d3]
+DUPEITEM=050d1
+
+[ITEMDEF 050d5]
+DUPEITEM=050d1
+
+[ITEMDEF 050d7]
+DUPEITEM=050d1
+
+[ITEMDEF 046dd]
+DEFNAME=i_sa_door_rd
+TYPE=t_door
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors (Ruined)
+DUPELIST=046df,046e1,046e3
+
+[ITEMDEF 046df]
+DUPEITEM=046dd
+
+[ITEMDEF 046e1]
+DUPEITEM=046dd
+
+[ITEMDEF 046e3]
+DUPEITEM=046dd
+
+[ITEMDEF 046de]
+TYPE=t_door_open
+CATEGORY=Buildings - Doors
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Doors, Open (Ruined)
+DUPELIST=046e0,046e2,046e4
+
+[ITEMDEF 046e0]
+DUPEITEM=046de
+
+[ITEMDEF 046e2]
+DUPEITEM=046de
+
+[ITEMDEF 046e4]
+DUPEITEM=046de
 
 
-[eof]
+[EOF]

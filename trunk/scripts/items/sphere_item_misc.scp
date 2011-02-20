@@ -1,14 +1,9 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, November 15, 2003
-//
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
 VERSION=0.56b
 
 [ITEMDEF 01014]
@@ -22,13 +17,11 @@ CATEGORY=Miscellaneous
 SUBSECTION=Invisible Tiles
 DESCRIPTION=Invisible Tile 01018
 
-
 [ITEMDEF 017cf]
-//teleporter
 DEFNAME=i_teleporter
 RESOURCES=60 i_board, 1 i_nails
 WEIGHT=60
-TYPE=T_TELEPAD
+TYPE=t_telepad
 CATEGORY=Miscellaneous
 SUBSECTION=Teleporter
 DESCRIPTION=@
@@ -847,6 +840,41 @@ DUPEITEM=01c14
 [ITEMDEF 01c16]
 //Candle of Love
 DUPEITEM=01c14
+
+[ITEMDEF 01e5e]
+DEFNAME=i_bulletin_board
+NAME=bulletin board
+TYPE=t_bboard
+TDATA2=0866
+FLIP=1
+WEIGHT=25
+RESOURCES=20 i_board,4 i_cloth,1 i_nails,1 i_paper,1 i_feather,1 i_ink_well
+SKILLMAKE=Carpentry 85.0, t_carpentry
+CATEGORY=Miscellaneous
+SUBSECTION=Bulletin Board
+DESCRIPTION=Bulletin Board 1
+DUPELIST=01e5f
+
+[ITEMDEF 01e5f]
+//bulletin board 1
+DUPEITEM=01e5e
+
+[ITEMDEF 02311]
+DEFNAME=i_bulletin_board_2
+TYPE=t_bboard
+TDATA2=0866
+FLIP=1
+WEIGHT=25
+RESOURCES=20 i_board,4 i_cloth,1 i_nails,1 i_paper,1 i_feather,1 i_ink_well
+SKILLMAKE=Carpentry 90.0,t_carpentry
+CATEGORY=Miscellaneous
+SUBSECTION=Bulletin Board
+DESCRIPTION=Bulletin Board 2
+DUPELIST=02312
+
+[ITEMDEF 02312]
+//bulletin board 2
+DUPEITEM=02311
 
 [ITEMDEF I_WINDOW]
 ID=I_TARGET

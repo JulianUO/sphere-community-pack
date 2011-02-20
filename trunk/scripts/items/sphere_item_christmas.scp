@@ -1,15 +1,124 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, December 9, 2005
-
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
 VERSION=0.56b
+
+[ITEMDEF 02332]
+DEFNAME=fx_decorative_lights
+NAME=decorative lights
+TYPE=t_normal
+FLIP=1
+WEIGHT=0.1
+RESOURCES=1 i_glass_raw
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Decorative Lights
+DUPELIST=02333,02334,02335,02336,02337,02338,02339
+
+[ITEMDEF 02333]
+//Decorative Lights
+DUPEITEM=02332
+
+[ITEMDEF 02334]
+//Decorative Lights
+DUPEITEM=02332
+
+[ITEMDEF 02335]
+//Decorative Lights
+DUPEITEM=02332
+
+[ITEMDEF 02336]
+//Decorative Lights
+DUPEITEM=02332
+
+[ITEMDEF 02337]
+//Decorative Lights
+DUPEITEM=02332
+
+[ITEMDEF 02338]
+//Decorative Lights
+DUPEITEM=02332
+
+[ITEMDEF 02339]
+//Decorative Lights
+DUPEITEM=02332
+
+[ITEMDEF 0236e]
+DEFNAME=i_candle_holiday
+TYPE=t_normal
+VALUE=100
+WEIGHT=2.1
+RESOURCES=10 i_beeswax,1 i_string,1 i_ribbon
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Holiday Candle
+DUPELIST=0236f,02370,02371,02372,02373
+
+[ITEMDEF 0236f]
+//holiday candle
+DUPEITEM=0236e
+
+[ITEMDEF 02370]
+//holiday candle
+DUPEITEM=0236e
+
+[ITEMDEF 02371]
+//holiday candle
+DUPEITEM=0236e
+
+[ITEMDEF 02372]
+//holiday candle
+DUPEITEM=0236e
+
+[ITEMDEF 02373]
+//holiday candle
+DUPEITEM=0236e
+
+[ITEMDEF 02374]
+DEFNAME=i_mistletoe
+TYPE=t_normal
+FLIP=1
+VALUE=100
+WEIGHT=0.2
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Mistletoe
+DUPELIST=02375
+
+[ITEMDEF 02375]
+//mistletoe
+DUPEITEM=02374
+
+[ITEMDEF 02376]
+DEFNAME=i_cactus_festive
+TYPE=t_normal
+WEIGHT=28.0
+RESOURCES=i_pot_flower_large,1 i_plant_cactus,1 i_dirt
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Festive Cactus
+
+[ITEMDEF 02377]
+DEFNAME=i_tree_snowy
+TYPE=t_normal
+WEIGHT=28.0
+RESOURCES=i_pot_flower_large,1 i_tree_sapling,1 i_dirt
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Snowy Tree
+
+[ITEMDEF 02378]
+DEFNAME=i_tree_decorative
+TYPE=t_normal
+WEIGHT=28.0
+RESOURCES=i_pot_flower_large 1 i_tree_sapling,1 i_dirt
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Decorative Topiary
+
 
 [ITEMDEF 02b14]
 //Cannot be opened?

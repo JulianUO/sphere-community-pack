@@ -293,6 +293,7 @@ RESOURCES=4 i_ribs_raw
 BLOODCOLOR=colors_blood
 MOVERATE=100
 TAG.Barding.Diff=73.2
+TAG.Luck.Loot=loot_cyclops_luck
 TAG.Slayer=SLAYER_REPOND
 TEVENTS=e_carnivores2
 CATEGORY=Monsters
@@ -338,6 +339,7 @@ RESOURCES=4 i_ribs_raw
 BLOODCOLOR=colors_blood
 MOVERATE=120
 TAG.Barding.Diff=93.6
+TAG.Luck.Loot=loot_titan_luck
 TAG.Slayer=SLAYER_REPOND
 TEVENTS=e_carnivores3
 CATEGORY=Monsters
@@ -441,7 +443,7 @@ BLOODCOLOR=colors_white
 MOVERATE=100
 TAG.Barding.Diff=88.8
 TAG.DamCold=70
-TAG.Luck.Loot=loot_arctic_ogre_lord_luck
+TAG.Luck.Loot=loot_ogre_lord_arctic_luck
 TAG.Slayer=SLAYER_OGRE
 TEVENTS=e_carnivores3
 CATEGORY=Monsters
@@ -476,5 +478,120 @@ ON=@NPCRestock
    ITEM=loot_ogre_lord_arctic
    //750 - 950 Gold. Club, Magic Items
    //Special: Level 3 Treasure Map
+
+
+//////////////////////////
+// Giant Loot Templates //
+//////////////////////////
+
+[TEMPLATE loot_ogre]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ogre
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+ITEM=i_club
+
+[TEMPLATE loot_ogre_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ogre
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_ettin]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ettin
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=random_potion,1
+
+[TEMPLATE loot_ettin_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ettin
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_troll]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Troll
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+
+[TEMPLATE loot_troll_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Troll
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_cyclops]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Cyclops
+CONTAINER=i_backpack
+ITEM=i_gold,{400 500}
+ITEM=random_potion
+ITEM=tm_boulders,1,R8
+ITEM=tm_rocks,1,R2
+ITEM=tm_rocks,1,R2
+
+[TEMPLATE loot_cyclops_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Cyclops
+ITEM=i_treasure_map_lvl_3
+
+[TEMPLATE loot_titan]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Titan
+CONTAINER=i_backpack
+ITEM=i_gold,{600 800}
+ITEM=random_scroll_medium
+ITEM=random_potion
+
+[TEMPLATE loot_titan_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Titan
+ITEM=i_treasure_map_lvl_5
+//fragrant seed
+//peculiar seed
+
+[TEMPLATE loot_ogre_lord]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ogre Lord
+CONTAINER=i_backpack
+ITEM=i_gold,{600 650}
+ITEM=i_club
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_ogre_lord_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ogre Lord
+ITEM=i_treasure_map_lvl_3
+
+[TEMPLATE loot_ogre_lord_arctic]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Arctic Ogre Lord
+CONTAINER=i_backpack
+ITEM=i_gold,{750 950}
+ITEM=i_club
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_ogre_lord_arctic_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Arctic Ogre Lord
+ITEM=i_treasure_map_lvl_3
+
 
 [EOF]

@@ -326,4 +326,104 @@ ON=@GetHit
       ENDIF
    ENDIF
 
+
+/////////////////////////////
+// Gargoyle Loot Templates //
+/////////////////////////////
+
+[TEMPLATE loot_gargoyle]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Gargoyle
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+ITEM=random_scroll_medium,{1 3}
+ITEM=random_jewel,{1 4}
+
+[TEMPLATE loot_gargoyle_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Gargoyle
+ITEM=i_treasure_map_lvl_1
+ITEM=i_gargoyle_pickaxe,1,R4
+
+[TEMPLATE loot_gargoyle_stone]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Stone Gargoyle
+CONTAINER=i_backpack
+ITEM=i_gold,{250 325}
+ITEM=random_jewel,{1 3}
+ITEM=i_ore_iron,{6 20}
+
+[TEMPLATE loot_gargoyle_stone_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Stone Gargoyle
+ITEM=i_treasure_map_lvl_2
+ITEM=i_gargoyle_pickaxe,1,R4
+
+[TEMPLATE loot_gargoyle_fire]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Fire Gargoyle
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=random_scroll_medium
+
+[TEMPLATE loot_gargoyle_fire_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Fire Gargoyle
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_gargoyle_enslaved]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Enslaved Gargoyle
+CONTAINER=i_backpack
+ITEM=i_gold,{250 300}
+ITEM=random_jewelry
+
+[TEMPLATE loot_gargoyle_enslaved_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Enslaved Gargoyle
+ITEM=i_treasure_map_lvl_1
+ITEM=i_gargoyle_pickaxe,1,R4
+
+[TEMPLATE loot_gargoyle_enforcer]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Gargoyle Enforcer
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=random_scroll_medium,{1 2}
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+
+[TEMPLATE loot_gargoyle_enforcer_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Gargoyle Enforcer
+ITEM=i_gargoyle_pickaxe,1,R4
+
+[TEMPLATE loot_gargoyle_destroyer]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Gargoyle Destroyer
+CONTAINER=i_backpack
+ITEM=i_gold,{750 950}
+ITEM=random_jewelry
+ITEM=random_scroll_medium
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+
+[TEMPLATE loot_gargoyle_destroyer_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Gargoyle Destroyer
+ITEM=i_gargoyle_pickaxe,1,R4
+
+
 [EOF]

@@ -189,7 +189,7 @@ BLOODCOLOR=colors_white
 MOVERATE=120
 TAG.Barding.Diff=89.3
 TAG.DamCold=80
-TAG.Luck.Loot=loot_ice_fiend_luck
+TAG.Luck.Loot=loot_demon_ice_luck
 TAG.Slayer=SLAYER_DEMON
 TEVENTS=e_carnivores3
 CATEGORY=Monsters
@@ -1080,5 +1080,231 @@ ON=@Create
    RESPOISON={60 70}
 ON=@NpcRestock
    ITEM=loot_drake
+
+//////////////////////////
+// Demon Loot Templates //
+//////////////////////////
+
+[TEMPLATE loot_demon]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Daemon
+CONTAINER=i_backpack
+ITEM=i_gold,{550 650}
+ITEM=i_scroll_blank,{1 2},R4
+ITEM=random_scroll_medium,{1 2}
+ITEM=random_scroll_medium,{1 2},R2
+ITEM=random_reagent,{4 6}
+ITEM=random_reagent,{4 6},R2
+ITEM=random_potion,{2 3}
+ITEM=random_potion,{2 3},R2
+ITEM=random_magic_wands
+ITEM=random_magic_wands,1,R2
+
+[TEMPLATE loot_daemon_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Daemon
+ITEM=i_treasure_map_lvl_4
+
+
+[TEMPLATE loot_demon_balron]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Balron
+CONTAINER=i_backpack
+ITEM=i_gold,{1200 1500}
+ITEM=random_jewelry,{1 2}
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_balron_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Balron
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_demon_ice]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ice Fiend
+CONTAINER=i_backpack
+ITEM=i_gold,{650 800}
+ITEM=random_jewelry,{1 2}
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,2
+
+[TEMPLATE loot_demon_ice_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ice Fiend
+ITEM=i_treasure_map_lvl_4
+
+[TEMPLATE loot_succubus]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Succubus
+CONTAINER=i_backpack
+ITEM=i_gold,{1000 1200}
+ITEM=i_scroll_blank,{1 2},R4
+ITEM=random_scroll_medium,{1 2}
+ITEM=random_scroll_medium,{1 2},R2
+ITEM=random_reagent,{4 6}
+ITEM=random_reagent,{4 6},R2
+ITEM=random_potion,{2 3}
+ITEM=random_potion,{2 3},R2
+ITEM=random_magic_wands
+ITEM=random_magic_wands,R2
+
+[TEMPLATE loot_succubus_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Succubus
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_oni]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Oni
+ITEM=i_gold,{1000 1100}
+ITEM=random_jewel,{1 3}
+ITEM=random_scroll,{1 3}
+ITEM=random_reagent,{4 6}
+ITEM=random_armor_all
+CONTAINER=i_bag
+ITEM=random_weapon_all
+ITEM=i_gold,{600 750}
+ITEM=random_jewel,{1 2},R2
+ITEM=random_reagent,{3 5},R3
+ITEM=random_wand_magic,1,R5
+ITEM=i_map_treasure,1,R80
+
+[TEMPLATE loot_fan_dancer]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Fan Dancer
+ITEM=i_gold,{500 750}
+ITEM=random_jewel,{1 2}
+ITEM=i_tessen
+ITEM=random_armor_all
+CONTAINER=i_bag
+ITEM=i_gold,{200 250}
+ITEM=random_jewel,{1 2},R3
+ITEM=random_weapon_all
+ITEM=random_item_origami,R20
+
+[TEMPLATE loot_tsuki_wolf]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Tsuki Wolf
+ITEM=i_gold,{400 500}
+ITEM=random_jewel,{2 4}
+ITEM=random_item_bone,1,R5
+ITEM=random_armor_all
+ITEM=random_body_parts_1,1,R5
+ITEM=random_body_parts_2,1,R5
+
+[TEMPLATE loot_devourer_of_souls]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Devourer of Souls
+ITEM=i_gold,{600 700}
+ITEM=random_reagent_necro,{20 30}
+ITEM=random_potion,1,R2
+ITEM=random_scroll,{2 3},R2
+ITEM=i_map_treasure,R99
+CONTAINER=i_bag
+ITEM=i_gold,{400 500}
+ITEM=random_reagent_necro,{10 20}
+ITEM=random_wand_magic,1,R2
+ITEM=random_reagent,{4 6},R2
+
+[TEMPLATE loot_gibberling]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Gibberling
+ITEM=i_gold,{50 100}
+
+[TEMPLATE loot_ravager]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ravager
+ITEM=i_gold,{275 325}
+
+[TEMPLATE loot_maddening_horror]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Maddening Horror
+ITEM=i_gold,{425 500}
+ITEM=random_jewel,{1 3}
+ITEM=random_scroll,{1 3}
+ITEM=random_reagent,{4 6}
+ITEM=random_staves
+ITEM=random_magic_loot,1,R50
+ITEM=monster_necro_reg_bag
+CONTAINER=i_bag
+ITEM=i_gold,{200 325}
+ITEM=random_weapon,1,R2
+ITEM=random_armor,1,R2
+ITEM=random_jewel,{1 3},R2
+ITEM=random_reagent,{4 6},R3
+ITEM=random_wand_magic,1,R5
+ITEM=i_map_treasure,1,R80
+
+[TEMPLATE loot_horde_minion]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Horde Minion (small)
+ITEM=i_gold,{25 50}
+ITEM=random_body_parts_1,R25
+ITEM=random_body_parts_2,R50
+ITEM=random_item_bone,R50
+
+[TEMPLATE loot_horde_demon_medium]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Horde Demon (medium)
+ITEM=i_gold,{125 150}
+ITEM=random_jewel,{1 2}
+ITEM=random_body_parts_1,1,R50
+ITEM=random_body_parts_2,1,R50
+ITEM=random_item_bone,1,R80
+
+[TEMPLATE loot_horde_demon_large]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Horde Demon (large)
+ITEM=i_gold,{250 300}
+ITEM=random_jewel,{2 3}
+ITEM=random_scroll,{2 3}
+ITEM=random_reagent,{6 9}
+ITEM=random_body_parts_1,1,R25
+ITEM=random_body_parts_2,1,R25
+ITEM=random_item_bone,1,R50
+ITEM=i_map_treasure,1,R100
+
+[TEMPLATE loot_demon_arcane]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Arcane Daemon
+CONTAINER=i_backpack
+ITEM=i_gold,{250 300}
+
+[TEMPLATE loot_demon_moloch]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Moloch
+CONTAINER=i_backpack
+ITEM=i_gold,{300 350}
+
+[TEMPLATE loot_demon_chaos]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Chaos Daemon
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+
 
 [EOF]

@@ -424,4 +424,181 @@ ON=@GetHit
       NEW.f_NPCRemovalTimer 1200
    ENDIF
 
+//////////////////////////
+// Solen Loot Templates //
+//////////////////////////
+
+[TEMPLATE loot_solen_worker]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Solen Worker
+ITEM=i_gold,{125 175}
+ITEM=i_crop_fungus_zoogi,{1 6}
+
+[TEMPLATE loot_solen_warrior]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Solen Warrior
+ITEM=i_gold,{250 350}
+ITEM=random_jewel,{1 4}
+ITEM=i_crop_fungus_zoogi,{1 6}
+
+[TEMPLATE loot_solen_queen]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Solen Queen
+ITEM=i_gold,{400 500}
+ITEM=random_jewel,{1 4}
+ITEM=i_crop_fungus_zoogi,{5 25}
+
+
+[TEMPLATE loot_black_solen_infiltrator_queen]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Black Solen Infiltrator Queen
+CONTAINER=i_backpack
+ITEM=i_gold,{250 300}
+
+[TEMPLATE loot_black_solen_infiltrator_queen_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Black Solen Infiltrator Queen
+// 4-16 Zoogi Fungus
+// Picnic Basket
+
+[TEMPLATE loot_black_solen_infiltrator_warrior]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Black Solen Infiltrator Warrior
+CONTAINER=i_backpack
+ITEM=i_gold,{200 225}
+ITEM=random_jewelry,{1 4}
+
+[TEMPLATE loot_black_solen_infiltrator_warrior_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Black Solen Infiltrator Warrior
+// 3-13 Zoogi Fungus
+// Picnic Basket
+
+[TEMPLATE loot_black_solen_queen]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Black Solen Queen
+CONTAINER=i_backpack
+ITEM=i_gold,{400 500}
+
+[TEMPLATE loot_black_solen_queen_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Black Solen Queen
+// 5-25 Zoogi Fungus
+// Picnic Basket
+// Crystal Ball of Pet Summoning
+
+[TEMPLATE loot_black_solen_warrior]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Black Solen Warrior
+CONTAINER=i_backpack
+ITEM=i_gold,{250 350}
+ITEM=random_jewelry,{1 4}
+
+[TEMPLATE loot_black_solen_warrior_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Black Solen Warrior
+// 3-13 Zoogi Fungus
+// Picnic Basket
+// Bracelet of Binding
+
+[TEMPLATE loot_black_solen_worker]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Black Solen Worker
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+
+[TEMPLATE loot_black_solen_worker_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Black Solen Worker
+// 1-6 Zoogi Fungus
+// Picnic Basket
+
+[TEMPLATE loot_red_solen_infiltrator_queen]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Red Solen Infiltrator Queen
+CONTAINER=i_backpack
+ITEM=i_gold,{250 300}
+
+[TEMPLATE loot_red_solen_infiltrator_queen_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Red Solen Infiltrator (Queen)
+// 4-16 Zoogi Fungus
+// Picnic Basket
+
+[TEMPLATE loot_red_solen_infiltrator_warrior]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Red Solen Infiltrator Warrior
+CONTAINER=i_backpack
+ITEM=i_gold,{200 225}
+ITEM=random_jewelry,{1 4}
+
+[TEMPLATE loot_red_solen_infiltrator_warrior_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Red Solen Infiltrator (Warrior)
+// 3-13 Zoogi Fungus
+// Picnic Basket
+
+[TEMPLATE loot_red_solen_queen]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Red Solen Queen
+CONTAINER=i_backpack
+ITEM=i_gold,{400 500}
+
+[TEMPLATE loot_red_solen_queen_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Red Solen Queen
+// 5-25 Zoogi Fungus
+// Picnic Basket
+// Crystal Ball of Pet Summoning
+
+[TEMPLATE loot_red_solen_warrior]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Red Solen Warrior
+CONTAINER=i_backpack
+ITEM=i_gold,{250 350}
+ITEM=random_jewelry,{1 4}
+
+[TEMPLATE loot_red_solen_warrior_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Red Solen Warrior
+// 3-13 Zoogi Fungus
+// Picnic Basket
+// Bracelet of Binding
+
+[TEMPLATE loot_red_solen_worker]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Red Solen Worker
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+
+[TEMPLATE loot_red_solen_worker_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Red Solen Worker
+// 1-6 Zoogi Fungus
+// Picnic Basket
+
+
 [EOF]

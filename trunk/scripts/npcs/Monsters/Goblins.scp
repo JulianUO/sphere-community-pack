@@ -135,4 +135,102 @@ ON=@NPCRestock
    ITEM=loot_gremlin
    // 100 - 200 Gold. 60 - 80 arrows, 5 apples
 
+[CHARDEF c_goblin_gray_mage]
+ID=c_goblin_gray
+NAME=gray goblin mage
+ICON=i_pet_goblin_gray
+SOUND=snd_monster_goblin
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DAM=5,7
+ARMOR=20
+DESIRES=r_goblin_camp,t_coin,t_gold,t_gem
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=15 t_meat_raw
+RESOURCES=1 i_ribs_raw
+BLOODCOLOR=colors_green
+MOVERATE=100
+TAG.SlayerGroup=REPOND
+TEVENTS=e_carnivores
+CATEGORY=Monsters
+SUBSECTION=Goblins
+DESCRIPTION=Gray Goblin Mage
+ON=@Create
+   NAME=#NAMES_GOBLIN
+   TITLE=the gray goblin mage
+   NPC=brain_monster
+   FAME={2500 2999}
+   KARMA={-3000 -3499}
+   STR={230 275}
+   MAXHITS={120 155}
+   DEX={70 90}
+   MAXSTAM={70 90}
+   INT={450 490}
+   MAXMANA={450 490}
+   ANATOMY={80.0 90.0}
+   EVALUATINGINTEL={90.0 105.0}
+   MAGICRESISTANCE={140.0 150.0}
+   MAGERY={100.0 120.0}
+   MEDITATION={90.0 100.0}
+   PARRYING={35.0 55.0}
+   TACTICS={80.0 90.0}
+   WRESTLING={95.0 110.0}
+   MODAR={0 10}
+   RESCOLD={30 40}
+   RESENERGY={10 20}
+   RESFIRE={35 45}
+   RESPOISON={35 45}
+ON=@NPCRestock
+   ITEM=loot_goblin_gray_mage
+
+
+///////////////////////////
+// Goblin Loot Templates //
+///////////////////////////
+
+[TEMPLATE loot_goblin_gray]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Gray Goblin
+ITEM=i_goblin_blood,{1 2},R5
+ITEM=i_gold,{150 175}
+ITEM=random_jewel,{1 4}
+ITEM=random_potion
+ITEM=random_shield
+CONTAINER=i_bag
+ITEM=i_gold,{100 150}
+ITEM=random_jewel,{1 2},R3
+ITEM=i_map_treasure,R99
+
+[TEMPLATE loot_goblin_green]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Green Goblin
+ITEM=i_goblin_blood,{1 3},R5
+ITEM=i_gold,{150 175}
+ITEM=random_jewel,{1 4}
+ITEM=random_shield,1,R3
+CONTAINER=i_bag
+ITEM=i_gold,{100 150}
+ITEM=random_jewel,{1 2},R3
+ITEM=i_map_treasure,1,R99
+
+[TEMPLATE loot_goblin_gray_mage]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Gray Goblin Mage
+ITEM=i_goblin_blood,{1 2},R10
+ITEM=i_gold,{150 175}
+ITEM=random_jewel,{1 3}
+ITEM=random_potion
+ITEM=random_reagent,{4 6}
+ITEM=random_shield
+CONTAINER=i_bag
+ITEM=i_gold,{100 150}
+ITEM=random_potion
+ITEM=random_reagent,{4 6}
+ITEM=random_scroll,{1 3}
+ITEM=random_jewel,{1 2},R3
+ITEM=i_map_treasure,R99
+
+
 [EOF]

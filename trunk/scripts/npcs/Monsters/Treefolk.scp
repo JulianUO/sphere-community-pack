@@ -90,8 +90,7 @@ ON=@Create
    RESFIRE=0
    RESPOISON={40 50}
 ON=@NpcRestock
-   ITEM=random_jewel,{1 4}
-   ITEM=i_gold,{280 330}
+   ITEM=loot_reaper
 
 [CHARDEF 012d]
 DEFNAME=c_treefellow
@@ -142,5 +141,29 @@ ON=@Hit
       SRC.EMOTE knocked off mount!
       SRC.DAMAGE <R15,25> <DEF.dam_physical> <UID>
    ENDIF
+
+
+/////////////////////////////
+// Treefolk Loot Templates //
+/////////////////////////////
+
+[TEMPLATE loot_reaper]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Reaper
+CONTAINER=i_backpack
+ITEM=i_gold,{125 150}
+ITEM={ i_log 1 i_board 1 },{10 15}
+ITEM=i_reag_dead_wood,{1 3}
+ITEM=random_reagent,{4 6}
+
+[TEMPLATE loot_treefellow]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Treefellow
+ITEM=i_gold,{125 175}
+ITEM=random_jewel,{3 5}
+ITEM=random_log,{25 35}
+
 
 [EOF]

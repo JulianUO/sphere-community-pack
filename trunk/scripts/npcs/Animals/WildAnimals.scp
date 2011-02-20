@@ -1074,7 +1074,7 @@ ON=@Create
    RESPOISON={25 35}
 ON=@NPCRestock
    ITEM=loot_rat_giant
-   //25 - 50 Gold. Carved: 6 Hides, 1 Raw Rib
+   //25 - 50 Gold.
 
 [CHARDEF 0dd]
 DEFNAME=c_walrus
@@ -1773,5 +1773,54 @@ ON=@DeathCorpse
       ARGO.SAY run down the curtain and joined the bleedin' choir invisibile!!
       ARGO.SAY THIS IS AN EX-PARROT!!
    ENDDO
+
+
+////////////////////////////////
+// Wild Animal Loot Templates //
+////////////////////////////////
+
+[TEMPLATE loot_toad_giant]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Giant Toad
+ITEM=i_gold,{25 50}
+
+[TEMPLATE loot_bullfrog]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Bullfrog
+ITEM=i_gold,{25 50}
+
+[TEMPLATE loot_hellhound]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Hellhound
+ITEM=i_gold,{175 225}
+ITEM=i_reag_sulfur_ash,{2 4}
+
+[TEMPLATE loot_hellcat]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Hellcat
+ITEM=i_gold,{125 175}
+
+[TEMPLATE loot_rat_giant]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Giant Rat
+ITEM=i_gold,{25 50}
+
+[TEMPLATE loot_skittering_hopper]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Skittering Hopper
+ITEM=i_gold,{50 100}
+
+[TEMPLATE loot_vampire_bat]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Vampire Bat
+ITEM=i_gold,{25 50}
+
 
 [EOF]

@@ -1,7 +1,206 @@
 [COMMENT monsters_elementals]
 The Magery summoning spell elementals are in the Spells directory.
 
+[CHARDEF c_elemental_air]
+ID=c_elemental_air_summoned
+NAME=air elemental
+ICON=i_pet_elem_air
+SOUND=snd_elementl_airelem1
+CAN=MT_WALK|MT_FLY|MT_NONHUM
+DAM=13,20
+ARMOR=40
+//DESIRES=
+//AVERSIONS=
+//FOODTYPE=
+//RESOURCES=
+BLOODCOLOR=colors_white
+MOVERATE=100
+TAG.Barding.Diff=77.1
+TAG.TamingSlots=2
+TAG.EnergyDamagePercent=50
+TAG.SlayerGroup=AIRELEM,ELEMENTAL
+CATEGORY=Monsters
+SUBSECTION=Elementals
+DESCRIPTION=Air Elemental
+ON=@Create
+   COLOR=04fff
+   NPC=brain_monster
+   TAG.Level=16
+   EVENTS=+e_monster_level_system
+   FAME=0
+   KARMA=0
+   STR={195 205}
+   MAXHITS={145 155}
+   DEX={195 205}
+   MAXSTAM={45 55}
+   INT={95 105}
+   MAXMANA={95 105}
+   EVALUATINGINTEL={65.0 75.0}
+   MAGERY={65.0 75.0}
+   MAGICRESISTANCE={55.0 65.0}
+   MEDITATION={85.0 95.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={75.0 85.0}
+   MODAR={0 10}
+   RESCOLD={35 45}
+   RESENERGY={70 80}
+   RESFIRE={30 40}
+   RESPOISON={50 60}
+
+[CHARDEF c_elemental_earth]
+ID=c_elemental_earth_summoned
+NAME=earth elemental
+ICON=i_pet_elem_earth
+SOUND=snd_elementl_erthel1
+CAN=MT_WALK|MT_USEHANDS
+DAM=31,49
+ARMOR=65
+//DESIRES=
+//AVERSIONS=
+//FOODTYPE=
+//RESOURCES=
+BLOODCOLOR=colors_brown
+MOVERATE=100
+TAG.Barding.Diff=68.3
+TAG.TamingSlots=2
+TAG.SlayerGroup=EARTHELEM,ELEMENTAL
+CATEGORY=Monsters
+SUBSECTION=Elementals
+DESCRIPTION=Earth Elemental
+ON=@Create
+   NPC=brain_monster
+   TAG.Level=16
+   EVENTS=+e_monster_level_system
+   FAME=0
+   KARMA=0
+   STR={195 205}
+   MAXHITS={175 185}
+   DEX={65 75}
+   MAXSTAM={65 75}
+   INT={65 75}
+   MAXMANA={65 75}
+   MAGICRESISTANCE={60.0 70.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={85.0 95.0}
+   MODAR={0 10}
+   RESCOLD={0 10}
+   RESENERGY={50 60}
+   RESFIRE={70 80}
+   RESPOISON={50 60}
+
+[CHARDEF c_elemental_fire]
+ID=c_elemental_fire_summoned
+NAME=fire elemental
+ICON=i_pet_elem_fire
+SOUND=snd_elementl_firelem1
+CAN=MT_WALK|MT_RUN|MT_NONHUM
+DAM=20,32
+ARMOR=50
+//DESIRES=
+//AVERSIONS=
+//FOODTYPE=
+//RESOURCES=
+BLOODCOLOR=colors_red
+MOVERATE=100
+TAG.Barding.Diff=83.1
+TAG.TamingSlots=4
+TAG.FireDamagePercent=100
+TAG.SlayerGroup=FIREELEM,ELEMENTAL
+CATEGORY=Monsters
+SUBSECTION=Elementals
+DESCRIPTION=Fire Elemental
+ON=@Create
+   NPC=brain_monster
+   TAG.Level=16
+   EVENTS=+e_monster_level_system
+   FAME=0
+   KARMA=0
+   STR={195 205}
+   MAXHITS={195 205}
+   DEX={195 205}
+   MAXSTAM={195 205}
+   INT={95 105}
+   MAXMANA={95 105}
+   EVALUATINGINTEL={85.0 95.0}
+   MAGERY={85.0 95.0}
+   MAGICRESISTANCE={80.0 90.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={90.0 100.0}
+   MODAR={0 10}
+   RESCOLD={0 10}
+   RESENERGY={50 60}
+   RESFIRE={70 80}
+   RESPOISON={50 60}
+   ITEMNEWBIE=i_light_source
+   ITEMNEWBIE=i_spellbook
+   ADDSPELL=s_magic_arrow
+   ADDSPELL=s_fireball
+   ADDSPELL=s_fire_field
+   ADDSPELL=s_explosion
+   ADDSPELL=s_flamestrike
+   ADDSPELL=s_meteor_swarm
+   ADDSPELL=s_summon_elem_fire
+   ADDSPELL=s_fire_bolt
+ON=@Death
+   // Death explosion
+   SERV.NEWITEM=i_fx_explode
+   NEW.TYPE=t_explosion
+   NEW.ATTR=attr_move_never|attr_decay
+   NEW.LINK=<UID>
+   NEW.MOREX=10  // damage amount
+   NEW.MOREY=dam_fire
+   NEW.MOREZ=2   // distance
+   NEW.P=<P>     // under body
+   NEW.TIMERD=1  // immediate decay
+
+[CHARDEF c_elemental_water]
+ID=c_elemental_water_summoned
+NAME=water elemental
+ICON=i_pet_elem_water
+SOUND=snd_elementl_watrel1
+CAN=MT_WALK|MT_SWIM|MT_NONHUM
+DAM=35,45
+ARMOR=50
+//DESIRES=
+//AVERSIONS=
+//FOODTYPE=
+//RESOURCES=
+BLOODCOLOR=colors_blue
+MOVERATE=100
+TAG.Barding.Diff=79.4
+TAG.TamingSlots=3
+TAG.ColdDamagePercent=100
+TAG.SlayerGroup=WATERELEM,ELEMENTAL
+CATEGORY=Monsters
+SUBSECTION=Elementals
+DESCRIPTION=Water Elemental
+ON=@Create
+   NPC=brain_monster
+   TAG.Level=16
+   EVENTS=+e_monster_level_system
+   FAME=0
+   KARMA=0
+   STR={195 205}
+   MAXHITS={160 175}
+   DEX={65 75}
+   MAXSTAM={65 75}
+   INT={95 105}
+   MAXMANA={95 105}
+   EVALUATINGINTEL={75.0 85.0}
+   MAGERY={75.0 85.0}
+   MAGICRESISTANCE={70.0 80.0}
+   MEDITATION={85.0 95.0}
+   TACTICS={95.0 105.0}
+   WRESTLING={80.0 90.0}
+   MODAR={0 10}
+   RESCOLD={70 80}
+   RESENERGY={40 50}
+   RESFIRE={20 30}
+   RESPOISON={45 55}
+
+[COMMENT monsters_elementals_ore]
 Regarding ore elementals:
+
 Melee attacks do 25 to 40 damage per hit. It has a special type of
 gas attack which looks like a large yellowish white flamestrike. This
 gas does from 15-45 points of damage per hit. It also decreases stamina
@@ -1004,5 +1203,358 @@ ON=@NPCRestock
    ITEM=i_sand,{1 3}
    //100 - 150 Gold. Bones
    //Special: Level 4 Treasure Map
+
+//////////////////////////////
+// Elemental Loot Templates //
+//////////////////////////////
+
+[TEMPLATE loot_elemental_air]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Air Elemental
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM={random_scroll_low 1 random_scroll_medium 1},1
+ITEM={random_scroll_low 1 random_scroll_medium 1},1
+
+[TEMPLATE loot_elemental_air_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Air
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_elemental_earth]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Earth Elemental
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=i_ore_iron,5
+ITEM=random_jewel
+ITEM=i_reag_fertile_dirt,{1 4}
+ITEM=i_reag_mandrake_root,1
+
+[TEMPLATE loot_elemental_earth_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Earth
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_elemental_fire]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Fire Elemental
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=random_jewel,1
+ITEM=i_reag_sulfur_ash,3
+
+[TEMPLATE loot_elemental_fire_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Fire
+ITEM=i_treasure_map_lvl_2
+
+[TEMPLATE loot_elemental_water]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Water Elemental
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=random_potion,1
+ITEM=i_reag_black_pearl,3
+
+[TEMPLATE loot_elemental_water_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Water
+ITEM=i_treasure_map_lvl_2
+
+
+[TEMPLATE loot_elemental_ore_agapite]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Elemental Agapite
+CONTAINER=i_backpack
+ITEM=i_gold,{125 150}
+ITEM=i_ore_agapite,25
+ITEM=random_jewel,2
+
+[TEMPLATE loot_elemental_agapite_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Agapite
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_elemental_ore_bronze]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Elemental Bronze
+CONTAINER=i_backpack
+ITEM=i_gold,{125 150}
+ITEM=i_ore_bronze,25
+ITEM=random_jewel,2
+
+[TEMPLATE loot_elemental_bronze_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Bronze
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_elemental_ore_copper]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Elemental Copper
+CONTAINER=i_backpack
+ITEM=i_gold,{125 150}
+ITEM=i_ore_copper,25
+ITEM=random_jewel,2
+
+[TEMPLATE loot_elemental_copper_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Copper
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_elemental_ore_copper_dull]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Elemental Dull Copper
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+ITEM=i_ore_dull_copper,{3 5}
+ITEM=random_jewel,2
+
+[TEMPLATE loot_elemental_dull_copper_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Dull Copper
+ITEM=i_treasure_map_lvl_1
+// Crystalline Blackrock
+
+[TEMPLATE loot_elemental_ore_shadow]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Elemental Shadow Iron
+CONTAINER=i_backpack
+ITEM=i_gold,{125 150}
+ITEM=i_ore_shadow,25
+ITEM=random_jewel,2
+
+[TEMPLATE loot_elemental_shadow_iron_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Shadow Iron
+ITEM=i_treasure_map_lvl_1
+// Crystalline Blackrock
+
+[TEMPLATE loot_elemental_ore_valorite]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Elemental Valorite
+CONTAINER=i_backpack
+ITEM=i_gold,{450 650}
+ITEM=i_ore_valorite,25
+ITEM=random_jewel,4
+ITEM=random_wands,1
+ITEM=random_scroll_medium,1
+
+[TEMPLATE loot_elemental_valorite_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Valorite
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_elemental_ore_verite]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Elemental Verite
+CONTAINER=i_backpack
+ITEM=i_gold,{125 150}
+ITEM=i_ore_verite,25
+ITEM=random_jewel,2
+
+[TEMPLATE loot_elemental_verite_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Verite
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_elemental_efreet]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Efreet
+CONTAINER=i_backpack
+ITEM=i_gold,{400 500}
+
+[TEMPLATE loot_elemental_efreet_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Efreet
+ITEM=i_treasure_map_lvl_4
+// Daemon Bone Armor
+
+[TEMPLATE loot_elemental_acid]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Elemental (acid)
+ITEM=i_gold,{400 500}
+ITEM=random_jewel,{2 4}
+ITEM=random_scroll,{2 3}
+ITEM=random_reagent,{4 6}
+ITEM=random_weapon
+ITEM=random_armor
+ITEM={ random_magic_custom_lesser 1 random_item_misc_rare 1 0 200 }
+ITEM=i_map_treasure,R30
+
+[TEMPLATE loot_elemental_blood]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Blood Elemental
+CONTAINER=i_backpack
+ITEM=i_gold,{700 900}
+ITEM=random_scroll,{2 3}
+ITEM=random_reagent,{4 6}
+ITEM=random_reagent,{4 6}
+ITEM=random_magic_wands
+ITEM=random_jewel,{2 4}
+
+[TEMPLATE loot_elemental_blood_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Blood
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_elemental_ice]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ice Elemental
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=random_jewel,2
+ITEM=i_reag_black_pearl,1
+ITEM=random_reagent,3
+
+[TEMPLATE loot_elemental_poison]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Poison Elemental
+CONTAINER=i_backpack
+ITEM=i_gold,{750 950}
+ITEM=i_reag_nightshade,4
+ITEM=random_scroll_medium,1
+ITEM=i_potion_poisonless,1
+ITEM=random_reagent,{4 6}
+ITEM=random_jewel,1
+
+[TEMPLATE loot_elemental_poison_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Poison
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_elemental_snow]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Snow Elemental
+CONTAINER=i_backpack
+ITEM=i_gold,{250 350}
+ITEM=i_ore_iron,3
+ITEM=i_reag_black_pearl,3
+
+[TEMPLATE loot_elemental_snow_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Snow
+ITEM=i_treasure_map_lvl_2
+
+[TEMPLATE loot_elemental_swamp]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Swamp Elemental
+ITEM=i_gold,{400 500}
+ITEM=random_jewel,{1 2}
+ITEM=random_potion,R2
+ITEM=random_scroll,{1 2}
+CONTAINER=i_backpack
+ITEM=i_gold,{75 100}
+ITEM=random_scroll,{1 3},R3
+ITEM=i_map_treasure,R40
+
+[TEMPLATE loot_elemental_ore_gold]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Elemental Golden
+CONTAINER=i_backpack
+ITEM=i_gold,{125 150}
+ITEM=i_ore_gold,25
+ITEM=random_jewel,2
+
+[TEMPLATE loot_elemental_golden_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Elemental Golden
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_elemental_kaze_kemono]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Kaze Kemono
+ITEM=i_gold,{550 650}
+ITEM=random_scroll,{2 3}
+ITEM=random_reagent,{4 6}
+ITEM=random_magic_wands
+ITEM=random_jewel,2
+
+[TEMPLATE loot_rai_ju]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Rai-Ju
+CONTAINER=i_backpack
+ITEM=i_gold,{550 650}
+ITEM=random_scroll,{2 3}
+ITEM=random_reagent,{4 6}
+ITEM=random_magic_wands
+ITEM=random_jewel,2
+
+[TEMPLATE loot_elemental_crystal]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Crystal Elemental
+CONTAINER=i_backpack
+ITEM=i_gold,{400 500}
+ITEM=random_jewel,4
+
+[TEMPLATE loot_elemental_lava]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Lava Elemental
+ITEM=i_lava_serpent_crust,{1 3},R5
+ITEM=i_gold,{500 600}
+ITEM=random_reagent,{6 9}
+ITEM=random_jewel,{3 4},R2
+ITEM=random_scroll,{2 3},R2
+ITEM=random_wand_magic,1,R2
+ITEM=i_map_treasure,1,R20
+ITEM=random_magic_loot,1,R20
+CONTAINER=i_bag
+ITEM=i_gold,{300 400}
+ITEM=random_jewel,{2 3}
+ITEM=random_reagent,{3 4}
+ITEM=random_weapon,1,R2
+ITEM=random_armor,1,R2
+ITEM=random_magic_loot,1,R20
+ITEM=random_item_misc_rare,1,R200
+
+[TEMPLATE loot_elemental_sand_vortex]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Sand Vortex
+ITEM=i_gold,{100 150}
+ITEM=random_jewel,{1 2}
+ITEM=random_potion,R5
+ITEM=random_item_bone,R30
+ITEM=i_map_treasure,R99
+
 
 [EOF]

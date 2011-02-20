@@ -1,0 +1,763 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+VERSION=0.56b
+
+[ITEMDEF 01648]
+DEFNAME=i_catapult_1
+WEIGHT=41.2
+RESOURCES=28 i_board, 5 i_log, 2 i_nails, 1 i_ingot_iron, 2 i_rope
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Catapult 01
+DUPELIST=01649,0164a,0164b,0164c,0164d,0164e,0164f,01650,01651,01652,01653,01654,01655,01656,01657,01658,01659,0165a,0165b,0165c,0165d,0165e,0165f,01660,01661,01662
+
+[ITEMDEF 01649]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0164a]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0164b]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0164c]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0164d]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0164e]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0164f]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01650]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01651]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01652]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01653]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01654]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01655]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01656]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01657]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01658]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01659]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0165a]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0165b]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0165c]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0165d]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0165e]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 0165f]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01660]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01661]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01662]
+//catapult 01
+DUPEITEM=01648
+
+[ITEMDEF 01663]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Catapult 01 (arm)
+WEIGHT=41.2
+DUPELIST=01664,01665,01666
+ON=@DClick
+   DISPID=01664
+   UPDATE
+   TIMERD=0.2
+   RETURN 1
+ON=@Timer
+   IF (<DISPIDDEC> < 01666)
+      DISPID=<DISPIDDEC>+1
+      TIMERD=0.2
+   ELSE
+      DISPID=01663
+      SFX 43
+   ENDIF
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 01664]
+//catapult 01 (arm)
+DUPEITEM=01663
+
+[ITEMDEF 01665]
+//catapult 01 (arm)
+DUPEITEM=01663
+
+[ITEMDEF 01666]
+//catapult 01 (arm)
+DUPEITEM=01663
+
+[ITEMDEF 01672]
+DEFNAME=i_catapult_2
+WEIGHT=41.2
+RESOURCES=28 i_board, 5 i_log, 2 i_nails, 1 i_ingot_iron, 2 i_rope
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Catapult 02
+DUPELIST=01673,01674,01675,01676,01677,01678,01679,0167a,0167b,0167c,0167d,0167e,0167f,01680,01681,01682,01683,01684,01685,01686,01687,01688,01689,0168a,0168b,0168c
+
+[ITEMDEF 01673]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01674]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01675]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01676]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01677]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01678]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01679]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 0167a]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 0167b]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 0167c]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 0167d]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 0167e]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 0167f]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01680]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01681]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01682]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01683]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01684]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01685]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01686]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01687]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01688]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 01689]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 0168a]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 0168b]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 0168c]
+//catapult 02
+DUPEITEM=01672
+
+[ITEMDEF 0168d]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Catapult 02 (arm)
+WEIGHT=41.2
+DUPELIST=0168e,0168f,01690
+ON=@DClick
+   DISPID=0168e
+   UPDATE
+   TIMERD=1.5
+   RETURN 1
+ON=@Timer
+   DISPID=0168d
+   UPDATE
+   SFX 43
+   RETURN 1
+
+[ITEMDEF 0168e]
+//catapult swinging (self animated)
+DUPEITEM=0168d
+
+[ITEMDEF 0168f]
+//catapult 02 (arm)
+DUPEITEM=0168d
+
+[ITEMDEF 01690]
+//catapult 02 (arm)
+DUPEITEM=0168d
+
+[ITEMDEF 01694]
+DEFNAME=i_catapult_3
+WEIGHT=41.2
+RESOURCES=28 i_board, 5 i_log, 2 i_nails, 1 i_ingot_iron, 2 i_rope
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Catapult 03
+DUPELIST=01695,01696,01697,01698,01699,0169a,0169b,0169c,0169d,0169e,0169f,016a0,016a1,016a2,016a3,016a4,016a5,016a6,016a7,016a8,016a9,016aa,016ab,016ac,016ad,016ae,016af,016b0,016b4
+
+[ITEMDEF 01695]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 01696]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 01697]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 01698]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 01699]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 0169a]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 0169b]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 0169c]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 0169d]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 0169e]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 0169f]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016a0]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016a1]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016a2]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016a3]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016a4]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016a5]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016a6]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016a7]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016a8]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016a9]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016aa]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016ab]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016ac]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016ad]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016ae]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016af]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016b0]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016b1]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Catapult 03 (arm)
+WEIGHT=41.2
+DUPELIST=016b2,016b3
+ON=@DClick
+   DISPID=016b2
+   UPDATE
+   TIMERD=0.2
+   RETURN 1
+ON=@Timer
+   IF (<DISPIDDEC> < 016b3)
+      DISPID=<DISPIDDEC>+1
+      TIMERD=0.2
+   ELSE
+      DISPID=016b1
+      SFX 43
+   ENDIF
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 016b2]
+//catapult 03 (arm)
+DUPEITEM=016b1
+
+[ITEMDEF 016b3]
+//catapult 03 (arm)
+DUPEITEM=016b1
+
+[ITEMDEF 016b4]
+//catapult 03
+DUPEITEM=01694
+
+[ITEMDEF 016b9]
+DEFNAME=i_catapult_4
+WEIGHT=41.2
+RESOURCES=28 i_board, 5 i_log, 2 i_nails, 1 i_ingot_iron, 2 i_rope
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Catapult 04
+DUPELIST=016ba,016bb,016bc,016bd,016be,016bf,016c0,016c1,016c2,016c3,016c4,016c5,016c6,016c7,016c8,016c9,016ca,016cb,016cc,016cd,016ce,016cf,016d0,016d1,016d2,016d3,016d4,016d5,016d9
+
+[ITEMDEF 016ba]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016bb]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016bc]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016bd]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016be]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016bf]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016c0]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016c1]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016c2]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016c3]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016c4]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016c5]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016c6]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016c7]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016c8]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016c9]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016ca]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016cb]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016cc]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016cd]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016ce]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016cf]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016d0]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016d1]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016d2]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016d3]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016d4]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016d5]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016d9]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 016d6]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Catapult 04 (arm)
+WEIGHT=41.2
+DUPELIST=016d7,016d8
+ON=@DClick
+   DISPID=016d7
+   UPDATE
+   TIMERD=0.2
+   RETURN 1
+ON=@Timer
+   IF (<DISPIDDEC> < 016d8)
+      DISPID=<DISPIDDEC>+1
+      TIMERD=0.2
+   ELSE
+      DISPID=016d6
+      SFX 43
+   ENDIF
+   UPDATE
+   RETURN 1
+
+[ITEMDEF 016d7]
+//catapult 04 (arm)
+DUPEITEM=016d6
+
+[ITEMDEF 016d8]
+//catapult 04 (arm)
+DUPEITEM=016d6
+
+[ITEMDEF 016d9]
+//catapult 04
+DUPEITEM=016b9
+
+[ITEMDEF 018f0]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018f1]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018f2]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018f3]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018f4]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018f5]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018f6]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018f7]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018f8]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018f9]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018fa]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018fb]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018fc]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018fd]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018fe]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 018ff]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 01900]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 01901]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 01902]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 01903]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 01904]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 01905]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 01906]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 01907]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 01908]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 01909]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 0190a]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 0190b]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 0190c]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+[ITEMDEF 0190d]
+CATEGORY=Miscellaneous
+SUBSECTION=Catapults
+DESCRIPTION=Animated Catapult Parts
+
+
+[EOF]

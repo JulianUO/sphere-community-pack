@@ -171,4 +171,60 @@ ON=@GetHit
       ENDIF
    ENDIF
 
+
+////////////////////////////
+// Yomotsu Loot Templates //
+////////////////////////////
+
+[TEMPLATE loot_yomotsu_warrior]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Yomotsu Warrior
+ITEM=i_gold,{400 450}
+ITEM=random_jewel,{1 4}
+ITEM=random_weapon_axe_normal
+ITEM=random_footwear_all
+ITEM=random_pants_all
+ITEM=random_armor_all
+ITEM={ i_fruit_gourd1 1 i_fruit_gourd2 1},{1 3},R2
+CONTAINER=i_bag
+ITEM=i_gold,{200 250}
+ITEM=random_jewel,{1 2},R3
+ITEM=i_map_treasure,R99
+
+[TEMPLATE loot_yomotsu_priest]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Yomotsu Priest
+ITEM=i_gold,{400 600}
+ITEM=random_jewel,{1 4}
+ITEM={ random_staves 199 i_staff_magic3 1 }
+ITEM=random_footwear_all
+ITEM=random_pants_all
+ITEM=random_armor_all
+ITEM={ i_fruit_gourd1 1 i_fruit_gourd2 1},{1 3},R2
+CONTAINER=i_bag
+ITEM=i_gold,{300 400}
+ITEM=random_wand_magic,1,R5
+ITEM=random_jewel,{1 2},R3
+ITEM=i_map_treasure,R99
+
+[TEMPLATE loot_yomotsu_elder]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Yomotsu Elder
+ITEM=i_gold,{800 950}
+ITEM=random_jewel,{1 4}
+ITEM=random_weapon_axe_normal
+ITEM=random_footwear_all
+ITEM=random_pants_all
+ITEM=random_armor_all
+ITEM=random_armor_shield_normal
+ITEM={ i_fruit_gourd1 1 i_fruit_gourd2 1},{1 3},R2
+CONTAINER=i_bag
+ITEM=i_gold,{700 850}
+ITEM=random_jewel,{1 2},R3
+ITEM=i_map_treasure,R50
+
+
 [EOF]

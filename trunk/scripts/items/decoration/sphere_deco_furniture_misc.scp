@@ -38,23 +38,6 @@ DESCRIPTION=Dartboard
 [ITEMDEF 01e2f]
 DUPEITEM=01e2e
 
-[ITEMDEF 01e5e]
-DEFNAME=i_bulletin_board
-NAME=Bulletin Board
-TYPE=T_BBOARD
-TDATA2=0866
-SKILLMAKE=CARPENTRY 85.0, t_carpentry
-RESOURCES=50 i_log
-WEIGHT=25
-DUPELIST=01e5f
-CATEGORY=Decoration - Furniture
-SUBSECTION=Misc
-DESCRIPTION=Bulletin Board
-
-[ITEMDEF 01e5f]
-DEFNAME=i_bulletin_board_2
-DUPEITEM=01e5e
-
 [ITEMDEF 024cb]
 DEFNAME=i_shoji_screen
 NAME=Shoji Screen

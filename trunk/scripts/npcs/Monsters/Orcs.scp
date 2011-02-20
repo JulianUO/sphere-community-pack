@@ -162,7 +162,7 @@ RESOURCES=1 i_ribs_raw
 BLOODCOLOR=colors_green
 MOVERATE=100
 TAG.Barding.Diff=72.6
-TAG.Luck.Loot=loot_orc_lord_luck
+TAG.Luck.Loot=loot_orcish_lord_luck
 TAG.Slayer=SLAYER_ORC
 TSPEECH=spk_orc
 TEVENTS=e_carnivores2
@@ -262,7 +262,7 @@ RESOURCES=1 i_ribs_raw
 BLOODCOLOR=colors_green
 MOVERATE=100
 TAG.Barding.Diff=73.2
-TAG.Luck.Loot=loot_orc_mage_luck
+TAG.Luck.Loot=loot_orcish_mage_luck
 TAG.Slayer=SLAYER_ORC
 TSPEECH=spk_orc
 TEVENTS=e_carnivores2
@@ -455,5 +455,139 @@ ON=@NpcRestock
    ITEM=loot_orc_brute
    //750 - 950 Gold. 25 Shadow Iron Ore, 10 Ingots, Magic Items
    //Special: Evil Orc Helm, Mask of Orcish Kin, Bola Ball
+
+
+////////////////////////
+// Orc Loot Templates //
+////////////////////////
+
+[TEMPLATE loot_orc_captain]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Orc Captain
+CONTAINER=i_backpack
+ITEM=i_gold,{100 150}
+ITEM=i_axe_two_hand
+ITEM=i_ringmail_tunic
+ITEM=i_helm_orc
+ITEM=i_boots_thigh
+
+[TEMPLATE loot_orc]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Orc
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=random_weapon
+
+[TEMPLATE loot_orc_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Orc
+ITEM=i_treasure_map_lvl_1
+// Bola Ball
+
+[TEMPLATE loot_orcish_lord]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Orc Lord
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=i_ringmail_tunic
+
+[TEMPLATE loot_orcish_lord_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Orc Lord
+// Bola Ball
+// Evil Orc Helm
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_orc_chopper]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Orc Chopper
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=i_log,{1 10}
+ITEM=i_board,{20 30}
+ITEM=i_axe_two_hand
+ITEM=i_ringmail_tunic
+ITEM=i_helm_orc
+ITEM=i_boots_thigh
+
+[TEMPLATE loot_orcish_mage]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Orc Mage
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=i_ringmail_tunic
+ITEM=random_scroll,{1 2}
+ITEM=random_reagent,6
+
+[TEMPLATE loot_orcish_mage_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Orc Mage
+// Mask of Orcish Kin
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_orc_scout]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Orc Scout
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+ITEM=i_arrow,{60 70}
+ITEM=i_fruit_apple,{3 5}
+ITEM=i_bandage,{1 15}
+ITEM=i_bow
+
+[TEMPLATE loot_orc_scout_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Orc Scout
+// An Orcish Bow
+
+[TEMPLATE loot_orc_bomber]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Orc Bomber
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=i_mortar_pestle,1
+ITEM=i_reag_sulfur_ash,{6 10}
+ITEM=i_reag_black_pearl,{6 10}
+ITEM=i_potion_explosionless,1
+ITEM=i_reag_mandrake_root,{6 10}
+
+[TEMPLATE loot_orc_bomber_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Orc Bomber
+// Bola Ball
+
+[TEMPLATE loot_orc_brute]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Orc Brute
+CONTAINER=i_backpack
+ITEM=i_gold,{750 950}
+ITEM=i_ore_shadow,25
+ITEM=i_ore_iron,10
+ITEM=random_jewelry,{3 6}
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_orc_brute_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Orc Brute
+// Evil Orc Helm
+// Mask of Orcish Kin
+// Bola Ball
+
 
 [EOF]
