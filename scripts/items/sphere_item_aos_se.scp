@@ -10,11 +10,6 @@
 //
 VERSION=0.56b
 
-[ITEMDEF 02231]
-DEFNAME=i_giant_mush
-NAME=giant mushroom
-TYPE=t_normal
-
 [ITEMDEF 02232]
 DEFNAME=i_ant_hill
 NAME=ant hill
@@ -242,24 +237,15 @@ SKILLMAKE=TAILORING 56.8, t_sewing_kit
 CATEGORY=Provisions - Armor
 SUBSECTION=Magic
 DESCRIPTION=Arcane Leather Gloves
-
-ON=@CREATE
+ON=@Create
    HITPOINTS={50 100}
    MORE2=24
-
-ON=@EQUIP
+ON=@Equip
    f_arcane_equip
-
-ON=@UNEQUIP
+ON=@UnEquip
    f_arcane_unequip 026b0
-
-ON=@CLIENTTOOLTIP
+ON=@ClientToolTip
    SRC.ADDCLILOC 1060728,<EVAL <MORE2>>,24
 
-[ITEMDEF 02206]
-DEFNAME=i_crystal_1
-NAME=crystal
-TYPE=t_wall
-CAN=can_i_block
 
 [EOF]

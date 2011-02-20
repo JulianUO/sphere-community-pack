@@ -263,7 +263,7 @@ ON=@Create
    RESFIRE={35 45}
    RESPOISON={25 35}
 ON=NPCRestock
-   ITEM=loot_ki-rin
+   ITEM=loot_kirin
    //300 - 350 Gold. 1 Low Level Scroll, 1 Potion, Magic Items
 ON=@DClick
    IF !(<f_isfemale>) && (<SRC.IsMyPet>)
@@ -1058,5 +1058,102 @@ ON=@Create
    RESENERGY={30 40}
    RESFIRE={20 30}
    RESPOISON={20 30}
+
+
+////////////////////////////////
+// Wild Mounts Loot Templates //
+////////////////////////////////
+
+[TEMPLATE loot_steed_dark]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Dark Steed
+CONTAINER=i_backpack
+ITEM=i_gold,{200 250}
+ITEM=random_potion
+ITEM=random_potion,1,R2
+ITEM=random_scroll_low,{1 2}
+ITEM=random_scroll_low,{1 2},R2
+ITEM=random_reagent,{4 6}
+ITEM=random_reagent,{4 6},R2
+
+[TEMPLATE loot_nightmare]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Nightmare
+CONTAINER=i_backpack
+ITEM=i_gold,{400 500}
+ITEM=i_reag_sulfur_ash,3
+ITEM=random_scroll_low,1
+ITEM=random_potion,1
+
+[TEMPLATE loot_steed_silver]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Steed (silver)
+ITEM=i_gold,{400 500}
+ITEM=random_reagent,{2 4}
+ITEM=random_scroll_low,{1 2}
+ITEM=random_potion
+
+[TEMPLATE loot_unicorn]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Unicorn
+CONTAINER=i_backpack
+ITEM=i_gold,{300 350}
+ITEM=random_scroll_low,1
+ITEM=random_potion,1
+
+[TEMPLATE loot_kirin]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Kirin
+CONTAINER=i_backpack
+ITEM=i_gold,{300 350}
+ITEM=random_scroll_low,1
+ITEM=random_potion,1
+
+[TEMPLATE loot_warhorse_dread]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Dread Warhorse
+ITEM=i_gold,{400 500}
+ITEM=i_reag_sulfur_ash,{2 4}
+ITEM=random_scroll,{1 2}
+ITEM=random_potion
+
+[TEMPLATE loot_steed_fire]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Fire Steed
+ITEM=i_gold,{150 300}
+ITEM=i_gem_ruby,{15 30}
+ITEM=i_reag_sulfur_ash,{6 9}
+
+[TEMPLATE loot_hiryu]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Hiryu
+ITEM=i_gold,{1500 1900}
+ITEM=random_jewel,{3 5}
+
+[TEMPLATE loot_reptalon]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Reptalon (chimera)
+ITEM=i_gold,{1500 1650}
+ITEM=random_jewel,{3 5},R2
+
+[TEMPLATE loot_cu_sidhe]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Cu Sidhe
+ITEM=i_gold,{1500 1900}
+ITEM=random_jewel,{3 5},R2
+ITEM=random_armor
+ITEM=random_weapon
+ITEM=i_treasure_map_lvl_5,1,R50
+
 
 [EOF]

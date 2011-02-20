@@ -230,7 +230,7 @@ ON=@Create
    RESFIRE=100
    RESPOISON={10 25}
 ON=@NpcRestock
-   ITEM=loot_golem
+   ITEM=loot_iron_golem
    //11-25 Ingots
    //Special: 1 Arcane Gem, Power Crystal, Clockwork Assembly
 ON=@Hit
@@ -553,5 +553,78 @@ ON=@Hit
       SRC.EFFECT 3,i_fx_field_paralyze,1,16,0,02
       SRC.SOUND snd_spell_paralyze
    ENDIF
+
+
+///////////////////////////////////////
+// Mechanical Monster Loot Templates //
+///////////////////////////////////////
+
+[TEMPLATE loot_iron_golem]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Iron Golem
+ITEM=random_ingot_common,{11 25}
+ITEM=i_gem_arcane,{1 2},R25
+ITEM=i_power_crystal,{1 2},R25
+ITEM=i_clockworks,1,R50
+
+[TEMPLATE loot_exodus_overseer]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Exodus Overseer
+ITEM=i_gold,{450 650}
+ITEM=random_jewel,{3 5},R2
+ITEM=i_gem_arcane,{1 2},R10
+ITEM=i_power_crystal,{1 2},R10
+ITEM=i_clockworks,1,R20
+
+[TEMPLATE loot_exodus_minion]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Exodus Minion
+ITEM=i_gold,{400 500}
+ITEM=random_jewel,{3 5},R2
+ITEM=i_gem_arcane,{1 2},R30
+ITEM=i_power_crystal,{1 2},R30
+ITEM=i_clockworks,1,R50
+
+[TEMPLATE loot_exodus_minionlord]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Exodus Minion Lord
+ITEM=i_gold,{500 600}
+ITEM=random_jewel,{3 5},R2
+ITEM=i_gem_arcane,{1 2},R20
+ITEM=i_power_crystal,{1 2},R20
+ITEM=i_clockworks,1,R40
+
+[TEMPLATE loot_betrayer]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=BlackThorn Betrayer
+ITEM=i_gold,{500 600}
+ITEM=random_jewel,{2 3}
+ITEM=random_armor_all
+ITEM=random_weapon_all
+ITEM=i_power_crystal,{1 2},R25
+CONTAINER=i_bag
+ITEM=i_gold,{250 300}
+ITEM=random_jewel,{1 2},R2
+ITEM=i_gem_arcane,1,R35
+ITEM=i_map_treasure,1,R50
+
+[TEMPLATE loot_juggernaut]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=BlackThorn Juggernaut
+ITEM=i_gold,{175 200}
+ITEM=random_jewel,{2 3}
+ITEM=random_armor_all
+ITEM=i_power_crystal,{1 2},R25
+CONTAINER=i_bag
+ITEM=i_gold,{100 125}
+ITEM=random_jewel,{1 2},R2
+ITEM=i_clockworks,1,R40
+
 
 [EOF]

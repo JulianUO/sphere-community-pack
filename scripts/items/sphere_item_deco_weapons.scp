@@ -6,6 +6,40 @@
 // FILE LAST UPDATED: Jan 30, 2011
 VERSION=0.56b
 
+[ITEMDEF 02236]
+DEFNAME=i_lance_light
+NAME=light lance
+FLIP=1
+VALUE=77
+WEIGHT=18.0
+RESOURCES=18 i_ingot_iron
+SKILLMAKE=Blacksmithing 48.0
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Lance
+DESCRIPTION=Light Lance
+DUPELIST=02238
+
+[ITEMDEF 02237]
+DEFNAME=i_lance_heavy
+NAME=heavy lance
+FLIP=1
+VALUE=77
+WEIGHT=18.0
+RESOURCES=18 i_ingot_iron
+SKILLMAKE=Blacksmithing 48.0
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Lance
+DESCRIPTION=Heavy Lance
+DUPELIST=02238
+
+[ITEMDEF 02238]
+//light lance
+DUPEITEM=02236
+
+[ITEMDEF 02239]
+//heavy lance
+DUPEITEM=02237
+
 [ITEMDEF 02554]
 DEFNAME=i_sword_demon
 TYPE=t_normal

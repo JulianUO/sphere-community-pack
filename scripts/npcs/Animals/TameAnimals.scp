@@ -39,8 +39,7 @@ ON=@Create
    RESFIRE={10 15}
    RESPOISON={5 10}
 ON=@NPCRestock
-   ITEM=i_gold,{50 100}
-   ITEM=i_reag_black_pearl,{2 4}
+   ITEM=loot_eagle
 
 [CHARDEF 06]
 DEFNAME=c_bird
@@ -653,5 +652,18 @@ ON=@Create
    RESENERGY={5 10}
    RESFIRE={5 10}
    RESPOISON={5 10}
+
+
+////////////////////////////////
+// Tame Animal Loot Templates //
+////////////////////////////////
+
+
+[TEMPLATE loot_eagle]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Eagle
+ITEM=i_gold,{50 100}
+ITEM=i_reag_black_pearl,{2 4}
 
 [EOF]

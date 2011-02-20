@@ -1,0 +1,141 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+VERSION=0.56b
+
+[ITEMDEF 02053]
+//red gauntlet hand
+DEFNAME=i_handr_1
+DUPELIST=02054,02055,02056,02057,02058,02059,0205a,0205b,0205c,0205d,0205e,0205f,02060,02061,02062
+
+[ITEMDEF 02054]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 02055]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 02056]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 02057]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 02058]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 02059]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 0205a]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 0205b]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 0205c]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 0205d]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 0205e]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 0205f]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 02060]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 02061]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 02062]
+//red gauntlet hand
+DUPEITEM=02053
+
+[ITEMDEF 0206a]
+//white gauntlet hand
+DEFNAME=i_hand_1
+DUPELIST=0206b,0206c,0206d,0206e,0206f,02070,02071,02072,02073,02074,02075,02076,02077,02078,02079
+
+[ITEMDEF 0206b]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 0206c]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 0206d]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 0206e]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 0206f]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 02070]
+//white gauntlet hand
+DEFNAME=i_hand_7
+DUPEITEM=0206a
+
+[ITEMDEF 02071]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 02072]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 02073]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 02074]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 02075]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 02076]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 02077]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 02078]
+//white gauntlet hand
+DUPEITEM=0206a
+
+[ITEMDEF 02079]
+//white gauntlet hand
+DUPEITEM=0206a
+
+
+[EOF]

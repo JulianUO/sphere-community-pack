@@ -223,4 +223,58 @@ ON=@NpcRestock
    ITEM=loot_meer_captain
    //50 - 100 Gold. Crossbow, 40-60 Bolts, Sword, 10-20 Reagents
 
+
+/////////////////////////
+// Meer Loot Templates //
+/////////////////////////
+
+[TEMPLATE loot_meer_mage]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Meer Mage
+ITEM=i_gold,{300 350}
+ITEM=random_jewel,{1 2}
+ITEM=random_potion
+ITEM=random_scroll,{1 3}
+ITEM=random_wand_magic,R20
+CONTAINER=i_bag
+ITEM=i_gold,{200 250}
+ITEM=random_jewel,{1 2},R3
+ITEM=i_map_treasure,1,R99
+
+[TEMPLATE loot_meer_warrior]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Meer Warrior
+ITEM=i_gold,{50 100}
+ITEM=random_jewel,{1 2}
+ITEM=random_armor
+
+[TEMPLATE loot_meer_eternal]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Meer Eternal
+ITEM=i_gold,{500 600}
+ITEM=random_jewel,{2 3}
+ITEM=random_potion
+ITEM=random_scroll,{1 3}
+ITEM=random_wand_magic,R20
+ITEM=random_armor
+CONTAINER=i_bag
+ITEM=i_gold,{500 600}
+ITEM=random_jewel,{1 2},R2
+ITEM=i_gem_arcane,1,R35
+ITEM=random_weapon_all,1,R2
+ITEM=i_map_treasure,1,R50
+
+[TEMPLATE loot_meer_captain]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Meer Captain
+ITEM=i_gold,{50 100}
+ITEM=random_jewel,{1 2}
+ITEM=random_armor
+ITEM=random_weapon_sword_normal
+
+
 [EOF]

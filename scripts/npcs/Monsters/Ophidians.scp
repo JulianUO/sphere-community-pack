@@ -13,7 +13,7 @@ RESOURCES=1 i_ribs_raw
 BLOODCOLOR=colors_blood
 MOVERATE=200
 TAG.Barding.Diff=80.7
-//TAG.Luck.Loot=FIXME
+TAG.Luck.Loot=loot_ophidian_shaman_luck
 TAG.Slayer=SLAYER_OPHIDIAN
 TEVENTS=e_ophidian
 TEVENTS=e_carnivores2
@@ -46,7 +46,7 @@ ON=@Create
    RESFIRE={30 40}
    RESPOISON={40 50}
 ON=@NPCRestock
-   ITEM=loot_ophidian_mage
+   ITEM=loot_ophidian_shaman
    ITEM=i_staff_ophidian,1,R50
    //125 - 175 Gold. 1 Low Level Scroll, 1 Medium Level Scroll, 10 Reagents
    //Special: Level 2 Treasure Map
@@ -103,7 +103,7 @@ ON=@NPCRestock
    //Special: Level 1 Treasure Map
 
 [CHARDEF 057]
-DEFNAME=c_ophidian_queen
+DEFNAME=c_ophidian_matriarch
 NAME=ophidian matriarch
 ICON=i_pet_ophidian_queen
 SOUND=snd_monster_ophidian_queen1
@@ -253,5 +253,89 @@ ON=@NPCRestock
    ITEM=loot_ophidian_avenger
    //550 - 650 Gold. 1 Lesser Poison Potion, Magic Items
    //Special: Level 3 Treasure Map
+
+
+/////////////////////////////
+// Ophidian Loot Templates //
+/////////////////////////////
+
+[TEMPLATE loot_ophidian_shaman]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ophidian Shaman
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+ITEM=random_potion,{1 2}
+ITEM=random_reagent,10
+ITEM=random_scroll_low,1
+ITEM=random_scroll_medium,1
+
+[TEMPLATE loot_ophidian_shaman_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ophidian Shaman
+ITEM=i_treasure_map_lvl_2
+
+[TEMPLATE loot_ophidian_warrior]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ophidian Warrior
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+
+[TEMPLATE loot_ophidian_warrior_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ophidian Warrior
+ITEM=i_treasure_map_lvl_1
+
+[TEMPLATE loot_ophidian_matriarch]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ophidian Matriarch
+CONTAINER=i_backpack
+ITEM=i_gold,{550 650}
+ITEM=random_potion,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_ophidian_matriarch_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ophidian Matriarch
+ITEM=i_treasure_map_lvl_4
+
+[TEMPLATE loot_ophidian_justicar]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ophidian Justicar
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=random_reagent,{5 15}
+ITEM=random_reagent_necro,{5 15}
+ITEM=random_scroll_medium,2
+
+[TEMPLATE loot_ophidian_justicar_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ophidian Justicar
+ITEM=i_treasure_map_lvl_2
+
+[TEMPLATE loot_ophidian_avenger]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ophidian Avenger
+CONTAINER=i_backpack
+ITEM=i_gold,{550 650}
+ITEM=random_jewelry,{1 2}
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_ophidian_avenger_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ophidian Avenger
+ITEM=i_treasure_map_lvl_3
+
 
 [EOF]

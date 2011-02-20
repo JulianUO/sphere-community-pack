@@ -217,13 +217,7 @@ ON=@Create
    RESFIRE={20 30}
    RESPOISON={20 40}
 ON=@NpcRestock
-   ITEM=i_gold,{425 500}
-   ITEM=random_jewel,{2 4},R2
-   ITEM=random_ore,{3 6},R2
-   ITEM=random_armor_all_normal,R2
-   ITEM=random_weapon_all_normal,R2
-   ITEM=i_powdered_iron,{1 3},R5
-   ITEM=i_iron_beetle_scale,{1 3},R50
+   ITEM=loot_iron_beetle
 ON=@ContextMenuRequest
    IF (<IsMyPet>)
       SRC.AddContextEntry 101,6122//or 6145
@@ -396,7 +390,7 @@ ON=@Create
 ON=@NpcRestock
    ITEM=loot_ant_lion
    //250 - 300 Gold. 1-10 Large Colored Ore (Dull Copper to Bronze), 1-5 Fertile Dirt, Bones
-   //Special: An Adventurer's Skeleton, Fragrant Seed, Peculiar Seed.
+   //Special: An Adventurer Skeleton, Fragrant Seed, Peculiar Seed.
 ON=@Hit
    //Dig a tunnel and heal when hit with ranged attack
    IF (<DISTANCE>>2) && (RAND(2)==1)
@@ -411,5 +405,69 @@ ON=@Hit
       NEW.ATTR=attr_move_never|attr_decay
       NEW.TIMER=5
    ENDIF
+
+
+///////////////////////////
+// Insect Loot Templates //
+///////////////////////////
+
+[TEMPLATE loot_scorpion]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Scorpion
+ITEM=i_gold,{50 100}
+ITEM=random_potion
+
+[TEMPLATE loot_deathwatch_beetle]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Deathwatch Beetle
+ITEM=i_gold,{25 50}
+ITEM=random_jewel,{1 2},R2
+ITEM=random_potion,R2
+ITEM=random_armor,R2
+
+[TEMPLATE loot_rune_beetle]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Rune Beetle
+ITEM=i_gold,{1000 1200}
+ITEM=random_reagent,{5 15}
+ITEM=random_jewel,{1 2},R2
+ITEM=random_scroll,{1 3},R2
+ITEM=random_body_parts_1,1,R2
+ITEM=random_body_parts_2,1,R2
+ITEM=random_item_bone,1,R2
+ITEM=random_armor_all,1,R2
+
+[TEMPLATE loot_iron_beetle]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Iron Beetle
+ITEM=i_gold,{425 500}
+ITEM=random_jewel,{2 4},R2
+ITEM=random_ore,{3 6},R2
+ITEM=random_armor_all_normal,R2
+ITEM=random_weapon_all_normal,R2
+ITEM=i_powdered_iron,{1 3},R5
+ITEM=i_iron_beetle_scale,{1 3},R50
+
+[TEMPLATE loot_fire_ant]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Fire Ant
+ITEM=i_gold,{200 300}
+ITEM=i_fire_ant_goo,1,R5
+ITEM=i_map_treasure,1,R80
+
+[TEMPLATE loot_ant_lion]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ant Lion
+ITEM=i_gold,{250 300}
+ITEM=random_ore_common,{1 10}
+ITEM=i_reag_fertile_dirt,{1 5}
+ITEM=random_item_bone,1,R10
+
 
 [EOF]

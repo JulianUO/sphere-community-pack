@@ -425,4 +425,70 @@ ON=@Death
       ENDIF
    ENDIF
 
+
+///////////////////////////
+// Spider Loot Templates //
+///////////////////////////
+
+[TEMPLATE loot_spider_dread]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Spider (dread)
+ITEM=i_gold,{450 650}
+ITEM=i_reag_spider_silk,{5 9}
+ITEM={ random_magic_loot 1 0 25 }
+
+[TEMPLATE loot_spider_frost]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Spider (frost)
+ITEM=i_gold,{75 125}
+ITEM=i_reag_spider_silk,{5 9}
+
+[TEMPLATE loot_spider]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Spider (giant)
+ITEM=i_gold,{25 50}
+ITEM=random_jewel,1,R5
+ITEM=i_reag_spider_silk,{3 6}
+
+[TEMPLATE loot_mimic]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Mimic
+ITEM=i_gold,{1000 1200}
+ITEM=random_jewel,{1 3}
+ITEM=random_scroll,{1 3}
+ITEM=random_reagent,{4 6}
+ITEM=random_magic_loot,1,R12
+CONTAINER=i_bag
+ITEM=i_gold,{400 600}
+ITEM=random_jewel,{1 3},R2
+ITEM=random_reagent,{4 6},R3
+ITEM=random_wand_magic,1,R5
+ITEM=i_map_treasure,1,R80
+
+[TEMPLATE loot_spider_wolf]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Spider (wolf)
+ITEM=i_gold,{450 650}
+ITEM=i_reag_spider_silk,{5 9}
+ITEM=i_bottle_ichor,{1 3},R10
+ITEM=i_spider_carapace,1,R50
+ITEM={ random_magic_loot 1 0 25 }
+
+[TEMPLATE loot_spider_trapdoor]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Spider (trapdoor)
+ITEM=i_gold,{250 350}
+ITEM=i_reag_spider_silk,{5 9}
+ITEM=i_bottle_ichor,{1 3},R15
+ITEM=i_spider_carapace,1,R75
+ITEM={ random_magic_loot 1 0 100 }
+
+
+
 [EOF]

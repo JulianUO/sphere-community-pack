@@ -67,6 +67,26 @@ ON=@Create
 //  endif
 //endif
 
+[ITEMDEF 0225a]
+DEFNAME=i_spellbook_bard
+TYPE=t_spellbook_bard
+LAYER=layer_hand1
+VALUE=488
+WEIGHT=1.0
+RESOURCES=80 i_parchment,1 i_hides_cut,1 i_cloth
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Books
+DESCRIPTION=Bard
+TEVENTS=e_equipitem
+DUPELIST=0225b
+ON=@Create
+   ATTR=attr_magic|attr_newbie
+   MOREZ=700
+
+[ITEMDEF 0225b]
+//bard spellbook
+DUPEITEM=0225a
+
 [ITEMDEF 0238c]
 DEFNAME=i_spellbook_bushido
 TYPE=t_spellbook_bushido

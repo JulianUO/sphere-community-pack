@@ -158,7 +158,7 @@ RESOURCES=1 i_ingot_iron,1 i_wire_iron,1 i_scroll_protection
 CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Unknown Talisman
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 ON=@Equip
    SRC.SOUND=0fd
    SRC.EFFECT=3,i_fx_bless_effect,6,16,0
@@ -238,16 +238,6 @@ RESOURCES=5 i_glass_raw
 CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Vial of stuff?
-
-[ITEMDEF 02376]
-DEFNAME=i_cactus_festive
-DEFNAME=i_quest48_prize
-TYPE=t_normal
-VALUE=1000
-WEIGHT=10
-ON=@Create
-   ATTR=attr_newbie
-
 
 [ITEMDEF i_prismoflight_gate]
 ID=i_moongate_blue
@@ -508,7 +498,7 @@ ID=c_man
 NAME=Lord Garrison
 DESIRES=i_gold,e_notoriety
 AVERSIONS=t_TRAP,t_eerie_stuff
-RESOURCES=head_of_garrison, i_flesh_torso, i_flesh_right_arm, i_flesh_left_arm, i_flesh_left_leg, i_flesh_right_leg, i_blood_2
+RESOURCES=head_of_garrison, i_flesh_torso, i_flesh_right_arm, i_flesh_left_arm, i_flesh_left_leg, i_flesh_right_leg, i_blood
 
 CATEGORY=DO NOT USE
 SUBSECTION=QUEST MONSTERS

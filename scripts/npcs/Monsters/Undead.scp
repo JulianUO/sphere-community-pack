@@ -390,7 +390,7 @@ MOVERATE=120
 TAG.Barding.Diff=106.4
 TAG.DamCold=60
 TAG.DamEnergy=40
-//TAG.Luck.Loot=FIXME
+TAG.Luck.Loot=loot_lich_lord_luck
 TAG.Slayer=SLAYER_UNDEAD
 TEVENTS=e_undead
 CATEGORY=Monsters
@@ -749,6 +749,7 @@ TAG.Barding.Diff=128.8
 TAG.DamCold=50
 TAG.DamPoison=50
 TAG.HitPoison=5//Lethal
+TAG.Luck.Loot=loot_rotting_corpse_luck
 TAG.Slayer=SLAYER_UNDEAD
 TEVENTS=e_carnivores2
 TEVENTS=e_undead
@@ -1344,7 +1345,7 @@ ARMOR=35
 DESIRES=r_graveyards,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
 AVERSIONS=t_trap,r_civilization
 FOODTYPE=30 t_food,t_drink,t_fruit,t_grain
-RESOURCES=i_flesh_head, i_flesh_torso, i_flesh_right_arm, i_flesh_left_arm, i_flesh_left_leg, i_flesh_right_leg, i_blood_2
+RESOURCES=i_flesh_head, i_flesh_torso, i_flesh_right_arm, i_flesh_left_arm, i_flesh_left_leg, i_flesh_right_leg, i_blood
 BLOODCOLOR=colors_blood
 MOVERATE=100
 TAG.Barding.Diff=110.0
@@ -1413,7 +1414,7 @@ ARMOR=35
 DESIRES=r_graveyards,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
 AVERSIONS=t_trap,r_civilization
 FOODTYPE=30 t_food,t_drink,t_fruit,t_grain
-RESOURCES=i_flesh_head, i_flesh_torso, i_flesh_right_arm, i_flesh_left_arm, i_flesh_left_leg, i_flesh_right_leg, i_blood_2
+RESOURCES=i_flesh_head, i_flesh_torso, i_flesh_right_arm, i_flesh_left_arm, i_flesh_left_leg, i_flesh_right_leg, i_blood
 BLOODCOLOR=colors_blood
 MOVERATE=100
 TAG.Barding.Diff=110.0
@@ -1521,7 +1522,287 @@ ON=@Create
    RESFIRE={20 30}
    RESPOISON={50 60}
 ON=@NPCRestock
-   ITEM=random_weapon_sword_normal
+   ITEM=random_weapon_swordsmanship
    ITEM=average_undead_backpack
+
+
+///////////////////////////
+// Undead Loot Templates //
+///////////////////////////
+
+[TEMPLATE loot_zombie]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Zombie
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=random_bone_armor
+
+[TEMPLATE loot_lich]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Lich
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=random_scroll_medium,2
+ITEM=random_reagent_necro,{4 6}
+ITEM=random_reagent_necro,{4 6}
+ITEM=random_reagent_necro,{4 6}
+ITEM=random_jewel
+ITEM=random_jewel
+ITEM=random_magic_wands
+ITEM=i_staff_gnarled
+
+[TEMPLATE loot_lich_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Lich
+ITEM=i_treasure_map_lvl_3
+
+[TEMPLATE loot_spectre]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Spectre
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=random_reagent,{4 6}
+ITEM=random_reagent,{4 6}
+
+[TEMPLATE loot_skeleton]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Skeleton
+CONTAINER=i_backpack
+ITEM=i_gold,{25 50}
+ITEM=random_bone_armor
+
+[TEMPLATE loot_lich_ancient]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Lich (ancient)
+ITEM=i_gold,{1000 1100}
+ITEM=random_jewel,{3 4}
+ITEM=random_scroll,{2 3}
+ITEM=random_reagent,{6 9}
+ITEM=i_map_treasure,1,R20
+ITEM={ random_staves 99 i_staff_liche 1 }
+ITEM={ random_magic_loot 1 0 20 }
+ITEM=monster_necro_reg_bag
+ITEM=random_weapon
+ITEM=random_armor
+CONTAINER=i_bag
+ITEM=i_gold,{500 600}
+ITEM=random_jewel,{2 3}
+ITEM=random_reagent,{5 8}
+ITEM=random_wand_magic
+ITEM={ random_item_misc_rare 1 0 200 }
+
+[TEMPLATE loot_lich_lord]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Lich Lord
+CONTAINER=i_backpack
+ITEM=i_gold,{450 600}
+ITEM=random_reagent_necro,{20 30}
+ITEM=random_reagent_necro,{20 30}
+ITEM=random_reagent_necro,{20 30}
+ITEM=random_scroll_medium,2
+ITEM=random_jewel
+ITEM=random_magic_wands
+ITEM=random_staves
+
+[TEMPLATE loot_lich_lord_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Lich Lord
+ITEM=i_treasure_map_lvl_4
+ITEM=i_staff_liche,1,R50
+
+[TEMPLATE loot_dark_guardian]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Dark Guardian
+ITEM=i_gold,{200 250}
+ITEM=random_jewel,{1 3}
+ITEM=random_scroll,{1 3}
+ITEM=random_reagent,{4 6}
+ITEM=random_staves
+ITEM=random_weapon_all
+ITEM=random_armor_all
+ITEM=monster_necro_reg_bag
+ITEM=i_reag_demon_bone,{15 20}
+CONTAINER=i_bag
+ITEM=i_gold,{200 250}
+ITEM=i_reag_demon_bone,{10 15},R2
+ITEM=random_jewel,{1 3},R2
+ITEM=random_reagent,{4 6},R3
+ITEM=random_wand_magic,1,R5
+ITEM=i_map_treasure,1,R30
+
+[TEMPLATE loot_dragon_skeletal]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Skeletal Dragon
+ITEM=i_gold,{1600 1800}
+ITEM=random_jewelry,5
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_skeletal_dragon_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Skeletal Dragon
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_skeletal_knight]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Skeletal Knight
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=random_platemail_armor
+
+[TEMPLATE loot_skeletal_mage]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Skeletal Mage
+CONTAINER=i_backpack
+ITEM=i_gold,{125 150}
+ITEM=random_scroll_medium
+ITEM=random_reagent,3
+ITEM=random_reagent_necro,{3 6}
+ITEM=random_reagent_necro,{3 6}
+
+[TEMPLATE loot_ghoul]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ghoul
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=random_jewel
+ITEM=random_bone_armor
+ITEM=random_weapon
+
+[TEMPLATE loot_mummy]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Mummy
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=i_reag_garlic,5
+ITEM=i_bandage,10
+ITEM=random_potion
+ITEM=random_jewel
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_mummy_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Mummy
+ITEM=i_treasure_map_lvl_1
+// Fragrant Seed
+// Peculiar Seed
+
+[TEMPLATE loot_rotting_corpse]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Rotting Corpse
+CONTAINER=i_backpack
+ITEM=i_gold,{1000 1250}
+
+[TEMPLATE loot_rotting_corpse_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Rotting Corpse
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_revenant_lion]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Revenant Lion
+ITEM=i_gold,{300 400}
+ITEM=random_jewel,{2 4}
+ITEM=random_scroll,{1 3}
+ITEM=random_reagent_necro,{6 8}
+ITEM={ random_body_parts_1 1 random_body_parts_2 1 random_item_bone 1 0 15 }
+CONTAINER=i_bag
+ITEM=i_gold,{250 300}
+ITEM=random_scroll,{1 2},R3
+ITEM=random_reagent,{4 6},R2
+
+[TEMPLATE loot_lady_of_snow]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Lady of the Snow
+ITEM=i_gold,{500 650}
+ITEM=random_jewel,{1 2}
+ITEM=random_reagent,{2 4}
+ITEM=random_armor_all
+CONTAINER=i_bag
+ITEM=i_gold,{300 350}
+ITEM=random_jewel,{1 2},R3
+ITEM=random_reagent,{2 4},R5
+
+[TEMPLATE loot_golem_flesh]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Golem (flesh)
+ITEM=i_gold,{125 175}
+
+[TEMPLATE loot_gore_fiend]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Gore Fiend
+ITEM=i_gold,{125 175}
+
+[TEMPLATE loot_patchwork_skeleton]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Patchwork Skeleton
+ITEM=i_gold,{50 100}
+ITEM=random_jewel,{1 2},R3
+
+[TEMPLATE loot_wailing_banshee]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Wailing Banshee
+ITEM=i_gold,{50 100}
+ITEM=random_jewel,{1 2},R3
+
+[TEMPLATE loot_gargoyle_undead]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Gargoyle (undead)
+ITEM=i_gold,{350 400}
+ITEM=random_jewel,{1 3}
+ITEM=random_potion
+ITEM=random_reagent,{4 6}
+ITEM=random_scroll,{1 3}
+ITEM=i_map_treasure,R99
+CONTAINER=i_bag
+ITEM=i_gold,{200 250}
+ITEM=random_jewel,{1 3},R2
+ITEM=random_reagent,{4 6}
+ITEM=random_scroll,{1 2},R2
+ITEM=random_wand_magic,1,R7
+
+[TEMPLATE loot_dream_wraith]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Dream Wraith
+ITEM=i_gold,{125 200}
+ITEM=random_jewel,{1 3}
+ITEM=random_scroll,{1 3}
+ITEM=random_reagent,{4 6}
+ITEM={ random_magic_loot 1 0 50 }
+ITEM=monster_necro_reg_bag
+CONTAINER=i_bag
+ITEM=i_gold,{100 125}
+ITEM=random_jewel,{1 3},R2
+ITEM=random_reagent,{4 6},R3
+ITEM=random_wand_magic,1,R5
+ITEM=i_map_treasure,1,R80
+
 
 [EOF]

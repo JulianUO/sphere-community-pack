@@ -372,7 +372,7 @@ BLOODCOLOR=colors_blood
 MOVERATE=200
 TAG.Barding.Diff=128.8
 TAG.DamPoison=25
-TAG.Luck.Loot=loot_serpentine_dragon_luck
+TAG.Luck.Loot=loot_dragon_serpentine_luck
 TAG.Slayer=SLAYER_DRAGON
 TEVENTS=e_carnivores3
 CATEGORY=Monsters
@@ -429,7 +429,7 @@ BLOODCOLOR=colors_blood
 MOVERATE=100
 TAG.Barding.Diff=128.3
 TAG.Control.Slots=5
-TAG.Luck.Loot=loot_greater_dragon_luck
+TAG.Luck.Loot=loot_dragon_greater_luck
 TAG.Slayer=SLAYER_DRAGON
 TEVENTS=e_carnivores3
 CATEGORY=Monsters
@@ -460,7 +460,7 @@ ON=@Create
    RESFIRE={65 90}
    RESPOISON={40 60}
 ON=@NPCRestock
-   ITEM=loot_dragon
+   ITEM=loot_dragon_greater
    //1500 - 2000 Gold. 8 - 16 Gems, Magic Items
    //Special: Level 5 Treasure Map
 
@@ -481,7 +481,7 @@ MOVERATE=100
 TAG.Barding.Diff=124.9
 TAG.DamCold=25
 TAG.HitPoison=4//Deadly
-TAG.Luck.Loot=loot_shadow_wyrm_luck
+TAG.Luck.Loot=loot_wyrm_shadow_luck
 TAG.Slayer=SLAYER_DRAGON
 TEVENTS=e_carnivores3
 CATEGORY=Monsters
@@ -712,13 +712,9 @@ ON=@Create
    RESFIRE={40 45}
    RESPOISON={40 50}
 ON=@NPCRestock
+   ITEM=loot_dragon_fairy
    //1500 - 1600 Gold.
    //Special: Draconian Orb (Peerless Key), Fey Wings (Quest Item), Fairy Dragon Wings, Fairy Dust (Ingredient), Level 3 Treasure Map
-   ITEM=i_fairy_dust,{1 3},R5
-   ITEM=i_gold,{1500 1600}
-   ITEM=i_map_treasure,1,R40
-   ITEM=i_fey_wings,R20
-   ITEM=random_essence_virtue,{2 3},R5
 
 [CHARDEF 02cf]
 //FIXME: No Stratics data yet
@@ -814,5 +810,200 @@ ON=@Create
    RESPOISON={70 80}
 ON=@NpcRestock
    ITEM=loot_wyrm_white
+
+///////////////////////////////
+// Dragonkind Loot Templates //
+///////////////////////////////
+
+[TEMPLATE loot_dragon]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Dragon
+CONTAINER=i_backpack
+ITEM=i_gold,{1600 1800}
+ITEM=random_jewelry,5
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_dragon_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Dragon
+ITEM=i_treasure_map_lvl_4
+
+[TEMPLATE loot_wyrm_ancient]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Ancient Wyrm
+CONTAINER=i_backpack
+ITEM=i_gold,{1600 1800}
+ITEM=random_jewelry,5
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_ancient_wyrm_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Ancient Wyrm
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_wyrm_white]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=White Wyrm
+CONTAINER=i_backpack
+ITEM=i_gold,{1200 1400}
+ITEM=random_jewelry,{1 5}
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_white_wyrm_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=White Wyrm
+ITEM=i_treasure_map_lvl_4
+
+[TEMPLATE loot_drake]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Drake
+CONTAINER=i_backpack
+ITEM=i_gold,{275 325}
+ITEM=random_jewelry,5
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,2
+ITEM=random_reagent,3
+
+[TEMPLATE loot_drake_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Drake
+ITEM=i_treasure_map_lvl_2
+
+[TEMPLATE loot_wyvern]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Wyvern
+CONTAINER=i_backpack
+ITEM=i_gold,{175 225}
+ITEM=random_potion,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_wyvern_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Wyvern
+ITEM=i_treasure_map_lvl_2
+
+[TEMPLATE loot_dragon_serpentine]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Serpentine Dragon
+ITEM=i_gold,{1500 2000}
+ITEM=random_jewelry,{8 16}
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_dragon_serpentine_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Serpentine Dragon
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_dragon_greater]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Greater Dragon
+ITEM=i_gold,{1500 2000}
+ITEM=random_jewelry,{8 16}
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_dragon_greater_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Greater Dragon
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_wyrm_shadow]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Shadow Wyrm
+ITEM=i_gold,{1550 1800}
+ITEM=random_jewelry,5
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{1 2}
+
+[TEMPLATE loot_wyrm_shadow_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Shadow Wyrm
+ITEM=i_treasure_map_lvl_5
+
+[TEMPLATE loot_dragon_stygian]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Stygian Dragon
+ITEM=i_gold,{1500 2000}
+ITEM=random_potion,{2 3}
+ITEM=random_scroll,{2 3}
+ITEM=random_wand_magic
+ITEM=random_goodie_rich
+ITEM=random_filthy_rich_magic_goodie
+ITEM=random_filthy_rich_magic_loot
+ITEM=random_armor_all
+ITEM=random_weapon_all
+ITEM=random_item_dragonscale,{3 5},R5
+ITEM=random_item_carcass,1,R20
+ITEM=i_map_treasure,1,R20
+CONTAINER=i_bag
+ITEM=i_gold,{1000 2000}
+ITEM=random_potion,1,R2
+ITEM=random_scroll,1,R2
+ITEM=random_filthy_rich_magic_goodie,1,R2
+ITEM=random_filthy_rich_magic_loot,1,R2
+ITEM=random_armor_all,1,R2
+ITEM=random_weapon_all,1,R2
+ITEM=random_magic_custom_greater,1,R6
+ITEM=random_magic_jewelry,1,R10
+ITEM=random_item_misc_rare,1,R25
+
+[TEMPLATE loot_hydra]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Hydra
+ITEM=i_gold,{500 600}
+ITEM=random_scroll,{1 3}
+ITEM=random_jewel,{1 3}
+ITEM=random_wand_magic
+ITEM=random_potion
+ITEM=random_weapon
+ITEM=random_armor
+ITEM=random_item_dragonscale,{2 3},R10
+ITEM=random_item_carcass,1,R99
+CONTAINER=i_bag
+ITEM=i_gold,{400 500}
+ITEM=random_scroll,{1 2},R2
+ITEM=random_jewel,{1 2},R2
+ITEM=random_wand_magic,1,R2
+ITEM=random_potion,1,R2
+ITEM={ random_magic_custom_greater 1 random_magic_jewelry 1 random_item_misc_rare 1 0 200 }
+
+[TEMPLATE loot_dragon_fairy]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Fairy Dragon
+ITEM=i_fairy_dust,{1 3},R5
+ITEM=i_gold,{1500 1600}
+ITEM=i_map_treasure,1,R40
+ITEM=i_fey_wings,R20
+ITEM=random_essence_virtue,{2 3},R5
 
 [EOF]

@@ -1,0 +1,634 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+VERSION=0.56b
+
+[ITEMDEF 02080]
+DEFNAME=i_rune_clumsy
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery First Circle
+NAME=Clumsy
+
+[ITEMDEF 02081]
+DEFNAME=i_rune_create_food
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery First Circle
+NAME=Create Food
+
+[ITEMDEF 02082]
+DEFNAME=i_rune_feeblemind
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery First Circle
+NAME=Feeblemind
+
+[ITEMDEF 02083]
+DEFNAME=i_rune_heal
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery First Circle
+NAME=Heal
+
+[ITEMDEF 02084]
+DEFNAME=i_rune_magic_arrow
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery First Circle
+NAME=Magic Arrow
+
+[ITEMDEF 02085]
+DEFNAME=i_rune_night_sight
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery First Circle
+NAME=Night Sight
+
+[ITEMDEF 02086]
+DEFNAME=i_rune_reactive_armor
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery First Circle
+NAME=Reactive Armor
+
+[ITEMDEF 02087]
+DEFNAME=i_rune_weaken
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery First Circle
+NAME=Weaken
+
+[ITEMDEF 02088]
+DEFNAME=i_rune_agility
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Second Circle
+NAME=Agility
+
+[ITEMDEF 02089]
+DEFNAME=i_rune_cunning
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Second Circle
+NAME=Cunning
+
+[ITEMDEF 0208a]
+DEFNAME=i_rune_cure
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Second Circle
+NAME=Cure
+
+[ITEMDEF 0208b]
+DEFNAME=i_rune_harm
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Second Circle
+NAME=Harm
+
+[ITEMDEF 0208c]
+DEFNAME=i_rune_magic_trap
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Second Circle
+NAME=Magic Trap
+
+[ITEMDEF 0208d]
+DEFNAME=i_rune_magic_untrap
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Second Circle
+NAME=Magic Untrap
+
+[ITEMDEF 0208e]
+DEFNAME=i_rune_protection
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Second Circle
+NAME=Protection
+
+[ITEMDEF 0208f]
+DEFNAME=i_rune_strength
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Second Circle
+NAME=Strength
+
+[ITEMDEF 02090]
+DEFNAME=i_rune_bless
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Third Circle
+NAME=Bless
+
+[ITEMDEF 02091]
+DEFNAME=i_rune_fireball
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Third Circle
+NAME=Fireball
+
+[ITEMDEF 02092]
+DEFNAME=i_rune_magic_lock
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Third Circle
+NAME=Magic Lock
+
+[ITEMDEF 02093]
+DEFNAME=i_rune_poison
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Third Circle
+NAME=Poison
+
+[ITEMDEF 02094]
+DEFNAME=i_rune_telekinesis
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Third Circle
+NAME=Telekinesis
+
+[ITEMDEF 02095]
+DEFNAME=i_rune_teleport
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Third Circle
+NAME=Teleport
+
+[ITEMDEF 02096]
+DEFNAME=i_rune_unlock
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Third Circle
+NAME=Magic Unlock
+
+[ITEMDEF 02097]
+DEFNAME=i_rune_wall_of_stone
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Third Circle
+NAME=Wall of Stone
+
+[ITEMDEF 02098]
+DEFNAME=i_rune_archcure
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fourth Circle
+NAME=Archcure
+
+[ITEMDEF 02099]
+DEFNAME=i_rune_archprotection
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fourth Circle
+NAME=Archprotection
+
+[ITEMDEF 0209a]
+DEFNAME=i_rune_curse
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fourth Circle
+NAME=Curse
+
+[ITEMDEF 0209b]
+DEFNAME=i_rune_fire_field
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fourth Circle
+NAME=Fire Field
+
+[ITEMDEF 0209c]
+DEFNAME=i_rune_greater_heal
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fourth Circle
+NAME=Greater Heal
+
+[ITEMDEF 0209d]
+DEFNAME=i_rune_lightning
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fourth Circle
+NAME=Lightning
+
+[ITEMDEF 0209e]
+DEFNAME=i_rune_mana_drain
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fourth Circle
+NAME=Mana Drain
+
+[ITEMDEF 0209f]
+DEFNAME=i_rune_recall
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fourth Circle
+NAME=Recall
+
+[ITEMDEF 020a0]
+DEFNAME=i_rune_blade_spirits
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fifth Circle
+NAME=Blade Spirits
+
+[ITEMDEF 020a1]
+DEFNAME=i_rune_dispel_field
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fifth Circle
+NAME=Dispel Field
+
+[ITEMDEF 020a2]
+DEFNAME=i_rune_incognito
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fifth Circle
+NAME=Incognito
+
+[ITEMDEF 020a3]
+DEFNAME=i_rune_magic_reflection
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fifth Circle
+NAME=Magic Reflection
+
+[ITEMDEF 020a4]
+DEFNAME=i_rune_mind_blast
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fifth Circle
+NAME=Mind Blast
+
+[ITEMDEF 020a5]
+DEFNAME=i_rune_paralyze
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fifth Circle
+NAME=Paralyze
+
+[ITEMDEF 020a6]
+DEFNAME=i_rune_poison_field
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fifth Circle
+NAME=Poison Field
+
+[ITEMDEF 020a7]
+DEFNAME=i_rune_summon_creature
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fifth Circle
+NAME=Summon Creature
+
+[ITEMDEF 020a8]
+DEFNAME=i_rune_dispel
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Sixth Circle
+NAME=Dispel
+
+[ITEMDEF 020a9]
+DEFNAME=i_rune_energy_bolt
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Sixth Circle
+NAME=Energy Bolt
+
+[ITEMDEF 020aa]
+DEFNAME=i_rune_explosion
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Sixth Circle
+NAME=Explosion
+
+[ITEMDEF 020ab]
+DEFNAME=i_rune_invisibility
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Sixth Circle
+NAME=Invisibility
+
+[ITEMDEF 020ac]
+DEFNAME=i_rune_mark
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Sixth Circle
+NAME=Mark
+
+[ITEMDEF 020ad]
+DEFNAME=i_rune_mass_curse
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Sixth Circle
+NAME=Mass Curse
+
+[ITEMDEF 020ae]
+DEFNAME=i_rune_paralyze_field
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Sixth Circle
+NAME=Paralyze Field
+
+[ITEMDEF 020af]
+DEFNAME=i_rune_reveal
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Sixth Circle
+NAME=Reveal
+
+[ITEMDEF 020b0]
+DEFNAME=i_rune_chain_lightning
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Seventh Circle
+NAME=Chain Lightning
+
+[ITEMDEF 020b1]
+DEFNAME=i_rune_energy_field
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Seventh Circle
+NAME=Energy Field
+
+[ITEMDEF 020b2]
+DEFNAME=i_rune_flamestrike
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Seventh Circle
+NAME=Flamestrike
+
+[ITEMDEF 020b3]
+DEFNAME=i_rune_gate_travel
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Seventh Circle
+NAME=Gate Travel
+
+[ITEMDEF 020b4]
+DEFNAME=i_rune_mana_vampire
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Seventh Circle
+NAME=Mana Vampire
+
+[ITEMDEF 020b5]
+DEFNAME=i_rune_mass_dispel
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Seventh Circle
+NAME=Mass Dispell
+
+[ITEMDEF 020b6]
+DEFNAME=i_rune_meteor_swarm
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Seventh Circle
+NAME=Meteor Swarm
+
+[ITEMDEF 020b7]
+DEFNAME=i_rune_polymorph
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Seventh Circle
+NAME=Polymorph
+
+[ITEMDEF 020b8]
+DEFNAME=i_rune_earthquake
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Eighth Circle
+NAME=Earthquake
+
+[ITEMDEF 020b9]
+DEFNAME=i_rune_energy_vortex
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Eighth Circle
+NAME=Energy Vortex
+
+[ITEMDEF 020ba]
+DEFNAME=i_rune_resurrection
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Eighth Circle
+NAME=Resurrection
+
+[ITEMDEF 020bb]
+DEFNAME=i_rune_summon_elem_air
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Eighth Circle
+NAME=Summon Air Elemental
+
+[ITEMDEF 020bc]
+DEFNAME=i_rune_summon_daemon
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Eighth Circle
+NAME=Summon Deamon
+
+[ITEMDEF 020bd]
+DEFNAME=i_rune_summon_elem_earth
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Eighth Circle
+NAME=Summon Earth Elemental
+
+[ITEMDEF 020be]
+DEFNAME=i_rune_summon_elem_fire
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Eighth Circle
+NAME=Summon Fire Elemental
+
+[ITEMDEF 020bf]
+DEFNAME=i_rune_summon_elem_water
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Eighth Circle
+NAME=Summon Water Elemental
+
+[ITEMDEF 020c0]
+DEFNAME=i_spell_circle_1
+NAME=First Circle
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery First Circle
+DESCRIPTION=@
+
+[ITEMDEF 020c1]
+DEFNAME=i_spell_circle_2
+NAME=Second Circle
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Second Circle
+DESCRIPTION=@
+
+[ITEMDEF 020c2]
+DEFNAME=i_spell_circle_3
+NAME=Third Circle
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Third Circle
+DESCRIPTION=@
+
+[ITEMDEF 020c3]
+DEFNAME=i_spell_circle_4
+NAME=Fourth Circle
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fourth Circle
+DESCRIPTION=@
+
+[ITEMDEF 020c4]
+DEFNAME=i_spell_circle_5
+NAME=Fifth Circle
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Fifth Circle
+DESCRIPTION=@
+
+[ITEMDEF 020c5]
+DEFNAME=i_spell_circle_6
+NAME=Sixth Circle
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Sixth Circle
+DESCRIPTION=@
+
+[ITEMDEF 020c6]
+DEFNAME=i_spell_circle_7
+NAME=Seventh Circle
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Seventh Circle
+DESCRIPTION=@
+
+[ITEMDEF 020c7]
+DEFNAME=i_spell_circle_8
+NAME=Eighth Circle
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Magery Eighth Circle
+DESCRIPTION=@
+
+[ITEMDEF 0238d]
+DEFNAME=i_rune_honorable_execution
+NAME=honorable execution
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Bushido
+DESCRIPTION=Honorable Execution
+
+[ITEMDEF 0238e]
+DEFNAME=i_rune_confidence
+NAME=confidence
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Bushido
+DESCRIPTION=Confidence
+
+[ITEMDEF 0238f]
+DEFNAME=i_rune_evasion
+NAME=evasion
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Bushido
+DESCRIPTION=Evasion
+
+[ITEMDEF 02390]
+DEFNAME=i_rune_counter_attack
+NAME=counter attack
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Bushido
+DESCRIPTION=Counter Attack
+
+[ITEMDEF 02391]
+DEFNAME=i_rune_lightning_strike
+NAME=lightening strike
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Bushido
+DESCRIPTION=Lightening Strike
+
+[ITEMDEF 02392]
+DEFNAME=i_rune_momentum_strike
+NAME=momentum strike
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Bushido
+DESCRIPTION=Momentum Strike
+
+[ITEMDEF 023a1]
+DEFNAME=i_rune_focus_attack
+NAME=focus attack
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Ninjitsu
+DESCRIPTION=Focus Attack
+
+[ITEMDEF 023a2]
+DEFNAME=i_rune_death_strike
+NAME=death strike
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Ninjitsu
+DESCRIPTION=Death Strike
+
+[ITEMDEF 023a3]
+DEFNAME=i_rune_animal_form
+NAME=animal form
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Ninjitsu
+DESCRIPTION=Animal Form
+
+[ITEMDEF 023a4]
+DEFNAME=i_rune_ki_attack
+NAME=ki attack
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Ninjitsu
+DESCRIPTION=Ki Attack
+
+[ITEMDEF 023a5]
+DEFNAME=i_rune_suprise_attack
+NAME=suprise attack
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Ninjitsu
+DESCRIPTION=Suprise Attack
+
+[ITEMDEF 023a6]
+DEFNAME=i_rune_backstab
+NAME=backstab
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Ninjitsu
+DESCRIPTION=Backstab
+
+[ITEMDEF 023a7]
+DEFNAME=i_rune_shadowjump
+NAME=shadow jump
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Ninjitsu
+DESCRIPTION=Shadow Jump
+
+[ITEMDEF 023a8]
+DEFNAME=i_rune_mirror_image
+NAME=mirror image
+TYPE=t_spellicon
+CATEGORY=Spell Icons
+SUBSECTION=Ninjitsu
+DESCRIPTION=Mirror Image
+
+
+[EOF]

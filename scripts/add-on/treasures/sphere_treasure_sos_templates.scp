@@ -15,13 +15,13 @@ VERSION=0.56b
 // --------------------
 // Templates for items that you get from SOS Treasure Maps
 
-[template tm_sos_treasure_ancient]
+[TEMPLATE tm_sos_treasure_ancient]
 // this is one level greater than any common sos
 CATEGORY=Item Templates
 SUBSECTION=Treasure Hunting
 DESCRIPTION=Ancient SOS Treasure
 
-[template tm_sos_treasure]
+[TEMPLATE tm_sos_treasure]
 // common sos treasure
 CATEGORY=Item Templates
 SUBSECTION=Treasure Hunting
@@ -80,4 +80,4 @@ DESCRIPTION=Body Parts
 ITEM={ i_flesh_arm_right 1 i_flesh_upper_body 1 i_flesh_leggings 1 i_flesh_torso_2 1 i_flesh_head 1 i_flesh_leg 1 i_flesh 1 i_flesh_legs_3 1 i_flesh_arm_left 1 i_flesh_upper_body_2 1 i_flesh_legs_4 1 i_flesh_torso_3 1 i_flesh_2 1 i_flesh_legs_5 1 i_flesh_leg_2 1 i_flesh_heart 1 i_flesh_liver 1 i_flesh_entrails 1 i_flesh_brain 1 i_flesh_torso 1 i_flesh_head_2 1 i_flesh_left_arm 1 i_flesh_right_arm 1 i_flesh_left_leg 1 i_flesh_right_leg 1 }
 
 
-[eof]
+[EOF]

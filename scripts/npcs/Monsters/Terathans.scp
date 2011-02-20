@@ -195,4 +195,67 @@ ON=@NpcRestock
    // 550 - 650 Gold. Magic Items
    //Special: Level 3 Treasure Map
 
+
+/////////////////////////////
+// Terathan Loot Templates //
+/////////////////////////////
+
+[TEMPLATE loot_terathan_warrior]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Terathan Warrior
+CONTAINER=i_backpack
+ITEM=i_gold,{125 175}
+
+[TEMPLATE loot_terathan_warrior_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Terathan Warrior
+ITEM=i_treasure_map_lvl_1
+// Fragrant Seed
+// Peculiar Seed
+
+[TEMPLATE loot_terathan_drone]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Terathan Drone
+CONTAINER=i_backpack
+ITEM=i_gold,{50 100}
+ITEM=i_reag_spider_silk,{1 3}
+
+[TEMPLATE loot_terathan_matriarch]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Terathan Matriarch
+CONTAINER=i_backpack
+ITEM=i_gold,{550 650}
+ITEM=i_reag_spider_silk,5
+ITEM=random_reagent_necro,1
+ITEM=random_potion,1
+ITEM=random_scroll_medium,2
+
+[TEMPLATE loot_terathan_matriarch_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Terathan Matriarch
+ITEM=i_treasure_map_lvl_4
+
+[TEMPLATE loot_terathan_avenger]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Terathan Avenger
+CONTAINER=i_backpack
+ITEM=i_gold,{550 650}
+ITEM=random_jewelry,{1 2}
+ITEM=random_potion,{1 2}
+ITEM=random_wands,{1 2}
+ITEM=random_scroll_medium,{2 3}
+
+[TEMPLATE loot_terathan_avenger_luck]
+CATEGORY=Item Templates
+SUBSECTION=Monster Special Loot Templates
+DESCRIPTION=Terathan Avenger
+ITEM=i_treasure_map_lvl_3
+
+
 [EOF]

@@ -3622,6 +3622,27 @@ DUPEITEM=01b9b
 //twigs
 DUPEITEM=01b9b
 
+[ITEMDEF 0222e]
+DEFNAME=i_giant_mushroom
+NAME=giant mushroom
+TYPE=t_normal
+CATEGORY=Vegetation
+SUBSECTION=Mushrooms
+DESCRIPTION=Giant Mushroom
+DUPELIST=0222f,02230,2231
+
+[ITEMDEF 0222f]
+//giant mushroom
+DUPEITEM=0222e
+
+[ITEMDEF 02230]
+//giant mushroom
+DUPEITEM=0222e
+
+[ITEMDEF 02231]
+//giant mushroom
+DUPEITEM=0222e
+
 [ITEMDEF 0246c]
 //technically its grass, but we want to harvest it like a tree
 DEFNAME=i_tree_bamboo

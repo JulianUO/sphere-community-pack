@@ -89,9 +89,7 @@ ON=@Create
    RESFIRE={5 10}
    RESPOISON={10 20}
 ON=@NPCRestock
-   ITEM=loot_lizardman
-   ITEM=i_spear
-   ITEM=i_spear_lizardman,1,R50
+   ITEM=loot_lizardman_spear
    //50 - 75 Gold
    //Special: Level 1 Treasure Map
 
@@ -139,10 +137,39 @@ ON=@Create
    RESFIRE={5 10}
    RESPOISON={10 20}
 ON=@NPCRestock
-   ITEM=loot_lizardman
-   ITEM=i_mace
-   ITEM=i_mace_lizardman,1,R50
+   ITEM=loot_lizardman_mace
    //50 - 75 Gold
    //Special: Level 1 Treasure Map
+
+
+//////////////////////////////
+// Lizardmen Loot Templates //
+//////////////////////////////
+
+[TEMPLATE loot_lizardman]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Lizardman
+CONTAINER=i_backpack
+ITEM=i_gold,{50 75}
+
+[TEMPLATE loot_lizardman_spear]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Lizardman (Spear)
+CONTAINER=i_backpack
+ITEM=i_gold,{50 75}
+ITEM=i_spear
+ITEM=i_spear_lizardman,1,R50
+
+[TEMPLATE loot_lizardman_mace]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Lizardman (Mace)
+CONTAINER=i_backpack
+ITEM=i_gold,{50 75}
+ITEM=i_mace
+ITEM=i_mace_lizardman,1,R50
+
 
 [EOF]

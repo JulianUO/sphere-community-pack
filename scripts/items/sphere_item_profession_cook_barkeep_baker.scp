@@ -1695,4 +1695,32 @@ DUPEITEM=01f9b
 //raw fish, cut open facing NE
 DUPEITEM=01e15
 
+[ITEMDEF 02068]
+DEFNAME=i_cauldron_2
+NAME=cauldron
+FLIP=1
+VALUE=169
+WEIGHT=39.0
+RESOURCES=8 i_ingot_iron,1 i_kettle
+SKILLMAKE=Tinkering 65.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Cook
+DESCRIPTION=Cauldron 2 (empty)
+DUPELIST=0207a
+
+[ITEMDEF 0207a]
+//Cauldron2 (empty)
+DUPEITEM=02068
+
+[ITEMDEF 0207b]
+DEFNAME=i_basket_3
+TYPE=t_container
+TDATA2=041
+WEIGHT=1.0
+RESOURCES=3 i_straw,1 i_string,1 i_cloth
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Basket 2
+
+
 [EOF]
