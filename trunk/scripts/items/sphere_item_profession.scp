@@ -21,7 +21,7 @@ DEFNAME=i_mallet_and_chisel
 RESOURCES=2 i_ingot_iron, 1 i_board
 WEIGHT=4
 CATEGORY=Items by Professions
-SUBSECTION=Artists
+SUBSECTION=Masons
 DESCRIPTION=Mallet and Chisel
 
 
@@ -245,7 +245,7 @@ TYPE=t_bandage_blood
 RESOURCES=1 i_bandage 1 i_blood
 WEIGHT=.1
 CATEGORY=Items by Professions
-SUBSECTION=Healer
+SUBSECTION=Healers
 DESCRIPTION=Bloody Bandages
 DUPELIST=0e22
 
@@ -256,7 +256,7 @@ TYPE=t_bandage
 WEIGHT=.1
 DUPELIST=0ee9
 CATEGORY=Items by Professions
-SUBSECTION=Healer
+SUBSECTION=Healers
 DESCRIPTION=Clean Bandages
 
 [ITEMDEF 0e22]
@@ -267,13 +267,12 @@ DUPEITEM=0e20
 DEFNAME=i_water_bloody
 RESOURCES=1 i_blood, 1 i_water, 1 i_basin
 CATEGORY=Items by Professions
-SUBSECTION=Healer
+SUBSECTION=Healers
 DESCRIPTION=Bloody Water
 
 [ITEMDEF 0ee9]
 //clean bandages
 DUPEITEM=0e21
-
 
 
 /////////////////////////////
@@ -286,7 +285,7 @@ RESOURCES=2 i_board, 7 i_sand
 TYPE=t_crystal_ball
 WEIGHT=3
 CATEGORY=Items by Professions
-SUBSECTION=Gypsy
+SUBSECTION=Fortune Tellers
 DESCRIPTION=Crystal ball
 DUPELIST=0e2e,0e2f,0e30
 
@@ -304,7 +303,7 @@ DEFNAME=i_cards_tarot
 RESOURCES=13 i_paper
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Gypsy
+SUBSECTION=Fortune Tellers
 DESCRIPTION=Tarot Cards
 DUPELIST=012a6,012a7,012a8,012a9,012aa,012ab,012ac
 
@@ -342,200 +341,171 @@ DUPEITEM=012a5
 ///////////////////////
 
 [ITEMDEF 0e9f]
-//portrait
 DEFNAME=i_portrait_1
-RESOURCES=15 i_log,25 i_cloth
 WEIGHT=3
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Portrait
+RESOURCES=15 i_log,25 i_cloth
 SKILLMAKE=carpentry 80.0, tailoring 65.0, t_carpentry, t_sewing_kit
+CATEGORY=Items by Professions
+SUBSECTION=Painters
+DESCRIPTION=Portrait 1
 DUPELIST=0ec8
 
 [ITEMDEF 0ea0]
-//painting
 DEFNAME=i_portrait_big
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Painting
+WEIGHT=3
 RESOURCES=25 i_log,35 i_cloth
 SKILLMAKE=carpentry 85.0, tailoring 70.0, t_carpentry, t_sewing_kit
+CATEGORY=Items by Professions
+SUBSECTION=Painters
+DESCRIPTION=Portrait (big)
 
 [ITEMDEF 0ea1]
-//painting
 DEFNAME=i_portrait_2
-RESOURCES=1 i_board, 1 i_dyes
 WEIGHT=3
+RESOURCES=1 i_log,25 i_cloth
+SKILLMAKE=carpentry 85.0, tailoring 70.0, t_carpentry, t_sewing_kit
 CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Painting
+SUBSECTION=Painters
+DESCRIPTION=Portrait 2
 DUPELIST=0ea2
 
 [ITEMDEF 0ea2]
-//painting
+//painting 2
 DUPEITEM=0ea1
 
 [ITEMDEF 0ea3]
-//painting
 DEFNAME=i_portrait_3
-RESOURCES=15 i_log,25 i_cloth
 WEIGHT=3
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Painting
+RESOURCES=15 i_log,25 i_cloth
 SKILLMAKE=carpentry 80.0, tailoring 65.0, t_carpentry, t_sewing_kit
+CATEGORY=Items by Professions
+SUBSECTION=Painters
+DESCRIPTION=Portrait 3
 DUPELIST=0ea4
 
 [ITEMDEF 0ea4]
-//painting
+//painting 3
 DUPEITEM=0ea3
 
 [ITEMDEF 0ea5]
-//portrait
 DEFNAME=i_portrait_4
-RESOURCES=15 i_log,25 i_cloth
 WEIGHT=3
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Portrait
-DUPELIST=0ea6
+RESOURCES=15 i_log,25 i_cloth
 SKILLMAKE=carpentry 80.0, tailoring 65.0, t_carpentry, t_sewing_kit
+CATEGORY=Items by Professions
+SUBSECTION=Painters
+DESCRIPTION=Portrait 4
+DUPELIST=0ea6
 
 [ITEMDEF 0ea6]
-//portrait
+//portrait 4
 DUPEITEM=0ea5
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Portrait
 
 [ITEMDEF 0ea7]
-//portrait
 DEFNAME=i_portrait_5
-RESOURCES=15 i_log,25 i_cloth
 WEIGHT=5
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Portrait
-DUPELIST=0ea8
+RESOURCES=15 i_log,25 i_cloth
 SKILLMAKE=carpentry 80.0, tailoring 65.0, t_carpentry, t_sewing_kit
+CATEGORY=Items by Professions
+SUBSECTION=Painters
+DESCRIPTION=Portrait 5
+DUPELIST=0ea8
 
 [ITEMDEF 0ea8]
-//portrait
+//portrait 5
 DUPEITEM=0ea7
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Portrait
-
-[ITEMDEF 0eb5]
-//music stand
-DEFNAME=i_music_stand
-RESOURCES=15 i_log
-WEIGHT=3
-CATEGORY=Items by Professions
-SUBSECTION=Bard
-DESCRIPTION=Music Stand
-SKILLMAKE=carpentry 78.9, t_carpentry
-DUPELIST=0eb7
 
 [ITEMDEF 0ec8]
-//painting
-DEFNAME=i_portrait_6
-RESOURCES=15 i_log,25 i_cloth
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Painting
-SKILLMAKE=carpentry 80.0, tailoring 65.0, t_carpentry, t_sewing_kit
-DUPELIST=0e9f
+//portrait 1
+DUPEITEM=0e9f
 
 [ITEMDEF 0ec9]
-//painting
+//portrait 7
 DUPEITEM=0ee7
 
 [ITEMDEF 0ee7]
-//portrait
 DEFNAME=i_portrait_7
 WEIGHT=5
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Portrait
 RESOURCES=15 i_log,25 i_cloth
 SKILLMAKE=carpentry 80.0, tailoring 65.0, t_carpentry, t_sewing_kit
+CATEGORY=Items by Professions
+SUBSECTION=Painters
+DESCRIPTION=Portrait 7
 DUPELIST=0ec9
 
 [ITEMDEF 0f65]
-//easel
 DEFNAME=i_easel
+TYPE=t_normal
+FLIP=1
+WEIGHT=15
 RESOURCES=15 i_board
 CATEGORY=Items by Professions
-SUBSECTION=Artists
+SUBSECTION=Painters
 DESCRIPTION=Easel
 DUPELIST=0f67,0f69
+
+[ITEMDEF 0f66]
+DEFNAME=i_easel_with_canvas
+TYPE=t_normal
+FLIP=1
+WEIGHT=24
+RESOURCES=20 i_log
+SKILLMAKE=Carpentry 86.8, t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=Painters
+DESCRIPTION=Easel with Canvas
+DUPELIST=0f68,0f6a
 
 [ITEMDEF 0f67]
 //easel
 DUPEITEM=0f65
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Easel
+
+[ITEMDEF 0f68]
+//easel with canvas
+DUPEITEM=0f66
 
 [ITEMDEF 0f69]
 //easel
 DUPEITEM=0f65
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Easel
+
+[ITEMDEF 0f6a]
+//easel with canvas
+DUPEITEM=0f66
 
 [ITEMDEF 0f71]
-//rack of canvases
 DEFNAME=i_canvases_rack
 RESOURCES=3 i_canvas, 1 i_easel
 CATEGORY=Items by Professions
-SUBSECTION=Artists
+SUBSECTION=Painters
 DESCRIPTION=Rack of Canvases
 DUPELIST=0f72,0f73,0f74,0f75,0f76
 
 [ITEMDEF 0f72]
 //rack of canvases
 DUPEITEM=0f71
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Rack of Canvases
 
 [ITEMDEF 0f73]
 //rack of canvases
 DUPEITEM=0f71
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Rack of Canvases
 
 [ITEMDEF 0f74]
 //rack of canvases
 DUPEITEM=0f71
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Rack of Canvases
 
 [ITEMDEF 0f75]
 //rack of canvases
 DUPEITEM=0f71
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Rack of Canvases
 
 [ITEMDEF 0f76]
 //rack of canvases
 DUPEITEM=0f71
-CATEGORY=Items by Professions
-SUBSECTION=Artists
-DESCRIPTION=Rack of Canvases
 
 [ITEMDEF 0fc1]
-//paints and brush
 DEFNAME=i_palette
 RESOURCES=1 i_brush, 6 i_dyes, 1 i_board
 WEIGHT=4
 CATEGORY=Items by Professions
-SUBSECTION=Artists
+SUBSECTION=Painters
 DESCRIPTION=Paints & Brushes
 
 
@@ -543,27 +513,43 @@ DESCRIPTION=Paints & Brushes
 // Musician Equipment //
 ////////////////////////
 
+[ITEMDEF 0eb5]
+DEFNAME=i_music_stand
+FLIP=1
+WEIGHT=3
+RESOURCES=15 i_log
+SKILLMAKE=carpentry 78.9, t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=Musicians
+DESCRIPTION=Music Stand
+DUPELIST=0eb7
+
 [ITEMDEF 0eb7]
 //music stand
 DUPEITEM=0eb5
 
 [ITEMDEF 0eb9]
-//music stand
 DEFNAME=i_music_stand_tall_book
+FLIP=1
+WEIGHT=3
 RESOURCES=i_music_stand_tall, i_sheet_music
 SKILLMAKE=carpentry 81.5, t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=Musicians
+DESCRIPTION=Music Stand with Sheet Music
 DUPELIST=0eba
 
 [ITEMDEF 0eba]
-//music stand
+//music stand with sheet music
 DUPEITEM=0eb9
 
 [ITEMDEF 0ebd]
-//sheet music
 DEFNAME=i_sheet_music
+FLIP=1
+WEIGHT=0.1
 RESOURCES=10 i_parchment
 CATEGORY=Items by Professions
-SUBSECTION=Bard
+SUBSECTION=Musicians
 DESCRIPTION=Sheet Music
 DUPELIST=0ebe,0ebf,0ec0
 
@@ -598,23 +584,47 @@ DUPELIST=0f35
 DUPEITEM=0f34
 
 [ITEMDEF 0f37]
-//saddle
 DEFNAME=i_saddle
-RESOURCES=15 i_log
+FLIP=1
 WEIGHT=3
+RESOURCES=15 i_log
+SKILLMAKE=carpentry 80.0, t_carpentry
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
 DESCRIPTION=Saddle
-SKILLMAKE=carpentry 80.0, t_carpentry
 DUPELIST=0f38
 
 [ITEMDEF 0f38]
 //saddle
 DUPEITEM=0f37
 
+[ITEMDEF 0f3b]
+DEFNAME=i_horse_dung
+FLIP=1
+VALUE=1
+CATEGORY=Items by Professions
+SUBSECTION=StableMaster
+DESCRIPTION=Horse Dung
+DUPELIST=0f3c
+
 [ITEMDEF 0f3c]
 //horse dung
 DUPEITEM=0f3b
+
+[ITEMDEF 0f36]
+//Sheaf of Hay
+DEFNAME=i_hay_sheaf
+TYPE=t_grain
+VALUE=3
+WEIGHT=10
+CATEGORY=Items by Professions
+SUBSECTION=StableMaster
+DESCRIPTION=Hay (Sheaf)
+DUPELIST=0100c,0100d
+
+[ITEMDEF 0100c]
+//hay sheaf
+DUPEITEM=0f36
 
 [ITEMDEF 0100d]
 //hay sheaf
@@ -636,90 +646,87 @@ DESCRIPTION=Hay
 
 [ITEMDEF 01370]
 DEFNAME=i_brush_horse
-RESOURCES=1 i_board, 50 i_straw
 WEIGHT=2
+RESOURCES=1 i_board, 50 i_straw
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
 DESCRIPTION=Brush
 
 [ITEMDEF 01371]
 DEFNAME=i_brush_horse_2
-RESOURCES=1 i_board, 50 i_straw
 WEIGHT=2
+RESOURCES=1 i_board, 50 i_straw
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
-DESCRIPTION=Brush
+DESCRIPTION=Brush 2
 
 [ITEMDEF 01372]
 DEFNAME=i_brush_horse_3
-RESOURCES=1 i_board, 50 i_straw
 WEIGHT=2
+RESOURCES=1 i_board, 50 i_straw
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
-DESCRIPTION=Brush
+DESCRIPTION=Brush 3
 
 [ITEMDEF 01373]
 DEFNAME=i_brush_horse_4
-RESOURCES=1 i_board, 50 i_straw
 WEIGHT=2
+RESOURCES=1 i_board, 50 i_straw
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
-DESCRIPTION=Brush
+DESCRIPTION=Brush 4
 
 [ITEMDEF 01374]
 DEFNAME=i_bridle_horse
-RESOURCES=2 i_hide, 1 i_ingot_iron
 WEIGHT=5
+RESOURCES=2 i_hide, 1 i_ingot_iron
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
 DESCRIPTION=Bridle
 
 [ITEMDEF 01375]
 DEFNAME=i_bridle_horse_2
-RESOURCES=2 i_hide, 1 i_ingot_iron
 WEIGHT=5
+RESOURCES=2 i_hide, 1 i_ingot_iron
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
 DESCRIPTION=Bridle
 
 [ITEMDEF 01376]
 DEFNAME=i_barding_horse_1
-RESOURCES=2 i_hide, 20 i_ingot_iron, 6 i_board
+FLIP=1
 WEIGHT=50
+RESOURCES=2 i_hide, 20 i_ingot_iron, 6 i_board
 CATEGORY=Items by Professions
 SUBSECTION=Blacksmiths
 DESCRIPTION=Horse Barding (01/02) (W)
 DUPELIST=01377
 
 [ITEMDEF 01377]
-//HORSE_BARDING_1 PART 2
+//horse barding
 DUPEITEM=01376
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
 DESCRIPTION=Horse Barding (02/02) (W)
 
 [ITEMDEF 01378]
 DEFNAME=i_barding_horse_2
-RESOURCES=2 i_hide, 20 i_ingot_iron, 6 i_board
 WEIGHT=50
+RESOURCES=2 i_hide, 20 i_ingot_iron, 6 i_board
 CATEGORY=Items by Professions
 SUBSECTION=Blacksmiths
 DESCRIPTION=Horse Barding (01/02) (N)
 DUPELIST=01379
 
 [ITEMDEF 01379]
-//HORSE_BARDING_2 PART 2
+//horse barding 2
 DUPEITEM=01378
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
 DESCRIPTION=Horse Barding (02/02) (N)
 
 [ITEMDEF 01449]
 DEFNAME=i_grain_loose
-RESOURCES=1 i_wheat_sheaf
+TYPE=t_grain
 VALUE=1
 WEIGHT=1
-TYPE=t_grain
+RESOURCES=1 i_wheat_sheaf
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
 DESCRIPTION=Loose Grain
@@ -727,8 +734,8 @@ DESCRIPTION=Loose Grain
 [ITEMDEF 014e7]
 DEFNAME=i_post_hitching
 FLIP=1
-RESOURCES=5 i_ingot_iron, 1 i_ingot_gold
 WEIGHT=7
+RESOURCES=5 i_ingot_iron, 1 i_ingot_gold
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
 DESCRIPTION=Hitching Post
@@ -745,7 +752,6 @@ DUPEITEM=014e7
 // Smithing hammer is in the weapons directory
 
 [ITEMDEF 0faf]
-//anvil
 DEFNAME=i_anvil
 TYPE=t_anvil
 SKILLMAKE=blacksmithing 30.0, tinkering 56.0,t_tinker_tools
@@ -758,14 +764,10 @@ DESCRIPTION=Anvil (N)
 DUPELIST=0fb0
 
 [ITEMDEF 0fb0]
-//anvil
 DUPEITEM=0faf
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
 DESCRIPTION=Anvil (W)
 
 [ITEMDEF 0fb6]
-//horse shoes
 DEFNAME=i_horse_shoes
 RESOURCES=4 i_ingot_iron
 CATEGORY=Items by Professions
@@ -773,7 +775,6 @@ SUBSECTION=Blacksmiths
 DESCRIPTION=Horse Shoes
 
 [ITEMDEF 0fb7]
-//forged metal
 DEFNAME=i_forged_metal
 TYPE=t_fire
 RESOURCES=1 i_ingot_iron
@@ -785,8 +786,6 @@ DUPELIST=0fb8
 [ITEMDEF 0fb8]
 //forged metal
 DUPEITEM=0fb7
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
 DESCRIPTION=Forged Metal (N)
 
 [ITEMDEF 0fbb]
@@ -1249,7 +1248,7 @@ RESOURCES=1 i_book_lg_pub
 WEIGHT=2
 TYPE=t_book
 CATEGORY=Items by Professions
-SUBSECTION=Artists
+SUBSECTION=Scribes
 DESCRIPTION=Book (W)
 DUPELIST=0fbe
 
@@ -1263,7 +1262,7 @@ DEFNAME=i_pen_and_ink
 RESOURCES=1 i_feather, 1 i_ink_pot
 WEIGHT=2
 CATEGORY=Items by Professions
-SUBSECTION=Artists
+SUBSECTION=Scribes
 DESCRIPTION=Pen & Ink (W)
 DUPELIST=0fc0
 
@@ -1271,7 +1270,7 @@ DUPELIST=0fc0
 //pen and ink
 DUPEITEM=0fbf
 CATEGORY=Items by Professions
-SUBSECTION=Artists
+SUBSECTION=Scribes
 DESCRIPTION=Pen & Ink (N)
 
 [ITEMDEF 0fef]
@@ -1282,7 +1281,7 @@ WEIGHT=2
 //DEFNAME=LG_PUB_BOOK
 TYPE=t_book
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Brown Book
 
 [ITEMDEF 0ff0]
@@ -1293,7 +1292,7 @@ WEIGHT=2
 //DEFNAME=SM_PUB_BOOK
 TYPE=t_book
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Light Tan Book
 
 [ITEMDEF 0ff1]
@@ -1304,7 +1303,7 @@ RESOURCES=1 i_canvas, 10 i_paper, 1 i_thread, 1 i_hide
 WEIGHT=2
 TYPE=t_book
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Dark Brown Book
 
 [ITEMDEF 0ff2]
@@ -1315,7 +1314,7 @@ RESOURCES=1 i_canvas, 10 i_paper, 1 i_thread, 1 i_hide
 WEIGHT=2
 TYPE=t_book
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Purple Book
 
 [ITEMDEF 0ff3]
@@ -1325,7 +1324,7 @@ RESOURCES=1 i_canvas, 10 i_paper, 1 i_thread, 1 i_hide
 WEIGHT=2
 TYPE=t_book
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Small Open Book
 
 [ITEMDEF 0ff4]
@@ -1335,7 +1334,7 @@ RESOURCES=1 i_canvas, 10 i_paper, 1 i_thread, 1 i_hide
 WEIGHT=2
 TYPE=t_book
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Large Open Book
 
 [ITEMDEF 01c11]
@@ -1345,7 +1344,7 @@ TYPE=t_book
 WEIGHT=2.0
 RESOURCES=2 i_canvas,20 i_parchment,2 i_thread,1 i_hides_cut
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Huge Book
 
 [ITEMDEF 01e20]
@@ -1355,7 +1354,7 @@ WEIGHT=2
 //red book, opened on the ground facing down
 TYPE=t_book
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Red Book (Open and Face Down)
 
 [ITEMDEF 01e21]
@@ -1364,7 +1363,7 @@ RESOURCES=2 i_book_open
 WEIGHT=4
 //2 brown books, opened on the ground facing down
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Brown Books (Open and Face Down)
 
 [ITEMDEF 01e22]
@@ -1373,7 +1372,7 @@ RESOURCES=2 i_book_open
 WEIGHT=4
 //2 red books opened facing up
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Red Books (Open and Face Up)
 
 [ITEMDEF 01e23]
@@ -1382,7 +1381,7 @@ RESOURCES=2 i_book_open
 WEIGHT=4
 //2 blue books opened facing up
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Blue Books (Open and Face Up)
 
 [ITEMDEF 01e24]
@@ -1391,7 +1390,7 @@ RESOURCES=2 i_book_open
 WEIGHT=4
 //stack of several books
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Stack of Books
 
 [ITEMDEF 01e25]
@@ -1400,8 +1399,24 @@ RESOURCES=6 i_book_open
 WEIGHT=12
 //another stack of several books
 CATEGORY=Items by Professions
-SUBSECTION=Scribe
+SUBSECTION=Scribes
 DESCRIPTION=Stack of Books
+
+[ITEMDEF 02d61]
+DEFNAME=i_ink_well
+NAME=ink well
+FLIP=1
+VALUE=5
+WEIGHT=1.0
+RESOURCES=1 i_ingot_iron
+CATEGORY=Items by Professions
+SUBSECTION=Scribes
+DESCRIPTION=Ink Well
+DUPELIST=02d62
+
+[ITEMDEF 02d62]
+//ink well
+DUPEITEM=02d61
 
 
 ///////////////////////
@@ -1425,9 +1440,6 @@ DUPEITEM=0100a
 CATEGORY=Items by Professions
 SUBSECTION=Archers/Bowyers
 DESCRIPTION=Archery Butte (N)
-
-[ITEMDEF 0100c]
-DUPEITEM=0f36
 
 [ITEMDEF 01020]
 DEFNAME=i_feathers_red_white
@@ -1509,13 +1521,12 @@ DUPEITEM=01bd1
 /////////////////////////
 
 [ITEMDEF 01026]
-//chisels
 DEFNAME=i_chisels
-RESOURCES=1 i_ingot_iron
-WEIGHT=1
 TYPE=t_carpentry
+WEIGHT=1
+RESOURCES=1 i_ingot_iron
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Chisels
 DUPELIST=01027
 
@@ -1524,15 +1535,13 @@ DUPELIST=01027
 DUPEITEM=01026
 
 [ITEMDEF 01028]
-//DEFNAME2=dovetail
-//DEFNAME2=dovetail_saw
 DEFNAME=i_saw_dovetail
 RESOURCES=3 i_ingot_iron,1 i_log
 TYPE=t_carpentry
 WEIGHT=1
 DUPELIST=01029
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Dovetail Saw
 SKILLMAKE=tinkering 33.2,t_tinker_tools
 
@@ -1548,7 +1557,7 @@ WEIGHT=2
 TYPE=t_carpentry
 FLIP=1
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Hammer
 DUPELIST=0102b
 
@@ -1561,7 +1570,7 @@ DEFNAME=i_plane_moulding
 WEIGHT=2
 TYPE=t_carpentry
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Moulding Planes
 DUPELIST=0102d
 SKILLMAKE=tinkering 30.7,t_tinker_tools
@@ -1576,7 +1585,7 @@ DEFNAME=i_nails
 WEIGHT=2
 TYPE=t_carpentry
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Nails
 DUPELIST=0102f
 RESOURCES=1 i_ingot_iron
@@ -1592,7 +1601,7 @@ RESOURCES=4 i_log
 WEIGHT=1
 TYPE=t_carpentry
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Jointing Plane
 DUPELIST=01031
 SKILLMAKE=tinkering 30.8,t_tinker_tools
@@ -1607,7 +1616,7 @@ RESOURCES=4 i_log
 WEIGHT=1
 TYPE=t_carpentry
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Smoothing Plane
 DUPELIST=01033
 SKILLMAKE=tinkering 30.7,t_tinker_tools
@@ -1623,7 +1632,7 @@ TYPE=t_carpentry
 RESOURCES=5 i_ingot_iron, 1 i_log
 SKILLMAKE=tinkering 31.3,t_tinker_tools
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Saw
 DUPELIST=01035
 
@@ -1635,7 +1644,7 @@ DUPEITEM=01034
 DEFNAME=i_wood_curls
 RESOURCES=1 i_board
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Wood Curls
 
 [ITEMDEF 010e4]
@@ -1645,7 +1654,7 @@ WEIGHT=1
 TYPE=t_carpentry
 FLIP=1
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Draw Knife
 
 [ITEMDEF 010e5]
@@ -1654,7 +1663,7 @@ RESOURCES=2 i_ingot_iron
 WEIGHT=1
 TYPE=t_carpentry
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Froe
 
 [ITEMDEF 010e6]
@@ -1663,7 +1672,7 @@ RESOURCES=2 i_ingot_iron
 WEIGHT=1
 TYPE=t_carpentry
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Inshave
 
 [ITEMDEF 010e7]
@@ -1672,8 +1681,23 @@ RESOURCES=2 i_ingot_iron
 WEIGHT=1
 TYPE=t_carpentry
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Scorp
+
+[ITEMDEF 014e9]
+DEFNAME=i_moulding_board
+FLIP=1
+RESOURCES=1 i_log, 1 i_board
+WEIGHT=3
+TYPE=t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=Carpenters
+DESCRIPTION=Moulding Board
+DUPELIST=014ea
+
+[ITEMDEF 014ea]
+//moulding board
+DUPEITEM=014e9
 
 [ITEMDEF 019f1]
 // bench - Woodworkers bench end - S
@@ -1685,7 +1709,7 @@ SKILLMAKE=carpentry 80.0, t_carpentry
 RESOURCES=30 i_log
 WEIGHT=8
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Woodworkers Bench
 
 [ITEMDEF 019f3]
@@ -1697,7 +1721,7 @@ DEFNAME=i_vise
 WEIGHT=6
 TYPE=t_carpentry
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Vise
 DUPELIST=019f8
 SKILLMAKE=carpentry 80.0, t_carpentry
@@ -1724,7 +1748,7 @@ FLIP=1
 RESOURCES=30 i_log
 WEIGHT=8
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Coopers Bench
 SKILLMAKE=carpentry 80.0, t_carpentry
 
@@ -1744,77 +1768,77 @@ DUPEITEM=019F9
 //Pile of 3 boards
 DUPEITEM=01bd7
 CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
+SUBSECTION=Carpenters
 DESCRIPTION=Boards (3)
 
 [ITEMDEF 01bd9]
 //Pile of 8 boards
 DUPEITEM=01bd7
 CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
+SUBSECTION=Carpenters
 DESCRIPTION=Boards (8)
 
 [ITEMDEF 01bda]
 //single board
 DUPEITEM=01bd7
 CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
+SUBSECTION=Carpenters
 DESCRIPTION=Board
 
 [ITEMDEF 01bdb]
 //Pile of 3 boards
 DUPEITEM=01bd7
 CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
+SUBSECTION=Carpenters
 DESCRIPTION=Boards (3)
 
 [ITEMDEF 01bdc]
 //boards
 DUPEITEM=01bd7
 CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
+SUBSECTION=Carpenters
 DESCRIPTION=Boards (8)
 
 [ITEMDEF 01bde]
 //Pile of logs facing SE
 DUPEITEM=01bdd
 CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
+SUBSECTION=Carpenters
 DESCRIPTION=Logs (3) (SE)
 
 [ITEMDEF 01bdf]
 //HUGE pile of logs facing SE
 DUPEITEM=01bdd
 CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
+SUBSECTION=Carpenters
 DESCRIPTION=Logs (Many) (SE)
 
 [ITEMDEF 01be0]
 //log facing SW
 DUPEITEM=01bdd
 CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
+SUBSECTION=Carpenters
 DESCRIPTION=Log (SW)
 
 [ITEMDEF 01be1]
 //Pile of logs facing SW
 DUPEITEM=01bdd
 CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
+SUBSECTION=Carpenters
 DESCRIPTION=Logs (3) (SW)
 
 [ITEMDEF 01be2]
 //HUGE pile of logs facing SE
 DUPEITEM=01bdd
 CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
+SUBSECTION=Carpenters
 DESCRIPTION=Logs (Many) (SE)
 
 [ITEMDEF 01e6e]
 DEFNAME=i_board_unfinished
 RESOURCES=1 i_board
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Board
 
 [ITEMDEF 01e6f]
@@ -1825,21 +1849,21 @@ TYPE=t_chair
 FLIP=1
 RESOURCES=2 i_lathework_unfinished, i_board_unfinished, i_nails
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Unfinished Chair
 
 [ITEMDEF 01e70]
 DEFNAME=i_drawer_unfinished
 RESOURCES=2 i_board_unfinished
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Unfinished Drawer
 
 [ITEMDEF 01e71]
 DEFNAME=i_bureau_unfinished
 RESOURCES=3 i_board_unfinished, i_nails
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Unfinished Chest of Drawers
 
 [ITEMDEF 01e72]
@@ -1847,7 +1871,7 @@ DESCRIPTION=Unfinished Chest of Drawers
 DEFNAME=i_table_unfinished
 RESOURCES=4 i_board_unfinished, i_table_leg_unfinished, i_nails
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Unfinished Table
 DUPELIST=01e7b
 
@@ -1856,7 +1880,7 @@ DUPELIST=01e7b
 DEFNAME=i_table_leg_unfinished
 RESOURCES=3 i_board_unfinished
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Table Legs
 DUPELIST=01e7c
 
@@ -1866,7 +1890,7 @@ DUPELIST=01e7c
 DEFNAME=i_table_leg_unfinished_2
 RESOURCES=1 i_board_unfinished
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Table Leg
 DUPELIST=01e7d
 
@@ -1875,21 +1899,21 @@ DUPELIST=01e7d
 DEFNAME=i_table_leg_unfinished_3
 RESOURCES=4 i_board_unfinished
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Table Legs
 
 [ITEMDEF 01e76]
 DEFNAME=i_bookcase_unfinished
 RESOURCES=8 i_board_unfinished
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Unfinished Shelves
 
 [ITEMDEF 01e77]
 DEFNAME=i_board_unfinished_2
 RESOURCES=1 i_board
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Board
 
 [ITEMDEF 01e78]
@@ -1900,14 +1924,14 @@ DUPEITEM=01e6f
 DEFNAME=i_drawer_unfinished_2
 RESOURCES=2 i_board_unfinished
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Unfinished Drawer
 
 [ITEMDEF 01e7a]
 DEFNAME=i_bureau_unfinished_2
 RESOURCES=3 i_board_unfinished, i_nails
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Unfinished Chest of Drawers
 
 [ITEMDEF 01e7b]
@@ -1928,14 +1952,14 @@ DUPEITEM=01e74
 DEFNAME=i_bookcase_unfinished_2
 RESOURCES=8 i_board_unfinished
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Unfinished Shelves
 
 [ITEMDEF 01e82]
 DEFNAME=i_lathework_unfinished
 RESOURCES=4 i_board, i_nails
 CATEGORY=Items by Professions
-SUBSECTION=Carpenter
+SUBSECTION=Carpenters
 DESCRIPTION=Lathe Work
 
 [ITEMDEF 01eb5]
@@ -1943,7 +1967,7 @@ DEFNAME=i_barrel_unfinished
 RESOURCES=3 i_barrel_staves
 WEIGHT=3
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Carpenters
 DESCRIPTION=Unfinished Barrel
 
 [ITEMDEF 01eb6]
@@ -1951,7 +1975,7 @@ DEFNAME=i_toolkit_empty
 RESOURCES=2 i_hide, i_ingot_iron
 WEIGHT=3
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Carpenters
 DESCRIPTION=Empty Tool Kit
 
 [ITEMDEF 01eb7]
@@ -1959,7 +1983,7 @@ DEFNAME=i_toolcase_empty
 RESOURCES=2 i_hide, i_ingot_iron
 WEIGHT=3
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Carpenters
 DESCRIPTION=Empty Tool Case
 
 [ITEMDEF 01eb8]
@@ -1970,10 +1994,11 @@ WEIGHT=6
 TYPE=t_carpentry
 DUPELIST=01eb9
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Carpenters
 DESCRIPTION=Tool Kit
 
 [ITEMDEF 01eb9]
+//toolkit
 DUPEITEM=01eb8
 
 
@@ -1986,7 +2011,7 @@ DEFNAME=i_globe
 RESOURCES=10 i_board, 2 i_cloth
 WEIGHT=6
 CATEGORY=Items by Professions
-SUBSECTION=Cartographer
+SUBSECTION=Cartographers
 DESCRIPTION=Globe
 DUPELIST=01048
 SKILLMAKE=carpentry 80.0, cartography 40.0, t_carpentry
@@ -2005,7 +2030,7 @@ TDATA1=500
 TDATA2=500
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Cartographer
+SUBSECTION=Cartographers
 DESCRIPTION=Map (Empty)
 DUPELIST=014ec
 
@@ -2019,7 +2044,7 @@ FLIP=1
 RESOURCES=i_map
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Cartographer
+SUBSECTION=Cartographers
 DESCRIPTION=Map (Rolled)(Empty)
 DUPELIST=014ee
 
@@ -2033,13 +2058,12 @@ DUPEITEM=014ed
 //////////////////////
 
 [ITEMDEF 01049]
-// bench - loom bench - n-s
 DEFNAME=i_bench_loom
-DUPELIST=0104a
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=carpentry 10.0, t_carpentry
 RESOURCES=8 i_board
+SKILLMAKE=carpentry 10.0, t_carpentry
+DUPELIST=0104a
 
 [ITEMDEF 0104a]
 // bench - loom bench - e-w
@@ -2056,7 +2080,7 @@ RESOURCES=i_clock_frame,i_clock_parts
 WEIGHT=2
 TYPE=t_clock
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Clock
 DUPELIST=0104c
 SKILLMAKE=tinkering 30.7,t_tinker_tools
@@ -2071,7 +2095,7 @@ RESOURCES=6 i_log
 WEIGHT=2
 //TYPE=T_CLOCK
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Clock Frame
 DUPELIST=0104e
 SKILLMAKE=tinkering 30.4,t_tinker_tools
@@ -2086,7 +2110,7 @@ RESOURCES=1 i_ingot_iron
 WEIGHT=1
 //TYPE=T_CLOCK
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Clock Parts
 DUPELIST=01050
 SKILLMAKE=tinkering 30.5,t_tinker_tools
@@ -2100,7 +2124,7 @@ DEFNAME=i_axel_and_gears
 RESOURCES=2 i_log
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Axle with Gears
 DUPELIST=01052
 SKILLMAKE=tinkering 30.4,t_tinker_tools
@@ -2115,7 +2139,7 @@ DEFNAME=i_gears
 RESOURCES=1 i_ingot_iron
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Gears
 DUPELIST=01054
 SKILLMAKE=tinkering 14.7,t_tinker_tools
@@ -2129,7 +2153,7 @@ DEFNAME=i_hinge
 RESOURCES=1 i_ingot_iron
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Hinge
 DUPELIST=01056
 SKILLMAKE=tinkering 14.8,t_tinker_tools
@@ -2143,7 +2167,7 @@ DEFNAME=i_sextant_parts
 RESOURCES=3 i_ingot_iron
 WEIGHT=2
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Sextant Parts
 DUPELIST=0105a
 SKILLMAKE=tinkering 31.0,t_tinker_tools
@@ -2157,7 +2181,7 @@ DEFNAME=i_axel
 RESOURCES=1 i_ingot_iron
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Axle
 DUPELIST=0105c
 SKILLMAKE=tinkering 30.4,t_tinker_tools
@@ -2171,7 +2195,7 @@ DEFNAME=i_springs
 RESOURCES=1 i_ingot_iron
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Springs
 DUPELIST=0105e
 SKILLMAKE=tinkering 13.7,t_tinker_tools
@@ -2185,7 +2209,7 @@ DEFNAME=i_wire_iron
 RESOURCES=1 i_ingot_iron
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Iron Wire
 
 [ITEMDEF 01877]
@@ -2193,7 +2217,7 @@ DEFNAME=i_wire_silver
 RESOURCES=1 i_ingot_iron
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Silver Wire
 
 [ITEMDEF 01878]
@@ -2201,7 +2225,7 @@ DEFNAME=i_wire_gold
 RESOURCES=1 i_ingot_gold
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Gold Wire
 
 [ITEMDEF 01879]
@@ -2209,7 +2233,7 @@ DEFNAME=i_wire_copper
 RESOURCES=1 i_ingot_copper
 WEIGHT=1
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Copper Wire
 
 [ITEMDEF 01eba]
@@ -2219,7 +2243,7 @@ SKILLMAKE=tinkering 50.0,t_tinker_tools
 WEIGHT=6
 TYPE=t_carpentry
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Tool Case
 DUPELIST=01ebb
 
@@ -2231,7 +2255,7 @@ DEFNAME=i_tinker_tools
 TYPE=t_tinker_tools
 WEIGHT=2
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Tinkers
 DESCRIPTION=Tinker's Tools
 SKILLMAKE=tinkering 35.0,t_tinker_tools
 RESOURCES=4 i_ingot_iron
@@ -2247,7 +2271,7 @@ TYPE=t_sextant
 RESOURCES=i_sextant_parts
 WEIGHT=2
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Sailors
 DESCRIPTION=Sextant
 DUPELIST=01058
 SKILLMAKE=tinkering 30.7,t_tinker_tools
@@ -2255,6 +2279,63 @@ SKILLMAKE=tinkering 30.7,t_tinker_tools
 [ITEMDEF 01058]
 //sextant
 DUPEITEM=01057
+
+[ITEMDEF 014f3]
+DEFNAME=i_model_ship
+FLIP=1
+WEIGHT=1
+RESOURCES=10 i_board
+SKILLMAKE=carpentry 95.0, t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=Sailors
+DESCRIPTION=Ship Model (N)
+DUPELIST=014f4
+
+[ITEMDEF 014f4]
+//ship model
+DUPEITEM=014f3
+
+[ITEMDEF 014f5]
+DEFNAME=i_spyglass
+TYPE=t_spy_glass
+FLIP=1
+RESOURCES=2 i_ingot_iron, 1 i_glass
+WEIGHT=3
+CATEGORY=Items by Professions
+SUBSECTION=Sailors
+DESCRIPTION=SpyGlass (N)
+DUPELIST=014f6
+
+[ITEMDEF 014f6]
+//spyglass
+DUPEITEM=014f5
+
+[ITEMDEF 014f7]
+DEFNAME=i_anchor
+FLIP=1
+WEIGHT=40
+RESOURCES=40 i_ingot_iron, 1 i_rope
+CATEGORY=Items by Professions
+SUBSECTION=Sailors
+DESCRIPTION=Anchor (W)
+DUPELIST=014f9
+
+[ITEMDEF 014f8]
+DEFNAME=i_rope
+FLIP=1
+WEIGHT=2
+CATEGORY=Items by Professions
+SUBSECTION=Sailors
+DESCRIPTION=Rope (W)
+DUPELIST=014fa
+
+[ITEMDEF 014f9]
+//anchor
+DUPEITEM=014f7
+
+[ITEMDEF 014fa]
+//rope
+DUPEITEM=014f8
 
 
 ///////////////////////////////
@@ -2293,7 +2374,7 @@ RESOURCES=15 i_cloth, 35 i_straw, 8 i_board, 1 i_ingot_iron
 WEIGHT=35
 CATEGORY=Items by Professions
 SUBSECTION=Fighters
-DESCRIPTION=Training Dummy
+DESCRIPTION=Training Dummy (N)
 DUPELIST=01075,01076,01077
 
 [ITEMDEF 01075]
@@ -2308,21 +2389,6 @@ DUPEITEM=01074
 //training dummy
 DUPEITEM=01074
 
-[ITEMDEF 014e9]
-DEFNAME=i_moulding_board
-FLIP=1
-RESOURCES=1 i_log, 1 i_board
-WEIGHT=3
-TYPE=t_carpentry
-CATEGORY=Items by Professions
-SUBSECTION=Carpenter
-DESCRIPTION=Moulding Board
-DUPELIST=014ea
-
-[ITEMDEF 014ea]
-//moulding board
-DUPEITEM=014e9
-
 
 /////////////////////
 // Thief Equipment //
@@ -2335,7 +2401,7 @@ FLIP=1
 RESOURCES=1 i_ingot_iron
 WEIGHT=.5
 CATEGORY=Items by Professions
-SUBSECTION=Thief
+SUBSECTION=Thieves
 DESCRIPTION=Lockpick
 DUPELIST=014fc
 SKILLMAKE=tinkering 48.5,t_tinker_tools
@@ -2348,10 +2414,10 @@ DUPEITEM=014fb
 DEFNAME=i_lockpick_set
 TYPE=t_lockpick
 FLIP=1
-RESOURCES=3 i_lockpick
 WEIGHT=1
+RESOURCES=3 i_lockpick
 CATEGORY=Items by Professions
-SUBSECTION=Thief
+SUBSECTION=Thieves
 DESCRIPTION=Lockpicks (Set)
 DUPELIST=014fe
 
@@ -2366,7 +2432,7 @@ SKILLMAKE=carpentry 80.0, tailoring 60.0, t_sewing_kit, t_carpentry
 RESOURCES=65 i_log,65 i_cloth
 //WEIGHT=60
 CATEGORY=Items by Professions
-SUBSECTION=Thief
+SUBSECTION=Thieves
 DESCRIPTION=Pickpocket Dip
 DUPELIST=01e2d,01ec0,01ec1,01ec2,01ec3,01ec4,01ec5
 
@@ -2374,14 +2440,14 @@ DUPELIST=01e2d,01ec0,01ec1,01ec2,01ec3,01ec4,01ec5
 //pickpocket dip
 DUPEITEM=01e2c
 CATEGORY=Items by Professions
-SUBSECTION=Thief
+SUBSECTION=Thieves
 DESCRIPTION=Pickpocket Dip
 
 [ITEMDEF 01ec0]
 DEFNAME=i_pickpocket_dip_n
 DUPEITEM=01e2c
 CATEGORY=Items by Professions
-SUBSECTION=Thief
+SUBSECTION=Thieves
 DESCRIPTION=Pickpocket Dip (w)
 
 [ITEMDEF 01ec1]
@@ -2394,7 +2460,7 @@ DUPEITEM=01e2c
 DEFNAME=i_pickpocket_dip_w
 DUPEITEM=01e2c
 CATEGORY=Items by Professions
-SUBSECTION=Thief
+SUBSECTION=Thieves
 DESCRIPTION=Pickpocket Dip (n)
 
 [ITEMDEF 01ec4]
@@ -2412,7 +2478,7 @@ DUPEITEM=01e2c
 DEFNAME=i_plough
 FLIP=1
 CATEGORY=Items by Professions
-SUBSECTION=Farmer
+SUBSECTION=Farmers
 DESCRIPTION=Plough
 DUPELIST=01501,01502,01503
 
@@ -2432,7 +2498,7 @@ DUPEITEM=01500
 DEFNAME=i_harrow_part_1
 FLIP=1
 CATEGORY=Items by Professions
-SUBSECTION=Farmer
+SUBSECTION=Farmers
 DESCRIPTION=Harrow
 DUPELIST=01505,01506,01507
 
@@ -2453,7 +2519,7 @@ DEFNAME=i_scarecrow
 RESOURCES=4 i_log, 14 i_straw, i_rope, i_hat_straw
 WEIGHT=23
 CATEGORY=Items by Professions
-SUBSECTION=Farmer
+SUBSECTION=Farmers
 DESCRIPTION=Scarecrow
 DUPELIST=01e35
 
@@ -2465,6 +2531,7 @@ DUPEITEM=01e34
 ///////////////////////
 // Butcher Equipment //
 ///////////////////////
+// Butcher knives are in the weapons files
 
 [ITEMDEF 01871]
 DEFNAME=i_carcass_beef
@@ -2472,7 +2539,7 @@ FLIP=1
 VALUE=14
 WEIGHT=20
 CATEGORY=Items by Professions
-SUBSECTION=Butcher
+SUBSECTION=Butchers
 DESCRIPTION=Beef Carcass
 DUPELIST=01872
 
@@ -2486,7 +2553,7 @@ FLIP=1
 VALUE=14
 WEIGHT=10
 CATEGORY=Items by Professions
-SUBSECTION=Butcher
+SUBSECTION=Butchers
 DESCRIPTION=Sheep Carcass
 DUPELIST=01874
 
@@ -2508,7 +2575,7 @@ WEIGHT=0.6
 RESOURCES=1 i_sextant_parts,1 i_spyglass
 SKILLMAKE=tinkering 30.7,t_tinker_tools
 CATEGORY=Items by Professions
-SUBSECTION=Tinker
+SUBSECTION=Surveyors/Architects
 DESCRIPTION=Surveyor Scope
 DUPELIST=0194c
 
@@ -2530,7 +2597,7 @@ WEIGHT=5
 SKILLMAKE=tinkering 40.0, t_tinker_tools
 RESOURCES=4 i_ingot_iron
 CATEGORY=Items by Professions
-SUBSECTION=Miner
+SUBSECTION=Miners
 DESCRIPTION=Shovel
 TEVENTS=t_shovel
 DUPELIST=0f3a

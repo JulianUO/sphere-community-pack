@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 14, 2011
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
 VERSION=0.56b
 
 [ITEMDEF 0e3b]
@@ -19,6 +19,7 @@ SKILLMAKE=Inscription 50.0
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Spellbooks
 DESCRIPTION=Magery Spellbook
+TEVENTS=t_iprop
 ON=@Create
 	ATTR=attr_magic|attr_newbie
 
@@ -32,6 +33,7 @@ RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Spellbooks
 DESCRIPTION=Paladin Spellbook
+TEVENTS=t_iprop
 ON=@Create
    ATTR=attr_magic|attr_newbie
    MOREZ=200
@@ -46,6 +48,7 @@ SKILLMAKE=Inscription 50.0
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Spellbooks
 DESCRIPTION=Necromancy Spellbook
+TEVENTS=t_iprop
 ON=@Create
    ATTR=attr_magic|attr_newbie
    MOREZ=100
@@ -67,6 +70,21 @@ ON=@Create
 //  endif
 //endif
 
+[ITEMDEF 02254]
+DEFNAME=i_spellbook_arms
+TYPE=t_normal //fixme: or t_spellbook_arms?
+LAYER=layer_hand1
+VALUE=488
+WEIGHT=1.0
+RESOURCES=80 i_parchment,1 i_hides_cut,1 i_cloth
+CATEGORY=Provisions - Alchemy & Magic
+SUBSECTION=Books
+DESCRIPTION=Weapon Book
+TEVENTS=t_iprop
+ON=@Create
+   ATTR=attr_magic|attr_newbie
+   //MOREZ=?
+
 [ITEMDEF 0225a]
 DEFNAME=i_spellbook_bard
 TYPE=t_spellbook_bard
@@ -77,7 +95,7 @@ RESOURCES=80 i_parchment,1 i_hides_cut,1 i_cloth
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Books
 DESCRIPTION=Bard
-TEVENTS=e_equipitem
+TEVENTS=t_iprop
 DUPELIST=0225b
 ON=@Create
    ATTR=attr_magic|attr_newbie
@@ -97,6 +115,7 @@ RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Spellbooks
 DESCRIPTION=Bushido Spellbook
+TEVENTS=t_iprop
 ON=@Create
    ATTR=attr_magic|attr_newbie
    MOREZ=400
@@ -111,6 +130,7 @@ RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Spellbooks
 DESCRIPTION=Ninjitsu Spellbook
+TEVENTS=t_iprop
 ON=@Create
    ATTR=attr_magic|attr_newbie
    MOREZ=500
@@ -125,6 +145,7 @@ RESOURCES=80 i_parchment,1 i_hide, 1 i_cloth
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Spellbooks
 DESCRIPTION=Arcanist Spellbook
+TEVENTS=t_iprop
 ON=@Create
    ATTR=attr_magic|attr_newbie
    MOREZ=600
@@ -138,6 +159,7 @@ SKILLMAKE=Inscription 50.0
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Spellbooks
 DESCRIPTION=Mystic Spellbook
+TEVENTS=t_iprop
 ON=@Create
 	ATTR=attr_magic|attr_newbie
 	MOREZ=677

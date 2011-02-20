@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0277c]
 DEFNAME=i_studded_do
@@ -15,7 +16,6 @@ SKILLMAKE=TAILORING 95.0
 WEIGHT=8.0
 FLIP=1
 REQSTR=55
-DUPELIST=027c7
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Studded Samurai Armor
 DESCRIPTION=Studded Do
@@ -25,9 +25,9 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
-
-ON=@CREATE
-HITPOINTS={36 48}
+DUPELIST=027c7
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 027c7]
 DUPEITEM=0277c
@@ -49,9 +49,12 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
+DUPELIST=027ca
+ON=@Create
+   HITPOINTS={36 48}
 
-ON=@CREATE
-HITPOINTS={36 48}
+[ITEMDEF 027ca]
+DUPEITEM=0277f
 
 [ITEMDEF 02787]
 DEFNAME=i_studded_suneate
@@ -62,7 +65,6 @@ SKILLMAKE=TAILORING 92.0
 WEIGHT=5.0
 FLIP=1
 REQSTR=30
-DUPELIST=027ca
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Studded Samurai Armor
 DESCRIPTION=Studded Suneate
@@ -72,11 +74,11 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
+DUPELIST=027d2
+ON=@Create
+   HITPOINTS={36 48}
 
-ON=@CREATE
-HITPOINTS={36 48}
-
-[ITEMDEF 027ca]
+[ITEMDEF 027d2]
 DUPEITEM=02787
 
 [ITEMDEF 0278b]
@@ -88,7 +90,6 @@ SKILLMAKE=TAILORING 92.0
 WEIGHT=5.0
 FLIP=1
 REQSTR=30
-DUPELIST=027d6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Studded Samurai Armor
 DESCRIPTION=Studded Haidate
@@ -97,9 +98,9 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
-
-ON=@CREATE
-HITPOINTS={36 48}
+DUPELIST=027d6
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 027d6]
 DUPEITEM=0278b
@@ -113,7 +114,6 @@ SKILLMAKE=TAILORING 80.0
 WEIGHT=2.0
 FLIP=1
 REQSTR=30
-DUPELIST=027e8
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Studded Samurai Armor
 DESCRIPTION=Studded Mempo
@@ -122,11 +122,11 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
-
+DUPELIST=027e8
 ON=@CREATE
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 027e8]
 DUPEITEM=0279d
 
-[eof]
+[EOF]

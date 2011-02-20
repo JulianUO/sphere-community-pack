@@ -792,6 +792,25 @@ DESCRIPTION=@
 DUPEITEM=02420
 DESCRIPTION=@ (n / ne)
 
+[ITEMDEF 026f4]
+DEFNAME=i_door_sliding_n
+TYPE=t_door
+RESOURCES=20 i_log,20 i_paper
+CATEGORY=Buildings - Doors
+SUBSECTION=Sliding
+DESCRIPTION=Sliding N
+DUPELIST=02990,0299e
+
+[ITEMDEF 026f6]
+DEFNAME=i_door_sliding_n_open
+TYPE=t_door_open
+RESOURCES=20 i_log,20 i_paper
+CATEGORY=Buildings - Doors
+SUBSECTION=Sliding
+DESCRIPTION=Sliding W
+DUPELIST=02991,0299f
+
+
 [ITEMDEF 041cf]
 DEFNAME=i_sa_door_ws1
 TYPE=t_door

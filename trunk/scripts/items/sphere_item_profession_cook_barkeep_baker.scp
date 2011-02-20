@@ -1,15 +1,11 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Wednesday, May 3, 2006
-//
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0970]
 DEFNAME=i_bowl_stew
@@ -255,7 +251,6 @@ DUPEITEM=09a5
 
 [ITEMDEF 09ad]
 DEFNAME=i_pitcher_milk
-//? TYPE=T_CONTAINER
 TYPE=t_drink
 TDATA1=i_pitcher_glass
 FLIP=1
@@ -1721,6 +1716,17 @@ RESOURCES=3 i_straw,1 i_string,1 i_cloth
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
 DESCRIPTION=Basket 2
+
+[ITEMDEF 024eb]
+DEFNAME=i_wassabi_raw
+TYPE=t_food
+VALUE=1
+WEIGHT=0.1
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese Kitchen
+DESCRIPTION=Wassabi (raw)
+ON=@Create
+   MOREM=1
 
 
 [EOF]
