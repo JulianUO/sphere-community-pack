@@ -174,5 +174,76 @@ DUPEITEM=02224
 //crystal 4
 DUPEITEM=02224
 
+[ITEMDEF 0223a]
+DEFNAME=i_crystals_broken
+NAME=broken crystals
+TYPE=t_normal
+VALUE=5
+WEIGHT=10.0
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Crystals
+DESCRIPTION=Broken Crystals
+DUPELIST=0223b,0223c,0223d,0223e,0223f,02240,02241,02242,02243,02244,02245,02246,02247,02248,02249
+
+[ITEMDEF 0223b]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 0223c]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 0223d]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 0223e]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 0223f]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 02240]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 02241]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 02242]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 02243]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 02244]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 02245]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 02246]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 02247]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 02248]
+//broken crystals
+DUPEITEM=0223a
+
+[ITEMDEF 02249]
+//broken crystals
+DUPEITEM=0223a
+
 
 [EOF]

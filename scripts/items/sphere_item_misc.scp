@@ -876,6 +876,7 @@ DUPELIST=02312
 //bulletin board 2
 DUPEITEM=02311
 
+
 [ITEMDEF I_WINDOW]
 ID=I_TARGET
 RESOURCES=2 i_sand, 2 i_board
@@ -1475,7 +1476,7 @@ CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Quest Items
 DESCRIPTION=Candle of Love
 
-[TYPEDEF t_digable_grave]
+[TYPEDEF t_grave]
 ON=@DClick
    IF (<SRC.RESTEST 1 i_grave_delay>)
       SRC.SYSMESSAGE You must wait to dig again.

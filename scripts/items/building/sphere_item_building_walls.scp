@@ -4882,7 +4882,7 @@ RESOURCES=100 i_ingot_iron
 CATEGORY=Buildings - SE Walls
 SUBSECTION=Wall Marble Window
 DESCRIPTION=@
-DUPELIST=02525,02527,02527,02528,02529,0252a,0252b,0252c,0252d,0252e,0253d,0253e
+DUPELIST=02525,02526,02527,02528,02529,0252a,0252b,0252c,0252d,0252e
 
 [ITEMDEF 02525]
 //wall marble window 3
@@ -4920,11 +4920,7 @@ DUPEITEM=02524
 //wall marble window 3
 DUPEITEM=02524
 
-[ITEMDEF 0253d]
-//wall marble window 3
-DUPEITEM=02524
-
-[ITEMDEF 0253e]
+[ITEMDEF 0252e]
 //wall marble window 3
 DUPEITEM=02524
 
@@ -5133,6 +5129,14 @@ DUPEITEM=026d0
 DUPEITEM=026d0
 
 
+[ITEMDEF 02712]
+DEFNAME=i_lattice
+TYPE=t_wall
+RESOURCES=100 i_log
+CATEGORY=Buildings - Walls
+SUBSECTION=Lattice
+DESCRIPTION=Lattice Pattern
+
 [ITEMDEF 02713]
 DEFNAME=i_latticed_wall_white
 TYPE=t_wall
@@ -5190,6 +5194,13 @@ DUPEITEM=02713
 //latticed wall (white)
 DUPEITEM=02713
 
+[ITEMDEF 02752]
+DEFNAME=i_latticed_wall_2
+TYPE=t_wall
+RESOURCES=100 i_log
+CATEGORY=Buildings - Walls
+SUBSECTION=Latticed Wall 2
+DESCRIPTION=Latticed Wall 2
 
 [ITEMDEF 02753]
 DEFNAME=i_latticed_wall_brown

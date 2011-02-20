@@ -1,13 +1,9 @@
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
 //****************************************************************************
-// FILE LAST UPDATED: Monday, November 24, 2003
-//
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
 VERSION=0.56b
 
 ///////////////////////////
@@ -3642,6 +3638,34 @@ DUPEITEM=0222e
 [ITEMDEF 02231]
 //giant mushroom
 DUPEITEM=0222e
+
+[ITEMDEF 0224a]
+DEFNAME=i_tree_willow2_trunk
+TYPE=t_tree
+CATEGORY=Vegetation
+SUBSECTION=Trees
+DESCRIPTION=Willow Tree 2 (trunk)
+
+[ITEMDEF 0224b]
+DEFNAME=i_tree_willow3_trunk
+TYPE=t_tree
+CATEGORY=Vegetation
+SUBSECTION=Trees
+DESCRIPTION=Willow Tree 3 (trunk)
+
+[ITEMDEF 0224c]
+DEFNAME=i_tree_oak3_trunk
+TYPE=t_tree
+CATEGORY=Vegetation
+SUBSECTION=Trees
+DESCRIPTION=Oak Tree 3 (trunk)
+
+[ITEMDEF 0224d]
+DEFNAME=i_tree_oak4_trunk
+TYPE=t_tree
+CATEGORY=Vegetation
+SUBSECTION=Trees
+DESCRIPTION=Oak Tree 4 (trunk)
 
 [ITEMDEF 0246c]
 //technically its grass, but we want to harvest it like a tree

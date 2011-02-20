@@ -1191,63 +1191,6 @@ DUPELIST=014e2
 //vat ladder
 DUPEITEM=014e1
 
-[ITEMDEF 014f3]
-DEFNAME=i_model_ship
-FLIP=1
-WEIGHT=1
-RESOURCES=10 i_board
-SKILLMAKE=carpentry 95.0, t_carpentry
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Nautical
-DESCRIPTION=Ship Model (N)
-DUPELIST=014f4
-
-[ITEMDEF 014f4]
-//ship model
-DUPEITEM=014f3
-
-[ITEMDEF 014f5]
-DEFNAME=i_spyglass
-TYPE=t_spy_glass
-FLIP=1
-RESOURCES=2 i_ingot_iron, 1 i_glass
-WEIGHT=3
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Nautical
-DESCRIPTION=SpyGlass (N)
-DUPELIST=014f6
-
-[ITEMDEF 014f6]
-//spyglass
-DUPEITEM=014f5
-
-[ITEMDEF 014f7]
-DEFNAME=i_anchor
-FLIP=1
-RESOURCES=40 i_ingot_iron, 1 i_rope
-WEIGHT=40
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Nautical
-DESCRIPTION=Anchor (W)
-DUPELIST=014f9
-
-[ITEMDEF 014f8]
-DEFNAME=i_rope
-FLIP=1
-WEIGHT=2
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Nautical
-DESCRIPTION=Rope (W)
-DUPELIST=014fa
-
-[ITEMDEF 014f9]
-//anchor
-DUPEITEM=014f7
-
-[ITEMDEF 014fa]
-//rope
-DUPEITEM=014f8
-
 [ITEMDEF 01508]
 DEFNAME=i_decorative_armor
 FLIP=1

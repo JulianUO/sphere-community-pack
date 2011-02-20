@@ -6,6 +6,7 @@
 // FILE LAST UPDATED: Saturday, Febuary 19, 2011
 VERSION=0.56b
 
+
 [ITEMDEF 02080]
 DEFNAME=i_rune_clumsy
 TYPE=t_spellicon

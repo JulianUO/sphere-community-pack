@@ -150,6 +150,24 @@ DESCRIPTION=Animated Piece
 [ITEMDEF 018b5]
 //animated ballista piece
 
+[ITEMDEF 018ce]
+//animated ballista piece
+
+[ITEMDEF 018cf]
+//animated ballista piece
+
+[ITEMDEF 018d0]
+//animated ballista piece
+
+[ITEMDEF 018d1]
+//animated ballista piece
+
+[ITEMDEF 018d2]
+//animated ballista piece
+
+[ITEMDEF 018d3]
+//animated ballista piece
+
 [ITEMDEF 03f3f]
 CATEGORY=Miscellaneous
 SUBSECTION=Ballista

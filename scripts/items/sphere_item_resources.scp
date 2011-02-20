@@ -173,28 +173,6 @@ SUBSECTION=Coins
 DESCRIPTION=Silver Coin
 DUPELIST=0ef1,0ef2
 
-[ITEMDEF 0f36]
-//Sheaf of Hay
-//Food for animals only? Is there a distinction?
-// DEFNAME2=BUNDLE_OF_GRAIN
-DEFNAME=i_hay_sheaf
-TYPE=t_grain
-VALUE=3
-WEIGHT=10
-CATEGORY=Items by Professions
-SUBSECTION=StableMaster
-DESCRIPTION=Hay (Sheaf)
-DUPELIST=0100c,0100d
-
-[ITEMDEF 0f3b]
-//horse dung
-DEFNAME=i_horse_dung
-VALUE=1
-CATEGORY=Items by Professions
-SUBSECTION=StableMaster
-DESCRIPTION=Horse Dung
-DUPELIST=0f3c
-
 [ITEMDEF 01dfd]
 DEFNAME=i_dirt
 VALUE=1

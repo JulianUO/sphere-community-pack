@@ -1,14 +1,9 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
 VERSION=0.56b
 
 
@@ -1441,6 +1436,968 @@ DUPEITEM=05b3
 [ITEMDEF 021f0]
 //tile roof
 DUPEITEM=05b3
+
+[ITEMDEF 023be]
+DEFNAME=i_roof_ceramic_blue
+DUPELIST=023bf,023c0,023c0,023c1,023c2,023c3,023c4,023c5,023c6,023c7,023c8,023c9,023ca,023cb,023cc,023cd,023ce,023cf,023d0,023d1,023d2,023d3
+
+CATEGORY=Buildings - SE Roofs
+SUBSECTION=Ceramic Roof (Blue)
+DESCRIPTION=@
+
+[ITEMDEF 023bf]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023c0]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023c1]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023c2]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023c3]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023c4]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023c5]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023c6]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023c7]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023c8]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023c9]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023ca]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023cb]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023cc]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023cd]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023ce]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023cf]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023d0]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023d1]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023d2]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023d3]
+//ceramic roof (blue)
+DUPEITEM=023be
+
+[ITEMDEF 023d4]
+DEFNAME=i_roof_ceramic_red
+DUPELIST=023d5,023d6,023d7,023d8,023d9,023da,023db,023dc,023dd,023de,023df,023e0,023e1,023e2,023e3,023e4,023e5,023e6,023e7,023e8,023e9
+
+CATEGORY=Buildings - SE Roofs
+SUBSECTION=Ceramic Roof (Red)
+DESCRIPTION=@
+
+[ITEMDEF 023d5]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023d6]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023d7]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023d8]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023d9]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023da]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023db]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023dc]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023dd]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023de]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023df]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023e0]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023e1]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023e2]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023e3]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023e4]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023e5]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023e6]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023e7]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023e8]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023e9]
+//ceramic roof (red)
+DUPEITEM=023d4
+
+[ITEMDEF 023ea]
+DEFNAME=i_roof_ceramic_aqua
+DUPELIST=023eb,023ec,023ed,023ee,023ef,023f0,023f1,023f2,023f3,023f4,023f5,023f6,023f7,023f8,023f9,023fa,023fb,023fc,023fd,023fe,023ff
+
+CATEGORY=Buildings - SE Roofs
+SUBSECTION=Ceramic Roof (Aqua)
+DESCRIPTION=@
+
+[ITEMDEF 023eb]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023ec]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023ed]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023ee]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023ef]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023f0]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023f1]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023f2]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023f3]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023f4]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023f5]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023f6]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023f7]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023f8]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023f9]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023fa]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023fb]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023fc]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023fd]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023fe]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 023ff]
+//ceramic roof (aqua)
+DUPEITEM=023ea
+
+[ITEMDEF 026da]
+DEFNAME=i_roof_hay
+CATEGORY=Buildings - SE Roofs
+SUBSECTION=Hay Roof
+DESCRIPTION=@
+DUPELIST=026db,026dc,026dd,026de,026df,026e0,026e1,026e2,026e3,026e4,026e5,026e6,026e7,026e8,026e9,026ea,026eb,026ec
+
+[ITEMDEF 026db]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026dc]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026dd]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026de]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026df]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026e0]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026e1]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026e2]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026e3]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026e4]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026e5]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026e6]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026e7]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026e8]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026e9]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026ea]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026eb]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026ec]
+//hay roof
+DUPEITEM=026da
+
+[ITEMDEF 026f8]
+DEFNAME=i_roof_bark
+CATEGORY=Buildings - SE Roofs
+SUBSECTION=Bark Roof
+DESCRIPTION=@
+DUPELIST=026f9,026fa,026fb,026fc,026fd,026fe,026ff,02700,02701,02702,02703,02704,02705,02706,02707,02708,02709,0270a,0270b,0270c
+
+[ITEMDEF 026f9]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 026fa]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 026fb]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 026fc]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 026fd]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 026fe]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 026ff]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 02700]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 02701]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 02702]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 02703]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 02704]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 02705]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 02706]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 02707]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 02708]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 02709]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 0270a]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 0270b]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 0270c]
+//bark roof
+DUPEITEM=026f8
+
+[ITEMDEF 028b0]
+DEFNAME=i_roof_stone_4
+DUPELIST=028b1,028b2,028b3,028b4,028b5,028b6,028b7,028b8,028b9,028ba,028bb,028bc,028bd,028be,028bf,028c0,028c1,028c2,028c3,028c4,028c5
+
+CATEGORY=Buildings - SE Roofs
+SUBSECTION=Stone Roof 4
+DESCRIPTION=@
+
+[ITEMDEF 028b1]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028b2]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028b3]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028b4]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028b5]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028b6]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028b7]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028b8]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028b9]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028ba]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028bb]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028bc]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028bd]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028be]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028bf]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028c0]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028c1]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028c2]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028c3]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028c4]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028c5]
+//stone roof
+DUPEITEM=028b0
+
+[ITEMDEF 028c6]
+DEFNAME=i_roof_wood_slat
+DUPELIST=028c7,028c8,028c9,028ca,028cb,028cc,028cd,028ce,028cf,028d0,028d1,028d2,028d3,028d4,028d5,028d6,028d7,028d8,028d9,028da,028db,028e4,028e5,028e6,028e7,028e8,028e9,028ea,028eb,028ec,028ed,028ee,028ef,02a2c,02a2d,02a2e
+
+CATEGORY=Buildings - SE Roofs
+SUBSECTION=Wood Slat Roof
+DESCRIPTION=@
+
+[ITEMDEF 028c7]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028c8]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028c9]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028ca]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028cb]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028cc]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028cd]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028ce]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028cf]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028d0]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028d1]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028d2]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028d3]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028d4]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028d5]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028d6]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028d7]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028d8]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028d9]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028da]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028db]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028e4]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028e5]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028e6]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028e7]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028e8]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028e9]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028ea]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028eb]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028ec]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028ed]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028ee]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028ef]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 02a2c]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 02a2d]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 02a2e]
+//wood slaf roof
+DUPEITEM=028c6
+
+[ITEMDEF 028f0]
+DEFNAME=i_roof_ceramic_green
+DUPELIST=028f1,028f2,028f3,028f4,028f5,028f6,028f7,028f8,028f9,028fa,028fb,028fc,028fd,028fe,028ff,02900,02901,02902,02903,02904,02905
+
+CATEGORY=Buildings - SE Roofs
+SUBSECTION=Ceramic Roof (Green)
+DESCRIPTION=@
+
+[ITEMDEF 028f1]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028f2]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028f3]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028f4]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028f5]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028f6]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028f7]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028f8]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028f9]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028fa]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028fb]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028fc]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028fd]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028fe]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 028ff]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 02900]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 02901]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 02902]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 02903]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 02904]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 02905]
+//ceramic roof (green)
+DUPEITEM=028f0
+
+[ITEMDEF 02906]
+DEFNAME=i_roof_ceramic_white
+DUPELIST=02907,02908,02909,0290a,0290b,0290c,0290d,0290e,0290f,02910,02911,02912,02913,02914,02915,02916,02917,02918,02919,0291a,0291b
+
+CATEGORY=Buildings - SE Roofs
+SUBSECTION=Ceramic Roof (White)
+DESCRIPTION=@
+
+[ITEMDEF 02907]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02908]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02909]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 0290a]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 0290b]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 0290c]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 0290d]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 0290e]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 0290f]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02910]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02911]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02912]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02913]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02914]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02915]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02916]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02917]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02918]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02919]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 0291a]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 0291b]
+//ceramic roof (white)
+DUPEITEM=02906
+
+[ITEMDEF 02920]
+DEFNAME=i_roof_ceramic_orange
+DUPELIST=02921,02922,02923,02924,02925,02926,02927,02928,02929,0292a,0292b,0292c,0292d,0292e,0292f,02930,02931,02932,02933,02934,02935
+
+CATEGORY=Buildings - SE Roofs
+SUBSECTION=Ceramic Roof (Orange)
+DESCRIPTION=@
+
+[ITEMDEF 02921]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02922]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02923]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02924]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02925]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02926]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02927]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02928]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02929]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 0292a]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 0292b]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 0292c]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 0292d]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 0292e]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 0292f]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02930]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02931]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02932]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02933]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02934]
+//ceramic roof (orange)
+DUPEITEM=02920
+
+[ITEMDEF 02935]
+//ceramic roof (orange)
+DUPEITEM=02920
 
 
 [EOF]
