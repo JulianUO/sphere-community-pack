@@ -1458,6 +1458,113 @@ CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Plant Bowl
 
+[ITEMDEF 02aaa]
+DEFNAME=i_promo_token
+NAME=token
+VALUE=100
+WEIGHT=1.0
+TYPE=t_normal
+CATEGORY=Quest
+SUBSECTION=Token
+DESCRIPTION=Promo Token
+
+[ITEMDEF 02aab]
+DEFNAME=i_class_samurai
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Samurai
+
+[ITEMDEF 02aac]
+DEFNAME=i_class_ninja
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Ninja
+
+[ITEMDEF 02aad]
+DEFNAME=i_class_necromancer
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Necromancer
+
+[ITEMDEF 02aae]
+DEFNAME=i_class_paladin
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Paladin
+
+[ITEMDEF 02aaf]
+DEFNAME=i_class_treasurehunter
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Treasure Hunter
+
+[ITEMDEF 02ab0]
+DEFNAME=i_class_mage
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Mage
+
+[ITEMDEF 02ab1]
+DEFNAME=i_class_swordsman
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Swordsman
+
+[ITEMDEF 02ab2]
+DEFNAME=i_class_fencer
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Fencer
+
+[ITEMDEF 02ab3]
+DEFNAME=i_class_macer
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Macer
+
+[ITEMDEF 02ab4]
+DEFNAME=i_class_archer
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Archer
+
+[ITEMDEF 02ab5]
+DEFNAME=i_class_blacksmith
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Blacksmith
+
+[ITEMDEF 02ab6]
+DEFNAME=i_class_bard
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Bard
+
+[ITEMDEF 02ab7]
+DEFNAME=i_class_tamer
+RESOURCES=3 i_board,1 i_ingot_iron
+CATEGORY=Decoration - Signs
+SUBSECTION=Classes
+DESCRIPTION=Tamer
+
+[ITEMDEF 02ab8]
+DEFNAME=i_mini_sacrificial_altar
+CATEGORY=Miniature
+SUBSECTION=Furniture
+DESCRIPTION=Sacrificial Altar
+
 
 [ITEMDEF 02ad8]
 CATEGORY=Miscellaneous
@@ -1468,6 +1575,7 @@ DESCRIPTION=Missing Name Tile 02ad8
 CATEGORY=Miscellaneous
 SUBSECTION=Bad Tiles
 DESCRIPTION=Missing Name 02ae3
+
 
 [ITEMDEF 02af8]
 //shopkeeper container

@@ -1,14 +1,9 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
 
 
@@ -863,6 +858,70 @@ DUPEITEM=0233c
 [ITEMDEF 0234a]
 //serpant pillar
 DUPEITEM=0233c
+
+[ITEMDEF 024ad]
+TYPE=t_normal
+RESOURCES=100 i_log
+CATEGORY=Buildings - Other
+SUBSECTION=Japanese Gate
+DESCRIPTION=Gate Structure North
+DUPELIST=024ae,024af,024b0,024b1,024b2,024b3
+
+[ITEMDEF 024ae]
+//japanese gate (north)
+DUPEITEM=024ad
+
+[ITEMDEF 024af]
+//japanese gate (north)
+DUPEITEM=024ad
+
+[ITEMDEF 024b0]
+//japanese gate (north)
+DUPEITEM=024ad
+
+[ITEMDEF 024b1]
+//japanese gate (north)
+DUPEITEM=024ad
+
+[ITEMDEF 024b2]
+//japanese gate (north)
+DUPEITEM=024ad
+
+[ITEMDEF 024b3]
+//japanese gate (north)
+DUPEITEM=024ad
+
+[ITEMDEF 024b4]
+TYPE=t_normal
+RESOURCES=100 i_log
+CATEGORY=Buildings - Other
+SUBSECTION=Japanese Gate
+DESCRIPTION=Gate Structure West
+DUPELIST=024b5,024b6,024b7,024b8,024b9,024ba
+
+[ITEMDEF 024b5]
+//japanese gate (west)
+DUPEITEM=024b4
+
+[ITEMDEF 024b6]
+//japanese gate (west)
+DUPEITEM=024b4
+
+[ITEMDEF 024b7]
+//japanese gate (west)
+DUPEITEM=024b4
+
+[ITEMDEF 024b8]
+//japanese gate (west)
+DUPEITEM=024b4
+
+[ITEMDEF 024b9]
+//japanese gate (west)
+DUPEITEM=024b4
+
+[ITEMDEF 024ba]
+//japanese gate (west)
+DUPEITEM=024b4
 
 [ITEMDEF 02710]
 //tightrope

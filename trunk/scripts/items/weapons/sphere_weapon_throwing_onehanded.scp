@@ -26,7 +26,7 @@ TWOHANDS=N
 RESOURCES=5 i_ingot_iron
 SKILLMAKE=75.0 Blacksmithing
 CATEGORY=Provisions - Weapons - Throwing
-SUBSECTION=Stygian Abyss
+SUBSECTION=Boomerangs
 DESCRIPTION=Boomerang
 TEVENTS=t_iprop
 TAG.Item.Gargoyle=1
@@ -91,7 +91,7 @@ TWOHANDS=N
 RESOURCES=9 i_ingot_iron
 SKILLMAKE=75.0 Blacksmithing
 CATEGORY=Provisions - Weapons - Throwing
-SUBSECTION=Stygian Abyss
+SUBSECTION=Soul Glaives
 DESCRIPTION=Soul Glaive
 TEVENTS=t_iprop
 TAG.Item.Gargoyle=1
@@ -121,7 +121,7 @@ TYPE=t_bola
 WEIGHT=4.0
 SKILLMAKE=Tinkering 60.0, t_tinker_tools
 RESOURCES=4 i_bola_ball, 3 i_hides_cut
-CATEGORY=Provisions - Weapons - Miscellaneous
+CATEGORY=Provisions - Weapons - Throwing
 SUBSECTION=Bolas
 DESCRIPTION=Bola
 
@@ -133,7 +133,7 @@ TYPE=t_normal
 WEIGHT=4.0
 SKILLMAKE=Tinkering 45.0, t_tinker_tools
 RESOURCES=10 i_ingot_iron
-CATEGORY=Provisions - Weapons - Miscellaneous
+CATEGORY=Provisions - Weapons - Throwing
 SUBSECTION=Bolas
 DESCRIPTION=Bola Ball
 ON=@Create
@@ -146,16 +146,51 @@ ON=@Create
 [ITEMDEF 027ac]
 DEFNAME=i_shuriken
 NAME=Shuriken%s
-TYPE=t_weapon_arrow
-DUPELIST=027f7
-SKILLMAKE=Blacksmithing 45.0
+TYPE=t_weapon_thrown//fixme: t_shuriken?
 RESOURCES=5 i_ingot_iron
-
-[ITEMDEF 027ed]
-DUPEITEM=027a2
+SKILLMAKE=Blacksmithing 45.0
+CATEGORY=Provisions - Weapons - Throwing
+SUBSECTION=Shurikens
+DESCRIPTION=Shuriken
+DUPELIST=027f7
 
 [ITEMDEF 027f7]
+//Shuriken
 DUPEITEM=027ac
+
+
+///////////////////////////////////////////////////////////////
+//////// SMOKE BOMBS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 02808]
+//This weapon is not equiped, it is thrown
+DEFNAME=i_bomb_smoke
+NAME=smoke bomb
+TYPE=t_weapon_thrown//fixme:t_smokebomb?
+VALUE=7
+WEIGHT=0.7
+RESOURCES=6 i_reag_volcanic_ash,1 i_egg
+SKILLMAKE=ALCHEMY 95.1
+CATEGORY=Provisions - Weapons - Throwing
+SUBSECTION=Smoke Bombs
+DESCRIPTION=Smoke Bomb
+
+
+///////////////////////////////////////////////////////////////
+//////// EGG BOMBS
+///////////////////////////////////////////////////////////////
+[ITEMDEF 02809]
+//This weapon is not equiped, it is thrown
+DEFNAME=i_bomb_egg
+NAME=egg bomb
+TYPE=t_weapon_thrown//fixme:t_egg_bomb
+VALUE=7
+WEIGHT=0.7
+RESOURCES=6 i_reag_volcanic_ash,1 i_egg
+SKILLMAKE=ALCHEMY 95.1
+CATEGORY=Provisions - Weapons - Throwing
+SUBSECTION=Egg Bombs
+DESCRIPTION=Egg Bomb
 
 
 [EOF]

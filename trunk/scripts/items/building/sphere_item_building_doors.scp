@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
 
 
@@ -792,6 +792,18 @@ DESCRIPTION=@
 DUPEITEM=02420
 DESCRIPTION=@ (n / ne)
 
+[ITEMDEF 0248b]
+TYPE=t_wall
+RESOURCES=200 i_log,10 i_ingot_iron
+CATEGORY=Buildings - Doors
+SUBSECTION=Japanese Gate Door
+DESCRIPTION=Door
+DUPELIST=0248c
+
+[ITEMDEF 0248c]
+//japanese gate door
+DUPEITEM=0248b
+
 [ITEMDEF 026f4]
 DEFNAME=i_door_sliding_n
 TYPE=t_door
@@ -809,6 +821,131 @@ CATEGORY=Buildings - Doors
 SUBSECTION=Sliding
 DESCRIPTION=Sliding W
 DUPELIST=02991,0299f
+
+
+[ITEMDEF 02990]
+//sliding door
+DUPEITEM=026f4
+
+[ITEMDEF 02991]
+//sliding door open
+DUPEITEM=026f6
+
+
+[ITEMDEF 0299e]
+//sliding door
+DUPEITEM=026f4
+
+[ITEMDEF 0299f]
+//sliding door open
+DUPEITEM=026f6
+
+
+[ITEMDEF 02a05]
+DEFNAME=i_door_sliding_2
+TYPE=t_door
+RESOURCES=20 i_log,20 i_paper
+CATEGORY=Buildings - Doors
+SUBSECTION=Sliding
+DESCRIPTION=Sliding 2
+DUPELIST=02a07,02a09,02a0b,02a0d,02a0f,02a11,02a13,02a15,02a17,02a19,02a1b
+
+[ITEMDEF 02a06]
+DEFNAME=i_door_sliding_n_open_2
+TYPE=t_door_open
+RESOURCES=20 i_log,20 i_paper
+CATEGORY=Buildings - Doors
+SUBSECTION=Sliding
+DESCRIPTION=Sliding 2 (open)
+DUPELIST=02a08,02a0a,02a0c,02a0e,02a10,02a12,02a14,02a16,02a18,02a1a,02a1c
+
+[ITEMDEF 02a07]
+//sliding door
+DUPEITEM=02a05
+
+[ITEMDEF 02a08]
+//sliding door (open)
+DUPEITEM=02a06
+
+[ITEMDEF 02a09]
+//sliding door
+DUPEITEM=02a05
+
+[ITEMDEF 02a0a]
+//sliding door (open)
+DUPEITEM=02a06
+
+[ITEMDEF 02a0b]
+//sliding door
+DUPEITEM=02a05
+
+[ITEMDEF 02a0c]
+//sliding door (open)
+DUPEITEM=02a06
+
+[ITEMDEF 02a0d]
+//sliding door
+DUPEITEM=02a05
+
+[ITEMDEF 02a0e]
+//sliding door (open)
+DUPEITEM=02a06
+
+[ITEMDEF 02a0f]
+//sliding door
+DUPEITEM=02a05
+
+[ITEMDEF 02a10]
+//sliding door (open)
+DUPEITEM=02a06
+
+[ITEMDEF 02a11]
+//sliding door
+DUPEITEM=02a05
+
+[ITEMDEF 02a12]
+//sliding door (open)
+DUPEITEM=02a06
+
+[ITEMDEF 02a13]
+//sliding door
+DUPEITEM=02a05
+
+[ITEMDEF 02a14]
+//sliding door (open)
+DUPEITEM=02a06
+
+[ITEMDEF 02a15]
+//sliding door
+DUPEITEM=02a05
+
+[ITEMDEF 02a16]
+//sliding door (open)
+DUPEITEM=02a06
+
+[ITEMDEF 02a17]
+//sliding door
+DUPEITEM=02a05
+
+[ITEMDEF 02a18]
+//sliding door (open)
+DUPEITEM=02a06
+
+[ITEMDEF 02a19]
+//sliding door
+DUPEITEM=02a05
+
+[ITEMDEF 02a1a]
+//sliding door (open)
+DUPEITEM=02a06
+
+[ITEMDEF 02a1b]
+//sliding door
+DUPEITEM=02a05
+
+[ITEMDEF 02a1c]
+//sliding door (open)
+DUPEITEM=02a06
 
 
 [ITEMDEF 041cf]

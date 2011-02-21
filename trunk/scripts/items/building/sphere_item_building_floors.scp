@@ -1622,11 +1622,839 @@ DUPEITEM=02960
 [ITEMDEF 0298f]
 DUPEITEM=02960
 
+[ITEMDEF 02bcf]
+DEFNAME=i_floor_tile_simple
+RESOURCES=100 i_board
+CATEGORY=Buildings - Floors
+SUBSECTION=Elven Floor Tile
+DESCRIPTION=Elven Floor Tile (simple)
+DUPELIST=02cec,02ced,02cee,02dcb,02dcc,02dcd,02dce
+
+[ITEMDEF 02cec]
+//Elven Floor Tile (simple)
+DUPEITEM=02bcf
+
+[ITEMDEF 02ced]
+//Elven Floor Tile (simple)
+DUPEITEM=02bcf
+
+[ITEMDEF 02cee]
+//Elven Floor Tile (simple)
+DUPEITEM=02bcf
+
+[ITEMDEF 02d38]
+DEFNAME=i_floor_bark
+RESOURCES=100 i_log
+CATEGORY=Buildings - Floors
+SUBSECTION=Elven Floor Bark
+DESCRIPTION=Elven Floor Bark
+DUPELIST=02d39,02d3a,02d3b
+
+[ITEMDEF 02d39]
+//Elven Bark Floor
+DUPEITEM=02d38
+
+[ITEMDEF 02d3a]
+//Elven Bark Floor
+DUPEITEM=02d38
+
+[ITEMDEF 02d3b]
+//Elven Bark Floor
+DUPEITEM=02d38
+
+[ITEMDEF 02dcb]
+//Elven Floor Tile (simple)
+DUPEITEM=02bcf
+
+[ITEMDEF 02dcc]
+//Elven Floor Tile (simple)
+DUPEITEM=02bcf
+
+[ITEMDEF 02dcd]
+//Elven Floor Tile (simple)
+DUPEITEM=02bcf
+
+[ITEMDEF 02dce]
+//Elven Floor Tile (simple)
+DUPEITEM=02bcf
+
+[ITEMDEF 02e01]
+NAME=thorn floor
+TYPE=t_floor
+RESOURCES=10 i_log,1 i_plant_bramble
+CATEGORY=Buildings - Floors
+SUBSECTION=Thorn Floor
+DESCRIPTION=Thorn Floor
+
+[ITEMDEF 02e69]
+DEFNAME=i_ground_tree
+NAME=tree floor
+TYPE=t_floor
+RESOURCES=100 i_log
+CATEGORY=Ground Tiles
+SUBSECTION=Tree Floor
+DESCRIPTION=Tree Floor
+DUPELIST=02e6a,02e6b,02e6c,02e6d,02e6e,02e6f,02e70,02e71,02e72,02e73,02e74,02e75,02e76,02e77,02e78,02e79,02e7a,02e7b,02e7c,02e7d,02e7e,02e7f,02e80,02e81,02e82,02e83,02e84,02e85,02e86,02e87,02e88,02e89,02e8a,02e8b,02e8c,02e8d,02e8e,02e8f,02e90,02e91,02e92,02e93,02e94,02e95,02e96,02e97,02e98,02e99,02e9a,02e9b,02e9c,02e9d,02e9e,02e9f,02ea0,02ea1,02ea2,02ea3,02ea4,02ea5,02ea6,02ea7,02ea8,02ea9,02eaa,02eab,02eac,02ead,02eae,02eaf,02eb0,02eb1,02eb2,02eb3,02eb4,02eb5,02eb6,02eb7,02eb8,02eb9,02eba,02ebb,02ebc,02ebd,02ebe,02ebf,02ec0,02ec1,02ec2,02ec3,02ec4,02ec5,02ec6,02ec7,02ec8,02ec9,02eca,02ecb,02ecc,02ecd,02ece,02ecf,02ed0,02ed1,02ed2,02ed3,02ed4,02ed5,02ed6,02ed7,02ed8,02ed9,02eda,02edb,02ee1,02ee2,02ee3,02ee4,02ee5,02ee6,02ee7,02ee8,02ee9,02eea,02eeb,02eec,02eed,02eee,02eef,02ef0,02ef1,02ef2,02ef3,02ef4,02ef5,02ef6,02ef7,02ef8,02ef9,02efa,02efb,02efc,02efd,02efe,02eff,02f00,02f01,02f02,02f03,02f04,02f05,02f06,02f07,02f08,02f09,02f0a,02f0b,02f0c,02f0d,02f0e
+
+[ITEMDEF 02e6a]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e6b]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e6c]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e6d]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e6e]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e6f]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e70]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e71]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e72]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e73]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e74]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e75]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e76]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e77]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e78]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e79]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e7a]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e7b]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e7c]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e7d]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e7e]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e7f]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e80]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e81]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e82]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e83]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e84]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e85]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e86]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e87]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e88]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e89]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e8a]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e8b]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e8c]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e8d]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e8e]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e8f]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e90]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e91]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e92]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e93]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e94]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e95]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e96]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e97]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e98]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e99]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e9a]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e9b]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e9c]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e9d]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e9e]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02e9f]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ea0]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ea1]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ea2]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ea3]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ea4]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ea5]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ea6]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ea7]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ea8]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ea9]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eaa]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eab]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eac]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ead]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eae]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eaf]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eb0]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eb1]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eb2]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eb3]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eb4]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eb5]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eb6]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eb7]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eb8]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eb9]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eba]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ebb]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ebc]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ebd]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ebe]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ebf]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ec0]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ec1]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ec2]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ec3]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ec4]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ec5]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ec6]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ec7]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ec8]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ec9]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eca]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ecb]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ecc]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ecd]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ece]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ecf]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ed0]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ed1]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ed2]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ed3]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ed4]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ed5]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ed6]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ed7]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ed8]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ed9]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eda]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02edb]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ee1]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ee2]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ee3]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ee4]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ee5]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ee6]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ee7]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ee8]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ee9]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eea]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eeb]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eec]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eed]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eee]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eef]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ef0]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ef1]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ef2]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ef3]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ef4]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ef5]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ef6]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ef7]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ef8]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02ef9]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02efa]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02efb]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02efc]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02efd]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02efe]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02eff]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f00]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f01]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f02]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f03]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f04]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f05]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f06]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f07]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f08]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f09]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f0a]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f0b]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f0c]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f0d]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 02f0e]
+//tree floor
+DUPEITEM=02e69
+
+[ITEMDEF 03004]
+DEFNAME=i_floor_black
+TYPE=t_floor
+RESOURCES=100 i_rock_plain
+CATEGORY=Buildings - Floors
+SUBSECTION=Black Floor
+DESCRIPTION=Black Floor
+DUPELIST=03005,03006,03007
+
+[ITEMDEF 03005]
+//floor tile (black)
+DUPEITEM=03004
+
+[ITEMDEF 03006]
+//floor tile (black)
+DUPEITEM=03004
+
+[ITEMDEF 03007]
+//floor tile (black)
+DUPEITEM=03004
+
+[ITEMDEF 035b2]
+TYPE=t_floor
+FLIP=1
+RESOURCES=100 i_water
+CATEGORY=Buildings - Floors
+SUBSECTION=Ice Floor
+DESCRIPTION=Ice Floor
+DUPELIST=035b3,035b4,035b5,035b6,035b7,035b8,035b9,035ba,035bb,035bc,035bd
+
+[ITEMDEF 035b3]
+//ice floor
+DUPEITEM=035b2
+
+[ITEMDEF 035b4]
+//ice floor
+DUPEITEM=035b2
+
+[ITEMDEF 035b5]
+//ice floor
+DUPEITEM=035b2
+
+[ITEMDEF 035b6]
+//ice floor
+DUPEITEM=035b2
+
+[ITEMDEF 035b7]
+//ice floor
+DUPEITEM=035b2
+
+[ITEMDEF 035b8]
+//ice floor
+DUPEITEM=035b2
+
+[ITEMDEF 035b9]
+//ice floor
+DUPEITEM=035b2
+
+[ITEMDEF 035ba]
+//ice floor
+DUPEITEM=035b2
+
+[ITEMDEF 035bb]
+//ice floor
+DUPEITEM=035b2
+
+[ITEMDEF 035bc]
+//ice floor
+DUPEITEM=035b2
+
+[ITEMDEF 035bd]
+//ice floor
+DUPEITEM=035b2
+
+[ITEMDEF 0361a]
+RESOURCES=100 i_rock_plain
+CATEGORY=Buildings - Floors
+SUBSECTION=Stone Floor 1a
+DESCRIPTION=Stone Floor 1a
+DUPELIST=0361b,0361c,0361d,0361e,0361f,03620,03621,03622
+
+[ITEMDEF 0361b]
+//Stone Floor 1a
+DUPEITEM=0361a
+
+[ITEMDEF 0361c]
+//Stone Floor 1a
+DUPEITEM=0361a
+
+[ITEMDEF 0361d]
+//Stone Floor 1a
+DUPEITEM=0361a
+
+[ITEMDEF 0361e]
+//Stone Floor 1a
+DUPEITEM=0361a
+
+[ITEMDEF 0361f]
+//Stone Floor 1a
+DUPEITEM=0361a
+
+[ITEMDEF 03620]
+//Stone Floor 1a
+DUPEITEM=0361a
+
+[ITEMDEF 03621]
+//Stone Floor 1a
+DUPEITEM=0361a
+
+[ITEMDEF 03622]
+//Stone Floor 1a
+DUPEITEM=0361a
+
+
 [ITEMDEF 0407e]
 DEFNAME=i_sa_floor_green_paver
 CATEGORY=Buildings - Floors
-SUBSECTION=Stygian Abyss
-DESCRIPTION=Green Pavers Floor Tiles
+SUBSECTION=Green Pavers Floor Tiles
+DESCRIPTION=Floor
 DUPELIST=0407f,04080,04081,04082,04083,04084,04085,04086,04087,04088,04089,0408a,0408b,0408c,0408d,0408e,0408f,04090,04091,04092,04093,04094,04095,04096,04097,04098,04099,0409a
 
 [ITEMDEF 0407f]

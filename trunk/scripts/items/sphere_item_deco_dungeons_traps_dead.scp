@@ -4210,14 +4210,35 @@ CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Bones
 DESCRIPTION=Skull (large)
 
-[ITEMDEF 02251]
-DEFNAME=i_daemon_skull
-NAME=daemon skull
-TYPE=t_normal
-VALUE=5000
+[ITEMDEF 0224e]
+DEFNAME=i_skull_demon
+NAME=demon skull
+TYPE=t_bone
+FLIP=1
+WEIGHT=10.0
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Bones
-DESCRIPTION=Demon Skull
+DESCRIPTION=Skull (demon 1)
+DUPELIST=0224f
+
+[ITEMDEF 0224f]
+//Skull (demon 1)
+DUPEITEM=0224e
+
+[ITEMDEF 02250]
+DEFNAME=i_skull_demon_2
+NAME=demon skull
+TYPE=t_bone
+FLIP=1
+WEIGHT=10.0
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Bones
+DESCRIPTION=Skull (demon 2)
+DUPELIST=02251
+
+[ITEMDEF 02251]
+//Skull (demon 2)
+DUPEITEM=02250
 
 
 

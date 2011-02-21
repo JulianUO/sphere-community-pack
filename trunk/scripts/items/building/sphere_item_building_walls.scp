@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
 
 
@@ -420,7 +420,7 @@ RESOURCES=100 i_rock_plain
 CATEGORY=Buildings - Walls
 SUBSECTION=Stone Wall 2
 DESCRIPTION=Wall
-DUPELIST=058,059,05a,05b,05c,05f,060,061,062,063,064,065,066,067,068,069,06a,06b,06c,06d,06e,06f,070,071,072,073,074,075,076,077,078,079,07d9,021fd,021ff,02200,02201,02202
+DUPELIST=058,059,05a,05b,05c,05f,060,061,062,063,064,065,066,067,068,069,06a,06b,06c,06d,06e,06f,070,071,072,073,074,075,076,077,078,079,07d9,021fd,02201,02202
 
 [ITEMDEF 058]
 //stone wall 2
@@ -442,7 +442,7 @@ RESOURCES=100 i_rock_plain,1 i_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Stone Wall 2
 DESCRIPTION=Wall (with window)
-DUPELIST=05c,05d,05e
+DUPELIST=05c,05d,05e,021ff,02200
 
 [ITEMDEF 05c]
 //stone wall 2 (with window)
@@ -703,7 +703,7 @@ DESCRIPTION=Wall (arch)
 [ITEMDEF 08f]
 //stone wall 3 (with window)
 //FIXME: This window does not have a light pattern
-DUPEITEM=07a
+DUPEITEM=083
 
 [ITEMDEF 090]
 DEFNAME=i_wall_log
@@ -712,7 +712,7 @@ RESOURCES=100 i_log
 CATEGORY=Buildings - Walls
 SUBSECTION=Log Wall 1
 DESCRIPTION=Wall
-DUPELIST=091,092,093,094,095,096,097,09a,09b,09c,09d,09e,09f,0a0,0a1,0a2,0a3,0a4,0a5,0145,0146,0147,0148
+DUPELIST=091,092,093,094,095,096,097,09a,09b,09c,09d,09e,09f,0a0,0a1,0a2,0a3,0a4,0a5,0145,0146,0147,0148,021b1,021b2,021b3,021b4,021b5,021b6,021b7,021b8,021bd,021be,021bf,021c0,021c1,021c2,021c3,021c4,021c5,021c6,021c7,021c8,021c9,021ca,021cb,021cc
 
 [ITEMDEF 091]
 //log wall 1
@@ -750,7 +750,7 @@ RESOURCES=100 i_log,1 i_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Log Wall
 DESCRIPTION=Wall (with window)
-DUPELIST=099
+DUPELIST=099,024f4,024f5,024f6,024f7,024f8,024f9,024fa,024fb,024fc,024fd,024fe,024ff
 
 [ITEMDEF 099]
 //log wall 1  (with window)
@@ -812,7 +812,7 @@ RESOURCES=100 i_board
 CATEGORY=Buildings - Walls
 SUBSECTION=Wooden Wall 2
 DESCRIPTION=Wall
-DUPELIST=0a7,0a8,0a9,0aa,0ab,0ac,0ad,0ae,0af,0b0,0b1,0b2,0b3,0b4,0b5,0b6,0b7,0b8,0bd,0be,0bf,0c0,0c1,0c2
+DUPELIST=0a7,0a8,0a9,0aa,0ab,0ac,0ad,0ae,0af,0b0,0b1,0b2,0b3,0b4,0b5,0b6,0b7,0b8,0bd,0be,0bf,0c0,0c1,0c2,021cd,021ce,021cf,021d0,021d1,021d2,021d3,021d4,021d5,021d6,021d7,021d8,021d9,021da,021db,021dc
 
 [ITEMDEF 0a7]
 //wooden wall 2
@@ -893,7 +893,7 @@ RESOURCES=100 i_board,1 i_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Wooden Wall 2
 DESCRIPTION=Wall (with window)
-DUPELIST=0ba,0bb,0bc
+DUPELIST=0ba,0bb,0bc,02500,02501,02502,02503,02504,02505,02506,02507,02508,02509,0250a,0250b
 
 [ITEMDEF 0ba]
 //wooden wall 2 (with window)
@@ -1178,7 +1178,7 @@ RESOURCES=100 i_stone_marble,1 i_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Marble Wall 1
 DESCRIPTION=Wall (with window)
-DUPELIST=0fd,0102,0103,0108,0109,0239a,0239b
+DUPELIST=0fd,0102,0103,0108,0109,0239a,0239b,0250c,0250d,0250e,0250f,02511,02512,02513,02514,02515,02516,02517,02518,02519,0251a,0251b,0251c,0251d,0251e,0251f,02520,02521,02522,02523,02524,02525,02526,02527,02528,02529,0252a,0252b,0252c,0252d,0252e
 
 [ITEMDEF 0fd]
 //marble wall 1 (with window)
@@ -2225,39 +2225,39 @@ DESCRIPTION=Wall
 DUPELIST=01f1,01f2,01f3,01f4,01f5,01f6,01f7,01f8,01f9
 
 [ITEMDEF 01f1]
-//tent wall
+//tent wall 1
 DUPEITEM=01f0
 
 [ITEMDEF 01f2]
-//tent wall
+//tent wall 1
 DUPEITEM=01f0
 
 [ITEMDEF 01f3]
-//wooden pole
+//tent wall 1 (wooden pole)
 DUPEITEM=01f0
 
 [ITEMDEF 01f4]
-//tent wall
+//tent wall 1
 DUPEITEM=01f0
 
 [ITEMDEF 01f5]
-//tent wall
+//tent wall 1
 DUPEITEM=01f0
 
 [ITEMDEF 01f6]
-//tent wall
+//tent wall 1
 DUPEITEM=01f0
 
 [ITEMDEF 01f7]
-//tent wall
+//tent wall 1
 DUPEITEM=01f0
 
 [ITEMDEF 01f8]
-//tent wall
+//tent wall 1
 DUPEITEM=01f0
 
 [ITEMDEF 01f9]
-//tent wall
+//tent wall 1
 DUPEITEM=01f0
 
 [ITEMDEF 01ff]
@@ -2270,31 +2270,31 @@ DESCRIPTION=Wall
 DUPELIST=0200,0201,0202,0203,0204,0205,0206,020b,020c
 
 [ITEMDEF 0200]
-//plaster wall 3
+//plaster wall 2
 DUPEITEM=01ff
 
 [ITEMDEF 0201]
-//plaster wall 3
+//plaster wall 2
 DUPEITEM=01ff
 
 [ITEMDEF 0202]
-//plaster wall 3
+//plaster wall 2
 DUPEITEM=01ff
 
 [ITEMDEF 0203]
-//plaster wall 3
+//plaster wall 2
 DUPEITEM=01ff
 
 [ITEMDEF 0204]
-//plaster wall 3
+//plaster wall 2
 DUPEITEM=01ff
 
 [ITEMDEF 0205]
-//plaster wall 3
+//plaster wall 2
 DUPEITEM=01ff
 
 [ITEMDEF 0206]
-//plaster wall 3
+//plaster wall 2
 DUPEITEM=01ff
 
 [ITEMDEF 0207]
@@ -2304,26 +2304,26 @@ RESOURCES=50 i_straw,50 i_sand,1 i_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Plaster Wall 2
 DESCRIPTION=Wall (with window)
-DUPELIST=0208,0209,020a
+DUPELIST=0208,0209,020a,0252f,02530,02531,02532,02533,02534,02535,02536,02537,02538,02539,0253a,0253b
 
 [ITEMDEF 0208]
-//plaster wall 3 (with window)
+//plaster wall 2 (with window)
 DUPEITEM=0207
 
 [ITEMDEF 0209]
-//plaster wall 3 (with window)
+//plaster wall 2 (with window)
 DUPEITEM=0207
 
 [ITEMDEF 020a]
-//plaster wall 3 (with window)
+//plaster wall 2 (with window)
 DUPEITEM=0207
 
 [ITEMDEF 020b]
-//plaster wall 3 (short)
+//plaster wall 2 (short)
 DUPEITEM=01ff
 
 [ITEMDEF 020c]
-//plaster wall 3 (short)
+//plaster wall 2 (short)
 DUPEITEM=01ff
 
 [ITEMDEF 020f]
@@ -2386,7 +2386,7 @@ RESOURCES=50 i_board
 CATEGORY=Buildings - Walls
 SUBSECTION=Wooden Wall 3
 DESCRIPTION=Wall
-DUPELIST=021e,021f,0220,0221,0222,0223,0226,0227,0228,0229,022a,022b,0421,0422,0423,0424,0425,0430,0431
+DUPELIST=021e,021f,0220,0221,0222,0223,0226,0227,0228,0229,022a,022b,0421,0422,0423,0424,0425,0430,0431,02188,02189,0218a,0218b,0218c,0218d,0218e,0218f,02190,02191,02192,02193,02194,02195,02196,02197,021a5,021a6,021a7,021a8,021a9,021aa,021ab,021ac,021ad,021ae,021af,021b0
 
 [ITEMDEF 021e]
 //wooden wall 3 (palisade)
@@ -2521,39 +2521,39 @@ DESCRIPTION=Wall
 DUPELIST=0231,0232,0233,0234,0235,0236,0237,0238,0239
 
 [ITEMDEF 0231]
-//tent wall
+//tent wall 2
 DUPEITEM=0230
 
 [ITEMDEF 0232]
-//tent wall
+//tent wall 2
 DUPEITEM=0230
 
 [ITEMDEF 0233]
-//wooden pole
+//tent wall 2 (wooden pole)
 DUPEITEM=0230
 
 [ITEMDEF 0234]
-//tent wall
+//tent wall 2
 DUPEITEM=0230
 
 [ITEMDEF 0235]
-//tent wall
+//tent wall 2
 DUPEITEM=0230
 
 [ITEMDEF 0236]
-//tent wall
+//tent wall 2
 DUPEITEM=0230
 
 [ITEMDEF 0237]
-//tent wall
+//tent wall 2
 DUPEITEM=0230
 
 [ITEMDEF 0238]
-//tent wall
+//tent wall 2
 DUPEITEM=0230
 
 [ITEMDEF 0239]
-//tent wall
+//tent wall 2
 DUPEITEM=0230
 
 [ITEMDEF 0241]
@@ -2563,7 +2563,7 @@ RESOURCES=100 i_rock_plain
 CATEGORY=Buildings - Walls
 SUBSECTION=Dungeon Wall
 DESCRIPTION=Wall
-DUPELIST=0242,0243,0244,0245,0246,0247,0248,0249,024a,02f9,02fa,02fb,02fc,02fd,02fe,02ff,0300
+DUPELIST=0242,0243,0244,0245,0246,0247,0248,0249,024a,02f9,02fa,02fb,02fc,02fd,02fe,02ff,0300,021dd,021de,021df,021e0,021e1,021e2,021e3,021e4,021e5,021e6,021e7,021e8
 
 [ITEMDEF 0242]
 //dungeon wall
@@ -2798,23 +2798,23 @@ DESCRIPTION=Wall
 DUPELIST=0278,0279,027a,027b,027c,0281,0282
 
 [ITEMDEF 0278]
-//ruined wall (half)
+//ruined wall  1 (half)
 DUPEITEM=0277
 
 [ITEMDEF 0279]
-//ruined wall (half)
+//ruined wall 1 (half)
 DUPEITEM=0277
 
 [ITEMDEF 027a]
-//ruined wall (half)
+//ruined wall 1 (half)
 DUPEITEM=0277
 
 [ITEMDEF 027b]
-//ruined wall (half)
+//ruined wall 1 (half)
 DUPEITEM=0277
 
 [ITEMDEF 027c]
-//ruined wall (half)
+//ruined wall 1 (half)
 DUPEITEM=0277
 
 [ITEMDEF 027d]
@@ -2834,11 +2834,11 @@ DUPEITEM=025c
 DUPEITEM=025c
 
 [ITEMDEF 0281]
-//ruined wall
+//ruined wall 1
 DUPEITEM=0277
 
 [ITEMDEF 0282]
-//ruined wall
+//ruined wall 1
 DUPEITEM=0277
 
 [ITEMDEF 0291]
@@ -2848,7 +2848,7 @@ RESOURCES=100 i_stone_marble
 CATEGORY=Buildings - Walls
 SUBSECTION=Marble Wall 2
 DESCRIPTION=Wall
-DUPELIST=0292,0293,0294,0297,0298,0299,029a,029d,029e,029f,02a0,02a1,02a2,02a3,02a4,02a5,02a6,02a7,02a8,02a9,02aa,02ab,02ac,02b0,02b1,02b2,02b3,02b4,02b5,02b6,02b7,02b8,02b9,02ba,02bb,02bc,02bd,02be,02bf,02c0,0446,0447,0448,0449,044a,044b,044c,044d,044e,044f,0450,0451,0452,0453,0253c,0253d,0253e
+DUPELIST=0292,0293,0294,0297,0298,0299,029a,029d,029e,029f,02a0,02a1,02a2,02a3,02a4,02a5,02a6,02a7,02a8,02a9,02aa,02ab,02ac,02b0,02b1,02b2,02b3,02b4,02b5,02b6,02b7,02b8,02b9,02ba,02bb,02bc,02bd,02be,02bf,02c0,0446,0447,0448,0449,044a,044b,044c,044d,044e,044f,0450,0451,0452,0453
 
 [ITEMDEF 0292]
 //marble wall 2
@@ -2869,7 +2869,7 @@ RESOURCES=100 i_stone_marble,1 i_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Marble Wall 2
 DESCRIPTION=Wall (with window)
-DUPELIST=0296,029b,029c,02ad,02ae
+DUPELIST=0296,029b,029c,02ad,02ae,0253c,0253d,0253e,026d0,026d1,026d2,026d3,026d4,026d5,026d6,026d7,026d8,026d9
 
 [ITEMDEF 0296]
 //marble wall 2 (with window)
@@ -3740,7 +3740,7 @@ DUPEITEM=037f
 DUPEITEM=037f
 
 [ITEMDEF 0382]
-//wooden post
+//plaster wall 3
 DUPEITEM=037f
 
 [ITEMDEF 0383]
@@ -4208,13 +4208,12 @@ DUPEITEM=0291
 DUPEITEM=0291
 
 [ITEMDEF 07d6]
-//stone column
+//stone wall 2 (column)
 DUPEITEM=057
 
 [ITEMDEF 07d9]
-//stone column
+//stone wall 2 (column)
 DUPEITEM=057
-
 
 [ITEMDEF 0215a]
 //rattan wall (short)
@@ -4227,7 +4226,6 @@ DUPEITEM=01a5
 [ITEMDEF 0215c]
 //rattan wall (short)
 DUPEITEM=01a5
-
 
 [ITEMDEF 02166]
 DEFNAME=i_wall_cave_entrance
@@ -4250,338 +4248,460 @@ DUPEITEM=02166
 //cave wall entrance
 DUPEITEM=02166
 
+[ITEMDEF 02188]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 02189]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 0218a]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 0218b]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 0218c]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 0218d]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 0218e]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 0218f]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 02190]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 02191]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 02192]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 02193]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 02194]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 02195]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 02196]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
+
+[ITEMDEF 02197]
+//wooden wall 3 (palisade)
+DUPEITEM=021d
 
 [ITEMDEF 021a5]
-//pallisade gate?
+//wooden wall 3 (palisade)
+DUPEITEM=021d
 
 [ITEMDEF 021a6]
-//pallisade gate?
+//wooden wall 3 (palisade)
+DUPEITEM=021d
 
 [ITEMDEF 021a7]
-//pallisade gate?
+//wooden wall 3 (palisade)
+DUPEITEM=021d
 
 [ITEMDEF 021a8]
-//pallisade gate?
+//wooden wall 3 (palisade)
+DUPEITEM=021d
 
 [ITEMDEF 021a9]
-//pallisade gate?
+//wooden wall 3
+DUPEITEM=021d
 
 [ITEMDEF 021aa]
-//pallisade gate?
+//wooden wall 3
+DUPEITEM=021d
 
 [ITEMDEF 021ab]
-//pallisade gate?
+//wooden wall 3
+DUPEITEM=021d
 
 [ITEMDEF 021ac]
-//pallisade gate?
+//wooden wall 3
+DUPEITEM=021d
 
 [ITEMDEF 021ad]
-//pallisade gate?
+//wooden wall 3
+DUPEITEM=021d
 
 [ITEMDEF 021ae]
-//pallisade gate?
+//wooden wall 3
+DUPEITEM=021d
 
 [ITEMDEF 021af]
-//pallisade gate?
+//wooden wall 3
+DUPEITEM=021d
 
 [ITEMDEF 021b0]
-//pallisade gate?
+//wooden wall 3
+DUPEITEM=021d
 
 [ITEMDEF 021b1]
-//log gate?
+//log wall 1 (short)
+DUPEITEM=090
 
 [ITEMDEF 021b2]
-//log gate?
+//log wall 1 (short)
+DUPEITEM=090
 
 [ITEMDEF 021b3]
-//log gate?
+//log wall 1 (short)
+DUPEITEM=090
 
 [ITEMDEF 021b4]
-//log gate?
+//log wall 1 (short)
+DUPEITEM=090
 
 [ITEMDEF 021b5]
-//log gate?
+//log wall 1 (short)
+DUPEITEM=090
 
 [ITEMDEF 021b6]
-//log gate?
+//log wall 1 (short)
+DUPEITEM=090
 
 [ITEMDEF 021b7]
-//log gate?
+//log wall 1 (short)
+DUPEITEM=090
 
 [ITEMDEF 021b8]
-//log gate?
+//log wall 1 (short)
+DUPEITEM=090
 
 [ITEMDEF 021bd]
-//log gate?
+//log wall 1 (half)
+DUPEITEM=090
 
 [ITEMDEF 021be]
-//log gate?
+//log wall 1 (half)
+DUPEITEM=090
 
 [ITEMDEF 021bf]
-//log gate?
+//log wall 1 (half)
+DUPEITEM=090
 
 [ITEMDEF 021c0]
-//log gate?
+//log wall 1 (half)
+DUPEITEM=090
 
 [ITEMDEF 021c1]
-//log gate?
+//log wall 1 (half)
+DUPEITEM=090
 
 [ITEMDEF 021c2]
-//log gate?
+//log wall 1 (half)
+DUPEITEM=090
 
 [ITEMDEF 021c3]
-//log gate?
+//log wall 1 (half)
+DUPEITEM=090
 
 [ITEMDEF 021c4]
-//log gate?
+//log wall 1 (half)
+DUPEITEM=090
 
 [ITEMDEF 021c5]
-//log gate?
+//log wall 1
+DUPEITEM=090
 
 [ITEMDEF 021c6]
-//log gate?
+//log wall 1
+DUPEITEM=090
 
 [ITEMDEF 021c7]
-//log gate?
+//log wall 1
+DUPEITEM=090
 
 [ITEMDEF 021c8]
-//log gate?
+//log wall 1
+DUPEITEM=090
 
 [ITEMDEF 021c9]
-//log gate?
+//log wall 1
+DUPEITEM=090
 
 [ITEMDEF 021ca]
-//log gate?
+//log wall 1
+DUPEITEM=090
 
 [ITEMDEF 021cb]
-//log gate?
+//log wall 1
+DUPEITEM=090
 
 [ITEMDEF 021cc]
-//log gate?
+//log wall 1
+DUPEITEM=090
 
 [ITEMDEF 021cd]
-//wooden wall or gate?
+//wooden wall 2 (short)
+DUPEITEM=0a6
 
 [ITEMDEF 021ce]
-//wooden wall or gate?
+//wooden wall 2 (short)
+DUPEITEM=0a6
 
 [ITEMDEF 021cf]
-//wooden wall or gate?
+//wooden wall 2 (short)
+DUPEITEM=0a6
 
 [ITEMDEF 021d0]
-//wooden wall or gate?
+//wooden wall 2 (short)
+DUPEITEM=0a6
 
 [ITEMDEF 021d1]
-//wooden wall or gate?
+//wooden wall 2 (half)
+DUPEITEM=0a6
 
 [ITEMDEF 021d2]
-//wooden wall or gate?
+//wooden wall 2 (half)
+DUPEITEM=0a6
 
 [ITEMDEF 021d3]
-//wooden wall or gate?
+//wooden wall 2 (half)
+DUPEITEM=0a6
 
 [ITEMDEF 021d4]
-//wooden wall or gate?
+//wooden wall 2 (half)
+DUPEITEM=0a6
 
 [ITEMDEF 021d5]
-//wooden wall or gate?
+//wooden wall 2
+DUPEITEM=0a6
 
 [ITEMDEF 021d6]
-//wooden wall or gate?
+//wooden wall 2
+DUPEITEM=0a6
 
 [ITEMDEF 021d7]
-//wooden wall or gate?
+//wooden wall 2
+DUPEITEM=0a6
 
 [ITEMDEF 021d8]
-//wooden wall or gate?
+//wooden wall 2
+DUPEITEM=0a6
 
 [ITEMDEF 021d9]
-//wooden wall or gate?
+//wooden wall 2
+DUPEITEM=0a6
 
 [ITEMDEF 021da]
-//wooden wall or gate?
+//wooden wall 2
+DUPEITEM=0a6
 
 [ITEMDEF 021db]
-//wooden wall or gate?
+//wooden wall 2
+DUPEITEM=0a6
 
 [ITEMDEF 021dc]
-//wooden wall or gate?
+//wooden wall 2
+DUPEITEM=0a6
 
 [ITEMDEF 021dd]
-//dungeon wall or gate?
+//dungeon wall (short)
+DUPEITEM=0241
 
 [ITEMDEF 021de]
-//dungeon wall or gate?
+//dungeon wall (short)
+DUPEITEM=0241
 
 [ITEMDEF 021df]
-//dungeon wall or gate?
+//dungeon wall (short)
+DUPEITEM=0241
 
 [ITEMDEF 021e0]
-//dungeon wall or gate?
+//dungeon wall (short)
+DUPEITEM=0241
 
 [ITEMDEF 021e1]
-//dungeon wall or gate?
+//dungeon wall (half)
+DUPEITEM=0241
 
 [ITEMDEF 021e2]
-//dungeon wall or gate?
+//dungeon wall (half)
+DUPEITEM=0241
 
 [ITEMDEF 021e3]
-//dungeon wall or gate?
+//dungeon wall (half)
+DUPEITEM=0241
 
 [ITEMDEF 021e4]
-//dungeon wall or gate?
+//dungeon wall (half)
+DUPEITEM=0241
 
 [ITEMDEF 021e5]
-//dungeon wall or gate?
+//dungeon wall
+DUPEITEM=0241
 
 [ITEMDEF 021e6]
-//dungeon wall or gate?
+//dungeon wall
+DUPEITEM=0241
 
 [ITEMDEF 021e7]
-//dungeon wall or gate?
+//dungeon wall
+DUPEITEM=0241
 
 [ITEMDEF 021e8]
-//dungeon wall or gate?
-
+//dungeon wall
+DUPEITEM=0241
 
 [ITEMDEF 021fd]
-//stone wall
+//stone wall 2 (column)
 DUPEITEM=057
 
-
 [ITEMDEF 021ff]
-DEFNAME=i_window_skull
-TYPE=t_wall
-RESOURCES=100 i_ingot_iron
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Windows
-DESCRIPTION=Skull Window
-DUPELIST=02200
+//stone wall 2 (with skull window)
+DUPEITEM=05b
 
 [ITEMDEF 02200]
-//skull window
-DUPEITEM=021ff
+//stone wall 2 (with skull window)
+DUPEITEM=05b
 
 [ITEMDEF 02201]
-//stone wall
+//stone wall 2 (spire)
 DUPEITEM=057
 
 [ITEMDEF 02202]
-//stone wall
+//stone wall 2 (spire)
 DUPEITEM=057
 
-
 [ITEMDEF 0239a]
-//window with shutters
+//marble wall 1 (with shutter windows)
 DUPEITEM=0fc
 
 [ITEMDEF 0239b]
-//window with shutters
+//marble wall 1 (with shutter windows)
 DUPEITEM=0fc
-
 
 [ITEMDEF 0247f]
 DEFNAME=i_japanese_wall_1
 TYPE=t_wall
 RESOURCES=100 i_log
 CATEGORY=Buildings - Walls
-SUBSECTION=Japanese Walls 1
-DESCRIPTION=@
+SUBSECTION=Japanese Wall 1
+DESCRIPTION=Wall
 DUPELIST=02480,02481,02482,02483,02484,02485,02486,02487,02488,02489,0248a
 
 [ITEMDEF 02480]
+//japanese wall 1
 DUPEITEM=0247f
 
 [ITEMDEF 02481]
+//japanese wall 1
 DUPEITEM=0247f
 
 [ITEMDEF 02482]
+//japanese wall 1
 DUPEITEM=0247f
 
 [ITEMDEF 02483]
+//japanese wall 1
 DUPEITEM=0247f
 
 [ITEMDEF 02484]
+//japanese wall 1
 DUPEITEM=0247f
 
 [ITEMDEF 02485]
+//japanese wall 1
 DUPEITEM=0247f
 
 [ITEMDEF 02486]
+//japanese wall 1
 DUPEITEM=0247f
 
 [ITEMDEF 02487]
+//japanese wall 1
 DUPEITEM=0247f
 
 [ITEMDEF 02488]
+//japanese wall 1
 DUPEITEM=0247f
 
 [ITEMDEF 02489]
+//japanese wall 1
 DUPEITEM=0247f
 
 [ITEMDEF 0248a]
+//japanese wall 1
 DUPEITEM=0247f
 
-[ITEMDEF 0248b]
-DEFNAME=i_wall_wooden_barricade
+[ITEMDEF 0248d]
+DEFNAME=i_wall_wood_dark
 TYPE=t_wall
 RESOURCES=100 i_log
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Wall Wood Barricade
-DESCRIPTION=@
-DUPELIST=0248c,0248d,0248e,0248f,02490,02491,02492,02493,02494,02495,02496,02497,02498
-
-[ITEMDEF 0248c]
-//wall wood barricade
-DUPEITEM=0248b
-
-[ITEMDEF 0248d]
-//wall wood barricade
-DUPEITEM=0248b
+CATEGORY=Buildings - Walls
+SUBSECTION=Dark Wood Wall
+DESCRIPTION=Wall
+DUPELIST=0248e,0248f,02490,02491,02492,02493,02494,02495,02496,02497,02498
 
 [ITEMDEF 0248e]
-//wall wood barricade
-DUPEITEM=0248b
+//dark wood wall
+DUPEITEM=0248d
 
 [ITEMDEF 0248f]
-//wall wood barricade
-DUPEITEM=0248b
+//dark wood wall
+DUPEITEM=0248d
 
 [ITEMDEF 02490]
-//wall wood barricade
-DUPEITEM=0248b
+//dark wood wall
+DUPEITEM=0248d
 
 [ITEMDEF 02491]
-//wall wood barricade
-DUPEITEM=0248b
+//dark wood wall
+DUPEITEM=0248d
 
 [ITEMDEF 02492]
-//wall wood barricade
-DUPEITEM=0248b
+//dark wood wall
+DUPEITEM=0248d
 
 [ITEMDEF 02493]
-//wall wood barricade
-DUPEITEM=0248b
+//dark wood wall
+DUPEITEM=0248d
 
 [ITEMDEF 02494]
-//wall wood barricade
-DUPEITEM=0248b
+//dark wood wall
+DUPEITEM=0248d
 
 [ITEMDEF 02495]
-//wall wood barricade
-DUPEITEM=0248b
+//dark wood wall
+DUPEITEM=0248d
 
 [ITEMDEF 02496]
-//wall wood barricade
-DUPEITEM=0248b
+//dark wood wall
+DUPEITEM=0248d
 
 [ITEMDEF 02497]
-//wall wood barricade
-DUPEITEM=0248b
+//dark wood wall
+DUPEITEM=0248d
 
 [ITEMDEF 02498]
-//wall wood barricade
-DUPEITEM=0248b
+//dark wood wall
+DUPEITEM=0248d
+
 
 [ITEMDEF 02499]
 //wall plaster new
@@ -4665,485 +4785,450 @@ DUPEITEM=02a30
 
 
 [ITEMDEF 024f4]
-DEFNAME=i_wall_log_window
-TYPE=t_wall
-RESOURCES=100 i_log
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Wall Log Window
-DESCRIPTION=@
-DUPELIST=024f5,024f6,024f7,024f8,024f9,024fa,024fb,024fc,024fd,024fe,024ff
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 024f5]
-//wall log window
-DUPEITEM=024f4
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 024f6]
-//wall log window
-DUPEITEM=024f4
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 024f7]
-//wall log window
-DUPEITEM=024f4
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 024f8]
-//wall log window
-DUPEITEM=024f4
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 024f9]
-//wall log window
-DUPEITEM=024f4
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 024fa]
-//wall log window
-DUPEITEM=024f4
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 024fb]
-//wall log window
-DUPEITEM=024f4
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 024fc]
-//wall log window
-DUPEITEM=024f4
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 024fd]
-//wall log window
-DUPEITEM=024f4
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 024fe]
-//wall log window
-DUPEITEM=024f4
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 024ff]
-//wall log window
-DUPEITEM=024f4
+//log wall 1 (with shuttered window)
+DUPEITEM=098
 
 [ITEMDEF 02500]
-DEFNAME=i_wall_wood_window
-TYPE=t_wall
-RESOURCES=100 i_log
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Wall Wood Window
-DESCRIPTION=@
-DUPELIST=02501,02502,02503,02504,02505,02506,02507,02508,02509,0250a,0250b
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 02501]
-//wall wood window (light)
-DUPEITEM=02500
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 02502]
-//wall wood window (light)
-DUPEITEM=02500
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 02503]
-//wall wood window (light)
-DUPEITEM=02500
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 02504]
-//wall wood window (light)
-DUPEITEM=02500
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 02505]
-//wall wood window (light)
-DUPEITEM=02500
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 02506]
-//wall wood window (light)
-DUPEITEM=02500
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 02507]
-//wall wood window (light)
-DUPEITEM=02500
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 02508]
-//wall wood window (light)
-DUPEITEM=02500
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 02509]
-//wall wood window (light)
-DUPEITEM=02500
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 0250a]
-//wall wood window (light)
-DUPEITEM=02500
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 0250b]
-//wall wood window (light)
-DUPEITEM=02500
+//wooden wall 2 (with shuttered window)
+DUPEITEM=0b9
 
 [ITEMDEF 0250c]
-DEFNAME=i_wall_marble_window
-TYPE=t_wall
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Wall Marble Window
-DESCRIPTION=@
-DUPELIST=0250d,0250e,0250f,02511,02512,02513,02514,02515,02516,02517
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0250d]
-//wall marble window
-DUPEITEM=0250c
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0250e]
-//wall marble window
-DUPEITEM=0250c
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0250f]
-//wall marble window
-DUPEITEM=0250c
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02510]
-//wall marble window
-DUPEITEM=0250c
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02511]
-//wall marble window
-DUPEITEM=0250c
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02512]
-//wall marble window
-DUPEITEM=0250c
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02513]
-//wall marble window
-DUPEITEM=0250c
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02514]
-//wall marble window
-DUPEITEM=0250c
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02515]
-//wall marble window
-DUPEITEM=0250c
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02516]
-//wall marble window
-DUPEITEM=0250c
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02517]
-//wall marble window
-DUPEITEM=0250c
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02518]
-DEFNAME=i_wall_marble_window_2
-TYPE=t_wall
-RESOURCES=100 i_ingot_iron
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Wall Marble Window
-DESCRIPTION=@
-DUPELIST=02519,0251a,0251b,0251c,0251d,0251e,0251f,02520,02521,02522,02523
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02519]
-//wall marble window 2
-DUPEITEM=02518
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0251a]
-//wall marble window 2
-DUPEITEM=02518
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0251b]
-//wall marble window 2
-DUPEITEM=02518
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0251c]
-//wall marble window 2
-DUPEITEM=02518
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0251d]
-//wall marble window 2
-DUPEITEM=02518
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0251e]
-//wall marble window 2
-DUPEITEM=02518
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0251f]
-//wall marble window 2
-DUPEITEM=02518
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02520]
-//wall marble window 2
-DUPEITEM=02518
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02521]
-//wall marble window 2
-DUPEITEM=02518
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02522]
-//wall marble window 2
-DUPEITEM=02518
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02523]
-//wall marble window 2
-DUPEITEM=02518
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02524]
-DEFNAME=i_wall_marble_window_3
-TYPE=t_wall
-RESOURCES=100 i_ingot_iron
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Wall Marble Window
-DESCRIPTION=@
-DUPELIST=02525,02526,02527,02528,02529,0252a,0252b,0252c,0252d,0252e
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02525]
-//wall marble window 3
-DUPEITEM=02524
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02526]
-//wall marble window 3
-DUPEITEM=02524
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02527]
-//wall marble window 3
-DUPEITEM=02524
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02528]
-//wall marble window 3
-DUPEITEM=02524
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 02529]
-//wall marble window 3
-DUPEITEM=02524
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0252a]
-//wall marble window 3
-DUPEITEM=02524
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0252b]
-//wall marble window 3
-DUPEITEM=02524
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0252c]
-//wall marble window 3
-DUPEITEM=02524
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0252d]
-//wall marble window 3
-DUPEITEM=02524
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0252e]
-//wall marble window 3
-DUPEITEM=02524
+//marble wall 1 (with shuttered window)
+DUPEITEM=0fc
 
 [ITEMDEF 0252f]
-DEFNAME=i_wall_plaster_window
-TYPE=t_wall
-RESOURCES=100 i_ingot_iron
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Wall Plaster Window
-DESCRIPTION=@
-DUPELIST=02530,02531,02532,02533,02534,02535,02536,02537,02538,02539,0253a,0253b
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 02530]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 02531]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 02532]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 02533]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 02534]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 02535]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 02536]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 02537]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 02538]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 02539]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 0253a]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 0253b]
-//wall plaster window
-DUPEITEM=0252f
+//plaster wall 2 (with shuttered window)
+DUPEITEM=0207
 
 [ITEMDEF 0253c]
-//marble wall window
-DUPEITEM=0291
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 0253d]
-//marble wall window
-DUPEITEM=0291
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 0253e]
-//marble wall window
-DUPEITEM=0291
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 0253f]
 DEFNAME=i_wall_stone_circular
 TYPE=t_wall
 RESOURCES=100 i_ingot_iron
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Wall Stone Circular
-DESCRIPTION=@
+CATEGORY=Buildings - Walls
+SUBSECTION=Circular Stone Wall
+DESCRIPTION=Wall
 DUPELIST=02540,02541,02542,02543,02544,02545,02546,02547,02548,02549,0254a,0254b,0254c,0254d,0254e,0254f,02550,02551,02552,02553
 
 [ITEMDEF 02540]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02541]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02542]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02543]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02544]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02545]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02546]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02547]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02548]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02549]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 0254a]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 0254b]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 0254c]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 0254d]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 0254e]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 0254f]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02550]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02551]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02552]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
 [ITEMDEF 02553]
-//wall stone circular
+//circular stone wall
 DUPEITEM=0253f
 
-
 [ITEMDEF 026d0]
-DEFNAME=i_window_marble
-TYPE=t_wall
-RESOURCES=100 i_ingot_iron
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Marble Windows
-DESCRIPTION=@
-DUPELIST=026d1,026d2,026d3,026d4,026d5,026d6,026d7,026d8,026d9
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 026d1]
-//marble window
-DUPEITEM=026d0
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 026d2]
-//marble window
-DUPEITEM=026d0
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 026d3]
-//marble window
-DUPEITEM=026d0
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 026d4]
-//marble window
-DUPEITEM=026d0
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 026d5]
-//marble window
-DUPEITEM=026d0
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 026d6]
-//marble window
-DUPEITEM=026d0
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 026d7]
-//marble window
-DUPEITEM=026d0
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 026d8]
-//marble window
-DUPEITEM=026d0
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 [ITEMDEF 026d9]
-//marble window
-DUPEITEM=026d0
+//marble wall 2 (with shuttered window)
+DUPEITEM=0295
 
 
 [ITEMDEF 02712]
-DEFNAME=i_lattice
+DEFNAME=i_latticed_wall_white_pattern
 TYPE=t_wall
 RESOURCES=100 i_log
 CATEGORY=Buildings - Walls
-SUBSECTION=Lattice
+SUBSECTION=Latticed Wall (white)
 DESCRIPTION=Lattice Pattern
 
 [ITEMDEF 02713]
 DEFNAME=i_latticed_wall_white
 TYPE=t_wall
 RESOURCES=100 i_log
-CATEGORY=Buildings - SE Walls
+CATEGORY=Buildings - Walls
 SUBSECTION=Latticed Wall (white)
-DESCRIPTION=@
+DESCRIPTION=Wall
 DUPELIST=02714,02715,02716,02717,02718,02719,0271a,0271b,0271c,0271d,0271e,0271f,02754,02755,02756,02757,02758,02759,0275a,0275b,0275c,0275d,0275e,0275f,02760,02761,02762,02992,02993,02994,02995,02996,02997,02998,02999,0299a,0299b,0299c,0299d
 
 [ITEMDEF 02714]
@@ -5195,20 +5280,20 @@ DUPEITEM=02713
 DUPEITEM=02713
 
 [ITEMDEF 02752]
-DEFNAME=i_latticed_wall_2
+DEFNAME=i_latticed_wall_brown_pattern
 TYPE=t_wall
 RESOURCES=100 i_log
 CATEGORY=Buildings - Walls
-SUBSECTION=Latticed Wall 2
-DESCRIPTION=Latticed Wall 2
+SUBSECTION=Latticed Wall (brown)
+DESCRIPTION=Lattice Pattern
 
 [ITEMDEF 02753]
 DEFNAME=i_latticed_wall_brown
 TYPE=t_wall
 RESOURCES=100 i_log
-CATEGORY=Buildings - SE Walls
+CATEGORY=Buildings - Walls
 SUBSECTION=Latticed Wall (brown)
-DESCRIPTION=@
+DESCRIPTION=Wall
 DUPELIST=02754,02755,02756,02757,02758,02759,0275a,0275b,0275c,0275d,0275e,0275f,02760,02761,02762,02992,02993,02994,02995,02996,02997,02998,02999,0299a,0299b,0299c,0299d
 
 [ITEMDEF 02754]
@@ -5276,65 +5361,65 @@ DUPEITEM=02753
 DEFNAME=i_wall_wood_old
 TYPE=t_wall
 RESOURCES=100 i_log
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Wooden Wall Old
-DESCRIPTION=@
+CATEGORY=Buildings - Walls
+SUBSECTION=Wooden Wall (old)
+DESCRIPTION=Wall
 DUPELIST=02860,02861,02862,02863,02864,02865,02866,02867,02868,02869,0286a,0286b,0286c,0286d
 
 [ITEMDEF 02860]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 02861]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 02862]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 02863]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 02864]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 02865]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 02866]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 02867]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 02868]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 02869]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 0286a]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 0286b]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 0286c]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 [ITEMDEF 0286d]
-//wooden wall old
+//wooden wall (old)
 DUPEITEM=0285f
 
 
@@ -5342,9 +5427,9 @@ DUPEITEM=0285f
 DEFNAME=i_wall_latticed_plaster
 TYPE=t_wall
 RESOURCES=100 i_log
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Latticed Plaster wall
-DESCRIPTION=@
+CATEGORY=Buildings - Walls
+SUBSECTION=Latticed Plaster Wall
+DESCRIPTION=Wall
 DUPELIST=02889,0288a,0288b,0288c,0288d,0288e,0288f,02890,02891,02892,02893,02894,02895,02896,02897,02898,02899,0289a,0289b,0289c,0289d,0289e,0289f,028a1,028a2,028a3
 
 [ITEMDEF 02889]
@@ -5447,7 +5532,7 @@ DUPEITEM=02888
 //latticed wall plaster
 DUPEITEM=02888
 
-[ITEMDEF 0289a2]
+[ITEMDEF 028a2]
 //latticed wall plaster
 DUPEITEM=02888
 
@@ -5460,10 +5545,10 @@ DUPEITEM=02888
 DEFNAME=i_wall_clay
 TYPE=t_wall
 RESOURCES=100 i_ingot_iron
-CATEGORY=Buildings - SE Walls
+CATEGORY=Buildings - Walls
 SUBSECTION=Clay Wall
-DESCRIPTION=@
-DUPELIST=02939,0293a,0293b,0293c,0293d,0293e,0293f,02940,02941,02942,02943,02944,02945,02946,02947,02948,02949,0294a,0294b,0294c,0294d,0294e,0294f,02950,02951,02952,02953,02954,02955,02956,02957,02958,02959,0295a
+DESCRIPTION=Wall
+DUPELIST=02939,0293a,0293b,0293c,0293d,0293e,0293f,02940,02941,02942,02943,02944,02945,02946,02947,02948,02949,0294a,0294b,0294c,0294d,0294e,0294f,02950,02951,02952,02953,02954,02955,02956,02957,02958,02959,0295a,0295b
 
 [ITEMDEF 02939]
 //Clay wall
@@ -5601,6 +5686,10 @@ DUPEITEM=02938
 //Clay wall
 DUPEITEM=02938
 
+[ITEMDEF 0295b]
+//Clay wall
+DUPEITEM=02938
+
 
 [ITEMDEF 02992]
 //latticed wall (dark brown)
@@ -5652,6 +5741,7 @@ DUPEITEM=02753
 
 
 [ITEMDEF 029a0]
+//FIXME: These should be split up and included with each wall type
 DEFNAME=i_wall_stained_glass
 TYPE=t_wall
 RESOURCES=100 i_ingot_iron
@@ -5791,7 +5881,7 @@ TYPE=t_wall
 RESOURCES=50 i_log,50 i_clay
 CATEGORY=Buildings - Walls
 SUBSECTION=Plaster Wall (Brown)
-DESCRIPTION=@
+DESCRIPTION=Wall
 DUPELIST=029dd,029de,029df,029e0,029e1,029e2,029e3,029e4,029e5,029e6,029e7,029e8,029e9,029ea,029eb,029ec,029ed,029ee,029ef,029f0,029f1,029f2,029f3,029f4,029f5,029f6,029f7,029f8,029f9,029fa,029fb,029fc
 
 [ITEMDEF 029dd]
@@ -5862,6 +5952,10 @@ DUPEITEM=029dc
 //plaster brown
 DUPEITEM=029dc
 
+[ITEMDEF 029ee]
+//plaster brown
+DUPEITEM=029dc
+
 [ITEMDEF 029ef]
 //plaster brown
 DUPEITEM=029dc
@@ -5923,9 +6017,9 @@ DUPEITEM=029dc
 DEFNAME=i_wall_plaster_new
 TYPE=t_normal
 RESOURCES=100 i_log
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Wall Stained-Glass
-DESCRIPTION=@
+CATEGORY=Buildings - Walls
+SUBSECTION=Plaster Wall (new)
+DESCRIPTION=Wall
 DUPELIST=02a31,02a32,02a33,02a34,02a35,02a36,02a37,02a38,02a39,02a3a,02a3b,02499,0249a,0249b,0249c,0249d,0249e,0249f,024a0,024a1,024a2,024a3,024a4,024a5,024a6,024a7,024a8,024a9,024aa,024ab,024ac
 
 [ITEMDEF 02a31]
@@ -5979,7 +6073,7 @@ TYPE=t_wall
 RESOURCES=100 i_rock_plain
 CATEGORY=Buildings - Walls
 SUBSECTION=Elven Marble Wall (simple)
-DESCRIPTION=Simple Wall
+DESCRIPTION=Wall
 DUPELIST=02b7b,02b7c,02b7d,02b7e,02b7f,02b80,02dbf,02dc0,02dc1,02dc2,02dc3,02dc4,02dc5,02dc6,02dc7,02dc8,02dc9,02dca,02dcf,02dd0,02dd1,02f1b
 
 [ITEMDEF 02b7b]
@@ -6013,7 +6107,7 @@ TYPE=t_wall
 RESOURCES=100 i_rock_plain
 CATEGORY=Buildings - Walls
 SUBSECTION=Elven Marble Wall (ornate)
-DESCRIPTION=Ornate Wall
+DESCRIPTION=Wall
 DUPELIST=02baa,02bab,02bac,02bad,02bae,02baf,02bb0,02bb1,02bb2,02bb3,02bb4,02bb9,02bba,02bbb,02bbc,02bbd,02bbe,02bbf,02bc0,02bc1,02bc2,02f1c
 
 [ITEMDEF 02baa]
@@ -6107,7 +6201,7 @@ TYPE=t_wall
 RESOURCES=100 i_rock_plain
 CATEGORY=Buildings - Walls
 SUBSECTION=Elven Marble Wall Dark (simple)
-DESCRIPTION=Dark Simple Wall
+DESCRIPTION=Wall
 DUPELIST=02bc4,02bc5,02bc6,02bc7,02bc8,02bc9,02bca,02bcb,02bcc,02bcd,02bce,02cef,02cf0,02cf1,02cf2,02cf3,02cf4,02cf5,02cf6,02cf7,02cf8,02f1d
 
 [ITEMDEF 02bc4]
@@ -6202,7 +6296,7 @@ TYPE=t_wall
 RESOURCES=100 i_log
 CATEGORY=Buildings - Walls
 SUBSECTION=Elven Bark Wall
-DESCRIPTION=Bark Wall
+DESCRIPTION=Wall
 DUPELIST=02d15,02d16,02d17,02d18,02d19,02d1a,02d1b,02d1c,02d1d,02d36,02d37,02d3c,02d3d,02d3e,02d3f,02d40,02d41,02d42,02d43,02d44,02d45,02d46,02d47,02d48,02d49,02f1e
 
 [ITEMDEF 02d15]
@@ -6488,7 +6582,7 @@ TYPE=t_wall
 RESOURCES=200 i_rock_plain
 CATEGORY=Buildings - Walls
 SUBSECTION=Stone Wall (tall)
-DESCRIPTION=Stone Wall
+DESCRIPTION=Wall
 DUPELIST=02ffc,02ffd,02ffe,03008,03009,0300a,0300b,0300c,0300d,0300e,0300f,03010,03011,03012,03013,03014,03015,03016,03017,0310b,0310c,0310d,0310e,0310f,03110,03111,03112,03113,03114,03115,03116,03117,03118,03119,0311a,0311b,0311c,0311d,0311e,0311f,03120,03121
 
 [ITEMDEF 02ffc]

@@ -274,31 +274,31 @@ DEFNAME=i_fx_lavafire
 TYPE=t_fire
 CATEGORY=Animations
 SUBSECTION=Lava
-DESCRIPTION=Lava Fire
+DESCRIPTION=Lava Fire 1
 DUPELIST=01a76,01a77,01a78,01a79,01a7a,01a7b
 
 [ITEMDEF 01a76]
-//lava fire
+//lava fire 1
 DUPEITEM=01a75
 
 [ITEMDEF 01a77]
-//lava fire
+//lava fire 1
 DUPEITEM=01a75
 
 [ITEMDEF 01a78]
-//lava fire
+//lava fire 1
 DUPEITEM=01a75
 
 [ITEMDEF 01a79]
-//lava fire
+//lava fire 1
 DUPEITEM=01a75
 
 [ITEMDEF 01a7a]
-//lava fire
+//lava fire 1
 DUPEITEM=01a75
 
 [ITEMDEF 01a7b]
-//lava fire
+//lava fire 1
 DUPEITEM=01a75
 
 [ITEMDEF 01a7c]
@@ -885,6 +885,42 @@ DUPEITEM=01fe7
 //moongate (gray)
 DUPEITEM=01fe7
 
+[ITEMDEF 02ae4]
+DEFNAME=i_fx_lavafire_3
+TYPE=t_fire
+CATEGORY=Animations
+SUBSECTION=Lava
+DESCRIPTION=Lava Fire 3
+DUPELIST=02ae5,02ae6,02ae7,02ae8,02ae9,02aea,02aeb
+
+[ITEMDEF 02ae5]
+//lava fire 3
+DUPEITEM=02ae4
+
+[ITEMDEF 02ae6]
+//lava fire 3
+DUPEITEM=02ae4
+
+[ITEMDEF 02ae7]
+//lava fire 3
+DUPEITEM=02ae4
+
+[ITEMDEF 02ae8]
+//lava fire 3
+DUPEITEM=02ae4
+
+[ITEMDEF 02ae9]
+//lava fire 3
+DUPEITEM=02ae4
+
+[ITEMDEF 02aea]
+//lava fire 3
+DUPEITEM=02ae4
+
+[ITEMDEF 02aeb]
+//lava fire 3
+DUPEITEM=02ae4
+
 [ITEMDEF 022c6]
 DEFNAME=i_fx_reflect
 TYPE=t_spell
@@ -909,35 +945,35 @@ DESCRIPTION=Boulder in Water
 DUPELIST=03422,03423,03424,03425,03426,03427,03428,03429
 
 [ITEMDEF 03422]
-boulder in water
+//boulder in water
 DUPEITEM=03421
 
 [ITEMDEF 03423]
-boulder in water
+//boulder in water
 DUPEITEM=03421
 
 [ITEMDEF 03424]
-boulder in water
+//boulder in water
 DUPEITEM=03421
 
 [ITEMDEF 03425]
-boulder in water
+//boulder in water
 DUPEITEM=03421
 
 [ITEMDEF 03426]
-boulder in water
+//boulder in water
 DUPEITEM=03421
 
 [ITEMDEF 03427]
-boulder in water
+//boulder in water
 DUPEITEM=03421
 
 [ITEMDEF 03428]
-boulder in water
+//boulder in water
 DUPEITEM=03421
 
 [ITEMDEF 03429]
-boulder in water
+//boulder in water
 DUPEITEM=03421
 
 [ITEMDEF 0342c]
@@ -948,39 +984,39 @@ DESCRIPTION=@
 DUPELIST=0342d,0342e,0342f,03430,03431,03432,03433,03434,03435
 
 [ITEMDEF 0342d]
-boulder in water
+//boulder in water
 DUPEITEM=0342c
 
 [ITEMDEF 0342e]
-boulder in water
+//boulder in water
 DUPEITEM=0342c
 
 [ITEMDEF 0342f]
-boulder in water
+//boulder in water
 DUPEITEM=0342c
 
 [ITEMDEF 03430]
-boulder in water
+//boulder in water
 DUPEITEM=0342c
 
 [ITEMDEF 03431]
-boulder in water
+//boulder in water
 DUPEITEM=0342c
 
 [ITEMDEF 03432]
-boulder in water
+//boulder in water
 DUPEITEM=0342c
 
 [ITEMDEF 03433]
-boulder in water
+//boulder in water
 DUPEITEM=0342c
 
 [ITEMDEF 03434]
-boulder in water
+//boulder in water
 DUPEITEM=0342c
 
 [ITEMDEF 03435]
-boulder in water
+//boulder in water
 DUPEITEM=0342c
 
 [ITEMDEF 036b0]
