@@ -733,4 +733,48 @@ DUPEITEM=02366
 DUPEITEM=02366
 
 
+[ITEMDEF 029fd]
+DEFNAME=i_fire_pit_indoor
+TYPE=t_fire
+RESOURCES=1 i_kindling,20 i_rock_plain
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Campfires
+DESCRIPTION=Indoor Fire Pit
+DUPELIST=029fe,029ff,02a00,02a01,02a02,02a03
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 029fe]
+//indoor fire pit
+DUPEITEM=029fd
+
+[ITEMDEF 029ff]
+//indoor fire pit
+DUPEITEM=029fd
+
+[ITEMDEF 02a00]
+//indoor fire pit
+DUPEITEM=029fd
+
+[ITEMDEF 02a01]
+//indoor fire pit
+DUPEITEM=029fd
+
+[ITEMDEF 02a02]
+//indoor fire pit
+DUPEITEM=029fd
+
+[ITEMDEF 02a03]
+//indoor fire pit
+DUPEITEM=029fd
+
+[ITEMDEF 02a04]
+DEFNAME=i_fire_pit_indoor_empty
+TYPE=t_normal
+RESOURCES=20 i_rock_plain
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Campfires
+DESCRIPTION=Indoor Fire Pit (empty)
+
+
 [EOF]

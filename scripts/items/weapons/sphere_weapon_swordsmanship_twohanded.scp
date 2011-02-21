@@ -460,6 +460,10 @@ DUPELIST=027ed
 ON=@Create
    HITPOINTS={36 48}
 
+[ITEMDEF 027ed]
+//no-dachi
+DUPEITEM=027a2
+
 [ITEMDEF i_sword_stampede]
 ID=i_no_dachi
 NAME=Sword of the Stampede

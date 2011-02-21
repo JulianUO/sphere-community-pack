@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -17,4 +17,348 @@ VERSION=0.56b
 // Magical Residue
 // Relic Fragment
 
-[eof]
+
+[ITEMDEF 02db1]
+// magical residue is the lowest level of the three core imbuing
+// ingredients. It can be obtained my unraveling weak magical items in
+// proximity to a Soul Forge.
+DEFNAME=i_magical_residue
+NAME=magical residue
+TYPE=t_normal
+VALUE=500
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Magical Residue
+
+[ITEMDEF 02db2]
+// Enchanted essence is an ingredient used with the Imbuing skill. It
+// can be obtained from unraveling minor Artifacts and from high intensity
+// magical equipment. An imbuing skill of more than 45 is required to
+// unravel Enchanted Essence.
+DEFNAME=i_enchanted_essence
+NAME=enchanted essence
+TYPE=t_normal
+VALUE=1000
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Enchanted Essence
+
+[ITEMDEF 02db3]
+// relic fragments are one of the most rare ingredients for Imbuing. They
+// mostly come from Artifacts and sometimes from very high intensity
+// equipment. They are used to imbue the most desirable properties.
+DEFNAME=i_relic_fragment
+NAME=relic fragment
+TYPE=t_normal
+VALUE=5000
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Relic Fragment
+
+
+[ITEMDEF 0571c]
+// This is the base ID of a number of imbuing ingredients.
+DEFNAME=i_essence_virtue
+NAME=essence of virtue
+TYPE=t_normal
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Essence of Virtue
+
+[ITEMDEF 0571d]
+//Essence of Virtue animation
+
+[ITEMDEF 0571e]
+//Essence of Virtue animation
+
+[ITEMDEF 0571f]
+//Essence of Virtue animation
+
+[ITEMDEF i_essence_diligence]
+// Is the imbuing ingredient used to imbue the Faster Cast Recovery property onto jewelry.
+ID=i_essence_virtue
+NAME=essence of diligence
+TYPE=t_normal
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Essence of Diligence
+ON=@Create
+   COLOR=1166
+
+[ITEMDEF i_essence_order]
+// Is the imbuing ingredient used to imbue the Lower Mana Cost property.
+ID=i_essence_virtue
+NAME=essence of order
+TYPE=t_normal
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Essence of Order
+ON=@Create
+   COLOR=1150
+
+[ITEMDEF i_essence_passion]
+// Is the imbuing ingredient used to imbue the Hit Lightning property onto weapons.
+ID=i_essence_virtue
+NAME=essence of passion
+TYPE=t_normal
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Essence of Passion
+ON=@Create
+   COLOR=1161
+
+[ITEMDEF i_essence_precision]
+// Is the imbuing ingredient used to imbue the Hit Chance Increase modifier. 
+ID=i_essence_virtue
+NAME=essence of precision
+TYPE=t_normal
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Essence of Precision
+ON=@Create
+   COLOR=1158
+
+[ITEMDEF i_essence_singularity]
+// Is the imbuing ingredient used to to imbue the Defense Chance Increase
+// property onto weapons, shields and jewelry.
+ID=i_essence_virtue
+NAME=essence of singularity
+TYPE=t_normal
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Essence of Singularity
+ON=@Create
+   COLOR=1175
+
+
+[ITEMDEF 05720]
+// Is an imbuing ingredient used to imbue Arachnid Slayer property onto items.
+DEFNAME=i_spider_carapace
+NAME=spider carapace
+TYPE=t_normal
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Spider Carapace
+
+[ITEMDEF 05721]
+//demon claw
+[ITEMDEF 05722]
+//vial of vitriol
+[ITEMDEF 05723]
+[ITEMDEF 05724]
+[ITEMDEF 05725]
+
+[ITEMDEF 05726]
+DEFNAME=i_fey_wings
+NAME=fey wings
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+TAG.NoVendor=1
+CATEGORY=Quest
+SUBSECTION=Fey
+DESCRIPTION=Fey Wings
+
+[ITEMDEF 05727]
+DEFNAME=i_vile_tentacles
+NAME=vile tentacles
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+TAG.NoVendor=1
+CATEGORY=Quest
+SUBSECTION=Stygian
+DESCRIPTION=Vile Tentacles
+
+[ITEMDEF 05728]
+//void core
+[ITEMDEF 05729]
+[ITEMDEF 0572a]
+[ITEMDEF 0572b]
+
+[ITEMDEF 0572c]
+// Is an imbuing ingredient used to imbue the Repond Slayer property onto
+// weapons.
+DEFNAME=i_goblin_blood
+NAME=goblin blood
+TYPE=t_normal
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Goblin Blood
+
+[ITEMDEF 0572d]
+// Is an Imbuing ingredient used to imbue the Reptile Slayer property
+// onto weapons.
+DEFNAME=i_lava_serpent_crust
+NAME=lava serpent crust
+TYPE=t_normal
+FLIP=0
+VALUE=100
+WEIGHT=1.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Lava Serpent Crust
+DUPELIST=0572e,0572f,05730
+
+[ITEMDEF 0572e]
+//Lava Serpent Crust (animation)
+
+[ITEMDEF 0572f]
+//Lava Serpent Crust (animation)
+
+[ITEMDEF 05730]
+//Lava Serpent Crust (animation)
+
+[ITEMDEF 05731]
+//undying flesh
+[ITEMDEF 05732]
+//crystalline blackrock
+[ITEMDEF 05733]
+[ITEMDEF 05734]
+[ITEMDEF 05735]
+[ITEMDEF 05736]
+//seed of renewal
+[ITEMDEF 05737]
+//elven fletching
+[ITEMDEF 05738]
+//crystal shards
+[ITEMDEF 05739]
+//lodestone
+[ITEMDEF 0573a]
+//delicate scales
+[ITEMDEF 0573b]
+//crushed glass
+[ITEMDEF 0573c]
+//arcanic runestone
+//is an Imbuing ingredient needed to imbue the Mage Weapon property onto weapons.
+//90 Tinkering and 80 Magery can craft Arcanic Rune Stone by using a tinkering tool along with 1 Crystal Shards and 5 Power Crystals.
+
+[ITEMDEF 0573d]
+// Is an imbuing ingredient used to imbue the durability property onto items.
+DEFNAME=i_powdered_iron
+NAME=powdered iron
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+RESOURCES=20 i_ingot_iron,1 i_pearl_white
+SKILLMAKE=Blacksmithing 110.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Powdered Iron
+
+[ITEMDEF 0573e]
+//void orb
+[ITEMDEF 0573f]
+[ITEMDEF 05740]
+[ITEMDEF 05741]
+
+[ITEMDEF 05742]
+// Is an imbuing ingredient used to imbue high intensities of Physical
+// Fire, Cold, Poison, and Energy Resist onto items. 
+DEFNAME=i_boura_pelt
+TYPE=t_fur
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Boura Pelt
+
+[ITEMDEF i_boura_skin]
+ID=i_fur_light
+NAME=boura skin
+TYPE=t_hide
+FLIP=1
+VALUE=5
+WEIGHT=5.0
+CATEGORY=Quest
+SUBSECTION=Stygian
+DESCRIPTION=Boura Skin
+ON=@Create
+   COLOR=758
+
+[ITEMDEF 05743]
+//chaga mushroom
+[ITEMDEF 05744]
+//silver snake skin
+//t_hide
+
+[ITEMDEF 05745]
+// Is an imbuing ingredient used to imbue high intensities of Lower
+// Reagent Cost onto items.
+DEFNAME=i_fairy_dust
+NAME=fairy dust
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Fairy Dust
+
+[ITEMDEF 05746]
+// Is an imbuing ingredient used to imbue Hit Dispel property onto items.
+DEFNAME=i_slith_tongue
+NAME=slith tongue
+TYPE=t_meat_raw
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Slith Tongue
+
+[ITEMDEF 05747]
+// Is an Imbuing ingredient used to imbue one of the Hit Physical Area,
+// Hit Fire Area, Hit Cold Area, Hit Poison Area and Hit Energy Area
+// properties onto items.
+DEFNAME=i_raptor_teeth
+NAME=raptor teeth
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Raptor Teeth
+
+[ITEMDEF 05748]
+// Is an Imbuing ingredient used to imbue the Night Sight property onto armor.
+DEFNAME=i_bottle_ichor
+NAME=bottle of ichor
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Bottle of Ichor
+
+[ITEMDEF 05749]
+// Is an Imbuing ingredient used to imbue Reflect Physical Damage property onto items.
+DEFNAME=i_reflective_wolf_eye
+NAME=reflective wolf eye
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Reflective Wolf Eye
+
+
+
+[EOF]

@@ -1,0 +1,190 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Sunday, Febuary 20, 2011
+VERSION=0.56b
+
+
+[ITEMDEF 02830]
+DEFNAME=i_origami_kit
+//NAME=origami kit
+TYPE=t_normal
+VALUE=25
+WEIGHT=1.1
+RESOURCES=1 i_scissors,1 i_paper
+SKILLMAKE=CARPENTRY 50.9,t_carpentry
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Origami Kit
+DUPELIST=02831
+ON=@DClick
+   SRC.SKILLMENU=sm_origami
+   RETURN 1
+
+[ITEMDEF 02831]
+//origami kit
+DUPEITEM=02830
+
+[SKILLMENU sm_origami]
+Origami
+ON=i_origami1 <name> (<resmake>)
+   MAKEITEM=i_origami1
+ON=i_origami2 <name> (<resmake>)
+   MAKEITEM=i_origami2
+ON=i_origami3 <name> (<resmake>)
+   MAKEITEM=i_origami3
+ON=i_origami4 <name> (<resmake>)
+   MAKEITEM=i_origami4
+ON=i_origami5 <name> (<resmake>)
+   MAKEITEM=i_origami5
+ON=i_origami6 <name> (<resmake>)
+   MAKEITEM=i_origami6
+
+[ITEMDEF 02838]
+DEFNAME=i_origami1
+NAME=origami butterfly
+TYPE=t_normal
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_paper
+SKILLMAKE=Carpentry 33.3,1 i_origami_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Origami Butterfly
+
+[ITEMDEF 02839]
+DEFNAME=i_origami2
+NAME=origami crane
+TYPE=t_normal
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_paper
+SKILLMAKE=Carpentry 33.3,1 i_origami_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Origami Crane
+
+[ITEMDEF 0283a]
+DEFNAME=i_origami3
+NAME=origami frog
+TYPE=t_normal
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_paper
+SKILLMAKE=Carpentry 33.3,1 i_origami_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Origami Frog
+
+[ITEMDEF 0283b]
+DEFNAME=i_origami4
+NAME=origami star
+TYPE=t_normal
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_paper
+SKILLMAKE=Carpentry 33.3,1 i_origami_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Origami Star
+
+[ITEMDEF 0283c]
+DEFNAME=i_origami5
+NAME=origami bird
+TYPE=t_normal
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_paper
+SKILLMAKE=Carpentry 33.3,1 i_origami_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Origami Bird
+
+[ITEMDEF 0283d]
+DEFNAME=i_origami6
+NAME=origami fish
+TYPE=t_normal
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_paper
+SKILLMAKE=Carpentry 33.3,1 i_origami_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Origami Fish
+
+[ITEMDEF 028dc]
+DEFNAME=i_bonsai_1
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=1 i_log,1 i_dirt,1 i_tree_sapling
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Bonsai Tree 1
+
+[ITEMDEF 028dd]
+DEFNAME=i_bonsai_2
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=1 i_log,1 i_dirt,1 i_tree_sapling
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Bonsai Tree 2
+
+[ITEMDEF 028de]
+DEFNAME=i_bonsai_3
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=1 i_log,1 i_dirt,1 i_tree_sapling
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Bonsai Tree 3
+
+[ITEMDEF 028df]
+DEFNAME=i_bonsai_4
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=1 i_log,1 i_dirt,1 i_tree_sapling
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Bonsai Tree 4
+
+[ITEMDEF 028e0]
+DEFNAME=i_bonsai_5
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=1 i_log,1 i_dirt,1 i_tree_sapling
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Bonsai Tree 5
+
+[ITEMDEF 028e1]
+DEFNAME=i_bonsai_6
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=1 i_log,1 i_dirt,1 i_tree_sapling
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Bonsai Tree 6
+
+[ITEMDEF 028e2]
+DEFNAME=i_bonsai_7
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=1 i_log,1 i_dirt,1 i_tree_sapling
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Bonsai Tree 7
+
+[ITEMDEF 028e3]
+DEFNAME=i_bonsai_8
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=1 i_log,1 i_dirt,1 i_tree_sapling
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Bonsai Tree 8
+
+
+[EOF]
