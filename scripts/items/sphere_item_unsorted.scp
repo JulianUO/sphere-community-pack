@@ -1753,7 +1753,6 @@ TEVENTS=t_iprop
 DUPELIST=03171
 //FIXME: quiver loading event
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={31 37}
 
 [ITEMDEF 03171]
@@ -1780,7 +1779,6 @@ DESCRIPTION=Elven Male Shirt
 TEVENTS=t_iprop
 DUPELIST=02fbe
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={31 37}
 
 [ITEMDEF 02fbe]
@@ -1805,7 +1803,6 @@ TAG.FemaleOnly=1
 TEVENTS=t_iprop
 DUPELIST=03181
 ON=@Create
-   f_AddMagicTags 1 1
    HITPOINTS={31 37}
 
 [ITEMDEF 03181]
