@@ -2923,8 +2923,6 @@ ON=i_pickpocket_dip Pickpocket Dip
 ADD i_pickpocket_dip
 ON=i_archery_butte Archery Butte
 ADD i_archery_butte
-ON=i_archery_butte2 Archery Butte
-ADD i_archery_butte2
 
 [MENU M_ADDI_PROV_CAMP]
 Items (Outdoor & Camp)

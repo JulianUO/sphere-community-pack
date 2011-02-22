@@ -3,8 +3,100 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
+
+
+[ITEMDEF 0100a]
+DEFNAME=i_archery_butte
+TYPE=t_archery_butte
+FLIP=1
+WEIGHT=38
+RESOURCES=20 i_straw,10 i_board,8 i_cloth
+SKILLMAKE=carpentry 40.0, tailoring 40.0, t_sewing_kit, t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=Archers/Bowyers
+DESCRIPTION=Archery Butte
+DUPELIST=0100b
+
+[ITEMDEF 0100b]
+//archery butte
+DUPEITEM=0100a
+
+[ITEMDEF 01020]
+DEFNAME=i_feathers_red_white
+RESOURCES=2 i_feather
+TYPE=t_feather
+WEIGHT=.1
+CATEGORY=Items by Professions
+SUBSECTION=Archers/Bowyers
+DESCRIPTION=Feathers (2 Red & White)
+DUPELIST=01021
+
+[ITEMDEF 01021]
+//feathers
+DUPEITEM=01020
+
+[ITEMDEF 01022]
+DEFNAME=i_arrow_fletching
+RESOURCES=1 i_feather
+WEIGHT=.1
+CATEGORY=Items by Professions
+SUBSECTION=Archers/Bowyers
+DESCRIPTION=Arrow Fletching Equipment
+DUPELIST=01023
+
+[ITEMDEF 01023]
+//Arrow Fletching Equipment
+DUPEITEM=01022
+
+[ITEMDEF 01024]
+DEFNAME=i_arrow_shafts_2
+TYPE=t_shaft
+WEIGHT=.1
+CATEGORY=Items by Professions
+SUBSECTION=Archers/Bowyers
+DESCRIPTION=Arrow Junk Shafts
+DUPELIST=01025
+ON=@DClick
+	SRC.SKILLMENU=sm_bolts
+	RETURN 1
+
+[ITEMDEF 01025]
+//arrow shafts
+DUPEITEM=01024
+
+[ITEMDEF 01bd4]
+//Shaft listed as "shafts"
+DEFNAME=i_arrow_shaft
+TYPE=t_shaft
+RESOURCES=i_log
+REPLICATE=1
+SKILLMAKE=9.8 bowcraft
+WEIGHT=.1
+CATEGORY=Items by Professions
+SUBSECTION=Archers/Bowyers
+DESCRIPTION=Shaft
+DUPELIST=01bd5,01bd6
+ON=@DClick
+	SRC.SKILLMENU=sm_bolts
+	RETURN 1
+
+[ITEMDEF 01bd5]
+//shafts
+DUPEITEM=01bd4
+
+[ITEMDEF 01bd6]
+//shafts
+DUPEITEM=01bd4
+
+[ITEMDEF 01bd2]
+//feathers (3)
+DUPEITEM=01bd1
+
+[ITEMDEF 01bd3]
+//Pile of White feathers
+DUPEITEM=01bd1
 
 [ITEMDEF 02dd7]
 DEFNAME=i_elven_bowstringer

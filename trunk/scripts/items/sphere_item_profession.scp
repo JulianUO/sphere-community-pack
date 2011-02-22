@@ -1,14 +1,9 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, September 8, 2005
-//
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
 
 
@@ -746,497 +741,6 @@ DUPELIST=014e8
 DUPEITEM=014e7
 
 
-//////////////////////////
-// Blacksmith Equipment //
-//////////////////////////
-// Smithing hammer is in the weapons directory
-
-[ITEMDEF 0faf]
-DEFNAME=i_anvil
-TYPE=t_anvil
-SKILLMAKE=blacksmithing 30.0, tinkering 56.0,t_tinker_tools
-RESOURCES=20 i_ingot_iron, 1 i_log
-FLIP=1
-WEIGHT=255
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Anvil (N)
-DUPELIST=0fb0
-
-[ITEMDEF 0fb0]
-DUPEITEM=0faf
-DESCRIPTION=Anvil (W)
-
-[ITEMDEF 0fb6]
-DEFNAME=i_horse_shoes
-RESOURCES=4 i_ingot_iron
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Horse Shoes
-
-[ITEMDEF 0fb7]
-DEFNAME=i_forged_metal
-TYPE=t_fire
-RESOURCES=1 i_ingot_iron
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forged Metal (W)
-DUPELIST=0fb8
-
-[ITEMDEF 0fb8]
-//forged metal
-DUPEITEM=0fb7
-DESCRIPTION=Forged Metal (N)
-
-[ITEMDEF 0fbb]
-//Uses weapon type but cannot be equiped
-DEFNAME=i_tongs
-RESOURCES=2 i_ingot_iron
-TYPE=t_weapon_mace_smith
-FLIP=1
-WEIGHT=2
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Tongs
-DUPELIST=0fbc
-
-[ITEMDEF 0fbc]
-//tongs
-DUPEITEM=0fbb
-
-[ITEMDEF 0197a]
-DEFNAME=i_forge_bellows_2_part_1_of_3_w
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (01/03) (W)
-
-[ITEMDEF 0197b]
-DEFNAME=i_forge_bellows_2_part_1_of_3_w_2
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 0197c]
-DEFNAME=i_forge_bellows_2_part_1_of_3_w_3
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 0197d]
-DEFNAME=i_forge_bellows_2_part_1_of_3_w_4
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 0197e]
-DEFNAME=i_forge_2_part_2_of_3_w
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (02/03) (W)
-
-[ITEMDEF 0197f]
-DEFNAME=i_forge_2_part_2_of_3_w_2
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 01980]
-DEFNAME=i_forge_2_part_2_of_3_w_3
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 01981]
-DEFNAME=i_forge_2_part_2_of_3_w_4
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 01982]
-DEFNAME=i_forge_2_part_3_of_3_w
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 01983]
-DEFNAME=i_forge_2_part_3_of_3_w_2
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (03/03) (W)
-
-[ITEMDEF 01984]
-DEFNAME=i_forge_2_part_3_of_3_w_3
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 01985]
-DEFNAME=i_forge_2_part_3_of_3_w_4
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 01986]
-DEFNAME=i_forge_bellows_2_part_1_of_3_n
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (01/03) (N)
-
-[ITEMDEF 01987]
-DEFNAME=i_forge_bellows_2_part_1_of_3_n_2
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 01988]
-DEFNAME=i_forge_bellows_2_part_1_of_3_n_3
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 01989]
-DEFNAME=i_forge_bellows_2_part_1_of_3_n_4
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 0198a]
-DEFNAME=i_forge_2_part_2_of_3_n
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (02/03) (N)
-
-[ITEMDEF 0198b]
-DEFNAME=i_forge_2_part_2_of_3_n_2
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 0198c]
-DEFNAME=i_forge_2_part_2_of_3_n_3
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 0198d]
-DEFNAME=i_forge_2_part_2_of_3_n_4
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 0198e]
-DEFNAME=i_forge_2_part_3_of_3_n
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (03/03) (N)
-
-[ITEMDEF 0198f]
-DEFNAME=i_forge_2_part_3_of_3_n_2
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 01990]
-DEFNAME=i_forge_2_part_3_of_3_n_3
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 01991]
-DEFNAME=i_forge_2_part_3_of_3_n_4
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 01992]
-DEFNAME=i_forge_bellows_2_part_1_of_3_s
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (01/03) (S)
-
-[ITEMDEF 01993]
-DEFNAME=i_forge_bellows_2_part_1_of_3_s_2
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 01994]
-DEFNAME=i_forge_bellows_2_part_1_of_3_s_3
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 01995]
-DEFNAME=i_forge_bellows_2_part_1_of_3_s_4
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 01996]
-DEFNAME=i_forge_2_part_2_of_3_s
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (02/03) (S)
-
-[ITEMDEF 01997]
-DEFNAME=i_forge_2_part_2_of_3_s_2
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 01998]
-DEFNAME=i_forge_2_part_2_of_3_s_3
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 01999]
-DEFNAME=i_forge_2_part_2_of_3_s_4
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 0199a]
-DEFNAME=i_forge_2_part_3_of_3_s
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (03/03) (S)
-
-[ITEMDEF 0199b]
-DEFNAME=i_forge_2_part_3_of_3_s_2
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 0199c]
-DEFNAME=i_forge_2_part_3_of_3_s_3
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 0199d]
-DEFNAME=i_forge_2_part_3_of_3_s_4
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 0199e]
-DEFNAME=i_forge_bellows_2_part_1_of_3_e
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (01/03) (E)
-
-[ITEMDEF 0199f]
-DEFNAME=i_forge_bellows_2_part_1_of_3_e_2
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 019a0]
-DEFNAME=i_forge_bellows_2_part_1_of_3_e_3
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 019a1]
-DEFNAME=i_forge_bellows_2_part_1_of_3_e_4
-RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
-WEIGHT=18
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Bellows
-
-[ITEMDEF 019a2]
-DEFNAME=i_forge_2_part_2_of_3_e
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (02/03) (E)
-
-[ITEMDEF 019a3]
-DEFNAME=i_forge_2_part_2_of_3_e_2
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 019a4]
-DEFNAME=i_forge_2_part_2_of_3_e_3
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 019a5]
-DEFNAME=i_forge_2_part_2_of_3_e_4
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 019a6]
-DEFNAME=i_forge_2_part_3_of_3_e
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge 2 (03/03) (E)
-
-[ITEMDEF 019a7]
-DEFNAME=i_forge_2_part_3_of_3_e_2
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 019a8]
-DEFNAME=i_forge_2_part_3_of_3_e_3
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-[ITEMDEF 019a9]
-DEFNAME=i_forge_2_part_3_of_3_e_4
-RESOURCES=8 i_rock_plain
-WEIGHT=16
-TYPE=t_forge
-CATEGORY=Items by Professions
-SUBSECTION=Blacksmiths
-DESCRIPTION=Forge
-
-
 /////////////////////////
 // Scripting Equipment //
 /////////////////////////
@@ -1402,6 +906,54 @@ CATEGORY=Items by Professions
 SUBSECTION=Scribes
 DESCRIPTION=Stack of Books
 
+[ITEMDEF 0207f]
+DEFNAME=i_bookstand_elven
+NAME=bookstand
+TYPE=t_normal
+VALUE=16
+WEIGHT=4.1
+RESOURCES=4 i_log_willow,1 i_nails
+SKILLMAKE=Carpentry 32.1,t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=Scribes
+DESCRIPTION=Elven Bookstand
+
+[ITEMDEF 02d4b]
+DEFNAME=i_bookstand_closedbook
+TYPE=t_normal
+NAME=bookstand
+FLIP=1
+VALUE=82
+WEIGHT=5.1
+RESOURCES=4 i_bookstand_elven,1 i_book_sm
+SKILLMAKE=Carpentry 42.3,t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=Scribes
+DESCRIPTION=Elven Bookstand (closed book)
+DUPELIST=02d4c
+
+[ITEMDEF 02d4c]
+//bookstand elven (closed book)
+DUPEITEM=02d4b
+
+[ITEMDEF 02d4d]
+DEFNAME=i_bookstand_openbook
+TYPE=t_normal
+NAME=bookstand
+FLIP=1
+VALUE=82
+WEIGHT=5.1
+RESOURCES=4 i_bookstand_elven,1 i_book_sm
+SKILLMAKE=Carpentry 42.3,t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=Scribes
+DESCRIPTION=Elven Bookstand (open book)
+DUPELIST=02d4c
+
+[ITEMDEF 02d4e]
+//bookstand elven (open book)
+DUPEITEM=02d4d
+
 [ITEMDEF 02d61]
 DEFNAME=i_ink_well
 NAME=ink well
@@ -1418,103 +970,23 @@ DUPELIST=02d62
 //ink well
 DUPEITEM=02d61
 
-
-///////////////////////
-// Archery Equipment //
-///////////////////////
-
-[ITEMDEF 0100a]
-DEFNAME=i_archery_butte
-TYPE=t_archery_butte
-SKILLMAKE=carpentry 40.0, tailoring 40.0, t_sewing_kit, t_carpentry
-RESOURCES=20 i_straw, 10 i_board, 8 i_cloth
-WEIGHT=4
+[ITEMDEF 02ddd]
+DEFNAME=i_podium
+NAME=elven podium
+TYPE=t_normal
+FLIP=1
+VALUE=56
+WEIGHT=20.0
+RESOURCES=20 i_board
+SKILLMAKE=Carpentry 80.0,t_carpentry
 CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
-DESCRIPTION=Archery Butte (W)
-DUPELIST=0100b
+SUBSECTION=Scribes
+DESCRIPTION=Elven Podium
+DUPELIST=02dde
 
-[ITEMDEF 0100b]
-DEFNAME=i_archery_butte2
-DUPEITEM=0100a
-CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
-DESCRIPTION=Archery Butte (N)
-
-[ITEMDEF 01020]
-DEFNAME=i_feathers_red_white
-RESOURCES=2 i_feather
-TYPE=t_feather
-WEIGHT=.1
-CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
-DESCRIPTION=Feathers (2 Red & White)
-DUPELIST=01021
-
-[ITEMDEF 01021]
-//feathers
-DUPEITEM=01020
-
-[ITEMDEF 01022]
-DEFNAME=i_arrow_fletching
-RESOURCES=1 i_feather
-WEIGHT=.1
-CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
-DESCRIPTION=Arrow Fletching Equip
-DUPELIST=01023
-
-[ITEMDEF 01023]
-DUPEITEM=01022
-
-[ITEMDEF 01024]
-DEFNAME=i_arrow_shafts_2
-TYPE=t_shaft
-WEIGHT=.1
-CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
-DESCRIPTION=Arrow Junk Shafts
-DUPELIST=01025
-ON=@DClick
-	SRC.SKILLMENU=sm_bolts
-	RETURN 1
-
-[ITEMDEF 01025]
-//arrow shafts
-DUPEITEM=01024
-
-[ITEMDEF 01bd4]
-//Shaft listed as "shafts"
-DEFNAME=i_arrow_shaft
-TYPE=t_shaft
-RESOURCES=i_log
-REPLICATE=1
-SKILLMAKE=9.8 bowcraft
-WEIGHT=.1
-CATEGORY=Items by Professions
-SUBSECTION=Archers/Bowyers
-DESCRIPTION=Shaft
-DUPELIST=01bd5,01bd6
-ON=@DClick
-	SRC.SKILLMENU=sm_bolts
-	RETURN 1
-
-[ITEMDEF 01bd5]
-//shafts
-DUPEITEM=01bd4
-
-[ITEMDEF 01bd6]
-//shafts
-DUPEITEM=01bd4
-
-[ITEMDEF 01bd2]
-//feathers (3)
-DUPEITEM=01bd1
-
-[ITEMDEF 01bd3]
-//Pile of White feathers
-DUPEITEM=01bd1
-
+[ITEMDEF 02dde]
+//elven podium
+DUPEITEM=02ddd
 
 /////////////////////////
 // Carpentry Equipment //

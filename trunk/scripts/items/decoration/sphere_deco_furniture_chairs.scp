@@ -3,14 +3,15 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Saturday, Febuary 19, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0a2a]
 DEFNAME=i_chair_stool_bar
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=CARPENTRY 11.0, t_carpentry
+SKILLMAKE=Carpentry 11.0, t_carpentry
 RESOURCES=9 i_log
 WEIGHT=3
 CATEGORY=Decoration - Furniture
@@ -18,21 +19,20 @@ SUBSECTION=Chairs
 DESCRIPTION=Stool
 
 [ITEMDEF 0a2b]
-// chair - dark stool
 DEFNAME=i_chair_stool
-TYPE=T_CHAIR
+TYPE=t_chair
 WEIGHT=3
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Barstool
-SKILLMAKE=CARPENTRY 11.0, t_carpentry
+SKILLMAKE=Carpentry 11.0, t_carpentry
 RESOURCES=9 i_log
 
 [ITEMDEF 0b2c]
 DEFNAME=i_bench_wood_dark
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=CARPENTRY 52.6, t_carpentry
+SKILLMAKE=Carpentry 52.6, t_carpentry
 RESOURCES=17 i_log
 WEIGHT=10
 DUPELIST=0b2d
@@ -48,7 +48,7 @@ DEFNAME=i_chair_wood_rough_dark
 NAME=Wooden Throne
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=CARPENTRY 52.6, t_carpentry
+SKILLMAKE=Carpentry 52.6, t_carpentry
 RESOURCES=17 i_log
 WEIGHT=10
 DUPELIST=0b2f,0b30,0b31
@@ -70,7 +70,7 @@ DEFNAME=i_chair_throne
 NAME=Magincia-Style Throne
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=CARPENTRY 52.6, t_carpentry
+SKILLMAKE=Carpentry 52.6, t_carpentry
 RESOURCES=19 i_log
 WEIGHT=15
 DUPELIST=0b33
@@ -86,7 +86,7 @@ DEFNAME=i_chair_wood_fancy_cushion
 NAME=Vesper-Style Chair
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=CARPENTRY 42.1, t_carpentry
+SKILLMAKE=Carpentry 42.1, t_carpentry
 RESOURCES=15 i_log
 WEIGHT=10
 DUPELIST=0b4f,0b50,0b51
@@ -108,7 +108,7 @@ DEFNAME=i_chair_wood_cushion
 NAME=Trinsic-Style Chair
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=CARPENTRY 42.1, t_carpentry
+SKILLMAKE=Carpentry 42.1, t_carpentry
 RESOURCES=15 i_log
 WEIGHT=10
 DUPELIST=0b53,0b54,0b55
@@ -130,7 +130,7 @@ DEFNAME=i_chair_wood
 NAME=Wooden Chair
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=CARPENTRY 21.0, t_carpentry
+SKILLMAKE=Carpentry 21.0, t_carpentry
 RESOURCES=13 i_log
 WEIGHT=3
 DUPELIST=0b57,0b58,0b59
@@ -152,7 +152,7 @@ DEFNAME=i_chair_wood_bamboo
 NAME=Straw Chair
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=CARPENTRY 21.0, t_carpentry
+SKILLMAKE=Carpentry 21.0, t_carpentry
 RESOURCES=13 i_log
 WEIGHT=3
 DUPELIST=0b5b,0b5c,0b5d
@@ -177,7 +177,7 @@ WEIGHT=3
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Foot Stool (Light)
-SKILLMAKE=CARPENTRY 11.0, t_carpentry
+SKILLMAKE=Carpentry 11.0, t_carpentry
 RESOURCES=9 i_log
 
 [ITEMDEF 02de3]
@@ -185,7 +185,7 @@ DEFNAME=i_chair_elven_ornate
 NAME=Ornate Elven Chair
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=CARPENTRY 80.0, t_carpentry
+SKILLMAKE=Carpentry 80.0, t_carpentry
 RESOURCES=30 i_log
 WEIGHT=20
 DUPELIST=02de4,02de5,02de6
@@ -207,7 +207,7 @@ DEFNAME=i_chair_elven_cozy
 NAME=Cozy Elven Chair
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=CARPENTRY 85.0, t_carpentry
+SKILLMAKE=Carpentry 85.0, t_carpentry
 RESOURCES=40 i_log
 WEIGHT=20
 DUPELIST=02dec,02ded,02dee
@@ -238,12 +238,30 @@ DESCRIPTION=Elven Loveseat
 [ITEMDEF 02de0]
 DUPEITEM=02ddf
 
+[ITEMDEF 02df5]
+DEFNAME=i_chair_reading
+NAME=elven reading chair
+TYPE=t_chair
+FLIP=1
+VALUE=75
+WEIGHT=33.4
+SKILLMAKE=Carpentry 86.0,t_carpentry
+RESOURCES=16 i_log_yew,4 i_nails,1 i_wire_silver
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Elven Reading Chair
+DUPELIST=02df6
+
+[ITEMDEF 02df6]
+//elven reading chair
+DUPEITEM=02df5
+
 [ITEMDEF 04023]
 DEFNAME=i_chair_ter_mur
 NAME=Ter-Mur Style Chair
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=CARPENTRY 85.0, t_carpentry
+SKILLMAKE=Carpentry 85.0, t_carpentry
 RESOURCES=40 i_log
 WEIGHT=20
 DUPELIST=04024
@@ -289,4 +307,4 @@ CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Gargish Couch (South - 1 of 2)
 
-[eof]
+[EOF]

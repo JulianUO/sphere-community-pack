@@ -931,4 +931,18 @@ DUPELIST=02711
 //tightrope
 DUPEITEM=02710
 
-[eof]
+[ITEMDEF 02fde]
+DEFNAME=i_ladder_wood_tall
+FLIP=1
+RESOURCES=20 i_board,1 i_nails
+CATEGORY=Buildings - Other
+SUBSECTION=Wooden Ladder
+DESCRIPTION=Wooden Ladder (tall)
+DUPELIST=02fdf
+
+[ITEMDEF 02fdf]
+//wooden ladder tall
+DUPEITEM=02fde
+
+
+[EOF]

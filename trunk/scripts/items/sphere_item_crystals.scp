@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 02206]
 DEFNAME=i_crystal_1
@@ -244,6 +245,46 @@ DUPEITEM=0223a
 [ITEMDEF 02249]
 //broken crystals
 DUPEITEM=0223a
+
+[ITEMDEF 02fdc]
+DEFNAME=i_crystal5
+NAME=crystal
+TYPE=t_normal
+VALUE={120 240}
+WEIGHT=10.0
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Crystals
+DESCRIPTION=Green Crystal 5
+
+[ITEMDEF 02fdd]
+DEFNAME=i_crystal6
+NAME=crystal
+TYPE=t_normal
+VALUE={120 240}
+WEIGHT=10.0
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Crystals
+DESCRIPTION=Green Crystal 6
+
+[ITEMDEF 02fe6]
+DEFNAME=i_crystal7
+NAME=crystal
+TYPE=t_normal
+VALUE={120 240}
+WEIGHT=10.0
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Crystals
+DESCRIPTION=Purple Crystal 5
+
+[ITEMDEF 02fe7]
+DEFNAME=i_crystal8
+NAME=crystal
+TYPE=t_normal
+VALUE={120 240}
+WEIGHT=10.0
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Crystals
+DESCRIPTION=Purple Crystal 6
 
 
 [EOF]

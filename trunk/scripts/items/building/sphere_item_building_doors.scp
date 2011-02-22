@@ -947,6 +947,111 @@ DUPEITEM=02a05
 //sliding door (open)
 DUPEITEM=02a06
 
+[ITEMDEF 02d63]
+DEFNAME=i_door_elven_simple_1
+TYPE=t_door
+RESOURCES=100 i_board
+CATEGORY=Buildings - Doors
+SUBSECTION=Elven Simple Door
+DESCRIPTION=@ (n / sw)
+DUPELIST=02d65
+
+[ITEMDEF 02d64]
+DEFNAME=i_door_elven_simple_1_o
+TYPE=t_door_open
+RESOURCES=100 i_board
+CATEGORY=Buildings - Doors
+SUBSECTION=Elven Simple Door
+DESCRIPTION=@ (n / sw) open
+DUPELIST=02d66
+
+[ITEMDEF 02d65]
+//elven simple door closed
+DUPEITEM=02d63
+
+[ITEMDEF 02d66]
+//elven simple door open
+DUPEITEM=02d64
+
+[ITEMDEF 02d67]
+DEFNAME=i_door_elven_ornate_1
+TYPE=t_door
+RESOURCES=100 i_board
+CATEGORY=Buildings - Doors
+SUBSECTION=Elven Ornate Door
+DESCRIPTION=@ (n / sw)
+DUPELIST=02d69
+
+[ITEMDEF 02d68]
+DEFNAME=i_door_elven_ornate_1_o
+TYPE=t_door_open
+RESOURCES=100 i_board
+CATEGORY=Buildings - Doors
+SUBSECTION=Elven Ornate Door
+DESCRIPTION=@ (n / sw) open
+DUPELIST=02d6a
+
+[ITEMDEF 02d69]
+//elven ornate door closed
+DUPEITEM=02d67
+
+[ITEMDEF 02d6a]
+//elven ornate door open
+DUPEITEM=02d68
+
+[ITEMDEF 02d6b]
+DEFNAME=i_door_elven_simple_dark_1
+TYPE=t_door
+RESOURCES=100 i_board
+CATEGORY=Buildings - Doors
+SUBSECTION=Elven Simple Door Dark
+DESCRIPTION=@ (n / sw)
+DUPELIST=02d6d
+
+[ITEMDEF 02d6c]
+DEFNAME=i_door_elven_simple_dark_1_o
+TYPE=t_door_open
+RESOURCES=100 i_board
+CATEGORY=Buildings - Doors
+SUBSECTION=Elven Simple Door Dark
+DESCRIPTION=@ (n / sw) open
+DUPELIST=02d6e
+
+[ITEMDEF 02d6d]
+//elven simple dark door closed
+DUPEITEM=02d6b
+
+[ITEMDEF 02d6e]
+//elven simple dark door open
+DUPEITEM=02d6c
+
+[ITEMDEF 02fe2]
+DEFNAME=i_door_moon_1
+NAME=moon door
+TYPE=t_door
+RESOURCES=100 i_board
+CATEGORY=Buildings - Doors
+SUBSECTION=Moon Door
+DESCRIPTION=Moon Door W (closed)
+DUPELIST=02fe4,0319c,0319e
+
+[ITEMDEF 02fe3]
+DEFNAME=i_door_moon_1_o
+NAME=moon door
+TYPE=t_door_open
+RESOURCES=100 i_board
+CATEGORY=Buildings - Doors
+SUBSECTION=Moon Door
+DESCRIPTION=Moon Door W (open)
+DUPELIST=02fe5,0319d,0319f
+
+[ITEMDEF 02fe4]
+//Moon Door W (closed)
+DUPEITEM=02fe2
+
+[ITEMDEF 02fe5]
+//Moon Door W (open)
+DUPEITEM=02fe3
 
 [ITEMDEF 041cf]
 DEFNAME=i_sa_door_ws1
