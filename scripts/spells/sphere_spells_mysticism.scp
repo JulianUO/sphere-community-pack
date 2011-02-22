@@ -49,7 +49,7 @@ INTERRUPT=100.0,100.0
 [Spell 680]
 // dispels beneficial spell from target
 DEFNAME=s_purge_magic
-NAME=Healing Stone
+NAME=Purge Magic
 CAST_TIME=0.7
 RUNES=AOS
 RESOURCES=i_reag_fertile_dirt, i_reag_garlic, i_reag_mandrake_root, i_reag_sulfur_ash

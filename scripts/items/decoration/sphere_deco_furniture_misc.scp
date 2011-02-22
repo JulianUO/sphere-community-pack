@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
 
 
@@ -11,7 +11,7 @@ VERSION=0.56b
 DEFNAME=i_dartboard
 NAME=Dartboard
 TYPE=t_normal
-SKILLMAKE=CARPENTRY 15.7, t_carpentry
+SKILLMAKE=Carpentry 15.7, t_carpentry
 RESOURCES=5 i_log
 WEIGHT=10
 DUPELIST=01e2f
@@ -114,22 +114,29 @@ DUPELIST=024dc
 //japanese basket (square tall)
 DUPEITEM=024db
 
-[ITEMDEF 02ddd]
-DEFNAME=i_podium_elven
-NAME=Elven Podium
+[ITEMDEF 02de7]
+DEFNAME=i_table_elven_ornate_2
+NAME=ornate elven table
 TYPE=t_normal
-SKILLMAKE=CARPENTRY 80.0, t_carpentry
-RESOURCES=20 i_log
-WEIGHT=15
+FLIP=1
+VALUE=108
+WEIGHT=40.6
+RESOURCES=20 i_log_yew,6 i_nails
+SKILLMAKE=Carpentry 88.8,t_carpentry
 CATEGORY=Decoration - Furniture
-SUBSECTION=Misc
-DESCRIPTION=Elven Podium
+SUBSECTION=Mondain Legacy
+DESCRIPTION=Ornate Elven Table
+DUPELIST=02de8,03092,03093,03094,03095,03096,03097
+
+[ITEMDEF 02de8]
+//ornate elven table
+DUPEITEM=02de7
 
 [ITEMDEF 02ff4]
 DEFNAME=i_parrot_perch
 NAME=Parrot Perch
 TYPE=t_parrot_perch
-SKILLMAKE=CARPENTRY 50.0, t_carpentry
+SKILLMAKE=Carpentry 50.0, t_carpentry
 RESOURCES=50 i_log
 WEIGHT=15
 DUPELIST=02ff5
@@ -157,6 +164,21 @@ DUPEITEM=024e3
 [ITEMDEF 024e5]
 //rock garden
 DUPEITEM=024e3
+
+[ITEMDEF 02fea]
+DEFNAME=i_displaycase_elven
+NAME=elven displaycase
+FLIP=1
+WEIGHT=8.1
+RESOURCES=2 i_board,1 i_nails,6 i_glass_raw
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Display Case
+DESCRIPTION=Elven Display Case
+DUPELIST=02feb
+
+[ITEMDEF 02feb]
+//elven displaycase
+DUPEITEM=02fea
 
 
 [EOF]

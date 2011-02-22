@@ -6,6 +6,29 @@
 // FILE LAST UPDATED: Monday, Febuary 14, 2011
 VERSION=0.56b
 
+
+[ITEMDEF 090d]
+DEFNAME=i_fountain_splash
+//NAME=fountain
+TYPE=t_water
+RESOURCES=20 i_rock_plain
+CATEGORY=Animations
+SUBSECTION=Fountain Splash
+DESCRIPTION=Fountain Splash
+DUPELIST=090e,090f,910
+
+[ITEMDEF 090e]
+//fountain splash
+DUPEITEM=090d
+
+[ITEMDEF 090f]
+//fountain splash
+DUPEITEM=090d
+
+[ITEMDEF 0910]
+//fountain splash
+DUPEITEM=090d
+
 [ITEMDEF 091b]
 DEFNAME=i_fx_bee_swarm
 TYPE=t_trap_active

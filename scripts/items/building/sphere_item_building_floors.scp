@@ -1622,6 +1622,26 @@ DUPEITEM=02960
 [ITEMDEF 0298f]
 DUPEITEM=02960
 
+[ITEMDEF 02bb5]
+DEFNAME=i_floor_tile_ornate
+RESOURCES=100 i_rock_plain
+CATEGORY=Buildings - Floors
+SUBSECTION=Elven Floor Tile
+DESCRIPTION=Elven Floor Tile (ornate)
+DUPELIST=02bb6,02bb7,02bb8
+
+[ITEMDEF 02bb6]
+//Elven Floor Tile (ornate)
+DUPEITEM=02bb5
+
+[ITEMDEF 02bb7]
+//Elven Floor Tile (ornate)
+DUPEITEM=02bb5
+
+[ITEMDEF 02bb8]
+//Elven Floor Tile (ornate)
+DUPEITEM=02bb5
+
 [ITEMDEF 02bcf]
 DEFNAME=i_floor_tile_simple
 RESOURCES=100 i_board

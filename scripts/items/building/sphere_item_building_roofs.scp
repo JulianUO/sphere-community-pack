@@ -2356,10 +2356,10 @@ DUPEITEM=028b0
 [ITEMDEF 02b81]
 DEFNAME=i_roof_diamond_shingle
 TYPE=t_roof
-CATEGORY=Buildings - ML Roofs
-SUBSECTION=Diamond Shingle Roof
+CATEGORY=Buildings - Roofs
+SUBSECTION=Shingle (diamond)
 DESCRIPTION=@
-DUPELIST=02b82,02b83,02b84,02b85,02b86,02b87,02b88,02b89,02b8a,02b8b,02b8c,02b8d,02b8e,02b8f,02b90,02b91,02b92,02b93
+DUPELIST=02b82,02b83,02b84,02b85,02b86,02b87,02b88,02b89,02b8a,02b8b,02b8c,02b8d,02b8e,02b8f,02b90,02b91,02b92,02b93,02f1f,02f20,02f21,02f22,02f23
 
 [ITEMDEF 02b82]
 //diamond shingle roof
@@ -2436,82 +2436,82 @@ DUPEITEM=02b81
 [ITEMDEF 02b94]
 DEFNAME=i_roof_leafed
 TYPE=t_roof
-DUPELIST=02b95,02b96,02b97,02b98,02b99,02b9a,02b9b,02b9c,02b9d,02b9e,02b9f,02ba0,02ba1,02ba2,02ba3,02ba4,02ba5,02ba6
-
-CATEGORY=Buildings - ML Roofs
-SUBSECTION=Leafed Roof
-DESCRIPTION=@
+RESOURCES=100 i_leaves
+CATEGORY=Buildings - Roofs
+SUBSECTION=Leafed Roof 1
+DESCRIPTION=Roof
+DUPELIST=02b95,02b96,02b97,02b98,02b99,02b9a,02b9b,02b9c,02b9d,02b9e,02b9f,02ba0,02ba1,02ba2,02ba3,02ba4,02ba5,02ba6,02f24,02f25,02f26,02f27,02f28
 
 [ITEMDEF 02b95]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02b96]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02b97]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02b98]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02b99]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02b9a]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02b9b]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02b9c]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02b9d]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02b9e]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02b9f]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02ba0]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02ba1]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02ba2]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02ba3]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02ba4]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02ba5]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 [ITEMDEF 02ba6]
-//leafed roof
+//leafed roof 1
 DUPEITEM=02b94
 
 
@@ -2912,6 +2912,46 @@ DUPEITEM=02c6f
 [ITEMDEF 02c7d]
 //slate roof
 DUPEITEM=02c6f
+
+[ITEMDEF 02f1f]
+//diamond roof shingle
+DUPEITEM=02b81
+
+[ITEMDEF 02f20]
+//diamond roof shingle
+DUPEITEM=02b81
+
+[ITEMDEF 02f21]
+//diamond roof shingle
+DUPEITEM=02b81
+
+[ITEMDEF 02f22]
+//diamond roof shingle
+DUPEITEM=02b81
+
+[ITEMDEF 02f23]
+//diamond roof shingle
+DUPEITEM=02b81
+
+[ITEMDEF 02f24]
+//leaf roof 1
+DUPEITEM=02b94
+
+[ITEMDEF 02f25]
+//leaf roof 1
+DUPEITEM=02b94
+
+[ITEMDEF 02f26]
+//leaf roof 1
+DUPEITEM=02b94
+
+[ITEMDEF 02f27]
+//leaf roof 1
+DUPEITEM=02b94
+
+[ITEMDEF 02f28]
+//leaf roof 1
+DUPEITEM=02b94
 
 
 [EOF]

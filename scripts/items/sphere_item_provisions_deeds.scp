@@ -104,27 +104,15 @@ DESCRIPTION=Training Dummy (N)
 ON=@Create
 	MORE=i_training_dummy_n
 
-[ITEMDEF I_DEED_ARCHBUTTEW]
-NAME=Deed to a Archery Butte (West)
+[ITEMDEF I_DEED_ARCHBUTTE]
+NAME=Deed to an Archery Butte
 ID=i_deed
 RESOURCES=i_deed,i_archery_butte
 CATEGORY=Provisions - Deeds
 SUBSECTION=Item Deeds
-DESCRIPTION=Archery Butte (W)
-
+DESCRIPTION=Archery Butte
 ON=@Create
 	MORE=i_archery_butte
-
-[ITEMDEF I_DEED_ARCHBUTTEN]
-NAME=Deed to a Archery Butte (North)
-ID=i_deed
-RESOURCES=i_deed,i_archery_butte2
-CATEGORY=Provisions - Deeds
-SUBSECTION=Item Deeds
-DESCRIPTION=Archery Butte (N)
-
-ON=@Create
-	MORE=i_archery_butte2
 
 [ITEMDEF I_DEED_PICKPOCKN]
 NAME=Deed to a Pickpocket Dip (North)

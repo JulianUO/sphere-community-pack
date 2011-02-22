@@ -4240,6 +4240,36 @@ DUPELIST=02251
 //Skull (demon 2)
 DUPEITEM=02250
 
+[ITEMDEF 02ff9]
+DEFNAME=i_coffin_stone
+FLIP=1
+WEIGHT=350.0
+RESOURCES=35 i_rock_plain,10 i_cloth
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Stone Coffin
+DESCRIPTION=Stone Coffin
+DUPELIST=02ffa,03048,03049,0304a,0304b
+
+[ITEMDEF 02ffa]
+//stone coffin
+DUPEITEM=02ff9
+
+[ITEMDEF 03048]
+//stone coffin
+DUPEITEM=02ff9
+
+[ITEMDEF 03049]
+//stone coffin
+DUPEITEM=02ff9
+
+[ITEMDEF 0304a]
+//stone coffin
+DUPEITEM=02ff9
+
+[ITEMDEF 0304b]
+//stone coffin
+DUPEITEM=02ff9
+
 
 
 [EOF]

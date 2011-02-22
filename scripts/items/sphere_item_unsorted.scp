@@ -1,15 +1,11 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0]
 DEFNAME=i_unused
@@ -22,28 +18,6 @@ DEFNAME=i_nodraw
 CATEGORY=Miscellaneous
 SUBSECTION=Bad Tiles
 DESCRIPTION=No Draw Tile
-
-[ITEMDEF 090d]
-DEFNAME=i_fountain_splash
-//NAME=fountain
-TYPE=t_water
-RESOURCES=20 i_rock_plain
-CATEGORY=Animations
-SUBSECTION=Fountain Splash
-DESCRIPTION=Fountain Splash
-DUPELIST=090e,090f,910
-
-[ITEMDEF 090e]
-//fountain splash
-DUPEITEM=090d
-
-[ITEMDEF 090f]
-//fountain splash
-DUPEITEM=090d
-
-[ITEMDEF 0910]
-//fountain splash
-DUPEITEM=090d
 
 [ITEMDEF 09b2]
 DEFNAME=i_bankbox
@@ -411,39 +385,6 @@ CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Keyed Table
 
-[ITEMDEF 0207f]
-DEFNAME=i_bookstand_elven
-NAME=bookstand
-TYPE=t_normal
-VALUE=16
-WEIGHT=4.1
-RESOURCES=4 i_log_willow,1 i_nails
-SKILLMAKE=Carpentry 32.1,t_carpentry
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=ML
-DESCRIPTION=Elven Bookstand
-
-
-[ITEMDEF 0213f]
-// stars
-NAME=stars
-DUPELIST=02140,02141,02142,02143,02144
-
-[ITEMDEF 02140]
-DUPEITEM=0213f
-
-[ITEMDEF 02141]
-DUPEITEM=0213f
-
-[ITEMDEF 02142]
-DUPEITEM=0213f
-
-[ITEMDEF 02143]
-DUPEITEM=0213f
-
-[ITEMDEF 02144]
-DUPEITEM=0213f
-
 [ITEMDEF 02198]
 CATEGORY=Miscellaneous
 SUBSECTION=Bad Tiles
@@ -458,22 +399,6 @@ DESCRIPTION=No Draw Tile 021a4
 CATEGORY=Miscellaneous
 SUBSECTION=Bad Tiles
 DESCRIPTION=No Draw Tile 021bc
-
-[ITEMDEF 02232]
-DEFNAME=i_ant_hill
-NAME=ant hill
-TYPE=t_normal
-CATEGORY=Ground Tiles
-SUBSECTION=Hills
-DESCRIPTION=Ant Hill
-
-[ITEMDEF 02233]
-DEFNAME=i_gopher_mound
-NAME=gopher mound
-TYPE=t_normal
-CATEGORY=Ground Tiles
-SUBSECTION=Hills
-DESCRIPTION=Gopher Mound
 
 [ITEMDEF 02256]
 DEFNAME=i_bagball_small
@@ -1559,12 +1484,6 @@ CATEGORY=Decoration - Signs
 SUBSECTION=Classes
 DESCRIPTION=Tamer
 
-[ITEMDEF 02ab8]
-DEFNAME=i_mini_sacrificial_altar
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Sacrificial Altar
-
 
 [ITEMDEF 02ad8]
 CATEGORY=Miscellaneous
@@ -1581,8 +1500,356 @@ DESCRIPTION=Missing Name 02ae3
 //shopkeeper container
 DEFNAME=i_vendorbox
 NAME=Vendor Box
-TYPE=T_EQ_VENDOR_BOX
+TYPE=t_eq_vendor_box
 TDATA2=04a
+
+
+[ITEMDEF 02db4]
+DEFNAME=i_head_stygian_dragon
+NAME=stygian dragon head
+TYPE=t_normal
+VALUE=1000
+WEIGHT=5.0
+CATEGORY=Quest
+SUBSECTION=Stygian
+DESCRIPTION=Stygian Dragon Head
+
+[ITEMDEF 02db5]
+DEFNAME=i_liche_dust
+NAME=liche dust
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Liche
+DESCRIPTION=Liche Dust
+
+[ITEMDEF 02db6]
+DEFNAME=i_blood_medusa
+NAME=Medusa blood
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Medusa
+DESCRIPTION=Medusa Blood
+
+[ITEMDEF 02db7]
+DEFNAME=i_horn_abyssal
+NAME=horn of Abyssal Infernal
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Abyssal Infernal
+DESCRIPTION=Horn of Abyssal Infernal
+
+[ITEMDEF 02db8]
+DEFNAME=i_claw_slasher_of_veils
+NAME=claw of Slasher of Veils
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Slasher of Veils
+DESCRIPTION=Claw of Slasher of Veils
+
+[ITEMDEF 02db9]
+DEFNAME=i_wormmeat_raw
+NAME=raw worm meat
+TYPE=t_meat_raw
+TDATA1=i_fish_cut_cooked
+VALUE=3
+WEIGHT=1.0
+CATEGORY=Items by Professions
+SUBSECTION=Cook
+DESCRIPTION=Worm Meat (Raw)
+
+[ITEMDEF 02dba]
+DEFNAME=i_bowl_stew_rotworm
+NAME=bowl of rotworm stew
+TYPE=t_food
+VALUE=46
+WEIGHT=5.0
+RESOURCES=1 i_bowl_wood_lg,1 i_pitcher_water,1 i_flour_bowl,1 i_wormmeat_raw
+SKILLMAKE=COOKING 40.0
+CATEGORY=Items by Professions
+SUBSECTION=Cook
+DESCRIPTION=Bowl of Rotworm Stew
+ON=@Create
+   MOREM=3
+
+
+[ITEMDEF 02f44]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f44
+
+[ITEMDEF 02f45]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f45
+
+[ITEMDEF 02f46]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f46
+
+[ITEMDEF 02f47]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f47
+
+[ITEMDEF 02f48]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f48
+
+[ITEMDEF 02f49]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f49
+
+[ITEMDEF 02f4a]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f4a
+
+[ITEMDEF 02f4b]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f4b
+
+[ITEMDEF 02f4c]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f4c
+
+[ITEMDEF 02f4d]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f4d
+
+[ITEMDEF 02f4e]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f4e
+
+[ITEMDEF 02f4f]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f4f
+
+[ITEMDEF 02f50]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f50
+
+[ITEMDEF 02f51]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f51
+
+[ITEMDEF 02f52]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f52
+
+[ITEMDEF 02f53]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f53
+
+[ITEMDEF 02f54]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f54
+
+[ITEMDEF 02f55]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f55
+
+[ITEMDEF 02f56]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 02f56
+
+[ITEMDEF 02f57]
+DEFNAME=i_prism_runed
+NAME=runed prism
+TYPE=t_normal
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Prism (runed)
+
+[ITEMDEF 02f5c]
+DEFNAME=i_switch_enchanted
+TYPE=t_normal
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Enchanted Switch
+
+[ITEMDEF 02f5d]
+DEFNAME=i_prism_hollow
+TYPE=t_normal
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Prism (hollow)
+
+[ITEMDEF 02f5e]
+DEFNAME=i_filgree_jeweled
+TYPE=t_normal
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Jeweled Filgree
+
+[ITEMDEF 02f5f]
+DEFNAME=i_switch_normal
+TYPE=t_normal
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Switch
+
+[ITEMDEF 02f60]
+DEFNAME=i_light_wisps
+TYPE=t_normal
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Wisps of Light
+
+[ITEMDEF 02f61]
+DEFNAME=i_switch_runed
+TYPE=t_normal
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Switch (runed)
+
+[ITEMDEF 02fb6]
+NAME=special parrot perch
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=2 i_log
+CATEGORY=Quest
+SUBSECTION=Parrot Perch
+DESCRIPTION=Special Parrot Perch
+
+[ITEMDEF 02fb7]
+DEFNAME=i_elven_quiver
+NAME=elven quiver
+TYPE=t_container
+TDATA2=047
+FLIP=1
+LAYER=layer_tunic
+ARMOR=8
+VALUE=32
+WEIGHT=5.1
+RESOURCES=4 i_hides_cut,1 i_thread,1 i_wire_silver
+SKILLMAKE=Tailoring 59.0,t_sewing_kit
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Quivers
+DESCRIPTION=Elven Quiver
+TEVENTS=t_iprop
+DUPELIST=03171
+//FIXME: quiver loading event
+ON=@Create
+   f_AddMagicTags 1 1
+   HITPOINTS={31 37}
+
+[ITEMDEF 03171]
+//elven quiver
+DUPEITEM=02fb7
+
+[ITEMDEF 02fbd]
+//FIXME: Bad tile graphic
+//FIXME: Looks good on paperdoll
+DEFNAME=i_elven_male_shirt3
+NAME=elven shirt
+TYPE=t_clothing
+DYE=1
+FLIP=1
+//LAYER=layer_shirt
+ARMOR=4
+VALUE=34
+WEIGHT=8.1
+RESOURCES=8 i_cloth,1 i_thread
+SKILLMAKE=Tailoring 27.2,t_sewing_kit
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Shirts & Robes
+DESCRIPTION=Elven Male Shirt
+TEVENTS=t_iprop
+DUPELIST=02fbe
+ON=@Create
+   f_AddMagicTags 1 1
+   HITPOINTS={31 37}
+
+[ITEMDEF 02fbe]
+//i_elven_male_shirt3
+DUPEITEM=02fbd
+
+[ITEMDEF 02fcb]
+DEFNAME=i_leaf_chest_female
+NAME=leaf female chest
+TYPE=t_armor
+FLIP=1
+ARMOR=13
+VALUE=117
+WEIGHT=13.1
+RESOURCES=12 i_hide,1 i_ingot_iron,1 i_thread
+SKILLMAKE=Tailoring 77.2,t_sewing_kit
+CATEGORY=Provisions - Armor
+SUBSECTION=Elven
+DESCRIPTION=Leaf Chest Female
+TAG.REQSTR=15
+TAG.FemaleOnly=1
+TEVENTS=t_iprop
+DUPELIST=03181
+ON=@Create
+   f_AddMagicTags 1 1
+   HITPOINTS={31 37}
+
+[ITEMDEF 03181]
+//light female chest
+DUPEITEM=02fcb
+
+[ITEMDEF 02fd6]
+DEFNAME=i_wafer
+NAME=parrot wafer
+TYPE=t_food
+VALUE=1
+WEIGHT=0.1
+RESOURCES=1 i_dough,1 i_sugar
+SKILLMAKE=COOKING 10.0,1 i_tray
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=Parrot Wafer
+ON=@Create
+   MOREM=1
+
+[ITEMDEF 02fd7]
+DEFNAME=i_grapes_of_wrath
+NAME=grapes of wrath
+TYPE=t_food
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Grapes of Wrath
+ON=@Create
+   MOREM=1
+
+[ITEMDEF 02fd8]
+DEFNAME=i_apple_enchanted
+NAME=enchanted apple
+TYPE=t_food
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Enchanted Apple
+ON=@Create
+   MOREM=1
+
 
 [ITEMDEF 03584]
 //Gumpid=091b
@@ -1739,7 +2006,6 @@ TYPE=t_game_piece
 [ITEMDEF 03dc8]
 //unused
 
-// no idea what the rest of this stuff is....
 
 [ITEMDEF 03ed6]
 CATEGORY=Miscellaneous
@@ -1752,13 +2018,13 @@ SUBSECTION=Bad Tiles
 DESCRIPTION=Unused Tile 03ed7
 
 [ITEMDEF 03eea]
-//
+//ship part - duplicate of 3e8a
 
 [ITEMDEF 03eeb]
-//
+//ship part - duplicate of 3eb2
 
 [ITEMDEF 03eec]
-//
+//ship part - duplicate of 3eb1
 
 [ITEMDEF 03eed]
 //
@@ -1774,204 +2040,6 @@ DESCRIPTION=Unused Tile 03ed7
 
 [ITEMDEF 03ef1]
 //
-
-[ITEMDEF 03f07]
-NAME=Apple Tree
-CATEGORY=Miniature
-SUBSECTION=Nature
-DESCRIPTION=Apple Tree
-
-[ITEMDEF 03f08]
-NAME=Carpet
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Carpet 3
-
-[ITEMDEF 03f09]
-NAME=Carpet
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Carpet 6
-
-[ITEMDEF 03f0a]
-NAME=Carpet
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Carpet 1
-
-[ITEMDEF 03f0b]
-NAME=Ruined Bed
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Ruined Bed
-
-[ITEMDEF 03f0c]
-NAME=Cherry Tree
-CATEGORY=Miniature
-SUBSECTION=Nature
-DESCRIPTION=Cherry Tree
-
-[ITEMDEF 03f0d]
-NAME=Carpet
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Carpet 5
-
-[ITEMDEF 03f0e]
-NAME=Wooden Coffin
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Wooden Coffin
-
-[ITEMDEF 03f0f]
-NAME=Curtains
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Curtains
-
-[ITEMDEF 03f10]
-NAME=Fountain
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Fountain
-
-[ITEMDEF 03f11]
-NAME=Carpet
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Carpet 4
-
-[ITEMDEF 03f12]
-NAME=Weapon Rack
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Weapon Rack (polearms)
-
-[ITEMDEF 03f13]
-NAME=Weapon Rack
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Weapon Rack (swords)
-
-[ITEMDEF 03f14]
-NAME=Stone Fireplace
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Stone Fireplace
-
-[ITEMDEF 03f15]
-NAME=Iron Maiden
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Iron Maiden
-
-[ITEMDEF 03f16]
-NAME=Peach tree
-CATEGORY=Miniature
-SUBSECTION=Nature
-DESCRIPTION=Peach Tree
-
-[ITEMDEF 03f17]
-NAME=Carpet
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Carpet 3 (pattern 2)
-
-[ITEMDEF 03f18]
-NAME=Carpet
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Carpet 2
-
-[ITEMDEF 03f19]
-NAME=Large Statue
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Large Statue (0129f-012a1)
-
-[ITEMDEF 03f1a]
-NAME=Large Statue
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Large Statue (0139e-013a0)
-
-[ITEMDEF 03f1b]
-NAME=Decorative Armor
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Decorative Armor (03d86)
-
-[ITEMDEF 03f1c]
-NAME=Decorative Armor
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Decorative Armor (03d87)
-
-[ITEMDEF 03f1d]
-NAME=Sosaria Tapestry
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Sosaria Tapestry (0234e)
-
-[ITEMDEF 03f1e]
-NAME=Unmade Bed
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Unmade Bed
-
-[ITEMDEF 03f1f]
-NAME=Vanity Dresser
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Vanity Dresser
-
-[ITEMDEF 03f20]
-NAME=Vanity Dresser
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Vanity Dresser
-
-[ITEMDEF 03f21]
-NAME=Broken Armoir
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Broken Armoir
-
-[ITEMDEF 03f22]
-NAME=Ruined Bookcase
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Ruined Bookcase (0c14)
-
-[ITEMDEF 03f23]
-NAME=Broken Furniture
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Broken Furniture
-
-[ITEMDEF 03f24]
-NAME=Broken Chair
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Broken Chair (0c1b)
-
-[ITEMDEF 03f25]
-NAME=Broken Armoir
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Broken Armoir (0c12)
-
-[ITEMDEF 03f26]
-NAME=Covered Chair
-CATEGORY=Miniature
-SUBSECTION=Furniture
-DESCRIPTION=Covered Chair (0c17)
-
-[ITEMDEF 03f27]
-NAME=Guillotine
-CATEGORY=Miniature
-SUBSECTION=Decoration
-DESCRIPTION=Guillotine (01230)
 
 [ITEMDEF 03f8f]
 CATEGORY=Miscellaneous

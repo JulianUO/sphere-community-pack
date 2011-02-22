@@ -59,7 +59,6 @@ DUPELIST=0977
 DUPEITEM=0976
 
 [ITEMDEF 0978]
-// DEFNAME2=BACON
 DEFNAME=i_bacon_slice
 TYPE=t_food
 RESOURCES=1 i_ham
@@ -102,7 +101,7 @@ WEIGHT=0.5
 CATEGORY=Items by Professions
 SUBSECTION=Baker
 DESCRIPTION=French Bread
-SKILLMAKE=COOKING 15.0
+SKILLMAKE=Cooking 15.0
 RESOURCES=1 i_flour_sack
 
 [ITEMDEF 098d]
@@ -148,7 +147,7 @@ DESCRIPTION=Fruit Basket
 [ITEMDEF 0995]
 DEFNAME=i_mug_ceramic
 RESOURCES=3 i_ingot_iron
-SKILLMAKE=TINKERING 42.0,t_tinker_tools
+SKILLMAKE=Tinkering 42.0,t_tinker_tools
 CATEGORY=Items by Professions
 SUBSECTION=BarKeep
 DESCRIPTION=Ceramic Mug
@@ -179,7 +178,7 @@ DEFNAME=i_goblet
 CATEGORY=Items by Professions
 SUBSECTION=BarKeep
 DESCRIPTION=Goblet
-SKILLMAKE=TINKERING 42.0,t_tinker_tools
+SKILLMAKE=Tinkering 42.0,t_tinker_tools
 RESOURCES=3 i_ingot_iron
 
 [ITEMDEF 099b]
@@ -281,7 +280,7 @@ DEFNAME=i_goblet_2
 CATEGORY=Items by Professions
 SUBSECTION=BarKeep
 DESCRIPTION=Goblet
-SKILLMAKE=TINKERING 42.0,t_tinker_tools
+SKILLMAKE=Tinkering 42.0,t_tinker_tools
 RESOURCES=3 i_ingot_iron
 
 [ITEMDEF 09bc]
@@ -385,7 +384,7 @@ DEFNAME=i_pitcher
 CATEGORY=Items by Professions
 SUBSECTION=BarKeep
 DESCRIPTION=Pitcher
-SKILLMAKE=TINKERING 42.0,t_tinker_tools
+SKILLMAKE=Tinkering 42.0,t_tinker_tools
 RESOURCES=3 i_ingot_iron
 
 [ITEMDEF 09d7]
@@ -672,7 +671,7 @@ RESOURCES=5 i_ivory
 WEIGHT=5
 CATEGORY=Items by Professions
 SUBSECTION=Barkeep
-DESCRIPTION=PILE RED CHECKERS
+DESCRIPTION=Pile of Checkers (red)
 DUPELIST=0fa4,0fa5
 
 [ITEMDEF 0e1b]
@@ -681,10 +680,9 @@ RESOURCES=5 i_ebony
 WEIGHT=5
 CATEGORY=Items by Professions
 SUBSECTION=Barkeep
-DESCRIPTION=PILE BLACK CHECKERS
+DESCRIPTION=Pile of Checkers (black)
 
 [ITEMDEF 0e1c]
-//DEFNAME2=BACKGAMMON
 DEFNAME=i_backgammon_game
 RESOURCES=3 i_board
 WEIGHT=5
@@ -692,9 +690,8 @@ TYPE=t_game_board
 TDATA2=092e
 CATEGORY=Items by Professions
 SUBSECTION=Barkeep
-SKILLMAKE=TINKERING 30.0,t_tinker_tools
+SKILLMAKE=Tinkering 30.0,t_tinker_tools
 DUPELIST=0fad
-
 ON=@Create
 	MORE1 = 2
 
@@ -732,19 +729,17 @@ WEIGHT=5
 CATEGORY=Items by Professions
 SUBSECTION=Barkeep
 DESCRIPTION=Game Board
-SKILLMAKE=TINKERING 30.0,t_tinker_tools
+SKILLMAKE=Tinkering 30.0,t_tinker_tools
 
 [ITEMDEF 0fa7]
-//Dice and Cup
 DEFNAME=i_dice_cup
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=Barkeep
 DESCRIPTION=Dice and Cup
 RESOURCES=3 i_log
-SKILLMAKE=TINKERING 30.0,t_tinker_tools
-
-ON=@DCLICK
+SKILLMAKE=Tinkering 30.0,t_tinker_tools
+ON=@DClick
 	SRC.EMOTE rolls a <EVAL(RAND(6)+1)>,<EVAL(RAND(6)+1)>
 	RETURN 1
 
@@ -761,27 +756,23 @@ DUPEITEM=0e1c
 DUPEITEM=09a7
 
 [ITEMDEF 0ff7]
-//glass pitcher
+//Pitcher (Glass)
 DUPEITEM=09a7
 
-
-
 [ITEMDEF 0ffa]
-//bucket of water
 DEFNAME=i_bucket_of_water
 RESOURCES=10 i_water, 1 i_bucket
 WEIGHT=4
 TYPE=t_drink
-TDATA1=I_BUCKET
+TDATA1=i_bucket
 CATEGORY=Items by Professions
 SUBSECTION=Barkeep
 DESCRIPTION=Bucket of Water
 
 [ITEMDEF 0ffb]
-//skull mug
 DEFNAME=i_skull_mug
 RESOURCES=3 i_ingot_iron
-SKILLMAKE=TINKERING 42.0,t_tinker_tools
+SKILLMAKE=Tinkering 42.0,t_tinker_tools
 WEIGHT=6
 CATEGORY=Items by Professions
 SUBSECTION=Barkeep
@@ -789,15 +780,16 @@ DESCRIPTION=Skull Mug
 DUPELIST=0ffc,0ffd,0ffe
 
 [ITEMDEF 0ffc]
+//skull mug
 DUPEITEM=0ffb
 
 [ITEMDEF 0ffd]
 //skull mug
-DUPEITEM=0FFB
+DUPEITEM=0ffb
 
 [ITEMDEF 0ffe]
 //skull mug
-DUPEITEM=0FFB
+DUPEITEM=0ffb
 
 [ITEMDEF 0fff]
 //pewter mug
@@ -811,7 +803,7 @@ DUPELIST=0fff,01001,01002
 CATEGORY=Items by Professions
 SUBSECTION=BarKeep
 DESCRIPTION=Pewter Mug
-SKILLMAKE=TINKERING 42.0,t_tinker_tools
+SKILLMAKE=Tinkering 42.0,t_tinker_tools
 
 [ITEMDEF 01001]
 //pewter mug
@@ -827,12 +819,12 @@ WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=BarKeep
 DESCRIPTION=Spitton
-SKILLMAKE=TINKERING 42.0,t_tinker_tools
+SKILLMAKE=Tinkering 42.0,t_tinker_tools
 
 [ITEMDEF 01004]
 DEFNAME=i_barrel_tap
 RESOURCES=1 i_ingot_iron
-SKILLMAKE=TINKERING 52.0,t_tinker_tools
+SKILLMAKE=Tinkering 52.0,t_tinker_tools
 WEIGHT=1
 CATEGORY=Items by Professions
 SUBSECTION=BarKeep
@@ -848,7 +840,7 @@ DESCRIPTION=Open Sack of Flour
 [ITEMDEF 0103c]
 DEFNAME=i_bread_wonder
 NAME=Wonder Bread
-SKILLMAKE=COOKING 1
+SKILLMAKE=Cooking 1
 RESOURCES=1 i_flour_sack
 TYPE=t_food
 WEIGHT=1
@@ -864,7 +856,7 @@ TYPE=t_food
 CATEGORY=Items by Professions
 SUBSECTION=Baker
 DESCRIPTION=Baked Pie
-SKILLMAKE=COOKING 20.0
+SKILLMAKE=Cooking 20.0
 
 [ITEMDEF 01044]
 DEFNAME=i_spam
@@ -885,7 +877,7 @@ DESCRIPTION=Open Sack of Flour
 [ITEMDEF 010e1]
 DEFNAME=i_barrel_hoops
 RESOURCES=4 i_ingot_iron
-SKILLMAKE=TINKERING 42.0,t_tinker_tools
+SKILLMAKE=Tinkering 42.0,t_tinker_tools
 WEIGHT=4
 CATEGORY=Items by Professions
 SUBSECTION=BarKeep
@@ -1727,6 +1719,19 @@ SUBSECTION=Japanese Kitchen
 DESCRIPTION=Wassabi (raw)
 ON=@Create
    MOREM=1
+
+[ITEMDEF 02d4f]
+DEFNAME=i_bowl_fruit
+TYPE=t_food
+VALUE=26
+WEIGHT=3.0
+RESOURCES=1 i_bowl_wood,2 i_fruit_apple,1 i_fruit_banana,1 i_fruit_grapes,1 i_fruit_pear
+SKILLMAKE=Carpentry 18.0,t_carpentry,Cooking 50.0
+CATEGORY=Items by Professions
+SUBSECTION=Cook
+DESCRIPTION=Fruit Bowl
+ON=@Create
+   MOREM=5
 
 
 [EOF]

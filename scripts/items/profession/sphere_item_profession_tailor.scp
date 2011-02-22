@@ -3,35 +3,58 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0ec6]
 DEFNAME=i_dress_form
 TYPE=t_normal
 WEIGHT=5
-SKILLMAKE=CARPENTRY 63.1, TAILORING 65.0, t_carpentry, t_sewing_kit
 RESOURCES=25 i_log, 10 i_cloth
-DUPELIST=0ec7
+SKILLMAKE=carpentry 63.1, tailoring 65.0, t_carpentry, t_sewing_kit
 CATEGORY=Items by Professions
 SUBSECTION=Tailor
 DESCRIPTION=Dress Form
+DUPELIST=0ec7
 
 [ITEMDEF 0ec7]
 DUPEITEM=0ec6
 
 [ITEMDEF 02dd9]
-DEFNAME=i_elven_spinning_wheel
-NAME=Elven Spinning Wheel
+DEFNAME=i_spinning_wheel_elven
+NAME=elven spinning wheel
 TYPE=t_spinwheel
-SKILLMAKE=CARPENTRY 75.0, TAILORING 65.0, t_carpentry, t_sewing_kit
-RESOURCES=60 i_log, 40 i_cloth
-DUPELIST=02dda
+FLIP=1
+VALUE=73
+WEIGHT=21.3
+RESOURCES=10 i_log_maple,1 i_ingot_iron,1 i_hinge,1 i_axel,1 i_gears
+SKILLMAKE=Carpentry 73.6,t_carpentry
 CATEGORY=Items by Professions
-SUBSECTION=Tailor
-DESCRIPTION=Spinning Wheel (Elven)
+SUBSECTION=Weavers
+DESCRIPTION=Elven Spinning Wheel
+TEVENTS=t_spinwheel_elven
+DUPELIST=02dda,02e3c,02e3d,02e3e,02e3f
 
 [ITEMDEF 02dda]
+//elven spinning wheel
 DUPEITEM=02dd9
 
-[eof]
+[ITEMDEF 02e3c]
+//elven spinning wheel
+DUPEITEM=02dd9
+
+[ITEMDEF 02e3d]
+//elven spinning wheel
+DUPEITEM=02dd9
+
+[ITEMDEF 02e3e]
+//elven spinning wheel
+DUPEITEM=02dd9
+
+[ITEMDEF 02e3f]
+//elven spinning wheel
+DUPEITEM=02dd9
+
+
+[EOF]

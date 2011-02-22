@@ -2606,6 +2606,60 @@ DEFNAME=i_chair_stool_BOARD_ROUGH
 SKILLMAKE=CARPENTRY 10.0, t_carpentry
 RESOURCES=8 i_board
 
+
+[ITEMDEF 02bd1]
+DEFNAME=i_dresser_drawer_2
+TYPE=t_container
+TDATA2=051
+FLIP=1
+VALUE=21
+WEIGHT=2.2
+RESOURCES=2 i_board,2 i_nails
+SKILLMAKE=Carpentry 71.6,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Bedroom Furniture
+DESCRIPTION=Drawer (Vanity 2)
+DUPELIST=02bd2,02bd3,02bd4,02bd5,02bd6
+
+[ITEMDEF 02bd2]
+//drawer 2
+DUPEITEM=02bd1
+
+[ITEMDEF 02bd3]
+//drawer 2
+DUPEITEM=02bd1
+
+[ITEMDEF 02bd4]
+//drawer 2
+DUPEITEM=02bd1
+
+[ITEMDEF 02bd5]
+//drawer 2
+DUPEITEM=02bd1
+
+[ITEMDEF 02bd6]
+//drawer 2
+DUPEITEM=02bd1
+
+[ITEMDEF 02bd7]
+DEFNAME=i_dresser_2
+TYPE=t_container
+TDATA2=051
+FLIP=1
+VALUE=272
+WEIGHT=28.9
+RESOURCES=8 i_board,20 i_nails,6 i_dresser_drawer,1 i_ingot_silver,5 i_glass_raw
+SKILLMAKE=Carpentry 87.3,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Bedroom Furniture
+DESCRIPTION=Dresser (Vanity 2)
+DUPELIST=02bd8
+
+[ITEMDEF 02bd8]
+//dresser
+DUPEITEM=02bd7
+
+
 [ITEMDEF 03dff]
 //bench dark stone against NE wall
 DEFNAME=i_bench_5

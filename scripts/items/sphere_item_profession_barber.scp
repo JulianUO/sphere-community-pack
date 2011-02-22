@@ -1,28 +1,24 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0dfc]
 DEFNAME=i_scissors_barber
 RESOURCES=2 i_ingot_iron, 1 i_screw
 WEIGHT=.4
-TYPE=T_SCISSORS
+TYPE=t_scissors
 CATEGORY=Items by Professions
 SUBSECTION=Barber
 DESCRIPTION=Barber Scissors
 DUPELIST=0dfd
 
 [ITEMDEF 0dfd]
-//Barber SCISSORS
+//Barber scissors
 DUPEITEM=0dfc
 
 [ITEMDEF 0dff]
@@ -156,7 +152,7 @@ DESCRIPTION=WIG 11
 [ITEMDEF 0e27]
 // DEFNAME2=hair_dye
 DEFNAME=i_bottle_hair_dye
-TYPE=T_HAIR_DYE
+TYPE=t_hair_dye
 RESOURCES=1 i_bottle, 1 i_dyes
 NAME=Bottle of Hair Dye
 WEIGHT=2
@@ -168,7 +164,7 @@ DUPELIST=0eff
 [ITEMDEF 0203b]
 DEFNAME=i_hair_short
 NAME=short hair
-TYPE=T_HAIR
+TYPE=t_hair
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -194,7 +190,7 @@ ON=@TIMER
 [ITEMDEF 0203c]
 DEFNAME=i_hair_long
 NAME=long hair
-TYPE=T_HAIR
+TYPE=t_hair
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -209,7 +205,7 @@ ON=@TIMER
 [ITEMDEF 0203d]
 DEFNAME=i_hair_ponytail
 NAME=ponytail
-TYPE=T_HAIR
+TYPE=t_hair
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -235,7 +231,7 @@ ON=@TIMER
 [ITEMDEF 0203e]
 DEFNAME=i_beard_long
 NAME=long beard
-TYPE=T_BEARD
+TYPE=t_beard
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -250,7 +246,7 @@ ON=@TIMER
 [ITEMDEF 0203f]
 DEFNAME=i_beard_short
 NAME=short beard
-TYPE=T_BEARD
+TYPE=t_beard
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -275,7 +271,7 @@ ON=@TIMER
 [ITEMDEF 02040]
 DEFNAME=i_beard_goatee
 NAME=goatee
-TYPE=T_BEARD
+TYPE=t_beard
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -300,7 +296,7 @@ ON=@TIMER
 [ITEMDEF 02041]
 DEFNAME=i_beard_mustache
 NAME=mustache
-TYPE=T_BEARD
+TYPE=t_beard
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -325,7 +321,7 @@ ON=@TIMER
 [ITEMDEF 02044]
 DEFNAME=i_hair_mohawk
 NAME=mohawk
-TYPE=T_HAIR
+TYPE=t_hair
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -351,7 +347,7 @@ ON=@TIMER
 [ITEMDEF 02045]
 DEFNAME=i_hair_pageboy
 NAME=pageboy
-TYPE=T_HAIR
+TYPE=t_hair
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -377,7 +373,7 @@ ON=@TIMER
 [ITEMDEF 02046]
 DEFNAME=i_hair_buns
 NAME=buns hair
-TYPE=T_HAIR
+TYPE=t_hair
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -402,7 +398,7 @@ ON=@TIMER
 [ITEMDEF 02047]
 DEFNAME=i_hair_afro
 NAME=afro
-TYPE=T_HAIR
+TYPE=t_hair
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -427,7 +423,7 @@ ON=@TIMER
 [ITEMDEF 02048]
 DEFNAME=i_hair_receding
 NAME=receeding hair
-TYPE=T_HAIR
+TYPE=t_hair
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -452,7 +448,7 @@ ON=@TIMER
 [ITEMDEF 02049]
 DEFNAME=i_hair_2_pigtails
 NAME=2 pig tails
-TYPE=T_HAIR
+TYPE=t_hair
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -477,7 +473,7 @@ ON=@TIMER
 [ITEMDEF 0204a]
 DEFNAME=i_hair_krisna
 NAME=krisna hair
-TYPE=T_HAIR
+TYPE=t_hair
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -502,7 +498,7 @@ ON=@TIMER
 [ITEMDEF 0204b]
 DEFNAME=i_beard_short_med
 NAME=medium short beard
-TYPE=T_BEARD
+TYPE=t_beard
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -527,7 +523,7 @@ ON=@TIMER
 [ITEMDEF 0204c]
 DEFNAME=i_beard_long_med
 NAME=medium long beard
-TYPE=T_BEARD
+TYPE=t_beard
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -552,7 +548,7 @@ ON=@TIMER
 [ITEMDEF 0204d]
 DEFNAME=i_beard_vandyke
 NAME=vandyke
-TYPE=T_BEARD
+TYPE=t_beard
 VALUE={8 12}
 CATEGORY=Items by Professions
 SUBSECTION=Barber
@@ -574,229 +570,377 @@ ON=@TIMER
 	cont.equip <new.uid>
 	return 1
 
+
+[ITEMDEF 02fbf]
+DEFNAME=i_hair_elven_ML
+NAME=medium length hair
+TYPE=t_hair
+VALUE=16
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Barber
+DESCRIPTION=Elven Medium Length Hair
+ON=@Create
+	ATTR=attr_newbie
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 02fc0]
+DEFNAME=i_hair_LF
+NAME=long hair with feather
+TYPE=t_hair
+VALUE=24
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Barber
+DESCRIPTION=Elven Long Hair with Feather
+ON=@Create
+	ATTR=attr_newbie
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 02fc1]
+DEFNAME=i_hair_short1
+NAME=short hair
+TYPE=t_hair
+VALUE=12
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Barber
+DESCRIPTION=Elven Short Hair
+ON=@Create
+	ATTR=attr_newbie
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 02fc2]
+DEFNAME=i_hair_elven_mullet
+NAME=mullet hair
+TYPE=t_hair
+VALUE=10
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Barber
+DESCRIPTION=Elven Mullet Hair
+ON=@Create
+	ATTR=attr_newbie
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 02fcc]
+DEFNAME=i_hair_elven_flower
+NAME=flower hair
+TYPE=t_hair
+VALUE=22
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Barber
+DESCRIPTION=Elven Flower Hair
+ON=@Create
+	ATTR=attr_newbie
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 02fcd]
+DEFNAME=i_hair_elven_long2
+NAME=long elven hair
+TYPE=t_hair
+VALUE=17
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Barber
+DESCRIPTION=Elven Long Hair
+ON=@Create
+	ATTR=attr_newbie
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 02fce]
+DEFNAME=i_hair_elven_long3
+NAME=long hair with topknot
+TYPE=t_hair
+VALUE=23
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Barber
+DESCRIPTION=Elven Long Hair with Topknot
+ON=@Create
+	ATTR=attr_newbie
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 02fcf]
+DEFNAME=i_hair_elven_braid
+NAME=Long hair with braid
+TYPE=t_hair
+VALUE=25
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Barber
+DESCRIPTION=Elven Long with Braid
+ON=@Create
+	ATTR=attr_newbie
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 02fd0]
+DEFNAME=i_hair_elven_long4
+NAME=long hair with bun
+TYPE=t_hair
+VALUE=27
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Barber
+DESCRIPTION=Elven Long Hair with Bun
+ON=@Create
+	ATTR=attr_newbie
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 02fd1]
+DEFNAME=i_hair_elven_spike
+NAME=spiked hair
+TYPE=t_hair
+VALUE=29
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Barber
+DESCRIPTION=Elven Spiked Hair
+ON=@Create
+	ATTR=attr_newbie
+ON=@Timer
+	RETURN 1
+
+[ITEMDEF 02fd2]
+DEFNAME=i_hair_elven_long5
+NAME=long hair
+TYPE=t_hair
+VALUE=19
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Barber
+DESCRIPTION=Elven Long Hair 5 (duplicate)
+ON=@Create
+	ATTR=attr_newbie
+ON=@Timer
+	RETURN 1
+
+
 [ITEMDEF 04258]
 DEFNAME=i_horn_gargoyle_male_1
 NAME=male gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 04259]
 DEFNAME=i_horn_gargoyle_male_2
 NAME=male gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 0425a]
 DEFNAME=i_horn_gargoyle_male_3
 NAME=male gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 0425b]
 DEFNAME=i_horn_gargoyle_male_4
 NAME=male gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 0425c]
 DEFNAME=i_horn_gargoyle_male_5
 NAME=male gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 0425d]
 DEFNAME=i_horn_gargoyle_male_6
 NAME=male gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 0425e]
 DEFNAME=i_horn_gargoyle_male_7
 NAME=male gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 0425f]
 DEFNAME=i_horn_gargoyle_male_8
 NAME=male gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 04261]
 DEFNAME=i_horn_gargoyle_female_1
 NAME=female gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
+TAG.FemaleOnly=1
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 04262]
 DEFNAME=i_horn_gargoyle_female_2
 NAME=female gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
+TAG.FemaleOnly=1
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 04273]
 DEFNAME=i_horn_gargoyle_female_3
 NAME=female gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
+TAG.FemaleOnly=1
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 04274]
 DEFNAME=i_horn_gargoyle_female_4
 NAME=female gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
+TAG.FemaleOnly=1
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 04275]
 DEFNAME=i_horn_gargoyle_female_5
 NAME=female gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
+TAG.FemaleOnly=1
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 042aa]
 DEFNAME=i_horn_gargoyle_female_6
 NAME=female gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
+TAG.FemaleOnly=1
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 042ab]
 DEFNAME=i_horn_gargoyle_female_7
 NAME=female gargoyle horns
-TYPE=T_HAIR
-
+TYPE=t_hair
+TAG.FemaleOnly=1
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 042ad]
 DEFNAME=i_horn_gargoyle_facial_1
 NAME=facial gargoyle horns
-TYPE=T_BEARD
+TYPE=t_beard
 LAYER=layer_beard
-
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 042ae]
 DEFNAME=i_horn_gargoyle_facial_2
 NAME=facial gargoyle horns
-TYPE=T_BEARD
+TYPE=t_beard
 LAYER=layer_beard
-
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 042af]
 DEFNAME=i_horn_gargoyle_facial_3
 NAME=facial gargoyle horns
-TYPE=T_BEARD
+TYPE=t_beard
 LAYER=layer_beard
-
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 042b0]
 DEFNAME=i_horn_gargoyle_facial_4
 NAME=facial gargoyle horns
-TYPE=T_BEARD
+TYPE=t_beard
 LAYER=layer_beard
-
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
 
 [ITEMDEF 042b1]
 DEFNAME=i_horn_gargoyle_female_8
 NAME=female gargoyle horn
-TYPE=T_HAIR
-
+TYPE=t_hair
 ON=@Create
-	ATTR = attr_newbie
-
+	ATTR=attr_newbie
 ON=@Timer
 	RETURN 1
+
+
+[ITEMDEF i_beard_none]
+ID=i_eq_marker
+NAME=no beard
+TYPE=t_beard
+LAYER=layer_beard
+VALUE=10
+WEIGHT=0
+ON=@Create
+   ATTR=attr_newbie
+ON=@Timer
+   RETURN 1
+
+[ITEMDEF i_hair_none]
+ID=i_eq_marker
+NAME=No Hair
+TYPE=t_hair
+LAYER=layer_hair
+VALUE=10
+WEIGHT=0
+ON=@Create
+   ATTR=attr_newbie
+ON=@Timer
+   RETURN 1
 
 
 [EOF]

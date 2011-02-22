@@ -3,25 +3,538 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
+
+
+// Equipable Smithing hammers are in the weapons directory
+
+[ITEMDEF 0faf]
+DEFNAME=i_anvil
+TYPE=t_anvil
+FLIP=1
+WEIGHT=255
+RESOURCES=20 i_ingot_iron, 1 i_log
+SKILLMAKE=blacksmithing 30.0, tinkering 56.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Anvil (N)
+DUPELIST=0fb0
+
+[ITEMDEF 0fb0]
+DUPEITEM=0faf
+DESCRIPTION=Anvil (W)
 
 [ITEMDEF 0fb1]
 DEFNAME=i_forge
-TYPE=t_forge
 NAME=Forge
+TYPE=t_forge
 WEIGHT=500
 CATEGORY=Items by Professions
 SUBSECTION=Blacksmiths
 DESCRIPTION=Small Forge
 
+[ITEMDEF 0fb6]
+DEFNAME=i_horse_shoes
+RESOURCES=4 i_ingot_iron
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Horse Shoes
+
+[ITEMDEF 0fb7]
+DEFNAME=i_forged_metal
+TYPE=t_fire
+RESOURCES=1 i_ingot_iron
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forged Metal (W)
+DUPELIST=0fb8
+
+[ITEMDEF 0fb8]
+//forged metal
+DUPEITEM=0fb7
+DESCRIPTION=Forged Metal (N)
+
+[ITEMDEF 0fbb]
+//Uses weapon type but cannot be equiped
+DEFNAME=i_tongs
+RESOURCES=2 i_ingot_iron
+TYPE=t_weapon_mace_smith
+FLIP=1
+WEIGHT=2
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Tongs
+DUPELIST=0fbc
+
+[ITEMDEF 0fbc]
+//tongs
+DUPEITEM=0fbb
+
+[ITEMDEF 0197a]
+DEFNAME=i_forge_bellows_2_part_1_of_3_w
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (01/03) (W)
+
+[ITEMDEF 0197b]
+DEFNAME=i_forge_bellows_2_part_1_of_3_w_2
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 0197c]
+DEFNAME=i_forge_bellows_2_part_1_of_3_w_3
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 0197d]
+DEFNAME=i_forge_bellows_2_part_1_of_3_w_4
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 0197e]
+DEFNAME=i_forge_2_part_2_of_3_w
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (02/03) (W)
+
+[ITEMDEF 0197f]
+DEFNAME=i_forge_2_part_2_of_3_w_2
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 01980]
+DEFNAME=i_forge_2_part_2_of_3_w_3
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 01981]
+DEFNAME=i_forge_2_part_2_of_3_w_4
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 01982]
+DEFNAME=i_forge_2_part_3_of_3_w
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 01983]
+DEFNAME=i_forge_2_part_3_of_3_w_2
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (03/03) (W)
+
+[ITEMDEF 01984]
+DEFNAME=i_forge_2_part_3_of_3_w_3
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 01985]
+DEFNAME=i_forge_2_part_3_of_3_w_4
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 01986]
+DEFNAME=i_forge_bellows_2_part_1_of_3_n
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (01/03) (N)
+
+[ITEMDEF 01987]
+DEFNAME=i_forge_bellows_2_part_1_of_3_n_2
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 01988]
+DEFNAME=i_forge_bellows_2_part_1_of_3_n_3
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 01989]
+DEFNAME=i_forge_bellows_2_part_1_of_3_n_4
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 0198a]
+DEFNAME=i_forge_2_part_2_of_3_n
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (02/03) (N)
+
+[ITEMDEF 0198b]
+DEFNAME=i_forge_2_part_2_of_3_n_2
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 0198c]
+DEFNAME=i_forge_2_part_2_of_3_n_3
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 0198d]
+DEFNAME=i_forge_2_part_2_of_3_n_4
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 0198e]
+DEFNAME=i_forge_2_part_3_of_3_n
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (03/03) (N)
+
+[ITEMDEF 0198f]
+DEFNAME=i_forge_2_part_3_of_3_n_2
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 01990]
+DEFNAME=i_forge_2_part_3_of_3_n_3
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 01991]
+DEFNAME=i_forge_2_part_3_of_3_n_4
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 01992]
+DEFNAME=i_forge_bellows_2_part_1_of_3_s
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (01/03) (S)
+
+[ITEMDEF 01993]
+DEFNAME=i_forge_bellows_2_part_1_of_3_s_2
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 01994]
+DEFNAME=i_forge_bellows_2_part_1_of_3_s_3
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 01995]
+DEFNAME=i_forge_bellows_2_part_1_of_3_s_4
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 01996]
+DEFNAME=i_forge_2_part_2_of_3_s
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (02/03) (S)
+
+[ITEMDEF 01997]
+DEFNAME=i_forge_2_part_2_of_3_s_2
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 01998]
+DEFNAME=i_forge_2_part_2_of_3_s_3
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 01999]
+DEFNAME=i_forge_2_part_2_of_3_s_4
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 0199a]
+DEFNAME=i_forge_2_part_3_of_3_s
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (03/03) (S)
+
+[ITEMDEF 0199b]
+DEFNAME=i_forge_2_part_3_of_3_s_2
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 0199c]
+DEFNAME=i_forge_2_part_3_of_3_s_3
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 0199d]
+DEFNAME=i_forge_2_part_3_of_3_s_4
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 0199e]
+DEFNAME=i_forge_bellows_2_part_1_of_3_e
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (01/03) (E)
+
+[ITEMDEF 0199f]
+DEFNAME=i_forge_bellows_2_part_1_of_3_e_2
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 019a0]
+DEFNAME=i_forge_bellows_2_part_1_of_3_e_3
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 019a1]
+DEFNAME=i_forge_bellows_2_part_1_of_3_e_4
+RESOURCES=2 i_board, 1 i_nails, 1 i_springs, 1 i_log, 8 i_rock_plain
+WEIGHT=18
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Bellows
+
+[ITEMDEF 019a2]
+DEFNAME=i_forge_2_part_2_of_3_e
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (02/03) (E)
+
+[ITEMDEF 019a3]
+DEFNAME=i_forge_2_part_2_of_3_e_2
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 019a4]
+DEFNAME=i_forge_2_part_2_of_3_e_3
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 019a5]
+DEFNAME=i_forge_2_part_2_of_3_e_4
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 019a6]
+DEFNAME=i_forge_2_part_3_of_3_e
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge 2 (03/03) (E)
+
+[ITEMDEF 019a7]
+DEFNAME=i_forge_2_part_3_of_3_e_2
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 019a8]
+DEFNAME=i_forge_2_part_3_of_3_e_3
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 019a9]
+DEFNAME=i_forge_2_part_3_of_3_e_4
+RESOURCES=8 i_rock_plain
+WEIGHT=16
+TYPE=t_forge
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Forge
+
+[ITEMDEF 02db0]
+//soulforge (looks like a regular forge)
+
+[ITEMDEF 02dd5]
+DEFNAME=i_anvil_elven
+NAME=elven anvil
+FLIP=1
+TYPE=t_anvil
+VALUE=210
+WEIGHT=240.0
+RESOURCES=20 i_rock_plain,20 i_ingot_iron,10 i_log_yew
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Elven Anvil
+TEVENTS=t_anvil_elven
+DUPELIST=02dd6
+
+[ITEMDEF 02dd6]
+//elven anvil
+DUPEITEM=02dd5
+
 [ITEMDEF 02dd8]
 DEFNAME=i_forge_elven
+NAME=elven forge
 TYPE=t_forge
-NAME=Elven Forge
-WEIGHT=500
+VALUE=260
+WEIGHT=375.0
+RESOURCES=30 i_rock_plain,15 i_ingot_silver,30 i_log_willow
 CATEGORY=Items by Professions
 SUBSECTION=Blacksmiths
 DESCRIPTION=Elven Forge
+TEVENTS=t_forge_elven
 
-[eof]
+
+[EOF]
