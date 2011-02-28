@@ -971,7 +971,7 @@ DUPELIST=02d62
 DUPEITEM=02d61
 
 [ITEMDEF 02ddd]
-DEFNAME=i_podium
+DEFNAME=i_podium_elven
 NAME=elven podium
 TYPE=t_normal
 FLIP=1

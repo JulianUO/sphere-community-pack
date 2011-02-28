@@ -3,39 +3,312 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Tuesday, Febuary 22, 2011
 VERSION=0.56b
+
+
+[ITEMDEF 0fe6]
+DEFNAME=i_pentagram
+WEIGHT=70
+RESOURCES=20 i_bloodstone, 10 i_rock_plain, 20 i_marble
+CATEGORY=Items by Professions
+SUBSECTION=Spellweaver
+DESCRIPTION=Pentagram
+DUPELIST=0fe7,0fe8,0fe9,0fea,0feb,0fec,0fed,0fee
+
+[ITEMDEF 0fe7]
+//pentagram
+DUPEITEM=0fe6
+
+[ITEMDEF 0fe8]
+//pentagram
+DUPEITEM=0fe6
+
+[ITEMDEF 0fe9]
+//pentagram
+DUPEITEM=0fe6
+
+[ITEMDEF 0fea]
+//pentagram
+DUPEITEM=0fe6
+
+[ITEMDEF 0feb]
+//pentagram
+DUPEITEM=0fe6
+
+[ITEMDEF 0fec]
+//pentagram
+DUPEITEM=0fe6
+
+[ITEMDEF 0fed]
+//pentagram
+DUPEITEM=0fe6
+
+[ITEMDEF 0fee]
+//pentagram
+DUPEITEM=0fe6
+
+[ITEMDEF 0120e]
+DEFNAME=i_altar_stone
+RESOURCES=10 i_rock_plain
+CATEGORY=Items by Professions
+SUBSECTION=Spellweaver
+DESCRIPTION=Altar
+DUPELIST=0120f,01210,01211,01212,01213,01214,01215,01216
+
+[ITEMDEF 0120f]
+//altar
+DUPEITEM=0120e
+
+[ITEMDEF 01210]
+//altar
+DUPEITEM=0120e
+
+[ITEMDEF 01211]
+//altar
+DUPEITEM=0120e
+
+[ITEMDEF 01212]
+//altar
+DUPEITEM=0120e
+
+[ITEMDEF 01213]
+//altar
+DUPEITEM=0120e
+
+[ITEMDEF 01214]
+//altar
+DUPEITEM=0120e
+
+[ITEMDEF 01215]
+//altar
+DUPEITEM=0120e
+
+[ITEMDEF 01216]
+//altar
+DUPEITEM=0120e
+
+[ITEMDEF 01cf1]
+DEFNAME=i_pentagram_blood
+NAME=blood pentagram
+TYPE=t_blood
+CATEGORY=Items by Professions
+SUBSECTION=Magic Users
+DESCRIPTION=Blood Pentagram
+DUPELIST=01cf2,01cf3,01cf4,01cf5,01cf6,01cf7,01cf8,01cf9,01cfa,01cfb,01cfc,01cfd,01cfe,01cff,01d00,01d01,01d02,01d03,01d04,01d05,01d06,01d07,01d08,01d09,01d0a,01d0b,01d0c,01d0d,01d0e,01d0f,01d10,01d11,01d12
+
+[ITEMDEF 01cf2]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cf3]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cf4]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cf5]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cf6]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cf7]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cf8]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cf9]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cfa]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cfb]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cfc]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cfd]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cfe]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01cff]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d00]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d01]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d02]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d03]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d04]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d05]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d06]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d07]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d08]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d09]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d0a]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d0b]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d0c]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d0d]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d0e]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d0f]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d10]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d11]
+//blood pentagram
+DUPEITEM=01cf1
+
+[ITEMDEF 01d12]
+//blood pentagram
+DUPEITEM=01cf1
+
 
 [ITEMDEF 0307b]
 DEFNAME=i_arcane_circle_center
 TYPE=t_normal
-DUPELIST=0307c,0307d,0307e,0307f,03080,03081,03082,03083
 CATEGORY=Items by Professions
 SUBSECTION=Spellweaver
-DESCRIPTION=@
+DESCRIPTION=Arcane Circle
+DUPELIST=0307c,0307d,0307e,0307f,03080,03081,03082,03083
 
 [ITEMDEF 0307c]
+//arcane circle
 DUPEITEM=0307b
 
 [ITEMDEF 0307d]
+//arcane circle
 DUPEITEM=0307b
 
 [ITEMDEF 0307e]
+//arcane circle
 DUPEITEM=0307b
 
 [ITEMDEF 0307f]
+//arcane circle
 DUPEITEM=0307b
 
 [ITEMDEF 03080]
+//arcane circle
 DUPEITEM=0307b
 
 [ITEMDEF 03081]
+//arcane circle
 DUPEITEM=0307b
 
 [ITEMDEF 03082]
+//arcane circle
 DUPEITEM=0307b
 
 [ITEMDEF 03083]
+//arcane circle
 DUPEITEM=0307b
 
-[eof]
+[ITEMDEF 0314c]
+DEFNAME=i_pentagram_2
+TYPE=t_normal
+CATEGORY=Items by Professions
+SUBSECTION=Spellweaver
+DESCRIPTION=Pentagram 2
+DUPELIST=0314d,0314e,0314f,03150,03151,03152,03153,03154
+
+[ITEMDEF 0314d]
+//arcane circle 2
+DUPEITEM=0314c
+
+[ITEMDEF 0314e]
+//arcane circle 2
+DUPEITEM=0314c
+
+[ITEMDEF 0314f]
+//arcane circle 2
+DUPEITEM=0314c
+
+[ITEMDEF 03150]
+//arcane circle 2
+DUPEITEM=0314c
+
+[ITEMDEF 03151]
+//arcane circle 2
+DUPEITEM=0314c
+
+[ITEMDEF 03152]
+//arcane circle 2
+DUPEITEM=0314c
+
+[ITEMDEF 03153]
+//arcane circle 2
+DUPEITEM=0314c
+
+[ITEMDEF 03154]
+//arcane circle 2
+DUPEITEM=0314c
+
+
+[EOF]

@@ -1737,7 +1737,7 @@ DESCRIPTION=Special Parrot Perch
 [ITEMDEF 02fb7]
 DEFNAME=i_elven_quiver
 NAME=elven quiver
-TYPE=t_container
+TYPE=t_clothing//t_container
 TDATA2=047
 FLIP=1
 LAYER=layer_tunic
@@ -1847,6 +1847,113 @@ DESCRIPTION=Enchanted Apple
 ON=@Create
    MOREM=1
 
+[ITEMDEF 03060]
+DEFNAME=i_aquarium
+NAME=aquarium
+TYPE=t_container
+TDATA2=02c96
+TDATA3=010001
+TDATA4=015c00c6
+FLIP=1
+VALUE=321
+WEIGHT=156.1
+RESOURCES=8 i_board,1 i_nails,48 i_glass_raw,100 i_water
+CATEGORY=Decoration - Furniture
+SUBSECTION=Aquarium
+DESCRIPTION=Aquarium
+//TEVENTS=e_aquarium
+DUPELIST=03061,03062,03063
+ON=@DClick
+   //Randomize all object locations
+   FORCONT <UID> 0
+      CONTP=<R1,348>,<R1,198>
+//      SERV.LOG Item <NAME>: <CONTP>
+   ENDFOR
+ON=@DropOn_Self
+   //Only allow aquarium items
+   IF (<ARGO.TYPE>!=t_aquarium_item) && (<ARGO.TYPE>!=t_fish)
+      RETURN 1
+   ENDIF
+
+[ITEMDEF 03061]
+//aquarium
+DUPEITEM=03060
+
+[ITEMDEF 03062]
+//aquarium
+DUPEITEM=03060
+
+[ITEMDEF 03063]
+//aquarium
+DUPEITEM=03060
+
+[ITEMDEF 03066]
+DEFNAME=i_displaycase_monster
+NAME=monster displaycase
+FLIP=1
+WEIGHT=36.4
+RESOURCES=12 i_board,4 i_nails,24 i_glass_raw
+CATEGORY=Decoration - Furniture
+SUBSECTION=Display Case
+DESCRIPTION=Monster Display Case
+DUPELIST=03067,03068,03069,0306a,0306b
+
+[ITEMDEF 03067]
+//monster displaycase
+DUPEITEM=03066
+
+[ITEMDEF 03068]
+//monster displaycase
+DUPEITEM=03066
+
+[ITEMDEF 03069]
+//monster displaycase
+DUPEITEM=03066
+
+[ITEMDEF 0306a]
+//monster displaycase
+DUPEITEM=03066
+
+[ITEMDEF 0306b]
+//monster displaycase
+DUPEITEM=03066
+
+[ITEMDEF 0318f]
+DEFNAME=i_bark
+NAME=bark
+TYPE=t_normal
+VALUE=120
+WEIGHT=0.1
+TAG.NoVendor=1
+CATEGORY=Quest
+SUBSECTION=Miscellaneous
+DESCRIPTION=Bark
+
+[ITEMDEF 03190]
+DEFNAME=i_plant_parasitic
+NAME=parasitic plant
+TYPE=t_normal
+VALUE=120
+WEIGHT=0.1
+TAG.NoVendor=1
+CATEGORY=Quest
+SUBSECTION=Miscellaneous
+DESCRIPTION=Parasitic Plant
+
+[ITEMDEF 03191]
+DEFNAME=i_fungi_luminescent
+NAME=luminescent fungi
+TYPE=t_normal
+VALUE=120
+WEIGHT=0.1
+TAG.NoVendor=1
+CATEGORY=Quest
+SUBSECTION=Miscellaneous
+DESCRIPTION=Luminescent Fungi
+
+//FIXME: the following benches cannot be sat on
+[ITEMDEF 0319a]
+[ITEMDEF 0319b]
 
 [ITEMDEF 03584]
 //Gumpid=091b

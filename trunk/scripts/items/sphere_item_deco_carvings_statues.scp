@@ -1,14 +1,11 @@
-//SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
 //****************************************************************************
-// FILE LAST UPDATED: Monday, November 24, 2003
-//
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Monday, Febuary 21, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0121d]
 DEFNAME=i_wall_carving_stone
@@ -567,7 +564,7 @@ DUPELIST=02d13
 DUPEITEM=02d12
 
 [ITEMDEF 02d4a]
-DEFNAME=i_acorn_decor
+DEFNAME=i_acorn_replica_giant
 TYPE=t_normal
 WEIGHT=10.0
 RESOURCES=10 i_board

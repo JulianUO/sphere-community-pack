@@ -40,6 +40,7 @@ DUPELIST=091c,091d,091e,091f,0920,0921,0922
 [ITEMDEF 091c]
 //bee swarm 1
 DUPEITEM=091b
+DESCRIPTION=Bee Swarm 1 (slower)
 
 [ITEMDEF 091d]
 //bee swarm 1
@@ -76,6 +77,7 @@ DUPELIST=0924,0925,0926,0927,0928,0929,092a
 [ITEMDEF 0924]
 //bee swarm  2
 DUPEITEM=0923
+DESCRIPTION=Bee Swarm 2 (no animation)
 
 [ITEMDEF 0925]
 //bee swarm  2
@@ -106,16 +108,18 @@ DEFNAME=i_moongate_red
 TYPE=t_telepad
 CATEGORY=Animations
 SUBSECTION=Moongates
-DESCRIPTION=Red Moongate
+DESCRIPTION=Red Moongate (slow animation)
 DUPELIST=0ddb,0ddc,0ddd,0dde
 
 [ITEMDEF 0ddb]
 //red moongate
 DUPEITEM=0dda
+DESCRIPTION=Red Moongate (no animation)
 
 [ITEMDEF 0ddc]
-//red moongate fast animated
+//red moongate
 DUPEITEM=0dda
+DESCRIPTION=Red Moongate (fast animation)
 
 [ITEMDEF 0ddd]
 //red moongate

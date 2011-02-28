@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Tuesday, Febuary 22, 2011
 VERSION=0.56b
+
 //
 // SCRIPT CREDITS
 // --------------
@@ -19,57 +20,54 @@ VERSION=0.56b
 // Arcane Circle
 [function f_GiveArcaneFocus]
 if !<restest i_arcane_focus>
-serv.newitem i_arcane_focus,1,<findlayer(layer_pack).uid>
-new.more1 = <argv[1]>
-new.timerf <argv[0]>,remove
-sysmessage @,,2 1072516,#1032629,<dargv[0]>
-sysmessage @,,2 1072740 // An arcane focus appears in your backpack.
+   serv.newitem i_arcane_focus,1,<findlayer(layer_pack).uid>
+   new.more1 = <argv[1]>
+   new.timerf <argv[0]>,remove
+   sysmessage @,,2 1072516,#1032629,<dargv[0]>
+   sysmessage @,,2 1072740 // An arcane focus appears in your backpack.
 else
-findid.i_arcane_focus.timerf CLEAR
-new.more1 = <argv[1]>
-new.timerf <argv[0]>,remove
-sysmessage @,,2 1072828 // Your arcane focus is renewed.
+   findid.i_arcane_focus.timerf CLEAR
+   new.more1 = <argv[1]>
+   new.timerf <argv[0]>,remove
+   sysmessage @,,2 1072828 // Your arcane focus is renewed.
 endif
 
 [function IsInArcaneCircle]
-foritems 0
-	if (<dispid> == 0fea) || (<dispid> == 01216) || (<dispid> == 0307f) || (<dispid> == 01d10) || (<dispid> == 01d0f) || (<dispid> == 01d1f) || (<dispid> == 01d12)
-	return 1
-	endif
+foritems 1
+   if (<dispid> == 0fea) || (<dispid> == 01216) || (<dispid> == 0307f) || (<dispid> == 01d10) || (<dispid> == 01d0f) || (<dispid> == 01d1f) || (<dispid> == 01d12) || (<dispid> == 03150)
+      return 1
+   endif
 endfor
 for 0 <eval (<p.statics> - 1)>
-	if (<p.statics.<dlocal._for>> == 0fea) || (<p.statics.<dlocal._for>> == 01216) || (<p.statics.<dlocal._for>> == 0307f) || (<p.statics.<dlocal._for>> == 01d10) || (<p.statics.<dlocal._for>> == 01d0f) || (<p.statics.<dlocal._for>> == 01d1f) || (<p.statics.<dlocal._for>> == 01d12)
-	return 1
-	endif
+   if (<p.statics.<dlocal._for>> == 0fea) || (<p.statics.<dlocal._for>> == 01216) || (<p.statics.<dlocal._for>> == 0307f) || (<p.statics.<dlocal._for>> == 01d10) || (<p.statics.<dlocal._for>> == 01d0f) || (<p.statics.<dlocal._for>> == 01d1f) || (<p.statics.<dlocal._for>> == 01d12) || (<p.statics.<dlocal._for>> == 03150)
+      return 1
+   endif
 endfor
 return 0
 
 [function IsInSanctuary]
 if (((<map> == 0) || (<map> == 1)) && (<p.x> == 6267) && (<p.y> == 131) && (<p.z> == 5))
-return 1
+   return 1
 endif
 return 0
 
-[itemdef 03155]
-defname=i_arcane_focus
-name=Arcane Focus
-type=t_normal
-weight=1
-tag0.cliloc.name = 1032629
-
-on=@create
-attr=attr_magic|attr_newbie|attr_move_never
-
-on=@clienttooltip
-src.addcliloc <tag0.cliloc.name>
-src.addcliloc 1060485,<dmore1>
-src.addcliloc 1072517,<dtimer>
-return 1
-
-on=@timer
-cont.sysmessage @,,2 1072515,#<tag0.cliloc.name>
-remove
-return 1
+[ITEMDEF 03155]
+DEFNAME=i_arcane_focus
+NAME=Arcane Focus
+TYPE=t_normal
+WEIGHT=1
+TAG0.Cliloc.name=1032629
+ON=@Create
+   attr=attr_magic|attr_newbie|attr_move_never
+ON=@ClientToolTip
+   SRC.ADDCLILOC <TAG0.Cliloc.name>
+   SRC.ADDCLILOC 1060485,<dMORE1>
+   SRC.ADDCLILOC 1072517,<dTIMER>
+   RETURN 1
+ON=@Timer
+   CONT.SYSMESSAGE @,,2 1072515,#<TAG0.Cliloc.name>
+   REMOVE
+   RETURN 1
 
 // Gift Of Renewal
 [ITEMDEF i_giftofrenewal]
@@ -119,19 +117,19 @@ endif
 [function DoThunderstormDamage]
 ref1 = <uid>
 forchars <argv[2]>
-	if <canseelos <uid>>
-		if <action> == skill_magery || <action> == skill_necromancy || <action> == skill_chivalry || <action> == skill_spellweaving || <action> == skill_mysticism
-		tag0.FasterCastRecovery -= 6
-		timerf <argv[3]>,tag0.FasterCastRecovery += 6
-		f_AddBuff Thunderstorm,<dargv[3]>,6
-		endif
-		
-		if <isplayer>
-		damage <argv[1]>,dam_magic|dam_lightning|dam_energy,<argv[4]>
-		else
-		damage <argv[0]>,dam_magic|dam_lightning|dam_energy,<argv[4]>
-		endif
-	endif
+   if <canseelos <uid>>
+      if <action> == skill_magery || <action> == skill_necromancy || <action> == skill_chivalry || <action> == skill_spellweaving || <action> == skill_mysticism
+      tag0.FasterCastRecovery -= 6
+      timerf <argv[3]>,tag0.FasterCastRecovery += 6
+      f_AddBuff Thunderstorm,<dargv[3]>,6
+      endif
+      
+      if <isplayer>
+      damage <argv[1]>,dam_magic|dam_lightning|dam_energy,<argv[4]>
+      else
+      damage <argv[0]>,dam_magic|dam_lightning|dam_energy,<argv[4]>
+      endif
+   endif
 endfor
 
 // Reaper Form
