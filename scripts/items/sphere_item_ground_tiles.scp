@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 21, 2011
+// FILE LAST UPDATED: Tuesday, Febuary 22, 2011
 VERSION=0.56b
 
 
@@ -2459,6 +2459,154 @@ DUPEITEM=040b
 [ITEMDEF 02fb5]
 //cave floor
 DUPEITEM=040b
+
+
+[ITEMDEF 030e7]
+DEFNAME=i_sinkhole
+CATEGORY=Ground Tiles
+SUBSECTION=Sinkhole
+DESCRIPTION=Sinkhole
+DUPELIST=030e8,030e9,030ea,030eb,030ec,030ed,030ee,030ef,030f0,030f1,030f2,030f3,030f4,030f5,030f6,030f7,030f8,030f9,030fa,030fb,030fc,030fd,030fe,030ff,03100,03101,03102,03103,03104,03105,03106,03107,03108,03109,0310a
+
+[ITEMDEF 030e8]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030e9]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030ea]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030eb]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030ec]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030ed]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030ee]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030ef]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030f0]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030f1]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030f2]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030f3]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030f4]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030f5]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030f6]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030f7]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030f8]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030f9]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030fa]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030fb]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030fc]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030fd]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030fe]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 030ff]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 03100]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 03101]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 03102]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 03103]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 03104]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 03105]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 03106]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 03107]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 03108]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 03109]
+//sinkhole
+DUPEITEM=030e7
+
+[ITEMDEF 0310a]
+//sinkhole
+DUPEITEM=030e7
 
 
 [ITEMDEF 031f4]

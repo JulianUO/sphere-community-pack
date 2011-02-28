@@ -16,7 +16,7 @@ VERSION=0.56b
 [ITEMDEF 0459]
 // bench - short marble bench e-w
 DEFNAME=i_BENCH_MARBLE
-TYPE=T_CHAIR
+TYPE=t_chair
 FLIP=1
 RESOURCES=50 i_stone_marble
 WEIGHT=4
@@ -33,7 +33,7 @@ DESCRIPTION=Marble Bench 1 (w)
 [ITEMDEF 045b]
 // bench - short sandstone bench e-w
 DEFNAME=i_bench_sandstone
-TYPE=T_CHAIR
+TYPE=t_chair
 FLIP=1
 RESOURCES=50 I_STONE_SAND
 WEIGHT=4
@@ -49,7 +49,7 @@ DUPEITEM=045b
 [ITEMDEF 0a2c]
 DEFNAME=i_bureau
 RESOURCES=5 I_BOARD, 10 I_NAILS, 3 I_DRAWER
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=051
 FLIP=1
 VALUE={150 180}
@@ -62,7 +62,7 @@ DUPELIST=0a34
 [ITEMDEF 0a2d]
 DEFNAME=i_drawer
 RESOURCES=5 I_BOARD, 2 I_NAILS
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=051
 FLIP=1
 CATEGORY=Decoration - Furniture
@@ -80,7 +80,7 @@ DUPEITEM=0a2d
 
 [ITEMDEF 0a30]
 DEFNAME=i_bureau_2
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=048
 FLIP=1
 WEIGHT=20
@@ -94,7 +94,7 @@ RESOURCES=25 i_log
 
 [ITEMDEF 0a31]
 DEFNAME=i_drawer_2
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=048
 FLIP=1
 RESOURCES=25 i_log
@@ -148,7 +148,7 @@ DUPEITEM=0a31
 [ITEMDEF 0a3c]
 DEFNAME=i_dresser
 RESOURCES=8 I_BOARD, 20 I_NAILS, 6 I_DRESSER_DRAWER, 1 i_ingot_iron, 5 I_SAND
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=051
 FLIP=1
 WEIGHT=30
@@ -165,7 +165,7 @@ DUPEITEM=0a3c
 //drawer
 DEFNAME=i_dresser_drawer
 RESOURCES=2 I_BOARD, 2 I_NAILS
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=051
 FLIP=1
 CATEGORY=Decoration - Furniture
@@ -228,7 +228,7 @@ DUPEITEM=0a3e
 [ITEMDEF 0a55]
 //Bedroll unrolled
 DEFNAME=i_bedroll
-TYPE=T_BEDROLL
+TYPE=t_bedroll
 RESOURCES=5 I_CLOTH, 1 I_CANVAS, 50 I_FEATHER, 1 i_hides_cut
 WEIGHT=5
 CATEGORY=Decoration - Furniture
@@ -243,7 +243,7 @@ DUPEITEM=0a55
 [ITEMDEF 0a57]
 //bedroll rolled up
 DEFNAME=i_bedroll_2
-TYPE=T_BEDROLL
+TYPE=t_bedroll
 RESOURCES=i_bedroll
 VALUE={4 8}
 WEIGHT=5
@@ -263,7 +263,7 @@ DUPEITEM=0a57
 [ITEMDEF 0a5a]
 //brown twin lower half, from head against NW wall
 DEFNAME=i_bed_1
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -278,7 +278,7 @@ DUPEITEM=0a5a
 [ITEMDEF 0a5e]
 //white twin bed upper half, from head against NE wall
 DEFNAME=i_bed_3
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -293,7 +293,7 @@ DUPEITEM=0a5e
 [ITEMDEF 0a60]
 //white twin bed upper half, from head against NW wall
 DEFNAME=i_bed_4
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -308,7 +308,7 @@ DUPEITEM=0a60
 [ITEMDEF 0a64]
 //brown twin bed upper half, from head against NE wall
 DEFNAME=i_bed_6
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -323,7 +323,7 @@ DUPEITEM=0a64
 [ITEMDEF 0a66]
 //white twin bed upper half, from head against NE wall with gray sheet & pillow
 DEFNAME=i_bed_7
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 WEIGHT=20
 CATEGORY=Decoration - Furniture
@@ -341,7 +341,7 @@ DUPEITEM=0a66
 [ITEMDEF 0a68]
 //twin bed bottom half, from head against NE wall with gray blanket
 DEFNAME=i_bed_8
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 WEIGHT=20
 CATEGORY=Decoration - Furniture
@@ -354,7 +354,7 @@ RESOURCES=100 i_log, 100 i_cloth
 [ITEMDEF 0a69]
 //white twin bed upper half, from head against NW wall with gray sheet & pillow
 DEFNAME=i_bed_9
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 WEIGHT=20
 SKILLMAKE=CARPENTRY 94.7, TAILORING 75.0, t_carpentry, t_sewing_kit
@@ -367,7 +367,7 @@ DESCRIPTION=Twin Bed (Grey Blankets) (NW)
 [ITEMDEF 0a6a]
 //white twin bed upper half, from head against NW wall with gray sheet
 DEFNAME=i_bed_10
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS, 1 I_SHEET, 1 I_PILLOW
 CATEGORY=Decoration - Furniture
@@ -377,7 +377,7 @@ DESCRIPTION=Twin Bed (Gray Blankets) (NW)
 [ITEMDEF 0a6b]
 //twin bed bottom half, from head against NW wall with gray blanket
 DEFNAME=i_bed_11
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 WEIGHT=20
 CATEGORY=Decoration - Furniture
@@ -413,7 +413,7 @@ DUPEITEM=0a6c
 //fancy double bed headboard against NW wall - W CORNER PIECE
 //must be overlapped
 DEFNAME=i_bed_12
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
 DYE=1
@@ -425,7 +425,7 @@ DESCRIPTION=Fancy Dbl Bed (HeadBoard) (NW Wall - West Corner)
 //fancy double bed foot corner against NW & NE wall - S CORNER PIECE
 //must be  overlapped
 DEFNAME=i_bed_13
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
 DYE=1
@@ -437,7 +437,7 @@ DESCRIPTION=Fancy Dbl Bed (Foot) (NW & NE Wall)
 //fancy double bed foot corner against NW wall - E CORNER PIECE
 //must be overlapped
 DEFNAME=i_bed_14
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
 DYE=1
@@ -449,7 +449,7 @@ DESCRIPTION=Fancy Dbl Bed (Foot) (NW Wall - East Corner)
 //fancy double bed headboard corner against NW wall - N CORNER PIECE
 //must be overlapped
 DEFNAME=i_bed_15
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
 DYE=1
@@ -461,7 +461,7 @@ DESCRIPTION=Fancy Dbl Bed (Head) (NW Wall - N Corner)
 //fancy double bed head corner against NE wall - E CORNER PIECE
 //must be overlapped
 DEFNAME=i_bed_16
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 DYE=1
 WEIGHT=20
@@ -476,7 +476,7 @@ RESOURCES=150 i_log,150 i_cloth
 //fancy double bed foot corner against NE & NW wall - S CORNER PIECE
 //must be  overlapped
 DEFNAME=i_bed_17
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 DYE=1
 WEIGHT=20
@@ -491,7 +491,7 @@ RESOURCES=150 i_log, 150 i_cloth
 //fancy double bed foot against NE wall - W CORNER PIECE
 //must be overlapped
 DEFNAME=i_bed_18
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 DYE=1
 WEIGHT=20
@@ -506,7 +506,7 @@ RESOURCES=150 i_log, 150 i_cloth
 //fancy double bed header against NE wall - N CORNER PIECE
 //must be overlapped
 DEFNAME=i_bed_19
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 DYE=1
 WEIGHT=20
@@ -522,7 +522,7 @@ RESOURCES=150 i_log, 150 i_cloth
 //fancy double bed headboard against NW wall - W CORNER PIECE
 //must be overlapped
 DEFNAME=i_bed_22
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
 DYE=1
@@ -535,7 +535,7 @@ DESCRIPTION=Fancy Dbl Bed w/ Blankets (Head) (NW Wall - W Corner)
 //fancy double bed headboard corner against NW wall - N CORNER PIECE
 //must be overlapped
 DEFNAME=i_bed_23
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
 DYE=1
@@ -548,7 +548,7 @@ DESCRIPTION=Fancy Dbl Bed w/ Blankets (Head) (NW Wall - N Corner)
 //fancy double bed headboard corner against NE wall - N CORNER PIECE
 //must be overlapped
 DEFNAME=i_bed_28
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
 DYE=1
@@ -561,7 +561,7 @@ DESCRIPTION=Fancy Dbl Bed w/ Blankets (Head) (NE Wall - N Corner)
 //fancy double bed headboard corner against NE wall - E CORNER PIECE
 //must be overlapped
 DEFNAME=i_bed_29
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
 DYE=1
@@ -572,7 +572,7 @@ DESCRIPTION=Fancy Dbl Bed w/ Blankets (Head) (NE Wall- E Corner)
 [ITEMDEF 0a84]
 //bed
 DEFNAME=i_bed_30
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
 CATEGORY=Decoration - Furniture
@@ -670,7 +670,7 @@ DEFNAME=i_bookcase_full
 //dark wood, full of books facing SW
 RESOURCES=8 I_BOARD, 2 I_NAILS, 20 I_BOOK_SM
 SKILLMAKE=CARPENTRY 36.5, t_carpentry
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=04d
 FLIP=1
 VALUE={120 150}
@@ -960,7 +960,7 @@ DESCRIPTION=Counter
 //water trough
 DEFNAME=i_trough_water
 RESOURCES=15 i_log
-TYPE=T_WATER_WASH
+TYPE=t_water_wash
 //WEIGHT=10
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
@@ -1019,7 +1019,7 @@ DESCRIPTION=Small Vase 2
 // bench - picnic table bench end - S
 DEFNAME=i_bench_board_rough_end
 DUPELIST=0b60,0b65,0b66
-TYPE=T_CHAIR
+TYPE=t_chair
 FLIP=1
 RESOURCES=4 I_BOARD, 2 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -1042,7 +1042,7 @@ DUPELIST=0b67
 DEFNAME=i_bench_wood_smooth_end
 DUPELIST=0b63,0b68,0b69
 FLIP=1
-TYPE=T_CHAIR
+TYPE=t_chair
 RESOURCES=4 I_BOARD, 2 I_NAILS
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
@@ -1269,7 +1269,7 @@ DEFNAME=i_table_board_rough_ext
 DEFNAME=i_bench_wood_highback
 DUPELIST=0b92
 FLIP=1
-TYPE=T_CHAIR
+TYPE=t_chair
 RESOURCES=20 I_BOARD, 6 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
@@ -1342,7 +1342,7 @@ DESCRIPTION=Books
 DEFNAME=i_chair_covered
 DUPELIST=0c18
 FLIP=1
-TYPE=T_CHAIR
+TYPE=t_chair
 RESOURCES=1 i_CHAIR_WOOD, 1 I_SHEET
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
@@ -1428,7 +1428,7 @@ DUPEITEM=0c24
 [ITEMDEF 0c26]
 //ruined bed
 DEFNAME=i_bed_ruined
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=5 I_BOARD, 8 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -1438,7 +1438,7 @@ DESCRIPTION=Bed
 [ITEMDEF 0c27]
 //ruined bed
 DEFNAME=i_bed_ruined_2
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=5 I_BOARD, 8 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -1448,7 +1448,7 @@ DESCRIPTION=Bed
 [ITEMDEF 0c28]
 //ruined bed
 DEFNAME=i_bed_ruined_3
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=5 I_BOARD, 8 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -1458,7 +1458,7 @@ DESCRIPTION=Bed
 [ITEMDEF 0c29]
 //ruined bed
 DEFNAME=i_bed_ruined_4
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=5 I_BOARD, 8 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -1468,7 +1468,7 @@ DESCRIPTION=Bed
 [ITEMDEF 0c2a]
 //ruined bed
 DEFNAME=i_bed_ruined_5
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=5 I_BOARD, 8 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -1478,7 +1478,7 @@ DESCRIPTION=Bed
 [ITEMDEF 0c2b]
 //ruined bed
 DEFNAME=i_bed_ruined_6
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=5 I_BOARD, 8 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -1574,7 +1574,7 @@ DUPEITEM=0c39
 [ITEMDEF 0db0]
 //bed
 DEFNAME=i_bed_31
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS
 CATEGORY=Decoration - Furniture
@@ -1722,7 +1722,7 @@ DUPEITEM=01190
 
 [ITEMDEF 011ce]
 DEFNAME=i_BED_DOUBLE_1
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 i_BOARD, 2 I_BEDROLL, 20 i_NAILS, 2 i_SHEET, 2 i_PILLOW
 WEIGHT=40
@@ -1751,7 +1751,7 @@ DESCRIPTION=Bed 01 (04/04)
 
 [ITEMDEF 011d2]
 DEFNAME=i_BED_DOUBLE_2
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 i_BOARD, 2 I_BEDROLL, 20 i_NAILS, 2 i_SHEET, 2 i_PILLOW
 WEIGHT=40
@@ -1924,7 +1924,7 @@ DUPEITEM=011f0
 // chair - backless bamboo stool
 // chair - backless bamboo artist's stool
 DEFNAME=i_chair_stool_bamboo
-TYPE=T_CHAIR
+TYPE=t_chair
 FLIP=1
 SKILLMAKE=CARPENTRY 40.0
 RESOURCES=4 i_BAMBOO, 3 i_CANVAS
@@ -1935,7 +1935,7 @@ DESCRIPTION=Foot Stool
 
 [ITEMDEF 011fd]
 DEFNAME=i_cot_sw
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=2
 RESOURCES=4 i_BAMBOO, 3 i_CANVAS
 WEIGHT=10
@@ -1988,7 +1988,7 @@ DUPEITEM=01203
 
 [ITEMDEF 01207]
 DEFNAME=i_bench_stone_1
-TYPE=T_CHAIR
+TYPE=t_chair
 FLIP=1
 RESOURCES=10 i_rock_plain
 WEIGHT=20
@@ -2013,7 +2013,7 @@ DESCRIPTION=Bench (Stone)
 
 [ITEMDEF 0120a]
 DEFNAME=i_bench_stone_2
-TYPE=T_CHAIR
+TYPE=t_chair
 FLIP=1
 RESOURCES=10 i_rock_plain
 WEIGHT=20
@@ -2039,7 +2039,7 @@ DESCRIPTION=Bench (Stone)
 [ITEMDEF 01218]
 // chair - gray stone chair w/high back - N
 DEFNAME=i_chair_stone
-TYPE=T_CHAIR
+TYPE=t_chair
 FLIP=1
 RESOURCES=10 i_rock_plain
 WEIGHT=10
@@ -2127,7 +2127,7 @@ DUPEITEM=013ac
 // DEFNAME2=i_chair_tacky_throne
 DEFNAME=i_chair_throne_lb
 DUPELIST=01527
-TYPE=T_CHAIR
+TYPE=t_chair
 FLIP=1
 RESOURCES=10 i_MARBLE, 5 i_ingot_gold, 5 i_VELVET, 100 i_FEATHER
 WEIGHT=50
@@ -2199,7 +2199,7 @@ DUPEITEM=01667
 
 [ITEMDEF 01894]
 DEFNAME=i_BED_RUINED_7
-TYPE=T_BED
+TYPE=t_bed
 TDATA1=0
 RESOURCES=50 i_BOARD, 2 I_BEDROLL, 20 i_NAILS, 2 i_SHEET
 WEIGHT=20
@@ -2261,7 +2261,7 @@ DESCRIPTION=Minax's Wand Display Case (empty)
 [ITEMDEF 0190e]
 // Not really a real door. (but ghosts should go thru it.)
 DEFNAME=i_bar_door_ne
-TYPE=T_DOOR
+TYPE=t_door
 RESOURCES=30 i_log
 WEIGHT=5
 CATEGORY=Decoration - Furniture
@@ -2532,7 +2532,7 @@ DUPEITEM=01dc3
 // bench - Sandstone bench end - S
 DEFNAME=i_bench_sandstone_end
 DUPELIST=01dc8,01dca,01dcb
-TYPE=T_CHAIR
+TYPE=t_chair
 FLIP=1
 RESOURCES=6 i_stone_sand
 WEIGHT=12
@@ -2566,7 +2566,7 @@ DUPEITEM=01dc9
 // bench - Marble bench end - S
 DEFNAME=i_bench_marble_end
 DUPELIST=01dce,01dd0,01dd1
-TYPE=T_CHAIR
+TYPE=t_chair
 FLIP=1
 RESOURCES=6 i_MARBLE
 WEIGHT=12
@@ -2663,7 +2663,7 @@ DUPEITEM=02bd7
 [ITEMDEF 03dff]
 //bench dark stone against NE wall
 DEFNAME=i_bench_5
-TYPE=T_CHAIR
+TYPE=t_chair
 FLIP=1
 VALUE={80 100}
 //RESOURCES=

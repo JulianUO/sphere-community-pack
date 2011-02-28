@@ -114,24 +114,6 @@ DUPELIST=024dc
 //japanese basket (square tall)
 DUPEITEM=024db
 
-[ITEMDEF 02de7]
-DEFNAME=i_table_elven_ornate_2
-NAME=ornate elven table
-TYPE=t_normal
-FLIP=1
-VALUE=108
-WEIGHT=40.6
-RESOURCES=20 i_log_yew,6 i_nails
-SKILLMAKE=Carpentry 88.8,t_carpentry
-CATEGORY=Decoration - Furniture
-SUBSECTION=Mondain Legacy
-DESCRIPTION=Ornate Elven Table
-DUPELIST=02de8,03092,03093,03094,03095,03096,03097
-
-[ITEMDEF 02de8]
-//ornate elven table
-DUPEITEM=02de7
-
 [ITEMDEF 02ff4]
 DEFNAME=i_parrot_perch
 NAME=Parrot Perch

@@ -108,18 +108,85 @@ DESCRIPTION=Plain Low Table
 
 [ITEMDEF 02de1]
 DEFNAME=i_table_ornate
-NAME=Ornate Table
+NAME=ornate table
 TYPE=t_table
 SKILLMAKE=CARPENTRY 85.0, t_carpentry
 RESOURCES=60 i_log
 WEIGHT=25
-DUPELIST=02de2
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Ornate Table
+DUPELIST=02de2,0308c,0308d,0308e,0308f,03090,03091
 
 [ITEMDEF 02de2]
+//ornate table
 DUPEITEM=02de1
+
+[ITEMDEF 0308c]
+//ornate table
+DUPEITEM=02de1
+
+[ITEMDEF 0308d]
+//ornate table
+DUPEITEM=02de1
+
+[ITEMDEF 0308e]
+//ornate table
+DUPEITEM=02de1
+
+[ITEMDEF 0308f]
+//ornate table
+DUPEITEM=02de1
+
+[ITEMDEF 03090]
+//ornate table
+DUPEITEM=02de1
+
+[ITEMDEF 03091]
+//ornate table
+DUPEITEM=02de1
+
+[ITEMDEF 02de7]
+DEFNAME=i_table_elven_ornate_2
+NAME=ornate elven table
+TYPE=t_normal
+FLIP=1
+VALUE=108
+WEIGHT=40.6
+RESOURCES=20 i_log_yew,6 i_nails
+SKILLMAKE=Carpentry 88.8,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Mondain Legacy
+DESCRIPTION=Ornate Elven Table
+DUPELIST=02de8,03092,03093,03094,03095,03096,03097
+
+[ITEMDEF 02de8]
+//ornate elven table
+DUPEITEM=02de7
+
+[ITEMDEF 03092]
+//ornate elven table
+DUPEITEM=02de7
+
+[ITEMDEF 03093]
+//ornate elven table
+DUPEITEM=02de7
+
+[ITEMDEF 03094]
+//ornate elven table
+DUPEITEM=02de7
+
+[ITEMDEF 03095]
+//ornate elven table
+DUPEITEM=02de7
+
+[ITEMDEF 03096]
+//ornate elven table
+DUPEITEM=02de7
+
+[ITEMDEF 03097]
+//ornate elven table
+DUPEITEM=02de7
 
 [ITEMDEF 04041]
 DEFNAME=i_table_ter_mur
@@ -167,51 +234,6 @@ DUPEITEM=03077
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Alchemist Table (East - 2 of 2)
-
-[ITEMDEF 03092]
-DEFNAME=i_hardwood_table_e_1_3
-NAME=Hardwood Table
-TYPE=t_table
-WEIGHT=50
-DUPELIST=03093,03094,03095,03096,03097
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Hardwood Table (East - 1 of 3)
-
-[ITEMDEF 03093]
-DEFNAME=i_hardwood_table_e_2_3
-DUPEITEM=03092
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Hardwood Table (East - 2 of 3)
-
-[ITEMDEF 03094]
-DEFNAME=i_hardwood_table_e_3_3
-DUPEITEM=03092
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Hardwood Table (East - 3 of 3)
-
-[ITEMDEF 03095]
-DEFNAME=i_hardwood_table_s_1_3
-DUPEITEM=03092
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Hardwood Table (South - 1 of 3)
-
-[ITEMDEF 03096]
-DEFNAME=i_hardwood_table_s_2_3
-DUPEITEM=03092
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Hardwood Table (South - 2 of 3)
-
-[ITEMDEF 03097]
-DEFNAME=i_hardwood_table_s_3_3
-DUPEITEM=03092
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Hardwood Table (South - 3 of 3)
 
 [ITEMDEF 0402f]
 DEFNAME=i_long_table_e_2_2

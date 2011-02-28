@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Tuesday, Febuary 22, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 09a9]
 DEFNAME=i_crate_small
@@ -450,12 +451,29 @@ TDATA2=048
 SKILLMAKE=CARPENTRY 94.7, t_carpentry
 RESOURCES=40 i_log
 WEIGHT=25
-DUPELIST=02dea
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Ornate Elven Chest
+DUPELIST=02dea,03098,03099,0309a,0309b
 
 [ITEMDEF 02dea]
+//ornate elven chest
+DUPEITEM=02de9
+
+[ITEMDEF 03098]
+//ornate elven chest
+DUPEITEM=02de9
+
+[ITEMDEF 03099]
+//ornate elven chest
+DUPEITEM=02de9
+
+[ITEMDEF 0309a]
+//ornate elven chest
+DUPEITEM=02de9
+
+[ITEMDEF 0309b]
+//ornate elven chest
 DUPEITEM=02de9
 
 [ITEMDEF 02def]
@@ -467,12 +485,29 @@ FLIP=1
 SKILLMAKE=CARPENTRY 94.7, t_carpentry
 RESOURCES=80 i_log
 WEIGHT=25
-DUPELIST=02df0
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Arcane Bookshelf
+DUPELIST=02df0,03084,03085,03086,03087
 
 [ITEMDEF 02df0]
+//arcane bookshelf
+DUPEITEM=02def
+
+[ITEMDEF 03084]
+//arcane bookshelf
+DUPEITEM=02def
+
+[ITEMDEF 03085]
+//arcane bookshelf
+DUPEITEM=02def
+
+[ITEMDEF 03086]
+//arcane bookshelf
+DUPEITEM=02def
+
+[ITEMDEF 03087]
+//arcane bookshelf
 DUPEITEM=02def
 
 [ITEMDEF 02df1]

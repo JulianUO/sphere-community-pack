@@ -133,6 +133,7 @@ DESCRIPTION=Shimmering Crystal
 //One of the keys to access Dreadhorn.
 //Found on the ground in Twisted Weald, this item has a timed life span.
 DEFNAME=i_blighted_cotton
+NAME=blighted cotton
 TYPE=t_normal
 WEIGHT=1.0
 CATEGORY=Quest

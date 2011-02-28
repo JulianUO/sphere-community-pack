@@ -954,7 +954,7 @@ RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Elven Simple Door
 DESCRIPTION=@ (n / sw)
-DUPELIST=02d65
+DUPELIST=02d65,031a0,031a2
 
 [ITEMDEF 02d64]
 DEFNAME=i_door_elven_simple_1_o
@@ -963,7 +963,7 @@ RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Elven Simple Door
 DESCRIPTION=@ (n / sw) open
-DUPELIST=02d66
+DUPELIST=02d66,02d64,02d63
 
 [ITEMDEF 02d65]
 //elven simple door closed
@@ -972,6 +972,23 @@ DUPEITEM=02d63
 [ITEMDEF 02d66]
 //elven simple door open
 DUPEITEM=02d64
+
+[ITEMDEF 031a0]
+//elven simple door closed
+DUPEITEM=02d63
+
+[ITEMDEF 031a1]
+//elven simple door open
+DUPEITEM=02d64
+
+[ITEMDEF 031a2]
+//elven simple door closed
+DUPEITEM=02d63
+
+[ITEMDEF 031a3]
+//elven simple door open
+DUPEITEM=02d63
+
 
 [ITEMDEF 02d67]
 DEFNAME=i_door_elven_ornate_1
@@ -1052,6 +1069,23 @@ DUPEITEM=02fe2
 [ITEMDEF 02fe5]
 //Moon Door W (open)
 DUPEITEM=02fe3
+
+[ITEMDEF 0319c]
+//Moon Door W (closed)
+DUPEITEM=02fe2
+
+[ITEMDEF 0319d]
+//Moon Door W (open)
+DUPEITEM=02fe3
+
+[ITEMDEF 0319e]
+//Moon Door W (closed)
+DUPEITEM=02fe2
+
+[ITEMDEF 0319f]
+//Moon Door W (open)
+DUPEITEM=02fe3
+
 
 [ITEMDEF 041cf]
 DEFNAME=i_sa_door_ws1

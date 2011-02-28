@@ -1,15 +1,11 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer Â©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+// FILE LAST UPDATED: Tuesday, Febuary 22, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0eca]
 DEFNAME=i_bones
@@ -198,47 +194,6 @@ DESCRIPTION=Spider Web 02 (W)
 [ITEMDEF 0ee8]
 //grave dirt
 DUPEITEM=0ed3
-
-[ITEMDEF 0fe6]
-DEFNAME=i_pentagram
-WEIGHT=70
-RESOURCES=20 i_bloodstone, 10 i_rock_plain, 20 i_marble
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Pentagram
-DESCRIPTION=@
-DUPELIST=0fe7,0fe8,0fe9,0fea,0feb,0fec,0fed,0fee
-
-[ITEMDEF 0fe7]
-//pentagram
-DUPEITEM=0fe6
-
-[ITEMDEF 0fe8]
-//pentagram
-DUPEITEM=0fe6
-
-[ITEMDEF 0fe9]
-//pentagram
-DUPEITEM=0fe6
-
-[ITEMDEF 0fea]
-//pentagram
-DUPEITEM=0fe6
-
-[ITEMDEF 0feb]
-//pentagram
-DUPEITEM=0fe6
-
-[ITEMDEF 0fec]
-//pentagram
-DUPEITEM=0fe6
-
-[ITEMDEF 0fed]
-//pentagram
-DUPEITEM=0fe6
-
-[ITEMDEF 0fee]
-//pentagram
-DUPEITEM=0fe6
 
 [ITEMDEF 010b8]
 DEFNAME=i_spiderweb
@@ -1443,47 +1398,6 @@ DUPEITEM=011b6
 [ITEMDEF 011bb]
 //boulder trap
 DUPEITEM=011b6
-
-[ITEMDEF 0120e]
-DEFNAME=i_altar_stone
-RESOURCES=10 i_rock_plain
-//WEIGHT=10
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Altar
-DESCRIPTION=@
-DUPELIST=0120f,01210,01211,01212,01213,01214,01215,01216
-
-[ITEMDEF 0120f]
-//altar
-DUPEITEM=0120e
-
-[ITEMDEF 01210]
-//altar
-DUPEITEM=0120e
-
-[ITEMDEF 01211]
-//altar
-DUPEITEM=0120e
-
-[ITEMDEF 01212]
-//altar
-DUPEITEM=0120e
-
-[ITEMDEF 01213]
-//altar
-DUPEITEM=0120e
-
-[ITEMDEF 01214]
-//altar
-DUPEITEM=0120e
-
-[ITEMDEF 01215]
-//altar
-DUPEITEM=0120e
-
-[ITEMDEF 01216]
-//altar
-DUPEITEM=0120e
 
 [ITEMDEF 0122a]
 DEFNAME=i_blood_pool_large
@@ -3375,148 +3289,6 @@ WEIGHT=8
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Body Parts
 DESCRIPTION=Brain
-
-[ITEMDEF 01cf1]
-DEFNAME=i_pentagram_blood
-NAME=blood pentagram
-TYPE=t_blood
-VALUE=1
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Blood
-DESCRIPTION=Blood Pentagram
-DUPELIST=01cf2,01cf3,01cf4,01cf5,01cf6,01cf7,01cf8,01cf9,01cfa,01cfb,01cfc,01cfd,01cfe,01cff,01d00,01d01,01d02,01d03,01d04,01d05,01d06,01d07,01d08,01d09,01d0a,01d0b,01d0c,01d0d,01d0e,01d0f,01d10,01d11,01d12
-
-[ITEMDEF 01cf2]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cf3]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cf4]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cf5]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cf6]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cf7]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cf8]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cf9]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cfa]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cfb]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cfc]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cfd]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cfe]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01cff]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d00]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d01]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d02]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d03]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d04]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d05]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d06]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d07]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d08]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d09]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d0a]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d0b]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d0c]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d0d]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d0e]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d0f]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d10]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d11]
-//blood pentagram
-DUPEITEM=01cf1
-
-[ITEMDEF 01d12]
-//blood pentagram
-DUPEITEM=01cf1
 
 [ITEMDEF 01d13]
 DEFNAME=i_casket_wood_2_with_body
