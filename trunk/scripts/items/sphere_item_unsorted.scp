@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 21, 2011
+// FILE LAST UPDATED: Monday, Febuary 28, 2011
 VERSION=0.56b
 
 
@@ -400,6 +400,24 @@ CATEGORY=Miscellaneous
 SUBSECTION=Bad Tiles
 DESCRIPTION=No Draw Tile 021bc
 
+[ITEMDEF 02234]
+DEFNAME=i_trophy_dragonhead
+NAME=dragon trophy
+FLIP=1
+VALUE=48
+WEIGHT=11.1
+RESOURCES=2 i_log,5 i_fur_light,1 i_nails,1 i_wool
+SKILLMAKE=Carpentry 72.0,Tailoring 60.0,t_carpentry,t_sewing_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Trophies
+DESCRIPTION=Dragon
+DUPELIST=02235
+
+[ITEMDEF 02235]
+//trophy dragonhead
+DUPEITEM=02234
+
+
 [ITEMDEF 02256]
 DEFNAME=i_bagball_small
 TYPE=t_normal
@@ -419,6 +437,324 @@ RESOURCES=2 i_hides_cut
 CATEGORY=Miscellaneous
 SUBSECTION=Games
 DESCRIPTION=Bagball (large)
+
+[ITEMDEF 02258]
+DEFNAME=i_bulk_order_deed
+TYPE=t_normal
+WEIGHT=1.0
+RESOURCES=1 i_parchment
+CATEGORY=Miscellaneous
+SUBSECTION=BOD
+DESCRIPTION=Bulk Order Deed
+
+[ITEMDEF 02259]
+DEFNAME=i_bulk_order_book
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=10 i_bulk_order_deed
+CATEGORY=Miscellaneous
+SUBSECTION=BOD
+DESCRIPTION=Bulk Order Book
+
+[ITEMDEF 02328]
+DEFNAME=i_snowman
+TYPE=t_normal
+FLIP=1
+WEIGHT=113.5
+RESOURCES=100 i_snow,1 i_fruit_carrot,12 i_reag_eye_of_newt,1 i_ribbon,1 i_hat_floppy
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Snowman
+DUPELIST=02329
+
+[ITEMDEF 02329]
+//snowman
+DUPEITEM=02328
+
+[ITEMDEF 0232a]
+DEFNAME=i_giftbox
+NAME=gift box
+TYPE=t_container
+TDATA2=0102
+TDATA3=100,100
+FLIP=1
+WEIGHT=9.4
+RESOURCES=9 i_board,2 i_nails,1 i_paper,1 i_ribbon
+SKILLMAKE=Carpentry 21.0,t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Gift Box
+DUPELIST=0232b
+
+[ITEMDEF 0232b]
+//gift box
+DUPEITEM=0232a
+
+[ITEMDEF 0232c]
+DEFNAME=i_wreath
+TYPE=t_normal
+FLIP=1
+WEIGHT=10.2
+RESOURCES=10 i_twig,1 i_mistletoe
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Wreath
+DUPELIST=0232d
+
+[ITEMDEF 0232d]
+//wreath
+DUPEITEM=0232c
+
+[ITEMDEF 0232e]
+DEFNAME=i_snowflake1
+TYPE=t_normal
+WEIGHT=0.1
+RESOURCES=1 i_snow
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Snowflake
+
+[ITEMDEF 0232f]
+DEFNAME=i_snowflake2
+TYPE=t_normal
+WEIGHT=0.1
+RESOURCES=1 i_snow
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Snowflake 2
+
+[ITEMDEF 02330]
+DEFNAME=i_pointsetia_red
+TYPE=t_normal
+WEIGHT=10.0
+RESOURCES=10 i_log
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Red Pointsetia
+
+[ITEMDEF 02331]
+DEFNAME=i_pointsetia_white
+TYPE=t_normal
+WEIGHT=10.0
+RESOURCES=10 i_log
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=White Pointsetia
+
+
+[ITEMDEF 0241c]
+DEFNAME=i_urn_1
+TYPE=t_normal
+VALUE=10
+WEIGHT=2.0
+RESOURCES=2 i_clay
+CATEGORY=Decoration - Potted Plants & Vases
+SUBSECTION=Vases & Pots
+DESCRIPTION=Urn
+
+[ITEMDEF 0241d]
+DEFNAME=i_urn_2
+TYPE=t_normal
+VALUE=20
+WEIGHT=4.0
+RESOURCES=4 i_clay
+CATEGORY=Decoration - Potted Plants & Vases
+SUBSECTION=Vases & Pots
+DESCRIPTION=Urn
+
+[ITEMDEF 0241e]
+DEFNAME=i_urn_3
+TYPE=t_normal
+VALUE=15
+WEIGHT=3.0
+RESOURCES=3 i_clay
+CATEGORY=Decoration - Potted Plants & Vases
+SUBSECTION=Vases & Pots
+DESCRIPTION=Urn
+
+
+[ITEMDEF 024d5]
+DEFNAME=i_basket_square_small
+TYPE=t_container
+TDATA2=03f
+WEIGHT=2.0
+RESOURCES=2 i_log_bamboo
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (square)
+DUPELIST=024d6
+
+[ITEMDEF 024d6]
+//japanese basket (square)
+DUPEITEM=024d5
+
+[ITEMDEF 024d7]
+DEFNAME=i_basket_round_small
+TYPE=t_container
+TDATA2=041
+WEIGHT=2.0
+RESOURCES=2 i_log_bamboo
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (round)
+
+[ITEMDEF 024d8]
+DEFNAME=i_basket_round_tall
+TYPE=t_container
+TDATA2=041
+WEIGHT=2.0
+RESOURCES=2 i_clay
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (tall round)
+
+[ITEMDEF 024d9]
+DEFNAME=i_basket_square_deep
+TYPE=t_container
+TDATA2=0108
+WEIGHT=4.0
+RESOURCES=4 i_log_bamboo
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (square deep)
+DUPELIST=024da
+
+[ITEMDEF 024da]
+//japanese basket (square deep)
+DUPEITEM=024d9
+
+[ITEMDEF 024db]
+DEFNAME=i_basket_square_tall
+TYPE=t_container
+TDATA2=0108
+WEIGHT=4.0
+RESOURCES=4 i_log_bamboo
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (square tall)
+DUPELIST=024dc
+
+[ITEMDEF 024dc]
+//japanese basket (square tall)
+DUPEITEM=024db
+
+[ITEMDEF 024dd]
+DEFNAME=i_basket_round_flat
+TYPE=t_container
+TDATA2=0108
+WEIGHT=2.0
+RESOURCES=2 i_log_bamboo
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (round flat)
+
+[ITEMDEF 024de]
+DEFNAME=i_bowl_placemat
+TYPE=t_normal
+WEIGHT=2.0
+RESOURCES=1 i_log_bamboo,1 i_clay
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese Kitchen
+DESCRIPTION=Bowl
+DUPELIST=024df,024e0
+
+[ITEMDEF 024df]
+//Bowl
+DUPEITEM=024de
+
+[ITEMDEF 024e0]
+//Bowl
+DUPEITEM=024de
+
+[ITEMDEF 024e1]
+DEFNAME=i_cups_japanese
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=4 i_clay
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese Kitchen
+DESCRIPTION=Cups (4)
+
+[ITEMDEF 024e2]
+DEFNAME=i_bottle_sake
+TYPE=t_booze
+WEIGHT=1.0
+RESOURCES=i_bottle_shochu_empty
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese Kitchen
+DESCRIPTION=Saki
+
+
+[ITEMDEF 024e6]
+TYPE=t_normal
+FLIP=1
+WEIGHT=1.0
+RESOURCES=1 i_ingot_iron
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese Kitchen
+DESCRIPTION=Tea Set
+DUPELIST=024e7
+
+[ITEMDEF 024e7]
+//tea set
+DUPEITEM=024e6
+
+[ITEMDEF 024e8]
+DEFNAME=i_wassabi_tray
+TYPE=t_food
+FLIP=1
+WEIGHT=2.0
+RESOURCES=10 i_wassabi_raw,1 i_board
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese Kitchen
+DESCRIPTION=Wassabi
+DUPELIST=024e9
+ON=@Create
+   MOREM=1
+
+[ITEMDEF 024e9]
+//wassabi
+DUPEITEM=024e8
+
+
+[ITEMDEF 024ec]
+DEFNAME=i_stair_cabinet
+TYPE=t_container
+TDATA2=0107
+RESOURCES=50 i_board
+CATEGORY=Decoration - Furniture
+SUBSECTION=Japanese
+DESCRIPTION=Stair Cabinet
+DUPELIST=024ed,024ee,024ef,024f0,024f1,024f2,024f3
+
+[ITEMDEF 024ed]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024ee]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024ef]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024f0]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024f1]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024f2]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024f3]
+//stair with cabinet
+DUPEITEM=024ec
+
 
 [ITEMDEF 025ea]
 DEFNAME=i_shirt_checkered
@@ -1383,6 +1719,393 @@ CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Plant Bowl
 
+
+[ITEMDEF 02832]
+DEFNAME=i_windchime
+TYPE=t_normal
+VALUE=13
+WEIGHT=3.1
+RESOURCES=1 i_log,1 i_paper,1 i_ingot_iron
+SKILLMAKE=Tinkering 58.1,t_tinker_tools
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Windchime
+ON=@DClick
+   IF (<R2>)
+      SRC.SOUND snd_special_windchimes1
+   ELSE
+      SRC.SOUND snd_special_windchimes2
+   ENDIF
+   RETURN 1
+
+[ITEMDEF 02833]
+DEFNAME=i_windchime_fancy
+TYPE=t_normal
+VALUE=15
+WEIGHT=3.1
+RESOURCES=1 i_log,1 i_paper,1 i_ingot_iron
+SKILLMAKE=Tinkering 69.3,t_tinker_tools
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Windchime (fancy)
+ON=@DClick
+   SRC.SOUND snd_special_windchimes3
+   RETURN 1
+
+
+[ITEMDEF 02834]
+DEFNAME=i_bento_box_empty
+TYPE=t_normal
+FLIP=1
+WEIGHT=0.5
+RESOURCES=5 i_paper
+CATEGORY=Items by Professions
+SUBSECTION=Chef
+DESCRIPTION=Bento Box (empty)
+DUPELIST=02835
+
+[ITEMDEF 02835]
+//bento box (empty)
+DUPEITEM=02834
+
+[ITEMDEF 02836]
+DEFNAME=i_bento_box
+TYPE=t_food
+FLIP=1
+WEIGHT=5.0
+RESOURCES=1 i_board,1 i_paper,1 i_tray_sushi,1 i_wassabi_raw
+CATEGORY=Items by Professions
+SUBSECTION=Chef
+DESCRIPTION=Bento Box (full)
+DUPELIST=02837
+ON=@Create
+   MOREM=5
+
+[ITEMDEF 02837]
+//bento box (full)
+DUPEITEM=02836
+
+
+[ITEMDEF 0283e]
+DEFNAME=i_tray_sushi
+TYPE=t_food
+FLIP=1
+WEIGHT=5.0
+RESOURCES=1 i_tray,1 i_fish_small,1 i_wassabi_raw,1 i_soup_miso
+CATEGORY=Items by Professions
+SUBSECTION=Chef
+DESCRIPTION=Tray of Sushi 1
+DUPELIST=0283f
+ON=@Create
+   MOREM=3
+
+[ITEMDEF 0283f]
+//tray of sushi
+DUPEITEM=0283e
+
+[ITEMDEF 02840]
+DEFNAME=i_tray_sushi2
+TYPE=t_food
+FLIP=1
+WEIGHT=5.0
+RESOURCES=1 i_tray,6 i_fish_small,1 i_wassabi_raw,1 i_soup_miso
+CATEGORY=Items by Professions
+SUBSECTION=Chef
+DESCRIPTION=Tray of Sushi 2
+DUPELIST=02841
+ON=@Create
+   MOREM=3
+
+[ITEMDEF 02841]
+//tray of sushi
+DUPEITEM=02840
+
+[ITEMDEF 02842]
+DEFNAME=i_sword_display_empty
+TYPE=t_normal
+FLIP=1
+WEIGHT=20.0
+RESOURCES=10 i_log
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Empty Sword Display
+DUPELIST=02843
+
+[ITEMDEF 02843]
+//empty sword display
+DUPEITEM=02842
+
+[ITEMDEF 02844]
+DEFNAME=i_sword_display_empty2
+TYPE=t_normal
+FLIP=1
+WEIGHT=20.0
+RESOURCES=10 i_log
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Empty Sword Display
+DUPELIST=02845
+
+[ITEMDEF 02845]
+//empty sword display 2
+DUPEITEM=02844
+
+
+[ITEMDEF 0284a]
+DEFNAME=i_flower_arrangement
+VALUE=20
+WEIGHT=2.0
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Flowers
+
+[ITEMDEF 0284b]
+DEFNAME=i_basket_greentea
+TYPE=t_normal
+WEIGHT=23.0
+RESOURCES=1 i_basket,20 i_tea_green
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese Kitchen
+DESCRIPTION=Basket of Green Tea
+
+[ITEMDEF 0284c]
+DEFNAME=i_tea_green
+TYPE=t_food
+VALUE=5
+WEIGHT=0.1
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese Kitchen
+DESCRIPTION=Green Tea
+
+[ITEMDEF 0284d]
+DEFNAME=i_soup_miso
+//NAME=miso soup
+TYPE=t_food
+FLIP=1
+WEIGHT=1.0
+RESOURCES=1 i_bowl_wood,3 i_fish_small
+SKILLMAKE=COOKING 49.0
+CATEGORY=Items by Professions
+SUBSECTION=Chef
+DESCRIPTION=Miso Soup
+DUPELIST=0284e
+ON=@Create
+   MOREM=3
+
+[ITEMDEF 0284e]
+//miso soup
+DUPEITEM=0284d
+
+[ITEMDEF 0284f]
+DEFNAME=i_soup_miso_2
+TYPE=t_food
+FLIP=1
+WEIGHT=2.0
+RESOURCES=2 i_log,2 i_fish_small
+CATEGORY=Items by Professions
+SUBSECTION=Chef
+DESCRIPTION=Miso Soups
+DUPELIST=02850
+ON=@Create
+   MOREM=3
+
+[ITEMDEF 02850]
+//miso soups
+DUPEITEM=0284f
+
+[ITEMDEF 02851]
+DEFNAME=i_display_swords_red
+TYPE=t_normal
+FLIP=1
+WEIGHT=38.0
+RESOURCES=10 i_log,1 i_daisho
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Red Sword Display
+DUPELIST=02852
+
+[ITEMDEF 02852]
+//red sword display
+DUPEITEM=02851
+
+[ITEMDEF 02853]
+DEFNAME=i_display_swords_black
+TYPE=t_normal
+FLIP=1
+WEIGHT=38.0
+RESOURCES=10 i_log,1 i_daisho
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Black Sword Display
+DUPELIST=02854
+
+[ITEMDEF 02854]
+//black sword display
+DUPEITEM=02853
+
+[ITEMDEF 02855]
+DEFNAME=i_display_swords_white
+TYPE=t_normal
+FLIP=1
+WEIGHT=41.0
+RESOURCES=10 i_log,1 i_no_dachi
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=White Sword Display
+DUPELIST=02856
+
+[ITEMDEF 02856]
+//white sword display
+DUPEITEM=02855
+
+
+[ITEMDEF 0291c]
+DEFNAME=i_display_swords_blue
+TYPE=t_normal
+FLIP=1
+WEIGHT=38.0
+RESOURCES=10 i_log,1 i_daisho
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Blue Sword Display
+DUPELIST=0291d
+
+[ITEMDEF 0291d]
+//blue sword display
+DUPEITEM=0291c
+
+[ITEMDEF 0291e]
+DEFNAME=i_display_swords_yellow
+TYPE=t_normal
+FLIP=1
+WEIGHT=38.0
+RESOURCES=10 i_log,1 i_daisho
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Yellow Sword Display
+DUPELIST=0291f
+
+[ITEMDEF 0291f]
+//yellow sword display
+DUPEITEM=0291e
+
+
+[ITEMDEF 02936]
+DEFNAME=i_abacus
+TYPE=t_normal
+FLIP=1
+WEIGHT=2.0
+RESOURCES=1 i_log,10 i_beads
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Abacus
+DUPELIST=02937
+
+[ITEMDEF 02937]
+//abacus
+DUPEITEM=02936
+
+
+[ITEMDEF 0295c]
+DEFNAME=i_futon
+TYPE=t_normal
+FLIP=1
+VALUE=100
+WEIGHT=18.4
+RESOURCES=4 i_canvas,4 i_cloth,10 i_wool,4 i_thread
+CATEGORY=Decoration - Furniture
+SUBSECTION=Japanese
+DESCRIPTION=Futon
+DUPELIST=0295d
+
+[ITEMDEF 0295d]
+//futon
+DUPEITEM=0295c
+
+[ITEMDEF 0295e]
+DEFNAME=i_futon2
+TYPE=t_normal
+FLIP=1
+VALUE=100
+WEIGHT=18.4
+RESOURCES=4 i_canvas,4 i_cloth,10 i_wool,4 i_thread
+CATEGORY=Decoration - Furniture
+SUBSECTION=Japanese
+DESCRIPTION=Futon 2
+DUPELIST=0295f
+
+[ITEMDEF 0295f]
+//futon 2
+DUPEITEM=0295e
+
+
+[ITEMDEF 02a2a]
+DEFNAME=i_sword_display_red2
+TYPE=t_normal
+WEIGHT=38.0
+RESOURCES=10 i_log,1 i_daisho
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Red Sword Display 2
+
+
+[ITEMDEF 02a45]
+TYPE=t_normal
+FLIP=1
+WEIGHT=38.0
+RESOURCES=10 i_log,1 i_daisho
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Red Sword Display
+DUPELIST=02a46
+
+[ITEMDEF 02a46]
+//Red Sword Display
+DUPEITEM=02a45
+
+[ITEMDEF 02a47]
+TYPE=t_normal
+FLIP=1
+WEIGHT=38.0
+RESOURCES=10 i_log,1 i_daisho
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Black Sword Display
+DUPELIST=02a48
+
+[ITEMDEF 02a48]
+//Black Sword Display
+DUPEITEM=02a47
+
+[ITEMDEF 02a49]
+TYPE=t_normal
+FLIP=1
+WEIGHT=38.0
+RESOURCES=10 i_log,1 i_daisho
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Purple Sword Display
+DUPELIST=02a4a
+
+[ITEMDEF 02a4a]
+//Purple Sword Display
+DUPEITEM=02a49
+
+[ITEMDEF 02a4b]
+TYPE=t_normal
+FLIP=1
+WEIGHT=38.0
+RESOURCES=10 i_log,1 i_daisho
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Green Sword Display
+DUPELIST=02a4c
+
+[ITEMDEF 02a4c]
+//Green Sword Display
+DUPEITEM=02a4b
+
+
 [ITEMDEF 02aaa]
 DEFNAME=i_promo_token
 NAME=token
@@ -1685,6 +2408,7 @@ DESCRIPTION=Prism (runed)
 
 [ITEMDEF 02f5c]
 DEFNAME=i_switch_enchanted
+NAME=enchanted switch
 TYPE=t_normal
 CATEGORY=Quest
 SUBSECTION=Unknown
@@ -1692,6 +2416,7 @@ DESCRIPTION=Enchanted Switch
 
 [ITEMDEF 02f5d]
 DEFNAME=i_prism_hollow
+NAME=hollow prism
 TYPE=t_normal
 CATEGORY=Quest
 SUBSECTION=Unknown
@@ -1699,6 +2424,7 @@ DESCRIPTION=Prism (hollow)
 
 [ITEMDEF 02f5e]
 DEFNAME=i_filgree_jeweled
+NAME=jeweled filgree
 TYPE=t_normal
 CATEGORY=Quest
 SUBSECTION=Unknown
@@ -1706,6 +2432,7 @@ DESCRIPTION=Jeweled Filgree
 
 [ITEMDEF 02f5f]
 DEFNAME=i_switch_normal
+NAME=switch
 TYPE=t_normal
 CATEGORY=Quest
 SUBSECTION=Unknown
@@ -1713,6 +2440,7 @@ DESCRIPTION=Switch
 
 [ITEMDEF 02f60]
 DEFNAME=i_light_wisps
+NAME=wisps of light
 TYPE=t_normal
 CATEGORY=Quest
 SUBSECTION=Unknown
@@ -1720,12 +2448,14 @@ DESCRIPTION=Wisps of Light
 
 [ITEMDEF 02f61]
 DEFNAME=i_switch_runed
+NAME=runed switch
 TYPE=t_normal
 CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Switch (runed)
 
 [ITEMDEF 02fb6]
+DEFNAME=i_parrot_perch_special
 NAME=special parrot perch
 TYPE=t_normal
 WEIGHT=4.0
@@ -1889,7 +2619,7 @@ DUPEITEM=03060
 
 [ITEMDEF 03066]
 DEFNAME=i_displaycase_monster
-NAME=monster displaycase
+NAME=monster showcase
 FLIP=1
 WEIGHT=36.4
 RESOURCES=12 i_board,4 i_nails,24 i_glass_raw
@@ -1899,24 +2629,124 @@ DESCRIPTION=Monster Display Case
 DUPELIST=03067,03068,03069,0306a,0306b
 
 [ITEMDEF 03067]
-//monster displaycase
+//monster showcase
 DUPEITEM=03066
 
 [ITEMDEF 03068]
-//monster displaycase
+//monster showcase
 DUPEITEM=03066
 
 [ITEMDEF 03069]
-//monster displaycase
+//monster showcase
 DUPEITEM=03066
 
 [ITEMDEF 0306a]
-//monster displaycase
+//monster showcase
 DUPEITEM=03066
 
 [ITEMDEF 0306b]
-//monster displaycase
+//monster showcase
 DUPEITEM=03066
+
+
+[ITEMDEF 0312d]
+DEFNAME=i_servered_elf_ears
+NAME=severed elf ears
+TYPE=t_normal
+FLIP=1
+VALUE=10
+WEIGHT=0.1
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=ML-Misc
+DESCRIPTION=Servered Elf Ears
+DUPELIST=0312e
+
+[ITEMDEF 0312e]
+//severed elf ears
+DUPEITEM=0312d
+
+[ITEMDEF 0312f]
+DEFNAME=i_servered_human_ears
+NAME=servered human ears
+TYPE=t_normal
+FLIP=1
+VALUE=10
+WEIGHT=0.1
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=ML-Misc
+DESCRIPTION=Servered Human Ears
+DUPELIST=03130
+
+[ITEMDEF 03130]
+//severed human ears
+DUPEITEM=0312f
+
+
+[ITEMDEF 03156]
+DEFNAME=i_mangled_dread_horn
+NAME=mangled dread horn head
+TYPE=t_normal
+FLIP=1
+VALUE=150
+WEIGHT=1.0
+CATEGORY=Quest
+SUBSECTION=Twisted Weald
+DESCRIPTION=Mangled Dread Horn Head
+DUPELIST=03157
+
+[ITEMDEF 03157]
+//mangled dread horn
+DUPEITEM=03156
+
+[ITEMDEF 03158]
+DEFNAME=i_trophy_dread_horn1
+NAME=trophy dread horn
+FLIP=1
+VALUE=2036
+WEIGHT=7.2
+RESOURCES=2 i_log,1 i_nails,1 i_wool,1 i_pristine_dread_horn
+SKILLMAKE=Carpentry 72.0,Tailoring 60.0,t_carpentry,t_sewing_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Trophies
+DESCRIPTION=Dread Horn
+DUPELIST=03159
+
+[ITEMDEF 03159]
+//trophy dread horn
+DUPEITEM=03158
+
+[ITEMDEF 0315a]
+DEFNAME=i_pristine_dread_horn
+NAME=pristine dread horn
+TYPE=t_normal
+FLIP=1
+VALUE=2000
+WEIGHT=3.2
+CATEGORY=Quest
+SUBSECTION=Twisted Weald
+DESCRIPTION=Pristine Dread Horn Head
+DUPELIST=0315b
+
+[ITEMDEF 0315b]
+//pristine dread horn
+DUPEITEM=0315a
+
+[ITEMDEF 0315c]
+DEFNAME=i_horn_dread
+NAME=horn of dread horn
+TYPE=t_normal
+FLIP=1
+VALUE=150
+WEIGHT=1.0
+CATEGORY=Quest
+SUBSECTION=Twisted Weald
+DESCRIPTION=Dread Horn Horn
+DUPELIST=0315d
+
+[ITEMDEF 0315d]
+//horn of dread horn
+DUPEITEM=0315c
+
 
 [ITEMDEF 0318f]
 DEFNAME=i_bark
@@ -1954,6 +2784,7 @@ DESCRIPTION=Luminescent Fungi
 //FIXME: the following benches cannot be sat on
 [ITEMDEF 0319a]
 [ITEMDEF 0319b]
+
 
 [ITEMDEF 03584]
 //Gumpid=091b

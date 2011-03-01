@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 21, 2011
+// FILE LAST UPDATED: Monday, Febuary 28, 2011
 VERSION=0.56b
 
 
@@ -18,6 +18,16 @@ WEIGHT=4
 CATEGORY=Items by Professions
 SUBSECTION=Masons
 DESCRIPTION=Mallet and Chisel
+
+[ITEMDEF 032f8]
+DEFNAME=i_hammer_and_chisel
+NAME=stone hammer and chisel
+VALUE=34
+WEIGHT=8.0
+RESOURCES=1 i_hammer,1 i_chisels
+CATEGORY=Items by Professions
+SUBSECTION=Masons
+DESCRIPTION=Hammer and Chisel
 
 
 /////////////////////////

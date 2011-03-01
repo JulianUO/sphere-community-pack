@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 21, 2011
+// FILE LAST UPDATED: Monday, Febuary 28, 2011
 VERSION=0.56b
 
 
@@ -5213,15 +5213,6 @@ DUPEITEM=0295
 //marble wall 2 (with shuttered window)
 DUPEITEM=0295
 
-
-[ITEMDEF 02712]
-DEFNAME=i_latticed_wall_white_pattern
-TYPE=t_wall
-RESOURCES=100 i_log
-CATEGORY=Buildings - Walls
-SUBSECTION=Latticed Wall (white)
-DESCRIPTION=Lattice Pattern
-
 [ITEMDEF 02713]
 DEFNAME=i_latticed_wall_white
 TYPE=t_wall
@@ -5278,14 +5269,6 @@ DUPEITEM=02713
 [ITEMDEF 0271f]
 //latticed wall (white)
 DUPEITEM=02713
-
-[ITEMDEF 02752]
-DEFNAME=i_latticed_wall_brown_pattern
-TYPE=t_wall
-RESOURCES=100 i_log
-CATEGORY=Buildings - Walls
-SUBSECTION=Latticed Wall (brown)
-DESCRIPTION=Lattice Pattern
 
 [ITEMDEF 02753]
 DEFNAME=i_latticed_wall_brown
@@ -6297,7 +6280,7 @@ RESOURCES=100 i_log
 CATEGORY=Buildings - Walls
 SUBSECTION=Elven Bark Wall
 DESCRIPTION=Wall
-DUPELIST=02d15,02d16,02d17,02d18,02d19,02d1a,02d1b,02d1c,02d1d,02d36,02d37,02d3c,02d3d,02d3e,02d3f,02d40,02d41,02d42,02d43,02d44,02d45,02d46,02d47,02d48,02d49,02f1e
+DUPELIST=02d15,02d16,02d17,02d18,02d19,02d1a,02d1b,02d1c,02d1d,02d36,02d37,02d3c,02d3d,02d3e,02d3f,02d40,02d41,02d42,02d43,02d44,02d45,02f1e
 
 [ITEMDEF 02d15]
 //Elven Bark Wall
@@ -6382,22 +6365,6 @@ DUPEITEM=02d14
 DUPEITEM=02d14
 
 [ITEMDEF 02d45]
-//Elven Bark Wall
-DUPEITEM=02d14
-
-[ITEMDEF 02d46]
-//Elven Bark Wall
-DUPEITEM=02d14
-
-[ITEMDEF 02d47]
-//Elven Bark Wall
-DUPEITEM=02d14
-
-[ITEMDEF 02d48]
-//Elven Bark Wall
-DUPEITEM=02d14
-
-[ITEMDEF 02d49]
 //Elven Bark Wall
 DUPEITEM=02d14
 

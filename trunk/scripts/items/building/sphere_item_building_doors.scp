@@ -947,6 +947,50 @@ DUPEITEM=02a05
 //sliding door (open)
 DUPEITEM=02a06
 
+
+[ITEMDEF 02d46]
+DEFNAME=i_door_elven_bark
+TYPE=t_door
+RESOURCES=100 i_board
+CATEGORY=Buildings - Doors
+SUBSECTION=Elven Bark Door
+DESCRIPTION=@ (closed)
+DUPELIST=02d48,031ac,031ae
+
+[ITEMDEF 02d47]
+DEFNAME=i_door_elven_bark_o
+TYPE=t_door_open
+RESOURCES=100 i_board
+CATEGORY=Buildings - Doors
+SUBSECTION=Elven Bark Door
+DESCRIPTION=@ (opened)
+DUPELIST=02d49,031ad,031af
+
+[ITEMDEF 02d48]
+//elven bark door closed
+DUPEITEM=02d46
+
+[ITEMDEF 02d49]
+//elven bark door open
+DUPEITEM=02d47
+
+[ITEMDEF 031ac]
+//elven bark door closed
+DUPEITEM=02d46
+
+[ITEMDEF 031ad]
+//elven bark door open
+DUPEITEM=02d47
+
+[ITEMDEF 031ae]
+//elven bark door closed
+DUPEITEM=02d46
+
+[ITEMDEF 031af]
+//elven bark door open
+DUPEITEM=02d47
+
+
 [ITEMDEF 02d63]
 DEFNAME=i_door_elven_simple_1
 TYPE=t_door
@@ -997,7 +1041,7 @@ RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Elven Ornate Door
 DESCRIPTION=@ (n / sw)
-DUPELIST=02d69
+DUPELIST=02d69,031a4,031a6
 
 [ITEMDEF 02d68]
 DEFNAME=i_door_elven_ornate_1_o
@@ -1006,7 +1050,7 @@ RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Elven Ornate Door
 DESCRIPTION=@ (n / sw) open
-DUPELIST=02d6a
+DUPELIST=02d6a,031a5,031a7
 
 [ITEMDEF 02d69]
 //elven ornate door closed
@@ -1016,6 +1060,23 @@ DUPEITEM=02d67
 //elven ornate door open
 DUPEITEM=02d68
 
+[ITEMDEF 031a4]
+//elven ornate door closed
+DUPEITEM=02d67
+
+[ITEMDEF 031a5]
+//elven ornate door open
+DUPEITEM=02d68
+
+[ITEMDEF 031a6]
+//elven ornate door closed
+DUPEITEM=02d67
+
+[ITEMDEF 031a7]
+//elven ornate door open
+DUPEITEM=02d68
+
+
 [ITEMDEF 02d6b]
 DEFNAME=i_door_elven_simple_dark_1
 TYPE=t_door
@@ -1023,7 +1084,7 @@ RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Elven Simple Door Dark
 DESCRIPTION=@ (n / sw)
-DUPELIST=02d6d
+DUPELIST=02d6d,031a8,031aa
 
 [ITEMDEF 02d6c]
 DEFNAME=i_door_elven_simple_dark_1_o
@@ -1032,7 +1093,7 @@ RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Elven Simple Door Dark
 DESCRIPTION=@ (n / sw) open
-DUPELIST=02d6e
+DUPELIST=02d6e,031a9,031ab
 
 [ITEMDEF 02d6d]
 //elven simple dark door closed
@@ -1042,48 +1103,65 @@ DUPEITEM=02d6b
 //elven simple dark door open
 DUPEITEM=02d6c
 
+[ITEMDEF 031a8]
+//elven simple dark door closed
+DUPEITEM=02d6b
+
+[ITEMDEF 031a9]
+//elven simple dark door open
+DUPEITEM=02d6c
+
+[ITEMDEF 031aa]
+//elven simple dark door closed
+DUPEITEM=02d6b
+
+[ITEMDEF 031ab]
+//elven simple dark door open
+DUPEITEM=02d6c
+
+
 [ITEMDEF 02fe2]
-DEFNAME=i_door_moon_1
+DEFNAME=i_door_moon
 NAME=moon door
 TYPE=t_door
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Moon Door
-DESCRIPTION=Moon Door W (closed)
+DESCRIPTION=@ (closed)
 DUPELIST=02fe4,0319c,0319e
 
 [ITEMDEF 02fe3]
-DEFNAME=i_door_moon_1_o
+DEFNAME=i_door_moon_o
 NAME=moon door
 TYPE=t_door_open
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Moon Door
-DESCRIPTION=Moon Door W (open)
+DESCRIPTION=@ (open)
 DUPELIST=02fe5,0319d,0319f
 
 [ITEMDEF 02fe4]
-//Moon Door W (closed)
+//Moon Door (closed)
 DUPEITEM=02fe2
 
 [ITEMDEF 02fe5]
-//Moon Door W (open)
+//Moon Door (open)
 DUPEITEM=02fe3
 
 [ITEMDEF 0319c]
-//Moon Door W (closed)
+//Moon Door (closed)
 DUPEITEM=02fe2
 
 [ITEMDEF 0319d]
-//Moon Door W (open)
+//Moon Door (open)
 DUPEITEM=02fe3
 
 [ITEMDEF 0319e]
-//Moon Door W (closed)
+//Moon Door (closed)
 DUPEITEM=02fe2
 
 [ITEMDEF 0319f]
-//Moon Door W (open)
+//Moon Door (open)
 DUPEITEM=02fe3
 
 
