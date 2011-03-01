@@ -320,147 +320,106 @@ SUBSECTION=Evil Home Decor
 DESCRIPTION=Bone Couch
 
 [ITEMDEF 02a81]
-//bed of nails - 1 of 2
 DEFNAME=i_bed_of_nails_ns
-DUPELIST=02a82,02a83,02a84,02a85,02a86,02a87,02a88
+NAME=bed of nails
+FLIP=1
+WEIGHT=63.6
+RESOURCES=1 i_bone_skull,6 i_bone,40 i_ingot_iron,10 i_log
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
+DESCRIPTION=Bed of Nails (ns)
+DUPELIST=02a82,02a83,02a84,02a85,02a86,02a87,02a88
 
 [ITEMDEF 02a82]
-//bed of nails - 2 of 2
+//bed of nails
 DUPEITEM=02a81
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a83]
-//bed of nails - 1 of 2
+//bed of nails
 DUPEITEM=02a81
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a84]
-//bed of nails - 2 of 2
+//bed of nails
 DUPEITEM=02a81
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a85]
-//bed of nails - 1 of 2
+//bed of nails
 DUPEITEM=02a81
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a86]
-//bed of nails - 2 of 2
+//bed of nails
 DUPEITEM=02a81
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a87]
-//bed of nails - 1 of 2
+//bed of nails
 DUPEITEM=02a81
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a88]
-//bed of nails - 2 of 2
+//bed of nails
 DUPEITEM=02a81
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a89]
-//bed of nails - 1 of 2
 DEFNAME=i_bed_of_nails
-DUPELIST=02a8a,02a8b,02a8c,02a8d,02a8e,02a8f,02a90
+NAME=bed of nails
+FLIP=1
+WEIGHT=63.6
+RESOURCES=1 i_bone_skull,6 i_bone,40 i_ingot_iron,10 i_log
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
+DESCRIPTION=Bed of Nails (ew)
+DUPELIST=02a8a,02a8b,02a8c,02a8d,02a8e,02a8f,02a90
 
 [ITEMDEF 02a8a]
-//bed of nails - 2 of 2
+//bed of nails
 DUPEITEM=02a89
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a8b]
-//bed of nails - 1 of 2
+//bed of nails
 DUPEITEM=02a89
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a8c]
-//bed of nails - 2 of 2
+//bed of nails
 DUPEITEM=02a89
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a8d]
-//bed of nails - 1 of 2
+//bed of nails
 DUPEITEM=02a89
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a8e]
-//bed of nails - 2 of 2
+//bed of nails
 DUPEITEM=02a89
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a8f]
-//bed of nails - 1 of 2
+//bed of nails
 DUPEITEM=02a89
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a90]
-//bed of nails - 2 of 2
+//bed of nails
 DUPEITEM=02a89
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bed of Nails
 
 [ITEMDEF 02a9a]
-//sacrificial altar - 1 of 2
-DUPELIST=02a9b
 DEFNAME=i_sacrificial_altar
+NAME=sacrificial altar
+FLIP=1
+VALUE=225
+WEIGHT=260.2
+RESOURCES=20 i_rock_plain,20 i_log,20 i_ingot_iron,2 i_candle
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Evil Home Decor
 DESCRIPTION=Sacrificial Altar
+DUPELIST=02a9b,02a9c,02a9d
 
 [ITEMDEF 02a9b]
-//sacrificial altar - 2 of 2
+//sacrificial altar
 DUPEITEM=02a9a
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Sacrificial Altar
 
 [ITEMDEF 02a9c]
-//sacrificial altar - 1 of 2
-DUPELIST=02a9d
-DEFNAME=i_sacrificial_altar_ns
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Sacrificial Altar
+//sacrificial altar
+DUPEITEM=02a9a
 
 [ITEMDEF 02a9d]
-//sacrificial altar - 2 of 2
-DUPEITEM=02a9c
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Sacrificial Altar
+//sacrificial altar
+DUPEITEM=02a9a
+
 
 [EOF]

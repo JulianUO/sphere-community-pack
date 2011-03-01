@@ -1,14 +1,9 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+// FILE LAST UPDATED: Monday, Febuary 28, 2011
 VERSION=0.56b
 
 
@@ -17,7 +12,7 @@ DEFNAME=i_stairs_stone
 RESOURCES=100 i_rock_plain
 CATEGORY=Buildings - Stairs
 SUBSECTION=Stone Stairs 1
-DESCRIPTION=@
+DESCRIPTION=Stairs
 DUPELIST=03ef,03f0,03f1,03f2,03f3,03f4,03f5,03f6,03f7,03f8,03f9,03fa,03fb,03fc,03fd,03fe,03ff,0400,0401,0402
 
 [ITEMDEF 03ef]
@@ -105,7 +100,7 @@ DEFNAME=i_stairs_marble
 RESOURCES=50 i_stone_marble
 CATEGORY=Buildings - Stairs
 SUBSECTION=Marble Stairs
-DESCRIPTION=@
+DESCRIPTION=Stairs
 DUPELIST=070a,070b,070c,070d,070e,070f,0710,0711,0712,0713,0714,0715,0716,0717,0718,0719,071a,071b,071c,071d
 
 [ITEMDEF 070a]
@@ -193,7 +188,7 @@ DEFNAME=i_stairs_stone_2
 RESOURCES=50 i_rock_plain
 CATEGORY=Buildings - Stairs
 SUBSECTION=Stone Stairs 2
-DESCRIPTION=@
+DESCRIPTION=Stairs
 DUPELIST=071f,0736,0737,0749,074a,074b,074c,074d,074e,074f,0782,0783,07a0,07a1,07a2,07da,07df,07e0,0834,0876
 
 [ITEMDEF 071f]
@@ -205,7 +200,7 @@ DEFNAME=i_stairs_wood
 RESOURCES=50 i_board
 CATEGORY=Buildings - Stairs
 SUBSECTION=Wooden Stairs (light)
-DESCRIPTION=@
+DESCRIPTION=Stairs
 DUPELIST=0721,0722,0723,0724,0725,0726,0727,0728,0729,072a,072b,072c,072d,072e,072f,0730,0731,0732,0733,0734,0735
 
 [ITEMDEF 0721]
@@ -305,7 +300,7 @@ DEFNAME=i_stairs_wood_2
 RESOURCES=50 i_board
 CATEGORY=Buildings - Stairs
 SUBSECTION=Wooden Stairs (dark)
-DESCRIPTION=@
+DESCRIPTION=Stairs
 DUPELIST=0739,073a,073b,073c,073d,073e,073f,0740,0741,0742,0743,0744,0745,0746,0747,0748,07b3,07b4,07b5,07b6
 
 [ITEMDEF 0739]
@@ -405,7 +400,7 @@ DEFNAME=i_stairs_stone_3
 RESOURCES=50 i_rock_plain
 CATEGORY=Buildings - Stairs
 SUBSECTION=Stone Stairs 3
-DESCRIPTION=@
+DESCRIPTION=Stairs
 DUPELIST=0751,0752,0753,0754,0755,0756,0757,0758,0759,075a,075b,075c,075d,075e,075f,0760,0761,0762,0763,0764,0765,0766,0767,0768
 
 [ITEMDEF 0751]
@@ -509,7 +504,7 @@ DEFNAME=i_stairs_sandstone
 RESOURCES=50 i_stone_sand
 CATEGORY=Buildings - Stairs
 SUBSECTION=Sandstone Stairs
-DESCRIPTION=@
+DESCRIPTION=Stairs
 DUPELIST=076a,076b,076c,076d,076e,076f,0770,0771,0772,0773,0774,0775,0776,0777,0778,0779,077a,077b,077c,077d,077e,077f,0780,0781
 
 [ITEMDEF 076a]
@@ -621,7 +616,7 @@ DEFNAME=i_stairs_stone_4
 RESOURCES=50 i_rock_plain
 CATEGORY=Buildings - Stairs
 SUBSECTION=Stone Stairs 4
-DESCRIPTION=@
+DESCRIPTION=Stairs
 DUPELIST=0785,0786,0787,0788,0789,078a,078b,078c,078d,078e,078f,0790,0791,0792,0793,0794,0795,0796,0797,0798,0799,079a,079b,079c
 
 [ITEMDEF 0785]
@@ -725,7 +720,7 @@ DEFNAME=i_cave_step
 RESOURCES=50 i_rock_plain
 CATEGORY=Buildings - Stairs
 SUBSECTION=Cave Steps
-DESCRIPTION=@
+DESCRIPTION=Steps
 DUPELIST=079e,079f,07b0,07b1,07b2,07b7,07b8,07b9
 
 [ITEMDEF 079e]
@@ -753,7 +748,7 @@ DEFNAME=i_stairs_stone_5
 RESOURCES=50 i_rock_plain
 CATEGORY=Buildings - Stairs
 SUBSECTION=Stone Stairs 5
-DESCRIPTION=@
+DESCRIPTION=Stairs
 DUPELIST=07a4,07a5,07a6,07a7,07a8,07a9,07aa,07ab,07ac,07ad,07ae,07af
 
 [ITEMDEF 07a4]
@@ -849,7 +844,7 @@ DEFNAME=i_carpet_rostrum
 RESOURCES=50 i_board, 10 i_wool
 CATEGORY=Buildings - Stairs
 SUBSECTION=Carpeted Rostrum
-DESCRIPTION=@
+DESCRIPTION=Stairs
 DUPELIST=07bb,07bc,07c7,07c8
 
 [ITEMDEF 07bb]
@@ -917,35 +912,35 @@ DEFNAME=i_wood_plank_2
 RESOURCES=25 i_board
 CATEGORY=Buildings - Floors
 SUBSECTION=Wooden Planks (dark)
-DESCRIPTION=@
+DESCRIPTION=Planks
 DUPELIST=07ca,07cb,07cc,07cd,07ce,07cf,07d0
 
 [ITEMDEF 07ca]
-//wooden bridge
+//wooden planks (dark)
 DUPEITEM=07c9
 
 [ITEMDEF 07cb]
-//wooden bridge
+//wooden planks (dark)
 DUPEITEM=07c9
 
 [ITEMDEF 07cc]
-//wooden plank
+//wooden planks (dark)
 DUPEITEM=07c9
 
 [ITEMDEF 07cd]
-//wooden plank
+//wooden planks (dark)
 DUPEITEM=07c9
 
 [ITEMDEF 07ce]
-//wooden plank
+//wooden planks (dark)
 DUPEITEM=07c9
 
 [ITEMDEF 07cf]
-//wooden plank
+//wooden planks (dark)
 DUPEITEM=07c9
 
 [ITEMDEF 07d0]
-//wooden plank
+//wooden planks (dark)
 DUPEITEM=07c9
 
 [ITEMDEF 07da]
@@ -973,7 +968,7 @@ DEFNAME=i_ramp_wood
 RESOURCES=25 i_board
 CATEGORY=Buildings - Stairs
 SUBSECTION=Wooden Ramp
-DESCRIPTION=@
+DESCRIPTION=Ramp
 DUPELIST=087b,087c,087d
 
 [ITEMDEF 087b]
@@ -992,8 +987,8 @@ DUPEITEM=087a
 DEFNAME=i_stone_steps
 RESOURCES=40 i_rock_plain
 CATEGORY=Buildings - Stairs
-SUBSECTION=Stone Step
-DESCRIPTION=@
+SUBSECTION=Stone Steps
+DESCRIPTION=Step
 DUPELIST=0916,0917,0918
 
 [ITEMDEF 0916]
@@ -1014,7 +1009,7 @@ RESOURCES=10 i_rock_plain
 WEIGHT=10
 CATEGORY=Buildings - Stairs
 SUBSECTION=Dungeon Ramp
-DESCRIPTION=Dungeon Ramp
+DESCRIPTION=Ramp
 DUPELIST=011bd,011be,011bf
 
 [ITEMDEF 011bd]
@@ -1028,6 +1023,52 @@ DUPEITEM=011bc
 [ITEMDEF 011bf]
 //dungeon ramp
 DUPEITEM=011bc
+
+[ITEMDEF 035d2]
+DEFNAME=i_stairs_crystal
+CATEGORY=Buildings - Stairs
+SUBSECTION=Crystal Stairs
+DESCRIPTION=Stairs
+DUPELIST=035d3,035d4,035d5,035d6
+
+[ITEMDEF 035d3]
+//crystal stairs
+DUPEITEM=035d2
+
+[ITEMDEF 035d4]
+//crystal stairs
+DUPEITEM=035d2
+
+[ITEMDEF 035d5]
+//crystal stairs
+DUPEITEM=035d2
+
+[ITEMDEF 035d6]
+//crystal stairs
+DUPEITEM=035d2
+
+[ITEMDEF 03609]
+DEFNAME=i_stairs_shadow
+CATEGORY=Buildings - Stairs
+SUBSECTION=Shadow Stairs
+DESCRIPTION=Stairs
+DUPELIST=0360a,0360b,0360c,0360d
+
+[ITEMDEF 0360a]
+//shadow stairs
+DUPEITEM=03609
+
+[ITEMDEF 0360b]
+//shadow stairs
+DUPEITEM=03609
+
+[ITEMDEF 0360c]
+//shadow stairs
+DUPEITEM=03609
+
+[ITEMDEF 0360d]
+//shadow stairs
+DUPEITEM=03609
 
 
 [EOF]

@@ -967,7 +967,7 @@ NEW.COLOR=0482
 NEW.NAME=The altars must be used to fulfill the prophecy...
 NEW.P=5142,1761,-6
 	FOR 0 5
-	SERV.NEWITEM=i_floor_marble_3
+	SERV.NEWITEM=i_floor_tile_green
 		DOSWITCH <dLOCAL._FOR>
 		NEW.P=5141,1761,5
 		NEW.P=5141,1760,5

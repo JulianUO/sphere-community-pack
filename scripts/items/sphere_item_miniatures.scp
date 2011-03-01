@@ -9,12 +9,14 @@ VERSION=0.56b
 
 [ITEMDEF 02a91]
 DEFNAME=i_mini_bone_throne
+NAME=bone throne
 CATEGORY=Miniature
 SUBSECTION=Furniture
 DESCRIPTION=Bone Throne
 
 [ITEMDEF 02a92]
 DEFNAME=i_mini_bed_of_nails
+NAME=bed of nails
 CATEGORY=Miniature
 SUBSECTION=Furniture
 DESCRIPTION=Bed of Nails
@@ -35,13 +37,14 @@ DESCRIPTION=Disturbing Portrait
 
 [ITEMDEF 02ab8]
 DEFNAME=i_mini_sacrificial_altar
+NAME=sacrificial altar
 CATEGORY=Miniature
 SUBSECTION=Furniture
 DESCRIPTION=Sacrificial Altar
 
 [ITEMDEF 02ac6]
 DEFNAME=i_mini_fountain_life
-NAME=Fountain of Life
+NAME=fountain of life
 CATEGORY=Miniature
 SUBSECTION=Decoration
 DESCRIPTION=Fountain of Life

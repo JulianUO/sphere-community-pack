@@ -2644,7 +2644,6 @@ DUPEITEM=02bd1
 [ITEMDEF 02bd7]
 DEFNAME=i_dresser_2
 TYPE=t_container
-TDATA2=051
 FLIP=1
 VALUE=272
 WEIGHT=28.9
@@ -2659,6 +2658,53 @@ DUPELIST=02bd8
 //dresser
 DUPEITEM=02bd7
 
+[ITEMDEF 030df]
+DEFNAME=i_elven_washbasin_parts
+TYPE=t_water
+FLIP=1
+WEIGHT=48.0
+RESOURCES=40 i_board,4 i_ingot_iron,4 i_clay
+CATEGORY=Decoration - Furniture
+SUBSECTION=Bedroom Furniture
+DESCRIPTION=Elven Wash Basin Parts
+DUPELIST=030e0,030e1,030e2
+
+[ITEMDEF 030e0]
+//elven washbasin parts
+DUPEITEM=030df
+
+[ITEMDEF 030e1]
+//elven washbasin parts
+DUPEITEM=030df
+
+[ITEMDEF 030e2]
+//elven washbasin parts
+DUPEITEM=030df
+
+[ITEMDEF 030e3]
+DEFNAME=i_elven_dresser_parts
+TYPE=t_container
+TDATA2=010e
+FLIP=1
+WEIGHT=28.9
+RESOURCES=8 i_board,20 i_nails,6 i_dresser_drawer,1 i_ingot_silver,5 i_glass_raw
+SKILLMAKE=Carpentry 87.3,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Bedroom Furniture
+DESCRIPTION=Elven Dresser Parts
+DUPELIST=030e4,030e5,030e6
+
+[ITEMDEF 030e4]
+//elven dresser parts
+DUPEITEM=030e3
+
+[ITEMDEF 030e5]
+//elven dresser parts
+DUPEITEM=030e3
+
+[ITEMDEF 030e6]
+//elven dresser parts
+DUPEITEM=030e3
 
 [ITEMDEF 03dff]
 //bench dark stone against NE wall

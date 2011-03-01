@@ -1,0 +1,157 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Monday, Febuary 28, 2011
+VERSION=0.56b
+
+
+[COMMENT sphere_item_textures]
+Textures are tiles that are not orthogonally projected tiles.  In other
+words, tiles that are not rotated 45 degrees.
+
+
+[ITEMDEF 02712]
+//related to item 02713
+DEFNAME=i_latticed_wall_white_pattern
+TYPE=t_normal
+CATEGORY=Buildings - Walls
+SUBSECTION=Latticed Wall (white)
+DESCRIPTION=Wall Pattern
+
+[ITEMDEF 02720]
+//related to item 02722
+DEFNAME=i_floor_wood_red_pattern
+TYPE=t_normal
+CATEGORY=Buildings - Floors
+SUBSECTION=Wood Floor (red)
+DESCRIPTION=Floor Pattern
+
+[ITEMDEF 02721]
+//related to item 0273a
+DEFNAME=i_floor_wood_brown_pattern
+TYPE=t_normal
+CATEGORY=Buildings - Floors
+SUBSECTION=Wood Floor (brown)
+DESCRIPTION=Floor Pattern
+
+[ITEMDEF 02752]
+//related to item 02753
+DEFNAME=i_latticed_wall_brown_pattern
+TYPE=t_normal
+RESOURCES=100 i_log
+CATEGORY=Buildings - Walls
+SUBSECTION=Latticed Wall (brown)
+DESCRIPTION=Wall Pattern
+
+//jungle|grass|swamp texture tiles?
+[ITEMDEF 032c4]
+[ITEMDEF 032c5]
+[ITEMDEF 032c6]
+[ITEMDEF 032c7]
+
+//dirt texture tile?
+[ITEMDEF 032c8]
+
+//jungle|grass|swamp texture tiles?
+[ITEMDEF 032e8]
+[ITEMDEF 032e9]
+[ITEMDEF 032ea]
+[ITEMDEF 032eb]
+
+//mountain texture tiles?
+[ITEMDEF 03341]
+[ITEMDEF 03342]
+[ITEMDEF 03343]
+[ITEMDEF 03344]
+[ITEMDEF 03345]
+[ITEMDEF 03346]
+[ITEMDEF 03347]
+[ITEMDEF 03348]
+[ITEMDEF 03349]
+[ITEMDEF 0334a]
+[ITEMDEF 0334b]
+[ITEMDEF 0334c]
+[ITEMDEF 0334d]
+[ITEMDEF 0334e]
+[ITEMDEF 0334f]
+[ITEMDEF 03350]
+[ITEMDEF 03351]
+
+//cave edge texture tiles?
+[ITEMDEF 0342a]
+[ITEMDEF 0342b]
+[ITEMDEF 03431]
+[ITEMDEF 03432]
+[ITEMDEF 03433]
+[ITEMDEF 03434]
+[ITEMDEF 03435]
+[ITEMDEF 03436]
+[ITEMDEF 03437]
+[ITEMDEF 03438]
+[ITEMDEF 03439]
+
+//jungle|grass|swamp texture tiles?
+[ITEMDEF 034d9]
+[ITEMDEF 034da]
+[ITEMDEF 034db]
+[ITEMDEF 034dc]
+[ITEMDEF 034dd]
+[ITEMDEF 034de]
+[ITEMDEF 034df]
+[ITEMDEF 034e0]
+[ITEMDEF 034e1]
+[ITEMDEF 034e2]
+[ITEMDEF 034e3]
+[ITEMDEF 034e4]
+[ITEMDEF 034e5]
+[ITEMDEF 034e6]
+[ITEMDEF 034e7]
+[ITEMDEF 034e8]
+[ITEMDEF 034e9]
+[ITEMDEF 034ea]
+[ITEMDEF 034eb]
+[ITEMDEF 034ec]
+
+//cave edge texture tiles?
+[ITEMDEF 03539]
+[ITEMDEF 0353a]
+[ITEMDEF 0353b]
+[ITEMDEF 0353c]
+
+//desert next to jungle|grass|swamp texture tiles?
+[ITEMDEF 03567]
+[ITEMDEF 03568]
+[ITEMDEF 03569]
+[ITEMDEF 0356a]
+[ITEMDEF 0356b]
+[ITEMDEF 0356c]
+[ITEMDEF 0356d]
+[ITEMDEF 0356e]
+[ITEMDEF 0356f]
+[ITEMDEF 03570]
+[ITEMDEF 03571]
+[ITEMDEF 03572]
+
+//road next to jungle|grass|swamp texture tiles?
+[ITEMDEF 03573]
+[ITEMDEF 03574]
+[ITEMDEF 03575]
+[ITEMDEF 03576]
+[ITEMDEF 03577]
+[ITEMDEF 03578]
+[ITEMDEF 03579]
+[ITEMDEF 0357a]
+[ITEMDEF 0357b]
+[ITEMDEF 0357c]
+[ITEMDEF 0357d]
+[ITEMDEF 0357e]
+
+//road next to jungle|grass|swamp texture tiles?
+[ITEMDEF 035ae]
+[ITEMDEF 035af]
+[ITEMDEF 035b0]
+[ITEMDEF 035b1]
+
+[EOF]
