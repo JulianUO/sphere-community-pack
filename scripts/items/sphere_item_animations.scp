@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 14, 2011
+// FILE LAST UPDATED: Thursday, March 3, 2011
 VERSION=0.56b
 
 
@@ -241,6 +241,38 @@ DUPEITEM=01159
 [ITEMDEF 0115e]
 //magical sparkles 2
 DUPEITEM=01159
+
+[ITEMDEF 01c19]
+DEFNAME=i_fx_oil_flask
+//TYPE=t_fire
+CATEGORY=Animations
+SUBSECTION=Oil Flask
+DESCRIPTION=@
+DUPELIST=01c1a,01c1b,01c1c,01c1d,01c1e,01c1f
+
+[ITEMDEF 01c1a]
+//lit oil flask
+DUPEITEM=01c19
+
+[ITEMDEF 01c1b]
+//lit oil flask
+DUPEITEM=01c19
+
+[ITEMDEF 01c1c]
+//dimly lit oil flask, frame from the animation
+DUPEITEM=01c19
+
+[ITEMDEF 01c1d]
+//breaking oil flask, frame from the animation
+DUPEITEM=01c19
+
+[ITEMDEF 01c1e]
+//exploded oil flask, frame from the animation
+DUPEITEM=01c19
+
+[ITEMDEF 01c1f]
+//firey exploded oil flask, frame from the animation
+DUPEITEM=01c19
 
 [ITEMDEF 019ab]
 DEFNAME=i_fire
@@ -963,88 +995,6 @@ DUPEITEM=022c6
 [ITEMDEF 022c8]
 //physical reflect
 DUPEITEM=022c6
-
-[ITEMDEF 03421]
-TYPE=t_rock
-CATEGORY=Animations
-SUBSECTION=Water
-DESCRIPTION=Boulder in Water
-DUPELIST=03422,03423,03424,03425,03426,03427,03428,03429
-
-[ITEMDEF 03422]
-//boulder in water
-DUPEITEM=03421
-
-[ITEMDEF 03423]
-//boulder in water
-DUPEITEM=03421
-
-[ITEMDEF 03424]
-//boulder in water
-DUPEITEM=03421
-
-[ITEMDEF 03425]
-//boulder in water
-DUPEITEM=03421
-
-[ITEMDEF 03426]
-//boulder in water
-DUPEITEM=03421
-
-[ITEMDEF 03427]
-//boulder in water
-DUPEITEM=03421
-
-[ITEMDEF 03428]
-//boulder in water
-DUPEITEM=03421
-
-[ITEMDEF 03429]
-//boulder in water
-DUPEITEM=03421
-
-[ITEMDEF 0342c]
-TYPE=t_rock
-CATEGORY=Ground Tiles (animated)
-SUBSECTION=Boulder in water
-DESCRIPTION=@
-DUPELIST=0342d,0342e,0342f,03430,03431,03432,03433,03434,03435
-
-[ITEMDEF 0342d]
-//boulder in water
-DUPEITEM=0342c
-
-[ITEMDEF 0342e]
-//boulder in water
-DUPEITEM=0342c
-
-[ITEMDEF 0342f]
-//boulder in water
-DUPEITEM=0342c
-
-[ITEMDEF 03430]
-//boulder in water
-DUPEITEM=0342c
-
-[ITEMDEF 03431]
-//boulder in water
-DUPEITEM=0342c
-
-[ITEMDEF 03432]
-//boulder in water
-DUPEITEM=0342c
-
-[ITEMDEF 03433]
-//boulder in water
-DUPEITEM=0342c
-
-[ITEMDEF 03434]
-//boulder in water
-DUPEITEM=0342c
-
-[ITEMDEF 03435]
-//boulder in water
-DUPEITEM=0342c
 
 [ITEMDEF 036b0]
 DEFNAME=i_fx_explode

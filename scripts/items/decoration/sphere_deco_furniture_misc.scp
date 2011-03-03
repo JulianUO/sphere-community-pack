@@ -99,21 +99,6 @@ DUPEITEM=024d2
 //bamboo screen 2
 DUPEITEM=024d2
 
-[ITEMDEF 024db]
-DEFNAME=i_basket_square_tall
-TYPE=t_container
-TDATA2=0108
-WEIGHT=4.0
-RESOURCES=4 i_log_bamboo
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Japanese Basket (square tall)
-DUPELIST=024dc
-
-[ITEMDEF 024dc]
-//japanese basket (square tall)
-DUPEITEM=024db
-
 [ITEMDEF 02ff4]
 DEFNAME=i_parrot_perch
 NAME=Parrot Perch

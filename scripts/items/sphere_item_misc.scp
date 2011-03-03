@@ -303,66 +303,6 @@ CATEGORY=Miscellaneous
 SUBSECTION=Virtue Stones
 DESCRIPTION=Virtue Stone (Yellow)
 
-[ITEMDEF 018a3]
-//Animated Piece, Don't use
-
-[ITEMDEF 018a4]
-//Animated Piece Don't use
-
-[ITEMDEF 018a5]
-//Animated Piece, Don't use
-
-[ITEMDEF 018a6]
-//Animated Piece, Don't use
-
-[ITEMDEF 018a7]
-//Animated Piece, Don't use
-
-[ITEMDEF 018a8]
-//Animated Piece, Don't use
-
-[ITEMDEF 018a9]
-//Animated Piece, Don't use
-
-[ITEMDEF 018aa]
-//Animated Piece, Don't use
-
-[ITEMDEF 018ad]
-//Animated Piece, Don't use
-
-[ITEMDEF 018b2]
-//Animated Piece, Don't use
-
-[ITEMDEF 018f4]
-//Animated pieces don't use
-
-[ITEMDEF 018f5]
-//Animated pieces don't use
-
-[ITEMDEF 018f6]
-//Animated pieces don't use
-
-[ITEMDEF 018f7]
-//Animated pieces don't use
-
-[ITEMDEF 018f8]
-//Animated pieces don't use
-
-[ITEMDEF 018f9]
-//Animated pieces don't use
-
-[ITEMDEF 018fa]
-//Animated pieces don't use
-
-[ITEMDEF 018fb]
-//Animated pieces don't use
-
-[ITEMDEF 01905]
-//Animated pieces don't use
-
-[ITEMDEF 0190a]
-//Animated pieces don't use
-
 [ITEMDEF 01964]
 //regions
 
@@ -914,22 +854,6 @@ ID=i_rock_plain
 ON=@Create
    COLOR=colors_brown
 
-[ITEMDEF I_FROSTINGBOWL]
-ID=i_bowl_dough
-
-ON=@Create
-   COLOR=colors_yellow
-
-[ITEMDEF i_CAKEPAN]
-ID=I_BASKET
-
-ON=@Create
-   COLOR=colors_gray
-
-[ITEMDEF i_JAR]
-ID=i_JAR_HONEY
-NAME=Empty Honey Jar
-
 [ITEMDEF i_LINEN]
 ID=i_CLOTH
 VALUE=2
@@ -1099,14 +1023,6 @@ DESCRIPTION=Marble
 
 ON=@Create
    COLOR=color_snow
-
-[ITEMDEF I_TOMATO_SAUCE]
-ID=i_bottle_red    //RED BOTTLE
-NAME=Tomato Sauce
-WEIGHT=2
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Tomato Sauce
 
 [ITEMDEF i_TREE_SAPLING_PLANTED]
 ID=i_PLANT_WEED

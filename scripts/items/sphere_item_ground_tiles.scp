@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Tuesday, Febuary 22, 2011
+// FILE LAST UPDATED: Thursday, March 3, 2011
 VERSION=0.56b
 
 
@@ -93,6 +93,7 @@ DUPEITEM=040b
 
 
 [ITEMDEF 0490]
+NAME=
 CATEGORY=Ground Tiles
 SUBSECTION=Black
 DESCRIPTION=Black Tile 0490
@@ -254,11 +255,10 @@ DUPEITEM=08e0
 //stalagmites
 DUPEITEM=08e0
 
-
 [ITEMDEF 0911]
 CATEGORY=Ground Tiles
-SUBSECTION=Dirt Patch
-DESCRIPTION=@
+SUBSECTION=Dirt
+DESCRIPTION=Dirt Patch
 DUPELIST=0912,0913,0914
 
 [ITEMDEF 0912]
@@ -1257,7 +1257,7 @@ VALUE=2
 WEIGHT=1
 CATEGORY=Ground Tiles
 SUBSECTION=Dirt
-DESCRIPTION=@
+DESCRIPTION=More Dirt
 DUPELIST=01b28,01b29,01b2a,01b2b,01b2c,01b2d,01b2e,01b2f,01b30,01b31,01b32,01b33,01b34,01b35,01b36,01b37,01b38,01b39,01b3a,01b3b,01b3c,01b3d,01b3e
 
 [ITEMDEF 01b28]
@@ -1602,6 +1602,14 @@ DUPEITEM=01797
 [ITEMDEF 017b2]
 //water
 DUPEITEM=01797
+
+[ITEMDEF 01dfd]
+DEFNAME=i_dirt
+VALUE=1
+CATEGORY=Ground Tiles
+SUBSECTION=Dirt
+DESCRIPTION=Dirt
+DUPELIST=01dfe,01dff,01e00
 
 [ITEMDEF 01dfe]
 //dirt
@@ -2612,7 +2620,7 @@ DUPEITEM=030e7
 [ITEMDEF 031f4]
 CATEGORY=Ground Tiles
 SUBSECTION=Dirt
-DESCRIPTION=@
+DESCRIPTION=Even More Dirt
 DUPELIST=031f5,031f6,031f7,031f8,031f9,031fa,031fb
 
 [ITEMDEF 031f5]
@@ -3300,7 +3308,70 @@ DUPEITEM=03286
 DUPEITEM=03286
 
 [ITEMDEF 032d5]
-//dirt
+//FIXME: dirt
+
+[ITEMDEF 03421]
+TYPE=t_rock
+CATEGORY=Ground Tiles (animated)
+SUBSECTION=Water
+DESCRIPTION=Boulder in Water
+DUPELIST=03422,03423,03424,03425,03426,03427,03428,03429
+
+[ITEMDEF 03422]
+//boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03423]
+//boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03424]
+//boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03425]
+//boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03426]
+//boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03427]
+//boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03428]
+//boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 03429]
+//boulder in water
+DUPEITEM=03421
+
+[ITEMDEF 0342c]
+TYPE=t_rock
+CATEGORY=Ground Tiles (animated)
+SUBSECTION=Water
+DESCRIPTION=Boulder 2 in water
+DUPELIST=0342d,0342e,0342f,03430
+
+[ITEMDEF 0342d]
+//boulder 2 in water
+DUPEITEM=0342c
+
+[ITEMDEF 0342e]
+//boulder 2 in water
+DUPEITEM=0342c
+
+[ITEMDEF 0342f]
+//boulder 2 in water
+DUPEITEM=0342c
+
+[ITEMDEF 03430]
+//boulder 2 in water
+DUPEITEM=0342c
+
 
 [ITEMDEF 0343b]
 DEFNAME=i_lava_bubble
@@ -3585,56 +3656,57 @@ DUPEITEM=0346e
 //water
 DUPEITEM=0346e
 
+
 [ITEMDEF 03486]
 TYPE=t_rock
 CATEGORY=Ground Tiles (animated)
-SUBSECTION=Small rock in water
-DESCRIPTION=@
+SUBSECTION=Water
+DESCRIPTION=Small rock in animated water
 DUPELIST=03487,03488,03489,0348a
 
 [ITEMDEF 03487]
-//rock
+//small rock in animated water
 DUPEITEM=03486
 
 [ITEMDEF 03488]
-//rock
+//small rock in animated water
 DUPEITEM=03486
 
 [ITEMDEF 03489]
-//rock
+//small rock in animated water
 DUPEITEM=03486
 
 [ITEMDEF 0348a]
-//rock
+//small rock in animated water
 DUPEITEM=03486
 
 [ITEMDEF 0348b]
 TYPE=t_rock
 CATEGORY=Ground Tiles (animated)
-SUBSECTION=Small rock in water
-DESCRIPTION=@
+SUBSECTION=Water
+DESCRIPTION=Small rocks in animated water
 DUPELIST=0348c,0348d,0348e,0348f
 
 [ITEMDEF 0348c]
-//rocks
+//small rocks in animated water
 DUPEITEM=0348b
 
 [ITEMDEF 0348d]
-//rocks
+//small rocks in animated water
 DUPEITEM=0348b
 
 [ITEMDEF 0348e]
-//rocks
+//small rocks in animated water
 DUPEITEM=0348b
 
 [ITEMDEF 0348f]
-//rocks
+//small rocks in animated water
 DUPEITEM=0348b
 
 [ITEMDEF 03490]
 CATEGORY=Ground Tiles (animated)
-SUBSECTION=Whirlpool
-DESCRIPTION=@
+SUBSECTION=Water
+DESCRIPTION=Whirlpool
 DUPELIST=03491,03492
 
 [ITEMDEF 03491]
@@ -3649,7 +3721,7 @@ DUPEITEM=03490
 TYPE=t_water
 CATEGORY=Ground Tiles (animated)
 SUBSECTION=Water
-DESCRIPTION=@
+DESCRIPTION=More Water
 DUPELIST=03495,03496,03497,03498,03499,0349a,0349b,0349c,0349d,0349e,0349f,034a0,034a1,034a2,034a3,034a4,034a5,034a6,034a7,034a8,034a9,034aa,034ab
 
 [ITEMDEF 03495]
@@ -3747,64 +3819,64 @@ DUPEITEM=03494
 [ITEMDEF 034ac]
 TYPE=t_rock
 CATEGORY=Ground Tiles (animated)
-SUBSECTION=Small rock in water
-DESCRIPTION=@
+SUBSECTION=Water
+DESCRIPTION=Small rock in animated water 2
 DUPELIST=034ad,034ae,034af
 
 [ITEMDEF 034ad]
-//rock
+//small rock in animated water 2
 DUPEITEM=034ac
 
 [ITEMDEF 034ae]
-//rock
+//small rock in animated water 2
 DUPEITEM=034ac
 
 [ITEMDEF 034af]
-//rock
+//small rock in animated water 2
 DUPEITEM=034ac
 
 [ITEMDEF 034b0]
 TYPE=t_rock
 CATEGORY=Ground Tiles (animated)
-SUBSECTION=Small rock in water
-DESCRIPTION=@
+SUBSECTION=Water
+DESCRIPTION=Small rocks in animated water 2
 DUPELIST=034b1,034b2,034b3,034b4
 
 [ITEMDEF 034b1]
-//rocks
+//small rocks in animated water 2
 DUPEITEM=034b0
 
 [ITEMDEF 034b2]
-//rocks
+//small rocks in animated water 2
 DUPEITEM=034b0
 
 [ITEMDEF 034b3]
-//rocks
+//small rocks in animated water 2
 DUPEITEM=034b0
 
 [ITEMDEF 034b4]
-//rocks
+//small rocks in animated water 2
 DUPEITEM=034b0
 
 [ITEMDEF 034b5]
 CATEGORY=Ground Tiles (animated)
-SUBSECTION=Whirlpool
-DESCRIPTION=@
+SUBSECTION=Water
+DESCRIPTION=Whirlpool 2
 DUPELIST=034b6,034b7
 
 [ITEMDEF 034b6]
-//whirlpool
+//whirlpool 2
 DUPEITEM=034b5
 
 [ITEMDEF 034b7]
-//whirlpool
+//whirlpool 2
 DUPEITEM=034b5
 
 [ITEMDEF 034b8]
 TYPE=t_water
 CATEGORY=Ground Tiles (animated)
 SUBSECTION=Water
-DESCRIPTION=@
+DESCRIPTION=Even More Water
 DUPELIST=034b9,034ba,034bb,034bd,034be,034bf,034c0,034c2,034c3,034c4,034c5,034c7,034c8,034c9,034ca,034d1,034d2,034d3,034d4,034d5
 
 [ITEMDEF 034b9]
@@ -3888,7 +3960,7 @@ DUPEITEM=034b8
 DUPEITEM=034b8
 
 [ITEMDEF 034d7]
-//dirt
+//FIXME: dirt
 
 [ITEMDEF 034ed]
 DEFNAME=i_waterfall_med

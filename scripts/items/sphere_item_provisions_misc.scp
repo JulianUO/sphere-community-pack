@@ -11,18 +11,16 @@
 //
 VERSION=0.56b
 
-[ITEMDEF 09a7]
-DEFNAME=i_pitcher_glass
-TYPE=t_pitcher_empty
-TDATA1=i_pitcher_glass
-FLIP=1
-RESOURCES=6 i_glass
-VALUE=50
+
+[ITEMDEF 0990]
+DEFNAME=i_basket
+TYPE=t_container
+TDATA2=041
+RESOURCES=3 i_straw
 WEIGHT=2
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Empty Glass Pitcher
-DUPELIST=0ff6,0ff7
+CATEGORY=Items by Professions
+SUBSECTION=Cook
+DESCRIPTION=Basket
 
 [ITEMDEF 09a8]
 DEFNAME=i_box_brass
@@ -39,7 +37,6 @@ SKILLMAKE=TINKERING 40.0,t_tinker_tools
 RESOURCES=5 i_ingot_iron, 5 i_log
 
 [ITEMDEF 09ab]
-//DEFNAME2=METAL_CHEST_4
 DEFNAME=i_chest_metal
 TYPE=t_container
 TDATA2=04a
@@ -86,7 +83,6 @@ SUBSECTION=Containers
 DESCRIPTION=Small Basket
 
 [ITEMDEF 0de1]
-//Kindling
 DEFNAME=i_kindling
 TYPE=t_kindling
 RESOURCES=1 i_log
@@ -151,7 +147,6 @@ SUBSECTION=Campfires
 DESCRIPTION=Burned Wood
 
 [ITEMDEF 0e40]
-// DEFNAME2=METAL_CHEST_1
 DEFNAME=i_chest_metal_brass
 TYPE=t_container
 TDATA2=042
@@ -159,13 +154,13 @@ FLIP=1
 WEIGHT=20
 SKILLMAKE=TINKERING 80.0,t_tinker_tools
 RESOURCES=15 i_ingot_iron, 5 i_ingot_gold, 2 i_log
-DUPELIST=0e41
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
-DESCRIPTION=METAL BRASS CHEST (W)
+DESCRIPTION=Metal Brass Chest
+DUPELIST=0e41
 
 [ITEMDEF 0e41]
-// DEFNAME2=METAL_CHEST_2
+//metal brass chest
 DUPEITEM=0e40
 
 [ITEMDEF 0e75]
@@ -184,7 +179,7 @@ SKILLMAKE=TAILORING 15.0, t_sewing_kit
 [ITEMDEF 0e76]
 DEFNAME=i_bag
 TYPE=t_container
-TDATA2=03D
+TDATA2=03d
 FLIP=1
 DYE=1
 WEIGHT=2
@@ -195,10 +190,9 @@ SKILLMAKE=TAILORING 10.0, t_sewing_kit
 RESOURCES=4 i_hides_cut
 
 [ITEMDEF 0e77]
-// DEFNAME2=big_barrel
 DEFNAME=i_barrel_open
 TYPE=t_container
-TDATA2=03E
+TDATA2=03e
 FLIP=1
 WEIGHT=10
 CATEGORY=Provisions - Miscellaneous
@@ -208,8 +202,7 @@ SKILLMAKE=TINKERING 55.0,t_tinker_tools
 RESOURCES=10 i_log
 
 [ITEMDEF 0e78]
-//Round Basket (AKA basin)
-DEFNAME=i_basket_round
+DEFNAME=i_basin
 RESOURCES=3 i_ingot_iron
 TYPE=t_container
 TDATA2=041
@@ -218,9 +211,10 @@ WEIGHT=1
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
 DESCRIPTION=Basin
+DUPELIST=01009
 
 [ITEMDEF 0e79]
-// Pouch
+//pouch
 DUPEITEM=09b0
 
 [ITEMDEF 0e7a]
@@ -236,14 +230,13 @@ SUBSECTION=Containers
 DESCRIPTION=Picnic Basket
 
 [ITEMDEF 0e7b]
-//water tub
-DEFNAME=i_TUB_WATER
+DEFNAME=i_tub_water
 WEIGHT=10
+RESOURCES=i_tub_empty,10 i_pitcher_water
+SKILLMAKE=CARPENTRY 0.0
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
 DESCRIPTION=Water Tub
-SKILLMAKE=CARPENTRY 70.0, t_carpentry
-RESOURCES=i_tub_empty
 
 [ITEMDEF 0e7c]
 //DEFNAME2=METAL_CHEST_3
@@ -255,13 +248,13 @@ DUPEITEM=09ab
 DUPEITEM=09a8
 
 [ITEMDEF 0e83]
-//empty tub
 DEFNAME=i_tub_empty
-RESOURCES=10 i_board, 5 i_ingot_iron
 TYPE=t_container
 TDATA2=041
 FLIP=1
 WEIGHT=5
+RESOURCES=10 i_board, 5 i_ingot_iron
+SKILLMAKE=CARPENTRY 70.0, t_carpentry
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
 DESCRIPTION=Empty Tub
@@ -333,21 +326,16 @@ SKILLMAKE=TINKERING 56.0,t_tinker_tools
 RESOURCES=12 i_log
 
 [ITEMDEF 01008]
-//wash basin
 DEFNAME=i_wash_basin
-RESOURCES=1 i_ingot_iron, 1 i_sand
 WEIGHT=1
+RESOURCES=1 i_basin,1 i_picher_water
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
 DESCRIPTION=Wash Basin
 
 [ITEMDEF 01009]
-DEFNAME=i_basin
-RESOURCES=1 i_ingot_iron, 1 i_sand
-WEIGHT=1
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Basin
+//basin
+DUPEITEM=0e78
 
 [ITEMDEF 0100e]
 DEFNAME=i_key_copper
@@ -370,7 +358,6 @@ DESCRIPTION=Gold Key
 SKILLMAKE=TINKERING 60.0,t_tinker_tools
 
 [ITEMDEF 01010]
-// DEFNAME2=IRON_KEY
 DEFNAME=i_key_iron
 RESOURCES=3 i_ingot_iron
 WEIGHT=1
@@ -394,7 +381,6 @@ ON=@DClick
    SRC.MESSAGE Drop keys on an empty key ring
 
 [ITEMDEF 01012]
-// DEFNAME2=MAGIC_Key
 DEFNAME=i_key_magic
 WEIGHT=1
 TYPE=t_key
@@ -407,7 +393,6 @@ ON=@Create
    ATTR=attr_magic|attr_newbie
 
 [ITEMDEF 01013]
-// DEFNAME2=RUSTY_KEY
 DEFNAME=i_key_rusty
 RESOURCES=1 i_ingot_iron
 WEIGHT=1
@@ -452,38 +437,6 @@ WEIGHT=1
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Etc.
 DESCRIPTION=Oil Flask
-
-[ITEMDEF 01c19]
-//exploding, lit oil flask animation
-DEFNAME=i_fx_oil_flask
-CATEGORY=Animations
-SUBSECTION=Oil Flask
-DESCRIPTION=@
-DUPELIST=01c1a,01c1b,01c1c,01c1d,01c1e,01c1f
-
-[ITEMDEF 01c1a]
-//lit oil flask
-DUPEITEM=01c19
-
-[ITEMDEF 01c1b]
-//lit oil flask
-DUPEITEM=01c19
-
-[ITEMDEF 01c1c]
-//dimly lit oil flask, frame from the animation
-DUPEITEM=01c19
-
-[ITEMDEF 01c1d]
-//breaking oil flask, frame from the animation
-DUPEITEM=01c19
-
-[ITEMDEF 01c1e]
-//exploded oil flask, frame from the animation
-DUPEITEM=01c19
-
-[ITEMDEF 01c1f]
-//firey exploded oil flask, frame from the animation
-DUPEITEM=01c19
 
 [ITEMDEF 01e80]
 //small light wooden crate against NE wall
@@ -546,6 +499,7 @@ DUPEITEM=01ed0
 //bedroll square
 DEFNAME=i_bedroll_open
 TYPE=t_bedroll
+FLIP=1
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Bedroll Tile
 DESCRIPTION=@
@@ -562,5 +516,16 @@ DUPEITEM=01f24
 [ITEMDEF 01f27]
 //bedroll square
 DUPEITEM=01f24
+
+[ITEMDEF 0207b]
+DEFNAME=i_basket_3
+TYPE=t_container
+TDATA2=041
+WEIGHT=1.0
+RESOURCES=3 i_straw,1 i_string,1 i_cloth
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Basket 2
+
 
 [EOF]

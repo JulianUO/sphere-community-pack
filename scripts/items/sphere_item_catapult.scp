@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+// FILE LAST UPDATED: Thursday, March 3, 2011
 VERSION=0.56b
 
 [ITEMDEF 01648]
@@ -568,10 +568,6 @@ DUPEITEM=016b9
 DUPEITEM=016b9
 
 [ITEMDEF 016d5]
-//catapult 04
-DUPEITEM=016b9
-
-[ITEMDEF 016d9]
 //catapult 04
 DUPEITEM=016b9
 

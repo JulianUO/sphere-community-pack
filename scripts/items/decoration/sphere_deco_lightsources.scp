@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 28, 2011
+// FILE LAST UPDATED: Thursday, March 3, 2011
 VERSION=0.56b
 
 
@@ -240,72 +240,4 @@ ON=@Create
    MOREZ=1
 
 
-[ITEMDEF 024c1]
-DEFNAME=i_lantern_hanging_red_lit
-NAME=Red Hanging Lantern
-TYPE=t_light_lit
-TDATA3=024c2
-TDATA4=024c2
-SKILLMAKE=CARPENTRY 65.0, t_carpentry
-RESOURCES=5 i_log
-DUPELIST=024c3
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Lanterns
-DESCRIPTION=Red Hanging Lantern (Lit)
-
-[ITEMDEF 024c3]
-DUPEITEM=024c1
-TDATA3=024c4
-TDATA4=024c4
-
-[ITEMDEF 024c2]
-DEFNAME=i_lantern_hanging_red
-NAME=Red Hanging Lantern
-TYPE=t_light_out
-TDATA3=024c1
-SKILLMAKE=CARPENTRY 65.0, t_carpentry
-RESOURCES=5 i_log
-DUPELIST=024c4
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Lanterns
-DESCRIPTION=Red Hanging Lantern (Unlit)
-
-[ITEMDEF 024c4]
-DUPEITEM=024c2
-TDATA3=024c3
-
-[ITEMDEF 024c5]
-DEFNAME=i_lantern_hanging_white_lit
-NAME=White Hanging Lantern
-TYPE=t_light_lit
-TDATA3=024c6
-TDATA4=024c6
-SKILLMAKE=CARPENTRY 65.0, t_carpentry
-RESOURCES=5 i_log
-DUPELIST=024c7
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Lanterns
-DESCRIPTION=White Hanging Lantern (Lit)
-
-[ITEMDEF 024c7]
-DUPEITEM=024c5
-TDATA3=024c8
-TDATA3=024c8
-
-[ITEMDEF 024c6]
-DEFNAME=i_lantern_hanging_white
-NAME=White Hanging Lantern
-TYPE=t_light_out
-TDATA3=024c5
-SKILLMAKE=CARPENTRY 65.0, t_carpentry
-RESOURCES=5 i_log
-DUPELIST=024c8
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Lanterns
-DESCRIPTION=White Hanging Lantern (Unlit)
-
-[ITEMDEF 024c8]
-DUPEITEM=024c6
-TDATA3=024c7
-
-[eof]
+[EOF]

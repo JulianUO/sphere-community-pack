@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 28, 2011
+// FILE LAST UPDATED: Thursday, March 3, 2011
 VERSION=0.56b
 
 
@@ -207,38 +207,6 @@ DUPEITEM=0dcb
 [ITEMDEF 0dd5]
 //fishing net
 DUPEITEM=0dcb
-
-[ITEMDEF 0dd6]
-//Small Fish
-DEFNAME=i_fish_small
-TYPE=t_fish
-VALUE=2
-WEIGHT=1
-CATEGORY=Items by Professions
-SUBSECTION=Fisherman
-DESCRIPTION=Small Fish
-DUPELIST=0dd7,0dd8,0dd9
-
-[ITEMDEF 0dd7]
-//small fish
-DUPEITEM=0dd6
-
-[ITEMDEF 0dd8]
-//small fish
-DUPEITEM=0dd6
-
-[ITEMDEF 0dd9]
-//small fish
-DUPEITEM=0dd6
-
-[ITEMDEF 01e18]
-//raw fish, cut open, minus head, facing NE
-DUPEITEM=01e17
-
-[ITEMDEF 01e1a]
-//fish head facing NE
-DUPEITEM=01e19
-
 
 //////////////////////
 // Healer Equipment //
@@ -637,14 +605,12 @@ DUPEITEM=0f36
 
 [ITEMDEF 01036]
 DEFNAME=i_hay_bits_scattered_small
-RESOURCES=1 i_straw
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
 DESCRIPTION=Hay Bits
 
 [ITEMDEF 01037]
 DEFNAME=i_hay
-RESOURCES=1 i_straw
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
 DESCRIPTION=Hay

@@ -359,24 +359,6 @@ ON=@Create
 //banana
 DUPEITEM=0171f
 
-[ITEMDEF 01721]
-DEFNAME=i_banana_bunch
-TYPE=t_fruit
-//TDATA1=i_tree_banana
-FLIP=1
-VALUE=8
-WEIGHT=0.4
-CATEGORY=Vegetation
-SUBSECTION=Fruits and Vegetables
-DESCRIPTION=Bananas (many)
-DUPELIST=01722
-ON=@Create
-   MOREM=4
-
-[ITEMDEF 01722]
-//bananas
-DUPEITEM=01721
-
 [ITEMDEF 01726]
 DEFNAME=i_fruit_coconut
 TYPE=t_fruit

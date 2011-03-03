@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 28, 2011
+// FILE LAST UPDATED: Thursday, March 3, 2011
 VERSION=0.56b
 
 
@@ -40,14 +40,6 @@ RESOURCES=1 i_vase_small_1, 1 i_flower_rose_white
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Vase with Rose
-
-[ITEMDEF 0ec1]
-DEFNAME=i_knife_broken
-WEIGHT=0.1
-RESOURCES=1 i_ingot_iron
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Knife (broken)
 
 [ITEMDEF 0f31]
 DEFNAME=i_twig
@@ -400,23 +392,6 @@ CATEGORY=Miscellaneous
 SUBSECTION=Bad Tiles
 DESCRIPTION=No Draw Tile 021bc
 
-[ITEMDEF 02234]
-DEFNAME=i_trophy_dragonhead
-NAME=dragon trophy
-FLIP=1
-VALUE=48
-WEIGHT=11.1
-RESOURCES=2 i_log,5 i_fur_light,1 i_nails,1 i_wool
-SKILLMAKE=Carpentry 72.0,Tailoring 60.0,t_carpentry,t_sewing_kit
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Trophies
-DESCRIPTION=Dragon
-DUPELIST=02235
-
-[ITEMDEF 02235]
-//trophy dragonhead
-DUPEITEM=02234
-
 
 [ITEMDEF 02256]
 DEFNAME=i_bagball_small
@@ -698,23 +673,6 @@ DUPELIST=024e7
 [ITEMDEF 024e7]
 //tea set
 DUPEITEM=024e6
-
-[ITEMDEF 024e8]
-DEFNAME=i_wassabi_tray
-TYPE=t_food
-FLIP=1
-WEIGHT=2.0
-RESOURCES=10 i_wassabi_raw,1 i_board
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Japanese Kitchen
-DESCRIPTION=Wassabi
-DUPELIST=024e9
-ON=@Create
-   MOREM=1
-
-[ITEMDEF 024e9]
-//wassabi
-DUPEITEM=024e8
 
 
 [ITEMDEF 024ec]
@@ -1768,57 +1726,6 @@ DUPELIST=02835
 //bento box (empty)
 DUPEITEM=02834
 
-[ITEMDEF 02836]
-DEFNAME=i_bento_box
-TYPE=t_food
-FLIP=1
-WEIGHT=5.0
-RESOURCES=1 i_board,1 i_paper,1 i_tray_sushi,1 i_wassabi_raw
-CATEGORY=Items by Professions
-SUBSECTION=Chef
-DESCRIPTION=Bento Box (full)
-DUPELIST=02837
-ON=@Create
-   MOREM=5
-
-[ITEMDEF 02837]
-//bento box (full)
-DUPEITEM=02836
-
-
-[ITEMDEF 0283e]
-DEFNAME=i_tray_sushi
-TYPE=t_food
-FLIP=1
-WEIGHT=5.0
-RESOURCES=1 i_tray,1 i_fish_small,1 i_wassabi_raw,1 i_soup_miso
-CATEGORY=Items by Professions
-SUBSECTION=Chef
-DESCRIPTION=Tray of Sushi 1
-DUPELIST=0283f
-ON=@Create
-   MOREM=3
-
-[ITEMDEF 0283f]
-//tray of sushi
-DUPEITEM=0283e
-
-[ITEMDEF 02840]
-DEFNAME=i_tray_sushi2
-TYPE=t_food
-FLIP=1
-WEIGHT=5.0
-RESOURCES=1 i_tray,6 i_fish_small,1 i_wassabi_raw,1 i_soup_miso
-CATEGORY=Items by Professions
-SUBSECTION=Chef
-DESCRIPTION=Tray of Sushi 2
-DUPELIST=02841
-ON=@Create
-   MOREM=3
-
-[ITEMDEF 02841]
-//tray of sushi
-DUPEITEM=02840
 
 [ITEMDEF 02842]
 DEFNAME=i_sword_display_empty
@@ -1867,51 +1774,6 @@ RESOURCES=1 i_basket,20 i_tea_green
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Japanese Kitchen
 DESCRIPTION=Basket of Green Tea
-
-[ITEMDEF 0284c]
-DEFNAME=i_tea_green
-TYPE=t_food
-VALUE=5
-WEIGHT=0.1
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Japanese Kitchen
-DESCRIPTION=Green Tea
-
-[ITEMDEF 0284d]
-DEFNAME=i_soup_miso
-//NAME=miso soup
-TYPE=t_food
-FLIP=1
-WEIGHT=1.0
-RESOURCES=1 i_bowl_wood,3 i_fish_small
-SKILLMAKE=COOKING 49.0
-CATEGORY=Items by Professions
-SUBSECTION=Chef
-DESCRIPTION=Miso Soup
-DUPELIST=0284e
-ON=@Create
-   MOREM=3
-
-[ITEMDEF 0284e]
-//miso soup
-DUPEITEM=0284d
-
-[ITEMDEF 0284f]
-DEFNAME=i_soup_miso_2
-TYPE=t_food
-FLIP=1
-WEIGHT=2.0
-RESOURCES=2 i_log,2 i_fish_small
-CATEGORY=Items by Professions
-SUBSECTION=Chef
-DESCRIPTION=Miso Soups
-DUPELIST=02850
-ON=@Create
-   MOREM=3
-
-[ITEMDEF 02850]
-//miso soups
-DUPEITEM=0284f
 
 [ITEMDEF 02851]
 DEFNAME=i_display_swords_red
@@ -2277,31 +2139,6 @@ CATEGORY=Quest
 SUBSECTION=Slasher of Veils
 DESCRIPTION=Claw of Slasher of Veils
 
-[ITEMDEF 02db9]
-DEFNAME=i_wormmeat_raw
-NAME=raw worm meat
-TYPE=t_meat_raw
-TDATA1=i_fish_cut_cooked
-VALUE=3
-WEIGHT=1.0
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Worm Meat (Raw)
-
-[ITEMDEF 02dba]
-DEFNAME=i_bowl_stew_rotworm
-NAME=bowl of rotworm stew
-TYPE=t_food
-VALUE=46
-WEIGHT=5.0
-RESOURCES=1 i_bowl_wood_lg,1 i_pitcher_water,1 i_flour_bowl,1 i_wormmeat_raw
-SKILLMAKE=COOKING 40.0
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Bowl of Rotworm Stew
-ON=@Create
-   MOREM=3
-
 
 [ITEMDEF 02f44]
 CATEGORY=Miscellaneous
@@ -2539,44 +2376,6 @@ ON=@Create
 //light female chest
 DUPEITEM=02fcb
 
-[ITEMDEF 02fd6]
-DEFNAME=i_wafer
-NAME=parrot wafer
-TYPE=t_food
-VALUE=1
-WEIGHT=0.1
-RESOURCES=1 i_dough,1 i_sugar
-SKILLMAKE=COOKING 10.0,1 i_tray
-CATEGORY=Items by Professions
-SUBSECTION=Baker
-DESCRIPTION=Parrot Wafer
-ON=@Create
-   MOREM=1
-
-[ITEMDEF 02fd7]
-DEFNAME=i_grapes_of_wrath
-NAME=grapes of wrath
-TYPE=t_food
-VALUE=100
-WEIGHT=0.1
-CATEGORY=Quest
-SUBSECTION=Unknown
-DESCRIPTION=Grapes of Wrath
-ON=@Create
-   MOREM=1
-
-[ITEMDEF 02fd8]
-DEFNAME=i_apple_enchanted
-NAME=enchanted apple
-TYPE=t_food
-VALUE=100
-WEIGHT=0.1
-CATEGORY=Quest
-SUBSECTION=Unknown
-DESCRIPTION=Enchanted Apple
-ON=@Create
-   MOREM=1
-
 [ITEMDEF 03060]
 DEFNAME=i_aquarium
 NAME=aquarium
@@ -2697,23 +2496,6 @@ DUPELIST=03157
 [ITEMDEF 03157]
 //mangled dread horn
 DUPEITEM=03156
-
-[ITEMDEF 03158]
-DEFNAME=i_trophy_dread_horn1
-NAME=trophy dread horn
-FLIP=1
-VALUE=2036
-WEIGHT=7.2
-RESOURCES=2 i_log,1 i_nails,1 i_wool,1 i_pristine_dread_horn
-SKILLMAKE=Carpentry 72.0,Tailoring 60.0,t_carpentry,t_sewing_kit
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Trophies
-DESCRIPTION=Dread Horn
-DUPELIST=03159
-
-[ITEMDEF 03159]
-//trophy dread horn
-DUPEITEM=03158
 
 [ITEMDEF 0315a]
 DEFNAME=i_pristine_dread_horn
