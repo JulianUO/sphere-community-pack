@@ -2970,12 +2970,6 @@ ON=i_RABBIT_SPITTED Spitted Rabbit
 ADD i_RABBIT_SPITTED
 ON=i_spit Spit
 ADD i_spit
-ON=i_CHICKEN_SPITTED_2 Spitted Chicken
-ADD i_CHICKEN_SPITTED_2
-ON=i_RABBIT_SPITTED_2 Spitted Rabbit
-ADD i_RABBIT_SPITTED_2
-ON=i_spit_2 Spit
-ADD i_spit_2
 
 [MENU M_ADDI_PROV_SYMBOL]
 Items (Symbols)

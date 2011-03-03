@@ -18,26 +18,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Eggshells
 
-[ITEMDEF 09bb]
-DEFNAME=i_pig_roast
-VALUE=6
-TYPE=t_food
-WEIGHT=45
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Roast Pig
-DUPELIST=09bc
-
-[ITEMDEF 09c9]
-DEFNAME=i_ham
-VALUE=4
-TYPE=t_food
-WEIGHT=0.5
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Ham
-DUPELIST=09d3
-
 [ITEMDEF 0df8]
 DEFNAME=i_wool
 VALUE=3
@@ -77,7 +57,6 @@ DUPELIST=01a9d
 [ITEMDEF 01a9d]
 //flax bundle
 DUPEITEM=01a9c
-
 
 [ITEMDEF 0dfe]
 DEFNAME=i_hair_cut
@@ -172,177 +151,6 @@ CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Coins
 DESCRIPTION=Silver Coin
 DUPELIST=0ef1,0ef2
-
-[ITEMDEF 01dfd]
-DEFNAME=i_dirt
-VALUE=1
-WEIGHT=.1
-CATEGORY=Ground Tiles
-SUBSECTION=Dirt
-DESCRIPTION=@
-DUPELIST=01dfe,01dff,01e00
-
-[ITEMDEF 01e15]
-//raw fish, cut open facing NW
-DEFNAME=i_fish_raw_whole
-VALUE=1
-WEIGHT=1
-TYPE=t_food_raw
-TDATA1=i_fish_cooked
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Fish (Raw & Cut)
-DUPELIST=01e16
-
-[ITEMDEF 01e17]
-//raw fish, cut open, minus head, facing NW
-DEFNAME=i_fish_raw
-VALUE=1
-TYPE=t_food_raw
-TDATA1=i_fish_cooked
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Fish (Raw, Cut, & No Head)
-DUPELIST=01e18
-
-[ITEMDEF 01e19]
-//fish head facing NW
-DEFNAME=i_fish_raw_head
-VALUE=1
-WEIGHT=.1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Fish Head
-DUPELIST=01e1a
-
-[ITEMDEF 01e1b]
-//Pile of fish heads
-DEFNAME=i_fish_raw_head_pile
-VALUE=1
-WEIGHT=3
-TYPE=t_food
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Fish Heads
-
-[ITEMDEF 01e8a]
-DEFNAME=i_lard
-VALUE=1
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Lard
-
-[ITEMDEF 01e8b]
-DEFNAME=i_chicken_plucked
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Plucked Chicken
-
-[ITEMDEF 01e83]
-DEFNAME=i_bird_dead
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Bird
-
-[ITEMDEF 01e84]
-DEFNAME=i_bird_dead_2
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Bird
-
-[ITEMDEF 01e85]
-DEFNAME=i_bird_dead_3
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Bird
-
-[ITEMDEF 01e86]
-DEFNAME=i_bird_dead_4
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Bird
-
-[ITEMDEF 01e87]
-DEFNAME=i_chicken_dead
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Chicken
-
-[ITEMDEF 01e88]
-DEFNAME=i_goat_skinned
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Skinned Goat
-
-[ITEMDEF 01e89]
-DEFNAME=i_goat_skinned_2
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Skinned Goat
-
-[ITEMDEF 01e8c]
-DEFNAME=i_pigs_feet
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Pigs Feet
-
-[ITEMDEF 01e8d]
-DEFNAME=i_pigs_feet_2
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Pigs Feet
-
-[ITEMDEF 01e8e]
-DEFNAME=i_pigs_head
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Pigs Head
-
-[ITEMDEF 01e8f]
-DEFNAME=i_pigs_head_2
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Pigs Head
-
-[ITEMDEF 01e90]
-DEFNAME=i_deer_skinned
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Skinned Deer
-
-[ITEMDEF 01e91]
-DEFNAME=i_deer_skinned_2
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Skinned Deer
-
-[ITEMDEF 01e92]
-DEFNAME=i_rabbit_skinned
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Skinned Rabbit
-
-[ITEMDEF 01e93]
-DEFNAME=i_rabbit_skinned_2
-VALUE=3
-CATEGORY=Items by Professions
-SUBSECTION=Butcher
-DESCRIPTION=Skinned Rabbit
 
 [ITEMDEF 0175d]
 DEFNAME=i_cloth
@@ -514,20 +322,6 @@ ON=@Create
 ID=i_hay_sheaf
 NAME=canvas
 VALUE=1
-
-[ITEMDEF i_sugar]
-ID=i_reag_volcanic_ash
-NAME=sugar
-TYPE=t_food
-PILE=1
-VALUE=1
-WEIGHT=0.1
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Sugar
-ON=@Create
-   COLOR=0481
-   MOREM=1
 
 
 [EOF]

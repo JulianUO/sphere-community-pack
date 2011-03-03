@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Thursday, March 3, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0283]
 DEFNAME=i_gargish_stone_arms_female
@@ -338,7 +339,7 @@ WEIGHT=7
 REQSTR=95
 SKILLMAKE=Blacksmithing 85.0
 RESOURCES=25 i_ingot_iron
-DUPELIST=0422b
+DUPELIST=0422c
 CATEGORY=Provisions - Armor - Gargish
 SUBSECTION=Shields
 DESCRIPTION=Gargish Order Shield
@@ -347,7 +348,7 @@ TAG.ResPhysical=1
 ON=@Create
    HITPOINTS={50 60}
 
-[ITEMDEF 0422b]
+[ITEMDEF 0422c]
 DUPEITEM=0422a
 
 [eof]

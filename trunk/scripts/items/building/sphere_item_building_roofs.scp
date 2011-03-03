@@ -3,7 +3,7 @@
 //This script is part from the Sphere Community Script Pack.
 //You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-//FILE LAST UPDATED: Monday, Febuary 21, 2011
+//FILE LAST UPDATED: Thursday, March 3, 2011
 VERSION=0.56b
 
 
@@ -1916,147 +1916,135 @@ DESCRIPTION=Wood Slat Roof
 DUPELIST=028c7,028c8,028c9,028ca,028cb,028cc,028cd,028ce,028cf,028d0,028d1,028d2,028d3,028d4,028d5,028d6,028d7,028d8,028d9,028da,028db,028e4,028e5,028e6,028e7,028e8,028e9,028ea
 
 [ITEMDEF 028c7]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028c8]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028c9]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028ca]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028cb]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028cc]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028cd]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028ce]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028cf]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028d0]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028d1]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028d2]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028d3]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028d4]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028d5]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028d6]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028d7]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028d8]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028d9]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028da]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028db]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028e4]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028e5]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028e6]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028e7]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028e8]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028e9]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028ea]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028eb]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028ec]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028ed]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028ee]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028ef]
-//wood slaf roof
-DUPEITEM=028c6
-
-[ITEMDEF 02a2c]
-//wood slaf roof
-DUPEITEM=028c6
-
-[ITEMDEF 02a2d]
-//wood slaf roof
-DUPEITEM=028c6
-
-[ITEMDEF 02a2e]
-//wood slaf roof
+//wood slat roof
 DUPEITEM=028c6
 
 [ITEMDEF 028f0]

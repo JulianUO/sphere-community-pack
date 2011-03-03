@@ -3,44 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Wednesday, March 2, 2011
 VERSION=0.56b
 
-[ITEMDEF 09cc]
-DEFNAME=i_fish_big_1
-VALUE=2
-TYPE=T_FISH
-WEIGHT=1
-CATEGORY=Resources - Fishing
-SUBSECTION=Fishes
-DESCRIPTION=Fish (Whole)
-
-[ITEMDEF 09cd]
-DEFNAME=i_fish_big_2
-VALUE=2
-TYPE=T_FISH
-WEIGHT=1
-CATEGORY=Resources - Fishing
-SUBSECTION=Fishes
-DESCRIPTION=Fish
-
-[ITEMDEF 09ce]
-DEFNAME=i_fish_big_3
-VALUE=2
-TYPE=T_FISH
-WEIGHT=1
-CATEGORY=Resources - Fishing
-SUBSECTION=Fishes
-DESCRIPTION=Fish
-
-[ITEMDEF 09cf]
-DEFNAME=i_fish_big_4
-VALUE=2
-TYPE=T_FISH
-WEIGHT=1
-CATEGORY=Resources - Fishing
-SUBSECTION=Fishes
-DESCRIPTION=Fish
 
 [ITEMDEF i_prized_fish]
 NAME=Prized Fish // 1041073
@@ -129,4 +94,4 @@ remove
 endif
 return 1
 
-[eof]
+[EOF]

@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Thursday, March 3, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0b34]
 DEFNAME=i_table_nightstand
@@ -203,37 +204,6 @@ DESCRIPTION=Ter-Mur Style Table
 ///////////////////////////////////////////////////////////////
 //////// TABLE PARTS
 ///////////////////////////////////////////////////////////////
-// These are used as components for craftable deeds.
-[ITEMDEF 03077]
-DEFNAME=i_alchemist_table_s_1_2
-NAME=Alchemist Table
-TYPE=t_table
-WEIGHT=50
-DUPELIST=03078,03079,0307a
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Alchemist Table (South - 1 of 2)
-
-[ITEMDEF 03078]
-DEFNAME=i_alchemist_table_s_2_2
-DUPEITEM=03077
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Alchemist Table (South - 2 of 2)
-
-[ITEMDEF 03079]
-DEFNAME=i_alchemist_table_e_1_2
-DUPEITEM=03077
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Alchemist Table (East - 1 of 2)
-
-[ITEMDEF 0307a]
-DEFNAME=i_alchemist_table_e_2_2
-DUPEITEM=03077
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Alchemist Table (East - 2 of 2)
 
 [ITEMDEF 0402f]
 DEFNAME=i_long_table_e_2_2

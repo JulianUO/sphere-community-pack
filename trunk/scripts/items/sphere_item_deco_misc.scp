@@ -1,14 +1,9 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+// FILE LAST UPDATED: Thursday, March 3, 2011
 VERSION=0.56b
 
 
@@ -1498,18 +1493,6 @@ DUPEITEM=01585
 //decorative sword and shield
 DUPEITEM=01584
 
-[ITEMDEF 01a07]
-//shackles, chains
-DUPEITEM=01262
-
-[ITEMDEF 01a08]
-//shackles, chains
-DUPEITEM=01262
-
-[ITEMDEF 01720]
-//banana
-DUPEITEM=0171f
-
 [ITEMDEF 01731]
 DEFNAME=i_fountain_1
 RESOURCES=100 i_rock_plain, 40 i_water, 1 i_springs
@@ -1950,97 +1933,6 @@ DUPEITEM=01d97
 [ITEMDEF 01e5d]
 DUPEITEM=01d97
 
-[ITEMDEF 01e60]
-DEFNAME=i_trophy_bearhead
-WEIGHT=3
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Trophies
-DESCRIPTION=Bear
-DUPELIST=01e67
-RESOURCES=15 i_log,10 i_hides_cut
-SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
-
-[ITEMDEF 01e61]
-DEFNAME=i_trophy_deerhead
-RESOURCES=15 i_log,10 i_hides_cut
-WEIGHT=3
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Trophies
-DESCRIPTION=Deer
-DUPELIST=01e68
-SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
-
-[ITEMDEF 01e62]
-DEFNAME=i_trophy_fish
-RESOURCES=15 i_log,10 i_hides_cut
-WEIGHT=3
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Trophies
-DESCRIPTION=Fish
-DUPELIST=01e69
-SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
-
-[ITEMDEF 01e63]
-DEFNAME=i_trophy_gorillahead
-RESOURCES=15 i_log,10 i_hides_cut
-WEIGHT=3
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Trophies
-DESCRIPTION=Gorilla
-DUPELIST=01e6a
-SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
-
-[ITEMDEF 01e64]
-DEFNAME=i_trophy_orchead
-RESOURCES=15 i_log,10 i_hides_cut
-WEIGHT=3
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Trophies
-DESCRIPTION=Orc
-DUPELIST=01e6b
-SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
-
-[ITEMDEF 01e65]
-DEFNAME=i_trophy_polarbearhead
-RESOURCES=15 i_log,10 i_hides_cut
-WEIGHT=3
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Trophies
-DESCRIPTION=Polar Bear
-DUPELIST=01e6c
-SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
-
-[ITEMDEF 01e66]
-DEFNAME=i_trophy_trollhead
-RESOURCES=15 i_log,10 i_hides_cut
-WEIGHT=3
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Trophies
-DESCRIPTION=Troll
-DUPELIST=01e6d
-SKILLMAKE=carpentry 72.0, tailoring 60.0, t_carpentry, t_sewing_kit
-
-[ITEMDEF 01e67]
-DUPEITEM=01e60
-
-[ITEMDEF 01e68]
-DUPEITEM=01e61
-
-[ITEMDEF 01e69]
-DUPEITEM=01e62
-
-[ITEMDEF 01e6a]
-DUPEITEM=01e63
-
-[ITEMDEF 01e6b]
-DUPEITEM=01e64
-
-[ITEMDEF 01e6c]
-DUPEITEM=01e65
-
-[ITEMDEF 01e6d]
-DUPEITEM=01e66
-
 [ITEMDEF 01ed3]
 DEFNAME=i_target
 RESOURCES=1 i_board, i_cloth
@@ -2069,9 +1961,6 @@ DUPEITEM=01ed3
 [ITEMDEF 01ed8]
 //target
 DUPEITEM=01ed3
-
-[ITEMDEF 01f05]
-DUPEITEM=01085
 
 
 [EOF]

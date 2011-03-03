@@ -1,3 +1,12 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Thursday, March 3, 2011
+VERSION=0.56b
+
+
 [ITEMDEF 020d]
 // An Acid Proof Rope is used to enter the Palace of Paroxysmus.  It can be
 // crafted by Carpenters who have access to the elven city of Heartwood and
@@ -12,19 +21,6 @@ SKILLMAKE=Carpentry,t_carpentry,i_recipe_rope_acid_proof
 CATEGORY=Quest
 SUBSECTION=Paroxysmus
 DESCRIPTION=Rope (acid proof)
-
-[ITEMDEF 021b]
-DEFNAME=i_fruit_peach_sugared
-NAME=sugared peach
-TYPE=t_food
-VALUE=5
-WEIGHT=0.1
-RESOURCES=1 i_fruit_peach,1 i_sugar
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Sugared Peach
-ON=@Create
-   MOREM=1
 
 [ITEMDEF 021c]
 DEFNAME=i_dryads_blessing
@@ -224,7 +220,7 @@ DESCRIPTION=Fishing Net
 [ITEMDEF 02004]
 DEFNAME=i_battered_bucket
 NAME=battered bucket
-TYPE=t_drink
+TYPE=t_water_wash
 TDATA1=i_bucket
 WEIGHT=12.1
 RESOURCES=1 i_bucket,3 i_pitcher_water

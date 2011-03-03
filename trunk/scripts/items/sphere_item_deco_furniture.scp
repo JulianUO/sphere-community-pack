@@ -1,16 +1,10 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+// FILE LAST UPDATED: Wednesday, March 2, 2011
 VERSION=0.56b
-
 
 
 [ITEMDEF 0459]
@@ -35,7 +29,7 @@ DESCRIPTION=Marble Bench 1 (w)
 DEFNAME=i_bench_sandstone
 TYPE=t_chair
 FLIP=1
-RESOURCES=50 I_STONE_SAND
+RESOURCES=50 i_stone_sand
 WEIGHT=4
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
@@ -48,7 +42,7 @@ DUPEITEM=045b
 
 [ITEMDEF 0a2c]
 DEFNAME=i_bureau
-RESOURCES=5 I_BOARD, 10 I_NAILS, 3 I_DRAWER
+RESOURCES=5 i_board, 10 i_nails, 3 i_drawer
 TYPE=t_container
 TDATA2=051
 FLIP=1
@@ -61,7 +55,7 @@ DUPELIST=0a34
 
 [ITEMDEF 0a2d]
 DEFNAME=i_drawer
-RESOURCES=5 I_BOARD, 2 I_NAILS
+RESOURCES=5 i_board, 2 i_nails
 TYPE=t_container
 TDATA2=051
 FLIP=1
@@ -84,13 +78,12 @@ TYPE=t_container
 TDATA2=048
 FLIP=1
 WEIGHT=20
+RESOURCES=25 i_log
+SKILLMAKE=CARPENTRY 85.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Chest of Drawers (Dark Wood) (SW)
 DUPELIST=0a38
-
-SKILLMAKE=CARPENTRY 85.0, t_carpentry
-RESOURCES=25 i_log
 
 [ITEMDEF 0a31]
 DEFNAME=i_drawer_2
@@ -99,7 +92,6 @@ TDATA2=048
 FLIP=1
 RESOURCES=25 i_log
 SKILLMAKE=CARPENTRY 85.0, t_carpentry
-
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Drawer (Dark Wood)
@@ -147,7 +139,7 @@ DUPEITEM=0a31
 
 [ITEMDEF 0a3c]
 DEFNAME=i_dresser
-RESOURCES=8 I_BOARD, 20 I_NAILS, 6 I_DRESSER_DRAWER, 1 i_ingot_iron, 5 I_SAND
+RESOURCES=8 i_board, 20 i_nails, 6 i_dresser_drawer, 1 i_ingot_iron, 5 i_sand
 TYPE=t_container
 TDATA2=051
 FLIP=1
@@ -164,7 +156,7 @@ DUPEITEM=0a3c
 [ITEMDEF 0a3e]
 //drawer
 DEFNAME=i_dresser_drawer
-RESOURCES=2 I_BOARD, 2 I_NAILS
+RESOURCES=2 i_board, 2 i_nails
 TYPE=t_container
 TDATA2=051
 FLIP=1
@@ -229,7 +221,7 @@ DUPEITEM=0a3e
 //Bedroll unrolled
 DEFNAME=i_bedroll
 TYPE=t_bedroll
-RESOURCES=5 I_CLOTH, 1 I_CANVAS, 50 I_FEATHER, 1 i_hides_cut
+RESOURCES=5 i_cloth, 1 i_canvas, 50 i_feather, 1 i_hides_cut
 WEIGHT=5
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -265,7 +257,7 @@ DUPEITEM=0a57
 DEFNAME=i_bed_1
 TYPE=t_bed
 TDATA1=0
-RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS
+RESOURCES=30 i_board, 1 i_bedroll, 10 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Twin Bed (Brown) (NW Wall)
@@ -280,7 +272,7 @@ DUPEITEM=0a5a
 DEFNAME=i_bed_3
 TYPE=t_bed
 TDATA1=0
-RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS
+RESOURCES=30 i_board, 1 i_bedroll, 10 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Twin Bed (White) (NE)
@@ -295,7 +287,7 @@ DUPEITEM=0a5e
 DEFNAME=i_bed_4
 TYPE=t_bed
 TDATA1=0
-RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS
+RESOURCES=30 i_board, 1 i_bedroll, 10 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Twin Bed (White) (NW)
@@ -310,7 +302,7 @@ DUPEITEM=0a60
 DEFNAME=i_bed_6
 TYPE=t_bed
 TDATA1=0
-RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS
+RESOURCES=30 i_board, 1 i_bedroll, 10 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Twin Bed (Brown) (NE)
@@ -369,7 +361,7 @@ DESCRIPTION=Twin Bed (Grey Blankets) (NW)
 DEFNAME=i_bed_10
 TYPE=t_bed
 TDATA1=0
-RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS, 1 I_SHEET, 1 I_PILLOW
+RESOURCES=30 i_board, 1 i_bedroll, 10 i_nails, 1 i_sheet, 1 i_pillow
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Twin Bed (Gray Blankets) (NW)
@@ -390,7 +382,7 @@ RESOURCES=100 i_log,100 i_cloth
 [ITEMDEF 0a6c]
 //folded blanket
 DEFNAME=i_blanket
-RESOURCES=5 I_CLOTH
+RESOURCES=5 i_cloth
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -415,7 +407,7 @@ DUPEITEM=0a6c
 DEFNAME=i_bed_12
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -427,7 +419,7 @@ DESCRIPTION=Fancy Dbl Bed (HeadBoard) (NW Wall - West Corner)
 DEFNAME=i_bed_13
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -439,7 +431,7 @@ DESCRIPTION=Fancy Dbl Bed (Foot) (NW & NE Wall)
 DEFNAME=i_bed_14
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -451,7 +443,7 @@ DESCRIPTION=Fancy Dbl Bed (Foot) (NW Wall - East Corner)
 DEFNAME=i_bed_15
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -524,7 +516,7 @@ RESOURCES=150 i_log, 150 i_cloth
 DEFNAME=i_bed_22
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -537,7 +529,7 @@ DESCRIPTION=Fancy Dbl Bed w/ Blankets (Head) (NW Wall - W Corner)
 DEFNAME=i_bed_23
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow, 2 i_blanket
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -550,7 +542,7 @@ DESCRIPTION=Fancy Dbl Bed w/ Blankets (Head) (NW Wall - N Corner)
 DEFNAME=i_bed_28
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow, 2 i_blanket
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -563,7 +555,7 @@ DESCRIPTION=Fancy Dbl Bed w/ Blankets (Head) (NE Wall - N Corner)
 DEFNAME=i_bed_29
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow, 2 i_blanket
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -574,7 +566,7 @@ DESCRIPTION=Fancy Dbl Bed w/ Blankets (Head) (NE Wall- E Corner)
 DEFNAME=i_bed_30
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 I_BOARD, 2 i_bedroll, 20 I_NAILS, 2 I_SHEET, 2 I_PILLOW, 2 I_BLANKET
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow, 2 i_blanket
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Bed
@@ -634,7 +626,7 @@ DUPEITEM=0a84
 
 [ITEMDEF 0a92]
 //folded sheet
-RESOURCES=5 I_CLOTH
+RESOURCES=5 i_cloth
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -642,7 +634,7 @@ DESCRIPTION=Folded Sheet
 
 [ITEMDEF 0a93]
 //folded sheet
-RESOURCES=5 I_CLOTH
+RESOURCES=5 i_cloth
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -650,7 +642,7 @@ DESCRIPTION=Folded Sheet
 
 [ITEMDEF 0a94]
 //folded rich sheet
-RESOURCES=6 I_CLOTH, 1 I_LINEN
+RESOURCES=6 i_cloth, 1 i_linen
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -658,7 +650,7 @@ DESCRIPTION=Folded Sheet (Rich)
 
 [ITEMDEF 0a95]
 //folded rich sheet
-RESOURCES=6 I_CLOTH, 1 I_LINEN
+RESOURCES=6 i_cloth, 1 i_linen
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -668,7 +660,7 @@ DESCRIPTION=Folded Sheet (Rich)
 DEFNAME=i_bookcase_full
 //bookcase
 //dark wood, full of books facing SW
-RESOURCES=8 I_BOARD, 2 I_NAILS, 20 I_BOOK_SM
+RESOURCES=8 i_board, 2 i_nails, 20 i_book_sm
 SKILLMAKE=CARPENTRY 36.5, t_carpentry
 TYPE=t_container
 TDATA2=04d
@@ -707,7 +699,7 @@ DUPEITEM=0a97
 
 [ITEMDEF 0a9f]
 DEFNAME=i_displaycase_rail_custom_edge
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -728,7 +720,7 @@ DUPEITEM=0a9f
 [ITEMDEF 0aa3]
 DEFNAME=i_displaycase_rail_custom_corner
 //custom displaycase base nw corner
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -745,7 +737,7 @@ DUPEITEM=0aa3
 [ITEMDEF 0afd]
 DEFNAME=i_displaycase_rail_long_end
 //long displaycase rail end e
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -754,7 +746,7 @@ DUPELIST=0aff,0b03,0b05
 [ITEMDEF 0afe]
 DEFNAME=i_displaycase_rail_long_center
 //long displaycase rail center e-w
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -767,7 +759,7 @@ DUPEITEM=0afd
 [ITEMDEF 0b00]
 DEFNAME=i_displaycase_base_long_end
 //long displaycase base e
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -776,7 +768,7 @@ DUPELIST=0b02,0b06,0b08
 [ITEMDEF 0b01]
 DEFNAME=i_displaycase_base_long_center
 //long displaycase base center e-w
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -813,7 +805,7 @@ DUPEITEM=0b00
 [ITEMDEF 0b09]
 DEFNAME=i_displaycase_1_base
 //displaycase base n-s
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -826,7 +818,7 @@ DUPEITEM=0b09
 [ITEMDEF 0b0b]
 DEFNAME=i_displaycase_1_rail
 //displaycase base n-s
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -839,7 +831,7 @@ DUPEITEM=0b0b
 [ITEMDEF 0b0d]
 DEFNAME=i_displaycase_2_base
 //displaycase base n-s
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -852,7 +844,7 @@ DUPEITEM=0b0d
 [ITEMDEF 0b0f]
 DEFNAME=i_displaycase_base_custom_block
 //Custom displaycase center block
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -860,7 +852,7 @@ DESCRIPTION=@
 [ITEMDEF 0b10]
 DEFNAME=i_displaycase_base_custom_corner
 //Custom displaycase corner nw
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -881,7 +873,7 @@ DUPEITEM=0b10
 [ITEMDEF 0b14]
 DEFNAME=i_displaycase_base_custom_edge
 //Custom displaycase edge e
-RESOURCES=15 I_BOARD, 2 I_NAILS, 6 I_SAND, 2 I_CLOTH
+RESOURCES=15 i_board, 2 i_nails, 6 i_sand, 2 i_cloth
 CATEGORY=Decoration - Furniture
 SUBSECTION=Display Case
 DESCRIPTION=@
@@ -907,7 +899,7 @@ DUPEITEM=0aa3
 DEFNAME=i_table_nightstand_ext
 // table - dark Rough board nightstand top, no legs n-s
 // poor graphic, doesn't mesh with table end for extention
-RESOURCES=6 I_BOARD, 1 I_NAILS
+RESOURCES=6 i_board, 1 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Table Top (No legs)
@@ -926,21 +918,21 @@ DUPEITEM=0b37
 
 [ITEMDEF 0b3d]
 //counter
-RESOURCES=10 I_BOARD, 4 I_NAILS
+RESOURCES=10 i_board, 4 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Counter
 
 [ITEMDEF 0b3e]
 //counter
-RESOURCES=10 I_BOARD, 4 I_NAILS
+RESOURCES=10 i_board, 4 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Counter
 
 [ITEMDEF 0b3f]
 //counter
-RESOURCES=10 I_BOARD, 4 I_NAILS
+RESOURCES=10 i_board, 4 i_nails
 VALUE={200 300}
 WEIGHT=4
 CATEGORY=Decoration - Furniture
@@ -949,7 +941,7 @@ DESCRIPTION=Counter
 
 [ITEMDEF 0b40]
 //counter
-RESOURCES=10 I_BOARD, 4 I_NAILS
+RESOURCES=10 i_board, 4 i_nails
 VALUE={200 300}
 WEIGHT=4
 CATEGORY=Decoration - Furniture
@@ -979,7 +971,6 @@ DUPEITEM=0b41
 [ITEMDEF 0b44]
 //water trough
 DUPEITEM=0b41
-
 
 [ITEMDEF 0b45]
 DEFNAME=i_vase_large_1
@@ -1013,7 +1004,6 @@ CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Small Vase 2
 
-
 [ITEMDEF 0b5f]
 // bench - rough board bench end - S
 // bench - picnic table bench end - S
@@ -1021,7 +1011,7 @@ DEFNAME=i_bench_board_rough_end
 DUPELIST=0b60,0b65,0b66
 TYPE=t_chair
 FLIP=1
-RESOURCES=4 I_BOARD, 2 I_NAILS
+RESOURCES=4 i_board, 2 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Bench
@@ -1043,7 +1033,7 @@ DEFNAME=i_bench_wood_smooth_end
 DUPELIST=0b63,0b68,0b69
 FLIP=1
 TYPE=t_chair
-RESOURCES=4 I_BOARD, 2 I_NAILS
+RESOURCES=4 i_board, 2 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Bench
@@ -1090,7 +1080,7 @@ DUPEITEM=0b64
 DEFNAME=i_table_wood_smooth_narrow_end
 // DEFNAME2=i_TABLE_7
 TYPE=t_table
-RESOURCES=6 I_BOARD, 3 I_NAILS
+RESOURCES=6 i_board, 3 i_nails
 VALUE={50 70}
 WEIGHT=3
 CATEGORY=Decoration - Furniture
@@ -1270,7 +1260,7 @@ DEFNAME=i_bench_wood_highback
 DUPELIST=0b92
 FLIP=1
 TYPE=t_chair
-RESOURCES=20 I_BOARD, 6 i_nails
+RESOURCES=20 i_board, 6 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Bench
@@ -1297,7 +1287,7 @@ TYPE=t_chair
 DEFNAME=i_chair_wood_bamboo_broken
 DUPELIST=0c11
 
-RESOURCES=5 i_BOARD
+RESOURCES=5 i_board
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Chair
@@ -1308,7 +1298,7 @@ DUPEITEM=0c10
 
 [ITEMDEF 0c12]
 //broken armoire
-RESOURCES=10 i_BOARD
+RESOURCES=10 i_board
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Armoire
@@ -1320,7 +1310,7 @@ DUPEITEM=0c12
 
 [ITEMDEF 0c14]
 //ruined bookcase
-RESOURCES=4 I_BOARD, 1 I_NAILS
+RESOURCES=4 i_board, 1 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Bookcase
@@ -1332,7 +1322,7 @@ DUPEITEM=0c14
 
 [ITEMDEF 0c16]
 DEFNAME=i_book_damaged
-RESOURCES=20 I_PAPER, 1 I_THREAD, 1 I_HIDE
+RESOURCES=20 i_paper, 1 i_thread, 1 i_hide
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Books
@@ -1343,7 +1333,7 @@ DEFNAME=i_chair_covered
 DUPELIST=0c18
 FLIP=1
 TYPE=t_chair
-RESOURCES=1 i_CHAIR_WOOD, 1 I_SHEET
+RESOURCES=1 i_chair_wood, 1 i_sheet
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Chair (Covered)
@@ -1355,11 +1345,10 @@ DUPEITEM=0c17
 [ITEMDEF 0c19]
 // chair - broken seat - wooden bamboo wicker seat chair - N
 DEFNAME=i_chair_wood_bamboo_broken_noseat
-DUPELIST=0c1a
-
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Chair
+DUPELIST=0c1a
 
 [ITEMDEF 0c1a]
 // chair - broken seat - wooden bamboo wicker seat chair - W
@@ -1369,7 +1358,7 @@ DUPEITEM=0c19
 // chair - broken fancy wooden chair - N
 DEFNAME=i_chair_wood_fancy_cushion_broken
 DUPELIST=0c1c,0c1d,0c1e
-RESOURCES=5 I_BOARD, 1 I_NAILS
+RESOURCES=5 i_board, 1 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Chair
@@ -1388,14 +1377,14 @@ DUPEITEM=0c1b
 
 [ITEMDEF 0c1f]
 //broken clock
-RESOURCES=1 I_CLOCK_FRAME, 1 I_PARCHMENT, 1 I_BOARD
+RESOURCES=1 i_clock_frame, 1 i_parchment, 1 i_board
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Clock
 
 [ITEMDEF 0c20]
 //broken dresser
-RESOURCES=5 I_BOARD, 10 I_NAILS, 2 I_DRESSER_DRAWER, 1 I_SAND
+RESOURCES=5 i_board, 10 i_nails, 2 i_dresser_drawer, 1 i_sand
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Dresser (Vanity)
@@ -1415,7 +1404,7 @@ DUPEITEM=0c20
 
 [ITEMDEF 0c24]
 //broken furniture
-RESOURCES=5 I_BOARD, 8 I_NAILS, 1 I_DRESSER_DRAWER
+RESOURCES=5 i_board, 8 i_nails, 1 i_dresser_drawer
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Dresser
@@ -1430,7 +1419,7 @@ DUPEITEM=0c24
 DEFNAME=i_bed_ruined
 TYPE=t_bed
 TDATA1=0
-RESOURCES=5 I_BOARD, 8 I_NAILS
+RESOURCES=5 i_board, 8 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Bed
@@ -1440,7 +1429,7 @@ DESCRIPTION=Bed
 DEFNAME=i_bed_ruined_2
 TYPE=t_bed
 TDATA1=0
-RESOURCES=5 I_BOARD, 8 I_NAILS
+RESOURCES=5 i_board, 8 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Bed
@@ -1450,7 +1439,7 @@ DESCRIPTION=Bed
 DEFNAME=i_bed_ruined_3
 TYPE=t_bed
 TDATA1=0
-RESOURCES=5 I_BOARD, 8 I_NAILS
+RESOURCES=5 i_board, 8 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Bed
@@ -1460,7 +1449,7 @@ DESCRIPTION=Bed
 DEFNAME=i_bed_ruined_4
 TYPE=t_bed
 TDATA1=0
-RESOURCES=5 I_BOARD, 8 I_NAILS
+RESOURCES=5 i_board, 8 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Bed
@@ -1470,7 +1459,7 @@ DESCRIPTION=Bed
 DEFNAME=i_bed_ruined_5
 TYPE=t_bed
 TDATA1=0
-RESOURCES=5 I_BOARD, 8 I_NAILS
+RESOURCES=5 i_board, 8 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Bed
@@ -1480,7 +1469,7 @@ DESCRIPTION=Bed
 DEFNAME=i_bed_ruined_6
 TYPE=t_bed
 TDATA1=0
-RESOURCES=5 I_BOARD, 8 I_NAILS
+RESOURCES=5 i_board, 8 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Bed
@@ -1488,7 +1477,7 @@ DESCRIPTION=Bed
 [ITEMDEF 0c2c]
 //ruined painting
 DEFNAME=i_painting_ruined
-RESOURCES=5 I_BOARD, 8 I_NAILS
+RESOURCES=5 i_board, 8 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Painting
@@ -1496,7 +1485,7 @@ DESCRIPTION=Painting
 [ITEMDEF 0c2d]
 //debris
 DEFNAME=i_debris
-RESOURCES=3 I_BOARD, 1 I_NAILS, 2 I_DIRT
+RESOURCES=3 i_board, 1 i_nails, 2 i_dirt
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Debris
@@ -1504,7 +1493,7 @@ DESCRIPTION=Debris
 [ITEMDEF 0c2e]
 //debris
 DEFNAME=i_debris_2
-RESOURCES=3 I_BOARD, 1 I_NAILS, 2 I_DIRT
+RESOURCES=3 i_board, 1 i_nails, 2 i_dirt
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Debris
@@ -1512,7 +1501,7 @@ DESCRIPTION=Debris
 [ITEMDEF 0c2f]
 //debris
 DEFNAME=i_debris_3
-RESOURCES=3 I_BOARD, 1 I_NAILS, 2 I_DIRT
+RESOURCES=3 i_board, 1 i_nails, 2 i_dirt
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Debris
@@ -1520,7 +1509,7 @@ DESCRIPTION=Debris
 [ITEMDEF 0c30]
 //debris
 DEFNAME=i_debris_4
-RESOURCES=3 I_BOARD, 1 I_NAILS, 2 I_DIRT
+RESOURCES=3 i_board, 1 i_nails, 2 i_dirt
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Debris
@@ -1528,7 +1517,7 @@ DESCRIPTION=Debris
 [ITEMDEF 0c31]
 //sheets
 DEFNAME=i_sheet
-RESOURCES=1 i_TABLE_NIGHTSTAND, 1 I_cloth
+RESOURCES=1 i_table_nightstand, 1 i_cloth
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
@@ -1537,7 +1526,7 @@ DESCRIPTION=Covered Ottoman
 [ITEMDEF 0c32]
 //sheets
 DEFNAME=i_sheet_2
-RESOURCES=1 i_TABLE_NIGHTSTAND, 1 I_SHEET
+RESOURCES=1 i_table_nightstand, 1 i_sheet
 DYE=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -1562,7 +1551,7 @@ DUPEITEM=0c32
 
 [ITEMDEF 0c39]
 DEFNAME=i_pegbaord
-RESOURCES=2 I_BOARD
+RESOURCES=2 i_board
 CATEGORY=Decoration - Furniture
 SUBSECTION=PegBoard
 DESCRIPTION=@
@@ -1576,7 +1565,7 @@ DUPEITEM=0c39
 DEFNAME=i_bed_31
 TYPE=t_bed
 TDATA1=0
-RESOURCES=30 I_BOARD, 1 i_bedroll, 10 I_NAILS
+RESOURCES=30 i_board, 1 i_bedroll, 10 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Bed
@@ -1698,14 +1687,14 @@ CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Table (Blue Plaid Runner)
 SKILLMAKE=CARPENTRY 83.0, TAILORING 60.0, t_carpentry, t_sewing_kit
-RESOURCES=6 i_BOARD, 1 i_NAILS, 2 i_CLOTH
+RESOURCES=6 i_board, 1 i_nails, 2 i_cloth
 DUPELIST=01191
 
 [ITEMDEF 01190]
 // table - narrow light blue plaid runner table extention e-w
 DEFNAME=i_table_runner_plaid_BLUE_ext
 TYPE=t_table
-RESOURCES=6 i_BOARD, 1 i_NAILS, 2 i_CLOTH
+RESOURCES=6 i_board, 1 i_nails, 2 i_cloth
 WEIGHT=7
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
@@ -1724,7 +1713,7 @@ DUPEITEM=01190
 DEFNAME=i_BED_DOUBLE_1
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 i_BOARD, 2 I_BEDROLL, 20 i_NAILS, 2 i_SHEET, 2 i_PILLOW
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow
 WEIGHT=40
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -1753,7 +1742,7 @@ DESCRIPTION=Bed 01 (04/04)
 DEFNAME=i_BED_DOUBLE_2
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 i_BOARD, 2 I_BEDROLL, 20 i_NAILS, 2 i_SHEET, 2 i_PILLOW
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow
 WEIGHT=40
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -1785,7 +1774,7 @@ DESCRIPTION=Bed 02 (04/04)
 // table - narrow bamboo table end - S
 DEFNAME=i_table_bamboo_end
 TYPE=t_table
-RESOURCES=30 i_BAMBOO, 4 i_NAILS
+RESOURCES=30 i_bamboo, 4 i_nails
 WEIGHT=15
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
@@ -1817,7 +1806,7 @@ DUPEITEM=011d8
 // table - narrow log table end - E
 DEFNAME=i_table_log_end
 TYPE=t_table
-RESOURCES=15 i_LOG, 4 i_NAILS
+RESOURCES=15 i_log, 4 i_nails
 WEIGHT=30
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
@@ -1867,7 +1856,7 @@ DUPEITEM=011e2
 
 [ITEMDEF 011e6]
 DEFNAME=i_MAT_WOVEN
-RESOURCES=2 i_STRAW
+RESOURCES=2 i_straw
 WEIGHT=2
 CATEGORY=Decoration - Furniture
 SUBSECTION=Mats
@@ -1888,7 +1877,7 @@ DUPEITEM=011e6
 
 [ITEMDEF 011ea]
 DEFNAME=i_PILLOW_STRAW
-RESOURCES=1 i_STRAW
+RESOURCES=1 i_straw
 WEIGHT=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -1901,7 +1890,7 @@ DUPEITEM=011ea
 
 [ITEMDEF 011f0]
 DEFNAME=i_hammock
-RESOURCES=1 i_ROPE, 2 i_BAMBOO, 2 i_CANVAS
+RESOURCES=1 i_rope, 2 i_bamboo, 2 i_canvas
 WEIGHT=8
 CATEGORY=Decoration - Furniture
 SUBSECTION=Hammocks & Cots
@@ -1927,7 +1916,7 @@ DEFNAME=i_chair_stool_bamboo
 TYPE=t_chair
 FLIP=1
 SKILLMAKE=CARPENTRY 40.0
-RESOURCES=4 i_BAMBOO, 3 i_CANVAS
+RESOURCES=4 i_bamboo, 3 i_canvas
 WEIGHT=3
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
@@ -1937,7 +1926,7 @@ DESCRIPTION=Foot Stool
 DEFNAME=i_cot_sw
 TYPE=t_bed
 TDATA1=2
-RESOURCES=4 i_BAMBOO, 3 i_CANVAS
+RESOURCES=4 i_bamboo, 3 i_canvas
 WEIGHT=10
 CATEGORY=Decoration - Furniture
 SUBSECTION=Hammocks & Cots
@@ -2062,7 +2051,7 @@ DUPEITEM=01218
 
 [ITEMDEF 01397]
 DEFNAME=i_pillow
-RESOURCES=4 i_CLOTH, 2 i_WOOL
+RESOURCES=4 i_cloth, 2 i_wool
 WEIGHT=2
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -2086,12 +2075,12 @@ DUPEITEM=01397
 
 [ITEMDEF 013a7]
 DEFNAME=i_pillow_3
-RESOURCES=4 i_CLOTH, 2 i_WOOL
+RESOURCES=4 i_cloth, 2 i_wool
 WEIGHT=2
 
 [ITEMDEF 013a8]
 DEFNAME=i_pillow_4
-RESOURCES=4 i_CLOTH, 2 i_WOOL
+RESOURCES=4 i_cloth, 2 i_wool
 WEIGHT=2
 DUPELIST=013a9,013aa
 
@@ -2105,12 +2094,12 @@ DUPEITEM=013a8
 
 [ITEMDEF 013ab]
 DEFNAME=i_pillow_6
-RESOURCES=4 i_CLOTH, 2 i_WOOL, 4 i_THREAD
+RESOURCES=4 i_cloth, 2 i_wool, 4 i_thread
 WEIGHT=2
 
 [ITEMDEF 013ac]
 DEFNAME=i_pillow_7
-RESOURCES=4 i_CLOTH, 2 i_WOOL, 4 i_THREAD
+RESOURCES=4 i_cloth, 2 i_wool, 4 i_thread
 WEIGHT=2
 DUPELIST=013ad,013ae
 
@@ -2129,7 +2118,7 @@ DEFNAME=i_chair_throne_lb
 DUPELIST=01527
 TYPE=t_chair
 FLIP=1
-RESOURCES=10 i_MARBLE, 5 i_ingot_gold, 5 i_VELVET, 100 i_FEATHER
+RESOURCES=10 i_marble, 5 i_ingot_gold, 5 i_velvet, 100 i_feather
 WEIGHT=50
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
@@ -2141,7 +2130,7 @@ DUPEITEM=01526
 
 [ITEMDEF 0163a]
 DEFNAME=i_PILLOW_LARGE
-RESOURCES=6 i_CLOTH, 4 i_WOOL
+RESOURCES=6 i_cloth, 4 i_wool
 WEIGHT=4
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -2149,7 +2138,7 @@ DESCRIPTION=Pillow
 
 [ITEMDEF 0163b]
 DEFNAME=i_pillow_9
-RESOURCES=4 i_CLOTH, 2 i_WOOL, 4 i_THREAD
+RESOURCES=4 i_cloth, 2 i_wool, 4 i_thread
 WEIGHT=2
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -2157,7 +2146,7 @@ DESCRIPTION=Pillow
 
 [ITEMDEF 0163c]
 DEFNAME=i_pillow_10
-RESOURCES=4 i_CLOTH, 2 i_WOOL, 4 i_THREAD
+RESOURCES=4 i_cloth, 2 i_wool, 4 i_thread
 WEIGHT=2
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -2167,7 +2156,7 @@ DESCRIPTION=Pillow
 // table - narrow checkered runner table end - S
 DEFNAME=i_table_runner_checkered
 TYPE=t_table
-RESOURCES=6 i_BOARD, 1 i_NAILS, 2 i_CLOTH
+RESOURCES=6 i_board, 1 i_nails, 2 i_cloth
 WEIGHT=7
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
@@ -2178,7 +2167,7 @@ DUPELIST=01669,0166a,0166c
 // table - narrow checkered runner table extention n-s
 TYPE=t_table
 DUPELIST=0166b
-RESOURCES=6 i_BOARD, 1 i_NAILS, 2 i_CLOTH
+RESOURCES=6 i_board, 1 i_nails, 2 i_cloth
 WEIGHT=7
 
 [ITEMDEF 01669]
@@ -2201,7 +2190,7 @@ DUPEITEM=01667
 DEFNAME=i_BED_RUINED_7
 TYPE=t_bed
 TDATA1=0
-RESOURCES=50 i_BOARD, 2 I_BEDROLL, 20 i_NAILS, 2 i_SHEET
+RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet
 WEIGHT=20
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
@@ -2277,12 +2266,12 @@ DUPEITEM=0190e
 [ITEMDEF 01910]
 DEFNAME=i_bar_piece
 WEIGHT=4
+RESOURCES=30 i_log
+SKILLMAKE=CARPENTRY 80.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bar
 DESCRIPTION=Bar
-DUPELIST=01911,01912,01913,01918,01919,0191a,0191b,0191c,0191d,0191e,0191f
-SKILLMAKE=CARPENTRY 80.0, t_carpentry
-RESOURCES=30 i_log
+DUPELIST=01911,01912,01913,01918,01919,0191a,0191b,0191c,0191d,0191e,0191f,01941,01942,01943
 
 [ITEMDEF 01911]
 //bar
@@ -2298,7 +2287,7 @@ DUPEITEM=01910
 
 [ITEMDEF 01914]
 DEFNAME=i_towel
-RESOURCES=3 i_CLOTH
+RESOURCES=3 i_cloth
 WEIGHT=2
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -2306,7 +2295,7 @@ DESCRIPTION=Towel
 
 [ITEMDEF 01915]
 DEFNAME=i_pillow_11
-RESOURCES=2 i_CLOTH, 1 i_WOOL
+RESOURCES=2 i_cloth, 1 i_wool
 WEIGHT=1
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
@@ -2315,7 +2304,7 @@ DESCRIPTION=Pillow
 [ITEMDEF 01916]
 // table - narrow massage table end - W
 DEFNAME=i_table_massage_end
-RESOURCES=4 i_BOARD, 2 i_LOG, 1 i_NAILS, 4 i_CANVAS
+RESOURCES=4 i_board, 2 i_log, 1 i_nails, 4 i_canvas
 WEIGHT=6
 CATEGORY=Decoration - Furniture
 SUBSECTION=Massage Table
@@ -2358,6 +2347,24 @@ DUPEITEM=01910
 //bar
 DUPEITEM=01910
 
+[ITEMDEF 01941]
+//bar piece with glass mugs on it
+DUPEITEM=01910
+DEFNAME=i_mugs_glass_bartop
+DESCRIPTION=Bar (with glass mugs on it)
+
+[ITEMDEF 01942]
+//bar piece with pewter goblets and tankards on it
+DUPEITEM=01910
+DEFNAME=i_goblets_pewter_bartop
+DESCRIPTION=Bar (with pewter goblets and tankards on it)
+
+[ITEMDEF 01943]
+//bar piece with pewter goblets and tankards on it
+DUPEITEM=01910
+DEFNAME=i_tankards_pewter_bartop
+DESCRIPTION=Bar (with pewter tankards on it)
+
 [ITEMDEF 01944]
 DEFNAME=i_pillow_fancy
 NAME=fancy pillow
@@ -2399,7 +2406,7 @@ DUPEITEM=019f2
 [ITEMDEF 01da5]
 // table - Small rough wood table end - S
 DEFNAME=i_TABLE_WOOD_ROUGH_SMALL_END
-RESOURCES=16 i_BOARD, i_NAILS
+RESOURCES=16 i_board, i_nails
 WEIGHT=16
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
@@ -2437,7 +2444,7 @@ DUPEITEM=01da7
 
 [ITEMDEF 01db3]
 DEFNAME=i_barrel_broken
-RESOURCES=16 i_BOARD, 2 i_BARREL_HOOP, I_BARREL
+RESOURCES=16 i_board, 2 i_barrel_hoop, i_barrel
 WEIGHT=21
 //broken barrel
 CATEGORY=Decoration - Furniture
@@ -2500,7 +2507,7 @@ DUPEITEM=01dbd
 // table - marble table end - S
 DEFNAME=i_table_marble_end
 TYPE=t_table
-RESOURCES=30 i_MARBLE
+RESOURCES=30 i_marble
 WEIGHT=60
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
@@ -2568,7 +2575,7 @@ DEFNAME=i_bench_marble_end
 DUPELIST=01dce,01dd0,01dd1
 TYPE=t_chair
 FLIP=1
-RESOURCES=6 i_MARBLE
+RESOURCES=6 i_marble
 WEIGHT=12
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
@@ -2723,7 +2730,6 @@ DUPELIST=03e00
 [ITEMDEF 03e00]
 //bench dark stone against NW wall
 DUPEITEM=03dff
-
 DESCRIPTION=@ (w)
 
 [EOF]

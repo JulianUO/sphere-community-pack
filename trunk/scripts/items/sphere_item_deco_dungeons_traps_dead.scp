@@ -683,8 +683,8 @@ SUBSECTION=Traps
 DESCRIPTION=Exploding Mushroom
 DUPELIST=01126,01127,01128,01129,0112a
 ON=@DClick
-   SRC.SPELLEFFECT s_Hallucination,1000
-   SRC.EMOTE Looking Funny
+   SRC.SPELLEFFECT s_hallucination,1000
+   SRC.EMOTE feel strange
    REMOVE
    RETURN 1
 ON=@Step
@@ -3249,46 +3249,6 @@ DUPEITEM=01ce4
 [ITEMDEF 01cec]
 DEFNAME=i_flesh_leg_2
 DUPEITEM=01ce2
-
-[ITEMDEF 01ced]
-DEFNAME=i_flesh_heart
-TYPE=t_meat_raw
-TDATA1=i_ribs_cooked
-VALUE=1
-WEIGHT=5
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Body Parts
-DESCRIPTION=Heart
-
-[ITEMDEF 01cee]
-DEFNAME=i_flesh_liver
-TYPE=t_meat_raw
-TDATA1=i_ribs_cooked
-VALUE=1
-WEIGHT=5
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Body Parts
-DESCRIPTION=Liver
-
-[ITEMDEF 01cef]
-DEFNAME=i_flesh_entrails
-TYPE=t_meat_raw
-TDATA1=i_ribs_cooked
-VALUE=1
-WEIGHT=6
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Body Parts
-DESCRIPTION=Entrails
-
-[ITEMDEF 01cf0]
-DEFNAME=i_flesh_brain
-TYPE=t_meat_raw
-TDATA1=i_ribs_cooked
-VALUE=1
-WEIGHT=8
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Body Parts
-DESCRIPTION=Brain
 
 [ITEMDEF 01d13]
 DEFNAME=i_casket_wood_2_with_body
