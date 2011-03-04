@@ -3,8 +3,86 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 21, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
+
+[ITEMDEF 0240]
+DEFNAME=i_power_crystal
+NAME=power crystal
+TYPE=t_normal
+VALUE=500
+WEIGHT=0.1
+TAG.NoVendor=1
+CATEGORY=Quest
+SUBSECTION=Quest 11
+DESCRIPTION=Power Crystal
+
+
+[ITEMDEF 01ecd]
+DEFNAME=i_crystal_green
+TYPE=t_normal
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Crystals
+DESCRIPTION=Glowing Green Crystal (blinking)
+DUPELIST=01ece,01ecf
+
+[ITEMDEF 01ece]
+DUPEITEM=01ecd
+DESCRIPTION=Glowing Green Crystal (dim)
+
+[ITEMDEF 01ecf]
+DUPEITEM=01ecd
+DESCRIPTION=Glowing Green Crystal (bright)
+
+
+[ITEMDEF 01ed0]
+DEFNAME=i_crystal_red
+TYPE=t_normal
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Crystals
+DESCRIPTION=Glowing Red Crystal (blinking)
+DUPELIST=01ed1,01ed2
+
+[ITEMDEF 01ed1]
+DUPEITEM=01ed0
+DESCRIPTION=Glowing Red Crystal (dim)
+
+[ITEMDEF 01ed2]
+DUPEITEM=01ed0
+DESCRIPTION=Glowing Red Crystal (bright)
+
+
+[ITEMDEF 01f19]
+DEFNAME=i_crystal_green_big
+TYPE=t_normal
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Crystals
+DESCRIPTION=Green Crystal (blinking)
+DUPELIST=01f1a,01f1b
+
+[ITEMDEF 01f1a]
+DUPEITEM=01f19
+DESCRIPTION=Green Crystal (dim)
+
+[ITEMDEF 01f1b]
+DUPEITEM=01f19
+DESCRIPTION=Green Crystal (bright)
+
+
+[ITEMDEF 01f1c]
+DEFNAME=i_crystal_purple
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Crystals
+DESCRIPTION=Purple Crystal (blinking)
+DUPELIST=01f1d,01f1e
+
+[ITEMDEF 01f1d]
+DUPEITEM=01f1c
+DESCRIPTION=Purple Crystal (dim)
+
+[ITEMDEF 01f1e]
+DUPEITEM=01f1c
+DESCRIPTION=Purple Crystal (bright)
 
 
 [ITEMDEF 02206]
@@ -247,44 +325,35 @@ DUPEITEM=0223a
 DUPEITEM=0223a
 
 [ITEMDEF 02fdc]
-DEFNAME=i_crystal5
+DEFNAME=i_crystal_green_tall
 NAME=crystal
 TYPE=t_normal
+FLIP=1
 VALUE={120 240}
 WEIGHT=10.0
 CATEGORY=Boulders, Rocks, and Crystals
 SUBSECTION=Crystals
-DESCRIPTION=Green Crystal 5
+DESCRIPTION=Green Crystal (tall)
+DUPELIST=02fdd
 
 [ITEMDEF 02fdd]
-DEFNAME=i_crystal6
-NAME=crystal
-TYPE=t_normal
-VALUE={120 240}
-WEIGHT=10.0
-CATEGORY=Boulders, Rocks, and Crystals
-SUBSECTION=Crystals
-DESCRIPTION=Green Crystal 6
+//Green Crystal (tall)
+DUPEITEM=02fdc
 
 [ITEMDEF 02fe6]
-DEFNAME=i_crystal7
+DEFNAME=i_crystal_purple_tall
 NAME=crystal
 TYPE=t_normal
 VALUE={120 240}
 WEIGHT=10.0
 CATEGORY=Boulders, Rocks, and Crystals
 SUBSECTION=Crystals
-DESCRIPTION=Purple Crystal 5
+DESCRIPTION=Purple Crystal (tall)
+DUPELIST=02fe7
 
 [ITEMDEF 02fe7]
-DEFNAME=i_crystal8
-NAME=crystal
-TYPE=t_normal
-VALUE={120 240}
-WEIGHT=10.0
-CATEGORY=Boulders, Rocks, and Crystals
-SUBSECTION=Crystals
-DESCRIPTION=Purple Crystal 6
+//Purple Crystal (tall)
+DUPEITEM=02fe6
 
 
 [EOF]

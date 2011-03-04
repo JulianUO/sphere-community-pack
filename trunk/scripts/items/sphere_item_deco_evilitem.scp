@@ -12,38 +12,6 @@
 
 VERSION=0.56b
 
-[ITEMDEF 02a58]
-//bone throne
-DEFNAME=i_bone_throne
-TYPE=t_chair
-DUPELIST=02a59
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bone Throne
-
-[ITEMDEF 02a59]
-//bone throne
-DUPEITEM=02a58
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bone Throne
-
-[ITEMDEF 02a5a]
-//bone couch - 1 of 2
-DEFNAME=i_bone_couch
-TYPE=t_chair
-DUPELIST=02a5b
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bone Couch
-
-[ITEMDEF 02a5b]
-//bone couch - 2 of 2
-DUPEITEM=02a5a
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bone Couch
-
 [ITEMDEF 02a5c]
 //bone table
 DEFNAME=i_bone_table
@@ -302,22 +270,6 @@ DUPEITEM=02a7d
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Evil Home Decor
 DESCRIPTION=Haunted Mirror
-
-[ITEMDEF 02a7f]
-//bone couch - 1 of 2
-DEFNAME=i_bone_couch_ns
-TYPE=t_chair
-DUPELIST=02a80
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bone Couch
-
-[ITEMDEF 02a80]
-//bone couch - 2 of 2
-DUPEITEM=02a7f
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bone Couch
 
 [ITEMDEF 02a81]
 DEFNAME=i_bed_of_nails_ns

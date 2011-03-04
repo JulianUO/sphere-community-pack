@@ -1,9 +1,9 @@
 //****************************************************************************
-// SphereServer ©1997-2009
-// This script is part from the Sphere Community Script Pack.
-// You can download the full pack from: www.sphereserver.net
+//SphereServer ©1997-2009
+//This script is part from the Sphere Community Script Pack.
+//You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 3, 2011
+//FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 
@@ -253,22 +253,26 @@ DUPEITEM=0e21
 /////////////////////////////
 
 [ITEMDEF 0e2d]
-DEFNAME=i_crystal_ball
-RESOURCES=2 i_board, 7 i_sand
+DEFNAME=i_crystal_ball_blank
 TYPE=t_crystal_ball
 WEIGHT=3
+RESOURCES=2 i_board, 7 i_sand
 CATEGORY=Items by Professions
 SUBSECTION=Fortune Tellers
-DESCRIPTION=Crystal ball
+DESCRIPTION=Crystal ball (blank)
 DUPELIST=0e2e,0e2f,0e30
 
 [ITEMDEF 0e2e]
 DUPEITEM=0e2d
+DEFNAME=i_crystal_ball
+DESCRIPTION=Crystal ball (animated)
 
 [ITEMDEF 0e2f]
+//crystal ball animation frame
 DUPEITEM=0e2d
 
 [ITEMDEF 0e30]
+//crystal ball animation frame
 DUPEITEM=0e2d
 
 [ITEMDEF 012a5]
@@ -307,6 +311,64 @@ DUPEITEM=012a5
 [ITEMDEF 012ac]
 //tarot
 DUPEITEM=012a5
+
+[ITEMDEF 035ef]
+TYPE=t_crystal_ball
+FLIP=1
+VALUE=194
+WEIGHT=15.0
+RESOURCES=15 i_water
+SKILLMAKE=Tinkering 95.7,ALCHEMY 50.0,Magery 85.1,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Fortune Tellers
+DESCRIPTION=Ice Ball
+DUPELIST=035f0,035f1,035f2,035f3,035f4,035f5
+
+[ITEMDEF 035f0]
+//Ice ball
+DUPEITEM=035ef
+
+[ITEMDEF 035f1]
+//Ice ball
+DUPEITEM=035ef
+
+[ITEMDEF 035f2]
+//Ice ball
+DUPEITEM=035ef
+
+[ITEMDEF 035f3]
+//Ice ball
+DUPEITEM=035ef
+
+[ITEMDEF 035f4]
+//Ice ball
+DUPEITEM=035ef
+
+[ITEMDEF 035f5]
+//Ice ball
+DUPEITEM=035ef
+
+[ITEMDEF 0468a]
+DEFNAME=i_crystal_ball_small
+TYPE=t_crystal_ball
+VALUE=321
+WEIGHT=9.6
+RESOURCES=2 i_board,7 i_glass_raw,6 i_gem_diamond
+SKILLMAKE=Tinkering 95.7,ALCHEMY 50.0,MAGERY 85.1,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Fortune Tellers
+DESCRIPTION=Crystal Ball (small)
+
+[ITEMDEF 0468b]
+DEFNAME=i_crystal_ball_large
+TYPE=t_crystal_ball
+VALUE=321
+WEIGHT=9.6
+RESOURCES=2 i_board,7 i_glass_raw,6 i_gem_diamond
+SKILLMAKE=Tinkering 95.7,ALCHEMY 50.0,MAGERY 85.1,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Fortune Tellers
+DESCRIPTION=Crystal Ball (large)
 
 
 ///////////////////////
@@ -737,28 +799,24 @@ DUPELIST=0fbe
 DUPEITEM=0fbd
 
 [ITEMDEF 0fbf]
-//pen and ink
 DEFNAME=i_pen_and_ink
-RESOURCES=1 i_feather, 1 i_ink_pot
+FLIP=1
 WEIGHT=2
+RESOURCES=1 i_feather,1 i_ink_pot
 CATEGORY=Items by Professions
 SUBSECTION=Scribes
-DESCRIPTION=Pen & Ink (W)
+DESCRIPTION=Pen & Ink
 DUPELIST=0fc0
 
 [ITEMDEF 0fc0]
 //pen and ink
 DUPEITEM=0fbf
-CATEGORY=Items by Professions
-SUBSECTION=Scribes
-DESCRIPTION=Pen & Ink (N)
 
 [ITEMDEF 0fef]
 //brown book facing NE
 DEFNAME=i_book_lg_pub
 RESOURCES=1 i_canvas, 10 i_paper, 1 i_thread, 1 i_hide
 WEIGHT=2
-//DEFNAME=LG_PUB_BOOK
 TYPE=t_book
 CATEGORY=Items by Professions
 SUBSECTION=Scribes
@@ -769,7 +827,6 @@ DESCRIPTION=Brown Book
 DEFNAME=i_book_sm_pub
 RESOURCES=1 i_canvas, 10 i_paper, 1 i_thread, 1 i_hide
 WEIGHT=2
-//DEFNAME=SM_PUB_BOOK
 TYPE=t_book
 CATEGORY=Items by Professions
 SUBSECTION=Scribes
@@ -778,7 +835,6 @@ DESCRIPTION=Light Tan Book
 [ITEMDEF 0ff1]
 //dark brown book facing NE
 DEFNAME=i_book_sm
-//DEFNAME=SM_BLANK_BOOK
 RESOURCES=1 i_canvas, 10 i_paper, 1 i_thread, 1 i_hide
 WEIGHT=2
 TYPE=t_book
@@ -789,7 +845,6 @@ DESCRIPTION=Dark Brown Book
 [ITEMDEF 0ff2]
 //purple book facing NE
 DEFNAME=i_book_lg
-//DEFNAME=LG_BLANK_BOOK
 RESOURCES=1 i_canvas, 10 i_paper, 1 i_thread, 1 i_hide
 WEIGHT=2
 TYPE=t_book
@@ -1148,69 +1203,68 @@ DUPELIST=014ea
 DUPEITEM=014e9
 
 [ITEMDEF 019f1]
-// bench - Woodworkers bench end - S
-DEFNAME=i_bench_woodworker_end
-DUPELIST=019f3,019f5,019f7
-TYPE=t_chair
+DEFNAME=i_bench_woodworker
 FLIP=1
-SKILLMAKE=carpentry 80.0, t_carpentry
-RESOURCES=30 i_log
 WEIGHT=8
+RESOURCES=30 i_log
+SKILLMAKE=carpentry 80.0, t_carpentry
 CATEGORY=Items by Professions
 SUBSECTION=Carpenters
-DESCRIPTION=Woodworkers Bench
+DESCRIPTION=4 Part Woodworkers Bench
+DUPELIST=019f2,019f3,019f4,019f5,019f6,019f7,019f8
+
+[ITEMDEF 019f2]
+//woodworkers bench
+DUPEITEM=019f1
 
 [ITEMDEF 019f3]
-// bench - Woodworkers bench end - N
-DUPEITEM=019F1
+//woodworkers bench
+DUPEITEM=019f1
 
 [ITEMDEF 019f4]
-DEFNAME=i_vise
-WEIGHT=6
-TYPE=t_carpentry
-CATEGORY=Items by Professions
-SUBSECTION=Carpenters
-DESCRIPTION=Vise
-DUPELIST=019f8
-SKILLMAKE=carpentry 80.0, t_carpentry
-RESOURCES=30 i_log
+//woodworkers bench
+DUPEITEM=019f1
 
 [ITEMDEF 019f5]
-// bench - Woodworkers bench end - E
-DUPEITEM=019F1
+//woodworkers bench
+DUPEITEM=019f1
+
+[ITEMDEF 019f6]
+//woodworkers bench
+DUPEITEM=019f1
 
 [ITEMDEF 019f7]
-// bench - Woodworkers bench end - W
-DUPEITEM=019F1
+//woodworkers bench
+DUPEITEM=019f1
 
 [ITEMDEF 019f8]
-//vise
-DUPEITEM=019f4
+//woodworkers bench
+DUPEITEM=019f1
 
 [ITEMDEF 019f9]
-// bench - Coopers bench end - S
 DEFNAME=i_bench_cooper
-DUPELIST=019fa,019fb,019fc
-TYPE=t_chair
+TYPE=t_table
 FLIP=1
-RESOURCES=30 i_log
-WEIGHT=8
+VALUE=47
+WEIGHT=31.1
+RESOURCES=10 i_log_yew,10 i_board,1 i_nails,1 i_ingot_iron
 CATEGORY=Items by Professions
-SUBSECTION=Carpenters
-DESCRIPTION=Coopers Bench
-SKILLMAKE=carpentry 80.0, t_carpentry
+SUBSECTION=Carpenter
+DESCRIPTION=2 Part Coopers Bench
+SKILLMAKE=Carpentry 80.0,t_carpentry
+DUPELIST=019fa,019fb,019fc
 
 [ITEMDEF 019fa]
-// bench - Coopers bench end - N
-DUPEITEM=019F9
+//coopers bench
+DUPEITEM=019f9
 
 [ITEMDEF 019fb]
-// bench - Coopers bench end - W
-DUPEITEM=019F9
+//coopers bench
+DUPEITEM=019f9
 
 [ITEMDEF 019fc]
-// bench - Coopers bench end - E
-DUPEITEM=019F9
+//coopers bench
+DUPEITEM=019f9
 
 [ITEMDEF 01bd8]
 //Pile of 3 boards
@@ -1289,17 +1343,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Carpenters
 DESCRIPTION=Board
 
-[ITEMDEF 01e6f]
-// chair - unfinished fancy wooden chair w/missing cushion - N
-DEFNAME=i_chair_wood_fancy_unfinished
-DUPELIST=01e78
-TYPE=t_chair
-FLIP=1
-RESOURCES=2 i_lathework_unfinished, i_board_unfinished, i_nails
-CATEGORY=Items by Professions
-SUBSECTION=Carpenters
-DESCRIPTION=Unfinished Chair
-
 [ITEMDEF 01e70]
 DEFNAME=i_drawer_unfinished
 RESOURCES=2 i_board_unfinished
@@ -1315,7 +1358,7 @@ SUBSECTION=Carpenters
 DESCRIPTION=Unfinished Chest of Drawers
 
 [ITEMDEF 01e72]
-// table - upside down wood table corner - 1
+//table - upside down wood table corner - 1
 DEFNAME=i_table_unfinished
 RESOURCES=4 i_board_unfinished, i_table_leg_unfinished, i_nails
 CATEGORY=Items by Professions
@@ -1324,7 +1367,7 @@ DESCRIPTION=Unfinished Table
 DUPELIST=01e7b
 
 [ITEMDEF 01e73]
-// table - table legs for e-w table
+//table - table legs for e-w table
 DEFNAME=i_table_leg_unfinished
 RESOURCES=3 i_board_unfinished
 CATEGORY=Items by Professions
@@ -1333,8 +1376,8 @@ DESCRIPTION=Table Legs
 DUPELIST=01e7c
 
 [ITEMDEF 01e74]
-// table - single table leg - laying down e-w
-// decoration
+//table - single table leg - laying down e-w
+//decoration
 DEFNAME=i_table_leg_unfinished_2
 RESOURCES=1 i_board_unfinished
 CATEGORY=Items by Professions
@@ -1343,7 +1386,7 @@ DESCRIPTION=Table Leg
 DUPELIST=01e7d
 
 [ITEMDEF 01e75]
-// table - solid table leg end, pair leaning on each other
+//table - solid table leg end, pair leaning on each other
 DEFNAME=i_table_leg_unfinished_3
 RESOURCES=4 i_board_unfinished
 CATEGORY=Items by Professions
@@ -1364,10 +1407,6 @@ CATEGORY=Items by Professions
 SUBSECTION=Carpenters
 DESCRIPTION=Board
 
-[ITEMDEF 01e78]
-// chair - unfinished fancy wooden chair w/missing cushion - W
-DUPEITEM=01e6f
-
 [ITEMDEF 01e79]
 DEFNAME=i_drawer_unfinished_2
 RESOURCES=2 i_board_unfinished
@@ -1383,17 +1422,17 @@ SUBSECTION=Carpenters
 DESCRIPTION=Unfinished Chest of Drawers
 
 [ITEMDEF 01e7b]
-// table - upside down wood table corner - 2
+//table - upside down wood table corner - 2
 DUPEITEM=01e72
 
 [ITEMDEF 01e7c]
-// table - table legs for n-s table
-// decoration
+//table - table legs for n-s table
+//decoration
 DUPEITEM=01e73
 
 [ITEMDEF 01e7d]
-// table - single table leg - laying down n-s
-// decoration
+//table - single table leg - laying down n-s
+//decoration
 DUPEITEM=01e74
 
 [ITEMDEF 01e7e]
@@ -1514,7 +1553,7 @@ SKILLMAKE=carpentry 10.0, t_carpentry
 DUPELIST=0104a
 
 [ITEMDEF 0104a]
-// bench - loom bench - e-w
+//bench - loom bench - e-w
 DUPEITEM=01049
 
 
@@ -1704,7 +1743,7 @@ TYPE=t_tinker_tools
 WEIGHT=2
 CATEGORY=Items by Professions
 SUBSECTION=Tinkers
-DESCRIPTION=Tinker's Tools
+DESCRIPTION=Tinker Tools
 SKILLMAKE=tinkering 35.0,t_tinker_tools
 RESOURCES=4 i_ingot_iron
 
@@ -1979,7 +2018,7 @@ DUPEITEM=01e34
 ///////////////////////
 // Butcher Equipment //
 ///////////////////////
-// Butcher knives are in the weapons files
+//Butcher knives are in the weapons files
 
 [ITEMDEF 01871]
 DEFNAME=i_carcass_beef

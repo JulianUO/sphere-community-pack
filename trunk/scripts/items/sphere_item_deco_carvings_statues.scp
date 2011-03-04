@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 21, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 
@@ -578,7 +578,7 @@ WEIGHT=130.0
 RESOURCES=12 i_rock_plain //,1 t_crystal
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
-DESCRIPTION=Pedestal with Crystal
+DESCRIPTION=Pedestal 2 (with Crystal)
 
 [ITEMDEF 02fd5]
 DEFNAME=i_pedestal_crystal_empty
@@ -728,16 +728,15 @@ DESCRIPTION=Statue Plinth
 
 [ITEMDEF 035e9]
 WEIGHT=150.0
-RESOURCES=150 i_crystal
+RESOURCES=150 i_crystal_ice
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Sculpture
 DESCRIPTION=Crystal Altar
 DUPELIST=03602,03603,03604
 
 [ITEMDEF 035ea]
-//Crystal sculpture
 WEIGHT=150.0
-RESOURCES=150 i_crystal
+RESOURCES=150 i_crystal_ice
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Sculpture
 DESCRIPTION=Crystal Sculpture
@@ -752,6 +751,8 @@ DUPEITEM=035ea
 DUPEITEM=035ea
 
 [ITEMDEF 035f6]
+DEFNAME=i_crystal_ice
+NAME=crystal ice
 TYPE=t_normal
 FLIP=1
 VALUE=194
@@ -760,11 +761,11 @@ RESOURCES=15 i_water
 SKILLMAKE=Tinkering 95.7,ALCHEMY 50.0,Magery 85.1,t_tinker_tools
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
-DESCRIPTION=Ice Statue (unfinished)
+DESCRIPTION=Crystal Ice
 DUPELIST=035f7
 
 [ITEMDEF 035f7]
-//Ice statue (unfinished)
+//Crystal Ice
 DUPEITEM=035f6
 
 [ITEMDEF 035f8]
@@ -772,7 +773,7 @@ TYPE=t_normal
 FLIP=1
 VALUE=174
 WEIGHT=13.0
-RESOURCES=13 i_water
+RESOURCES=13 i_crystal_ice
 SKILLMAKE=Tinkering 95.7,ALCHEMY 50.0,Magery 85.1,t_tinker_tools
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
@@ -788,7 +789,7 @@ TYPE=t_normal
 FLIP=1
 VALUE=184
 WEIGHT=14.0
-RESOURCES=14 i_water
+RESOURCES=14 i_crystal_ice
 SKILLMAKE=Tinkering 95.7,Alchemy 50.0,Magery 85.1,t_tinker_tools
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
@@ -804,7 +805,7 @@ TYPE=t_normal
 FLIP=1
 VALUE=174
 WEIGHT=13.0
-RESOURCES=13 i_water
+RESOURCES=13 i_crystal_ice
 SKILLMAKE=Tinkering 95.7,Alchemy 50.0,Magery 85.1,t_tinker_tools
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
@@ -821,7 +822,7 @@ TYPE=t_normal
 FLIP=1
 VALUE=174
 WEIGHT=13.0
-RESOURCES=13 i_water
+RESOURCES=13 i_crystal_ice
 SKILLMAKE=Tinkering 95.7,Alchemy 50.0,Magery 85.1,t_tinker_tools
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues

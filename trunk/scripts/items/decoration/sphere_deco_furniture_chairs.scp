@@ -3,232 +3,578 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Tuesday, Febuary 22, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
+
+[ITEMDEF 0459]
+DEFNAME=i_bench_marble
+TYPE=t_chair
+FLIP=1
+WEIGHT=4
+RESOURCES=50 i_stone_marble
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Marble Bench 1 (n)
+DUPELIST=045a
+
+[ITEMDEF 045a]
+DUPEITEM=0459
+DESCRIPTION=Marble Bench 1 (w)
+
+[ITEMDEF 045b]
+DEFNAME=i_bench_sandstone
+TYPE=t_chair
+FLIP=1
+WEIGHT=4
+RESOURCES=50 i_stone_sand
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Marble Bench 2 (n)
+DUPELIST=045c
+
+[ITEMDEF 045c]
+DESCRIPTION=Marble Bench 2 (w)
+DUPEITEM=045b
 
 [ITEMDEF 0a2a]
 DEFNAME=i_chair_stool_bar
 TYPE=t_chair
-FLIP=1
-SKILLMAKE=Carpentry 11.0, t_carpentry
-RESOURCES=9 i_log
 WEIGHT=3
+RESOURCES=9 i_log
+SKILLMAKE=Carpentry 11.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
-DESCRIPTION=Stool
+DESCRIPTION=Bar Stool
 
 [ITEMDEF 0a2b]
 DEFNAME=i_chair_stool
 TYPE=t_chair
 WEIGHT=3
+SKILLMAKE=Carpentry 11.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
-DESCRIPTION=Barstool
-SKILLMAKE=Carpentry 11.0, t_carpentry
+DESCRIPTION=Stool
 RESOURCES=9 i_log
 
 [ITEMDEF 0b2c]
 DEFNAME=i_bench_wood_dark
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=Carpentry 52.6, t_carpentry
-RESOURCES=17 i_log
 WEIGHT=10
-DUPELIST=0b2d
+RESOURCES=17 i_log
+SKILLMAKE=Carpentry 52.6, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Wooden Bench
+DUPELIST=0b2d
 
 [ITEMDEF 0b2d]
+//wooden bench
 DUPEITEM=0b2c
 
 [ITEMDEF 0b2e]
 DEFNAME=i_chair_wood_rough_dark
-NAME=Wooden Throne
+NAME=wooden throne
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=Carpentry 52.6, t_carpentry
-RESOURCES=17 i_log
 WEIGHT=10
-DUPELIST=0b2f,0b30,0b31
+RESOURCES=17 i_log
+SKILLMAKE=Carpentry 52.6, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Wooden Throne
+DUPELIST=0b2f,0b30,0b31
 
 [ITEMDEF 0b2f]
+//wooden throne
 DUPEITEM=0b2e
 
 [ITEMDEF 0b30]
+//wooden throne
 DUPEITEM=0b2e
 
 [ITEMDEF 0b31]
+//wooden throne
 DUPEITEM=0b2e
 
 [ITEMDEF 0b32]
 DEFNAME=i_chair_throne
-NAME=Magincia-Style Throne
+NAME=Magincia style throne
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=Carpentry 52.6, t_carpentry
-RESOURCES=19 i_log
 WEIGHT=15
-DUPELIST=0b33
+RESOURCES=19 i_log
+SKILLMAKE=Carpentry 52.6, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Magincia-Style Throne
+DUPELIST=0b33
 
 [ITEMDEF 0b33]
+//Magincia style throne
 DUPEITEM=0b32
 
 [ITEMDEF 0b4e]
 DEFNAME=i_chair_wood_fancy_cushion
-NAME=Vesper-Style Chair
+NAME=Vesper style chair
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=Carpentry 42.1, t_carpentry
-RESOURCES=15 i_log
 WEIGHT=10
-DUPELIST=0b4f,0b50,0b51
+RESOURCES=15 i_log
+SKILLMAKE=Carpentry 42.1, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Vesper-Style Chair
+DUPELIST=0b4f,0b50,0b51
 
 [ITEMDEF 0b4f]
+//Vesper style chair
 DUPEITEM=0b4e
 
 [ITEMDEF 0b50]
+//Vesper style chair
 DUPEITEM=0b4e
 
 [ITEMDEF 0b51]
+//Vesper style chair
 DUPEITEM=0b4e
 
 [ITEMDEF 0b52]
 DEFNAME=i_chair_wood_cushion
-NAME=Trinsic-Style Chair
+NAME=Trinsic style chair
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=Carpentry 42.1, t_carpentry
-RESOURCES=15 i_log
 WEIGHT=10
-DUPELIST=0b53,0b54,0b55
+RESOURCES=15 i_log
+SKILLMAKE=Carpentry 42.1, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Trinsic-Style Chair
+DUPELIST=0b53,0b54,0b55
 
 [ITEMDEF 0b53]
+//Trinsic style chair
 DUPEITEM=0b52
 
 [ITEMDEF 0b54]
+//Trinsic style chair
 DUPEITEM=0b52
 
 [ITEMDEF 0b55]
+//Trinsic style chair
 DUPEITEM=0b52
 
 [ITEMDEF 0b56]
 DEFNAME=i_chair_wood
-NAME=Wooden Chair
+NAME=wooden chair
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=Carpentry 21.0, t_carpentry
-RESOURCES=13 i_log
 WEIGHT=3
-DUPELIST=0b57,0b58,0b59
+RESOURCES=13 i_log
+SKILLMAKE=Carpentry 21.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Wooden Chair
+DUPELIST=0b57,0b58,0b59
 
 [ITEMDEF 0b57]
+//wooden chair
 DUPEITEM=0b56
 
 [ITEMDEF 0b58]
+//wooden chair
 DUPEITEM=0b56
 
 [ITEMDEF 0b59]
+//wooden chair
 DUPEITEM=0b56
 
 [ITEMDEF 0b5a]
 DEFNAME=i_chair_wood_bamboo
-NAME=Straw Chair
+NAME=straw chair
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=Carpentry 21.0, t_carpentry
-RESOURCES=13 i_log
 WEIGHT=3
-DUPELIST=0b5b,0b5c,0b5d
+RESOURCES=13 i_log
+SKILLMAKE=Carpentry 21.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Straw Chair
+DUPELIST=0b5b,0b5c,0b5d
 
 [ITEMDEF 0b5b]
+//straw chair
 DUPEITEM=0b5a
 
 [ITEMDEF 0b5c]
+//straw chair
 DUPEITEM=0b5a
 
 [ITEMDEF 0b5d]
+//straw chair
 DUPEITEM=0b5a
 
 [ITEMDEF 0b5e]
-// chair - light stool
 DEFNAME=i_chair_stool_light
 TYPE=t_chair
 WEIGHT=3
+RESOURCES=9 i_log
+SKILLMAKE=Carpentry 11.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Foot Stool (Light)
-SKILLMAKE=Carpentry 11.0, t_carpentry
-RESOURCES=9 i_log
 
-[ITEMDEF 02de3]
-DEFNAME=i_chair_elven_ornate
-NAME=Ornate Elven Chair
+[ITEMDEF 0b5f]
+DEFNAME=i_bench_wood_rough
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=Carpentry 80.0, t_carpentry
-RESOURCES=30 i_log
-WEIGHT=20
-DUPELIST=02de4,02de5,02de6
+RESOURCES=4 i_board, 2 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
-DESCRIPTION=Ornate Elven Chair
+DESCRIPTION=Wooden Bench (rough)
+DUPELIST=0b60,0b61,0b65,0b66,0b67
 
-[ITEMDEF 02de4]
-DUPEITEM=02de3
+[ITEMDEF 0b60]
+//Wooden Bench (rough)
+DUPEITEM=0b5f
 
-[ITEMDEF 02de5]
-DUPEITEM=02de3
+[ITEMDEF 0b61]
+//Wooden Bench (rough)
+DUPEITEM=0b5f
 
-[ITEMDEF 02de6]
-DUPEITEM=02de3
+[ITEMDEF 0b62]
+DEFNAME=i_bench_wood_smooth
+FLIP=1
+TYPE=t_chair
+RESOURCES=4 i_board, 2 i_nails
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Bench
+DUPELIST=0b63,0b64,0b68,0b69,0b6a
 
-[ITEMDEF 02deb]
-DEFNAME=i_chair_elven_cozy
-NAME=Cozy Elven Chair
+[ITEMDEF 0b63]
+//Wooden Bench (smooth)
+DUPEITEM=0b62
+
+[ITEMDEF 0b64]
+//Wooden Bench (smooth)
+DUPEITEM=0b62
+
+[ITEMDEF 0b65]
+//Wooden Bench (rough)
+DUPEITEM=0b5f
+
+[ITEMDEF 0b66]
+//Wooden Bench (rough)
+DUPEITEM=0b5f
+
+[ITEMDEF 0b67]
+//Wooden Bench (rough)
+DUPEITEM=0b5f
+
+[ITEMDEF 0b68]
+//Wooden Bench (smooth)
+DUPEITEM=0b62
+
+[ITEMDEF 0b69]
+//Wooden Bench (smooth)
+DUPEITEM=0b62
+
+[ITEMDEF 0b6a]
+//Wooden Bench (smooth)
+DUPEITEM=0b62
+
+[ITEMDEF 0b91]
+DEFNAME=i_bench_wood_highback
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=Carpentry 85.0, t_carpentry
-RESOURCES=40 i_log
-WEIGHT=20
-DUPELIST=02dec,02ded,02dee
+RESOURCES=20 i_board, 6 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
-DESCRIPTION=Cozy Elven Chair
+DESCRIPTION=Bench
+DUPELIST=0b92,0b93,0b94
 
-[ITEMDEF 02dec]
-DUPEITEM=02deb
+[ITEMDEF 0b92]
+//bench (highback)
+DUPEITEM=0b91
 
-[ITEMDEF 02ded]
-DUPEITEM=02deb
+[ITEMDEF 0b93]
+//bench (highback)
+DUPEITEM=0b91
 
-[ITEMDEF 02dee]
-DUPEITEM=02deb
+[ITEMDEF 0b94]
+//bench (highback)
+DUPEITEM=0b91
+
+[ITEMDEF 0c10]
+DEFNAME=i_chair_wood_bamboo_broken
+FLIP=1
+RESOURCES=5 i_board
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs (unusable)
+DESCRIPTION=Wooden Chair (lying down)
+DUPELIST=0c11
+
+[ITEMDEF 0c11]
+//wooden chair
+DUPEITEM=0c10
+
+[ITEMDEF 0c17]
+DEFNAME=i_chair_covered
+FLIP=1
+RESOURCES=1 i_chair_wood, 1 i_sheet
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs (unusable)
+DESCRIPTION=Chair (covered)
+DUPELIST=0c18
+
+[ITEMDEF 0c18]
+//chair (covered)
+DUPEITEM=0c17
+
+[ITEMDEF 0c19]
+DEFNAME=i_chair_wood_bamboo_broken_noseat
+FLIP=1
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs (unusable)
+DESCRIPTION=Wooden Chair (no seat, lying down)
+DUPELIST=0c1a
+
+[ITEMDEF 0c1a]
+//wooden chair (no seat, lying down)
+DUPEITEM=0c19
+
+[ITEMDEF 0c1b]
+DEFNAME=i_chair_wood_fancy_cushion_broken
+FLIP=1
+RESOURCES=5 i_board, 1 i_nails
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs (unusable)
+DESCRIPTION=Fancy Chair (lying down)
+DUPELIST=0c1c,0c1d,0c1e
+
+[ITEMDEF 0c1c]
+//fancy chair (lying down)
+DUPEITEM=0c1b
+
+[ITEMDEF 0c1d]
+//fancy chair (lying down)
+DUPEITEM=0c1b
+
+[ITEMDEF 0c1e]
+//fancy chair (lying down)
+DUPEITEM=0c1b
+
+[ITEMDEF 011fc]
+DEFNAME=i_chair_stool_bamboo
+TYPE=t_chair
+WEIGHT=3
+RESOURCES=4 i_bamboo, 3 i_canvas
+SKILLMAKE=Carpentry 40.0
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Foot Stool
+
+[ITEMDEF 01207]
+//can not sit on these benches
+DEFNAME=i_bench_stone_1
+TYPE=t_chair
+FLIP=1
+VALUE=30
+WEIGHT=40.0
+RESOURCES=4 i_rock_plain
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Bench (Stone - can not sit)
+DUPELIST=01208,01209
+
+[ITEMDEF 01208]
+//stone bench
+DUPEITEM=01207
+
+[ITEMDEF 01209]
+//stone bench
+DUPEITEM=01207
+
+[ITEMDEF 0120a]
+DEFNAME=i_bench_stone_2
+TYPE=t_chair
+FLIP=1
+VALUE=30
+WEIGHT=100.0
+RESOURCES=10 i_rock_plain
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Bench 2 (Stone - can not sit)
+DUPELIST=0120b,0120c
+
+[ITEMDEF 0120b]
+//stone bench 2
+DUPEITEM=0120A
+
+[ITEMDEF 0120c]
+//stone bench 2
+DUPEITEM=0120A
+
+[ITEMDEF 01218]
+DEFNAME=i_chair_stone
+TYPE=t_chair
+FLIP=1
+VALUE=55
+WEIGHT=100.0
+RESOURCES=10 i_rock_plain
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Chair (gray stone)
+DUPELIST=01219,0121a,0121b
+
+[ITEMDEF 01219]
+//chair (gray stone)
+DUPEITEM=01218
+
+[ITEMDEF 0121a]
+//chair (gray stone)
+DUPEITEM=01218
+
+[ITEMDEF 0121b]
+//chair (gray stone)
+DUPEITEM=01218
+
+[ITEMDEF 01526]
+DEFNAME=i_chair_throne_lb
+TYPE=t_chair
+FLIP=1
+VALUE=204
+WEIGHT=120.0
+RESOURCES=10 i_rock_plain,5 i_ingot_gold,5 i_velvet,100 i_feather
+SKILLMAKE=Carpentry 89.4,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Throne
+DUPELIST=01527
+
+[ITEMDEF 01527]
+// chair throne lb
+DUPEITEM=01526
+
+[ITEMDEF 01dc7]
+DEFNAME=i_bench_sandstone
+TYPE=t_chair
+FLIP=1
+VALUE=35
+WEIGHT=60.0
+RESOURCES=6 i_rock_plain
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Sandstone Bench
+DUPELIST=01dc8,01dc9,01dca,01dcb,01dcc
+
+[ITEMDEF 01dc8]
+//sandstone bench
+DUPEITEM=01dc7
+
+[ITEMDEF 01dc9]
+//sandstone bench
+DUPEITEM=01dc7
+
+[ITEMDEF 01dca]
+//sandstone bench
+DUPEITEM=01dc7
+
+[ITEMDEF 01dcb]
+//sandstone bench
+DUPEITEM=01dc7
+
+[ITEMDEF 01dcc]
+//sandstone bench
+DUPEITEM=01dc7
+
+[ITEMDEF 01dcd]
+DEFNAME=i_bench_marble
+TYPE=t_chair
+FLIP=1
+VALUE=35
+WEIGHT=60.0
+RESOURCES=6 i_rock_plain
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Marble Bench
+DUPELIST=01dce,01dcf,01dd0,01dd1,01dd2
+
+[ITEMDEF 01dce]
+//Marble Bench
+DUPEITEM=01dcd
+
+[ITEMDEF 01dcf]
+//Marble Bench
+DUPEITEM=01dcd
+
+[ITEMDEF 01dd0]
+//Marble Bench
+DUPEITEM=01dcd
+
+[ITEMDEF 01dd1]
+//Marble Bench
+DUPEITEM=01dcd
+
+[ITEMDEF 01dd2]
+//Marble Bench (this piece is a mistake)
+DUPEITEM=01dcd
+
+[ITEMDEF 01e6f]
+DEFNAME=i_chair_wood_fancy_unfinished
+TYPE=t_chair
+FLIP=1
+RESOURCES=2 i_lathework_unfinished, i_board_unfinished, i_nails
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs (unusable)
+DESCRIPTION=Unfinished Chair
+DUPELIST=01e78
+
+[ITEMDEF 01e78]
+//unfinished chair
+DUPEITEM=01e6f
+
+[ITEMDEF 02a58]
+DEFNAME=i_bone_throne
+TYPE=t_chair
+FLIP=1
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Bone Throne
+DUPELIST=02a59
+
+[ITEMDEF 02a59]
+//bone throne
+DUPEITEM=02a58
+
+[ITEMDEF 02a5a]
+DEFNAME=i_bone_couch
+TYPE=t_chair
+FLIP=1
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Bone Couch
+DUPELIST=02a5b,02a7f,02a80
+
+[ITEMDEF 02a5b]
+//bone couch
+DUPEITEM=02a5a
+
+[ITEMDEF 02a7f]
+//bone couch
+DUPEITEM=02a5a
+
+[ITEMDEF 02a80]
+//bone couch
+DUPEITEM=02a5a
 
 [ITEMDEF 02ddf]
 DEFNAME=i_elven_loveseat
-NAME=Elven Loveseat
+NAME=elven loveseat
 TYPE=t_chair
-FLIP=0
+FLIP=1
 WEIGHT=25
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
@@ -238,6 +584,56 @@ DUPELIST=02de0,03088,03089,0308a,0308b
 [ITEMDEF 02de0]
 //elven loveseat
 DUPEITEM=02ddf
+
+[ITEMDEF 02de3]
+DEFNAME=i_chair_elven_ornate
+NAME=ornate elven chair
+TYPE=t_chair
+FLIP=1
+WEIGHT=20
+RESOURCES=30 i_log
+SKILLMAKE=Carpentry 80.0, t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Ornate Elven Chair
+DUPELIST=02de4,02de5,02de6
+
+[ITEMDEF 02de4]
+//ornate elven chair
+DUPEITEM=02de3
+
+[ITEMDEF 02de5]
+//ornate elven chair
+DUPEITEM=02de3
+
+[ITEMDEF 02de6]
+//ornate elven chair
+DUPEITEM=02de3
+
+[ITEMDEF 02deb]
+DEFNAME=i_chair_elven_cozy
+NAME=cozy elven chair
+TYPE=t_chair
+FLIP=1
+WEIGHT=20
+RESOURCES=40 i_log
+SKILLMAKE=Carpentry 85.0, t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Cozy Elven Chair
+DUPELIST=02dec,02ded,02dee
+
+[ITEMDEF 02dec]
+//cozy elven chair
+DUPEITEM=02deb
+
+[ITEMDEF 02ded]
+//cozy elven chair
+DUPEITEM=02deb
+
+[ITEMDEF 02dee]
+//cozy elven chair
+DUPEITEM=02deb
 
 [ITEMDEF 03088]
 //elven loveseat
@@ -255,7 +651,6 @@ DUPEITEM=02ddf
 //elven loveseat
 DUPEITEM=02ddf
 
-
 [ITEMDEF 02df5]
 DEFNAME=i_chair_reading
 NAME=elven reading chair
@@ -263,8 +658,8 @@ TYPE=t_chair
 FLIP=1
 VALUE=75
 WEIGHT=33.4
-SKILLMAKE=Carpentry 86.0,t_carpentry
 RESOURCES=16 i_log_yew,4 i_nails,1 i_wire_silver
+SKILLMAKE=Carpentry 86.0,t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Elven Reading Chair
@@ -274,55 +669,78 @@ DUPELIST=02df6
 //elven reading chair
 DUPEITEM=02df5
 
-[ITEMDEF 04023]
-DEFNAME=i_chair_ter_mur
-NAME=Ter-Mur Style Chair
+[ITEMDEF 035ed]
+DEFNAME=i_throne_crystal
+NAME=crystal throne
 TYPE=t_chair
 FLIP=1
-SKILLMAKE=Carpentry 85.0, t_carpentry
-RESOURCES=40 i_log
+VALUE=216
+WEIGHT=20.0
+RESOURCES=20 i_crystal5
+SKILLMAKE=Carpentry 82.1,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Crystal Throne
+DUPELIST=035ee
+
+[ITEMDEF 035ee]
+//Crystal throne
+DUPEITEM=035ed
+
+[ITEMDEF 03dff]
+DEFNAME=i_bench_stone
+TYPE=t_chair
+FLIP=1
+VALUE=50
+WEIGHT=100.0
+RESOURCES=10 i_rock_plain
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Bench (Dark Stone)
+DUPELIST=03e00
+
+[ITEMDEF 03e00]
+//bench (dark stone)
+DUPEITEM=03dff
+
+[ITEMDEF 04023]
+DEFNAME=i_chair_ter_mur
+NAME=Ter-Mur style chair
+TYPE=t_chair
+FLIP=1
 WEIGHT=20
+RESOURCES=40 i_log
+SKILLMAKE=Carpentry 85.0, t_carpentry
 DUPELIST=04024
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
 DESCRIPTION=Ter-Mur Style Chair
 
 [ITEMDEF 04024]
+//Ter-Mur style chair
 DUPEITEM=04023
 
-///////////////////////////////////////////////////////////////
-//////// CHAIR PARTS
-///////////////////////////////////////////////////////////////
-// These are used as components for craftable deeds.
 [ITEMDEF 04027]
 DEFNAME=i_gargish_couch_e_2_2
-NAME=Gargish Couch
+NAME=Gargish couch
 TYPE=t_chair
+FLIP=1
 WEIGHT=50
-DUPELIST=04028,04029,0402a
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
-DESCRIPTION=Gargish Couch (East - 2 of 2)
+DESCRIPTION=Gargish Couch
+DUPELIST=04028,04029,0402a
 
 [ITEMDEF 04028]
 DEFNAME=i_gargish_couch_e_1_2
 DUPEITEM=04027
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Gargish Couch (East - 1 of 2)
 
 [ITEMDEF 04029]
 DEFNAME=i_gargish_couch_s_2_2
 DUPEITEM=04027
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Gargish Couch (South - 2 of 2)
 
 [ITEMDEF 0402a]
 DEFNAME=i_gargish_couch_s_1_2
 DUPEITEM=04027
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Gargish Couch (South - 1 of 2)
 
 [EOF]

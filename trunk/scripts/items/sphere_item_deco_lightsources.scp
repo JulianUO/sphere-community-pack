@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Wednesday, March 2, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 
@@ -548,6 +548,26 @@ MOREZ=1
 [ITEMDEF 0f6b]
 //torch
 DUPEITEM=0f64
+
+[ITEMDEF 01c14]
+// cannot be unlit.
+DEFNAME=i_candle_of_love
+TYPE=t_light_lit
+TDATA4=i_candle_of_love
+RESOURCES=i_candle, i_ingot_agapite
+WEIGHT=5
+CATEGORY=Miscellaneous
+SUBSECTION=Virtue Items
+DESCRIPTION=Candle of Love
+DUPELIST=01c15,01c16
+
+[ITEMDEF 01c15]
+//Candle of Love
+DUPEITEM=01c14
+
+[ITEMDEF 01c16]
+//Candle of Love
+DUPEITEM=01c14
 
 [ITEMDEF 0142c]
 DEFNAME=i_candle_short_lit

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 3, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 
@@ -1162,16 +1162,6 @@ DUPEITEM=014d7
 [ITEMDEF 014df]
 //vat
 DUPEITEM=014d7
-
-[ITEMDEF 014e0]
-DEFNAME=i_bucket
-TYPE=t_container
-TDATA2=03e
-RESOURCES=2 i_board, 1 i_ingot_iron, 1 i_nails
-WEIGHT=2
-CATEGORY=Miscellaneous
-SUBSECTION=Vat
-DESCRIPTION=Bucket
 
 [ITEMDEF 014e1]
 DEFNAME=i_vat_ladder

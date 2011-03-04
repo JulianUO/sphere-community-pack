@@ -7,39 +7,6 @@
 VERSION=0.56b
 
 
-[ITEMDEF 0459]
-// bench - short marble bench e-w
-DEFNAME=i_BENCH_MARBLE
-TYPE=t_chair
-FLIP=1
-RESOURCES=50 i_stone_marble
-WEIGHT=4
-DUPELIST=045a
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Marble Bench 1 (n)
-
-[ITEMDEF 045a]
-// bench - short marble bench n-s
-DUPEITEM=0459
-DESCRIPTION=Marble Bench 1 (w)
-
-[ITEMDEF 045b]
-// bench - short sandstone bench e-w
-DEFNAME=i_bench_sandstone
-TYPE=t_chair
-FLIP=1
-RESOURCES=50 i_stone_sand
-WEIGHT=4
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Marble Bench 2 (n)
-DUPELIST=045c
-
-[ITEMDEF 045c]
-DESCRIPTION=Marble Bench 2 (w)
-DUPEITEM=045b
-
 [ITEMDEF 0a2c]
 DEFNAME=i_bureau
 RESOURCES=5 i_board, 10 i_nails, 3 i_drawer
@@ -1004,77 +971,6 @@ CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Small Vase 2
 
-[ITEMDEF 0b5f]
-// bench - rough board bench end - S
-// bench - picnic table bench end - S
-DEFNAME=i_bench_board_rough_end
-DUPELIST=0b60,0b65,0b66
-TYPE=t_chair
-FLIP=1
-RESOURCES=4 i_board, 2 i_nails
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Bench
-
-[ITEMDEF 0b60]
-// bench - rough board bench end - N
-// bench - picnic table bench end - N
-DUPEITEM=0b5f
-
-[ITEMDEF 0b61]
-// bench - rough board bench ext - n-s
-// bench - picnic table bench ext - n-s
-TYPE=t_chair
-DUPELIST=0b67
-
-[ITEMDEF 0b62]
-// bench - Smooth wood bench end - S
-DEFNAME=i_bench_wood_smooth_end
-DUPELIST=0b63,0b68,0b69
-FLIP=1
-TYPE=t_chair
-RESOURCES=4 i_board, 2 i_nails
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Bench
-
-[ITEMDEF 0b63]
-// bench - Smooth wood bench end - N
-DUPEITEM=0b62
-
-[ITEMDEF 0b64]
-DEFNAME=i_bench_wood_smooth_ext
-// bench - Smooth wood bench ext - n-s
-DUPELIST=0b6a
-TYPE=t_chair
-
-[ITEMDEF 0b65]
-// bench - rough board bench end - E
-// bench - picnic table bench end - E
-DUPEITEM=0b5f
-
-[ITEMDEF 0b66]
-// bench - rough board bench end - W
-// bench - picnic table bench end - W
-DUPEITEM=0b5f
-
-[ITEMDEF 0b67]
-// bench - rough board bench ext - e-w
-// bench - picnic table bench ext - e-w
-DUPEITEM=0b61
-
-[ITEMDEF 0b68]
-// bench - Smooth wood bench end - E
-DUPEITEM=0b62
-
-[ITEMDEF 0b69]
-// bench - Smooth wood bench end - W
-DUPEITEM=0b62
-
-[ITEMDEF 0b6a]
-// bench - Smooth wood bench ext - e-w
-DUPEITEM=0b64
-
 [ITEMDEF 0b6b]
 // table - narrow smooth wood table end - S
 DEFNAME=i_table_wood_smooth_narrow_end
@@ -1253,49 +1149,6 @@ DUPEITEM=0b8a
 // table - narrow rough board extention e-w
 DEFNAME=i_table_board_rough_ext
 
-[ITEMDEF 0b91]
-// bench - high-backed bench along wall - E
-// bench - high-backed bench - pew - E
-DEFNAME=i_bench_wood_highback
-DUPELIST=0b92
-FLIP=1
-TYPE=t_chair
-RESOURCES=20 i_board, 6 i_nails
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Bench
-
-[ITEMDEF 0b92]
-// bench - high-backed bench along wall - W
-// bench - high-backed bench - pew - W
-DUPEITEM=0b91
-
-[ITEMDEF 0b93]
-// bench - high-backed bench along wall - S
-// bench - high-backed bench - pew - S
-// DUPEITEM=0b91
-TYPE=t_chair
-
-[ITEMDEF 0b94]
-// bench - high-backed bench along wall - N
-// bench - high-backed bench - pew - N
-// DUPEITEM=0b91
-TYPE=t_chair
-
-[ITEMDEF 0c10]
-// chair - broken wooden bamboo wicker seat chair - N
-DEFNAME=i_chair_wood_bamboo_broken
-DUPELIST=0c11
-
-RESOURCES=5 i_board
-CATEGORY=Decoration - Furniture
-SUBSECTION=Broken Furniture
-DESCRIPTION=Chair
-
-[ITEMDEF 0c11]
-// chair - broken wooden bamboo wicker seat chair - W
-DUPEITEM=0c10
-
 [ITEMDEF 0c12]
 //broken armoire
 RESOURCES=10 i_board
@@ -1326,54 +1179,6 @@ RESOURCES=20 i_paper, 1 i_thread, 1 i_hide
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Books
-
-[ITEMDEF 0c17]
-//chair - chair covered with a sheet - N
-DEFNAME=i_chair_covered
-DUPELIST=0c18
-FLIP=1
-TYPE=t_chair
-RESOURCES=1 i_chair_wood, 1 i_sheet
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Chair (Covered)
-
-[ITEMDEF 0c18]
-//chair - chair covered with a sheet - W
-DUPEITEM=0c17
-
-[ITEMDEF 0c19]
-// chair - broken seat - wooden bamboo wicker seat chair - N
-DEFNAME=i_chair_wood_bamboo_broken_noseat
-CATEGORY=Decoration - Furniture
-SUBSECTION=Broken Furniture
-DESCRIPTION=Chair
-DUPELIST=0c1a
-
-[ITEMDEF 0c1a]
-// chair - broken seat - wooden bamboo wicker seat chair - W
-DUPEITEM=0c19
-
-[ITEMDEF 0c1b]
-// chair - broken fancy wooden chair - N
-DEFNAME=i_chair_wood_fancy_cushion_broken
-DUPELIST=0c1c,0c1d,0c1e
-RESOURCES=5 i_board, 1 i_nails
-CATEGORY=Decoration - Furniture
-SUBSECTION=Broken Furniture
-DESCRIPTION=Chair
-
-[ITEMDEF 0c1c]
-// chair - broken fancy wooden chair  - W
-DUPEITEM=0c1b
-
-[ITEMDEF 0c1d]
-// chair - broken fancy wooden chair  - E
-DUPEITEM=0c1b
-
-[ITEMDEF 0c1e]
-// chair - broken fancy wooden chair  - S
-DUPEITEM=0c1b
 
 [ITEMDEF 0c1f]
 //broken clock
@@ -1515,39 +1320,36 @@ SUBSECTION=Broken Furniture
 DESCRIPTION=Debris
 
 [ITEMDEF 0c31]
-//sheets
-DEFNAME=i_sheet
+DEFNAME=i_table_small_covered
 RESOURCES=1 i_table_nightstand, 1 i_cloth
-DYE=1
 CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Covered Ottoman
+SUBSECTION=Tables (unusable)
+DESCRIPTION=Small Table (covered)
+DUPELIST=0c32
 
 [ITEMDEF 0c32]
-//sheets
-DEFNAME=i_sheet_2
-RESOURCES=1 i_table_nightstand, 1 i_sheet
-DYE=1
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedding
-DESCRIPTION=Sheets
-DUPELIST=0c33,0c34,0c35,0c36
+//Small Table (covered)
+DUPEITEM=0c31
 
 [ITEMDEF 0c33]
-//sheets
-DUPEITEM=0c32
+DEFNAME=i_sheet_2
+RESOURCES=1 i_table_nightstand, 1 i_sheet
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables (unusable)
+DESCRIPTION=Large Table (covered)
+DUPELIST=0c34,0c35,0c36
 
 [ITEMDEF 0c34]
-//sheets
-DUPEITEM=0c32
+//Large Table (covered)
+DUPEITEM=0c33
 
 [ITEMDEF 0c35]
-//sheets
-DUPEITEM=0c32
+//Large Table (covered)
+DUPEITEM=0c33
 
 [ITEMDEF 0c36]
-//sheets
-DUPEITEM=0c32
+//Large Table (covered)
+DUPEITEM=0c33
 
 [ITEMDEF 0c39]
 DEFNAME=i_pegbaord
@@ -1909,19 +1711,6 @@ DUPEITEM=011f0
 //hammock
 DUPEITEM=011f0
 
-[ITEMDEF 011fc]
-// chair - backless bamboo stool
-// chair - backless bamboo artist's stool
-DEFNAME=i_chair_stool_bamboo
-TYPE=t_chair
-FLIP=1
-SKILLMAKE=CARPENTRY 40.0
-RESOURCES=4 i_bamboo, 3 i_canvas
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Foot Stool
-
 [ITEMDEF 011fd]
 DEFNAME=i_cot_sw
 TYPE=t_bed
@@ -1974,80 +1763,6 @@ DUPEITEM=01201
 [ITEMDEF 01206]
 // table - narrow stone table extention e-w
 DUPEITEM=01203
-
-[ITEMDEF 01207]
-DEFNAME=i_bench_stone_1
-TYPE=t_chair
-FLIP=1
-RESOURCES=10 i_rock_plain
-WEIGHT=20
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Bench (Stone)
-DUPELIST=01208,01209
-
-[ITEMDEF 01208]
-//STONE_BENCH_1 PART 3
-DUPEITEM=01207
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Bench (Stone)
-
-[ITEMDEF 01209]
-//STONE_BENCH_1 PART 2
-DUPEITEM=01207
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Bench (Stone)
-
-[ITEMDEF 0120a]
-DEFNAME=i_bench_stone_2
-TYPE=t_chair
-FLIP=1
-RESOURCES=10 i_rock_plain
-WEIGHT=20
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Bench (Stone)
-DUPELIST=0120b,0120c
-
-[ITEMDEF 0120b]
-//STONE_BENCH_2 PART 3
-DUPEITEM=0120A
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Bench (Stone)
-
-[ITEMDEF 0120c]
-//STONE_BENCH_2 PART 2
-DUPEITEM=0120A
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Bench (Stone)
-
-[ITEMDEF 01218]
-// chair - gray stone chair w/high back - N
-DEFNAME=i_chair_stone
-TYPE=t_chair
-FLIP=1
-RESOURCES=10 i_rock_plain
-WEIGHT=10
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Chair (Stone)
-DUPELIST=01219,0121a,0121b
-
-[ITEMDEF 01219]
-// chair - gray stone chair w/high back - W
-DUPEITEM=01218
-
-[ITEMDEF 0121a]
-// chair - gray stone chair w/high back - S
-DUPEITEM=01218
-
-[ITEMDEF 0121b]
-// chair - gray stone chair w/high back - E
-DUPEITEM=01218
 
 [ITEMDEF 01397]
 DEFNAME=i_pillow
@@ -2110,23 +1825,6 @@ DUPEITEM=013ac
 [ITEMDEF 013ae]
 //pillow
 DUPEITEM=013ac
-
-[ITEMDEF 01526]
-// chair - LB's U shaped throne S piece - e-w
-// DEFNAME2=i_chair_tacky_throne
-DEFNAME=i_chair_throne_lb
-DUPELIST=01527
-TYPE=t_chair
-FLIP=1
-RESOURCES=10 i_marble, 5 i_ingot_gold, 5 i_velvet, 100 i_feather
-WEIGHT=50
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Throne
-
-[ITEMDEF 01527]
-// chair - LB's U shaped throne N piece - e-w
-DUPEITEM=01526
 
 [ITEMDEF 0163a]
 DEFNAME=i_PILLOW_LARGE
@@ -2393,16 +2091,6 @@ DUPELIST=01946
 //carved wooden screen
 DUPEITEM=01945
 
-[ITEMDEF 019f2]
-// bench - Woodworkers bench extention - n-s
-DEFNAME=i_bench_woodworker_ext
-DUPELIST=019f6
-TYPE=t_chair
-
-[ITEMDEF 019f6]
-// bench - Woodworkers bench extention - n-s
-DUPEITEM=019f2
-
 [ITEMDEF 01da5]
 // table - Small rough wood table end - S
 DEFNAME=i_TABLE_WOOD_ROUGH_SMALL_END
@@ -2535,81 +2223,8 @@ DUPEITEM=01dc1
 // table - marble table extention e-w
 DUPEITEM=01dc3
 
-[ITEMDEF 01dc7]
-// bench - Sandstone bench end - S
-DEFNAME=i_bench_sandstone_end
-DUPELIST=01dc8,01dca,01dcb
-TYPE=t_chair
-FLIP=1
-RESOURCES=6 i_stone_sand
-WEIGHT=12
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Sandstone Bench
-
-[ITEMDEF 01dc8]
-// bench - Sandstone bench end - N
-DUPEITEM=01dc7
-
-[ITEMDEF 01dc9]
-// bench - Sandstone bench extention - n-s
-DEFNAME=i_bench_sandstone_ext
-DUPELIST=01dcc
-TYPE=t_chair
-
-[ITEMDEF 01dca]
-// bench - Sandstone bench end - E
-DUPEITEM=01dc7
-
-[ITEMDEF 01dcb]
-// bench - Sandstone bench end - W
-DUPEITEM=01dc7
-
-[ITEMDEF 01dcc]
-// bench - Sandstone bench extention - e-w
-DUPEITEM=01dc9
-
-[ITEMDEF 01dcd]
-// bench - Marble bench end - S
-DEFNAME=i_bench_marble_end
-DUPELIST=01dce,01dd0,01dd1
-TYPE=t_chair
-FLIP=1
-RESOURCES=6 i_marble
-WEIGHT=12
-CATEGORY=Decoration - Furniture
-SUBSECTION=Chairs
-DESCRIPTION=Marble Bench
-
-[ITEMDEF 01dce]
-// bench - Marble bench end - N
-DUPEITEM=01dcd
-
-[ITEMDEF 01dcf]
-// bench - Marble bench ext - n-s
-DEFNAME=i_bench_marble_ext
-DUPELIST=01dd2
-TYPE=t_chair
-
-[ITEMDEF 01dd0]
-// bench - Marble bench end - E
-DUPEITEM=01dcd
-
-[ITEMDEF 01dd1]
-// bench - Marble bench end - W
-DUPEITEM=01dcd
-
-[ITEMDEF 01dd2]
-// bench - Marble bench ext - n-s
-// this is also n-s, can it be redeffed to use sandstone ID ??
-// DEFNAME=i_bench_marble_ext_ew
-// ID=i_BENCH_SANDSTONE_EXT
-// COLOR=00 // set color to match marble
-DUPEITEM=01dcf
-
 [ITEMDEF 01e7f]
-// chair - rough board stool/nightstand
-DEFNAME=i_chair_stool_BOARD_ROUGH
+//end table (unfinished)
 SKILLMAKE=CARPENTRY 10.0, t_carpentry
 RESOURCES=8 i_board
 
@@ -2712,24 +2327,5 @@ DUPEITEM=030e3
 [ITEMDEF 030e6]
 //elven dresser parts
 DUPEITEM=030e3
-
-[ITEMDEF 03dff]
-//bench dark stone against NE wall
-DEFNAME=i_bench_5
-TYPE=t_chair
-FLIP=1
-VALUE={80 100}
-//RESOURCES=
-WEIGHT=5
-
-CATEGORY=Decoration - Furniture
-SUBSECTION=Stone Bench
-DESCRIPTION=@ (n)
-DUPELIST=03e00
-
-[ITEMDEF 03e00]
-//bench dark stone against NW wall
-DUPEITEM=03dff
-DESCRIPTION=@ (w)
 
 [EOF]

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 3, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 [COMMENT comment_food]
@@ -93,6 +93,7 @@ Some ToDo possibilities:
 - butter making...
 - candy making...
 - perhaps move mushrooms and fruit into this file...
+- sugar from beets or cane?
 
 
 /////////////////////
@@ -118,7 +119,7 @@ DEFNAME=i_fx_bubbling_stew
 TYPE=t_food
 VALUE=10
 WEIGHT=5.0
-RESOURCES=4 i_pitcher_water,1 i_flour_bowl,4 i_ribs,1 i_fruit_carrot
+RESOURCES=4 i_pitcher_water,1 i_flour_bowl,4 i_ribs_raw,1 i_fruit_carrot
 //FIXME: add more veggies? Add the cauldron or kettle?
 CATEGORY=Provisions - Food
 SUBSECTION=Cooked
@@ -161,7 +162,7 @@ FLIP=1
 VALUE=5
 WEIGHT=0.1
 RESOURCES=1 i_bacon_slab
-SKILLMAKE=Cooking 15.0,i_fry_pan
+SKILLMAKE=Cooking 15.0,i_frypan
 CATEGORY=Provisions - Food
 SUBSECTION=Cooked
 DESCRIPTION=Slice of Cooked Bacon
@@ -421,7 +422,7 @@ TYPE=t_food
 VALUE=2
 WEIGHT=0.1
 RESOURCES=1 i_eggs_fresh
-SKILLMAKE=Cooking 15.0,i_fry_pan
+SKILLMAKE=Cooking 15.0,i_frypan
 CATEGORY=Provisions - Food
 SUBSECTION=Cooked
 DESCRIPTION=Fried Eggs
@@ -555,7 +556,7 @@ DEFNAME=i_jug_cider
 TYPE=t_booze
 VALUE=23
 WEIGHT=0.2
-RESOURCES=1 i_jug,1 i_fruit_apple,1 i_pitcher_water,1 i_reag_fertile_dirt
+RESOURCES=1 i_bottle,1 i_fruit_apple,1 i_pitcher_water,1 i_reag_fertile_dirt
 CATEGORY=Provisions - Food
 SUBSECTION=Drinks - Booze
 DESCRIPTION=Jug of Cider
@@ -826,7 +827,7 @@ RESOURCES=4 i_wheat_sheaf,1 i_cloth
 CATEGORY=Provisions - Food
 SUBSECTION=Natural
 DESCRIPTION=Sack of Flour (open)
-DUPEITEM=01046
+DUPELIST=01046
 
 [ITEMDEF 0103b]
 DEFNAME=i_bread_loaf
@@ -915,7 +916,7 @@ TDATA1=i_pie_baked
 VALUE=10
 WEIGHT=0.3
 RESOURCES=1 i_dough,1 t_fruit,1 i_sugar
-SKILLMAKE=Cooking 20.0,i_bowl_large,i_rolling_pin
+SKILLMAKE=Cooking 20.0,i_bowl_wood_lg,i_rolling_pin
 CATEGORY=Provisions - Food
 SUBSECTION=Raw Food
 DESCRIPTION=Pie (unbaked)
@@ -961,7 +962,7 @@ DEFNAME=i_bowl_dough
 TYPE=t_food_raw
 VALUE=13
 WEIGHT=0.4
-RESOURCES=1 i_bowl_large,1 i_dough
+RESOURCES=1 i_bowl_wood_lg,1 i_dough
 CATEGORY=Provisions - Food
 SUBSECTION=Raw Food
 DESCRIPTION=Bowl of Dough
@@ -1284,6 +1285,15 @@ RESOURCES=5 i_basket,5 i_dried_herbs
 CATEGORY=Provisions - Food
 SUBSECTION=Assembled
 DESCRIPTION=Basket of Herbs
+
+[ITEMDEF 01956]
+DEFNAME=i_bottle_shochu
+TYPE=t_booze
+WEIGHT=1.0
+RESOURCES=1 i_bottle_shochu_empty,1 i_fruit_grapes,1 i_reag_fertile_dirt
+CATEGORY=Provisions - Food
+SUBSECTION=Drinks - Booze
+DESCRIPTION=Bottle of Shochu
 
 [ITEMDEF 01ad3]
 DEFNAME=i_donuts
@@ -1843,6 +1853,15 @@ DUPEITEM=0ff8
 //pitcher of water
 DUPEITEM=0ff8
 
+[ITEMDEF 024e2]
+DEFNAME=i_bottle_sake
+TYPE=t_booze
+WEIGHT=1.0
+RESOURCES=i_bottle_shochu_empty
+CATEGORY=Provisions - Food
+SUBSECTION=Drinks - Booze
+DESCRIPTION=Saki
+
 [ITEMDEF 024e8]
 DEFNAME=i_wassabi_tray
 TYPE=t_food
@@ -1922,9 +1941,18 @@ ON=@Create
 //tray of sushi 2
 DUPEITEM=02840
 
+[ITEMDEF 0284b]
+DEFNAME=i_basket_greentea
+TYPE=t_food_raw
+WEIGHT=23.0
+RESOURCES=1 i_basket,20 i_tea_green
+CATEGORY=Provisions - Food
+SUBSECTION=Raw Food
+DESCRIPTION=Basket of Green Tea
+
 [ITEMDEF 0284c]
 DEFNAME=i_tea_green
-NAME=bowl of green tea
+NAME=bowl%s of green tea
 TYPE=t_food
 VALUE=5
 WEIGHT=0.1
@@ -2112,7 +2140,7 @@ ON=@Create
 
 [ITEMDEF 02fd6]
 DEFNAME=i_wafer
-NAME=parrot wafer
+NAME=parrot wafer%s
 TYPE=t_food
 VALUE=5
 WEIGHT=0.1
@@ -2135,7 +2163,7 @@ DESCRIPTION=Grapes of Wrath
 [ITEMDEF 02fd8]
 //FIXME: Supposed to cure all curses?
 DEFNAME=i_apple_enchanted
-NAME=enchanted apple
+NAME=enchanted apple%s
 TYPE=t_fruit
 VALUE=100
 WEIGHT=0.1
@@ -2374,6 +2402,7 @@ DESCRIPTION=Sea Sponge
 [ITEMDEF 03bb8]
 //FIXME: This should not be drank all at once... use it to fill a cup at a time perhaps?
 DEFNAME=i_cauldron_eggnog
+NAME=cauldron of eggnog
 //TYPE=t_drink
 VALUE=168
 WEIGHT=39.0
@@ -2561,6 +2590,7 @@ DUPEITEM=044e5
 
 [ITEMDEF 046a0]
 DEFNAME=i_cornucopia
+NAME=cornucopia
 TYPE=t_food
 VALUE=26
 WEIGHT=3.0
@@ -2593,7 +2623,7 @@ ON=@Create
 
 [ITEMDEF 0468d]
 DEFNAME=i_lollypop_red
-NAME=red lollypop
+NAME=red lollypop%s
 TYPE=t_food
 WEIGHT=0.1
 VALUE=3
@@ -2607,7 +2637,7 @@ ON=@Create
 
 [ITEMDEF 0468e]
 DEFNAME=i_lollypop_yellow
-NAME=yellow lollypop
+NAME=yellow lollypop%s
 TYPE=t_food
 WEIGHT=0.1
 VALUE=3
@@ -2621,7 +2651,7 @@ ON=@Create
 
 [ITEMDEF 0468f]
 DEFNAME=i_lollypop_green
-NAME=green lollypop
+NAME=green lollypop%s
 TYPE=t_food
 WEIGHT=0.1
 VALUE=3
@@ -2635,7 +2665,7 @@ ON=@Create
 
 [ITEMDEF 04690]
 DEFNAME=i_candy_nougat
-NAME=nougat swirl
+NAME=nougat swirl%s
 TYPE=t_food
 WEIGHT=0.1
 VALUE=3
@@ -2663,7 +2693,7 @@ ON=@Create
 
 [ITEMDEF 0469e]
 DEFNAME=i_candy_wrapped
-NAME=wrapped candy
+NAME=wrapped candy%s//should be candies
 TYPE=t_food
 WEIGHT=0.1
 VALUE=3
@@ -2716,7 +2746,7 @@ PILE=1
 VALUE=1
 WEIGHT=0.1
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Natural
 DESCRIPTION=Sugar
 ON=@Create
    COLOR=0481
@@ -2766,7 +2796,7 @@ ON=@Create
 
 [ITEMDEF i_fruit_tomato]
 ID=09d0
-NAME=tomato
+NAME=tomato%es
 TYPE=t_fruit
 TDATA1=i_crop_tomato1
 PILE=1
@@ -2801,7 +2831,7 @@ TYPE=t_grain
 VALUE=1
 WEIGHT=0.5
 CATEGORY=Provisions - Food
-SUBSECTION=Grains
+SUBSECTION=Fruits
 DESCRIPTION=Barley
 ON=@Create
    COLOR=colors_brown
@@ -2809,23 +2839,25 @@ ON=@Create
 
 [ITEMDEF i_dough_sweet]
 ID=i_dough
-NAME=Sweet Dough
+NAME=sweet dough
+TYPE=t_food_raw
 SKILLMAKE=Cooking 0.1, t_cooking_tool
 RESOURCES=1 i_dough, 1 i_jar_honey
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Raw Food
 DESCRIPTION=Sweet Dough
 ON=@Create
    COLOR=colors_yellow
 
 [ITEMDEF i_cake_mix]
-NAME=Cake Mix
 ID=i_cookie_mix
+NAME=cake mix
+TYPE=t_food_raw
 SKILLMAKE=Cooking 40.0,i_spoon_wood_large
 RESOURCES=1 i_dough_sweet,1 i_sugar
 WEIGHT=1
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Raw Food
 DESCRIPTION=Cake Mix
 
 
@@ -2837,7 +2869,7 @@ TDATA1=i_baked_quiche
 RESOURCES=1 i_dough, 1 i_eggs_fresh
 SKILLMAKE=Cooking 0.1, t_cooking_tool
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Raw Food
 DESCRIPTION=Unbaked Quiche
 ON=@Create
    MOREM=3
@@ -2849,7 +2881,7 @@ TYPE=t_food
 RESOURCES=1 i_unbaked_quiche
 SKILLMAKE=Cooking 0.1
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Baked
 DESCRIPTION=Baked Quiche
 ON=@Create
    MOREM=3
@@ -2863,7 +2895,7 @@ TDATA1=i_baked_pie_meat
 RESOURCES=1 i_dough, 1 i_ribs_raw
 SKILLMAKE=Cooking 0.1, t_cooking_tool
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Raw Food
 DESCRIPTION=Unbaked Meat Pie
 ON=@Create
    MOREM=3
@@ -2875,7 +2907,7 @@ TYPE=t_food
 RESOURCES=1 i_unbaked_pie_meat
 SKILLMAKE=Cooking 0.1
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Baked
 DESCRIPTION=Baked Meat Pie
 ON=@Create
    MOREM=3
@@ -2889,7 +2921,7 @@ TDATA1=i_baked_pie_fruit
 RESOURCES=1 i_dough, 1 i_fruit_peach
 SKILLMAKE=Cooking 0.1, t_cooking_tool
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Raw Food
 DESCRIPTION=Unbaked Fruit Pie
 ON=@Create
    MOREM=3
@@ -2901,7 +2933,7 @@ TYPE=t_food
 RESOURCES=1 i_unbaked_pie_fruit
 SKILLMAKE=Cooking 0.1
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Baked
 DESCRIPTION=Baked Fruit Pie
 ON=@Create
    MOREM=3
@@ -2915,7 +2947,7 @@ TDATA1=i_baked_peach_cobbler
 RESOURCES=1 i_dough, 1 i_fruit_peach
 SKILLMAKE=Cooking 0.1, t_cooking_tool
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Raw Food
 DESCRIPTION=Unbaked Peach Cobbler
 ON=@Create
    MOREM=3
@@ -2927,7 +2959,7 @@ TYPE=t_food
 RESOURCES=1 i_unbaked_peach_cobbler
 SKILLMAKE=Cooking 0.1
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Baked
 DESCRIPTION=Baked Peach Cobbler
 ON=@Create
    MOREM=3
@@ -2941,7 +2973,7 @@ TDATA1=i_baked_pie_apple
 RESOURCES=1 i_dough, 1 i_fruit_apple
 SKILLMAKE=Cooking 0.1, t_cooking_tool
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Raw Food
 DESCRIPTION=Unbaked Apple Pie
 ON=@Create
    MOREM=3
@@ -2953,7 +2985,7 @@ TYPE=t_food
 RESOURCES=1 i_unbaked_pie_apple
 SKILLMAKE=Cooking 0.1
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Baked
 DESCRIPTION=Baked Apple Pie
 ON=@Create
    MOREM=3
@@ -2967,7 +2999,7 @@ TDATA1=i_baked_pie_pumpkin
 RESOURCES=1 i_dough, 1 i_fruit_pumpkin
 SKILLMAKE=Cooking 0.1, t_cooking_tool
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Raw Food
 DESCRIPTION=Unbaked Pumpkin Pie
 ON=@Create
    MOREM=3
@@ -2979,7 +3011,7 @@ TYPE=t_food
 RESOURCES=1 i_unbaked_pie_pumpkin
 SKILLMAKE=Cooking 0.1
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Baked
 DESCRIPTION=Baked Pumpkin Pie
 ON=@Create
    MOREM=3
@@ -2993,7 +3025,7 @@ TDATA1=i_pizza_sausage
 RESOURCES=1 i_dough,1 i_cheese_wedge,1 i_sausage
 SKILLMAKE=Cooking 0.1, t_cooking_tool
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Raw Food
 DESCRIPTION=Uncooked Sausage Pizza
 ON=@Create
    MOREM=3
@@ -3005,7 +3037,7 @@ TYPE=t_food
 RESOURCES=1 i_uncooked_pizza_sausage
 SKILLMAKE=Cooking 0.1
 CATEGORY=Provisions - Food
-SUBSECTION=Chef
+SUBSECTION=Baked
 DESCRIPTION=Sausage Pizza
 ON=@Create
    MOREM=3
@@ -3100,7 +3132,7 @@ ID=i_sea_sponge
 NAME=full moon fish
 TYPE=t_fish
 CATEGORY=Provisions - Food
-SUBSECTION=ML
+SUBSECTION=Fish
 DESCRIPTION=Full Moon Fish
 ON=@Create
 	COLOR=colors_brown
