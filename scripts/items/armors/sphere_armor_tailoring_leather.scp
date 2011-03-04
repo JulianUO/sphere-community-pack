@@ -3,14 +3,15 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 013c5]
 DEFNAME=i_leather_sleeves
 TYPE=t_armor_leather
 RESOURCES=4 i_hides_cut
-SKILLMAKE=TAILORING 53.9, t_sewing_kit
+SKILLMAKE=Tailoring 53.9, t_sewing_kit
 WEIGHT=2.0
 FLIP=1
 REQSTR=20
@@ -23,18 +24,18 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
-
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 013cd]
 DUPEITEM=013c5
 
 [ITEMDEF 013c6]
 DEFNAME=i_leather_gloves
+NAME=leather gloves
 TYPE=t_armor_leather
 RESOURCES=3 i_hides_cut
-SKILLMAKE=TAILORING 51.8, t_sewing_kit
+SKILLMAKE=Tailoring 51.8, t_sewing_kit
 WEIGHT=1.0
 FLIP=1
 REQSTR=20
@@ -47,9 +48,8 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
-
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 013ce]
 DUPEITEM=013c6
@@ -58,7 +58,7 @@ DUPEITEM=013c6
 DEFNAME=i_leather_gorget
 TYPE=t_armor_leather
 RESOURCES=4 i_hides_cut
-SKILLMAKE=TAILORING 53.9, t_sewing_kit
+SKILLMAKE=Tailoring 53.9, t_sewing_kit
 WEIGHT=1.0
 FLIP=1
 REQSTR=20
@@ -70,15 +70,14 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
-
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 013cb]
 DEFNAME=i_leather_leggings
 TYPE=t_armor_leather
 RESOURCES=10 i_hides_cut
-SKILLMAKE=TAILORING 66.3, t_sewing_kit
+SKILLMAKE=Tailoring 66.3, t_sewing_kit
 WEIGHT=4.0
 FLIP=1
 REQSTR=20
@@ -91,9 +90,8 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
-
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 013d2]
 DUPEITEM=013cb
@@ -102,7 +100,7 @@ DUPEITEM=013cb
 DEFNAME=i_leather_tunic
 TYPE=t_armor_leather
 RESOURCES=12 i_hides_cut
-SKILLMAKE=TAILORING 70.5, t_sewing_kit
+SKILLMAKE=Tailoring 70.5, t_sewing_kit
 WEIGHT=6
 FLIP=1
 REQSTR=25
@@ -115,9 +113,8 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
-
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 013d3]
 DUPEITEM=013cc
@@ -126,7 +123,7 @@ DUPEITEM=013cc
 DEFNAME=i_leather_cap
 TYPE=t_armor_leather
 RESOURCES=2 i_hides_cut
-SKILLMAKE=TAILORING 6.2, t_sewing_kit
+SKILLMAKE=Tailoring 6.2, t_sewing_kit
 WEIGHT=2.0
 FLIP=1
 REQSTR=20
@@ -139,9 +136,8 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
-
 ON=@CREATE
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 01dba]
 DUPEITEM=01db9
@@ -150,7 +146,7 @@ DUPEITEM=01db9
 DEFNAME=i_armor_female_shorts
 TYPE=t_armor_leather
 RESOURCES=8 i_hides_cut
-SKILLMAKE=TAILORING 62.2
+SKILLMAKE=Tailoring 62.2
 WEIGHT=3.0
 FLIP=1.0
 REQSTR=20
@@ -164,9 +160,8 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
-
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 01c01]
 DUPEITEM=01c00
@@ -175,7 +170,7 @@ DUPEITEM=01c00
 DEFNAME=i_armor_female_leather
 TYPE=t_armor_leather
 RESOURCES=8 i_hides_cut
-SKILLMAKE=TAILORING 62.2
+SKILLMAKE=Tailoring 62.2
 WEIGHT=1
 FLIP=1
 REQSTR=25
@@ -189,9 +184,8 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
-
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 01c07]
 DUPEITEM=01c06
@@ -200,7 +194,7 @@ DUPEITEM=01c06
 DEFNAME=i_armor_female_skirt
 TYPE=t_armor_leather
 RESOURCES=6 i_hides_cut
-SKILLMAKE=TAILORING 58.0, t_sewing_kit
+SKILLMAKE=Tailoring 58.0, t_sewing_kit
 WEIGHT=1.0
 FLIP=1
 REQSTR=20
@@ -214,9 +208,8 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
-
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 01c09]
 DUPEITEM=01c08
@@ -225,7 +218,7 @@ DUPEITEM=01c08
 DEFNAME=i_armor_female_bustier
 TYPE=t_armor_leather
 RESOURCES=6 i_hides_cut
-SKILLMAKE=TAILORING 58.0, t_sewing_kit
+SKILLMAKE=Tailoring 58.0, t_sewing_kit
 WEIGHT=1.0
 FLIP=1
 REQSTR=20
@@ -239,11 +232,10 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
-
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 01c0b]
 DUPEITEM=01c0a
 
-[eof]
+[EOF]

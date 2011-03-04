@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 3, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 
@@ -130,24 +130,6 @@ DUPEITEM=01950
 [ITEMDEF 01955]
 //mongbat dartboard
 DUPEITEM=01950
-
-[ITEMDEF 01956]
-DEFNAME=i_bottle_shochu
-TYPE=t_booze
-WEIGHT=1.0
-RESOURCES=1 i_bottle_shochu_empty,1 i_fruit_grapes,1 i_reag_fertile_dirt
-CATEGORY=Items by Professions
-SUBSECTION=BarKeep
-DESCRIPTION=Bottle of Shochu
-
-[ITEMDEF 01957]
-DEFNAME=i_bottle_shochu_empty
-NAME=empty wine bottle
-WEIGHT=0.1
-RESOURCES=1 i_clay
-CATEGORY=Items by Professions
-SUBSECTION=BarKeep
-DESCRIPTION=Bottle of Shochu (empty)
 
 [ITEMDEF 019bc]
 //FIXME: When held, the bearer gets the appearance of a monster.
@@ -446,25 +428,6 @@ DUPELIST=02329
 //snowman
 DUPEITEM=02328
 
-[ITEMDEF 0232a]
-DEFNAME=i_giftbox
-NAME=gift box
-TYPE=t_container
-TDATA2=0102
-TDATA3=100,100
-FLIP=1
-WEIGHT=9.4
-RESOURCES=9 i_board,2 i_nails,1 i_paper,1 i_ribbon
-SKILLMAKE=Carpentry 21.0,t_carpentry
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Gift Box
-DUPELIST=0232b
-
-[ITEMDEF 0232b]
-//gift box
-DUPEITEM=0232a
-
 [ITEMDEF 0232c]
 DEFNAME=i_wreath
 TYPE=t_normal
@@ -546,173 +509,6 @@ RESOURCES=3 i_clay
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Urn
-
-
-[ITEMDEF 024d5]
-DEFNAME=i_basket_square_small
-TYPE=t_container
-TDATA2=03f
-WEIGHT=2.0
-RESOURCES=2 i_log_bamboo
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Japanese Basket (square)
-DUPELIST=024d6
-
-[ITEMDEF 024d6]
-//japanese basket (square)
-DUPEITEM=024d5
-
-[ITEMDEF 024d7]
-DEFNAME=i_basket_round_small
-TYPE=t_container
-TDATA2=041
-WEIGHT=2.0
-RESOURCES=2 i_log_bamboo
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Japanese Basket (round)
-
-[ITEMDEF 024d8]
-DEFNAME=i_basket_round_tall
-TYPE=t_container
-TDATA2=041
-WEIGHT=2.0
-RESOURCES=2 i_clay
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Japanese Basket (tall round)
-
-[ITEMDEF 024d9]
-DEFNAME=i_basket_square_deep
-TYPE=t_container
-TDATA2=0108
-WEIGHT=4.0
-RESOURCES=4 i_log_bamboo
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Japanese Basket (square deep)
-DUPELIST=024da
-
-[ITEMDEF 024da]
-//japanese basket (square deep)
-DUPEITEM=024d9
-
-[ITEMDEF 024db]
-DEFNAME=i_basket_square_tall
-TYPE=t_container
-TDATA2=0108
-WEIGHT=4.0
-RESOURCES=4 i_log_bamboo
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Japanese Basket (square tall)
-DUPELIST=024dc
-
-[ITEMDEF 024dc]
-//japanese basket (square tall)
-DUPEITEM=024db
-
-[ITEMDEF 024dd]
-DEFNAME=i_basket_round_flat
-TYPE=t_container
-TDATA2=0108
-WEIGHT=2.0
-RESOURCES=2 i_log_bamboo
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Japanese Basket (round flat)
-
-[ITEMDEF 024de]
-DEFNAME=i_bowl_placemat
-TYPE=t_normal
-WEIGHT=2.0
-RESOURCES=1 i_log_bamboo,1 i_clay
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Japanese Kitchen
-DESCRIPTION=Bowl
-DUPELIST=024df,024e0
-
-[ITEMDEF 024df]
-//Bowl
-DUPEITEM=024de
-
-[ITEMDEF 024e0]
-//Bowl
-DUPEITEM=024de
-
-[ITEMDEF 024e1]
-DEFNAME=i_cups_japanese
-TYPE=t_normal
-WEIGHT=4.0
-RESOURCES=4 i_clay
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Japanese Kitchen
-DESCRIPTION=Cups (4)
-
-[ITEMDEF 024e2]
-DEFNAME=i_bottle_sake
-TYPE=t_booze
-WEIGHT=1.0
-RESOURCES=i_bottle_shochu_empty
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Japanese Kitchen
-DESCRIPTION=Saki
-
-
-[ITEMDEF 024e6]
-TYPE=t_normal
-FLIP=1
-WEIGHT=1.0
-RESOURCES=1 i_ingot_iron
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Japanese Kitchen
-DESCRIPTION=Tea Set
-DUPELIST=024e7
-
-[ITEMDEF 024e7]
-//tea set
-DUPEITEM=024e6
-
-
-[ITEMDEF 024ec]
-DEFNAME=i_stair_cabinet
-TYPE=t_container
-TDATA2=0107
-RESOURCES=50 i_board
-CATEGORY=Decoration - Furniture
-SUBSECTION=Japanese
-DESCRIPTION=Stair Cabinet
-DUPELIST=024ed,024ee,024ef,024f0,024f1,024f2,024f3
-
-[ITEMDEF 024ed]
-//stair with cabinet
-DUPEITEM=024ec
-
-[ITEMDEF 024ee]
-//stair with cabinet
-DUPEITEM=024ec
-
-[ITEMDEF 024ef]
-//stair with cabinet
-DUPEITEM=024ec
-
-[ITEMDEF 024f0]
-//stair with cabinet
-DUPEITEM=024ec
-
-[ITEMDEF 024f1]
-//stair with cabinet
-DUPEITEM=024ec
-
-[ITEMDEF 024f2]
-//stair with cabinet
-DUPEITEM=024ec
-
-[ITEMDEF 024f3]
-//stair with cabinet
-DUPEITEM=024ec
-
 
 [ITEMDEF 025ea]
 DEFNAME=i_shirt_checkered
@@ -1766,15 +1562,6 @@ CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Japanese
 DESCRIPTION=Flowers
 
-[ITEMDEF 0284b]
-DEFNAME=i_basket_greentea
-TYPE=t_normal
-WEIGHT=23.0
-RESOURCES=1 i_basket,20 i_tea_green
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Japanese Kitchen
-DESCRIPTION=Basket of Green Tea
-
 [ITEMDEF 02851]
 DEFNAME=i_display_swords_red
 TYPE=t_normal
@@ -2376,46 +2163,6 @@ ON=@Create
 //light female chest
 DUPEITEM=02fcb
 
-[ITEMDEF 03060]
-DEFNAME=i_aquarium
-NAME=aquarium
-TYPE=t_container
-TDATA2=02c96
-TDATA3=010001
-TDATA4=015c00c6
-FLIP=1
-VALUE=321
-WEIGHT=156.1
-RESOURCES=8 i_board,1 i_nails,48 i_glass_raw,100 i_water
-CATEGORY=Decoration - Furniture
-SUBSECTION=Aquarium
-DESCRIPTION=Aquarium
-//TEVENTS=e_aquarium
-DUPELIST=03061,03062,03063
-ON=@DClick
-   //Randomize all object locations
-   FORCONT <UID> 0
-      CONTP=<R1,348>,<R1,198>
-//      SERV.LOG Item <NAME>: <CONTP>
-   ENDFOR
-ON=@DropOn_Self
-   //Only allow aquarium items
-   IF (<ARGO.TYPE>!=t_aquarium_item) && (<ARGO.TYPE>!=t_fish)
-      RETURN 1
-   ENDIF
-
-[ITEMDEF 03061]
-//aquarium
-DUPEITEM=03060
-
-[ITEMDEF 03062]
-//aquarium
-DUPEITEM=03060
-
-[ITEMDEF 03063]
-//aquarium
-DUPEITEM=03060
-
 [ITEMDEF 03066]
 DEFNAME=i_displaycase_monster
 NAME=monster showcase
@@ -2447,38 +2194,6 @@ DUPEITEM=03066
 //monster showcase
 DUPEITEM=03066
 
-
-[ITEMDEF 0312d]
-DEFNAME=i_servered_elf_ears
-NAME=severed elf ears
-TYPE=t_normal
-FLIP=1
-VALUE=10
-WEIGHT=0.1
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=ML-Misc
-DESCRIPTION=Servered Elf Ears
-DUPELIST=0312e
-
-[ITEMDEF 0312e]
-//severed elf ears
-DUPEITEM=0312d
-
-[ITEMDEF 0312f]
-DEFNAME=i_servered_human_ears
-NAME=servered human ears
-TYPE=t_normal
-FLIP=1
-VALUE=10
-WEIGHT=0.1
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=ML-Misc
-DESCRIPTION=Servered Human Ears
-DUPELIST=03130
-
-[ITEMDEF 03130]
-//severed human ears
-DUPEITEM=0312f
 
 
 [ITEMDEF 03156]
@@ -2566,6 +2281,91 @@ DESCRIPTION=Luminescent Fungi
 //FIXME: the following benches cannot be sat on
 [ITEMDEF 0319a]
 [ITEMDEF 0319b]
+
+[ITEMDEF 031b0]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031b0
+
+[ITEMDEF 031b1]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031b1
+
+[ITEMDEF 031b2]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031b2
+
+[ITEMDEF 031b3]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031b3
+
+[ITEMDEF 031b4]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031b4
+
+[ITEMDEF 031b5]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031b5
+
+[ITEMDEF 031b6]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031b6
+
+[ITEMDEF 031b7]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031b7
+
+[ITEMDEF 031b8]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031b8
+
+[ITEMDEF 031b9]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031b9
+
+[ITEMDEF 031ba]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031ba
+
+[ITEMDEF 031bb]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031bb
+
+[ITEMDEF 031bc]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031bc
+
+[ITEMDEF 031bd]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031bd
+
+[ITEMDEF 031be]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031be
+
+[ITEMDEF 031bf]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031bf
+
+[ITEMDEF 031c0]
+CATEGORY=Miscellaneous
+SUBSECTION=Invisible Tiles
+DESCRIPTION=Invisible Tile 031c0
 
 
 [ITEMDEF 03584]

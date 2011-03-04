@@ -187,36 +187,4 @@ DUPEITEM=01f14
 //Recall Rune
 DUPEITEM=01f14
 
-[ITEMDEF 01f19]
-//blinking, glowing green magical crystal
-DEFNAME=i_crystal_green_big
-CATEGORY=Provisions - Alchemy & Magic
-SUBSECTION=Magic Crystal
-DESCRIPTION=@
-DUPELIST=01f1a,01f1b
-
-[ITEMDEF 01f1a]
-//green magical crystal
-DUPEITEM=01f19
-
-[ITEMDEF 01f1b]
-//glowing green magical crystal
-DUPEITEM=01f19
-
-[ITEMDEF 01f1c]
-//blinking, glowing purple magical crystal
-DEFNAME=i_crystal_purple
-CATEGORY=Provisions - Alchemy & Magic
-SUBSECTION=Magic Crystal
-DESCRIPTION=@
-DUPELIST=01f1d,01f1e
-
-[ITEMDEF 01f1d]
-//purple magical crystal
-DUPEITEM=01f1c
-
-[ITEMDEF 01f1e]
-//glowing purple magical crystal
-DUPEITEM=01f1c
-
 [EOF]

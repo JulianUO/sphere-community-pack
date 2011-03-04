@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 3, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 
@@ -3307,8 +3307,14 @@ DUPEITEM=03286
 //lava edge 2
 DUPEITEM=03286
 
-[ITEMDEF 032d5]
-//FIXME: dirt
+
+
+[ITEMDEF 032c9]
+//FIXME: dirt? farmer field?
+
+[ITEMDEF 032ca]
+//FIXME: dirt? farmer field?
+
 
 [ITEMDEF 03421]
 TYPE=t_rock
@@ -3707,13 +3713,17 @@ DUPEITEM=0348b
 CATEGORY=Ground Tiles (animated)
 SUBSECTION=Water
 DESCRIPTION=Whirlpool
-DUPELIST=03491,03492
+DUPELIST=03491,03492,03493
 
 [ITEMDEF 03491]
 //whirlpool
 DUPEITEM=03490
 
 [ITEMDEF 03492]
+//whirlpool
+DUPEITEM=03490
+
+[ITEMDEF 03493]
 //whirlpool
 DUPEITEM=03490
 
@@ -3958,9 +3968,6 @@ DUPEITEM=034b8
 [ITEMDEF 034d5]
 //ripples
 DUPEITEM=034b8
-
-[ITEMDEF 034d7]
-//FIXME: dirt
 
 [ITEMDEF 034ed]
 DEFNAME=i_waterfall_med

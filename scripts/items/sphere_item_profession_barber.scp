@@ -150,15 +150,14 @@ SUBSECTION=Barber
 DESCRIPTION=WIG 11
 
 [ITEMDEF 0e27]
-// DEFNAME2=hair_dye
 DEFNAME=i_bottle_hair_dye
+NAME=bottle of hair dye
 TYPE=t_hair_dye
-RESOURCES=1 i_bottle, 1 i_dyes
-NAME=Bottle of Hair Dye
 WEIGHT=2
+RESOURCES=1 i_bottle, 1 i_dyes
 CATEGORY=Items by Professions
 SUBSECTION=Barber
-DESCRIPTION=HAIR DYE
+DESCRIPTION=Hair Dye
 DUPELIST=0eff
 
 [ITEMDEF 0203b]

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 21, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 
@@ -1163,6 +1163,44 @@ DUPEITEM=02fe2
 [ITEMDEF 0319f]
 //Moon Door (open)
 DUPEITEM=02fe3
+
+
+[ITEMDEF 03640]
+DEFNAME=i_door_shadow
+TYPE=t_door
+RESOURCES=40 i_ingot_iron,2 i_hinge
+CATEGORY=Buildings - Doors
+SUBSECTION=Shadow Door
+DESCRIPTION=@
+DUPELIST=03642,03644
+
+[ITEMDEF 03641]
+TYPE=t_door_open
+RESOURCES=40 i_ingot_iron,2 i_hinge
+CATEGORY=Buildings - Doors
+SUBSECTION=Shadow Door
+DESCRIPTION=@ (open?)
+DUPELIST=0363f,03643,03645,03646
+
+[ITEMDEF 03642]
+//Shadow Door
+DUPEITEM=03640
+
+[ITEMDEF 03643]
+//Shadow Door (open)
+DUPEITEM=03641
+
+[ITEMDEF 03644]
+//Shadow Door
+DUPEITEM=03640
+
+[ITEMDEF 03645]
+//Shadow Door (open?)
+DUPEITEM=03641
+
+[ITEMDEF 03646]
+//Shadow Door (open)
+DUPEITEM=03641
 
 
 [ITEMDEF 041cf]

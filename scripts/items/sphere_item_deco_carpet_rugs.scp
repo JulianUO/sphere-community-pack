@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 28, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 
@@ -300,6 +300,7 @@ DUPEITEM=0ada
 
 [ITEMDEF 0ae3]
 DEFNAME=i_carpet_5
+NAME=carpet
 TYPE=t_floor
 FLIP=1
 VALUE=225

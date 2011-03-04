@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 3, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 [COMMENT comment_profession_cooking]
@@ -159,7 +159,7 @@ RESOURCES=3 i_ingot_gold
 CATEGORY=Decoration - Kitchen and Dining
 SUBSECTION=Dishes
 DESCRIPTION=Goblet (gold)
-DUPEITEM=09bf
+DUPELIST=09bf
 
 [ITEMDEF 09bd]
 DEFNAME=i_silverware
@@ -506,6 +506,15 @@ CATEGORY=Decoration - Kitchen and Dining
 SUBSECTION=Dishes
 DESCRIPTION=Wooden Bowl (large)
 
+[ITEMDEF 01957]
+DEFNAME=i_bottle_shochu_empty
+NAME=empty shochu bottle
+WEIGHT=0.1
+RESOURCES=1 i_clay
+CATEGORY=Decoration - Kitchen and Dining
+SUBSECTION=Dishes
+DESCRIPTION=Bottle of Shochu (empty)
+
 [ITEMDEF 01f81]
 DEFNAME=i_glass
 FLIP=1
@@ -527,6 +536,48 @@ DUPEITEM=01f81
 [ITEMDEF 01f84]
 //glass
 DUPEITEM=01f81
+
+[ITEMDEF 024de]
+DEFNAME=i_bowl_placemat
+TYPE=t_normal
+FLIP=1
+WEIGHT=2.0
+RESOURCES=1 i_log_bamboo,1 i_clay
+CATEGORY=Decoration - Kitchen and Dining
+SUBSECTION=Dishes
+DESCRIPTION=Bowl on Placemat
+DUPELIST=024df,024e0
+
+[ITEMDEF 024df]
+//bowl on placemat
+DUPEITEM=024de
+
+[ITEMDEF 024e0]
+//bowl on placemat
+DUPEITEM=024de
+
+[ITEMDEF 024e1]
+DEFNAME=i_cups_japanese
+TYPE=t_normal
+WEIGHT=4.0
+RESOURCES=4 i_clay
+CATEGORY=Decoration - Kitchen and Dining
+SUBSECTION=Dishes
+DESCRIPTION=Cups (4)
+
+[ITEMDEF 024e6]
+TYPE=t_normal
+FLIP=1
+WEIGHT=1.0
+RESOURCES=1 i_ingot_iron
+CATEGORY=Decoration - Kitchen and Dining
+SUBSECTION=Dishes
+DESCRIPTION=Tea Set
+DUPELIST=024e7
+
+[ITEMDEF 024e7]
+//tea set
+DUPEITEM=024e6
 
 [ITEMDEF 02068]
 DEFNAME=i_cauldron_2

@@ -3,7 +3,7 @@
 //This script is part from the Sphere Community Script Pack.
 //You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-//FILE LAST UPDATED: Thursday, March 3, 2011
+//FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 
@@ -2940,6 +2940,213 @@ DUPEITEM=02b94
 [ITEMDEF 02f28]
 //leaf roof 1
 DUPEITEM=02b94
+
+[ITEMDEF 035be]
+DEFNAME=i_roof_ice
+TYPE=t_roof
+RESOURCES=25 i_crystal_ice
+CATEGORY=Buildings - Roofs
+SUBSECTION=Ice Roof
+DESCRIPTION=@
+DUPELIST=035bf,035c0,035c1,035c2,035c3,035c4,035c5,035c6,035c7,035c8,035c9,035ca,035cb,035cc,035cd,035ce,035cf,035d0,035d1
+
+[ITEMDEF 035bf]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035c0]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035c1]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035c2]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035c3]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035c4]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035c5]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035c6]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035c7]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035c8]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035c9]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035ca]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035cb]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035cc]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035cd]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035ce]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035cf]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035d0]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 035d1]
+//ice roof
+DUPEITEM=035be
+
+[ITEMDEF 03623]
+DEFNAME=i_roof_shadow
+TYPE=t_roof
+WEIGHT=50.0
+RESOURCES=5 i_rock_plain
+CATEGORY=Buildings - Roofs
+SUBSECTION=Shadow Roof
+DESCRIPTION=Shadow Roof
+DUPELIST=03624,03625,03626,03627,03628,03629,0362a,0362b,0362c,0362d,0362e,0362f,03630,03631,03632,03633,03634,03635
+
+[ITEMDEF 03624]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03625]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03626]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03627]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03628]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03629]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 0362a]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 0362b]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 0362c]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 0362d]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 0362e]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 0362f]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03630]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03631]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03632]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03633]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03634]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03635]
+//Shadow Roof
+DUPEITEM=03623
+
+[ITEMDEF 03636]
+//Shadow Wall
+DUPEITEM=0360e
+
+[ITEMDEF 03637]
+//Shadow Wall
+DUPEITEM=0360e
+
+[ITEMDEF 03638]
+//Shadow Wall
+DUPEITEM=0360e
+
+[ITEMDEF 03639]
+//Shadow Wall
+DUPEITEM=0360e
+
+[ITEMDEF 0363a]
+//Shadow Wall
+DUPEITEM=0360e
+
+[ITEMDEF 0363b]
+//Shadow Wall
+DUPEITEM=0360e
+
+[ITEMDEF 0363c]
+//Shadow Wall
+DUPEITEM=0360e
+
+[ITEMDEF 0363d]
+//Shadow Wall
+DUPEITEM=0360e
+
+[ITEMDEF 0363e]
+//Shadow Wall
+DUPEITEM=0360e
+
+[ITEMDEF 0363f]
+//Shadow Wall
+DUPEITEM=0360e
 
 
 [EOF]

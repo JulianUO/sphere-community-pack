@@ -3,8 +3,38 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Tuesday, Febuary 22, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
+
+
+[ITEMDEF 0990]
+DEFNAME=i_basket
+TYPE=t_container
+TDATA2=041
+WEIGHT=2
+RESOURCES=3 i_straw
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Basket
+
+
+[ITEMDEF 09a8]
+DEFNAME=i_box_brass
+TYPE=t_container
+TDATA2=04b
+//TDATA2=043   // no lock?
+FLIP=1
+WEIGHT=5
+RESOURCES=5 i_ingot_iron, 5 i_log
+SKILLMAKE=TINKERING 40.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Brass Box
+DUPELIST=0e80
+
+[ITEMDEF 0e80]
+//Brass Box
+DUPEITEM=09a8
 
 
 [ITEMDEF 09a9]
@@ -12,271 +42,678 @@ DEFNAME=i_crate_small
 TYPE=t_container
 TDATA2=044
 FLIP=1
+WEIGHT=3
 SKILLMAKE=CARPENTRY 10.0, t_carpentry
 RESOURCES=8 i_board
-WEIGHT=3
-DUPELIST=0e7e
-CATEGORY=Decoration - Furniture
+CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
 DESCRIPTION=Wooden Crate (Small)
+DUPELIST=0e7e
 
 [ITEMDEF 0e7e]
+//Wooden Crate (Small)
 DUPEITEM=09a9
+
 
 [ITEMDEF 09aa]
 DEFNAME=i_box_wood
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=040
 FLIP=1
-SKILLMAKE=CARPENTRY 21.0, t_carpentry
-RESOURCES=10 i_log
 WEIGHT=4
-DUPELIST=0e7d
-CATEGORY=Decoration - Furniture
+RESOURCES=10 i_log
+SKILLMAKE=CARPENTRY 21.0, t_carpentry
+CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
-DESCRIPTION=Wooden Box (W)
+DESCRIPTION=Wooden Box
+DUPELIST=0e7d
 
 [ITEMDEF 0e7d]
+//Wooden Box
 DUPEITEM=09aa
+
+
+[ITEMDEF 09ab]
+DEFNAME=i_chest_metal
+TYPE=t_container
+TDATA2=04a
+FLIP=1
+WEIGHT=20
+RESOURCES=20 i_ingot_iron, 2 i_board
+SKILLMAKE=TINKERING 75.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Metal Chest
+DUPELIST=0e7c
+
+[ITEMDEF 0e7c]
+//Metal Chest
+DUPEITEM=09ab
+
+
+[ITEMDEF 09ac]
+DEFNAME=i_basket_bushel
+TYPE=t_container
+TDATA2=041
+WEIGHT=5
+RESOURCES=3 i_straw
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Large Basket
+
+
+[ITEMDEF 09b0]
+DEFNAME=i_pouch
+TYPE=t_container
+TDATA2=03c
+FLIP=1
+DYE=1
+WEIGHT=1
+RESOURCES=2 i_hides_cut
+SKILLMAKE=TAILORING 10.0, t_sewing_kit
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Pouch
+DUPELIST=0e79
+
+[ITEMDEF 0e79]
+//pouch
+DUPEITEM=09b0
+
+
+[ITEMDEF 09b1]
+DEFNAME=i_basket_2
+TYPE=t_container
+TDATA2=03F
+RESOURCES=3 i_straw
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Small Basket
+
+
+[ITEMDEF 0e40]
+DEFNAME=i_chest_metal_brass
+TYPE=t_container
+TDATA2=042
+FLIP=1
+WEIGHT=20
+RESOURCES=15 i_ingot_iron, 5 i_ingot_gold, 2 i_log
+SKILLMAKE=TINKERING 80.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Metal Brass Chest
+DUPELIST=0e41
+
+[ITEMDEF 0e41]
+//metal brass chest
+DUPEITEM=0e40
+
 
 [ITEMDEF 0e42]
 DEFNAME=i_chest_wooden_brass
 TYPE=t_container
 TDATA2=049
 FLIP=1
-SKILLMAKE=CARPENTRY 73.6, t_carpentry
-RESOURCES=20 i_log
 WEIGHT=10
-DUPELIST=0e43
-CATEGORY=Decoration - Furniture
+RESOURCES=20 i_log
+SKILLMAKE=CARPENTRY 73.6, t_carpentry
+CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
-DESCRIPTION=Wooden Chest (W)
+DESCRIPTION=Wooden Chest
+DUPELIST=0e43
 
 [ITEMDEF 0e43]
+//Wooden Chest
 DUPEITEM=0e42
+
+
+[ITEMDEF 0e75]
+DEFNAME=i_backpack
+TYPE=t_container
+TDATA2=03c
+FLIP=1
+DYE=1
+WEIGHT=3
+RESOURCES=4 i_hides_cut
+SKILLMAKE=TAILORING 15.0, t_sewing_kit
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Backpack
+
+
+[ITEMDEF 0e76]
+DEFNAME=i_bag
+TYPE=t_container
+TDATA2=03d
+FLIP=1
+DYE=1
+WEIGHT=2
+RESOURCES=4 i_hides_cut
+SKILLMAKE=TAILORING 10.0, t_sewing_kit
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Leather Bag
+
+
+[ITEMDEF 0e77]
+DEFNAME=i_barrel_open
+TYPE=t_container
+TDATA2=03e
+FLIP=1
+WEIGHT=10
+RESOURCES=10 i_log
+SKILLMAKE=TINKERING 55.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Empty Barrel
+
+
+[ITEMDEF 0e78]
+DEFNAME=i_basin
+RESOURCES=3 i_ingot_iron
+TYPE=t_container
+TDATA2=041
+//TDATA2=0589
+FLIP=1
+WEIGHT=1
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Basin
+DUPELIST=01009
+
+[ITEMDEF 01009]
+//basin
+DUPEITEM=0e78
+
+
+[ITEMDEF 0e7a]
+DEFNAME=i_basket_square
+TYPE=t_container
+TDATA2=03f
+FLIP=1
+WEIGHT=1
+RESOURCES=5 i_straw
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Picnic Basket
+
+
+[ITEMDEF 0e83]
+DEFNAME=i_tub_empty
+TYPE=t_container
+TDATA2=041
+FLIP=1
+WEIGHT=5
+RESOURCES=10 i_board, 5 i_ingot_iron
+SKILLMAKE=CARPENTRY 70.0, t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Empty Tub
+
 
 [ITEMDEF 0a4c]
 DEFNAME=i_armoire_dk
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=04e
 FLIP=1
-SKILLMAKE=CARPENTRY 84.2, t_carpentry
-RESOURCES=35 i_log
 WEIGHT=25
-DUPELIST=0a4d,0a50,0a51
+RESOURCES=35 i_log
+SKILLMAKE=CARPENTRY 84.2, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Armoire (Dark Wood)
+DUPELIST=0a4d,0a50,0a51
 
 [ITEMDEF 0a4d]
+//Armoire (Dark Wood)
 DUPEITEM=0a4c
 
 [ITEMDEF 0a50]
+//Armoire (Dark Wood)
 DUPEITEM=0a4c
 
 [ITEMDEF 0a51]
+//Armoire (Dark Wood)
 DUPEITEM=0a4c
+
 
 [ITEMDEF 0a4e]
 DEFNAME=i_armoire_lt
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=04f
 FLIP=1
-SKILLMAKE=CARPENTRY 84.2, t_carpentry
-RESOURCES=35 i_log
 WEIGHT=25
-DUPELIST=0a4f,0a52,0a53
+RESOURCES=35 i_log
+SKILLMAKE=CARPENTRY 84.2, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Armoire (Light Wood)
+DUPELIST=0a4f,0a52,0a53
 
 [ITEMDEF 0a4f]
+//Armoire (Light Wood)
 DUPEITEM=0a4e
 
 [ITEMDEF 0a52]
+//Armoire (Light Wood)
 DUPEITEM=0a4e
 
 [ITEMDEF 0a53]
+//Armoire (Light Wood)
 DUPEITEM=0a4e
+
 
 [ITEMDEF 0a9d]
 DEFNAME=i_shelf_wooden
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=04d
 FLIP=1
+WEIGHT=20
 SKILLMAKE=CARPENTRY 31.5, t_carpentry
 RESOURCES=25 i_log
-WEIGHT=20
-DUPELIST=0a9e
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Wooden Shelf (Dark Wood) (Empty)
+DUPELIST=0a9e
 
 [ITEMDEF 0a9e]
+//Wooden Shelf (Dark Wood) (Empty)
 DUPEITEM=0a9d
+
 
 [ITEMDEF 0e3c]
 DEFNAME=i_crate_lg
 TYPE=t_container
 TDATA2=044
 FLIP=1
-SKILLMAKE=CARPENTRY 47.3, t_carpentry
-RESOURCES=18 i_log
 WEIGHT=5
-DUPELIST=0e3d
+RESOURCES=18 i_log
+SKILLMAKE=CARPENTRY 47.3, t_carpentry
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
 DESCRIPTION=Wooden Crate (Large)
+DUPELIST=0e3d
 
 [ITEMDEF 0e3d]
+//Wooden Crate (Large)
 DUPEITEM=0e3c
+
 
 [ITEMDEF 0e3e]
 DEFNAME=i_crate_md
 TYPE=t_container
 TDATA2=044
 FLIP=1
-SKILLMAKE=CARPENTRY 31.5, t_carpentry
-RESOURCES=15 i_log
 WEIGHT=3
-DUPELIST=0e3f
+RESOURCES=15 i_log
+SKILLMAKE=CARPENTRY 31.5, t_carpentry
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
 DESCRIPTION=Wooden Crate (Medium)
+DUPELIST=0e3f
 
 [ITEMDEF 0e3f]
+//Wooden Crate (Medium)
 DUPEITEM=0e3e
+
 
 [ITEMDEF 0e7f]
 DEFNAME=i_keg_small
-TYPE=T_CONTAINER
+TYPE=t_container
 TDATA2=03e
 FLIP=1
-SKILLMAKE=CARPENTRY 57.8,t_tinker_tools
-RESOURCES=1 i_barrel_tap, 1 i_barrel_hoops, 3 i_barrel_staves
 WEIGHT=5
+RESOURCES=1 i_barrel_tap, 1 i_barrel_hoops, 3 i_barrel_staves
+SKILLMAKE=CARPENTRY 57.8,t_tinker_tools
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
-DESCRIPTION=Keg
+DESCRIPTION=Keg (empty)
+
+
+[ITEMDEF 0fae]
+DEFNAME=i_barrel
+TYPE=t_container
+TDATA2=03e
+FLIP=1
+WEIGHT=10
+RESOURCES=12 i_log
+SKILLMAKE=Tinkering 56.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Barrel (sealed)
+
+
+[ITEMDEF 014e0]
+DEFNAME=i_bucket
+TYPE=t_container
+TDATA2=03e
+WEIGHT=2
+RESOURCES=2 i_board, 1 i_ingot_iron, 1 i_nails
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Bucket
+
+
+[ITEMDEF 01ad6]
+DEFNAME=i_keg_wood
+TYPE=t_container
+TDATA2=03e
+FLIP=1
+VALUE=45
+WEIGHT=11.0
+RESOURCES=1 i_barrel_tap,1 i_keg_small
+SKILLMAKE=Tinkering 70.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Keg (with tap)
+DUPELIST=01ad7
+
+[ITEMDEF 01ad6]
+//keg (with tap)
+DUPEITEM=01ad6
+
+
+[ITEMDEF 01e80]
+//small light wooden crate against NE wall
+//not the same as i_crate_small (diff wood)
+DEFNAME=i_crate_small_2
+TYPE=t_container
+TDATA2=044
+FLIP=1
+WEIGHT=3
+RESOURCES=8 i_board
+SKILLMAKE=CARPENTRY 10.0, t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Wooden Crate 2 (Small)
+DUPELIST=01e81
+
+[ITEMDEF 01e81]
+//Wooden Crate 2 (Small)
+DUPEITEM=01e80
+
+
+[ITEMDEF 0207b]
+DEFNAME=i_basket_3
+TYPE=t_container
+TDATA2=041
+WEIGHT=1.0
+RESOURCES=3 i_straw,1 i_string,1 i_cloth
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Basket 2
+
+
+[ITEMDEF 0232a]
+DEFNAME=i_giftbox
+NAME=gift box
+TYPE=t_container
+TDATA2=0102
+TDATA3=100,100
+FLIP=1
+WEIGHT=9.4
+RESOURCES=9 i_board,2 i_nails,1 i_paper,1 i_ribbon
+SKILLMAKE=Carpentry 21.0,t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Gift Box
+DUPELIST=0232b
+
+[ITEMDEF 0232b]
+//gift box
+DUPEITEM=0232a
+
+
+[ITEMDEF 024d5]
+DEFNAME=i_basket_square_small
+TYPE=t_container
+TDATA2=03f
+WEIGHT=2.0
+RESOURCES=2 i_log_bamboo
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (square)
+DUPELIST=024d6
+
+[ITEMDEF 024d6]
+//japanese basket (square)
+DUPEITEM=024d5
+
+
+[ITEMDEF 024d7]
+DEFNAME=i_basket_round_small
+TYPE=t_container
+TDATA2=041
+WEIGHT=2.0
+RESOURCES=2 i_log_bamboo
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (round)
+
+
+[ITEMDEF 024d8]
+DEFNAME=i_basket_round_tall
+TYPE=t_container
+TDATA2=041
+WEIGHT=2.0
+RESOURCES=2 i_clay
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (tall round)
+
+
+[ITEMDEF 024d9]
+DEFNAME=i_basket_square_deep
+TYPE=t_container
+TDATA2=0108
+WEIGHT=4.0
+RESOURCES=4 i_log_bamboo
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (square deep)
+DUPELIST=024da
+
+[ITEMDEF 024da]
+//japanese basket (square deep)
+DUPEITEM=024d9
+
+
+[ITEMDEF 024db]
+DEFNAME=i_basket_square_tall
+TYPE=t_container
+TDATA2=0108
+WEIGHT=4.0
+RESOURCES=4 i_log_bamboo
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (square tall)
+DUPELIST=024dc
+
+[ITEMDEF 024dc]
+//japanese basket (square tall)
+DUPEITEM=024db
+
+
+[ITEMDEF 024dd]
+DEFNAME=i_basket_round_flat
+TYPE=t_container
+TDATA2=0108
+WEIGHT=2.0
+RESOURCES=2 i_log_bamboo
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Japanese Basket (round flat)
+
+
+[ITEMDEF 024ec]
+DEFNAME=i_stair_cabinet
+TYPE=t_container
+TDATA2=0107
+RESOURCES=50 i_board
+CATEGORY=Decoration - Furniture
+SUBSECTION=Containers
+DESCRIPTION=Stair with Cabinet
+DUPELIST=024ed,024ee,024ef,024f0,024f1,024f2,024f3
+
+[ITEMDEF 024ed]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024ee]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024ef]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024f0]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024f1]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024f2]
+//stair with cabinet
+DUPEITEM=024ec
+
+[ITEMDEF 024f3]
+//stair with cabinet
+DUPEITEM=024ec
+
 
 [ITEMDEF 0280b]
 DEFNAME=i_chest_wooden_plain
+NAME=plain wooden chest
 TYPE=t_container
-NAME=Plain Wooden Chest
 TDATA2=0109
+TDATA3=0a000a
+TDATA4=096005f
 FLIP=1
-SKILLMAKE=CARPENTRY 90.0, t_carpentry
-RESOURCES=30 i_log
 WEIGHT=25
-DUPELIST=0280c
+RESOURCES=30 i_log
+SKILLMAKE=CARPENTRY 90.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Plain Wooden Chest
-TDATA3=0A000A
-TDATA4=096005F
+DUPELIST=0280c
 
 [ITEMDEF 0280c]
+//Plain Wooden Chest
 DUPEITEM=0280b
+
 
 [ITEMDEF 0280d]
 DEFNAME=i_chest_wooden_ornate
+NAME=ornate wooden chest
 TYPE=t_container
-NAME=Ornate Wooden Chest
 TDATA2=010b
+TDATA3=0a000a
+TDATA4=096005f
 FLIP=1
-SKILLMAKE=CARPENTRY 90.0, t_carpentry
-RESOURCES=30 i_log
 WEIGHT=25
-DUPELIST=0280e
+RESOURCES=30 i_log
+SKILLMAKE=CARPENTRY 90.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Ornate Wooden Chest
-TDATA3=0A000A
-TDATA4=096005F
+DUPELIST=0280e
 
 [ITEMDEF 0280e]
+//Ornate Wooden Chest
 DUPEITEM=0280d
+
 
 [ITEMDEF 0280f]
 DEFNAME=i_chest_wooden_gilded
+NAME=gilded wooden chest
 TYPE=t_container
-NAME=Gilded Wooden Chest
 TDATA2=010a
+TDATA3=0a000a
+TDATA4=096005f
 FLIP=1
-SKILLMAKE=CARPENTRY 90.0, t_carpentry
-RESOURCES=30 i_log
 WEIGHT=25
-DUPELIST=02810
+RESOURCES=30 i_log
+SKILLMAKE=CARPENTRY 90.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Gilded Wooden Chest
-TDATA3=0A000A
-TDATA4=096005F
+DUPELIST=02810
 
 [ITEMDEF 02810]
+//Gilded Wooden Chest
 DUPEITEM=0280f
+
 
 [ITEMDEF 02811]
 DEFNAME=i_footlocker_wooden
+NAME=wooden footlocker
 TYPE=t_container
-NAME=Wooden Footlocker
 TDATA2=010c
+TDATA3=0a000a
+TDATA4=096005f
 FLIP=1
-SKILLMAKE=CARPENTRY 90.0, t_carpentry
-RESOURCES=30 i_log
 WEIGHT=25
-DUPELIST=02812
+RESOURCES=30 i_log
+SKILLMAKE=CARPENTRY 90.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Wooden Footlocker
-TDATA3=0A000A
-TDATA4=096005F
+DUPELIST=02812
 
 [ITEMDEF 02812]
+//Wooden Footlocker
 DUPEITEM=02811
+
 
 [ITEMDEF 02813]
 DEFNAME=i_chest_wooden_finished
+NAME=finished wooden chest
 TYPE=t_container
-NAME=Finished Wooden Chest
 TDATA2=010d
+TDATA3=0a000a
+TDATA4=096005f
 FLIP=1
-SKILLMAKE=CARPENTRY 90.0, t_carpentry
-RESOURCES=30 i_log
 WEIGHT=25
-DUPELIST=02814
+RESOURCES=30 i_log
+SKILLMAKE=CARPENTRY 90.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Finished Wooden Chest
-TDATA3=0A000A
-TDATA4=096005F
+DUPELIST=02814
 
 [ITEMDEF 02814]
+//Finished Wooden Chest
 DUPEITEM=02813
+
 
 [ITEMDEF 02815]
 DEFNAME=i_cabinet_tall
+NAME=tall cabinet
 TYPE=t_container
-NAME=Tall Cabinet
 TDATA2=010c
+TDATA3=0a000a
+TDATA4=096005f
 FLIP=1
-SKILLMAKE=CARPENTRY 90.0, t_carpentry
-RESOURCES=35 i_log
 WEIGHT=25
-DUPELIST=02816
+RESOURCES=35 i_log
+SKILLMAKE=CARPENTRY 90.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Tall Cabinet
-TDATA3=0A000A
-TDATA4=096005F
+DUPELIST=02816
 
 [ITEMDEF 02816]
+//Tall Cabinet
 DUPEITEM=02815
+
 
 [ITEMDEF 02817]
 DEFNAME=i_cabinet_short
 TYPE=t_container
-NAME=Short Cabinet
+NAME=short cabinet
 TDATA2=010c
 FLIP=1
 SKILLMAKE=CARPENTRY 90.0, t_carpentry
@@ -295,7 +732,7 @@ DUPEITEM=02817
 [ITEMDEF 02857]
 DEFNAME=i_armoire_red
 TYPE=t_container
-NAME=Red Armoire
+NAME=red armoire
 TDATA2=0105
 FLIP=1
 SKILLMAKE=CARPENTRY 90.0, t_carpentry
@@ -314,7 +751,7 @@ DUPEITEM=02857
 [ITEMDEF 02859]
 DEFNAME=i_armoire_elegant
 TYPE=t_container
-NAME=Elegant Armoire
+NAME=elegant armoire
 TDATA2=0107
 FLIP=1
 SKILLMAKE=CARPENTRY 90.0, t_carpentry
@@ -333,7 +770,7 @@ DUPEITEM=02859
 [ITEMDEF 0285b]
 DEFNAME=i_armoire_maple
 TYPE=t_container
-NAME=Maple Armoire
+NAME=maple armoire
 TDATA2=0106
 FLIP=1
 SKILLMAKE=CARPENTRY 90.0, t_carpentry
@@ -352,7 +789,7 @@ DUPEITEM=0285b
 [ITEMDEF 0285d]
 DEFNAME=i_armoire_cherry
 TYPE=t_container
-NAME=Cherry Armoire
+NAME=cherry armoire
 TDATA2=0107
 FLIP=1
 SKILLMAKE=CARPENTRY 90.0, t_carpentry
@@ -371,7 +808,7 @@ DUPEITEM=0285d
 [ITEMDEF 02d05]
 DEFNAME=i_armoire_elven_simple
 TYPE=t_container
-NAME=Elven Armoire (Simple)
+NAME=Elven armoire
 TDATA2=04f
 FLIP=1
 SKILLMAKE=CARPENTRY 80.0, t_carpentry
@@ -388,7 +825,7 @@ DUPEITEM=02d05
 [ITEMDEF 02d07]
 DEFNAME=i_armoire_elven_fancy
 TYPE=t_container
-NAME=Elven Armoire (Fancy)
+NAME=Elven armoire
 TDATA2=04e
 FLIP=1
 SKILLMAKE=CARPENTRY 80.0, t_carpentry
@@ -405,7 +842,7 @@ DUPEITEM=02d07
 [ITEMDEF 02d09]
 DEFNAME=i_elven_dresser_we
 TYPE=t_container
-NAME=ELVEN DRESSER
+NAME=Elven dresser
 TDATA2=051
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
@@ -414,7 +851,7 @@ DESCRIPTION=Elven Dresser west-east
 [ITEMDEF 02d0a]
 DEFNAME=i_dresser_elven
 TYPE=t_container
-NAME=Elven Dresser
+NAME=Elven dresser
 TDATA2=048
 SKILLMAKE=CARPENTRY 75.0, t_carpentry
 RESOURCES=45 i_log
@@ -430,7 +867,7 @@ DUPEITEM=02d0a
 [ITEMDEF 02d0c]
 DEFNAME=i_washbasin_elven
 TYPE=t_container
-NAME=Elven Washbasin
+NAME=Elven washbasin
 TDATA2=048
 SKILLMAKE=CARPENTRY 70.0, t_carpentry
 RESOURCES=40 i_log
@@ -446,7 +883,7 @@ DUPEITEM=02d0c
 [ITEMDEF 02de9]
 DEFNAME=i_chest_elven_ornate
 TYPE=t_container
-NAME=Ornate Elven Chest
+NAME=ornate Elven chest
 TDATA2=048
 SKILLMAKE=CARPENTRY 94.7, t_carpentry
 RESOURCES=40 i_log
@@ -479,7 +916,7 @@ DUPEITEM=02de9
 [ITEMDEF 02def]
 DEFNAME=i_bookshelf_arcane
 TYPE=t_container
-NAME=Arcane Bookshelf
+NAME=arcane bookshelf
 TDATA2=04d
 FLIP=1
 SKILLMAKE=CARPENTRY 94.7, t_carpentry
@@ -513,7 +950,7 @@ DUPEITEM=02def
 [ITEMDEF 02df1]
 DEFNAME=i_chest_rarewood
 TYPE=t_container
-NAME=Rarewood Chest
+NAME=rarewood chest
 TDATA2=04a
 FLIP=1
 SKILLMAKE=CARPENTRY 80.0, t_carpentry
@@ -530,7 +967,7 @@ DUPEITEM=02df1
 [ITEMDEF 02df3]
 DEFNAME=i_box_decorative
 TYPE=t_container
-NAME=Decorative Box
+NAME=decorative box
 TDATA2=010A
 FLIP=1
 SKILLMAKE=CARPENTRY 80.0, t_carpentry
@@ -546,10 +983,51 @@ DESCRIPTION=Decorative Box
 [ITEMDEF 02df4]
 DUPEITEM=02df3
 
+[ITEMDEF 03060]
+DEFNAME=i_aquarium
+NAME=aquarium
+TYPE=t_container
+TDATA2=02c96
+TDATA3=010001
+TDATA4=015c00c6
+FLIP=1
+VALUE=321
+WEIGHT=156.1
+RESOURCES=8 i_board,1 i_nails,48 i_glass_raw,100 i_water
+CATEGORY=Decoration - Furniture
+SUBSECTION=Aquarium
+DESCRIPTION=Aquarium
+//TEVENTS=e_aquarium
+DUPELIST=03061,03062,03063
+ON=@DClick
+   //Randomize all object locations
+   FORCONT <UID> 0
+      CONTP=<R1,348>,<R1,198>
+//      SERV.LOG Item <NAME>: <CONTP>
+   ENDFOR
+ON=@DropOn_Self
+   //Only allow aquarium items
+   IF (<ARGO.TYPE>!=t_aquarium_item) && (<ARGO.TYPE>!=t_fish)
+      RETURN 1
+   ENDIF
+
+[ITEMDEF 03061]
+//aquarium
+DUPEITEM=03060
+
+[ITEMDEF 03062]
+//aquarium
+DUPEITEM=03060
+
+[ITEMDEF 03063]
+//aquarium
+DUPEITEM=03060
+
+
 [ITEMDEF 04025]
 DEFNAME=i_chest_gargoyle
 TYPE=t_container
-NAME=Gargoyle Chest
+NAME=Gargish chest
 FLIP=1
 TDATA2=04b
 SKILLMAKE=CARPENTRY 80.0, t_carpentry
@@ -563,4 +1041,4 @@ DESCRIPTION=Gargoyle Chest
 [ITEMDEF 04026]
 DUPEITEM=04025
 
-[eof]
+[EOF]

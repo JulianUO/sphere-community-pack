@@ -1,86 +1,11 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, November 24, 2003
-//
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
-
-[ITEMDEF 0990]
-DEFNAME=i_basket
-TYPE=t_container
-TDATA2=041
-RESOURCES=3 i_straw
-WEIGHT=2
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Basket
-
-[ITEMDEF 09a8]
-DEFNAME=i_box_brass
-TYPE=t_container
-TDATA2=04b
-//TDATA2=043   // no lock?
-FLIP=1
-WEIGHT=5
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Brass Box  (N)
-DUPELIST=0e80
-SKILLMAKE=TINKERING 40.0,t_tinker_tools
-RESOURCES=5 i_ingot_iron, 5 i_log
-
-[ITEMDEF 09ab]
-DEFNAME=i_chest_metal
-TYPE=t_container
-TDATA2=04a
-FLIP=1
-WEIGHT=20
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Metal Chest (N)
-DUPELIST=0e7c
-SKILLMAKE=TINKERING 75.0,t_tinker_tools
-RESOURCES=20 i_ingot_iron, 2 i_board
-
-[ITEMDEF 09ac]
-DEFNAME=i_basket_bushel
-TYPE=t_container
-TDATA2=041
-RESOURCES=3 i_straw
-WEIGHT=5
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Large Basket
-
-[ITEMDEF 09b0]
-DEFNAME=i_pouch
-TYPE=t_container
-TDATA2=03c
-FLIP=1
-DYE=1
-WEIGHT=1
-DUPELIST=0e79
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Pouch
-SKILLMAKE=TAILORING 10.0, t_sewing_kit
-RESOURCES=2 i_hides_cut
-
-[ITEMDEF 09b1]
-DEFNAME=i_basket_2
-TYPE=t_container
-TDATA2=03F
-RESOURCES=3 i_straw
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Small Basket
 
 [ITEMDEF 0de1]
 DEFNAME=i_kindling
@@ -146,89 +71,6 @@ CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Campfires
 DESCRIPTION=Burned Wood
 
-[ITEMDEF 0e40]
-DEFNAME=i_chest_metal_brass
-TYPE=t_container
-TDATA2=042
-FLIP=1
-WEIGHT=20
-SKILLMAKE=TINKERING 80.0,t_tinker_tools
-RESOURCES=15 i_ingot_iron, 5 i_ingot_gold, 2 i_log
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Metal Brass Chest
-DUPELIST=0e41
-
-[ITEMDEF 0e41]
-//metal brass chest
-DUPEITEM=0e40
-
-[ITEMDEF 0e75]
-DEFNAME=i_backpack
-RESOURCES=4 i_hides_cut
-TYPE=t_container
-TDATA2=03c
-FLIP=1
-DYE=1
-WEIGHT=3
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Backpack
-SKILLMAKE=TAILORING 15.0, t_sewing_kit
-
-[ITEMDEF 0e76]
-DEFNAME=i_bag
-TYPE=t_container
-TDATA2=03d
-FLIP=1
-DYE=1
-WEIGHT=2
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Leather Bag
-SKILLMAKE=TAILORING 10.0, t_sewing_kit
-RESOURCES=4 i_hides_cut
-
-[ITEMDEF 0e77]
-DEFNAME=i_barrel_open
-TYPE=t_container
-TDATA2=03e
-FLIP=1
-WEIGHT=10
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Empty Barrel
-SKILLMAKE=TINKERING 55.0,t_tinker_tools
-RESOURCES=10 i_log
-
-[ITEMDEF 0e78]
-DEFNAME=i_basin
-RESOURCES=3 i_ingot_iron
-TYPE=t_container
-TDATA2=041
-FLIP=1
-WEIGHT=1
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Basin
-DUPELIST=01009
-
-[ITEMDEF 0e79]
-//pouch
-DUPEITEM=09b0
-
-[ITEMDEF 0e7a]
-//picnic basket
-DEFNAME=i_basket_square
-TYPE=t_container
-TDATA2=03f
-RESOURCES=5 i_straw
-FLIP=1
-WEIGHT=1
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Picnic Basket
-
 [ITEMDEF 0e7b]
 DEFNAME=i_tub_water
 WEIGHT=10
@@ -237,27 +79,6 @@ SKILLMAKE=CARPENTRY 0.0
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
 DESCRIPTION=Water Tub
-
-[ITEMDEF 0e7c]
-//DEFNAME2=METAL_CHEST_3
-// Silver Chest similar to 09ab against NW wall
-DUPEITEM=09ab
-
-[ITEMDEF 0e80]
-// Brass strong box lockable against NW wall
-DUPEITEM=09a8
-
-[ITEMDEF 0e83]
-DEFNAME=i_tub_empty
-TYPE=t_container
-TDATA2=041
-FLIP=1
-WEIGHT=5
-RESOURCES=10 i_board, 5 i_ingot_iron
-SKILLMAKE=CARPENTRY 70.0, t_carpentry
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Empty Tub
 
 [ITEMDEF 0eeb]
 //copper coins
@@ -312,30 +133,13 @@ DESCRIPTION=Fire Pit
 ON=@Create
    MOREZ=1
 
-[ITEMDEF 0fae]
-//barrel (covered)
-DEFNAME=i_barrel
-TYPE=t_container
-TDATA2=03E
-FLIP=1
-WEIGHT=10
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Barrel w/Lid
-SKILLMAKE=TINKERING 56.0,t_tinker_tools
-RESOURCES=12 i_log
-
 [ITEMDEF 01008]
 DEFNAME=i_wash_basin
 WEIGHT=1
-RESOURCES=1 i_basin,1 i_picher_water
+RESOURCES=1 i_basin,1 i_pitcher_water
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Containers
 DESCRIPTION=Wash Basin
-
-[ITEMDEF 01009]
-//basin
-DUPEITEM=0e78
 
 [ITEMDEF 0100e]
 DEFNAME=i_key_copper
@@ -438,63 +242,6 @@ CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Etc.
 DESCRIPTION=Oil Flask
 
-[ITEMDEF 01e80]
-//small light wooden crate against NE wall
-// not the same as i_crate_small (diff wood)
-DEFNAME=i_crate_small_2
-TYPE=t_container
-TDATA2=044
-FLIP=1
-WEIGHT=3
-SKILLMAKE=CARPENTRY 10.0, t_carpentry
-RESOURCES=8 i_board
-DUPELIST=01e81
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Wooden Crate (Small)
-
-[ITEMDEF 01e81]
-//small light wooden crate against NW wall
-DUPEITEM=01e80
-
-[ITEMDEF 01ecd]
-//blinking green communications crystal casting light
-DEFNAME=i_crystal_green
-RESOURCES=10 i_gem_emerald
-NAME=Communication Crystal
-TYPE=t_comm_crystal
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Communication Crystals
-DESCRIPTION=Communication Crystal (green)
-DUPELIST=01ece,01ecf
-
-[ITEMDEF 01ece]
-//green (off?)communications crystal casting light
-DUPEITEM=01ecd
-
-[ITEMDEF 01ecf]
-//bright green (on) communications crystal casting light
-DUPEITEM=01ecd
-
-[ITEMDEF 01ed0]
-//blinking red communications crystal casting light
-DEFNAME=i_crystal_red
-RESOURCES=10 i_gem_ruby
-NAME=Communication Crystal
-TYPE=t_comm_crystal
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Communication Crystals
-DESCRIPTION=Communication Crystal (red)
-DUPELIST=01ed1,01ed2
-
-[ITEMDEF 01ed1]
-//red communications crystal casting light
-DUPEITEM=01ed0
-
-[ITEMDEF 01ed2]
-//bright red (on) communications crystal casting light
-DUPEITEM=01ed0
-
 [ITEMDEF 01f24]
 //bedroll square
 DEFNAME=i_bedroll_open
@@ -516,16 +263,6 @@ DUPEITEM=01f24
 [ITEMDEF 01f27]
 //bedroll square
 DUPEITEM=01f24
-
-[ITEMDEF 0207b]
-DEFNAME=i_basket_3
-TYPE=t_container
-TDATA2=041
-WEIGHT=1.0
-RESOURCES=3 i_straw,1 i_string,1 i_cloth
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Basket 2
 
 
 [EOF]

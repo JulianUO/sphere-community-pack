@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 3, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 
@@ -17,7 +17,7 @@ TYPE=t_normal
 VALUE=12
 WEIGHT=2.0
 RESOURCES=1 i_cloth,10 i_flax_bundle
-SKILLMAKE=Carpentry,t_carpentry,i_recipe_rope_acid_proof
+SKILLMAKE=Carpentry 25.0,t_carpentry//,i_recipe_rope_acid_proof
 CATEGORY=Quest
 SUBSECTION=Paroxysmus
 DESCRIPTION=Rope (acid proof)
@@ -93,20 +93,9 @@ CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Protector's Essence
 
-[ITEMDEF 0240]
-DEFNAME=i_power_crystal
-NAME=power crystal
-TYPE=t_normal
-VALUE=500
-WEIGHT=0.1
-TAG.NoVendor=1
-CATEGORY=Quest
-SUBSECTION=Quest 11
-DESCRIPTION=Power Crystal
-
 [ITEMDEF 024b]
 DEFNAME=i_heart_icy
-//NAME=icy heart
+NAME=icy heart
 TYPE=t_normal
 VALUE=100
 WEIGHT=0.1
@@ -147,6 +136,7 @@ DESCRIPTION=Gaman Horn
 
 [ITEMDEF 01096]
 DEFNAME=i_talisman_quest
+NAME=talisman
 TYPE=t_jewelry
 ARMOR=20
 LAYER=layer_talisman
@@ -565,7 +555,7 @@ SAY @33,3,1 Go forth and vanquish the devourer that has been summoned!
 
 [ITEMDEF 0fc2]
 DEFNAME=i_salivas_feather
-NAME=Saliva's Feather
+NAME=Saliva's feather
 TYPE=t_normal
 VALUE=2
 WEIGHT=.1
@@ -591,7 +581,7 @@ ON=@Create
 
 [ITEMDEF i_thrashers_tail]
 ID=i_hide
-NAME=thrasher's tail
+NAME=Thrasher's tail
 TYPE=t_hide
 CATEGORY=Do Not Use
 SUBSECTION=Quest Items

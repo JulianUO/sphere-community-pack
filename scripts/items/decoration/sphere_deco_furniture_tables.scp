@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 3, 2011
+// FILE LAST UPDATED: Friday, March 4, 2011
 VERSION=0.56b
 
 
@@ -157,7 +157,7 @@ WEIGHT=40.6
 RESOURCES=20 i_log_yew,6 i_nails
 SKILLMAKE=Carpentry 88.8,t_carpentry
 CATEGORY=Decoration - Furniture
-SUBSECTION=Mondain Legacy
+SUBSECTION=Tables
 DESCRIPTION=Ornate Elven Table
 DUPELIST=02de8,03092,03093,03094,03095,03096,03097
 
@@ -199,6 +199,30 @@ WEIGHT=25
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Ter-Mur Style Table
+
+[ITEMDEF 03605]
+TYPE=t_table
+FLIP=1
+VALUE=261
+WEIGHT=25.0
+RESOURCES=25 i_water,1 i_cloth
+SKILLMAKE=Carpentry 42.1,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Ice Table
+DUPELIST=03606,03607,03608
+
+[ITEMDEF 03606]
+//Ice Table
+DUPEITEM=03605
+
+[ITEMDEF 03607]
+//Ice Table
+DUPEITEM=03605
+
+[ITEMDEF 03608]
+//Ice Table
+DUPEITEM=03605
 
 
 ///////////////////////////////////////////////////////////////
