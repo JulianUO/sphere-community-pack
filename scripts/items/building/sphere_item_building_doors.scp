@@ -1167,6 +1167,7 @@ DUPEITEM=02fe3
 
 [ITEMDEF 03640]
 DEFNAME=i_door_shadow
+NAME=door
 TYPE=t_door
 RESOURCES=40 i_ingot_iron,2 i_hinge
 CATEGORY=Buildings - Doors
@@ -1175,6 +1176,7 @@ DESCRIPTION=@
 DUPELIST=03642,03644
 
 [ITEMDEF 03641]
+NAME=door
 TYPE=t_door_open
 RESOURCES=40 i_ingot_iron,2 i_hinge
 CATEGORY=Buildings - Doors

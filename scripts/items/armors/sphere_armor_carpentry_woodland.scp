@@ -3,170 +3,171 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 02b67]
 DEFNAME=i_woodland_chest
-NAME=Woodland Chest
+NAME=woodland chest
 TYPE=t_armor
-RESOURCES=20 i_log
-SKILLMAKE=CARPENTRY 90.0
-REQSTR=95
+FLIP=1
 ARMOR=0 // 35
-DUPELIST=0315e
-CATEGORY=Provisions - Armor - Wood
-SUBSECTION=Woodland Armor
-DESCRIPTION=Woodland Chest
+REQSTR=95
+RESOURCES=20 i_log
+SKILLMAKE=Carpentry 90.0
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Chest
+DUPELIST=0315e
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 0315e]
 DUPEITEM=02b67
 
 [ITEMDEF 02b68]
 DEFNAME=i_woodland_belt
-NAME=Woodland Belt
+NAME=woodland belt
 TYPE=t_armor
+FLIP=1
+ARMOR=0 // 35
+REQSTR=10
 RESOURCES=10 i_hides_cut
 SKILLMAKE=TAILORING 80.0
-REQSTR=10
-ARMOR=0 // 35
-DUPELIST=0315f
 CATEGORY=Provisions - Armor - Wood
 SUBSECTION=Woodland Armor
 DESCRIPTION=Woodland Belt
-
-ON=@CREATE
-HITPOINTS={50 60}
+DUPELIST=0315f
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 0315f]
 DUPEITEM=02b68
 
 [ITEMDEF 02b69]
 DEFNAME=i_woodland_gorget
-NAME=Woodland Gorget
+NAME=woodland gorget
 TYPE=t_armor
-RESOURCES=15 i_log
-SKILLMAKE=CARPENTRY 85.0
-REQSTR=45
+FLIP=1
 ARMOR=0 // 35
-DUPELIST=03160
-CATEGORY=Provisions - Armor - Wood
-SUBSECTION=Woodland Armor
-DESCRIPTION=Woodland Gorget
+REQSTR=45
+RESOURCES=15 i_log
+SKILLMAKE=Carpentry 85.0
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Gorget
+DUPELIST=03160
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 03160]
 DUPEITEM=02b69
 
 [ITEMDEF 02b6a]
 DEFNAME=i_woodland_gauntlets
-NAME=Woodland Gauntlets
+NAME=woodland gauntlets
 TYPE=t_armor
-RESOURCES=15 i_log
-SKILLMAKE=CARPENTRY 85.0
-REQSTR=70
+FLIP=1
 ARMOR=0 // 35
-DUPELIST=03161
-CATEGORY=Provisions - Armor - Wood
-SUBSECTION=Woodland Armor
-DESCRIPTION=Woodland Gauntlets
+REQSTR=70
+RESOURCES=15 i_log
+SKILLMAKE=Carpentry 85.0
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Gauntlets
+DUPELIST=03161
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 03161]
 DUPEITEM=02b6a
 
 [ITEMDEF 02b6b]
 DEFNAME=i_woodland_leggings
-NAME=Woodland Leggings
+NAME=woodland leggings
 TYPE=t_armor
-RESOURCES=15 i_log
-SKILLMAKE=CARPENTRY 85.0
-REQSTR=90
+FLIP=1
 ARMOR=0 // 35
-DUPELIST=03162
-CATEGORY=Provisions - Armor - Wood
-SUBSECTION=Woodland Armor
-DESCRIPTION=Woodland Leggings
+REQSTR=90
+RESOURCES=15 i_log
+SKILLMAKE=Carpentry 85.0
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Leggings
+DUPELIST=03162
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 03162]
 DUPEITEM=02b6b
 
 [ITEMDEF 02b6c]
 DEFNAME=i_woodland_arms
-NAME=Woodland Arms
+NAME=woodland arms
 TYPE=t_armor
-RESOURCES=15 i_log
-SKILLMAKE=CARPENTRY 85.0
-REQSTR=80
+FLIP=1
 ARMOR=0 // 35
-DUPELIST=03163
-CATEGORY=Provisions - Armor - Wood
-SUBSECTION=Woodland Armor
-DESCRIPTION=Woodland Arms
+REQSTR=80
+RESOURCES=15 i_log
+SKILLMAKE=Carpentry 85.0
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Arms
+DUPELIST=03163
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 03163]
 DUPEITEM=02b6c
 
 [ITEMDEF 02b6d]
 DEFNAME=i_armor_female_woodland
-NAME=Female Woodland Chest
+NAME=female woodland chest
 TYPE=t_armor
-RESOURCES=20 i_log
-SKILLMAKE=CARPENTRY 90.0
-REQSTR=95
+FLIP=1
 ARMOR=0 // 35
-DUPELIST=03164
-CATEGORY=Provisions - Armor - Wood
-SUBSECTION=Woodland Armor
-DESCRIPTION=Woodland Chest (Female)
+REQSTR=95
+RESOURCES=20 i_log
+SKILLMAKE=Carpentry 90.0
 TAG.ResPhysical=5
 TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Wood
+SUBSECTION=Woodland Armor
+DESCRIPTION=Woodland Chest (Female)
+DUPELIST=03164
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 03164]
 DUPEITEM=02b6d
 
-[eof]
+[EOF]

@@ -3,117 +3,741 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
 
 
 [ITEMDEF 0b34]
 DEFNAME=i_table_nightstand
-NAME=Small Table
+NAME=small table
 TYPE=t_table
-FLIP=0
-SKILLMAKE=CARPENTRY 42.1, t_carpentry
+FLIP=1
 RESOURCES=17 i_log
-DUPELIST=0b35,0b36,0b3a,0b3c
+SKILLMAKE=Carpentry 42.1, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
-DESCRIPTION=Small Table
+DESCRIPTION=Small Nightstand
+DUPELIST=0b35,0b36,0b3a,0b3c
 
 [ITEMDEF 0b35]
+//small nightstand
 DUPEITEM=0b34
 
 [ITEMDEF 0b36]
+//small nightstand
 DUPEITEM=0b34
 
+[ITEMDEF 0b37]
+//table - dark Rough board nightstand top, no legs n-s
+//poor graphic, doesnt mesh with table end for extention
+DEFNAME=i_table_nightstand_ext
+TYPE=t_table
+FLIP=1
+RESOURCES=6 i_board, 1 i_nails
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Small Nightstand Extensions (that dont mesh well)
+DUPELIST=0b38,0b39
+
+[ITEMDEF 0b38]
+//small nightstand extensions (that dont mesh well)
+DUPEITEM=0b37
+
+[ITEMDEF 0b39]
+//small nightstand extensions (that dont mesh well)
+DUPEITEM=0b37
+
 [ITEMDEF 0b3a]
+//small nightstand
 DUPEITEM=0b34
 
 [ITEMDEF 0b3c]
+//small nightstand
 DUPEITEM=0b34
+
+[ITEMDEF 0b3d]
+DEFNAME=i_table_counter
+TYPE=t_table
+FLIP=1
+VALUE=32
+WEIGHT=10.4
+RESOURCES=10 i_log_oak,4 i_nails
+SKILLMAKE=Carpentry 41.1,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Counter
+DUPELIST=0b3e,0b3f,0b40
+
+[ITEMDEF 0b3e]
+//counter
+DUPEITEM=0b3d
+
+[ITEMDEF 0b3f]
+//counter
+DUPEITEM=0b3d
+
+[ITEMDEF 0b40]
+//counter
+DUPEITEM=0b3d
 
 [ITEMDEF 0b49]
 DEFNAME=i_table_writing
-NAME=Writing Table
+NAME=writing table
 TYPE=t_table
 FLIP=1
-SKILLMAKE=CARPENTRY 63.1, t_carpentry
-RESOURCES=17 i_log
 WEIGHT=15
-DUPELIST=0b4a,0b4b,0b4c
+RESOURCES=17 i_log
+SKILLMAKE=Carpentry 63.1, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Writing Table
+DUPELIST=0b4a,0b4b,0b4c
 
 [ITEMDEF 0b4a]
+//writing tables
 DUPEITEM=0b49
 
 [ITEMDEF 0b4b]
+//writing tables
 DUPEITEM=0b49
 
 [ITEMDEF 0b4c]
+//writing tables
 DUPEITEM=0b49
+
+[ITEMDEF 0b6b]
+DEFNAME=i_table_wood_smooth_narrow_end
+TYPE=t_table
+FLIP=1
+VALUE=45
+WEIGHT=16.3
+RESOURCES=16 i_log_maple,3 i_nails
+SKILLMAKE=Carpentry 73.1,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (smooth wood narrow)
+DUPELIST=0b6c,0b6d,0b7e,0b7f,0b80
+
+[ITEMDEF 0b6c]
+//table narrow smooth
+DUPEITEM=0b6b
+
+[ITEMDEF 0b6d]
+//table narrow smooth
+DUPEITEM=0b6b
+
+[ITEMDEF 0b6e]
+DEFNAME=i_table_wood_solid_narrow_end
+TYPE=t_table
+FLIP=1
+VALUE=43
+WEIGHT=16.3
+RESOURCES=16 i_log_oak,3 i_nails
+SKILLMAKE=Carpentry 47.3,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (solid wood narrow)
+DUPELIST=0b6f,0b81,0b82
+
+[ITEMDEF 0b6f]
+//table solid wood
+DUPEITEM=0b6e
+
+[ITEMDEF 0b70]
+DEFNAME=i_table_wood_smooth_large
+TYPE=t_table
+FLIP=1
+VALUE=42
+WEIGHT=14.3
+RESOURCES=14 i_log_oak,3 i_nails
+SKILLMAKE=Carpentry 81.9,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (smooth large)
+DUPELIST=0b71,0b72,0b73,0b74,0b83,0b84,0b85,0b86,0b87
+
+[ITEMDEF 0b71]
+//table (smooth large)
+DUPEITEM=0b70
+
+[ITEMDEF 0b72]
+//table (smooth large)
+DUPEITEM=0b70
+
+[ITEMDEF 0b73]
+//table (smooth large)
+DUPEITEM=0b70
+
+[ITEMDEF 0b74]
+//table (smooth large)
+DUPEITEM=0b70
+
+[ITEMDEF 0b75]
+DEFNAME=i_table_board_rough_end
+TYPE=t_table
+FLIP=1
+VALUE=36
+WEIGHT=12.3
+RESOURCES=12 i_board,3 i_nails
+SKILLMAKE=Carpentry 63.1,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (picnic)
+DUPELIST=0b76,0b88,0b89
+
+[ITEMDEF 0b76]
+//table (picnic)
+DUPEITEM=0b75
+
+[ITEMDEF 0b77]
+DEFNAME=i_table_board_rough_large
+TYPE=t_table
+FLIP=1
+VALUE=38
+WEIGHT=12.3
+RESOURCES=12 i_board,3 i_nails
+SKILLMAKE=Carpentry 78.5,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (rough large)
+DUPELIST=0b78,0b79,0b7a,0b77,0b8a,0b8b,0b8c,0b8d,0b8e
+
+[ITEMDEF 0b78]
+//table (rough large)
+DUPEITEM=0b77
+
+[ITEMDEF 0b79]
+//table (rough large)
+DUPEITEM=0b77
+
+[ITEMDEF 0b7a]
+//table (rough large)
+DUPEITEM=0b77
+
+[ITEMDEF 0b7b]
+//table (rough large)
+DUPEITEM=0b77
 
 [ITEMDEF 0b7c]
 DEFNAME=i_table_wood_rough_small
-NAME=Large Table
 TYPE=t_table
 FLIP=1
-SKILLMAKE=CARPENTRY 63.1, t_carpentry
-RESOURCES=23 i_log
-WEIGHT=25
-DUPELIST=0b8f
+VALUE=16
+WEIGHT=16.2
+RESOURCES=8 i_log,2 i_nails
+SKILLMAKE=Carpentry 43.1,t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
-DESCRIPTION=Large Table
-
-[ITEMDEF 0b8f]
-DUPEITEM=0b7c
+DESCRIPTION=Table (rough small)
+DUPELIST=0b8f
 
 [ITEMDEF 0b7d]
 DEFNAME=i_table_wood_rough_board
-NAME=Yew-Wood Table
 TYPE=t_table
 FLIP=1
-SKILLMAKE=CARPENTRY 40.0, t_carpentry
-RESOURCES=27 i_log
-WEIGHT=3
-DUPELIST=0b90
+VALUE=19
+WEIGHT=22.2
+RESOURCES=11 i_log,2 i_nails
+SKILLMAKE=Carpentry 40.0,t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
-DESCRIPTION=Yew-Wood Table
+DESCRIPTION=Table (rough board)
+DUPELIST=0b90
+
+[ITEMDEF 0b7e]
+//table narrow smooth
+DUPEITEM=0b6b
+
+[ITEMDEF 0b7f]
+//table narrow smooth
+DUPEITEM=0b6b
+
+[ITEMDEF 0b80]
+//table narrow smooth
+DUPEITEM=0b6b
+
+[ITEMDEF 0b81]
+//table solid wood
+DUPEITEM=0b6e
+
+[ITEMDEF 0b82]
+//table solid wood
+DUPEITEM=0b6e
+
+[ITEMDEF 0b83]
+//table (smooth large)
+DUPEITEM=0b70
+
+[ITEMDEF 0b84]
+//table (smooth large)
+DUPEITEM=0b70
+
+[ITEMDEF 0b85]
+//table (smooth large)
+DUPEITEM=0b70
+
+[ITEMDEF 0b86]
+//table (smooth large)
+DUPEITEM=0b70
+
+[ITEMDEF 0b87]
+//table (smooth large)
+DUPEITEM=0b70
+
+[ITEMDEF 0b88]
+//table (picnic)
+DUPEITEM=0b75
+
+[ITEMDEF 0b89]
+//table (picnic)
+DUPEITEM=0b75
+
+[ITEMDEF 0b8a]
+//table (rough large)
+DUPEITEM=0b77
+
+[ITEMDEF 0b8b]
+//table (rough large)
+DUPEITEM=0b77
+
+[ITEMDEF 0b8c]
+//table (rough large)
+DUPEITEM=0b77
+
+[ITEMDEF 0b8d]
+//table (rough large)
+DUPEITEM=0b77
+
+[ITEMDEF 0b8e]
+//table (rough large)
+DUPEITEM=0b77
+
+[ITEMDEF 0b8f]
+//table (rough small)
+DUPEITEM=0b7c
 
 [ITEMDEF 0b90]
+//table (rough board)
 DUPEITEM=0b7d
+
+[ITEMDEF 0c31]
+DEFNAME=i_table_covered_small
+TYPE=t_table
+RESOURCES=1 i_table_nightstand, 1 i_cloth
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables (unusable)
+DESCRIPTION=Small Table (covered)
+DUPELIST=0c32
+
+[ITEMDEF 0c32]
+//Small Table (covered)
+DUPEITEM=0c31
+
+[ITEMDEF 0c33]
+DEFNAME=i_table_covered_large
+TYPE=t_table
+RESOURCES=1 i_table_nightstand, 1 i_cloth
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables (unusable)
+DESCRIPTION=Large Table (covered)
+DUPELIST=0c34,0c35,0c36
+
+[ITEMDEF 0c34]
+//Large Table (covered)
+DUPEITEM=0c33
+
+[ITEMDEF 0c35]
+//Large Table (covered)
+DUPEITEM=0c33
+
+[ITEMDEF 0c36]
+//Large Table (covered)
+DUPEITEM=0c33
+
+[ITEMDEF 0118b]
+DEFNAME=i_table_runner_purple
+TYPE=t_table
+FLIP=1
+VALUE=139
+WEIGHT=47.2
+RESOURCES=27 i_board,20 i_cloth,2 i_nails
+SKILLMAKE=Carpentry 89.0,Tailoring 60.0,t_carpentry,t_sewing_kit
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (Purple Runner)
+DUPELIST=0118c
+
+[ITEMDEF 0118c]
+//table (purple runner)
+DUPEITEM=0118b
+
+[ITEMDEF 0118d]
+DEFNAME=i_table_runner_red
+TYPE=t_table
+FLIP=1
+VALUE=139
+WEIGHT=47.2
+RESOURCES=27 i_log,20 i_cloth,2 i_nails
+SKILLMAKE=Carpentry 89.0,Tailoring 60.0,t_carpentry,t_sewing_kit
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (Red Runner)
+DUPELIST=0118e
+
+[ITEMDEF 0118e]
+//table (red runner)
+DUPEITEM=0118d
+
+[ITEMDEF 0118f]
+DEFNAME=i_table_runner_blue
+TYPE=t_table
+FLIP=1
+VALUE=136
+WEIGHT=47.2
+RESOURCES=26 i_board,20 i_cloth,2 i_nails
+SKILLMAKE=Carpentry 83.0,Tailoring 60.0,t_carpentry,t_sewing_kit
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (Blue Runner)
+DUPELIST=01190,01191,01192
+
+[ITEMDEF 01190]
+//table (blue runner)
+DUPEITEM=0118f
+
+[ITEMDEF 01191]
+// table (blue runner)
+DUPEITEM=0118f
+
+[ITEMDEF 01192]
+//table (blue runner)
+DUPEITEM=0118f
+
+[ITEMDEF 011d6]
+DEFNAME=i_table_bamboo
+TYPE=t_table
+FLIP=1
+VALUE=104
+WEIGHT=30.4
+RESOURCES=30 i_log_bamboo,4 i_nails
+SKILLMAKE=Carpentry 36.7,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (Bamboo)
+DUPELIST=011d7,011d8,011d9,011da,011db
+
+[ITEMDEF 011d7]
+//table (bamboo)
+DUPEITEM=011d6
+
+[ITEMDEF 011d8]
+//table (bamboo)
+DUPEITEM=011d6
+
+[ITEMDEF 011d9]
+//table (bamboo)
+DUPEITEM=011d6
+
+[ITEMDEF 011da]
+//table (bamboo)
+DUPEITEM=011d6
+
+[ITEMDEF 011db]
+//table (bamboo)
+DUPEITEM=011d6
+
+[ITEMDEF 011dc]
+DEFNAME=i_table_log
+TYPE=t_table
+FLIP=1
+VALUE=42
+WEIGHT=30.4
+RESOURCES=15 i_log_maple,4 i_nails
+SKILLMAKE=Carpentry 39.4,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (Log)
+DUPELIST=011dd,011de,011df,011e0,011e1
+
+[ITEMDEF 011dd]
+//table (log)
+DUPEITEM=011dc
+
+[ITEMDEF 011de]
+//table (log)
+DUPEITEM=011dc
+
+[ITEMDEF 011df]
+//table (log)
+DUPEITEM=011dc
+
+[ITEMDEF 011e0]
+//table (log)
+DUPEITEM=011dc
+
+[ITEMDEF 011e1]
+//table (log)
+DUPEITEM=011dc
+
+[ITEMDEF 01201]
+DEFNAME=i_table_stone
+TYPE=t_table
+FLIP=1
+VALUE=100
+WEIGHT=300.0
+RESOURCES=30 i_rock_plain
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (Stone)
+DUPELIST=01202,01203,01204,01205,01206
+
+[ITEMDEF 01202]
+//table (stone)
+DUPEITEM=01201
+
+[ITEMDEF 01203]
+//table (stone)
+DUPEITEM=01201
+
+[ITEMDEF 01204]
+//table (stone)
+DUPEITEM=01201
+
+[ITEMDEF 01205]
+//table (stone)
+DUPEITEM=01201
+
+[ITEMDEF 01206]
+//table (stone)
+DUPEITEM=01201
+
+[ITEMDEF 01667]
+DEFNAME=i_table_runner_checkered
+TYPE=t_table
+FLIP=1
+VALUE=150
+WEIGHT=52.2
+RESOURCES=26 i_log_maple,2 i_nails,26 i_cloth
+SKILLMAKE=Carpentry 61.3,Tailoring 43.1,t_carpentry,t_sewing_kit
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (checkered runner)
+DUPELIST=01668,01669,0166a,0166b,0166c
+
+[ITEMDEF 01668]
+//table (checkered runner)
+DUPEITEM=01667
+
+[ITEMDEF 01669]
+//table (checkered runner)
+DUPEITEM=01667
+
+[ITEMDEF 0166a]
+//table (checkered runner)
+DUPEITEM=01667
+
+[ITEMDEF 0166b]
+//table (checkered runner)
+DUPEITEM=01667
+
+[ITEMDEF 0166c]
+//table (checkered runner)
+DUPEITEM=01667
+
+[ITEMDEF 01916]
+DEFNAME=i_table_massage
+TYPE=t_table
+FLIP=1
+VALUE=46
+WEIGHT=12.1
+RESOURCES=4 i_board,2 i_log,1 i_nails,4 i_canvas
+SKILLMAKE=Carpentry 51.8,t_carpentry,Tailoring 19.7,t_sewing_kit
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Massage Table
+DUPELIST=01917
+
+[ITEMDEF 01917]
+//table (massage)
+DUPEITEM=01916
+
+[ITEMDEF 01da5]
+DEFNAME=i_table_wood_rough_small
+TYPE=t_table
+FLIP=1
+VALUE=24
+WEIGHT=16.2
+RESOURCES=8 i_log,2 i_nails
+SKILLMAKE=Carpentry 56.3,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (small rough)
+DUPELIST=01da6,01da9,01daa
+
+[ITEMDEF 01da6]
+//table (small rough)
+DUPEITEM=01da5
+
+[ITEMDEF 01da7]
+DEFNAME=i_table_board_rough_small
+TYPE=t_table
+FLIP=1
+VALUE=26
+WEIGHT=22.2
+RESOURCES=11 i_log,2 i_nails
+SKILLMAKE=Carpentry 46.3,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (rough board)
+DUPELIST=01da8,01dab,01dac
+
+[ITEMDEF 01da8]
+//table (rough board)
+DUPEITEM=01da7
+
+[ITEMDEF 01da9]
+//table (small rough)
+DUPEITEM=01da5
+
+[ITEMDEF 01daa]
+//table (small rough)
+DUPEITEM=01da5
+
+[ITEMDEF 01dab]
+//table (rough board)
+DUPEITEM=01da7
+
+[ITEMDEF 01dac]
+//table (rough board)
+DUPEITEM=01da7
+
+[ITEMDEF 01dbb]
+DEFNAME=i_table_sandstone
+TYPE=t_table
+FLIP=1
+VALUE=160
+WEIGHT=300.0
+RESOURCES=30 i_rock_plain
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (Sandstone)
+DUPELIST=01dbc,01dbd,01dbe,01dbf,01dc0
+
+[ITEMDEF 01dbc]
+//table (sandstone)
+DUPEITEM=01dbb
+
+[ITEMDEF 01dbd]
+//table (sandstone)
+DUPEITEM=01dbb
+
+[ITEMDEF 01dbe]
+//table (sandstone)
+DUPEITEM=01dbb
+
+[ITEMDEF 01dbf]
+//table (sandstone)
+DUPEITEM=01dbb
+
+[ITEMDEF 01dc0]
+//table (sandstone)
+DUPEITEM=01dbb
+
+[ITEMDEF 01dc1]
+DEFNAME=i_table_marble
+TYPE=t_table
+FLIP=1
+VALUE=160
+WEIGHT=300.0
+RESOURCES=30 i_rock_plain
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Table (Marble)
+DUPELIST=01dc2,01dc3,01dc4,01dc5,01dc6
+
+[ITEMDEF 01dc2]
+//table (marble)
+DUPEITEM=01dc1
+
+[ITEMDEF 01dc3]
+//table (marble)
+DUPEITEM=01dc1
+
+[ITEMDEF 01dc4]
+//table (marble)
+DUPEITEM=01dc1
+
+[ITEMDEF 01dc5]
+//table (marble)
+DUPEITEM=01dc1
+
+[ITEMDEF 01dc6]
+//table (marble)
+DUPEITEM=01dc1
+
+[ITEMDEF 01e7f]
+DEFNAME=i_table_nightstand_unfinished
+NAME=unfinished nighttable
+TYPE=t_table
+WEIGHT=17.4
+RESOURCES=17 i_board,4 i_nails
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables (unusable)
+DESCRIPTION=Unfinished Night Table
+
+[ITEMDEF 0207e]
+//FIXME: Is this a quest item?
+DEFNAME=i_table_keyed
+TYPE=t_table
+WEIGHT=17.4
+RESOURCES=17 i_log,4 i_nails
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Keyed Table
 
 [ITEMDEF 02819]
 DEFNAME=i_table_low_elegant
-NAME=Elegant Low Table
+NAME=elegant low table
 TYPE=t_table
-SKILLMAKE=CARPENTRY 80.0, t_carpentry
-RESOURCES=35 i_log
 WEIGHT=25
+RESOURCES=35 i_log
+SKILLMAKE=Carpentry 80.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Elegant Low Table
 
 [ITEMDEF 0281a]
 DEFNAME=i_table_low_plain
-NAME=Plain Low Table
+NAME=plain low table
 TYPE=t_table
-SKILLMAKE=CARPENTRY 80.0, t_carpentry
-RESOURCES=35 i_log
 WEIGHT=25
+RESOURCES=35 i_log
+SKILLMAKE=Carpentry 80.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Plain Low Table
+
+[ITEMDEF 02a5c]
+DEFNAME=i_table_bone
+NAME=bone table
+TYPE=t_table
+VALUE=64
+WEIGHT=14.8
+RESOURCES=27 i_bone,1 i_thread,4 i_bone_skull
+SKILLMAKE=Carpentry 42.1,t_carpentry,Necromancy 75.0
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Bone Table
+
 
 [ITEMDEF 02de1]
 DEFNAME=i_table_ornate
 NAME=ornate table
 TYPE=t_table
-SKILLMAKE=CARPENTRY 85.0, t_carpentry
-RESOURCES=60 i_log
+FLIP=1
 WEIGHT=25
+RESOURCES=60 i_log
+SKILLMAKE=Carpentry 85.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Ornate Table
@@ -150,7 +774,7 @@ DUPEITEM=02de1
 [ITEMDEF 02de7]
 DEFNAME=i_table_elven_ornate_2
 NAME=ornate elven table
-TYPE=t_normal
+TYPE=t_table
 FLIP=1
 VALUE=108
 WEIGHT=40.6
@@ -189,18 +813,8 @@ DUPEITEM=02de7
 //ornate elven table
 DUPEITEM=02de7
 
-[ITEMDEF 04041]
-DEFNAME=i_table_ter_mur
-NAME=Ter-Mur Style Table
-TYPE=t_table
-SKILLMAKE=CARPENTRY 75.0, t_carpentry
-RESOURCES=50 i_log
-WEIGHT=25
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Ter-Mur Style Table
-
 [ITEMDEF 03605]
+NAME=crystal table
 TYPE=t_table
 FLIP=1
 VALUE=261
@@ -225,70 +839,70 @@ DUPEITEM=03605
 DUPEITEM=03605
 
 
+[ITEMDEF 04041]
+DEFNAME=i_table_ter_mur
+NAME=Ter-Mur style table
+TYPE=t_table
+WEIGHT=25
+RESOURCES=50 i_log
+SKILLMAKE=Carpentry 75.0, t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Ter-Mur Style Table
+
+
 ///////////////////////////////////////////////////////////////
 //////// TABLE PARTS
 ///////////////////////////////////////////////////////////////
 
 [ITEMDEF 0402f]
 DEFNAME=i_long_table_e_2_2
-NAME=Long Table
+NAME=long table
 TYPE=t_table
 WEIGHT=50
-DUPELIST=04030,04031,04032
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Long Table (East - 2 of 2)
+DUPELIST=04030,04031,04032
 
 [ITEMDEF 04030]
-DEFNAME=i_long_table_e_1_2
 DUPEITEM=0402f
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
+DEFNAME=i_long_table_e_1_2
 DESCRIPTION=Long Table (East - 1 of 2)
 
 [ITEMDEF 04031]
-DEFNAME=i_long_table_s_2_2
 DUPEITEM=0402f
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
+DEFNAME=i_long_table_s_2_2
 DESCRIPTION=Long Table (South - 2 of 2)
 
 [ITEMDEF 04032]
-DEFNAME=i_long_table_s_1_2
 DUPEITEM=0402f
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
+DEFNAME=i_long_table_s_1_2
 DESCRIPTION=Long Table (South - 1 of 2)
 
 [ITEMDEF 04033]
 DEFNAME=i_short_table_4_4
-NAME=Short Table
+NAME=short table
 TYPE=t_table
 WEIGHT=50
-DUPELIST=04034,04035,04036
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
 DESCRIPTION=Short Table (4 of 4)
+DUPELIST=04034,04035,04036
 
 [ITEMDEF 04034]
-DEFNAME=i_short_table_3_4
 DUPEITEM=04033
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
+DEFNAME=i_short_table_3_4
 DESCRIPTION=Short Table (3 of 4)
 
 [ITEMDEF 04035]
-DEFNAME=i_short_table_2_4
 DUPEITEM=04033
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
+DEFNAME=i_short_table_2_4
 DESCRIPTION=Short Table (2 of 4)
 
 [ITEMDEF 04036]
-DEFNAME=i_short_table_1_4
 DUPEITEM=04033
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
+DEFNAME=i_short_table_1_4
 DESCRIPTION=Short Table (1 of 4)
 
-[eof]
+[EOF]

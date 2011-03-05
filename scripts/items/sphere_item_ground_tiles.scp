@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
 
 
@@ -4356,6 +4356,906 @@ DUPEITEM=03547
 [ITEMDEF 03561]
 //lava
 DUPEITEM=03547
+
+
+[ITEMDEF 03869]
+CATEGORY=Ground Tiles
+SUBSECTION=Mosaics
+DESCRIPTION=Skull Mosaic
+DUPELIST=0386a,0386b,0386c,0386d,0386e,0386f,03870,03871,03872,03873,03874,03875,03876,03877,03878,03879,0387a,0387b,0387c,0387d,0387e,0387f,03880,03881,03882,03883,03884,03885,03886,03887,03888,03889,0388a,0388b,0388c,0388d,0388e,0388f,03890,03891,03892,03893,03894,03895,03896,03897,03898,03899,0389a,0389b,0389c,0389d,0389e,0389f
+
+[ITEMDEF 0386a]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0386b]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0386c]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0386d]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0386e]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0386f]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03870]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03871]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03872]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03873]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03874]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03875]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03876]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03877]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03878]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03879]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0387a]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0387b]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0387c]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0387d]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0387e]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0387f]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03880]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03881]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03882]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03883]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03884]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03885]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03886]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03887]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03888]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03889]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0388a]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0388b]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0388c]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0388d]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0388e]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0388f]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03890]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03891]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03892]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03893]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03894]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03895]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03896]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03897]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03898]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 03899]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0389a]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0389b]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0389c]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0389d]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0389e]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 0389f]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 038a0]
+//skull mosaic
+DUPEITEM=03869
+
+[ITEMDEF 038a1]
+CATEGORY=Ground Tiles
+SUBSECTION=Mosaics
+DESCRIPTION=Flower Mosaic
+DUPELIST=038a2,038a3,038a4,038a5,038a6,038a7,038a8,038a9,038aa,038ab,038ac,038ad,038ae,038af,038b0,038b1,038b2,038b3,038b4,038b5,038b6,038b7,038b8,038b9,038ba,038bb,038bc,038bd,038be,038bf,038c0,038c1,038c2,038c3,038c4,038c5,038c6,038c7,038c8,038c9,038ca,038cb,038cc,038cd,038ce,038cf,038d0,038d1,038d2,038d3,038d4,038d5,038d6,038d7,038d8
+
+[ITEMDEF 038a2]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038a3]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038a4]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038a5]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038a6]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038a7]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038a8]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038a9]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038aa]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038ab]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038ac]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038ad]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038ae]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038af]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038b0]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038b1]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038b2]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038b3]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038b4]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038b5]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038b6]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038b7]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038b8]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038b9]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038ba]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038bb]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038bc]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038bd]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038be]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038bf]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038c0]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038c1]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038c2]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038c3]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038c4]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038c5]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038c6]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038c7]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038c8]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038c9]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038ca]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038cb]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038cc]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038cd]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038ce]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038cf]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038d0]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038d1]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038d2]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038d3]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038d4]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038d5]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038d6]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038d7]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038d8]
+//flower mosaic
+DUPEITEM=038a1
+
+[ITEMDEF 038d9]
+CATEGORY=Ground Tiles
+SUBSECTION=Mosaics
+DESCRIPTION=Dolphin Mosaic
+DUPELIST=038da,038db,038dc,038dd,038de,038df,038e0,038e1,038e2,038e3,038e4,038e5,038e6,038e7,038e8,038e9,038ea,038eb,038ec,038ed,038ee,038ef,038f0,038f1,038f2,038f3,038f4,038f5,038f6,038f7,038f8,038f9,038fa,038fb,038fc,038fd,038fe,038ff,03900,03901,03902,03903,03904,03905,03906,03907,03908,03909,0390a,0390b,0390c,0390d,0390e,0390f,03910
+
+[ITEMDEF 038da]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038db]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038dc]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038dd]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038de]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038df]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038e0]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038e1]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038e2]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038e3]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038e4]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038e5]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038e6]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038e7]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038e8]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038e9]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038ea]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038eb]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038ec]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038ed]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038ee]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038ef]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038f0]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038f1]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038f2]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038f3]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038f4]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038f5]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038f6]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038f7]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038f8]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038f9]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038fa]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038fb]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038fc]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038fd]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038fe]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 038ff]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 03900]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 03901]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 03902]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 03903]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 03904]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 03905]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 03906]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 03907]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 03908]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 03909]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 0390a]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 0390b]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 0390c]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 0390d]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 0390e]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 0390f]
+//dolphin mosaic
+DUPEITEM=038d9
+
+[ITEMDEF 03910]
+//dolphin mosaic
+DUPEITEM=038d9
+
+
+[ITEMDEF 039d4]
+DEFNAME=i_floor_tree
+NAME=tree floor
+CATEGORY=Ground Tiles
+SUBSECTION=tree Floor
+DESCRIPTION=Floor
+DUPELIST=039d5,039d6,039d7,039d8,039d9,039da,039db,039dc,039dd,039de,039df,039e0,039e1,039e2,039e3,039e4,039e5,03a1f,03a20,03a21,03a22,03a23,03a24,03a25,03a26,03a27,03a28,03a29,03a2a,03a2b,03a2c,03a2d,03a2e,03a2f,03a30,03a31,03a32,03a45,03a46,03a47,03a48,03a49,03a4a,03a4b,03a4c,03a4d,03a4e,03a4f,03a50,03a51,03a52,03a53,03a54
+
+[ITEMDEF 039d5]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039d6]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039d7]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039d8]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039d9]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039da]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039db]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039dc]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039dd]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039de]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039df]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039e0]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039e1]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039e2]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039e3]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039e4]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 039e5]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a1f]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a20]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a21]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a22]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a23]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a24]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a25]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a26]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a27]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a28]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a29]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a2a]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a2b]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a2c]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a2d]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a2e]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a2f]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a30]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a31]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a32]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a45]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a46]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a47]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a48]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a49]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a4a]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a4b]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a4c]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a4d]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a4e]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a4f]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a50]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a51]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a52]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a53]
+//tree floor
+DUPEITEM=039d4
+
+[ITEMDEF 03a54]
+//tree floor
+DUPEITEM=039d4
 
 
 [ITEMDEF 0219f]

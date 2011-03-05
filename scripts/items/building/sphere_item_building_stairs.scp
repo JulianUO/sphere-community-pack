@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
 
 
@@ -1050,6 +1050,7 @@ DUPEITEM=035d2
 
 [ITEMDEF 03609]
 DEFNAME=i_stairs_shadow
+NAME=stairs
 CATEGORY=Buildings - Stairs
 SUBSECTION=Shadow Stairs
 DESCRIPTION=Stairs

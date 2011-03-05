@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
 
 
@@ -349,15 +349,6 @@ ON=@unequip
 [ITEMDEF 0207d]
 //unnecessary copy of item 0db?
 DEFNAME=i_pillar
-
-[ITEMDEF 0207e]
-DEFNAME=i_table_keyed
-TYPE=t_table
-WEIGHT=17.4
-RESOURCES=17 i_log,4 i_nails
-CATEGORY=Quest
-SUBSECTION=Unknown
-DESCRIPTION=Keyed Table
 
 [ITEMDEF 02198]
 CATEGORY=Miscellaneous
@@ -1078,10 +1069,10 @@ DESCRIPTION=Unused Tile 02676
 
 [ITEMDEF 02677]
 DEFNAME=i_gloves_kote1
-//TYPE=t_armor_leather
+TYPE=t_armor_leather
 FLIP=1
-//LAYER=layer_gloves
-//ARMOR=13
+LAYER=layer_gloves
+ARMOR=13
 VALUE=23
 WEIGHT=3.0
 RESOURCES=3 i_hides_cut
@@ -1102,17 +1093,17 @@ DUPEITEM=02677
 
 [ITEMDEF 02679]
 DEFNAME=i_gloves_kote2
-//TYPE=t_armor_leather
+TYPE=t_armor_leather
 FLIP=1
-//LAYER=layer_gloves
-//ARMOR=13
+LAYER=layer_gloves
+ARMOR=13
 VALUE=23
 WEIGHT=3.0
 RESOURCES=3 i_hides_cut
 SKILLMAKE=Tailoring 56.8,t_sewing_kit
 CATEGORY=Provisions - Armor
 SUBSECTION=Leather Armor
-DESCRIPTION=Kote Gloves 2 (can not equip)
+DESCRIPTION=Kote Gloves 2 (cannot equip)
 TAG.REQSTR=10
 TAG.NotGargoyle=1
 TEVENTS=t_iprop
@@ -1280,9 +1271,9 @@ DUPEITEM=02689
 [ITEMDEF 0268b]
 DEFNAME=i_hachimaki
 NAME=hachimaki
-//TYPE=t_armor
+TYPE=t_armor
 FLIP=1
-//ARMOR=30
+ARMOR=30
 VALUE=65
 WEIGHT=10.0
 RESOURCES=10 i_ingot_iron
@@ -1304,9 +1295,9 @@ DUPEITEM=0268b
 [ITEMDEF 0268d]
 DEFNAME=i_kabuto
 NAME=decorative kabuto
-//TYPE=t_armor
+TYPE=t_armor
 FLIP=1
-//ARMOR=30
+ARMOR=30
 VALUE=65
 WEIGHT=10.0
 RESOURCES=10 i_ingot_iron
@@ -1328,9 +1319,9 @@ DUPEITEM=0268d
 [ITEMDEF 0268f]
 DEFNAME=i_kabuto_mempo
 NAME=decorative kabuto mempo
-//TYPE=t_armor
+TYPE=t_armor
 FLIP=1
-//ARMOR=30
+ARMOR=30
 VALUE=65
 WEIGHT=10.0
 RESOURCES=10 i_ingot_iron
@@ -1398,9 +1389,9 @@ DUPEITEM=0269d
 
 [ITEMDEF 026a1]
 DEFNAME=i_mask_feathered
-//TYPE=t_clothing
+TYPE=t_clothing
 FLIP=1
-//LAYER=layer_helm
+LAYER=layer_helm
 ARMOR=5
 VALUE=26
 WEIGHT=3.6
@@ -2280,7 +2271,10 @@ DESCRIPTION=Luminescent Fungi
 
 //FIXME: the following benches cannot be sat on
 [ITEMDEF 0319a]
+NAME=bench
+
 [ITEMDEF 0319b]
+NAME=bench
 
 [ITEMDEF 031b0]
 CATEGORY=Miscellaneous
@@ -2371,85 +2365,86 @@ DESCRIPTION=Invisible Tile 031c0
 [ITEMDEF 03584]
 //Gumpid=091b
 DEFNAME=i_gamepiece_checker_w
+NAME=checker
 NAME=red checker
 TYPE=t_game_piece
 
 [ITEMDEF 03585]
 //Gumpid=091c
 DEFNAME=i_gamepiece_bishop_w
-NAME=white bishop
+NAME=bishop
 TYPE=t_game_piece
 
 [ITEMDEF 03586]
 //Gumpid=091d
 DEFNAME=i_gamepiece_rook_w
-NAME=white rook
+NAME=rook
 TYPE=t_game_piece
 
 [ITEMDEF 03587]
 //Gumpid=091e
 DEFNAME=i_gamepiece_queen_w
-NAME=Queen
+NAME=queen
 TYPE=t_game_piece
 
 [ITEMDEF 03588]
 //Gumpid=091f
 DEFNAME=i_gamepiece_knight_w
-NAME=Knight
+NAME=knight
 TYPE=t_game_piece
 
 [ITEMDEF 03589]
 //Gumpid=0920
 DEFNAME=i_gamepiece_pawn_w
-NAME=Pawn
+NAME=pawn
 TYPE=t_game_piece
 
 [ITEMDEF 0358a]
 //Gumpid=0921
 DEFNAME=i_gamepiece_king_w
-NAME=King
+NAME=king
 TYPE=t_game_piece
 
 [ITEMDEF 0358b]
 //Gumpid=0922
 DEFNAME=i_gamepiece_checker_b
-NAME=Checker
+NAME=checker
 TYPE=t_game_piece
 
 [ITEMDEF 0358c]
 //Gumpid=0923
 DEFNAME=i_gamepiece_bishop_b
-NAME=Bishop
+NAME=bishop
 TYPE=t_game_piece
 
 [ITEMDEF 0358d]
 //Gumpid=0924
 DEFNAME=i_gamepiece_rook_b
-NAME=Rook
+NAME=rook
 TYPE=t_game_piece
 
 [ITEMDEF 0358e]
 //Gumpid=0925
 DEFNAME=i_gamepiece_queen_b
-NAME=Queen
+NAME=queen
 TYPE=t_game_piece
 
 [ITEMDEF 0358f]
 //Gumpid=0926
 DEFNAME=i_gamepiece_knight_b
-NAME=Knight
+NAME=knight
 TYPE=t_game_piece
 
 [ITEMDEF 03590]
 //Gumpid=0927
 DEFNAME=i_gamepiece_pawn_b
-NAME=Pawn
+NAME=pawn
 TYPE=t_game_piece
 
 [ITEMDEF 03591]
 //Gumpid=0928
 DEFNAME=i_gamepiece_king_b
-NAME=King
+NAME=king
 TYPE=t_game_piece
 
 [ITEMDEF 03592]
@@ -2517,22 +2512,91 @@ TYPE=t_game_piece
 TYPE=t_game_piece
 
 
-[ITEMDEF 03dc5]
-//unused
+[ITEMDEF 0364c]
+[ITEMDEF 0364d]
+FLIP=1
+DUPELIST=0369c
+[ITEMDEF 0364e]
+//blackrock boulder?
+[ITEMDEF 0364f]
+//blackrock boulder?
+[ITEMDEF 03650]
+//blackrock boulder?
 
-[ITEMDEF 03dc8]
-//unused
+[ITEMDEF 03651]
+FLIP=1
+DUPELIST=03652,03653,03654,03655,03656
+[ITEMDEF 03652]
+DUPEITEM=03651
+[ITEMDEF 03653]
+DUPEITEM=03651
+[ITEMDEF 03654]
+DUPEITEM=03651
+[ITEMDEF 03655]
+DUPEITEM=03651
+[ITEMDEF 03656]
+DUPEITEM=03651
+[ITEMDEF 03657]
+FLIP=1
+DUPELIST=03658,03659
+[ITEMDEF 03658]
+DUPEITEM=03657
+[ITEMDEF 03659]
+DUPEITEM=03657
+
+[ITEMDEF 0365a]
+FLIP=1
+DUPELIST=0365b,0369d,0369e
+[ITEMDEF 0365b]
+DUPEITEM=0365a
+
+[ITEMDEF 0365c]
+DEFNAME=i_banner_tattered_shadow
+WEIGHT=5.0
+RESOURCES=1 i_log,5 i_cloth
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Tattered
+DESCRIPTION=Small Tattered Banner (Shadow)
+DUPELIST=0365d,0365e,0365f
+[ITEMDEF 0365d]
+DUPEITEM=0365c
+[ITEMDEF 0365e]
+DUPEITEM=0365c
+[ITEMDEF 0365f]
+DUPEITEM=0365c
+
+[ITEMDEF 03660]
+[ITEMDEF 03661]
+[ITEMDEF 03662]
+[ITEMDEF 03663]
+[ITEMDEF 03664]
+[ITEMDEF 03665]
+[ITEMDEF 03666]
+[ITEMDEF 03667]
+[ITEMDEF 03668]
+[ITEMDEF 03669]
+[ITEMDEF 0366a]
+[ITEMDEF 0366b]
+[ITEMDEF 0366c]
+[ITEMDEF 0366d]
+[ITEMDEF 0366e]
+[ITEMDEF 0366f]
+
+[ITEMDEF 03678]
+//quest item
+[ITEMDEF 03679]
+//quest item
+[ITEMDEF 0367a]
+//quest item
+
+[ITEMDEF 0369c]
+DUPEITEM=0364d
+[ITEMDEF 0369d]
+DUPEITEM=0365a
+[ITEMDEF 0369e]
+DUPEITEM=0365a
 
 
-[ITEMDEF 03ed6]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Unused Tile 03ed6
-
-[ITEMDEF 03ed7]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Unused Tile 03ed7
 
 [ITEMDEF 03eea]
 //ship part - duplicate of 3e8a

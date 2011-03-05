@@ -3,155 +3,156 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 02b74]
 DEFNAME=i_hide_tunic
-NAME=Hide Tunic
+NAME=hide tunic
 TYPE=t_armor_leather
+FLIP=1
 WEIGHT=6
-RESOURCES=15 i_hides_cut
-SKILLMAKE=TAILORING 85.0
 REQSTR=25
-DUPELIST=0316b
-CATEGORY=Provisions - Armor - Leather
-SUBSECTION=Hide Armor
-DESCRIPTION=Hide Tunic
+RESOURCES=15 i_hides_cut
+SKILLMAKE=Tailoring 85.0
 TAG.Item.Elven=1
 TAG.ResPhysical=3
 TAG.ResFire=3
 TAG.ResCold=4
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Hide Armor
+DESCRIPTION=Hide Tunic
+DUPELIST=0316b
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 0316b]
 DUPEITEM=02b74
 
 [ITEMDEF 02b75]
 DEFNAME=i_hide_gloves
-NAME=Hide Gloves
+NAME=hide gloves
 TYPE=t_armor_leather
+FLIP=1
 WEIGHT=2
-RESOURCES=10 i_hides_cut
-SKILLMAKE=TAILORING 75.0
 REQSTR=15
-DUPELIST=0316c
-CATEGORY=Provisions - Armor - Leather
-SUBSECTION=Hide Armor
-DESCRIPTION=Hide Gloves
+RESOURCES=10 i_hides_cut
+SKILLMAKE=Tailoring 75.0
 TAG.Item.Elven=1
 TAG.ResPhysical=3
 TAG.ResFire=3
 TAG.ResCold=4
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Hide Armor
+DESCRIPTION=Hide Gloves
+DUPELIST=0316c
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 0316c]
 DUPEITEM=02b75
 
 [ITEMDEF 02b76]
 DEFNAME=i_hide_gorget
-NAME=Hide Gorget
+NAME=hide gorget
 TYPE=t_armor_leather
+FLIP=1
 WEIGHT=3
-RESOURCES=12 i_hides_cut
-SKILLMAKE=TAILORING 90.0
 REQSTR=15
-DUPELIST=0316d
-CATEGORY=Provisions - Armor - Leather
-SUBSECTION=Hide Armor
-DESCRIPTION=Hide Gorget
+RESOURCES=12 i_hides_cut
+SKILLMAKE=Tailoring 90.0
 TAG.Item.Elven=1
 TAG.ResPhysical=3
 TAG.ResFire=3
 TAG.ResCold=4
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Hide Armor
+DESCRIPTION=Hide Gorget
+DUPELIST=0316d
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 0316d]
 DUPEITEM=02b76
 
 [ITEMDEF 02b77]
 DEFNAME=i_hide_pauldrons
-NAME=Hide Pauldrons
+NAME=hide pauldrons
 TYPE=t_armor_leather
+FLIP=1
 WEIGHT=4
-RESOURCES=12 i_hides_cut
-SKILLMAKE=TAILORING 75.0
 REQSTR=20
-DUPELIST=0316e
-CATEGORY=Provisions - Armor - Leather
-SUBSECTION=Hide Armor
-DESCRIPTION=Hide Pauldrons
+RESOURCES=12 i_hides_cut
+SKILLMAKE=Tailoring 75.0
 TAG.Item.Elven=1
 TAG.ResPhysical=3
 TAG.ResFire=3
 TAG.ResCold=4
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Hide Armor
+DESCRIPTION=Hide Pauldrons
+DUPELIST=0316e
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 0316e]
 DUPEITEM=02b77
 
 [ITEMDEF 02b78]
 DEFNAME=i_hide_pants
-NAME=Hide Pants
+NAME=hide pants
 TYPE=t_armor_leather
+FLIP=1
 WEIGHT=5
-RESOURCES=15 i_hides_cut
-SKILLMAKE=TAILORING 92.0
 REQSTR=25
-DUPELIST=0316f
-CATEGORY=Provisions - Armor - Leather
-SUBSECTION=Hide Armor
-DESCRIPTION=Hide Pants
+RESOURCES=15 i_hides_cut
+SKILLMAKE=Tailoring 92.0
 TAG.Item.Elven=1
 TAG.ResPhysical=3
 TAG.ResFire=3
 TAG.ResCold=4
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Hide Armor
+DESCRIPTION=Hide Pants
+DUPELIST=0316f
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 0316f]
 DUPEITEM=02b78
 
 [ITEMDEF 02b79]
 DEFNAME=i_hide_tunic_female
-NAME=Female Hide Tunic
+NAME=female hide tunic
 TYPE=t_armor_leather
+FLIP=1
 WEIGHT=6
-RESOURCES=15 i_hides_cut
-SKILLMAKE=TAILORING 85.0
 REQSTR=25
-DUPELIST=0316b
-CATEGORY=Provisions - Armor - Leather
-SUBSECTION=Hide Armor
-DESCRIPTION=Hide Tunic (Female)
+RESOURCES=15 i_hides_cut
+SKILLMAKE=Tailoring 85.0
 TAG.Item.Elven=1
 TAG.ResPhysical=3
 TAG.ResFire=3
 TAG.ResCold=4
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
-ON=@CREATE
-HITPOINTS={50 60}
+CATEGORY=Provisions - Armor - Leather
+SUBSECTION=Hide Armor
+DESCRIPTION=Hide Tunic (Female)
+DUPELIST=0316b
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 03170]
 DUPEITEM=02b79

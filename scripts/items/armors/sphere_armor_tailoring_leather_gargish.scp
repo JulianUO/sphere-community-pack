@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
 
 // version 1 = id, dupe
@@ -14,23 +14,23 @@ VERSION=0.56b
 
 [ITEMDEF 0301]
 DEFNAME=i_leather_gargoyle_arms_female
-NAME=Gargoyle Leather Arms
-TYPE=t_armor
+NAME=Gargish leather arms
+TYPE=t_armor_leather
+FLIP=1
+WEIGHT=4
+REQSTR=25
 RESOURCES=8 i_hides_cut
 SKILLMAKE=Tailoring 53.9
-WEIGHT=4
-FLIP=1
-REQSTR=25
-DUPELIST=04047
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Arms (female)
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=7
 TAG.ResPoison=6
 TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Leather Gargoyle Armor
+DESCRIPTION=Gargoyle Leather Arms (female)
+DUPELIST=04047
 ON=@Create
    HITPOINTS={50 60}
 
@@ -39,23 +39,23 @@ DUPEITEM=0301
 
 [ITEMDEF 0302]
 DEFNAME=i_leather_gargoyle_arms
-NAME=Gargoyle Leather Arms
-TYPE=t_armor
+NAME=Gargish leather arms
+TYPE=t_armor_leather
+FLIP=1
+WEIGHT=4
+REQSTR=25
 RESOURCES=8 i_hides_cut
 SKILLMAKE=Tailoring 53.9
-WEIGHT=4
-FLIP=1
-REQSTR=25
-DUPELIST=04048
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Arms
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=7
 TAG.ResPoison=6
 TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Leather Gargoyle Armor
+DESCRIPTION=Gargoyle Leather Arms
+DUPELIST=04048
 ON=@Create
    HITPOINTS={50 60}
 
@@ -64,23 +64,23 @@ DUPEITEM=0302
 
 [ITEMDEF 0303]
 DEFNAME=i_leather_gargoyle_chest_female
-NAME=Gargoyle Leather Chest
-TYPE=t_armor
+NAME=Gargish leather chest
+TYPE=t_armor_leather
+FLIP=1
+WEIGHT=4
+REQSTR=25
 RESOURCES=8 i_hides_cut
 SKILLMAKE=Tailoring 70.5
-WEIGHT=4
-FLIP=1
-REQSTR=25
-DUPELIST=04049
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Chest (female)
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=7
 TAG.ResPoison=6
 TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Leather Gargoyle Armor
+DESCRIPTION=Gargoyle Leather Chest (female)
+DUPELIST=04049
 ON=@Create
    HITPOINTS={50 60}
 
@@ -89,23 +89,23 @@ DUPEITEM=0303
 
 [ITEMDEF 0304]
 DEFNAME=i_leather_gargoyle_chest
-NAME=Gargoyle Leather Chest
-TYPE=t_armor
+NAME=Gargish leather chest
+TYPE=t_armor_leather
+FLIP=1
+WEIGHT=4
+REQSTR=25
 RESOURCES=8 i_hides_cut
 SKILLMAKE=Tailoring 70.5
-WEIGHT=4
-FLIP=1
-REQSTR=25
-DUPELIST=0404a
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Chest
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=7
 TAG.ResPoison=6
 TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Leather Gargoyle Armor
+DESCRIPTION=Gargoyle Leather Chest
+DUPELIST=0404a
 ON=@Create
    HITPOINTS={50 60}
 
@@ -114,23 +114,23 @@ DUPEITEM=0304
 
 [ITEMDEF 0305]
 DEFNAME=i_leather_gargoyle_leggings_female
-NAME=Gargoyle Leather Leggings
-TYPE=t_armor
+NAME=Gargish leather leggings
+TYPE=t_armor_leather
+FLIP=1
+WEIGHT=4
+REQSTR=25
 RESOURCES=10 i_hides_cut
 SKILLMAKE=Tailoring 66.3
-WEIGHT=4
-FLIP=1
-REQSTR=25
-DUPELIST=0404d
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Leggings (female)
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=7
 TAG.ResPoison=6
 TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Leather Gargoyle Armor
+DESCRIPTION=Gargoyle Leather Leggings (female)
+DUPELIST=0404d
 ON=@Create
    HITPOINTS={50 60}
 
@@ -139,23 +139,23 @@ DUPEITEM=0305
 
 [ITEMDEF 0306]
 DEFNAME=i_leather_gargoyle_leggings
-NAME=Gargoyle Leather Leggings
-TYPE=t_armor
+NAME=Gargish leather leggings
+TYPE=t_armor_leather
+FLIP=1
+WEIGHT=4
+REQSTR=25
 RESOURCES=10 i_hides_cut
 SKILLMAKE=Tailoring 66.3
-WEIGHT=4
-FLIP=1
-REQSTR=25
-DUPELIST=0404e
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Leggings
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=7
 TAG.ResPoison=6
 TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Leather Gargoyle Armor
+DESCRIPTION=Gargoyle Leather Leggings
+DUPELIST=0404e
 ON=@Create
    HITPOINTS={50 60}
 
@@ -164,23 +164,23 @@ DUPEITEM=0306
 
 [ITEMDEF 0310]
 DEFNAME=i_leather_gargoyle_kilt
-NAME=Gargoyle Leather Kilt
-TYPE=t_armor
+NAME=Gargish leather kilt
+TYPE=t_armor_leather
+FLIP=1
+WEIGHT=4
+REQSTR=25
 RESOURCES=6 i_hides_cut
 SKILLMAKE=Tailoring 58.0
-WEIGHT=4
-FLIP=1
-REQSTR=25
-DUPELIST=0404b
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Kilt (female)
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=7
 TAG.ResPoison=6
 TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Leather Gargoyle Armor
+DESCRIPTION=Gargoyle Leather Kilt (female)
+DUPELIST=0404b
 ON=@Create
    HITPOINTS={50 60}
 
@@ -189,28 +189,27 @@ DUPEITEM=0310
 
 [ITEMDEF 0311]
 DEFNAME=i_leather_gargoyle_kilt
-NAME=Gargoyle Leather Kilt
-TYPE=t_armor
+NAME=Gargish leather kilt
+TYPE=t_armor_leather
+FLIP=1
+WEIGHT=4
+REQSTR=25
 RESOURCES=6 i_hides_cut
 SKILLMAKE=Tailoring 58.0
-WEIGHT=4
-FLIP=1
-REQSTR=25
-DUPELIST=0404c
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Kilt
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
 TAG.ResCold=7
 TAG.ResPoison=6
 TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Leather Gargoyle Armor
+DESCRIPTION=Gargoyle Leather Kilt
+DUPELIST=0404c
 ON=@Create
    HITPOINTS={50 60}
 
 [ITEMDEF 0404c]
 DUPEITEM=0311
 
-
-[eof]
+[EOF]

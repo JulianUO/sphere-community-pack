@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Tuesday, Febuary 22, 2011
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
 
 
@@ -4079,16 +4079,127 @@ COMPONENT=030c5,-2,0,0
 COMPONENT=030c6,0,-1,0
 COMPONENT=030c7,0,-2,0
 
+[ITEMDEF 030c8]
+DEFNAME=i_tree_wide3_foliage
+TYPE=t_tree
+CATEGORY=Vegetation
+SUBSECTION=Trees
+DESCRIPTION=Wide Tree 3 Foliage
+DUPELIST=030c9,030ca,030cb,030cc,030cd,030ce
+
+[ITEMDEF 030c9]
+//Wide Tree 3 Foliage
+DUPEITEM=030c8
+
+[ITEMDEF 030ca]
+//Wide Tree 3 Foliage
+DUPEITEM=030c8
+
+[ITEMDEF 030cb]
+//Wide Tree 3 Foliage
+DUPEITEM=030c8
+
+[ITEMDEF 030cc]
+//Wide Tree 3 Foliage
+DUPEITEM=030c8
+
+[ITEMDEF 030cd]
+//Wide Tree 3 Foliage
+DUPEITEM=030c8
+
+[ITEMDEF 030ce]
+//Wide Tree 3 Foliage
+DUPEITEM=030c8
+
+[ITEMDEF 030cf]
+DEFNAME=i_tree_wide4_foliage
+TYPE=t_tree
+CATEGORY=Vegetation
+SUBSECTION=Trees
+DESCRIPTION=Wide Tree 4 Foliage
+DUPELIST=030d0,030d1,030d2,030d3
+
+[ITEMDEF 030d0]
+//Wide Tree 4 Foliage
+DUPEITEM=030cf
+
+[ITEMDEF 030d1]
+//Wide Tree 4 Foliage
+DUPEITEM=030cf
+
+[ITEMDEF 030d2]
+//Wide Tree 4 Foliage
+DUPEITEM=030cf
+
+[ITEMDEF 030d3]
+//Wide Tree 4 Foliage
+DUPEITEM=030cf
+
+[ITEMDEF 030d4]
+DEFNAME=i_tree_wide3_trunk
+TYPE=t_tree
+CATEGORY=Vegetation
+SUBSECTION=Trees
+DESCRIPTION=Wide Tree 3 Trunk
+DUPELIST=030d5,030d6,030d7,030d8,030d9
+
+[ITEMDEF 030d5]
+//Wide Tree 3 Trunk
+DUPEITEM=030d4
+
+[ITEMDEF 030d6]
+//Wide Tree 3 Trunk
+DUPEITEM=030d4
+
+[ITEMDEF 030d7]
+//Wide Tree 3 Trunk
+DUPEITEM=030d4
+
+[ITEMDEF 030d8]
+//Wide Tree 3 Trunk
+DUPEITEM=030d4
+
+[ITEMDEF 030d9]
+//Wide Tree 3 Trunk
+DUPEITEM=030d4
+
+[ITEMDEF 030da]
+DEFNAME=i_tree_wide4_trunk
+TYPE=t_tree
+CATEGORY=Vegetation
+SUBSECTION=Trees
+DESCRIPTION=Wide Tree 4 Trunk
+DUPELIST=030db,030dc,030dd,030de
+
+[ITEMDEF 030db]
+//Wide Tree 4 Trunk
+DUPEITEM=030da
+
+[ITEMDEF 030dc]
+//Wide Tree 4 Trunk
+DUPEITEM=030da
+
+[ITEMDEF 030dd]
+//Wide Tree 4 Trunk
+DUPEITEM=030da
+
+[ITEMDEF 030de]
+//Wide Tree 4 Trunk
+DUPEITEM=030da
+
 [ITEMDEF 03122]
 //FIXME: duplicate of something?
+NAME=cherry blossoms
 TYPE=t_foliage
 
 [ITEMDEF 03123]
 //Duplicate of peach leaves item 0d9e
+NAME=peaches
 TYPE=t_foliage
 
 [ITEMDEF 03124]
 //Duplicate of apple leaves item 0d9a
+NAME=apples
 TYPE=t_foliage
 
 
