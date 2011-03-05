@@ -408,7 +408,7 @@ SUBSECTION=Containers
 DESCRIPTION=Keg (with tap)
 DUPELIST=01ad7
 
-[ITEMDEF 01ad6]
+[ITEMDEF 01ad7]
 //keg (with tap)
 DUPEITEM=01ad6
 

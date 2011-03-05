@@ -314,11 +314,12 @@ DUPEITEM=012a5
 
 [ITEMDEF 035ef]
 TYPE=t_crystal_ball
+NAME=crystal ball
 FLIP=1
 VALUE=194
 WEIGHT=15.0
-RESOURCES=15 i_water
-SKILLMAKE=Tinkering 95.7,ALCHEMY 50.0,Magery 85.1,t_tinker_tools
+RESOURCES=15 i_crystal_ice
+SKILLMAKE=Tinkering 95.7,Alchemy 50.0,Magery 85.1,t_tinker_tools
 CATEGORY=Items by Professions
 SUBSECTION=Fortune Tellers
 DESCRIPTION=Ice Ball

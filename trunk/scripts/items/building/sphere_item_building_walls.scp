@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 28, 2011
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
 
 
@@ -6770,7 +6770,7 @@ DUPEITEM=01a
 [ITEMDEF 035d7]
 //Crystal wall
 TYPE=t_wall
-RESOURCES=100 i_crystal5
+RESOURCES=100 i_crystal_ice
 CATEGORY=Buildings - Walls
 SUBSECTION=Crystal Wall
 DESCRIPTION=Crystal Wall
@@ -6847,6 +6847,7 @@ DUPEITEM=035d7
 
 [ITEMDEF 0360e]
 DEFNAME=i_wall_shadow
+NAME=wall
 TYPE=t_wall
 RESOURCES=100 i_rock_plain
 CATEGORY=Buildings - Walls

@@ -12,13 +12,6 @@
 
 VERSION=0.56b
 
-[ITEMDEF 02a5c]
-//bone table
-DEFNAME=i_bone_table
-TYPE=t_table
-CATEGORY=Decoration - Dungeons and The Dead
-SUBSECTION=Evil Home Decor
-DESCRIPTION=Bone Table
 
 [ITEMDEF 02a5d]
 //disturbing portrait

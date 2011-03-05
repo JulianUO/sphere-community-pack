@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Wednesday, March 2, 2011
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
 
 
@@ -862,59 +862,6 @@ DUPEITEM=0b14
 //custom displaycase base se corner
 DUPEITEM=0aa3
 
-[ITEMDEF 0b37]
-DEFNAME=i_table_nightstand_ext
-// table - dark Rough board nightstand top, no legs n-s
-// poor graphic, doesn't mesh with table end for extention
-RESOURCES=6 i_board, 1 i_nails
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table Top (No legs)
-DUPELIST=0b38,0b39
-
-[ITEMDEF 0b38]
-// table - dark Rough board nightstand top, no legs e-w
-// poor graphic, doesn't mesh with table end for extention
-DUPEITEM=0b37
-
-[ITEMDEF 0b39]
-// table top same as 0b38, no need to define
-// duped only for backward compatibility
-// poor graphic, doesn't mesh with table end for extention
-DUPEITEM=0b37
-
-[ITEMDEF 0b3d]
-//counter
-RESOURCES=10 i_board, 4 i_nails
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Counter
-
-[ITEMDEF 0b3e]
-//counter
-RESOURCES=10 i_board, 4 i_nails
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Counter
-
-[ITEMDEF 0b3f]
-//counter
-RESOURCES=10 i_board, 4 i_nails
-VALUE={200 300}
-WEIGHT=4
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Counter
-
-[ITEMDEF 0b40]
-//counter
-RESOURCES=10 i_board, 4 i_nails
-VALUE={200 300}
-WEIGHT=4
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Counter
-
 [ITEMDEF 0b41]
 //water trough
 DEFNAME=i_trough_water
@@ -924,7 +871,7 @@ TYPE=t_water_wash
 CATEGORY=Items by Professions
 SUBSECTION=StableMaster
 DESCRIPTION=Water Trough
-SKILLMAKE=CARPENTRY 80.0, t_carpentry
+SKILLMAKE=Carpentry 80.0, t_carpentry
 DUPELIST=0b42,0b43,0b44
 
 [ITEMDEF 0b42]
@@ -970,184 +917,6 @@ RESOURCES=3 i_clay
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Small Vase 2
-
-[ITEMDEF 0b6b]
-// table - narrow smooth wood table end - S
-DEFNAME=i_table_wood_smooth_narrow_end
-// DEFNAME2=i_TABLE_7
-TYPE=t_table
-RESOURCES=6 i_board, 3 i_nails
-VALUE={50 70}
-WEIGHT=3
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table
-DUPELIST=0b6c,0b7e,0b7f,0b87
-
-[ITEMDEF 0b6c]
-// table - narrow smooth wood table end - N
-DUPEITEM=0b6b
-
-[ITEMDEF 0b6d]
-// table - narrow smooth wood table extention n/s
-DEFNAME=i_table_wood_smooth_narrow_ext
-DUPELIST=0b80
-
-[ITEMDEF 0b6e]
-// table - solid wood table end - S
-DEFNAME=i_table_wood_solid_end
-DUPELIST=0b6f,0b81,0b82
-
-[ITEMDEF 0b6f]
-// table - solid wood table end - N
-DUPEITEM=0b6e
-
-[ITEMDEF 0b70]
-// table - custom solid wood table corner SW
-// n-s grain
-DEFNAME=i_table_wood_solid_custom_corner_ns
-DUPELIST=0b71,0b72,0b73
-
-[ITEMDEF 0b71]
-// table - custom solid wood table corner SE
-// n-s grain
-DUPEITEM=0b70
-
-[ITEMDEF 0b72]
-// table - custom solid wood table corner NE
-// n-s grain
-DUPEITEM=0b70
-
-[ITEMDEF 0b73]
-// table - custom solid wood table corner NE
-// also can be used as center piece to extend table n-s
-// n-s grain
-DUPEITEM=0b70
-
-[ITEMDEF 0b74]
-// table - custom solid wood table center N or S
-// use to extend table e-w
-// n-s grain
-DEFNAME=i_table_wood_solid_custom_ext
-
-[ITEMDEF 0b75]
-// table - narrow rough board table end - S
-// narrow picnic table - S
-DEFNAME=i_table_board_rough_end
-DUPELIST=0b76,0b88,0b89
-
-[ITEMDEF 0b76]
-// table - narrow rough board table end - N
-// narrow picnic table - N
-DUPEITEM=0b75
-
-[ITEMDEF 0b77]
-// table - custom rough board table corner - SW
-// n-s grain
-DEFNAME=i_table_board_rough_corner
-DUPELIST=0b78,0b79,0b7a
-
-[ITEMDEF 0b78]
-// table - custom rough board table corner - SE
-// n-s grain
-DUPEITEM=0b77
-
-[ITEMDEF 0b79]
-// table - custom rough board table corner - NE
-// n-s grain
-DUPEITEM=0b77
-
-[ITEMDEF 0b7a]
-// table - custom rough board table corner - NW
-// n-s grain
-DUPEITEM=0b77
-
-[ITEMDEF 0b7b]
-// table - custom rough board table extention
-// Also used as extention for narrow n-s
-// n-s grain
-
-[ITEMDEF 0b7e]
-// table - narrow smooth wood table end - E
-DUPEITEM=0b6b
-
-[ITEMDEF 0b7f]
-// table - narrow smooth wood table end - W
-DUPEITEM=0b6b
-
-[ITEMDEF 0b80]
-// table - narrow smooth wood table extention e/w
-DUPEITEM=0b6d
-
-[ITEMDEF 0b81]
-// table - solid wood table end - E
-DUPEITEM=0b6e
-
-[ITEMDEF 0b82]
-// table - solid wood table end - W
-DUPEITEM=0b6e
-
-[ITEMDEF 0b83]
-// table - custom solid wood table corner - NE
-// e-w grain
-DEFNAME=i_table_wood_solid_custom_corner_ew
-DUPELIST=0b84,0b85,0b86
-
-[ITEMDEF 0b84]
-// table - custom solid wood table corner - SE
-// e-w grain
-DUPEITEM=0b83
-
-[ITEMDEF 0b85]
-// table - custom solid wood table corner - SW
-// e-w grain
-DUPEITEM=0b83
-
-[ITEMDEF 0b86]
-// table - custom solid wood table corner - NW
-// e-w grain
-DUPEITEM=0b83
-
-[ITEMDEF 0b87]
-// table - custom solid wood table extention
-// e-w grain
-DUPEITEM=0b6b
-
-[ITEMDEF 0b88]
-// table - narrow rough board table end -  E
-// narrow picnic table - E
-DUPEITEM=0b75
-
-[ITEMDEF 0b89]
-// table - narrow rough board table end -  W
-// narrow picnic table - W
-DUPEITEM=0b75
-
-[ITEMDEF 0b8a]
-// table - custom rough board table corner - NE
-// e-w grain
-DEFNAME=i_table_board_rough_custom_corner_ew
-DUPELIST=0b8b,0b8c,0b8d
-
-[ITEMDEF 0b8b]
-// table - custom rough board table corner - SE
-// e-w grain
-DUPEITEM=0b8a
-
-[ITEMDEF 0b8c]
-// table - custom rough board table corner - SW
-// e-w grain
-DUPEITEM=0b8a
-
-[ITEMDEF 0b8d]
-// table - custom rough board table corner - NW
-// e-w grain
-//Also used as extention for narrow e-w
-DUPEITEM=0b8a
-
-[ITEMDEF 0b8e]
-// table - narrow rough board extention e-w
-DEFNAME=i_table_board_rough_ext
 
 [ITEMDEF 0c12]
 //broken armoire
@@ -1319,38 +1088,6 @@ CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Debris
 
-[ITEMDEF 0c31]
-DEFNAME=i_table_small_covered
-RESOURCES=1 i_table_nightstand, 1 i_cloth
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables (unusable)
-DESCRIPTION=Small Table (covered)
-DUPELIST=0c32
-
-[ITEMDEF 0c32]
-//Small Table (covered)
-DUPEITEM=0c31
-
-[ITEMDEF 0c33]
-DEFNAME=i_sheet_2
-RESOURCES=1 i_table_nightstand, 1 i_sheet
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables (unusable)
-DESCRIPTION=Large Table (covered)
-DUPELIST=0c34,0c35,0c36
-
-[ITEMDEF 0c34]
-//Large Table (covered)
-DUPEITEM=0c33
-
-[ITEMDEF 0c35]
-//Large Table (covered)
-DUPEITEM=0c33
-
-[ITEMDEF 0c36]
-//Large Table (covered)
-DUPEITEM=0c33
-
 [ITEMDEF 0c39]
 DEFNAME=i_pegbaord
 RESOURCES=2 i_board
@@ -1441,78 +1178,8 @@ CATEGORY=Decoration - Furniture
 SUBSECTION=Hanging Pole
 DESCRIPTION=Hanging Pole (N) (03/03)
 
-[ITEMDEF 0118b]
-// table - purple runner n-s
-DEFNAME=i_table_runner_purple
-TYPE=t_table
-
-RESOURCES=27 i_board,30 i_cloth
-SKILLMAKE=CARPENTRY 89.0, TAILORING 60.0, t_carpentry, t_sewing_kit
-
-WEIGHT=7
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table (Purple Runner)
-DUPELIST=0118c
-
-[ITEMDEF 0118c]
-// table - purple plaid runner e-w
-DUPEITEM=0118b
-
-[ITEMDEF 0118d]
-// table - dark red runner n-s
-DEFNAME=i_table_runner_red
-TYPE=t_table
-RESOURCES=27 i_log,30 i_cloth
-WEIGHT=7
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table (Red Runner)
-SKILLMAKE=CARPENTRY 89.0, TAILORING 60.0, t_carpentry, t_sewing_kit
-
-[ITEMDEF 0118e]
-DEFNAME=i_table_runner_snowflake
-TYPE=t_table
-RESOURCES=27 i_log,30 i_cloth
-WEIGHT=7
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table (Snowflake Runner)
-SKILLMAKE=CARPENTRY 89.0, TAILORING 60.0, t_carpentry, t_sewing_kit
-
-[ITEMDEF 0118f]
-// table - narrow light blue plaid runner table end e-w
-DEFNAME=i_table_runner_plaid_blue
-TYPE=t_table
-WEIGHT=7
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table (Blue Plaid Runner)
-SKILLMAKE=CARPENTRY 83.0, TAILORING 60.0, t_carpentry, t_sewing_kit
-RESOURCES=6 i_board, 1 i_nails, 2 i_cloth
-DUPELIST=01191
-
-[ITEMDEF 01190]
-// table - narrow light blue plaid runner table extention e-w
-DEFNAME=i_table_runner_plaid_BLUE_ext
-TYPE=t_table
-RESOURCES=6 i_board, 1 i_nails, 2 i_cloth
-WEIGHT=7
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table (Plaid Extender Runner)
-DUPELIST=01192
-
-[ITEMDEF 01191]
-// table - narrow light blue plaid runner table end n-s
-DUPEITEM=0118f
-
-[ITEMDEF 01192]
-// table - narrow light blue plaid runner table extention n-s
-DUPEITEM=01190
-
 [ITEMDEF 011ce]
-DEFNAME=i_BED_DOUBLE_1
+DEFNAME=i_bed_double_1
 TYPE=t_bed
 TDATA1=0
 RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet, 2 i_pillow
@@ -1572,72 +1239,8 @@ CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Bed 02 (04/04)
 
-[ITEMDEF 011d6]
-// table - narrow bamboo table end - S
-DEFNAME=i_table_bamboo_end
-TYPE=t_table
-RESOURCES=30 i_bamboo, 4 i_nails
-WEIGHT=15
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table (Bamboo)
-DUPELIST=011d7,011d9,011da
-
-[ITEMDEF 011d7]
-// table - narrow bamboo table end - N
-DUPEITEM=011d6
-
-[ITEMDEF 011d8]
-DEFNAME=i_table_bamboo_ext
-// table - narrow bamboo extention n-s
-DUPELIST=011db
-
-[ITEMDEF 011d9]
-// table - narrow bamboo table end - E
-DUPEITEM=011d6
-
-[ITEMDEF 011da]
-// table - narrow bamboo table end - W
-DUPEITEM=011d6
-
-[ITEMDEF 011db]
-// table - narrow bamboo extention e-w
-DUPEITEM=011d8
-
-[ITEMDEF 011dc]
-// table - narrow log table end - E
-DEFNAME=i_table_log_end
-TYPE=t_table
-RESOURCES=15 i_log, 4 i_nails
-WEIGHT=30
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table (Log)
-DUPELIST=011dd,011df,011e0
-
-[ITEMDEF 011dd]
-// table - narrow log table end - W
-DUPEITEM=011dc
-
-[ITEMDEF 011de]
-// table - narrow log table extention e-w
-DEFNAME=i_table_log_ext
-DUPELIST=011e1
-
-[ITEMDEF 011df]
-// table - narrow log table end - S
-DUPEITEM=011dc
-
-[ITEMDEF 011e0]
-// table - narrow log table end - N
-DUPEITEM=011dc
-
-[ITEMDEF 011e1]
-// table - narrow log table extention e-w
-DUPEITEM=011de
-
 [ITEMDEF 011e2]
-DEFNAME=i_MAT_GRASS
+DEFNAME=i_mat_grass
 RESOURCES=2 i_plant_grasses
 WEIGHT=2
 CATEGORY=Decoration - Furniture
@@ -1734,36 +1337,6 @@ DUPEITEM=011fd
 //cot
 DUPEITEM=011fd
 
-[ITEMDEF 01201]
-// table - narrow stone table end - S
-DEFNAME=i_TABLE_STONE_end
-RESOURCES=10 i_rock_plain
-WEIGHT=10
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table (Stone)
-DUPELIST=01202,01204,01205
-
-[ITEMDEF 01202]
-// table - narrow stone table end - N
-DUPEITEM=01201
-
-[ITEMDEF 01203]
-// table - narrow stone table extention n-s
-DUPELIST=01206
-
-[ITEMDEF 01204]
-// table - narrow stone table end - E
-DUPEITEM=01201
-
-[ITEMDEF 01205]
-// table - narrow stone table end - W
-DUPEITEM=01201
-
-[ITEMDEF 01206]
-// table - narrow stone table extention e-w
-DUPEITEM=01203
-
 [ITEMDEF 01397]
 DEFNAME=i_pillow
 RESOURCES=4 i_cloth, 2 i_wool
@@ -1850,42 +1423,8 @@ CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
 DESCRIPTION=Pillow
 
-[ITEMDEF 01667]
-// table - narrow checkered runner table end - S
-DEFNAME=i_table_runner_checkered
-TYPE=t_table
-RESOURCES=6 i_board, 1 i_nails, 2 i_cloth
-WEIGHT=7
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table (Red & Green Table Cloth)
-DUPELIST=01669,0166a,0166c
-
-[ITEMDEF 01668]
-// table - narrow checkered runner table extention n-s
-TYPE=t_table
-DUPELIST=0166b
-RESOURCES=6 i_board, 1 i_nails, 2 i_cloth
-WEIGHT=7
-
-[ITEMDEF 01669]
-// table - narrow checkered runner table end - N
-DUPEITEM=01667
-
-[ITEMDEF 0166a]
-// table - narrow checkered runner table end - W
-DUPEITEM=01667
-
-[ITEMDEF 0166b]
-// table - narrow checkered runner table extention e-w
-DUPEITEM=01668
-
-[ITEMDEF 0166c]
-// table - narrow checkered runner table end - E
-DUPEITEM=01667
-
 [ITEMDEF 01894]
-DEFNAME=i_BED_RUINED_7
+DEFNAME=i_bed_ruined_7
 TYPE=t_bed
 TDATA1=0
 RESOURCES=50 i_board, 2 i_bedroll, 20 i_nails, 2 i_sheet
@@ -1999,20 +1538,6 @@ CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
 DESCRIPTION=Pillow
 
-[ITEMDEF 01916]
-// table - narrow massage table end - W
-DEFNAME=i_table_massage_end
-RESOURCES=4 i_board, 2 i_log, 1 i_nails, 4 i_canvas
-WEIGHT=6
-CATEGORY=Decoration - Furniture
-SUBSECTION=Massage Table
-DESCRIPTION=@
-DUPELIST=01917
-
-[ITEMDEF 01917]
-// table - narrow massage table end - E
-DUPEITEM=01916
-
 [ITEMDEF 01918]
 //bar
 DUPEITEM=01910
@@ -2091,45 +1616,6 @@ DUPELIST=01946
 //carved wooden screen
 DUPEITEM=01945
 
-[ITEMDEF 01da5]
-// table - Small rough wood table end - S
-DEFNAME=i_TABLE_WOOD_ROUGH_SMALL_END
-RESOURCES=16 i_board, i_nails
-WEIGHT=16
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Table
-DUPELIST=01da6,01da9,01daa
-
-[ITEMDEF 01da6]
-// table - Small rough wood table end - N
-DUPEITEM=01da5
-
-[ITEMDEF 01da7]
-// table - Small rough board table end - S
-DEFNAME=i_TABLE_BOARD_ROUGH_SMALL_END
-DUPELIST=01da8,01dab,01dac
-
-[ITEMDEF 01da8]
-// table - Small rough board table end - N
-DUPEITEM=01da7
-
-[ITEMDEF 01da9]
-// table - Small rough wood table end - E
-DUPEITEM=01da5
-
-[ITEMDEF 01daa]
-// table - Small rough wood table end - W
-DUPEITEM=01da5
-
-[ITEMDEF 01dab]
-// table - Small rough board table end - E
-DUPEITEM=01da7
-
-[ITEMDEF 01dac]
-// table - Small rough board table end - W
-DUPEITEM=01da7
-
 [ITEMDEF 01db3]
 DEFNAME=i_barrel_broken
 RESOURCES=16 i_board, 2 i_barrel_hoop, i_barrel
@@ -2158,76 +1644,6 @@ DEFNAME=i_barrel_hoop
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Barrel Hoops
-
-[ITEMDEF 01dbb]
-// table - sandstone table end - S
-DEFNAME=i_table_sandstone_end
-TYPE=t_table
-RESOURCES=30 i_stone_sand
-WEIGHT=60
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Sandstone Table
-DUPELIST=01dbc,01dbe,01dbf
-
-[ITEMDEF 01dbc]
-// table - sandstone table end - N
-DUPEITEM=01dbb
-
-[ITEMDEF 01dbd]
-// table - sandstone table extention n-s
-DEFNAME=i_table_sandstone_ext
-DUPELIST=01dc0
-
-[ITEMDEF 01dbe]
-// table - sandstone table end - E
-DUPEITEM=01dbb
-
-[ITEMDEF 01dbf]
-// table - sandstone table end - W
-DUPEITEM=01dbb
-
-[ITEMDEF 01dc0]
-// table - sandstone table extention e-w
-DUPEITEM=01dbd
-
-[ITEMDEF 01dc1]
-// table - marble table end - S
-DEFNAME=i_table_marble_end
-TYPE=t_table
-RESOURCES=30 i_marble
-WEIGHT=60
-CATEGORY=Decoration - Furniture
-SUBSECTION=Tables
-DESCRIPTION=Marble Table
-DUPELIST=01dc2,01dc4,01dc5
-
-[ITEMDEF 01dc2]
-// table - marble table end - N
-DUPEITEM=01dc1
-
-[ITEMDEF 01dc3]
-DEFNAME=i_table_marble_ext
-// table - marble table extention n-s
-DUPELIST=01dc6
-
-[ITEMDEF 01dc4]
-// table - marble table end - E
-DUPEITEM=01dc1
-
-[ITEMDEF 01dc5]
-// table - marble table end - W
-DUPEITEM=01dc1
-
-[ITEMDEF 01dc6]
-// table - marble table extention e-w
-DUPEITEM=01dc3
-
-[ITEMDEF 01e7f]
-//end table (unfinished)
-SKILLMAKE=CARPENTRY 10.0, t_carpentry
-RESOURCES=8 i_board
-
 
 [ITEMDEF 02bd1]
 DEFNAME=i_dresser_drawer_2

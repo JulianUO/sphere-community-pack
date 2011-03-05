@@ -3,21 +3,18 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 013d4]
 DEFNAME=i_studded_sleeves
 TYPE=t_armor_leather
-RESOURCES=10 i_hides_cut
-SKILLMAKE=TAILORING 87.1, t_sewing_kit
-WEIGHT=4
 FLIP=1
+WEIGHT=4
 REQSTR=25
-DUPELIST=013dc
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Studded Armor
-DESCRIPTION=Studded Sleeves
+RESOURCES=10 i_hides_cut
+SKILLMAKE=Tailoring 87.1, t_sewing_kit
 TAG.Penalty.Meditation=1
 TAG.Penalty.Stealth=4
 TAG.ResPhysical=2
@@ -25,9 +22,12 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
-
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Studded Armor
+DESCRIPTION=Studded Sleeves
+DUPELIST=013dc
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 013dc]
 DUPEITEM=013d4
@@ -35,15 +35,11 @@ DUPEITEM=013d4
 [ITEMDEF 013d5]
 DEFNAME=i_studded_gloves
 TYPE=t_armor_leather
-RESOURCES=8 i_hides_cut
-SKILLMAKE=TAILORING 82.9, t_sewing_kit
-WEIGHT=1
 FLIP=1
+WEIGHT=1
 REQSTR=25
-DUPELIST=013dd
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Studded Armor
-DESCRIPTION=Studded Gloves
+RESOURCES=8 i_hides_cut
+SKILLMAKE=Tailoring 82.9, t_sewing_kit
 TAG.Penalty.Meditation=1
 TAG.Penalty.Stealth=2
 TAG.ResPhysical=2
@@ -51,9 +47,12 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
-
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Studded Armor
+DESCRIPTION=Studded Gloves
+DUPELIST=013dd
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 013dd]
 DUPEITEM=013d5
@@ -61,14 +60,10 @@ DUPEITEM=013d5
 [ITEMDEF 013d6]
 DEFNAME=i_studded_gorget
 TYPE=t_armor_leather
-RESOURCES=6 i_hides_cut
-SKILLMAKE=TAILORING 78.8, t_sewing_kit
 WEIGHT=1
-FLIP=1
 REQSTR=25
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Studded Armor
-DESCRIPTION=Studded Gorget
+RESOURCES=6 i_hides_cut
+SKILLMAKE=Tailoring 78.8, t_sewing_kit
 TAG.Penalty.Meditation=1
 TAG.Penalty.Stealth=2
 TAG.ResPhysical=2
@@ -76,22 +71,20 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
-
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Studded Armor
+DESCRIPTION=Studded Gorget
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 013da]
 DEFNAME=i_studded_leggings
 TYPE=t_armor_leather
-RESOURCES=12 i_hides_cut
-SKILLMAKE=TAILORING 91.2, t_sewing_kit
-WEIGHT=5
 FLIP=1
+WEIGHT=5
 REQSTR=30
-DUPELIST=013e1
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Studded Armor
-DESCRIPTION=Studded Leggings
+RESOURCES=12 i_hides_cut
+SKILLMAKE=Tailoring 91.2, t_sewing_kit
 TAG.Penalty.Meditation=1
 TAG.Penalty.Stealth=6
 TAG.ResPhysical=2
@@ -99,9 +92,12 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
-
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Studded Armor
+DESCRIPTION=Studded Leggings
+DUPELIST=013e1
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 013e1]
 DUPEITEM=013da
@@ -109,15 +105,11 @@ DUPEITEM=013da
 [ITEMDEF 013db]
 DEFNAME=i_studded_tunic
 TYPE=t_armor_leather
-RESOURCES=14 i_hides_cut
-SKILLMAKE=TAILORING 94.0, t_sewing_kit
-WEIGHT=8
 FLIP=1
+WEIGHT=8
 REQSTR=35
-DUPELIST=013e2
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Studded Armor
-DESCRIPTION=Studded Tunic
+RESOURCES=14 i_hides_cut
+SKILLMAKE=Tailoring 94.0, t_sewing_kit
 TAG.Penalty.Meditation=1
 TAG.Penalty.Stealth=10
 TAG.ResPhysical=2
@@ -125,9 +117,12 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
-
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Studded Armor
+DESCRIPTION=Studded Tunic
+DUPELIST=013e2
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 013e2]
 DUPEITEM=013db
@@ -135,15 +130,11 @@ DUPEITEM=013db
 [ITEMDEF 01c02]
 DEFNAME=i_armor_female_studded
 TYPE=t_armor_leather
-RESOURCES=1 i_hides_cut
-SKILLMAKE=BLACKSMITHING 87.1
-WEIGHT=6
 FLIP=1
+WEIGHT=6
 REQSTR=35
-DUPELIST=01c03
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Studded Armor
-DESCRIPTION=Studded Armor (Female)
+RESOURCES=1 i_hides_cut
+SKILLMAKE=Tailoring 87.1
 TAG.Item.Female=1
 TAG.Penalty.Meditation=1
 TAG.Penalty.Stealth=10
@@ -152,25 +143,24 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
-
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Studded Armor
+DESCRIPTION=Studded Armor (Female)
+DUPELIST=01c03
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 01c03]
 DUPEITEM=01c02
 
 [ITEMDEF 01c0c]
 DEFNAME=i_armor_female_bustier_studded
-TYPE=T_ARMOR_leather
-RESOURCES=8 i_hides_cut
-SKILLMAKE=TAILORING 82.9, t_sewing_kit
-WEIGHT=1
+TYPE=t_armor_leather
 FLIP=1
+WEIGHT=1
 REQSTR=35
-DUPELIST=01c0d
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Studded Armor
-DESCRIPTION=Studded Bustier (Female)
+RESOURCES=8 i_hides_cut
+SKILLMAKE=Tailoring 82.9, t_sewing_kit
 TAG.Item.Female=1
 TAG.Penalty.Meditation=1
 TAG.Penalty.Stealth=10
@@ -179,11 +169,14 @@ TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
-
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Studded Armor
+DESCRIPTION=Studded Bustier (Female)
+DUPELIST=01c0d
 ON=@Create
-HITPOINTS={36 48}
+   HITPOINTS={36 48}
 
 [ITEMDEF 01c0d]
 DUPEITEM=01c0c
 
-[eof]
+[EOF]

@@ -3,28 +3,28 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+// FILE LAST UPDATED: Saturday, March 5, 2011
 VERSION=0.56b
 
 
 [ITEMDEF 0277c]
 DEFNAME=i_studded_do
-NAME=Studded Do
-TYPE=t_armor
-RESOURCES=14 t_leather
-SKILLMAKE=TAILORING 95.0
-WEIGHT=8.0
+NAME=studded do
+TYPE=t_armor_leather
 FLIP=1
+WEIGHT=8.0
 REQSTR=55
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Studded Samurai Armor
-DESCRIPTION=Studded Do
+RESOURCES=14 t_leather
+SKILLMAKE=Tailoring 95.0
 TAG.Penalty.Meditation=1
 TAG.ResPhysical=2
 TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Studded Samurai Armor
+DESCRIPTION=Studded Do
 DUPELIST=027c7
 ON=@Create
    HITPOINTS={36 48}
@@ -34,12 +34,13 @@ DUPEITEM=0277c
 
 [ITEMDEF 0277f]
 DEFNAME=i_studded_hiro_sode
-NAME=Studded Hiro Sode
-TYPE=t_armor
-RESOURCES=8 t_leather
-SKILLMAKE=TAILORING 85.0
+NAME=studded hiro sode
+TYPE=t_armor_leather
+FLIP=1
 WEIGHT=1.0
 REQSTR=30
+RESOURCES=8 t_leather
+SKILLMAKE=Tailoring 85.0
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Studded Samurai Armor
 DESCRIPTION=Studded Hiro Sode
@@ -58,22 +59,22 @@ DUPEITEM=0277f
 
 [ITEMDEF 02787]
 DEFNAME=i_studded_suneate
-NAME=Studded Suneate
-TYPE=t_armor
-RESOURCES=14 t_leather
-SKILLMAKE=TAILORING 92.0
-WEIGHT=5.0
+NAME=studded suneate
+TYPE=t_armor_leather
 FLIP=1
+WEIGHT=5.0
 REQSTR=30
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Studded Samurai Armor
-DESCRIPTION=Studded Suneate
+RESOURCES=14 t_leather
+SKILLMAKE=Tailoring 92.0
 TAG.Penalty.Meditation=1
 TAG.ResPhysical=2
 TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Studded Samurai Armor
+DESCRIPTION=Studded Suneate
 DUPELIST=027d2
 ON=@Create
    HITPOINTS={36 48}
@@ -83,21 +84,21 @@ DUPEITEM=02787
 
 [ITEMDEF 0278b]
 DEFNAME=i_studded_haidate
-NAME=Studded Haidate
-TYPE=t_armor
-RESOURCES=14 t_leather
-SKILLMAKE=TAILORING 92.0
-WEIGHT=5.0
+NAME=studded haidate
+TYPE=t_armor_leather
 FLIP=1
+WEIGHT=5.0
 REQSTR=30
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Studded Samurai Armor
-DESCRIPTION=Studded Haidate
+RESOURCES=14 t_leather
+SKILLMAKE=Tailoring 92.0
 TAG.ResPhysical=2
 TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=4
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Studded Samurai Armor
+DESCRIPTION=Studded Haidate
 DUPELIST=027d6
 ON=@Create
    HITPOINTS={36 48}
@@ -107,23 +108,23 @@ DUPEITEM=0278b
 
 [ITEMDEF 0279d]
 DEFNAME=i_studded_mempo
-NAME=Studded Mempo
-TYPE=t_armor
-RESOURCES=8 t_leather
-SKILLMAKE=TAILORING 80.0
-WEIGHT=2.0
+NAME=studded mempo
+TYPE=t_armor_leather
 FLIP=1
+WEIGHT=2.0
 REQSTR=30
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Studded Samurai Armor
-DESCRIPTION=Studded Mempo
+RESOURCES=8 t_leather
+SKILLMAKE=Tailoring 80.0
 TAG.ResPhysical=2
 TAG.ResFire=4
 TAG.ResCold=3
 TAG.ResPoison=3
 TAG.ResEnergy=3
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Studded Samurai Armor
+DESCRIPTION=Studded Mempo
 DUPELIST=027e8
-ON=@CREATE
+ON=@Create
    HITPOINTS={36 48}
 
 [ITEMDEF 027e8]

@@ -2447,6 +2447,7 @@ DUPEITEM=035b2
 
 [ITEMDEF 0361a]
 DEFNAME=i_floor_stone
+NAME=floor
 TYPE=t_floor
 FLIP=1
 RESOURCES=100 i_rock_plain
