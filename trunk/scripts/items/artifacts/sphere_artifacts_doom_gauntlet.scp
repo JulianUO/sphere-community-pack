@@ -1,0 +1,610 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED:
+VERSION=0.56b
+
+[ITEMDEF i_arcane_shield]
+ID=i_shield_kite_wood
+NAME=Arcane Shield
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.SpellChanneling=1
+TAG.NightSight=1
+TAG.DefenseChanceIncrease=15
+TAG.FasterCasting=1
+TAG.ResEnergy=1
+REQSTR=20
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Arcane Shield
+
+ON=@Create
+COLOR=00546
+HITPOINTS=255
+
+[ITEMDEF i_armor_fortune]
+ID=i_studded_tunic
+NAME=Armor of Fortune
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.Luck=200
+TAG.DefenseChanceIncrease=15
+TAG.LowerReagentCost=40
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=3
+TAG.ResEnergy=4
+TAG.MageArmor=1
+REQSTR=35
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Arcane Shield
+
+ON=@Create
+COLOR=00032
+HITPOINTS=255
+
+[ITEMDEF i_axe_heavens]
+ID=i_axe_double
+NAME=Axe of the Heavens
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.HitLightning=50
+TAG.HitChanceIncrease=15
+TAG.DefenseChanceIncrease=15
+TAG.DamageIncrease=50
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Axe of the Heavens
+ON=@Create
+   COLOR=03c8
+   HITPOINTS=255
+
+[ITEMDEF i_blade_insanity]
+ID=i_katana
+NAME=Blade of Insanity
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.HitStaminaLeech=100
+TAG.StaminaRegeneration=2
+TAG.SwingSpeedIncrease=30
+TAG.DamageIncrease=50
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Blade of Insanity
+ON=@Create
+   COLOR=03c8
+   HITPOINTS=255
+
+[ITEMDEF i_bone_crusher]
+ID=i_mace_war
+NAME=Bone Crusher
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.HitLowerAttack=50
+TAG.StrengthBonus=10
+TAG.DamageIncrease=75
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Bone Crusher
+ON=@Create
+   COLOR=021e
+   HITPOINTS=255
+
+[ITEMDEF i_bracelet_health]
+ID=i_bracelet_gold
+NAME=Bracelet of Health
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.HitPointIncrease=5
+TAG.HitPointRegeneration=10
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Bracelet of Health
+ON=@Create
+COLOR=00020
+
+[ITEMDEF i_breath_dead]
+ID=i_bone_harvester
+NAME=Breath of the Dead
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.HitHarm=25
+TAG.HitLifeLeech=100
+TAG.DamageIncrease=50
+TAG.SpellDamageIncrease=5
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Breath of the Dead
+ON=@Create
+   COLOR=03e1
+   HITPOINTS=255
+
+[ITEMDEF i_divine_countenance]
+ID=i_mask_blue
+NAME=Divine Countenance
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.IntelligenceBonus=8
+TAG.ManaRegeneration=2
+TAG.ReflectPhysicalDamage=15
+TAG.LowerManaCost=8
+TAG.ResPhysical=8
+TAG.ResFire=6
+TAG.ResCold=9
+TAG.ResPoison=4
+TAG.ResEnergy=25
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Divine Countenance
+REQSTR=10
+ON=@Create
+COLOR=00482
+
+[ITEMDEF i_frostbringer]
+ID=i_bow
+NAME=Frostbringer
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.HitDispel=50
+TAG.StaminaRegeneration=10
+TAG.DamageIncrease=50
+TAG.DamCold=100
+DAM=16,18
+SPEED=4.25
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Frostbringer
+ON=@Create
+   COLOR=012a
+   HITPOINTS=255
+
+[ITEMDEF i_gauntlets_nobility]
+ID=i_leather_gloves
+NAME=Gauntlets of Nobility
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.StrenghtBonus=8
+TAG.Luck=100
+TAG.DamageIncrease=20
+TAG.ResPhysical=18
+TAG.ResFire=3
+TAG.ResCold=1
+TAG.ResPoison=20
+TAG.ResEnergy=3
+REQSTR=40
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Gauntlets of Nobility
+ON=@Create
+COLOR=00140
+HITPOINTS=255
+
+[ITEMDEF i_hat_magi]
+ID=i_hat_wizards
+NAME=Hat of the Magi
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.IntelligenceBonus=8
+TAG.ManaRegeneration=4
+TAG.SpellDamageIncrease=10
+TAG.ResPoison=20
+TAG.ResEnergy=20
+REQSTR=10
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Hat of the Magi
+ON=@Create
+COLOR=0047e
+HITPOINTS=255
+
+[ITEMDEF i_helm_insight]
+ID=i_platemail_helm
+NAME=Helm of Insight
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.IntelligenceBonus=8
+TAG.ManaIncrease=15
+TAG.ManaRegeneration=2
+TAG.LowerManaCost=8
+TAG.ResEnergy=17
+REQSTR=80
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Helm of Insight
+ON=@Create
+COLOR=00554
+HITPOINTS=255
+
+[ITEMDEF i_holy_knights_breastplate]
+ID=i_platemail_chest
+NAME=Holy Knight's Breastplate
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.HitPointIncrease=10
+TAG.ReflectPhysicalDamage=15
+TAG.ResPhysical=35
+REQSTR=95
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Holy Knight's Breastplate
+ON=@Create
+COLOR=0047e
+HITPOINTS=255
+
+[ITEMDEF i_hunters_headdress]
+ID=i_mask_deer
+NAME=Hunter's Headdress
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.DexterityBonus=8
+TAG.NightSight=1
+TAG.HitChanceIncrease=15
+TAG.ResPhysical=2
+TAG.ResFire=6
+TAG.ResCold=23
+TAG.ResPoison=1
+TAG.ResEnergy=7
+REQSTR=10
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Hunter's Headdress
+ON=@Create
+COLOR=0059b
+HITPOINTS=255
+
+[ITEMDEF i_jackals_collar]
+ID=i_platemail_gorget
+NAME=Jackal's Collar
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.DexterityBonus=15
+TAG.HitPointRegeneration=2
+TAG.ResPhysical=5
+TAG.ResFire=23
+TAG.ResCold=17
+TAG.ResPoison=3
+TAG.ResEnergy=2
+REQSTR=45
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Jackal's Collar
+ON=@Create
+COLOR=00475
+HITPOINTS=255
+
+[ITEMDEF i_legacy_dreadlord]
+ID=i_bardiche
+NAME=Legacy of the Dread Lord
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.SpellChanneling=1
+TAG.FasterCastRecovery=3
+TAG.SwingSpeedIncrease=30
+TAG.DamageIncrease=50
+TAG.DamPhysical=100
+DAM=17,18
+SPEED=3.75
+REQSTR=45
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Legacy of the Dread Lord
+ON=@Create
+COLOR=00219
+HITPOINTS=255
+
+[ITEMDEF i_leggings_bane]
+ID=i_chainmail_leggings
+NAME=Leggings of Bane
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.StaminaIncrease=8
+TAG.HitChanceIncrease=20
+TAG.ResPhysical=4
+TAG.ResFire=4
+TAG.ResCold=4
+TAG.ResPoison=36
+TAG.ResEnergy=2
+REQSTR=60
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Leggings of Bane
+ON=@Create
+COLOR=00170
+HITPOINTS=255
+
+[ITEMDEF i_midnight_bracers]
+ID=i_bone_arms
+NAME=Midnight Bracers
+TEVENTS=t_iprop
+TAG.Skill.Bonus.1=Necromancy,20.0
+TAG.Artifact=11
+TAG.SpellDamageIncrease=10
+TAG.ResPhysical=23
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=2
+TAG.ResEnergy=4
+TAG.MageArmor=1
+REQSTR=55
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Midnight Bracers
+ON=@Create
+COLOR=00774
+HITPOINTS=255
+
+[ITEMDEF i_ornament_magician]
+ID=i_bracelet_gold
+NAME=Ornament of the Magician
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.FasterCastRecovery=3
+TAG.FasterCasting=2
+TAG.LowerManaCost=10
+TAG.LowerReagentCost=20
+TAG.ResEnergy=15
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Ornament of the Magician
+ON=@Create
+COLOR=00068
+
+[ITEMDEF i_Ornate_crown_harrower]
+ID=i_bone_helmet
+NAME=Ornate Crown of the Harrower
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.HitPointRegeneration=2
+TAG.StaminaRegeneration=3
+TAG.DamageIncrease=25
+TAG.ResPhysical=3
+TAG.ResFire=3
+TAG.ResCold=4
+TAG.ResPoison=17
+TAG.ResEnergy=4
+REQSTR=20
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Ornate Crown of the Harrower
+ON=@Create
+COLOR=0003e
+HITPOINTS=255
+
+[ITEMDEF i_ring_elements]
+ID=i_ring_gold
+NAME=Ring of the Elements
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.Luck=100
+TAG.ResFire=16
+TAG.ResCold=16
+TAG.ResPoison=16
+TAG.ResEnergy=16
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Ring of the Elements
+ON=@Create
+COLOR=0002c
+
+[ITEMDEF i_ring_vile]
+ID=i_ring_gold
+NAME=Ring of the Vile
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.DexterityBonus=8
+TAG.StaminaRegeneration=6
+TAG.HitChanceIncrease=15
+TAG.ResPoison=20
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Ring of the Vile
+ON=@Create
+COLOR=0003e
+
+[ITEMDEF i_serpents_fang]
+ID=i_kryss
+NAME=Serpent's Fang
+TEVENTS=t_iprop
+TAG.HitPoisonArea=100
+TAG.HitChanceIncrease=15
+TAG.DamageIncrease=50
+TAG.ResPoison=15
+TAG.DamPhysical=25
+TAG.DamPoison=75
+DAM=10,12
+SPEED=2
+REQSTR=10
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Ring of the Vile
+ON=@Create
+COLOR=00852
+HITPOINTS=255
+
+[ITEMDEF i_shadow_dancer_leggings]
+ID=i_leather_leggings
+NAME=Shadow Dancer Leggings
+TEVENTS=t_iprop
+TAG.Skill.Bonus.1=Stealing,20.0
+TAG.Skill.Bonus.2=Stealth,20.0
+TAG.Artifact=11
+TAG.ResPhysical=17
+TAG.ResFire=4
+TAG.ResCold=3
+TAG.ResPoison=18
+TAG.ResEnergy=18
+REQSTR=20
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Shadow Dancer Leggings
+ON=@Create
+COLOR=00902
+HITPOINTS=255
+
+[ITEMDEF i_spirit_totem]
+ID=i_mask_bear
+NAME=Spirit of the Totem
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.StrenghtBonus=20
+TAG.ReflectPhysicalDamage=15
+TAG.HitChanceIncrease=15
+TAG.ResPhysical=20
+TAG.ResFire=3
+TAG.ResCold=8
+TAG.ResPoison=4
+TAG.ResEnergy=4
+REQSTR=10
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Spirit of the Totem
+ON=@Create
+COLOR=00902
+HITPOINTS=255
+
+[ITEMDEF i_staff_magi]
+ID=i_staff_black
+NAME=Staff of the Magi
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.SpellChanneling=1
+TAG.FasterCasting=1
+TAG.DamageIncrease=50
+TAG.DamEnergy=100
+DAM=13,16
+SPEED=2.75
+REQSTR=35
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Staff of the Magi
+ON=@Create
+COLOR=0047e
+HITPOINTS=255
+
+[ITEMDEF i_berserkers_maul]
+ID=i_maul
+NAME=The Berserker's Maul
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.SwingSpeedIncrease=75
+TAG.DamageIncrease=50
+DAM=14,16
+SPEED=3.5
+REQSTR=45
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=The Berserker's Maul
+ON=@Create
+COLOR=00020
+HITPOINTS=255
+
+[ITEMDEF i_dragon_slayer]
+ID=i_lance
+NAME=The Dragon Slayer
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.Slayer.Less=SSLAYER_DRAGON
+TAG.Luck=110
+TAG.DamageIncrease=50
+TAG.ResFire=20
+TAG.BestWeaponSkill=1
+TAG.DamEnergy=100
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=The Dragon Slayer
+ON=@Create
+   COLOR=<ColorElementalType>
+   HITPOINTS=255
+
+[ITEMDEF i_dryad_bow]
+ID=i_bow
+NAME=The Dryad Bow
+TEVENTS=t_iprop
+TAG.Skill.Bonus.1=<f_get_random_skill>,{5.0 1 10.0}
+TAG.Artifact=11
+TAG.SelfRepair=5
+TAG.SwingSpeedIncrease=50
+TAG.DamageIncrease=35
+TAG.ResPoison=15
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=The Dryad Bow
+ON=@Create
+   COLOR=04f8
+   HITPOINTS=255
+
+[ITEMDEF i_taskmaster]
+ID=i_war_fork
+NAME=The Taskmaster
+TEVENTS=t_iprop
+TAG.Artifact=10
+TAG.HitPoisonArea=100
+TAG.DexterityBonus=5
+TAG.HitChanceIncrease=15
+TAG.DamageIncrease=50
+TAG.DamPoison=100
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=The TaskMaster
+ON=@Create
+   COLOR=04f8
+   HITPOINTS=255
+
+[ITEMDEF i_tunic_fire]
+ID=i_chainmail_tunic
+NAME=Tunic of Fire
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.SelfRepair=5
+TAG.NightSight=1
+TAG.ReflectPhysicalDamage=15
+TAG.ResPhysical=24
+TAG.ResFire=34
+REQSTR=60
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Tunic of Fire
+ON=@Create
+COLOR=0002c
+HITPOINTS=255
+
+[ITEMDEF i_voice_fallen_king]
+ID=i_leather_gorget
+NAME=Voice of the Fallen King
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.StrenghtBonus=8
+TAG.HitPointRegeneration=5
+TAG.StaminaRegeneration=3
+TAG.ResCold=18
+TAG.ResEnergy=18
+REQSTR=20
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Voice of the Fallen King
+ON=@Create
+COLOR=00774
+HITPOINTS=255
+
+[ITEMDEF i_aegis]
+ID=i_shield_heater
+NAME=Ægis
+TEVENTS=t_iprop
+TAG.Artifact=11
+TAG.SelfRepair=5
+TAG.ReflectPhysicalDamage=15
+TAG.DefenseChanceIncrease=15
+TAG.LowerManaCost=8
+TAG.ResPhysical=15
+REQSTR=90
+CATEGORY=Provisions - Artifacts - Doom Gauntlet
+SUBSECTION=Unique Artifacts
+DESCRIPTION=Ægis
+ON=@Create
+COLOR=0047e
+HITPOINTS=255
