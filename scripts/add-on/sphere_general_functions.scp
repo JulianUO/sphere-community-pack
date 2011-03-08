@@ -267,4 +267,7 @@ ENDIF
 END
 enddo
 
+[FUNCTION f_get_random_skill]
+RETURN <SERV.SKILL.<R55>.NAME>
+
 [eof]
