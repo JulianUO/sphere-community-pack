@@ -225,24 +225,6 @@ ON=@Create
    COLOR=0 //FIXME: unknown color
    HITPOINTS=255
 
-[ITEMDEF i_serpents_fang]
-ID=i_kryss
-NAME=Serpent's Fang
-TEVENTS=t_iprop
-TAG.Artifact=11
-TAG.HitPoisonArea=100
-TAG.HitChanceIncrease=15
-TAG.DamageIncrease=50
-TAG.ResPoison=16
-TAG.DamPhysical=25
-TAG.DamPoison=75
-CATEGORY=Provisions - Weapons - Fencing
-SUBSECTION=Krysses
-DESCRIPTION=Serpent's Fang
-ON=@Create
-   COLOR=<ColorElementalType>
-   HITPOINTS=255
-
 [ITEMDEF i_silver_serpent_blade]
 ID=i_kryss
 NAME=Silver Serpent Blade
@@ -299,24 +281,6 @@ SUBSECTION=Lances
 DESCRIPTION=Luna Lance
 ON=@Create
    COLOR=0481
-   HITPOINTS=255
-
-[ITEMDEF i_dragon_slayer]
-ID=i_lance
-NAME=The Dragon Slayer
-TEVENTS=t_iprop
-TAG.Artifact=11
-TAG.Slayer.Less=SSLAYER_DRAGON
-TAG.Luck=110
-TAG.DamageIncrease=50
-TAG.ResFire=20
-TAG.BestWeaponSkill=1
-TAG.DamEnergy=100
-CATEGORY=Provisions - Weapons - Fencing
-SUBSECTION=Lances
-DESCRIPTION=The Dragon Slayer
-ON=@Create
-   COLOR=<ColorElementalType>
    HITPOINTS=255
 
 
@@ -445,23 +409,6 @@ DESCRIPTION=Recaro's Riposte
 ON=@Create
    COLOR=0 //FIXME: unknown color
    HITPOINTS=110
-
-[ITEMDEF i_taskmaster]
-ID=i_war_fork
-NAME=The Taskmaster
-TEVENTS=t_iprop
-TAG.Artifact=10
-TAG.HitPoisonArea=100
-TAG.DexterityBonus=5
-TAG.HitChanceIncrease=15
-TAG.DamageIncrease=50
-TAG.DamPoison=100
-CATEGORY=Provisions - Weapons - Fencing
-SUBSECTION=War Forks
-DESCRIPTION=The Taskmaster
-ON=@Create
-   COLOR=<ColorElementalType>
-   HITPOINTS=255
 
 
 ///////////////////////////////////////////////////////////////
