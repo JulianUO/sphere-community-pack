@@ -68,23 +68,6 @@ ON=@Create
    COLOR=<ColorElementalType>
    HITPOINTS={36 48}
 
-[ITEMDEF i_staff_magi]
-ID=i_staff_black
-NAME=Staff of the Magi
-TEVENTS=t_iprop
-TAG.Artifact=11
-TAG.SpellChanneling=1
-TAG.MageWeapon=0
-TAG.FasterCasting=1
-TAG.DamageIncrease=50
-TAG.DamEnergy=100
-CATEGORY=Provisions - Weapons - MaceFighting
-SUBSECTION=Black Staves
-DESCRIPTION=Staff of the Magi
-ON=@Create
-   COLOR=0481
-   HITPOINTS={36 48}
-
 
 ///////////////////////////////////////////////////////////////
 //////// GNARLED STAVES
