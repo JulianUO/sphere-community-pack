@@ -275,20 +275,6 @@ ON=@Create
 [ITEMDEF 0143b]
 DUPEITEM=0143a
 
-[ITEMDEF i_berserker_maul]
-ID=i_maul
-NAME=The Berserker's Maul
-TEVENTS=t_iprop
-TAG.Artifact=11
-TAG.SwingSpeedIncrease=75
-TAG.DamageIncrease=100
-CATEGORY=Provisions - Weapons - MaceFighting
-SUBSECTION=Mauls
-DESCRIPTION=The Berserker's Maul
-ON=@Create
-   COLOR=021
-   HITPOINTS=255
-
 
 ///////////////////////////////////////////////////////////////
 //////// SCEPTERS
@@ -572,21 +558,6 @@ SUBSECTION=War Maces
 DESCRIPTION=Arctic Death Dealer
 ON=@Create
    COLOR=0480
-   HITPOINTS=255
-
-[ITEMDEF i_bone_crusher]
-ID=i_mace_war
-NAME=Bone Crusher
-TEVENTS=t_iprop
-TAG.Artifact=11
-TAG.HitLowerAttack=50
-TAG.StrengthBonus=10
-TAG.DamageIncrease=75
-CATEGORY=Provisions - Weapons - MaceFighting
-SUBSECTION=War Maces
-DESCRIPTION=Bone Crusher
-ON=@Create
-   COLOR=021e
    HITPOINTS=255
 
 [ITEMDEF i_churchill_war_mace]
