@@ -94,22 +94,6 @@ ON=@Create
 [ITEMDEF 026c5]
 DUPEITEM=026bb
 
-[ITEMDEF i_breath_dead]
-ID=i_bone_harvester
-NAME=Breath of the Dead
-TEVENTS=t_iprop
-TAG.Artifact=11
-TAG.HitHarm=25
-TAG.HitLifeLeech=100
-TAG.DamageIncrease=50
-TAG.SpellDamageIncrease=5
-CATEGORY=Provisions - Weapons - Swordsmanship
-SUBSECTION=Bone Harvesters
-DESCRIPTION=Breath of the Dead
-ON=@Create
-   COLOR=03e1
-   HITPOINTS=255
-
 
 ///////////////////////////////////////////////////////////////
 //////// BROADSWORDS
@@ -407,22 +391,6 @@ ON=@Create
 
 [ITEMDEF 013ff]
 DUPEITEM=013fe
-
-[ITEMDEF i_blade_insanity]
-ID=i_katana
-NAME=Blade of Insanity
-TEVENTS=t_iprop
-TAG.Artifact=11
-TAG.HitStaminaLeech=100
-TAG.StaminaRegeneration=2
-TAG.SwingSpeedIncrease=30
-TAG.DamageIncrease=50
-CATEGORY=Provisions - Weapons - Swordsmanship
-SUBSECTION=Katanas
-DESCRIPTION=Blade of Insanity
-ON=@Create
-   COLOR=03c8
-   HITPOINTS=255
 
 
 ///////////////////////////////////////////////////////////////
