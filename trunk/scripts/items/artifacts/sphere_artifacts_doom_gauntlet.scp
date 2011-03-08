@@ -6,6 +6,9 @@
 // FILE LAST UPDATED:
 VERSION=0.56b
 
+[DEFNAME doom_gauntlet_artifacts]
+DOOM_GAUNTLET_ARTIFACTS {i_Arcane_Shield 1 i_Armor_Fortune 1 i_Axe_Heavens 1 i_Blade_Insanity 1 i_Bone_Crusher 1 i_Bracelet_Health 1 i_Breath_Dead 1 i_Divine_Countenance 1 i_Frostbringer 1 i_Gauntlets_Nobility 1 i_Hat_Magi 1 i_Helm_Insight 1 i_Holy_Knights_Breastplate 1 i_Hunters_Headdress 1 i_Jackals_Collar 1 i_Legacy_DreadLord 1 i_Leggings_Bane 1 i_Midnight_Bracers 1 i_Ornate_Crown_Harrower 1 i_Ring_elements 1 i_Ring_Vile 1 i_Serpents_Fang 1 i_Shadow_Dancer_Leggings 1 i_Spirit_Totem 1 i_Staff_Magi 1 i_Beserkers_Maul 1 i_Dragon_Slayer 1 i_Dryad_Bow 1 i_Taskmaster 1 i_Tunic_Fire 1 i_Voice_Fallen_King 1 i_aegis 1}
+
 [ITEMDEF i_arcane_shield]
 ID=i_shield_kite_wood
 NAME=Arcane Shield
