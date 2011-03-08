@@ -81,21 +81,6 @@ ON=@Create
    COLOR=51
    HITPOINTS=255
 
-[ITEMDEF i_frostbringer]
-ID=i_bow
-NAME=Frostbringer
-TEVENTS=t_iprop
-TAG.Artifact=11
-TAG.Luck=30
-TAG.DamageIncrease=50
-TAG.HitDispel=50
-CATEGORY=Provisions - Weapons - Archery
-SUBSECTION=Bows
-DESCRIPTION=Frostbringer
-ON=@Create
-   COLOR=012a
-   HITPOINTS=255
-
 [ITEMDEF i_swiftflight]
 ID=i_bow
 NAME=Swiftflight
@@ -107,22 +92,6 @@ SUBSECTION=Bows
 DESCRIPTION=Swiftflight
 ON=@Create
    COLOR=0 //FIXME: unknown color
-   HITPOINTS=255
-
-[ITEMDEF i_dryad_bow]
-ID=i_bow
-NAME=The Dryad Bow
-TEVENTS=t_iprop
-TAG.Artifact=11
-TAG.SelfRepair=5
-TAG.SwingSpeedIncrease=50
-TAG.DamageIncrease=35
-TAG.ResPoison=15
-CATEGORY=Provisions - Weapons - Archery
-SUBSECTION=Bows
-DESCRIPTION=The Dryad Bow
-ON=@Create
-   COLOR=04f8
    HITPOINTS=255
 
 
