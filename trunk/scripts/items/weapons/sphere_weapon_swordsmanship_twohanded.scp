@@ -61,22 +61,6 @@ ON=@Create
 [ITEMDEF 0f4e]
 DUPEITEM=0f4d
 
-[ITEMDEF i_legacy_dread_lord]
-ID=i_bardiche
-NAME=Legacy of the Dread Lord
-TEVENTS=t_iprop
-TAG.Artifact=10
-TAG.SpellChanneling=1
-TAG.FasterCastRecovery=3
-TAG.SwingSpeedIncrease=30
-TAG.DamageIncrease=50
-CATEGORY=Provisions - Weapons - Swordsmanship
-SUBSECTION=Bardiches
-DESCRIPTION=Legacy of the Dread Lord
-ON=@Create
-   COLOR=39
-   HITPOINTS=255
-
 
 ///////////////////////////////////////////////////////////////
 //////// BATTLE AXES
@@ -234,22 +218,6 @@ ON=@Create
 
 [ITEMDEF 0f4c]
 DUPEITEM=0f4b
-
-[ITEMDEF i_axe_heavens]
-ID=i_axe_double
-NAME=Axe of the Heavens
-TEVENTS=t_iprop
-TAG.Artifact=11
-TAG.HitLightning=50
-TAG.HitChanceIncrease=15
-TAG.DefenseChanceIncrease=15
-TAG.DamageIncrease=50
-CATEGORY=Provisions - Weapons - Swordsmanship
-SUBSECTION=Double Axes
-DESCRIPTION=Axe of the Heavens
-ON=@Create
-   COLOR=03c8
-   HITPOINTS=255
 
 
 ///////////////////////////////////////////////////////////////
