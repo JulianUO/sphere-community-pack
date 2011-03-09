@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, March 5, 2011
+// FILE LAST UPDATED: Wednesday, March 9, 2011
 VERSION=0.56b
 
 
@@ -111,7 +111,7 @@ TYPE=t_table
 FLIP=1
 VALUE=45
 WEIGHT=16.3
-RESOURCES=16 i_log_maple,3 i_nails
+RESOURCES=16 i_log,3 i_nails
 SKILLMAKE=Carpentry 73.1,t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
@@ -452,7 +452,7 @@ TYPE=t_table
 FLIP=1
 VALUE=42
 WEIGHT=30.4
-RESOURCES=15 i_log_maple,4 i_nails
+RESOURCES=15 i_log,4 i_nails
 SKILLMAKE=Carpentry 39.4,t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables
@@ -517,7 +517,7 @@ TYPE=t_table
 FLIP=1
 VALUE=150
 WEIGHT=52.2
-RESOURCES=26 i_log_maple,2 i_nails,26 i_cloth
+RESOURCES=26 i_log,2 i_nails,26 i_cloth
 SKILLMAKE=Carpentry 61.3,Tailoring 43.1,t_carpentry,t_sewing_kit
 CATEGORY=Decoration - Furniture
 SUBSECTION=Tables

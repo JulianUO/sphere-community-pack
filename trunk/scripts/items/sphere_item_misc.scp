@@ -3,11 +3,12 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Wednesday, March 9, 2011
 VERSION=0.56b
 
 
 [ITEMDEF 01014]
+//Perhaps use this for bulletin board messages?
 CATEGORY=Miscellaneous
 SUBSECTION=Invisible Tiles
 DESCRIPTION=Invisible Tile 01014

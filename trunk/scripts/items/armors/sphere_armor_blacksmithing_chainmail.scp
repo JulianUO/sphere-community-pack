@@ -3,18 +3,19 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Wednesday, March 9, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 013bb]
 DEFNAME=i_chainmail_coif
-TYPE=T_ARMOR
-RESOURCES=10 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 14.5
-WEIGHT=7
+NAME=chainmail coif
+TYPE=t_armor
 FLIP=1
+WEIGHT=7
 REQSTR=60
-DUPELIST=013c0
+RESOURCES=10 i_ingot_iron
+SKILLMAKE=Blacksmithing 14.5
 CATEGORY=Provisions - Armor - Blacksmithing
 SUBSECTION=Chainmail Armor
 DESCRIPTION=Chainmail Coif
@@ -25,23 +26,23 @@ TAG.ResFire=4
 TAG.ResCold=4
 TAG.ResPoison=1
 TAG.ResEnergy=2
-
+DUPELIST=013c0
 ON=@Create
-COLOR=color_o_iron
-HITPOINTS={36 48}
+   COLOR=color_o_iron
+   HITPOINTS={36 48}
 
 [ITEMDEF 013c0]
+//chainmail coif
 DUPEITEM=013bb
 
 [ITEMDEF 013be]
 DEFNAME=i_chainmail_leggings
-TYPE=T_ARMOR
-RESOURCES=18 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 36.7
-WEIGHT=7
+TYPE=t_armor
 FLIP=1
+WEIGHT=7
 REQSTR=60
-DUPELIST=013c3
+RESOURCES=18 i_ingot_iron
+SKILLMAKE=Blacksmithing 36.7
 CATEGORY=Provisions - Armor - Blacksmithing
 SUBSECTION=Chainmail Armor
 DESCRIPTION=Chainmail Leggings
@@ -52,23 +53,23 @@ TAG.ResFire=4
 TAG.ResCold=4
 TAG.ResPoison=1
 TAG.ResEnergy=2
-
+DUPELIST=013c3
 ON=@Create
-COLOR=color_o_iron
-HITPOINTS={36 48}
+   COLOR=color_o_iron
+   HITPOINTS={36 48}
 
 [ITEMDEF 013c3]
+//chainmail leggings
 DUPEITEM=013be
 
 [ITEMDEF 013bf]
 DEFNAME=i_chainmail_tunic
-TYPE=T_ARMOR
-RESOURCES=20 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 39.1
-WEIGHT=7
+TYPE=t_armor
 FLIP=1
+WEIGHT=7
 REQSTR=60
-DUPELIST=013c4
+RESOURCES=20 i_ingot_iron
+SKILLMAKE=Blacksmithing 39.1
 CATEGORY=Provisions - Armor - Blacksmithing
 SUBSECTION=Chainmail Armor
 DESCRIPTION=Chainmail Tunic
@@ -79,12 +80,13 @@ TAG.ResFire=4
 TAG.ResCold=4
 TAG.ResPoison=1
 TAG.ResEnergy=2
-
+DUPELIST=013c4
 ON=@Create
-COLOR=color_o_iron
-HITPOINTS={36 48}
+   COLOR=color_o_iron
+   HITPOINTS={36 48}
 
 [ITEMDEF 013c4]
+//chainmail tunic
 DUPEITEM=013bf
 
-[eof]
+[EOF]

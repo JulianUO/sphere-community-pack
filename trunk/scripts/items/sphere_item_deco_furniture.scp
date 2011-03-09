@@ -592,36 +592,38 @@ DUPEITEM=0a84
 DUPEITEM=0a84
 
 [ITEMDEF 0a92]
-//folded sheet
-RESOURCES=5 i_cloth
+DEFNAME=i_sheet
 DYE=1
+FLIP=1
+VALUE=32
+WEIGHT=1.5
+RESOURCES=5 i_cloth,5 i_thread
+SKILLMAKE=Tailoring 35.0,t_sewing_kit
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
 DESCRIPTION=Folded Sheet
+DUPELIST=0a93
 
 [ITEMDEF 0a93]
 //folded sheet
-RESOURCES=5 i_cloth
-DYE=1
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedding
-DESCRIPTION=Folded Sheet
+DUPEITEM=0a92
 
 [ITEMDEF 0a94]
-//folded rich sheet
-RESOURCES=6 i_cloth, 1 i_linen
+DEFNAME=i_sheet_rich
 DYE=1
+FLIP=1
+VALUE=64
+WEIGHT=1.5
+RESOURCES=5 i_cloth,25 i_thread
+SKILLMAKE=Tailoring 35.0,t_sewing_kit
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedding
-DESCRIPTION=Folded Sheet (Rich)
+DESCRIPTION=Folded Sheet (rich)
+DUPELIST=0a93
 
 [ITEMDEF 0a95]
-//folded rich sheet
-RESOURCES=6 i_cloth, 1 i_linen
-DYE=1
-CATEGORY=Decoration - Furniture
-SUBSECTION=Bedding
-DESCRIPTION=Folded Sheet (Rich)
+//folded sheet
+DUPEITEM=0a94
 
 [ITEMDEF 0a97]
 DEFNAME=i_bookcase_full
