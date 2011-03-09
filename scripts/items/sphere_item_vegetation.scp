@@ -3102,6 +3102,7 @@ DESCRIPTION=Apple Tree Foliage (green)
 
 [ITEMDEF 0d96]
 DEFNAME=i_tree_leaves_apple_1_2
+NAME=apples
 TYPE=t_foliage
 TDATA1=i_tree_leaves_apple_1_3
 TDATA2=0
@@ -3138,6 +3139,7 @@ DESCRIPTION=Apple Tree Leaves 2 (green)
 
 [ITEMDEF 0d9a]
 DEFNAME=i_tree_leaves_apple_2_2
+NAME=apples
 TYPE=t_foliage
 TDATA1=i_tree_leaves_apple_2_3
 TDATA2=0
@@ -3174,6 +3176,7 @@ DESCRIPTION=Peach Tree Leaves (green)
 
 [ITEMDEF 0d9e]
 DEFNAME=i_tree_leaves_peach_1_2
+NAME=peaches
 TYPE=t_foliage
 TDATA1=i_tree_leaves_peach_1_3
 TDATA2=0
@@ -3210,6 +3213,7 @@ DESCRIPTION=Peach Tree Leaves 2 (green)
 
 [ITEMDEF 0da2]
 DEFNAME=i_tree_leaves_peach_2_2
+NAME=peaches
 TYPE=t_foliage
 TDATA1=i_tree_leaves_peach_2_3
 TDATA2=0
@@ -3246,6 +3250,7 @@ DESCRIPTION=Pear Tree Foliage (green)
 
 [ITEMDEF 0da6]
 DEFNAME=i_tree_leaves_pear_1_2
+NAME=pears
 TYPE=t_foliage
 TDATA1=i_tree_leaves_pear_1_3
 TDATA2=0
@@ -3282,6 +3287,7 @@ DESCRIPTION=Pear Tree Foliage 2 (green)
 
 [ITEMDEF 0daa]
 DEFNAME=i_tree_leaves_pear_2_2
+NAME=pears
 TYPE=t_foliage
 TDATA1=i_tree_leaves_pear_2_3
 TDATA2=0
@@ -3351,9 +3357,11 @@ DUPEITEM=0e57
 [ITEMDEF 012b5]
 //Yew Tree - not used
 //Duplicate of 012b6
+NAME=yew tree
 
 [ITEMDEF 012b6]
 DEFNAME=i_tree_yew1
+NAME=yew tree
 TYPE=t_tree
 CATEGORY=Vegetation
 SUBSECTION=Yew Tree
@@ -3390,6 +3398,7 @@ DESCRIPTION=Yew Tree 1 (trunk 08/08)
 
 [ITEMDEF 012be]
 DEFNAME=i_tree_yew1_foliage
+NAME=yew leaves
 TYPE=t_foliage
 CATEGORY=Vegetation
 SUBSECTION=Yew Tree
