@@ -1,137 +1,141 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+//SphereServer ©1997-2009
+//This script is part from the Sphere Community Script Pack.
+//You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, November 22, 2003
-//
+//FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
+
 
 ///////////////////////////////////////////////////////////////
 //////// OSI ORES
 ///////////////////////////////////////////////////////////////
 // This are the ores used in OSI. More info, read stratics.
+
 [ITEMDEF 019b7]
-// DEFNAME2=METAL_ORE_1
 DEFNAME=i_ore_iron
-NAME=Iron Ore
+NAME=iron ore
 TYPE=t_ore
-SKILLMAKE=MINING 20.0
 TDATA1=i_ingot_iron
-WEIGHT=2
 VALUE=4
-DUPELIST=019b8,019b9,019ba
+WEIGHT=2
+SKILLMAKE=Mining 20.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Iron Ore
+DUPELIST=019b8,019b9,019ba
+
+[ITEMDEF 019b8]
+//iron ore medium pile
+DUPEITEM=019b7
+DESCRIPTION=Iron Ore (medium pile)
+
+[ITEMDEF 019b9]
+//iron ore large pile
+DUPEITEM=019b7
+DESCRIPTION=Iron Ore (large pile)
+
+[ITEMDEF 019ba]
+//iron ore pile leftovers
+DUPEITEM=019b7
+DESCRIPTION=Iron Ore (leftovers)
+
 
 [ITEMDEF i_ore_dull_copper]
 ID=i_ore_iron
-NAME=Dull Copper Ore
-SKILLMAKE=MINING 65.0
+NAME=dull copper ore
 TDATA1=i_ingot_dull_copper
 VALUE=15
+SKILLMAKE=Mining 65.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Dull Copper Ore
-
 ON=@Create
-COLOR=color_o_dull_copper
+   COLOR=color_o_dull_copper
 
 [ITEMDEF i_ore_shadow]
 ID=i_ore_iron
-NAME=Shadow Ore
-SKILLMAKE=MINING 70.0
+NAME=shadow ore
 TDATA1=i_ingot_shadow
 VALUE=15
+SKILLMAKE=Mining 70.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Shadow Ore
-
 ON=@Create
-COLOR=color_o_shadow
+   COLOR=color_o_shadow
 
 [ITEMDEF i_ore_copper]
 ID=i_ore_iron
-NAME=Copper Ore
-SKILLMAKE=MINING 75.0
+NAME=copper ore
 TDATA1=i_ingot_copper
 VALUE=15
+SKILLMAKE=Mining 75.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Iron Ore
-
 ON=@Create
-COLOR=color_o_copper
+   COLOR=color_o_copper
 
 [ITEMDEF i_ore_bronze]
 ID=i_ore_iron
-NAME=Bronze Ore
-SKILLMAKE=MINING 80.0
+NAME=bronze ore
 TDATA1=i_ingot_bronze
 VALUE=15
+SKILLMAKE=Mining 80.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Copper Ore
-
 ON=@Create
-COLOR=color_o_bronze
+   COLOR=color_o_bronze
 
 [ITEMDEF i_ore_gold]
 ID=i_ore_iron
-NAME=Gold Ore
-SKILLMAKE=MINING 85.0
+NAME=gold ore
 TDATA1=i_ingot_gold
 VALUE=15
+SKILLMAKE=Mining 85.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Gold Ore
-
 ON=@Create
-COLOR=color_o_gold
+   COLOR=color_o_gold
 
 [ITEMDEF i_ore_agapite]
 ID=i_ore_iron
-NAME=Agapite Ore
-SKILLMAKE=MINING 90.0
+NAME=agapite ore
 TDATA1=i_ingot_agapite
 VALUE=15
+SKILLMAKE=Mining 90.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Agapite Ore
-
 ON=@Create
-COLOR=color_o_agapite
+   COLOR=color_o_agapite
 
 [ITEMDEF i_ore_verite]
 ID=i_ore_iron
-NAME=Verite Ore
-SKILLMAKE=MINING 95.0
+NAME=verite ore
 TDATA1=i_ingot_verite
 VALUE=15
+SKILLMAKE=Mining 95.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Verite Ore
-
 ON=@Create
-COLOR=color_o_verite
+   COLOR=color_o_verite
 
 [ITEMDEF i_ore_valorite]
 ID=i_ore_iron
-NAME=Valorite Ore
-SKILLMAKE=MINING 99.0
+NAME=valorite ore
 TDATA1=i_ingot_valorite
 VALUE=15
+SKILLMAKE=Mining 99.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Valorite Ore
-
 ON=@Create
-COLOR=color_o_valorite
+   COLOR=color_o_valorite
 
 
 ///////////////////////////////////////////////////////////////
@@ -140,92 +144,85 @@ COLOR=color_o_valorite
 // Ores that was used by Sphere. Stay here for backwards comp.
 [ITEMDEF i_ore_silver]
 ID=i_ore_iron
-NAME=Silver Ore
-SKILLMAKE=MINING 95.0
+NAME=silver ore
 TDATA1=i_ingot_silver
 VALUE=7
+SKILLMAKE=Mining 95.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Silver Ore
-
 ON=@Create
-COLOR=color_o_silver
+   COLOR=color_o_silver
 
 [ITEMDEF i_ore_rose]
 ID=i_ore_iron
-NAME=Rose Ore
-SKILLMAKE=MINING 87.0
+NAME=rose ore
 TDATA1=i_ingot_rose
 VALUE=15
+SKILLMAKE=Mining 87.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Rose Ore
-
 ON=@Create
-COLOR=color_o_rose
+   COLOR=color_o_rose
 
 [ITEMDEF i_ore_mytheril]
 ID=i_ore_iron
-NAME=Mytheril Ore
-SKILLMAKE=MINING 99.5
+NAME=mytheril ore
 TDATA1=i_ingot_mytheril
 VALUE=15
+SKILLMAKE=Mining 99.5
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Mytheril Ore
-
 ON=@Create
-COLOR=color_o_mytheril
+   COLOR=color_o_mytheril
 
 [ITEMDEF i_ore_blackrock]
 ID=i_ore_iron
-NAME=Blackrock Ore
-SKILLMAKE=MINING 100.0
+NAME=blackrock ore
 TDATA1=i_ingot_blackrock
 VALUE=18
+SKILLMAKE=Mining 100.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Blackrock Ore
-
 ON=@Create
-COLOR=color_o_blackrock
+   COLOR=color_o_blackrock
 
 [ITEMDEF i_ore_bloodrock]
 ID=i_ore_iron
-NAME=Bloodrock Ore
-SKILLMAKE=MINING 93.0
+NAME=bloodrock ore
 TDATA1=i_ingot_bloodrock
 VALUE=15
+SKILLMAKE=Mining 93.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Bloodrock Ore
-
 ON=@Create
-COLOR=color_o_bloodrock
+   COLOR=color_o_bloodrock
 
 [ITEMDEF i_ore_rusty]
 ID=i_ore_iron
-NAME=Rusty Ore
-SKILLMAKE=MINING 50.0
+NAME=rusty ore
 TDATA1=i_ingot_rusty
 VALUE=15
+SKILLMAKE=Mining 50.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Rusty Ore
-
 ON=@Create
-COLOR=color_o_rusty
+   COLOR=color_o_rusty
 
 [ITEMDEF i_ore_old_copper]
 ID=i_ore_iron
-NAME=Old Copper Ore
-SKILLMAKE=MINING 60.0
+NAME=old copper ore
 TDATA1=i_ingot_old_copper
 VALUE=15
+SKILLMAKE=Mining 60.0
 CATEGORY=Resources - Mining
 SUBSECTION=Ores
 DESCRIPTION=Old Copper Ore
-
 ON=@Create
 	COLOR=color_o_oldcopper
 

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, March 5, 2011
+// FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 
 
@@ -13,7 +13,7 @@ RESOURCES=5 i_board, 10 i_nails, 3 i_drawer
 TYPE=t_container
 TDATA2=051
 FLIP=1
-VALUE={150 180}
+VALUE=150
 WEIGHT=20
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -204,7 +204,7 @@ DUPEITEM=0a55
 DEFNAME=i_bedroll_2
 TYPE=t_bedroll
 RESOURCES=i_bedroll
-VALUE={4 8}
+VALUE=4
 WEIGHT=5
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
@@ -634,7 +634,7 @@ SKILLMAKE=CARPENTRY 36.5, t_carpentry
 TYPE=t_container
 TDATA2=04d
 FLIP=1
-VALUE={120 150}
+VALUE=120
 WEIGHT=10
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bookcase
@@ -1604,6 +1604,7 @@ DESCRIPTION=Fancy Pillow
 
 [ITEMDEF 01945]
 DEFNAME=i_screen_wooden_carved
+NAME=wooden screen
 FLIP=1
 VALUE=76
 WEIGHT=24.4

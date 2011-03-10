@@ -1,15 +1,11 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+//SphereServer ©1997-2009
+//This script is part from the Sphere Community Script Pack.
+//You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, Feb 12, 2011
-//
+//FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0e34]
 DEFNAME=i_scroll_blank
@@ -120,6 +116,7 @@ DUPEITEM=0e3a
 
 [ITEMDEF 01f2d]
 DEFNAME=i_scroll_reactive_armor
+NAME=Reactive Armor Scroll
 TYPE=t_scroll
 VALUE=20
 WEIGHT=0.1
@@ -465,6 +462,7 @@ ON=@Create
 
 [ITEMDEF 01f44]
 DEFNAME=i_scroll_wall_of_stone
+NAME=Wall of Stone Scroll
 TYPE=t_scroll
 VALUE=20
 WEIGHT=0.1
@@ -495,6 +493,7 @@ ON=@Create
 
 [ITEMDEF 01f46]
 DEFNAME=i_scroll_archprotection
+NAME=Arch Protection Scroll
 TYPE=t_scroll
 VALUE=28
 WEIGHT=0.1
@@ -525,7 +524,7 @@ ON=@Create
 
 [ITEMDEF 01f48]
 DEFNAME=i_scroll_fire_field
-NAME=fire field scroll
+NAME=Fire Field Scroll
 TYPE=t_scroll
 VALUE=25
 WEIGHT=0.1
@@ -541,6 +540,7 @@ ON=@Create
 
 [ITEMDEF 01f49]
 DEFNAME=i_scroll_greater_heal
+NAME=Greater Heal Scroll
 TYPE=t_scroll
 VALUE=28
 WEIGHT=0.1
@@ -601,6 +601,7 @@ ON=@Create
 
 [ITEMDEF 01f4d]
 DEFNAME=i_scroll_blade_spirits
+NAME=Blade Spirits Scroll
 TYPE=t_scroll
 VALUE=27
 WEIGHT=0.1
@@ -616,6 +617,7 @@ ON=@Create
 
 [ITEMDEF 01f4e]
 DEFNAME=i_scroll_dispel_field
+NAME=Dispel Field Scroll
 TYPE=t_scroll
 VALUE=30
 WEIGHT=0.1
@@ -646,7 +648,7 @@ ON=@Create
 
 [ITEMDEF 01f50]
 DEFNAME=i_scroll_magic_reflection
-NAME=magic reflection scroll
+NAME=Magic Reflection Scroll
 TYPE=t_scroll
 VALUE=27
 WEIGHT=0.1
@@ -692,6 +694,7 @@ ON=@Create
 
 [ITEMDEF 01f53]
 DEFNAME=i_scroll_poison_field
+NAME=Poison Field Scroll
 TYPE=t_scroll
 VALUE=27
 WEIGHT=0.1
@@ -707,6 +710,7 @@ ON=@Create
 
 [ITEMDEF 01f54]
 DEFNAME=i_scroll_summon_creature
+NAME=Summon Creature Scroll
 TYPE=t_scroll
 VALUE=27
 WEIGHT=0.1
@@ -767,6 +771,7 @@ ON=@Create
 
 [ITEMDEF 01f58]
 DEFNAME=i_scroll_invisibility
+NAME=Invisibility Scroll
 TYPE=t_scroll
 VALUE=26
 WEIGHT=0.1
@@ -812,6 +817,7 @@ ON=@Create
 
 [ITEMDEF 01f5b]
 DEFNAME=i_scroll_paralyze_field
+NAME=Paralyze Field Scroll
 TYPE=t_scroll
 VALUE=29
 WEIGHT=0.1
@@ -842,6 +848,7 @@ ON=@Create
 
 [ITEMDEF 01f5d]
 DEFNAME=i_scroll_chain_lightning
+NAME=Chain Lightning Scroll
 TYPE=t_scroll
 VALUE=34
 WEIGHT=0.1
@@ -857,7 +864,7 @@ ON=@Create
 
 [ITEMDEF 01f5e]
 DEFNAME=i_scroll_energy_field
-NAME=energy field scroll
+NAME=Energy Field Scroll
 TYPE=t_scroll
 VALUE=34
 WEIGHT=0.1
@@ -903,6 +910,7 @@ ON=@Create
 
 [ITEMDEF 01f61]
 DEFNAME=i_scroll_mana_vampire
+NAME=Mana Vampire Scroll
 TYPE=t_scroll
 VALUE=34
 WEIGHT=0.1
@@ -918,6 +926,7 @@ ON=@Create
 
 [ITEMDEF 01f62]
 DEFNAME=i_scroll_mass_dispel
+NAME=Mass Dispel Scroll
 TYPE=t_scroll
 VALUE=34
 WEIGHT=0.1
@@ -933,6 +942,7 @@ ON=@Create
 
 [ITEMDEF 01f63]
 DEFNAME=i_scroll_meteor_swarm
+NAME=Meteor Storm Scroll
 TYPE=t_scroll
 VALUE=34
 WEIGHT=0.1
@@ -978,6 +988,7 @@ ON=@Create
 
 [ITEMDEF 01f66]
 DEFNAME=i_scroll_energy_vortex
+NAME=Energy Vortex Scroll
 TYPE=t_scroll
 VALUE=36
 WEIGHT=0.1
@@ -993,7 +1004,7 @@ ON=@Create
 
 [ITEMDEF 01f67]
 DEFNAME=i_scroll_resurrection
-NAME=resurrection scroll
+NAME=Resurrection Scroll
 TYPE=t_scroll
 VALUE=33
 WEIGHT=0.1
@@ -1009,6 +1020,7 @@ ON=@Create
 
 [ITEMDEF 01f68]
 DEFNAME=i_scroll_summon_elem_air
+NAME=Summon Air Elemental Scroll
 TYPE=t_scroll
 VALUE=33
 WEIGHT=0.1
@@ -1016,7 +1028,7 @@ RESOURCES=1 i_scroll_blank,1 i_reag_blood_moss,1 i_reag_mandrake_root,1 i_reag_s
 SKILLMAKE=Inscription 80.0,Magery 70.0
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Scrolls - 8th Circle
-DESCRIPTION=Summon Elemental Scroll
+DESCRIPTION=Summon Air Elemental Scroll
 ON=@Create
    ATTR=attr_magic
    MOREX=s_summon_elem_air
@@ -1024,6 +1036,7 @@ ON=@Create
 
 [ITEMDEF 01f69]
 DEFNAME=i_scroll_summon_daemon
+NAME=Summon Daemon Scroll
 TYPE=t_scroll
 VALUE=36
 WEIGHT=0.1
@@ -1039,6 +1052,7 @@ ON=@Create
 
 [ITEMDEF 01f6a]
 DEFNAME=i_scroll_summon_elem_earth
+NAME=Summon Earth Elemental Scroll
 TYPE=t_scroll
 VALUE=33
 WEIGHT=0.1
@@ -1054,6 +1068,7 @@ ON=@Create
 
 [ITEMDEF 01f6b]
 DEFNAME=i_scroll_summon_elem_fire
+NAME=Summon Fire Elemental Scroll
 TYPE=t_scroll
 VALUE=36
 WEIGHT=0.1
@@ -1069,6 +1084,7 @@ ON=@Create
 
 [ITEMDEF 01f6c]
 DEFNAME=i_scroll_summon_elem_water
+NAME=Summon Water Elemental Scroll
 TYPE=t_scroll
 VALUE=33
 WEIGHT=0.1
@@ -1379,7 +1395,7 @@ ON=@Create
 
 [ITEMDEF 02270]
 DEFNAME=i_scroll_exorcism
-NAME=Exorcism Scroll
+NAME=exorcism scroll
 TYPE=t_scroll
 //VALUE=FIXME
 WEIGHT=1
@@ -1565,6 +1581,7 @@ ON=@Create
 
 [ITEMDEF 02d51]
 DEFNAME=i_scroll_arcane_circle
+NAME=Arcane Circle Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1579,6 +1596,7 @@ ON=@Create
 
 [ITEMDEF 02d52]
 DEFNAME=i_scroll_gift_of_renewal
+NAME=Gift of Renewal Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1593,6 +1611,7 @@ ON=@Create
 
 [ITEMDEF 02d53]
 DEFNAME=i_scroll_immolating_weapon
+NAME=Immolating Weapon Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1607,6 +1626,7 @@ ON=@Create
 
 [ITEMDEF 02d54]
 DEFNAME=i_scroll_attunement
+NAME=Attunement
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1621,6 +1641,7 @@ ON=@Create
 
 [ITEMDEF 02d55]
 DEFNAME=i_scroll_thunderstorm
+NAME=Thunderstorm Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1635,7 +1656,7 @@ ON=@Create
 
 [ITEMDEF 02d56]
 DEFNAME=i_scroll_nature_fury
-NAME=nature's fury
+NAME=Nature's Fury Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1650,7 +1671,7 @@ ON=@Create
 
 [ITEMDEF 02d57]
 DEFNAME=i_scroll_summon_fey
-NAME=summon fey
+NAME=Summon Fey Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1665,7 +1686,7 @@ ON=@Create
 
 [ITEMDEF 02d58]
 DEFNAME=i_scroll_summon_fiend
-NAME=summon fiend
+NAME=Summon Fiend Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1680,7 +1701,7 @@ ON=@Create
 
 [ITEMDEF 02d59]
 DEFNAME=i_scroll_reaper_form
-NAME=reaper form
+NAME=Reaper Form Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1695,7 +1716,7 @@ ON=@Create
 
 [ITEMDEF 02d5a]
 DEFNAME=i_scroll_wildfire
-NAME=wildfire
+NAME=Wildfire Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1710,7 +1731,7 @@ ON=@Create
 
 [ITEMDEF 02d5b]
 DEFNAME=i_scroll_essence_of_wind
-NAME=essence of wind
+NAME=Essence of Wind Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1725,7 +1746,7 @@ ON=@Create
 
 [ITEMDEF 02d5c]
 DEFNAME=i_scroll_dryad_allure
-NAME=dryad allure
+NAME=Dryad Allure Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1740,7 +1761,7 @@ ON=@Create
 
 [ITEMDEF 02d5d]
 DEFNAME=i_scroll_ethereal_voyage
-NAME=ethereal voyage
+NAME=Ethereal Voyage Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1755,7 +1776,7 @@ ON=@Create
 
 [ITEMDEF 02d5e]
 DEFNAME=i_scroll_word_of_death
-NAME=word of death
+NAME=Word of Death Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1770,7 +1791,7 @@ ON=@Create
 
 [ITEMDEF 02d5f]
 DEFNAME=i_scroll_gift_of_life
-NAME=gift of life
+NAME=Gift of Life Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank
@@ -1785,7 +1806,7 @@ ON=@Create
 
 [ITEMDEF 02d60]
 DEFNAME=i_scroll_arcane_empowerment
-NAME=arcane empowerment
+NAME=Arcane Empowerment Scroll
 TYPE=t_scroll
 WEIGHT=0.1
 RESOURCES=1 i_scroll_blank

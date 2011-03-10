@@ -3,18 +3,18 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+//FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 01410]
 DEFNAME=i_platemail_arms
-TYPE=T_ARMOR
-RESOURCES=18 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 66.3
-WEIGHT=5
+TYPE=t_armor
 FLIP=1
+WEIGHT=5
 REQSTR=80
-DUPELIST=01417
+RESOURCES=18 i_ingot_iron
+SKILLMAKE=Blacksmithing 66.3
 CATEGORY=Provisions - Armor - Blacksmithing
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Arms
@@ -25,23 +25,22 @@ TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
+DUPELIST=01417
 ON=@Create
-COLOR=color_o_iron
-HITPOINTS={50 60}
+   COLOR=color_o_iron
+   HITPOINTS={36 48}
 
 [ITEMDEF 01417]
 DUPEITEM=01410
 
 [ITEMDEF 01411]
 DEFNAME=i_platemail_leggings
-TYPE=T_ARMOR
-RESOURCES=20 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 68.8
-WEIGHT=7
+TYPE=t_armor
 FLIP=1
+WEIGHT=7
 REQSTR=90
-DUPELIST=0141a
+RESOURCES=20 i_ingot_iron
+SKILLMAKE=Blacksmithing 68.8
 CATEGORY=Provisions - Armor - Blacksmithing
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Legs
@@ -52,23 +51,22 @@ TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
+DUPELIST=0141a
 ON=@Create
-COLOR=color_o_iron
-HITPOINTS={50 60}
+   COLOR=color_o_iron
+   HITPOINTS={36 48}
 
 [ITEMDEF 0141a]
 DUPEITEM=01411
 
 [ITEMDEF 01412]
 DEFNAME=i_platemail_helm
-TYPE=T_ARMOR
-RESOURCES=15 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 62.6
-WEIGHT=5
+TYPE=t_armor
 FLIP=1
+WEIGHT=5
 REQSTR=80
-DUPELIST=01419
+RESOURCES=15 i_ingot_iron
+SKILLMAKE=Blacksmithing 62.6
 CATEGORY=Provisions - Armor - Blacksmithing
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Helm
@@ -79,22 +77,21 @@ TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
+DUPELIST=01419
 ON=@Create
-COLOR=color_o_iron
-HITPOINTS={50 60}
+   COLOR=color_o_iron
+   HITPOINTS={36 48}
 
 [ITEMDEF 01419]
 DUPEITEM=01412
 
 [ITEMDEF 01413]
 DEFNAME=i_platemail_gorget
-TYPE=T_ARMOR
-RESOURCES=10 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 56.4
+TYPE=t_armor
 WEIGHT=2
-FLIP=1
 REQSTR=45
+RESOURCES=10 i_ingot_iron
+SKILLMAKE=Blacksmithing 56.4
 CATEGORY=Provisions - Armor - Blacksmithing
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Gorget
@@ -105,20 +102,18 @@ TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
 ON=@Create
-COLOR=color_o_iron
-HITPOINTS={50 60}
+   COLOR=color_o_iron
+   HITPOINTS={36 48}
 
 [ITEMDEF 01414]
 DEFNAME=i_platemail_gloves
-TYPE=T_ARMOR
-RESOURCES=12 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 58.9
-WEIGHT=2
+TYPE=t_armor
 FLIP=1
+WEIGHT=2
 REQSTR=70
-DUPELIST=01418
+RESOURCES=12 i_ingot_iron
+SKILLMAKE=Blacksmithing 58.9
 CATEGORY=Provisions - Armor - Blacksmithing
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Gauntlets
@@ -129,23 +124,22 @@ TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
+DUPELIST=01418
 ON=@Create
-COLOR=color_o_iron
-HITPOINTS={50 60}
+   COLOR=color_o_iron
+   HITPOINTS={36 48}
 
 [ITEMDEF 01418]
 DUPEITEM=01414
 
 [ITEMDEF 01415]
 DEFNAME=i_platemail_chest
-TYPE=T_ARMOR
-RESOURCES=25 i_ingot_iron
-SKILLMAKE=BLACKSMITHING 75.0
-WEIGHT=10.0
+TYPE=t_armor
 FLIP=1
+WEIGHT=10.0
 REQSTR=95
-DUPELIST=01416
+RESOURCES=25 i_ingot_iron
+SKILLMAKE=Blacksmithing 75.0
 CATEGORY=Provisions - Armor
 SUBSECTION=Platemail Armor
 DESCRIPTION=Platemail Breastplate
@@ -156,12 +150,41 @@ TAG.ResFire=3
 TAG.ResCold=2
 TAG.ResPoison=3
 TAG.ResEnergy=2
-
+DUPELIST=01416
 ON=@Create
-COLOR=color_o_iron
-HITPOINTS={50 60}
+   COLOR=color_o_iron
+   HITPOINTS={36 48}
 
 [ITEMDEF 01416]
 DUPEITEM=01415
 
-[eof]
+[ITEMDEF 01c04]
+DEFNAME=i_armor_female_plate
+//NAME=female plate
+TYPE=t_armor
+FLIP=1
+WEIGHT=4.0
+REQSTR=95
+RESOURCES=20 i_ingot_iron
+SKILLMAKE=Blacksmithing 44.1
+CATEGORY=Provisions - Armor
+SUBSECTION=Platemail Armor
+DESCRIPTION=Female Plate
+TAG.Penalty.Meditation=1
+TAG.Penalty.Stealth=25
+TAG.ResPhysical=5
+TAG.ResFire=3
+TAG.ResCold=2
+TAG.ResPoison=3
+TAG.ResEnergy=2
+DUPELIST=01c05
+ON=@Create
+   COLOR=color_o_iron
+   HITPOINTS={36 48}
+
+[ITEMDEF 01c05]
+//female plate
+DUPEITEM=01c04
+
+
+[EOF]

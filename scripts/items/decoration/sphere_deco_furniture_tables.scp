@@ -688,6 +688,7 @@ DESCRIPTION=Unfinished Night Table
 [ITEMDEF 0207e]
 //FIXME: Is this a quest item?
 DEFNAME=i_table_keyed
+NAME=table
 TYPE=t_table
 WEIGHT=17.4
 RESOURCES=17 i_log,4 i_nails

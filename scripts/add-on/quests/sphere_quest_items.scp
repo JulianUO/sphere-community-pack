@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 
 
@@ -161,6 +161,7 @@ DESCRIPTION=Seeker Token
 
 [ITEMDEF 01fff]
 DEFNAME=i_crate_sealed
+NAME=sealed crate
 VALUE=22
 WEIGHT=8.1
 RESOURCES=8 i_board,1 i_nails
@@ -170,6 +171,7 @@ DESCRIPTION=Wooden Crate (sealed)
 
 [ITEMDEF 02000]
 DEFNAME=i_box_brass_corroded
+NAME=corroded brass box
 VALUE=39
 WEIGHT=10.1
 RESOURCES=5 i_ingot_iron,5 i_board,1 i_nails
@@ -190,6 +192,7 @@ DESCRIPTION=Lissith's Silk
 
 [ITEMDEF 02002]
 DEFNAME=i_key_quest
+NAME=quest key
 TYPE=t_key
 WEIGHT=0.1
 RESOURCES=5 i_ingot_gold,5 i_ingot_silver,5 i_ingot_copper
@@ -201,6 +204,7 @@ ON=@Create
 
 [ITEMDEF 02003]
 DEFNAME=i_fishing_net_quest
+NAME=special fishing net
 WEIGHT=14.0
 RESOURCES=10 i_rope,10 i_thread,4 i_shell
 CATEGORY=Quest
@@ -229,9 +233,9 @@ DESCRIPTION=Vial of stuff?
 [ITEMDEF i_prismoflight_gate]
 ID=i_moongate_blue
 NAME=Prism of Light
-TYPE=T_FLOOR
+TYPE=t_floor
 ON=@Create
-   ATTR=ATTR_MOVE_NEVER|ATTR_INVIS
+   ATTR=attr_move_never|attr_invis
 ON=@Step
    IF (<SRC.FINDID.i_prismoflight_admission_ticket>)
       SRC.GO 6472,189
@@ -243,7 +247,7 @@ ON=@Step
 [ITEMDEF i_prismoflight_admission_ticket]
 ID=i_book_sm
 NAME=Prism of Light admission ticket
-TYPE=T_NORMAL
+TYPE=t_normal
 ON=@Create
    ATTR=attr_newbie|attr_move_never|attr_decay|attr_can_decay
    TIMER=60*60*24
@@ -256,7 +260,7 @@ ON=@Timer
 
 [ITEMDEF i_mem_prismoflight_admission_ticket]
 ID=i_memory
-TYPE=T_EQ_SCRIPT
+TYPE=t_eq_script
 NAME=prism of light mem item
 ON=@Create
    ATTR=attr_invis|attr_decay
@@ -572,8 +576,8 @@ TYPE=T_INGOT
 VALUE=3
 PILE=1
 WEIGHT=.1
-CATEGORY=Do Not Use
-SUBSECTION=Quest Items
+CATEGORY=Quest
+SUBSECTION=Hydra
 DESCRIPTION=Hydra Scales
 
 ON=@Create
@@ -583,17 +587,17 @@ ON=@Create
 ID=i_hide
 NAME=Thrasher's tail
 TYPE=t_hide
-CATEGORY=Do Not Use
-SUBSECTION=Quest Items
-DESCRIPTION=thrasher's tail
+CATEGORY=Quest
+SUBSECTION=Thrasher
+DESCRIPTION=Thrasher's tail
 
 [ITEMDEF i_resolves_bridle]
 ID=i_bridle_horse
-NAME=Resolve's Bridle
-RESOURCES=2 i_HIDE, 1 i_ingot_iron
+NAME=Resolve's bridle
 WEIGHT=5
-CATEGORY=Do Not Use
-SUBSECTION=Quest Items
+RESOURCES=2 i_hide, 1 i_ingot_iron
+CATEGORY=Quest
+SUBSECTION=Resolve
 DESCRIPTION=Resolve's Bridle
 
 [EOF]

@@ -1,15 +1,11 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+//SphereServer ©1997-2009
+//This script is part from the Sphere Community Script Pack.
+//You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+//FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 09b4]
 DEFNAME=i_eggshells
@@ -17,16 +13,6 @@ VALUE=1
 CATEGORY=Items by Professions
 SUBSECTION=Cook
 DESCRIPTION=Eggshells
-
-[ITEMDEF 0df8]
-DEFNAME=i_wool
-VALUE=3
-TYPE=t_wool
-WEIGHT=3
-CATEGORY=Items by Professions
-SUBSECTION=Tailor
-DESCRIPTION=Wool (pile)
-DUPELIST=0101f
 
 [ITEMDEF 0df9]
 DEFNAME=i_cotton
@@ -66,7 +52,6 @@ SUBSECTION=Barber
 DESCRIPTION=Cut Hair
 
 [ITEMDEF 0e5c]
-//glowing rune
 DEFNAME=i_rune_glowing_1
 TYPE=t_light_lit
 TDATA4=i_rune_glowing_1
@@ -77,7 +62,6 @@ DESCRIPTION=Glowing Rune 01
 DUPELIST=0e5d,0e5e
 
 [ITEMDEF 0e5f]
-//glowing rune
 DEFNAME=i_rune_glowing_2
 TYPE=t_light_lit
 TDATA4=i_rune_glowing_2
@@ -88,7 +72,6 @@ DESCRIPTION=Glowing Rune 02
 DUPELIST=0e60,0e61
 
 [ITEMDEF 0e62]
-//glowing rune
 DEFNAME=i_rune_glowing_3
 TYPE=t_light_lit
 TDATA4=i_rune_glowing_3
@@ -99,7 +82,6 @@ DESCRIPTION=Glowing Rune 03
 DUPELIST=0e63,0e64
 
 [ITEMDEF 0e65]
-//glowing rune
 DEFNAME=i_rune_glowing_4
 TYPE=t_light_lit
 TDATA4=i_rune_glowing_4
@@ -110,7 +92,6 @@ DESCRIPTION=Glowing Rune 04
 DUPELIST=0e66,0e67
 
 [ITEMDEF 0e68]
-//glowing rune
 DEFNAME=i_rune_glowing_5
 TYPE=t_light_lit
 TDATA4=i_rune_glowing_5
@@ -121,7 +102,6 @@ DESCRIPTION=Glowing Rune 05
 DUPELIST=0e69,0e6a
 
 [ITEMDEF 0eea]
-//copper coin
 DEFNAME=i_coin_copper
 VALUE=1
 TYPE=t_coin
@@ -131,7 +111,6 @@ DESCRIPTION=Copper Coin
 DUPELIST=0eeb,0eec
 
 [ITEMDEF 0eed]
-//gold coin
 DEFNAME=i_gold
 TYPE=t_gold
 VALUE=1
@@ -143,7 +122,6 @@ ON=@Create
    ATTR=attr_identified
 
 [ITEMDEF 0ef0]
-//silver coin
 DEFNAME=i_coin_silver
 VALUE=1
 TYPE=t_coin
@@ -151,17 +129,6 @@ CATEGORY=Provisions - Miscellaneous
 SUBSECTION=Coins
 DESCRIPTION=Silver Coin
 DUPELIST=0ef1,0ef2
-
-[ITEMDEF 0175d]
-DEFNAME=i_cloth
-WEIGHT=2
-VALUE=3
-TYPE=t_cloth
-DYE=1
-CATEGORY=Items by Professions
-SUBSECTION=Tailor
-DESCRIPTION=Folded Cloth
-DUPELIST=0175e,0175f,01760,01761,01762,01763,01764,01765
 
 [ITEMDEF 01bd1]
 DEFNAME=i_feather
@@ -175,6 +142,15 @@ DUPELIST=0dfa,0dfb,01bd2,01bd3
 ON=@DClick
    SRC.SKILLMENU=sm_bolts
    RETURN 1
+
+[ITEMDEF 0dfa]
+//feathers 2
+DUPEITEM=01bd1
+
+[ITEMDEF 0dfb]
+//feathers 2
+DUPEITEM=01bd1
+
 
 [ITEMDEF 010ee]
 DEFNAME=i_garbage

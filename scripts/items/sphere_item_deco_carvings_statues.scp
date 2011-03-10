@@ -391,6 +391,7 @@ DUPEITEM=0139e
 
 [ITEMDEF 01947]
 DEFNAME=i_statue_stone_blessed
+NAME=statue
 FLIP=1
 VALUE=68
 WEIGHT=120.0

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Thursday, March 9, 2011
 VERSION=0.56b
 
 
@@ -505,45 +505,48 @@ DUPEITEM=0b26
 
 [ITEMDEF 0e31]
 DEFNAME=i_brazier_2
-RESOURCES=15 i_ingot_iron
-TYPE=t_fire
-WEIGHT=15
+TYPE=t_light_lit
+VALUE=417
+WEIGHT=34.0
+RESOURCES=10 i_ingot_iron,3 i_ingot_copper,1 i_brazier
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Brazier
-DESCRIPTION=BRAZIER
+DESCRIPTION=Brazier
 DUPELIST=0e32,0e33
-
 ON=@Create
-MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 0e32]
+//brazier
 DUPEITEM=0e31
-
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Brazier
-DESCRIPTION=BRAZIER
 
 [ITEMDEF 0e33]
+//brazier
 DUPEITEM=0e31
-CATEGORY=Decoration - Lightsources
-SUBSECTION=Brazier
-DESCRIPTION=BRAZIER
 
 [ITEMDEF 0f64]
-//torch
-//player torch
 DEFNAME=i_torch
 TYPE=t_light_out
 TDATA3=i_torch_lit
+FLIP=1
+VALUE=2
+WEIGHT=1.0
 RESOURCES=1 i_log
-WEIGHT=1
+SKILLMAKE=Carpentry 15.0,t_carpentry
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Torches
 DESCRIPTION=Torch (Unlit)
 DUPELIST=0f6b
-
 ON=@Create
-MOREZ=1
+   MOREZ=1
+ON=@Equip
+   SRC.FINDLAYER.2.AMOUNT=1
+   RETURN 0
+ON=@UnEquip
+   IF (<SRC.FINDLAYER.2.AMOUNT> > 1)
+      SRC.FINDLAYER.2.AMOUNT=1
+   ENDIF
+   RETURN 0
 
 [ITEMDEF 0f6b]
 //torch
@@ -554,10 +557,10 @@ DUPEITEM=0f64
 DEFNAME=i_candle_of_love
 TYPE=t_light_lit
 TDATA4=i_candle_of_love
-RESOURCES=i_candle, i_ingot_agapite
 WEIGHT=5
-CATEGORY=Miscellaneous
-SUBSECTION=Virtue Items
+RESOURCES=i_candle, i_ingot_agapite
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Candles
 DESCRIPTION=Candle of Love
 DUPELIST=01c15,01c16
 
@@ -571,18 +574,18 @@ DUPEITEM=01c14
 
 [ITEMDEF 0142c]
 DEFNAME=i_candle_short_lit
+NAME=candle
 TYPE=t_light_lit
 TDATA3=i_candle_short
 TDATA4=0
-RESOURCES=i_candle_short
 WEIGHT=1
+RESOURCES=i_candle_short
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Candles
 DESCRIPTION=Candle (Lit)
 DUPELIST=0142d,0142e
-
 ON=@Create
-MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 0142d]
 //Candle
@@ -594,31 +597,30 @@ DUPEITEM=0142c
 
 [ITEMDEF 0142f]
 DEFNAME=i_candle_short
-WEIGHT=1
+NAME=candle
 TYPE=t_light_out
 TDATA3=i_candle_short_lit
+WEIGHT=1
 RESOURCES=1 i_dipping_stick
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Candles
 DESCRIPTION=Candle (Unlit)
-
 ON=@Create
-MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 01430]
 DEFNAME=i_candle_lg_lit
 TYPE=t_light_lit
 TDATA3=i_candle_lg
 TDATA4=0
-RESOURCES=i_candle_lg
 WEIGHT=1
+RESOURCES=i_candle_lg
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Candles
 DESCRIPTION=Candle (Lit)
 DUPELIST=01431,01432
-
 ON=@Create
-MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 01431]
 //candle
@@ -630,31 +632,31 @@ DUPEITEM=01430
 
 [ITEMDEF 01433]
 DEFNAME=i_candle_lg
-WEIGHT=1
+NAME=candle
 TYPE=t_light_out
 TDATA3=i_candle_lg_lit
+WEIGHT=1
 RESOURCES=1 i_dipping_stick
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Candles
 DESCRIPTION=Candle (Unlit)
-
 ON=@Create
-MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 01434]
 DEFNAME=i_candle_thin_lit
+NAME=candle
 TYPE=t_light_lit
 TDATA3=i_candle_thin
 TDATA4=0
-RESOURCES=i_candle_thin
 WEIGHT=1
+RESOURCES=i_candle_thin
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Candles
 DESCRIPTION=Candle (Lit)
 DUPELIST=01435,01436
-
 ON=@Create
-MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 01435]
 //Candle
@@ -668,60 +670,66 @@ DUPEITEM=01434
 DEFNAME=i_candle_thin
 TYPE=t_light_out
 TDATA3=i_candle_thin_lit
-RESOURCES=1 i_dipping_stick
 WEIGHT=1
+RESOURCES=1 i_dipping_stick
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Candles
 DESCRIPTION=Candle (Burnt Out)
-
 ON=@Create
-MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 01853]
 DEFNAME=i_skull_candle
 TYPE=t_light_out
 TDATA3=i_skull_candle_lit
-RESOURCES=1 i_bone_skull, 1 i_candle
+FLIP=1
+VALUE=25
 WEIGHT=4
+RESOURCES=1 i_bone_skull, 1 i_candle
+SKILLMAKE=Tinkering 53.0,t_tinker_tools,Necromancy 41.1
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Candles
 DESCRIPTION=Skull Candle (Unlit)
 DUPELIST=01857
-
 ON=@Create
-MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 01854]
 DEFNAME=i_skull_candle_lit
 TYPE=t_light_lit
 TDATA3=i_skull_candle
 TDATA4=i_bone_skull
-RESOURCES=i_skull_candle
 WEIGHT=4
+RESOURCES=i_skull_candle
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Candles
 DESCRIPTION=Skull Candle (Lit)
 DUPELIST=01855,01856,01858,01859,0185a
-
 ON=@Create
-MOREZ=1
+   MOREZ=1
 
 [ITEMDEF 01855]
+//skull candle (lit)
 DUPEITEM=01854
 
 [ITEMDEF 01856]
+//skull candle (lit)
 DUPEITEM=01854
 
 [ITEMDEF 01857]
+//skull candle
 DUPEITEM=01853
 
 [ITEMDEF 01858]
+//skull candle (lit)
 DUPEITEM=01854
 
 [ITEMDEF 01859]
+//skull candle (lit)
 DUPEITEM=01854
 
 [ITEMDEF 0185a]
+//skull candle (lit)
 DUPEITEM=01854
 
 [ITEMDEF 0194d]
@@ -746,30 +754,42 @@ DUPEITEM=0194d
 
 [ITEMDEF 019aa]
 DEFNAME=i_brazier_tall
-TYPE=t_fire
-RESOURCES=8 i_ingot_iron
-WEIGHT=16
+TYPE=t_light_lit
+VALUE=463
+WEIGHT=45
+RESOURCES=20 i_ingot_iron,4 i_ingot_copper,1 i_brazier
+SKILLMAKE=Tinkering 48.0,t_tinker_tools
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Brazier
 DESCRIPTION=Brazier
+ON=@Create
+   MOREZ=1
 
 [ITEMDEF 019bb]
 DEFNAME=i_brazier_small
 TYPE=t_fire
-RESOURCES=3 i_ingot_iron
-WEIGHT=6
+VALUE=391
+WEIGHT=28.0
+RESOURCES=5 i_ingot_iron,2 i_ingot_copper,i_brazier
+SKILLMAKE=Tinkering 35.0,t_tinker_tools
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Brazier
-DESCRIPTION=Brazier
+DESCRIPTION=Brazier (small)
+ON=@Create
+   MOREZ=1
 
 [ITEMDEF 01f2b]
 DEFNAME=i_brazier
 TYPE=t_fire
-RESOURCES=10 i_ember, 12 i_ingot_iron
-WEIGHT=15
+VALUE=358
+WEIGHT=21
+RESOURCES=10 i_kindling,10 i_reag_brimstone,5 i_ingot_iron,5 i_ingot_copper
+SKILLMAKE=Tinkering 32.0,t_tinker_tools
 CATEGORY=Decoration - Lightsources
 SUBSECTION=Brazier
 DESCRIPTION=Brazier
+ON=@Create
+   MOREZ=1
 
 [ITEMDEF 02cfd]
 DEFNAME=i_glowing_beetle_red
@@ -873,6 +893,238 @@ WEIGHT=2.0
 CATEGORY=Provisions - Miscellaneous
 SUBSECTION=ML-Misc
 DESCRIPTION=Green Glowing Beetle 2 (unlit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024bb]
+DEFNAME=i_lantern_paper1_lit
+TYPE=t_light_lit
+TDATA3=i_lantern_paper1
+TDATA4=0
+VALUE=39
+WEIGHT=2.0
+RESOURCES=10 i_paper,1 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 1 (lit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024bc]
+DEFNAME=i_lantern_paper1
+TYPE=t_light_out
+TDATA3=i_lantern_paper1_lit
+VALUE=39
+WEIGHT=2.0
+RESOURCES=10 i_paper,1 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 1 (unlit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024bd]
+DEFNAME=i_lantern_paper2_lit
+TYPE=t_light_lit
+TDATA3=i_lantern_paper2
+TDATA4=0
+VALUE=39
+WEIGHT=2.0
+RESOURCES=10 i_paper,1 i_log_bamboo,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 2 (lit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024be]
+DEFNAME=i_lantern_paper2
+TYPE=t_light_out
+TDATA3=i_lantern_paper2_lit
+VALUE=39
+WEIGHT=2.0
+RESOURCES=10 i_paper,1 i_log_bamboo,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 2 (unlit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024bf]
+DEFNAME=i_lantern_paper3_lit
+TYPE=t_light_lit
+TDATA3=i_lantern_paper3
+TDATA4=0
+VALUE=59
+WEIGHT=2.0
+RESOURCES=20 i_paper,1 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 3 (lit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024c0]
+DEFNAME=i_lantern_paper3
+TYPE=t_light_out
+TDATA3=i_lantern_paper3_lit
+VALUE=59
+WEIGHT=2.0
+RESOURCES=20 i_paper,1 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 3 (unlit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024c1]
+DEFNAME=i_lantern_paper4_lit
+TYPE=t_light_lit
+TDATA3=i_lantern_paper4
+TDATA4=0
+VALUE=89
+WEIGHT=8.0
+RESOURCES=20 i_paper,5 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 4 (lit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024c2]
+DEFNAME=i_lantern_paper4
+TYPE=t_light_out
+TDATA3=i_lantern_paper4_lit
+VALUE=89
+WEIGHT=8.0
+RESOURCES=20 i_paper,5 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 4 (unlit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024c3]
+DEFNAME=i_lantern_paper4b_lit
+TYPE=t_light_lit
+TDATA3=i_lantern_paper4b
+TDATA4=0
+VALUE=89
+WEIGHT=8.0
+RESOURCES=20 i_paper,5 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 4b (lit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024c4]
+DEFNAME=i_lantern_paper4b
+TYPE=t_light_out
+TDATA3=i_lantern_paper4b_lit
+VALUE=89
+WEIGHT=8.0
+RESOURCES=20 i_paper,5 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 4b (unlit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024c5]
+DEFNAME=i_lantern_paper5_lit
+TYPE=t_light_lit
+TDATA3=i_lantern_paper5
+TDATA4=0
+VALUE=89
+WEIGHT=8.0
+RESOURCES=20 i_paper,5 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 5 (lit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024c6]
+DEFNAME=i_lantern_paper5
+TYPE=t_light_out
+TDATA3=i_lantern_paper5_lit
+VALUE=89
+WEIGHT=8.0
+RESOURCES=20 i_paper,5 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 5 (unlit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024c7]
+DEFNAME=i_lantern_paper5b_lit
+TYPE=t_light_lit
+TDATA3=i_lantern_paper5b
+TDATA4=0
+VALUE=89
+WEIGHT=8.0
+RESOURCES=20 i_paper,5 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 5b (lit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024c8]
+DEFNAME=i_lantern_paper5b
+TYPE=t_light_out
+TDATA3=i_lantern_paper5b_lit
+VALUE=89
+WEIGHT=8.0
+RESOURCES=20 i_paper,5 i_ingot_iron,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 5b (unlit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024c9]
+DEFNAME=i_lantern_paper6_lit
+TYPE=t_light_lit
+TDATA3=i_lantern_paper6
+TDATA4=0
+VALUE=59
+WEIGHT=4.0
+RESOURCES=20 i_paper,1 i_log_bamboo,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 6 (lit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 024ca]
+DEFNAME=i_lantern_paper6
+TYPE=t_light_out
+TDATA3=i_lantern_paper6_lit
+VALUE=59
+WEIGHT=4.0
+RESOURCES=20 i_paper,1 i_log_bamboo,1 i_oil_flask
+SKILLMAKE=Carpentry 49.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Japanese
+DESCRIPTION=Paper Lantern 6 (unlit)
 ON=@Create
    MOREZ=1
 

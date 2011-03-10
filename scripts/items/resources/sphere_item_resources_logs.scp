@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+//FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -22,103 +22,123 @@ VERSION=0.56b
 [ITEMDEF 01bdd]
 DEFNAME=i_log
 NAME=log%s
-VALUE=1
 TYPE=t_log
+//FLIP=1
+VALUE=1
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
 DESCRIPTION=Log
 DUPELIST=01bde,01bdf,01be0,01be1,01be2
 
+[ITEMDEF 01bde]
+DUPEITEM=01bdd
+DESCRIPTION=Logs (3) (SE)
+
+[ITEMDEF 01bdf]
+DUPEITEM=01bdd
+DESCRIPTION=Logs (Many) (SE)
+
+[ITEMDEF 01be0]
+DUPEITEM=01bdd
+DESCRIPTION=Log (SW)
+
+[ITEMDEF 01be1]
+DUPEITEM=01bdd
+DESCRIPTION=Logs (3) (SW)
+
+[ITEMDEF 01be2]
+DUPEITEM=01bdd
+DESCRIPTION=Logs (Many) (SE)
+
+
 [ITEMDEF i_log_oak]
 ID=i_log
 NAME=oak log%s
-VALUE=5
 TYPE=t_log
+VALUE=5
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
 DESCRIPTION=Oak Log
-
 ON=@Create
-COLOR=color_o_oak
+   COLOR=color_o_oak
 
 [ITEMDEF i_log_ash]
 ID=i_log
 NAME=ash log%s
-VALUE=5
 TYPE=t_log
+VALUE=5
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
 DESCRIPTION=Ash Log
-
 ON=@Create
-COLOR=color_o_ash
+   COLOR=color_o_ash
 
 [ITEMDEF i_log_yew]
 ID=i_log
 NAME=yew log%s
-VALUE=5
 TYPE=t_log
+VALUE=5
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
 DESCRIPTION=Yew Log
-
 ON=@Create
-COLOR=color_o_yew
+   COLOR=color_o_yew
 
 [ITEMDEF i_log_heartwood]
 ID=i_log
 NAME=heartwood log%s
-VALUE=5
 TYPE=t_log
+VALUE=5
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
 DESCRIPTION=Heartwood Log
-
 ON=@Create
-COLOR=color_o_heartwood
+   COLOR=color_o_heartwood
 
 [ITEMDEF i_log_bloodwood]
 ID=i_log
 NAME=bloodwood log%s
-VALUE=5
 TYPE=t_log
+VALUE=5
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
 DESCRIPTION=Bloodwood Log
-
 ON=@Create
-COLOR=color_o_bloodwood
+   COLOR=color_o_bloodwood
 
 [ITEMDEF i_log_frostwood]
 ID=i_log
 NAME=frostwood log%s
-VALUE=5
 TYPE=t_log
+VALUE=5
 WEIGHT=2
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
 DESCRIPTION=Frostwood Log
-
 ON=@Create
-COLOR=color_o_frostwood
+   COLOR=color_o_frostwood
+
+
+///////////////////////////////////////////////////////////////
+//////// CUSTOM LOGS
+///////////////////////////////////////////////////////////////
 
 [ITEMDEF i_log_bamboo]
 ID=i_log
 NAME=bamboo
 TYPE=t_log
 VALUE=2
-WEIGHT=1.0
+WEIGHT=1
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Logs
 DESCRIPTION=Bamboo Log
 ON=@Create
    COLOR=098
 
-
-[eof]
+[EOF]

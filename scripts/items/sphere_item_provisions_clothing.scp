@@ -1265,7 +1265,7 @@ DUPEITEM=01517
 
 [ITEMDEF 01ffd]
 DEFNAME=i_surcoat
-NAME=Surcoat
+NAME=surcoat
 TYPE=t_clothing
 DYE=1
 FLIP=1
@@ -1888,7 +1888,7 @@ ON=@unequip
 
 [ITEMDEF 0204e]
 DEFNAME=i_deathshroud
-NAME=Death Shroud
+NAME=death shroud
 TYPE=t_clothing
 CATEGORY=Provisions - GM Items
 SUBSECTION=Special Items

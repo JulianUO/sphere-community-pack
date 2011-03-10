@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+//FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -18,96 +18,111 @@ VERSION=0.56b
 //////// OSI BOARDS
 ///////////////////////////////////////////////////////////////
 // This are the boards used in OSI.
+
 [ITEMDEF 01bd7]
-//DEFNAME2=lumber
 DEFNAME=i_board
-RESOURCES=i_log
-SKILLMAKE=1 carpentry, t_carpentry
+TYPE=t_board
+//FLIP=1
 VALUE=2
 WEIGHT=1
-TYPE=T_BOARD
+RESOURCES=i_log
+SKILLMAKE=1 carpentry, t_carpentry
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Boards
 DESCRIPTION=Board
 DUPELIST=01bd8,01bd9,01bda,01bdb,01bdc
 
+[ITEMDEF 01bd8]
+DUPEITEM=01bd7
+DESCRIPTION=Boards (3)
+
+[ITEMDEF 01bd9]
+DUPEITEM=01bd7
+DESCRIPTION=Boards (8)
+
+[ITEMDEF 01bda]
+DUPEITEM=01bd7
+DESCRIPTION=Board
+
+[ITEMDEF 01bdb]
+DUPEITEM=01bd7
+DESCRIPTION=Boards (3)
+
+[ITEMDEF 01bdc]
+DUPEITEM=01bd7
+DESCRIPTION=Boards (8)
+
+
 [ITEMDEF i_board_oak]
 ID=i_board
 NAME=oak board%s
+TYPE=t_board
 VALUE=5
-TYPE=T_board
 WEIGHT=1
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Boards
 DESCRIPTION=Oak Board
-
 ON=@Create
-COLOR=color_o_oak
+   COLOR=color_o_oak
 
 [ITEMDEF i_board_ash]
 ID=i_board
 NAME=ash board%s
+TYPE=t_board
 VALUE=5
-TYPE=T_board
 WEIGHT=1
-
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Boards
 DESCRIPTION=Ash Board
-
 ON=@Create
-COLOR=color_o_ash
+   COLOR=color_o_ash
 
 [ITEMDEF i_board_yew]
 ID=i_board
 NAME=yew board%s
+TYPE=t_board
 VALUE=5
-TYPE=T_board
 WEIGHT=1
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Boards
 DESCRIPTION=Yew Board
-
 ON=@Create
-COLOR=color_o_yew
+   COLOR=color_o_yew
 
 [ITEMDEF i_board_heartwood]
 ID=i_board
 NAME=heartwood board%s
+TYPE=t_board
 VALUE=5
-TYPE=T_board
 WEIGHT=1
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Boards
 DESCRIPTION=Heartwood Board
-
 ON=@Create
-COLOR=color_o_heartwood 
+   COLOR=color_o_heartwood 
 
 [ITEMDEF i_board_bloodwood]
 ID=i_board
 NAME=bloodwood board%s
+TYPE=t_board
 VALUE=5
-TYPE=T_board
 WEIGHT=1
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Boards
 DESCRIPTION=Bloodwood Board
-
 ON=@Create
-COLOR=color_o_bloodwood 
+   COLOR=color_o_bloodwood 
 
 [ITEMDEF i_board_frostwood]
 ID=i_board
 NAME=frostwood board%s
+TYPE=t_board
 VALUE=5
-TYPE=T_board
 WEIGHT=1
 CATEGORY=Resources - Lumberjacking
 SUBSECTION=Boards
 DESCRIPTION=Frostwood Board
-
 ON=@Create
-COLOR=color_o_frostwood 
+   COLOR=color_o_frostwood 
 
-[eof]
+[EOF]
