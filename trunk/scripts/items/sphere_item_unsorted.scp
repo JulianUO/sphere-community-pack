@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, March 5, 2011
+// FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 
 
@@ -100,6 +100,7 @@ ON=@Create
 
 [ITEMDEF 01950]
 DEFNAME=i_dartboard_mongbat
+NAME=mongbat dartboard
 //FLIP=1
 TYPE=t_archery_butte
 VALUE=75
@@ -172,6 +173,7 @@ DESCRIPTION=Large Worldgem Bit
 
 [ITEMDEF 01f23]
 DEFNAME=i_deed2
+NAME=deed
 TYPE=t_deed
 WEIGHT=0.2
 RESOURCES=1 i_paper,1 i_wax_seal
@@ -194,6 +196,7 @@ DESCRIPTION=NonGen (Memory) Object
 
 [ITEMDEF 0207d]
 //unnecessary copy of item 0db?
+NAME=pillar
 DEFNAME=i_pillar
 
 [ITEMDEF 02198]
@@ -745,6 +748,7 @@ DESCRIPTION=Flowers
 
 [ITEMDEF 02851]
 DEFNAME=i_display_swords_red
+NAME=sword display
 TYPE=t_normal
 FLIP=1
 WEIGHT=38.0
@@ -760,6 +764,7 @@ DUPEITEM=02851
 
 [ITEMDEF 02853]
 DEFNAME=i_display_swords_black
+NAME=sword display
 TYPE=t_normal
 FLIP=1
 WEIGHT=38.0
@@ -775,6 +780,7 @@ DUPEITEM=02853
 
 [ITEMDEF 02855]
 DEFNAME=i_display_swords_white
+NAME=sword display
 TYPE=t_normal
 FLIP=1
 WEIGHT=41.0
@@ -791,6 +797,7 @@ DUPEITEM=02855
 
 [ITEMDEF 0291c]
 DEFNAME=i_display_swords_blue
+NAME=sword display
 TYPE=t_normal
 FLIP=1
 WEIGHT=38.0
@@ -806,6 +813,7 @@ DUPEITEM=0291c
 
 [ITEMDEF 0291e]
 DEFNAME=i_display_swords_yellow
+NAME=sword display
 TYPE=t_normal
 FLIP=1
 WEIGHT=38.0
@@ -871,6 +879,7 @@ DUPEITEM=0295e
 
 [ITEMDEF 02a2a]
 DEFNAME=i_sword_display_red2
+NAME=sword display
 TYPE=t_normal
 WEIGHT=38.0
 RESOURCES=10 i_log,1 i_daisho
@@ -880,6 +889,7 @@ DESCRIPTION=Red Sword Display 2
 
 
 [ITEMDEF 02a45]
+NAME=sword display
 TYPE=t_normal
 FLIP=1
 WEIGHT=38.0
@@ -894,6 +904,7 @@ DUPELIST=02a46
 DUPEITEM=02a45
 
 [ITEMDEF 02a47]
+NAME=sword display
 TYPE=t_normal
 FLIP=1
 WEIGHT=38.0
@@ -908,6 +919,7 @@ DUPELIST=02a48
 DUPEITEM=02a47
 
 [ITEMDEF 02a49]
+NAME=sword display
 TYPE=t_normal
 FLIP=1
 WEIGHT=38.0
@@ -922,6 +934,7 @@ DUPELIST=02a4a
 DUPEITEM=02a49
 
 [ITEMDEF 02a4b]
+NAME=sword display
 TYPE=t_normal
 FLIP=1
 WEIGHT=38.0

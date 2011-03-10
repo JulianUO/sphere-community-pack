@@ -3,13 +3,13 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 21, 2011
+// FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 
 
 [ITEMDEF 01e2e]
 DEFNAME=i_dartboard
-NAME=Dartboard
+NAME=dartboard
 TYPE=t_normal
 SKILLMAKE=Carpentry 15.7, t_carpentry
 RESOURCES=5 i_log
@@ -24,7 +24,7 @@ DUPEITEM=01e2e
 
 [ITEMDEF 024cb]
 DEFNAME=i_shoji_screen
-NAME=Shoji Screen
+NAME=shoji screen
 TYPE=t_normal
 FLIP=1
 WEIGHT=10
@@ -41,7 +41,7 @@ DUPEITEM=024cb
 
 [ITEMDEF 024cd]
 DEFNAME=i_shoji_screen2
-NAME=Shoji Screen
+NAME=shoji screen
 TYPE=t_normal
 FLIP=1
 VALUE=130
@@ -101,7 +101,7 @@ DUPEITEM=024d2
 
 [ITEMDEF 02ff4]
 DEFNAME=i_parrot_perch
-NAME=Parrot Perch
+NAME=parrot perch
 TYPE=t_parrot_perch
 SKILLMAKE=Carpentry 50.0, t_carpentry
 RESOURCES=50 i_log

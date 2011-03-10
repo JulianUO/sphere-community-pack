@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 14, 2011
+// FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 020c8]
 DEFNAME=i_pet_ettin_2
@@ -667,7 +668,7 @@ DESCRIPTION=Female Elf
 
 [ITEMDEF 0210e]
 DEFNAME=i_pet_abyssal_infernal
-NAME=Abyssal Infernal
+NAME=abyssal infernal
 TYPE=t_figurine
 TDATA3=c_abyssal_infernal
 CATEGORY=Miscellaneous
@@ -676,7 +677,7 @@ DESCRIPTION=Abyssal Infernal
 
 [ITEMDEF 0210f]
 DEFNAME=i_pet_beetle_iron
-NAME=Iron Beetle
+NAME=iron beetle
 TYPE=t_figurine
 TDATA3=c_beetle_iron
 CATEGORY=Miscellaneous
@@ -685,7 +686,7 @@ DESCRIPTION=Iron Beetle
 
 [ITEMDEF 02110]
 DEFNAME=i_pet_boura
-NAME=Boura
+NAME=boura
 TYPE=t_figurine
 TDATA3=c_boura
 CATEGORY=Miscellaneous
@@ -694,7 +695,7 @@ DESCRIPTION=Boura
 
 [ITEMDEF 02111]
 DEFNAME=i_pet_chicken_lizard
-NAME=Chicken Lizard
+NAME=chicken lizard
 TYPE=t_figurine
 TDATA3=c_chicken_lizard
 CATEGORY=Miscellaneous
@@ -703,7 +704,7 @@ DESCRIPTION=Chicken Lizard
 
 [ITEMDEF 02112]
 DEFNAME=i_pet_scorpion_clockwork
-NAME=Clockwork Scorpion
+NAME=clockwork scorpion
 TYPE=t_figurine
 TDATA3=c_scorpion_clockwork
 CATEGORY=Miscellaneous
@@ -712,7 +713,7 @@ DESCRIPTION=Clockwork Scorpion
 
 [ITEMDEF 02113]
 DEFNAME=i_pet_dragon_fairy
-NAME=Fairy Dragon
+NAME=fairy dragon
 TYPE=t_figurine
 TDATA3=c_dragon_fairy
 CATEGORY=Miscellaneous
@@ -721,7 +722,7 @@ DESCRIPTION=Fairy Dragon
 
 [ITEMDEF 02114]
 DEFNAME=i_pet_dragon_wolf
-NAME=Dragon Wolf
+NAME=dragon wolf
 TYPE=t_figurine
 TDATA3=c_dragon_wolf
 CATEGORY=Miscellaneous
@@ -730,7 +731,7 @@ DESCRIPTION=Dragon Wolf
 
 [ITEMDEF 02115]
 DEFNAME=i_pet_elem_lava
-NAME=Lava Elemental
+NAME=lava elemental
 TYPE=t_figurine
 TDATA3=c_elemental_lava
 CATEGORY=Miscellaneous
@@ -739,7 +740,7 @@ DESCRIPTION=Lava Elemental
 
 [ITEMDEF 02116]
 DEFNAME=i_pet_maddening_horror
-NAME=Maddening Horror
+NAME=maddening horror
 TYPE=t_figurine
 TDATA3=c_maddening_horror
 CATEGORY=Miscellaneous
@@ -748,7 +749,7 @@ DESCRIPTION=Maddening Horror
 
 [ITEMDEF 02117]
 DEFNAME=i_pet_vollem
-NAME=Vollem
+NAME=vollem
 TYPE=t_figurine
 TDATA3=c_vollem
 CATEGORY=Miscellaneous
@@ -1048,7 +1049,7 @@ DESCRIPTION=Ostard (forest 2)
 
 [ITEMDEF 02138]
 DEFNAME=i_pet_goblin_gray
-NAME=Gray Goblin
+NAME=gray goblin
 TYPE=t_figurine
 TDATA3=c_goblin_gray
 CATEGORY=Miscellaneous
@@ -1057,7 +1058,7 @@ DESCRIPTION=Gray Goblin
 
 [ITEMDEF 02139]
 DEFNAME=i_pet_goblin_green
-NAME=Green Goblin
+NAME=green goblin
 TYPE=t_figurine
 TDATA3=c_goblin_green
 CATEGORY=Miscellaneous
@@ -1066,7 +1067,7 @@ DESCRIPTION=Green Goblin
 
 [ITEMDEF 0213b]
 DEFNAME=i_pet_kepetch
-NAME=Kepetch
+NAME=kepetch
 TYPE=t_figurine
 TDATA3=c_kepetch
 CATEGORY=Miscellaneous
@@ -1075,7 +1076,7 @@ DESCRIPTION=Kepetch
 
 [ITEMDEF 0213c]
 DEFNAME=i_pet_kepetch_shorn
-NAME=Kepetch
+NAME=kepetch
 TYPE=t_figurine
 TDATA3=c_kepetch_shorn
 CATEGORY=Miscellaneous
@@ -1093,7 +1094,7 @@ DESCRIPTION=Medusa
 
 [ITEMDEF 0213e]
 DEFNAME=i_pet_raptor
-NAME=Raptor
+NAME=raptor
 TYPE=t_figurine
 TDATA3=c_raptor
 CATEGORY=Miscellaneous
@@ -1111,7 +1112,7 @@ DESCRIPTION=Rotworm
 
 [ITEMDEF 02151]
 DEFNAME=i_pet_skree
-NAME=Skree
+NAME=skree
 TYPE=t_figurine
 TDATA3=c_skree
 CATEGORY=Miscellaneous
@@ -2093,7 +2094,7 @@ DESCRIPTION=Special (Warlord Kabur)
 
 [ITEMDEF 02602]
 DEFNAME=i_pet_solen_queen
-NAME=fire ant queen
+NAME=solen queen
 TYPE=t_figurine
 TDATA3=c_solen_queen
 CATEGORY=Miscellaneous
@@ -2102,7 +2103,7 @@ DESCRIPTION=Solen Queen
 
 [ITEMDEF 02603]
 DEFNAME=i_pet_solen_warrior
-NAME=fire ant warrior
+NAME=solen warrior
 TYPE=t_figurine
 TDATA3=c_solen_warrior
 CATEGORY=Miscellaneous
@@ -2111,7 +2112,7 @@ DESCRIPTION=Solen Warrior
 
 [ITEMDEF 02604]
 DEFNAME=i_pet_solen_worker
-NAME=fire ant worker
+NAME=solen worker
 TYPE=t_figurine
 TDATA3=c_solen_worker
 CATEGORY=Miscellaneous
@@ -2548,7 +2549,7 @@ DESCRIPTION=Mound of Maggots
 
 [ITEMDEF 02634]
 DEFNAME=i_pet_dragon_stygian_red
-NAME=Red Stygian Dragon
+NAME=red stygian dragon
 TYPE=t_figurine
 TDATA3=c_dragon_stygian_red
 CATEGORY=Miscellaneous
@@ -2557,7 +2558,7 @@ DESCRIPTION=Stygian Dragon (red)
 
 [ITEMDEF 02635]
 DEFNAME=i_pet_dragon_stygian_blue
-NAME=Blue Stygian Dragon
+NAME=blue stygian dragon
 TYPE=t_figurine
 TDATA3=c_dragon_stygian_blue
 CATEGORY=Miscellaneous
@@ -2775,7 +2776,7 @@ DESCRIPTION=Lady Melisande
 
 [ITEMDEF 02d85]
 DEFNAME=i_pet_monsterous_interred
-NAME=Monsterous Interred
+NAME=monsterous interred
 TYPE=t_figurine
 TDATA3=c_monstrous_interred_grizzle
 CATEGORY=Miscellaneous
@@ -2793,7 +2794,7 @@ DESCRIPTION=Monsterous Interred Grizzle
 
 [ITEMDEF 02d87]
 DEFNAME=i_pet_shimmering_effusion
-NAME=Shimmering Effusion
+NAME=shimmering effusion
 TYPE=t_figurine
 TDATA3=c_shimmering_effusion
 CATEGORY=Miscellaneous
@@ -2802,7 +2803,7 @@ DESCRIPTION=Shimmering Effusion
 
 [ITEMDEF 02d88]
 DEFNAME=i_pet_tormented_minotaur
-NAME=Tormented Minotaur
+NAME=tormented minotaur
 TYPE=t_figurine
 TDATA3=c_tormented_minotaur
 CATEGORY=Miscellaneous
@@ -2811,7 +2812,7 @@ DESCRIPTION=Tormented Minotaur
 
 [ITEMDEF 02d89]
 DEFNAME=i_pet_minotaur
-NAME=Minotaur
+NAME=minotaur
 TYPE=t_figurine
 TDATA3=c_minotaur
 CATEGORY=Miscellaneous
@@ -2820,7 +2821,7 @@ DESCRIPTION=Minotaur
 
 [ITEMDEF 02d8a]
 DEFNAME=i_pet_changeling
-NAME=Changeling
+NAME=changeling
 TYPE=t_figurine
 TDATA3=c_changeling
 CATEGORY=Miscellaneous
@@ -2829,7 +2830,7 @@ DESCRIPTION=Changeling
 
 [ITEMDEF 02d8b]
 DEFNAME=i_pet_hydra
-NAME=Hydra
+NAME=hydra
 TYPE=t_figurine
 TDATA3=c_hydra
 CATEGORY=Miscellaneous
@@ -2838,7 +2839,7 @@ DESCRIPTION=Hydra
 
 [ITEMDEF 02d8c]
 DEFNAME=i_pet_dryad
-NAME=Dryad
+NAME=dryad
 TYPE=t_figurine
 TDATA3=c_dryad
 CATEGORY=Miscellaneous
@@ -2847,7 +2848,7 @@ DESCRIPTION=Dryad
 
 [ITEMDEF 02d8d]
 DEFNAME=i_pet_troglodyte
-NAME=Troglodyte
+NAME=troglodyte
 TYPE=t_figurine
 TDATA3=c_troglodyte
 CATEGORY=Miscellaneous
@@ -2874,7 +2875,7 @@ DESCRIPTION=Trodlodyte
 
 [ITEMDEF 02d90]
 DEFNAME=i_pet_satyr
-NAME=Satyr
+NAME=satyr
 TYPE=t_figurine
 TDATA3=c_satyr
 CATEGORY=Miscellaneous
@@ -2892,7 +2893,7 @@ DESCRIPTION=Satyr
 
 [ITEMDEF 02d92]
 DEFNAME=i_pet_fetid_essence
-NAME=Fetid Essence
+NAME=fetid essence
 TYPE=t_figurine
 TDATA3=c_fetid_essence
 CATEGORY=Miscellaneous
@@ -2901,7 +2902,7 @@ DESCRIPTION=Fetid Essence
 
 [ITEMDEF 02d93]
 DEFNAME=i_pet_mantra_effervescent
-NAME=Mantra Effervescent
+NAME=mantra effervescent
 TYPE=t_figurine
 TDATA3=c_mantra_effervescent
 CATEGORY=Miscellaneous
@@ -2910,7 +2911,7 @@ DESCRIPTION=Mantra Effervescent
 
 [ITEMDEF 02d94]
 DEFNAME=i_pet_corporeal_brume
-NAME=Corporeal Brume
+NAME=corporeal brume
 TYPE=t_figurine
 TDATA3=c_corporeal_brume
 CATEGORY=Miscellaneous
@@ -2919,7 +2920,7 @@ DESCRIPTION=Corporeal Brume
 
 [ITEMDEF 02d95]
 DEFNAME=i_pet_reptalon
-NAME=Reptalon
+NAME=reptalon
 TYPE=t_figurine
 TDATA3=c_reptalon
 VALUE={2650 2700}
@@ -2929,7 +2930,7 @@ DESCRIPTION=Reptalon
 
 [ITEMDEF 02d96]
 DEFNAME=i_pet_cu_sidhe
-NAME=Cu Sidhe
+NAME=cu sidhe
 TYPE=t_figurine
 TDATA3=c_cu_sidhe
 VALUE={1500 1550}
@@ -2939,7 +2940,7 @@ DESCRIPTION=Cu Sidhe
 
 [ITEMDEF 02d97]
 DEFNAME=i_pet_squirrel
-NAME=Squirrel
+NAME=squirrel
 TYPE=t_figurine
 TDATA3=c_squirrel
 VALUE={25 50}
@@ -2949,7 +2950,7 @@ DESCRIPTION=Squirrel
 
 [ITEMDEF 02d98]
 DEFNAME=i_pet_ferret
-NAME=Ferret
+NAME=ferret
 TYPE=t_figurine
 TDATA3=c_ferret
 VALUE={25 50}
@@ -2959,7 +2960,7 @@ DESCRIPTION=Ferret
 
 [ITEMDEF 02d99]
 DEFNAME=i_pet_minotaur_scout
-NAME=Minotaur Scout
+NAME=minotaur scout
 TYPE=t_figurine
 TDATA3=c_minotaur_scout
 CATEGORY=Miscellaneous
@@ -2968,7 +2969,7 @@ DESCRIPTION=Minotaur Scout
 
 [ITEMDEF 02d9a]
 DEFNAME=i_pet_minotaur_captain
-NAME=Minotaur Captain
+NAME=minotaur captain
 TYPE=t_figurine
 TDATA3=c_minotaur_captain
 CATEGORY=Miscellaneous
@@ -2977,7 +2978,7 @@ DESCRIPTION=Minotaur Captain
 
 [ITEMDEF 02d9b]
 DEFNAME=i_pet_parrot
-NAME=Parrot
+NAME=parrot
 TYPE=t_figurine
 TDATA3=c_parrot
 VALUE={25 50}
@@ -2987,7 +2988,7 @@ DESCRIPTION=Parrot
 
 [ITEMDEF 02d9c]
 DEFNAME=i_pet_darknight_creeper2
-NAME=Darknight Creeper
+NAME=darknight creeper
 TYPE=t_figurine
 TDATA3=c_darknight_creeper
 CATEGORY=Miscellaneous
@@ -2996,7 +2997,7 @@ DESCRIPTION=Darknight Creeper
 
 [ITEMDEF 0422d]
 DEFNAME=i_pet_gargoyle_male
-NAME=Gargoyle
+NAME=gargoyle
 TYPE=t_figurine
 TDATA3=c_gargoyle_male
 CATEGORY=Miscellaneous
@@ -3005,7 +3006,7 @@ DESCRIPTION=Gargoyle (male)
 
 [ITEMDEF 0422e]
 DEFNAME=i_pet_gargoyle_female
-NAME=Gargoyle
+NAME=gargoyle
 TYPE=t_figurine
 TDATA3=c_gargoyle_female
 CATEGORY=Miscellaneous
@@ -3014,7 +3015,7 @@ DESCRIPTION=Gargoyle (female)
 
 [ITEMDEF 0422f]
 DEFNAME=i_pet_phoenix_red
-NAME=Phoenix
+NAME=phoenix
 TYPE=t_figurine
 TDATA3=c_phoenix
 CATEGORY=Miscellaneous
@@ -3023,7 +3024,7 @@ DESCRIPTION=Phoenix (red)
 
 [ITEMDEF 04230]
 DEFNAME=i_pet_phoenix_ash
-NAME=Phoenix
+NAME=phoenix
 TYPE=t_figurine
 TDATA3=c_phoenix
 CATEGORY=Miscellaneous
@@ -3032,7 +3033,7 @@ DESCRIPTION=Phoenix (ash)
 
 [ITEMDEF 04287]
 DEFNAME=i_pet_abyssal_infernal_2
-NAME=Abyssal Infernal
+NAME=abyssal infernal
 TYPE=t_figurine
 TDATA3=c_abyssal_infernal
 CATEGORY=Miscellaneous
@@ -3041,7 +3042,7 @@ DESCRIPTION=Abyssal Infernal (frame)
 
 [ITEMDEF 04288]
 DEFNAME=i_pet_beetle_iron_2
-NAME=Iron Beetle
+NAME=iron beetle
 TYPE=t_figurine
 TDATA3=c_beetle_iron
 CATEGORY=Miscellaneous
@@ -3050,7 +3051,7 @@ DESCRIPTION=Iron Beetle (frame)
 
 [ITEMDEF 04289]
 DEFNAME=i_pet_boura_2
-NAME=Boura
+NAME=boura
 TYPE=t_figurine
 TDATA3=c_boura
 CATEGORY=Miscellaneous
@@ -3059,7 +3060,7 @@ DESCRIPTION=Boura (frame)
 
 [ITEMDEF 0428a]
 DEFNAME=i_pet_chicken_lizard_2
-NAME=Chicken Lizard
+NAME=chicken lizard
 TYPE=t_figurine
 TDATA3=c_chicken_lizard
 CATEGORY=Miscellaneous
@@ -3068,7 +3069,7 @@ DESCRIPTION=Chicken Lizard (frame)
 
 [ITEMDEF 0428b]
 DEFNAME=i_pet_scorpion_clockwork_2
-NAME=Clockwork Scorpion
+NAME=clockwork scorpion
 TYPE=t_figurine
 TDATA3=c_scorpion_clockwork
 CATEGORY=Miscellaneous
@@ -3077,7 +3078,7 @@ DESCRIPTION=Clockwork Scorpion (frame)
 
 [ITEMDEF 0428c]
 DEFNAME=i_pet_dragon_fairy_2
-NAME=Fairy Dragon
+NAME=fairy dragon
 TYPE=t_figurine
 TDATA3=c_dragon_fairy
 CATEGORY=Miscellaneous
@@ -3086,7 +3087,7 @@ DESCRIPTION=Fairy Dragon (frame)
 
 [ITEMDEF 0428d]
 DEFNAME=i_pet_dragon_wolf_2
-NAME=Dragon Wolf
+NAME=dragon wolf
 TYPE=t_figurine
 TDATA3=c_dragon_wolf
 CATEGORY=Miscellaneous
@@ -3095,7 +3096,7 @@ DESCRIPTION=Dragon Wolf (frame)
 
 [ITEMDEF 0428e]
 DEFNAME=i_pet_elem_lava_2
-NAME=Lava Elemental
+NAME=lava elemental
 TYPE=t_figurine
 TDATA3=c_elemental_lava
 CATEGORY=Miscellaneous
@@ -3104,7 +3105,7 @@ DESCRIPTION=Lava Elemental (frame)
 
 [ITEMDEF 0428f]
 DEFNAME=i_pet_maddening_horror_2
-NAME=Maddening Horror
+NAME=maddening horror
 TYPE=t_figurine
 TDATA3=c_maddening_horror
 CATEGORY=Miscellaneous
@@ -3113,7 +3114,7 @@ DESCRIPTION=Maddening Horror (frame)
 
 [ITEMDEF 04290]
 DEFNAME=i_pet_vollem_2
-NAME=Vollem
+NAME=vollem
 TYPE=t_figurine
 TDATA3=c_vollem
 CATEGORY=Miscellaneous
@@ -3122,7 +3123,7 @@ DESCRIPTION=Vollem (frame)
 
 [ITEMDEF 04291]
 DEFNAME=i_pet_gargoyle_undead
-NAME=Undead Gargoyle
+NAME=undead gargoyle
 TYPE=t_figurine
 TDATA3=c_gargoyle_undead
 CATEGORY=Miscellaneous
@@ -3131,7 +3132,7 @@ DESCRIPTION=Undead Gargoyle
 
 [ITEMDEF 04292]
 DEFNAME=i_pet_goblin_green_2
-NAME=Green Goblin
+NAME=green goblin
 TYPE=t_figurine
 TDATA3=c_goblin_green
 CATEGORY=Miscellaneous
@@ -3140,7 +3141,7 @@ DESCRIPTION=Green Goblin (frame)
 
 [ITEMDEF 04293]
 DEFNAME=i_pet_goblin_gray_2
-NAME=Gray Goblin
+NAME=gray goblin
 TYPE=t_figurine
 TDATA3=c_goblin_gray
 CATEGORY=Miscellaneous
@@ -3158,7 +3159,7 @@ DESCRIPTION=Gremlin
 
 [ITEMDEF 04295]
 DEFNAME=i_pet_homunculus
-NAME=Homunculus
+NAME=homunculus
 TYPE=t_figurine
 TDATA3=c_homunculus
 CATEGORY=Miscellaneous
@@ -3167,7 +3168,7 @@ DESCRIPTION=Homunculus
 
 [ITEMDEF 04296]
 DEFNAME=i_pet_kepetch_2
-NAME=Kepetch
+NAME=kepetch
 TYPE=t_figurine
 TDATA3=c_kepetch
 CATEGORY=Miscellaneous
@@ -3176,7 +3177,7 @@ DESCRIPTION=Kepetch
 
 [ITEMDEF 04297]
 DEFNAME=i_pet_kepetch_2_shorn
-NAME=Shorn Kepetch
+NAME=shorn kepetch
 TYPE=t_figurine
 TDATA3=c_kepetch_shorn
 CATEGORY=Miscellaneous
@@ -3185,7 +3186,7 @@ DESCRIPTION=Kepetch (shorn)
 
 [ITEMDEF 04298]
 DEFNAME=i_pet_medusa_2
-NAME=Medusa
+NAME=medusa
 TYPE=t_figurine
 TDATA3=c_medusa
 CATEGORY=Miscellaneous
@@ -3194,7 +3195,7 @@ DESCRIPTION=Medusa (frame)
 
 [ITEMDEF 04299]
 DEFNAME=i_pet_mimic
-NAME=Mimic
+NAME=mimic
 TYPE=t_figurine
 TDATA3=c_mimic
 CATEGORY=Miscellaneous
@@ -3203,7 +3204,7 @@ DESCRIPTION=Mimic
 
 [ITEMDEF 0429a]
 DEFNAME=i_pet_liche_primeval
-NAME=Primeval Liche
+NAME=primeval liche
 TYPE=t_figurine
 TDATA3=c_liche_primeval
 CATEGORY=Miscellaneous
@@ -3212,7 +3213,7 @@ DESCRIPTION=Primeval Liche
 
 [ITEMDEF 0429b]
 DEFNAME=i_pet_raptor_2
-NAME=Raptor
+NAME=raptor
 TYPE=t_figurine
 TDATA3=c_raptor
 CATEGORY=Miscellaneous
@@ -3230,7 +3231,7 @@ DESCRIPTION=Rising Colossus
 
 [ITEMDEF 0429d]
 DEFNAME=i_pet_rotworm_2
-NAME=Rotworm
+NAME=rotworm
 TYPE=t_figurine
 TDATA3=c_rotworm
 CATEGORY=Miscellaneous
@@ -3293,7 +3294,7 @@ DESCRIPTION=Wolf Spider (frame)
 
 [ITEMDEF 042a4]
 DEFNAME=i_pet_spider_trapdoor
-NAME=Trap Door Spider
+NAME=trap door spider
 TYPE=t_figurine
 TDATA3=c_spider_trapdoor
 CATEGORY=Miscellaneous
@@ -3302,7 +3303,7 @@ DESCRIPTION=Trap Door Spider
 
 [ITEMDEF 042a5]
 DEFNAME=i_pet_stone_form
-NAME=Stone Form
+NAME=stone form
 TYPE=t_figurine
 TDATA3=c_stone_form
 CATEGORY=Miscellaneous
@@ -3311,7 +3312,7 @@ DESCRIPTION=Stone Form
 
 [ITEMDEF 042a6]
 DEFNAME=i_pet_stygian_dragon_2
-NAME=Stygian Dragon
+NAME=stygian dragon
 TYPE=t_figurine
 TDATA3=c_dragon_stygian
 CATEGORY=Miscellaneous
@@ -3320,7 +3321,7 @@ DESCRIPTION=Stygian Dragon
 
 [ITEMDEF 042a7]
 DEFNAME=i_pet_fire_ant_2
-NAME=Fire Ant
+NAME=fire ant
 TYPE=t_figurine
 TDATA3=c_fire_ant
 CATEGORY=Miscellaneous
@@ -3338,7 +3339,7 @@ DESCRIPTION=Tunnel Spirit
 
 [ITEMDEF 042a9]
 DEFNAME=i_pet_wolf_leather_2
-NAME=Leather Wolf
+NAME=leather wolf
 TYPE=t_figurine
 TDATA3=c_wolf_leather
 CATEGORY=Miscellaneous

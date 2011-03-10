@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 
 [COMMENT comment_food]
@@ -1278,6 +1278,7 @@ DUPEITEM=0187e
 
 [ITEMDEF 0194f]
 DEFNAME=i_basket_herbs
+NAME=basket of herbs
 TYPE=t_food
 TDATA1=i_basket
 WEIGHT=1.0
@@ -1288,6 +1289,7 @@ DESCRIPTION=Basket of Herbs
 
 [ITEMDEF 01956]
 DEFNAME=i_bottle_shochu
+NAME=shochu
 TYPE=t_booze
 WEIGHT=1.0
 RESOURCES=1 i_bottle_shochu_empty,1 i_fruit_grapes,1 i_reag_fertile_dirt
@@ -2095,7 +2097,7 @@ DUPEITEM=02be5
 DUPEITEM=02be5
 
 [ITEMDEF 02be8]
-//NAME=black sugar cube
+NAME=black sugar cube
 CATEGORY=Provisions - Food
 SUBSECTION=Unknown Candy
 DESCRIPTION=Black Cube

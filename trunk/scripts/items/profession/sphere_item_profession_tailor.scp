@@ -3,13 +3,27 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 21, 2011
+// FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 
+
+[ITEMDEF 0df6]
+DEFNAME=i_knitting_item
+FLIP=1
+RESOURCES=1 i_knitting_needles,1 i_yarn_ball
+CATEGORY=Items by Professions
+SUBSECTION=Tailor
+DESCRIPTION=Knitting Items
+DUPELIST=0df7
+
+[ITEMDEF 0df7]
+//knitting
+DUPEITEM=0df6
 
 [ITEMDEF 0ec6]
 DEFNAME=i_dress_form
 TYPE=t_normal
+FLIP=1
 WEIGHT=5
 RESOURCES=25 i_log, 10 i_cloth
 SKILLMAKE=carpentry 63.1, tailoring 65.0, t_carpentry, t_sewing_kit
@@ -19,42 +33,54 @@ DESCRIPTION=Dress Form
 DUPELIST=0ec7
 
 [ITEMDEF 0ec7]
+//dress form
 DUPEITEM=0ec6
 
-[ITEMDEF 02dd9]
-DEFNAME=i_spinning_wheel_elven
-NAME=elven spinning wheel
-TYPE=t_spinwheel
-FLIP=1
-VALUE=73
-WEIGHT=21.3
-RESOURCES=10 i_log_maple,1 i_ingot_iron,1 i_hinge,1 i_axel,1 i_gears
-SKILLMAKE=Carpentry 73.6,t_carpentry
+[ITEMDEF 0f9d]
+DEFNAME=i_sewing_kit
+TYPE=t_sewing_kit
+WEIGHT=2
+RESOURCES=2 i_ingot_iron
+SKILLMAKE=Tinkering 18.8,t_tinker_tools
 CATEGORY=Items by Professions
-SUBSECTION=Weavers
-DESCRIPTION=Elven Spinning Wheel
-TEVENTS=t_spinwheel_elven
-DUPELIST=02dda,02e3c,02e3d,02e3e,02e3f
+SUBSECTION=Tailor
+DESCRIPTION=Sewing Kit
 
-[ITEMDEF 02dda]
-//elven spinning wheel
-DUPEITEM=02dd9
+[ITEMDEF 0f9e]
+DEFNAME=i_scissors
+TYPE=t_scissors
+FLIP=1
+WEIGHT=1
+RESOURCES=4 i_ingot_iron
+CATEGORY=Items by Professions
+SUBSECTION=Tailor
+DESCRIPTION=Scissors
+SKILLMAKE=Tinkering 14.5,t_tinker_tools
+DUPELIST=0f9f
 
-[ITEMDEF 02e3c]
-//elven spinning wheel
-DUPEITEM=02dd9
+[ITEMDEF 0f9f]
+//scissors
+DUPEITEM=0f9e
 
-[ITEMDEF 02e3d]
-//elven spinning wheel
-DUPEITEM=02dd9
+[ITEMDEF 0fa9]
+DEFNAME=i_dyes
+TYPE=t_dye
+WEIGHT=3
+RESOURCES=1 i_log,1 i_reag_blood_moss
+SKILLMAKE=Alchemy 10.0
+CATEGORY=Items by Professions
+SUBSECTION=Tailor
+DESCRIPTION=Dyes
 
-[ITEMDEF 02e3e]
-//elven spinning wheel
-DUPEITEM=02dd9
-
-[ITEMDEF 02e3f]
-//elven spinning wheel
-DUPEITEM=02dd9
+[ITEMDEF 0fab]
+DEFNAME=i_dye_tub
+TYPE=t_dye_vat
+WEIGHT=10
+RESOURCES=5 i_log
+SKILLMAKE=Carpentry 50.0, t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=Tailor
+DESCRIPTION=Dying Tub
 
 
 [EOF]

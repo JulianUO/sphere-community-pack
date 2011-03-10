@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 
 
@@ -435,6 +435,7 @@ DUPEITEM=01e80
 
 [ITEMDEF 0207b]
 DEFNAME=i_basket_3
+NAME=basket
 TYPE=t_container
 TDATA2=041
 WEIGHT=1.0

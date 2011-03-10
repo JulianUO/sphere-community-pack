@@ -87,6 +87,7 @@ ON=@Create
 
 [ITEMDEF 0225a]
 DEFNAME=i_spellbook_bard
+NAME=bard spellbook
 TYPE=t_spellbook_bard
 LAYER=layer_hand1
 VALUE=488

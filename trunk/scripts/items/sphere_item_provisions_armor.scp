@@ -266,36 +266,6 @@ ON=@EQUIP
 //Order shield
 DUPEITEM=01bc4
 
-[ITEMDEF 01c04]
-DEFNAME=i_armor_female_plate
-TYPE=T_ARMOR
-NAME=Platemail Female Armor
-FLIP=1
-RESOURCES=20 i_ingot_iron
-WEIGHT=6
-//DEFNAME=i_FEM_ARMOR_B
-REQSTR=95
-CATEGORY=Provisions - Armor
-SUBSECTION=Female Armor
-DESCRIPTION=Female Plate Armor
-DUPELIST=01c05
-SKILLMAKE=BLACKSMITHING 45.3
-
-TAG.Penalty.Stealth = 25
-
-TAG.ResPhysical=5
-TAG.ResFire=3
-TAG.ResCold=2
-TAG.ResPoison=3
-TAG.ResEnergy=2
-
-ON=@Create
-HITPOINTS={51 65}
-
-[ITEMDEF 01c05]
-//female bikini style plate armor
-DUPEITEM=01c04
-
 [ITEMDEF 01f0b]
 DEFNAME=i_helm_orc
 TYPE=t_armor_leather
