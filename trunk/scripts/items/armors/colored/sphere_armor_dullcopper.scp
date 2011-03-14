@@ -354,15 +354,15 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=51
 
-[ITEMDEF i_HELM_CLOSED_DULL_COPPER]
-NAME=Dull Copper Closed Helm
-ID=i_helm_closed
+[ITEMDEF i_HELM_CLOSE_DULL_COPPER]
+NAME=Dull Copper Close Helm
+ID=i_helm_close
 ARMOR=0 // 25
 REQSTR=20
 WEIGHT=5
 CATEGORY=Provisions - Armor - Colored
 SUBSECTION=Dull Copper
-DESCRIPTION=Closed Helm
+DESCRIPTION=Close Helm
 RESOURCES=15 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 58.6
 TAG.Penalty.Stealth = 10
@@ -420,15 +420,15 @@ ON=@Create
 	COLOR=color_o_dull_copper
 	HITPOINTS=30
 
-[ITEMDEF i_HELM_NOSE_DULL_COPPER]
-NAME=Dull Copper Nose Helm
-ID=i_helm_nose
+[ITEMDEF i_HELM_NORSE_DULL_COPPER]
+NAME=Dull Copper Norse Helm
+ID=i_helm_norse
 ARMOR=0 // 20
 REQSTR=0
 WEIGHT=5
 CATEGORY=Provisions - Armor - Colored
 SUBSECTION=Dull Copper
-DESCRIPTION=Nose Helm
+DESCRIPTION=Norse Helm
 RESOURCES=15 i_ingot_dull_copper
 SKILLMAKE=BLACKSMITHING 58.6
 TAG.Penalty.Stealth = 10

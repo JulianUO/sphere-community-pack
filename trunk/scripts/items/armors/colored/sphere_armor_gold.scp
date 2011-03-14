@@ -368,15 +368,15 @@ ON=@Create
 	HITPOINTS=31
 	COLOR=color_o_gold
 	
-[ITEMDEF i_HELM_CLOSED_GOLD]
-NAME=Golden Closed Helm
-ID=i_helm_closed
+[ITEMDEF i_HELM_CLOSE_GOLD]
+NAME=Golden Close Helm
+ID=i_helm_close
 ARMOR=0 // 30
 REQSTR=20
 WEIGHT=5
 CATEGORY=Provisions - Armor - Colored
 SUBSECTION=Golden
-DESCRIPTION=Closed Helm
+DESCRIPTION=Close Helm
 RESOURCES=15 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 59.6
 TAG.Penalty.Stealth = 10
@@ -437,15 +437,15 @@ ON=@Create
 	COLOR=color_o_gold
 	HITPOINTS=101
 
-[ITEMDEF i_HELM_NOSE_GOLD]
-NAME=Golden Nose Helm
-ID=i_helm_nose
+[ITEMDEF i_HELM_NORSE_GOLD]
+NAME=Golden Norse Helm
+ID=i_helm_norse
 ARMOR=0 // 30
 REQSTR=20
 WEIGHT=5
 CATEGORY=Provisions - Armor - Colored
 SUBSECTION=Golden
-DESCRIPTION=Nose Helm
+DESCRIPTION=Norse Helm
 RESOURCES=15 i_ingot_gold
 SKILLMAKE=BLACKSMITHING 59.6
 TAG.Penalty.Stealth = 10

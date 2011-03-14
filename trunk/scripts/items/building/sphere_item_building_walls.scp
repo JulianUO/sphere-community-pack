@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, March 5, 2011
+// FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 
 
@@ -6476,7 +6476,7 @@ DUPEITEM=02dfb
 
 [ITEMDEF 02dff]
 DEFNAME=i_wall_thorn
-NAME=thorn wall
+NAME=wall
 TYPE=t_wall
 RESOURCES=100 i_log,1 i_plant_bramble
 CATEGORY=Buildings - Walls
@@ -6490,6 +6490,8 @@ DUPEITEM=02dff
 
 
 [ITEMDEF 02f13]
+DEFNAME=i_wooden_cave_entrance
+NAME=cave entrance
 TYPE=t_wall
 RESOURCES=100 i_log
 CATEGORY=Buildings - Walls
@@ -6544,7 +6546,7 @@ DUPEITEM=02d14
 
 [ITEMDEF 02ffb]
 DEFNAME=i_wall_stone_tall
-NAME=stone wall
+NAME=wall
 TYPE=t_wall
 RESOURCES=200 i_rock_plain
 CATEGORY=Buildings - Walls
@@ -6632,7 +6634,7 @@ DUPEITEM=02ffb
 
 [ITEMDEF 03025]
 DEFNAME=i_wall_wood_tall
-NAME=wood wall
+NAME=wall
 TYPE=t_wall
 RESOURCES=200 i_log
 CATEGORY=Buildings - Walls
@@ -6768,7 +6770,8 @@ DUPEITEM=01a
 
 
 [ITEMDEF 035d7]
-//Crystal wall
+DEFNAME=i_wall_crystal
+NAME=wall
 TYPE=t_wall
 RESOURCES=100 i_crystal_ice
 CATEGORY=Buildings - Walls

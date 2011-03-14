@@ -179,8 +179,8 @@ random_leg_armor       { i_studded_leggings 1 i_platemail_leggings 1 i_chainmail
 random_arm_armor       { i_studded_sleeves 1 i_platemail_arms 1 i_leather_sleeves 1 i_ringmail_gloves 1 }
 random_gloves          { i_studded_gloves 1 i_platemail_gloves 1 i_leather_gloves 1 }
 random_shield          { i_shield_round_bronze 1 i_shield_buckler 1 i_shield_kite_metal 1 i_shield_heater 1 i_shield_kite_wood 1 i_shield_wood 1 i_shield_round_metal 1 }
-random_head_armor      { i_chainmail_coif 1 i_helm_closed 1 i_helm_open 1 i_helm_nose 1 i_bascinet 1 i_platemail_helm 1 }
-random_helmet          { i_helm_closed 1 i_helm_open 1 i_bascinet 1 i_helm_nose 1 i_platemail_helm 1 }
+random_head_armor      { i_chainmail_coif 1 i_helm_close 1 i_helm_open 1 i_helm_norse 1 i_bascinet 1 i_platemail_helm 1 }
+random_helmet          { i_helm_close 1 i_helm_open 1 i_bascinet 1 i_helm_norse 1 i_platemail_helm 1 }
 random_chest_armor     { i_studded_tunic 1 i_platemail_chest 1 i_chainmail_tunic 1 i_leather_tunic 1 i_ringmail_tunic 1 }
 random_gorget          { i_studded_gorget 1 i_platemail_gorget 1 i_leather_gorget 1 i_studded_gorget 1 }
 
@@ -278,8 +278,8 @@ random_leg_armor_male      { i_bone_leggings 1 i_chainmail_leggings 10 i_leather
 random_leg_armor_female    { i_armor_female_shorts 5 i_armor_female_skirt 5 i_armor_female_bustier 5 i_armor_female_bustier_studded 5 }
 random_arm_armor           { i_bone_arms 1 i_leather_sleeves 30 i_studded_sleeves 20 i_ringmail_sleeves 15 i_platemail_arms 5 }
 random_neck_armor          { i_leather_gorget 3 i_studded_gorget 2 i_platemail_gorget 1 i_studded_gorget 2 }
-random_helms               { i_platemail_helm 3 i_bone_helmet 1 i_helm_nose 2 } // i_closed, i_open , i_bascinet,
-random_coifs               { i_chainmail_coif 4 i_helm_closed 6 }
+random_helms               { i_platemail_helm 3 i_bone_helmet 1 i_helm_norse 2 } // i_closed, i_open , i_bascinet,
+random_coifs               { i_chainmail_coif 4 i_helm_close 6 }
 random_hand_armor          { i_bone_gloves 3 i_leather_gloves 50 i_studded_gloves 30 i_ringmail_gloves 10 i_platemail_gloves 7 }
 random_shields             { i_shield_wood 3 i_shield_buckler 2 i_shield_kite_wood 2 i_shield_kite_metal 3 i_shield_heater 1 }
 
