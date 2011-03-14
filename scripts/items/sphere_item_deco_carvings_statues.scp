@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, March 5, 2011
+// FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 
 
@@ -737,6 +737,7 @@ DESCRIPTION=Crystal Altar
 DUPELIST=03602,03603,03604
 
 [ITEMDEF 035ea]
+NAME=sculpture
 WEIGHT=150.0
 RESOURCES=150 i_crystal_ice
 CATEGORY=Decoration - Wall Carvings & Statues

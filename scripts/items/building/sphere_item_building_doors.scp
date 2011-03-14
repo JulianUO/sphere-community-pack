@@ -3,14 +3,15 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Thursday, March 10, 2011
 VERSION=0.56b
 
 
 [ITEMDEF 0675]
 DEFNAME=i_door_metal
-RESOURCES=40 i_ingot_iron
+NAME=door
 TYPE=t_door
+RESOURCES=40 i_ingot_iron
 CATEGORY=Buildings - Doors
 SUBSECTION=Metal Door 1
 DESCRIPTION=@ (n / sw)
@@ -79,8 +80,9 @@ DESCRIPTION=@
 
 [ITEMDEF 0685]
 DEFNAME=i_door_metal_bar
-RESOURCES=30 i_ingot_iron
+NAME=door
 TYPE=t_door
+RESOURCES=30 i_ingot_iron
 CATEGORY=Buildings - Doors
 SUBSECTION=Barred Metal Door
 DESCRIPTION=@ (n / sw)
@@ -164,8 +166,9 @@ DESCRIPTION=@
 
 [ITEMDEF 0695]
 DEFNAME=i_door_rattan
-RESOURCES=15 i_plant_grasses, 15 i_straw
+NAME=door
 TYPE=t_door
+RESOURCES=15 i_plant_grasses, 15 i_straw
 CATEGORY=Buildings - Doors
 SUBSECTION=Rattan Door
 DESCRIPTION=@ (n / sw)
@@ -234,8 +237,9 @@ DESCRIPTION=@
 
 [ITEMDEF 06a5]
 DEFNAME=i_door_wood
-RESOURCES=25 i_board
+NAME=door
 TYPE=t_door
+RESOURCES=25 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Wooden Door 1
 DESCRIPTION=@ (n / sw)
@@ -318,8 +322,9 @@ DESCRIPTION=@
 
 [ITEMDEF 06b5]
 DEFNAME=i_door_wood_4
-RESOURCES=25 i_board
+NAME=door
 TYPE=t_door
+RESOURCES=25 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Wooden Door 2
 DESCRIPTION=@ (n / sw)
@@ -403,8 +408,9 @@ DESCRIPTION=@
 
 [ITEMDEF 06c5]
 DEFNAME=i_door_metal_2
-RESOURCES=45 i_ingot_iron
+NAME=door
 TYPE=t_door
+RESOURCES=45 i_ingot_iron
 CATEGORY=Buildings - Doors
 SUBSECTION=Metal Door 2
 DESCRIPTION=@ (n / sw)
@@ -488,8 +494,9 @@ DESCRIPTION=@
 
 [ITEMDEF 06d5]
 DEFNAME=i_door_wood_2
-RESOURCES=25 i_board
+NAME=door
 TYPE=t_door
+RESOURCES=25 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Wooden Door 3
 DESCRIPTION=@ (n / sw)
@@ -573,8 +580,9 @@ DESCRIPTION=@
 
 [ITEMDEF 06e5]
 DEFNAME=i_door_wood_3
-RESOURCES=25 i_board
+NAME=door
 TYPE=t_door
+RESOURCES=25 i_board
 CATEGORY=Buildings - Doors
 SUBSECTION=Wooden Door 4
 DESCRIPTION=@ (n / sw)
@@ -657,9 +665,10 @@ DUPEITEM=06e6
 DESCRIPTION=@
 
 [ITEMDEF 06f5]
-DEFNAME=i_door_portculis
-RESOURCES=50 i_ingot_iron
+DEFNAME=i_door_portcullis
+NAME=portcullis
 TYPE=t_portculis
+RESOURCES=50 i_ingot_iron
 CATEGORY=Buildings - Doors
 SUBSECTION=Portcullis
 DESCRIPTION=@
@@ -674,16 +683,17 @@ DUPEITEM=06f5
 
 [ITEMDEF 01fed]
 DEFNAME=i_door_metal_bar_2
-RESOURCES=10 i_ingot_iron
+NAME=door
 TYPE=t_door
+RESOURCES=10 i_ingot_iron
 CATEGORY=Buildings - Doors
 SUBSECTION=Barred Metal Door 2
 DESCRIPTION=@ (n / sw)
 DUPELIST=01fef,01ff1,01ff3,01ff5,01ff7,01ff9,01ffb
 
 [ITEMDEF 01fee]
-//barred metal door
 DEFNAME=i_door_metal_bar_2_o
+NAME=door
 TYPE=t_door_open
 DESCRIPTION=@
 DUPELIST=01ff0,01ff2,01ff4,01ff6,01ff8,01ffa,01ffc
@@ -759,6 +769,7 @@ DUPEITEM=01fee
 DESCRIPTION=@
 
 [ITEMDEF 0241f]
+NAME=door
 TYPE=t_door_open
 RESOURCES=40 i_log
 CATEGORY=Buildings - Doors
@@ -768,6 +779,7 @@ DUPELIST=02421,02423
 
 [ITEMDEF 02420]
 DEFNAME=i_door_wooden_dark
+NAME=door
 TYPE=t_door
 RESOURCES=40 i_log
 CATEGORY=Buildings - Doors
@@ -793,7 +805,8 @@ DUPEITEM=02420
 DESCRIPTION=@ (n / ne)
 
 [ITEMDEF 0248b]
-TYPE=t_wall
+NAME=door
+TYPE=t_door
 RESOURCES=200 i_log,10 i_ingot_iron
 CATEGORY=Buildings - Doors
 SUBSECTION=Japanese Gate Door
@@ -806,6 +819,7 @@ DUPEITEM=0248b
 
 [ITEMDEF 026f4]
 DEFNAME=i_door_sliding_n
+NAME=door
 TYPE=t_door
 RESOURCES=20 i_log,20 i_paper
 CATEGORY=Buildings - Doors
@@ -815,6 +829,7 @@ DUPELIST=02990,0299e
 
 [ITEMDEF 026f6]
 DEFNAME=i_door_sliding_n_open
+NAME=door
 TYPE=t_door_open
 RESOURCES=20 i_log,20 i_paper
 CATEGORY=Buildings - Doors
@@ -843,6 +858,7 @@ DUPEITEM=026f6
 
 [ITEMDEF 02a05]
 DEFNAME=i_door_sliding_2
+NAME=door
 TYPE=t_door
 RESOURCES=20 i_log,20 i_paper
 CATEGORY=Buildings - Doors
@@ -852,6 +868,7 @@ DUPELIST=02a07,02a09,02a0b,02a0d,02a0f,02a11,02a13,02a15,02a17,02a19,02a1b
 
 [ITEMDEF 02a06]
 DEFNAME=i_door_sliding_n_open_2
+NAME=door
 TYPE=t_door_open
 RESOURCES=20 i_log,20 i_paper
 CATEGORY=Buildings - Doors
@@ -950,6 +967,7 @@ DUPEITEM=02a06
 
 [ITEMDEF 02d46]
 DEFNAME=i_door_elven_bark
+NAME=door
 TYPE=t_door
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
@@ -959,6 +977,7 @@ DUPELIST=02d48,031ac,031ae
 
 [ITEMDEF 02d47]
 DEFNAME=i_door_elven_bark_o
+NAME=door
 TYPE=t_door_open
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
@@ -993,6 +1012,7 @@ DUPEITEM=02d47
 
 [ITEMDEF 02d63]
 DEFNAME=i_door_elven_simple_1
+NAME=door
 TYPE=t_door
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
@@ -1002,6 +1022,7 @@ DUPELIST=02d65,031a0,031a2
 
 [ITEMDEF 02d64]
 DEFNAME=i_door_elven_simple_1_o
+NAME=door
 TYPE=t_door_open
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
@@ -1036,6 +1057,7 @@ DUPEITEM=02d63
 
 [ITEMDEF 02d67]
 DEFNAME=i_door_elven_ornate_1
+NAME=door
 TYPE=t_door
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
@@ -1045,6 +1067,7 @@ DUPELIST=02d69,031a4,031a6
 
 [ITEMDEF 02d68]
 DEFNAME=i_door_elven_ornate_1_o
+NAME=door
 TYPE=t_door_open
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
@@ -1079,6 +1102,7 @@ DUPEITEM=02d68
 
 [ITEMDEF 02d6b]
 DEFNAME=i_door_elven_simple_dark_1
+NAME=door
 TYPE=t_door
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
@@ -1088,6 +1112,7 @@ DUPELIST=02d6d,031a8,031aa
 
 [ITEMDEF 02d6c]
 DEFNAME=i_door_elven_simple_dark_1_o
+NAME=door
 TYPE=t_door_open
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
@@ -1122,7 +1147,7 @@ DUPEITEM=02d6c
 
 [ITEMDEF 02fe2]
 DEFNAME=i_door_moon
-NAME=moon door
+NAME=door
 TYPE=t_door
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
@@ -1132,7 +1157,7 @@ DUPELIST=02fe4,0319c,0319e
 
 [ITEMDEF 02fe3]
 DEFNAME=i_door_moon_o
-NAME=moon door
+NAME=door
 TYPE=t_door_open
 RESOURCES=100 i_board
 CATEGORY=Buildings - Doors
@@ -1207,6 +1232,7 @@ DUPEITEM=03641
 
 [ITEMDEF 041cf]
 DEFNAME=i_sa_door_ws1
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1223,6 +1249,7 @@ DUPEITEM=041cf
 DUPEITEM=041cf
 
 [ITEMDEF 041d0]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1240,6 +1267,7 @@ DUPEITEM=041d0
 
 [ITEMDEF 041c2]
 DEFNAME=i_sa_door_ws2
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1256,6 +1284,7 @@ DUPEITEM=041c2
 DUPEITEM=041c2
 
 [ITEMDEF 041c3]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1273,6 +1302,7 @@ DUPEITEM=041c3
 
 [ITEMDEF 0409b]
 DEFNAME=i_sa_door_ws3
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1289,6 +1319,7 @@ DUPEITEM=0409b
 DUPEITEM=0409b
 
 [ITEMDEF 0409c]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1306,6 +1337,7 @@ DUPEITEM=0409c
 
 [ITEMDEF 0410c]
 DEFNAME=i_sa_door_gd
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1322,6 +1354,7 @@ DUPEITEM=0410c
 DUPEITEM=0410c
 
 [ITEMDEF 0410d]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1339,6 +1372,7 @@ DUPEITEM=0410d
 
 [ITEMDEF 05142]
 DEFNAME=i_sa_door_barred
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1355,6 +1389,7 @@ DUPEITEM=05142
 DUPEITEM=05142
 
 [ITEMDEF 05143]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1372,6 +1407,7 @@ DUPEITEM=05143
 
 [ITEMDEF 04d1a]
 DEFNAME=i_sa_door_qdh
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1388,6 +1424,7 @@ DUPEITEM=04d1a
 DUPEITEM=04d1a
 
 [ITEMDEF 04d1b]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1405,6 +1442,7 @@ DUPEITEM=04d1b
 
 [ITEMDEF 04d22]
 DEFNAME=i_sa_door_qd
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1421,6 +1459,7 @@ DUPEITEM=04d22
 DUPEITEM=04d22
 
 [ITEMDEF 04d23]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1438,6 +1477,7 @@ DUPEITEM=04d23
 
 [ITEMDEF 0436e]
 DEFNAME=i_sa_door_m1
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1454,6 +1494,7 @@ DUPEITEM=0436e
 DUPEITEM=0436e
 
 [ITEMDEF 0436f]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1471,6 +1512,7 @@ DUPEITEM=0436f
 
 [ITEMDEF 04372]
 DEFNAME=i_sa_door_m2
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1487,6 +1529,7 @@ DUPEITEM=04372
 DUPEITEM=04372
 
 [ITEMDEF 04373]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1504,6 +1547,7 @@ DUPEITEM=04373
 
 [ITEMDEF 050c8]
 DEFNAME=i_sa_door_m3
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1520,6 +1564,7 @@ DUPEITEM=050c8
 DUPEITEM=050c8
 
 [ITEMDEF 050c9]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1537,6 +1582,7 @@ DUPEITEM=050c9
 
 [ITEMDEF 050d0]
 DEFNAME=i_sa_door_m4
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1553,6 +1599,7 @@ DUPEITEM=050d0
 DUPEITEM=050d0
 
 [ITEMDEF 050d1]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1570,6 +1617,7 @@ DUPEITEM=050d1
 
 [ITEMDEF 046dd]
 DEFNAME=i_sa_door_rd
+NAME=door
 TYPE=t_door
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss
@@ -1586,6 +1634,7 @@ DUPEITEM=046dd
 DUPEITEM=046dd
 
 [ITEMDEF 046de]
+NAME=door
 TYPE=t_door_open
 CATEGORY=Buildings - Doors
 SUBSECTION=Stygian Abyss

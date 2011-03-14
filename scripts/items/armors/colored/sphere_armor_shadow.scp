@@ -354,15 +354,15 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS=100
 
-[ITEMDEF i_HELM_CLOSED_SHADOW]
-NAME=Shadow Closed Helm
-ID=i_helm_closed
+[ITEMDEF i_HELM_CLOSE_SHADOW]
+NAME=Shadow Close Helm
+ID=i_helm_close
 ARMOR=0 // 37
 REQSTR=20
 WEIGHT=5
 CATEGORY=Provisions - Armor - Colored
 SUBSECTION=Shadow
-DESCRIPTION=Closed Helm
+DESCRIPTION=Close Helm
 RESOURCES=15 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 59.6
 TAG.Penalty.Stealth = 10
@@ -420,15 +420,15 @@ ON=@Create
 	COLOR=color_o_shadow
 	HITPOINTS={101 115}
 
-[ITEMDEF i_HELM_NOSE_SHADOW]
-NAME=Shadow Bascinet
-ID=i_helm_nose
+[ITEMDEF i_HELM_NORSE_SHADOW]
+NAME=Shadow Norse Helm
+ID=i_helm_norse
 ARMOR=0 // 37
 REQSTR=0
 WEIGHT=5
 CATEGORY=Provisions - Armor - Colored
 SUBSECTION=Shadow
-DESCRIPTION=Bascinet
+DESCRIPTION=Norse Helm
 RESOURCES=15 i_ingot_shadow
 SKILLMAKE=BLACKSMITHING 59.6
 TAG.Penalty.Stealth = 10

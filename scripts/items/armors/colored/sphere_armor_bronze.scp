@@ -354,15 +354,15 @@ ON=@Create
 	COLOR=color_o_bronze
 	HITPOINTS={51 65}
 
-[ITEMDEF i_HELM_CLOSED_BRONZE]
-NAME=Bronze Closed Helm
-ID=i_helm_closed
+[ITEMDEF i_HELM_CLOSE_BRONZE]
+ID=i_helm_close
+NAME=Bronze Close Helm
 ARMOR=0 // 25
 REQSTR=20
 WEIGHT=5
 CATEGORY=Provisions - Armor - Colored
 SUBSECTION=Bronze
-DESCRIPTION=Closed Helm
+DESCRIPTION=Close Helm
 RESOURCES=15 i_ingot_bronze
 SKILLMAKE=BLACKSMITHING 58.6
 TAG.Penalty.Stealth = 10
@@ -420,15 +420,15 @@ ON=@Create
 	COLOR=color_o_bronze
 	HITPOINTS={30 35}
 
-[ITEMDEF i_HELM_NOSE_BRONZE]
-NAME=Bronze Nose Helm
-ID=i_helm_nose
+[ITEMDEF i_HELM_NORSE_BRONZE]
+NAME=Bronze Norse Helm
+ID=i_helm_norse
 ARMOR=0 // 20
 REQSTR=0
 WEIGHT=5
 CATEGORY=Provisions - Armor - Colored
 SUBSECTION=Bronze
-DESCRIPTION=Nose Helm
+DESCRIPTION=Norse Helm
 RESOURCES=15 i_ingot_bronze
 SKILLMAKE=BLACKSMITHING 58.6
 TAG.Penalty.Stealth = 10

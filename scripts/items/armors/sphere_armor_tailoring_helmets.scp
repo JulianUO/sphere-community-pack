@@ -8,7 +8,7 @@ VERSION=0.56b
 
 
 [ITEMDEF 02776]
-DEFNAME=i_leather_jinsaga
+DEFNAME=i_leather_jingasa
 NAME=leather jingasa
 TYPE=t_armor_leather
 FLIP=1
@@ -23,7 +23,7 @@ TAG.ResPoison=2
 TAG.ResEnergy=3
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Helmets
-DESCRIPTION=Leather Jinsaga
+DESCRIPTION=Leather Jingasa
 DUPELIST=027c1
 ON=@Create
    HITPOINTS={50 60}

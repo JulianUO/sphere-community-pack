@@ -2277,14 +2277,14 @@ ADD i_leather_tunic_decoration
 
 [MENU M_HELMS]
 Armor (Helmets)
-ON=i_helm_closed Close Helm
-ADD i_helm_closed
+ON=i_helm_close Close Helm
+ADD i_helm_close
 ON=i_helm_open Helmet
 ADD i_helm_open
 ON=i_bascinet Bascinet
 ADD i_bascinet
-ON=i_helm_nose Nose Helm
-ADD i_helm_nose
+ON=i_helm_norse Norse Helm
+ADD i_helm_norse
 ON=i_helm_orc Orc Helm
 ADD i_helm_orc
 
