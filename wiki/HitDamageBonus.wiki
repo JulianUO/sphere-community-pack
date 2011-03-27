@@ -12,5 +12,6 @@ endif
 DEFAULT: Hitter<br>
 SRC: Hit<br>
 ARGO: Weapon used to hit<br>
+ARGN1: Damage<br>
 
 var0.UIDofCharacter_damagebonus +=: Used to add additional damage, in percentage.
