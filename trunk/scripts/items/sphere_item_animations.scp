@@ -3129,5 +3129,71 @@ CATEGORY=Animations
 SUBSECTION=Weirdness
 DESCRIPTION=Strange Yellow Dot
 
+[ITEMDEF 042cf]
+DEFNAME=fx_magical_sparkles_3
+TYPE=t_spell
+VALUE=1
+RESOURCES=2 t_reagent
+CATEGORY=Animations
+SUBSECTION=Magical Sparkles
+DESCRIPTION=Sparkles 3 (red)
+DUPELIST=042d0,042d1,042d2,042d3,042d4,042d5,042d6,042d7,042d8,042d9,042da,042db,042dc,042dd,
+
+[ITEMDEF 042d0]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042d1]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042d2]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042d3]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042d4]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042d5]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042d6]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042d7]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042d8]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042d9]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042da]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042db]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042dc]
+//Sparkles 3
+DUPEITEM=042cf
+
+[ITEMDEF 042dd]
+//Sparkles 3
+DUPEITEM=042cf
+
 
 [EOF]

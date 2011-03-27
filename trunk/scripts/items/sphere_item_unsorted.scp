@@ -1858,7 +1858,7 @@ NAME=decorative armor
 TYPE=t_normal
 FLIP=1
 WEIGHT=190.0
-RESOURCES=5 i_ingot_gold,2 i_log,7 i_feather,1 i_helm_closed,1 i_platemail_arms,1 i_platemail_leggings,1 i_platemail_gorget,1 i_platemail_gloves,1 i_platemail_chest,1 i_axe_war
+RESOURCES=5 i_ingot_gold,2 i_log,7 i_feather,1 i_helm_close,1 i_platemail_arms,1 i_platemail_leggings,1 i_platemail_gorget,1 i_platemail_gloves,1 i_platemail_chest,1 i_axe_war
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Decorative Armor
 DESCRIPTION=Decorative Armor
@@ -1966,5 +1966,235 @@ DESCRIPTION=Empty tile 03f28
 CATEGORY=Miscellaneous
 SUBSECTION=Bad Tiles
 DESCRIPTION=Missing Name 03f8f
+
+[ITEMDEF 04077]
+//dragons blood
+[ITEMDEF 0407a]
+//eagle strike
+[ITEMDEF 0407b]
+//basket frame
+[ITEMDEF 040bd]
+//pushme pullyou statue
+
+[ITEMDEF 04102]
+DEFNAME=i_chest_pirate
+NAME=pirate chest
+TYPE=t_container
+TDATA2=0423
+FLIP=1
+VALUE=93
+WEIGHT=22.0
+RESOURCES=20 i_ingot_iron,2 i_board,1 i_nails
+SKILLMAKE=Tinkering 75.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Pirate Chest
+DUPELIST=04106
+//FIXME: add an opening animation
+
+[ITEMDEF 04103]
+DEFNAME=i_chest_pirate_opened
+NAME=pirate chest
+TYPE=t_container
+TDATA2=0423
+FLIP=1
+VALUE=93
+WEIGHT=22.0
+RESOURCES=20 i_ingot_iron,2 i_board,1 i_nails
+SKILLMAKE=Tinkering 75.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Pirate Chest (opened)
+DUPELIST=04104,04105,04107,04108,04109
+
+[ITEMDEF 04104]
+//Pirate Chest (opened)
+DUPEITEM=04103
+
+[ITEMDEF 04105]
+//Pirate Chest (opened)
+DUPEITEM=04103
+
+[ITEMDEF 04106]
+//Pirate chest
+DUPEITEM=04102
+
+[ITEMDEF 04107]
+//Pirate Chest (opened)
+DUPEITEM=04103
+
+[ITEMDEF 04108]
+//Pirate Chest (opened)
+DUPEITEM=04103
+
+[ITEMDEF 04109]
+//Pirate Chest (opened)
+DUPEITEM=04103
+
+[ITEMDEF 0410a]
+DEFNAME=i_key_skeleton
+TYPE=t_key
+FLIP=1
+VALUE=16
+WEIGHT=0.1
+RESOURCES=2 i_ingot_iron,1 i_ingot_copper
+SKILLMAKE=Tinkering 43.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Keys
+DESCRIPTION=Skeleton Key
+DUPELIST=0410b
+ON=@Create
+   ATTR=attr_newbie
+
+[ITEMDEF 0410b]
+//skeleton key
+DUPEITEM=0410a
+
+[ITEMDEF 044d5]
+DEFNAME=i_grandfather_clock
+NAME=grandfather clock
+TYPE=t_clock
+FLIP=1
+VALUE=44
+WEIGHT=9.2
+RESOURCES=1 i_clock_frame,1 i_parchment,10 i_board,1 i_clock_parts
+SKILLMAKE=Tinkering 90.7,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Tinker
+DESCRIPTION=Grandfather Clock
+DUPELIST=044d9
+
+[ITEMDEF 044d6]
+//grandfather clock (animation frame)
+
+[ITEMDEF 044d7]
+//grandfather clock (animation frame)
+
+[ITEMDEF 044d8]
+//grandfather clock (animation frame)
+
+[ITEMDEF 044d9]
+//grandfather clock
+DUPEITEM=044d5
+
+[ITEMDEF 044da]
+//grandfather clock (animation frame)
+
+[ITEMDEF 044db]
+//grandfather clock (animation frame)
+
+[ITEMDEF 044dc]
+//grandfather clock (animation frame)
+
+[ITEMDEF 044dd]
+DEFNAME=i_grandfather_clock_2
+NAME=grandfather clock
+TYPE=t_clock
+FLIP=1
+VALUE=44
+WEIGHT=9.2
+RESOURCES=1 i_clock_frame,1 i_parchment,10 i_board,1 i_clock_parts
+SKILLMAKE=Tinkering 90.7,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Tinker
+DESCRIPTION=Grandfather Clock 2
+DUPELIST=044e1
+
+[ITEMDEF 044de]
+//grandfather clock 2 (animation frame)
+
+[ITEMDEF 044df]
+//grandfather clock 2 (animation frame)
+
+[ITEMDEF 044e0]
+//grandfather clock 2 (animation frame)
+
+[ITEMDEF 044e1]
+//grandfather clock 2
+DUPEITEM=044dd
+
+[ITEMDEF 044e2]
+//grandfather clock 2 (animation frame)
+
+[ITEMDEF 044e3]
+//grandfather clock 2 (animation frame)
+
+[ITEMDEF 044e4]
+//grandfather clock 2 (animation frame)
+
+[ITEMDEF 04515]
+//stackable bottle
+
+[ITEMDEF 04516]
+//stackable flask
+
+[ITEMDEF 04517]
+//stackable empty vial
+
+[ITEMDEF 04572]
+DEFNAME=i_icicles
+NAME=icicles
+TYPE=t_normal
+FLIP=1
+CATEGORY=Miscellaneous
+SUBSECTION=External House Decor
+DESCRIPTION=Icicles
+DUPELIST=04573,04574,04575,04576,04577
+
+[ITEMDEF 04573]
+//icicles
+DUPEITEM=04572
+
+[ITEMDEF 04574]
+//icicles
+DUPEITEM=04572
+
+[ITEMDEF 04575]
+//icicles
+DUPEITEM=04572
+
+[ITEMDEF 04576]
+//icicles
+DUPEITEM=04572
+
+[ITEMDEF 04577]
+//icicles
+DUPEITEM=04572
+
+[ITEMDEF 048d4]
+DEFNAME=i_grandfather_clock_3
+NAME=grandfather clock
+TYPE=t_clock
+FLIP=1
+VALUE=44
+WEIGHT=9.2
+RESOURCES=1 i_clock_frame,1 i_parchment,10 i_board,1 i_clock_parts
+SKILLMAKE=Tinkering 90.7,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Tinker
+DESCRIPTION=Grandfather Clock 3
+DUPELIST=048d8
+
+[ITEMDEF 048d5]
+//grandfather clock (animation frame)
+
+[ITEMDEF 048d6]
+//grandfather clock (animation frame)
+
+[ITEMDEF 048d7]
+//grandfather clock (animation frame)
+
+[ITEMDEF 048d8]
+//grandfather clock
+DUPEITEM=048d4
+
+[ITEMDEF 048d9]
+//grandfather clock (animation frame)
+
+[ITEMDEF 048da]
+//grandfather clock (animation frame)
+
+[ITEMDEF 048db]
+//grandfather clock (animation frame)
 
 [EOF]

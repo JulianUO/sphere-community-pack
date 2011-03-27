@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Wednesday, March 9, 2011
+// FILE LAST UPDATED: Sunday, March 27, 2011
 VERSION=0.56b
 
 
@@ -535,6 +535,31 @@ CATEGORY=Items by Professions
 SUBSECTION=Blacksmiths
 DESCRIPTION=Elven Forge
 TEVENTS=t_forge_elven
+
+[ITEMDEF 044c7]
+DEFNAME=i_soulforge_small
+TYPE=t_forge
+FLIP=0
+VALUE=250
+WEIGHT=325.0
+RESOURCES=30 i_rock_plain,25 i_ingot_iron
+SKILLMAKE=Blacksmithing 30.0,Tinkering 56.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Small Soul Forge
+DUPELIST=044c8,044c9,044ca
+
+[ITEMDEF 044c8]
+//Small Soul Forge (animation frame)
+DUPEITEM=044c7
+
+[ITEMDEF 044c9]
+//Small Soul Forge (animation frame)
+DUPEITEM=044c7
+
+[ITEMDEF 044ca]
+//Small Soul Forge (animation frame)
+DUPEITEM=044c7
 
 
 [EOF]

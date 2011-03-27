@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, March 5, 2011
+// FILE LAST UPDATED: Sunday, March 27, 2011
 VERSION=0.56b
 
 // version 1 = id, dupe
@@ -16,11 +16,12 @@ VERSION=0.56b
 DEFNAME=i_cloth_gargoyle_arms
 NAME=Gargish cloth arms
 TYPE=t_armor
+DYE=1
 FLIP=1
 WEIGHT=2
 REQSTR=20
 RESOURCES=8 i_cloth
-SKILLMAKE=Tailoring 87.1
+SKILLMAKE=Tailoring 87.1,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=7
@@ -41,11 +42,12 @@ DUPEITEM=0403
 DEFNAME=i_cloth_gargoyle_chest
 NAME=Gargish cloth chest
 TYPE=t_armor
+DYE=1
 FLIP=1
 WEIGHT=2
 REQSTR=20
 RESOURCES=12 i_cloth
-SKILLMAKE=Tailoring 94.0
+SKILLMAKE=Tailoring 94.0,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=7
@@ -66,11 +68,12 @@ DUPEITEM=0405
 DEFNAME=i_cloth_gargoyle_kilt
 NAME=Gargish cloth kilt
 TYPE=t_armor
+DYE=1
 FLIP=1
 WEIGHT=2
 REQSTR=20
 RESOURCES=6 i_cloth
-SKILLMAKE=Tailoring 82.9
+SKILLMAKE=Tailoring 82.9,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=7
@@ -91,11 +94,12 @@ DUPEITEM=0407
 DEFNAME=i_cloth_gargoyle_leggings
 NAME=Gargish cloth leggings
 TYPE=t_armor
+DYE=1
 FLIP=1
 WEIGHT=2
 REQSTR=20
 RESOURCES=10 i_cloth
-SKILLMAKE=Tailoring 91.2
+SKILLMAKE=Tailoring 91.2,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=7
@@ -111,5 +115,27 @@ ON=@Create
 
 [ITEMDEF 04066]
 DUPEITEM=040a
+
+[ITEMDEF 045a4]
+DEFNAME=i_gargish_cloth_wings
+NAME=Gargish cloth wing armor
+TYPE=t_clothing
+DYE=1
+FLIP=1
+WEIGHT=2.0
+REQSTR=10
+RESOURCES=12 i_cloth
+SKILLMAKE=Tailoring 65.0,t_sewing_kit
+TAG.Item.Gargoyle=1
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Cloth Gargoyle Armor
+DESCRIPTION=Gargish Cloth Wing Armor
+DUPELIST=045a5
+ON=@Create
+   HITPOINTS={50 60}
+
+[ITEMDEF 045a5]
+//gargoyle cloth wings
+DUPEITEM=045a4
 
 [EOF]
