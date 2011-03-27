@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 9, 2011
+// FILE LAST UPDATED: Sunday, March 27, 2011
 VERSION=0.56b
 
 
@@ -1128,5 +1128,37 @@ DESCRIPTION=Paper Lantern 6 (unlit)
 ON=@Create
    MOREZ=1
 
+[ITEMDEF 040be]
+DEFNAME=i_chandelier_lit
+TYPE=t_light_lit
+TDATA3=i_chandelier
+TDATA4=i_chandelier
+WEIGHT=3.3
+RESOURCES=i_candleabra
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Candles
+DESCRIPTION=Chandelier
+DUPELIST=040bf,040c0
+ON=@Create
+   MOREZ=1
 
+[ITEMDEF 040bf]
+//chandelier
+DUPEITEM=040be
+
+[ITEMDEF 040c0]
+//chandelier
+DUPEITEM=040be
+
+[ITEMDEF 040fe]
+//red lantern
+
+[ITEMDEF 040ff]
+//blue lantern
+
+[ITEMDEF 04100]
+//green lantern
+
+[ITEMDEF 04101]
+//purple lantern
 [EOF]

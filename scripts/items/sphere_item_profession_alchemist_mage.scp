@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 21, 2011
+// FILE LAST UPDATED: Sunday, March 27, 2011
 VERSION=0.56b
 
 
@@ -747,50 +747,10 @@ DEFNAME=i_rune_alchem_12
 TYPE=t_telepad
 
 [ITEMDEF 02dae]
-DEFNAME=i_healing_stone
-NAME=healing stone
-TYPE=t_normal
-WEIGHT=0.1
-CATEGORY=Spells
-SUBSECTION=Mysticism
-DESCRIPTION=Healing Stone
-ON=@DropOn_Char
-   RETURN 1
-   ENDIF
-ON=@DropOn_Ground
-   REMOVE
-ON=@DropOn_Item
-   IF (<ARGO>!=<SRC.FINDLAYER(21).UID>)
-      RETURN 1
-   ENDIF
-//ON=@DClick
-// * The healing stone will have stored life energy or healing points which determine how many times the stone can be used before being destroyed. (The life energy is determined by the casters Mysticism and Focus/Imbuing skills)
-// * The maximum amount the stone can heal for in a single usage is determined by the casters mysticism and focus/imbuing skills.
-// * The stone now has healing energy which determines how much of the maximum healing can be used at a time. This healing energy is completely consumed with each use and must take time to recharge before being able to heal for the maximum amount.
-// * The cool down on healing usage for the stone is 2 seconds, and it takes 15 seconds to replenish the stones energy completely.
-// * The healing stone can now be used to cure poison. The chance to cure is based on the users mysticism and focus/imbuing skills. The life energy cost to cure poison is based on the level of poison. Failing to cure poison only costs 1/3rd of the life energy as curing.
-// * Curing will not affect the stones energy.
-// * Summoning time for the Healing Stone has been increased significantly. 
+//healing stone
 
 [ITEMDEF 02daf]
-//Stores one Mysticism spell in a spell stone. The stone can be activated to instantly cast the stored spell. 
-DEFNAME=i_spell_stone
-NAME=spell stone
-TYPE=t_normal
-WEIGHT=0.1
-CATEGORY=Spells
-SUBSECTION=Mysticism
-DESCRIPTION=Spell Stone
-ON=@DropOn_Char
-   RETURN 1
-   ENDIF
-ON=@DropOn_Ground
-   REMOVE
-ON=@DropOn_Item
-   IF (<ARGO>!=<SRC.FINDLAYER(21).UID>)
-      RETURN 1
-   ENDIF
-//ON=@DClick
+//spell stone
 
 [ITEMDEF 02dd3]
 DEFNAME=i_elven_alchemy_table
@@ -826,5 +786,50 @@ DUPEITEM=02dd3
 //elven alchemy table
 DUPEITEM=02dd3
 
+[ITEMDEF 04078]
+DEFNAME=i_healing_stone
+NAME=healing stone
+TYPE=t_normal
+WEIGHT=0.1
+CATEGORY=Spells
+SUBSECTION=Mysticism
+DESCRIPTION=Healing Stone
+ON=@DropOn_Char
+   RETURN 1
+   ENDIF
+ON=@DropOn_Ground
+   REMOVE
+ON=@DropOn_Item
+   IF (<ARGO>!=<SRC.FINDLAYER(21).UID>)
+      RETURN 1
+   ENDIF
+//ON=@DClick
+// * The healing stone will have stored life energy or healing points which determine how many times the stone can be used before being destroyed. (The life energy is determined by the casters Mysticism and Focus/Imbuing skills)
+// * The maximum amount the stone can heal for in a single usage is determined by the casters mysticism and focus/imbuing skills.
+// * The stone now has healing energy which determines how much of the maximum healing can be used at a time. This healing energy is completely consumed with each use and must take time to recharge before being able to heal for the maximum amount.
+// * The cool down on healing usage for the stone is 2 seconds, and it takes 15 seconds to replenish the stones energy completely.
+// * The healing stone can now be used to cure poison. The chance to cure is based on the users mysticism and focus/imbuing skills. The life energy cost to cure poison is based on the level of poison. Failing to cure poison only costs 1/3rd of the life energy as curing.
+// * Curing will not affect the stones energy.
+// * Summoning time for the Healing Stone has been increased significantly. 
+
+[ITEMDEF 04079]
+//Stores one Mysticism spell in a spell stone. The stone can be activated to instantly cast the stored spell. 
+DEFNAME=i_spell_stone
+NAME=spell stone
+TYPE=t_normal
+WEIGHT=0.1
+CATEGORY=Spells
+SUBSECTION=Mysticism
+DESCRIPTION=Spell Stone
+ON=@DropOn_Char
+   RETURN 1
+   ENDIF
+ON=@DropOn_Ground
+   REMOVE
+ON=@DropOn_Item
+   IF (<ARGO>!=<SRC.FINDLAYER(21).UID>)
+      RETURN 1
+   ENDIF
+//ON=@DClick
 
 [EOF]

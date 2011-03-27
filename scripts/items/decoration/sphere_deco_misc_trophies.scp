@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 3, 2011.
+// FILE LAST UPDATED: Sunday, March 27, 2011.
 VERSION=0.56b
 
 
@@ -98,7 +98,6 @@ DUPEITEM=01e65
 [ITEMDEF 01e6d]
 DUPEITEM=01e66
 
-
 [ITEMDEF 02234]
 DEFNAME=i_trophy_dragonhead
 NAME=dragon trophy
@@ -115,7 +114,6 @@ DUPELIST=02235
 [ITEMDEF 02235]
 //trophy dragonhead
 DUPEITEM=02234
-
 
 [ITEMDEF 03158]
 DEFNAME=i_trophy_dread_horn
@@ -134,5 +132,21 @@ DUPELIST=03159
 //trophy dread horn
 DUPEITEM=03158
 
+[ITEMDEF 044e7]
+DEFNAME=i_trophy_dragonfish
+NAME=trophy dragonfish
+FLIP=1
+VALUE=53
+WEIGHT=8.2
+RESOURCES=2 i_log,1 i_fish_dragon,1 i_nails,1 i_wool
+SKILLMAKE=Carpentry 72.0,Tailoring 60.0,t_carpentry,t_sewing_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Trophies
+DESCRIPTION=Dragonfish
+DUPELIST=044e8
+
+[ITEMDEF 044e8]
+//trophy dragonfish
+DUPEITEM=044e7
 
 [EOF]

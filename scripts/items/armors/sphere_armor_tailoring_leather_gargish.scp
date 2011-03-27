@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, March 5, 2011
+// FILE LAST UPDATED: Sunday, March 27, 2011
 VERSION=0.56b
 
 // version 1 = id, dupe
@@ -17,10 +17,10 @@ DEFNAME=i_leather_gargoyle_arms_female
 NAME=Gargish leather arms
 TYPE=t_armor_leather
 FLIP=1
-WEIGHT=4
+WEIGHT=4.0
 REQSTR=25
 RESOURCES=8 i_hides_cut
-SKILLMAKE=Tailoring 53.9
+SKILLMAKE=Tailoring 53.9,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
@@ -42,10 +42,10 @@ DEFNAME=i_leather_gargoyle_arms
 NAME=Gargish leather arms
 TYPE=t_armor_leather
 FLIP=1
-WEIGHT=4
+WEIGHT=4.0
 REQSTR=25
 RESOURCES=8 i_hides_cut
-SKILLMAKE=Tailoring 53.9
+SKILLMAKE=Tailoring 53.9,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
@@ -67,10 +67,10 @@ DEFNAME=i_leather_gargoyle_chest_female
 NAME=Gargish leather chest
 TYPE=t_armor_leather
 FLIP=1
-WEIGHT=4
+WEIGHT=4.0
 REQSTR=25
 RESOURCES=8 i_hides_cut
-SKILLMAKE=Tailoring 70.5
+SKILLMAKE=Tailoring 70.5,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
@@ -92,10 +92,10 @@ DEFNAME=i_leather_gargoyle_chest
 NAME=Gargish leather chest
 TYPE=t_armor_leather
 FLIP=1
-WEIGHT=4
+WEIGHT=4.0
 REQSTR=25
 RESOURCES=8 i_hides_cut
-SKILLMAKE=Tailoring 70.5
+SKILLMAKE=Tailoring 70.5,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
@@ -117,10 +117,10 @@ DEFNAME=i_leather_gargoyle_leggings_female
 NAME=Gargish leather leggings
 TYPE=t_armor_leather
 FLIP=1
-WEIGHT=4
+WEIGHT=4.0
 REQSTR=25
 RESOURCES=10 i_hides_cut
-SKILLMAKE=Tailoring 66.3
+SKILLMAKE=Tailoring 66.3,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
@@ -142,10 +142,10 @@ DEFNAME=i_leather_gargoyle_leggings
 NAME=Gargish leather leggings
 TYPE=t_armor_leather
 FLIP=1
-WEIGHT=4
+WEIGHT=4.0
 REQSTR=25
 RESOURCES=10 i_hides_cut
-SKILLMAKE=Tailoring 66.3
+SKILLMAKE=Tailoring 66.3,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
@@ -167,10 +167,10 @@ DEFNAME=i_leather_gargoyle_kilt
 NAME=Gargish leather kilt
 TYPE=t_armor_leather
 FLIP=1
-WEIGHT=4
+WEIGHT=4.0
 REQSTR=25
 RESOURCES=6 i_hides_cut
-SKILLMAKE=Tailoring 58.0
+SKILLMAKE=Tailoring 58.0,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
@@ -192,10 +192,10 @@ DEFNAME=i_leather_gargoyle_kilt
 NAME=Gargish leather kilt
 TYPE=t_armor_leather
 FLIP=1
-WEIGHT=4
+WEIGHT=4.0
 REQSTR=25
 RESOURCES=6 i_hides_cut
-SKILLMAKE=Tailoring 58.0
+SKILLMAKE=Tailoring 58.0,t_sewing_kit
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=6
@@ -211,5 +211,26 @@ ON=@Create
 
 [ITEMDEF 0404c]
 DUPEITEM=0311
+
+[ITEMDEF 0457e]
+DEFNAME=i_gargish_leather_wings
+NAME=Gargish leather wing armor
+TYPE=t_armor_leather
+FLIP=1
+WEIGHT=2.0
+REQSTR=10
+RESOURCES=12 i_hides_cut
+SKILLMAKE=Tailoring 65.0,t_sewing_kit
+TAG.Item.Gargoyle=1
+CATEGORY=Provisions - Armor
+SUBSECTION=Leather Gargoyle Armor
+DESCRIPTION=Gargish Leather Wing Armor
+DUPELIST=0457f
+ON=@Create
+   HITPOINTS={50 60}
+
+[ITEMDEF 0457f]
+//gargoyle leather wing armor
+DUPEITEM=0457e
 
 [EOF]
