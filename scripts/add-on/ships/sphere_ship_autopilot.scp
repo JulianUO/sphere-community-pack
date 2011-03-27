@@ -31,6 +31,7 @@ else
 endif
 
 [function startmovement]
+shipstop
 if <tag0.ship_dest_total>
 	if !<tag0.autopilot>
 		f_land_check <p.x>,<p.y>,<tag.ship_dest_0>,<map>

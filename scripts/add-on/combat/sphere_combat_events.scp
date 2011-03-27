@@ -59,7 +59,7 @@ local.totalbonus = 0
 local.totalbonus = <f_combatsys_damagebonus_uor>
 local.totalbonus = <f_combatsys_damagebonus_aos>
 enddo
-trigger @HitDamageBonus,<def.tat_as_argo>,<argo>
+trigger @HitDamageBonus,<def.tat_as_full>,<argo>,<muldiv <argn1>,<eval (100 + <local.totalbonus>)>,100>
 local.totalbonus += <var0.<uid>_damagebonus>
 var.<uid>_damagebonus =
 local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>
@@ -171,7 +171,7 @@ local.totalbonus = 0
 local.totalbonus = <f_combatsys_damagebonus_uor>
 local.totalbonus = <f_combatsys_damagebonus_aos>
 enddo
-trigger @HitDamageBonus,<def.tat_as_argo>,<argo>
+trigger @HitDamageBonus,<def.tat_as_full>,<argo>,<muldiv <argn1>,<eval (100 + <local.totalbonus>)>,100>
 local.totalbonus += <var0.<uid>_damagebonus>
 var.<uid>_damagebonus =
 local.totalbonus = <muldiv <argn1>,<local.totalbonus>,100>

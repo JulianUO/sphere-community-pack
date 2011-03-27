@@ -1,0 +1,62 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: 06-Apr-2009
+VERSION=0.56b
+//
+// SCRIPT CREDITS
+// --------------
+// jeem
+//
+// SCRIPT DOCUMENTATION
+// High Seas ship tracking feature
+
+[FUNCTION startshiptracking]
+shiptrackingtick <src>,0
+
+[FUNCTION stopshiptracking]
+tag.StopTracking = 1
+for 71 75
+	src.arrowquest 0,0,<dlocal._for>
+endfor
+
+[FUNCTION shiptrackingtick]
+ref1 = <argv[0]>
+ref2 = <uid>
+local.tick = <argv[1]>
+
+if !((<ref1>) && (<ref1.isonline>) && (<ref2>))
+	return 1
+endif
+
+if <tag0.StopTracking>
+	tag.StopTracking =
+	return 1
+endif
+if <local.tick> >= 6
+	trysrc <ref1> stopshiptracking
+	tag.StopTracking =
+	return 1
+endif
+
+for 71 75
+	ref1.arrowquest 0,0,<dlocal._for>
+endfor
+
+foritems 200
+	if <type> == t_ship
+		if <ref2> != <uid>
+			local.tracked ++
+			ref1.arrowquest <p.x>,<p.y>,<eval (<local.tracked> + 70)>
+			if <local.tracked> >= 5
+				timerf 10,shiptrackingtick <ref1>,<eval (<local.tick> + 1)>
+				return 1
+			endif
+		endif
+	endif
+endfor
+timerf 10,shiptrackingtick <ref1>,<eval (<local.tick> + 1)>
+
+[eof]
