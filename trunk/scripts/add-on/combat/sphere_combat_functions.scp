@@ -216,4 +216,38 @@ if <str> >= 100
 endif
 return <feval <floatval <float.bonus.tactics> + <local.bonus.anatomy> + <local.bonus.lumber> + <local.bonus.str>>>
 
+///////////////////////////////////////////////////////////////
+//////// ADDITIONAL FUNCTIONS
+///////////////////////////////////////////////////////////////
+[function AOSDamage] // aosdamage Damage,Fire,Cold,Poison,Energy,Source
+if <flags>&statf_dead
+	return 1
+endif
+
+if <argv> > 5
+	ref1 = <argv[5]>
+elif <argv> < 5
+	serv.log Missing parameters in AOSDamage function
+	return 1
+else
+	ref1 = <uid>
+endif
+
+tag.hbcs = 1
+local.DamFire = <ref1.tag0.DamFire>
+local.DamCold = <ref1.tag0.DamCold>
+local.DamPoison = <ref1.tag0.DamPoison>
+local.DamEnergy = <ref1.tag0.DamEnergy>
+ref1.tag0.DamFire = <argv[1]>
+ref1.tag0.DamCold = <argv[2]>
+ref1.tag0.DamPoison = <argv[3]>
+ref1.tag0.DamEnergy = <argv[4]>
+
+damage <argv[0]> dam_god <ref1>
+
+ref1.tag0.DamFire = <local.DamFire>
+ref1.tag0.DamCold = <local.DamCold>
+ref1.tag0.DamPoison = <local.DamPoison>
+ref1.tag0.DamEnergy = <local.DamEnergy>
+
 [eof]
