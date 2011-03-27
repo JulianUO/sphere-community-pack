@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 10, 2011
+// FILE LAST UPDATED: Sunday, March 27, 2011
 VERSION=0.56b
 
 
@@ -2994,6 +2994,15 @@ TDATA3=c_darknight_creeper
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Darknight Creeper
+
+[ITEMDEF 03ffd]
+DEFNAME=i_hellhound_ancient
+NAME=ancient hellhound
+TYPE=t_figurine
+TDATA3=c_hellhound_ancient
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Ancient Hellhound
 
 [ITEMDEF 0422d]
 DEFNAME=i_pet_gargoyle_male

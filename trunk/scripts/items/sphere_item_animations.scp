@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Sunday, March 27, 2011
 VERSION=0.56b
 
 
@@ -2983,8 +2983,53 @@ DUPEITEM=03996
 //fire field 2 (n/s)
 DUPEITEM=03996
 
+[ITEMDEF 03e02]
+//DEFNAME=i_fx_poison_field_EW
+//TYPE=t_spell
+CATEGORY=Animations
+SUBSECTION=Poison Field
+DESCRIPTION=Poison Field East/West
+DUPELIST=03e03,03e04,03e05,03e06,03e07,03e08,03e09,03e0a,03e0b
+
+[ITEMDEF 03e03]
+//Poison Field East/West
+DUPEITEM=03e02
+
+[ITEMDEF 03e04]
+//Poison Field East/West
+DUPEITEM=03e02
+
+[ITEMDEF 03e05]
+//Poison Field East/West
+DUPEITEM=03e02
+
+[ITEMDEF 03e06]
+//Poison Field East/West
+DUPEITEM=03e02
+
+[ITEMDEF 03e07]
+//Poison Field East/West
+DUPEITEM=03e02
+
+[ITEMDEF 03e08]
+//Poison Field East/West
+DUPEITEM=03e02
+
+[ITEMDEF 03e09]
+//Poison Field East/West
+DUPEITEM=03e02
+
+[ITEMDEF 03e0a]
+//Poison Field East/West
+DUPEITEM=03e02
+
+[ITEMDEF 03e0b]
+//Poison Field East/West
+DUPEITEM=03e02
+
 [ITEMDEF 03e27]
 DEFNAME=i_fx_field_fire_3
+NAME=fire field
 TYPE=t_fire
 VALUE=1
 CATEGORY=Animations
@@ -3085,4 +3130,4 @@ SUBSECTION=Weirdness
 DESCRIPTION=Strange Yellow Dot
 
 
-[eof]
+[EOF]

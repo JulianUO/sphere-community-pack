@@ -19,7 +19,7 @@ VERSION=0.56b
 
 
 [ITEMDEF 02db1]
-// magical residue is the lowest level of the three core imbuing
+// Magical residue is the lowest level of the three core imbuing
 // ingredients. It can be obtained my unraveling weak magical items in
 // proximity to a Soul Forge.
 DEFNAME=i_magical_residue
@@ -46,7 +46,7 @@ SUBSECTION=Imbuing
 DESCRIPTION=Enchanted Essence
 
 [ITEMDEF 02db3]
-// relic fragments are one of the most rare ingredients for Imbuing. They
+// Relic fragments are one of the most rare ingredients for Imbuing. They
 // mostly come from Artifacts and sometimes from very high intensity
 // equipment. They are used to imbue the most desirable properties.
 DEFNAME=i_relic_fragment
@@ -71,16 +71,16 @@ SUBSECTION=Imbuing
 DESCRIPTION=Essence of Virtue
 
 [ITEMDEF 0571d]
-//Essence of Virtue animation
+//Essence of Virtue (animation frame)
 
 [ITEMDEF 0571e]
-//Essence of Virtue animation
+//Essence of Virtue (animation frame)
 
 [ITEMDEF 0571f]
-//Essence of Virtue animation
+//Essence of Virtue (animation frame)
 
 [ITEMDEF i_essence_diligence]
-// Is the imbuing ingredient used to imbue the Faster Cast Recovery property onto jewelry.
+// Is the imbuing ingredient used to imbue the Faster Cast Recovery property.
 ID=i_essence_virtue
 NAME=essence of diligence
 TYPE=t_normal
@@ -106,7 +106,7 @@ ON=@Create
    COLOR=1150
 
 [ITEMDEF i_essence_passion]
-// Is the imbuing ingredient used to imbue the Hit Lightning property onto weapons.
+// Is the imbuing ingredient used to imbue the Hit Lightning property.
 ID=i_essence_virtue
 NAME=essence of passion
 TYPE=t_normal
@@ -119,7 +119,7 @@ ON=@Create
    COLOR=1161
 
 [ITEMDEF i_essence_precision]
-// Is the imbuing ingredient used to imbue the Hit Chance Increase modifier. 
+// Is the imbuing ingredient used to imbue the Hit Chance Increase property.
 ID=i_essence_virtue
 NAME=essence of precision
 TYPE=t_normal
@@ -133,7 +133,7 @@ ON=@Create
 
 [ITEMDEF i_essence_singularity]
 // Is the imbuing ingredient used to to imbue the Defense Chance Increase
-// property onto weapons, shields and jewelry.
+// property.
 ID=i_essence_virtue
 NAME=essence of singularity
 TYPE=t_normal
@@ -147,7 +147,7 @@ ON=@Create
 
 
 [ITEMDEF 05720]
-// Is an imbuing ingredient used to imbue Arachnid Slayer property onto items.
+// Is an imbuing ingredient used to imbue Arachnid Slayer property.
 DEFNAME=i_spider_carapace
 NAME=spider carapace
 TYPE=t_normal
@@ -158,12 +158,37 @@ SUBSECTION=Imbuing
 DESCRIPTION=Spider Carapace
 
 [ITEMDEF 05721]
-//demon claw
+// Is an imbuing ingredient used to imbue the Demon Slayer property.
+DEFNAME=i_daemon_claw
+NAME=daemon claw
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Daemon Claw
+
 [ITEMDEF 05722]
-//vial of vitriol
+// Is an imbuing ingredient used to imbue the Elemental Slayer property.
+DEFNAME=i_vial_of_vitriol
+NAME=vial of vitriol
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+RESOURCES=1 i_parasitic_plant,30 i_reag_nightshade
+SKILLMAKE=Alchemy 90.0,Magery 75.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Vial of Vitriol
+
 [ITEMDEF 05723]
+//Vial of Vitriol (animation frame)
+
 [ITEMDEF 05724]
+//Vial of Vitriol (animation frame)
+
 [ITEMDEF 05725]
+//Vial of Vitriol (animation frame)
 
 [ITEMDEF 05726]
 DEFNAME=i_fey_wings
@@ -194,8 +219,7 @@ DESCRIPTION=Vile Tentacles
 [ITEMDEF 0572b]
 
 [ITEMDEF 0572c]
-// Is an imbuing ingredient used to imbue the Repond Slayer property onto
-// weapons.
+// Is an imbuing ingredient used to imbue the Repond Slayer property.
 DEFNAME=i_goblin_blood
 NAME=goblin blood
 TYPE=t_normal
@@ -206,8 +230,7 @@ SUBSECTION=Imbuing
 DESCRIPTION=Goblin Blood
 
 [ITEMDEF 0572d]
-// Is an Imbuing ingredient used to imbue the Reptile Slayer property
-// onto weapons.
+// Is an Imbuing ingredient used to imbue the Reptile Slayer property.
 DEFNAME=i_lava_serpent_crust
 NAME=lava serpent crust
 TYPE=t_normal
@@ -220,40 +243,115 @@ DESCRIPTION=Lava Serpent Crust
 DUPELIST=0572e,0572f,05730
 
 [ITEMDEF 0572e]
-//Lava Serpent Crust (animation)
+//Lava Serpent Crust (animation frame)
 
 [ITEMDEF 0572f]
-//Lava Serpent Crust (animation)
+//Lava Serpent Crust (animation frame)
 
 [ITEMDEF 05730]
-//Lava Serpent Crust (animation)
+//Lava Serpent Crust (animation frame)
 
 [ITEMDEF 05731]
-//undying flesh
+// Is an imbuing ingredient used to imbue the Undead Slayer property.
+DEFNAME=i_undying_flesh
+NAME=undying flesh
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Undying Flesh
+
 [ITEMDEF 05732]
-//crystalline blackrock
-[ITEMDEF 05733]
+// Is an imbuing ingredient used to imbue high intensities of Skill Bonus
+// properties.
+DEFNAME=i_crystalline_blackrock
+NAME=crystalline blackrock
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Crystalline Blackrock
+
+[ITEMDEF 05733] 
+//Crystalline Blackrock (animation frame)
+
 [ITEMDEF 05734]
+//Crystalline Blackrock (animation frame)
+
 [ITEMDEF 05735]
+//Crystalline Blackrock (animation frame)
+
 [ITEMDEF 05736]
-//seed of renewal
+// Is an imbuing ingredient used to imbue the Hit Point Regeneration, Stamina
+// Regeneration and Mana Regeneration properties.
+DEFNAME=i_seed_of_renewal
+NAME=seed of renewal
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Seed of Renewal
+
 [ITEMDEF 05737]
-//elven fletching
+// Is an imbuing ingredient used to imbue the Lower Requirements property.
+DEFNAME=i_elven_fletching
+NAME=elven fletching
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Elven Fletching
+
 [ITEMDEF 05738]
-//crystal shards
+// Is an imbuing ingredient used to imbue high intensities of the Damage
+// Increase and Spell Damage Increase properties.
+DEFNAME=i_crystal_shards
+NAME=crystal shards
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Crystal Shards
+
 [ITEMDEF 05739]
 //lodestone
+
 [ITEMDEF 0573a]
-//delicate scales
+// Is an imbuing ingredient used to imbue the use best weapon skill property.
+DEFNAME=i_delicate_scales
+NAME=delicate scales
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Delicate Scales
+
 [ITEMDEF 0573b]
-//crushed glass
+// Is an imbuing ingredient used to imbue the enhance potions property.
+DEFNAME=i_crushed_glass
+NAME=crushed glass
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+RESOURCES=5 i_sword_glass,1 i_diamond_blue
+SKILLMAKE=Blacksmithing 110.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Crushed Glass
+
 [ITEMDEF 0573c]
 //arcanic runestone
-//is an Imbuing ingredient needed to imbue the Mage Weapon property onto weapons.
+// Is an Imbuing ingredient needed to imbue the Mage Weapon property onto weapons.
 //90 Tinkering and 80 Magery can craft Arcanic Rune Stone by using a tinkering tool along with 1 Crystal Shards and 5 Power Crystals.
 
 [ITEMDEF 0573d]
-// Is an imbuing ingredient used to imbue the durability property onto items.
+// Is an imbuing ingredient used to imbue the durability property.
 DEFNAME=i_powdered_iron
 NAME=powdered iron
 TYPE=t_normal
@@ -266,14 +364,31 @@ SUBSECTION=Imbuing
 DESCRIPTION=Powdered Iron
 
 [ITEMDEF 0573e]
-//void orb
+// Is an imbuing ingredient used to imbue Hit Life Leech, Hit Stamina Leech
+// and Hit Mana Leech properties.
+DEFNAME=i_void_orb
+NAME=void orb
+TYPE=t_normal
+VALUE=100
+WEIGHT=1.0
+RESOURCES=1 i_gem_dark_sapphire,50 i_reag_black_pearl
+SKILLMAKE=Tinkering 90.0,Magery 80.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Void Orb
+
 [ITEMDEF 0573f]
+//Void Orb (animation frame)
+
 [ITEMDEF 05740]
+//Void Orb (animation frame)
+
 [ITEMDEF 05741]
+//Void Orb (animation frame)
 
 [ITEMDEF 05742]
 // Is an imbuing ingredient used to imbue high intensities of Physical
-// Fire, Cold, Poison, and Energy Resist onto items. 
+// Fire, Cold, Poison, and Energy Resist properties. 
 DEFNAME=i_boura_pelt
 TYPE=t_fur
 VALUE=100
@@ -296,14 +411,31 @@ ON=@Create
    COLOR=758
 
 [ITEMDEF 05743]
-//chaga mushroom
+// Is an imbuing ingredient used to imbue high intensities of the Luck
+// property.
+DEFNAME=i_chaga_mushroom
+NAME=chaga mushroom
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Chaga Mushroom
+
 [ITEMDEF 05744]
-//silver snake skin
-//t_hide
+// Is an imbuing ingredient used to imbue the Spell Channeling property.
+DEFNAME=i_silver_snake_skin
+NAME=silver snake skin
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Silver Snake Skin
 
 [ITEMDEF 05745]
-// Is an imbuing ingredient used to imbue high intensities of Lower
-// Reagent Cost onto items.
+// Is an imbuing ingredient used to imbue high intensities of the Lower
+// Reagent Cost property.
 DEFNAME=i_fairy_dust
 NAME=fairy dust
 TYPE=t_normal
@@ -314,7 +446,7 @@ SUBSECTION=Imbuing
 DESCRIPTION=Fairy Dust
 
 [ITEMDEF 05746]
-// Is an imbuing ingredient used to imbue Hit Dispel property onto items.
+// Is an imbuing ingredient used to imbue the Hit Dispel property.
 DEFNAME=i_slith_tongue
 NAME=slith tongue
 TYPE=t_meat_raw
@@ -327,7 +459,7 @@ DESCRIPTION=Slith Tongue
 [ITEMDEF 05747]
 // Is an Imbuing ingredient used to imbue one of the Hit Physical Area,
 // Hit Fire Area, Hit Cold Area, Hit Poison Area and Hit Energy Area
-// properties onto items.
+// properties.
 DEFNAME=i_raptor_teeth
 NAME=raptor teeth
 TYPE=t_normal
@@ -338,7 +470,7 @@ SUBSECTION=Imbuing
 DESCRIPTION=Raptor Teeth
 
 [ITEMDEF 05748]
-// Is an Imbuing ingredient used to imbue the Night Sight property onto armor.
+// Is an Imbuing ingredient used to imbue the Night Sight property.
 DEFNAME=i_bottle_ichor
 NAME=bottle of ichor
 TYPE=t_normal
@@ -349,7 +481,7 @@ SUBSECTION=Imbuing
 DESCRIPTION=Bottle of Ichor
 
 [ITEMDEF 05749]
-// Is an Imbuing ingredient used to imbue Reflect Physical Damage property onto items.
+// Is an Imbuing ingredient used to imbue Reflect Physical Damage property.
 DEFNAME=i_reflective_wolf_eye
 NAME=reflective wolf eye
 TYPE=t_normal
