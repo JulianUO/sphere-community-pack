@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 10, 2011
+// FILE LAST UPDATED: Sunday, March 27, 2011
 VERSION=0.56b
 
 
@@ -1760,11 +1760,34 @@ DUPEITEM=0365c
 [ITEMDEF 0366f]
 
 [ITEMDEF 03678]
-//quest item
+DEFNAME=i_crystal_token
+NAME=Crystal Token
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Crystal Token
+
 [ITEMDEF 03679]
-//quest item
+DEFNAME=i_shadow_token
+NAME=Shadow Token
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Shadow Token
+
 [ITEMDEF 0367a]
-//quest item
+DEFNAME=i_heritage_token
+NAME=Heritage Token
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Heritage Token
 
 [ITEMDEF 0369c]
 DUPEITEM=0364d
@@ -1773,6 +1796,141 @@ DUPEITEM=0365a
 [ITEMDEF 0369e]
 DUPEITEM=0365a
 
+[ITEMDEF 036a0]
+//Duplicate of peach leaves item 0d9d
+TYPE=t_foliage
+
+[ITEMDEF 036a1]
+//Duplicate of maple leaves item 0247c
+TYPE=t_foliage
+
+[ITEMDEF 036a2]
+DEFNAME=i_book_sm_quest
+NAME=book
+TYPE=t_book
+WEIGHT=1.0
+RESOURCES=1 i_canvas,10 i_paper,1 i_thread,1 i_hides_cut
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Light Tan Book
+
+[ITEMDEF 036a3]
+DEFNAME=i_book_sm_quest_2
+NAME=book
+TYPE=t_book
+WEIGHT=1.0
+RESOURCES=1 i_canvas,10 i_paper,1 i_thread,1 i_hides_cut
+CATEGORY=Quest
+SUBSECTION=Unknown
+DESCRIPTION=Reddish Book
+
+[ITEMDEF 03d12]
+//grapevines
+//duplicate of 0d21
+
+[ITEMDEF 03d17]
+//corn crop
+//duplicate of 0c7e
+
+[ITEMDEF 03d18]
+//corn crop
+//shorter duplicate of 0c7d
+
+[ITEMDEF 03d19]
+//corn (fruit)
+//duplicate of 0c7f
+
+[ITEMDEF 03d1a]
+//corn (fruit)
+//duplicate of 0c80
+
+[ITEMDEF 03d1b]
+//corn (fruit)
+//duplicate of 0c81
+
+[ITEMDEF 03d1c]
+//corn (fruit)
+//duplicate of 0c82
+
+[ITEMDEF 03d86]
+DEFNAME=i_decorative_armor
+NAME=decorative armor
+TYPE=t_normal
+FLIP=1
+WEIGHT=190.0
+RESOURCES=5 i_ingot_gold,2 i_log,7 i_feather,1 i_helm_closed,1 i_platemail_arms,1 i_platemail_leggings,1 i_platemail_gorget,1 i_platemail_gloves,1 i_platemail_chest,1 i_axe_war
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Decorative Armor
+DESCRIPTION=Decorative Armor
+DUPELIST=03d87
+
+[ITEMDEF 03d87]
+//decorative armor
+DUPEITEM=03d86
+
+[ITEMDEF 03d8a]
+DEFNAME=i_bed_ruined
+NAME=ruined bed
+TYPE=t_bed
+WEIGHT=149.5
+RESOURCES=120 i_board,15 i_cloth,20 i_nails,2 i_bedroll
+CATEGORY=Decoration - Furniture
+SUBSECTION=Broken Furniture
+DESCRIPTION=Ruined Large Bed
+DUPELIST=03d8b,03d8c,03d8d,03d90,03d91,03d92,03d93
+
+[ITEMDEF 03d8b]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d8c]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d8d]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d8e]
+//Weighted Fishing Net
+DUPEITEM=01ea3
+
+[ITEMDEF 03d8f]
+//Weighted Fishing Net
+DUPEITEM=01ea3
+
+[ITEMDEF 03d90]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d91]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d92]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d93]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03daf]
+DEFNAME=i_cauldron_full
+NAME=Cauldron
+FLIP=1
+VALUE=168
+WEIGHT=39.0
+RESOURCES=8 i_ingot_iron,1 i_kettle
+SKILLMAKE=Tinkering 65.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Cook
+DESCRIPTION=Cauldron (full with white background)
+DUPELIST=03db0
+
+[ITEMDEF 03db0]
+//Cauldron (full with white background)
+DUPEITEM=03daf
 
 
 [ITEMDEF 03eea]
@@ -1798,6 +1956,11 @@ DUPEITEM=0365a
 
 [ITEMDEF 03ef1]
 //
+
+[ITEMDEF 03f28]
+CATEGORY=Miscellaneous
+SUBSECTION=Bad Tiles
+DESCRIPTION=Empty tile 03f28
 
 [ITEMDEF 03f8f]
 CATEGORY=Miscellaneous

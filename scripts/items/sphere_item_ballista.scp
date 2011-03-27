@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Sunday, March 27, 2011
 VERSION=0.56b
 
 
@@ -179,7 +179,7 @@ NAME=ballista
 CATEGORY=Miscellaneous
 SUBSECTION=Ballista
 DESCRIPTION=@
-DUPELIST=03f40,03f41,03f42,03f43,03f44,03f45,03f46,03f47,03f48,03f49,03f4a,03f4b,03f4c,03f4d,03f4e,03f4f,03f50,03f51,03f52,03f53,03f54,03f55,03f56,03f57,03f58,03f59,03f5a,03f5b,03f5c,03f5d,03f5e,03f5f,03f60,03f61,03f62,03f63,03f64,03f65,03f66,03f67,03f68,03f69,03f6a,03f6b,03f6c,03f6d,03f6e,03f6f,03f70,03f71,03f72,03f73,03f74,03f75,03f76,03f77,03f78,03f79,03f7a,03f7b,03f7c,03f7d,03f7e,03f7f,03f80,03f81,03f82,03f83,03f84,03f85,03f86,03f87,03f88,03f89,03f8a,03f8b,03f8c,03f8d,03f8e,03f90,03f91,03f92,03f93,03f94,03f95,03f96,03f97,03f98,03f99,03f9a,03f9b,03f9c,03f9d,03f9e,03f9f,03fa0,03fa1,03fa2,03fa3,03fa4,03fa5,03fa6,03fa7,03fa8,03fa9,03faa,03fab,03fac,03fad,03fae,03faf,03fb0,03fb1,03fb2,03fb3,03fb4,03fb5,03fb6,03fb7,03fb8,03fb9,03fba,03fbb,03fbc,03fbd,03fbe,03fbf,03fc0,03fc1,03fc2,03fc3,03fc4,03fc5,03fc6,03fc7,03fc8,03fc9,03fca,03fcb,03fcc,03fcd,03fce,03fcf,03fd0,03fd1,03fd2,03fd3,03fd4,03fd5,03fd6,03fd7,03fd8,03fd9,03fda,03fdb,03fdc,03fdd,03fde,03fdf,03fe0,03fe2,03fe3,03fe4
+DUPELIST=03f40,03f41,03f42,03f43,03f44,03f45,03f46,03f47,03f48,03f49,03f4a,03f4b,03f4c,03f4d,03f4e,03f4f,03f50,03f51,03f52,03f53,03f54,03f55,03f56,03f57,03f58,03f59,03f5a,03f5b,03f5c,03f5d,03f5e,03f5f,03f60,03f61,03f62,03f63,03f64,03f65,03f66,03f67,03f68,03f69,03f6a,03f6b,03f6c,03f6d,03f6e,03f6f,03f70,03f71,03f72,03f73,03f74,03f75,03f76,03f77,03f78,03f79,03f7a,03f7b,03f7c,03f7d,03f7e,03f7f,03f80,03f81,03f82,03f83,03f84,03f85,03f86,03f87,03f88,03f89,03f8a,03f8b,03f8c,03f8d,03f8e,03f90,03f91,03f92,03f93,03f94,03f95,03f96,03f97,03f98,03f99,03f9a,03f9b,03f9c,03f9d,03f9e,03f9f,03fa0,03fa1,03fa2,03fa3,03fa4,03fa5,03fa6,03fa7,03fa8,03fa9,03faa,03fab,03fac,03fad,03fae,03faf,03fb0,03fb1,03fb2,03fb3,03fb4,03fb5,03fb6,03fb7,03fb8,03fb9,03fba,03fbb,03fbc,03fbd,03fbe,03fbf,03fc0,03fc1,03fc2,03fc3,03fc4,03fc5,03fc6,03fc7,03fc8,03fc9,03fca,03fcb,03fcc,03fcd,03fce,03fcf,03fd0,03fd1,03fd2,03fd3,03fd4,03fd5,03fd6,03fd7,03fd8,03fd9,03fda,03fdb,03fdc,03fdd,03fde,03fdf,03fe0,03fe1,03fe2,03fe3,03fe4
 
 [ITEMDEF 03f40]
 //ballista
@@ -818,6 +818,10 @@ DUPEITEM=03f3f
 DUPEITEM=03f3f
 
 [ITEMDEF 03fe0]
+//ballista
+DUPEITEM=03f3f
+
+[ITEMDEF 03fe1]
 //ballista
 DUPEITEM=03f3f
 

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Wednesday, March 9, 2011
+// FILE LAST UPDATED: Sunday, March 27, 2011
 VERSION=0.56b
 
 
@@ -5041,7 +5041,7 @@ DUPEITEM=038d9
 DEFNAME=i_floor_tree
 NAME=tree floor
 CATEGORY=Ground Tiles
-SUBSECTION=tree Floor
+SUBSECTION=Tree Floor
 DESCRIPTION=Floor
 DUPELIST=039d5,039d6,039d7,039d8,039d9,039da,039db,039dc,039dd,039de,039df,039e0,039e1,039e2,039e3,039e4,039e5,03a1f,03a20,03a21,03a22,03a23,03a24,03a25,03a26,03a27,03a28,03a29,03a2a,03a2b,03a2c,03a2d,03a2e,03a2f,03a30,03a31,03a32,03a45,03a46,03a47,03a48,03a49,03a4a,03a4b,03a4c,03a4d,03a4e,03a4f,03a50,03a51,03a52,03a53,03a54
 
@@ -5257,6 +5257,125 @@ DUPEITEM=039d4
 //tree floor
 DUPEITEM=039d4
 
+
+[ITEMDEF 03af0]
+//FIXME: what is this used for? Tree Canopy perhaps?
+//DEFNAME=i_floor_green
+NAME=floor
+CATEGORY=Ground Tiles
+SUBSECTION=Green Floor (foliage?)
+DESCRIPTION=Floor
+DUPELIST=03af1,03af2,03af3,03af4,03af5,03af6,03af7,03af8
+
+[ITEMDEF 03af1]
+//green floor
+DUPEITEM=03af0
+
+[ITEMDEF 03af2]
+//green floor
+DUPEITEM=03af0
+
+[ITEMDEF 03af3]
+//green floor
+DUPEITEM=03af0
+
+[ITEMDEF 03af4]
+//green floor
+DUPEITEM=03af0
+
+[ITEMDEF 03af5]
+//green floor
+DUPEITEM=03af0
+
+[ITEMDEF 03af6]
+//green floor
+DUPEITEM=03af0
+
+[ITEMDEF 03af7]
+//green floor
+DUPEITEM=03af0
+
+[ITEMDEF 03af8]
+//green floor
+DUPEITEM=03af0
+
+
+[ITEMDEF 03b16]
+DEFNAME=i_floor_darkness
+NAME=floor
+CATEGORY=Ground Tiles
+SUBSECTION=Black Floor
+DESCRIPTION=Floor
+DUPELIST=03b17,03b18,03b19,03b1a,03b1b,03b1c,03b1d,03b1e,03b1f,03b20,03b21,03b22,03b23,03b24,03b25,03b26
+
+[ITEMDEF 03b17]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b18]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b19]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b1a]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b1b]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b1c]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b1d]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b1e]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b1f]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b20]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b21]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b22]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b23]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b24]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b25]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03b26]
+//black floor
+DUPEITEM=03b16
+
+[ITEMDEF 03d84]
+CATEGORY=Ground Tiles
+SUBSECTION=Black
+DESCRIPTION=Black Tile 03d84 (empty)
 
 [ITEMDEF 0219f]
 //hover over (hidden)

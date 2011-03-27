@@ -6777,7 +6777,7 @@ RESOURCES=100 i_crystal_ice
 CATEGORY=Buildings - Walls
 SUBSECTION=Crystal Wall
 DESCRIPTION=Crystal Wall
-DUPELIST=035d8,035d9,035da,035db,035dc,035dd,035de,035df,035e0,035e1,035e2,035e3,035e4,035e5,035e6,035e7,035e8
+DUPELIST=035d8,035d9,035da,035db,035dc,035dd,035de,035df,035e0,035e1,035e2,035e3,035e4,035e5,035e6,035e7,035e8,03670,03671,03672,03673
 
 [ITEMDEF 035d8]
 //Crystal wall
@@ -6960,25 +6960,42 @@ DUPEITEM=0360e
 DUPEITEM=0360e
 
 
+[ITEMDEF 03670]
+//Crystal wall (short)
+DUPEITEM=035d7
+
+[ITEMDEF 03671]
+//Crystal wall (short)
+DUPEITEM=035d7
+
+[ITEMDEF 03672]
+//Crystal wall (short)
+DUPEITEM=035d7
+
+[ITEMDEF 03673]
+//Crystal wall (short)
+DUPEITEM=035d7
+
+
 [ITEMDEF 03674]
-//Shadow Wall
+//Shadow Wall (short)
 DUPEITEM=0360e
 
 [ITEMDEF 03675]
-//Shadow Wall
+//Shadow Wall (short)
 DUPEITEM=0360e
 
 [ITEMDEF 03676]
-//Shadow Wall
+//Shadow Wall (short)
 DUPEITEM=0360e
 
 [ITEMDEF 03677]
-//Shadow Wall
+//Shadow Wall (short)
 DUPEITEM=0360e
 
 
 [ITEMDEF 0369f]
-//Shadow Wall
+//Shadow Wall (arch)
 DUPEITEM=0360e
 
 
