@@ -136,14 +136,14 @@ tag.Luck = <eval <tag0.Luck> + 40>
 tag.DamageIncrease = 5
 
 [function f_colored_armor_ash]
-tag.LowerRequeriments = 20
+tag.LowerRequirements = 20
 
 [function f_colored_weaps_ash]
 if !<istevent.t_iprop>
 events +t_iprop
 endif
 tag.SwingSpeedIncrease = 10
-tag.LowerRequeriments = 20
+tag.LowerRequirements = 20
 
 [function f_colored_armor_yew]
 if !<istevent.t_iprop>
@@ -185,7 +185,7 @@ endif
 dorand 6
 tag.Luck = 40
 hitpoints += <eval <hitpoints> / 2>
-tag.LowerRequeriments = 20
+tag.LowerRequirements = 20
 tag.DamageIncrease = 10
 tag.HitChanceIncrease = 5
 tag.MageArmor = 1
@@ -212,7 +212,7 @@ endif
 dorand 7
 tag.Luck = 40
 hitpoints += <eval <hitpoints> / 2>
-tag.LowerRequeriments = 20
+tag.LowerRequirements = 20
 tag.SwingSpeedIncrease = 10
 tag.HitChanceIncrease = 5
 tag.HitLifeLeech = <r100>

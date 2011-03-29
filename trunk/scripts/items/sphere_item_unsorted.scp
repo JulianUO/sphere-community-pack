@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, March 27, 2011
+// FILE LAST UPDATED: Tuesday, March 29, 2011
 VERSION=0.56b
 
 
@@ -2196,5 +2196,33 @@ DUPEITEM=048d4
 
 [ITEMDEF 048db]
 //grandfather clock (animation frame)
+
+
+[ITEMDEF 048e0]
+DEFNAME=i_toy_bear
+TYPE=t_normal
+FLIP=1
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Toy Valentine Bear
+DUPELIST=048e1
+
+[ITEMDEF 048e1]
+//toy valentine bear
+DUPEITEM=048e0
+
+[ITEMDEF 048e2]
+DEFNAME=i_toy_bear_2
+TYPE=t_normal
+FLIP=1
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Toy Valentine Bear 2
+DUPELIST=048e3
+
+[ITEMDEF 048e3]
+//toy valentine bear 2
+DUPEITEM=048e2
+
 
 [EOF]

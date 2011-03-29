@@ -896,5 +896,69 @@ CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
 DESCRIPTION=Medusa
 
+[ITEMDEF 04578]
+DEFNAME=i_statue_seahorse
+FLIP=1
+VALUE=150
+WEIGHT=200.0
+RESOURCES=10 i_rock_plain
+SKILLMAKE=Masonry 90.0
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Seahorse
+DUPELIST=04579
+
+[ITEMDEF 04579]
+//seahorse statue
+DUPEITEM=04578
+
+[ITEMDEF 0457a]
+DEFNAME=i_statue_mermaid
+FLIP=1
+VALUE=150
+WEIGHT=200.0
+RESOURCES=10 i_rock_plain
+SKILLMAKE=Masonry 90.0
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Mermaid
+DUPELIST=0457b
+
+[ITEMDEF 0457b]
+//mermaid statue
+DUPEITEM=0457a
+
+[ITEMDEF 0457c]
+DEFNAME=i_statue_griffin
+FLIP=1
+VALUE=150
+WEIGHT=200.0
+RESOURCES=10 i_rock_plain
+SKILLMAKE=Masonry 90.0
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Griffin
+DUPELIST=0457d
+
+[ITEMDEF 0457d]
+//griffin statue
+DUPEITEM=0457c
+
+[ITEMDEF 04688]
+DEFNAME=i_statue_cat
+FLIP=1
+VALUE=150
+WEIGHT=200.0
+RESOURCES=10 i_rock_plain
+SKILLMAKE=Masonry 90.0
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Small Cat
+DUPELIST=04689
+
+[ITEMDEF 04689]
+//small cat statue
+DUPEITEM=04688
+
 
 [EOF]

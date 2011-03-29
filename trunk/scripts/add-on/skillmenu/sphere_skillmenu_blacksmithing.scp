@@ -306,11 +306,11 @@ blacksmithing_material_8_color		"color_o_valorite"
 blacksmithing_material_8_resourceid	"i_ingot_valorite"
 
 [function f_colored_armor_dullcopper]
-tag.LowerRequeriments = 20
+tag.LowerRequirements = 20
 hitpoints += 50
 
 [function f_colored_weaps_dullcopper]
-tag.LowerRequeriments = 50
+tag.LowerRequirements = 50
 hitpoints += 100
 
 [function f_colored_armor_shadow]
@@ -324,14 +324,14 @@ if !<istevent.t_iprop>
 events +t_iprop
 endif
 tag.Luck = <eval <tag0.Luck> + 40>
-tag.LowerRequeriments = 30
+tag.LowerRequirements = 30
 
 [function f_colored_weaps_golden]
 if !<istevent.t_iprop>
 events +t_iprop
 endif
 tag.Luck = <eval <tag0.Luck> + 40>
-tag.LowerRequeriments = 50
+tag.LowerRequirements = 50
 
 [function f_colored_armor_valorite]
 hitpoints += 50

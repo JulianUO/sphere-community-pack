@@ -84,8 +84,8 @@ itemprop_030   "1060584,1,255,255,01,usesremaining,0400"
 // 1072377;Full Armor Set Present;Original
 // 1072378;<br>Only when full set is present:;Original
 
-// can't be scripted or not meant to be *special*
-// - lower requeriments
+//FIXME: To script these, the REQSTR property of weapons and armor needs to be zero and a TAG used instead
+// - lower requirements
 // - strength requirement
 
 // too lazy to do it

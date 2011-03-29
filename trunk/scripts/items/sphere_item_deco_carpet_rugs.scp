@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Wednesday, March 9, 2011
+// FILE LAST UPDATED: Tuesday, March 29, 2011
 VERSION=0.56b
 
 
@@ -1126,5 +1126,19 @@ DUPEITEM=02ac8
 //bearskin rug bits (unused)
 DUPEITEM=02ac8
 
+[ITEMDEF 047da]
+DEFNAME=i_welcome_mat
+TYPE=t_normal
+DYE=1
+FLIP=1
+CATEGORY=Decoration - Carpets & Rugs
+SUBSECTION=Welcome Mat
+DESCRIPTION=Welcome Mat
+DUPELIST=047db
 
-[eof]
+[ITEMDEF 047db]
+//welcome mat
+DUPEITEM=047da
+
+
+[EOF]

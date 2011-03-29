@@ -373,4 +373,54 @@ DUPEITEM=03a73
 [ITEMDEF 03a92]
 DUPEITEM=03a73
 
+[ITEMDEF 046ec]
+DEFNAME=i_nutcracker_small
+TYPE=t_normal//FIXME: When dclicked, it should animate once
+FLIP=1
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Small Nutcracker
+DUPELIST=046ef
+
+[ITEMDEF 046ed]
+//small nutcracker (animation frame)
+
+[ITEMDEF 046ee]
+//small nutcracker (animation frame)
+
+[ITEMDEF 046ef]
+//small nutcracker
+DUPEITEM=046ec
+
+[ITEMDEF 046f0]
+//small nutcracker (animation frame)
+
+[ITEMDEF 046f1]
+//small nutcracker (animation frame)
+
+[ITEMDEF 046f2]
+DEFNAME=i_nutcracker_large
+TYPE=t_normal//FIXME: When dclicked, it should animate once
+FLIP=1
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Large Nutcracker
+DUPELIST=046f5
+
+[ITEMDEF 046f3]
+//large nutcracker (animation frame)
+
+[ITEMDEF 046f4]
+//large nutcracker (animation frame)
+
+[ITEMDEF 046f5]
+//large nutcracker
+DUPEITEM=046f2
+
+[ITEMDEF 046f6]
+//large nutcracker (animation frame)
+
+[ITEMDEF 046f7]
+//large nutcracker (animation frame)
+
 [EOF]
