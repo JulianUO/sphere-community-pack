@@ -18,9 +18,9 @@ VERSION=0.56b
 
 [function craftskill]
 if strcmp("<argv[0]>","<ctag.craft.skill>")
-ctag.craft.last
-ctag.craft.page.sidebar
-ctag.craft.sidebar = 01
+   ctag.craft.last
+   ctag.craft.page.sidebar
+   ctag.craft.sidebar = 01
 endif
 ctag.craft.skill=<argv[0]>
 sdialog d_craft_menu
@@ -29,80 +29,80 @@ sdialog d_craft_menu
 [function craft]
 local.recipe = <getargv 3 <ctag0.craft.item.options>>
 if <local.recipe> == 1
-	if !<tag0.recipe.<serv.itemdef.<ctag0.craft.item>.baseid>>
-	ctag.craft.message = <def.scp.craft_msg_norecipe>
-	f_resenddialog d_craft_menu
-	return 1
-	endif
+   if !<tag0.recipe.<serv.itemdef.<ctag0.craft.item>.baseid>>
+      ctag.craft.message = <def.scp.craft_msg_norecipe>
+      f_resenddialog d_craft_menu
+      return 1
+   endif
 endif
 if <account.resdisp> < <getargv 4 <ctag0.craft.item.options>>
-ctag.craft.message = <def.scp.craft_msg_noexpansion>
-f_resenddialog d_craft_menu
-return 1
+   ctag.craft.message = <def.scp.craft_msg_noexpansion>
+   f_resenddialog d_craft_menu
+   return 1
 endif
 if !<canmakeskill <args>>
-ctag.craft.message = <def.scp.craft_msg_noskill>
-f_resenddialog d_craft_menu
-return 1
+   ctag.craft.message = <def.scp.craft_msg_noskill>
+   f_resenddialog d_craft_menu
+   return 1
 elif !<canmake <args>>
-ctag.craft.message = <def.scp.craft_msg_noresources>
-f_resenddialog d_craft_menu
-return 1
+   ctag.craft.message = <def.scp.craft_msg_noresources>
+   f_resenddialog d_craft_menu
+   return 1
 elif !<isempty <def.<ctag0.craft.skill>_check>>
-	if (<<def.<ctag0.craft.skill>_check> <args>>)
-	f_resenddialog d_craft_menu
-	return 1
-	endif
+   if (<<def.<ctag0.craft.skill>_check> <args>>)
+      f_resenddialog d_craft_menu
+   return 1
+   endif
 endif
 makeitem <args>
 craftsuccesschance <args>
 ctag.craft.message = "Creating <serv.itemdef.<args>.name>..."
 ctag.craft.last.<ctag0.craft.skill> = <args>
 if !strcmpi("Cooking","<ctag0.craft.skill>")
-timerf <eval <serv.skill.13.delay>/10>,craftcooking <args>,<actdiff> // Cooking Fix
+   timerf <eval <serv.skill.13.delay>/10>,craftcooking <args>,<actdiff> // Cooking Fix
 endif
 
 [function craftcooking]
 if (<canmake <argv[0]>>) && (<argv[1]> > 0)
-serv.newitem <argv[0]>
-consume <new.resources>
-new.bounce
-ctag.craft.message = <def.scp.craft_msg_success>
-skillgain cooking <r2>
+   serv.newitem <argv[0]>
+   consume <new.resources>
+   new.bounce
+   ctag.craft.message = <def.scp.craft_msg_success>
+   skillgain cooking <r2>
 else
-ctag.craft.message = <def.scp.craft_msg_fail>
+   ctag.craft.message = <def.scp.craft_msg_fail>
 endif
 craftskill cooking
 
 [function craftsuccesschance]
 if (<src.<streat <serv.itemdef.<args>.skillmake.1>>> >= <serv.itemdef.<args>.skillmake.1.val>)
-local.r = <eval (<src.<streat <serv.itemdef.<args>.skillmake.1>>> - <serv.itemdef.<args>.skillmake.1.val>) * 2>
-local.r += <def.<src.ctag0.craft.skill>_chanceatmin>
+   local.r = <eval (<src.<streat <serv.itemdef.<args>.skillmake.1>>> - <serv.itemdef.<args>.skillmake.1.val>) * 2>
+   local.r += <def.<src.ctag0.craft.skill>_chanceatmin>
 endif
 if !(<isitem>)
-	if (<r1000> < <local.r>)
-	actdiff = 10
-	else
-	actdiff = -10
-	endif
-return 1
+   if (<r1000> < <local.r>)
+      actdiff = 10
+   else
+      actdiff = -10
+   endif
+   return 1
 else
-	if <local.r> < 0
-	local.r = 0
-	elif <local.r> > 1000
-	local.r = 1000
-	endif
-return <local.r>
+   if <local.r> < 0
+      local.r = 0
+   elif <local.r> > 1000
+      local.r = 1000
+   endif
+   return <local.r>
 endif
 
 [function craft_exceptionalchance]
 if <src.<serv.skill.<serv.itemdef.<uid>.skillmake.0.key>.name>> < 95.0
-local.r = <eval <craftsuccesschance> - 60>
+   local.r = <eval <craftsuccesschance> - 60>
 else
-local.r = <eval <craftsuccesschance> - 45>
+   local.r = <eval <craftsuccesschance> - 45>
 endif
 if <local.r> < 0
-local.r = 0
+   local.r = 0
 endif
 return <local.r>
 
@@ -113,10 +113,10 @@ dorigin 180 45
 while !(<isempty <def.<ctag0.craft.skill>_material_<dlocal.n>_name>>)
 dtext +35 *20 0480 <def.<ctag0.craft.skill>_material_<dlocal.n>_name>
 button *0 *0 4005 4007 1 0 <eval 5020 + <local.n>>
-	if <local.n> > 9
-	local.x += 180
-	dorigin <local.x> 45
-	endif
+if <local.n> > 9
+   local.x += 180
+   dorigin <local.x> 45
+endif
 local.n ++
 endwhile
 

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, March 27, 2011
+// FILE LAST UPDATED: Tuesday, March 29, 2011
 VERSION=0.56b
 
 
@@ -3194,6 +3194,40 @@ DUPEITEM=042cf
 [ITEMDEF 042dd]
 //Sparkles 3
 DUPEITEM=042cf
+
+[ITEMDEF 046e6]
+DEFNAME=fx_fireball_yellow
+TYPE=t_fire
+VALUE=1
+CATEGORY=Animations
+SUBSECTION=Fireball
+DESCRIPTION=Yellow Fireball
+DUPELIST=046e7,046e8
+
+[ITEMDEF 046e7]
+//Yellow Fireball
+DUPEITEM=046e6
+
+[ITEMDEF 046e8]
+//Yellow Fireball
+DUPEITEM=046e6
+
+[ITEMDEF 046e9]
+DEFNAME=fx_fireball_blue
+TYPE=t_fire
+VALUE=1
+CATEGORY=Animations
+SUBSECTION=Fireball
+DESCRIPTION=Blue Fireball
+DUPELIST=046ea,046eb
+
+[ITEMDEF 046ea]
+//Yellow Fireball
+DUPEITEM=046e9
+
+[ITEMDEF 046eb]
+//Yellow Fireball
+DUPEITEM=046e9
 
 
 [EOF]

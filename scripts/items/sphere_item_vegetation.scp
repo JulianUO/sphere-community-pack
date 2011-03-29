@@ -341,6 +341,50 @@ DUPEITEM=0c7f
 //ear of corn
 DUPEITEM=0c7f
 
+[ITEMDEF 0deb]
+DEFNAME=i_crop_marijuana1
+TYPE=t_crops
+//TDATA1=i_crop_marijuana1
+TDATA2=i_crop_marijuana2
+//TDATA3=0
+VALUE=1
+CATEGORY=Vegetation
+SUBSECTION=Fruits and Vegetables
+DESCRIPTION=marijuana Crop (sprout)
+
+[ITEMDEF 0dec]
+DEFNAME=i_crop_marijuana2
+TYPE=t_crops
+//TDATA1=i_crop_marijuana1
+TDATA2=i_crop_marijuana3
+//TDATA3=0
+VALUE=1
+CATEGORY=Vegetation
+SUBSECTION=Fruits and Vegetables
+DESCRIPTION=marijuana Crop (small)
+
+[ITEMDEF 0ded]
+DEFNAME=i_crop_marijuana3
+TYPE=t_crops
+//TDATA1=i_crop_marijuana1
+TDATA2=i_crop_marijuana
+//TDATA3=0
+VALUE=1
+CATEGORY=Vegetation
+SUBSECTION=Fruits and Vegetables
+DESCRIPTION=marijuana Crop (large)
+
+[ITEMDEF 0dee]
+DEFNAME=i_crop_marijuana
+TYPE=t_crops
+TDATA1=i_crop_marijuana1
+TDATA2=0
+TDATA3=i_dried_herbs
+VALUE=1
+CATEGORY=Vegetation
+SUBSECTION=Fruits and Vegetables
+DESCRIPTION=marijuana Crop (mature)
+
 [ITEMDEF 0171f]
 DEFNAME=i_fruit_banana
 TYPE=t_fruit
