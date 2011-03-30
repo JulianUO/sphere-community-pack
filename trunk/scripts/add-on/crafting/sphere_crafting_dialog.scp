@@ -226,7 +226,7 @@ endif
 f_resenddialog d_craft_menu
 
 on=506 // mark item option button
-if <def0.craft_<ctag0.craft.skill>_marking>
+if <def0.<ctag0.craft.skill>_marking>
    doswitch <ctag0.craft.mark>
       ctag.craft.mark = 1
       ctag.craft.mark = 2
