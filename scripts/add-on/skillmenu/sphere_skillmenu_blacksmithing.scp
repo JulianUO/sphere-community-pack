@@ -247,7 +247,7 @@ blacksmithing_material_1_skill		"Blacksmithing 65.0"
 blacksmithing_material_1_armor_res	"6,0,0,0,0,f_colored_armor_dullcopper"
 blacksmithing_material_1_weaps_dam	"0,0,0,0,0,f_colored_weaps_dullcopper"
 blacksmithing_material_1_color		"color_o_dull_copper"
-blacksmithing_material_1_resourceid	"i_ingot_dullcopper"
+blacksmithing_material_1_resourceid	"i_ingot_dull_copper"
 
 blacksmithing_material_2		"shadow"
 blacksmithing_material_2_name		"Shadow"

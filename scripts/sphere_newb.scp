@@ -79,9 +79,11 @@ COLOR=colors_red
 [NEWBIE ALCHEMY ELF]
 if <obody> == c_elf_male
 serv.newitem i_elven_robe
+new.attr |= attr_newbie
 new.equip
 elif <obody> == c_elf_female
 serv.newitem i_elven_robe_female
+new.attr |= attr_newbie
 new.equip
 endif
 ITEMNEWBIE=i_mortar_pestle
