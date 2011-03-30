@@ -96,13 +96,18 @@ else
 endif
 
 [function craft_exceptionalchance]
-if <src.<serv.skill.<serv.itemdef.<uid>.skillmake.0.key>.name>> < 95.0
-   local.r = <eval <craftsuccesschance <baseid>> - 600>
+local.successchance = <eval (<src.<serv.skill.<serv.itemdef.<baseid>.skillmake.1.key>.key>> - <serv.itemdef.<baseid>.skillmake.1.val>) * 2>
+local.successchance += <def.<src.ctag0.craft.skill>_chanceatmin>
+
+if <src.<serv.skill.<serv.itemdef.<baseid>.skillmake.0.key>.name>> < 95.0
+   local.r = <eval <local.successchance> - 600>
 else
-   local.r = <eval <craftsuccesschance <baseid>> - 450>
+   local.r = <eval <local.successchance> - 450>
 endif
 if <local.r> < 0
    local.r = 0
+elif <local.r> > 1000
+   local.r = 1000
 endif
 return <local.r>
 
