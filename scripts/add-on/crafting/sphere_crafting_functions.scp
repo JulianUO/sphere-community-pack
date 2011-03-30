@@ -75,8 +75,8 @@ endif
 craftskill cooking
 
 [function craftsuccesschance]
-if (<src.<serv.itemdef.<args>.skillmake.1.name>> >= <serv.itemdef.<args>.skillmake.1.val>)
-   local.r = <eval (<src.<serv.itemdef.<args>.skillmake.1.name>> - <serv.itemdef.<args>.skillmake.1.val>) * 2>
+if (<src.<serv.skill.<serv.itemdef.<args>.skillmake.1.key>.key>> >= <serv.itemdef.<args>.skillmake.1.val>)
+   local.r = <eval (<src.<serv.skill.<serv.itemdef.<args>.skillmake.1.key>.key>> - <serv.itemdef.<args>.skillmake.1.val>) * 2>
    local.r += <def.<src.ctag0.craft.skill>_chanceatmin>
 endif
 if !(<isitem>)
