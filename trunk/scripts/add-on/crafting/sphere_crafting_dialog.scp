@@ -495,14 +495,14 @@ craft <ctag0.craft.item>
 /////////////////////////////////////////
 
 [dialog d_craft_prompt]
-0,25
+100,200
 
 resizepic 0 0 5054 220 170
 resizepic 10 10 3000 200 150
-dhtmlgump 20 20 180 80 0 0 "Do you wish to place your maker's mark on this item?"
-dhtmlgump 55 100 140 25 0 0 CONTINUE
+xmfhtmlgump 20 20 180 80 1018317 0 0 // Do you wish to place your maker's mark on this item?
+xmfhtmlgump 55 100 140 25 1011011 0 0 // CONTINUE
 button 20 100 4005 4007 1 0 1
-dhtmlgump 55 125 140 25 0 0 CANCEL
+xmfhtmlgump 55 125 140 25 1011012 0 0 // CANCEL
 button 20 125 4005 4007 1 0 0
 
 [dialog d_craft_prompt button]
@@ -512,5 +512,6 @@ src.sysmessage @,,1 Cancelled mark.
 on=1
 src.sysmessage @,,1 You mark the item.
 tag0.exceptional = <src.name>
+resendtooltip
 
 [eof]
