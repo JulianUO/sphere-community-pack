@@ -78,7 +78,7 @@ GROUP=Ilshenar Shrines
 NAME=Gargoyle Shrine
 P=1104,404,0,2
 RECT=1088,384,1127,425,2
-FLAGS=region_flag_safe|region_flag_no_pvp|region_flag_nobuilding
+GROUP=Ilshenar Shrines
 
 ////////////  END SHRINE  /////////////
 
@@ -98,7 +98,7 @@ RECT=856,576,896,704,2
 RECT=904,624,928,656,2
 GROUP=Ilshenar Towns
 TAG.TITLE=the city of
-FLAGS=region_flag_nobuilding|region_flag_guarded
+FLAGS=region_flag_nobuilding|region_flag_globalname|region_flag_guarded
 
 [AREADEF a_pormir_harm]
 NAME=Pormir Harm

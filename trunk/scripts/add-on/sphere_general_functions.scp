@@ -270,4 +270,13 @@ enddo
 [FUNCTION f_get_random_skill]
 RETURN <SERV.SKILL.<R55>.NAME>
 
-[eof]
+// Converts a 24-bit RGB value to 16-bit.
+// Usage: F_24TO16 <R> <G> <B>
+//
+[FUNCTION f_24to16]
+LOCAL.R = ((<ARGN1> & 0ff) / 8) << 10
+LOCAL.G = ((<ARGN2> & 0ff) / 8) << 5
+LOCAL.B = ((<ARGN3> & 0ff) / 8)
+RETURN <EVAL (<LOCAL.A>) | (<LOCAL.R>) | (<LOCAL.G>) | (<LOCAL.B>)>
+
+[EOF]

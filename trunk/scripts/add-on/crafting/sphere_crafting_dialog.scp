@@ -373,7 +373,7 @@ f_resenddialog d_craft_material
 on=600 700
 if <argn> == 600
    ctag.craft.material.<ctag0.craft.skill>
-   f_resenddialog d_craft_material
+   f_resenddialog d_craft_menu
    return 0
 endif
 local.skill = <strarg <def.<ctag0.craft.skill>_material_<eval <argn>-600>_skill>>
