@@ -42,21 +42,21 @@ ctag.craft.message =
 if <def.scp.CraftingSystem> == 0
    return 0
 endif
-if <def0.scp.NewCrafting_<serv.skill.<argn>.key>> == 0
+if <def0.scp.NewCrafting_<serv.skill.<action>.key>> == 0
    return 0
 endif
 ref2 = <act.uid>
 ref2.name = <serv.itemdef.<ref2.baseid>.name>
-local.skillmake = <serv.skill.<action>.key> // someone explain why would action not be the crafting skill and i'll add the statement.
-local.success = <eval (<local.skillmake> + (250 + (<local.skillmake> / 3))) - <<serv.skill.<action>.key>>>
-if <r> < <local.success>
-   ctag.craft.message = <def.scp.craft_msg_fail>
-   if !<isempty <ctag.craft.skill>>
-      craftskill <ctag0.craft.skill>
-   endif
-   ref1.remove
-   return 1
-endif
+//local.skillmake = <serv.skill.<action>.key> // someone explain why would action not be the crafting skill and i'll add the statement.
+//local.success = <eval (<<local.skillmake>> + (250 + (<<local.skillmake>> / 3))) - <<serv.skill.<action>.key>>>
+//if <r> < <local.success>
+//   ctag.craft.message = <def.scp.craft_msg_fail>
+//   if !<isempty <ctag.craft.skill>>
+//      craftskill <ctag0.craft.skill>
+//   endif
+//   ref2.remove
+//   return 1
+//endif
 ctag.craft.message = You create <ref2.name>.
 if <craft_exceptionalchance> < <r>
    if !<isempty <def.<ctag0.craft.skill>_exceptional_bonus>>
