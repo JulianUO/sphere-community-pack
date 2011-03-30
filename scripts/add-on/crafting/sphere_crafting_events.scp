@@ -58,13 +58,15 @@ ref2.name = <serv.itemdef.<ref2.baseid>.name>
 //   return 1
 //endif
 ctag.craft.message = You create <ref2.name>.
-if <ref2.craft_exceptionalchance> < <r>
+if <ref2.craft_exceptionalchance> > <r>
    if !<isempty <def.<ctag0.craft.skill>_exceptional_bonus>>
       ref2.<def.<ctag0.craft.skill>_exceptional_bonus> <uid>
    endif
    ctag0.craft.message = <def.scp.craft_msg_exceptional>
    ref2.tag.exceptional = 1
-   if !<ctag0.craft.nomark>
+   if <ctag0.craft.mark> == 0
+      ref2.dialog d_craft_prompt
+   elif <ctag0.craft.mark> == 2
       ref2.tag.exceptional = <name>
       ctag.craft.message = <def.scp.craft_msg_excepmark>
    endif
