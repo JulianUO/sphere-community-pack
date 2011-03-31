@@ -57,16 +57,16 @@ ref2.name = <serv.itemdef.<ref2.baseid>.name>
 //   ref2.remove
 //   return 1
 //endif
-ctag.craft.message = You create <ref2.name>.
+ctag.craft.message = Your last successful creation: <ref2.name>.
 if <ref2.craft_exceptionalchance> > <r>
    if !<isempty <def.<ctag0.craft.skill>_exceptional_bonus>>
       ref2.<def.<ctag0.craft.skill>_exceptional_bonus> <uid>
    endif
    ctag0.craft.message = <def.scp.craft_msg_exceptional>
    ref2.tag.exceptional = 1
-   if <ctag0.craft.mark> == 0
+   if <ctag0.craft.mark> == 2
       ref2.dialog d_craft_prompt
-   elif <ctag0.craft.mark> == 2
+   elif <ctag0.craft.mark> == 1
       ref2.tag.exceptional = <name>
       ctag.craft.message = <def.scp.craft_msg_excepmark>
    endif
@@ -74,14 +74,13 @@ endif
 if !<isempty <def.<ctag0.craft.skill>_aftercraft>>
    ref2.<def.<ctag0.craft.skill>_aftercraft>
 endif
-local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<ctag0.craft.material.<ctag0.craft.skill>>_" : "0">
-if <ctag0.craft.material.<ctag0.craft.skill>>
+if <ctag0.craft.material.<ctag.craft.skill>>
    if !<isempty <def.<ctag0.craft.skill>_<ctag0.craft.material.<ctag0.craft.skill>>_aftercraft>>
       ref2.<def.<ctag0.craft.skill>_<ctag0.craft.material.<ctag0.craft.skill>>_aftercraft>>
    endif
 endif
-trigger @ItemCraft,<def.tat_as_argo>,<ref2.uid>
-ref2.trigger @Craft,<def.tat_as_argo,<uid>
+//trigger @ItemCraft,<def.tat_as_argo>,<ref2.uid>
+//ref2.trigger @Craft,<def.tat_as_argo,<uid>
 f_resenddialog d_craft_menu
 
 [eof]
