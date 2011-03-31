@@ -66,7 +66,7 @@ xmfhtmlgumpcolor 10 13 530 20 <ddef.scp.craft_title_<ctag0.craft.skill>> 0 0 <dd
 page 1
 xmfhtmlgumpcolor 10 38 200 20 <ddef.scp.craft_head_categories> 0 0 <ddef.dcolor_white>
 xmfhtmlgumpcolor 50 61 115 20 <ddef.scp.craft_button_lastten> 0 0 <ddef.dcolor_white>
-button 15 60 4005 4007 1 0 5010
+button 15 60 4005 4007 1 0 406
 local.wid = 80
 local.sidebar = <eval 1 + (10 * <ctag0.craft.page.sidebar>)>
 for z <local.sidebar> <eval <local.sidebar>+9>
@@ -176,7 +176,7 @@ f_resenddialog d_craft_itemprop
 on=600 800 // craft item button
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<dctag0.craft.material.<ctag0.craft.skill>>_" : "_">
 if <ctag0.craft.material.<ctag.craft.skill>>
-   if <isempty <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_name>>
+   if <isempty <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<eval <argn>-600>>//name>>
       local.resource = "_"
    endif
 endif
@@ -267,7 +267,7 @@ xmfhtmlgumpcolor 10 13 530 20 <ddef.scp.craft_title_<ctag0.craft.skill>> 0 0 <dd
 page 1
 // sidebar section
 xmfhtmlgumpcolor 10 38 200 20 <ddef.scp.craft_head_categories> 0 0 <ddef.dcolor_white>
-button 15 60 4005 4007 1 0 5010
+button 15 60 4005 4007 1 0 406
 xmfhtmlgumpcolor 50 61 115 20 <ddef.scp.craft_button_lastten> 0 0 <ddef.dcolor_white>
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<dctag0.craft.material.<ctag0.craft.skill>>_" : "_">
 local.sidebar = <eval 1 + (10 * <ctag0.craft.page.sidebar>)>
