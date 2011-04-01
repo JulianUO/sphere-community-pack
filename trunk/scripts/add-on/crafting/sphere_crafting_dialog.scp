@@ -205,6 +205,8 @@ f_resenddialog d_craft_menu
 
 on=406 // last ten button
 //FIXME: This is a shortcut to the last 10 items the player made
+SYSMESSAGE @021 Not yet implemented
+f_resenddialog d_craft_menu
 
 on=500 // smelt button
 f_resenddialog d_craft_menu
@@ -221,7 +223,6 @@ dialogclose d_craft_menu
 on=505 // repair button
 if !<isempty <def.<ctag0.craft.skill>_repair>>
    try <def.<ctag0.craft.skill>_repair>
-   return 1
 endif
 f_resenddialog d_craft_menu
 
@@ -236,12 +237,12 @@ endif
 f_resenddialog d_craft_menu
 
 on=507 // enhance button
+SYSMESSAGE @021 Not yet implemented
 f_resenddialog d_craft_menu
 
 on=508 // make last button
 if <isempty <ctag.craft.last.<ctag0.craft.skill>>>
    ctag.craft.message = You need to make an item first.
-   return 1
 endif
 craft <ctag0.craft.last.<ctag0.craft.skill>>
 
@@ -352,7 +353,30 @@ button 270 402 4005 4007 1 0 508
 xmfhtmlgumpcolor 305 403 150 20 <ddef.scp.craft_button_makelast> 0 0 <ddef.dcolor_white>
 
 [dialog d_craft_material button]
-on=0
+on=0 // exit
+ctag.craft.message
+
+on=1 99 // select category button
+ctag.craft.item
+ctag.craft.page.mainbar
+ctag.craft.sidebar = <argn>
+dialogclose d_craft_material
+f_resenddialog d_craft_menu
+
+on=100 300 // select item button
+local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<dctag0.craft.material.<ctag0.craft.skill>>_" : "_">
+if <ctag0.craft.material.<ctag.craft.skill>>
+   if <isempty <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<eval <argn>-100>>>
+      local.resource = "_"
+   endif
+endif
+ctag.craft.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<eval <argn>-100>>
+ctag.craft.item.options = <def.<ctag0.craft.skill>_options_default>
+if !<isempty <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-100>_opt>>
+   ctag.craft.item.options = <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-100>_opt>
+endif
+dialogclose d_craft_material
+f_resenddialog d_craft_itemprop
 
 on=400 401 // sidebar buttons
 if <argn> == 401
@@ -369,6 +393,49 @@ else
    ctag0.craft.page.mainbar --
 endif
 f_resenddialog d_craft_material
+
+on=406 // last ten button
+//FIXME: This is a shortcut to the last 10 items the player made
+SYSMESSAGE @021 Not yet implemented
+dialogclose d_craft_material
+f_resenddialog d_craft_menu
+
+on=500 // smelt button
+f_resenddialog d_craft_material
+try <def.<ctag0.craft.skill>_smelt>
+
+on=501 502 // material buttons
+f_resenddialog d_craft_material <eval <argn> - 500>
+
+on=503 // exit button
+ctag.craft.message
+dialogclose d_craft_material
+
+on=505 // repair button
+if !<isempty <def.<ctag0.craft.skill>_repair>>
+   try <def.<ctag0.craft.skill>_repair>
+endif
+f_resenddialog d_craft_material
+
+on=506 // mark item option button
+if <def0.<ctag0.craft.skill>_marking>
+   doswitch <ctag0.craft.mark>
+      ctag.craft.mark = 1
+      ctag.craft.mark = 2
+      ctag.craft.mark
+   enddo
+endif
+f_resenddialog d_craft_material
+
+on=507 // enhance button
+SYSMESSAGE @021 Not yet implemented
+f_resenddialog d_craft_material
+
+on=508 // make last button
+if <isempty <ctag.craft.last.<ctag0.craft.skill>>>
+   ctag.craft.message = You need to make an item first.
+endif
+craft <ctag0.craft.last.<ctag0.craft.skill>>
 
 on=600 700
 if <argn> == 600
