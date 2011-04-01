@@ -24,8 +24,11 @@ endif
 //if <act.tag0.setid> > 0
 //addcliloc 1072376,<def.set_<act.tag0.setid>_pieces>
 //endif
-if !<isnum <act.tag0.exceptional>>
-addcliloc 1050043,<act.tag0.exceptional> // crafted by ~1_NAME~
+if <act.tag0.exceptional>
+addcliloc 1018303
+endif
+if !<isempty <act.tag.craftedby>>
+addcliloc 1050043,<act.tag0.craftedby> // crafted by ~1_NAME~
 endif
 if <act.weight> > 0
 addcliloc 1072225,<fval <act.weight>>

@@ -22,7 +22,7 @@ carpentry_repair		""
 carpentry_check			"f_craft_carpentry_checkboard"
 carpentry_check_notice		""
 carpentry_chanceatmin		"50.0"
-carpentry_exceptional_bonus	""
+carpentry_exceptional_bonus	"f_craft_exceptionalbonus"
 carpentry_aftercraft		""	// function called on the item AFTER you craft it (if success only).
 
 
