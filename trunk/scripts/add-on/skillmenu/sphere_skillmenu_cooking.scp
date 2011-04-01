@@ -23,7 +23,7 @@ cooking_repair			""
 cooking_check			"f_craft_cooking_checkfire"
 cooking_check_notice		""
 cooking_chanceatmin		"0.0"
-cooking_exceptional_bonus	""
+cooking_exceptional_bonus	"f_craft_exceptionalbonus"
 cooking_aftercraft		""
 
 cooking_category_1_name "1044495" // Ingredients

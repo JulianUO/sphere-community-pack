@@ -24,7 +24,7 @@ bowcraft_repair			""
 bowcraft_check			""
 bowcraft_check_notice		""
 bowcraft_chanceatmin		"50.0"
-bowcraft_exceptional_bonus	""
+bowcraft_exceptional_bonus	"f_craft_exceptionalbonus"
 bowcraft_aftercraft		""	// function called on the item AFTER you craft it (if success only).
 
 bowcraft_category_1_name	"1044457" // Materials

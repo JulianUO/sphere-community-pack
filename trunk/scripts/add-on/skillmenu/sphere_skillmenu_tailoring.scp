@@ -26,7 +26,7 @@ tailoring_repair		""
 tailoring_check			""
 tailoring_check_notice		""
 tailoring_chanceatmin		"50.0"
-tailoring_exceptional_bonus	""
+tailoring_exceptional_bonus	"f_craft_exceptionalbonus"
 tailoring_aftercraft		""
 
 tailoring_category_1_name	"1049149"	// Bone Armor
