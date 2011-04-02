@@ -3,177 +3,144 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+// FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
 
+
 [ITEMDEF 0e9b]
-//Mortar & Pestle
 DEFNAME=i_mortar_pestle
-TYPE=T_MORTAR
-RESOURCES=3 i_ingot_iron
+TYPE=t_mortar
 WEIGHT=1
+RESOURCES=3 i_ingot_iron
+SKILLMAKE=Tinkering 23.3,t_tinker_tools
 CATEGORY=Provisions - Alchemy & Magic
-SUBSECTION=Magical Items
+SUBSECTION=Tools
 DESCRIPTION=Mortar and Pestle
-SKILLMAKE=TINKERING 23.3,t_tinker_tools
 
 [ITEMDEF 0f06]
-//Potion (Black)
 DEFNAME=i_bottle_black
 TYPE=t_potion
 TDATA1=i_bottle_empty
-RESOURCES=i_bottle_empty
 WEIGHT=1
-DESCRIPTION=Potion (Black)(Nightsite)
-SUBSECTION=Potions
+RESOURCES=i_bottle_empty
 CATEGORY=Provisions - Alchemy & Magic
-
+SUBSECTION=Potions
+DESCRIPTION=Potion (Black)(Nightsite)
 ON=@Create
-	MORE1=S_Night_Sight
-	MORE2={ 30.0 90.0 }
+	MORE1=s_night_sight
+	MORE2={30.0 90.0}
 
 [ITEMDEF 0f07]
-//Potion (Orange)
 DEFNAME=i_bottle_orange
-TYPE=T_POTION
+TYPE=t_potion
 TDATA1=i_bottle_empty
-RESOURCES=i_bottle_empty
 WEIGHT=1
-DESCRIPTION=Potion (Orange)(Cure)
-SUBSECTION=Potions
+RESOURCES=i_bottle_empty
 CATEGORY=Provisions - Alchemy & Magic
-
+SUBSECTION=Potions
+DESCRIPTION=Potion (Orange)(Cure)
 ON=@Create
 	MORE1=s_cure
-	MORE2={ 300 900 }
+	MORE2={30.0 90.0}
 
 [ITEMDEF 0f08]
-//Potion (Blue)
 DEFNAME=i_bottle_blue
-TYPE=T_POTION
+TYPE=t_potion
 TDATA1=i_bottle_empty
-RESOURCES=i_bottle_empty
 WEIGHT=1
-DESCRIPTION=Potion (Blue)(Agility)
-SUBSECTION=Potions
+RESOURCES=i_bottle_empty
 CATEGORY=Provisions - Alchemy & Magic
-
+SUBSECTION=Potions
+DESCRIPTION=Potion (Blue)(Agility)
 ON=@Create
 	MORE1=s_agility
-	MORE2={ 300 900 }
+	MORE2={30.0 90.0}
 
 [ITEMDEF 0f09]
-//Potion (White)
 DEFNAME=i_bottle_white
-TYPE=T_POTION
+TYPE=t_potion
 TDATA1=i_bottle_empty
-RESOURCES=i_bottle_empty
 WEIGHT=1
-DESCRIPTION=Potion (White)(Strength)
-SUBSECTION=Potions
+RESOURCES=i_bottle_empty
 CATEGORY=Provisions - Alchemy & Magic
-
+SUBSECTION=Potions
+DESCRIPTION=Potion (White)(Strength)
 ON=@Create
-	MORE1=s_Strength
-	MORE2={ 300 900 }
+	MORE1=s_strength
+	MORE2={30.0 90.0}
 
 [ITEMDEF 0f0a]
-//Potion (Green)
 DEFNAME=i_bottle_green
-TYPE=T_POTION
+TYPE=t_potion
 TDATA1=i_bottle_empty
-RESOURCES=i_bottle_empty
 WEIGHT=1
-DESCRIPTION=Potion (Green)(Poison)
-SUBSECTION=Potions
+RESOURCES=i_bottle_empty
 CATEGORY=Provisions - Alchemy & Magic
-
+SUBSECTION=Potions
+DESCRIPTION=Potion (Green)(Poison)
 ON=@Create
-	MORE1=s_Poison
-	MORE2={ 300 900 }
+	MORE1=s_poison
+	MORE2={30.0 90.0}
 
 [ITEMDEF 0f0b]
-//Potion (Red)
 DEFNAME=i_bottle_red
-TYPE=T_POTION
+TYPE=t_potion
 TDATA1=i_bottle_empty
-RESOURCES=i_bottle_empty
 WEIGHT=1
-DESCRIPTION=Potion (Red)(Refresh)
-SUBSECTION=Potions
+RESOURCES=i_bottle_empty
 CATEGORY=Provisions - Alchemy & Magic
-
+SUBSECTION=Potions
+DESCRIPTION=Potion (Red)(Refresh)
 ON=@Create
 	MORE1=s_refresh
-	MORE2={ 300 900 }
+	MORE2={30.0 90.0}
 
 [ITEMDEF 0f0c]
-//Potion (Yellow)
 DEFNAME=i_bottle_yellow
-TYPE=T_POTION
+TYPE=t_potion
 TDATA1=i_bottle_empty
-RESOURCES=i_bottle_empty
 WEIGHT=1
-DESCRIPTION=Potion (Yellow)(Heal)
-SUBSECTION=Potions
+RESOURCES=i_bottle_empty
 CATEGORY=Provisions - Alchemy & Magic
-
+SUBSECTION=Potions
+DESCRIPTION=Potion (Yellow)(Heal)
 ON=@Create
 	MORE1=s_heal
-	MORE2={ 300 900 }
+	MORE2={30.0 90.0}
 
 [ITEMDEF 0f0d]
-//Potion (Purple)
 DEFNAME=i_bottle_purple
-TYPE=T_POTION
-TDATA1=0
-RESOURCES=i_bottle_empty
+TYPE=t_potion
+TDATA1=0//nothing returned when used
 WEIGHT=1
-DESCRIPTION=Potion (Purple)(Explosion)
-SUBSECTION=Potions
+RESOURCES=i_bottle_empty
 CATEGORY=Provisions - Alchemy & Magic
-
+SUBSECTION=Potions
+DESCRIPTION=Potion (Purple)(Explosion)
 ON=@Create
 	MORE1=s_explosion
-	MORE2={ 30.0 80.0 }
+	MORE2={30.0 80.0}
 
 [ITEMDEF 0f0e]
-//Empty Potion Bottle
 DEFNAME=i_bottle_empty
-TYPE=T_POTION_EMPTY
-SKILLMAKE=TINKERING 21.3,t_tinker_tools
-RESOURCES=2 i_ingot_iron
+TYPE=t_potion_empty
 WEIGHT=1
+RESOURCES=2 i_ingot_iron
+SKILLMAKE=Tinkering 21.3,t_tinker_tools
 CATEGORY=Provisions - Alchemy & Magic
-SUBSECTION=Magical Items
-DESCRIPTION=Empty Alchemist Bottle
+SUBSECTION=Potions
+DESCRIPTION=Empty Bottle
 
 [ITEMDEF 01f14]
-//recall rune
-//DEFNAME2=RUNE
-//DEFNAME2=MARKER_TALISMAN_1
 DEFNAME=i_rune_marker
-TYPE=T_RUNE
-VALUE={16 20}
-//RESOURCES=
+TYPE=t_rune
+FLIP=1
+VALUE=20
 WEIGHT=1
 CATEGORY=Provisions - Alchemy & Magic
 SUBSECTION=Magical Items
 DESCRIPTION=Recall Rune
 DUPELIST=01f15,01f16,01f17
-
-on=@spelleffect
-if <def.scp.Rune_NeverFade> == 1
-more1=100
-endif
-
-on=@dclick
-if <def.scp.Rune_RenameNoPrefix> == 1
-src.ctag.rune = <uid>
-src.sysmessage <def.scp.runes_entername>
-src.promptconsole Rename_Rune
-return 1
-endif
 
 [ITEMDEF 01f15]
 //recall rune
@@ -184,7 +151,7 @@ DUPEITEM=01f14
 DUPEITEM=01f14
 
 [ITEMDEF 01f17]
-//Recall Rune
+//recall rune
 DUPEITEM=01f14
 
 [EOF]

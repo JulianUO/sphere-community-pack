@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Tuesday, March 8, 2011
+// FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
 
 
@@ -52,7 +52,7 @@ DUPEITEM=02307
 
 [ITEMDEF 041d8]
 DEFNAME=i_leather_gargoyle_talons
-NAME=gargish leather talons
+NAME=Gargish leather talons
 TYPE=t_clothing
 DYE=1
 FLIP=1
@@ -60,6 +60,7 @@ WEIGHT=2.0
 REQSTR=10
 RESOURCES=6 i_hides_cut
 SKILLMAKE=Tailoring 40.4, t_sewing_kit
+TAG.Item.Gargoyle=1
 CATEGORY=Provisions - Clothing
 SUBSECTION=Footwear
 DESCRIPTION=Gargish Leather Talons
@@ -1034,7 +1035,7 @@ DUPEITEM=02309
 
 [ITEMDEF 04002]
 DEFNAME=i_gargish_robe_fancy
-NAME=gargish fancy robe
+NAME=Gargish fancy robe
 TYPE=t_clothing
 DYE=1
 FLIP=1
@@ -1042,6 +1043,7 @@ WEIGHT=3.0
 REQSTR=10
 RESOURCES=18 i_cloth
 SKILLMAKE=Tailoring 75.0, t_sewing_kit
+TAG.Item.Gargoyle=1
 CATEGORY=Provisions - Clothing
 SUBSECTION=Shirts
 DESCRIPTION=Gargish Fancy Robe
@@ -1055,7 +1057,7 @@ DUPEITEM=04002
 
 [ITEMDEF 04000]
 DEFNAME=i_gargish_robe
-NAME=gargish robe
+NAME=Gargish robe
 TYPE=t_clothing
 DYE=1
 FLIP=1
@@ -1063,6 +1065,7 @@ WEIGHT=3.0
 REQSTR=10
 RESOURCES=16 i_cloth
 SKILLMAKE=Tailoring 53.9, t_sewing_kit
+TAG.Item.Gargoyle=1
 CATEGORY=Provisions - Clothing
 SUBSECTION=Shirts
 DESCRIPTION=Gargish Robe
@@ -1339,7 +1342,7 @@ WEIGHT=2.0
 REQSTR=10
 RESOURCES=6 i_cloth
 SKILLMAKE=Tailoring 20.7, t_sewing_kit
-CATEGORY=Provisions - Clothes
+CATEGORY=Provisions - Clothing
 SUBSECTION=Miscellaneous
 DESCRIPTION=Half Apron
 DUPELIST=0153c
@@ -1359,7 +1362,7 @@ WEIGHT=4.0
 REQSTR=10
 RESOURCES=10 i_cloth
 SKILLMAKE=Tailoring 29.0, t_sewing_kit
-CATEGORY=Provisions - Clothes
+CATEGORY=Provisions - Clothing
 SUBSECTION=Miscellaneous
 DESCRIPTION=Full Apron
 DUPELIST=0153e
@@ -1379,7 +1382,7 @@ WEIGHT=1.0
 REQSTR=10
 RESOURCES=4 i_cloth
 SKILLMAKE=Tailoring 4.1, t_sewing_kit
-CATEGORY=Provisions - Clothes
+CATEGORY=Provisions - Clothing
 SUBSECTION=Miscellaneous
 DESCRIPTION=Body Sash
 DUPELIST=01542
@@ -1400,7 +1403,7 @@ WEIGHT=2.0
 REQSTR=45
 //RESOURCES=
 //SKILLMAKE=
-CATEGORY=Provisions - Clothes
+CATEGORY=Provisions - Clothing
 SUBSECTION=Miscellaneous
 DESCRIPTION=Elven Glasses
 TAG.ResPhysical=2
@@ -1416,120 +1419,62 @@ ON=@Create
 //elven glasses
 DUPEITEM=02fb8
 
-
-///////////////////////////////////////////////////////////////
-//////// GARGISH
-///////////////////////////////////////////////////////////////
-//Despite being made of cloth, all game references to this stuff calls it armor...
-
-[ITEMDEF 0404]
-DEFNAME=i_gargish_cloth_arms
-NAME=gargish cloth arms
+[ITEMDEF 045b1]
+DEFNAME=i_gargish_glasses_female
+NAME=Gargish female glasses
 TYPE=t_armor
-DYE=1
+DYE=0//dye using pigments of tokuno only
 FLIP=1
-ARMOR=0//5
-WEIGHT=2.0
-REQSTR=20
-RESOURCES=8 i_cloth
-SKILLMAKE=Tailoring 87.1, t_sewing_kit
-CATEGORY=Provisions - Armor
-SUBSECTION=Gargish
-DESCRIPTION=Gargish Cloth Arms
-TAG.ResPhysical=5
-TAG.ResFire=7
-TAG.ResCold=6
-TAG.ResPoison=6
-TAG.ResEnergy=6
-DUPELIST=04060
+WEIGHT=2.2
+REQSTR=45
+//RESOURCES=
+//SKILLMAKE=
+CATEGORY=Provisions - Clothing
+SUBSECTION=Miscellaneous
+DESCRIPTION=Gargish Female Glasses
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=4
+TAG.ResEnergy=2
+TAG.ResPoison=3
+TAG.Item.Gargoyle=1
+TAG.FemaleOnly=1
+TEVENTS=t_iprop
+DUPELIST=045b3
 ON=@Create
-   HITPOINTS={35 54}
+   HITPOINTS={36 48}
 
-[ITEMDEF 04060]
-//gargish cloth arms
-DUPEITEM=0404
+[ITEMDEF 045b3]
+//gargish female glasses
+DUPEITEM=045b1
 
-[ITEMDEF 0406]
-DEFNAME=i_gargish_cloth_chest
-NAME=gargish cloth chest
+[ITEMDEF 04644]
+DEFNAME=i_gargish_glasses
+NAME=Gargish glasses
 TYPE=t_armor
-DYE=1
+DYE=0//dye using pigments of tokuno only
 FLIP=1
-ARMOR=0//5
-WEIGHT=6.0
-REQSTR=25
-RESOURCES=12 i_cloth
-SKILLMAKE=Tailoring 94.0, t_sewing_kit
-CATEGORY=Provisions - Armor
-SUBSECTION=Gargish
-DESCRIPTION=Gargish Cloth Chest
-TAG.ResPhysical=5
-TAG.ResFire=7
-TAG.ResCold=6
-TAG.ResPoison=6
-TAG.ResEnergy=6
-DUPELIST=04062
+WEIGHT=2.2
+REQSTR=45
+//RESOURCES=
+//SKILLMAKE=
+CATEGORY=Provisions - Clothing
+SUBSECTION=Miscellaneous
+DESCRIPTION=Gargish Glasses
+TAG.ResPhysical=2
+TAG.ResFire=4
+TAG.ResCold=4
+TAG.ResEnergy=2
+TAG.ResPoison=3
+TAG.Item.Gargoyle=1
+TEVENTS=t_iprop
+DUPELIST=04645
 ON=@Create
-   HITPOINTS={35 54}
+   HITPOINTS={36 48}
 
-[ITEMDEF 04062]
-//gargish cloth chest
-DUPEITEM=0406
-
-[ITEMDEF 0408]
-DEFNAME=i_gargish_cloth_kilt
-NAME=gargish cloth kilt
-TYPE=t_clothing
-DYE=1
-FLIP=1
-ARMOR=0//5
-WEIGHT=2.0
-REQSTR=20
-RESOURCES=6 i_cloth
-SKILLMAKE=Tailoring 82.9, t_sewing_kit
-CATEGORY=Provisions - Armor
-SUBSECTION=Gargish
-DESCRIPTION=Gargish Cloth Kilt
-TAG.ResPhysical=5
-TAG.ResFire=7
-TAG.ResCold=6
-TAG.ResPoison=6
-TAG.ResEnergy=6
-DUPELIST=04064
-ON=@Create
-   HITPOINTS={35 54}
-
-[ITEMDEF 04064]
-//gargish cloth kilt
-DUPEITEM=0408
-
-[ITEMDEF 0409]
-DEFNAME=i_gargish_cloth_leggings_f
-NAME=gargish cloth leggings
-TYPE=t_clothing
-DYE=1
-FLIP=1
-ARMOR=0//5
-WEIGHT=4.0
-REQSTR=20
-RESOURCES=10 i_cloth
-SKILLMAKE=Tailoring 91.2, t_sewing_kit
-CATEGORY=Provisions - Armor
-SUBSECTION=Gargish
-DESCRIPTION=Gargish Cloth Leggings
-TAG.ResPhysical=5
-TAG.ResFire=7
-TAG.ResCold=6
-TAG.ResPoison=6
-TAG.ResEnergy=6
-DUPELIST=04065
-ON=@Create
-   HITPOINTS={35 54}
-
-[ITEMDEF 04065]
-//gargish cloth leggings
-DUPEITEM=0409
-
+[ITEMDEF 04645]
+//gargish glasses
+DUPEITEM=04644
 
 ///////////////////////////////////////////////////////////////
 //////// OLD CLOTH (Not rescripted yet)
@@ -2641,6 +2586,99 @@ ON=@Create
 [ITEMDEF 02fbe]
 //i_elven_male_shirt3
 DUPEITEM=02fbd
+
+[ITEMDEF 0450d]
+DEFNAME=i_gargish_leather_belt
+NAME=Gargish belt
+TYPE=t_clothing
+DYE=1
+FLIP=1
+WEIGHT=5.1
+REQSTR=10
+RESOURCES=5 i_hides_cut,1 i_thread
+SKILLMAKE=Tailoring 50.0,t_sewing_kit,Armslore 38.0
+CATEGORY=Provisions - Clothing
+SUBSECTION=Miscellaneous
+DESCRIPTION=Gargish Belt
+TAG.Item.Gargoyle=1
+TEVENTS=t_iprop
+DUPELIST=0450e
+ON=@Create
+   HITPOINTS={36 48}
+
+[ITEMDEF 0450e]
+//gargoyle belt
+DUPEITEM=0450d
+
+[ITEMDEF 046aa]
+DEFNAME=i_gargish_sash_female
+NAME=Gargish female sash
+TYPE=t_clothing
+DYE=1
+FLIP=1
+WEIGHT=4.1
+REQSTR=10
+RESOURCES=4 i_cloth,1 i_thread
+SKILLMAKE=Tailoring 4.5,t_sewing_kit
+CATEGORY=Provisions - Clothing
+SUBSECTION=Miscellaneous
+DESCRIPTION=Gargish Female Sash
+TAG.FemaleOnly=1
+TAG.Item.Gargoyle=1
+TEVENTS=t_iprop
+DUPELIST=046ab
+ON=@Create
+   HITPOINTS={36 48}
+
+[ITEMDEF 046ab]
+//gargish female sash
+DUPEITEM=046aa
+
+[ITEMDEF 046b4]
+DEFNAME=i_gargish_sash
+NAME=Gargish sash
+TYPE=t_clothing
+DYE=1
+FLIP=1
+WEIGHT=4.1
+REQSTR=10
+RESOURCES=4 i_cloth,1 i_thread
+SKILLMAKE=Tailoring 4.5,t_sewing_kit
+CATEGORY=Provisions - Clothing
+SUBSECTION=Miscellaneous
+DESCRIPTION=Gargish Sash
+TAG.Item.Gargoyle=1
+TEVENTS=t_iprop
+DUPELIST=046b5
+ON=@Create
+   HITPOINTS={36 48}
+
+[ITEMDEF 046b5]
+//gargish sash
+DUPEITEM=046b4
+
+[ITEMDEF 050d8]
+DEFNAME=i_gargish_apron
+NAME=Gargish half apron
+TYPE=t_clothing
+DYE=1
+FLIP=1
+WEIGHT=6.1
+REQSTR=10
+RESOURCES=6 i_cloth,1 i_thread
+SKILLMAKE=Tailoring 22.7,t_sewing_kit
+CATEGORY=Provisions - Clothes
+SUBSECTION=Miscellaneous
+DESCRIPTION=Gargish Half Apron
+TAG.Item.Gargoyle=1
+TEVENTS=t_iprop
+DUPELIST=050d9
+ON=@Create
+   HITPOINTS={36 48}
+
+[ITEMDEF 050d9]
+//Gargish half apron
+DUPEITEM=050d8
 
 
 [EOF]

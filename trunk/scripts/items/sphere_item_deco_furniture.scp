@@ -3,40 +3,40 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 10, 2011
+// FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
 
 
 [ITEMDEF 0a2c]
 DEFNAME=i_bureau
-RESOURCES=5 i_board, 10 i_nails, 3 i_drawer
 TYPE=t_container
 TDATA2=051
 FLIP=1
 VALUE=150
 WEIGHT=20
+RESOURCES=5 i_board, 10 i_nails, 3 i_drawer
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
-DESCRIPTION=Chest of Drawers (Light Wood)(SW)
+DESCRIPTION=Chest of Drawers (Light Wood)
 DUPELIST=0a34
 
 [ITEMDEF 0a2d]
 DEFNAME=i_drawer
-RESOURCES=5 i_board, 2 i_nails
 TYPE=t_container
 TDATA2=051
 FLIP=1
+RESOURCES=5 i_board, 2 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Drawer (Light Wood)
 DUPELIST=0a2e,0a2f,0a35,0a36,0a37
 
 [ITEMDEF 0a2e]
-//drawer
+//drawer (light wood)
 DUPEITEM=0a2d
 
 [ITEMDEF 0a2f]
-//drawer
+//drawer (light wood)
 DUPEITEM=0a2d
 
 [ITEMDEF 0a30]
@@ -46,10 +46,10 @@ TDATA2=048
 FLIP=1
 WEIGHT=20
 RESOURCES=25 i_log
-SKILLMAKE=CARPENTRY 85.0, t_carpentry
+SKILLMAKE=Carpentry 85.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
-DESCRIPTION=Chest of Drawers (Dark Wood) (SW)
+DESCRIPTION=Chest of Drawers (Dark Wood)
 DUPELIST=0a38
 
 [ITEMDEF 0a31]
@@ -58,165 +58,163 @@ TYPE=t_container
 TDATA2=048
 FLIP=1
 RESOURCES=25 i_log
-SKILLMAKE=CARPENTRY 85.0, t_carpentry
+SKILLMAKE=Carpentry 85.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Drawer (Dark Wood)
 DUPELIST=0a32,0a33,0a39,0a3a,0a3b
 
 [ITEMDEF 0a32]
-//drawer
+//drawer (dark wood)
 DUPEITEM=0a31
 
 [ITEMDEF 0a33]
-//drawer
+//drawer (dark wood)
 DUPEITEM=0a31
 
 [ITEMDEF 0a34]
-//chest of drawers facing SE, light wood
+//chest of drawers (light wood)
 DUPEITEM=0a2c
 
 [ITEMDEF 0a35]
-//drawer
+//drawer (light wood)
 DUPEITEM=0a2d
 
 [ITEMDEF 0a36]
-//drawer
+//drawer (light wood)
 DUPEITEM=0a2d
 
 [ITEMDEF 0a37]
-//drawer
+//drawer (light wood)
 DUPEITEM=0a2d
 
 [ITEMDEF 0a38]
-//chest of drawers facing SE, dark wood
+//chest of drawers (dark wood)
 DUPEITEM=0a30
 
 [ITEMDEF 0a39]
-//drawer
+//drawer (dark wood)
 DUPEITEM=0a31
 
 [ITEMDEF 0a3a]
-//drawer
+//drawer (dark wood)
 DUPEITEM=0a31
 
 [ITEMDEF 0a3b]
-//drawer
+//drawer (dark wood)
 DUPEITEM=0a31
 
 [ITEMDEF 0a3c]
 DEFNAME=i_dresser
-RESOURCES=8 i_board, 20 i_nails, 6 i_dresser_drawer, 1 i_ingot_iron, 5 i_sand
 TYPE=t_container
 TDATA2=051
 FLIP=1
 WEIGHT=30
+RESOURCES=8 i_board, 20 i_nails, 6 i_dresser_drawer, 1 i_ingot_iron, 5 i_glass_raw
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Dresser (Vanity)
 DUPELIST=0a3d,0a44,0a45
 
 [ITEMDEF 0a3d]
-//dresser
+//dresser  (Vanity)
 DUPEITEM=0a3c
 
 [ITEMDEF 0a3e]
-//drawer
 DEFNAME=i_dresser_drawer
-RESOURCES=2 i_board, 2 i_nails
 TYPE=t_container
 TDATA2=051
 FLIP=1
+RESOURCES=2 i_board, 2 i_nails
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Drawer (Vanity)
 DUPELIST=0a3f,0a40,0a41,0a42,0a43,0a46,0a47,0a48,0a49,0a4a,0a4b
 
 [ITEMDEF 0a3f]
-//drawer
+//drawer (Vanity)
 DUPEITEM=0a3e
 
 [ITEMDEF 0a40]
-//drawer
+//drawer (Vanity)
 DUPEITEM=0a3e
 
 [ITEMDEF 0a41]
-//drawer
+//drawer (Vanity)
 DUPEITEM=0a3e
 
 [ITEMDEF 0a42]
-//drawer
+//drawer (Vanity)
 DUPEITEM=0a3e
 
 [ITEMDEF 0a43]
-//drawer
+//drawer (Vanity)
 DUPEITEM=0a3e
 
 [ITEMDEF 0a44]
-//dresser
+//dresser (Vanity)
 DUPEITEM=0a3c
 
 [ITEMDEF 0a45]
-//dresser
+//dresser (Vanity)
 DUPEITEM=0a3c
 
 [ITEMDEF 0a46]
-//drawer
+//drawer (Vanity)
 DUPEITEM=0a3e
 
 [ITEMDEF 0a47]
-//drawer
+//drawer (Vanity)
 DUPEITEM=0a3e
 
 [ITEMDEF 0a48]
-//drawer
+//drawer (Vanity)
 DUPEITEM=0a3e
 
 [ITEMDEF 0a49]
-//drawer
+//drawer (Vanity)
 DUPEITEM=0a3e
 
 [ITEMDEF 0a4a]
-//drawer
+//drawer (Vanity)
 DUPEITEM=0a3e
 
 [ITEMDEF 0a4b]
-//drawer
+//drawer (Vanity)
 DUPEITEM=0a3e
 
 [ITEMDEF 0a55]
-//Bedroll unrolled
 DEFNAME=i_bedroll
 TYPE=t_bedroll
-RESOURCES=5 i_cloth, 1 i_canvas, 50 i_feather, 1 i_hides_cut
+FLIP=1
 WEIGHT=5
+RESOURCES=5 i_cloth, 1 i_canvas, 50 i_feather, 1 i_hides_cut
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Bed Roll (Unrolled)
 DUPELIST=0a56
 
 [ITEMDEF 0a56]
-//bedroll
+//bedroll (Unrolled)
 DUPEITEM=0a55
 
 [ITEMDEF 0a57]
-//bedroll rolled up
 DEFNAME=i_bedroll_2
 TYPE=t_bedroll
-RESOURCES=i_bedroll
-VALUE=4
+FLIP=1
 WEIGHT=5
+RESOURCES=i_bedroll
 CATEGORY=Decoration - Furniture
 SUBSECTION=Bedroom Furniture
 DESCRIPTION=Bedroll (Rolled Up)
 DUPELIST=0a58,0a59
 
 [ITEMDEF 0a58]
-//bedroll
+//bedroll  (Rolled Up)
 DUPEITEM=0a57
 
 [ITEMDEF 0a59]
-//bedroll
+//bedroll (Rolled Up)
 DUPEITEM=0a57
 
 [ITEMDEF 0a5a]
@@ -1623,7 +1621,6 @@ DUPEITEM=01945
 DEFNAME=i_barrel_broken
 RESOURCES=16 i_board, 2 i_barrel_hoop, i_barrel
 WEIGHT=21
-//broken barrel
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Broken Barrel
@@ -1642,8 +1639,9 @@ DUPEITEM=01db3
 DUPEITEM=01db3
 
 [ITEMDEF 01db7]
-//barrel hoops
 DEFNAME=i_barrel_hoop
+NAME=barrel hoops
+RESOURCES=4 i_ingot_iron
 CATEGORY=Decoration - Furniture
 SUBSECTION=Broken Furniture
 DESCRIPTION=Barrel Hoops

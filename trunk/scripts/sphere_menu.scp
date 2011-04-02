@@ -3396,8 +3396,8 @@ ADD 0ba2
 Road Signs
 ON=i_sign_post Wooden Sign Post
 ADD i_sign_post
-ON=i_sign_45 Road Sign
-ADD i_sign_45
+ON=i_sign_045 Road Sign
+ADD i_sign_045
 ON=i_sign_315 Road Sign
 ADD i_sign_315
 ON=i_sign_000 Road Sign

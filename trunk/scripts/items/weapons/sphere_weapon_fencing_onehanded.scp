@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
+
 
 ///////////////////////////////////////////////////////////////
 //////// ASSASSIN SPIKES
@@ -445,7 +446,7 @@ DUPEITEM=08fe
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0902]
 DEFNAME=i_gargish_dagger
-NAME=gargish dagger
+NAME=Gargish dagger
 TYPE=t_weapon_fence
 DAM=10,11
 FLIP=1

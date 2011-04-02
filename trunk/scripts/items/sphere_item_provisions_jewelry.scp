@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, March 27, 2011
+// FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
 
 
@@ -144,6 +144,62 @@ SKILLMAKE=Tinkering 91.0,t_tinker_tools
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewelry
 DESCRIPTION=Ankh Pendant
+
+[ITEMDEF 04210]
+DEFNAME=i_necklace_gargoyle
+NAME=Gargish necklace
+TYPE=t_jewelry
+VALUE=24
+WEIGHT=0.2
+RESOURCES=2 i_ingot_gold
+SKILLMAKE=Tinkering 75.0,t_tinker_tools
+CATEGORY=Provisions - Jewels and Jewelry
+SUBSECTION=Jewelry
+DESCRIPTION=Gargish Necklace
+TAG.Item.Gargoyle=1
+TEVENTS=t_iprop
+
+[ITEMDEF 04211]
+DEFNAME=i_bracelet_gargoyle
+NAME=Gargish bracelet
+TYPE=t_jewelry
+VALUE=48
+WEIGHT=0.4
+RESOURCES=4 i_ingot_gold
+SKILLMAKE=Tinkering 73.5,t_tinker_tools
+CATEGORY=Provisions - Jewels and Jewelry
+SUBSECTION=Jewelry
+DESCRIPTION=Gargish Bracelet
+TAG.Item.Gargoyle=1
+TEVENTS=t_iprop
+
+[ITEMDEF 04212]
+DEFNAME=i_ring_gargoyle
+NAME=Gargish ring
+TYPE=t_jewelry
+VALUE=24
+WEIGHT=0.2
+RESOURCES=2 i_ingot_gold
+SKILLMAKE=Tinkering 73.0,t_tinker_tools
+CATEGORY=Provisions - Jewels and Jewelry
+SUBSECTION=Jewelry
+DESCRIPTION=Gargoyle Ring
+TAG.Item.Gargoyle=1
+TEVENTS=t_iprop
+
+[ITEMDEF 04213]
+DEFNAME=i_earrings_gargoyle
+NAME=Gargish earrings
+TYPE=t_jewelry
+VALUE=24
+WEIGHT=0.2
+RESOURCES=2 i_ingot_gold
+SKILLMAKE=Tinkering 72.5,t_tinker_tools
+CATEGORY=Provisions - Jewels and Jewelry
+SUBSECTION=Jewelry
+DESCRIPTION=Gargish Earrings
+TAG.Item.Gargoyle=1
+TEVENTS=t_iprop
 
 
 [EOF]

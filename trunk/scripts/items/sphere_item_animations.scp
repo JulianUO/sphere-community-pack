@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Tuesday, March 29, 2011
+// FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
 
 
@@ -38,7 +38,6 @@ DESCRIPTION=Bee Swarm 1
 DUPELIST=091c,091d,091e,091f,0920,0921,0922
 
 [ITEMDEF 091c]
-//bee swarm 1
 DUPEITEM=091b
 DESCRIPTION=Bee Swarm 1 (slower)
 
@@ -75,7 +74,6 @@ DESCRIPTION=Bee Swarm 2
 DUPELIST=0924,0925,0926,0927,0928,0929,092a
 
 [ITEMDEF 0924]
-//bee swarm  2
 DUPEITEM=0923
 DESCRIPTION=Bee Swarm 2 (no animation)
 
@@ -133,7 +131,7 @@ DUPEITEM=0dda
 TYPE=t_fire
 CATEGORY=Animations
 SUBSECTION=Fireball
-DESCRIPTION=Fireball
+DESCRIPTION=Fireball (not actually animated)
 DUPELIST=0f54,0f55,0f56,0f57,0f58,0f59,0f5a
 
 [ITEMDEF 0f54]

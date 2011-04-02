@@ -1,0 +1,51 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Saturday, April 2, 2011
+VERSION=0.56b
+
+
+[COMMENT typedef_mounted_pixie]
+- Each says a couple phrases when double-clicked (only the user can hear)
+- It is rumored the voices are members from the Development Team
+- Use an Axe to put them out of their misery..errr..back into deed form. 
+
+[TYPEDEF t_mounted_pixie]
+ON=@DClick
+   IF (<DISPID>==i_mounted_pixie_1)//dark green girlie voice
+      DORAND 4
+         SRC.SOUND 0555//"ouch, OUCH, Owieeeee"
+         SRC.SOUND 0556//"Pleaseeeeee"
+         SRC.SOUND 0557//"Help meeee"
+         SRC.SOUND 0558//"Let me downn"
+      ENDDO
+   ELIF (<DISPID>==i_mounted_pixie_2)//orange male voice
+      DORAND 4
+         SRC.SOUND 0559//"Oh man, come on! I am beggin you!"
+         SRC.SOUND 055a//"Lemme out!"
+         SRC.SOUND 055b//"Ph-phleasseeee!"
+         SRC.SOUND 055c//"Help me!"
+      ENDDO
+   ELIF (<DISPID>==i_mounted_pixie_3)//blue
+      DORAND 3
+         SRC.SOUND 055d//"Let me down!"
+         SRC.SOUND 055e//"Phhleeaseeeeee!"
+         SRC.SOUND 055f//"Halp meee!"
+      ENDDO
+   ELIF (<DISPID>==i_mounted_pixie_4)//light green
+      DORAND 3
+         SRC.SOUND 0560//"Help meeeeee!"
+         SRC.SOUND 0561//"Let me down!"
+         SRC.SOUND 0562//"Phhleeaseeeeee!"
+      ENDDO
+   ELIF (<DISPID>==i_mounted_pixie_5)//pink
+      DORAND 3
+         SRC.SOUND 0563//"Let me down"
+         SRC.SOUND 0564//"Pleaseeee"
+         SRC.SOUND 0565//"ouch, OUCH, OOWIEE"
+      ENDDO
+   ENDIF
+
+[EOF]
