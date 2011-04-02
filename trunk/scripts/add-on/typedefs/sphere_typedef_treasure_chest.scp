@@ -3,30 +3,31 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Friday, April 2, 2011
 VERSION=0.56b
+
 
 [TYPEDEF t_treasure_chest]
 ON=@DClick
 if <morey> > 1
-	if <r3> > 0
-		for 1 <r2,3>
-		serv.newnpc <def.scp.Monsters_TMapLevel_<dtag0.map.level>>
-		new.attack <src.uid>
-		endfor
-	morey --
-	endif
+   if <r3> > 0
+      for 1 <r2,3>
+         serv.newnpc <def.scp.Monsters_TMapLevel_<dtag0.map.level>>
+         new.attack <src.uid>
+      endfor
+      morey --
+   endif
 endif
 
 ON=@PickUp_Self
 if <morey> > 1
-	if <r3> > 0
-		for 1 <r2,3>
-		serv.newnpc <def.scp.Monsters_TMapLevel_<dtag0.map.level>>
-		new.attack <src.uid>
-		endfor
-	morey --
-	endif
+   if <r3> > 0
+      for 1 <r2,3>
+         serv.newnpc <def.scp.Monsters_TMapLevel_<dtag0.map.level>>
+         new.attack <src.uid>
+      endfor
+      morey --
+   endif
 endif
 
 [eof]
