@@ -1,0 +1,15 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Saturday, April 2, 2011
+VERSION=0.56b
+
+
+[TYPEDEF t_portrait_creepy]
+ON=@DClick
+   FLIP
+   SRC.SOUND 056a//howl
+
+[EOF]

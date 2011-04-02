@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 10, 2011
+// FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
 
 [COMMENT comment_food]
@@ -209,6 +209,7 @@ DESCRIPTION=Cheese (wedge)
 [ITEMDEF 097d]
 //FIXME: Use a knife on the cut wheel to create 4 wedges
 DEFNAME=i_cheese_cut
+NAME=cut wheel of cheese
 TYPE=t_food
 VALUE=18
 WEIGHT=0.4

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 10, 2011
+// FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
 
 
@@ -5726,11 +5726,12 @@ DUPEITEM=02753
 [ITEMDEF 029a0]
 //FIXME: These should be split up and included with each wall type
 DEFNAME=i_wall_stained_glass
+NAME=stained glass window
 TYPE=t_wall
 RESOURCES=100 i_ingot_iron
-CATEGORY=Buildings - SE Walls
-SUBSECTION=Wall Stained-Glass
-DESCRIPTION=@
+CATEGORY=Buildings - Walls
+SUBSECTION=Stained Glass
+DESCRIPTION=Window
 DUPELIST=029a1,029a2,029a3,029a4,029a5,029a6,029a7,029a8,029a9,029aa,029ab,029ac,029ad,029ae,029af,029b0,029b1,029b2,029b3,029b4,029b5,029b6,029b7,029b8,029b9,029ba,029bb,029bc,029bd,029be,029bf
 
 [ITEMDEF 029a1]

@@ -1,0 +1,23 @@
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Saturday, April 2, 2011
+VERSION=0.56b
+
+
+[TYPEDEF t_rune]
+ON=@SpellEffect
+   IF (<DEF.SCP.Rune_NeverFade> == 1)
+      MORE1=100
+   ENDIF
+ON=@DClick
+   IF (<DEF.SCP.Rune_RenameNoPrefix> == 1)
+      SRC.CTAG.rune = <UID>
+      SRC.SYSMESSAGE <DEF.SCP.runes_entername>
+      SRC.promptconsole Rename_Rune
+      RETURN 1
+   ENDIF
+
+[EOF]

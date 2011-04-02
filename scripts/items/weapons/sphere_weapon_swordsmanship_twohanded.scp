@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
+
 
 ///////////////////////////////////////////////////////////////
 //////// AXES
@@ -841,7 +842,7 @@ DUPEITEM=08fd
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 0908]
 DEFNAME=i_gargish_talwar
-NAME=gargish talwar
+NAME=Gargish talwar
 TYPE=t_weapon_sword
 DAM=16,18
 SKILL=Swordsmanship

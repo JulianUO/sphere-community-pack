@@ -3,12 +3,13 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Wednesday, March 9, 2011
+// FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
 
 
 [ITEMDEF 01014]
-//Perhaps use this for bulletin board messages?
+//FIXME: Perhaps use this for bulletin board messages?
+NAME=.
 CATEGORY=Miscellaneous
 SUBSECTION=Invisible Tiles
 DESCRIPTION=Invisible Tile 01014
@@ -21,9 +22,9 @@ DESCRIPTION=Invisible Tile 01018
 
 [ITEMDEF 017cf]
 DEFNAME=i_teleporter
-RESOURCES=60 i_board, 1 i_nails
-WEIGHT=60
 TYPE=t_telepad
+WEIGHT=60
+RESOURCES=60 i_board, 1 i_nails
 CATEGORY=Miscellaneous
 SUBSECTION=Teleporter
 DESCRIPTION=@
@@ -243,7 +244,7 @@ DUPEITEM=017cf
 
 [ITEMDEF 01869]
 DEFNAME=i_virtstone_1
-DEFNAME2=I_VIRTUESTONE_BLACK
+DEFNAME2=i_virtuestone_black
 WEIGHT=1
 CATEGORY=Miscellaneous
 SUBSECTION=Virtue Stones
@@ -251,7 +252,7 @@ DESCRIPTION=Virtue Stone (Black)
 
 [ITEMDEF 0186a]
 DEFNAME=i_virtstone_2
-DEFNAME2=I_VIRTUESTONE_BLUE
+DEFNAME2=i_virtuestone_blue
 WEIGHT=1
 CATEGORY=Miscellaneous
 SUBSECTION=Virtue Stones
@@ -259,7 +260,7 @@ DESCRIPTION=Virtue Stone (Blue)
 
 [ITEMDEF 0186b]
 DEFNAME=i_virtstone_3
-DEFNAME2=I_VIRTUESTONE_GREEN
+DEFNAME2=i_virtuestone_green
 WEIGHT=1
 CATEGORY=Miscellaneous
 SUBSECTION=Virtue Stones
@@ -267,7 +268,7 @@ DESCRIPTION=Virtue Stone (Green)
 
 [ITEMDEF 0186c]
 DEFNAME=i_virtstone_4
-DEFNAME2=I_VIRTUESTONE_ORANGE
+DEFNAME2=i_virtuestone_orange
 WEIGHT=1
 CATEGORY=Miscellaneous
 SUBSECTION=Virtue Stones
@@ -275,7 +276,7 @@ DESCRIPTION=Virtue Stone (Orange)
 
 [ITEMDEF 0186d]
 DEFNAME=i_virtstone_5
-DEFNAME2=I_VIRTUESTONE_PURPLE
+DEFNAME2=i_virtuestone_purple
 WEIGHT=1
 CATEGORY=Miscellaneous
 SUBSECTION=Virtue Stones
@@ -283,7 +284,7 @@ DESCRIPTION=Virtue Stone (Purple)
 
 [ITEMDEF 0186e]
 DEFNAME=i_virtstone_6
-DEFNAME2=I_VIRTUESTONE_RED
+DEFNAME2=i_virtuestone_red
 WEIGHT=1
 CATEGORY=Miscellaneous
 SUBSECTION=Virtue Stones
@@ -291,7 +292,7 @@ DESCRIPTION=Virtue Stone (Red)
 
 [ITEMDEF 0186f]
 DEFNAME=i_virtstone_7
-DEFNAME2=I_VIRTUESTONE_AQUA
+DEFNAME2=i_virtuestone_aqua
 WEIGHT=1
 CATEGORY=Miscellaneous
 SUBSECTION=Virtue Stones
@@ -299,73 +300,91 @@ DESCRIPTION=Virtue Stone (Aqua)
 
 [ITEMDEF 01870]
 DEFNAME=i_virtstone_8
-DEFNAME2=I_VIRTUESTONE_YELLOW
+DEFNAME2=i_virtuestone_yellow
 WEIGHT=1
 CATEGORY=Miscellaneous
 SUBSECTION=Virtue Stones
 DESCRIPTION=Virtue Stone (Yellow)
 
+// The following ITEMDEFs should only be used on skillmenus or dialogs
+// since they have no visible tile within the worldfile...
+
 [ITEMDEF 01964]
-//regions
+DEFNAME=i_region_caves
+NAME=cave region
 
 [ITEMDEF 01965]
-//regions
+DEFNAME=i_region_forest
+NAME=forest region
 
 [ITEMDEF 01966]
-//regions
+DEFNAME=i_region_grass
+NAME=grassland region
 
 [ITEMDEF 01967]
-//regions
+DEFNAME=i_region_jungle
+NAME=jungle region
 
 [ITEMDEF 01968]
-//regions
+DEFNAME=i_region_mountain
+NAME=mountain region
 
 [ITEMDEF 01969]
-//regions - adding this yields invis area? Not sure about these
+DEFNAME=i_region_desert
+NAME=desert region
 
 [ITEMDEF 0196a]
-//regions - adding this yields invis area? Not sure about these
+DEFNAME=i_region_snow
+NAME=snow region
 
 [ITEMDEF 0196b]
-//regions - adding this yields invis area? Not sure about these
+DEFNAME=i_region_swamp
+NAME=swamp region
 
 [ITEMDEF 0196c]
-//regions - adding this yields invis area? Not sure about these
+DEFNAME=i_region_water
+NAME=water region
 
 [ITEMDEF 0196d]
-//regions - adding this yields invis area? Not sure about these
+DEFNAME=i_region_moongate_blue
+NAME=blue moongate region
 
 [ITEMDEF 0196e]
-//regions - adding this yields invis area? Not sure about these
+DEFNAME=i_region_moongate_red
+NAME=red moongate region
 
 [ITEMDEF 0196f]
 DEFNAME=i_mapadd1
-//map icon 1  Couldn't add this?
+NAME=detail map
 
 [ITEMDEF 01970]
 DEFNAME=i_mapadd2
-//map icon 2  Couldn't add this?
+NAME=regional map
 
 [ITEMDEF 01971]
 DEFNAME=i_mapadd3
-//map icon 3  Couldn't add this?
+NAME=sea chart
 
 [ITEMDEF 01972]
 DEFNAME=i_mapadd4
-//map icon 4  Couldn't add this?
+NAME=world map
 
 [ITEMDEF 01973]
-//quest egg Couldn't add this?
 DEFNAME=i_quest
+NAME=quest
 
 [ITEMDEF 01977]
-//Couldn't add this?
+DEFNAME=i_region_dirt
+NAME=dirt region
 
 [ITEMDEF 01978]
-//Couldn't add this?
+DEFNAME=i_region_furrows
+NAME=furrows region
 
 [ITEMDEF 01979]
-//Couldn't add this?
+DEFNAME=i_region_lava
+NAME=lava region
+
 
 [ITEMDEF 01aa4]
 DEFNAME=i_lighthouse
@@ -799,163 +818,150 @@ DUPELIST=02312
 DUPEITEM=02311
 
 
-[ITEMDEF I_WINDOW]
-ID=I_TARGET
+[ITEMDEF i_window]
+ID=i_target
 RESOURCES=2 i_sand, 2 i_board
-
 ON=@Create
    COLOR=colors_white
 
-[ITEMDEF I_flagstone_RED]
+[ITEMDEF i_flagstone_red]
 ID=i_rock_plain
-
 ON=@Create
    COLOR=colors_red
 
-[ITEMDEF I_flagstone_GRAY]
+[ITEMDEF i_flagstone_gray]
 ID=i_rock_plain
-
 ON=@Create
    COLOR=colors_gray
 
 [ITEMDEF i_stone_slate]
 ID=i_rock_plain
-
 ON=@Create
    COLOR=colors_gray
 
-[ITEMDEF I_STONE_RED]
+[ITEMDEF i_stone_red]
 ID=i_rock_plain
-
 ON=@Create
    COLOR=colors_red
 
-[ITEMDEF I_STONE_COBBLE]
+[ITEMDEF i_stone_cobble]
 ID=i_rock_plain
-
 ON=@Create
    COLOR=colors_brown
 
-[ITEMDEF i_LINEN]
-ID=i_CLOTH
+[ITEMDEF i_linen]
+ID=i_cloth
+NAME=linen
 VALUE=2
-NAME=Linen
-RESOURCES=6 i_flax_bundle
 WEIGHT=1
-
+RESOURCES=6 i_flax_bundle
 ON=@Create
    COLOR=colors_yellow
 
-[ITEMDEF i_PAPER]
+[ITEMDEF i_paper]
 ID=i_bedroll_open
-NAME=Paper
+NAME=paper
 VALUE=2
 RESOURCES=1 i_board, 1 t_water
 SKILLMAKE=carpentry 15.7, t_carpentry
-WEIGHT=.1
+WEIGHT=0.1
 
-[ITEMDEF i_PARCHMENT]
+[ITEMDEF i_parchment]
 ID=i_bedroll_open
+NAME=parchment
 VALUE=2
-NAME=Parchment
 RESOURCES=1 i_paper, 1 i_cloth
 SKILLMAKE=carpentry 20.7, t_carpentry
-WEIGHT=1
+WEIGHT=0.1
 
-[ITEMDEF i_CROP_HERB]
+[ITEMDEF i_crop_herb]
 ID=i_plant_grasses
 NAME=Herbs
 
-[ITEMDEF i_KNITTING_NEEDLES]
+[ITEMDEF i_knitting_needles]
 ID=i_axel
+NAME=knitting needles
 VALUE=5
 WEIGHT=1
-NAME=Knitting Needles
 RESOURCES=1 i_board
 CATEGORY=Items by Professions
 SUBSECTION=Tailor
 DESCRIPTION=Knitting Needles
 
-[ITEMDEF I_SCREW]
+[ITEMDEF i_screw]
 ID=i_hinge
+NAME=screw
 VALUE=1
-WEIGHT=.2
-NAME=Screw
+WEIGHT=0.1
 RESOURCES=1 i_ingot_iron
 CATEGORY=Items by Professions
 SUBSECTION=Tinker
 DESCRIPTION=Screw
 
-[ITEMDEF I_EBONY]
+[ITEMDEF i_ebony]
 ID=i_reag_blackmoor
-NAME=Ebony
-WEIGHT=1
+NAME=ebony
+WEIGHT=0.1
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
 DESCRIPTION=Ebony
 
-[ITEMDEF I_IVORY]
+[ITEMDEF i_ivory]
 ID=i_bone_spine
-NAME=Ivory
-WEIGHT=1
+NAME=ivory
+WEIGHT=0.1
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewels
 DESCRIPTION=Ivory
-
 ON=@Create
    COLOR=colors_white
 
-[ITEMDEF i_HAIR_DYEs]
-ID=i_TESTTUBE_RACK_FULL
-TYPE=T_HAIR_DYE
-NAME=Hair Dyes
-WEIGHT=4
+[ITEMDEF i_hair_dyes]
+ID=i_testtube_rack_full
+NAME=hair dyes
+TYPE=t_hair_dye
+WEIGHT=0.1
 CATEGORY=Items by Professions
 SUBSECTION=Barber
 DESCRIPTION=Hair Dyes
-
 ON=@Create
    COLOR=colors_hair
 
-[ITEMDEF I_RIBBON]
+[ITEMDEF i_ribbon]
 ID=i_yarn_ball
 NAME=Ribbon
 WEIGHT=1
-
 ON=@Create
    COLOR=colors_all
 
-[ITEMDEF I_HINGES_BRASS]
+[ITEMDEF i_hinge_brass]
 ID=i_hinge
-NAME=Brass Hinges
-WEIGHT=.5
+NAME=brass hinges
+WEIGHT=0.1
 RESOURCES=3 i_ingot_iron, 1 i_cloth
 CATEGORY=Items by Professions
 SUBSECTION=Tinker
 DESCRIPTION=Brass Hinges
-
 ON=@Create
    COLOR=color_o_gold
 
-[ITEMDEF I_SEWING_NEEDLE]
-ID=I_SCORP
+[ITEMDEF i_sewing_needle]
+ID=i_scorp
+NAME=sewing needle
 VALUE=1
-NAME=Sewing needle
-WEIGHT=.1
+WEIGHT=0.1
 RESOURCES=1 i_ingot_iron
 CATEGORY=Items by Professions
 SUBSECTION=Tailor
 DESCRIPTION=Sewing Needle
-
 ON=@Create
    COLOR=color_metal
 
-[ITEMDEF I_DIE]
-ID=I_GEM_SAPPHIRE
-NAME=Die
-WEIGHT=.2
+[ITEMDEF i_die]
+ID=i_gem_sapphire
+NAME=die
+WEIGHT=0.1
 //RESOURCES3=1 i_bone, 1 i_ink
-
 ON=@Create
    COLOR=colors_white
 
@@ -1020,7 +1026,6 @@ RESOURCES=2 i_plant_cattails
 CATEGORY=Vegetation
 SUBSECTION=Sticks and Wood
 DESCRIPTION=Bamboo
-
 ON=@Create
    COLOR=09a
 
@@ -1068,22 +1073,18 @@ ID=i_BOOK_OPEN
 CATEGORY=Trigger Items
 SUBSECTION=Magic Items
 DESCRIPTION=Book of Hell
-
 ON=@Create
    MORE=b_hitchhiker // some book number
-
-ON=@DCLICK
+ON=@DClick
    SRC.EFFECT=3,i_FIRE_COLUMN,6,15,1   // flamestrike
    SRC.SOUND=snd_SPELL_FLAMESTRIKE
    SRC.DAMAGE={5 20}   // damage the person who did this
    TIMER=4
-
-ON=@TIMER
+ON=@Timer
    SPEAK Run away !
    RETURN 1
 
 [ITEMDEF I_FIRE_STORM]
-// Fire Storm
 NAME=a Fire Storm
 ID=i_fx_explode
 TYPE=T_SPELL
@@ -1223,7 +1224,6 @@ ARMOR=500
 CATEGORY=Provisions - GM Items
 SUBSECTION=GM Robes
 DESCRIPTION=GM Robe
-
 ON=@Create
    COLOR=021
 
@@ -1234,9 +1234,8 @@ ARMOR=500
 CATEGORY=Provisions - GM Items
 SUBSECTION=GM Robes
 DESCRIPTION=Seer Robe
-
 ON=@Create
-   COLOR=01D3
+   COLOR=01d3
 
 [ITEMDEF i_counselor_robe]
 NAME=Counselor Robe
@@ -1245,28 +1244,25 @@ ARMOR=500
 CATEGORY=Provisions - GM Items
 SUBSECTION=GM Robes
 DESCRIPTION=Counselor Robe
-
 ON=@Create
    COLOR=003
 
-[ITEMDEF i_CHECKERBOARD]
-//DEFNAME=CHECKERBOARD
+[ITEMDEF i_checkerboard]
 ID=i_game_board
-NAME=Checkerboard
-TYPE=T_GAME_BOARD
+NAME=checkerboard
+TYPE=t_game_board
 SKILLMAKE=tinkering 40.0, carpentry 40.0
 RESOURCES=3 i_board, 3 i_log
 CATEGORY=Items by Professions
 SUBSECTION=BarKeep
 DESCRIPTION=Checkerboard
-
 ON=@Create
-   MORE=1   // make this checkers.
+   MORE=1   //checkers
 
-[ITEMDEF i_CHESSBOARD]
+[ITEMDEF i_chessboard]
 ID=i_game_board
-NAME=Chessboard
-TYPE=T_GAME_BOARD
+NAME=chessboard
+TYPE=t_game_board
 SKILLMAKE=tinkering 60.0, carpentry 60.0
 RESOURCES=3 i_board, 4 i_log
 CATEGORY=Items by Professions

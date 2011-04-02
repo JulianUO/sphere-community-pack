@@ -3,14 +3,16 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
+
 
 ///////////////////////////////////////////////////////////////
 //////// BOOMERANGS
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 08ff]
 DEFNAME=i_boomerang
+NAME=boomerang
 TYPE=t_weapon_bow
 TDATA3=//nothing is consumed... the weapon itself is thrown
 TDATA4=i_boomerang
@@ -145,7 +147,7 @@ ON=@Create
 ///////////////////////////////////////////////////////////////
 [ITEMDEF 027ac]
 DEFNAME=i_shuriken
-NAME=Shuriken%s
+NAME=shuriken%s
 TYPE=t_weapon_thrown//fixme: t_shuriken?
 RESOURCES=5 i_ingot_iron
 SKILLMAKE=Blacksmithing 45.0
