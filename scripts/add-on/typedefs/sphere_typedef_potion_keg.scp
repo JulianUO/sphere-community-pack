@@ -3,8 +3,16 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Friday, April 2, 2011
 VERSION=0.56b
+
+
+[COMMENT typedef_t_potion_keg]
+This script could be improved as follows:
+- Replace the remaining hardcoded strings with clilocs
+- Use defnames for variables like max potions per keg etc
+- Use types (t_potion and t_potion_empty) instead of defnames (i_bottle_empty)
+  so that potions can be put into other sorts of stackable bottles...
 
 [TYPEDEF t_potion_keg]
 ON=@Dclick
@@ -14,48 +22,48 @@ return 1
 
 ON=@TargOn_Item
 if <src.action> != -1
-src.sysmessage You can't use this yet!
-return 1
+   src.sysmessageloc @,,2 500310//"You are too busy with something else."
+   return 1
 endif
 if <argo.baseid> == i_bottle_empty
-	if <morex> < 1
-	src.sysmessage @,,2 502230
-	return 1
-	endif
-	if <argo.topobj.uid> != <src.uid>
-	src.sysmessage @,,1 The empty bottle should be in your backpack!
-	return 1
-	endif
-src.sysmessage @,,1 You fill an empty bottle.
-sound = snd_z_end_liquid
-serv.newitem <tag0.potion.type>,1,<src.uid>
-new.more2 = <more2>
-new.attr = 0
-new.timer = -1
-morex --
-	if <morex> == 0
-	name =
-	tag.potion.type =
-	more2 = 0
-	else
-	name = a <argo.name> Keg (<morex>)
-	endif
-argo.consume 1
-return 1
+   if <morex> < 1
+      src.sysmessage @,,2 502230//"There seems to be nothing in the keg."
+      return 1
+   endif
+   if <argo.topobj.uid> != <src.uid>
+      src.sysmessage @,,1 The empty bottle should be in your backpack!
+      return 1
+   endif
+   src.sysmessageloc @,,2 500279//"You pour the potion into a bottle..."
+   sound = snd_z_end_liquid
+   serv.newitem <tag0.potion.type>,1,<src.uid>
+   new.more2 = <more2>
+   new.attr = 0
+   new.timer = -1
+   morex --
+   if <morex> == 0
+      name =
+      tag.potion.type =
+      more2 = 0
+   else
+      name = a <argo.name> Keg (<morex>)
+   endif
+   argo.consume 1
+   return 1
 elif <argo.type> != t_potion
-src.sysmessage @,,1 That's not a potion.
-return 1
+   src.sysmessage @,,2 502232//"The keg is not designed to hod that type of object."
+   return 1
 elif <tag0.potion.type> && (<argo.baseid> != <tag0.potion.type>)
-src.sysmessage @,,2 502236
-return 1
+   src.sysmessage @,,2 502236//"You decide that it would be a bad idea to mix different types of potions."
+   return 1
 elif <morex> > 99
-src.sysmessage @,,2 502233
-return 1
+   src.sysmessage @,,2 502233//"The keg will not hold any more."
+   return 1
 elif <morex> == 0
-tag.potion.type = <argo.baseid>
+   tag.potion.type = <argo.baseid>
 elif <tag0.potion.type> != <argo.baseid>
-src.sysmessage @,,2 502236
-return 1
+   src.sysmessage @,,2 502236//"You decide that it would be a bad idea to mix different types of potions."
+   return 1
 endif
 more2 = <eval <more2> * <morex>>
 morex ++

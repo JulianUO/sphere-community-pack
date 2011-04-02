@@ -1,18 +1,33 @@
-[TYPEDEF T_SHRINE]
-ON=@DCLICK
+//****************************************************************************
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Friday, April 1, 2011
+VERSION=0.56b
+
+
+[COMMENT typedef_t_shrine]
+This script could be improved various ways:
+- Use clilocs instead of hardcoded english
+- Use defname entries that store min/max/default values instead of hardcoding them
+
+
+[TYPEDEF t_shrine]
+ON=@DClick
 IF (<SRC.FLAGS>&statf_dead)
-	IF <SRC.FINDID.i_resu_timer>
-	SRC.SYSMESSAGE <SRC.FINDID.i_resu_timer.TIMER> secs to resurrect
-	RETURN 1
-	ENDIF
-SRC.MOVE 1
-	if <def.scp.ResurrectionDelay> > 0
-	serv.newitem i_resu_timer,1,<SRC.UID>,1
-	endif
-SRC.RESURRECT
-SRC.SOUND 00f7
+   IF (<SRC.FINDID.i_resu_timer>)
+      SRC.SYSMESSAGE <SRC.FINDID.i_resu_timer.TIMER> secs to resurrect
+      RETURN 1
+   ENDIF
+   SRC.MOVE 1//FIXME: What was the purpose of this?
+   IF (<DEF.SCP.ResurrectionDelay> > 0)
+      SERV.NEWITEM i_resu_timer,1,<SRC.UID>,1
+   ENDIF
+   SRC.RESURRECT
+   SRC.SOUND 0f7
 ELSE
-SRC.SYSMESSAGE You are not dead.
+   SRC.SYSMESSAGE You are not dead.
 ENDIF
 RETURN 1
 
@@ -21,21 +36,21 @@ SRC.AddContextEntry 300,6198
 
 ON=@ContextMenuSelect
 IF (<ARGN> == 300)
-DIALOG D_TITHING
+   SDIALOG d_tithing
 ENDIF
 
-[DIALOG D_TITHING]
+[DIALOG d_tithing]
 160,40
-src.closealldialogs
+src.closealldialogs//FIXME: is this really necessary?
 
 PAGE 0
 gumppic 30 30 102
-xmfhtmlgump 95 100 120 100 1060198 0 0 //May your wealth bring blessings to those in need, if tithed upon this most sacred site.
+xmfhtmlgump 95 100 120 100 1060198 0 0 //"May your wealth bring blessings to those in need..."
 local.gold = <src.rescount i_gold>
 if <src.ctag0.offer> > <local.gold>
-src.ctag0.offer = <local.gold>
+   src.ctag0.offer = <local.gold>
 elif <src.ctag0.offer> < 0
-src.ctag0.offer = 0
+   src.ctag0.offer = 0
 endif
 dtext 57 274 0 Gold:
 dtext 87 274 53 <EVAL <LOCAL.GOLD>-<SRC.CTAG0.OFFER>>
@@ -55,57 +70,54 @@ dtext 172 228 0 >
 dtext 176 228 0 >
 button 217 272 4023 4024 1 0 5
 
-[DIALOG D_TITHING BUTTON]
+[DIALOG d_tithing BUTTON]
 ON=0
-// You have decided to tithe no gold to the shrine.
-SRC.MESSAGE @,,2 1060193
+SRC.MESSAGE @,,2 1060193 //"You have decided to tithe no gold to the shrine."
 SRC.CTAG.OFFER=
 
 ON=1 4
 DOSWITCH <EVAL <ARGN1>-1>
-SRC.CTAG.OFFER=0
-SRC.CTAG0.OFFER -= 100
-SRC.CTAG0.OFFER += 100
-SRC.CTAG.OFFER=<SRC.RESCOUNT i_gold>
+   SRC.CTAG.OFFER=0
+   SRC.CTAG0.OFFER -= 100
+   SRC.CTAG0.OFFER += 100
+   SRC.CTAG.OFFER=<SRC.RESCOUNT i_gold>
 ENDDO
-DIALOG D_TITHING
+SDIALOG d_tithing
 
 ON=5
 LOCAL.OFFER=<SRC.CTAG0.OFFER>
 IF (<LOCAL.OFFER> > <SRC.RESCOUNT i_gold>)
-LOCAL.OFFER=<SRC.RESCOUNT i_gold>
+   LOCAL.OFFER=<SRC.RESCOUNT i_gold>
 ELIF (<LOCAL.OFFER> < 0)
-LOCAL.OFFER=0
+   LOCAL.OFFER=0
 ENDIF
 IF (<EVAL <SRC.TITHING>+<LOCAL.OFFER>> > 30000)
-LOCAL.OFFER=<EVAL 30000-<SRC.TITHING>>
+   LOCAL.OFFER=<EVAL 30000-<SRC.TITHING>>
 ENDIF
 IF (<LOCAL.OFFER> <= 0)
-SRC.MESSAGE @,,2 1060193
-SRC.CTAG.OFFER=
-RETURN 1
+   SRC.MESSAGE @,,2 1060193//"You have decided to tithe no gold..."
+   SRC.CTAG.OFFER=
+   RETURN 1
 ENDIF
 REF1=<SRC.FINDLAYER.layer_pack>
 IF (<REF1>) && (<SRC.RESCOUNT i_gold> >= <LOCAL.OFFER>)
-SRC.CONSUME <LOCAL.OFFER> i_gold
-SRC.TITHING += <LOCAL.OFFER>
-SRC.MESSAGE @,,2 1060195 //You tithe gold to the shrine as a sign of devotion.
-SRC.SOUND=0243
-SRC.SOUND=02E6
+   SRC.CONSUME <LOCAL.OFFER> i_gold
+   SRC.TITHING += <LOCAL.OFFER>
+   SRC.MESSAGE @,,2 1060195 //"You tithe gold to the shrine as a sign of devotion."
+   SRC.SOUND=snd_z_end_mystery1
+   SRC.SOUND=02e6
 ELSE
-SRC.MESSAGE @,,2 1060194 //You do not have enough gold to tithe that amount!
+   SRC.MESSAGE @,,2 1060194 //"You do not have enough gold to tithe that amount!"
 ENDIF
 SRC.CTAG.OFFER=
 
 [ITEMDEF i_resu_timer]
 ID=i_memory
 TYPE=t_eq_script
-
-ON=@EQUIP
-TIMER = <def.scp.ResurrectionDelay>
-
-ON=@TIMER
-REMOVE
-RETURN 1
+ON=@Equip
+   TIMER = <def.scp.ResurrectionDelay>
+ON=@Timer
+   REMOVE
+   RETURN 1
 
 [EOF]

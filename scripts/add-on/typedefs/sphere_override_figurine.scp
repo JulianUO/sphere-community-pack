@@ -3,22 +3,22 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Friday, April 1, 2011
 VERSION=0.56b
 
-// Shrinked animals
+// Shrunk animals
 [typedef t_figurine]
 on=@dclick
 if <src.isgm>
-return 0
+   return 0
 endif
 if <def.scp.Followers> == 0
-return 0
+   return 0
 endif
 local.slots = <qval <serv.chardef.<tdata3>.tag0.control.slots> ? <serv.chardef.<tdata3>.tag0.control.slots> : 1>
 if <eval <src.curfollower>+<local.slots>> > <src.maxfollower>
-src.sysmessage You have too many followers.
-return 1
+   src.sysmessage You have too many followers.
+   return 1
 endif
 src.curfollower += <local.slots>
 

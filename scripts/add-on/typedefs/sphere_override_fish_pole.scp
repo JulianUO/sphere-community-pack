@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Friday, April 1, 2011
 VERSION=0.56b
+
 //
 // SCRIPT CREDITS
 // --------------
@@ -19,18 +20,18 @@ VERSION=0.56b
 [typedef t_fish_pole]
 on=@targon_item
 if <def.scp.Fishing_SOSTreasure> == 0
-return 0
+   return 0
 endif
 if <argo.baseid> == i_sos_tile
-src.anim 12
-src.sound 027
-	dorand 4
-	src.f_pullout_treasure <argo.uid>
-	src.f_fishing_bones <argo.uid>
-	src.f_fishing_items <argo.uid>
-	enddo
+   src.anim 12
+   src.sound 027
+   dorand 4//FIXME: is this right?
+      src.f_pullout_treasure <argo.uid>
+      src.f_fishing_bones <argo.uid>
+      src.f_fishing_items <argo.uid>
+   enddo
 else
-src.sysmessage <def.scp.fishing_nofish>
+   src.sysmessage <def.scp.fishing_nofish>
 endif
 return 1
 

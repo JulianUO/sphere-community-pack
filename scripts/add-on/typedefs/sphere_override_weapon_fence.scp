@@ -3,19 +3,20 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Friday, April 1, 2011
 VERSION=0.56b
 
-[typedef t_weapon_fence]
-on=@targon_ground
+
+[TYPEDEF t_weapon_fence]
+ON=@TargOn_Ground
 if <argn1>
-	if <serv.itemdef.<argn1>.type>==t_tree
-		if <distance <argn1>> < 3
-		serv.newitem=i_memory
-		new.camping_harvestkindling <src.uid>,"<src.targp>"
-		return 1
-		endif
-	endif
+   if <serv.itemdef.<argn1>.type>==t_tree
+      if <distance <argn1>> < 3
+         serv.newitem=i_memory
+         new.camping_harvestkindling <src.uid>,"<src.targp>"
+         return 1
+      endif
+   endif
 endif
 
 
