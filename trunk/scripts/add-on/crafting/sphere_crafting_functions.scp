@@ -128,7 +128,6 @@ if <isweapon>
 	tag0.DamageIncrease += <local.totalbonus>
 elif <isarmor>
 	local.totalbonus = <min 20,<eval 15 + (<ref1.armslore> / 200)>>
-	ref1.sayu <dlocal.totalbonus>
 	for <local.totalbonus>
 		dorand 5
 			tag0.ResPhysical ++
