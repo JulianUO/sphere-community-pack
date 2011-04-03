@@ -168,6 +168,7 @@ DUPEITEM=01c00
 
 [ITEMDEF 01c06]
 DEFNAME=i_armor_female_leather
+NAME=female leather armor
 TYPE=t_armor_leather
 FLIP=1
 WEIGHT=1
