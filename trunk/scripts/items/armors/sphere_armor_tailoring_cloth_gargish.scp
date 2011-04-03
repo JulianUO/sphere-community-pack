@@ -6,10 +6,11 @@
 // FILE LAST UPDATED: Saturday, April 2, 2011
 VERSION=0.56b
 
+// FIXME: should these have t_armor or t_clothing?
 
 [ITEMDEF 0403]
-DEFNAME=i_gargish_cloth_arms
-NAME=Gargish cloth arms
+DEFNAME=i_gargish_cloth_arms_1
+NAME=gargish cloth arms
 TYPE=t_armor
 DYE=1
 FLIP=1
@@ -25,8 +26,8 @@ TAG.ResPoison=6
 TAG.ResEnergy=6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Cloth Gargoyle Armor
-DESCRIPTION=Gargish Cloth Arms
-DUPELIST=0405f,0404,04060
+DESCRIPTION=Gargish Cloth Arms (Type 1)
+DUPELIST=0405f
 ON=@Create
    HITPOINTS={50 60}
 
@@ -35,16 +36,35 @@ ON=@Create
 DUPEITEM=0403
 
 [ITEMDEF 0404]
-//gargish cloth arms
-DUPEITEM=0403
+DEFNAME=i_gargish_cloth_arms_2
+NAME=gargish cloth arms
+TYPE=t_armor
+DYE=1
+FLIP=1
+WEIGHT=2.0
+REQSTR=20
+RESOURCES=8 i_cloth
+SKILLMAKE=Tailoring 87.1,t_sewing_kit
+TAG.Item.Gargoyle=1
+TAG.ResPhysical=5
+TAG.ResFire=7
+TAG.ResCold=6
+TAG.ResPoison=6
+TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Cloth Gargoyle Armor
+DESCRIPTION=Gargish Cloth Arms (Type 2)
+DUPELIST=04060
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 04060]
 //gargish cloth arms
-DUPEITEM=0403
+DUPEITEM=0404
 
 [ITEMDEF 0405]
-DEFNAME=i_gargish_cloth_chest
-NAME=Gargish cloth chest
+DEFNAME=i_gargish_cloth_chest_1
+NAME=gargish cloth chest
 TYPE=t_armor
 DYE=1
 FLIP=1
@@ -60,8 +80,8 @@ TAG.ResPoison=6
 TAG.ResEnergy=6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Cloth Gargoyle Armor
-DESCRIPTION=Gargish Cloth Chest
-DUPELIST=04061,0406,04062
+DESCRIPTION=Gargish Cloth Chest (Type 1)
+DUPELIST=04061
 ON=@Create
    HITPOINTS={50 60}
 
@@ -70,16 +90,35 @@ ON=@Create
 DUPEITEM=0405
 
 [ITEMDEF 0406]
-//gargish cloth chest
-DUPEITEM=0405
+DEFNAME=i_gargish_cloth_chest_2
+NAME=gargish cloth chest
+TYPE=t_armor
+DYE=1
+FLIP=1
+WEIGHT=2.0
+REQSTR=20
+RESOURCES=12 i_cloth
+SKILLMAKE=Tailoring 94.0,t_sewing_kit
+TAG.Item.Gargoyle=1
+TAG.ResPhysical=5
+TAG.ResFire=7
+TAG.ResCold=6
+TAG.ResPoison=6
+TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Cloth Gargoyle Armor
+DESCRIPTION=Gargish Cloth Chest (Type 2)
+DUPELIST=04062
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 04062]
 //gargish cloth chest
-DUPEITEM=0405
+DUPEITEM=0406
 
 [ITEMDEF 0407]
-DEFNAME=i_gargish_cloth_kilt
-NAME=Gargish cloth kilt
+DEFNAME=i_gargish_cloth_kilt_1
+NAME=gargish cloth kilt
 TYPE=t_armor
 DYE=1
 FLIP=1
@@ -95,8 +134,8 @@ TAG.ResPoison=6
 TAG.ResEnergy=6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Cloth Gargoyle Armor
-DESCRIPTION=Gargish Cloth Kilt
-DUPELIST=04063,0408,04064
+DESCRIPTION=Gargish Cloth Kilt (Type 1)
+DUPELIST=04063
 ON=@Create
    HITPOINTS={50 60}
 
@@ -105,16 +144,35 @@ ON=@Create
 DUPEITEM=0407
 
 [ITEMDEF 0408]
-//gargish cloth kilt
-DUPEITEM=0407
+DEFNAME=i_gargish_cloth_kilt_2
+NAME=gargish cloth kilt
+TYPE=t_armor
+DYE=1
+FLIP=1
+WEIGHT=2.0
+REQSTR=20
+RESOURCES=6 i_cloth
+SKILLMAKE=Tailoring 82.9,t_sewing_kit
+TAG.Item.Gargoyle=1
+TAG.ResPhysical=5
+TAG.ResFire=7
+TAG.ResCold=6
+TAG.ResPoison=6
+TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Cloth Gargoyle Armor
+DESCRIPTION=Gargish Cloth Kilt (Type 2)
+DUPELIST=04064
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 04064]
 //gargish cloth kilt
-DUPEITEM=0407
+DUPEITEM=0408
 
 [ITEMDEF 0409]
-DEFNAME=i_gargish_cloth_leggings
-NAME=Gargish cloth leggings
+DEFNAME=i_gargish_cloth_leggings_1
+NAME=gargish cloth leggings
 TYPE=t_armor
 DYE=1
 FLIP=1
@@ -122,16 +180,16 @@ WEIGHT=4.0
 REQSTR=20
 RESOURCES=10 i_cloth
 SKILLMAKE=Tailoring 91.2, t_sewing_kit
-CATEGORY=Provisions - Armor - Tailoring
-SUBSECTION=Cloth Gargoyle Armor
-DESCRIPTION=Gargish Cloth Leggings
 TAG.Item.Gargoyle=1
 TAG.ResPhysical=5
 TAG.ResFire=7
 TAG.ResCold=6
 TAG.ResPoison=6
 TAG.ResEnergy=6
-DUPELIST=04065,040a,04066
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Cloth Gargoyle Armor
+DESCRIPTION=Gargish Cloth Leggings (Type 1)
+DUPELIST=04065
 ON=@Create
    HITPOINTS={50 60}
 
@@ -140,16 +198,35 @@ ON=@Create
 DUPEITEM=0409
 
 [ITEMDEF 040a]
-//gargish cloth leggings
-DUPEITEM=0409
+DEFNAME=i_gargish_cloth_leggings_2
+NAME=gargish cloth leggings
+TYPE=t_armor
+DYE=1
+FLIP=1
+WEIGHT=4.0
+REQSTR=20
+RESOURCES=10 i_cloth
+SKILLMAKE=Tailoring 91.2, t_sewing_kit
+TAG.Item.Gargoyle=1
+TAG.ResPhysical=5
+TAG.ResFire=7
+TAG.ResCold=6
+TAG.ResPoison=6
+TAG.ResEnergy=6
+CATEGORY=Provisions - Armor - Tailoring
+SUBSECTION=Cloth Gargoyle Armor
+DESCRIPTION=Gargish Cloth Leggings (Type 2)
+DUPELIST=04066
+ON=@Create
+   HITPOINTS={50 60}
 
 [ITEMDEF 04066]
 //gargish cloth leggings
-DUPEITEM=0409
+DUPEITEM=040a
 
 [ITEMDEF 045a4]
 DEFNAME=i_gargish_cloth_wings
-NAME=Gargish cloth wing armor
+NAME=gargish cloth wing armor
 TYPE=t_clothing
 DYE=1
 FLIP=1

@@ -33,6 +33,11 @@ endif
 if <act.weight> > 0
 addcliloc 1072225,<fval <act.weight>>
 endif
+if <act.tag0.Item.Elven>
+addcliloc 1075086 // Elves Only
+elif <act.tag0.Item.Gargoyle>
+addcliloc 1111709 // Gargoyles Only
+endif
 if <act.tag0.artifact>
 addcliloc 1061078,<act.dtag0.artifact>
 endif

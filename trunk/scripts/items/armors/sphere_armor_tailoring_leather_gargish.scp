@@ -13,8 +13,8 @@ VERSION=0.56b
 // gargish leather legs = 0x0306, 0x404e = 590
 
 [ITEMDEF 0301]
-DEFNAME=i_leather_gargoyle_arms_female
-NAME=Gargish leather arms
+DEFNAME=i_leather_gargoyle_arms_1
+NAME=gargish leather arms
 TYPE=t_armor_leather
 FLIP=1
 WEIGHT=4.0
@@ -29,7 +29,7 @@ TAG.ResPoison=6
 TAG.ResEnergy=6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Arms (female)
+DESCRIPTION=Gargoyle Leather Arms (Type 1)
 DUPELIST=04047
 ON=@Create
    HITPOINTS={50 60}
@@ -38,8 +38,8 @@ ON=@Create
 DUPEITEM=0301
 
 [ITEMDEF 0302]
-DEFNAME=i_leather_gargoyle_arms
-NAME=Gargish leather arms
+DEFNAME=i_leather_gargoyle_arms_2
+NAME=gargish leather arms
 TYPE=t_armor_leather
 FLIP=1
 WEIGHT=4.0
@@ -54,7 +54,7 @@ TAG.ResPoison=6
 TAG.ResEnergy=6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Arms
+DESCRIPTION=Gargoyle Leather Arms (Type 2)
 DUPELIST=04048
 ON=@Create
    HITPOINTS={50 60}
@@ -63,8 +63,8 @@ ON=@Create
 DUPEITEM=0302
 
 [ITEMDEF 0303]
-DEFNAME=i_leather_gargoyle_chest_female
-NAME=Gargish leather chest
+DEFNAME=i_leather_gargoyle_chest_2
+NAME=gargish leather chest
 TYPE=t_armor_leather
 FLIP=1
 WEIGHT=4.0
@@ -79,7 +79,7 @@ TAG.ResPoison=6
 TAG.ResEnergy=6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Chest (female)
+DESCRIPTION=Gargoyle Leather Chest (Type 2)
 DUPELIST=04049
 ON=@Create
    HITPOINTS={50 60}
@@ -88,8 +88,8 @@ ON=@Create
 DUPEITEM=0303
 
 [ITEMDEF 0304]
-DEFNAME=i_leather_gargoyle_chest
-NAME=Gargish leather chest
+DEFNAME=i_leather_gargoyle_chest_1
+NAME=gargish leather chest
 TYPE=t_armor_leather
 FLIP=1
 WEIGHT=4.0
@@ -104,7 +104,7 @@ TAG.ResPoison=6
 TAG.ResEnergy=6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Chest
+DESCRIPTION=Gargoyle Leather Chest (Type 1)
 DUPELIST=0404a
 ON=@Create
    HITPOINTS={50 60}
@@ -113,8 +113,8 @@ ON=@Create
 DUPEITEM=0304
 
 [ITEMDEF 0305]
-DEFNAME=i_leather_gargoyle_leggings_female
-NAME=Gargish leather leggings
+DEFNAME=i_leather_gargoyle_leggings_1
+NAME=gargish leather leggings
 TYPE=t_armor_leather
 FLIP=1
 WEIGHT=4.0
@@ -129,7 +129,7 @@ TAG.ResPoison=6
 TAG.ResEnergy=6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Leggings (female)
+DESCRIPTION=Gargoyle Leather Leggings (Type 1)
 DUPELIST=0404d
 ON=@Create
    HITPOINTS={50 60}
@@ -138,8 +138,8 @@ ON=@Create
 DUPEITEM=0305
 
 [ITEMDEF 0306]
-DEFNAME=i_leather_gargoyle_leggings
-NAME=Gargish leather leggings
+DEFNAME=i_leather_gargoyle_leggings_2
+NAME=gargish leather leggings
 TYPE=t_armor_leather
 FLIP=1
 WEIGHT=4.0
@@ -154,7 +154,7 @@ TAG.ResPoison=6
 TAG.ResEnergy=6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Leggings
+DESCRIPTION=Gargoyle Leather Leggings (Type 2)
 DUPELIST=0404e
 ON=@Create
    HITPOINTS={50 60}
@@ -163,8 +163,8 @@ ON=@Create
 DUPEITEM=0306
 
 [ITEMDEF 0310]
-DEFNAME=i_leather_gargoyle_kilt
-NAME=Gargish leather kilt
+DEFNAME=i_leather_gargoyle_kilt_2
+NAME=gargish leather kilt
 TYPE=t_armor_leather
 FLIP=1
 WEIGHT=4.0
@@ -179,7 +179,7 @@ TAG.ResPoison=6
 TAG.ResEnergy=6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Kilt (female)
+DESCRIPTION=Gargoyle Leather Kilt (Type 2)
 DUPELIST=0404b
 ON=@Create
    HITPOINTS={50 60}
@@ -188,8 +188,8 @@ ON=@Create
 DUPEITEM=0310
 
 [ITEMDEF 0311]
-DEFNAME=i_leather_gargoyle_kilt
-NAME=Gargish leather kilt
+DEFNAME=i_leather_gargoyle_kilt_1
+NAME=gargish leather kilt
 TYPE=t_armor_leather
 FLIP=1
 WEIGHT=4.0
@@ -204,7 +204,7 @@ TAG.ResPoison=6
 TAG.ResEnergy=6
 CATEGORY=Provisions - Armor - Tailoring
 SUBSECTION=Leather Gargoyle Armor
-DESCRIPTION=Gargoyle Leather Kilt
+DESCRIPTION=Gargoyle Leather Kilt (Type 1)
 DUPELIST=0404c
 ON=@Create
    HITPOINTS={50 60}
@@ -214,7 +214,7 @@ DUPEITEM=0311
 
 [ITEMDEF 0457e]
 DEFNAME=i_gargish_leather_wings
-NAME=Gargish leather wing armor
+NAME=gargish leather wing armor
 TYPE=t_armor_leather
 FLIP=1
 WEIGHT=2.0
