@@ -34,8 +34,7 @@ DUPEITEM=0278e
 [ITEMDEF 02790]
 DEFNAME=i_leather_ninja_belt
 NAME=leather ninja belt
-//TYPE=t_armor_leather
-TYPE=t_ninja_belt//FIXME: Maybe this should be a TEVENT?
+TYPE=t_armor_leather
 FLIP=1
 WEIGHT=1
 REQSTR=10
@@ -49,9 +48,10 @@ SKILLMAKE=Tailoring 50.0, t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Miscellaneous
 DESCRIPTION=Leather Ninja Belt
+TEVENTS=t_ninja_shuriken
 DUPELIST=027db
-//ON=@Create
-//   HITPOINTS={36 48}
+ON=@Create
+   HITPOINTS={36 48}
 
 [ITEMDEF 027db]
 DUPEITEM=02790
