@@ -237,6 +237,20 @@ endif
 f_resenddialog d_craft_menu
 
 on=507 // enhance button
+//1061002//"You must use a runic tailoring kit to enhance a tailored item."
+//1061003//"You must be using a runic hammer to enhance a smithed item."
+//1061004//"Target an item to enhance with your chosen material."
+//1061005//"The item must be in your backpack to enhance it."
+//1061008//"You enhance the item with the properties of the special material."
+//1061009//"The item already carries the properties of a special material."
+//1061010//"You must select a special material in order to enhance an item with its properties."
+//1061011//"You cannot enhance this type of item with thte properties of the selected special material."
+//1061012//"This item is already enhanced with the properties of a special material."
+//1061080//"You attempt to enhance the item, but fail catastrophically. The item is lost."
+//1061081//"The target item is not a magic item or does not have any properties that match those of the special material."
+//1061082//"You attempt to enhance the item, but fail. Some material is lost in the process."
+//1074794//"Target the material to use."
+//1149869//"Target an item to enhance with the properties of your selected material (success rate: ~%)"
 SYSMESSAGE @021 Not yet implemented
 f_resenddialog d_craft_menu
 
