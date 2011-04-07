@@ -12,21 +12,36 @@ VERSION=0.56b
 //
 // SCRIPT DOCUMENTATION
 // --------------------
-// Format of the entries is: SKILL_category_#_# "ID"
-// Replace SKILL with your crafting skill (sample: Blacksmithing)
-// Replace the 1st # with the category index
-// Replace the 2nd # with the item index
-// Replace ID with your item id (sample: i_sword_long)
 //
-// What is "SKILL_options_default"?
-// It is an entry which controls if you can make exceptional items
-// if you can mark the item, color it, need a recipe and which expansion is needed
-// The order is: "exceptional,mark,colored,recipe,expansion"
+// _marking: A value of 1 indicates that a maker's mark can be added to the
+//           crafted item.
 //
-// Also, you can set individual options using the following format:
-// SKILL_category_#_#_opt "exceptional,mark,colored,recipe,expansion"
-// How to use them is explained above. Options are stored in "sphere_skillmenu_SKILL_options.scp"
-// NOTE: Colored only works with the crafting generator script.
+// _firstmaterial: A value of 1 indicates that alternate materials can be
+//                 selected in the crafting menu.  For example, in the case
+//                 of blacksmithing, the default material is i_ingot_iron,
+//                 however some items can be crafted from other types of
+//                 ingots...
+//
+// _secondmaterial: This is not yet implemented
+//
+// _options_default: This indicates the default craft flags for items in the
+//                   skillmenu that do not have their own _opt entry.  The
+//                   flags, in order, are:
+//
+//                     "exceptional,mark,colored,recipe,expansion"
+//
+//                   An individual item can have its flags overridden from
+//                   this default by adding a _opt entry.  For example:
+//
+//                     blacksmithing_category_1_1      "i_ringmail_gloves"
+//                     blacksmithing_category_1_1_opt  "1,1,1,0,0"
+//
+//                   The colored flag indicates this item has ITEMDEFs that
+//                   can be crafted from other materials.  Those items are
+//                   indicated with a material number, in the example below,
+//                   the number 3 indicates copper:
+//
+//                     blacksmithing_3_category_1_1 "i_ringmail_gloves_copper"
 //
 // _smelt: The function called when you try to smelt an item.
 //         If empty, option won't show in the skill menu.
@@ -34,21 +49,33 @@ VERSION=0.56b
 // _repair: The function called when you try to repair an item.
 //          If empty, option won't show in the skill menu.
 //
-// _check: A small check before trying to create the item.
-//         Things like asking for a forge or mana would work,
-//         RETURN 1 in this function cancels crafting.
+// _check: A function that does some tests before trying to create the item.
+//         For example, blacksmithing typically requires a forge to be near.
+//         RETURN 1 in this function prevents the crafting.
 //
 // _check_notice: Text displayed if the _check property returns 1.
 //
-// _chanceatmin: Can't remember.
+// _chanceatmin: To determine success, the primary skill required to make an
+//               item (in other words, the first skill in the SKILLMAKE entry
+//               for an item) is subtracted from the crafters skill, then that
+//               result becomes the percent chance of success.  If set, the
+//               _chanceatmin is added to the result before the final percent
+//               chance is calculated.  For example, if a crafter has 100.0
+//               blacksmithing, and the item they are crafting requires 95.0
+//               blacksmithing, then the chance of success is 5%... but if
+//               _chanceatmin is set to 20.0, then the crafter will actually
+//               have a 25% chance of succeeding.
 //
-// _exceptional_bonus: Bonus function applied to the item if is crafted exceptionally.
-//		       Damage, Resistances bonus should be here.
+// _exceptional_bonus: Bonus function applied to the item when it is crafted
+//                     exceptionally.  For armour or weapons, this function
+//                     could add TAGs to the item that affect its damage or
+//                     resistance to damage, etc...
 //
-// _aftercraft: Function called on the item AFTER you craft it.
-//              If success only.
+// _aftercraft: This function called on the item AFTER it is successfully
+//              crafted.
 
-[defname sphere_crafting_blacksmithing_default]
+
+[defname sphere_crafting_blacksmithing_defaults]
 blacksmithing_marking		"1" // 1 or 0
 blacksmithing_firstmaterial	"1" // 1 or 0
 blacksmithing_secondmaterial	"0" // 1 or 0
@@ -74,6 +101,14 @@ blacksmithing_category_9_name	"1011084" // Polearms
 blacksmithing_category_10_name	"1060885" // Dragon Scale Armor
 blacksmithing_category_11_name	"1044117" // Throwing
 
+[defname sphere_crafting_blacksmithing_skillmenu_items]
+//
+// The format of specific items is: SKILL_category_#_# "ID"
+// - Replace SKILL with your crafting skill (sample: blacksmithing)
+// - Replace the 1st # with the category index number
+// - Replace the 2nd # with the item index number
+// - Replace ID with the item id (sample: i_sword_long)
+//
 blacksmithing_category_1_1	"i_ringmail_gloves"
 blacksmithing_category_1_2	"i_ringmail_leggings"
 blacksmithing_category_1_3	"i_ringmail_sleeves"

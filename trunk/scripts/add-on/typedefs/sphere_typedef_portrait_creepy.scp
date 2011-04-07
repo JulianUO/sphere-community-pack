@@ -11,5 +11,6 @@ VERSION=0.56b
 ON=@DClick
    FLIP
    SRC.SOUND 056a//howl
+   RETURN 1
 
 [EOF]
