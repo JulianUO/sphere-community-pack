@@ -16,7 +16,8 @@ VERSION=0.56b
 
 [defname sphere_crafting_bowcraft_default]
 bowcraft_marking		"1" // 1 or 0
-bowcraft_materials		"1" // 1 or 0
+bowcraft_firstmaterial	"1" // 1 or 0
+bowcraft_secondmaterial	"0" // 1 or 0
 bowcraft_options_default	"1,1,0,0,0"
 
 bowcraft_smelt			""

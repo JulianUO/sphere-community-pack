@@ -211,6 +211,7 @@ ON=@DClick
          SRC.SOUND 0554//"Don't worry dear, its nothing a floppy hat or a mask wouldn't cover up."
       ENDDO
    ENDIF
+   RETURN 1
 
 [ITEMDEF 02a7c]
 //haunted mirror
