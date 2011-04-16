@@ -16,7 +16,6 @@ The shuriken can have its type=t_ninja_shuriken but the belt should keep
 type=t_armor_leather and have the TEVENT=t_ninja_shuriken added.
 
 This script could be improved further:
-- Allow shurikens to be dropped on the belt to load them...
 - The belt should probably be a container so that it (and the player) gain
   weight when shurikens are loaded.  When this conversion is made, the load
   limit check could be eliminated...
@@ -104,17 +103,6 @@ ON=@TargOn_Char
       SRC.FINDID.i_shuriken.REMOVE
    ENDIF
    RETURN 1
-
-ON=@DropOn_Self
-   SERV.LOG Does this trigger work? name=<NAME> src=<SRC.NAME>
-   IF (<ARGO.TYPE>!=t_shuriken)
-      SRC.SYSMESSAGELOC color_text,1063301//"You can only place shuriken in a ninja belt."
-      RETURN 1
-   ENDIF
-   IF (<TAG0.ShurikenCount> >= <DEF.ShurikenLoadLimit>)
-      SRC.SYSMESSAGELOC color_text,1063302//"You cannot add any more shuriken."
-      RETURN 1
-   ENDIF
 
 ON=@ClientToolTip
    IF (<DEFNAME>==i_belt_ninja_leather)
