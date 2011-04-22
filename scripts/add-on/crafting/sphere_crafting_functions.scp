@@ -96,6 +96,9 @@ else
 endif
 
 [function craft_exceptionalchance]
+if !(<getargv 1 <src.ctag0.craft.item.options>>)
+   return 0
+endif
 local.successchance = <eval (<src.<serv.skill.<serv.itemdef.<baseid>.skillmake.1.key>.key>> - <serv.itemdef.<baseid>.skillmake.1.val>) * 2>
 local.successchance += <def.<src.ctag0.craft.skill>_chanceatmin>
 local.r = <eval <local.successchance> - 450>
