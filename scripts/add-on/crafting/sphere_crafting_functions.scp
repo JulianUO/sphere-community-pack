@@ -51,7 +51,7 @@ elif !<canmake <args>>
 elif !<isempty <def.<ctag0.craft.skill>_check>>
    if (<<def.<ctag0.craft.skill>_check> <args>>)
       f_resenddialog d_craft_menu
-   return 1
+      return 1
    endif
 endif
 makeitem <args>
@@ -61,6 +61,15 @@ ctag.craft.last.<ctag0.craft.skill> = <args>
 if !strcmpi("Cooking","<ctag0.craft.skill>")
    timerf <eval <serv.skill.13.delay>/10>,craftcooking <args>,<actdiff> // Cooking Fix
 endif
+LOCAL.NewLastTen=<args>
+for 0 9
+   LOCAL.TempItem=<getargv <LOCAL._for> <TAG0.craft.lastTen.<ctag0.craft.skill>>>
+   IF (<LOCAL.TempItem>) && !(STRMATCH(*<LOCAL.TempItem>*,<LOCAL.NewLastTen>))
+      LOCAL.NewLastTen=<LOCAL.NewLastTen>,<LOCAL.TempItem>
+   ENDIF
+endfor
+TAG.craft.lastTen.<ctag0.craft.skill>=<LOCAL.NewLastTen>
+
 
 [function craftcooking]
 if (<canmake <argv[0]>>) && (<argv[1]> > 0)
@@ -73,6 +82,18 @@ else
    ctag.craft.message = <def.scp.craft_msg_fail>
 endif
 craftskill cooking
+
+[function cancraft]
+IF (STRMATCH("*t_masonry_tool*","<SERV.ITEMDEF.<ARGS>.SKILLMAKE>") && !(<TAG0.crafting.masonry>)
+   RETURN 0
+ENDIF
+IF (STRMATCH("*t_glassblowing*","<SERV.ITEMDEF.<ARGS>.SKILLMAKE>") && !(<TAG0.crafting.glassblowing>)
+   RETURN 0
+ENDIF
+IF !(<CANMAKE <ARGS>>)
+   RETURN 0
+ENDIF
+RETURN 1
 
 [function craftsuccesschance]
 if (<src.<serv.skill.<serv.itemdef.<args>.skillmake.1.key>.key>> >= <serv.itemdef.<args>.skillmake.1.val>)
@@ -144,5 +165,6 @@ elif <tag0.UsesRemaining>
 	local.totalbonus = <min 40,<eval 35 + (<ref1.armslore> / 200)>> // FIXME: couldn't find any information on the actual formula so this is completely made up.
 	tag0.UsesRemaining += <local.totalbonus>
 endif
+
 
 [eof]
