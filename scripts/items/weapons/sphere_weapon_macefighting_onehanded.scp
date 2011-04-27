@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED:  Monday, April 25, 2011
 VERSION=0.56b
+
 
 ///////////////////////////////////////////////////////////////
 //////// CLUBS
@@ -717,7 +718,7 @@ WEIGHT=14.0
 REQSTR=45
 TWOHANDS=N
 RESOURCES=20 i_ingot_iron
-SKILLMAKE=70.0 Blacksmithing
+SKILLMAKE=Blacksmithing 70.0
 CATEGORY=Provisions - Weapons - MaceFighting
 SUBSECTION=Disc Maces
 DESCRIPTION=Disc Mace

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Tuesday, April 5, 2011
+// FILE LAST UPDATED: Monday, April 25, 2011
 VERSION=0.56b
 
 
@@ -26,7 +26,7 @@ WEIGHT=4.0
 REQSTR=25
 TWOHANDS=N
 RESOURCES=5 i_ingot_iron
-SKILLMAKE=75.0 Blacksmithing
+SKILLMAKE=Blacksmithing 75.0
 CATEGORY=Provisions - Weapons - Throwing
 SUBSECTION=Boomerangs
 DESCRIPTION=Boomerang
@@ -58,7 +58,7 @@ WEIGHT=6.0
 REQSTR=40
 TWOHANDS=N
 RESOURCES=9 i_ingot_iron
-SKILLMAKE=75.0 Blacksmithing
+SKILLMAKE=Blacksmithing 75.0
 CATEGORY=Provisions - Weapons - Throwing
 SUBSECTION=Cyclones
 DESCRIPTION=Cyclone
@@ -91,7 +91,7 @@ WEIGHT=8.0
 REQSTR=60
 TWOHANDS=N
 RESOURCES=9 i_ingot_iron
-SKILLMAKE=75.0 Blacksmithing
+SKILLMAKE=Blacksmithing 75.0
 CATEGORY=Provisions - Weapons - Throwing
 SUBSECTION=Soul Glaives
 DESCRIPTION=Soul Glaive

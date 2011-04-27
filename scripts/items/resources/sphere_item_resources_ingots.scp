@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Monday, April 25, 2011
 VERSION=0.56b
 //
 // SCRIPT CREDITS
@@ -26,7 +26,7 @@ VERSION=0.56b
 DEFNAME=i_ingot_iron
 TYPE=T_INGOT
 RESOURCES=i_ore_iron
-SKILLMAKE=20.0 MINING
+SKILLMAKE=Mining 20.0
 TDATA1=20.0
 TDATA2=50.0
 WEIGHT=2

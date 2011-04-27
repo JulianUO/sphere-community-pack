@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Monday, April 25, 2011
 VERSION=0.56b
+
 
 ///////////////////////////////////////////////////////////////
 //////// BOKUTOS
@@ -846,7 +847,7 @@ WEIGHT=6.0
 REQSTR=40
 TWOHANDS=N
 RESOURCES=18 i_granite
-SKILLMAKE=55.0 Carpentry
+SKILLMAKE=Carpentry 55.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Stone War Swords
 DESCRIPTION=Stone War Sword
@@ -904,7 +905,7 @@ WEIGHT=6.0
 REQSTR=20
 TWOHANDS=N
 RESOURCES=14 i_sand
-SKILLMAKE=55.0 Alchemy
+SKILLMAKE=Alchemy 55.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Glass Swords
 DESCRIPTION=Glass Sword

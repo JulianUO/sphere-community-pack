@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Monday, April 25, 2011
 VERSION=0.56b
+
 
 ///////////////////////////////////////////////////////////////
 //////// DOUBLE BLADED STAVES
@@ -449,7 +450,7 @@ WEIGHT=2.0
 REQSTR=40
 TWOHANDS=Y
 RESOURCES=12 i_ingot_iron
-SKILLMAKE=47.0 Blacksmithing
+SKILLMAKE=Blacksmithing 47.0
 CATEGORY=Provisions - Weapons - Fencing
 SUBSECTION=Dual Pointed Spears
 DESCRIPTION=Dual Pointed Spear

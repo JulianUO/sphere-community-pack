@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, April 2, 2011
+// FILE LAST UPDATED: Monday, April 25, 2011
 VERSION=0.56b
 
 
@@ -2458,7 +2458,7 @@ ARMOR=20
 VALUE=547
 WEIGHT=12.6
 RESOURCES=10 i_cloth,5 i_gem_diamond,1 i_wire_gold,1 i_thread,1 i_scroll_resurrection
-SKILLMAKE=Tailoring 70.0,t_sewing_kit,Magery 70.0,Anatomy 100.0
+SKILLMAKE=Tailoring 70.0,t_sewing_kit
 CATEGORY=Provisions - Clothes
 SUBSECTION=Shirts & Robes
 DESCRIPTION=Death Shroud (works)

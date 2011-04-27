@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, April 2, 2011
+// FILE LAST UPDATED: Monday, April 25, 2011
 VERSION=0.56b
 
 
@@ -3380,7 +3380,8 @@ DUPEITEM=0342c
 
 
 [ITEMDEF 0343b]
-DEFNAME=i_lava_bubble
+//FIXME: merge with the other lava bubble defname?
+DEFNAME=i_lava_bubble_2
 TYPE=t_lava
 CATEGORY=Ground Tiles (animated)
 SUBSECTION=Lava

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, April 2, 2011
+// FILE LAST UPDATED: Monday, April 25, 2011
 VERSION=0.56b
 
 
@@ -824,7 +824,7 @@ WEIGHT=4.0
 REQSTR=35
 TWOHANDS=Y
 RESOURCES=24 i_ingot_iron
-SKILLMAKE=75.0 Blacksmithing
+SKILLMAKE=Blacksmithing 75.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Dual Short Axes
 DESCRIPTION=Dual Short Axes
@@ -852,7 +852,7 @@ WEIGHT=4.0
 REQSTR=40
 TWOHANDS=Y
 RESOURCES=18 i_ingot_iron
-SKILLMAKE=75.0 Blacksmithing
+SKILLMAKE=Blacksmithing 75.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Gargish Talwars
 DESCRIPTION=Gargish Talwar
