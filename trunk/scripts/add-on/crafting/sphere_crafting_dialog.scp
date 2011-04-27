@@ -103,11 +103,15 @@ local.y = 60
 local.resource = <qval <ctag0.craft.material.<ctag0.craft.skill>> ? "_<dctag0.craft.material.<ctag0.craft.skill>>_" : "_">
 local.mainbar = <eval 1 + (10 * <ctag0.craft.page.mainbar>)>
 for 1 10
-   local.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<dlocal.mainbar>>
+   if <ctag0.lastenbutton>
+      local.item = <getargv <eval <local._for>-1> <TAG0.craft.lastTen.<ctag0.craft.skill>>>
+   else
+      local.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<dlocal.mainbar>>
+   endif
    if <local.item> != 0
       button 480 <local.y> 4011 4012 1 0 <eval 100 + <local.mainbar>>
       button 220 <local.y> 4005 4007 1 0 <eval 600 + <local.mainbar>>
-      dcroppedtext 255 <local.y> 220 20 <qval (<canmake <local.item>>) ? 0480 : 020> <serv.itemdef.<local.item>.name>
+      dcroppedtext 255 <local.y> 220 20 <qval (<cancraft <local.item>>) ? 0480 : 020> <serv.itemdef.<local.item>.name>
    endif
    local.mainbar ++
    local.y += 20
@@ -155,6 +159,7 @@ ctag.craft.message
 on=1 99 // select category button
 ctag.craft.item
 ctag.craft.page.mainbar
+ctag.lastenbutton
 ctag.craft.sidebar = <argn>
 f_resenddialog d_craft_menu
 
@@ -165,10 +170,16 @@ if <ctag0.craft.material.<ctag.craft.skill>>
       local.resource = "_"
    endif
 endif
-ctag.craft.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<eval <argn>-100>>
-ctag.craft.item.options = <def.<ctag0.craft.skill>_options_default>
-if !<isempty <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-100>_opt>>
-   ctag.craft.item.options = <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-100>_opt>
+if <ctag0.lastenbutton>
+   ctag.craft.item = <getargv <eval <argn>-101> <TAG0.craft.lastTen.<ctag0.craft.skill>>>
+   ctag.craft.item.options = 0,0,0,0,0
+   //FIXME: ideally find the actual _opt entry rather than forcing 0,0,0,0,0
+else
+   ctag.craft.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<eval <argn>-100>>
+   ctag.craft.item.options = <def.<ctag0.craft.skill>_options_default>
+   if !<isempty <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-100>_opt>>
+      ctag.craft.item.options = <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-100>_opt>
+   endif
 endif
 dialogclose d_craft_menu
 f_resenddialog d_craft_itemprop
@@ -180,10 +191,16 @@ if <ctag0.craft.material.<ctag.craft.skill>>
       local.resource = "_"
    endif
 endif
-ctag.craft.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<eval <argn>-600>>
-ctag.craft.item.options = <def.<ctag0.craft.skill>_options_default>
-if !<isempty <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-600>_opt>>
-   ctag.craft.item.options = <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-600>_opt>
+if <ctag0.lastenbutton>
+   ctag.craft.item = <getargv <eval <argn>-601> <TAG0.craft.lastTen.<ctag0.craft.skill>>>
+   ctag.craft.item.options = 0,0,0,0,0
+   //FIXME: ideally find the actual _opt entry rather than forcing 0,0,0,0,0
+else
+   ctag.craft.item = <def.<ctag0.craft.skill><local.resource>category_<dctag0.craft.sidebar>_<eval <argn>-600>>
+   ctag.craft.item.options = <def.<ctag0.craft.skill>_options_default>
+   if !<isempty <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-600>_opt>>
+      ctag.craft.item.options = <def.<ctag0.craft.skill>_category_<dctag0.craft.sidebar>_<eval <argn>-600>_opt>
+   endif
 endif
 craft <ctag0.craft.item>
 
@@ -204,8 +221,7 @@ endif
 f_resenddialog d_craft_menu
 
 on=406 // last ten button
-//FIXME: This is a shortcut to the last 10 items the player made
-SYSMESSAGE @021 Not yet implemented
+ctag.lastenbutton=1
 f_resenddialog d_craft_menu
 
 on=500 // smelt button
@@ -409,8 +425,7 @@ endif
 f_resenddialog d_craft_material
 
 on=406 // last ten button
-//FIXME: This is a shortcut to the last 10 items the player made
-SYSMESSAGE @021 Not yet implemented
+ctag.lastenbutton=1
 dialogclose d_craft_material
 f_resenddialog d_craft_menu
 
@@ -499,6 +514,9 @@ if <def.scp.NewCrafting_RecipeNeeded> == 1
       local.recipe = 0
    endif
 endif
+IF (STRMATCH("*t_masonry_tool*","<REF1.SKILLMAKE>") || (STRMATCH("*t_glassblowing*","<REF1.SKILLMAKE>")
+   LOCAL.recipe=1
+ENDIF
 tilepichue 30 80 <ref1.dispiddec> <dref1.color>
 dcroppedtext 170 37 265 20 0480 ITEM
 dcroppedtext 330 37 265 20 88 <ref1.name>
@@ -555,6 +573,15 @@ if <argv[0]>
    xmfhtmlgumpcolor 170 <dlocal.height> 350 20 <ddef.scp.craft_markable> 0 0 <ddef.dcolor_white>
    local.height += 20
 endif
+IF (STRMATCH("*t_masonry_tool*","<REF1.SKILLMAKE>")
+   xmfhtmlgumpcolor 170 <dlocal.height> 350 20 1044635 0 0 <ddef.dcolor_white>
+   local.height += 20
+ENDIF
+IF (STRMATCH("*t_glassblowing*","<REF1.SKILLMAKE>")
+   xmfhtmlgumpcolor 170 <dlocal.height> 350 20 1044636 0 0 <ddef.dcolor_white>
+   local.height += 20
+ENDIF
+
 
 [dialog d_craft_itemprop button]
 on=0

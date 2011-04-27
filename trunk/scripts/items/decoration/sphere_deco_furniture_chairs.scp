@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, April 2, 2011
+// FILE LAST UPDATED: Wednesday, April 27, 2011
 VERSION=0.56b
 
 
@@ -66,7 +66,7 @@ RESOURCES=17 i_log
 SKILLMAKE=Carpentry 52.6, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
-DESCRIPTION=Wooden Bench
+DESCRIPTION=Wooden Bench (dark)
 DUPELIST=0b2d
 
 [ITEMDEF 0b2d]
@@ -223,7 +223,7 @@ RESOURCES=9 i_log
 SKILLMAKE=Carpentry 11.0, t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Chairs
-DESCRIPTION=Foot Stool (Light)
+DESCRIPTION=Foot Stool (light)
 
 [ITEMDEF 0b5f]
 DEFNAME=i_bench_wood_rough
@@ -365,6 +365,31 @@ DUPEITEM=0c1b
 [ITEMDEF 0c1e]
 //fancy chair (lying down)
 DUPEITEM=0c1b
+
+[ITEMDEF 0e50]
+DEFNAME=i_bench_wood_light
+NAME=light wood bench
+TYPE=t_chair
+FLIP=1
+WEIGHT=27.4
+RESOURCES=27 i_board,4 i_nails
+SKILLMAKE=Carpentry 52.6,t_carpentry
+CATEGORY=Decoration - Furniture
+SUBSECTION=Chairs
+DESCRIPTION=Wooden Bench (light)
+DUPELIST=0e51,0e52,0e53
+
+[ITEMDEF 0e51]
+//Wooden Bench (light)
+DUPEITEM=0e50
+
+[ITEMDEF 0e52]
+//Wooden Bench (light)
+DUPEITEM=0e50
+
+[ITEMDEF 0e53]
+//Wooden Bench (light)
+DUPEITEM=0e50
 
 [ITEMDEF 011fc]
 DEFNAME=i_chair_stool_bamboo
