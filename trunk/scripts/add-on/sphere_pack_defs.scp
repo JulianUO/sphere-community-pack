@@ -60,6 +60,10 @@ dcolor_red					15540260
 [DEFNAME COLOR_FISH]
 color_o_sos_tile				0
 color_o_sos_ancient				0
+color_o_fishprize				51
+color_o_fishwondrous			86
+color_o_fishtrulyrare			76
+color_o_fishpeculiarhighly		66
 
 [DEFNAME COLOR_LOG]
 color_o_log					0
@@ -99,12 +103,6 @@ color_o_rusty					0750
 
 [DEFNAME COLOR_SETS]
 color_o_darkwood_set				0494
-
-[DEFNAME COLOR_FISH]
-color_o_fishprize				51
-color_o_fishwondrous			86
-color_o_fishtrulyrare			76
-color_o_fishpeculiarhighly		66
 
 [DEFNAME COLOR_GRANITE]
 color_o_granite					0

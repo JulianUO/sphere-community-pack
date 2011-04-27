@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Monday, April 25, 2011
 VERSION=0.56b
+
 
 ///////////////////////////////////////////////////////////////
 //////// BLACK STAVES
@@ -503,7 +504,7 @@ WEIGHT=4.0
 REQSTR=20
 TWOHANDS=Y
 RESOURCES=10 i_sand
-SKILLMAKE=53.6 Alchemy
+SKILLMAKE=Alchemy 53.6
 CATEGORY=Provisions - Weapons - MaceFighting
 SUBSECTION=Glass Staves
 DESCRIPTION=Glass Staff

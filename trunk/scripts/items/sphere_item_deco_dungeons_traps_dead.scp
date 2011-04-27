@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Wednesday, March 9, 2011
+// FILE LAST UPDATED: Monday, April 25, 2011
 VERSION=0.56b
 
 
@@ -1440,7 +1440,7 @@ NAME=guillotine
 VALUE=223
 WEIGHT=130.2
 RESOURCES=100 i_log_oak,1 i_basket,20 i_ingot_iron,2 i_nails
-SKILLMAKE=Carpentry 98.5,ANATOMY 50.0,t_carpentry
+SKILLMAKE=Carpentry 98.5,t_carpentry
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Torture
 DESCRIPTION=Guillotine (N)
@@ -1463,7 +1463,7 @@ DEFNAME=i_guillotine_w
 VALUE=223
 WEIGHT=130.2
 RESOURCES=100 i_log_oak,1 i_basket,20 i_ingot_iron,2 i_nails
-SKILLMAKE=Carpentry 98.5,ANATOMY 50.0,t_carpentry
+SKILLMAKE=Carpentry 98.5,t_carpentry
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Torture
 DESCRIPTION=Guillotine (W)
@@ -3738,7 +3738,7 @@ DUPEITEM=01d4c
 DUPEITEM=01d4c
 
 [ITEMDEF 01d8a]
-DEFNAME=i_body_shrouded
+DEFNAME=i_body_shrouded_2
 RESOURCES=7 i_cloth, i_corpse_blank
 CATEGORY=Decoration - Dungeons and The Dead
 SUBSECTION=Body in wrappings

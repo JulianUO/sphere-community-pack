@@ -1,5 +1,4 @@
 [CHARDEF C_H_GUILD_CLOTHIER]
-DEFNAME=C_H_GUILD_CLOTHIER
 NAME=#NAMES_HUMANMALE the Guildmaster Clothier
 ID=C_MAN
 DESIRES=i_gold,e_notoriety
@@ -54,7 +53,6 @@ ON=@NPCRestock
 	ITEM=random_coin_purse
 
 [CHARDEF C_H_GUILD_CLOTHIER_F]
-DEFNAME=C_H_GUILD_CLOTHIER
 NAME=#NAMES_HUMANFEMALE the Guildmaster Clothier
 ID=C_WOMAN
 DESIRES=i_gold,e_notoriety
