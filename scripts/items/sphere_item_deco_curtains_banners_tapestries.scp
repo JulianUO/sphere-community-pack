@@ -1,19 +1,16 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, November 23, 2003
-//
+// FILE LAST UPDATED: Friday, April 29, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0980]
 DEFNAME=i_curtain_red
 DYE=1
+FLIP=1
 WEIGHT=12.0
 RESOURCES=10 i_cloth,1 i_ingot_gold
 CATEGORY=Decoration - Curtains
@@ -66,54 +63,45 @@ DUPEITEM=0980
 DUPEITEM=0980
 
 [ITEMDEF 0eaa]
-//tapestry
 DEFNAME=i_tapestry
-RESOURCES=1 i_cloth_bolt, 2 i_dyes, 1 i_log, 1 i_rope
+FLIP=1
 WEIGHT=8
+RESOURCES=1 i_cloth_bolt, 2 i_dyes, 1 i_log, 1 i_rope
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 01 (01/02) (N)
 DUPELIST=0eab
 
 [ITEMDEF 0eab]
-//tapestry
 DUPEITEM=0eaa
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 01 (02/02) (N)
 
 [ITEMDEF 0eac]
-//tapestry
 DEFNAME=i_tapestry_2
-RESOURCES=1 i_cloth_bolt, 2 i_dyes, 1 i_log, 1 i_rope
+FLIP=1
 WEIGHT=8
+RESOURCES=1 i_cloth_bolt, 2 i_dyes, 1 i_log, 1 i_rope
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 02 (01/02) (N)
 DUPELIST=0ead
 
 [ITEMDEF 0ead]
-//tapestry
 DUPEITEM=0eac
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 02 (02/02) (N)
 
 [ITEMDEF 0eae]
-//tapestry
 DEFNAME=i_tapestry_3
-RESOURCES=1 i_cloth_bolt, 2 i_dyes, 1 i_log, 1 i_rope
+FLIP=1
 WEIGHT=8
+RESOURCES=1 i_cloth_bolt, 2 i_dyes, 1 i_log, 1 i_rope
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 03 (01/02) (W)
 DUPELIST=0eaf
 
 [ITEMDEF 0eaf]
-//tapestry
 DUPEITEM=0eae
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Tapestries
 DESCRIPTION=Tapestry 03 (02/02) (W)
 
 [ITEMDEF 0fd5]
@@ -320,8 +308,9 @@ DESCRIPTION=Curtain Sash
 
 [ITEMDEF 0154e]
 DEFNAME=i_curtain_freestanding
-RESOURCES=3 i_ingot_iron, 8 i_cloth
+FLIP=1
 WEIGHT=6
+RESOURCES=3 i_ingot_iron, 8 i_cloth
 CATEGORY=Decoration - Curtains
 SUBSECTION=Single Red
 DESCRIPTION=@
@@ -337,153 +326,127 @@ DUPEITEM=0154e
 
 [ITEMDEF 01586]
 DEFNAME=i_banner_1_part_1
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
+FLIP=1
 WEIGHT=3
+RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 01
+DUPELIST=01587,01588
 
 [ITEMDEF 01587]
+DUPEITEM=01586
 DEFNAME=i_banner_1_part_2
-RESOURCES=1 i_log, 2 i_cloth, 1 i_thread
-WEIGHT=3
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Banners
-DESCRIPTION=Banner 01
 
 [ITEMDEF 01588]
+DUPEITEM=01586
 DEFNAME=i_banner_1_part_3
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
-WEIGHT=3
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Banners
-DESCRIPTION=Banner 01
 
 [ITEMDEF 01589]
 DEFNAME=i_banner_2_part_1
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
+FLIP=1
 WEIGHT=3
+RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 02
+DUPELIST=0158a,0158b
 
 [ITEMDEF 0158a]
+DUPEITEM=01589
 DEFNAME=i_banner_2_part_2
-RESOURCES=1 i_log, 2 i_cloth, 1 i_thread
-WEIGHT=3
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Banners
-DESCRIPTION=Banner 02
 
 [ITEMDEF 0158b]
+DUPEITEM=01589
 DEFNAME=i_banner_2_part_3
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
-WEIGHT=3
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Banners
-DESCRIPTION=Banner 02
 
 [ITEMDEF 0158c]
 DEFNAME=i_banner_3_part_1
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
+FLIP=1
 WEIGHT=3
+RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 03
+DUPELIST=0158d,0158e
 
 [ITEMDEF 0158d]
+DUPEITEM=0158c
 DEFNAME=i_banner_3_part_2
-RESOURCES=1 i_log, 2 i_cloth, 1 i_thread
-WEIGHT=3
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Banners
-DESCRIPTION=Banner 03
 
 [ITEMDEF 0158e]
+DUPEITEM=0158c
 DEFNAME=i_banner_3_part_3
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
-WEIGHT=3
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Banners
-DESCRIPTION=Banner 03
 
 [ITEMDEF 0158f]
 DEFNAME=i_banner_hanger_ne
-RESOURCES=1 i_board, 1 i_nails
 WEIGHT=1
+RESOURCES=1 i_board, 1 i_nails
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner Hanger
 
 [ITEMDEF 01590]
 DEFNAME=i_banner_4_part_1
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
+FLIP=1
 WEIGHT=3
+RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 04
+DUPELIST=01591
 
 [ITEMDEF 01591]
+DUPEITEM=01590
 DEFNAME=i_banner_4_part_2
-RESOURCES=1 i_log, 2 i_cloth, 1 i_thread
-WEIGHT=3
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Banners
-DESCRIPTION=Banner 04
 
 [ITEMDEF 01592]
 DEFNAME=i_banner_5_part_1
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
+FLIP=1
 WEIGHT=3
+RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 05
+DUPELIST=01593
 
 [ITEMDEF 01593]
+DUPEITEM=01592
 DEFNAME=i_banner_5_part_2
-RESOURCES=1 i_log, 2 i_cloth, 1 i_thread
-WEIGHT=3
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Banners
-DESCRIPTION=Banner 05
 
 [ITEMDEF 01594]
 DEFNAME=i_banner_6_part_1
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
+FLIP=1
 WEIGHT=3
+RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 06
+DUPELIST=01595
 
 [ITEMDEF 01595]
+DUPEITEM=01594
 DEFNAME=i_banner_6_part_2
-RESOURCES=1 i_log, 2 i_cloth, 1 i_thread
-WEIGHT=3
-CATEGORY=Decoration - Banners & Tapestries
-SUBSECTION=Banners
-DESCRIPTION=Banner 06
 
 [ITEMDEF 01596]
 DEFNAME=i_banner_6_part_3
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
+FLIP=1
 WEIGHT=3
+RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 06
+DUPELIST=01597
 
 [ITEMDEF 01597]
+DUPEITEM=01596
 DEFNAME=i_banner_6_part_4
-WEIGHT=4.2
-RESOURCES=1 i_log,1 i_board,1 i_cloth,1 i_thread,1 i_nails
-CATEGORY=Decoration - Banners and Tapestries
-SUBSECTION=Banners
-DESCRIPTION=Banner 06
-
 
 [ITEMDEF 01598]
 DEFNAME=i_banner_7_part_1
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
+FLIP=1
 WEIGHT=3
+RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
 CATEGORY=Decoration - Banners & Tapestries
 SUBSECTION=Banners
 DESCRIPTION=Banner 07
@@ -530,8 +493,9 @@ DESCRIPTION=Banner 08
 
 [ITEMDEF 0159e]
 DEFNAME=i_curtain_banner_nw
-RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
+FLIP=1
 WEIGHT=3
+RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
 CATEGORY=Decoration - Curtains
 SUBSECTION=Single White
 DESCRIPTION=@
@@ -1245,8 +1209,9 @@ DUPEITEM=015f6
 
 [ITEMDEF 0160d]
 DEFNAME=i_single_red_curtain
-RESOURCES=2 i_cloth, 1 i_thread
+FLIP=1
 WEIGHT=2
+RESOURCES=2 i_cloth, 1 i_thread
 CATEGORY=Decoration - Curtains
 SUBSECTION=Single Red
 DESCRIPTION=@
@@ -1554,8 +1519,9 @@ DESCRIPTION=Banner 30
 
 [ITEMDEF 01638]
 DEFNAME=i_curtain_plain_red
-RESOURCES=1 i_cloth
+FLIP=1
 WEIGHT=1
+RESOURCES=1 i_cloth
 CATEGORY=Decoration - Curtains
 SUBSECTION=Small Red
 DESCRIPTION=@
@@ -1566,7 +1532,7 @@ DUPELIST=01639
 DUPEITEM=01638
 
 [ITEMDEF 0234e]
-TYPE=t_normal
+DEFNAME=i_tapestry_sosaria
 FLIP=1
 WEIGHT=54.0
 RESOURCES=1 i_cloth_bolt,2 i_dyes,1 i_board,1 i_rope
@@ -1701,7 +1667,6 @@ DUPEITEM=02417
 
 [ITEMDEF 02886]
 DEFNAME=i_wall_panel
-TYPE=t_normal
 FLIP=1
 WEIGHT=26.4
 RESOURCES=12 i_log,24 i_paper
@@ -1816,5 +1781,133 @@ DUPEITEM=0980
 //Red curtain
 DUPEITEM=0980
 
+[ITEMDEF 049a0]
+DEFNAME=i_tapestry_sacrifice
+NAME=sacrifice tapestry
+FLIP=1
+WEIGHT=5.0
+RESOURCES=10 i_cloth,2 i_thread
+SKILLMAKE=Tailoring 51.0,t_sewing_kit
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Virtue
+DESCRIPTION=Sacrifice Tapestry
+DUPELIST=049b4
 
-[eof]
+[ITEMDEF 049a1]
+DEFNAME=i_tapestry_spirituality
+NAME=spirituality tapestry
+FLIP=1
+WEIGHT=5.0
+RESOURCES=10 i_cloth,2 i_thread
+SKILLMAKE=Tailoring 51.0,t_sewing_kit
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Virtue
+DESCRIPTION=Spirituality Tapestry
+DUPELIST=049b9
+
+[ITEMDEF 049a2]
+DEFNAME=i_tapestry_honesty
+NAME=honesty tapestry
+FLIP=1
+WEIGHT=5.0
+RESOURCES=10 i_cloth,2 i_thread
+SKILLMAKE=Tailoring 51.0,t_sewing_kit
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Virtue
+DESCRIPTION=Honesty Tapestry
+DUPELIST=049bf
+
+[ITEMDEF 049a3]
+DEFNAME=i_tapestry_humility
+NAME=humility tapestry
+FLIP=1
+WEIGHT=5.0
+RESOURCES=10 i_cloth,2 i_thread
+SKILLMAKE=Tailoring 51.0,t_sewing_kit
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Virtue
+DESCRIPTION=Humility Tapestry
+DUPELIST=049c0
+
+[ITEMDEF 049a7]
+DEFNAME=i_tapestry_justice
+NAME=justice tapestry
+FLIP=1
+WEIGHT=5.0
+RESOURCES=10 i_cloth,2 i_thread
+SKILLMAKE=Tailoring 51.0,t_sewing_kit
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Virtue
+DESCRIPTION=Justice Tapestry
+DUPELIST=049ba
+
+[ITEMDEF 049a8]
+DEFNAME=i_tapestry_compassion
+NAME=compassion tapestry
+FLIP=1
+WEIGHT=5.0
+RESOURCES=10 i_cloth,2 i_thread
+SKILLMAKE=Tailoring 51.0,t_sewing_kit
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Virtue
+DESCRIPTION=Compassion Tapestry
+DUPELIST=049b5
+
+[ITEMDEF 049b2]
+DEFNAME=i_tapestry_honor
+NAME=honor tapestry
+FLIP=1
+WEIGHT=5.0
+RESOURCES=10 i_cloth,2 i_thread
+SKILLMAKE=Tailoring 51.0,t_sewing_kit
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Virtue
+DESCRIPTION=Honor Tapestry
+DUPELIST=049be
+
+[ITEMDEF 049b3]
+DEFNAME=i_tapestry_valor
+NAME=valor tapestry
+FLIP=1
+WEIGHT=5.0
+RESOURCES=10 i_cloth,2 i_thread
+SKILLMAKE=Tailoring 51.0,t_sewing_kit
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Virtue
+DESCRIPTION=Valor Tapestry
+DUPELIST=049bb
+
+[ITEMDEF 049b4]
+//sacrifice tapestry
+DUPEITEM=049a0
+
+[ITEMDEF 049b5]
+//compassion tapestry
+DUPEITEM=049a8
+
+[ITEMDEF 049b9]
+//spirituality tapestry
+DUPEITEM=049a1
+
+[ITEMDEF 049ba]
+//justice tapestry
+DUPEITEM=049a7
+
+[ITEMDEF 049bb]
+//valor tapestry
+DUPEITEM=049b3
+
+[ITEMDEF 049be]
+//honor tapestry
+DUPEITEM=049b2
+
+[ITEMDEF 049bf]
+//honesty tapestry
+DUPEITEM=049a2
+
+[ITEMDEF 049c0]
+//humility tapestry
+DUPEITEM=049a3
+
+
+[EOF]

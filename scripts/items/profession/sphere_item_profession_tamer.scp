@@ -3,14 +3,15 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Thursday, April 28, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 04513]
 DEFNAME=i_chicken_coop
 NAME=Chicken Coop
 TYPE=t_chicken_coop
-SKILLMAKE=CARPENTRY 90.0, t_carpentry
+SKILLMAKE=Carpentry 90.0,t_carpentry
 RESOURCES=150 i_log
 WEIGHT=20
 DUPELIST=04514
@@ -25,15 +26,17 @@ DUPEITEM=04513
 DEFNAME=i_incubator
 NAME=Incubator
 TYPE=t_incubator
-SKILLMAKE=CARPENTRY 90.0, t_carpentry
+FLIP=1
+WEIGHT=10.0
 RESOURCES=100 i_log
-WEIGHT=10
-DUPELIST=0407d
+SKILLMAKE=Carpentry 90.0,t_carpentry
 CATEGORY=Items by Professions
 SUBSECTION=Animal Tamer
 DESCRIPTION=Incubator
+DUPELIST=0407d
 
 [ITEMDEF 0407d]
+//Incubator
 DUPEITEM=0407c
 
-[eof]
+[EOF]

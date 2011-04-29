@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Wednesday, March 9, 2011
+// FILE LAST UPDATED: Friday, April 29, 2011
 VERSION=0.56b
 
 
@@ -905,5 +905,44 @@ DESCRIPTION=Short Table (2 of 4)
 DUPEITEM=04033
 DEFNAME=i_short_table_1_4
 DESCRIPTION=Short Table (1 of 4)
+
+[ITEMDEF 04982]
+DEFNAME=i_table_cthulu
+NAME=Cthulu table
+TYPE=t_table
+FLIP=1
+VALUE=29
+WEIGHT=17.4
+RESOURCES=17 i_rock_plain,4 i_nails
+SKILLMAKE=Carpentry 42.1,t_masonry_tool
+CATEGORY=Decoration - Furniture
+SUBSECTION=Tables
+DESCRIPTION=Cthulu Table
+DUPELIST=04983,04984,04985
+
+[ITEMDEF 04983]
+//Cthulu table
+DUPEITEM=04982
+
+[ITEMDEF 04984]
+//Cthulu table
+DUPEITEM=04982
+
+[ITEMDEF 04985]
+//Cthulu table
+DUPEITEM=04982
+
+[ITEMDEF i_multi_table_cthulu]
+NAME=Cthulu table
+TYPE=t_multi
+CATEGORY=Multis
+SUBSECTION=Furniture
+DESCRIPTION=Cthulu Table
+MULTIREGION=0,0,0,0
+COMPONENT=04982,0,0,0
+COMPONENT=04983,0,-1,0
+COMPONENT=04984,-1,0,0
+COMPONENT=04985,-1,-1,0
+
 
 [EOF]

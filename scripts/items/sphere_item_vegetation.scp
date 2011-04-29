@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, April 1, 2011
+// FILE LAST UPDATED: Thursday, April 28, 2011
 VERSION=0.56b
 
 
@@ -4258,6 +4258,50 @@ TYPE=t_foliage
 //Duplicate of apple leaves item 0d9a
 NAME=apples
 TYPE=t_foliage
+
+[ITEMDEF 04792]
+DEFNAME=i_crop_ruinplant
+NAME=ruin plant
+TYPE=t_crops
+//TDATA1=0
+TDATA2=i_crop_ruinplant_flowering
+//TDATA3=0
+CATEGORY=Vegetation
+SUBSECTION=Plants and Flowers
+DESCRIPTION=Ruin Plant (mature)
+
+[ITEMDEF 04793]
+DEFNAME=i_crop_ruinplant_flowering
+NAME=flowering ruin plant
+TYPE=t_crops
+//TDATA1=0
+TDATA2=i_crop_ruinplant
+//TDATA3=0
+CATEGORY=Vegetation
+SUBSECTION=Plants and Flowers
+DESCRIPTION=Ruin Plant (flowering)
+
+[ITEMDEF 04794]
+DEFNAME=i_crop_ruinplant_n
+NAME=ruin plant
+TYPE=t_crops
+//TDATA1=0
+TDATA2=i_crop_ruinplant_n_flowering
+//TDATA3=0
+CATEGORY=Vegetation
+SUBSECTION=Plants and Flowers
+DESCRIPTION=Ruin Plant North (mature)
+
+[ITEMDEF 04795]
+DEFNAME=i_crop_ruinplant_n_flowering
+NAME=flowering ruin plant
+TYPE=t_crops
+//TDATA1=0
+TDATA2=i_crop_ruinplant_n
+//TDATA3=0
+CATEGORY=Vegetation
+SUBSECTION=Plants and Flowers
+DESCRIPTION=Ruin Plant North (flowering)
 
 
 [EOF]

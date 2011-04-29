@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 10, 2011
+// FILE LAST UPDATED: Friday, April 29, 2011
 VERSION=0.56b
 
 
@@ -1027,19 +1027,38 @@ DUPEITEM=03060
 
 [ITEMDEF 04025]
 DEFNAME=i_chest_gargoyle
+NAME=gargoyle chest
 TYPE=t_container
-NAME=Gargish chest
-FLIP=1
 TDATA2=04b
-SKILLMAKE=CARPENTRY 80.0, t_carpentry
-RESOURCES=30 i_log
+FLIP=1
 WEIGHT=25
-DUPELIST=04026
+RESOURCES=30 i_log
+SKILLMAKE=Carpentry 80.0,t_carpentry
 CATEGORY=Decoration - Furniture
 SUBSECTION=Containers
 DESCRIPTION=Gargoyle Chest
+DUPELIST=04026
 
 [ITEMDEF 04026]
+//gargoyle chest
 DUPEITEM=04025
+
+[ITEMDEF 04910]
+DEFNAME=i_chest_gothic
+NAME=gothic chest
+TYPE=t_container
+TDATA2=04a
+FLIP=1
+WEIGHT=22.0
+RESOURCES=22 i_board,2 i_ingot_iron,1 i_nails
+SKILLMAKE=Tinkering 75.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Gothic Chest
+DUPELIST=04911
+
+[ITEMDEF 04911]
+//gothic chest
+DUPEITEM=04910
 
 [EOF]

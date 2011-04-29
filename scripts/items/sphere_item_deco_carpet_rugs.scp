@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, April 25, 2011
+// FILE LAST UPDATED: Thursday, April 28, 2011
 VERSION=0.56b
 
 
@@ -1125,6 +1125,302 @@ DUPEITEM=02ac8
 [ITEMDEF 02ace]
 //bearskin rug bits (unused)
 DUPEITEM=02ac8
+
+[ITEMDEF 04707]
+DEFNAME=i_rug_skull_s
+NAME=skull rug
+TYPE=t_floor
+FLIP=1
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=100 i_wool,100 i_thread,10 i_dyes
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
+CATEGORY=Decoration - Carpets & Rugs
+SUBSECTION=Skull Rug
+DESCRIPTION=South Facing
+DUPELIST=04708,04709,0470a,0470b,0470c,0470d,0470e,0470f,04710,04711,04712,04713,04714,04715,04716,04717,04718
+
+[ITEMDEF 04708]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 04709]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 0470a]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 0470b]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 0470c]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 0470d]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 0470e]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 0470f]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 04710]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 04711]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 04712]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 04713]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 04714]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF 04715]
+//skull rug south
+DUPEITEM=04707
+
+[ITEMDEF i_multi_rug_skull_s]
+NAME=skull rug south
+TYPE=t_multi
+CATEGORY=Multis
+SUBSECTION=Decoration
+DESCRIPTION=Skull Rug (s)
+MULTIREGION=0,0,0,0
+COMPONENT=04707,0,0,0
+COMPONENT=04708,-2,0,0
+COMPONENT=04709,-2,-1,0
+COMPONENT=0470a,2,0,0
+COMPONENT=0470b,-1,0,0
+COMPONENT=0470c,-1,-1,0
+COMPONENT=0470d,1,-1,0
+COMPONENT=0470e,2,-1,0
+COMPONENT=0470f,0,-1,0
+COMPONENT=04710,1,0,0
+COMPONENT=04711,0,1,0
+COMPONENT=04712,2,1,0
+COMPONENT=04713,-1,1,0
+COMPONENT=04714,-2,1,0
+COMPONENT=04715,1,1,0
+
+[ITEMDEF 04716]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 04717]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 04718]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 04721]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 04722]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 04723]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 0473c]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 0473d]
+DEFNAME=i_rug_skull_w
+NAME=skull rug
+TYPE=t_floor
+FLIP=1
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=100 i_wool,100 i_thread,10 i_dyes
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
+CATEGORY=Decoration - Carpets & Rugs
+SUBSECTION=Skull Rug
+DESCRIPTION=West Rug
+DUPELIST=04716,04717,04718,04721,04722,04723,0473c,0473e,0473f,04740,04741,04742,04743,04744
+
+[ITEMDEF 0473e]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 0473f]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 04740]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 04741]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 04742]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 04743]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF 04744]
+//skull rug west
+DUPEITEM=0473d
+
+[ITEMDEF i_multi_rug_skull_w]
+NAME=skull rug west
+TYPE=t_multi
+CATEGORY=Multis
+SUBSECTION=Decoration
+DESCRIPTION=skull Rug (w)
+MULTIREGION=0,0,0,0
+COMPONENT=0473d,0,0,0
+COMPONENT=04716,1,2,0
+COMPONENT=04717,0,2,0
+COMPONENT=04718,-1,2,0
+COMPONENT=04721,1,1,0
+COMPONENT=04722,0,1,0
+COMPONENT=04723,-1,1,0
+COMPONENT=0473c,1,0,0
+COMPONENT=0473e,-1,0,0
+COMPONENT=0473f,1,-1,0
+COMPONENT=04740,0,-1,0
+COMPONENT=04741,-1,-1,0
+COMPONENT=04742,1,-2,0
+COMPONENT=04743,0,-2,0
+COMPONENT=04744,-1,-2,0
+
+[ITEMDEF 04745]
+DEFNAME=i_rug_rose_s
+NAME=rose rug
+TYPE=t_floor
+FLIP=1
+WEIGHT=15.0
+CAN=can_i_platform
+RESOURCES=100 i_wool,100 i_thread,10 i_dyes
+SKILLMAKE=Tailoring 78.9,t_sewing_kit
+CATEGORY=Decoration - Carpets & Rugs
+SUBSECTION=Rose Rug
+DESCRIPTION=South Rug
+DUPELIST=04746,04747,04748,04749,0474a,0474b,0474c,0474d,0474e,0474f,04750,04751,04752,04753
+
+[ITEMDEF 04746]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 04747]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 04748]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 04749]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 0474a]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 0474b]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 0474c]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 0474d]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 0474e]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 0474f]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 04750]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 04751]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 04752]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF 04753]
+//rose rug south
+DUPEITEM=04745
+
+[ITEMDEF i_multi_rug_rose_s]
+NAME=rose rug south
+TYPE=t_multi
+CATEGORY=Multis
+SUBSECTION=Decoration
+DESCRIPTION=Rose Rug (s)
+MULTIREGION=0,0,0,0
+COMPONENT=04745,0,0,0
+COMPONENT=04746,0,-2,0
+COMPONENT=04747,1,-2,0
+COMPONENT=04748,-1,-1,0
+COMPONENT=04749,0,-1,0
+COMPONENT=0474a,1,-1,0
+COMPONENT=0474b,-1,0,0
+COMPONENT=0474c,1,2,0
+COMPONENT=0474d,1,0,0
+COMPONENT=0474e,-1,1,0
+COMPONENT=0474f,0,1,0
+COMPONENT=04750,1,1,0
+COMPONENT=04751,-1,2,0
+COMPONENT=04752,0,2,0
+COMPONENT=04753,-1,-2,0
+
+
+[ITEMDEF 04790]
+DEFNAME=i_welcome_mat_rounded
+NAME=welcome mat
+TYPE=t_normal
+DYE=1
+FLIP=1
+CATEGORY=Decoration - Carpets & Rugs
+SUBSECTION=Welcome Mat
+DESCRIPTION=Welcome Mat (rounded)
+DUPELIST=04791
+
+[ITEMDEF 04791]
+//welcome mat rounded
+DUPEITEM=04790
+
 
 [ITEMDEF 047da]
 DEFNAME=i_welcome_mat

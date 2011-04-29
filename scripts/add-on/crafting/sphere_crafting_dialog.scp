@@ -389,6 +389,7 @@ ctag.craft.message
 on=1 99 // select category button
 ctag.craft.item
 ctag.craft.page.mainbar
+ctag.lastenbutton
 ctag.craft.sidebar = <argn>
 dialogclose d_craft_material
 f_resenddialog d_craft_menu
