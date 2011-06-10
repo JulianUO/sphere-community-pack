@@ -235,13 +235,12 @@ ON=@NPCRestock
    //300 - 400 Gold. Gems, Empty Spell Book, Armor, Viking Sword
 
 [CHARDEF 0b7]
-//FIXME: Figure out which of these savages can/should ride
 //FIXME: Bola attack vs mounted opponents
 DEFNAME=c_savage_warrior_male
 NAME=savage warrior
 ICON=i_pet_man_naked
 //SOUND=snd_human_moomph01//This sound is annoying, find a better one
-CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP|MT_MOUNT
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
 DAM=23,27
 ARMOR=30
 DESIRES=r_jungle,t_coin,t_gold,t_gem,t_potion
@@ -296,13 +295,12 @@ ON=@Hit
    ENDIF
 
 [CHARDEF 0b8]
-//FIXME: Figure out which of these savages can/should ride
 //FIXME: Heals using bandages
 DEFNAME=c_savage_warrior_female
 NAME=savage warrior
 ICON=i_pet_woman_naked
 //SOUND=snd_human_fmoomph01//This sound is annoying, find a better one
-CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP|MT_FEMALE|MT_MOUNT
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP|MT_FEMALE
 DAM=23,27
 ARMOR=30
 DESIRES=r_jungle,t_coin,t_gold,t_gem,t_potion
@@ -357,7 +355,6 @@ ON=@Hit
    ENDIF
 
 [CHARDEF 0b9]
-//FIXME: Figure out which of these savages can/should be the rider.
 //FIXME: Heals himself with bandages.
 DEFNAME=c_savage_rider
 NAME=savage rider
@@ -404,6 +401,7 @@ ON=@Create
    RESPOISON={20 30}
    ITEMNEWBIE=random_male_hair
    COLOR=colors_hair
+   ITEM=03eba//This mounts him on a savage ridgeback
 ON=@NPCRestock
    ITEM=loot_savage_rider
    //125 - 175 Gold. Bone Arms, Bone Legs, Bear Mask, 1-15 Clean Bandages
@@ -421,9 +419,12 @@ ON=@Hit
       ARGN1=<ARGN1> * 3
       ARGN2=<DEF.dam_physical>
    ENDIF
+ON=@Death
+   //Spawn a savage ridgeback when the rider dies
+   SRC.NEWNPC c_savage_ridgeback
+   NEW.P=<SRC.P>
 
 [CHARDEF 0ba]
-//FIXME: Figure out which of these savages can/should ride
 //FIXME: Tribal dance attack
 //"Each time a Savage Shaman is hit, she has a chance to initiate a
 // tribal dance (best viewed in 3D). If she initiates the dance, she searches
@@ -436,7 +437,7 @@ DEFNAME=c_savage_shaman
 NAME=savage shaman
 ICON=i_pet_woman_naked
 //SOUND=snd_human_fmoomph01//This sound is annoying, find a better one
-CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP|MT_FEMALE|MT_MOUNT
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP|MT_FEMALE
 DAM=7,18
 ARMOR=30
 DESIRES=r_jungle,t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
