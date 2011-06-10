@@ -561,5 +561,351 @@ DUPEITEM=044c7
 //Small Soul Forge (animation frame)
 DUPEITEM=044c7
 
+[ITEMDEF 0423b]
+DEFNAME=i_soulforge
+NAME=soulforge
+TYPE=t_forge
+VALUE=250
+WEIGHT=325.0
+RESOURCES=30 i_rock_plain,25 i_ingot_iron
+SKILLMAKE=Tinkering 56.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Soulforge
+DUPELIST=0423c,0423d,0423e,0423f,04240,04241,04242,04243
+
+[ITEMDEF 0423c]
+//Soulforge
+DUPEITEM=0423b
+
+[ITEMDEF 0423d]
+//Soulforge
+DUPEITEM=0423b
+
+[ITEMDEF 0423e]
+//Soulforge
+DUPEITEM=0423b
+
+[ITEMDEF 0423f]
+//Soulforge
+DUPEITEM=0423b
+
+[ITEMDEF 04240]
+//Soulforge
+DUPEITEM=0423b
+
+[ITEMDEF 04241]
+//Soulforge
+DUPEITEM=0423b
+
+[ITEMDEF 04242]
+//Soulforge
+DUPEITEM=0423b
+
+[ITEMDEF 04243]
+//Soulforge
+DUPEITEM=0423b
+
+[ITEMDEF i_multi_soulforge]
+NAME=soulforge
+TYPE=t_multi
+CATEGORY=Multis
+SUBSECTION=Decoration
+DESCRIPTION=Soulforge
+MULTIREGION=0,0,0,0
+COMPONENT=0423b,-1,-1,0
+COMPONENT=0423c,0,-1,0
+COMPONENT=0423d,1,-1,0
+COMPONENT=0423e,-1,0,-1
+COMPONENT=0423f,0,0,0
+COMPONENT=04240,1,0,0
+COMPONENT=04241,-1,1,0
+COMPONENT=04242,0,1,0
+COMPONENT=04243,1,1,0
+
+[ITEMDEF 0424b]
+NAME=soulforge roof
+TYPE=t_roof
+DUPELIST=0424c,0424d,0424e,0424f,04250,04251,04252,04253
+
+[ITEMDEF 0424c]
+//Soulforge Roof
+DUPEITEM=0424b
+
+[ITEMDEF 0424d]
+//Soulforge Roof
+DUPEITEM=0424b
+
+[ITEMDEF 0424e]
+//Soulforge Roof
+DUPEITEM=0424b
+
+[ITEMDEF 0424f]
+//Soulforge Roof
+DUPEITEM=0424b
+
+[ITEMDEF 04250]
+//Soulforge Roof
+DUPEITEM=0424b
+
+[ITEMDEF 04251]
+//Soulforge Roof
+DUPEITEM=0424b
+
+[ITEMDEF 04252]
+//Soulforge Roof
+DUPEITEM=0424b
+
+[ITEMDEF 04253]
+//Soulforge Roof
+DUPEITEM=0424b
+
+[ITEMDEF i_multi_soulforge_with_roof]
+NAME=soulforge
+TYPE=t_multi
+CATEGORY=Multis
+SUBSECTION=Decoration
+DESCRIPTION=Soulforge (with roof)
+MULTIREGION=0,0,0,0
+COMPONENT=0423b,-1,-1,0
+COMPONENT=0423c,0,-1,0
+COMPONENT=0423d,1,-1,0
+COMPONENT=0423e,-1,0,-1
+COMPONENT=0423f,0,0,0
+COMPONENT=04240,1,0,0
+COMPONENT=04241,-1,1,0
+COMPONENT=04242,0,1,0
+COMPONENT=04243,1,1,0
+COMPONENT=0424b,-1,-1,13
+COMPONENT=0424c,0,-1,13
+COMPONENT=0424d,1,-1,13
+COMPONENT=0424e,-1,0,13
+COMPONENT=0424f,0,0,13
+COMPONENT=04250,1,0,13
+COMPONENT=04251,-1,1,13
+COMPONENT=04252,0,1,13
+COMPONENT=04253,1,1,13
+
+[ITEMDEF 04254]
+DEFNAME=i_anvil_gargoyle
+NAME=Gargish anvil
+TYPE=t_anvil
+FLIP=1
+VALUE=325
+WEIGHT=575.0
+RESOURCES=50 i_rock_plain,50 i_ingot_iron,25 i_log
+SKILLMAKE=Tinkering 56.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Gargish Anvil
+DUPELIST=04255,04256,04257
+
+[ITEMDEF 04255]
+//Gargish Anvil
+DUPEITEM=04254
+
+[ITEMDEF 04256]
+//Gargish Anvil
+DUPEITEM=04254
+
+[ITEMDEF 04257]
+//Gargish Anvil
+DUPEITEM=04254
+
+[ITEMDEF 04263]
+DEFNAME=i_soulforge_and_anvil
+NAME=soulforge and anvil
+TYPE=t_forge
+TEVENTS=t_anvil
+VALUE=250
+WEIGHT=650.0
+RESOURCES=60 i_rock_plain,50 i_ingot_iron
+SKILLMAKE=Tinkering 56.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Soulforge and Anvil
+DUPELIST=04264,04265,04266,04267,04268,04269,0426a,0426b,0426c,0426d,0426e,0426f,04270,04271,04272
+
+[ITEMDEF 04264]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 04265]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 04266]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 04267]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 04268]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 04269]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 0426a]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 0426b]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 0426c]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 0426d]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 0426e]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 0426f]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 04270]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 04271]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF 04272]
+//Soulforge and Anvil
+DUPEITEM=04263
+
+[ITEMDEF i_multi_soulforge_and_anvil]
+NAME=soulforge and anvil
+TYPE=t_multi
+CATEGORY=Multis
+SUBSECTION=Decoration
+DESCRIPTION=Soulforge and Anvil
+MULTIREGION=0,0,0,0
+COMPONENT=04263,-1,-1,0
+COMPONENT=04264,0,-1,0
+COMPONENT=04265,1,-1,0
+COMPONENT=04266,2,-1,0
+COMPONENT=04267,-1,0,0
+COMPONENT=04268,0,0,0
+COMPONENT=04269,1,0,0
+COMPONENT=0426a,2,0,0
+COMPONENT=0426b,-1,1,0
+COMPONENT=0426c,0,1,0
+COMPONENT=0426d,1,1,0
+COMPONENT=0426e,2,1,0
+COMPONENT=0426f,-1,2,0
+COMPONENT=04270,0,2,0
+COMPONENT=04271,1,2,0
+COMPONENT=04272,2,2,0
+
+[ITEMDEF 04277]
+DEFNAME=i_soulforge_and_anvil_with_roof
+NAME=soulforge and anvil
+TYPE=t_forge
+TEVENTS=t_anvil
+VALUE=250
+WEIGHT=700.0
+RESOURCES=60 i_rock_plain,50 i_ingot_iron,50 i_log
+SKILLMAKE=Tinkering 56.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Soulforge and Anvil (with roof)
+DUPELIST=04278,04279,0427a,0427b,0427c,0427d,0427e,0427f,04280,04281,04282,04283,04284,04285,04286
+
+[ITEMDEF 04278]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 04279]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 0427a]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 0427b]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 0427c]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 0427d]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 0427e]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 0427f]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 04280]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 04281]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 04282]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 04283]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 04284]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 04285]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF 04286]
+//Soulforge and Anvil (with roof)
+DUPEITEM=04277
+
+[ITEMDEF i_multi_soulforge_and_anvil_with_roof]
+NAME=soulforge and anvil
+TYPE=t_multi
+CATEGORY=Multis
+SUBSECTION=Decoration
+DESCRIPTION=Soulforge and Anvil (with roof)
+MULTIREGION=0,0,0,0
+COMPONENT=04277,-1,-1,0
+COMPONENT=04278,0,-1,0
+COMPONENT=04279,1,-1,0
+COMPONENT=0427a,2,-1,0
+COMPONENT=0427b,-1,0,0
+COMPONENT=0427c,0,0,0
+COMPONENT=0427d,1,0,0
+COMPONENT=0427e,2,0,0
+COMPONENT=0427f,-1,1,0
+COMPONENT=04280,0,1,0
+COMPONENT=04281,1,1,0
+COMPONENT=04282,2,1,0
+COMPONENT=04283,-1,2,0
+COMPONENT=04284,0,2,0
+COMPONENT=04285,1,2,0
+COMPONENT=04286,2,2,0
 
 [EOF]
