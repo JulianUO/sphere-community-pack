@@ -3,21 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, April 28, 2011
+// FILE LAST UPDATED: Saturday, July 30, 2011
 VERSION=0.56b
 
-
-[ITEMDEF 0]
-DEFNAME=i_unused
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Unused Tile
-
-[ITEMDEF 01]
-DEFNAME=i_nodraw
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=No Draw Tile
 
 [ITEMDEF 09b2]
 DEFNAME=i_bankbox
@@ -25,11 +13,6 @@ NAME=Bank Box
 LAYER=layer_bankbox
 TYPE=t_eq_bank_box
 TDATA2=04a
-
-[ITEMDEF 0ea9]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Unused Portrait Tile 0ea9
 
 [ITEMDEF 0eb0]
 //FIXME: used to be TYPE=T_MESSAGE used as BBoard messages.
@@ -198,22 +181,6 @@ DESCRIPTION=NonGen (Memory) Object
 //unnecessary copy of item 0db?
 NAME=pillar
 DEFNAME=i_pillar
-
-[ITEMDEF 02198]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=No Draw Tile 02198
-
-[ITEMDEF 021a4]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=No Draw Tile 021a4
-
-[ITEMDEF 021bc]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=No Draw Tile 021bc
-
 
 [ITEMDEF 02256]
 DEFNAME=i_bagball_small
@@ -448,36 +415,6 @@ ON=@Create
 //amazon light
 DUPEITEM=0265d
 
-[ITEMDEF 02669]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Unused Tile 02669
-
-[ITEMDEF 0266a]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Unused Tile 0266a
-
-[ITEMDEF 0266f]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Unused Tile 0266f
-
-[ITEMDEF 02670]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Unused Tile 02670
-
-[ITEMDEF 02675]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Unused Tile 02675
-
-[ITEMDEF 02676]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Unused Tile 02676
-
 [ITEMDEF 02677]
 DEFNAME=i_gloves_kote1
 TYPE=t_armor_leather
@@ -525,11 +462,6 @@ ON=@Create
 [ITEMDEF 0267a]
 //kote gloves
 DUPEITEM=02679
-
-[ITEMDEF 02688]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Unused Tile 02688
 
 [ITEMDEF 02689]
 DEFNAME=i_helm_winged
@@ -1049,17 +981,6 @@ RESOURCES=3 i_board,1 i_ingot_iron
 CATEGORY=Decoration - Signs
 SUBSECTION=Classes
 DESCRIPTION=Tamer
-
-
-[ITEMDEF 02ad8]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Missing Name Tile 02ad8
-
-[ITEMDEF 02ae3]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Missing Name 02ae3
 
 
 [ITEMDEF 02af8]
@@ -1956,16 +1877,6 @@ DUPEITEM=03daf
 
 [ITEMDEF 03ef1]
 //
-
-[ITEMDEF 03f28]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Empty tile 03f28
-
-[ITEMDEF 03f8f]
-CATEGORY=Miscellaneous
-SUBSECTION=Bad Tiles
-DESCRIPTION=Missing Name 03f8f
 
 [ITEMDEF 04077]
 DEFNAME=i_reag_dragon_blood_new

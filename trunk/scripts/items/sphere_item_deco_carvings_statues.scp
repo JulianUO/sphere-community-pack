@@ -3,9 +3,30 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, March 10, 2011
+// FILE LAST UPDATED: Saturday, July 9, 2011
 VERSION=0.56b
 
+
+[ITEMDEF 02]
+DEFNAME=i_ankh
+FLIP=1
+RESOURCES=100 i_rock_plain
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Statues
+DESCRIPTION=Ankh
+DUPELIST=03,04,05
+
+[ITEMDEF 03]
+//Ankh
+DUPEITEM=02
+
+[ITEMDEF 04]
+//Ankh
+DUPEITEM=02
+
+[ITEMDEF 05]
+//Ankh
+DUPEITEM=02
 
 [ITEMDEF 0121d]
 DEFNAME=i_wall_carving_stone

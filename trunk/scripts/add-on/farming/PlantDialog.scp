@@ -148,7 +148,7 @@ if (<tag0.m_status>)
 	tilepic 96 168 0c61
 	tilepic 162 168 0c61
 	dhtmlgump 129 167 42 20 0 0 <def.bfont_yellow><bhealth>
-	elif strmatch('<bhealth>','Vibrent')
+	elif strmatch('<bhealth>','Vibrant')
 	tilepic 93 162 01a99
 	tilepic 162 162 01a99
 	dhtmlgump 129 167 42 20 0 0 <def.bfont_yellow><bhealth>
@@ -251,7 +251,7 @@ return wilted
 elif (<local.perc> < 100)
 return healthy
 else
-return vibrent
+return vibrant
 endif
 
 [dialog d_empty_plant]

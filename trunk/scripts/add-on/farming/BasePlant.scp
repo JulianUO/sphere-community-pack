@@ -259,7 +259,7 @@ if (<morex>==10)  // MUTATE THE PLANT
 	return 1
 	endif
 
-	if !strmatch('<src.targ.bhealth>','Vibrent') && !strmatch('<src.targ.bhealth>','healthy')
+	if !strmatch('<src.targ.bhealth>','Vibrant') && !strmatch('<src.targ.bhealth>','healthy')
 	src.sysmessage @,,2 1053075 // unhealthy plants
 	return 1
 	endif

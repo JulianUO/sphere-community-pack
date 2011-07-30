@@ -82,7 +82,7 @@ src.sysmessage @,,2 1053051 // You cannot gather pollen from a plant in this sta
 return 1
 endif
 
-if !strmatch('<bhealth>','Vibrent') && !strmatch('<bhealth>','healthy')
+if !strmatch('<bhealth>','Vibrant') && !strmatch('<bhealth>','healthy')
 src.sysmessage @,,2 1053052 // You cannot gather pollen from an unhealthy plant!
 return 1
 endif

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, April 2, 2011
+// FILE LAST UPDATED: Saturday, July 9, 2011
 VERSION=0.56b
 
 
@@ -17,37 +17,37 @@ DESCRIPTION=Wall
 DUPELIST=07,08,09,0a,0b,0c,0d,010,011,012,013,014,015,016,017,018,019
 
 [ITEMDEF 07]
-//wooden wall 1
+//wooden wall 1 (full)
 DUPEITEM=06
 
 [ITEMDEF 08]
-//wooden wall 1
+//wooden wall 1 (full)
 DUPEITEM=06
 
 [ITEMDEF 09]
-//wooden wall 1
+//wooden wall 1 (full)
 DUPEITEM=06
 
 [ITEMDEF 0a]
-//wooden wall 1
+//wooden wall 1 (full)
 DUPEITEM=06
 
 [ITEMDEF 0b]
-//wooden wall 1
+//wooden wall 1 (full)
 DUPEITEM=06
 
 [ITEMDEF 0c]
-//wooden wall 1
+//wooden wall 1 (full)
 DUPEITEM=06
 
 [ITEMDEF 0d]
-//wooden wall 1
+//wooden wall 1 (full)
 DUPEITEM=06
 
 [ITEMDEF 0e]
 DEFNAME=i_wall_wood_window
 TYPE=t_window
-RESOURCES=100 i_log,1 i_window
+RESOURCES=100 i_log,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Wooden Wall 1
 DESCRIPTION=Wall (with window)
@@ -114,41 +114,41 @@ RESOURCES=100 i_rock_plain
 CATEGORY=Buildings - Walls
 SUBSECTION=Stone Wall 1
 DESCRIPTION=Wall
-DUPELIST=01b,01c,01d,01e,01f,020,021,024,025,026,027,028,029,02a,02b,02c,02d,02e,02f,030,031,032
+DUPELIST=01b,01c,01d,01e,01f,020,021,024,025,026,027,028,029,02a,02b,02c,02d,02e,02f,030,031,032,03127
 
 [ITEMDEF 01b]
-//stone wall 1
+//stone wall 1 (full)
 DUPEITEM=01a
 
 [ITEMDEF 01c]
-//stone wall 1
+//stone wall 1 (full)
 DUPEITEM=01a
 
 [ITEMDEF 01d]
-//stone wall 1
+//stone wall 1 (full)
 DUPEITEM=01a
 
 [ITEMDEF 01e]
-//stone wall 1
+//stone wall 1 (full)
 DUPEITEM=01a
 
 [ITEMDEF 01f]
-//stone wall 1
+//stone wall 1 (full)
 DUPEITEM=01a
 
 [ITEMDEF 020]
-//stone wall 1
+//stone wall 1 (full)
 DUPEITEM=01a
 
 [ITEMDEF 021]
-//stone wall 1
+//stone wall 1 (full)
 DUPEITEM=01a
 
 [ITEMDEF 022]
 //FIXME: This window does not have a light pattern
 DEFNAME=i_wall_stone_window
 TYPE=t_window
-RESOURCES=100 i_rock_plain,1 i_window
+RESOURCES=100 i_rock_plain,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Stone Wall 1
 DESCRIPTION=Wall (with window)
@@ -243,37 +243,37 @@ DESCRIPTION=Wall
 DUPELIST=034,035,036,037,038,039,03a,03d,03e,03f,040,041,042,043,044,045,046,047,048,049,04a,04b,04c,04d,04e,04f,050,051,052,053,054,055,056
 
 [ITEMDEF 034]
-//brick wall 1
+//brick wall 1 (full)
 DUPEITEM=033
 
 [ITEMDEF 035]
-//brick wall 1
+//brick wall 1 (full)
 DUPEITEM=033
 
 [ITEMDEF 036]
-//brick wall 1
+//brick wall 1 (full)
 DUPEITEM=033
 
 [ITEMDEF 037]
-//brick wall 1
+//brick wall 1 (full)
 DUPEITEM=033
 
 [ITEMDEF 038]
-//brick wall 1
+//brick wall 1 (full)
 DUPEITEM=033
 
 [ITEMDEF 039]
-//brick wall 1
+//brick wall 1 (full)
 DUPEITEM=033
 
 [ITEMDEF 03a]
-//brick wall 1
+//brick wall 1 (full)
 DUPEITEM=033
 
 [ITEMDEF 03b]
 DEFNAME=i_wall_brick_window
 TYPE=t_window
-RESOURCES=50 i_clay,50 i_straw,1 i_window
+RESOURCES=50 i_clay,50 i_straw,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Brick Wall 1
 DESCRIPTION=Wall (with window)
@@ -438,7 +438,7 @@ DUPEITEM=057
 //FIXME: This window has the wrong light pattern
 DEFNAME=i_wall_stone_2_window
 TYPE=t_window
-RESOURCES=100 i_rock_plain,1 i_window
+RESOURCES=100 i_rock_plain,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Stone Wall 2
 DESCRIPTION=Wall (with window)
@@ -595,7 +595,7 @@ RESOURCES=100 i_rock_plain
 CATEGORY=Buildings - Walls
 SUBSECTION=Stone Wall 3
 DESCRIPTION=Wall
-DUPELIST=07b,07c,07d,07e,07f,080,081,082,084,086,087,088,089,08a,08b,08c,08e,0364,0365
+DUPELIST=07b,07c,07d,07e,07f,080,081,082,084,086,087,088,089,08a,08b,08c,08e,0364,0365,04145
 
 [ITEMDEF 07b]
 //stone wall 3 (arch)
@@ -639,7 +639,7 @@ DUPEITEM=07a
 DEFNAME=i_wall_stone_3_window
 TYPE=t_window
 CAN=can_i_block
-RESOURCES=100 i_rock_plain,1 i_window
+RESOURCES=100 i_rock_plain,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Stone Wall 3
 DESCRIPTION=Wall (with window)
@@ -746,7 +746,7 @@ DUPEITEM=090
 //FIXME: This window does not have a light pattern
 DEFNAME=i_wall_log_window
 TYPE=t_window
-RESOURCES=100 i_log,1 i_window
+RESOURCES=100 i_log,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Log Wall
 DESCRIPTION=Wall (with window)
@@ -889,7 +889,7 @@ DUPEITEM=0a6
 [ITEMDEF 0b9]
 DEFNAME=i_wall_wood_2_window
 TYPE=t_window
-RESOURCES=100 i_board,1 i_window
+RESOURCES=100 i_board,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Wooden Wall 2
 DESCRIPTION=Wall (with window)
@@ -1174,7 +1174,7 @@ DUPEITEM=0f8
 [ITEMDEF 0fc]
 DEFNAME=i_wall_marble_window
 TYPE=t_window
-RESOURCES=100 i_stone_marble,1 i_window
+RESOURCES=100 i_stone_marble,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Marble Wall 1
 DESCRIPTION=Wall (with window)
@@ -1432,7 +1432,7 @@ DUPEITEM=0127
 [ITEMDEF 013a]
 DEFNAME=i_wall_plaster_window
 TYPE=t_window
-RESOURCES=50 i_sand,50 i_straw,1 i_window
+RESOURCES=50 i_sand,50 i_straw,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Plaster Wall 1
 DESCRIPTION=Wall (with window)
@@ -1582,7 +1582,7 @@ DUPEITEM=0158
 [ITEMDEF 015c]
 DEFNAME=i_wall_sandstone_window
 TYPE=t_window
-RESOURCES=100 i_stone_sand,1 i_window
+RESOURCES=100 i_stone_sand,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Sandstone Wall 1
 DESCRIPTION=Wall (with window)
@@ -1921,7 +1921,7 @@ DUPEITEM=01a5
 [ITEMDEF 01ad]
 DEFNAME=i_wall_rattan_window
 TYPE=t_window
-RESOURCES=50 i_plant_grasses,50 i_straw,1 i_window
+RESOURCES=50 i_plant_grasses,50 i_straw
 CATEGORY=Buildings - Walls
 SUBSECTION=Rattan Wall
 DESCRIPTION=Wall (with window)
@@ -2024,7 +2024,7 @@ DUPEITEM=01b6
 //FIXME: This window has the wrong light pattern
 DEFNAME=i_wall_hide_window
 TYPE=t_window
-RESOURCES=100 i_hide,1 i_window,1 i_window
+RESOURCES=100 i_hide
 CATEGORY=Buildings - Walls
 SUBSECTION=Hide Wall
 DESCRIPTION=Wall (with window)
@@ -2097,7 +2097,7 @@ DUPEITEM=01cf
 [ITEMDEF 01d3]
 DEFNAME=i_wall_stone_5_window
 TYPE=t_window
-RESOURCES=50 i_rock_plain,1 i_window
+RESOURCES=50 i_rock_plain,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Stone Wall 5
 DESCRIPTION=Wall (with window)
@@ -2300,7 +2300,7 @@ DUPEITEM=01ff
 [ITEMDEF 0207]
 DEFNAME=i_wall_plaster_2_window
 TYPE=t_window
-RESOURCES=50 i_straw,50 i_sand,1 i_window
+RESOURCES=50 i_straw,50 i_sand,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Plaster Wall 2
 DESCRIPTION=Wall (with window)
@@ -2633,7 +2633,7 @@ DUPEITEM=024c
 [ITEMDEF 0252]
 DEFNAME=i_wall_sandstone_2_window
 TYPE=t_wall
-RESOURCES=100 i_stone_sand,1 i_window
+RESOURCES=100 i_stone_sand,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Sandstone Wall 2 (fancy)
 DESCRIPTION=Wall (with window)
@@ -2865,7 +2865,7 @@ DUPEITEM=0291
 [ITEMDEF 0295]
 DEFNAME=i_wall_marble_2_window
 TYPE=t_window
-RESOURCES=100 i_stone_marble,1 i_window
+RESOURCES=100 i_stone_marble,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Marble Wall 2
 DESCRIPTION=Wall (with window)
@@ -4039,7 +4039,7 @@ DUPEITEM=03cb
 //FIXME: This window does not have a light pattern
 DEFNAME=i_wall_sandstone_3_window
 TYPE=t_window
-RESOURCES=100 i_rock_plain,1 i_window
+RESOURCES=100 i_rock_plain,1 i_glass_window
 CATEGORY=Buildings - Walls
 SUBSECTION=Sandstone Wall 3
 DESCRIPTION=Wall (with window)
@@ -6766,7 +6766,7 @@ DUPEITEM=02ffb
 
 
 [ITEMDEF 03127]
-//stone wall
+//stone wall 1 (full)
 DUPEITEM=01a
 
 
@@ -7088,6 +7088,10 @@ DUPEITEM=03ef2
 [ITEMDEF 03f06]
 //wall stone circular
 DUPEITEM=03ef2
+
+[ITEMDEF 04145]
+//stone wall 3 (with entrance)
+DUPEITEM=07a
 
 
 [EOF]
