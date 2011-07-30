@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, April 28, 2011
+// FILE LAST UPDATED: Saturday, July 9, 2011
 VERSION=0.56b
 
 
@@ -342,52 +342,52 @@ DUPEITEM=0c7f
 DUPEITEM=0c7f
 
 [ITEMDEF 0deb]
-DEFNAME=i_crop_marijuana1
-NAME=marijuana
+DEFNAME=i_crop_tomato1
+NAME=tomato plant
 TYPE=t_crops
-//TDATA1=i_crop_marijuana1
-TDATA2=i_crop_marijuana2
+//TDATA1=i_crop_tomato1
+TDATA2=i_crop_tomato2
 //TDATA3=0
 VALUE=1
 CATEGORY=Vegetation
 SUBSECTION=Fruits and Vegetables
-DESCRIPTION=marijuana Crop (sprout)
+DESCRIPTION=Tomato Crop (sprout)
 
 [ITEMDEF 0dec]
-DEFNAME=i_crop_marijuana2
-NAME=marijuana
+DEFNAME=i_crop_tomato2
+NAME=tomato plant
 TYPE=t_crops
-//TDATA1=i_crop_marijuana1
-TDATA2=i_crop_marijuana3
+//TDATA1=i_crop_tomato1
+TDATA2=i_crop_tomato3
 //TDATA3=0
 VALUE=1
 CATEGORY=Vegetation
 SUBSECTION=Fruits and Vegetables
-DESCRIPTION=marijuana Crop (small)
+DESCRIPTION=Tomato Crop (small)
 
 [ITEMDEF 0ded]
-DEFNAME=i_crop_marijuana3
-NAME=marijuana
+DEFNAME=i_crop_tomato3
+NAME=tomato plant
 TYPE=t_crops
-//TDATA1=i_crop_marijuana1
-TDATA2=i_crop_marijuana
+//TDATA1=i_crop_tomato1
+TDATA2=i_crop_tomato
 //TDATA3=0
 VALUE=1
 CATEGORY=Vegetation
 SUBSECTION=Fruits and Vegetables
-DESCRIPTION=marijuana Crop (large)
+DESCRIPTION=Tomato Crop (large)
 
 [ITEMDEF 0dee]
-DEFNAME=i_crop_marijuana
-NAME=marijuana
+DEFNAME=i_crop_tomato
+NAME=tomato plant
 TYPE=t_crops
-TDATA1=i_crop_marijuana1
+TDATA1=i_crop_tomato1
 TDATA2=0
-TDATA3=i_dried_herbs
+TDATA3=i_fruit_tomato
 VALUE=1
 CATEGORY=Vegetation
 SUBSECTION=Fruits and Vegetables
-DESCRIPTION=marijuana Crop (mature)
+DESCRIPTION=Tomato Crop (mature)
 
 [ITEMDEF 0171f]
 DEFNAME=i_fruit_banana
@@ -1150,30 +1150,6 @@ VALUE=2
 CATEGORY=Vegetation
 SUBSECTION=Fruits and Vegetables
 DESCRIPTION=Potato Crop (mature)
-
-[ITEMDEF i_crop_tomato1]
-ID=0cb5
-NAME=tomato plant
-TYPE=t_crops
-TDATA1=i_crop_tomato1
-TDATA2=i_crop_tomato
-TDATA3=0
-VALUE=2
-CATEGORY=Vegetation
-SUBSECTION=Fruits and Vegetables
-DESCRIPTION=Tomato Crop
-
-[ITEMDEF i_crop_tomato]
-ID=0cb0
-NAME=tomato plant
-TYPE=t_crops
-TDATA1=i_crop_tomato1
-TDATA2=0
-TDATA3=i_fruit_tomato
-VALUE=2
-CATEGORY=Vegetation
-SUBSECTION=Fruits and Vegetables
-DESCRIPTION=Tomato Crop (mature)
 
 
 //////////////////////////////////
@@ -2072,6 +2048,20 @@ VALUE=1
 CATEGORY=Vegetation
 SUBSECTION=Plants and Flowers
 DESCRIPTION=Water Lily 12
+
+[ITEMDEF 0dc4]
+DEFNAME=i_plant_round
+NAME=round bush
+FLIP=1
+VALUE=1
+CATEGORY=Vegetation
+SUBSECTION=Plants and Flowers
+DESCRIPTION=Round Plant
+DUPELIST=0dc5
+
+[ITEMDEF 0dc5]
+//round bush
+DUPEITEM=0dc4
 
 [ITEMDEF 018d9]
 DEFNAME=i_flower_rose_white

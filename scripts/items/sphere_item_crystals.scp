@@ -3,18 +3,18 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, March 4, 2011
+// FILE LAST UPDATED: Saturday, July 9, 2011
 VERSION=0.56b
+
 
 [ITEMDEF 0240]
 DEFNAME=i_power_crystal
 NAME=power crystal
 TYPE=t_normal
-VALUE=500
+VALUE=25
 WEIGHT=0.1
-TAG.NoVendor=1
-CATEGORY=Quest
-SUBSECTION=Quest 11
+CATEGORY=Resources
+SUBSECTION=Mineral
 DESCRIPTION=Power Crystal
 
 

@@ -818,9 +818,10 @@ DUPELIST=02312
 DUPEITEM=02311
 
 
-[ITEMDEF i_window]
-ID=i_target
-RESOURCES=2 i_sand, 2 i_board
+[ITEMDEF i_glass_window]
+ID=i_target//this is not a good choice since its animated
+NAME=window glass
+RESOURCES=2 i_sand
 ON=@Create
    COLOR=colors_white
 

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, April 25, 2011
+// FILE LAST UPDATED: Saturday, July 9, 2011
 VERSION=0.56b
 
 
@@ -729,7 +729,7 @@ DUPEITEM=027aa
 ///////////////////////////////////////////////////////////////
 //////// AMMUNITION
 ///////////////////////////////////////////////////////////////
-[ITEMDEF 0f3f]
+[ITEMDEF 0f3e]
 DEFNAME=i_arrow
 NAME=arrow%s
 TYPE=t_weapon_arrow
@@ -741,23 +741,33 @@ SKILLMAKE=Bowcraft 0.0
 CATEGORY=Provisions - Weapons - Archery
 SUBSECTION=Ammunition
 DESCRIPTION=Arrow
-DUPELIST=0f40,0f41,0f42
+DUPELIST=0f3f
+
+[ITEMDEF 0f3f]
+//arrow
+DUPEITEM=0f3e
 
 [ITEMDEF 0f40]
-//Medium pile of arrows
-DUPEITEM=0f3f
-DESCRIPTION=Arrows (5)
+DEFNAME=i_arrows
+NAME=arrows
+WEIGHT=0.5
+RESOURCES=5 i_arrow
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Ammunition
+DESCRIPTION=Arrows
 
 [ITEMDEF 0f41]
-//Large Pile of arrows
-DUPEITEM=0f3f
-DESCRIPTION=Arrows (Many)
+DEFNAME=i_arrow_pile
+NAME=pile of arrows
+WEIGHT=2.0
+RESOURCES=20 i_arrow
+CATEGORY=Provisions - Weapons - Archery
+SUBSECTION=Ammunition
+DESCRIPTION=Arrow Pile
 
 [ITEMDEF 0f42]
-//single arrow
+//arrow animation
 DEFNAME=i_arrow_x
-DUPEITEM=0f3f
-DESCRIPTION=Arrow (Straight)
 
 [ITEMDEF 01bfb]
 // Crossbow Bolt
