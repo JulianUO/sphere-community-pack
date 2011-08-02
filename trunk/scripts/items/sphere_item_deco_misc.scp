@@ -1156,82 +1156,6 @@ DUPELIST=014e2
 //vat ladder
 DUPEITEM=014e1
 
-[ITEMDEF 01508]
-DEFNAME=i_decorative_armor
-FLIP=1
-RESOURCES=20 i_ingot_iron, 5 i_ingot_gold, 2 i_log, 1 i_board, 70 i_feather
-WEIGHT=34
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Decorative Armor
-DESCRIPTION=@
-DUPELIST=0151c
-
-ON=@DCLICK
-if ( <dispid> == i_decorative_armor )
-	ID=i_decorative_armor_d
-else
-	ID=i_decorative_armor_d2
-endif
-sfx snd_WEAPONS_GILOTIN1
-update
-return 1
-
-[ITEMDEF 01509]
-DEFNAME=i_decorative_armor_d
-RESOURCES=i_decorative_armor
-WEIGHT=30
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Decorative Armor
-DESCRIPTION=@
-DUPELIST=0151d
-
-ON=@DCLICK
-if ( <dispid> == i_decorative_armor_d )
-	ID=i_decorative_armor
-else
-	ID=i_decorative_armor_2
-endif
-update
-return 1
-
-[ITEMDEF 01512]
-DEFNAME=i_decorative_armor2
-FLIP=1
-RESOURCES=10 i_ingot_bronze, 13 i_ingot_dull_copper, 2 i_ingot_iron, 2 i_log, 1 i_board
-WEIGHT=34
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Decorative Armor
-DESCRIPTION=@
-DUPELIST=0151a
-
-ON=@DCLICK
-if ( <dispid> == i_decorative_armor2 )
-	ID=i_decorative_armor2_d
-else
-	ID=i_decorative_armor2_d2
-endif
-sfx snd_WEAPONS_GILOTIN1
-update
-return 1
-
-[ITEMDEF 01513]
-DEFNAME=i_decorative_armor2_d
-RESOURCES=i_decorative_armor2
-WEIGHT=30
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Decorative Armor
-DESCRIPTION=@
-DUPELIST=0151b
-
-ON=@DCLICK
-if ( <dispid> == i_decorative_armor2_d )
-	ID=i_decorative_armor2
-else
-	ID=i_decorative_armor2_2
-endif
-update
-return 1
-
 [ITEMDEF 01514]
 DEFNAME=i_serpent_crest
 RESOURCES=20 i_ingot_iron
@@ -1239,22 +1163,6 @@ WEIGHT=35
 CATEGORY=Decoration - Miscellaneous
 SUBSECTION=Serpent Crest
 DESCRIPTION=@
-
-[ITEMDEF 0151a]
-DEFNAME=i_decorative_armor2_2
-DUPEITEM=01512
-
-[ITEMDEF 0151b]
-DEFNAME=i_decorative_armor2_d2
-DUPEITEM=01513
-
-[ITEMDEF 0151c]
-DEFNAME=i_decorative_armor_2
-DUPEITEM=01508
-
-[ITEMDEF 0151d]
-DEFNAME=i_decorative_armor_d2
-DUPEITEM=01509
 
 [ITEMDEF 0151e]
 DEFNAME=i_vat_2
