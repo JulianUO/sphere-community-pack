@@ -3,24 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Thursday, April 28, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
-
-[ITEMDEF 04513]
-DEFNAME=i_chicken_coop
-NAME=Chicken Coop
-TYPE=t_chicken_coop
-SKILLMAKE=Carpentry 90.0,t_carpentry
-RESOURCES=150 i_log
-WEIGHT=20
-DUPELIST=04514
-CATEGORY=Items by Professions
-SUBSECTION=Animal Tamer
-DESCRIPTION=Chicken Coop
-
-[ITEMDEF 04514]
-DUPEITEM=04513
 
 [ITEMDEF 0407c]
 DEFNAME=i_incubator
@@ -38,5 +23,58 @@ DUPELIST=0407d
 [ITEMDEF 0407d]
 //Incubator
 DUPEITEM=0407c
+
+
+[ITEMDEF 04513]
+//FIXME: chicken coop placement limits
+//1112696//"You already have a chicken coop in your house!"
+DEFNAME=i_chicken_coop
+NAME=chicken coop
+FLIP=1
+WEIGHT=20.0
+RESOURCES=150 i_board,10 i_nails
+SKILLMAKE=Carpentry 90.0,t_carpentry
+CATEGORY=Miscellaneous
+SUBSECTION=Mini Houses
+DESCRIPTION=Chicken Coop
+DUPELIST=04514
+ON=@Create
+   TAG.StablesMax=3
+ON=@DClick
+   IF !(<TAG0.StableOwner>)
+      TAG.StableOwner=<SRC>
+   ENDIF
+   RETURN 1
+ON=@ClientToolTip
+   IF (<TAG0.StableOwner>)
+      REF99=<EVAL <TAG.StableOwner>&~030000000>
+      SRC.ADDCLILOC 1072304,<REF99.NAME>//"Owned by ~"
+   ENDIF
+   SRC.ADDCLILOC 1071250,<dTAG0.StablesUsed>,<dTAG0.StablesMax>//"~/~ stable stalls used."
+ON=@ContextMenuRequest
+   IF (<TAG0.StableOwner>==<SRC>)
+      SRC.AddContextEntry 101,3006126//"Stable Pet"//1112556//"Stable a chicken"
+      SRC.AddContextEntry 102,3006181//"Summon your pet"//1112557//"Claim a chicken"
+   ENDIF
+ON=@ContextMenuSelect
+   IF (<TAG0.StableOwner>!=<SRC>)
+      SRC.SYSMESSAGELOC color_text,1113204//"The chickens stabled in this coop belong to someone else!"
+      RETURN 1
+   ENDIF
+   IF (<ARGN>==101)
+      IF (<dTAG0.StablesUsed> >= <dTAG0.StablesMax>)
+         SRC.SYSMESSAGELOC color_text,1114325//"There is no more room in your chicken coop!"
+         RETURN 1
+      ENDIF
+      //1112559//"Which chicken do you wish to stable?"
+      //1112558//"You may only stable chickens in the chicken coop"
+   ENDIF
+   IF (<ARGN>==102)
+      //1080048//"Select a pet to retrieve from the stable:"
+   ENDIF
+
+[ITEMDEF 04514]
+//chicken coop
+DUPEITEM=04513
 
 [EOF]

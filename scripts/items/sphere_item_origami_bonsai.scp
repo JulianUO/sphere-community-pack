@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Tuesday, March 29, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -201,5 +201,40 @@ DUPELIST=046e5
 //bonsai tree
 DUPEITEM=046d9
 
+[ITEMDEF 04b1c]
+DEFNAME=i_origami_dragon
+NAME=origami dragon
+TYPE=t_normal
+FLIP=1
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_paper
+SKILLMAKE=Carpentry 66.6,1 i_origami_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Origami Dragon
+DUPELIST=04b1d
+
+[ITEMDEF 04b1d]
+//Origami Dragon
+DUPEITEM=04b1c
+
+[ITEMDEF 04b1e]
+DEFNAME=i_origami_bunny
+NAME=origami bunny
+TYPE=t_normal
+FLIP=1
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_paper
+SKILLMAKE=Carpentry 66.6,1 i_origami_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Japanese
+DESCRIPTION=Origami Bunny
+DUPELIST=04b1f
+
+[ITEMDEF 04b1f]
+//Origami Bunny
+DUPEITEM=04b1e
 
 [EOF]

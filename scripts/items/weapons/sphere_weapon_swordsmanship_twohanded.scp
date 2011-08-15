@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, April 25, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -862,6 +862,154 @@ ON=@Create
 
 [ITEMDEF 04075]
 DUPEITEM=0908
+
+
+///////////////////////////////////////////////////////////////
+//////// GARGISH 
+///////////////////////////////////////////////////////////////
+
+[ITEMDEF 048b0]
+DEFNAME=i_gargish_axe_battle
+NAME=Gargish battle axe
+TYPE=t_weapon_axe
+DAM=15,17
+FLIP=1
+SKILL=Swordsmanship
+SPEED=38//FIXME
+VALUE=59
+WEIGHT=6.3
+TWOHANDS=Y
+RESOURCES=14 i_ingot_iron,1 i_log
+SKILLMAKE=Blacksmithing 30.5
+CATEGORY=Provisions - Weapons
+SUBSECTION=Swordsmanship
+DESCRIPTION=Gargish Battle Axe
+REQSTR=35
+TAG.GargoyleOnly=1
+TEVENTS=t_iprop
+DUPELIST=048b1
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048b1]
+//gargish battle axe
+DUPEITEM=048b0
+
+
+[ITEMDEF 048b2]
+DEFNAME=i_gargish_axe
+NAME=Gargish axe
+TYPE=t_weapon_axe
+DAM=14,16
+FLIP=1
+SKILL=Swordsmanship
+SPEED=44//FIXME
+VALUE=59
+WEIGHT=6.3
+TWOHANDS=Y
+RESOURCES=14 i_ingot_iron,1 i_log
+SKILLMAKE=Blacksmithing 34.2
+CATEGORY=Provisions - Weapons
+SUBSECTION=Swordsmanship
+DESCRIPTION=Gargish Battle Axe
+REQSTR=35
+TAG.GargoyleOnly=1
+TEVENTS=t_iprop
+DUPELIST=048b3
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048b3]
+//gargish axe
+DUPEITEM=048b2
+
+
+[ITEMDEF 048b4]
+DEFNAME=i_gargish_bardiche
+NAME=Gargish bardiche
+TYPE=t_weapon_sword
+DAM=17,18
+FLIP=1
+SPEED=35//FIXME
+SKILL=Swordsmanship
+VALUE=111
+WEIGHT=13.5
+TWOHANDS=Y
+RESOURCES=18 i_ingot_iron,2 i_log
+SKILLMAKE=Blacksmithing 31.7
+CATEGORY=Provisions - Weapons
+SUBSECTION=Swordsmanship
+DESCRIPTION=Gargish Bardiche
+REQSTR=45
+TAG.GargoyleOnly=1
+TEVENTS=t_iprop
+DUPELIST=048b5
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048b5]
+//gargish bardiche
+DUPEITEM=048b4
+
+
+[ITEMDEF 048c4]
+DEFNAME=i_gargish_scythe
+NAME=Gargish scythe
+TYPE=t_weapon_sword
+DAM=15,18
+FLIP=1
+SKILL=Swordsmanship
+SPEED=38//FIXME
+RANGE=2
+VALUE=81
+WEIGHT=5.0
+TWOHANDS=Y
+RESOURCES=14 i_ingot_iron,2 i_board
+SKILLMAKE=Blacksmithing 39.0
+CATEGORY=Provisions - Weapons
+SUBSECTION=Swordsmanship
+DESCRIPTION=Gargish Scythe
+REQSTR=45
+TEVENTS=t_iprop
+DUPELIST=048c5
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048c5]
+//Gargish scythe
+DUPEITEM=048c4
+
+
+[ITEMDEF 048d0]
+DEFNAME=i_gargish_daisho
+NAME=Gargish daisho
+TYPE=t_weapon_sword
+DAM=13,15
+FLIP=1
+SKILL=Swordsmanship
+SPEED=47//FIXME
+VALUE=166
+WEIGHT=8.0
+TWOHANDS=Y
+RESOURCES=15 i_ingot_iron
+SKILLMAKE=Blacksmithing 60.0
+CATEGORY=Provisions - Weapons
+SUBSECTION=Swordsmanship
+DESCRIPTION=Gargish Daisho
+REQSTR=40
+TEVENTS=t_iprop
+DUPELIST=048d1
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048d1]
+//Gargish daisho
+DUPEITEM=048d0
 
 
 [EOF]

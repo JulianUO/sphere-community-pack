@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, April 25, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -516,6 +516,97 @@ ON=@Create
 
 [ITEMDEF 04070]
 DUPEITEM=0905
+
+
+///////////////////////////////////////////////////////////////
+//////// GARGISH
+///////////////////////////////////////////////////////////////
+
+[ITEMDEF 048b8]
+DEFNAME=i_gargish_staff_gnarled
+NAME=Gargish gnarled staff
+TYPE=t_weapon_mace_staff
+DAM=15,17
+FLIP=1
+SKILL=Macefighting
+SPEED=41//FIXME
+VALUE=8
+WEIGHT=3.0
+TWOHANDS=Y
+RESOURCES=7 i_log
+SKILLMAKE=Carpentry 78.9,t_carpentry
+CATEGORY=Provisions - Weapons
+SUBSECTION=Macefighting
+DESCRIPTION=Gargish Gnarled Staff
+REQSTR=20
+TAG.GargoyleOnly=1
+TEVENTS=t_iprop
+DUPELIST=048b9
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048b9]
+//gargish gnarled staff
+DUPEITEM=048b8
+
+
+[ITEMDEF 048c0]
+DEFNAME=i_gargish_hammer_war
+NAME=Gargish war hammer
+TYPE=t_weapon_mace_smith
+DAM=17,18
+FLIP=1
+SKILL=Macefighting
+SPEED=35//FIXME
+VALUE=103
+WEIGHT=10.0
+TWOHANDS=Y
+RESOURCES=16 i_ingot_iron,1 i_board
+SKILLMAKE=Blacksmithing 34.2
+CATEGORY=Provisions - Weapons
+SUBSECTION=Macefighting
+DESCRIPTION=Gargish War Hammer
+REQSTR=95
+TAG.NotGargoyle=1
+TEVENTS=t_iprop
+DUPELIST=048c1
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048c1]
+//gargish war hammer
+DUPEITEM=048c0
+
+
+[ITEMDEF 048cc]
+DEFNAME=i_gargish_tessen
+NAME=Gargish tessen
+TYPE=t_weapon_mace_sharp
+DAM=10,12
+FLIP=1
+//LAYER=layer_hand2
+SKILL=Macefighting
+SPEED=56//FIXME
+VALUE=174
+WEIGHT=6.0
+TWOHANDS=Y
+RESOURCES=16 i_ingot_iron,10 i_cloth
+SKILLMAKE=Blacksmithing 85.0,Tailoring 50.0,t_sewing_kit
+CATEGORY=Provisions - Weapons
+SUBSECTION=Macefighting
+DESCRIPTION=Gargish Tessen
+REQSTR=10
+TEVENTS=t_iprop
+DUPELIST=048cd
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048cd]
+//Gargish tessen
+DUPEITEM=048cc
 
 
 [EOF]

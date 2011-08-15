@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, April 25, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -462,6 +462,66 @@ ON=@Create
 
 [ITEMDEF 0406d]
 DUPEITEM=0904
+
+
+///////////////////////////////////////////////////////////////
+//////// GARGISH
+///////////////////////////////////////////////////////////////
+
+[ITEMDEF 048c8]
+DEFNAME=i_gargish_pike
+NAME=Gargish pike
+TYPE=t_weapon_fence
+DAM=14,16
+FLIP=1
+SKILL=Fencing
+SPEED=44//FIXME
+VALUE=72
+WEIGHT=8.0
+TWOHANDS=Y
+RESOURCES=12 i_ingot_iron,2 i_log
+SKILLMAKE=Blacksmithing 47.0
+CATEGORY=Provisions - Weapons
+SUBSECTION=Fencing
+DESCRIPTION=Gargish Pike
+REQSTR=50
+TEVENTS=t_iprop
+DUPELIST=048c9
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048c9]
+//Gargish pike
+DUPEITEM=048c8
+
+
+[ITEMDEF 048ce]
+DEFNAME=i_gargish_tekagi
+NAME=Gargish tekagi
+TYPE=t_weapon_fence
+DAM=10,12
+FLIP=1
+SKILL=Fencing
+SPEED=56//FIXME
+VALUE=74
+WEIGHT=5.0
+TWOHANDS=Y
+RESOURCES=12 i_ingot_iron
+SKILLMAKE=Blacksmithing 55.0
+CATEGORY=Provisions - Weapons
+SUBSECTION=Fencing
+DESCRIPTION=Gargish Tekagi
+REQSTR=10
+TEVENTS=t_iprop
+DUPELIST=048cf
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048cf]
+//Gargish tekagi
+DUPEITEM=048ce
 
 
 [EOF]

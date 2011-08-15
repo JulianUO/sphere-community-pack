@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, April 25, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -600,6 +600,95 @@ DESCRIPTION=True War Cleaver
 ON=@Create
    COLOR=0 //FIXME: unknown color
    HITPOINTS={36 48}
+
+
+///////////////////////////////////////////////////////////////
+//////// GARGISH
+///////////////////////////////////////////////////////////////
+
+[ITEMDEF 048bc]
+DEFNAME=i_gargish_kryss
+NAME=Gargish kryss
+TYPE=t_weapon_fence
+DAM=10,12
+FLIP=1
+SKILL=Fencing
+SPEED=56//FIXME
+VALUE=51
+WEIGHT=8.0
+TWOHANDS=N
+RESOURCES=8 i_ingot_iron
+SKILLMAKE=Blacksmithing 36.7
+CATEGORY=Provisions - Weapons
+SUBSECTION=Fencing
+DESCRIPTION=Gargish Kryss
+REQSTR=10
+TAG.GargoyleOnly=1
+TEVENTS=t_iprop
+DUPELIST=048bd
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048bd]
+//gargish kryss
+DUPEITEM=048bc
+
+[ITEMDEF 048be]
+DEFNAME=i_gargish_war_fork
+NAME=Gargish war fork
+TYPE=t_weapon_fence
+DAM=12,13
+FLIP=1
+SKILL=Fencing
+SPEED=50//FIXME
+VALUE=78
+WEIGHT=8.0
+TWOHANDS=N
+RESOURCES=12 i_ingot_iron,1 i_log
+SKILLMAKE=Blacksmithing 42.9
+CATEGORY=Provisions - Weapons
+SUBSECTION=Fencing
+DESCRIPTION=Gargish War Fork
+REQSTR=40
+TAG.GargoyleOnly=1
+TEVENTS=t_iprop
+DUPELIST=048bf
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048bf]
+//gargish war fork
+DUPEITEM=048be
+
+[ITEMDEF 048ca]
+DEFNAME=i_gargish_lance
+NAME=Gargish lance
+TYPE=t_weapon_fence
+DAM=17,18
+FLIP=1
+SKILL=Fencing
+SPEED=26//FIXME
+RANGE=2
+VALUE=121
+WEIGHT=12.0
+TWOHANDS=N
+RESOURCES=20 i_ingot_iron,2 i_log
+SKILLMAKE=Blacksmithing 48.0
+CATEGORY=Provisions - Weapons
+SUBSECTION=Fencing
+DESCRIPTION=Gargish Lance
+REQSTR=95
+TEVENTS=t_iprop
+DUPELIST=048cb
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048cb]
+//Gargish lance
+DUPEITEM=048ca
 
 
 [EOF]

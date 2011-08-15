@@ -3,8 +3,75 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
+
+
+[ITEMDEF 02328]
+DEFNAME=i_snowman
+TYPE=t_normal
+FLIP=1
+WEIGHT=113.5
+RESOURCES=100 i_snow,1 i_fruit_carrot,12 i_reag_eye_of_newt,1 i_ribbon,1 i_hat_floppy
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Snowman
+DUPELIST=02329
+
+[ITEMDEF 02329]
+//snowman
+DUPEITEM=02328
+
+[ITEMDEF 0232c]
+DEFNAME=i_wreath
+TYPE=t_normal
+FLIP=1
+WEIGHT=10.2
+RESOURCES=10 i_twig,1 i_mistletoe
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Wreath
+DUPELIST=0232d
+
+[ITEMDEF 0232d]
+//wreath
+DUPEITEM=0232c
+
+[ITEMDEF 0232e]
+DEFNAME=i_snowflake1
+TYPE=t_normal
+WEIGHT=0.1
+RESOURCES=1 i_snow
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Snowflake
+
+[ITEMDEF 0232f]
+DEFNAME=i_snowflake2
+TYPE=t_normal
+WEIGHT=0.1
+RESOURCES=1 i_snow
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Snowflake 2
+
+[ITEMDEF 02330]
+DEFNAME=i_pointsetia_red
+TYPE=t_normal
+WEIGHT=10.0
+RESOURCES=10 i_log
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Red Pointsetia
+
+[ITEMDEF 02331]
+DEFNAME=i_pointsetia_white
+TYPE=t_normal
+WEIGHT=10.0
+RESOURCES=10 i_log
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=White Pointsetia
 
 [ITEMDEF 02332]
 DEFNAME=fx_decorative_lights
@@ -45,6 +112,7 @@ DUPEITEM=02332
 [ITEMDEF 02339]
 //Decorative Lights
 DUPEITEM=02332
+
 
 [ITEMDEF 0236e]
 DEFNAME=i_candle_holiday

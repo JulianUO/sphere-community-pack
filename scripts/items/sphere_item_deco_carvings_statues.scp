@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, July 9, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -888,9 +888,61 @@ SUBSECTION=Statues
 DESCRIPTION=Gargoyle Statue
 DUPELIST=0369b
 
+[ITEMDEF 0364c]
+DEFNAME=i_spiked_column
+NAME=spiked column
+VALUE=172
+WEIGHT=800.0
+RESOURCES=20 i_rock_obsidian
+SKILLMAKE=Carpentry 95.0,t_masonry_tool
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Spiked Column
+
+[ITEMDEF 0364d]
+DEFNAME=i_spiked_post
+NAME=spiked post
+FLIP=1
+VALUE=172
+WEIGHT=800.0
+RESOURCES=20 i_rock_obsidian
+SKILLMAKE=Carpentry 95.0,t_masonry_tool
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Spiked Post
+DUPELIST=0369c
+
+[ITEMDEF 0365a]
+DEFNAME=i_altar_shadow
+NAME=shadow altar
+FLIP=1
+RESOURCES=40 i_rock_obsidian
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Sculptures
+DESCRIPTION=Shadow Altar
+DUPELIST=0365b,0369d,0369e
+
+[ITEMDEF 0365b]
+//shadow altar
+DUPEITEM=0365a
+
+
 [ITEMDEF 0369b]
 //Gargoyle statue
 DUPEITEM=0364b
+
+[ITEMDEF 0369c]
+//Spiked Post
+DUPELIST=0364d
+
+[ITEMDEF 0369d]
+//shadow altar
+DUPEITEM=0365a
+
+[ITEMDEF 0369e]
+//shadow altar
+DUPEITEM=0365a
+
 
 [ITEMDEF 03bb3]
 DEFNAME=i_statue_ou
@@ -906,6 +958,41 @@ DUPELIST=033b4
 [ITEMDEF 03bb4]
 //Ultima statue
 DUPEITEM=03bb3
+
+
+[ITEMDEF 03d86]
+DEFNAME=i_decorative_armor
+NAME=decorative armor
+TYPE=t_normal
+FLIP=1
+WEIGHT=190.0
+RESOURCES=5 i_ingot_gold,2 i_log,7 i_feather,1 i_helm_close,1 i_platemail_arms,1 i_platemail_leggings,1 i_platemail_gorget,1 i_platemail_gloves,1 i_platemail_chest,1 i_axe_war
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Decorative Armor
+DUPELIST=03d87
+
+[ITEMDEF 03d87]
+//decorative armor
+DUPEITEM=03d86
+
+
+[ITEMDEF 03da9]
+DEFNAME=i_decorative_armor2
+NAME=decorative armor
+TYPE=t_normal
+FLIP=1
+WEIGHT=190.0
+RESOURCES=5 i_ingot_gold,2 i_log,7 i_feather,1 i_helm_closed,1 i_platemail_arms,1 i_platemail_leggings,1 i_platemail_gorget,1 i_platemail_gloves,1 i_platemail_chest,1 i_axe_war
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Decorative Armor
+DESCRIPTION=Decorative Armor 2
+DUPELIST=03daa
+
+[ITEMDEF 03daa]
+//decorative armor2
+DUPEITEM=03da9
+
 
 [ITEMDEF 040bc]
 DEFNAME=i_statue_medusa

@@ -2048,10 +2048,6 @@ DUPEITEM=028c6
 //wood slat roof
 DUPEITEM=028c6
 
-[ITEMDEF 028ef]
-//wood slat roof
-DUPEITEM=028c6
-
 [ITEMDEF 028f0]
 DEFNAME=i_roof_ceramic_green
 TYPE=t_roof

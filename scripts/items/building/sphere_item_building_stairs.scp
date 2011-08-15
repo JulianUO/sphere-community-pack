@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, March 5, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -1071,6 +1071,161 @@ DUPEITEM=03609
 [ITEMDEF 0360d]
 //shadow stairs
 DUPEITEM=03609
+
+
+[ITEMDEF 04130]
+DEFNAME=i_stairs_stone_aged
+FLIP=1
+RESOURCES=100 i_rock_plain
+CATEGORY=Buildings - Stairs
+SUBSECTION=Aged Stone Stairs
+DESCRIPTION=Stairs
+DUPELIST=04131,04132,04133,04134,04135,04136,04137,04138,04139,0413a,0413b,0413c,0413d,0413e,0413f
+
+[ITEMDEF 04131]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 04132]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 04133]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 04134]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 04135]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 04136]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 04137]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 04138]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 04139]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 0413a]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 0413b]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 0413c]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 0413d]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 0413e]
+//aged stone stairs
+DUPEITEM=04130
+
+[ITEMDEF 0413f]
+//aged stone stairs
+DUPEITEM=04130
+
+
+[ITEMDEF 04232]
+DEFNAME=i_stairs_stone_aged_light
+RESOURCES=100 i_rock_plain
+CATEGORY=Buildings - Stairs
+SUBSECTION=Aged Stone Stairs (light)
+DESCRIPTION=Stairs
+DUPELIST=04233,04234,04235,04236,04237,04238,04239,042e2,042e3,042e4,042e5,042e6,042e7,042f6,042f7,042f8,042f9,04300,04301
+
+[ITEMDEF 04233]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 04234]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 04235]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 04236]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 04237]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 04238]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 04239]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 042e2]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 042e3]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 042e4]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 042e5]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 042e6]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 042e7]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 042f6]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 042f7]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 042f8]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 042f9]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 04300]
+//aged stone stairs (light)
+DUPEITEM=04232
+
+[ITEMDEF 04301]
+//aged stone stairs (light)
+DUPEITEM=04232
 
 
 [EOF]

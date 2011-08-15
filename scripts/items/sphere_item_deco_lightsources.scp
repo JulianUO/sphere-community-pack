@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, July 9, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -1141,6 +1141,19 @@ DESCRIPTION=Paper Lantern 6 (unlit)
 ON=@Create
    MOREZ=1
 
+
+[ITEMDEF 04039]
+DEFNAME=i_chandelier
+TYPE=t_light_out
+TDATA3=i_chandelier_lit
+WEIGHT=3.3
+RESOURCES=i_candleabra
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Candles
+DESCRIPTION=Chandelier (unlit)
+ON=@Create
+   MOREZ=1
+
 [ITEMDEF 040be]
 DEFNAME=i_chandelier_lit
 TYPE=t_light_lit
@@ -1163,15 +1176,177 @@ DUPEITEM=040be
 //chandelier
 DUPEITEM=040be
 
+
 [ITEMDEF 040fe]
-//red lantern
+DEFNAME=i_lantern_red_lit
+RESOURCES=i_lantern
+TYPE=t_light_lit
+TDATA3=i_lantern_red_lit
+TDATA4=i_lantern_red_lit
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=Red Lantern (Lit)
+ON=@Create
+   MOREZ=1
 
 [ITEMDEF 040ff]
-//blue lantern
+DEFNAME=i_lantern_blue_lit
+RESOURCES=i_lantern
+TYPE=t_light_lit
+TDATA3=i_lantern_blue_lit
+TDATA4=i_lantern_blue_lit
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=Blue Lantern (Lit)
+ON=@Create
+   MOREZ=1
 
 [ITEMDEF 04100]
-//green lantern
+DEFNAME=i_lantern_green_lit
+RESOURCES=i_lantern
+TYPE=t_light_lit
+TDATA3=i_lantern_green_lit
+TDATA4=i_lantern_green_lit
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=Green Lantern (Lit)
+ON=@Create
+   MOREZ=1
 
 [ITEMDEF 04101]
-//purple lantern
+DEFNAME=i_lantern_purple_lit
+RESOURCES=i_lantern
+TYPE=t_light_lit
+TDATA3=i_lantern_purple_lit
+TDATA4=i_lantern_purple_lit
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=Purple Lantern (Lit)
+ON=@Create
+   MOREZ=1
+
+
+[ITEMDEF 04691]
+DEFNAME=i_jackolantern_lit
+NAME=Jack-o-lantern
+RESOURCES=i_jackolantern
+TYPE=t_light_lit
+TDATA3=i_jackolantern
+TDATA4=i_jackolantern
+FLIP=1
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=Jack-o-Lantern (Lit)
+DUPELIST=04692,04693
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 04692]
+//jack-o-lantern lit
+DUPEITEM=04691
+
+[ITEMDEF 04693]
+//jack-o-lantern lit
+DUPEITEM=04691
+
+[ITEMDEF 04694]
+DEFNAME=i_jackolantern
+NAME=Jack-o-lantern
+TYPE=t_light_out
+TDATA3=i_jackolantern_lit
+FLIP=1
+VALUE=10
+WEIGHT=1.0
+RESOURCES=1 i_fruit_pumpkin,1 i_candle
+SKILLMAKE=Carpentry 40.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=Jack-o-Lantern (Unlit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 04695]
+DEFNAME=i_jackolantern2_lit
+NAME=Jack-o-lantern
+RESOURCES=i_jackolantern
+TYPE=t_light_lit
+TDATA3=i_jackolantern2
+TDATA4=i_jackolantern2
+FLIP=1
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=Jack-o-Lantern 2 (Lit)
+DUPELIST=04696,04697
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 04696]
+//jack-o-lantern 2 lit
+DUPEITEM=04695
+
+[ITEMDEF 04697]
+//jack-o-lantern 2 lit
+DUPEITEM=04695
+
+[ITEMDEF 04698]
+DEFNAME=i_jackolantern2
+NAME=Jack-o-lantern
+TYPE=t_light_out
+TDATA3=i_jackolantern2_lit
+FLIP=1
+VALUE=10
+WEIGHT=1.0
+RESOURCES=1 i_fruit_pumpkin,1 i_candle
+SKILLMAKE=Carpentry 40.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=Jack-o-Lantern 2 (Unlit)
+ON=@Create
+   MOREZ=1
+
+
+[ITEMDEF 049c1]
+DEFNAME=i_dragon_lamp_lit
+NAME=dragon lamp
+RESOURCES=i_lantern
+TYPE=t_light_lit
+TDATA3=i_dragon_lamp
+TDATA4=i_dragon_lamp
+FLIP=1
+VALUE=40
+WEIGHT=1.0
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=Dragon Lamp (Lit)
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 049c2]
+DEFNAME=i_dragon_lamp
+NAME=dragon lamp
+TYPE=t_light_out
+TDATA3=i_dragon_lamp_lit
+FLIP=1
+VALUE=10
+WEIGHT=1.0
+RESOURCES=1 i_board,1 i_ingot_iron,1 i_oil_flask,1 i_glass_raw
+SKILLMAKE=Tinkering 40.0,t_carpentry
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Lanterns
+DESCRIPTION=Dragon Lamp (Unlit)
+ON=@Create
+   MOREZ=1
+
 [EOF]
