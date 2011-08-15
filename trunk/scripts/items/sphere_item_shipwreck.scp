@@ -1,0 +1,136 @@
+//****************************************************************************
+// SphereServer 1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
+//****************************************************************************
+// FILE LAST UPDATED: Sunday, August 14, 2011
+VERSION=0.56b
+
+
+[ITEMDEF 0479a]
+DEFNAME=i_shipwreck_s
+NAME=shipwreck
+FLIP=1
+CATEGORY=Decoration
+SUBSECTION=Shipwreck
+DESCRIPTION=Shipwreck (south)
+DUPELIST=0479b,0479c,0479d,0479e,0479f,047a0,047a1,047a2,047a3,047a4,047a5,047a6,047a7,047a8,047a9,047aa,047ab,047ac,047ad,047ae,047af,047b0,047b1,047b2,047b3,047b4,047b5,047b6,047b7
+
+[ITEMDEF 0479b]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 0479c]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 0479d]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 0479e]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 0479f]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047a0]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047a1]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047a2]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047a3]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047a4]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047a5]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047a6]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047a7]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047a8]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047a9]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047aa]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047ab]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047ac]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047ad]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047ae]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047af]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047b0]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047b1]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047b2]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047b3]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047b4]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047b5]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047b6]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+[ITEMDEF 047b7]
+//Shipwreck (south)
+DUPEITEM=0479a
+
+
+[EOF]

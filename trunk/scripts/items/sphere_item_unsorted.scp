@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, July 30, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -15,14 +15,17 @@ TYPE=t_eq_bank_box
 TDATA2=04a
 
 [ITEMDEF 0eb0]
-//FIXME: used to be TYPE=T_MESSAGE used as BBoard messages.
+//FIXME: used for BBoard messages
 DEFNAME=i_vase_rose
 NAME=rose in a vase
+TYPE=t_message
 WEIGHT=1.1
 RESOURCES=1 i_vase_small_1, 1 i_flower_rose_white
 CATEGORY=Decoration - Potted Plants & Vases
 SUBSECTION=Vases & Pots
 DESCRIPTION=Vase with Rose
+ON=@DClick
+   RETURN 1
 
 [ITEMDEF 0f31]
 DEFNAME=i_twig
@@ -179,8 +182,8 @@ DESCRIPTION=NonGen (Memory) Object
 
 [ITEMDEF 0207d]
 //unnecessary copy of item 0db?
-NAME=pillar
 DEFNAME=i_pillar
+NAME=pillar
 
 [ITEMDEF 02256]
 DEFNAME=i_bagball_small
@@ -219,72 +222,6 @@ RESOURCES=10 i_bulk_order_deed
 CATEGORY=Miscellaneous
 SUBSECTION=BOD
 DESCRIPTION=Bulk Order Book
-
-[ITEMDEF 02328]
-DEFNAME=i_snowman
-TYPE=t_normal
-FLIP=1
-WEIGHT=113.5
-RESOURCES=100 i_snow,1 i_fruit_carrot,12 i_reag_eye_of_newt,1 i_ribbon,1 i_hat_floppy
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Holiday Gifts
-DESCRIPTION=Snowman
-DUPELIST=02329
-
-[ITEMDEF 02329]
-//snowman
-DUPEITEM=02328
-
-[ITEMDEF 0232c]
-DEFNAME=i_wreath
-TYPE=t_normal
-FLIP=1
-WEIGHT=10.2
-RESOURCES=10 i_twig,1 i_mistletoe
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Holiday Gifts
-DESCRIPTION=Wreath
-DUPELIST=0232d
-
-[ITEMDEF 0232d]
-//wreath
-DUPEITEM=0232c
-
-[ITEMDEF 0232e]
-DEFNAME=i_snowflake1
-TYPE=t_normal
-WEIGHT=0.1
-RESOURCES=1 i_snow
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Holiday Gifts
-DESCRIPTION=Snowflake
-
-[ITEMDEF 0232f]
-DEFNAME=i_snowflake2
-TYPE=t_normal
-WEIGHT=0.1
-RESOURCES=1 i_snow
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Holiday Gifts
-DESCRIPTION=Snowflake 2
-
-[ITEMDEF 02330]
-DEFNAME=i_pointsetia_red
-TYPE=t_normal
-WEIGHT=10.0
-RESOURCES=10 i_log
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Holiday Gifts
-DESCRIPTION=Red Pointsetia
-
-[ITEMDEF 02331]
-DEFNAME=i_pointsetia_white
-TYPE=t_normal
-WEIGHT=10.0
-RESOURCES=10 i_log
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Holiday Gifts
-DESCRIPTION=White Pointsetia
 
 
 [ITEMDEF 0241c]
@@ -1042,113 +979,26 @@ SUBSECTION=Slasher of Veils
 DESCRIPTION=Claw of Slasher of Veils
 
 
-[ITEMDEF 02f44]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f44
-
-[ITEMDEF 02f45]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f45
-
-[ITEMDEF 02f46]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f46
-
-[ITEMDEF 02f47]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f47
-
-[ITEMDEF 02f48]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f48
-
-[ITEMDEF 02f49]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f49
-
-[ITEMDEF 02f4a]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f4a
-
-[ITEMDEF 02f4b]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f4b
-
-[ITEMDEF 02f4c]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f4c
-
-[ITEMDEF 02f4d]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f4d
-
-[ITEMDEF 02f4e]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f4e
-
-[ITEMDEF 02f4f]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f4f
-
-[ITEMDEF 02f50]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f50
-
-[ITEMDEF 02f51]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f51
-
-[ITEMDEF 02f52]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f52
-
-[ITEMDEF 02f53]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f53
-
-[ITEMDEF 02f54]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f54
-
-[ITEMDEF 02f55]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f55
-
-[ITEMDEF 02f56]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 02f56
-
 [ITEMDEF 02f57]
 DEFNAME=i_prism_runed
 NAME=runed prism
 TYPE=t_normal
+VALUE=23
+RESOURCES=1 i_prism_hollow,1 i_reag_black_pearl,1 i_reag_spider_silk,1 i_scroll_blank
+SKILLMAKE=Inscription 45.0
 CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Prism (runed)
+
 
 [ITEMDEF 02f5c]
 DEFNAME=i_switch_enchanted
 NAME=enchanted switch
 TYPE=t_normal
+VALUE=27
+WEIGHT=0.1
+RESOURCES=1 i_switch_normal,1 i_reag_black_pearl,1 i_reag_spider_silk,1 i_scroll_blank
+SKILLMAKE=Inscription 45.0
 CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Enchanted Switch
@@ -1157,24 +1007,34 @@ DESCRIPTION=Enchanted Switch
 DEFNAME=i_prism_hollow
 NAME=hollow prism
 TYPE=t_normal
+VALUE=8
+WEIGHT=0.1
+RESOURCES=8 i_sand
+SKILLMAKE=Alchemy 100.0,t_glassblowing
 CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Prism (hollow)
 
 [ITEMDEF 02f5e]
-DEFNAME=i_filgree_jeweled
-NAME=jeweled filgree
+DEFNAME=i_filigree_jeweled
+NAME=jeweled filigree
 TYPE=t_normal
+VALUE=73
+WEIGHT=0.1
+RESOURCES=2 i_ingot_iron,1 i_gem_ruby,1 i_gem_star_sapphire
+SKILLMAKE=Tinkering 70.0,t_tinker_tools
 CATEGORY=Quest
 SUBSECTION=Unknown
-DESCRIPTION=Jeweled Filgree
+DESCRIPTION=Jeweled Filigree
 
 [ITEMDEF 02f5f]
 DEFNAME=i_switch_normal
-NAME=switch
+NAME=wood switch
 TYPE=t_normal
-CATEGORY=Quest
-SUBSECTION=Unknown
+VALUE=12
+WEIGHT=0.1
+CATEGORY=Resources
+SUBSECTION=Lumberjacking
 DESCRIPTION=Switch
 
 [ITEMDEF 02f60]
@@ -1189,9 +1049,13 @@ DESCRIPTION=Wisps of Light
 DEFNAME=i_switch_runed
 NAME=runed switch
 TYPE=t_normal
+VALUE=127
+RESOURCES=2 i_board,1 i_switch_enchanted,1 i_filigree_jeweled,1 i_prism_runed
+SKILLMAKE=Carpentry 70.0,t_carpentry
 CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Switch (runed)
+
 
 [ITEMDEF 02fb6]
 DEFNAME=i_parrot_perch_special
@@ -1374,91 +1238,6 @@ NAME=bench
 [ITEMDEF 0319b]
 NAME=bench
 
-[ITEMDEF 031b0]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031b0
-
-[ITEMDEF 031b1]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031b1
-
-[ITEMDEF 031b2]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031b2
-
-[ITEMDEF 031b3]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031b3
-
-[ITEMDEF 031b4]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031b4
-
-[ITEMDEF 031b5]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031b5
-
-[ITEMDEF 031b6]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031b6
-
-[ITEMDEF 031b7]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031b7
-
-[ITEMDEF 031b8]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031b8
-
-[ITEMDEF 031b9]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031b9
-
-[ITEMDEF 031ba]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031ba
-
-[ITEMDEF 031bb]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031bb
-
-[ITEMDEF 031bc]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031bc
-
-[ITEMDEF 031bd]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031bd
-
-[ITEMDEF 031be]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031be
-
-[ITEMDEF 031bf]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031bf
-
-[ITEMDEF 031c0]
-CATEGORY=Miscellaneous
-SUBSECTION=Invisible Tiles
-DESCRIPTION=Invisible Tile 031c0
-
 
 [ITEMDEF 03584]
 //Gumpid=091b
@@ -1610,75 +1389,173 @@ TYPE=t_game_piece
 TYPE=t_game_piece
 
 
-[ITEMDEF 0364c]
-[ITEMDEF 0364d]
-FLIP=1
-DUPELIST=0369c
 [ITEMDEF 0364e]
-//blackrock boulder?
+DEFNAME=i_rock_obsidian
+NAME=obsidian rock
+TYPE=t_arock
+VALUE=100
+WEIGHT=
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Rocks
+DESCRIPTION=Obsidian Rock
+
 [ITEMDEF 0364f]
-//blackrock boulder?
+DEFNAME=i_shard_obsidian
+NAME=obsidian shard
+TYPE=t_arock
+VALUE=100
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Rocks
+DESCRIPTION=Obsidian Shard
+
 [ITEMDEF 03650]
-//blackrock boulder?
+DEFNAME=i_shadow_pillar
+NAME=shadow pillar
+TYPE=t_arock
+VALUE=100
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Rocks
+DESCRIPTION=Shadow Pillar
 
 [ITEMDEF 03651]
+DEFNAME=i_fire_pit_shadow
+NAME=shadow fire pit
+TYPE=t_fire
 FLIP=1
+RESOURCES=1 i_kindling,50 i_rock_obsidian
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Campfires
+DESCRIPTION=Shadow Fire Pit
 DUPELIST=03652,03653,03654,03655,03656
+
 [ITEMDEF 03652]
+//shadow fire pit
 DUPEITEM=03651
+
 [ITEMDEF 03653]
+//shadow fire pit
 DUPEITEM=03651
+
 [ITEMDEF 03654]
+//shadow fire pit
 DUPEITEM=03651
+
 [ITEMDEF 03655]
+//shadow fire pit
 DUPEITEM=03651
+
 [ITEMDEF 03656]
+//shadow fire pit
 DUPEITEM=03651
+
 [ITEMDEF 03657]
+DEFNAME=i_globe_of_sosaria
+NAME=globe of Sosaria
 FLIP=1
+CATEGORY=Items by Professions
+SUBSECTION=Cartographer
+DESCRIPTION=Globe of Sosaria
 DUPELIST=03658,03659
+
 [ITEMDEF 03658]
-DUPEITEM=03657
-[ITEMDEF 03659]
+//globe of Sosaria
 DUPEITEM=03657
 
-[ITEMDEF 0365a]
-FLIP=1
-DUPELIST=0365b,0369d,0369e
-[ITEMDEF 0365b]
-DUPEITEM=0365a
+[ITEMDEF 03659]
+//globe of Sosaria
+DUPEITEM=03657
 
 [ITEMDEF 0365c]
-DEFNAME=i_banner_tattered_shadow
+DEFNAME=i_banner_shadow
+NAME=shadow banner
+FLIP=1
 WEIGHT=5.0
 RESOURCES=1 i_log,5 i_cloth
 CATEGORY=Decoration - Banners and Tapestries
 SUBSECTION=Tattered
-DESCRIPTION=Small Tattered Banner (Shadow)
+DESCRIPTION=Shadow Banner
 DUPELIST=0365d,0365e,0365f
+
 [ITEMDEF 0365d]
+//shadow banner
 DUPEITEM=0365c
+
 [ITEMDEF 0365e]
+//shadow banner
 DUPEITEM=0365c
+
 [ITEMDEF 0365f]
+//shadow banner
 DUPEITEM=0365c
 
 [ITEMDEF 03660]
+DEFNAME=i_globe_animation
+NAME=Sosaria
+CATEGORY=Animations
+SUBSECTION=Globe
+DESCRIPTION=Globe
+DUPELIST=3661,03662,03663,03664,03665,03666,03667,03668,03669,0366a,0366b,0366c,0366d,0366e,0366f
+
 [ITEMDEF 03661]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 03662]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 03663]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 03664]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 03665]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 03666]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 03667]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 03668]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 03669]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 0366a]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 0366b]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 0366c]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 0366d]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 0366e]
+//globe animation frame
+DUPEITEM=03660
+
 [ITEMDEF 0366f]
+//globe animation frame
+DUPEITEM=03660
+
 
 [ITEMDEF 03678]
 DEFNAME=i_crystal_token
@@ -1710,13 +1587,6 @@ CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Heritage Token
 
-[ITEMDEF 0369c]
-DUPEITEM=0364d
-[ITEMDEF 0369d]
-DUPEITEM=0365a
-[ITEMDEF 0369e]
-DUPEITEM=0365a
-
 [ITEMDEF 036a0]
 //Duplicate of peach leaves item 0d9d
 TYPE=t_foliage
@@ -1745,6 +1615,79 @@ CATEGORY=Quest
 SUBSECTION=Unknown
 DESCRIPTION=Reddish Book
 
+
+[ITEMDEF 03af9]
+DEFNAME=i_coral
+NAME=coral
+TYPE=t_aquarium_item
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Aquarium
+DESCRIPTION=Coral
+
+[ITEMDEF 03afa]
+DEFNAME=i_coral_2
+NAME=coral
+TYPE=t_aquarium_item
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Aquarium
+DESCRIPTION=Coral (2)
+
+[ITEMDEF 03afb]
+DEFNAME=i_coral_3
+NAME=coral
+TYPE=t_aquarium_item
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Aquarium
+DESCRIPTION=Coral (3)
+
+[ITEMDEF 03afc]
+DEFNAME=i_crab_speckled
+NAME=speckled crab
+TYPE=t_fish
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Aquarium
+DESCRIPTION=Speckled Crab
+
+[ITEMDEF 03b0f]
+DEFNAME=i_island_totem
+NAME=Moai
+TYPE=t_aquarium_item
+VALUE=250
+WEIGHT=500.0
+RESOURCES=50 i_rock_plain
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Moai
+
+[ITEMDEF 03b12]
+DEFNAME=i_shell_2
+NAME=shell
+TYPE=t_aquarium_item
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Aquarium
+DESCRIPTION=Shell (2)
+
+[ITEMDEF 03b13]
+DEFNAME=i_shell_3
+NAME=shell
+TYPE=t_aquarium_item
+VALUE=10
+WEIGHT=1.0
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Aquarium
+DESCRIPTION=Shell (3)
+
+
 [ITEMDEF 03d12]
 //grapevines
 //duplicate of 0d21
@@ -1772,22 +1715,6 @@ DESCRIPTION=Reddish Book
 [ITEMDEF 03d1c]
 //corn (fruit)
 //duplicate of 0c82
-
-[ITEMDEF 03d86]
-DEFNAME=i_decorative_armor
-NAME=decorative armor
-TYPE=t_normal
-FLIP=1
-WEIGHT=190.0
-RESOURCES=5 i_ingot_gold,2 i_log,7 i_feather,1 i_helm_close,1 i_platemail_arms,1 i_platemail_leggings,1 i_platemail_gorget,1 i_platemail_gloves,1 i_platemail_chest,1 i_axe_war
-CATEGORY=Decoration - Miscellaneous
-SUBSECTION=Decorative Armor
-DESCRIPTION=Decorative Armor
-DUPELIST=03d87
-
-[ITEMDEF 03d87]
-//decorative armor
-DUPEITEM=03d86
 
 [ITEMDEF 03d8a]
 DEFNAME=i_bed_ruined
@@ -1878,6 +1805,173 @@ DUPEITEM=03daf
 [ITEMDEF 03ef1]
 //
 
+
+[ITEMDEF 04005]
+DEFNAME=i_toxic_venom_sac
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Resources
+SUBSECTION=Animal
+DESCRIPTION=Toxic Venom Sac
+ON=@Create
+   COLOR=049
+
+[ITEMDEF 04006]
+DEFNAME=i_softened_reed
+TYPE=t_normal
+VALUE=10
+WEIGHT=0.1
+RESOURCES=2 i_dry_reed,1 i_scouring_toxin
+SKILLMAKE=Alchemy 75.0
+CATEGORY=Resources
+SUBSECTION=Fabricated
+DESCRIPTION=Softened Reed
+
+[ITEMDEF 04007]
+DEFNAME=i_void_essence
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+CATEGORY=Resources
+SUBSECTION=Animal
+DESCRIPTION=Void Essence
+
+[ITEMDEF 04008]
+DEFNAME=i_crystal_granule
+TYPE=t_normal
+VALUE=100
+WEIGHT=0.1
+SKILLMAKE=Alchemy 75.0,t_glassblowing
+RESOURCES=1 i_shimmering_crystal
+CATEGORY=Resources
+SUBSECTION=Fabricated
+DESCRIPTION=Crystal Granule
+
+[ITEMDEF 04009]
+DEFNAME=i_crystal_dust
+TYPE=t_normal
+VALUE=10
+WEIGHT=0.1
+SKILLMAKE=Alchemy 75.0
+RESOURCES=4 i_crystals_broken
+CATEGORY=Resources
+SUBSECTION=Fabricated
+DESCRIPTION=Crystal Dust
+
+[ITEMDEF 0400a]
+//wilted soul fragment
+
+[ITEMDEF 0400b]
+DEFNAME=i_soul_gem
+TYPE=t_normal
+VALUE=1000
+WEIGHT=0.1
+CATEGORY=Resources
+SUBSECTION=Mineral
+DESCRIPTION=Soul Gem
+
+
+[ITEMDEF i_dry_reed]
+//obtained by using Clippers on a plant
+ID=01bd5
+NAME=dry reed%s
+TYPE=t_normal
+VALUE=1
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Gardeners
+DESCRIPTION=Dry Reeds
+
+[ITEMDEF 04022]
+//obtained by using Clippers on a plant
+DEFNAME=i_plant_clippings
+TYPE=t_normal
+VALUE=1
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Gardeners
+DESCRIPTION=Plant Clippings
+
+
+[ITEMDEF 0403a]
+DEFNAME=i_gargish_mirror
+NAME=Gargish floor mirror
+FLIP=1
+WEIGHT=20.2
+RESOURCES=12 i_rock_plain,12 i_glass_raw
+SKILLMAKE=Alchemy 72.0,Carpentry 60.0,t_masonry_tool
+CATEGORY=Decoration - Furniture
+SUBSECTION=Bedroom Furniture
+DESCRIPTION=Gargish Mirror
+DUPELIST=04046
+
+
+[ITEMDEF 0403d]
+DEFNAME=i_painting_gargoyle
+NAME=gargoyle painting
+FLIP=1
+VALUE=280
+WEIGHT=19.0
+RESOURCES=4 i_board,10 i_canvas,5 i_dyes
+SKILLMAKE=Carpentry 90.0,i_palette
+CATEGORY=Items by Professions
+SUBSECTION=Artists
+DESCRIPTION=Gargoyle Painting
+DUPELIST=0403e
+
+[ITEMDEF 0403e]
+//gargoyle painting
+DUPEITEM=0403d
+
+[ITEMDEF 0403f]
+DEFNAME=i_sculpture_gargoyle
+NAME=gargoyle sculpture
+TYPE=t_normal
+VALUE=30
+WEIGHT=50.0
+RESOURCES=9 i_rock_plain,1 i_log_yew
+SKILLMAKE=Carpentry 85.0,t_masonry_tool
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Sculptures
+DESCRIPTION=Gargoyle Sculpture
+DUPELIST=04040
+
+[ITEMDEF 04040]
+//gargoyle sculpture
+DUPEITEM=0403f
+
+
+[ITEMDEF 04042]
+//Gargish vase (tall)
+FLIP=1
+DUPELIST=04043
+
+[ITEMDEF 04043]
+//Gargish vase (tall)
+DUPEITEM=04042
+
+[ITEMDEF 04044]
+DEFNAME=i_gargish_mirror_wall
+NAME=Gargish wall mirror
+FLIP=1
+WEIGHT=16.2
+RESOURCES=8 i_rock_plain,12 i_glass_raw
+SKILLMAKE=Alchemy 72.0,Carpentry 60.0,t_masonry_tool
+CATEGORY=Decoration - Furniture
+SUBSECTION=Bedroom Furniture
+DESCRIPTION=Gargish Wall Mirror
+DUPELIST=04045
+
+[ITEMDEF 04045]
+//Gargish mirror (wall)
+DUPEITEM=04044
+
+[ITEMDEF 04046]
+//Gargish mirror (tall)
+DUPEITEM=0403a
+
+
 [ITEMDEF 04077]
 DEFNAME=i_reag_dragon_blood_new
 TYPE=t_reagent
@@ -1897,63 +1991,17 @@ DEFNAME=i_basket_unfinished
 //unfinished basket frame
 //used in crafting menu to obfuscate basket images if the basketweaving skill is not known.
 
+
 [ITEMDEF 040bd]
-//pushme pullyou statue
+DEFNAME=i_statue_pushme_pullyou
+NAME=statue
+WEIGHT=120.0
+RESOURCES=12 i_rock_plain
+SKILLMAKE=Carpentry 88.0,t_masonry_tool
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Two Headed Horse
 
-[ITEMDEF 04102]
-DEFNAME=i_chest_pirate
-NAME=pirate chest
-TYPE=t_container
-TDATA2=0423
-FLIP=1
-VALUE=93
-WEIGHT=22.0
-RESOURCES=20 i_ingot_iron,2 i_board,1 i_nails
-SKILLMAKE=Tinkering 75.0,t_tinker_tools
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Pirate Chest
-DUPELIST=04106
-//FIXME: add an opening animation
-
-[ITEMDEF 04103]
-DEFNAME=i_chest_pirate_opened
-NAME=pirate chest
-TYPE=t_container
-TDATA2=0423
-FLIP=1
-VALUE=93
-WEIGHT=22.0
-RESOURCES=20 i_ingot_iron,2 i_board,1 i_nails
-SKILLMAKE=Tinkering 75.0,t_tinker_tools
-CATEGORY=Provisions - Miscellaneous
-SUBSECTION=Containers
-DESCRIPTION=Pirate Chest (opened)
-DUPELIST=04104,04105,04107,04108,04109
-
-[ITEMDEF 04104]
-//Pirate Chest (opened)
-DUPEITEM=04103
-
-[ITEMDEF 04105]
-//Pirate Chest (opened)
-DUPEITEM=04103
-
-[ITEMDEF 04106]
-//Pirate chest
-DUPEITEM=04102
-
-[ITEMDEF 04107]
-//Pirate Chest (opened)
-DUPEITEM=04103
-
-[ITEMDEF 04108]
-//Pirate Chest (opened)
-DUPEITEM=04103
-
-[ITEMDEF 04109]
-//Pirate Chest (opened)
-DUPEITEM=04103
 
 [ITEMDEF 0410a]
 DEFNAME=i_key_skeleton
@@ -1973,6 +2021,420 @@ ON=@Create
 [ITEMDEF 0410b]
 //skeleton key
 DUPEITEM=0410a
+
+
+[FUNCTION f_ResetMailboxFlag]
+LOCAL.HasAnItem=0
+FORCONT <UID> 0
+   LOCAL.HasAnItem += 1
+ENDFOR
+IF (<LOCAL.HasAnItem>)
+   ID=<TAG.FullID>
+ELSE
+   ID=<TAG.EmptyID>
+ENDIF
+UPDATE
+
+[TYPEDEF t_mailbox]
+//FIXME: Implement keys, secure locks, pickable locks, and traps.
+ON=@DropOn_Self
+   ID=<TAG.FullID>
+   UPDATE
+ON=@PickUp_Self
+   TIMERF 0,f_ResetMailboxFlag
+
+[ITEMDEF 04141]
+DEFNAME=i_mailbox_s
+NAME=mailbox
+TYPE=t_container
+TDATA2=011a
+TEVENTS=t_mailbox
+TAG.FullID=04141
+TAG.EmptyID=04142
+CATEGORY=House Decoration
+SUBSECTION=Mailbox
+DESCRIPTION=Mailbox South (full)
+
+[ITEMDEF 04142]
+NAME=mailbox
+TYPE=t_container
+TDATA2=011a
+TEVENTS=t_mailbox
+TAG.FullID=04141
+TAG.EmptyID=04142
+CATEGORY=House Decoration
+SUBSECTION=Mailbox
+DESCRIPTION=Mailbox South
+
+[ITEMDEF 04143]
+DEFNAME=i_mailbox_w
+NAME=mailbox
+TYPE=t_container
+TEVENTS=t_mailbox
+TDATA2=011a
+TAG.FullID=04143
+TAG.EmptyID=04144
+CATEGORY=House Decoration
+SUBSECTION=Mailbox
+DESCRIPTION=Mailbox West (full)
+
+[ITEMDEF 04144]
+NAME=mailbox
+TYPE=t_container
+TDATA2=011a
+TEVENTS=t_mailbox
+TAG.FullID=04143
+TAG.EmptyID=04144
+CATEGORY=House Decoration
+SUBSECTION=Mailbox
+DESCRIPTION=Mailbox West
+
+
+[ITEMDEF 041ad]
+DEFNAME=i_weaponstand1_full
+NAME=weapon stand
+TYPE=t_normal
+FLIP=1
+WEIGHT=34.0
+RESOURCES=i_weaponstand1,6 i_shortblade
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Weapon Stand 1 (full)
+DUPELIST=041b3
+
+[ITEMDEF 041ae]
+DEFNAME=i_weaponstand2_full
+NAME=weapon stand
+TYPE=t_normal
+FLIP=1
+WEIGHT=34.0
+RESOURCES=i_weaponstand2,6 i_shortblade
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Weapon Stand 2 (full)
+DUPELIST=041b4
+
+[ITEMDEF 041b3]
+//Weapon Stand 1 (full)
+DUPEITEM=041ad
+
+[ITEMDEF 041b4]
+//Weapon Stand 2 (full)
+DUPEITEM=041ae
+
+
+[ITEMDEF 041c0]
+DEFNAME=i_weaponstand1
+NAME=weapon stand
+TYPE=t_normal
+FLIP=1
+WEIGHT=20.0
+RESOURCES=20 i_board
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Weapon Stand 1
+DUPELIST=041cd
+
+[ITEMDEF 041c1]
+DEFNAME=i_weaponstand2
+NAME=weapon stand
+TYPE=t_normal
+FLIP=1
+WEIGHT=20.0
+RESOURCES=20 i_board
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Weapon Stand 2
+DUPELIST=041ce
+
+[ITEMDEF 041cd]
+//Weapon Stand 1
+DUPEITEM=041c0
+
+[ITEMDEF 041ce]
+//Weapon Stand 2
+DUPEITEM=041c1
+
+
+[ITEMDEF 041da]
+DEFNAME=i_mace_rack_full
+NAME=rack of maces
+TYPE=t_normal
+FLIP=1
+WEIGHT=44.0
+RESOURCES=10 i_log,6 i_mace
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Weapon Racks
+DESCRIPTION=Rack of Maces (full)
+DUPELIST=041db,041e6,041e7
+
+[ITEMDEF 041db]
+//Rack of Maces (full)
+DUPEITEM=041da
+
+[ITEMDEF 041e6]
+//Rack of Maces (full)
+DUPEITEM=041da
+
+[ITEMDEF 041e7]
+//Rack of Maces (full)
+DUPEITEM=041da
+
+
+[ITEMDEF 041fc]
+DEFNAME=i_harp_gargoyle
+NAME=Gargish harp
+TYPE=t_musical
+TDATA1=045
+TDATA2=046
+FLIP=1
+VALUE=37
+WEIGHT=14.0
+RESOURCES=10 i_log,4 i_wire_iron
+SKILLMAKE=Tinkering 56.5,Musicianship 65.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Bards
+DESCRIPTION=Gargish Harp
+DUPELIST=041fd
+
+[ITEMDEF 041fd]
+//Gargoyle Harp
+DUPEITEM=041fc
+
+[ITEMDEF 041fe]
+DEFNAME=i_weapon_rack_full
+NAME=weapon rack
+TYPE=t_normal
+FLIP=1
+WEIGHT=34.0
+RESOURCES=10 i_log,6 i_shortblade
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Weapon Rack (full)
+DUPELIST=041ff,0420e,0420f
+
+[ITEMDEF 041ff]
+//Weapon Rack (full)
+DUPEITEM=041fe
+
+[ITEMDEF 0420c]
+DEFNAME=i_lute_gargoyle
+NAME=Gargish lute
+TYPE=t_musical
+TDATA1=04c
+TDATA2=04d
+FLIP=1
+VALUE=18
+WEIGHT=7.0
+RESOURCES=6 i_log,1 i_wire_iron
+SKILLMAKE=Tinkering 52.0,Musicianship 65.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Bards
+DESCRIPTION=Lute (gargoyle)
+DUPELIST=0420d
+
+[ITEMDEF 0420d]
+//Lute (gargoyle)
+DUPEITEM=0420c
+
+[ITEMDEF 0420e]
+//Weapon Rack (full)
+DUPEITEM=041fe
+
+[ITEMDEF 0420f]
+//Weapon Rack (full)
+DUPEITEM=041fe
+
+
+[ITEMDEF 04214]
+DEFNAME=i_toy_rockinghorse
+NAME=rocking horse
+TYPE=t_normal
+FLIP=1
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Rocking Horse
+DUPELIST=04215
+
+[ITEMDEF 04215]
+//toy rocking horse
+DUPEITEM=04214
+
+
+[ITEMDEF 0421e]
+DEFNAME=i_weapon_rack_smallarms
+NAME=weapon rack
+TYPE=t_normal
+FLIP=1
+WEIGHT=34.0
+RESOURCES=10 i_log,6 i_gargish_dagger
+CATEGORY=Decoration - Weapons & Shields
+SUBSECTION=Sword Display
+DESCRIPTION=Weapon Rack (small arms)
+DUPELIST=0421f,04226,04227
+
+[ITEMDEF 0421f]
+//Weapon Rack (small arms)
+DUPEITEM=0421e
+
+[ITEMDEF 04226]
+//Weapon Rack (small arms)
+DUPEITEM=0421e
+
+[ITEMDEF 04227]
+//Weapon Rack (small arms)
+DUPEITEM=0421e
+
+
+[ITEMDEF 04244]
+DEFNAME=i_musical_instrument
+NAME=musical instrument
+TYPE=t_musical
+TDATA1=04c
+TDATA2=04d
+FLIP=1
+VALUE=18
+WEIGHT=7.0
+RESOURCES=6 i_log,1 i_wire_iron
+SKILLMAKE=Tinkering 52.0,Musicianship 65.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Bards
+DESCRIPTION=Musical Instrument
+DUPELIST=04245
+
+[ITEMDEF 04245]
+//Musical Instrument
+DUPEITEM=04244
+
+
+[ITEMDEF 042b2]
+DEFNAME=i_vase_gargoyle1
+WEIGHT=15.0
+RESOURCES=15 i_clay
+CATEGORY=Decoration - Potted Plants & Vases
+SUBSECTION=Vases & Pots
+DESCRIPTION=Large Gargish Vase 1
+
+[ITEMDEF 042b3]
+DEFNAME=i_vase_gargoyle2
+WEIGHT=15.0
+RESOURCES=15 i_clay
+CATEGORY=Decoration - Potted Plants & Vases
+SUBSECTION=Vases & Pots
+DESCRIPTION=Large Gargish Vase 1
+
+[ITEMDEF 042b4]
+DEFNAME=i_bottle_11_full
+NAME=pyramid bottle
+VALUE=13
+WEIGHT=1.0
+RESOURCES=5 i_glass_raw
+SKILLMAKE=Alchemy 50.0,t_glassblowing
+CATEGORY=Items by Professions
+SUBSECTION=Alchemist
+DESCRIPTION=Bottle 11 (full)
+
+[ITEMDEF 042b5]
+DEFNAME=i_skulls_spiked
+NAME=spiked skulls
+TYPE=t_normal
+WEIGHT=13.0
+RESOURCES=10 i_bone,3 i_bone_skull
+CATEGORY=Decoration - Dungeons and The Dead
+SUBSECTION=Bones
+DESCRIPTION=Spiked Skulls
+
+[ITEMDEF 042b6]
+DEFNAME=i_portrait_horror
+TYPE=t_normal
+FLIP=1
+WEIGHT=6.0
+RESOURCES=1 i_log_bamboo,4 i_cloth
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Gargish
+DESCRIPTION=Portrait
+
+[ITEMDEF 042b7]
+DEFNAME=i_book_greencover
+TYPE=t_book
+FLIP=1
+WEIGHT=2.0
+RESOURCES=20 i_paper
+CATEGORY=Items by Professions
+SUBSECTION=Artists
+DESCRIPTION=Book (green cover)
+
+[ITEMDEF 042b8]
+DEFNAME=i_book_evilcover
+TYPE=t_book
+FLIP=1
+WEIGHT=2.0
+RESOURCES=20 i_paper
+CATEGORY=Items by Professions
+SUBSECTION=Artists
+DESCRIPTION=Book (evil cover)
+
+[ITEMDEF 042b9]
+DEFNAME=i_potted_tree
+TYPE=t_normal
+WEIGHT=18.0
+RESOURCES=i_pot_flower_large,1 i_dirt
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Potted Trees
+DESCRIPTION=Potted Tree 1
+
+[ITEMDEF 042ba]
+DEFNAME=i_potted_tree_2
+TYPE=t_normal
+WEIGHT=18.0
+RESOURCES=i_pot_flower_large,1 i_dirt
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Potted Trees
+DESCRIPTION=Potted Tree 2
+
+
+[ITEMDEF 042c9]
+DEFNAME=i_banner_ultima
+NAME=Ultima banner
+WEIGHT=5.0
+RESOURCES=1 i_log,5 i_cloth
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Banners
+DESCRIPTION=Ultima Banner
+DUPELIST=042ca
+
+[ITEMDEF 042ca]
+//ultima banner
+DUPEITEM=042c9
+
+[ITEMDEF 042cb]
+DEFNAME=i_banner_chaos
+NAME=chaos banner
+WEIGHT=5.0
+RESOURCES=1 i_log,5 i_cloth
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Banners
+DESCRIPTION=Chaos Banner
+DUPELIST=042cc
+
+[ITEMDEF 042cc]
+//chaos banner
+DUPEITEM=042cb
+
+[ITEMDEF 042cd]
+DEFNAME=i_banner_serpent
+NAME=serpent banner
+WEIGHT=5.0
+RESOURCES=1 i_log,5 i_cloth
+CATEGORY=Decoration - Banners and Tapestries
+SUBSECTION=Banners
+DESCRIPTION=Serpent Banner
+DUPELIST=042ce
+
+[ITEMDEF 042ce]
+//serpent banner
+DUPEITEM=042cd
+
 
 [ITEMDEF 044d5]
 DEFNAME=i_grandfather_clock
@@ -2046,6 +2508,7 @@ DUPEITEM=044dd
 [ITEMDEF 044e4]
 //grandfather clock 2 (animation frame)
 
+
 [ITEMDEF 04515]
 //stackable bottle
 
@@ -2054,6 +2517,7 @@ DUPEITEM=044dd
 
 [ITEMDEF 04517]
 //stackable empty vial
+
 
 [ITEMDEF 04572]
 DEFNAME=i_icicles
@@ -2084,6 +2548,113 @@ DUPEITEM=04572
 [ITEMDEF 04577]
 //icicles
 DUPEITEM=04572
+
+
+[ITEMDEF 04580]
+DEFNAME=i_drum_gargoyle
+NAME=Gargish drum
+TYPE=t_musical
+TDATA1=038
+TDATA2=039
+VALUE=22
+WEIGHT=6.0
+RESOURCES=1 i_hides_cut,5 i_board
+SKILLMAKE=Tinkering 51.0,Musicianship 65.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Bards
+DESCRIPTION=Drum (gargoyle)
+DUPELIST=04581
+
+[ITEMDEF 04581]
+//gargoyle drum
+DUPEITEM=04580
+
+
+[ITEMDEF 045a6]
+DEFNAME=i_flute_gargoyle
+NAME=Gargish flute
+TYPE=t_musical
+TDATA1=058b
+TDATA2=058c
+FLIP=1
+VALUE=14
+WEIGHT=1.0
+RESOURCES=1 i_log_bamboo
+SKILLMAKE=Tinkering 52.0,Musicianship 65.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Bards
+DESCRIPTION=Gargish Flute
+DUPELIST=045a7
+
+[ITEMDEF 045a7]
+//Gargish Flute
+DUPEITEM=045a6
+
+
+[ITEMDEF 04686]
+DEFNAME=i_bottle_11_empty
+NAME=pyramid bottle
+VALUE=13
+WEIGHT=1.0
+RESOURCES=5 i_glass_raw
+SKILLMAKE=Alchemy 50.0,t_glassblowing
+CATEGORY=Items by Professions
+SUBSECTION=Alchemist
+DESCRIPTION=Bottle 11 (empty)
+
+
+[ITEMDEF 04699]
+DEFNAME=i_picture_ruined
+NAME=ruined picture
+FLIP=1
+WEIGHT=6.1
+RESOURCES=1 i_board,1 i_canvas
+CATEGORY=Decoration - Furniture
+SUBSECTION=Broken Furniture
+DESCRIPTION=Ruined Picture
+DUPELIST=0469a
+
+[ITEMDEF 0469a]
+//ruined picture
+DUPEITEM=04699
+
+[ITEMDEF 0469b]
+DEFNAME=i_scarecrow_2
+NAME=scarecrow
+FLIP=1
+VALUE=78
+WEIGHT=30.0
+RESOURCES=4 i_log,14 i_straw,1 i_rope,1 i_jackolantern
+SKILLMAKE=Carpentry 74.1,t_carpentry,Tailoring 65.3
+CATEGORY=Items by Professions
+SUBSECTION=Farmer
+DESCRIPTION=Scarecrow
+DUPELIST=0469c
+
+[ITEMDEF 0469c]
+//scarecrow 2
+DUPEITEM=0469b
+
+
+[ITEMDEF 046b6]
+//sea market buoy
+[ITEMDEF 046b7]
+//sea market buoy
+[ITEMDEF 046b8]
+//sea market buoy
+[ITEMDEF 046b9]
+//sea market buoy
+
+
+[ITEMDEF 046f8]
+//toy boura
+[ITEMDEF 046f9]
+//toy boura
+[ITEMDEF 046fa]
+//xmas tree angel
+[ITEMDEF 046fb]
+//xmas tree angel
+
 
 [ITEMDEF 048d4]
 DEFNAME=i_grandfather_clock_3
@@ -2147,6 +2718,234 @@ DUPELIST=048e3
 [ITEMDEF 048e3]
 //toy valentine bear 2
 DUPEITEM=048e2
+
+
+[ITEMDEF 0493b]
+DEFNAME=i_statue_gargoyle_gryphon
+NAME=gargoyle gryphon
+FLIP=1
+VALUE=150
+WEIGHT=20.0
+RESOURCES=2 i_rock_plain
+SKILLMAKE=Carpentry 20.0,t_masonry_tool
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Gargoyle Gryphon
+DUPELIST=0493c
+
+[ITEMDEF 0493c]
+//Gargoyle Gryphon
+DUPEITEM=0493b
+
+[ITEMDEF 0494d]
+DEFNAME=i_statue_gargoyle_traditional
+NAME=traditional gargoyle
+FLIP=1
+VALUE=150
+WEIGHT=20.0
+RESOURCES=2 i_rock_plain
+SKILLMAKE=Carpentry 20.0,t_masonry_tool
+CATEGORY=Decoration - Wall Carvings & Statues
+SUBSECTION=Statues
+DESCRIPTION=Traditional Gargoyle
+DUPELIST=0494e
+
+[ITEMDEF 0494e]
+//Traditional Gargoyle
+DUPEITEM=0494d
+
+
+[ITEMDEF 0495e]
+DEFNAME=i_jug_hooch
+NAME=hooch jug
+TYPE=t_booze
+VALUE=23
+WEIGHT=0.1
+RESOURCES=1 i_bottle,1 i_fruit_apple,1 i_pitcher_water,1 i_reag_fertile_dirt
+CATEGORY=Items by Professions
+SUBSECTION=BarKeep
+DESCRIPTION=Jug of Hooch
+DUPELIST=0495f
+
+[ITEMDEF 0495f]
+//Jug of Hooch
+DUPEITEM=0495e
+
+[ITEMDEF 04b44]
+DEFNAME=i_fishhook_magic
+NAME=magic fish hook
+FLIP=1
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_ingot_iron
+SKILLMAKE=Tinkering 21.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Fisherman
+DESCRIPTION=Magic Fish Hook
+DUPELIST=04b45
+
+[ITEMDEF 04b45]
+//Magic Fish Hook
+DUPEITEM=04b44
+
+[ITEMDEF 04b46]
+DEFNAME=i_fishhook
+NAME=fish hook
+FLIP=1
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_ingot_iron
+SKILLMAKE=Tinkering 21.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Fisherman
+DESCRIPTION=Fish Hook
+DUPELIST=04b47
+
+[ITEMDEF 04b46]
+//Fish Hook
+DUPEITEM=04b46
+
+[ITEMDEF 0981c]
+DEFNAME=i_training_dummy_advanced
+NAME=advanced training dummy
+TYPE=t_train_dummy
+VALUE=330
+WEIGHT=110.5
+RESOURCES=20 i_log,35 i_cloth,50 i_cotton,5 i_thread,5 i_hides_cut
+SKILLMAKE=Carpentry 85.0,Tailoring 70.0,t_carpentry,t_sewing_kit
+CATEGORY=Items by Professions
+SUBSECTION=Fighters
+DESCRIPTION=Training Dummy (advanced)
+DUPELIST=0981d,0981e,0981f,09820,09821,09822,09823,09824,09825,09834,09835,09836,09837,09838,09839
+ON=@Create
+   TAG.OVERRIDE.PRACTICEMAX.SKILL_40=75.0
+   TAG.OVERRIDE.PRACTICEMAX.SKILL_42=75.0
+
+[ITEMDEF 0981d]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 0981e]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 0981f]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09820]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09821]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09822]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09823]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09824]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09825]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09826]
+DEFNAME=i_training_dummy_advanced_frame
+NAME=advanced training dummy frame
+TYPE=t_normal
+FLIP=1
+VALUE=330
+WEIGHT=110.5
+RESOURCES=20 i_log,10 i_rope
+SKILLMAKE=Carpentry 15.0,t_carpentry
+CATEGORY=Items by Professions
+SUBSECTION=Fighters
+DESCRIPTION=Training Dummy (advanced) Frame
+DUPELIST=09827,09828,09829,0982a,0982b,0982c,0982d,0982e,0982f,09830,09831,09832,09833
+
+[ITEMDEF 09827]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 09828]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 09829]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 0982a]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 0982b]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 0982c]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 0982d]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 0982e]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 0982f]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 09830]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 09831]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 09832]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 09833]
+//advanced training dummy frame
+DUPEITEM=09826
+
+[ITEMDEF 09834]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09835]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09836]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09837]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09838]
+//advanced training dummy
+DUPEITEM=0981c
+
+[ITEMDEF 09839]
+//advanced training dummy
+DUPEITEM=0981c
 
 
 [EOF]

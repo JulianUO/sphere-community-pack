@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, April 25, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -1744,5 +1744,145 @@ DUPEITEM=030e3
 [ITEMDEF 030e6]
 //elven dresser parts
 DUPEITEM=030e3
+
+
+[ITEMDEF 0400c]
+DEFNAME=i_bed_small_gargish
+NAME=Gargish single bed
+TYPE=t_bed
+TDATA1=0
+FLIP=1
+VALUE=301
+WEIGHT=64.0
+RESOURCES=20 i_rock_granite,1 i_blanket,1 i_pillow_11
+SKILLMAKE=Carpentry 81.3,t_masonry_tool
+CATEGORY=Decoration - Furniture
+SUBSECTION=Bedroom Furniture
+DESCRIPTION=Gargish Single Bed
+DUPELIST=0400d,0400e,0400f
+
+[ITEMDEF 0400d]
+//Gargish single bed
+DUPEITEM=0400c
+
+[ITEMDEF 0400e]
+//Gargish single bed
+DUPEITEM=0400c
+
+[ITEMDEF 0400f]
+//Gargish single bed
+DUPEITEM=0400c
+
+
+[ITEMDEF 04010]
+DEFNAME=i_bed_large_gargish
+NAME=Gargish double bed
+TYPE=t_bed
+TDATA1=0
+FLIP=1
+VALUE=301
+WEIGHT=64.0
+RESOURCES=40 i_rock_granite,1 i_blanket,1 i_pillow_11
+SKILLMAKE=Carpentry 81.3,t_masonry_tool
+CATEGORY=Decoration - Furniture
+SUBSECTION=Bedroom Furniture
+DESCRIPTION=Gargish Double Bed
+DUPELIST=04011,04012,04013,04014,04015,04016,04017,04018,04019,0401a,0401b,0401c,0401d,0401e,0401f,04020,04021
+
+[ITEMDEF 04011]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 04012]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 04013]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 04014]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 04015]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 04016]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 04017]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 04018]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 04019]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 0401a]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 0401b]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 0401c]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 0401d]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 0401e]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 0401f]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 04020]
+//Gargish double bed
+DUPEITEM=04010
+
+[ITEMDEF 04021]
+//Gargish double bed
+DUPEITEM=04010
+
+
+[ITEMDEF 0402b]
+DEFNAME=i_gargish_dresser
+NAME=Gargish dresser
+TYPE=t_container
+FLIP=1
+WEIGHT=50
+RESOURCES=20 i_rock_plain
+SKILLMAKE=Carpentry 85.6,t_masonry_tool
+CATEGORY=Decoration - Furniture
+SUBSECTION=Bedroom Furniture
+DESCRIPTION=Gargish Dresser
+DUPELIST=0402c,0402d,0402e
+
+[ITEMDEF 0402c]
+//Gargish dresser
+DUPEITEM=0402b
+
+[ITEMDEF 0402d]
+//Gargish dresser
+DUPEITEM=0402b
+
+[ITEMDEF 0402e]
+//Gargish dresser
+DUPEITEM=0402b
+
+
 
 [EOF]

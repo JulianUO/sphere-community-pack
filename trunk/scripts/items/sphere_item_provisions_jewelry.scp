@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, April 2, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -132,6 +132,58 @@ SKILLMAKE=Tinkering 62.0,t_tinker_tools
 CATEGORY=Provisions - Jewels and Jewelry
 SUBSECTION=Jewelry
 DESCRIPTION=Bead Necklace (silver)
+
+[ITEMDEF 02f58]
+DEFNAME=i_talisman1
+NAME=talisman
+TYPE=t_jewelry
+//ARMOR=20
+LAYER=layer_talisman
+WEIGHT=0.1
+RESOURCES=1 i_ingot_iron,1 i_wire_iron,1 i_scroll_protection
+CATEGORY=Provisions - Talismans
+SUBSECTION=Talismans
+DESCRIPTION=Talisman 1
+TEVENTS=t_iprop
+
+[ITEMDEF 02f59]
+DEFNAME=i_talisman2
+NAME=talisman
+TYPE=t_jewelry
+//ARMOR=20
+LAYER=layer_talisman
+WEIGHT=0.1
+RESOURCES=1 i_ingot_iron,1 i_wire_iron,1 i_scroll_protection
+CATEGORY=Provisions - Talismans
+SUBSECTION=Talismans
+DESCRIPTION=Talisman 2
+TEVENTS=t_iprop
+
+[ITEMDEF 02f5a]
+DEFNAME=i_talisman3
+NAME=talisman
+TYPE=t_jewelry
+//ARMOR=20
+LAYER=layer_talisman
+WEIGHT=0.1
+RESOURCES=1 i_ingot_iron,1 i_wire_iron,1 i_scroll_protection
+CATEGORY=Provisions - Talismans
+SUBSECTION=Talismans
+DESCRIPTION=Talisman 3
+TEVENTS=t_iprop
+
+[ITEMDEF 02f5b]
+DEFNAME=i_talisman4
+NAME=Talisman
+TYPE=t_jewelry
+//ARMOR=20
+LAYER=layer_talisman
+WEIGHT=0.1
+RESOURCES=1 i_ingot_iron,1 i_wire_iron,1 i_scroll_protection
+CATEGORY=Provisions - Talismans
+SUBSECTION=Talismans
+DESCRIPTION=Talisman 4
+TEVENTS=t_iprop
 
 [ITEMDEF 03bb5]
 DEFNAME=i_pendant_ankh

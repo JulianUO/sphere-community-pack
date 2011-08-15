@@ -92,6 +92,32 @@ DESCRIPTION=Essence of Diligence
 ON=@Create
    COLOR=1166
 
+[ITEMDEF i_essence_direction]
+// Is the imbuing ingredient used to imbue the Velocity property onto Archery weapons.
+ID=i_essence_virtue
+NAME=essence of direction
+TYPE=t_normal
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Essence of Direction
+ON=@Create
+   COLOR=1099
+
+[ITEMDEF i_essence_feeling]
+// Is the imbuing ingredient used to imbue the Hit Magic Arrow property onto weapons.
+ID=i_essence_virtue
+NAME=essence of feeling
+TYPE=t_normal
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Essence of Feeling
+ON=@Create
+   COLOR=1196
+
 [ITEMDEF i_essence_order]
 // Is the imbuing ingredient used to imbue the Lower Mana Cost property.
 ID=i_essence_virtue
@@ -117,6 +143,19 @@ SUBSECTION=Imbuing
 DESCRIPTION=Essence of Passion
 ON=@Create
    COLOR=1161
+
+[ITEMDEF i_essence_persistence]
+// Is the imbuing ingredient used to imbue ????.
+ID=i_essence_virtue
+NAME=essence of persistence
+TYPE=t_normal
+VALUE=100
+WEIGHT=5.0
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Essence of Persistence
+ON=@Create
+   COLOR=1209
 
 [ITEMDEF i_essence_precision]
 // Is the imbuing ingredient used to imbue the Hit Chance Increase property.
@@ -144,7 +183,6 @@ SUBSECTION=Imbuing
 DESCRIPTION=Essence of Singularity
 ON=@Create
    COLOR=1175
-
 
 [ITEMDEF 05720]
 // Is an imbuing ingredient used to imbue Arachnid Slayer property.
@@ -346,9 +384,17 @@ SUBSECTION=Imbuing
 DESCRIPTION=Crushed Glass
 
 [ITEMDEF 0573c]
-//arcanic runestone
 // Is an Imbuing ingredient needed to imbue the Mage Weapon property onto weapons.
-//90 Tinkering and 80 Magery can craft Arcanic Rune Stone by using a tinkering tool along with 1 Crystal Shards and 5 Power Crystals.
+DEFNAME=i_arcanic_runestone
+NAME=arcanic runestone
+TYPE=t_normal
+VALUE=250
+WEIGHT=1.0
+RESOURCES=5 i_power_crystal,1 i_crystal_shards
+SKILLMAKE=Tinkering 90.0,Magery 80.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Imbuing
+DESCRIPTION=Arcanic Runestone
 
 [ITEMDEF 0573d]
 // Is an imbuing ingredient used to imbue the durability property.
@@ -490,7 +536,6 @@ WEIGHT=0.1
 CATEGORY=Items by Professions
 SUBSECTION=Imbuing
 DESCRIPTION=Reflective Wolf Eye
-
 
 
 [EOF]

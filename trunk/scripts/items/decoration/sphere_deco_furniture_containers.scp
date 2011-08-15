@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, April 29, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -1043,6 +1043,135 @@ DUPELIST=04026
 //gargoyle chest
 DUPEITEM=04025
 
+
+[ITEMDEF 04102]
+DEFNAME=i_chest_pirate
+NAME=pirate chest
+TYPE=t_container
+TDATA2=0423
+FLIP=1
+VALUE=93
+WEIGHT=22.0
+RESOURCES=20 i_ingot_iron,2 i_board,1 i_nails
+SKILLMAKE=Tinkering 75.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Pirate Chest
+DUPELIST=04106
+//FIXME: add an opening animation
+
+[ITEMDEF 04103]
+DEFNAME=i_chest_pirate_opened
+NAME=pirate chest
+TYPE=t_container
+TDATA2=0423
+FLIP=1
+VALUE=93
+WEIGHT=22.0
+RESOURCES=20 i_ingot_iron,2 i_board,1 i_nails
+SKILLMAKE=Tinkering 75.0,t_tinker_tools
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Pirate Chest (opened)
+DUPELIST=04104,04105,04107,04108,04109
+
+[ITEMDEF 04104]
+//Pirate Chest (opened)
+DUPEITEM=04103
+
+[ITEMDEF 04105]
+//Pirate Chest (opened)
+DUPEITEM=04103
+
+[ITEMDEF 04106]
+//Pirate chest
+DUPEITEM=04102
+
+[ITEMDEF 04107]
+//Pirate Chest (opened)
+DUPEITEM=04103
+
+[ITEMDEF 04108]
+//Pirate Chest (opened)
+DUPEITEM=04103
+
+[ITEMDEF 04109]
+//Pirate Chest (opened)
+DUPEITEM=04103
+
+
+[ITEMDEF 046a2]
+DEFNAME=i_giftbox2
+NAME=gift box
+TYPE=t_container
+TDATA2=011b
+//TDATA3=100,100//FIXME
+WEIGHT=9.4
+RESOURCES=9 i_board,2 i_nails,1 i_paper,1 i_ribbon
+SKILLMAKE=Carpentry 21.0,t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Gift Box 2
+
+[ITEMDEF 046a3]
+DEFNAME=i_giftbox3
+NAME=gift box
+TYPE=t_container
+TDATA2=011c
+//TDATA3=100,100//FIXME
+WEIGHT=9.4
+RESOURCES=9 i_board,2 i_nails,1 i_paper,1 i_ribbon
+SKILLMAKE=Carpentry 21.0,t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Gift Box 3
+
+[ITEMDEF 046a4]
+DEFNAME=i_giftbox4
+NAME=gift box
+TYPE=t_container
+TDATA2=011d
+//TDATA3=100,100//FIXME
+WEIGHT=9.4
+RESOURCES=9 i_board,2 i_nails,1 i_paper,1 i_ribbon
+SKILLMAKE=Carpentry 21.0,t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Gift Box 4
+
+[ITEMDEF 046a5]
+DEFNAME=i_giftbox5
+NAME=gift box
+TYPE=t_container
+FLIP=1
+TDATA2=011e
+//TDATA3=100,100//FIXME
+WEIGHT=9.4
+RESOURCES=9 i_board,2 i_nails,1 i_paper,1 i_ribbon
+SKILLMAKE=Carpentry 21.0,t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Gift Box 5
+DUPELIST=046a6
+
+[ITEMDEF 046a6]
+//Gift Box 5
+DUPEITEM=046a5
+
+[ITEMDEF 046a7]
+DEFNAME=i_giftbox6
+NAME=gift box
+TYPE=t_container
+TDATA2=011f
+//TDATA3=100,100//FIXME
+WEIGHT=9.4
+RESOURCES=9 i_board,2 i_nails,1 i_paper,1 i_ribbon
+SKILLMAKE=Carpentry 21.0,t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Gift Box 6
+
+
 [ITEMDEF 04910]
 DEFNAME=i_chest_gothic
 NAME=gothic chest
@@ -1060,5 +1189,81 @@ DUPELIST=04911
 [ITEMDEF 04911]
 //gothic chest
 DUPEITEM=04910
+
+[ITEMDEF 049c8]
+DEFNAME=i_giftbox7
+NAME=gift box
+TYPE=t_container
+FLIP=1
+TDATA2=0121
+//TDATA3=100,100//FIXME
+WEIGHT=9.4
+RESOURCES=9 i_board,2 i_nails,1 i_paper,1 i_ribbon
+SKILLMAKE=Carpentry 21.0,t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Gift Box 7
+DUPELIST=049c9
+
+[ITEMDEF 049c9]
+//Gift Box 7
+DUPEITEM=049c8
+
+[ITEMDEF 049ca]
+DEFNAME=i_giftbox8
+NAME=valentine gift box
+TYPE=t_container
+FLIP=1
+TDATA2=0120
+//TDATA3=100,100//FIXME
+WEIGHT=9.4
+RESOURCES=9 i_board,2 i_nails,1 i_paper,1 i_ribbon
+SKILLMAKE=Carpentry 21.0,t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Gift Box 8 (valentine)
+DUPELIST=049cb
+
+[ITEMDEF 049cb]
+//Gift Box 8 (valentine)
+DUPEITEM=049ca
+
+[ITEMDEF 049cc]
+DEFNAME=i_giftbox9
+NAME=valentine gift box
+TYPE=t_container
+FLIP=1
+TDATA2=0120
+//TDATA3=100,100//FIXME
+WEIGHT=9.4
+RESOURCES=9 i_board,2 i_nails,1 i_paper,1 i_ribbon
+SKILLMAKE=Carpentry 21.0,t_carpentry
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Gift Box 8 (animated valentine)
+DUPELIST=049d0
+
+[ITEMDEF 049cd]
+//animation stage of Gift Box 8
+
+[ITEMDEF 049ce]
+//animation stage of Gift Box 8
+
+[ITEMDEF 049cf]
+//animation stage of Gift Box 8
+
+[ITEMDEF 049d0]
+//Gift Box 8 (animated valentine)
+DUPEITEM=049cc
+
+[ITEMDEF 049d1]
+//animation stage of Gift Box 8
+
+[ITEMDEF 049d2]
+//animation stage of Gift Box 8
+
+[ITEMDEF 049d3]
+//animation stage of Gift Box 8
+
 
 [EOF]

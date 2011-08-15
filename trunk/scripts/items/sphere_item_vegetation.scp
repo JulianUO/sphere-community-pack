@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, July 9, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -3733,19 +3733,19 @@ DUPELIST=02472,02473,02474,02475
 
 [ITEMDEF 02472]
 //cherry tree foliage
-DUPEITEM=0246c
+DUPEITEM=02471
 
 [ITEMDEF 02473]
 //cherry tree foliage
-DUPEITEM=0246c
+DUPEITEM=02471
 
 [ITEMDEF 02474]
 //cherry tree foliage
-DUPEITEM=0246c
+DUPEITEM=02471
 
 [ITEMDEF 02475]
 //cherry tree foliage
-DUPEITEM=0246c
+DUPEITEM=02471
 
 [ITEMDEF 02476]
 DEFNAME=i_tree_cherry_trunk
@@ -3833,6 +3833,30 @@ DUPEITEM=026ef
 [ITEMDEF 026f3]
 //plum tree foliage
 DUPEITEM=026ef
+
+[ITEMDEF 02cf9]
+NAME=Decorative Vines
+CATEGORY=Vegetation
+SUBSECTION=Decorative
+DESCRIPTION=Decorative Vines
+
+[ITEMDEF 02cfa]
+NAME=Decorative Vines
+CATEGORY=Vegetation
+SUBSECTION=Decorative
+DESCRIPTION=Decorative Vines
+
+[ITEMDEF 02cfb]
+NAME=Decorative Vines
+CATEGORY=Vegetation
+SUBSECTION=Decorative
+DESCRIPTION=Decorative Vines
+
+[ITEMDEF 02cfc]
+NAME=Decorative Vines
+CATEGORY=Vegetation
+SUBSECTION=Decorative
+DESCRIPTION=Decorative Vines
 
 [ITEMDEF 0309c]
 DEFNAME=i_tree_tall_pine_trunk
@@ -4249,6 +4273,27 @@ TYPE=t_foliage
 NAME=apples
 TYPE=t_foliage
 
+[ITEMDEF 04128]
+DEFNAME=i_gargoyle_tower_vines
+NAME=gargoyle tower vines
+FLIP=1
+CATEGORY=Vegetation
+SUBSECTION=Decorative
+DESCRIPTION=Gargoyle Tower Vines
+DUPELIST=04129,0412a,0412b
+
+[ITEMDEF 04129]
+//Gargoyle Tower Vines
+DUPEITEM=04128
+
+[ITEMDEF 0412a]
+//Gargoyle Tower Vines
+DUPEITEM=04128
+
+[ITEMDEF 0412b]
+//Gargoyle Tower Vines
+DUPEITEM=04128
+
 [ITEMDEF 04792]
 DEFNAME=i_crop_ruinplant
 NAME=ruin plant
@@ -4293,5 +4338,65 @@ CATEGORY=Vegetation
 SUBSECTION=Plants and Flowers
 DESCRIPTION=Ruin Plant North (flowering)
 
+
+[ITEMDEF 04919]
+DEFNAME=i_topiary_goblin
+NAME=topiary goblin
+FLIP=1
+TYPE=t_normal
+WEIGHT=12.0
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Topiary Goblin
+DUPELIST=0491a
+
+[ITEMDEF 0491a]
+//Topiary Goblin
+DUPEITEM=04919
+
+[ITEMDEF 0491b]
+DEFNAME=i_topiary_llama
+NAME=topiary llama
+FLIP=1
+TYPE=t_normal
+WEIGHT=12.0
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Topiary Llama
+DUPELIST=04930
+
+[ITEMDEF 04930]
+//Topiary Llama
+DUPEITEM=0491b
+
+[ITEMDEF 04960]
+DEFNAME=i_topiary_goblin_2
+NAME=topiary goblin
+FLIP=1
+TYPE=t_normal
+WEIGHT=12.0
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Topiary Goblin 2
+DUPELIST=04966
+
+[ITEMDEF 04966]
+//Topiary Goblin 2
+DUPEITEM=04960
+
+[ITEMDEF 0497d]
+DEFNAME=i_topiary_ostard
+NAME=topiary ostard
+FLIP=1
+TYPE=t_normal
+WEIGHT=12.0
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Holiday Gifts
+DESCRIPTION=Topiary Ostard
+DUPELIST=0497e
+
+[ITEMDEF 0497e]
+//Topiary Ostard
+DUPEITEM=0497d
 
 [EOF]

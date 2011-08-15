@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, July 10, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -815,5 +815,23 @@ DUPEITEM=01d99
 [ITEMDEF 01d9e]
 //spike trap
 DUPEITEM=01d99
+
+[ITEMDEF 04004]
+DEFNAME=i_trap_goblin
+NAME=a strange device
+TYPE=t_trap
+RESOURCES=1 i_rock_plain,1 i_springs
+CATEGORY=Traps
+SUBSECTION=Goblin Trap
+DESCRIPTION=Goblin Trap (armed)
+
+[ITEMDEF 04140]
+//DEFNAME=i_trap_goblin_active
+NAME=a strange device
+TYPE=t_trap
+RESOURCES=1 i_rock_plain,1 i_springs
+CATEGORY=Traps
+SUBSECTION=Goblin Trap
+DESCRIPTION=Goblin Trap
 
 [EOF]

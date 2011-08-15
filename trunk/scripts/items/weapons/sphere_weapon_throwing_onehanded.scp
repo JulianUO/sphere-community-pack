@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, April 25, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -71,6 +71,11 @@ ON=@Create
 [ITEMDEF 0406c]
 DUPEITEM=0901
 
+[ITEMDEF 048d3]
+DEFNAME=i_cyclone_animation
+NAME=cyclone
+TYPE=t_normal
+
 
 ///////////////////////////////////////////////////////////////
 //////// SOUL GLAIVES
@@ -111,6 +116,11 @@ DUPELIST=04069
 
 [ITEMDEF 04069]
 DUPEITEM=0909
+
+[ITEMDEF 048d2]
+DEFNAME=i_glaive_animation
+NAME=glaive
+TYPE=t_normal
 
 
 ///////////////////////////////////////////////////////////////

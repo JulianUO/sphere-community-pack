@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, April 25, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -286,7 +286,7 @@ SKILLMAKE=Blacksmithing 70.0
 CATEGORY=Provisions - Weapons - Swordsmanship
 SUBSECTION=Elven Machetes
 DESCRIPTION=Bone Machete
-TAG.REQSTR=20
+REQSTR=20
 TAG.NotGargoyle=1
 TEVENTS=t_iprop
 ON=@Create
@@ -916,6 +916,124 @@ ON=@Create
 
 [ITEMDEF 04073]
 DUPEITEM=090c
+
+
+///////////////////////////////////////////////////////////////
+//////// GARGISH SWORDS
+///////////////////////////////////////////////////////////////
+
+[ITEMDEF 048ae]
+DEFNAME=i_gargish_cleaver
+NAME=Gargish cleaver
+TYPE=t_weapon_sword
+DAM=11,13
+FLIP=1
+SKILL=Swordsmanship
+SPEED=50//FIXME
+VALUE=100
+WEIGHT=3.0
+TWOHANDS=N
+RESOURCES=3 i_ingot_iron
+SKILLMAKE=Tinkering 20.0,t_tinker_tools
+CATEGORY=Provisions - Weapons
+SUBSECTION=Swordsmanship
+DESCRIPTION=Gargish Cleaver
+REQSTR=10
+TAG.GargoyleOnly=1
+TEVENTS=t_iprop
+DUPELIST=048af
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048af]
+//Gargish cleaver
+DUPEITEM=048ae
+
+
+[ITEMDEF 048b6]
+DEFNAME=i_gargish_knife_butcher
+NAME=Gargish butcher knife
+TYPE=t_weapon_sword
+DAM=9,11
+FLIP=1
+SKILL=Swordsmanship
+SPEED=53//FIXME
+VALUE=11
+WEIGHT=2.0
+TWOHANDS=N
+RESOURCES=2 i_ingot_iron
+SKILLMAKE=Tinkering 0.0,t_tinker_tools
+CATEGORY=Provisions - Weapons
+SUBSECTION=Swordsmanship
+DESCRIPTION=Gargish Butcher Knife
+REQSTR=5
+TAG.GargoyleOnly=1
+TEVENTS=t_iprop
+DUPELIST=048b7
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048b7]
+//gargish butcher knife
+DUPEITEM=048b6
+
+[ITEMDEF 048ba]
+DEFNAME=i_gargish_katana
+NAME=Gargish katana
+TYPE=t_weapon_sword
+DAM=11,13
+FLIP=1
+SKILL=Swordsmanship
+SPEED=50//FIXME
+VALUE=56
+WEIGHT=6.0
+TWOHANDS=N
+RESOURCES=8 i_ingot_iron
+SKILLMAKE=Blacksmithing 44.1
+CATEGORY=Provisions - Weapons
+SUBSECTION=Swordsmanship
+DESCRIPTION=Gargish Katana
+TAG.GargoyleOnly=1
+REQSTR=25
+TEVENTS=t_iprop
+DUPELIST=048bb
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048bb]
+//gargish katana
+DUPEITEM=048ba
+
+
+[ITEMDEF 048c6]
+DEFNAME=i_gargish_bone_harvester
+NAME=Gargish bone harvester
+TYPE=t_weapon_sword
+DAM=13,15
+FLIP=1
+SKILL=Swordsmanship
+SPEED=44//FIXME
+VALUE=55
+WEIGHT=3.0
+TWOHANDS=N
+RESOURCES=10 i_ingot_iron,1 i_log
+SKILLMAKE=Blacksmithing 33.0
+CATEGORY=Provisions - Weapons
+SUBSECTION=Swordsmanship
+DESCRIPTION=Gargish Bone Harvester
+REQSTR=25
+TEVENTS=t_iprop
+DUPELIST=048c7
+ON=@Create
+   HITPOINTS={36 48}
+   f_AddMagicTags 1 1
+
+[ITEMDEF 048c7]
+//Gargish bone harvester
+DUPEITEM=048c6
 
 
 [EOF]

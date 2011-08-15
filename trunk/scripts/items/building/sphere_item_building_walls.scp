@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, July 9, 2011
+// FILE LAST UPDATED: Sunday, August 14, 2011
 VERSION=0.56b
 
 
@@ -7092,6 +7092,580 @@ DUPEITEM=03ef2
 [ITEMDEF 04145]
 //stone wall 3 (with entrance)
 DUPEITEM=07a
+
+[ITEMDEF 04114]
+DEFNAME=i_wall_stone_aged
+NAME=wall
+TYPE=t_wall
+RESOURCES=200 i_stone_plain
+CATEGORY=Buildings - Walls
+SUBSECTION=Aged Stone Wall
+DESCRIPTION=Wall
+DUPELIST=04115,04116,04117,04118,04119,0411a,0411b,0411c,0411d,0411e,0411f,04120,04121,04122,04123,04124,04125,04126,04127,0412c,0412d,0412e,0412f
+
+[ITEMDEF 04115]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04116]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04117]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04118]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04119]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 0411a]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 0411b]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 0411c]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 0411d]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 0411e]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 0411f]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04120]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04121]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04122]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04123]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04124]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04125]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04126]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 04127]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 0412c]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 0412d]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 0412e]
+//Aged Stone Wall
+DUPEITEM=04114
+
+[ITEMDEF 0412f]
+//Aged Stone Wall
+DUPEITEM=04114
+
+
+[ITEMDEF 04146]
+DEFNAME=i_wall_set_1
+NAME=wall
+TYPE=t_wall
+RESOURCES=100 i_rock_granite
+CATEGORY=Buildings - Walls
+SUBSECTION=Gargish Wall Set 1
+DESCRIPTION=Full Wall
+DUPELIST=04147,0414c,0414d,0414e,0414f,04150,04151,04152,04153,04154,04155,04156,04157,04158,04159,0415a,0415b,0415c,0415d,0415e,0415f,04160,04161,04162,04163,04166,04167,04168,04169,0416a,0416b
+
+[ITEMDEF 04147]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04148]
+//stone ruin
+[ITEMDEF 04149]
+//stone ruin
+[ITEMDEF 0414a]
+//stone ruin
+[ITEMDEF 0414b]
+//stone ruin
+
+[ITEMDEF 0414c]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0414d]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0414e]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0414f]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04150]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04151]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04152]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04153]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04154]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04155]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04156]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04157]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04158]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04159]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0415a]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0415b]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0415c]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0415d]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0415e]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0415f]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04160]
+//wall set 1 (window)
+DUPEITEM=04146
+NAME=window
+
+[ITEMDEF 04161]
+//wall set 1 (window)
+DUPEITEM=04146
+NAME=window
+
+[ITEMDEF 04162]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04163]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04164]
+//stone ruin
+[ITEMDEF 04165]
+//stone ruin
+
+[ITEMDEF 04166]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04167]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04168]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 04169]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0416a]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0416b]
+//wall set 1
+DUPEITEM=04146
+
+[ITEMDEF 0416c]
+DEFNAME=i_wall_blue_marble
+NAME=blue marble wall
+TYPE=t_wall
+RESOURCES=100 i_rock_marble
+CATEGORY=Buildings - Walls
+SUBSECTION=Gargish Blue Marble
+DESCRIPTION=Full Wall
+DUPELIST=0416d,0416e,0416f,04174,04175,04176,04177,04178,04179,0417a,0417b,0417c,0417d,0417e,0417f,04180,04181,04182,04183,04184,04185
+
+[ITEMDEF 0416d]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 0416e]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 0416f]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 04170]
+//wall set 2
+[ITEMDEF 04171]
+//wall set 2
+[ITEMDEF 04172]
+//wall set 2
+[ITEMDEF 04173]
+//wall set 2
+
+[ITEMDEF 04174]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 04175]
+//blue marble wall (window)
+DUPEITEM=0416c
+NAME=window
+
+[ITEMDEF 04176]
+//blue marble wall (window)
+DUPEITEM=0416c
+NAME=window
+
+[ITEMDEF 04177]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 04178]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 04179]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 0417a]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 0417b]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 0417c]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 0417d]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 0417e]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 0417f]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 04180]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 04181]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 04182]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 04183]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 04184]
+//blue marble wall
+DUPEITEM=0416c
+
+[ITEMDEF 04185]
+//blue marble wall
+DUPEITEM=0416c
+
+
+[ITEMDEF 046be]
+DEFNAME=i_stone_ruin_again
+CATEGORY=Buildings - Walls
+SUBSECTION=Stygian Abyss
+DESCRIPTION=Stone Ruins
+DUPELIST=046bf,046c0,046c1,046c2,046c3,046c4,046c5,046c6,046c7,046c8,046c9,046ca,046cb,046d0,046d1,046d2,046d3,046d4,046d5,046d6,046d7,046d8,046da,046db,046dc,04719,0471a,0471b,0471c,0471d,0471e,0471f,04720,0477d,0477e,0477f,04780,04781,04782,04783,04784,04785,04786,04787,04788,04789,0478a,0478b,0478c,0478d,0478e,0478f
+
+[ITEMDEF 046bf]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046c0]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046c1]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046c2]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046c3]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046c4]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046c5]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046c6]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046c7]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046c8]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046c9]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046ca]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046cb]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046d0]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046d1]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046d2]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046d3]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046d4]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046d5]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046d6]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046d7]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046d8]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046da]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046db]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 046dc]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04719]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0471a]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0471b]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0471c]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0471d]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0471e]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0471f]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04720]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0477d]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0477e]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0477f]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04780]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04781]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04782]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04783]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04784]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04785]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04786]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04787]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04788]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 04789]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0478a]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0478b]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0478c]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0478d]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0478e]
+//Stone Ruins
+DUPEITEM=046be
+
+[ITEMDEF 0478f]
+//Stone Ruins
+DUPEITEM=046be
 
 
 [EOF]
