@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, August 14, 2011
+// FILE LAST UPDATED: Sunday, August 21, 2011
 VERSION=0.56b
 
 
@@ -6778,7 +6778,7 @@ RESOURCES=100 i_crystal_ice
 CATEGORY=Buildings - Walls
 SUBSECTION=Crystal Wall
 DESCRIPTION=Crystal Wall
-DUPELIST=035d8,035d9,035da,035db,035dc,035dd,035de,035df,035e0,035e1,035e2,035e3,035e4,035e5,035e6,035e7,035e8,03670,03671,03672,03673
+DUPELIST=035d8,035d9,035da,035db,035dc,035dd,035de,035df,035e0,035e1,035e2,035e3,035e4,035e5,035e6,03670,03671,03672,03673
 
 [ITEMDEF 035d8]
 //Crystal wall
@@ -6840,14 +6840,6 @@ DUPEITEM=035d7
 //Crystal wall
 DUPEITEM=035d7
 
-[ITEMDEF 035e7]
-//Crystal wall
-DUPEITEM=035d7
-
-[ITEMDEF 035e8]
-//Crystal wall
-DUPEITEM=035d7
-
 
 [ITEMDEF 0360e]
 DEFNAME=i_wall_shadow
@@ -6856,7 +6848,7 @@ TYPE=t_wall
 RESOURCES=100 i_rock_plain
 CATEGORY=Buildings - Walls
 SUBSECTION=Shadow Wall
-DUPELIST=0360f,03610,03611,03612,03613,03614,03615,03616,03617,03618,03619,03636,03637,03638,03639,0363a.0363b,0363c,0363d,0363e,0363f,03647,03648,03649,0364a,03674,03675,03676,03677
+DUPELIST=0360f,03610,03611,03612,03613,03614,03615,03616,03617,03618,03619,03636,03637,03638,03639,0363a.0363b,0363c,0363d,0363e,0363f,03647,03648,03649,0364a,03674,03675,03676,03677,0369f
 
 [ITEMDEF 0360f]
 //Shadow Wall
@@ -6945,19 +6937,19 @@ DUPEITEM=0360e
 
 
 [ITEMDEF 03647]
-//Shadow Wall
+//Shadow Wall (carved)
 DUPEITEM=0360e
 
 [ITEMDEF 03648]
-//Shadow Wall
+//Shadow Wall (carved)
 DUPEITEM=0360e
 
 [ITEMDEF 03649]
-//Shadow Wall
+//Shadow Wall (carved)
 DUPEITEM=0360e
 
 [ITEMDEF 0364a]
-//Shadow Wall
+//Shadow Wall (carved)
 DUPEITEM=0360e
 
 
@@ -7007,7 +6999,7 @@ RESOURCES=100 i_ingot_iron
 CATEGORY=Buildings - Walls
 SUBSECTION=Wall Stone Circular 2
 DESCRIPTION=Wall Stone Circular
-DUPELIST=03ef3,03ef4,03ef5,03ef6,03ef7,03ef8,03ef9,03efa,03efb,03efc,03efd,03efe,03eff,03f00,03f01,03f02,03f03,03f04,03f05,03f06,0369f
+DUPELIST=03ef3,03ef4,03ef5,03ef6,03ef7,03ef8,03ef9,03efa,03efb,03efc,03efd,03efe,03eff,03f00,03f01,03f02,03f03,03f04,03f05,03f06
 
 [ITEMDEF 03ef3]
 //wall stone circular
