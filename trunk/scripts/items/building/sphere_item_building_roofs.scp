@@ -3,7 +3,7 @@
 //This script is part from the Sphere Community Script Pack.
 //You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-//FILE LAST UPDATED: Saturday, March 5, 2011
+//FILE LAST UPDATED: Sunday, August 21, 2011
 VERSION=0.56b
 
 
@@ -3109,46 +3109,6 @@ DUPEITEM=03623
 [ITEMDEF 03635]
 //Shadow Roof
 DUPEITEM=03623
-
-[ITEMDEF 03636]
-//Shadow Wall
-DUPEITEM=0360e
-
-[ITEMDEF 03637]
-//Shadow Wall
-DUPEITEM=0360e
-
-[ITEMDEF 03638]
-//Shadow Wall
-DUPEITEM=0360e
-
-[ITEMDEF 03639]
-//Shadow Wall
-DUPEITEM=0360e
-
-[ITEMDEF 0363a]
-//Shadow Wall
-DUPEITEM=0360e
-
-[ITEMDEF 0363b]
-//Shadow Wall
-DUPEITEM=0360e
-
-[ITEMDEF 0363c]
-//Shadow Wall
-DUPEITEM=0360e
-
-[ITEMDEF 0363d]
-//Shadow Wall
-DUPEITEM=0360e
-
-[ITEMDEF 0363e]
-//Shadow Wall
-DUPEITEM=0360e
-
-[ITEMDEF 0363f]
-//Shadow Wall
-DUPEITEM=0360e
 
 
 [EOF]

@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, April 25, 2011
+// FILE LAST UPDATED: Sunday, August 21, 2011
 VERSION=0.56b
 
 
@@ -1258,7 +1258,7 @@ WEIGHT=1
 CATEGORY=Ground Tiles
 SUBSECTION=Dirt
 DESCRIPTION=More Dirt
-DUPELIST=01b28,01b29,01b2a,01b2b,01b2c,01b2d,01b2e,01b2f,01b30,01b31,01b32,01b33,01b34,01b35,01b36,01b37,01b38,01b39,01b3a,01b3b,01b3c,01b3d,01b3e
+DUPELIST=01b28,01b29,01b2a,01b2b,01b2c,01b2d,01b2e,01b2f,01b30,01b31,01b32,01b33,01b34,01b35,01b36,01b37,01b38,01b39,01b3a,01b3b,01b3c,01b3d,01b3e,032c9,032ca
 
 [ITEMDEF 01b28]
 //dirt
@@ -3308,12 +3308,13 @@ DUPEITEM=03286
 DUPEITEM=03286
 
 
-
 [ITEMDEF 032c9]
-//FIXME: dirt? farmer field?
+//dirt
+DUPEITEM=01b27
 
 [ITEMDEF 032ca]
-//FIXME: dirt? farmer field?
+//dirt
+DUPEITEM=01b27
 
 
 [ITEMDEF 03421]
