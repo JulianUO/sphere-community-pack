@@ -2182,21 +2182,6 @@ ON=@Death
    NEW.P=<P>     // under body
    NEW.TIMERD=1  // immediate decay
 
-[CHARDEF 0402]
-//FIXME: Giant Turkey
-DEFNAME=c_turkey_giant
-NAME=giant turkey
-
-[CHARDEF 042c]
-//FIXME: Needs scripting
-DEFNAME=c_scalis
-NAME=scalis
-
-[CHARDEF 042d]
-//FIXME: Needs scripting
-DEFNAME=c_hellhound_ancient
-NAME=ancient hellhound
-
 [CHARDEF 042e]
 //FIXME: Needs scripting
 DEFNAME=c_werewolf

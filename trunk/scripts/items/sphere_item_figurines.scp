@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, March 27, 2011
+// FILE LAST UPDATED: Sunday, August 21, 2011
 VERSION=0.56b
 
 
@@ -2996,7 +2996,7 @@ SUBSECTION=Character Icons
 DESCRIPTION=Darknight Creeper
 
 [ITEMDEF 03ffd]
-DEFNAME=i_hellhound_ancient
+DEFNAME=i_pet_hellhound_ancient
 NAME=ancient hellhound
 TYPE=t_figurine
 TDATA3=c_hellhound_ancient
@@ -3354,5 +3354,20 @@ TDATA3=c_wolf_leather
 CATEGORY=Miscellaneous
 SUBSECTION=Character Icons
 DESCRIPTION=Leather Wolf (frame)
+
+[ITEMDEF 046f8]
+DEFNAME=i_pet_boura_armoured
+NAME=Armoured Boura
+TYPE=t_figurine
+FLIP=1
+TDATA3=c_boura_armoured
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Armoured Boura
+DUPELIST=046f9
+
+[ITEMDEF 046f9]
+//armoured boura
+DUPEITEM=046f8
 
 [EOF]

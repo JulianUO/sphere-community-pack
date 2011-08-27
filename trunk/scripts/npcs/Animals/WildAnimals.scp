@@ -1775,6 +1775,92 @@ ON=@DeathCorpse
    ENDDO
 
 
+[CHARDEF 0402]
+NAME=giant turkey
+CAN=MT_NONMOVER|MT_NONHUM
+//ICON=i_pet_fixme
+//SOUND=snd_animal_fixme
+CAN=MT_WALK|MT_FLY|MT_NONHUM
+DAM=13,15
+ARMOR=20
+DESIRES=t_dirt
+AVERSIONS=e_carnivores2,e_carnivores3
+FOODTYPE=15 t_seed
+RESOURCES=60 i_feather,5 i_bird_raw
+BLOODCOLOR=colors_blood
+MOVERATE=100
+//TAG.Barding.Diff=22.0
+//TAG.Control.Slots=2
+CATEGORY=Animals
+SUBSECTION=Wild
+DESCRIPTION=Giant Turkey
+ON=@Create
+   NPC=brain_monster
+   FAME={1500 1999}
+   KARMA={-1500 -1999}
+   STR={160 222}
+   MAXHITS={180 280}
+   DEX={76 85}
+   MAXSTAM={176 185}
+   INT={36 42}
+   MAXMANA={36 42}
+   MAGICRESISTANCE={15.0 20.0}
+   TACTICS={25.0 30.0}
+//   TAMING={10.0 15.0}
+   WRESTLING={30.0 35.0}
+   MODAR={0 10}
+   RESCOLD={15 20}
+   RESENERGY={5 15}
+   RESFIRE={5 15}
+   RESPOISON={5 15}
+
+
+[CHARDEF 042d]
+//FIXME: Fireball attack based on their hitpoints
+//FIXME: Fight in packs
+DEFNAME=c_hellhound_ancient
+NAME=ancient hellhound
+ICON=i_pet_hellhound_ancient
+SOUND=snd_animals_wolf1
+CAN=MT_WALK|MT_RUN|MT_NONHUM
+DAM=28,36
+ARMOR=50
+DESIRES=r_desert,r_mountains_volcanic,t_coin,t_gold,t_gem
+AVERSIONS=r_civilization
+FOODTYPE=15 t_meat_raw
+RESOURCES=3 i_ribs_raw,8 i_reag_sulfur_ash
+BLOODCOLOR=colors_blood
+MOVERATE=150
+TAG.Barding.Diff=122.8
+//TAG.Control.Slots=3
+TAG.DamFire=80
+TEVENTS=e_carnivores2
+CATEGORY=Animals
+SUBSECTION=Wild
+DESCRIPTION=Hell Hound
+ON=@Create
+   NPC=brain_dragon
+   FAME={3500 3999}
+   KARMA={-3500 -3999}
+   STR={1200 1300}
+   MAXHITS={66 125}
+   DEX={180 190}
+   MAXSTAM={180 190}
+   INT={950 1050}
+   MAXMANA={950 1050}
+   MAGICRESISTANCE={95.0 105.0}
+   TACTICS={105.0 110.0}
+//   TAMING={105.0 110.0}
+   WRESTLING={100.0 105.0}
+   MODAR={0 10}
+   RESCOLD={40 45}
+   RESENERGY={80 90}
+   RESFIRE={70 80}
+   RESPOISON={60 70}
+ON=@NPCRestock
+   ITEM=loot_hellhound_ancient
+
+
 ////////////////////////////////
 // Wild Animal Loot Templates //
 ////////////////////////////////
@@ -1821,6 +1907,13 @@ CATEGORY=Item Templates
 SUBSECTION=Monster Loot Templates
 DESCRIPTION=Vampire Bat
 ITEM=i_gold,{25 50}
+
+[TEMPLATE loot_hellhound_ancient]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Hellhound (ancient)
+ITEM=i_gold,{475 525}
+ITEM=i_reag_sulfur_ash,{4 8}
 
 
 [EOF]

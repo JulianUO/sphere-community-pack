@@ -493,6 +493,56 @@ ON=@Hit
 [CHARDEF 02ef]
 //FIXME: Human looking
 
+[CHARDEF 042e]
+DEFNAME=c_werewolf
+NAME=were wolf
+//ICON=i_pet_werewolf
+SOUND=snd_animals_wolf1
+CAN=MT_WALK|MT_RUN
+DAM=18,25
+ARMOR=35
+DESIRES=r_forests,t_coin,t_gold,t_gem
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=20 t_meat_raw
+RESOURCES=1 i_ribs_raw,1 i_fur
+BLOODCOLOR=colors_blood
+MOVERATE=100
+TAG.Barding.Diff=79.8
+TAG.Slayer=WOLF
+TEVENTS=e_carnivores2
+CATEGORY=Monsters
+SUBSECTION=Were Creatures
+DESCRIPTION=Were Wolf
+ON=@Create
+   NPC=brain_monster
+   FAME={2500 2999}
+   KARMA={-2500 -2999}
+   STR={350 375}
+   MAXHITS={220 245}
+   DEX={95 105}
+   MAXSTAM={105 125}
+   INT={35 55}
+   MAXMANA={35 55}
+   MAGICRESISTANCE={58.0 75.0}
+   TACTICS={50.0 70.0}
+   WRESTLING={80.0 90.0}
+   MODAR={0 5}
+   RESCOLD={45 55}
+   RESENERGY={25 35}
+   RESFIRE={30 40}
+   RESPOISON={35 40}
+ON=@NPCRestock
+   ITEM=loot_werewolf
+ON=@GetHit
+   IF ((RAND(9)==1)
+      IF (<BODY>==c_werewolf)
+         BODY=c_man
+      ELSE
+         BODY=c_werewolf
+      ENDIF
+      NAME=were wolf
+      SRC.UPDATE
+   ENDIF
 
 //////////////////////////////
 // Humankind Loot Templates //
@@ -566,5 +616,18 @@ ITEM={ random_armor_shield_normal 1 0 10 }
 //ITEM={ random_weapon_fencing_normal 1 i_spear_tribal 20 }
 //ITEM={ random_masks 1 i_bola 1 i_bodypaint 1 0 20 }
 
+[TEMPLATE loot_werewolf]
+CATEGORY=Item Templates
+SUBSECTION=Monster Loot Templates
+DESCRIPTION=Were Wolf
+ITEM=i_gold,{75 100}
+ITEM=random_jewel,{1 2}
+ITEM=random_body_parts_1,R2
+CONTAINER=i_bag
+MOREZ={0 15}
+MOREM={1 50}
+ITEM=i_gold,{50 75}
+ITEM=random_jewel,R2
+ITEM=random_body_parts_2,R5
 
 [EOF]

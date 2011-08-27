@@ -407,6 +407,51 @@ ON=@Create
    RESFIRE={0 10}
    RESPOISON={0 10}
 
+[CHARDEF 01b0]
+//Partial animation - dont use
+//FIXME: Stun attack
+DEFNAME=c_boura_armoured
+NAME=armoured boura
+ICON=i_pet_boura_armoured
+SOUND=snd_monster_boura
+CAN=MT_WALK|MT_RUN|MT_NONHUM
+DAM=16,20
+ARMOR=45
+DESIRES=r_plains
+AVERSIONS=e_carnivores2,e_carnivores3
+RESOURCES=30 i_fur,20 i_hide_spined,10 i_ribs_raw,8 i_reag_dragon_blood
+FOODTYPE=40 t_fruit,t_grain,t_grass
+MOVERATE=100
+TAG.Barding.Diff=86.7
+TAG.Control.Slots=2
+TAG.SlayerGroup=BOVINE
+CATEGORY=Animals
+SUBSECTION=Wild
+DESCRIPTION=Boura (armoured)
+ON=@Create
+   NPC=brain_animal
+   FAME={2000 2500}
+   KARMA={-2000 -2499}
+   STR={300 410}
+   MAXHITS={435 530}
+   DEX={65 85}
+   MAXSTAM={65 85}
+   INT={15 20}
+   MAXMANA={15 20}
+   ANATOMY={85.0 90.0}
+   MAGICRESISTANCE={65.0 75.0}
+   TACTICS={80.0 90.0}
+   TAMING={15.0 20.0}
+   WRESTLING={85.0 95.0}
+   MODAR={0 5}
+   RESCOLD={35 40}
+   RESENERGY={30 40}
+   RESFIRE={30 40}
+   RESPOISON={30 40}
+ON=@NPCRestock
+   ITEM=i_boura_pelt,{1 3},R5
+
+
 [CHARDEF 031f]
 //FIXME: Should be possible to remove the armor
 DEFNAME=c_armored_swamp_dragon
