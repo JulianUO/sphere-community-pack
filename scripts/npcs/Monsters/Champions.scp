@@ -2324,6 +2324,59 @@ ON=@Create
 ON=@NPCRestock
    ITEM=loot_lich_primeval
 
+
+[CHARDEF 042c]
+//FIXME: Animates dead, summons parasitic eels, water ball ranged attack
+DEFNAME=c_scalis
+NAME=scalis
+ICON=i_pet_scalis
+SOUND=snd_monster_dragon1//fixme
+CAN=MT_SWIM
+DAM=19,26
+RANGE=2
+ARMOR=80
+DESIRES=t_coin,t_gold,t_gem,t_wand,t_potion,t_scroll,t_reagent
+AVERSIONS=t_trap,r_civilization
+FOODTYPE=80 t_meat_raw
+RESOURCES=20 i_dragonscale_blue
+BLOODCOLOR=colors_blue
+MOVERATE=100
+TAG.Barding.Diff=160.0
+TAG.DamCold=30
+TAG.DamEnergy=30
+//TAG.Slayer=DRAGON,REPTILE
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Champions
+DESCRIPTION=Scalis (Osiredon)
+ON=@Create
+   NPC=brain_monster
+   NAME=Osiredon
+   TITLE=Scalis Enforcer
+   FAME={9500 9999}
+   KARMA={-9500 -9999}
+   STR={800 825}
+   MAXHITS={45000 55000}
+   DEX={130 140}
+   MAXSTAM={130 140}
+   INT={160 170}
+   MAXMANA={3500 4500}
+   ANATOMY={35.0 40.0}
+   EVALUATINGINTEL={5.0 10.0}
+   MAGERY={15.0 20.0}
+   MAGICRESISTANCE={120.0 125.0}
+   MEDITATION={70.0 75.0}
+   TACTICS={125.0 130.0}
+   WRESTLING={125.0 130.0}
+   MODAR={0 5}
+   RESCOLD={85 90}
+   RESENERGY={80 85}
+   RESFIRE={90 95}
+   RESPOISON={80 85}
+ON=@NpcRestock
+   ITEM=loot_champ_scalis
+
+
 [CHARDEF 042f]
 //FIXME: No Stratics entry
 DEFNAME=c_minotaur_lord
@@ -2887,6 +2940,24 @@ ITEM=random_armor
 ITEM=i_map_treasure,1,R20
 ITEM=i_liche_dust,{2 3},R5
 ITEM=random_artifact,1,R10
+CONTAINER=i_bag
+ITEM=i_gold,{500 600}
+ITEM=random_jewel,{2 3}
+ITEM=random_reagent,{5 8}
+ITEM=random_wand_magic
+ITEM=random_item_misc_rare,1,R20
+
+[TEMPLATE loot_champ_scalis]
+CATEGORY=Item Templates
+SUBSECTION=Champion Loot Templates
+DESCRIPTION=Scalis
+ITEM=i_gold,{1600 2000}
+ITEM=random_jewel,{3 5}
+ITEM=random_weapon_all
+ITEM=random_body_parts_1,R2
+ITEM=random_body_parts_2,R5
+ITEM=random_item_bone,R15
+ITEM=random_item_carcass,1,R30
 CONTAINER=i_bag
 ITEM=i_gold,{500 600}
 ITEM=random_jewel,{2 3}
