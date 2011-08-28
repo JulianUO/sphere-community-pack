@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, August 14, 2011
+// FILE LAST UPDATED: Sunday, August 28, 2011
 VERSION=0.56b
 
 
@@ -750,12 +750,13 @@ DESCRIPTION=Statue Plinth
 
 [ITEMDEF 035e9]
 NAME=crystal altar
+FLIP=1
 WEIGHT=150.0
 RESOURCES=150 i_crystal_ice
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Sculpture
 DESCRIPTION=Crystal Altar
-DUPELIST=03602,03603,03604
+DUPELIST=03602,03603,03604,03da2
 
 [ITEMDEF 035ea]
 NAME=sculpture
@@ -866,26 +867,28 @@ DUPEITEM=035fe
 DUPEITEM=035fe
 
 [ITEMDEF 03602]
-//ice altar
 DUPEITEM=035e9
+DESCRIPTION=Crystal Altar (multiple parts)
 
 [ITEMDEF 03603]
-//ice altar
 DUPEITEM=035e9
+DESCRIPTION=Crystal Altar (multiple parts)
 
 [ITEMDEF 03604]
-//ice altar
 DUPEITEM=035e9
+DESCRIPTION=Crystal Altar (multiple parts)
 
 [ITEMDEF 0364b]
-DEFNAME=i_statue_gargoyle
-NAME=gargoyle statue
+DEFNAME=i_statue_fire_demon
+NAME=fire demon statue
+FLIP=1
 VALUE=172
 WEIGHT=800.0
-RESOURCES=80 i_rock_plain
+RESOURCES=80 i_rock_obsidian
+SKILLMAKE=Carpentry 95.0,t_masonry_tool
 CATEGORY=Decoration - Wall Carvings & Statues
 SUBSECTION=Statues
-DESCRIPTION=Gargoyle Statue
+DESCRIPTION=Fire Demon Statue
 DUPELIST=0369b
 
 [ITEMDEF 0364c]
@@ -928,7 +931,7 @@ DUPEITEM=0365a
 
 
 [ITEMDEF 0369b]
-//Gargoyle statue
+//Fire Demon Statue
 DUPEITEM=0364b
 
 [ITEMDEF 0369c]
@@ -975,6 +978,11 @@ DUPELIST=03d87
 [ITEMDEF 03d87]
 //decorative armor
 DUPEITEM=03d86
+
+
+[ITEMDEF 03da2]
+DUPEITEM=035e9
+DESCRIPTION=Crystal Altar (multiple parts)
 
 
 [ITEMDEF 03da9]

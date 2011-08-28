@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, August 14, 2011
+// FILE LAST UPDATED: Saturday, August 27, 2011
 VERSION=0.56b
 
 
@@ -4272,6 +4272,339 @@ TYPE=t_foliage
 //Duplicate of apple leaves item 0d9a
 NAME=apples
 TYPE=t_foliage
+
+[ITEMDEF 039a3]
+DEFNAME=i_foliage_giant_oak
+TYPE=t_foliage
+CATEGORY=Vegetation
+SUBSECTION=Trees
+DESCRIPTION=Giant Oak Foliage
+DUPELIST=039a4,039a5,039a6,039a7,039a8,039a9,039aa,039ab,039ac,039ad,039ae,039af,039b1,039b2,039b3,039b4,039b5,039b6,039b7,039b8,039b9,039ba,039bb,039bc,039c3,039c4,039c5,039c6,039c7,039c8,039c9,039ca,039cb,039cc,039cd,039ce,039cf,039d0,039d1,039d2,039d3,03a09,03a0a,03a0b,03a0c,03a0d,03a0e,03a0f,03a10,03a11,03a12,03a13,03a14,03a15,03a16,03a17,03a18,03a19,03a1a,03a1b,03a1c,03a1d,03a1e,03a33,03a34,03a35,03a36,03a37,03a38,03a39,03a3a,03a3b,03a3c,03a3d,03a3e,03a3f,03a40,03a41,03a42,03a43,03a44
+
+[ITEMDEF 039a4]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039a5]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039a6]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039a7]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039a8]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039a9]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039aa]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039ab]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039ac]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039ad]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039ae]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039af]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039b1]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039b2]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039b3]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039b4]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039b5]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039b6]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039b7]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039b8]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039b9]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039ba]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039bb]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039bc]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039c3]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039c4]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039c5]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039c6]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039c7]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039c8]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039c9]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039ca]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039cb]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039cc]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039cd]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039ce]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039cf]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039d0]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039d1]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039d2]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 039d3]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a09]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a0a]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a0b]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a0c]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a0d]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a0e]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a0f]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a10]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a11]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a12]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a13]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a14]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a15]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a16]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a17]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a18]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a19]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a1a]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a1b]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a1c]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a1d]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a1e]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a33]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a34]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a35]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a36]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a37]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a38]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a39]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a3a]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a3b]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a3c]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a3d]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a3e]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a3f]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a40]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a41]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a42]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a43]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
+[ITEMDEF 03a44]
+//Giant Oak Foliage
+DUPEITEM=039a3
+
 
 [ITEMDEF 04128]
 DEFNAME=i_gargoyle_tower_vines

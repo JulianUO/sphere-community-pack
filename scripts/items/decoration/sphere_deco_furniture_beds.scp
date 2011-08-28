@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: Sunday, August 28, 2011
 VERSION=0.56b
 
 [ITEMDEF 0a5c]
@@ -200,4 +200,44 @@ CATEGORY=Decoration - Furniture
 SUBSECTION=Beds
 DESCRIPTION=Tall Elven Bed (South - 4 of 4)
 
-[eof]
+[ITEMDEF 03d8a]
+DEFNAME=i_bed_ruined
+NAME=ruined bed
+TYPE=t_bed
+WEIGHT=149.5
+RESOURCES=120 i_board,15 i_cloth,20 i_nails,2 i_bedroll
+CATEGORY=Decoration - Furniture
+SUBSECTION=Broken Furniture
+DESCRIPTION=Ruined Large Bed
+DUPELIST=03d8b,03d8c,03d8d,03d90,03d91,03d92,03d93
+
+[ITEMDEF 03d8b]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d8c]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d8d]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d90]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d91]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d92]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+[ITEMDEF 03d93]
+//Ruined Large Bed
+DUPEITEM=03d8a
+
+
+[EOF]

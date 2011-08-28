@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Monday, Febuary 21, 2011
+// FILE LAST UPDATED: Sunday, August 28, 2011
 VERSION=0.56b
 
 
@@ -715,30 +715,6 @@ DUPEITEM=01ea0
 //rope
 DUPEITEM=01ea0
 
-[ITEMDEF 01ea3]
-DEFNAME=i_net
-NAME=fishing net
-FLIP=1
-WEIGHT=50.0
-RESOURCES=25 i_rope,25 i_thread,8 i_fishing_weight
-SKILLMAKE=Carpentry 68.4,Fishing 55.0
-CATEGORY=Items by Professions
-SUBSECTION=Fisherman
-DESCRIPTION=Weighted Fishing Net
-DUPELIST=01ea4,01ea5,01ea6,03d8e,03d8f
-
-[ITEMDEF 01ea4]
-//Weighted Fishing Net
-DUPEITEM=01ea3
-
-[ITEMDEF 01ea5]
-//Weighted Fishing Net
-DUPEITEM=01ea3
-
-[ITEMDEF 01ea6]
-//Weighted Fishing Net
-DUPEITEM=01ea3
-
 [ITEMDEF 01ea8]
 DEFNAME=i_winch
 WEIGHT=30.3
@@ -860,6 +836,7 @@ DUPEITEM=0233c
 DUPEITEM=0233c
 
 [ITEMDEF 024ad]
+DEFNAME=i_japanese_gate_n
 TYPE=t_normal
 RESOURCES=100 i_log
 CATEGORY=Buildings - Other
@@ -892,6 +869,7 @@ DUPEITEM=024ad
 DUPEITEM=024ad
 
 [ITEMDEF 024b4]
+DEFNAME=i_japanese_gate_w
 TYPE=t_normal
 RESOURCES=100 i_log
 CATEGORY=Buildings - Other
@@ -944,5 +922,26 @@ DUPELIST=02fdf
 //wooden ladder tall
 DUPEITEM=02fde
 
+[ITEMDEF 03db2]
+DEFNAME=i_ladder_wood_3
+NAME=wooden ladder
+FLIP=1
+RESOURCES=15 i_board,1 i_nails
+CATEGORY=Buildings - Other
+SUBSECTION=Wooden Ladder
+DESCRIPTION=Wooden Ladder 3
+DUPELIST=03db3,03db4,03db5
+
+[ITEMDEF 03db3]
+//wooden ladder 3
+DUPEITEM=03db2
+
+[ITEMDEF 03db4]
+//wooden ladder 3
+DUPEITEM=03db2
+
+[ITEMDEF 03db5]
+//wooden ladder 3
+DUPEITEM=03db2
 
 [EOF]

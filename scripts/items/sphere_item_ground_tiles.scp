@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, August 21, 2011
+// FILE LAST UPDATED: Saturday, August 27, 2011
 VERSION=0.56b
 
 
@@ -5373,6 +5373,78 @@ DUPEITEM=03b16
 [ITEMDEF 03b26]
 //black floor
 DUPEITEM=03b16
+
+[ITEMDEF 03b27]
+DEFNAME=i_floor_black_partial
+NAME=floor
+CATEGORY=Ground Tiles
+SUBSECTION=Black Floor
+DESCRIPTION=Floor
+DUPELIST=03b28,03b29,03b2a,03b2b,03b2c,03b2d,03b2e,03b2f,03b30,03b31,03b32,03b33,03b34,03b35,03b36,03b37
+
+[ITEMDEF 03b28]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b29]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b2a]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b2b]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b2c]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b2d]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b2e]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b2f]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b30]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b31]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b32]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b33]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b34]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b35]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b36]
+//partial black floor
+DUPEITEM=03b27
+
+[ITEMDEF 03b37]
+//partial black floor
+DUPEITEM=03b27
 
 [ITEMDEF 03d84]
 CATEGORY=Ground Tiles

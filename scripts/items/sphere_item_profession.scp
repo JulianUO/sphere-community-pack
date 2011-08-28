@@ -3,7 +3,7 @@
 //This script is part from the Sphere Community Script Pack.
 //You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-//FILE LAST UPDATED: Saturday, April 2, 2011
+//FILE LAST UPDATED: Sunday, August 28, 2011
 VERSION=0.56b
 
 
@@ -217,6 +217,72 @@ DUPEITEM=0dcb
 [ITEMDEF 0dd5]
 //fishing net
 DUPEITEM=0dcb
+
+[ITEMDEF 01ea3]
+DEFNAME=i_net
+NAME=fishing net
+FLIP=1
+WEIGHT=50.0
+RESOURCES=25 i_rope,25 i_thread,8 i_fishing_weight
+SKILLMAKE=Carpentry 68.4,Fishing 55.0
+CATEGORY=Items by Professions
+SUBSECTION=Fisherman
+DESCRIPTION=Weighted Fishing Net
+DUPELIST=01ea4,01ea5,01ea6,03d8e,03d8f
+
+[ITEMDEF 01ea4]
+//Weighted Fishing Net
+DUPEITEM=01ea3
+
+[ITEMDEF 01ea5]
+//Weighted Fishing Net
+DUPEITEM=01ea3
+
+[ITEMDEF 01ea6]
+//Weighted Fishing Net
+DUPEITEM=01ea3
+
+[ITEMDEF 03d8e]
+//Weighted Fishing Net
+DUPEITEM=01ea3
+
+[ITEMDEF 03d8f]
+//Weighted Fishing Net
+DUPEITEM=01ea3
+
+[ITEMDEF 04b44]
+DEFNAME=i_fishhook_magic
+NAME=magic fish hook
+FLIP=1
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_ingot_iron
+SKILLMAKE=Tinkering 21.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Fisherman
+DESCRIPTION=Magic Fish Hook
+DUPELIST=04b45
+
+[ITEMDEF 04b45]
+//Magic Fish Hook
+DUPEITEM=04b44
+
+[ITEMDEF 04b46]
+DEFNAME=i_fishhook
+NAME=fish hook
+FLIP=1
+VALUE=5
+WEIGHT=0.1
+RESOURCES=1 i_ingot_iron
+SKILLMAKE=Tinkering 21.0,t_tinker_tools
+CATEGORY=Items by Professions
+SUBSECTION=Fisherman
+DESCRIPTION=Fish Hook
+DUPELIST=04b47
+
+[ITEMDEF 04b46]
+//Fish Hook
+DUPEITEM=04b46
 
 //////////////////////
 // Healer Equipment //
