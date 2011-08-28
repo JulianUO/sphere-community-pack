@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Friday, April 29, 2011
+// FILE LAST UPDATED: Sunday, August 28, 2011
 VERSION=0.56b
 
 
@@ -193,118 +193,99 @@ DUPEITEM=0fe1
 DUPEITEM=0fe1
 
 [ITEMDEF 012da]
-DEFNAME=i_curtain_white_02
+DEFNAME=i_curtain_long_animated
+NAME=long curtain
 DYE=1
 FLIP=1
 WEIGHT=10.0
 RESOURCES=10 i_cloth
 CATEGORY=Decoration - Curtains
 SUBSECTION=Curtain
-DESCRIPTION=Curtain
-DUPELIST=012db,012dc,012dd,012de,012df,012e0,012e1
+DESCRIPTION=Long Curtain (animated)
+DUPELIST=012db,012dc,012dd,012de,012df,012e0,012e1,012e5,012e6,012e7,012e8,012e9,012ea,012eb,012ec
 
 [ITEMDEF 012db]
-//curtain white fluffy floorlength being drawn
 DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012dc]
-//curtain side to w. white floorlength
 DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012dd]
-//curtain white skinny
 DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012de]
-//curtain white animated drawing back right to left against NW wall
 DUPEITEM=012da
+DESCRIPTION=Long Curtain (animated)
 
 [ITEMDEF 012df]
-//curtain fluffy white being drawn back nw wall
 DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012e0]
-//curtain
 DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012e1]
-//curtain
 DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012e2]
-DEFNAME=i_curtain_white_02_1_sash
-DYE=1
-WEIGHT=10.0
-RESOURCES=10 i_cloth
-CATEGORY=Decoration - Curtains
-SUBSECTION=Curtain
-DESCRIPTION=Curtain Sash
-
-[ITEMDEF 012e3]
-DEFNAME=i_curtain_white_02_1_sash_2
-DYE=1
-WEIGHT=10.0
-RESOURCES=10 i_cloth
-CATEGORY=Decoration - Curtains
-SUBSECTION=Curtain
-DESCRIPTION=Curtain Sash
-
-[ITEMDEF 012e4]
-DEFNAME=i_curtain_white_02_1_sash_3
-DYE=1
-WEIGHT=10.0
-RESOURCES=10 i_cloth
-CATEGORY=Decoration - Curtains
-SUBSECTION=Curtain
-DESCRIPTION=Curtain Sash
-
-[ITEMDEF 012e5]
-DEFNAME=i_curtain_white_02_2_sash_3
+DEFNAME=i_curtain_sash
 DYE=1
 FLIP=1
 WEIGHT=10.0
 RESOURCES=10 i_cloth
 CATEGORY=Decoration - Curtains
 SUBSECTION=Curtain
-DESCRIPTION=Curtain
-DUPELIST=012e6,012e7,012e8,012e9,012ea,012eb,012ec
+DESCRIPTION=Curtain Sash
+DUPELIST=012e3,012e4,012e3,012ed
+
+[ITEMDEF 012e3]
+//Curtain Sash
+DUPEITEM=012e2
+
+[ITEMDEF 012e4]
+//Curtain Sash
+DUPEITEM=012e2
+
+[ITEMDEF 012e5]
+DUPEITEM=012da
+DESCRIPTION=Long Curtain (animated)
 
 [ITEMDEF 012e6]
-//curtain
-DUPEITEM=012e5
+DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012e7]
-//curtain
-DUPEITEM=012e5
+DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012e8]
-//curtain
-DUPEITEM=012e5
+DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012e9]
-//curtain
-DUPEITEM=012e5
+DUPEITEM=012da
+DESCRIPTION=Long Curtain (animated)
 
 [ITEMDEF 012ea]
-//curtain
-DUPEITEM=012e5
+DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012eb]
-//curtain
-DUPEITEM=012e5
+DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012ec]
-//curtain
-DUPEITEM=012e5
+DUPEITEM=012da
+DESCRIPTION=Long Curtain (animation frame)
 
 [ITEMDEF 012ed]
-DEFNAME=i_curtain_white_02_2_sash_4
-DYE=1
-WEIGHT=10
-RESOURCES=10 i_cloth
-CATEGORY=Decoration - Curtains
-SUBSECTION=Curtain 03
-DESCRIPTION=Curtain Sash
+//Curtain Sash
+DUPEITEM=012e2
 
 [ITEMDEF 0154e]
 DEFNAME=i_curtain_freestanding
@@ -1764,6 +1745,80 @@ ON=@Create
 [ITEMDEF 03bb7]
 //Tapestry of map 0
 DUPEITEM=03bb6
+
+
+[ITEMDEF 03d9c]
+DEFNAME=i_curtain_long
+NAME=long curtain
+DYE=1
+FLIP=1
+WEIGHT=10.0
+RESOURCES=10 i_cloth
+CATEGORY=Decoration - Curtains
+SUBSECTION=Curtains
+DESCRIPTION=Long Curtain
+DUPELIST=03d9d,03d9e,03d9f,03da0,03da1,03da3,03da4,03da5,03da6,03da7,03da8,03dab,03dac,03dad,03dae
+
+[ITEMDEF 03d9d]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03d9e]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03d9f]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03da0]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03da1]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03da3]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03da4]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03da5]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03da6]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03da7]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03da8]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03dab]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03dac]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03dad]
+//Long Curtain
+DUPEITEM=03d9c
+
+[ITEMDEF 03dae]
+//Long Curtain
+DUPEITEM=03d9c
+
 
 [ITEMDEF 03ed8]
 //Red curtain

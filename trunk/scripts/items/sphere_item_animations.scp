@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, April 2, 2011
+// FILE LAST UPDATED: Saturday, August 27, 2011
 VERSION=0.56b
 
 
@@ -2519,99 +2519,99 @@ DUPEITEM=03818
 
 
 [ITEMDEF 03914]
-DEFNAME=i_fx_poison_field
-TYPE=t_spell
-CATEGORY=Animations
-SUBSECTION=Poison Field
-DESCRIPTION=@ East/West
-DUPELIST=03915,03916,03917,03918,03919,0391a,0391b,0391c,0391d,0391e,0391f,03920,03921,03922,03923,03924,03925,03926,03927,03928,03929
+//Badly animated poison field
 
 [ITEMDEF 03915]
-//poison field (e/w)
-DUPEITEM=03914
+DEFNAME=i_fx_poison_field_ew
+//TYPE=t_spell
+CATEGORY=Animations
+SUBSECTION=Poison Field
+DESCRIPTION=Poison Field East/West
+DUPELIST=03916,03917,03918,03919,0391a,0391b,0391c,0391d,0391e,0391f
 
 [ITEMDEF 03916]
-//poison field (e/w)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03915
 
 [ITEMDEF 03917]
-//poison field (e/w)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03915
 
 [ITEMDEF 03918]
-//poison field (e/w)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03915
 
 [ITEMDEF 03919]
-//poison field (e/w)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03915
 
 [ITEMDEF 0391a]
-//poison field (e/w)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03915
 
 [ITEMDEF 0391b]
-//poison field (e/w)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03915
 
 [ITEMDEF 0391c]
-//poison field (e/w)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03915
 
 [ITEMDEF 0391d]
-//poison field (e/w)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03915
 
 [ITEMDEF 0391e]
-//poison field (e/w)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03915
 
 [ITEMDEF 0391f]
-//poison field (e/w)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03915
 
 [ITEMDEF 03920]
 DEFNAME=i_fx_poison_field_ns
-DUPEITEM=03914
+TYPE=t_spell
 CATEGORY=Animations
 SUBSECTION=Poison Field
-DESCRIPTION=@ North/South
+DESCRIPTION=Poison Field North/South
+DUPELIST=03921,03922,03923,03924,03925,03926,03927,03928,03929
 
 [ITEMDEF 03921]
-//poison field (n/s)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03920
 
 [ITEMDEF 03922]
-//poison field (n/s)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03920
 
 [ITEMDEF 03923]
-//poison field (n/s)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03920
 
 [ITEMDEF 03924]
-//poison field (n/s)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03920
 
 [ITEMDEF 03925]
-//poison field (n/s)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03920
 
 [ITEMDEF 03926]
-//poison field (n/s)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03920
 
 [ITEMDEF 03927]
-//poison field (n/s)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03920
 
 [ITEMDEF 03928]
-//poison field (n/s)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03920
 
 [ITEMDEF 03929]
-//poison field (n/s)
-DUPEITEM=03914
+//Field of Poison
+DUPEITEM=03920
 
 [ITEMDEF 03946]
 DEFNAME=i_fx_energy_field
@@ -2982,11 +2982,11 @@ DUPEITEM=03996
 DUPEITEM=03996
 
 [ITEMDEF 03e02]
-//DEFNAME=i_fx_poison_field_EW
+//DEFNAME=i_fx_poison_field_ew_alt
 //TYPE=t_spell
 CATEGORY=Animations
 SUBSECTION=Poison Field
-DESCRIPTION=Poison Field East/West
+DESCRIPTION=Poison Field East/West Alternate
 DUPELIST=03e03,03e04,03e05,03e06,03e07,03e08,03e09,03e0a,03e0b
 
 [ITEMDEF 03e03]

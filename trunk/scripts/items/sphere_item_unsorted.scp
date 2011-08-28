@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, August 21, 2011
+// FILE LAST UPDATED: Sunday, August 28, 2011
 VERSION=0.56b
 
 
@@ -1716,70 +1716,6 @@ DESCRIPTION=Shell (3)
 //corn (fruit)
 //duplicate of 0c82
 
-[ITEMDEF 03d8a]
-DEFNAME=i_bed_ruined
-NAME=ruined bed
-TYPE=t_bed
-WEIGHT=149.5
-RESOURCES=120 i_board,15 i_cloth,20 i_nails,2 i_bedroll
-CATEGORY=Decoration - Furniture
-SUBSECTION=Broken Furniture
-DESCRIPTION=Ruined Large Bed
-DUPELIST=03d8b,03d8c,03d8d,03d90,03d91,03d92,03d93
-
-[ITEMDEF 03d8b]
-//Ruined Large Bed
-DUPEITEM=03d8a
-
-[ITEMDEF 03d8c]
-//Ruined Large Bed
-DUPEITEM=03d8a
-
-[ITEMDEF 03d8d]
-//Ruined Large Bed
-DUPEITEM=03d8a
-
-[ITEMDEF 03d8e]
-//Weighted Fishing Net
-DUPEITEM=01ea3
-
-[ITEMDEF 03d8f]
-//Weighted Fishing Net
-DUPEITEM=01ea3
-
-[ITEMDEF 03d90]
-//Ruined Large Bed
-DUPEITEM=03d8a
-
-[ITEMDEF 03d91]
-//Ruined Large Bed
-DUPEITEM=03d8a
-
-[ITEMDEF 03d92]
-//Ruined Large Bed
-DUPEITEM=03d8a
-
-[ITEMDEF 03d93]
-//Ruined Large Bed
-DUPEITEM=03d8a
-
-[ITEMDEF 03daf]
-DEFNAME=i_cauldron_full
-NAME=Cauldron
-FLIP=1
-VALUE=168
-WEIGHT=39.0
-RESOURCES=8 i_ingot_iron,1 i_kettle
-SKILLMAKE=Tinkering 65.0,t_tinker_tools
-CATEGORY=Items by Professions
-SUBSECTION=Cook
-DESCRIPTION=Cauldron (full with white background)
-DUPELIST=03db0
-
-[ITEMDEF 03db0]
-//Cauldron (full with white background)
-DUPEITEM=03daf
-
 
 [ITEMDEF 03eea]
 //ship part - duplicate of 3e8a
@@ -2766,40 +2702,6 @@ DUPELIST=0495f
 [ITEMDEF 0495f]
 //Jug of Hooch
 DUPEITEM=0495e
-
-[ITEMDEF 04b44]
-DEFNAME=i_fishhook_magic
-NAME=magic fish hook
-FLIP=1
-VALUE=5
-WEIGHT=0.1
-RESOURCES=1 i_ingot_iron
-SKILLMAKE=Tinkering 21.0,t_tinker_tools
-CATEGORY=Items by Professions
-SUBSECTION=Fisherman
-DESCRIPTION=Magic Fish Hook
-DUPELIST=04b45
-
-[ITEMDEF 04b45]
-//Magic Fish Hook
-DUPEITEM=04b44
-
-[ITEMDEF 04b46]
-DEFNAME=i_fishhook
-NAME=fish hook
-FLIP=1
-VALUE=5
-WEIGHT=0.1
-RESOURCES=1 i_ingot_iron
-SKILLMAKE=Tinkering 21.0,t_tinker_tools
-CATEGORY=Items by Professions
-SUBSECTION=Fisherman
-DESCRIPTION=Fish Hook
-DUPELIST=04b47
-
-[ITEMDEF 04b46]
-//Fish Hook
-DUPEITEM=04b46
 
 [ITEMDEF 0981c]
 DEFNAME=i_training_dummy_advanced

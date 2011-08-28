@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, August 14, 2011
+// FILE LAST UPDATED: Sunday, August 28, 2011
 VERSION=0.56b
 
 
@@ -1141,6 +1141,58 @@ DESCRIPTION=Paper Lantern 6 (unlit)
 ON=@Create
    MOREZ=1
 
+[ITEMDEF 03d94]
+DEFNAME=i_torch_wall_lit_duplicate
+NAME=wall torch
+TYPE=t_light_lit
+FLIP=1
+TDATA3=i_torch_wall_duplicate
+TDATA4=i_torch_wall_lit_duplicate
+WEIGHT=1.0
+RESOURCES=i_torch_wall_duplicate
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Torches
+DESCRIPTION=Wall Torch Duplicate (Lit)
+DUPELIST=03d98
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 03d95]
+//animation frame of Wall Torch Duplicate (Lit)
+
+[ITEMDEF 03d96]
+//animation frame of Wall Torch Duplicate (Lit)
+
+[ITEMDEF 03d97]
+DEFNAME=i_torch_wall_duplicate
+NAME=wall torch
+TYPE=t_light_out
+TDATA3=i_torch_wall_lit_duplicate
+FLIP=1
+VALUE=10
+WEIGHT=1.0
+RESOURCES=1 i_torch_wall_empty,1 i_torch
+SKILLMAKE=Tinkering 30.0,t_tinker_tools
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Torches
+DESCRIPTION=Wall Torch Duplicate (Unlit)
+DUPELIST=03d9b
+ON=@Create
+   MOREZ=1
+
+[ITEMDEF 03d98]
+//Wall Torch Duplicate (Lit)
+DUPEITEM=03d94
+
+[ITEMDEF 03d99]
+//animation frame of Wall Torch Duplicate (Lit)
+
+[ITEMDEF 03d9a]
+//animation frame of Wall Torch Duplicate (Lit)
+
+[ITEMDEF 03d9b]
+//Wall Torch Duplicate (Unlit)
+DUPEITEM=03d97
 
 [ITEMDEF 04039]
 DEFNAME=i_chandelier
