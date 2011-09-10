@@ -28,7 +28,7 @@ local.damage = <r<more1>,<eval (<more1> * 2)>>
 if !<cont.isplayer>
 	local.damage *= 2
 endif
-cont.damage <dlocal.damage> dam_physical|dam_god <link>
+cont.damage <dlocal.damage> dam_god <link>
 cont.sfx 0133
 serv.newitem {0122a 0122f}
 new.p = <cont.p>

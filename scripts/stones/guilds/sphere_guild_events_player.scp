@@ -4,7 +4,7 @@
 
 [EVENTS e_guild]
 ON=@Death
-IF !(<ATTACKER>) || (<FINDID.i_evento_memoria>)
+IF !(<ATTACKER>)
  return 0
 ENDIF
 FOR 0 <eval <ATTACKER>-1>

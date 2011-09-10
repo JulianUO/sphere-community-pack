@@ -796,28 +796,29 @@ region_flag_no_pvp           08000   // players cannot directly harm each other 
 
 [DEFNAME spell_flags]
 // spell flags.
-spellflag_dir_anim              0000001   // evoke type cast or directed. (animation)
-spellflag_targ_item             0000002   // need to target an object
-spellflag_targ_char             0000004   // needs to target a living thing
-spellflag_targ_obj              0000006
-spellflag_targ_xyz              0000008   // can just target a location.
-spellflag_harm                  0000010   // the spell is in some way harmfull.
-spellflag_fx_bolt               0000020   // effect is a bolt to the target.
-spellflag_fx_targ               0000040   // effect is at the target.
-spellflag_field                 0000080   // create a field of stuff. (fire,poison,wall)
-spellflag_summon                0000100   // summon a creature.
-spellflag_good                  0000200   // the spell is a good spell. You intend to help to receiver.
-spellflag_resist                0000400   // allowed to resist this.
-spellflag_targ_noself           0000800   // cannot target spell to self
-spellflag_disabled              0008000   // spell is disabled
-spellflag_scripted              0010000   // spell is scripted
-spellflag_playeronly            0020000   // spell is not casted by npc ai
-spellflag_nounparalyze          0040000   // do not unparalyze the victim
-spellflag_no_castanim           0080000   // don't play (default) cast anim
-spellflag_targ_no_player        0100000   // if a char may be targeted, it may not be a player
-spellflag_targ_no_npc           0200000   // if a char may be targeted, it may not be an NPC
-spellflag_noprecast             0400000   // disables effects of MAGICF_PRECAST with a spell (only valid if MAGICF_PRECAST actived in Sphere.ini)
-spellflag_nofreezeoncast        0800000 // disables effects of MAGICF_FREEZEONCAST with a spell (only valid if MAGICF_FREEZEONCAST actived in Sphere.ini)
+spellflag_dir_anim              00000001	// evoke type cast or directed. (animation)
+spellflag_targ_item             00000002	// need to target an object
+spellflag_targ_char             00000004	// needs to target a living thing
+spellflag_targ_obj              00000006	// can target item or char
+spellflag_targ_xyz              00000008	// can just target a location.
+spellflag_harm                  00000010	// the spell is in some way harmfull.
+spellflag_fx_bolt               00000020	// effect is a bolt to the target.
+spellflag_fx_targ               00000040	// effect is at the target.
+spellflag_field                 00000080	// create a field of stuff. (fire,poison,wall)
+spellflag_summon                00000100	// summon a creature.
+spellflag_good                  00000200	// the spell is a good spell. You intend to help to receiver.
+spellflag_resist                00000400	// allowed to resist this.
+spellflag_targ_noself           00000800	// cannot target spell to self
+spellflag_disabled              00008000	// spell is disabled
+spellflag_scripted              00010000	// spell is scripted
+spellflag_playeronly            00020000	// spell is not casted by npc ai
+spellflag_nounparalyze          00040000	// do not unparalyze the victim
+spellflag_no_castanim           00080000	// don't play (default) cast anim
+spellflag_targ_no_player        00100000	// if a char may be targeted, it may not be a player
+spellflag_targ_no_npc           00200000	// if a char may be targeted, it may not be an NPC
+spellflag_noprecast             00400000	// disables effects of MAGICF_PRECAST with a spell (only valid if MAGICF_PRECAST actived in Sphere.ini)
+spellflag_nofreezeoncast        00800000	// disables effects of MAGICF_FREEZEONCAST with a spell (only valid if MAGICF_FREEZEONCAST actived in Sphere.ini)
+spellflag_area                  01000000	// area effect (uses local.arearadius)
 
 [DEFNAME mem_flags]
 memory_sawcrime       00001   // i saw them commit a crime or i was attacked criminally. i can call the guards on them.
@@ -1530,97 +1531,104 @@ los_fishing		00800   // Do not allow LOS path checking to go through objects or 
 los_nc_water		01000	// Do not allow LOS path checking to go through water.
 
 [DEFNAME buff_icons]
-bufficon_dismountprevention    1001
-bufficon_norearm               1002
-bufficon_nightsight            1005
-bufficon_deathstrike           1006
-bufficon_evilomen              1007
-bufficon_healingthrottle       1008
-bufficon_staminathrottle       1009
-bufficon_divinefury            1010
-bufficon_enemyofone            1011
-bufficon_hidingandorstealth    1012
-bufficon_activemeditation      1013
-bufficon_bloodoathcaster       1014
-bufficon_bloodoathcurse        1015
-bufficon_corpseskin            1016
-bufficon_mindrot               1017
-bufficon_painspike             1018
-bufficon_strangle              1019
-bufficon_giftofrenewal         1020
-bufficon_attuneweapon          1021
-bufficon_thunderstorm          1022
-bufficon_essenceofwind         1023
-bufficon_etherealvoyage        1024
-bufficon_giftoflife            1025
-bufficon_arcaneempowerment     1026
-bufficon_mortalstrike          1027
-bufficon_reactivearmor         1028
-bufficon_protection            1029
-bufficon_archprotection        1030
-bufficon_magicreflection       1031
-bufficon_incognito             1032
-bufficon_disguised             1033
-bufficon_animalform            1034
-bufficon_polymorph             1035
-bufficon_invisibility          1036
-bufficon_paralyze              1037
-bufficon_poison                1038
-bufficon_bleed                 1039
-bufficon_clumsy                1040
-bufficon_feeblemind            1041
-bufficon_weaken                1042
-bufficon_curse                 1043
-bufficon_masscurse             1044
-bufficon_agility               1045
-bufficon_cunning               1046
-bufficon_strength              1047
-bufficon_bless                 1048
+bufficon_dismountprevention 	1001
+bufficon_norearm 							1002
+bufficon_nightsight 					1005
+bufficon_deathstrike 					1006
+bufficon_evilomen 						1007
+bufficon_healingthrottle 			1008
+bufficon_staminathrottle 			1009
+bufficon_divinefury 					1010
+bufficon_enemyofone 					1011
+bufficon_hidingandorstealth 	1012
+bufficon_activemeditation 		1013
+bufficon_bloodoathcaster 			1014
+bufficon_bloodoathcurse 			1015
+bufficon_corpseskin 					1016
+bufficon_mindrot 							1017
+bufficon_painspike 						1018
+bufficon_strangle 						1019
+bufficon_giftofrenewal 				1020
+bufficon_attuneweapon 				1021
+bufficon_thunderstorm 				1022
+bufficon_essenceofwind 				1023
+bufficon_etherealvoyage 			1024
+bufficon_giftoflife 					1025
+bufficon_arcaneempowerment 		1026
+bufficon_mortalstrike 				1027
+bufficon_reactivearmor 				1028
+bufficon_protection 					1029
+bufficon_archprotection 			1030
+bufficon_magicreflection 			1031
+bufficon_incognito 						1032
+bufficon_disguised 						1033
+bufficon_animalform 					1034
+bufficon_polymorph 						1035
+bufficon_invisibility 				1036
+bufficon_paralyze 						1037
+bufficon_poison 							1038
+bufficon_bleed 								1039
+bufficon_clumsy 							1040
+bufficon_feeblemind 					1041
+bufficon_weaken 							1042
+bufficon_curse 								1043
+bufficon_masscurse 						1044
+bufficon_agility 							1045
+bufficon_cunning 							1046
+bufficon_strength 						1047
+bufficon_bless 								1048
+bufficon_sleep							1049
+bufficon_stoneform						1050
+bufficon_spellplague					1051
+bufficon_gargoyleberserk				1052
+bufficon_gargoylefly					1054
 
 [DEFNAME buff_clilocs]
-buffcliloc_empty             1070722
-buffcliloc_curse_1           1075835
-buffcliloc_curse_2           1075840
-buffcliloc_masscurse_1       1075839
-buffcliloc_masscurse_2       1075840
-buffcliloc_weaken_1          1075837
-buffcliloc_weaken_2          1075838
-buffcliloc_masscurse_1       1075839
-buffcliloc_masscurse_2       1075840
-buffcliloc_agility_1         1075841
-buffcliloc_agility_2         1075842
-buffcliloc_cunning_1         1075843
-buffcliloc_cunning_2         1075844
-buffcliloc_strength_1        1075845
-buffcliloc_strength_2        1075846
-buffcliloc_bless_1           1075847
-buffcliloc_bless_2           1075848
-buffcliloc_reactivearmor_1   1075812
-buffcliloc_reactivearmor_2   1070722 //empty
-buffcliloc_protection_1      1075814
-buffcliloc_protection_2      1070722 //empty
-buffcliloc_archprotection    1075816
-buffcliloc_archprotection    1070722 //empty
-buffcliloc_invisibility_1    1075825
-buffcliloc_invisibility_2    1075826
-buffcliloc_paralyze_1        1075827
-buffcliloc_paralyze_2        1075828
+buffcliloc_empty 1070722
+buffcliloc_curse_1 1075835
+buffcliloc_curse_2 1075840
+buffcliloc_masscurse_1 1075839
+buffcliloc_masscurse_2 1075840
+buffcliloc_weaken_1 1075837
+buffcliloc_weaken_2 1075838
+buffcliloc_masscurse_1 1075839
+buffcliloc_masscurse_2 1075840
+buffcliloc_agility_1 1075841
+buffcliloc_agility_2 1075842
+buffcliloc_cunning_1 1075843
+buffcliloc_cunning_2 1075844
+buffcliloc_strength_1 1075845
+buffcliloc_strength_2 1075846
+buffcliloc_bless_1 1075847
+buffcliloc_bless_2 1075848
+buffcliloc_reactivearmor_1 1075812
+buffcliloc_reactivearmor_2 1070722 //empty
+buffcliloc_protection_1 1075814
+buffcliloc_protection_2 1070722 //empty
+buffcliloc_archprotection 1075816
+buffcliloc_archprotection 1070722 //empty
+buffcliloc_invisibility_1 1075825
+buffcliloc_invisibility_2 1075826
+buffcliloc_paralyze_1 1075827
+buffcliloc_paralyze_2 1075828
 buffcliloc_magicreflection_1 1075817
 buffcliloc_magicreflection_1 1070722 //empty
-buffcliloc_clumsy_1          1075831
-buffcliloc_clumsy_2          1075832
-buffcliloc_feeblemind_1      1075833
-buffcliloc_feeblemind_1      1075834
-buffcliloc_incognito_1       1075819
-buffcliloc_incognito_2       1075820
-buffcliloc_polymorph_1       1075824
-buffcliloc_polymorph_2       1070722 //empty
-buffcliloc_poison_1          1017383
-buffcliloc_poison_2          1070722
-buffcliloc_nightsight_1      1075643
-buffcliloc_nightsight_2      1075644
-buffcliloc_hidden_1          1075655
-buffcliloc_hidden_2          1075656
+buffcliloc_clumsy_1 1075831
+buffcliloc_clumsy_2 1075832
+buffcliloc_feeblemind_1 1075833
+buffcliloc_feeblemind_1 1075834
+buffcliloc_incognito_1 1075819
+buffcliloc_incognito_2 1075820
+buffcliloc_polymorph_1 1075824
+buffcliloc_polymorph_2 1070722 //empty
+buffcliloc_poison_1 1017383
+buffcliloc_poison_2 1070722
+buffcliloc_nightsight_1 1075643
+buffcliloc_nightsight_2 1075644
+buffcliloc_hidden_1 1075655
+buffcliloc_hidden_2 1075656
+buffcliloc_gargoylefly_1 1112193
+buffcliloc_gargoylefly_2 1112567
 
 [DEFNAME charheight]
 height_01 28 //DEFNAME=c_ogre

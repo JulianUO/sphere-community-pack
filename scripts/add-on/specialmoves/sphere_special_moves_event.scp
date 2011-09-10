@@ -26,7 +26,15 @@ local.tacticsnoreq = <getargv 1 <def.scp.special_move_<argn1>>>
 
 if <<combat.skill>> >= <qval (<local.move> == 1) ? 70.0:90.0>
 	if ((<local.tacticsnoreq> == 1) || ((<local.tacticsnoreq> == 2) && ((<tactics> >= <qval (<local.move> == 1) ? 70.0:90.0>) || !(<weapon>))) || ((<local.tacticsnoreq> == 0) && (<tactics> >= <qval (<local.move> == 1) ? 70.0:90.0>)))
-		tag0.SpecialMoveInUse = <argn1>
+		if (<argn1> == 13) && (<bushido> < 50.0) // Riding Swipe requires 50.0 Bushido
+			sysmessage @,,2 1070768,50 // You need ~1_SKILL_REQUIREMENT~ Bushido skill to perform that attack!
+			clearspecialmove
+		elif ((<argn1> == 14) || (<argn1> == 16)) && (<bushido> < 50.0) && (<ninjitsu> < 50.0) // requires 50.0 Bushido or Ninjitsu
+			sysmessage @,,2 1063347,50 // You need ~1_SKILL_REQUIREMENT~ Bushido or Ninjitsu skill to perform that attack!
+			clearspecialmove
+		else
+			tag0.SpecialMoveInUse = <argn1>
+		endif
 	else
 		if (<local.tacticsnoreq> == 0) || (<local.tacticsnoreq> == 2)
 			sysmessage @,,2 1079308,<qval (<local.move> == 1) ? 70.0:90.0> // You need ~1_SKILL_REQUIREMENT~ weapon and tactics skill to perform that attack
@@ -60,6 +68,12 @@ if <tag0.SpecialMoveInUse> == 10
 	else
 		sysmessage @,,2 1060181,<f_special_move_mana 30> // You need ~1_MANA_REQUIREMENT~ mana to perform that attack
 	endif
+elif <tag0.SpecialMoveInUse> == 18
+	// Nerve Strike - Does damage and paralyses your opponent for a short time.
+	if <src.flags>&statf_freeze
+		sysmessage @,,2 1061923 // The target is already frozen.
+		clearspecialmove
+	endif
 endif
 
 on=@hitdamagebonus
@@ -85,7 +99,7 @@ elif <tag0.SpecialMoveInUse> == 4
 	if <mana> >= <f_special_move_mana 25>
 		sysmessage @,,2 1060090 // You have delivered a crushing blow!
 		src.sysmessage @,,2 1060091 // You take extra damage from the crushing attack!
-		var0.<uid>_damagebonus += 50
+		src.aosdamage <eval (<argn1> / 2)>,0,0,0,0,<uid>
 		
 		src.sfx 01e1
 		src.effect 0,0fb4,1,0,0,0,3
@@ -165,7 +179,7 @@ elif <tag0.SpecialMoveInUse> == 3
 		local.damage = <min 20,<abs <eval ((<local.manapercent> - <local.hitspercent>) / 4)>>>
 		local.damage += 10
 		
-		src.damage <local.damage> dam_physical|dam_god <uid>
+		src.damage <local.damage> dam_god <uid>
 		mana -= <f_special_move_mana 30>
 		clearspecialmove
 		tag.LastSpecialMoveUse = <serv.time>
@@ -208,9 +222,7 @@ elif <tag0.SpecialMoveInUse> == 6
 		if <flags>&statf_onhorse
 			src.sysmessage @,,2 1062315 // You fall off your mount!
 		else
-			local.damage = <r15,25>
-			local.damage = <muldiv <local.damage>,<eval (100 - (<src.armor>+<src.modar>))>,100>
-			src.damage <local.damage> dam_physical|dam_god <uid>
+			src.aosdamage <r15,25>,0,0,0,0,<uid>
 			src.sysmessage @,,2 1060083 // You fall off of your mount and take damage!
 		endif
 		src.sfx 0140
@@ -335,6 +347,7 @@ elif <tag0.SpecialMoveInUse> == 12
 		forchars 1
 			if (<isinparty>) && (<ref1.isinparty>) && (<party.master> == <ref1.party.master>)
 			elif ((<notogetflag <ref1>> == noto_good) || (<notogetflag <ref1>> == noto_guild_same))
+			elif !<ref1.canseelos <uid>>
 			elif (<src> == <uid>)
 			else
 				ref1.sysmessage @,,2 1060161 // The whirling attack strikes a target!
@@ -344,6 +357,98 @@ elif <tag0.SpecialMoveInUse> == 12
 			endif
 		endfor
 		mana -= <f_special_move_mana 15>
+		tag.LastSpecialMoveUse = <serv.time>
+		clearspecialmove
+	else
+		sysmessage @,,2 1060181,<f_special_move_mana 30> // You need ~1_MANA_REQUIREMENT~ mana to perform that attack
+	endif
+elif <tag0.SpecialMoveInUse> == 13
+	// Riding Swipe - If you are on foot, dismounts your opponent and damage the ethereal's rider or the living mount(which must be healed before
+	// ridden again). If you are mounted, damages and stuns the mounted opponent.
+	if !<src.flags>&statf_onhorse
+		sysmessage @,,2 1060848 // This attack only works on mounted targets
+		clearspecialmove
+	elif <mana> >= <f_special_move_mana 30>
+		local.damage = <eval (10 + (((<bushido> - 500) * 100) / 700)>
+		if <flags>&statf_onhorse
+			ref1=<src.findlayer(layer_horse).more2>
+			src.dismount
+			if <ref1> // ethereals are uneffected
+				ref1.aosdamage <local.damage>,0,0,0,0
+			endif
+		else
+			src.aosdamage <local.damage>,0,0,0,0
+			if <src.tag0.immune_to_parablow>
+				sysmessage @,,2 1070804 // Your target resists paralysis.
+				src.sysmessage @,,2 1070813 // You resist paralysis.
+			else
+				src.flags |= statf_freeze
+				src.timerf 3,flags &= ~statf_freeze // 3 seconds stun
+				src.tag.immune_to_parablow = 1
+				src.timerf 3,tag.immune_to_parablow =
+			endif
+		endif
+		mana -= <f_special_move_mana 30>
+		tag.LastSpecialMoveUse = <serv.time>
+		clearspecialmove
+	else
+		sysmessage @,,2 1060181,<f_special_move_mana 30> // You need ~1_MANA_REQUIREMENT~ mana to perform that attack
+	endif
+elif <tag0.SpecialMoveInUse> == 14
+	// Frenzied Whirlwind - A quick attack to all enemies in range of your weapon that causes damage over time.
+	if <mana> >= <f_special_move_mana 30>
+		effect 3,03728,10,15
+		sfx 02a1
+		local.damage = <eval (((<max <bushido>,<ninjitsu>> - 500) / 70) + 5)>
+		ref1=<uid>
+		forchars 1
+			if !<ref1.canseelos <uid>>
+			elif (<src> == <uid>)
+			else
+				timerf 1,tag.ignore.combat = 1
+				timerf 1,damage <eval (<local.damage>/3)> dam_god <ref1>
+				timerf 2,tag.ignore.combat = 1
+				timerf 2,damage <eval (<local.damage>/3)> dam_god <ref1>
+				timerf 3,tag.ignore.combat = 1
+				timerf 3,damage <eval (<local.damage>/3)> dam_god <ref1>
+				local.hit = 1
+			endif
+		endfor
+		if <local.hit>
+			timerf 2,effect 3,03728,10,15
+			timerf 2,sfx 02a1
+		endif
+		mana -= <f_special_move_mana 30>
+		tag.LastSpecialMoveUse = <serv.time>
+		clearspecialmove
+	else
+		sysmessage @,,2 1060181,<f_special_move_mana 30> // You need ~1_MANA_REQUIREMENT~ mana to perform that attack
+	endif
+elif <tag0.SpecialMoveInUse> == 16
+	// Block - Raises your defenses for a short time.
+elif <tag0.SpecialMoveInUse> == 18
+	// Nerve Strike - Does damage and paralyses your opponent for a short time.
+	if <mana> >= <f_special_move_mana 30>
+		if <src.tag0.immune_to_parablow>
+			sysmessage @,,2 1070804 // Your target resists paralysis.
+			src.sysmessage @,,2 1070813 // You resist paralysis.
+		else
+			src.sfx 0204
+			effect 3,0376a,9,32
+			effect 3,037c4,1,8
+			
+			sysmessage @,,2 1063356 // You cripple your target with a nerve strike!
+			src.sysmessage @,,2 1063357 // Your attacker dealt a crippling nerve strike!
+
+			src.aosdamage <eval (((15 * ((<bushido> / 10) - 50)) / 70) + <r0,10>)>,0,0,0,0,<uid> // 0-25
+
+			if (<eval (((<bushido> * 4) + 1500) / 7)> > <r1,1000>
+				src.flags |= statf_freeze
+				src.timerf 2,flags &= ~statf_freeze // stun for 2 seconds
+				src.tag.immune_to_parablow = 1
+				src.timerf 2,tag.immune_to_parablow =
+		endif
+		mana -= <f_special_move_mana 30>
 		tag.LastSpecialMoveUse = <serv.time>
 		clearspecialmove
 	else
@@ -366,8 +471,8 @@ if <act.isweapon>
 	if <serv.time> < <tag0.noequiptill>
 		return 1
 	endif
+	tag.noequiptill =
 endif
-tag.noequiptill =
 
 on=@mount
 if <serv.time> < <tag0.nomounttill>
