@@ -1929,7 +1929,7 @@ ON=@NpcRestock
 [CHARDEF c_forest_lord]
 ID=c_champ_lord_oaks
 NAME=Forest Lord
-SOUND=snd_pixie
+SOUND=snd_monster_pixie
 ICON=i_pet_pixie
 ARMOR=10
 DAM=10,25
@@ -1968,7 +1968,7 @@ ON=@NpcRestock
 [CHARDEF c_forest_queen]
 ID=c_champ_silvani
 NAME=Forest Queen
-SOUND=snd_pixie
+SOUND=snd_monster_pixie
 ICON=i_pet_pixie
 ARMOR=10
 DAM=10,25
