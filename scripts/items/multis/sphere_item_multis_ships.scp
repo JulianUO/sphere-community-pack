@@ -3,8 +3,9 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 
+// FILE LAST UPDATED: Sunday, August 28, 2011
 VERSION=0.56b
+
 
 [SPEECH spk_ship_cmds]
 ON=Raise Anchor
@@ -1204,7 +1205,7 @@ COMPONENT=0848e,2,-2
 [MULTIDEF 025]
 DEFNAME=i_multi_ship_gargish_e
 NAME=Gargish Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=16
 CAN=CAN_i_block
@@ -1255,7 +1256,7 @@ COMPONENT=085bd,2,2
 [MULTIDEF 026]
 DEFNAME=i_multi_ship_gargish_s
 NAME=Gargish Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=16
 CAN=CAN_i_block
@@ -1306,7 +1307,7 @@ COMPONENT=0822f,-2,2
 [MULTIDEF 027]
 DEFNAME=i_multi_ship_gargish_w
 NAME=Gargish Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=16
 CAN=CAN_i_block
@@ -1357,7 +1358,7 @@ COMPONENT=08360,-2,-2
 [MULTIDEF 028]
 DEFNAME=i_multi_ship_gargish_d1_n
 NAME=Gargish Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=16
 CAN=CAN_i_block
@@ -1408,7 +1409,7 @@ COMPONENT=0881a,2,-2
 [MULTIDEF 029]
 DEFNAME=i_multi_ship_gargish_d1_e
 NAME=Gargish Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=16
 CAN=CAN_i_block
@@ -1459,7 +1460,7 @@ COMPONENT=086ea,2,2
 [MULTIDEF 02A]
 DEFNAME=i_multi_ship_gargish_d1_s
 NAME=Gargish Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=16
 CAN=CAN_i_block
@@ -1510,7 +1511,7 @@ COMPONENT=04a0e,-2,2
 [MULTIDEF 02B]
 DEFNAME=i_multi_ship_gargish_d1_w
 NAME=Gargish Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=16
 CAN=CAN_i_block
@@ -1561,7 +1562,7 @@ COMPONENT=08a76,-2,-2
 [MULTIDEF 02C]
 DEFNAME=i_multi_ship_gargish_d2_n
 NAME=Gargish Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=16
 CAN=CAN_i_block
@@ -1612,7 +1613,7 @@ COMPONENT=08cc7,2,-2
 [MULTIDEF 02D]
 DEFNAME=i_multi_ship_gargish_d2_e
 NAME=Gargish Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=16
 CAN=CAN_i_block
@@ -1662,7 +1663,7 @@ COMPONENT=088ef,2,2
 [MULTIDEF 02E]
 DEFNAME=i_multi_ship_gargish_d2_s
 NAME=Gargish Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=16
 CAN=CAN_i_block
@@ -1713,7 +1714,7 @@ COMPONENT=08df5,-2,2
 [MULTIDEF 02F]
 DEFNAME=i_multi_ship_gargish_d2_w
 NAME=Gargish Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=16
 CAN=CAN_i_block
@@ -1763,7 +1764,7 @@ COMPONENT=08f23,-2,-2
 [MULTIDEF 030]
 DEFNAME=i_multi_ship_tokuno_n
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -1796,7 +1797,7 @@ COMPONENT=091a6,2,-3
 [MULTIDEF 031]
 DEFNAME=i_multi_ship_tokuno_e
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -1829,7 +1830,7 @@ COMPONENT=0922d,3,2
 [MULTIDEF 032]
 DEFNAME=i_multi_ship_tokuno_s
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -1862,7 +1863,7 @@ COMPONENT=09098,-2,3
 [MULTIDEF 033]
 DEFNAME=i_multi_ship_tokuno_w
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -1895,7 +1896,7 @@ COMPONENT=0911f,-3,-2
 [MULTIDEF 034]
 DEFNAME=i_multi_ship_tokuno_d1_n
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -1928,7 +1929,7 @@ COMPONENT=09482,2,-3
 [MULTIDEF 035]
 DEFNAME=i_multi_ship_tokuno_d1_e
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -1961,7 +1962,7 @@ COMPONENT=09509,3,2
 [MULTIDEF 036]
 DEFNAME=i_multi_ship_tokuno_d1_s
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -1994,7 +1995,7 @@ COMPONENT=09374,-2,3
 [MULTIDEF 037]
 DEFNAME=i_multi_ship_tokuno_d1_w
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -2027,7 +2028,7 @@ COMPONENT=093fb,-3,-2
 [MULTIDEF 038]
 DEFNAME=i_multi_ship_tokuno_d2_n
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -2060,7 +2061,7 @@ COMPONENT=096d8,2,-3
 [MULTIDEF 039]
 DEFNAME=i_multi_ship_tokuno_d2_e
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -2093,7 +2094,7 @@ COMPONENT=09651,3,2
 [MULTIDEF 03A]
 DEFNAME=i_multi_ship_tokuno_d2_s
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -2126,7 +2127,7 @@ COMPONENT=09764,-2,3
 [MULTIDEF 03B]
 DEFNAME=i_multi_ship_tokuno_d2_w
 NAME=Tokuno Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=150000
 HEIGHT=7
 CAN=CAN_i_block
@@ -2159,7 +2160,7 @@ COMPONENT=097f0,-3,-2
 [MULTIDEF 03C]
 DEFNAME=i_multi_ship_rowboat_n
 NAME=Rowboat
-TYPE=t_multi
+TYPE=t_ship
 VALUE=20000
 HEIGHT=5
 CAN=CAN_i_block
@@ -2179,7 +2180,7 @@ COMPONENT=03ebc,0,4
 [MULTIDEF 03D]
 DEFNAME=i_multi_ship_rowboat_e
 NAME=Rowboat
-TYPE=t_multi
+TYPE=t_ship
 VALUE=20000
 HEIGHT=5
 CAN=CAN_i_block
@@ -2199,7 +2200,7 @@ COMPONENT=03e63,-4,0
 [MULTIDEF 03E]
 DEFNAME=i_multi_ship_rowboat_s
 NAME=Rowboat
-TYPE=t_multi
+TYPE=t_ship
 VALUE=20000
 HEIGHT=5
 CAN=CAN_i_block
@@ -2219,7 +2220,7 @@ COMPONENT=03ec4,0,-4
 [MULTIDEF 03F]
 DEFNAME=i_multi_ship_rowboat_w
 NAME=Rowboat
-TYPE=t_multi
+TYPE=t_ship
 VALUE=20000
 HEIGHT=5
 CAN=CAN_i_block
@@ -2239,7 +2240,7 @@ COMPONENT=03e76,4,0
 [MULTIDEF 040]
 DEFNAME=i_multi_ship_britannian_n
 NAME=Britannian Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=18
 CAN=CAN_i_block
@@ -2286,7 +2287,7 @@ COMPONENT=05c3b,0,16
 [MULTIDEF 041]
 DEFNAME=i_multi_ship_britannian_e
 NAME=Britannian Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=18
 CAN=CAN_i_block
@@ -2333,7 +2334,7 @@ COMPONENT=05c05,-16,0
 [MULTIDEF 042]
 DEFNAME=i_multi_ship_britannian_s
 NAME=Britannian Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=18
 CAN=CAN_i_block
@@ -2380,7 +2381,7 @@ COMPONENT=05c71,0,-16
 [MULTIDEF 043]
 DEFNAME=i_multi_ship_britannian_w
 NAME=Britannian Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=18
 CAN=CAN_i_block
@@ -2427,7 +2428,7 @@ COMPONENT=05ca7,16,0
 [MULTIDEF 044]
 DEFNAME=i_multi_ship_britannian_d1_n
 NAME=Britannian Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=18
 CAN=CAN_i_block
@@ -2474,7 +2475,7 @@ COMPONENT=0623b,0,16
 [MULTIDEF 045]
 DEFNAME=i_multi_ship_britannian_d1_e
 NAME=Britannian Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=18
 CAN=CAN_i_block
@@ -2521,7 +2522,7 @@ COMPONENT=06205,-16,0
 [MULTIDEF 046]
 DEFNAME=i_multi_ship_britannian_d1_s
 NAME=Britannian Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=18
 CAN=CAN_i_block
@@ -2568,7 +2569,7 @@ COMPONENT=06271,0,-16
 [MULTIDEF 047]
 DEFNAME=i_multi_ship_britannian_d1_w
 NAME=Britannian Galleon
-TYPE=t_multi
+TYPE=t_ship
 VALUE=200000
 HEIGHT=18
 CAN=CAN_i_block

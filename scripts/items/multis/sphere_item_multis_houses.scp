@@ -1,16 +1,12 @@
 //****************************************************************************
-// SPHERE by : Menasoft ©1997-2007
-// www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, December 6 2009
-//
+// FILE LAST UPDATED: Sunday, August 28, 2011
 VERSION=0.56b
-// NEEDS: _multis.scp - use EXTRACT to get multis' for other multi part items:
+
+// NEEDS: _multis.scp - use EXTRACT to get multis for other multi part items:
 // loom
 // cannon
 // beds
@@ -894,6 +890,33 @@ COMPONENT=7314 0 -1 0 0
 COMPONENT=7317 -1 1 0 0
 COMPONENT=7316 -1 0 0 0
 COMPONENT=7315 -1 -1 0 0
+
+[MULTIDEF 0c8]
+DEFNAME=i_booth_carpeted
+NAME=carpeted vendor booth
+TYPE=t_multi
+MULTIREGION=-1,-1,2,2
+CATEGORY=Multis
+SUBSECTION=Vendor Booth
+DESCRIPTION=Carpeted Vendor Booth
+
+[MULTIDEF 0c9]
+DEFNAME=i_booth_fenced
+NAME=fenced vendor booth
+TYPE=t_multi
+MULTIREGION=-1,-1,2,2
+CATEGORY=Multis
+SUBSECTION=Vendor Booth
+DESCRIPTION=Fenced Vendor Booth
+
+[MULTIDEF 0ca]
+DEFNAME=i_booth_wooden
+NAME=vendor booth
+TYPE=t_multi
+MULTIREGION=-1,-1,2,2
+CATEGORY=Multis
+SUBSECTION=Vendor Booth
+DESCRIPTION=Vendor Booth with Wood Floor
 
 [MULTIDEF 01f4]
 DEFNAME=i_Wandering_Healer_Camp

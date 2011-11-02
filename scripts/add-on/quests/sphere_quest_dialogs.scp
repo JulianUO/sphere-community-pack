@@ -663,10 +663,10 @@ return 1
 endif
 if <def.quest_<src.dtag0.quest<dlocal.questid>.id>_prizes>
 	for z 1 <def.quest_<src.dtag0.quest<dlocal.questid>.id>_prizes>
-		if <def.quest_<src.dtag0.quest.<dlocal.questid>.id>_prizetype<dlocal.z>> == 1
+		if <def.quest_<src.dtag0.quest<dlocal.questid>.id>_prizetype<dlocal.z>> == 1
 		serv.newitem <strarg <def.quest_<src.dtag0.quest<dlocal.questid>.id>_prizeid<dlocal.z>>>
 		new.bounce
-		elif <def.quest_<src.dtag0.quest.<dlocal.questid>.id>_prizetype<dlocal.z>> == 3
+		elif <def.quest_<src.dtag0.quest<dlocal.questid>.id>_prizetype<dlocal.z>> == 3
 		src.<strarg <def.quest_<src.dtag0.quest<dlocal.questid>.id>_prizeid<dlocal.z>>>
 		endif
 	endfor
