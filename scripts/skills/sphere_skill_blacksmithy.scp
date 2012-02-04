@@ -5,15 +5,18 @@
 //****************************************************************************
 // FILE LAST UPDATED:
 VERSION=0.56b
-//
-// SCRIPT CREDITS
-// --------------
-// Coruja - Base script
-// ShiryuX - Updated to the pack
-//
-// SCRIPT DOCUMENTATION
-// --------------------
-// Functions used for Blacksmithing Menu
+
+
+[COMMENT sphere_skill_blacksmithy_functions]
+"SCRIPT CREDITS
+ --------------
+ Coruja - Base script
+ ShiryuX - Updated to the pack
+
+ SCRIPT DOCUMENTATION
+ --------------------
+ Functions used for Blacksmithing Menu"
+
 
 [SKILL 7]
 DEFNAME=SKILL_Blacksmith
@@ -37,88 +40,237 @@ src.sysmessage @,,2 <def.scp.craft_msg_fail>
 ON=@Abort
 src.sysmessage @,,2 <def.scp.craft_msg_fail>
 
-[function f_craft_blacksmith_checkforge]
-if !<isneartype t_forge 3>
-ctag.craft.message = <def.scp.craft_msg_needforge>
-return 1
-endif
-return 0
 
-[function f_craft_blacksmith_exceptionalbonus]
-ref5 = <args>
-name = Exceptional <name>
-if <isweapon>
-tag0.damageincrease += <eval 35 + (<ref5.armslore> / 200)>
-elif <isarmor>
-modar += <eval (<armor.high> * 15) / 100>
-endif
+[FUNCTION f_craft_blacksmith_checkforge]
+IF (!<ISNEARTYPE t_forge 3>) || (!<ISNEARTYPE t_anvil 3>)
+   CTAG.craft.message=<DEF.SCP.craft_msg_smithingneeds>
+   RETURN 1
+ENDIF
+RETURN 0
 
-[function f_craft_blacksmith_repair]
-targetf f_craft_blacksmith_repair_targ
-sysmessage <def.scp.craft_repair_targ>
+[FUNCTION f_craft_blacksmith_exceptionalbonus]
+REF5=<ARGS>
+NAME=Exceptional <NAME>
+IF (<ISWEAPON>)
+   tag0.damageincrease += <eval 35 + (<ref5.armslore> / 200)>
+ELIF (<ISARMOR>)
+   modar += <eval (<armor.high> * 15) / 100>
+ENDIF
 
-[function f_craft_blacksmith_repair_targ]
-if (!<isneartype t_forge 3>) || (!<isneartype t_anvil 3>)
-sysmessage <def.scp.blacksmith_forgeanvil>
-return 1
-elif !<argo.isitem>
-sysmessage <def.scp.craft_repair_notitem>
-return 1
-elif <argo.topobj> != <uid>
-sysmessage <def.scp.craft_repair_inpack>
-return 1
-elif (<argo.skillmake.1.key> != skill_blacksmith) || !((<argo.type> == t_armor) || (<argo.type> == t_shield) || (<argo.isweapon>))
-sysmessage <def.scp.craft_repair_wrongskill>
-return 1
-elif <argo.more1l> >= <argo.more1h>
-sysmessage <def.scp.craft_repair_fullrepair>
-return 1
-endif
-if <argo.more1h> <= 0
-sysmessage <def.scp.craft_repair_cannot>
-return 1
-endif
+
+[FUNCTION f_craft_blacksmith_repair]
+IF (!<ISNEARTYPE t_forge 3>) || (!<ISNEARTYPE t_anvil 3>)
+   CTAG.craft.message=<DEF.SCP.craft_msg_smithrepairneeds>
+   f_resenddialog d_craft_menu
+   RETURN 1
+ENDIF
+TARGETF f_craft_blacksmith_repair_targ
+SYSMESSAGE <DEF.SCP.craft_repair_targ>
+
+[FUNCTION f_craft_blacksmith_repair_targ]
+IF (!<ISNEARTYPE t_forge 3>) || (!<ISNEARTYPE t_anvil 3>)
+   CTAG.craft.message=<DEF.SCP.craft_msg_smithrepairneeds>
+   LOCAL.FailedRequirement=1
+ELIF (!<ARGO.ISTEVENT.e_equipitem>)
+   CTAG.Craft.Message=<DEF.SCP.craft_repair_notitem>
+   LOCAL.FailedRequirement=1
+ELIF (<ARGO.SKILLMAKE.1.KEY>!=<SRC.CTAG0.craft.skill>)
+   CTAG.Craft.Message=<DEF.SCP.craft_repair_wrongskill>
+   LOCAL.FailedRequirement=1
+ELIF (<ARGO.CONT> != <FINDLAYER(layer_pack).UID>)
+   CTAG.Craft.Message=<DEF.SCP.craft_repair_inpack>
+   LOCAL.FailedRequirement=1
+ELIF (<ARGO.SKILLMAKE.1.KEY> != skill_blacksmith) || !((<ARGO.TYPE> == t_armor) || (<ARGO.TYPE> == t_shield) || (<ARGO.ISWEAPON>))
+   CTAG.Craft.Message=<DEF.SCP.craft_repair_wrongskill>
+   LOCAL.FailedRequirement=1
+ELIF (<ARGO.MORE1L> >= <ARGO.MORE1H>)
+   CTAG.Craft.Message=<DEF.SCP.craft_repair_fullrepair>
+   LOCAL.FailedRequirement=1
+ELIF (<ARGO.MORE1H> <= 0)
+   CTAG.Craft.Message=<DEF.SCP.craft_repair_cannot>
+   LOCAL.FailedRequirement=1
+ENDIF
+IF (<LOCAL.FailedRequirement>)
+   f_resenddialog d_craft_menu
+   RETURN 1
+ENDIF
 f_loopanim 11,3,1
 f_loopsound 42,3,1
-local.difficulty = <eval ((((<argo.more1h> - <argo.more1l>) * 1250) / <argo.more1h>) - 250) / 10>
-local.decrease = <eval 30 - (<blacksmithing> / 33)>
-if <local.decrease> < 0
-local.decrease = 0
-endif
-local.decrease += <eval {2 4}>
-argo.more1h = <eval (<argo.more1h> * (100 - <local.decrease>)) / 100>
-if <local.difficulty> > <r100>
-sysmessage <def.scp.craft_repair_fail>
-return 1
-else
-argo.more1l = <argo.more1h>
-sysmessage <def.scp.craft_repair_success>
-endif
+LOCAL.difficulty=<EVAL ((((<ARGO.MORE1H> - <ARGO.MORE1L>) * 1250) / <ARGO.MORE1H>) - 250) / 10>
+LOCAL.decrease=<EVAL 30 - (<Blacksmithing> / 33)>
+IF (<LOCAL.decrease> < 0)
+   LOCAL.decrease=0
+   ENDIF
+LOCAL.decrease += <EVAL {2 4}>
+ARGO.MORE1H=<EVAL (<ARGO.MORE1H> * (100 - <LOCAL.decrease>)) / 100>
+IF (<LOCAL.difficulty> > <R100>)
+   CTAG.craft.message=<DEF.SCP.craft_repair_fail>
+   RETURN 1
+ELSE
+   ARGO.MORE1L=<ARGO.MORE1H>
+   CTAG.craft.message=<DEF.SCP.craft_repair_success>
+ENDIF
+RESENDTOOLTIP
 
-[function f_craft_blacksmith_smelt]
-targetf f_craft_blacksmith_smelt_targ
-sysmessage <def.scp.craft_smelt_targ>
 
-[function f_craft_blacksmith_smelt_targ]
-if (!<isneartype t_forge 3>) || (!<isneartype t_anvil 3>)
-sysmessage <def.scp.blacksmith_forgeanvil>
-return 1
-elif !<argo.isitem>
-sysmessage <def.scp.craft_smelt_notitem>
-return 1
-elif (<argo.type>==t_clothing) || (<argo.attr>&attr_magic) || !((<argo.isarmor>) || (<argo.isweapon>) || strmatch("*ingot*","<argo.resources.1>"))
-sysmessage <def.scp.craft_smelt_notsmeltable>
-return 1
-else
-	if !<argo.quality>
-	local.amount = 1
-	else
-	local.amount = <muldiv <strarg <argo.resources.1>>,60,100>
-	endif
-serv.newitem <streat <argo.resources.1>>,<dlocal.amount>
-new.cont = <argo.cont>
-argo.remove
-sysmessage <def.scp.craft_smelt_success>
-endif
+[FUNCTION f_craft_blacksmith_smelt]
+IF (!<ISNEARTYPE t_forge 3>)
+   CTAG.craft.message=<DEF.SCP.craft_msg_smithsmeltneeds>
+   f_resenddialog d_craft_menu
+   RETURN 1
+ENDIF
+TARGETF f_craft_blacksmith_smelt_targ
+SYSMESSAGE <DEF.SCP.craft_smelt_targ>
 
-[eof]
+[FUNCTION f_craft_blacksmith_smelt_targ]
+IF (!<ISNEARTYPE t_forge 3>)
+   CTAG.craft.message=<DEF.SCP.craft_msg_smithsmeltneeds>
+   RETURN 1
+ELIF !<ARGO.ISITEM>
+   SYSMESSAGE <DEF.SCP.craft_smelt_notitem>
+   RETURN 1
+ELIF (<ARGO.TYPE>==t_clothing) || (<ARGO.ATTR>&attr_magic) || !((<ARGO.ISARMOR>) || (<ARGO.ISWEAPON>) || STRMATCH("*ingot*","<ARGO.RESOURCES.1>"))
+   SYSMESSAGE <DEF.SCP.craft_smelt_notsmeltable>
+   RETURN 1
+ELSE
+	IF !<ARGO.QUALITY>
+      LOCAL.AMOUNT=1
+	ELSE
+      LOCAL.AMOUNT=<MULDIV <STRARG <ARGO.RESOURCES.1>>,60,100>
+	ENDIF
+   SERV.NEWITEM=<STREAT <ARGO.RESOURCES.1>>,<dLOCAL.AMOUNT>
+   NEW.CONT=<ARGO.CONT>
+   ARGO.REMOVE
+   SYSMESSAGE <DEF.SCP.craft_smelt_success>
+ENDIF
+
+
+[FUNCTION f_craft_blacksmith_enhance]
+LOCAL.DefnameValue=<SRC.CTAG0.craft.skill>_material_<SRC.dCTAG.craft.material.<SRC.CTAG.craft.skill>>
+
+IF (!<ISNEARTYPE t_forge 3>) || (!<ISNEARTYPE t_anvil 3>)
+   CTAG.craft.message=<DEF.SCP.craft_msg_smithenhanceneeds>
+   LOCAL.FailedRequirement=1
+ELIF !(<FINDLAYER(layer_hand1).ISTEVENT.t_runic_smith_hammer>)
+   CTAG.Craft.Message=<DEF.SCP.craft_enhance_notrunicB>
+   LOCAL.FailedRequirement=1
+ELIF (STRMATCH(<DEF.<LOCAL.DefnameValue>_resourceid>,))
+   CTAG.Craft.Message=<DEF.SCP.craft_enhance_notspecial>
+   LOCAL.FailedRequirement=1
+ELIF !(<SRC.RESTEST 5 <DEF.<LOCAL.DefnameValue>_resourceid>>)
+   CTAG.Craft.Message=<DEF.SCP.craft_enhance_nomaterial>
+   LOCAL.FailedRequirement=1
+ENDIF
+IF (<LOCAL.FailedRequirement>)
+   f_resenddialog d_craft_menu
+   RETURN 1
+ENDIF
+TARGETF f_craft_blacksmith_enhance_targ
+SYSMESSAGE <DEF.SCP.craft_enhance_targ>
+
+[FUNCTION f_craft_blacksmith_enhance_targ]
+LOCAL.DefnameValue=<SRC.CTAG0.craft.skill>_material_<SRC.dCTAG.craft.material.<SRC.CTAG.craft.skill>>
+
+IF (!<ISNEARTYPE t_forge 3>) || (!<ISNEARTYPE t_anvil 3>)
+   CTAG.craft.message=<DEF.SCP.craft_msg_smithenhanceneeds>
+   LOCAL.FailedRequirement=1
+ELIF !(<FINDLAYER(layer_hand1).ISTEVENT.t_runic_smith_hammer>)
+   CTAG.Craft.Message=<DEF.SCP.craft_enhance_notrunicB>
+   LOCAL.FailedRequirement=1
+ELIF (STRMATCH(<DEF.<LOCAL.DefnameValue>_resourceid>,))
+   CTAG.Craft.Message=<DEF.SCP.craft_enhance_notspecial>
+   LOCAL.FailedRequirement=1
+ELIF !(<SRC.RESTEST 5 <DEF.<LOCAL.DefnameValue>_resourceid>>)
+   CTAG.Craft.Message=<DEF.SCP.craft_enhance_nomaterial>
+   LOCAL.FailedRequirement=1
+ELIF (<ARGO.f_craft_blacksmith_alreadyEnhanced>)
+   CTAG.Craft.Message=<DEF.SCP.craft_enhance_already>
+   LOCAL.FailedRequirement=1
+ELIF (<ARGO.ATTR>&attr_magic)
+   CTAG.Craft.Message=<DEF.SCP.craft_enhance_enchanted>
+   LOCAL.FailedRequirement=1
+ELIF !(<ARGO.ISTEVENT.e_equipitem>)
+   CTAG.Craft.Message=<DEF.SCP.craft_enhance_notitem>
+   LOCAL.FailedRequirement=1
+ELIF (<ARGO.SKILLMAKE.1.KEY>!=<SRC.CTAG0.craft.skill>)
+   CTAG.Craft.Message=<DEF.SCP.craft_enhance_notitem>
+   LOCAL.FailedRequirement=1
+ELIF (<ARGO.CONT> != <FINDLAYER(layer_pack).UID>)
+   CTAG.Craft.Message=<DEF.SCP.craft_enhance_inpack>
+   LOCAL.FailedRequirement=1
+ENDIF
+IF (<LOCAL.FailedRequirement>)
+   f_resenddialog d_craft_menu
+   RETURN 1
+ENDIF
+SRC.CONSUME 5 <DEF.<LOCAL.DefnameValue>_resourceid>
+f_loopanim 11,3,1
+f_loopsound 42,3,1
+LOCAL.materialPenalty=<EVAL <STREAT <DEF.<LOCAL.DefnameValue>_skill>>>
+LOCAL.difficulty=<EVAL <Blacksmithing>-<ARGO.SKILLMAKE.1.VALUE>-<LOCAL.materialPenalty>>
+LOCAL.chance=<R1000>
+
+IF (<LOCAL.difficulty> < 0)
+   SYSMESSAGE <DEF.SCP.craft_enhance_totalfail>
+   ARGO.CONSUME
+   RETURN 1
+ENDIF
+IF (<LOCAL.Chance> > <LOCAL.difficulty>)
+   SYSMESSAGE <DEF.SCP.craft_enhance_fail>
+   RETURN 1
+ELSE
+   ARGO.f_craft_blacksmith_enhance_item
+   SYSMESSAGE <DEF.SCP.craft_enhance_success>
+ENDIF
+
+[FUNCTION f_craft_blacksmith_alreadyEnhanced]
+LOCAL.BadResources="i_ingot_copper,i_ingot_gold,i_ingot_rose,i_ingot_agapite,i_ingot_tyrian,i_ingot_silver,i_ingot_shadow,i_ingot_byzantine,i_ingot_magmite,i_ingot_verite,i_ingot_bloodrock,i_ingot_blackrock,i_ingot_valorite,i_ingot_lavarock,i_ingot_royal,i_ingot_mytheril,i_ingot_titanium,i_ingot_zanite"
+IF (<TAG0.Enhanced>)
+   RETURN 1
+ENDIF
+ARGS=<SERV.ITEMDEF.<DEFNAME>.RESOURCES>
+FOR 1 <ARGV>
+   IF (STRMATCH(*<SERV.ITEMDEF.<DEFNAME>.RESOURCES.<LOCAL._FOR>.KEY>*,<LOCAL.BadResources>))
+      RETURN 1
+   ENDIF
+ENDFOR
+RETURN 0
+
+[FUNCTION f_craft_blacksmith_enhance_item]
+LOCAL.DefnameValue=<SRC.CTAG0.craft.skill>_material_<SRC.dCTAG.craft.material.<SRC.CTAG.craft.skill>>
+LOCAL.Material=<DEF.<LOCAL.DefnameValue>_resourceid>
+
+TAG.Enhanced=<LOCAL.Material>
+IF (<TAG0.REQSTR>)
+   TAG0.REQSTR += <EVAL <DEF.<LOCAL.DefnameValue>_modreqstr>>
+ENDIF
+IF (<HITPOINTS>)
+   IF (<DEF.<LOCAL.DefnameValue>_durability>==3)
+      LOCAL.DurabilityIncrease=<R24,36>
+      MORE1L += <LOCAL.DurabilityIncrease>
+      MORE1H += <LOCAL.DurabilityIncrease>
+   ELSEIF (<DEF.<LOCAL.DefnameValue>_durability>==4)
+      LOCAL.DurabilityIncrease=<R24,36>
+      MORE1L += <LOCAL.DurabilityIncrease>
+      MORE1H += <LOCAL.DurabilityIncrease>
+   ENDIF
+ENDIF
+NAME=<DEF.<LOCAL.DefnameValue>> <NAME>
+COLOR=<DEF.<LOCAL.DefnameValue>_color>
+ATTR |= attr_identified
+
+IF (<ISWEAPON>)
+   TAG0.PhysicalDamagePercent += <EVAL <getargv 0 <DEF.<LOCAL.DefnameValue>_moddamage>>>
+   TAG0.FireDamagePercent += <EVAL <getargv 1 <DEF.<LOCAL.DefnameValue>_moddamage>>>
+   TAG0.ColdDamagePercent += <EVAL <getargv 2 <DEF.<LOCAL.DefnameValue>_moddamage>>>
+   TAG0.PoisonDamagePercent += <EVAL <getargv 3 <DEF.<LOCAL.DefnameValue>_moddamage>>>
+   TAG0.EnergyDamagePercent += <EVAL <getargv 4 <DEF.<LOCAL.DefnameValue>_moddamage>>>
+ELSEIF (<ISARMOR>)
+   TAG0.ResPhysical += <EVAL <getargv 0 <DEF.<LOCAL.DefnameValue>_modresist>>>
+   TAG0.ResFire += <EVAL <getargv 1 <DEF.<LOCAL.DefnameValue>_modresist>>>
+   TAG0.ResCold += <EVAL <getargv 2 <DEF.<LOCAL.DefnameValue>_modresist>>>
+   TAG0.ResPoison += <EVAL <getargv 3 <DEF.<LOCAL.DefnameValue>_modresist>>>
+   TAG0.ResEnergy += <EVAL <getargv 4 <DEF.<LOCAL.DefnameValue>_modresist>>>
+ENDIF
+
+[EOF]

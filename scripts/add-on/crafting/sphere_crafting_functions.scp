@@ -95,6 +95,27 @@ IF !(<CANMAKE <ARGS>>)
 ENDIF
 RETURN 1
 
+[FUNCTION enhancesuccesschance]
+IF (<SRC.Imbuing> >= <serv.itemdef.<args>.skillmake.1.val>)
+   LOCAL.R = <EVAL (<SRC.Imbuing>> - <SERV.ITEMDEF.<ARGS>.SKILLMAKE.1.VAL>) * 2>
+   LOCAL.R += <DEF.<SERV.ITEMDEF.<ARGS>.SKILLMAKE.1.NAME>_CHANCEATMIN>
+ENDIF
+IF !(<ISITEM>)
+   IF (<R1000> < <LOCAL.R>)
+      ACTDIFF = 10
+   ELSE
+      ACTDIFF = -10
+   ENDIF
+   RETURN 1
+ELSE
+   IF <LOCAL.R> < 0
+      LOCAL.R = 0
+   ELIF <LOCAL.R> > 1000
+      LOCAL.R = 1000
+   ENDIF
+   RETURN <LOCAL.R>
+ENDIF
+
 [function craftsuccesschance]
 if (<src.<serv.skill.<serv.itemdef.<args>.skillmake.1.key>.key>> >= <serv.itemdef.<args>.skillmake.1.val>)
    local.r = <eval (<src.<serv.skill.<serv.itemdef.<args>.skillmake.1.key>.key>> - <serv.itemdef.<args>.skillmake.1.val>) * 2>

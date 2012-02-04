@@ -5,45 +5,47 @@
 //****************************************************************************
 // FILE LAST UPDATED:
 VERSION=0.56b
-//
-// SCRIPT CREDITS
-// --------------
-// pyromapes2k - Base crafting system used in here
-// coruja - Updated to be more OSI compatible
-// ShiryuX - Updated to the scriptpack and tweaked many parts of it
-//
-// SCRIPT DOCUMENTATION
-// --------------------
-// OSI Crafting System
-// ---------------------------------------
-// ctag0.craft.skill = the skill used
-// ctag0.craft.last = last item crafted
-// ctag0.craft.page.sidebar = sidebar page
-// ---------------------------------------
-// d_craft_menu buttons
-// --------------------
-// 1 - 99 = sidebar
-// 100 - 300 = item list
-// 600 - 800 = item list (make button)
-//
-// 400 = prev page sidebar
-// 401 = next page sidebar
-//
-// 403 = prev page main list
-// 404 = next page main list
-//
-// 406 = last ten button
-//
-// 500 = smelt item
-// 501 = first resource
-// 502 = second resource
-// 503 = exit
-//
-// 505 = repair
-// 506 = smelt
-// 507 = enhance
-// 508 = make last
-// --------------------
+
+[COMMENT sphere_crafting_system]
+
+"SCRIPT CREDITS
+ --------------
+ pyromapes2k - Base crafting system used in here
+ coruja - Updated to be more OSI compatible
+ ShiryuX - Updated to the scriptpack and tweaked many parts of it
+
+ SCRIPT DOCUMENTATION
+ --------------------
+ OSI Crafting System
+ ---------------------------------------
+ ctag0.craft.skill = the skill used
+ ctag0.craft.last = last item crafted
+ ctag0.craft.page.sidebar = sidebar page
+ ---------------------------------------
+ d_craft_menu buttons
+ --------------------
+ 1 - 99 = sidebar
+ 100 - 300 = item list
+ 600 - 800 = item list (make button)
+
+ 400 = prev page sidebar
+ 401 = next page sidebar
+
+ 403 = prev page main list
+ 404 = next page main list
+
+ 406 = last ten button
+
+ 500 = smelt item
+ 501 = first resource
+ 502 = second resource
+ 503 = exit
+
+ 505 = repair
+ 506 = smelt
+ 507 = enhance
+ 508 = make last
+ --------------------"
 
 ///////////////////////////////////////////////////////////////
 //////// MAIN CRAFTING MENU
@@ -51,6 +53,10 @@ VERSION=0.56b
 // This is the main menu, contains the list of items.
 [dialog d_craft_menu]
 40,40
+
+IF !(<CTAG0.craft.mark>) && (<DEF0.<CTAG0.craft.skill>_marking>)
+   ctag.craft.mark=2
+ENDIF
 
 page 0
 resizepic 0 0 9200 530 437   // background/border
@@ -146,8 +152,10 @@ button 270 342 4005 4007 1 0 505
 xmfhtmlgumpcolor 305 343 150 20 <ddef.scp.craft_button_repair> 0 0 <ddef.dcolor_white>
 button 270 362 4005 4007 1 0 506
 xmfhtmlgumpcolor 305 363 150 20 <qval (<ctag0.craft.mark>) ? <qval (<ctag0.craft.mark>==1) ? 1044017 : 1044019> : 1044018> 0 0 <ddef.dcolor_white>
-button 270 382 4005 4007 1 0 507
-xmfhtmlgumpcolor 305 383 150 20 <ddef.scp.craft_button_enhance> 0 0 <ddef.dcolor_white>
+if !<isempty <def.<ctag0.craft.skill>_enhance>>
+   button 270 382 4005 4007 1 0 507
+   xmfhtmlgumpcolor 305 383 150 20 <ddef.scp.craft_button_enhance> 0 0 <ddef.dcolor_white>
+endif
 button 270 402 4005 4007 1 0 508
 xmfhtmlgumpcolor 305 403 150 20 <ddef.scp.craft_button_makelast> 0 0 <ddef.dcolor_white>
 
@@ -225,7 +233,6 @@ ctag.lastenbutton=1
 f_resenddialog d_craft_menu
 
 on=500 // smelt button
-f_resenddialog d_craft_menu
 try <def.<ctag0.craft.skill>_smelt>
 
 on=501 502 // material buttons
@@ -240,7 +247,6 @@ on=505 // repair button
 if !<isempty <def.<ctag0.craft.skill>_repair>>
    try <def.<ctag0.craft.skill>_repair>
 endif
-f_resenddialog d_craft_menu
 
 on=506 // mark item option button
 if <def0.<ctag0.craft.skill>_marking>
@@ -253,22 +259,11 @@ endif
 f_resenddialog d_craft_menu
 
 on=507 // enhance button
-//1061002//"You must use a runic tailoring kit to enhance a tailored item."
-//1061003//"You must be using a runic hammer to enhance a smithed item."
-//1061004//"Target an item to enhance with your chosen material."
-//1061005//"The item must be in your backpack to enhance it."
-//1061008//"You enhance the item with the properties of the special material."
-//1061009//"The item already carries the properties of a special material."
-//1061010//"You must select a special material in order to enhance an item with its properties."
-//1061011//"You cannot enhance this type of item with thte properties of the selected special material."
-//1061012//"This item is already enhanced with the properties of a special material."
-//1061080//"You attempt to enhance the item, but fail catastrophically. The item is lost."
+if !<isempty <def.<ctag0.craft.skill>_enhance>>
+   try <def.<ctag0.craft.skill>_enhance>
+endif
+//1149869,<FVAL <SRC.IMBUING>>//"Target an item to enhance with the properties of your selected material (success rate: ~%)"
 //1061081//"The target item is not a magic item or does not have any properties that match those of the special material."
-//1061082//"You attempt to enhance the item, but fail. Some material is lost in the process."
-//1074794//"Target the material to use."
-//1149869//"Target an item to enhance with the properties of your selected material (success rate: ~%)"
-SYSMESSAGE @021 Not yet implemented
-f_resenddialog d_craft_menu
 
 on=508 // make last button
 if <isempty <ctag.craft.last.<ctag0.craft.skill>>>
@@ -431,7 +426,6 @@ dialogclose d_craft_material
 f_resenddialog d_craft_menu
 
 on=500 // smelt button
-f_resenddialog d_craft_material
 try <def.<ctag0.craft.skill>_smelt>
 
 on=501 502 // material buttons
@@ -445,7 +439,6 @@ on=505 // repair button
 if !<isempty <def.<ctag0.craft.skill>_repair>>
    try <def.<ctag0.craft.skill>_repair>
 endif
-f_resenddialog d_craft_material
 
 on=506 // mark item option button
 if <def0.<ctag0.craft.skill>_marking>
@@ -458,8 +451,9 @@ endif
 f_resenddialog d_craft_material
 
 on=507 // enhance button
-SYSMESSAGE @021 Not yet implemented
-f_resenddialog d_craft_material
+if !<isempty <def.<ctag0.craft.skill>_enhance>>
+   try <def.<ctag0.craft.skill>_enhance>
+endif
 
 on=508 // make last button
 if <isempty <ctag.craft.last.<ctag0.craft.skill>>>

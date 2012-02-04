@@ -20,9 +20,7 @@ endif
 if <def0.scp.NewCrafting_Blacksmithing> == 0
    return 0
 endif
-if <def0.blacksmithing_resourceid>==<defname>
-   src.ctag.craft.material.blacksmithing=
-elif <def0.blacksmithing_material_1_resourceid>==<defname>
+if <def0.blacksmithing_material_1_resourceid>==<defname>
    src.ctag.craft.material.blacksmithing=1
 elif <def0.blacksmithing_material_2_resourceid>==<defname>
    src.ctag.craft.material.blacksmithing=2
@@ -62,6 +60,8 @@ elif <def0.blacksmithing_material_19_resourceid>==<defname>
    src.ctag.craft.material.blacksmithing=19
 elif <def0.blacksmithing_material_20_resourceid>==<defname>
    src.ctag.craft.material.blacksmithing=20
+else
+   src.ctag.craft.material.blacksmithing=
 endif
 return 0
 
