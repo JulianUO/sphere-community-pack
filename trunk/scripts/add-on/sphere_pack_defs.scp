@@ -104,8 +104,12 @@ color_o_rusty					0750
 [DEFNAME COLOR_SETS]
 color_o_darkwood_set				0494
 
-[DEFNAME COLOR_GRANITE]
-color_o_granite					0
+[DEFNAME COLOR_ROCKS]
+color_o_granite            0b8e//09c2,0
+color_o_sandstone          0501
+color_o_marble             0b8b//0b8c,05b2
+color_o_jade               0505//0506,0b83,0b93,0b94,0b95,0b96
+color_o_bloodstone         05b5//0b85
 
 [DEFNAME SPELLWEAVING_SOUNDS]
 snd_spell_arcane_circle			1472

@@ -49,6 +49,9 @@ VERSION=0.56b
 // _repair: The function called when you try to repair an item.
 //          If empty, option won't show in the skill menu.
 //
+// _enhance: The function called when you try to enhance an item.
+//           If empty, option won't show in the skill menu.
+//
 // _check: A function that does some tests before trying to create the item.
 //         For example, blacksmithing typically requires a forge to be near.
 //         RETURN 1 in this function prevents the crafting.
