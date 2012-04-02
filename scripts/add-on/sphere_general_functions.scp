@@ -36,18 +36,18 @@ endif
 return 0
 
 [function ismale]
-if (<body> == c_gargoyle_male) || (<body> == c_elf_male) || (<body> == c_man)
+if (<can> == mt_male)
 return 1
 endif
 return 0
 
 [function isfemale]
-if (<body> == c_gargoyle_female) || (<body> == c_elf_female) || (<body> == c_woman)
+if (<can> == mt_female)
 return 1
 endif
 return 0
 
-[FUNCTION ishumanaid]
+[FUNCTION ishumanoid]
 if (<ismale> || <isfemale>)
 RETURN 1
 endif

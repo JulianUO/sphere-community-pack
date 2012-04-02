@@ -574,3 +574,12 @@ i_leather_barded !
   EA animations.
 - Fixed: Cleaned up some bad axis cats on NPC's.
 - Updated: spheretables.scp to access the folders. Sorry, I forgot to update it last time.
+
+01-04-2012, Khaos
+- Updated: sphere_defs.scp; added in the mountid for ethereal boura mount. This is a veteran
+  reward on EA.
+
+02-04-2012, Khaos
+- Fixed: sphere_general_functions.scp; IsMale and IsFemale was looking for ID types. It now checks
+  for CAN flags instead. mt_male and mt_female respectively. Also, I fixed a typo in IsHumanoid.
+  It was reading IsHumanaid. Need to see if the dependencies are incorrect as well.
