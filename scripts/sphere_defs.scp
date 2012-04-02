@@ -61,6 +61,8 @@ mount_0x11c   03e92   // Armored Steed (Mondains Steed)
 mount_0x115   03e91   // Cu Sidhe
 mount_0x114   03e90   // Reptalon
 mount_0xd5   03ec5   // Polar Bear (veteran's award)
+// SA
+mount_0x1B0	03ec6	// Ethereal Boura
 
 [DEFNAME hues]   // these are hues from hues.mul.
 color_none          0
