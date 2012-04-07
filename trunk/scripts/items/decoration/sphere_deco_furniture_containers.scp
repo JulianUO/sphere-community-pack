@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, August 14, 2011
+// FILE LAST UPDATED: Monday, February 20, 2012
 VERSION=0.56b
 
 
@@ -1098,6 +1098,19 @@ DUPEITEM=04103
 [ITEMDEF 04109]
 //Pirate Chest (opened)
 DUPEITEM=04103
+
+
+[ITEMDEF 044f2]
+DEFNAME=i_barrel_oak
+NAME=oak barrel
+TYPE=t_container
+VALUE=149
+WEIGHT=87.0
+RESOURCES=1 i_barrel_staves,1 i_barrel_hoops,1 i_barrel_lid
+SKILLMAKE=Tinkering 55.0,t_tinker_tools//requires proximity to coopers bench
+CATEGORY=Provisions - Miscellaneous
+SUBSECTION=Containers
+DESCRIPTION=Oak Barrel
 
 
 [ITEMDEF 046a2]

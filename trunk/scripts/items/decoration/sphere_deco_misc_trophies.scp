@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, March 27, 2011.
+// FILE LAST UPDATED: Monday, February 20, 2012.
 VERSION=0.56b
 
 
@@ -148,5 +148,38 @@ DUPELIST=044e8
 [ITEMDEF 044e8]
 //trophy dragonfish
 DUPEITEM=044e7
+
+[ITEMDEF 044e9]
+DEFNAME=i_trophy_marlin
+NAME=marlin trophy
+FLIP=1
+VALUE=53
+WEIGHT=8.2
+RESOURCES=2 i_board,1 i_fish_marlin,1 i_nails,1 i_wool
+SKILLMAKE=Carpentry 72.0,Tailoring 60.0,t_carpentry,t_sewing_kit
+CATEGORY=Decoration - Miscellaneous
+SUBSECTION=Trophies
+DESCRIPTION=Marlin (multiple parts)
+DUPELIST=044ea,044eb,044ec,044ed,044ee
+
+[ITEMDEF 044ea]
+//trophy marlin
+DUPEITEM=044e9
+
+[ITEMDEF 044eb]
+//trophy marlin
+DUPEITEM=044e9
+
+[ITEMDEF 044ec]
+//trophy marlin
+DUPEITEM=044e9
+
+[ITEMDEF 044ed]
+//trophy marlin
+DUPEITEM=044e9
+
+[ITEMDEF 044ee]
+//trophy marlin
+DUPEITEM=044e9
 
 [EOF]

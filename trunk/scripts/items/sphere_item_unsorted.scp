@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Sunday, August 28, 2011
+// FILE LAST UPDATED: Monday, February 20, 2012
 VERSION=0.56b
 
 
@@ -2443,6 +2443,37 @@ DUPEITEM=044dd
 
 [ITEMDEF 044e4]
 //grandfather clock 2 (animation frame)
+
+
+[ITEMDEF 044ef]
+DEFNAME=i_planter_ancient
+NAME=ancient stone planter
+WEIGHT=15.0
+RESOURCES=3 i_rock_plain
+SKILLMAKE=Carpentry 5.0,t_masonry_tool
+CATEGORY=Decoration - Potted Plants & Vases
+SUBSECTION=Vases & Pots
+DESCRIPTION=Ancient Stone Planter
+
+[ITEMDEF 044f0]
+DEFNAME=i_planter_grecian
+NAME=grecian planter
+WEIGHT=20.0
+RESOURCES=4 i_rock_plain
+SKILLMAKE=Carpentry 5.0,t_masonry_tool
+CATEGORY=Decoration - Potted Plants & Vases
+SUBSECTION=Vases & Pots
+DESCRIPTION=Grecian Planter
+
+[ITEMDEF 044f1]
+DEFNAME=i_planter_modern
+NAME=modern stone planter
+WEIGHT=15.0
+RESOURCES=3 i_rock_plain
+SKILLMAKE=Carpentry 5.0,t_masonry_tool
+CATEGORY=Decoration - Potted Plants & Vases
+SUBSECTION=Vases & Pots
+DESCRIPTION=Modern Stone Planter
 
 
 [ITEMDEF 04515]
