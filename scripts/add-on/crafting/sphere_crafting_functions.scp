@@ -23,6 +23,9 @@ if strcmp("<argv[0]>","<ctag.craft.skill>")
    ctag.craft.sidebar = 01
 endif
 ctag.craft.skill=<argv[0]>
+if !(<ctag0.craft.mark>) && (<def0.<ctag0.craft.skill>_marking>)
+   ctag.craft.mark=2
+endif
 f_resenddialog d_craft_menu
 
 

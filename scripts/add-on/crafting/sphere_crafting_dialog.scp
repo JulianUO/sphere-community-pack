@@ -54,10 +54,6 @@ VERSION=0.56b
 [dialog d_craft_menu]
 40,40
 
-IF !(<CTAG0.craft.mark>) && (<DEF0.<CTAG0.craft.skill>_marking>)
-   ctag.craft.mark=2
-ENDIF
-
 page 0
 resizepic 0 0 9200 530 437   // background/border
 gumppictiled 10 10 510 417 2624   // darker background
