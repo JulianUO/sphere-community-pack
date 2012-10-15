@@ -3,7 +3,7 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, Febuary 19, 2011
+// FILE LAST UPDATED: Monday, October 15, 2012
 VERSION=0.56b
 
 [ITEMDEF 0e3b]
@@ -22,6 +22,9 @@ DESCRIPTION=Magery Spellbook
 TEVENTS=t_iprop
 ON=@Create
 	ATTR=attr_magic|attr_newbie
+   //To fill the book, set the following:
+   //MORE1=0fffffff
+   //MORE2=0fffffff
 
 [ITEMDEF 02252]
 DEFNAME=i_spellbook_paladin
@@ -37,6 +40,8 @@ TEVENTS=t_iprop
 ON=@Create
    ATTR=attr_magic|attr_newbie
    MOREZ=200
+   //To fill the book, set the following:
+   MORE1=03ff
 
 [ITEMDEF 02253]
 DEFNAME=i_spellbook_necromancy
@@ -52,6 +57,9 @@ TEVENTS=t_iprop
 ON=@Create
    ATTR=attr_magic|attr_newbie
    MOREZ=100
+   //To fill the book, set the following:
+   //MORE1=0ffff//FIXME: This is missing exorcism
+
 //I think the code below is no longer necessary...
 //ON=@DropOn_Self
 //if <argo.type> == t_scroll
@@ -120,6 +128,8 @@ TEVENTS=t_iprop
 ON=@Create
    ATTR=attr_magic|attr_newbie
    MOREZ=400
+   //To fill the book, set the following:
+   MORE1=03f
    
 [ITEMDEF 023a0]
 DEFNAME=i_spellbook_ninjitsu
@@ -135,6 +145,8 @@ TEVENTS=t_iprop
 ON=@Create
    ATTR=attr_magic|attr_newbie
    MOREZ=500
+   //To fill the book, set the following:
+   MORE1=0ff
    
 [ITEMDEF 02d50]
 DEFNAME=i_spellbook_arcanist
@@ -150,6 +162,8 @@ TEVENTS=t_iprop
 ON=@Create
    ATTR=attr_magic|attr_newbie
    MOREZ=600
+   //To fill the book, set the following:
+   MORE1=0ffff
 
 [ITEMDEF 02d9d]
 DEFNAME=i_spellbook_mystic
@@ -164,5 +178,7 @@ TEVENTS=t_iprop
 ON=@Create
 	ATTR=attr_magic|attr_newbie
 	MOREZ=677
+   //To fill the book, set the following:
+   //MORE1=01ffff//FIXME: this is wrong
 
 [EOF]
