@@ -811,7 +811,7 @@ ON=@Success
          IF (<ISPLAYER>)
             IF (<FLAGS>&statf_dead)
                IF (<ISNEARCORPSE 10>)
-                  DOSWITCH <MAPPLANE>
+                  DOSWITCH <MAP>
                   GO r_chaos_shrine_fel
                   GO r_chaos_shrine_fel // this should be trammel?
                   GO r_chaos_shrine_ilsh
