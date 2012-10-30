@@ -7,7 +7,7 @@
 // Menasoft & Partners.  All donations and contributions
 // become the property of Menasoft & Partners.
 //****************************************************************************
-// FILE LAST UPDATED: Saturday, November 15, 2003
+// FILE LAST UPDATED: Tuesday, October 29, 2012
 // Made by Admin Peter (OnlineUO), modified for 56b by Furio
 VERSION=0.56b
 
@@ -33,6 +33,12 @@ RECT=1960,1278,2106,1413,3
 RECT=2004,1413,2040,1419,3
 FLAGS=region_flag_nobuilding|region_flag_safe|region_antimagic_all
 GROUP=Malas
+
+[AREADEF a_malas_gypsy_camp_n1]
+NAME=Malas Gypsy Camp
+P=1402,417,-90,3
+RECT=1387,408,1408,1423,3
+GROUP=Malas Gypsy Camp
 
 [AREADEF a_doom]
 NAME=Doom
@@ -136,7 +142,22 @@ GROUP=Tokuno Islands
 NAME=Ninja Cave
 P=404,1167,0,3
 RECT=360,960,460,1175,3
-FLAGS=region_flag_nobuilding
+FLAGS=region_flag_nobuilding|region_antimagic_recall_in|region_antimagic_gate|region_antimagic_recall_out|region_flag_underground
 GROUP=Tokuno Islands 
+
+[AREADEF a_citadel]
+NAME=The Citadel
+P=98,1890,0,3
+Rect=55,1840,200,1990,3
+FLAGS=region_flag_nobuilding|region_antimagic_recall_in|region_antimagic_gate|region_antimagic_recall_out|region_flag_underground
+GROUP=Malas
+
+[AREADEF a_citadel_travesty]
+NAME=Travesty's Domain
+P=114,1955,0,3
+Rect=65,1934,118,1976,3
+FLAGS=region_flag_nobuilding|region_antimagic_recall_in|region_antimagic_gate|region_antimagic_recall_out|region_flag_underground
+GROUP=Malas
+
 
 [EOF]

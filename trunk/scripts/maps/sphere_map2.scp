@@ -7,7 +7,7 @@
 // Menasoft & Partners.  All donations and contributions
 // become the property of Menasoft & Partners.
 //****************************************************************************
-// FILE LAST UPDATED: June 18, 2011
+// FILE LAST UPDATED: Tuesday, October 29, 2012
 // - Made by Admin Peter (OnlineUO), modified for 56b by Furio
 VERSION=0.56b
 
@@ -145,7 +145,7 @@ GROUP=Ilshenar Misc
 
 [AREADEF a_montor]
 NAME=Montor
-P=1648,320,0,2
+P=1650,343,-3,2
 RECT=1576,272,1720,368,2
 RECT=1616,200,1696,272,2
 RECT=1696,144,1736,272,2
@@ -635,10 +635,18 @@ RECT=1496,512,1744,680,2
 FLAGS=region_flag_nobuilding
 GROUP=Ilshenar Unknown
 
-[AREADEF a_Twisted_Weald]
+[AREADEF a_twisted_weald]
 NAME=Twisted Weald
 P=2211,1262,3,2
 Rect=2100,1300,2258,1141,2
+FLAGS=region_flag_nobuilding|region_antimagic_recall_in|region_antimagic_gate|region_antimagic_recall_out|region_flag_underground
+GROUP=Ilshenar
+
+[AREADEF a_dreadhorn_isle]
+NAME=Dreadhorn Isle
+P=2151,1261,-60,2
+Rect=2126,1238,2153,1269,2
+Rect=2153,1246,2159,1269,2
 FLAGS=region_flag_nobuilding|region_antimagic_recall_in|region_antimagic_gate|region_antimagic_recall_out|region_flag_underground
 GROUP=Ilshenar
 
