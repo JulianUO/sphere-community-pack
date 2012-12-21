@@ -7,7 +7,7 @@
 // Menasoft & Partners.  All donations and contributions
 // become the property of Menasoft & Partners.
 //****************************************************************************
-// FILE LAST UPDATED: Monday, November 24, 2003
+// FILE LAST UPDATED: Friday, December 21, 2011
 //
 VERSION=0.56b
 
@@ -207,6 +207,118 @@ DUPEITEM=01771
 [ITEMDEF 0177c]
 //rock
 DUPEITEM=01771
+
+
+[ITEMDEF 04b48]
+DEFNAME=i_geode_shard
+NAME=geode shard
+FLIP=1
+VALUE=500
+WEIGHT=0.1
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Geode
+DESCRIPTION=Geode Shard
+DUPELIST=04b4c
+
+[ITEMDEF 04b49]
+DEFNAME=i_geode
+NAME=geode
+TYPE=t_geode
+FLIP=1
+VALUE=1800
+WEIGHT=1.0
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Geode
+DESCRIPTION=Geode 1
+DUPELIST=04b4d
+ON=@Create
+   f_creategeode
+
+[FUNCTION f_creategeode]
+   NAME=Quartz Geode
+   COLOR=<R2501,2644>
+   IF (<R100>==1)
+      DORAND 10
+         BEGIN
+          NAME=Calcite Geode
+          NAME=Agate Geode
+          NAME=Smithsonite Geode
+          NAME=Amethyst Geode
+          NAME=Chalcedony Geode
+          NAME=Sphalerite Geode
+          NAME=Millerite Geode
+          NAME=Barite Geode
+          NAME=Dolomite Geode
+          NAME=Limonite Geode
+         END
+         COLOR=<R2651,2662>
+      ENDDO
+   ENDIF
+
+[TYPEDEF t_geode]
+ON=@Damage
+   IF (<TOPOBJ.UID>!=<SRC>) && !(<SRC.ISGM>)
+      SRC.SYSMESSAGELOC color_text,1042001//"That must be in your backpack for you to use it."
+      RETURN 1
+   ENDIF
+   FOR 4
+      SERV.NEWITEM=i_geode_shard
+      NEW.COLOR=<COLOR>
+      NEW.CONT=<SRC>
+   ENDFOR
+   REMOVE
+
+[ITEMDEF 04b4a]
+DEFNAME=i_geode_2
+NAME=geode
+TYPE=t_geode
+FLIP=1
+VALUE=1800
+WEIGHT=1.0
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Geode
+DESCRIPTION=Geode 1
+DUPELIST=04b4e
+ON=@Create
+   f_creategeode
+
+[ITEMDEF 04b4b]
+DEFNAME=i_cracked_lavarock
+NAME=cracked lavarock
+TYPE=t_cracked_lavarock
+FLIP=1
+VALUE=5
+WEIGHT=1.0
+CATEGORY=Boulders, Rocks, and Crystals
+SUBSECTION=Geode
+DESCRIPTION=Cracked Lavarock
+DUPELIST=04b4f
+
+[TYPEDEF t_cracked_lavarock]
+ON=@Damage
+   IF (<TOPOBJ.UID>!=<SRC>) && !(<SRC.ISGM>)
+      SRC.SYSMESSAGELOC color_text,1042001//"That must be in your backpack for you to use it."
+      RETURN 1
+   ENDIF
+   SERV.NEWITEM={ i_geode 1 i_geode_2 1 }
+   NEW.CONT=<SRC>
+   REMOVE
+
+[ITEMDEF 04b4c]
+//Geode Shard
+DUPEITEM=04b48
+
+[ITEMDEF 04b4d]
+//Geode 1
+DUPEITEM=04b49
+
+[ITEMDEF 04b4e]
+//Geode 2
+DUPEITEM=04b4a
+
+[ITEMDEF 04b4f]
+//Cracked Lavarock
+DUPEITEM=04b4b
 
 
 [eof]
