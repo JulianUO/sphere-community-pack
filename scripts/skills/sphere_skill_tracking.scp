@@ -209,7 +209,7 @@ begin
 end
 begin
 	IF (<isplayer>)
-	elseif (<ishumanaid>)
+	elseif (<ishumanoid>)
 	elseif (<NPC> == brain_animal)
 	else
 		LOCAL.tracklist .= ,<uid>
@@ -217,7 +217,7 @@ begin
 end
 begin
 	IF (<isplayer>)
-	elseif (<ishumanaid>)
+	elseif (<ishumanoid>)
 		LOCAL.tracklist .= ,<uid>
 	endif
 end
