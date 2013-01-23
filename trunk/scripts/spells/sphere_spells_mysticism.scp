@@ -1,17 +1,12 @@
 //****************************************************************************
-//SPHERE by : Menasoft ©1997-2007
-//www.sphereserver.net
-// All SPHERE script files and formats are copyright Menasoft & Partners.
-// This file may be freely edited for personal use, but may not be distributed
-// in whole or in part, in any format without express written permission from
-// Menasoft & Partners.  All donations and contributions
-// become the property of Menasoft & Partners.
+// SphereServer ©1997-2009
+// This script is part from the Sphere Community Script Pack.
+// You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED: 18-Oct-2009
+// FILE LAST UPDATED: January 23, 2013
+//
+VERSION=0.56b
 
-//
-// Mysticism Spells
-//
 [Spell 678]
 // deals damage to target
 DEFNAME=s_nether_bolt
@@ -19,7 +14,7 @@ NAME=Nether Bolt
 CAST_TIME=0.5
 RUNES=ICY
 RESOURCES=i_reag_black_pearl, i_reag_sulfur_ash
-FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM| SPELLFLAG_RESIST
+FLAGS=spellflag_targ_char|spellflag_dir_anim|spellflag_harm|spellflag_resist|spellflag_damage
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_nether_bolt
 EFFECT_ID=0
@@ -53,7 +48,7 @@ NAME=Purge Magic
 CAST_TIME=0.7
 RUNES=AOS
 RESOURCES=i_reag_fertile_dirt, i_reag_garlic, i_reag_mandrake_root, i_reag_sulfur_ash
-FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM| SPELLFLAG_RESIST
+FLAGS=spellflag_targ_char|spellflag_dir_anim|spellflag_harm|spellflag_resist
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_purge_magic
 EFFECT_ID=i_fx_curse
@@ -70,7 +65,7 @@ NAME=Enchant
 CAST_TIME=1.0
 RUNES=IOY
 RESOURCES=i_reag_spider_silk, i_reag_mandrake_root, i_reag_sulfur_ash
-FLAGS=SPELLFLAG_TARG_ITEM
+FLAGS=spellflag_targ_item
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_enchant
 EFFECT_ID=0
@@ -87,7 +82,7 @@ NAME=Sleep
 CAST_TIME=1.0
 RUNES=IZ
 RESOURCES=i_reag_nightshade, i_reag_spider_silk, i_reag_black_pearl
-FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM| SPELLFLAG_RESIST
+FLAGS=spellflag_targ_char|spellflag_dir_anim|spellflag_harm|spellflag_resist
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_sleep
 EFFECT_ID=i_fx_curse
@@ -104,7 +99,7 @@ NAME=Eagle Strike
 CAST_TIME=1.0
 RUNES=KPZ
 RESOURCES=i_reag_blood_moss, i_reag_bone, i_reag_spider_silk, i_reag_mandrake_root
-FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM
+FLAGS=spellflag_targ_char|spellflag_dir_anim|spellflag_harm
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_eagle_strike
 EFFECT_ID=0
@@ -121,7 +116,7 @@ NAME=Animated Weapon
 CAST_TIME=1.0
 RUNES=IJPY
 RESOURCES=i_reag_bone, i_reag_black_pearl, i_reag_mandrake_root, i_reag_nightshade
-FLAGS=SPELLFLAG_SUMMON
+FLAGS=spellflag_summon
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_animated_weapon
 EFFECT_ID=0
@@ -155,7 +150,7 @@ NAME=Spell Trigger
 CAST_TIME=1.0
 RUNES=IVOE
 RESOURCES=i_reag_dragon_blood, i_reag_garlic, i_reag_mandrake_root, i_reag_spider_silk
-FLAGS=SPELLFLAG_TARG_ITEM
+FLAGS=spellflag_targ_item
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_spell_trigger
 EFFECT_ID=0
@@ -189,7 +184,7 @@ NAME=Cleansing Winds
 CAST_TIME=1.0
 RUNES=IVMH
 RESOURCES=i_reag_dragon_blood, i_reag_garlic, i_reag_ginseng, i_reag_mandrake_root
-FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM
+FLAGS=spellflag_targ_char|spellflag_dir_anim
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_cleansing_winds
 EFFECT_ID=i_fx_heal
@@ -206,7 +201,7 @@ NAME=Bombard
 CAST_TIME=1.0
 RUNES=CPY
 RESOURCES=i_reag_blood_moss, i_reag_dragon_blood, i_reag_garlic, i_reag_sulfur_ash
-FLAGS=SPELLFLAG_TARG_CHAR | SPELLFLAG_DIR_ANIM | SPELLFLAG_HARM
+FLAGS=spellflag_targ_char|spellflag_dir_anim|spellflag_harm|spellflag_damage
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_bombard
 EFFECT_ID=0
@@ -223,7 +218,7 @@ NAME=Spell Plague
 CAST_TIME=1.0
 RUNES=VRJO
 RESOURCES=i_reag_daemon_bone, i_reag_dragon_blood, i_reag_nightshade, i_reag_sulfur_ash
-FLAGS=SPELLFLAG_HARM
+FLAGS=spellflag_harm|spellflag_damage|spellflag_area
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_spell_plague
 EFFECT_ID=0
@@ -240,7 +235,7 @@ NAME=Hail Storm
 CAST_TIME=1.0
 RUNES=KDY
 RESOURCES=i_reag_dragon_blood, i_reag_blood_moss, i_reag_black_pearl, i_reag_mandrake_root
-FLAGS=SPELLFLAG_HARM
+FLAGS=spellflag_harm|spellflag_damage|spellflag_area
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_hail_storm
 EFFECT_ID=0
@@ -257,7 +252,7 @@ NAME=Nether Cyclone
 CAST_TIME=1.0
 RUNES=GH
 RESOURCES=i_reag_mandrake_root, i_reag_nightshade, i_reag_sulfur_ash, i_reag_blood_moss
-FLAGS=SPELLFLAG_HARM
+FLAGS=spellflag_harm|spellflag_damage|spellflag_area
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_nether_cyclone
 EFFECT_ID=0
@@ -274,7 +269,7 @@ NAME=Rising Collossus
 CAST_TIME=1.0
 RUNES=KVXCP
 RESOURCES=i_reag_daemon_bone, i_reag_dragon_blood, i_reag_fertile_dirt, i_reag_nightshade
-FLAGS=SPELLFLAG_SUMMON
+FLAGS=spellflag_summon
 RUNE_ITEM=
 SCROLL_ITEM=i_scroll_rising_colossus
 EFFECT_ID=0

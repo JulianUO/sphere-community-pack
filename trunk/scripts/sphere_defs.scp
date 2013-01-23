@@ -821,6 +821,9 @@ spellflag_targ_no_npc           00200000	// if a char may be targeted, it may no
 spellflag_noprecast             00400000	// disables effects of MAGICF_PRECAST with a spell (only valid if MAGICF_PRECAST actived in Sphere.ini)
 spellflag_nofreezeoncast        00800000	// disables effects of MAGICF_FREEZEONCAST with a spell (only valid if MAGICF_FREEZEONCAST actived in Sphere.ini)
 spellflag_area                  01000000	// area effect (uses local.arearadius)
+spellflag_poly                  02000000 // polymorph yourself
+spellflag_targ_dead             04000000 // target is dead (for resurrection-like spells)
+spellflag_damage                08000000 // kinda harm but deals damage to the targ, damage type is LOCAL.DamageType.
 
 [DEFNAME mem_flags]
 memory_sawcrime       00001   // i saw them commit a crime or i was attacked criminally. i can call the guards on them.
