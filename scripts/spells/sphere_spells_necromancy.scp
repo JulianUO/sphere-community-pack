@@ -3,7 +3,8 @@
 // This script is part from the Sphere Community Script Pack.
 // You can download the full pack from: www.sphereserver.net
 //****************************************************************************
-// FILE LAST UPDATED:
+// FILE LAST UPDATED: January 23, 2013
+//
 VERSION=0.56b
 
 [COMMENT comment_necromancy_spells]
@@ -394,7 +395,7 @@ CAST_TIME=1.0
 RESOURCES=i_reag_grave_dust, i_reag_pig_iron
 RUNE_ITEM=i_rune_poison
 SCROLL_ITEM=i_scroll_pain_spike
-FLAGS=spellflag_dir_anim|spellflag_targ_char|spellflag_harm|spellflag_fx_targ|spellflag_resist|spellflag_targ_noself
+FLAGS=spellflag_dir_anim|spellflag_targ_char|spellflag_harm|spellflag_fx_targ|spellflag_resist|spellflag_targ_noself|spellflag_damage
 EFFECT_ID=i_fx_curse
 EFFECT=0
 DURATION=0
